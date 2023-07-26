@@ -69,7 +69,7 @@ public class UploadDataV4Request extends Request {
         } 
 
         /**
-         * baseMeAgentId
+         * BaseMeAgentId.
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putBodyParameter("BaseMeAgentId", baseMeAgentId);

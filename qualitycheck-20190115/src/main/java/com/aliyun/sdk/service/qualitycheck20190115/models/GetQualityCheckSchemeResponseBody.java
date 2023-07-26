@@ -583,7 +583,7 @@ public class GetQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * 质检方案id
+             * SchemeId.
              */
             public Builder schemeId(Long schemeId) {
                 this.schemeId = schemeId;

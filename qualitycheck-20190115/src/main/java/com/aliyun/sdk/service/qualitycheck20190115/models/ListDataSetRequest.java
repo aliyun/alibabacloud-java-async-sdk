@@ -77,7 +77,7 @@ public class ListDataSetRequest extends Request {
         }
 
         /**
-         * 入参json字符串
+         * JsonStr.
          */
         public Builder jsonStr(String jsonStr) {
             this.putQueryParameter("JsonStr", jsonStr);

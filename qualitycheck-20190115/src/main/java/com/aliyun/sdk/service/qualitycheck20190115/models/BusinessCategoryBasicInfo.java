@@ -74,7 +74,7 @@ public class BusinessCategoryBasicInfo extends TeaModel {
         private Integer serviceType; 
 
         /**
-         * 业务ID
+         * Bid.
          */
         public Builder bid(Integer bid) {
             this.bid = bid;
@@ -82,7 +82,7 @@ public class BusinessCategoryBasicInfo extends TeaModel {
         }
 
         /**
-         * 业务名称
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -90,7 +90,7 @@ public class BusinessCategoryBasicInfo extends TeaModel {
         }
 
         /**
-         * originalId
+         * OriginalId.
          */
         public Builder originalId(Long originalId) {
             this.originalId = originalId;
@@ -98,7 +98,7 @@ public class BusinessCategoryBasicInfo extends TeaModel {
         }
 
         /**
-         * 服务类型(ServiceCategory)
+         * ServiceType.
          */
         public Builder serviceType(Integer serviceType) {
             this.serviceType = serviceType;

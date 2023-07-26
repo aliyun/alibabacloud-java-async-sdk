@@ -122,7 +122,7 @@ public class SchemeCheckType extends TeaModel {
         private java.util.List < TaskFlowScoreInfoList> taskFlowScoreInfoList; 
 
         /**
-         * 检测项名称
+         * CheckName.
          */
         public Builder checkName(String checkName) {
             this.checkName = checkName;
@@ -130,7 +130,7 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * 检测项类型：默认如下
+         * CheckType.
          */
         public Builder checkType(Long checkType) {
             this.checkType = checkType;
@@ -138,7 +138,7 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * 是否启用
+         * Enable.
          */
         public Builder enable(Integer enable) {
             this.enable = enable;
@@ -146,7 +146,7 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * 质检方案ID
+         * SchemeId.
          */
         public Builder schemeId(Long schemeId) {
             this.schemeId = schemeId;
@@ -154,7 +154,7 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * 检测项下评分项列表，见SchemeScoreInfo
+         * SchemeScoreInfoList.
          */
         public Builder schemeScoreInfoList(java.util.List < SchemeScoreInfoList> schemeScoreInfoList) {
             this.schemeScoreInfoList = schemeScoreInfoList;
@@ -162,7 +162,7 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * 最终得分
+         * Score.
          */
         public Builder score(Integer score) {
             this.score = score;
@@ -170,7 +170,7 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * 原始得分
+         * SourceScore.
          */
         public Builder sourceScore(Integer sourceScore) {
             this.sourceScore = sourceScore;
@@ -178,7 +178,7 @@ public class SchemeCheckType extends TeaModel {
         }
 
         /**
-         * 检测项下评分项列表，见TaskFlowScoreInfo
+         * TaskFlowScoreInfoList.
          */
         public Builder taskFlowScoreInfoList(java.util.List < TaskFlowScoreInfoList> taskFlowScoreInfoList) {
             this.taskFlowScoreInfoList = taskFlowScoreInfoList;
@@ -302,7 +302,7 @@ public class SchemeCheckType extends TeaModel {
             private String taskFlowName; 
 
             /**
-             * 规则名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -310,7 +310,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 规则ID
+             * Rid.
              */
             public Builder rid(Long rid) {
                 this.rid = rid;
@@ -318,7 +318,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 客服评分：默认0，[0, 100]
+             * ScoreNum.
              */
             public Builder scoreNum(Integer scoreNum) {
                 this.scoreNum = scoreNum;
@@ -326,7 +326,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 0-触发规则后加减分
+             * ScoreNumType.
              */
             public Builder scoreNumType(Integer scoreNumType) {
                 this.scoreNumType = scoreNumType;
@@ -334,7 +334,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 0-命中节点时计分
+             * ScoreRuleHitType.
              */
             public Builder scoreRuleHitType(Integer scoreRuleHitType) {
                 this.scoreRuleHitType = scoreRuleHitType;
@@ -342,7 +342,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 1加分 3减分 默认1
+             * ScoreType.
              */
             public Builder scoreType(Integer scoreType) {
                 this.scoreType = scoreType;
@@ -350,7 +350,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 流程ID
+             * TaskFlowId.
              */
             public Builder taskFlowId(Long taskFlowId) {
                 this.taskFlowId = taskFlowId;
@@ -358,7 +358,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 流程名称
+             * TaskFlowName.
              */
             public Builder taskFlowName(String taskFlowName) {
                 this.taskFlowName = taskFlowName;
@@ -483,7 +483,7 @@ public class SchemeCheckType extends TeaModel {
             private String taskFlowName; 
 
             /**
-             * 规则名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -491,7 +491,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 规则ID
+             * Rid.
              */
             public Builder rid(Long rid) {
                 this.rid = rid;
@@ -499,7 +499,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 客服评分：默认0，[0, 100]
+             * ScoreNum.
              */
             public Builder scoreNum(Integer scoreNum) {
                 this.scoreNum = scoreNum;
@@ -507,7 +507,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 0-触发规则后加减分
+             * ScoreNumType.
              */
             public Builder scoreNumType(Integer scoreNumType) {
                 this.scoreNumType = scoreNumType;
@@ -515,7 +515,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 0-命中节点时计分
+             * ScoreRuleHitType.
              */
             public Builder scoreRuleHitType(Integer scoreRuleHitType) {
                 this.scoreRuleHitType = scoreRuleHitType;
@@ -523,7 +523,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 1加分 3减分 默认1
+             * ScoreType.
              */
             public Builder scoreType(Integer scoreType) {
                 this.scoreType = scoreType;
@@ -531,7 +531,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 流程ID
+             * TaskFlowId.
              */
             public Builder taskFlowId(Long taskFlowId) {
                 this.taskFlowId = taskFlowId;
@@ -539,7 +539,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 流程名称
+             * TaskFlowName.
              */
             public Builder taskFlowName(String taskFlowName) {
                 this.taskFlowName = taskFlowName;
@@ -616,7 +616,7 @@ public class SchemeCheckType extends TeaModel {
             private Integer taskFlowType; 
 
             /**
-             * 评分项列表
+             * SchemeScoreInfoList.
              */
             public Builder schemeScoreInfoList(java.util.List < TaskFlowScoreInfoListSchemeScoreInfoList> schemeScoreInfoList) {
                 this.schemeScoreInfoList = schemeScoreInfoList;
@@ -624,7 +624,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 流程ID
+             * TaskFlowId.
              */
             public Builder taskFlowId(Long taskFlowId) {
                 this.taskFlowId = taskFlowId;
@@ -632,7 +632,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * 流程名称
+             * TaskFlowName.
              */
             public Builder taskFlowName(String taskFlowName) {
                 this.taskFlowName = taskFlowName;
@@ -640,7 +640,7 @@ public class SchemeCheckType extends TeaModel {
             }
 
             /**
-             * \"流程版本：0：树，1：图\"
+             * TaskFlowType.
              */
             public Builder taskFlowType(Integer taskFlowType) {
                 this.taskFlowType = taskFlowType;

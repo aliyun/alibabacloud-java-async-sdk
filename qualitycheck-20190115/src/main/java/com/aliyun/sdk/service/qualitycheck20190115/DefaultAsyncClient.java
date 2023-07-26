@@ -893,6 +893,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<ListBusinessSpacesResponse> listBusinessSpaces(ListBusinessSpacesRequest request) {
         try {

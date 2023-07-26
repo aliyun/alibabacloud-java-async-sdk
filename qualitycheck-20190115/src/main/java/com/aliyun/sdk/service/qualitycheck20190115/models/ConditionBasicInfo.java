@@ -134,7 +134,7 @@ public class ConditionBasicInfo extends TeaModel {
         private String userGroup; 
 
         /**
-         * 检测范围
+         * Check_range.
          */
         public Builder checkRange(CheckRange checkRange) {
             this.checkRange = checkRange;
@@ -142,7 +142,7 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * 条件id，可能是db中的主键，也可能是转换成的a, b, c
+         * Cid.
          */
         public Builder cid(String cid) {
             this.cid = cid;
@@ -150,7 +150,7 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * 排除
+         * Exclusion.
          */
         public Builder exclusion(Integer exclusion) {
             this.exclusion = exclusion;
@@ -158,7 +158,7 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * 在db中的主键
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -166,7 +166,7 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * Lambda表达式：例如:a&&b
+         * Lambda.
          */
         public Builder lambda(String lambda) {
             this.lambda = lambda;
@@ -174,7 +174,7 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * 条件名
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -182,7 +182,7 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * 算子列表
+         * Operators.
          */
         public Builder operators(java.util.List < OperatorBasicInfo > operators) {
             this.operators = operators;
@@ -190,7 +190,7 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * 条件所属的规则id
+         * Rid.
          */
         public Builder rid(String rid) {
             this.rid = rid;
@@ -198,7 +198,7 @@ public class ConditionBasicInfo extends TeaModel {
         }
 
         /**
-         * 用户组
+         * UserGroup.
          */
         public Builder userGroup(String userGroup) {
             this.userGroup = userGroup;
@@ -262,7 +262,7 @@ public class ConditionBasicInfo extends TeaModel {
             private String location; 
 
             /**
-             * 条件ID
+             * Cid.
              */
             public Builder cid(String cid) {
                 this.cid = cid;
@@ -270,7 +270,7 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * 命中次数
+             * Hit_time.
              */
             public Builder hitTime(Integer hitTime) {
                 this.hitTime = hitTime;
@@ -278,7 +278,7 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * 位置
+             * Location.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -331,7 +331,7 @@ public class ConditionBasicInfo extends TeaModel {
             private Integer to; 
 
             /**
-             * 对话开始索引
+             * From.
              */
             public Builder from(Integer from) {
                 this.from = from;
@@ -339,7 +339,7 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * 对话结束索引
+             * To.
              */
             public Builder to(Integer to) {
                 this.to = to;
@@ -440,7 +440,7 @@ public class ConditionBasicInfo extends TeaModel {
             private Integer roleId; 
 
             /**
-             * false: 相对位置; 会结合anchor以及角色来决定句子位置
+             * Absolute.
              */
             public Builder absolute(Boolean absolute) {
                 this.absolute = absolute;
@@ -448,7 +448,7 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * true: 每句话都必须满足条件；
+             * AllSentencesSatisfy.
              */
             public Builder allSentencesSatisfy(Boolean allSentencesSatisfy) {
                 this.allSentencesSatisfy = allSentencesSatisfy;
@@ -456,7 +456,7 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * 前置后置条件
+             * Anchor.
              */
             public Builder anchor(Anchor anchor) {
                 this.anchor = anchor;
@@ -464,7 +464,7 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * 相对范围
+             * Range.
              */
             public Builder range(Range range) {
                 this.range = range;
@@ -472,7 +472,7 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * 对应 RoleType.type
+             * Role.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -480,7 +480,7 @@ public class ConditionBasicInfo extends TeaModel {
             }
 
             /**
-             * 对应 RoleType.id
+             * RoleId.
              */
             public Builder roleId(Integer roleId) {
                 this.roleId = roleId;

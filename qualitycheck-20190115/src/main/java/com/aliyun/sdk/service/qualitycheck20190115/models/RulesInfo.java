@@ -98,7 +98,7 @@ public class RulesInfo extends TeaModel {
         private java.util.List < RuleInfo > rules; 
 
         /**
-         * 规则条件信息，多个规则的条件都放在一个list中
+         * Conditions.
          */
         public Builder conditions(java.util.List < ConditionBasicInfo > conditions) {
             this.conditions = conditions;
@@ -106,7 +106,7 @@ public class RulesInfo extends TeaModel {
         }
 
         /**
-         * 总条数
+         * Count.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -114,7 +114,7 @@ public class RulesInfo extends TeaModel {
         }
 
         /**
-         * 测试文案
+         * Dialogues.
          */
         public Builder dialogues(java.util.List < RuleTestDialogue > dialogues) {
             this.dialogues = dialogues;
@@ -122,7 +122,7 @@ public class RulesInfo extends TeaModel {
         }
 
         /**
-         * 当前页
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -130,7 +130,7 @@ public class RulesInfo extends TeaModel {
         }
 
         /**
-         * 页数
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -138,7 +138,7 @@ public class RulesInfo extends TeaModel {
         }
 
         /**
-         * 规则基本信息，可能有多个规则
+         * Rules.
          */
         public Builder rules(java.util.List < RuleInfo > rules) {
             this.rules = rules;

@@ -686,7 +686,7 @@ public class RuleInfo extends TeaModel {
         private String weight; 
 
         /**
-         * 审核选项 1 不自动审核 3 自动审核 //4.0 协议兼容使用
+         * AutoReview.
          */
         public Builder autoReview(Integer autoReview) {
             this.autoReview = autoReview;
@@ -694,7 +694,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 业务名称列表
+         * BusinessCategoryNameList.
          */
         public Builder businessCategoryNameList(java.util.List < String > businessCategoryNameList) {
             this.businessCategoryNameList = businessCategoryNameList;
@@ -702,7 +702,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 0-服务规范性检测 1-服务态度检测 2-服务专业性检测 3-客户态度检测  4-服务流程正确性检测
+         * CheckType.
          */
         public Builder checkType(Long checkType) {
             this.checkType = checkType;
@@ -710,7 +710,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 备注
+         * Comments.
          */
         public Builder comments(String comments) {
             this.comments = comments;
@@ -718,7 +718,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 配置类型：1：简单条件配置，2：高级配置，默认1 //4.0协议专用
+         * ConfigType.
          */
         public Builder configType(Integer configType) {
             this.configType = configType;
@@ -726,7 +726,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 创建人姓名
+         * CreateEmpName.
          */
         public Builder createEmpName(String createEmpName) {
             this.createEmpName = createEmpName;
@@ -734,7 +734,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 创建人工号
+         * CreateEmpid.
          */
         public Builder createEmpid(String createEmpid) {
             this.createEmpid = createEmpid;
@@ -742,7 +742,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -750,7 +750,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 1拒绝编辑规则，0/null可以编辑规则
+         * Deny.
          */
         public Builder deny(Integer deny) {
             this.deny = deny;
@@ -758,7 +758,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 测试文案
+         * Dialogues.
          */
         public Builder dialogues(java.util.List < RuleTestDialogue > dialogues) {
             this.dialogues = dialogues;
@@ -766,7 +766,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 是否生效：0否，1是
+         * Effective.
          */
         public Builder effective(Integer effective) {
             this.effective = effective;
@@ -774,7 +774,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 生效结束时间
+         * EffectiveEndTime.
          */
         public Builder effectiveEndTime(String effectiveEndTime) {
             this.effectiveEndTime = effectiveEndTime;
@@ -782,7 +782,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 生效开始时间
+         * EffectiveStartTime.
          */
         public Builder effectiveStartTime(String effectiveStartTime) {
             this.effectiveStartTime = effectiveStartTime;
@@ -790,7 +790,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 结束时间
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -798,7 +798,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 外部属性
+         * ExternalProperty.
          */
         public Builder externalProperty(Integer externalProperty) {
             this.externalProperty = externalProperty;
@@ -806,7 +806,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 是否为全生命周期生效，0否，1是
+         * FullCycle.
          */
         public Builder fullCycle(Integer fullCycle) {
             this.fullCycle = fullCycle;
@@ -814,7 +814,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 图流程画布
+         * GraphFlow.
          */
         public Builder graphFlow(Object graphFlow) {
             this.graphFlow = graphFlow;
@@ -822,7 +822,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 是否已删除
+         * IsDelete.
          */
         public Builder isDelete(Integer isDelete) {
             this.isDelete = isDelete;
@@ -830,7 +830,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 是否在线
+         * IsOnline.
          */
         public Builder isOnline(Integer isOnline) {
             this.isOnline = isOnline;
@@ -838,7 +838,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 形如a&&b的条件表达式
+         * Lambda.
          */
         public Builder lambda(String lambda) {
             this.lambda = lambda;
@@ -846,7 +846,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 最后更新人姓名
+         * LastUpdateEmpName.
          */
         public Builder lastUpdateEmpName(String lastUpdateEmpName) {
             this.lastUpdateEmpName = lastUpdateEmpName;
@@ -854,7 +854,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 最后更新人工号
+         * LastUpdateEmpid.
          */
         public Builder lastUpdateEmpid(String lastUpdateEmpid) {
             this.lastUpdateEmpid = lastUpdateEmpid;
@@ -862,7 +862,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 最后更新时间
+         * LastUpdateTime.
          */
         public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
@@ -870,7 +870,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 规则级别：0 重度违规 1 中度违规 2 轻度违规
+         * Level.
          */
         public Builder level(Integer level) {
             this.level = level;
@@ -878,7 +878,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 是否满足
+         * Meet.
          */
         public Builder meet(Integer meet) {
             this.meet = meet;
@@ -886,7 +886,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 在质检方案中是否已修改
+         * ModifyType.
          */
         public Builder modifyType(Integer modifyType) {
             this.modifyType = modifyType;
@@ -894,7 +894,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 规则名称
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -902,7 +902,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 操作模式
+         * OperationMode.
          */
         public Builder operationMode(Integer operationMode) {
             this.operationMode = operationMode;
@@ -910,7 +910,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 质检类型：0 离线质检，1 实时质检 //4.0逻辑兼容使用
+         * QualityCheckType.
          */
         public Builder qualityCheckType(Integer qualityCheckType) {
             this.qualityCheckType = qualityCheckType;
@@ -918,7 +918,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 规则ID
+         * Rid.
          */
         public Builder rid(String rid) {
             this.rid = rid;
@@ -926,7 +926,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 规则类别名称
+         * RuleCategoryName.
          */
         public Builder ruleCategoryName(String ruleCategoryName) {
             this.ruleCategoryName = ruleCategoryName;
@@ -934,7 +934,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 是否计分 1不计分 3计分 //4.0 协议兼容使用
+         * RuleScoreType.
          */
         public Builder ruleScoreType(Integer ruleScoreType) {
             this.ruleScoreType = ruleScoreType;
@@ -942,7 +942,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 0：默认；1：用户创建 //4.0逻辑兼容使用
+         * RuleType.
          */
         public Builder ruleType(Integer ruleType) {
             this.ruleType = ruleType;
@@ -950,7 +950,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 质检维度对象
+         * SchemeCheckType.
          */
         public Builder schemeCheckType(SchemeCheckType schemeCheckType) {
             this.schemeCheckType = schemeCheckType;
@@ -958,7 +958,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 所属质检方案Id
+         * SchemeId.
          */
         public Builder schemeId(Long schemeId) {
             this.schemeId = schemeId;
@@ -966,7 +966,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 质检方案名称
+         * SchemeName.
          */
         public Builder schemeName(String schemeName) {
             this.schemeName = schemeName;
@@ -974,7 +974,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 质检方案与规则映射ID
+         * SchemeRuleMappingId.
          */
         public Builder schemeRuleMappingId(Long schemeRuleMappingId) {
             this.schemeRuleMappingId = schemeRuleMappingId;
@@ -982,7 +982,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 评分项是否删除，用于删除时显示置灰
+         * ScoreDeleted.
          */
         public Builder scoreDeleted(Boolean scoreDeleted) {
             this.scoreDeleted = scoreDeleted;
@@ -990,7 +990,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 评分大项ID
+         * ScoreId.
          */
         public Builder scoreId(Long scoreId) {
             this.scoreId = scoreId;
@@ -998,7 +998,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 评分大项名称
+         * ScoreName.
          */
         public Builder scoreName(String scoreName) {
             this.scoreName = scoreName;
@@ -1006,7 +1006,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 分数num
+         * ScoreNum.
          */
         public Builder scoreNum(Integer scoreNum) {
             this.scoreNum = scoreNum;
@@ -1014,7 +1014,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 0-触发规则后加减分 1-触发规则后一次性得分 //4.0协议专用
+         * ScoreNumType.
          */
         public Builder scoreNumType(Integer scoreNumType) {
             this.scoreNumType = scoreNumType;
@@ -1022,7 +1022,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 0-命中节点时计分
+         * ScoreRuleHitType.
          */
         public Builder scoreRuleHitType(Integer scoreRuleHitType) {
             this.scoreRuleHitType = scoreRuleHitType;
@@ -1030,7 +1030,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 小项id
+         * ScoreSubId.
          */
         public Builder scoreSubId(Long scoreSubId) {
             this.scoreSubId = scoreSubId;
@@ -1038,7 +1038,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 评分小项
+         * ScoreSubName.
          */
         public Builder scoreSubName(String scoreSubName) {
             this.scoreSubName = scoreSubName;
@@ -1046,7 +1046,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 加分或者减分
+         * ScoreType.
          */
         public Builder scoreType(Integer scoreType) {
             this.scoreType = scoreType;
@@ -1054,7 +1054,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 质检维度内的排序
+         * SortIndex.
          */
         public Builder sortIndex(Integer sortIndex) {
             this.sortIndex = sortIndex;
@@ -1062,7 +1062,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 开始时间
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -1070,7 +1070,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 规则状态
+         * Status.
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -1078,7 +1078,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 规则类别：10：质检方案-通用规则；11：质检方案-流程规则 //4.0协议专用
+         * TargetType.
          */
         public Builder targetType(Integer targetType) {
             this.targetType = targetType;
@@ -1086,7 +1086,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 流程画布ID
+         * TaskFlowId.
          */
         public Builder taskFlowId(Long taskFlowId) {
             this.taskFlowId = taskFlowId;
@@ -1094,7 +1094,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 流程图类型-已废弃-默认-1
+         * TaskFlowType.
          */
         public Builder taskFlowType(Integer taskFlowType) {
             this.taskFlowType = taskFlowType;
@@ -1102,7 +1102,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 关注的条件列表
+         * Triggers.
          */
         public Builder triggers(java.util.List < String > triggers) {
             this.triggers = triggers;
@@ -1110,7 +1110,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * RuleCategory，2舆情监控，3业务类  //4.0 逻辑兼容使用
+         * Type.
          */
         public Builder type(Integer type) {
             this.type = type;
@@ -1118,7 +1118,7 @@ public class RuleInfo extends TeaModel {
         }
 
         /**
-         * 权重
+         * Weight.
          */
         public Builder weight(String weight) {
             this.weight = weight;

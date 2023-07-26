@@ -110,7 +110,7 @@ public class TaskGraphFlow extends TeaModel {
         private Boolean skipWhenFirstSessionNodeMiss; 
 
         /**
-         * 流程计分逻辑设置
+         * FlowRuleScoreType.
          */
         public Builder flowRuleScoreType(Integer flowRuleScoreType) {
             this.flowRuleScoreType = flowRuleScoreType;
@@ -118,7 +118,7 @@ public class TaskGraphFlow extends TeaModel {
         }
 
         /**
-         * 流程画布id
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -126,7 +126,7 @@ public class TaskGraphFlow extends TeaModel {
         }
 
         /**
-         * 流程所有节点
+         * Nodes.
          */
         public Builder nodes(java.util.List < GraphFlowNode > nodes) {
             this.nodes = nodes;
@@ -134,7 +134,7 @@ public class TaskGraphFlow extends TeaModel {
         }
 
         /**
-         * 规则ID
+         * Rid.
          */
         public Builder rid(Long rid) {
             this.rid = rid;
@@ -142,7 +142,7 @@ public class TaskGraphFlow extends TeaModel {
         }
 
         /**
-         * 规则名称
+         * RuleName.
          */
         public Builder ruleName(String ruleName) {
             this.ruleName = ruleName;
@@ -150,7 +150,7 @@ public class TaskGraphFlow extends TeaModel {
         }
 
         /**
-         * 前端展示使用
+         * ShowProperties.
          */
         public Builder showProperties(String showProperties) {
             this.showProperties = showProperties;
@@ -158,7 +158,7 @@ public class TaskGraphFlow extends TeaModel {
         }
 
         /**
-         * 首个对话节点未命中则跳过
+         * SkipWhenFirstSessionNodeMiss.
          */
         public Builder skipWhenFirstSessionNodeMiss(Boolean skipWhenFirstSessionNodeMiss) {
             this.skipWhenFirstSessionNodeMiss = skipWhenFirstSessionNodeMiss;

@@ -98,7 +98,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 结果代码，200表示成功，若为别的值则表示失败，调用方可根据此字段判断失败原因。
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +114,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * HTTP状态码。
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * 出错时表示出错详情，成功时为successful。
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id。
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class TestRuleV4ResponseBody extends TeaModel {
         }
 
         /**
-         * 请求是否成功，调用方可根据此字段来判断请求是否成功：true表示成功；false/null表示失败。
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

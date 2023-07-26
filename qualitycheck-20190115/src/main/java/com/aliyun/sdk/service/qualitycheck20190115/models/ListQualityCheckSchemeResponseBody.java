@@ -745,7 +745,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人
+             * CreateUserName.
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -761,7 +761,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -769,7 +769,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * 质检方案名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -777,7 +777,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * 规则列表
+             * RuleList.
              */
             public Builder ruleList(java.util.List < RuleList> ruleList) {
                 this.ruleList = ruleList;
@@ -793,7 +793,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * 质检方案Id
+             * SchemeId.
              */
             public Builder schemeId(Long schemeId) {
                 this.schemeId = schemeId;
@@ -833,7 +833,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * 更新人
+             * UpdateUserName.
              */
             public Builder updateUserName(String updateUserName) {
                 this.updateUserName = updateUserName;
@@ -841,7 +841,7 @@ public class ListQualityCheckSchemeResponseBody extends TeaModel {
             }
 
             /**
-             * 质检方案版本
+             * Version.
              */
             public Builder version(Long version) {
                 this.version = version;

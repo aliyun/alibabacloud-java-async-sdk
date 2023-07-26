@@ -74,7 +74,7 @@ public class RuleTestDialogue extends TeaModel {
         private String userGroup; 
 
         /**
-         * 对话内容
+         * Content.
          */
         public Builder content(java.util.List < Content> content) {
             this.content = content;
@@ -82,7 +82,7 @@ public class RuleTestDialogue extends TeaModel {
         }
 
         /**
-         * 对话ID
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -90,7 +90,7 @@ public class RuleTestDialogue extends TeaModel {
         }
 
         /**
-         * 对话名称
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -98,7 +98,7 @@ public class RuleTestDialogue extends TeaModel {
         }
 
         /**
-         * 用户组
+         * UserGroup.
          */
         public Builder userGroup(String userGroup) {
             this.userGroup = userGroup;
@@ -246,7 +246,7 @@ public class RuleTestDialogue extends TeaModel {
             private String words; 
 
             /**
-             * 开始时间InLong
+             * Begin.
              */
             public Builder begin(Long begin) {
                 this.begin = begin;
@@ -254,7 +254,7 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * 开始时间InLong
+             * BeginTime.
              */
             public Builder beginTime(Long beginTime) {
                 this.beginTime = beginTime;
@@ -262,7 +262,7 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * 情绪能量值
+             * EmotionValue.
              */
             public Builder emotionValue(Integer emotionValue) {
                 this.emotionValue = emotionValue;
@@ -270,7 +270,7 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * 结束时间inLong
+             * End.
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -278,7 +278,7 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * 时分秒
+             * HourMinSec.
              */
             public Builder hourMinSec(String hourMinSec) {
                 this.hourMinSec = hourMinSec;
@@ -286,7 +286,7 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * 身份标识
+             * Identity.
              */
             public Builder identity(String identity) {
                 this.identity = identity;
@@ -294,7 +294,7 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * 角色
+             * Role.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -302,7 +302,7 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * 静音时长
+             * SilenceDuration.
              */
             public Builder silenceDuration(Long silenceDuration) {
                 this.silenceDuration = silenceDuration;
@@ -310,7 +310,7 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * 语速
+             * SpeechRate.
              */
             public Builder speechRate(Long speechRate) {
                 this.speechRate = speechRate;
@@ -318,7 +318,7 @@ public class RuleTestDialogue extends TeaModel {
             }
 
             /**
-             * 对话
+             * Words.
              */
             public Builder words(String words) {
                 this.words = words;

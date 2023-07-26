@@ -98,7 +98,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
         private String value; 
 
         /**
-         * 实际值
+         * ActualValue.
          */
         public Builder actualValue(String actualValue) {
             this.actualValue = actualValue;
@@ -106,7 +106,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * 数据类型
+         * DataType.
          */
         public Builder dataType(Integer dataType) {
             this.dataType = dataType;
@@ -114,7 +114,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * 系统字段
+         * Field.
          */
         public Builder field(String field) {
             this.field = field;
@@ -122,7 +122,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * 字段数据来源类型：1：系统预定义字段 2：传参质检字段
+         * FieldType.
          */
         public Builder fieldType(Integer fieldType) {
             this.fieldType = fieldType;
@@ -130,7 +130,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * 逻辑表达式
+         * Symbol.
          */
         public Builder symbol(Integer symbol) {
             this.symbol = symbol;
@@ -138,7 +138,7 @@ public class JudgeNodeMetaDesc extends TeaModel {
         }
 
         /**
-         * 预设值的值
+         * Value.
          */
         public Builder value(String value) {
             this.value = value;

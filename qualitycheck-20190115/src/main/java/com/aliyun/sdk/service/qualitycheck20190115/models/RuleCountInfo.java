@@ -590,7 +590,7 @@ public class RuleCountInfo extends TeaModel {
         private String userGroup; 
 
         /**
-         * 审核选项 1 不自动审核 3 自动审核
+         * AutoReview.
          */
         public Builder autoReview(Integer autoReview) {
             this.autoReview = autoReview;
@@ -598,7 +598,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 业务类别基本信息列表
+         * BusinessCategoryBasicInfoList.
          */
         public Builder businessCategoryBasicInfoList(java.util.List < BusinessCategoryBasicInfo > businessCategoryBasicInfoList) {
             this.businessCategoryBasicInfoList = businessCategoryBasicInfoList;
@@ -606,7 +606,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 业务类别名称列表
+         * BusinessCategoryNameList.
          */
         public Builder businessCategoryNameList(java.util.List < String > businessCategoryNameList) {
             this.businessCategoryNameList = businessCategoryNameList;
@@ -614,7 +614,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 业务范围
+         * BusinessRange.
          */
         public Builder businessRange(java.util.List < Integer > businessRange) {
             this.businessRange = businessRange;
@@ -622,7 +622,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 检测会话数
+         * CheckNumber.
          */
         public Builder checkNumber(Long checkNumber) {
             this.checkNumber = checkNumber;
@@ -630,7 +630,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 评论
+         * Comments.
          */
         public Builder comments(String comments) {
             this.comments = comments;
@@ -638,7 +638,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 创建人姓名
+         * CreateEmpName.
          */
         public Builder createEmpName(String createEmpName) {
             this.createEmpName = createEmpName;
@@ -646,7 +646,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 创建人工号
+         * CreateEmpid.
          */
         public Builder createEmpid(String createEmpid) {
             this.createEmpid = createEmpid;
@@ -654,7 +654,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -662,7 +662,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 1拒绝编辑规则，0/null可以编辑规则
+         * Deny.
          */
         public Builder deny(Integer deny) {
             this.deny = deny;
@@ -670,7 +670,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 是否生效：0否，1是
+         * Effective.
          */
         public Builder effective(Integer effective) {
             this.effective = effective;
@@ -678,7 +678,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 生效结束时间
+         * EffectiveEndTime.
          */
         public Builder effectiveEndTime(String effectiveEndTime) {
             this.effectiveEndTime = effectiveEndTime;
@@ -686,7 +686,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 生效开始时间
+         * EffectiveStartTime.
          */
         public Builder effectiveStartTime(String effectiveStartTime) {
             this.effectiveStartTime = effectiveStartTime;
@@ -694,7 +694,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 结束时间
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -702,7 +702,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 是否为全生命周期生效，0否，1是
+         * FullCycle.
          */
         public Builder fullCycle(Integer fullCycle) {
             this.fullCycle = fullCycle;
@@ -710,7 +710,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 流程画布
+         * GraphFlow.
          */
         public Builder graphFlow(Object graphFlow) {
             this.graphFlow = graphFlow;
@@ -718,7 +718,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 命中会话量
+         * HitNumber.
          */
         public Builder hitNumber(Long hitNumber) {
             this.hitNumber = hitNumber;
@@ -726,7 +726,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 命中率
+         * HitRate.
          */
         public Builder hitRate(Float hitRate) {
             this.hitRate = hitRate;
@@ -734,7 +734,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 命中违规率
+         * HitRealViolationRate.
          */
         public Builder hitRealViolationRate(Float hitRealViolationRate) {
             this.hitRealViolationRate = hitRealViolationRate;
@@ -742,7 +742,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 是否删除
+         * IsDelete.
          */
         public Builder isDelete(Integer isDelete) {
             this.isDelete = isDelete;
@@ -750,7 +750,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 是否选择
+         * IsSelect.
          */
         public Builder isSelect(Boolean isSelect) {
             this.isSelect = isSelect;
@@ -758,7 +758,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 定时任务名称
+         * JobName.
          */
         public Builder jobName(String jobName) {
             this.jobName = jobName;
@@ -766,7 +766,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 最后更新人姓名
+         * LastUpdateEmpName.
          */
         public Builder lastUpdateEmpName(String lastUpdateEmpName) {
             this.lastUpdateEmpName = lastUpdateEmpName;
@@ -774,7 +774,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 最后更新人工号
+         * LastUpdateEmpid.
          */
         public Builder lastUpdateEmpid(String lastUpdateEmpid) {
             this.lastUpdateEmpid = lastUpdateEmpid;
@@ -782,7 +782,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 最后更新时间
+         * LastUpdateTime.
          */
         public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
@@ -790,7 +790,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 规则名称
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -798,7 +798,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 操作模式
+         * OperationMode.
          */
         public Builder operationMode(Integer operationMode) {
             this.operationMode = operationMode;
@@ -806,7 +806,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 待复核数
+         * PreReviewNumber.
          */
         public Builder preReviewNumber(Long preReviewNumber) {
             this.preReviewNumber = preReviewNumber;
@@ -814,7 +814,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 发现问题数
+         * ProblemNumber.
          */
         public Builder problemNumber(Long problemNumber) {
             this.problemNumber = problemNumber;
@@ -822,7 +822,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 质检类型：0 离线质检，1 实时质检
+         * QualityCheckType.
          */
         public Builder qualityCheckType(Integer qualityCheckType) {
             this.qualityCheckType = qualityCheckType;
@@ -830,7 +830,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 复核后真实违规的数量
+         * RealViolationNumber.
          */
         public Builder realViolationNumber(Integer realViolationNumber) {
             this.realViolationNumber = realViolationNumber;
@@ -838,7 +838,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 复核准确率
+         * ReviewAccuracyRate.
          */
         public Builder reviewAccuracyRate(Float reviewAccuracyRate) {
             this.reviewAccuracyRate = reviewAccuracyRate;
@@ -846,7 +846,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 已复核数
+         * ReviewNumber.
          */
         public Builder reviewNumber(Long reviewNumber) {
             this.reviewNumber = reviewNumber;
@@ -854,7 +854,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 复核率
+         * ReviewRate.
          */
         public Builder reviewRate(Float reviewRate) {
             this.reviewRate = reviewRate;
@@ -862,7 +862,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 审核状态名字
+         * ReviewStatusName.
          */
         public Builder reviewStatusName(String reviewStatusName) {
             this.reviewStatusName = reviewStatusName;
@@ -870,7 +870,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 规则ID
+         * Rid.
          */
         public Builder rid(Long rid) {
             this.rid = rid;
@@ -878,7 +878,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * -- 8-未设置评分
+         * RuleScoreSingleType.
          */
         public Builder ruleScoreSingleType(Integer ruleScoreSingleType) {
             this.ruleScoreSingleType = ruleScoreSingleType;
@@ -886,7 +886,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 是否计分 1不计分 3计分
+         * RuleScoreType.
          */
         public Builder ruleScoreType(Integer ruleScoreType) {
             this.ruleScoreType = ruleScoreType;
@@ -894,7 +894,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 内置规则Or用户创建规则
+         * RuleType.
          */
         public Builder ruleType(Integer ruleType) {
             this.ruleType = ruleType;
@@ -902,7 +902,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 小项id
+         * ScoreSubId.
          */
         public Builder scoreSubId(Long scoreSubId) {
             this.scoreSubId = scoreSubId;
@@ -910,7 +910,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 开始时间
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -918,7 +918,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 状态：待生效 / 生效中 / 已失效:  0 / 1 / 2
+         * Status.
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -926,7 +926,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 规则种类：10-普通规则，11-流程规则
+         * TargetType.
          */
         public Builder targetType(Integer targetType) {
             this.targetType = targetType;
@@ -934,7 +934,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 规则类型
+         * Type.
          */
         public Builder type(Integer type) {
             this.type = type;
@@ -942,7 +942,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 类型名称
+         * TypeName.
          */
         public Builder typeName(String typeName) {
             this.typeName = typeName;
@@ -950,7 +950,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 未复核数量
+         * UnReviewNumber.
          */
         public Builder unReviewNumber(Long unReviewNumber) {
             this.unReviewNumber = unReviewNumber;
@@ -958,7 +958,7 @@ public class RuleCountInfo extends TeaModel {
         }
 
         /**
-         * 用户组
+         * UserGroup.
          */
         public Builder userGroup(String userGroup) {
             this.userGroup = userGroup;

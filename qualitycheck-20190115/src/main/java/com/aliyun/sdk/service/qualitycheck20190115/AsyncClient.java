@@ -140,6 +140,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAsrVocabResponse> listAsrVocab(ListAsrVocabRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListBusinessSpacesResponse> listBusinessSpaces(ListBusinessSpacesRequest request);
 
     CompletableFuture<ListDataSetResponse> listDataSet(ListDataSetRequest request);

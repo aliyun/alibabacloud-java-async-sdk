@@ -50,7 +50,7 @@ public class NextNodeSituations extends TeaModel {
         private String type; 
 
         /**
-         * 判断条件
+         * ConditionGroup.
          */
         public Builder conditionGroup(java.util.List < ConditionGroup> conditionGroup) {
             this.conditionGroup = conditionGroup;
@@ -58,7 +58,7 @@ public class NextNodeSituations extends TeaModel {
         }
 
         /**
-         * 条件之间的匹配关系 目前都是or的关系
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;
@@ -110,7 +110,7 @@ public class NextNodeSituations extends TeaModel {
             private String type; 
 
             /**
-             * 匹配条件集合
+             * Conditions.
              */
             public Builder conditions(java.util.List < JudgeNodeMetaDesc > conditions) {
                 this.conditions = conditions;
@@ -118,7 +118,7 @@ public class NextNodeSituations extends TeaModel {
             }
 
             /**
-             * 条件之间的匹配关系
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

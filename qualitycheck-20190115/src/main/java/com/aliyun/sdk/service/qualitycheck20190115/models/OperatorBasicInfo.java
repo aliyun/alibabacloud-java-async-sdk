@@ -110,7 +110,7 @@ public class OperatorBasicInfo extends TeaModel {
         private String userGroup; 
 
         /**
-         * 主键id
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -118,7 +118,7 @@ public class OperatorBasicInfo extends TeaModel {
         }
 
         /**
-         * 算子名
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -126,7 +126,7 @@ public class OperatorBasicInfo extends TeaModel {
         }
 
         /**
-         * 可能是主键id，也可能是前端生成的id
+         * Oid.
          */
         public Builder oid(String oid) {
             this.oid = oid;
@@ -134,7 +134,7 @@ public class OperatorBasicInfo extends TeaModel {
         }
 
         /**
-         * 算子参数
+         * Param.
          */
         public Builder param(Param param) {
             this.param = param;
@@ -142,7 +142,7 @@ public class OperatorBasicInfo extends TeaModel {
         }
 
         /**
-         * 质检类型：0 离线质检，1 实时质检
+         * QualityCheckType.
          */
         public Builder qualityCheckType(Integer qualityCheckType) {
             this.qualityCheckType = qualityCheckType;
@@ -150,7 +150,7 @@ public class OperatorBasicInfo extends TeaModel {
         }
 
         /**
-         * 算子类别
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;
@@ -158,7 +158,7 @@ public class OperatorBasicInfo extends TeaModel {
         }
 
         /**
-         * 用户组
+         * UserGroup.
          */
         public Builder userGroup(String userGroup) {
             this.userGroup = userGroup;
@@ -286,6 +286,9 @@ public class OperatorBasicInfo extends TeaModel {
         @NameInMap("Poutput_type")
         private Integer poutputType;
 
+        @NameInMap("Pvalues")
+        private java.util.List < String > pvalues;
+
         @NameInMap("QuestionThreshold")
         private String questionThreshold;
 
@@ -367,6 +370,7 @@ public class OperatorBasicInfo extends TeaModel {
             this.phrase = builder.phrase;
             this.pkey = builder.pkey;
             this.poutputType = builder.poutputType;
+            this.pvalues = builder.pvalues;
             this.questionThreshold = builder.questionThreshold;
             this.references = builder.references;
             this.regex = builder.regex;
@@ -658,6 +662,13 @@ public class OperatorBasicInfo extends TeaModel {
         }
 
         /**
+         * @return pvalues
+         */
+        public java.util.List < String > getPvalues() {
+            return this.pvalues;
+        }
+
+        /**
          * @return questionThreshold
          */
         public String getQuestionThreshold() {
@@ -794,6 +805,7 @@ public class OperatorBasicInfo extends TeaModel {
             private String phrase; 
             private String pkey; 
             private Integer poutputType; 
+            private java.util.List < String > pvalues; 
             private String questionThreshold; 
             private java.util.List < String > references; 
             private String regex; 
@@ -810,7 +822,7 @@ public class OperatorBasicInfo extends TeaModel {
             private Integer velocityInMint; 
 
             /**
-             * 答案命中阈值
+             * AnswerThreshold.
              */
             public Builder answerThreshold(String answerThreshold) {
                 this.answerThreshold = answerThreshold;
@@ -818,7 +830,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 蚂蚁模型信息
+             * AntModelInfo.
              */
             public Builder antModelInfo(java.util.Map < String, String > antModelInfo) {
                 this.antModelInfo = antModelInfo;
@@ -826,7 +838,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 语速检测，是否计算整个对话平均语速，默认false
+             * Average.
              */
             public Builder average(Boolean average) {
                 this.average = average;
@@ -834,7 +846,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 时长算子，时长计算开始类型，录音开始，还是某句对话开始
+             * BeginType.
              */
             public Builder beginType(String beginType) {
                 this.beginType = beginType;
@@ -842,7 +854,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 机器人id
+             * BotId.
              */
             public Builder botId(String botId) {
                 this.botId = botId;
@@ -850,7 +862,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 区分大小写
+             * Case_sensitive.
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -858,7 +870,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 知识类目路径
+             * CategoryPathCode.
              */
             public Builder categoryPathCode(String categoryPathCode) {
                 this.categoryPathCode = categoryPathCode;
@@ -866,7 +878,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 静音检测：要不要检测第一句话
+             * CheckFirstSentence.
              */
             public Builder checkFirstSentence(Boolean checkFirstSentence) {
                 this.checkFirstSentence = checkFirstSentence;
@@ -874,7 +886,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 检测方式，1 相邻句能量波动 2 最大能量跨度 默认1
+             * CheckType.
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -882,7 +894,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 大于，还是小于，gt/lt
+             * CompareOperator.
              */
             public Builder compareOperator(String compareOperator) {
                 this.compareOperator = compareOperator;
@@ -890,7 +902,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 是否单句话匹配；
+             * ContextChatMatch.
              */
             public Builder contextChatMatch(Boolean contextChatMatch) {
                 this.contextChatMatch = contextChatMatch;
@@ -898,7 +910,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 随录参数算子参数
+             * CustomerParam.
              */
             public Builder customerParam(JudgeNodeMetaDesc customerParam) {
                 this.customerParam = customerParam;
@@ -906,7 +918,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 抢话算子 延时时长
+             * DelayTime.
              */
             public Builder delayTime(Integer delayTime) {
                 this.delayTime = delayTime;
@@ -914,7 +926,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * different_role
+             * Different_role.
              */
             public Builder differentRole(Boolean differentRole) {
                 this.differentRole = differentRole;
@@ -922,7 +934,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 时长算子，时长计算结束类型，录音结束，还是某句对话结束
+             * EndType.
              */
             public Builder endType(String endType) {
                 this.endType = endType;
@@ -930,7 +942,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 上下文重复算子：排除掉某些对话
+             * Excludes.
              */
             public Builder excludes(java.util.List < String > excludes) {
                 this.excludes = excludes;
@@ -938,7 +950,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 上下文重复算子：检测当前句的前from句是否有重复；0表示前面的所有句
+             * From.
              */
             public Builder from(Integer from) {
                 this.from = from;
@@ -946,7 +958,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * from_end
+             * From_end.
              */
             public Builder fromEnd(Boolean fromEnd) {
                 this.fromEnd = fromEnd;
@@ -954,7 +966,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 上下文重复算子：重复几次
+             * Hit_time.
              */
             public Builder hitTime(Integer hitTime) {
                 this.hitTime = hitTime;
@@ -962,7 +974,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 生效句子， true单个句子，false多个句子
+             * In_sentence.
              */
             public Builder inSentence(Boolean inSentence) {
                 this.inSentence = inSentence;
@@ -970,7 +982,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * interval代表区间范围开始
+             * Interval.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -978,7 +990,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * intervalEnd 代表区间范围结束
+             * IntervalEnd.
              */
             public Builder intervalEnd(Integer intervalEnd) {
                 this.intervalEnd = intervalEnd;
@@ -986,7 +998,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 关键字扩展
+             * KeywordExtension.
              */
             public Builder keywordExtension(Integer keywordExtension) {
                 this.keywordExtension = keywordExtension;
@@ -994,7 +1006,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 匹配到的关键字数量
+             * KeywordMatchSize.
              */
             public Builder keywordMatchSize(Integer keywordMatchSize) {
                 this.keywordMatchSize = keywordMatchSize;
@@ -1002,7 +1014,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 关键词
+             * Keywords.
              */
             public Builder keywords(java.util.List < String > keywords) {
                 this.keywords = keywords;
@@ -1010,7 +1022,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 知识信息
+             * KnowledgeInfo.
              */
             public Builder knowledgeInfo(String knowledgeInfo) {
                 this.knowledgeInfo = knowledgeInfo;
@@ -1018,7 +1030,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 命中问题后几句内检测答案
+             * KnowledgeSentenceNum.
              */
             public Builder knowledgeSentenceNum(Integer knowledgeSentenceNum) {
                 this.knowledgeSentenceNum = knowledgeSentenceNum;
@@ -1026,7 +1038,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 知识类目或者知识Id
+             * KnowledgeTargetId.
              */
             public Builder knowledgeTargetId(String knowledgeTargetId) {
                 this.knowledgeTargetId = knowledgeTargetId;
@@ -1034,7 +1046,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 知识类目名字或知识名字
+             * KnowledgeTargetName.
              */
             public Builder knowledgeTargetName(String knowledgeTargetName) {
                 this.knowledgeTargetName = knowledgeTargetName;
@@ -1042,7 +1054,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 0-类目 1-知识
+             * KnowledgeTargetType.
              */
             public Builder knowledgeTargetType(Integer knowledgeTargetType) {
                 this.knowledgeTargetType = knowledgeTargetType;
@@ -1050,7 +1062,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * lgf句子
+             * LgfSentences.
              */
             public Builder lgfSentences(java.util.List < String > lgfSentences) {
                 this.lgfSentences = lgfSentences;
@@ -1058,7 +1070,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 能量值变化，默认3, 1~9
+             * MaxEmotionChangeValue.
              */
             public Builder maxEmotionChangeValue(Integer maxEmotionChangeValue) {
                 this.maxEmotionChangeValue = maxEmotionChangeValue;
@@ -1066,7 +1078,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 句子中最少字数，小于此字数的句子不检查
+             * MinWordSize.
              */
             public Builder minWordSize(Integer minWordSize) {
                 this.minWordSize = minWordSize;
@@ -1074,7 +1086,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * true表示取不同角色相邻的两句话，false表示取不同角色的第一句话比较响应时间（默认）
+             * Near_dialogue.
              */
             public Builder nearDialogue(Boolean nearDialogue) {
                 this.nearDialogue = nearDialogue;
@@ -1082,7 +1094,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 排除的正则表达式
+             * NotRegex.
              */
             public Builder notRegex(String notRegex) {
                 this.notRegex = notRegex;
@@ -1090,7 +1102,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 语句
+             * Phrase.
              */
             public Builder phrase(String phrase) {
                 this.phrase = phrase;
@@ -1098,7 +1110,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 涉外属性需要的变量
+             * Pkey.
              */
             public Builder pkey(String pkey) {
                 this.pkey = pkey;
@@ -1106,7 +1118,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * poutput类型
+             * Poutput_type.
              */
             public Builder poutputType(Integer poutputType) {
                 this.poutputType = poutputType;
@@ -1114,7 +1126,15 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 问题命中阈值
+             * Pvalues.
+             */
+            public Builder pvalues(java.util.List < String > pvalues) {
+                this.pvalues = pvalues;
+                return this;
+            }
+
+            /**
+             * QuestionThreshold.
              */
             public Builder questionThreshold(String questionThreshold) {
                 this.questionThreshold = questionThreshold;
@@ -1122,7 +1142,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * references引用
+             * References.
              */
             public Builder references(java.util.List < String > references) {
                 this.references = references;
@@ -1130,7 +1150,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 正则表达式
+             * Regex.
              */
             public Builder regex(String regex) {
                 this.regex = regex;
@@ -1138,7 +1158,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 算子中使用角色，目前用于上下文重复算子，与target_role一起使用。
+             * RoleId.
              */
             public Builder roleId(Integer roleId) {
                 this.roleId = roleId;
@@ -1146,7 +1166,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 分数
+             * Score.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -1154,7 +1174,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 相似度阈值
+             * Similarity_threshold.
              */
             public Builder similarityThreshold(Double similarityThreshold) {
                 this.similarityThreshold = similarityThreshold;
@@ -1162,7 +1182,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 相识问
+             * SimilarlySentences.
              */
             public Builder similarlySentences(java.util.List < String > similarlySentences) {
                 this.similarlySentences = similarlySentences;
@@ -1170,7 +1190,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 同义词
+             * Synonyms.
              */
             public Builder synonyms(java.util.Map < String, java.util.List<String>> synonyms) {
                 this.synonyms = synonyms;
@@ -1178,7 +1198,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * target
+             * Target.
              */
             public Builder target(Integer target) {
                 this.target = target;
@@ -1186,7 +1206,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * target_role
+             * Target_role.
              */
             public Builder targetRole(String targetRole) {
                 this.targetRole = targetRole;
@@ -1194,7 +1214,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 阈值
+             * Threshold.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;
@@ -1202,7 +1222,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 使用eas算法
+             * UseEasAlgorithm.
              */
             public Builder useEasAlgorithm(Boolean useEasAlgorithm) {
                 this.useEasAlgorithm = useEasAlgorithm;
@@ -1210,7 +1230,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * 速度
+             * Velocity.
              */
             public Builder velocity(Double velocity) {
                 this.velocity = velocity;
@@ -1218,7 +1238,7 @@ public class OperatorBasicInfo extends TeaModel {
             }
 
             /**
-             * velocityInMint
+             * VelocityInMint.
              */
             public Builder velocityInMint(Integer velocityInMint) {
                 this.velocityInMint = velocityInMint;

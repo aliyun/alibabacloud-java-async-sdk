@@ -146,7 +146,7 @@ public class GraphFlowNode extends TeaModel {
         private Boolean useConditions; 
 
         /**
-         * 算子信息
+         * Conditions.
          */
         public Builder conditions(java.util.List < ConditionBasicInfo > conditions) {
             this.conditions = conditions;
@@ -154,7 +154,7 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * 前端展示使用
+         * Content.
          */
         public Builder content(String content) {
             this.content = content;
@@ -162,7 +162,7 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * 节点id
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -170,7 +170,7 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * index
+         * Index.
          */
         public Builder index(Integer index) {
             this.index = index;
@@ -178,7 +178,7 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * 节点名字
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -186,7 +186,7 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * 子节点
+         * NextNodes.
          */
         public Builder nextNodes(java.util.List < NextNodes> nextNodes) {
             this.nextNodes = nextNodes;
@@ -194,7 +194,7 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * 节点类型
+         * NodeType.
          */
         public Builder nodeType(String nodeType) {
             this.nodeType = nodeType;
@@ -202,7 +202,7 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * 节点属性
+         * Properties.
          */
         public Builder properties(Properties properties) {
             this.properties = properties;
@@ -210,7 +210,7 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * 规则ID，当规则没有落库时 rid为空。当规则落库时 rid == id
+         * Rid.
          */
         public Builder rid(Long rid) {
             this.rid = rid;
@@ -218,7 +218,7 @@ public class GraphFlowNode extends TeaModel {
         }
 
         /**
-         * 是否使用 算子匹配还是使用老板的匹配
+         * UseConditions.
          */
         public Builder useConditions(Boolean useConditions) {
             this.useConditions = useConditions;
@@ -318,7 +318,7 @@ public class GraphFlowNode extends TeaModel {
             private java.util.List < String > triggers; 
 
             /**
-             * 质检维度
+             * CheckType.
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -326,7 +326,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 流程分支优先级。越小优先级越高
+             * Index.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -334,7 +334,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 通往下一跳的Lambda表达式
+             * Lambda.
              */
             public Builder lambda(String lambda) {
                 this.lambda = lambda;
@@ -342,7 +342,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 条件分支名
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -350,7 +350,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 后续节点ID
+             * NextNodeId.
              */
             public Builder nextNodeId(Long nextNodeId) {
                 this.nextNodeId = nextNodeId;
@@ -358,7 +358,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 关注的算子
+             * Triggers.
              */
             public Builder triggers(java.util.List < String > triggers) {
                 this.triggers = triggers;
@@ -555,7 +555,7 @@ public class GraphFlowNode extends TeaModel {
             private String type; 
 
             /**
-             * 1 "不自动审核"
+             * AutoReview.
              */
             public Builder autoReview(Integer autoReview) {
                 this.autoReview = autoReview;
@@ -563,7 +563,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 是否开启分支判断
+             * BranchJudge.
              */
             public Builder branchJudge(Boolean branchJudge) {
                 this.branchJudge = branchJudge;
@@ -571,7 +571,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 最多检测N句
+             * CheckMoreSize.
              */
             public Builder checkMoreSize(Integer checkMoreSize) {
                 this.checkMoreSize = checkMoreSize;
@@ -579,7 +579,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 质检维度
+             * CheckType.
              */
             public Builder checkType(Integer checkType) {
                 this.checkType = checkType;
@@ -587,7 +587,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 普通算子逻辑
+             * Lambda.
              */
             public Builder lambda(String lambda) {
                 this.lambda = lambda;
@@ -595,7 +595,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * single类型时，角色
+             * Role.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -603,7 +603,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 是否计分
+             * RuleScoreType.
              */
             public Builder ruleScoreType(Integer ruleScoreType) {
                 this.ruleScoreType = ruleScoreType;
@@ -611,7 +611,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * single类型时，是否表达
+             * SayType.
              */
             public Builder sayType(String sayType) {
                 this.sayType = sayType;
@@ -619,7 +619,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 计分值
+             * ScoreNum.
              */
             public Builder scoreNum(Integer scoreNum) {
                 this.scoreNum = scoreNum;
@@ -627,7 +627,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 0-触发规则后加减分;1-触发规则后一次性得分
+             * ScoreNumType.
              */
             public Builder scoreNumType(Integer scoreNumType) {
                 this.scoreNumType = scoreNumType;
@@ -635,7 +635,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 0-命中节点时计分
+             * ScoreRuleHitType.
              */
             public Builder scoreRuleHitType(Integer scoreRuleHitType) {
                 this.scoreRuleHitType = scoreRuleHitType;
@@ -643,7 +643,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 1加分 3减分 默认1
+             * ScoreType.
              */
             public Builder scoreType(Integer scoreType) {
                 this.scoreType = scoreType;
@@ -651,7 +651,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 关注的算子
+             * Triggers.
              */
             public Builder triggers(java.util.List < String > triggers) {
                 this.triggers = triggers;
@@ -659,7 +659,7 @@ public class GraphFlowNode extends TeaModel {
             }
 
             /**
-             * 属性类型
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;

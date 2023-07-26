@@ -69,7 +69,7 @@ public class DeleteWarningStrategyConfigRequest extends Request {
         } 
 
         /**
-         * baseMeAgentId
+         * BaseMeAgentId.
          */
         public Builder baseMeAgentId(Long baseMeAgentId) {
             this.putQueryParameter("BaseMeAgentId", baseMeAgentId);
