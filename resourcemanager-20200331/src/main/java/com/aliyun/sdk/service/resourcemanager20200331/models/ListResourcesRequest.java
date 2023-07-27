@@ -38,6 +38,10 @@ public class ListResourcesRequest extends Request {
     private String resourceType;
 
     @Query
+    @NameInMap("ResourceTypes")
+    private java.util.List < ResourceTypes> resourceTypes;
+
+    @Query
     @NameInMap("Service")
     private String service;
 
@@ -49,6 +53,7 @@ public class ListResourcesRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
+        this.resourceTypes = builder.resourceTypes;
         this.service = builder.service;
     }
 
@@ -108,6 +113,13 @@ public class ListResourcesRequest extends Request {
     }
 
     /**
+     * @return resourceTypes
+     */
+    public java.util.List < ResourceTypes> getResourceTypes() {
+        return this.resourceTypes;
+    }
+
+    /**
      * @return service
      */
     public String getService() {
@@ -121,6 +133,7 @@ public class ListResourcesRequest extends Request {
         private String resourceGroupId; 
         private String resourceId; 
         private String resourceType; 
+        private java.util.List < ResourceTypes> resourceTypes; 
         private String service; 
 
         private Builder() {
@@ -135,6 +148,7 @@ public class ListResourcesRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
+            this.resourceTypes = request.resourceTypes;
             this.service = request.service;
         } 
 
@@ -202,6 +216,15 @@ public class ListResourcesRequest extends Request {
         }
 
         /**
+         * ResourceTypes.
+         */
+        public Builder resourceTypes(java.util.List < ResourceTypes> resourceTypes) {
+            this.putQueryParameter("ResourceTypes", resourceTypes);
+            this.resourceTypes = resourceTypes;
+            return this;
+        }
+
+        /**
          * The ID of the Alibaba Cloud service.
          * <p>
          * 
@@ -220,4 +243,71 @@ public class ListResourcesRequest extends Request {
 
     } 
 
+    public static class ResourceTypes extends TeaModel {
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        @NameInMap("Service")
+        private String service;
+
+        private ResourceTypes(Builder builder) {
+            this.resourceType = builder.resourceType;
+            this.service = builder.service;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
+         * @return service
+         */
+        public String getService() {
+            return this.service;
+        }
+
+        public static final class Builder {
+            private String resourceType; 
+            private String service; 
+
+            /**
+             * The resource type.
+             * <p>
+             * 
+             * For more information about the supported resource types, see the **Resource type** column in [Alibaba Cloud services that support resource groups](~~94479~~).
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * The ID of the Alibaba Cloud service.
+             * <p>
+             * 
+             * You can obtain the ID from the **Service code** column in [Alibaba Cloud services that support resource groups](~~94479~~).
+             */
+            public Builder service(String service) {
+                this.service = service;
+                return this;
+            }
+
+            public ResourceTypes build() {
+                return new ResourceTypes(this);
+            } 
+
+        } 
+
+    }
 }
