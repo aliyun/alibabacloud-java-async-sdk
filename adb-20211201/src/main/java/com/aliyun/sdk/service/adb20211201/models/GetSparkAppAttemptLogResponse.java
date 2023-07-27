@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.adb20211201.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetSparkAppAttemptLogResponse} extends {@link TeaModel}
+ *
+ * <p>GetSparkAppAttemptLogResponse</p>
+ */
+public class GetSparkAppAttemptLogResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private GetSparkAppAttemptLogResponseBody body;
+
+    private GetSparkAppAttemptLogResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static GetSparkAppAttemptLogResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public GetSparkAppAttemptLogResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<GetSparkAppAttemptLogResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(GetSparkAppAttemptLogResponseBody body);
+
+        @Override
+        GetSparkAppAttemptLogResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<GetSparkAppAttemptLogResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private GetSparkAppAttemptLogResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(GetSparkAppAttemptLogResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(GetSparkAppAttemptLogResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public GetSparkAppAttemptLogResponse build() {
+            return new GetSparkAppAttemptLogResponse(this);
+        } 
+
+    } 
+
+}
