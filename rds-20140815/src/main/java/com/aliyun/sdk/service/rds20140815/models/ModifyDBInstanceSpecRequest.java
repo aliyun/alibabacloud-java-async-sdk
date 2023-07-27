@@ -95,6 +95,10 @@ public class ModifyDBInstanceSpecRequest extends Request {
     private String switchTime;
 
     @Query
+    @NameInMap("TargetMinorVersion")
+    private String targetMinorVersion;
+
+    @Query
     @NameInMap("UsedTime")
     private Long usedTime;
 
@@ -124,6 +128,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         this.serverlessConfiguration = builder.serverlessConfiguration;
         this.sourceBiz = builder.sourceBiz;
         this.switchTime = builder.switchTime;
+        this.targetMinorVersion = builder.targetMinorVersion;
         this.usedTime = builder.usedTime;
         this.zoneId = builder.zoneId;
     }
@@ -282,6 +287,13 @@ public class ModifyDBInstanceSpecRequest extends Request {
     }
 
     /**
+     * @return targetMinorVersion
+     */
+    public String getTargetMinorVersion() {
+        return this.targetMinorVersion;
+    }
+
+    /**
      * @return usedTime
      */
     public Long getUsedTime() {
@@ -316,6 +328,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         private ServerlessConfiguration serverlessConfiguration; 
         private String sourceBiz; 
         private String switchTime; 
+        private String targetMinorVersion; 
         private Long usedTime; 
         private String zoneId; 
 
@@ -345,6 +358,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
             this.serverlessConfiguration = request.serverlessConfiguration;
             this.sourceBiz = request.sourceBiz;
             this.switchTime = request.switchTime;
+            this.targetMinorVersion = request.targetMinorVersion;
             this.usedTime = request.usedTime;
             this.zoneId = request.zoneId;
         } 
@@ -538,6 +552,15 @@ public class ModifyDBInstanceSpecRequest extends Request {
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
             this.switchTime = switchTime;
+            return this;
+        }
+
+        /**
+         * TargetMinorVersion.
+         */
+        public Builder targetMinorVersion(String targetMinorVersion) {
+            this.putQueryParameter("TargetMinorVersion", targetMinorVersion);
+            this.targetMinorVersion = targetMinorVersion;
             return this;
         }
 
