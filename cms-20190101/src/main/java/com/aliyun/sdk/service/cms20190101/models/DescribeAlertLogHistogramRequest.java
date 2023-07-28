@@ -69,6 +69,10 @@ public class DescribeAlertLogHistogramRequest extends Request {
     private String sendStatus;
 
     @Query
+    @NameInMap("SourceType")
+    private String sourceType;
+
+    @Query
     @NameInMap("StartTime")
     private Long startTime;
 
@@ -88,6 +92,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         this.ruleName = builder.ruleName;
         this.searchKey = builder.searchKey;
         this.sendStatus = builder.sendStatus;
+        this.sourceType = builder.sourceType;
         this.startTime = builder.startTime;
     }
 
@@ -203,6 +208,13 @@ public class DescribeAlertLogHistogramRequest extends Request {
     }
 
     /**
+     * @return sourceType
+     */
+    public String getSourceType() {
+        return this.sourceType;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -224,6 +236,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
         private String ruleName; 
         private String searchKey; 
         private String sendStatus; 
+        private String sourceType; 
         private Long startTime; 
 
         private Builder() {
@@ -246,6 +259,7 @@ public class DescribeAlertLogHistogramRequest extends Request {
             this.ruleName = request.ruleName;
             this.searchKey = request.searchKey;
             this.sendStatus = request.sendStatus;
+            this.sourceType = request.sourceType;
             this.startTime = request.startTime;
         } 
 
@@ -401,6 +415,15 @@ public class DescribeAlertLogHistogramRequest extends Request {
         public Builder sendStatus(String sendStatus) {
             this.putQueryParameter("SendStatus", sendStatus);
             this.sendStatus = sendStatus;
+            return this;
+        }
+
+        /**
+         * SourceType.
+         */
+        public Builder sourceType(String sourceType) {
+            this.putQueryParameter("SourceType", sourceType);
+            this.sourceType = sourceType;
             return this;
         }
 

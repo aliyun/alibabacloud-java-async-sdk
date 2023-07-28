@@ -619,6 +619,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifySiteMonitorResponse> modifySiteMonitor(ModifySiteMonitorRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<OpenCmsServiceResponse> openCmsService(OpenCmsServiceRequest request);
 
     CompletableFuture<PutContactResponse> putContact(PutContactRequest request);

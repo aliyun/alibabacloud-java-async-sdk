@@ -148,6 +148,9 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         private String instanceId;
 
+        @NameInMap("OsMonitorConfig")
+        private String osMonitorConfig;
+
         @NameInMap("OsMonitorErrorCode")
         private String osMonitorErrorCode;
 
@@ -166,6 +169,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         private NodeStatus(Builder builder) {
             this.autoInstall = builder.autoInstall;
             this.instanceId = builder.instanceId;
+            this.osMonitorConfig = builder.osMonitorConfig;
             this.osMonitorErrorCode = builder.osMonitorErrorCode;
             this.osMonitorErrorDetail = builder.osMonitorErrorDetail;
             this.osMonitorStatus = builder.osMonitorStatus;
@@ -193,6 +197,13 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return osMonitorConfig
+         */
+        public String getOsMonitorConfig() {
+            return this.osMonitorConfig;
         }
 
         /**
@@ -233,6 +244,7 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean autoInstall; 
             private String instanceId; 
+            private String osMonitorConfig; 
             private String osMonitorErrorCode; 
             private String osMonitorErrorDetail; 
             private String osMonitorStatus; 
@@ -260,6 +272,14 @@ public class DescribeMonitoringAgentStatusesResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * OsMonitorConfig.
+             */
+            public Builder osMonitorConfig(String osMonitorConfig) {
+                this.osMonitorConfig = osMonitorConfig;
                 return this;
             }
 

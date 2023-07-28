@@ -2356,6 +2356,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     */
     @Override
     public CompletableFuture<OpenCmsServiceResponse> openCmsService(OpenCmsServiceRequest request) {
         try {
