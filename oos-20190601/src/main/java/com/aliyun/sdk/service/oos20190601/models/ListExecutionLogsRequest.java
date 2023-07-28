@@ -125,7 +125,7 @@ public class ListExecutionLogsRequest extends Request {
         } 
 
         /**
-         * ExecutionId.
+         * The ID of the execution.
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -134,7 +134,7 @@ public class ListExecutionLogsRequest extends Request {
         }
 
         /**
-         * LogType.
+         * The type of the log.
          */
         public Builder logType(String logType) {
             this.putQueryParameter("LogType", logType);
@@ -143,7 +143,7 @@ public class ListExecutionLogsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -152,7 +152,7 @@ public class ListExecutionLogsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -161,7 +161,7 @@ public class ListExecutionLogsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which you want to query the logs of the execution.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -170,7 +170,7 @@ public class ListExecutionLogsRequest extends Request {
         }
 
         /**
-         * TaskExecutionId.
+         * The execution ID of the task.
          */
         public Builder taskExecutionId(String taskExecutionId) {
             this.putQueryParameter("TaskExecutionId", taskExecutionId);

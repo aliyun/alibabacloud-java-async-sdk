@@ -96,7 +96,7 @@ public class ListTagKeysRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page. Valid value: 10 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -105,7 +105,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -114,7 +114,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -123,7 +123,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource to which the tag is added.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

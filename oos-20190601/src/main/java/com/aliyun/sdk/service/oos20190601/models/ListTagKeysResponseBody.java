@@ -74,7 +74,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Keys.
+         * The tag keys.
          */
         public Builder keys(java.util.List < String > keys) {
             this.keys = keys;
@@ -82,7 +82,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -90,7 +90,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +98,7 @@ public class ListTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

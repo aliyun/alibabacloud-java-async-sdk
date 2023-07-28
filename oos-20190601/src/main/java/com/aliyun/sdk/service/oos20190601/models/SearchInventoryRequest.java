@@ -111,7 +111,11 @@ public class SearchInventoryRequest extends Request {
         } 
 
         /**
-         * Aggregator.
+         * The information about aggregators. You can use one or more aggregators to query the aggregate information of an instance. Valid values:
+         * <p>
+         * 
+         * *   ACS:Application.Name
+         * *   ACS:Application.Version
          */
         public Builder aggregator(java.util.List < String > aggregator) {
             this.putQueryParameter("Aggregator", aggregator);
@@ -120,7 +124,7 @@ public class SearchInventoryRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The filter rules for the component.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -129,7 +133,7 @@ public class SearchInventoryRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: 1 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -138,7 +142,7 @@ public class SearchInventoryRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -147,7 +151,7 @@ public class SearchInventoryRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -213,7 +217,7 @@ public class SearchInventoryRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Name.
+             * The name of the component property. Valid values of N: 1 to 5. Different components have different property names. You can call the [GetInventorySchema](https://api.aliyun.com/#/?product=oos\&version=2019-06-01\&api=GetInventorySchema) operation to query the property names of different components. For example, the ACS:InstanceInformation component has the InstanceId property. Therefore, you can set this parameter to ACS:InstanceInformation.InstanceId.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -221,7 +225,14 @@ public class SearchInventoryRequest extends Request {
             }
 
             /**
-             * Operator.
+             * The comparison operator that is used to filter property values. Valid values of N: 1 to 5. Valid values:
+             * <p>
+             * 
+             * *   Equal
+             * *   NotEqual
+             * *   BeginWith
+             * *   LessThan
+             * *   GreaterThan
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -229,7 +240,7 @@ public class SearchInventoryRequest extends Request {
             }
 
             /**
-             * Value.
+             * The property values to query.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

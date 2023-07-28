@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateExecutionPolicyResponseBody</p>
  */
 public class GenerateExecutionPolicyResponseBody extends TeaModel {
+    @NameInMap("MissingPolicy")
+    private String missingPolicy;
+
     @NameInMap("Policy")
     private String policy;
 
@@ -19,6 +22,7 @@ public class GenerateExecutionPolicyResponseBody extends TeaModel {
     private String requestId;
 
     private GenerateExecutionPolicyResponseBody(Builder builder) {
+        this.missingPolicy = builder.missingPolicy;
         this.policy = builder.policy;
         this.requestId = builder.requestId;
     }
@@ -29,6 +33,13 @@ public class GenerateExecutionPolicyResponseBody extends TeaModel {
 
     public static GenerateExecutionPolicyResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return missingPolicy
+     */
+    public String getMissingPolicy() {
+        return this.missingPolicy;
     }
 
     /**
@@ -46,11 +57,20 @@ public class GenerateExecutionPolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String missingPolicy; 
         private String policy; 
         private String requestId; 
 
         /**
-         * Policy.
+         * The policies that are missing.
+         */
+        public Builder missingPolicy(String missingPolicy) {
+            this.missingPolicy = missingPolicy;
+            return this;
+        }
+
+        /**
+         * The RAM policy.
          */
         public Builder policy(String policy) {
             this.policy = policy;
@@ -58,7 +78,7 @@ public class GenerateExecutionPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

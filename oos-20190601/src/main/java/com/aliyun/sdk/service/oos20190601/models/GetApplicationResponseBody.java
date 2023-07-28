@@ -50,7 +50,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Application.
+         * The information about the application.
          */
         public Builder application(Application application) {
             this.application = application;
@@ -58,7 +58,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,7 +71,94 @@ public class GetApplicationResponseBody extends TeaModel {
 
     } 
 
+    public static class AlarmConfig extends TeaModel {
+        @NameInMap("ContactGroups")
+        private java.util.List < String > contactGroups;
+
+        @NameInMap("HealthCheckUrl")
+        private String healthCheckUrl;
+
+        @NameInMap("TemplateIds")
+        private java.util.List < String > templateIds;
+
+        private AlarmConfig(Builder builder) {
+            this.contactGroups = builder.contactGroups;
+            this.healthCheckUrl = builder.healthCheckUrl;
+            this.templateIds = builder.templateIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AlarmConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return contactGroups
+         */
+        public java.util.List < String > getContactGroups() {
+            return this.contactGroups;
+        }
+
+        /**
+         * @return healthCheckUrl
+         */
+        public String getHealthCheckUrl() {
+            return this.healthCheckUrl;
+        }
+
+        /**
+         * @return templateIds
+         */
+        public java.util.List < String > getTemplateIds() {
+            return this.templateIds;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > contactGroups; 
+            private String healthCheckUrl; 
+            private java.util.List < String > templateIds; 
+
+            /**
+             * ContactGroups.
+             */
+            public Builder contactGroups(java.util.List < String > contactGroups) {
+                this.contactGroups = contactGroups;
+                return this;
+            }
+
+            /**
+             * HealthCheckUrl.
+             */
+            public Builder healthCheckUrl(String healthCheckUrl) {
+                this.healthCheckUrl = healthCheckUrl;
+                return this;
+            }
+
+            /**
+             * TemplateIds.
+             */
+            public Builder templateIds(java.util.List < String > templateIds) {
+                this.templateIds = templateIds;
+                return this;
+            }
+
+            public AlarmConfig build() {
+                return new AlarmConfig(this);
+            } 
+
+        } 
+
+    }
     public static class Application extends TeaModel {
+        @NameInMap("AlarmConfig")
+        private AlarmConfig alarmConfig;
+
+        @NameInMap("ApplicationType")
+        private String applicationType;
+
         @NameInMap("CreateDate")
         private String createDate;
 
@@ -91,6 +178,8 @@ public class GetApplicationResponseBody extends TeaModel {
         private String updateDate;
 
         private Application(Builder builder) {
+            this.alarmConfig = builder.alarmConfig;
+            this.applicationType = builder.applicationType;
             this.createDate = builder.createDate;
             this.description = builder.description;
             this.name = builder.name;
@@ -105,6 +194,20 @@ public class GetApplicationResponseBody extends TeaModel {
 
         public static Application create() {
             return builder().build();
+        }
+
+        /**
+         * @return alarmConfig
+         */
+        public AlarmConfig getAlarmConfig() {
+            return this.alarmConfig;
+        }
+
+        /**
+         * @return applicationType
+         */
+        public String getApplicationType() {
+            return this.applicationType;
         }
 
         /**
@@ -150,6 +253,8 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AlarmConfig alarmConfig; 
+            private String applicationType; 
             private String createDate; 
             private String description; 
             private String name; 
@@ -158,7 +263,23 @@ public class GetApplicationResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * CreateDate.
+             * AlarmConfig.
+             */
+            public Builder alarmConfig(AlarmConfig alarmConfig) {
+                this.alarmConfig = alarmConfig;
+                return this;
+            }
+
+            /**
+             * ApplicationType.
+             */
+            public Builder applicationType(String applicationType) {
+                this.applicationType = applicationType;
+                return this;
+            }
+
+            /**
+             * The time when the application was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -166,7 +287,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the application.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +295,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The application name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -182,7 +303,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -190,7 +311,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -198,7 +319,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the application was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

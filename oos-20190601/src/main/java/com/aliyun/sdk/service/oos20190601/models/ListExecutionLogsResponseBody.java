@@ -86,7 +86,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ExecutionLogs.
+         * The execution logs.
          */
         public Builder executionLogs(java.util.List < ExecutionLogs> executionLogs) {
             this.executionLogs = executionLogs;
@@ -94,7 +94,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * IsTruncated.
+         * Indicates whether the log is truncated.
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -102,7 +102,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -110,7 +110,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -118,7 +118,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * LogType.
+             * The type of the log.
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -202,7 +202,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The details of the task execution.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -210,7 +210,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
             }
 
             /**
-             * TaskExecutionId.
+             * The execution ID of the task.
              */
             public Builder taskExecutionId(String taskExecutionId) {
                 this.taskExecutionId = taskExecutionId;
@@ -218,7 +218,7 @@ public class ListExecutionLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The timestamp when the task was run.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;

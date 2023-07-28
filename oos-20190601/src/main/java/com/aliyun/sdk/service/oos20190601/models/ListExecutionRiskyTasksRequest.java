@@ -69,7 +69,7 @@ public class ListExecutionRiskyTasksRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,7 +78,7 @@ public class ListExecutionRiskyTasksRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the template.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

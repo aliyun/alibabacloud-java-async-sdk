@@ -97,7 +97,7 @@ public class GetParameterRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The operation that you want to perform. Set the value to GetParameter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -106,7 +106,7 @@ public class GetParameterRequest extends Request {
         }
 
         /**
-         * ParameterVersion.
+         * The time when the common parameter was updated.
          */
         public Builder parameterVersion(Integer parameterVersion) {
             this.putQueryParameter("ParameterVersion", parameterVersion);
@@ -115,7 +115,7 @@ public class GetParameterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The name of the common parameter.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +124,7 @@ public class GetParameterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The user who created the common parameter.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

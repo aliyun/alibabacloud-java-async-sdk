@@ -181,7 +181,7 @@ public class ListSecretParametersRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -190,7 +190,7 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the parameter. **You can enter a keyword to query parameter names in fuzzy match mode.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -199,7 +199,7 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -208,7 +208,7 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * Path.
+         * The path of the parameter. For example, if the name of a parameter is /path/path1/Myparameter, the path of the parameter is /path/path1/.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -217,7 +217,7 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * Recursive.
+         * Specifies whether to query parameters from all levels of directories in the specified path. Default value: false.
          */
         public Builder recursive(Boolean recursive) {
             this.putQueryParameter("Recursive", recursive);
@@ -226,7 +226,7 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,7 +235,7 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -244,7 +244,11 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * SortField.
+         * The field used to sort the query results. Valid values:
+         * <p>
+         * 
+         * *   Name
+         * *   CreatedDate
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -253,7 +257,11 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * The order in which the entries are sorted. Valid values:
+         * <p>
+         * 
+         * *   Ascending
+         * *   Descending (Default)
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -262,7 +270,7 @@ public class ListSecretParametersRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags of the parameter.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

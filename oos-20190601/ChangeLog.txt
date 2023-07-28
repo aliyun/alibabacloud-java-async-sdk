@@ -1,3 +1,6 @@
+2023-07-28 Version: 1.0.4
+- PatchBaseline Support Tags.
+
 2022-11-07 Version: 1.0.3
 - Update StartExecution add Parameter TemplateURL.
    Update StartExecution Parameter TemplateName to optional.

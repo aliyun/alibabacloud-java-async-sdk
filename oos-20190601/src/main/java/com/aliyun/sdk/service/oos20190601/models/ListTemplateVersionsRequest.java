@@ -111,7 +111,7 @@ public class ListTemplateVersionsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The maximum number of results on each page. Valid values: 10 to 100
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -120,7 +120,7 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -129,7 +129,7 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -138,7 +138,7 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * ShareType.
+         * The type of the template. Valid values: Private and Public.
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -147,7 +147,7 @@ public class ListTemplateVersionsRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the template.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

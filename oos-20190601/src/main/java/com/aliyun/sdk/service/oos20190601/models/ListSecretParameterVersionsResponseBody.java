@@ -158,7 +158,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * CreatedBy.
+         * The user who created the encryption parameter.
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -166,7 +166,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedDate.
+         * The time when the encryption parameter was created.
          */
         public Builder createdDate(String createdDate) {
             this.createdDate = createdDate;
@@ -174,7 +174,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the encryption parameter.
          */
         public Builder description(String description) {
             this.description = description;
@@ -182,7 +182,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * The ID of the encryption parameter.
          */
         public Builder id(String id) {
             this.id = id;
@@ -190,7 +190,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -198,7 +198,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the encryption parameter.
          */
         public Builder name(String name) {
             this.name = name;
@@ -206,7 +206,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -214,7 +214,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * ParameterVersions.
+         * The information about the version of the encryption parameter.
          */
         public Builder parameterVersions(java.util.List < ParameterVersions> parameterVersions) {
             this.parameterVersions = parameterVersions;
@@ -222,7 +222,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -238,7 +238,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The type of the encryption parameter.
          */
         public Builder type(String type) {
             this.type = type;
@@ -314,7 +314,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * ParameterVersion.
+             * The version number of the encryption parameter.
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -322,7 +322,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * The user who updated the encryption parameter.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -330,7 +330,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the encryption parameter was updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -338,7 +338,7 @@ public class ListSecretParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the encryption parameter.
              */
             public Builder value(String value) {
                 this.value = value;

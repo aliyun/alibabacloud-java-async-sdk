@@ -17,6 +17,10 @@ public class UpdateExecutionRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("Description")
+    private String description;
+
+    @Query
     @NameInMap("ExecutionId")
     @Validation(required = true)
     private String executionId;
@@ -32,6 +36,7 @@ public class UpdateExecutionRequest extends Request {
     private UpdateExecutionRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.description = builder.description;
         this.executionId = builder.executionId;
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
@@ -58,6 +63,13 @@ public class UpdateExecutionRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return executionId
      */
     public String getExecutionId() {
@@ -80,6 +92,7 @@ public class UpdateExecutionRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateExecutionRequest, Builder> {
         private String clientToken; 
+        private String description; 
         private String executionId; 
         private String parameters; 
         private String regionId; 
@@ -91,13 +104,14 @@ public class UpdateExecutionRequest extends Request {
         private Builder(UpdateExecutionRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.description = request.description;
             this.executionId = request.executionId;
             this.parameters = request.parameters;
             this.regionId = request.regionId;
         } 
 
         /**
-         * ClientToken.
+         * The description of the execution.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -106,7 +120,16 @@ public class UpdateExecutionRequest extends Request {
         }
 
         /**
-         * ExecutionId.
+         * 执行的描述。
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * The ID of the execution.
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -115,7 +138,7 @@ public class UpdateExecutionRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * A JSON string consisting of a collection of parameters. Default value: {}.
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -124,7 +147,7 @@ public class UpdateExecutionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

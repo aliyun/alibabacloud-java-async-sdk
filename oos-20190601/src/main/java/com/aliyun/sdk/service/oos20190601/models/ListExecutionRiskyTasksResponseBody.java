@@ -50,7 +50,7 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
         private java.util.List < RiskyTasks> riskyTasks; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RiskyTasks.
+         * The information about high-risk tasks.
          */
         public Builder riskyTasks(java.util.List < RiskyTasks> riskyTasks) {
             this.riskyTasks = riskyTasks;
@@ -134,7 +134,7 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
             private java.util.List < String > template; 
 
             /**
-             * API.
+             * The name of the operation that the high-risk task calls.
              */
             public Builder API(String API) {
                 this.API = API;
@@ -142,7 +142,7 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Service.
+             * The cloud service in which the high-risk task runs.
              */
             public Builder service(String service) {
                 this.service = service;
@@ -150,7 +150,7 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Task.
+             * The details of the high-risk task.
              */
             public Builder task(java.util.List < String > task) {
                 this.task = task;
@@ -158,7 +158,7 @@ public class ListExecutionRiskyTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Template.
+             * The details of templates to which the high-risk task belongs.
              */
             public Builder template(java.util.List < String > template) {
                 this.template = template;

@@ -182,7 +182,7 @@ public class CreateSecretParameterRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). For more information, see "How to ensure idempotence".
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,7 +191,13 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * Constraints.
+         * The constraints of the encryption parameter. By default, this parameter is null. Valid values:
+         * <p>
+         * 
+         * *   AllowedValues: The value that is allowed for the encryption parameter. It must be an array string.
+         * *   AllowedPattern: The pattern that is allowed for the encryption parameter. It must be a regular expression.
+         * *   MinLength: The minimum length of the encryption parameter.
+         * *   MaxLength: The maximum length of the encryption parameter.
          */
         public Builder constraints(String constraints) {
             this.putQueryParameter("Constraints", constraints);
@@ -200,7 +206,7 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the encryption parameter. The description must be 1 to 200 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -209,7 +215,7 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * KeyId.
+         * The key ID of Key Management Service (KMS) that is used to encrypt the parameter.
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -218,7 +224,7 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -227,7 +233,7 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -236,7 +242,7 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -245,7 +251,7 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -255,7 +261,7 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * Type.
+         * The data type of the parameter. Set the value to Secret.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -264,7 +270,7 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * Value.
+         * The value of the encryption parameter. The value must be 1 to 4096 characters in length.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

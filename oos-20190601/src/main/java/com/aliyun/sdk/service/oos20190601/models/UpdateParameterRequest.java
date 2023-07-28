@@ -126,7 +126,7 @@ public class UpdateParameterRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The ID of the common parameter.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -135,7 +135,7 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
-         * Name.
+         * The data type of the common parameter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -144,7 +144,7 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The version number of the common parameter.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +153,7 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The operation that you want to perform. Set the value to UpdateParameter.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -162,7 +162,7 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The name of the common parameter.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -171,7 +171,7 @@ public class UpdateParameterRequest extends Request {
         }
 
         /**
-         * Value.
+         * The value of the common parameter. The value must be 1 to 4096 characters in length.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

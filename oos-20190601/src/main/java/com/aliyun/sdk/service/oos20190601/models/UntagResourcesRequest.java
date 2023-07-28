@@ -122,7 +122,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Specifies whether to delete all tags. This parameter takes effect only when the TagKeys parameter is not specified. Valid values: true and false. Default value: false. The TagKeys parameter is required when this parameter is set to false.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +131,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * You can call this operation to delete tags that are attached to one or more resources.
          */
         public Builder resourceIds(java.util.Map < String, ? > resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "ResourceIds", "json");

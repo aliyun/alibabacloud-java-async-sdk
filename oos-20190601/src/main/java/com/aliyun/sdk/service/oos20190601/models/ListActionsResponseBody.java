@@ -74,7 +74,7 @@ public class ListActionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Actions.
+         * The details of the actions.
          */
         public Builder actions(java.util.List < Actions> actions) {
             this.actions = actions;
@@ -82,7 +82,7 @@ public class ListActionsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -90,7 +90,7 @@ public class ListActionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +98,7 @@ public class ListActionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +210,23 @@ public class ListActionsResponseBody extends TeaModel {
             private String templateVersion; 
 
             /**
-             * ActionType.
+             * The type of the action.
+             * <p>
+             * 
+             * 1.  Atomic actions
+             * 
+             *     *   Atomic.API
+             *     *   Atomic.Trigger
+             *     *   Atomic.Control
+             *     *   Atomic.Embedded
+             * 
+             * 2.  Cloud product actions
+             * 
+             *     *   Product.ECS
+             *     *   Product.RDS
+             *     *   Product.VPC
+             *     *   Product.FC
+             *     *   ...
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -218,7 +234,7 @@ public class ListActionsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * The time when the action was created.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -226,7 +242,7 @@ public class ListActionsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the action.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -234,7 +250,7 @@ public class ListActionsResponseBody extends TeaModel {
             }
 
             /**
-             * OOSActionName.
+             * The name of the action.
              */
             public Builder OOSActionName(String OOSActionName) {
                 this.OOSActionName = OOSActionName;
@@ -242,7 +258,7 @@ public class ListActionsResponseBody extends TeaModel {
             }
 
             /**
-             * Popularity.
+             * The number of times that the action is used.
              */
             public Builder popularity(Integer popularity) {
                 this.popularity = popularity;
@@ -250,7 +266,7 @@ public class ListActionsResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * The parameters of the action.
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -258,7 +274,10 @@ public class ListActionsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersion.
+             * The version of the template that corresponds to the action.
+             * <p>
+             * 
+             * >  For atomic actions, this parameter is not returned.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;

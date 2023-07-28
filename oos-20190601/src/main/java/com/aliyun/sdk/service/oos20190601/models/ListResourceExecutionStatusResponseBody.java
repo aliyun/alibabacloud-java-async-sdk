@@ -74,7 +74,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
         private java.util.List < ResourceExecutionStatus> resourceExecutionStatus; 
 
         /**
-         * MaxResults.
+         * The number of entries returned on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +82,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceExecutionStatus.
+         * The execution information of the resource.
          */
         public Builder resourceExecutionStatus(java.util.List < ResourceExecutionStatus> resourceExecutionStatus) {
             this.resourceExecutionStatus = resourceExecutionStatus;
@@ -186,7 +186,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ExecutionId.
+             * The ID of the execution.
              */
             public Builder executionId(String executionId) {
                 this.executionId = executionId;
@@ -194,7 +194,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionTime.
+             * The time when the execution started running.
              */
             public Builder executionTime(String executionTime) {
                 this.executionTime = executionTime;
@@ -202,7 +202,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Outputs.
+             * The output of the template.
              */
             public Builder outputs(String outputs) {
                 this.outputs = outputs;
@@ -210,7 +210,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -218,7 +218,7 @@ public class ListResourceExecutionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the execution.
              */
             public Builder status(String status) {
                 this.status = status;

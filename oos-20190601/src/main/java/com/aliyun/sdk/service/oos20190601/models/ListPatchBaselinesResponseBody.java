@@ -74,7 +74,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MaxResults.
+         * The type of the operating system.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +82,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * gAAAAABfTgv5ewUWmNdJ3g7JVLvX70sPH90GZOVGC
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * PatchBaselines.
+         * Indicates whether the patch baseline is set as the default patch baseline.
          */
         public Builder patchBaselines(java.util.List < PatchBaselines> patchBaselines) {
             this.patchBaselines = patchBaselines;
@@ -98,7 +98,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The details of the patch baselines.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,7 +111,74 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("TagKey")
+        private String tagKey;
+
+        @NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class PatchBaselines extends TeaModel {
+        @NameInMap("ApprovedPatches")
+        private java.util.List < String > approvedPatches;
+
+        @NameInMap("ApprovedPatchesEnableNonSecurity")
+        private Boolean approvedPatchesEnableNonSecurity;
+
         @NameInMap("CreatedBy")
         private String createdBy;
 
@@ -136,6 +203,12 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         @NameInMap("ShareType")
         private String shareType;
 
+        @NameInMap("Sources")
+        private java.util.List < String > sources;
+
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @NameInMap("UpdatedBy")
         private String updatedBy;
 
@@ -143,6 +216,8 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         private String updatedDate;
 
         private PatchBaselines(Builder builder) {
+            this.approvedPatches = builder.approvedPatches;
+            this.approvedPatchesEnableNonSecurity = builder.approvedPatchesEnableNonSecurity;
             this.createdBy = builder.createdBy;
             this.createdDate = builder.createdDate;
             this.description = builder.description;
@@ -151,6 +226,8 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             this.name = builder.name;
             this.operationSystem = builder.operationSystem;
             this.shareType = builder.shareType;
+            this.sources = builder.sources;
+            this.tags = builder.tags;
             this.updatedBy = builder.updatedBy;
             this.updatedDate = builder.updatedDate;
         }
@@ -161,6 +238,20 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
 
         public static PatchBaselines create() {
             return builder().build();
+        }
+
+        /**
+         * @return approvedPatches
+         */
+        public java.util.List < String > getApprovedPatches() {
+            return this.approvedPatches;
+        }
+
+        /**
+         * @return approvedPatchesEnableNonSecurity
+         */
+        public Boolean getApprovedPatchesEnableNonSecurity() {
+            return this.approvedPatchesEnableNonSecurity;
         }
 
         /**
@@ -220,6 +311,20 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sources
+         */
+        public java.util.List < String > getSources() {
+            return this.sources;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return updatedBy
          */
         public String getUpdatedBy() {
@@ -234,6 +339,8 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > approvedPatches; 
+            private Boolean approvedPatchesEnableNonSecurity; 
             private String createdBy; 
             private String createdDate; 
             private String description; 
@@ -242,11 +349,29 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             private String name; 
             private String operationSystem; 
             private String shareType; 
+            private java.util.List < String > sources; 
+            private java.util.List < Tags> tags; 
             private String updatedBy; 
             private String updatedDate; 
 
             /**
-             * CreatedBy.
+             * ApprovedPatches.
+             */
+            public Builder approvedPatches(java.util.List < String > approvedPatches) {
+                this.approvedPatches = approvedPatches;
+                return this;
+            }
+
+            /**
+             * ApprovedPatchesEnableNonSecurity.
+             */
+            public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
+                this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
+                return this;
+            }
+
+            /**
+             * The name of the patch baseline.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -254,7 +379,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * The ID of the patch baseline.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -262,7 +387,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The user who last modified the patch baseline.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -270,7 +395,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * Queries the details of patch baselines.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -278,7 +403,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * The time when the patch baseline was last modified.
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -286,7 +411,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The share type of the patch baseline.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -294,7 +419,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * OperationSystem.
+             * The description of the patch baseline.
              */
             public Builder operationSystem(String operationSystem) {
                 this.operationSystem = operationSystem;
@@ -302,7 +427,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * Queries the details of patch baselines.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -310,7 +435,23 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * Sources.
+             */
+            public Builder sources(java.util.List < String > sources) {
+                this.sources = sources;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            /**
+             * The time when the patch baseline was created.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -318,7 +459,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The creator of the patch baseline.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

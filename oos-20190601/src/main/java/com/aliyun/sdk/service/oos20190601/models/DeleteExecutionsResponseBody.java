@@ -38,7 +38,7 @@ public class DeleteExecutionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * Deletes multiple executions.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

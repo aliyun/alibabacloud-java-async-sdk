@@ -264,7 +264,7 @@ public class ListTemplatesRequest extends Request {
         } 
 
         /**
-         * Category.
+         * The type of the template. Valid values include TimerTrigger, EventTrigger, AlarmTrigger, and Other.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -273,7 +273,11 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * CreatedBy.
+         * The creator of the template.
+         * <p>
+         * 
+         * *   To query the template provided by Alibaba Cloud, set this parameter to **ACS**.
+         * *   To query the template created by a user, set this parameter to the **ID** of the template or the **name of the user** who creates the template.
          */
         public Builder createdBy(String createdBy) {
             this.putQueryParameter("CreatedBy", createdBy);
@@ -282,7 +286,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * CreatedDateAfter.
+         * Specifies to query the template that is created at or later than the specified time.
+         * <p>
+         * 
+         * The value must be in the YYYY-MM-DDThh:mm:ssZ format.
          */
         public Builder createdDateAfter(String createdDateAfter) {
             this.putQueryParameter("CreatedDateAfter", createdDateAfter);
@@ -291,7 +298,10 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * CreatedDateBefore.
+         * Specifies to query the template that is created at or before the specified time.
+         * <p>
+         * 
+         * The value must be in the YYYY-MM-DDThh:mm::ssZ format.
          */
         public Builder createdDateBefore(String createdDateBefore) {
             this.putQueryParameter("CreatedDateBefore", createdDateBefore);
@@ -300,7 +310,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * HasTrigger.
+         * Specifies whether to query the template that is configured with a trigger.
          */
         public Builder hasTrigger(Boolean hasTrigger) {
             this.putQueryParameter("HasTrigger", hasTrigger);
@@ -309,7 +319,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -318,7 +328,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -327,7 +337,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which you want to query templates.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -336,7 +346,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -345,7 +355,11 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * ShareType.
+         * The share type of the template. Valid values:
+         * <p>
+         * 
+         * *   **Public**
+         * *   **Private**
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -354,7 +368,13 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * SortField.
+         * The field that is used to sort the templates to be returned. Valid values:
+         * <p>
+         * 
+         * *   **TotalExecutionCounts**: The system sorts the returned templates based on the total number of execution times of the template. This is the default value.
+         * *   **Popularity**: The system sorts the returned templates based on the popularity of the template.
+         * *   **TemplateName**: The system sorts the returned templates based on the name of the template.
+         * *   **CreatedDate**: The system sorts the returned templates based on the creation time of the template.
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -363,7 +383,11 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * The order in which you want to sort the results. Valid values:
+         * <p>
+         * 
+         * *   **Ascending**: ascending order.
+         * *   **Descending**: descending order. This is the default value.
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -372,7 +396,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag keys and values. The number of key-value pairs ranges from 1 to 20.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -382,7 +406,11 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateFormat.
+         * The format of the template. Valid values:
+         * <p>
+         * 
+         * *   **JSON**
+         * *   **YAML**
          */
         public Builder templateFormat(String templateFormat) {
             this.putQueryParameter("TemplateFormat", templateFormat);
@@ -391,7 +419,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the template. All templates whose names contain the specified template name are to be returned.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -400,7 +428,7 @@ public class ListTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * The type of the template.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

@@ -236,7 +236,7 @@ public class StartExecutionRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The access token.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -245,7 +245,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the execution.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -254,7 +254,12 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * LoopMode.
+         * The loop mode. Valid values:
+         * <p>
+         * 
+         * *   Automatic: does not suspend the execution of the template. This is the default value.
+         * *   FirstBatchPause: suspends the execution of the template after the first batch is complete.
+         * *   EveryBatchPause: suspends the execution of the template after each batch is complete.
          */
         public Builder loopMode(String loopMode) {
             this.putQueryParameter("LoopMode", loopMode);
@@ -263,7 +268,12 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * Mode.
+         * The execution mode. Valid values:
+         * <p>
+         * 
+         * *   Automatic: automatically starts the execution of the template. This is the default value.
+         * *   FailurePause: suspends the execution of the template upon a failure.
+         * *   Debug: manually starts the execution of the template.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -272,7 +282,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The JSON string that consists of a set of parameters. Default value: {}.
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -281,7 +291,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * ParentExecutionId.
+         * The ID of the parent execution.
          */
         public Builder parentExecutionId(String parentExecutionId) {
             this.putQueryParameter("ParentExecutionId", parentExecutionId);
@@ -290,7 +300,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the execution resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -299,7 +309,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -308,7 +318,11 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * SafetyCheck.
+         * The security check mode. Valid values:
+         * <p>
+         * 
+         * *   Skip: specifies that you are aware of the risks. The system performs all actions in the execution without manual confirmation, regardless of the risk level. This parameter is valid only if the `Mode` parameter is set to Automatic.
+         * *   ConfirmEveryHighRiskAction: requires you to confirm each high-risk action. This is the default value. You can call the **NotifyExecution** operation to confirm or cancel an action.
          */
         public Builder safetyCheck(String safetyCheck) {
             this.putQueryParameter("SafetyCheck", safetyCheck);
@@ -317,7 +331,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags for the execution.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -327,7 +341,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * TemplateContent.
+         * The content of the template in the JSON or YAML format. This parameter is the same as the Content parameter that you can specify when you call the CreateTemplate operation. You can use this parameter to specify the tasks that you want to run. This way, you do not need to create a template before you start an execution. If you select an existing template, you do not need to specify this parameter.
          */
         public Builder templateContent(String templateContent) {
             this.putQueryParameter("TemplateContent", templateContent);
@@ -336,7 +350,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the template. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -345,7 +359,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * TemplateURL.
+         * The Object Storage Service (OSS) URL of the object that stores the content of the Operation Orchestration Service (OOS) template. The access control list (ACL) of the object must be public-read. You can use this parameter to specify the tasks that you want to run. This way, you do not need to create a template before you start an execution. If you select an existing template, you do not need to specify this parameter.
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
@@ -354,7 +368,7 @@ public class StartExecutionRequest extends Request {
         }
 
         /**
-         * TemplateVersion.
+         * The version number of the template. If you do not specify this parameter, the system uses the latest version.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

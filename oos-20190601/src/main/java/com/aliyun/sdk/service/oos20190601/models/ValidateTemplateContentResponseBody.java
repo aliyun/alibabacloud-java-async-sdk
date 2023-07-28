@@ -86,7 +86,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
         private java.util.List < Tasks> tasks; 
 
         /**
-         * Outputs.
+         * The outputs of the template.
          */
         public Builder outputs(String outputs) {
             this.outputs = outputs;
@@ -94,7 +94,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * The parameters of the template.
          */
         public Builder parameters(String parameters) {
             this.parameters = parameters;
@@ -102,7 +102,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
         }
 
         /**
-         * RamRole.
+         * The RAM role.
          */
         public Builder ramRole(String ramRole) {
             this.ramRole = ramRole;
@@ -110,7 +110,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * The task defined in the template.
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -206,7 +206,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Description.
+             * The description of the task.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +214,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the task.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -222,7 +222,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
             }
 
             /**
-             * Outputs.
+             * The outputs of the task.
              */
             public Builder outputs(String outputs) {
                 this.outputs = outputs;
@@ -230,7 +230,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * The properties of the task.
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -238,7 +238,7 @@ public class ValidateTemplateContentResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the task.
              */
             public Builder type(String type) {
                 this.type = type;

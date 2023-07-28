@@ -74,7 +74,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Applications.
+         * The applications.
          */
         public Builder applications(java.util.List < Applications> applications) {
             this.applications = applications;
@@ -82,7 +82,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -90,7 +90,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +98,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,6 +112,9 @@ public class ListApplicationsResponseBody extends TeaModel {
     } 
 
     public static class Applications extends TeaModel {
+        @NameInMap("ApplicationType")
+        private String applicationType;
+
         @NameInMap("CreateDate")
         private String createDate;
 
@@ -131,6 +134,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         private String updateDate;
 
         private Applications(Builder builder) {
+            this.applicationType = builder.applicationType;
             this.createDate = builder.createDate;
             this.description = builder.description;
             this.name = builder.name;
@@ -145,6 +149,13 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         public static Applications create() {
             return builder().build();
+        }
+
+        /**
+         * @return applicationType
+         */
+        public String getApplicationType() {
+            return this.applicationType;
         }
 
         /**
@@ -190,6 +201,7 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String applicationType; 
             private String createDate; 
             private String description; 
             private String name; 
@@ -198,7 +210,15 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * CreateDate.
+             * The type of the application.
+             */
+            public Builder applicationType(String applicationType) {
+                this.applicationType = applicationType;
+                return this;
+            }
+
+            /**
+             * The time when the application was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -206,7 +226,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the application.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +234,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the application.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -222,7 +242,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -230,7 +250,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * A tag of the resource.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -238,7 +258,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the application was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

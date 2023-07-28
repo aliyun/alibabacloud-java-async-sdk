@@ -98,7 +98,7 @@ public class UpdateApplicationGroupRequest extends Request {
         } 
 
         /**
-         * ApplicationName.
+         * The application name.
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -107,7 +107,7 @@ public class UpdateApplicationGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the application group.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -116,7 +116,7 @@ public class UpdateApplicationGroupRequest extends Request {
         }
 
         /**
-         * NewName.
+         * The new name of the application group.
          */
         public Builder newName(String newName) {
             this.putQueryParameter("NewName", newName);
@@ -125,7 +125,7 @@ public class UpdateApplicationGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Set the value to cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

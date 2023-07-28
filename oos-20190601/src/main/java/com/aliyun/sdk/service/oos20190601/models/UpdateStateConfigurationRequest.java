@@ -195,7 +195,7 @@ public class UpdateStateConfigurationRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The schedule type.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -204,7 +204,7 @@ public class UpdateStateConfigurationRequest extends Request {
         }
 
         /**
-         * ConfigureMode.
+         * The description of the desired-state configuration.
          */
         public Builder configureMode(String configureMode) {
             this.putQueryParameter("ConfigureMode", configureMode);
@@ -213,7 +213,7 @@ public class UpdateStateConfigurationRequest extends Request {
         }
 
         /**
-         * Description.
+         * The schedule expression.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -222,7 +222,7 @@ public class UpdateStateConfigurationRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The ID of the region.
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -232,7 +232,7 @@ public class UpdateStateConfigurationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The configuration mode.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,7 +241,7 @@ public class UpdateStateConfigurationRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The parameters.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -250,7 +250,7 @@ public class UpdateStateConfigurationRequest extends Request {
         }
 
         /**
-         * ScheduleExpression.
+         * The name of the template.
          */
         public Builder scheduleExpression(String scheduleExpression) {
             this.putQueryParameter("ScheduleExpression", scheduleExpression);
@@ -259,7 +259,7 @@ public class UpdateStateConfigurationRequest extends Request {
         }
 
         /**
-         * ScheduleType.
+         * The ID of the resource group.
          */
         public Builder scheduleType(String scheduleType) {
             this.putQueryParameter("ScheduleType", scheduleType);
@@ -268,7 +268,7 @@ public class UpdateStateConfigurationRequest extends Request {
         }
 
         /**
-         * StateConfigurationId.
+         * The ID of the desired-state configuration.
          */
         public Builder stateConfigurationId(String stateConfigurationId) {
             this.putQueryParameter("StateConfigurationId", stateConfigurationId);
@@ -277,7 +277,7 @@ public class UpdateStateConfigurationRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -287,7 +287,7 @@ public class UpdateStateConfigurationRequest extends Request {
         }
 
         /**
-         * Targets.
+         * The required resources.
          */
         public Builder targets(String targets) {
             this.putQueryParameter("Targets", targets);

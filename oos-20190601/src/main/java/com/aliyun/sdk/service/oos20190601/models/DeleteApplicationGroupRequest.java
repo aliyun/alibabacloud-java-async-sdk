@@ -84,7 +84,7 @@ public class DeleteApplicationGroupRequest extends Request {
         } 
 
         /**
-         * ApplicationName.
+         * The name of the application.
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -93,7 +93,7 @@ public class DeleteApplicationGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the application group.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -102,7 +102,7 @@ public class DeleteApplicationGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. Set the value to cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

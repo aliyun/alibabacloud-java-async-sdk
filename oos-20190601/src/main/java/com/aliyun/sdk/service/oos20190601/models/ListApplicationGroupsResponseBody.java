@@ -74,7 +74,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApplicationGroups.
+         * The details of the application group.
          */
         public Builder applicationGroups(java.util.List < ApplicationGroups> applicationGroups) {
             this.applicationGroups = applicationGroups;
@@ -82,7 +82,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -90,7 +90,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -98,7 +98,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -270,7 +270,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * ApplicationName.
+             * The name of the application.
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -278,7 +278,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CmsGroupId.
+             * The ID of the application group in CloudMonitor.
              */
             public Builder cmsGroupId(String cmsGroupId) {
                 this.cmsGroupId = cmsGroupId;
@@ -286,7 +286,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the application group was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -294,7 +294,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DeployParameters.
+             * The configuration information of the application group.
              */
             public Builder deployParameters(String deployParameters) {
                 this.deployParameters = deployParameters;
@@ -302,7 +302,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DeployRegionId.
+             * The ID of the region in which the related resources reside.
              */
             public Builder deployRegionId(String deployRegionId) {
                 this.deployRegionId = deployRegionId;
@@ -310,7 +310,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the application group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -318,7 +318,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ImportTagKey.
+             * The tag key.
              */
             public Builder importTagKey(String importTagKey) {
                 this.importTagKey = importTagKey;
@@ -326,7 +326,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ImportTagValue.
+             * The tag value.
              */
             public Builder importTagValue(String importTagValue) {
                 this.importTagValue = importTagValue;
@@ -334,7 +334,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the application group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +342,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the application group.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -350,7 +350,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusReason.
+             * The state information of the application group.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;
@@ -358,7 +358,7 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the application group was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

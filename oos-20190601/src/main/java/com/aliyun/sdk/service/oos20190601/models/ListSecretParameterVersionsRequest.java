@@ -126,7 +126,7 @@ public class ListSecretParameterVersionsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -135,7 +135,7 @@ public class ListSecretParameterVersionsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the encryption parameter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -144,7 +144,7 @@ public class ListSecretParameterVersionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -153,7 +153,7 @@ public class ListSecretParameterVersionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -162,7 +162,7 @@ public class ListSecretParameterVersionsRequest extends Request {
         }
 
         /**
-         * ShareType.
+         * The share type of the encryption parameter.
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -171,7 +171,7 @@ public class ListSecretParameterVersionsRequest extends Request {
         }
 
         /**
-         * WithDecryption.
+         * Specifies whether to decrypt the parameter value. The decrypted parameter value is returned only if this parameter is set to true. Otherwise, null is returned.
          */
         public Builder withDecryption(Boolean withDecryption) {
             this.putQueryParameter("WithDecryption", withDecryption);

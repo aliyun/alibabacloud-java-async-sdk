@@ -13,6 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPatchBaselinesRequest extends Request {
     @Query
+    @NameInMap("ApprovedPatches")
+    private java.util.List < String > approvedPatches;
+
+    @Query
+    @NameInMap("ApprovedPatchesEnableNonSecurity")
+    private Boolean approvedPatchesEnableNonSecurity;
+
+    @Query
     @NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -36,14 +44,26 @@ public class ListPatchBaselinesRequest extends Request {
     @NameInMap("ShareType")
     private String shareType;
 
+    @Query
+    @NameInMap("Sources")
+    private java.util.List < String > sources;
+
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     private ListPatchBaselinesRequest(Builder builder) {
         super(builder);
+        this.approvedPatches = builder.approvedPatches;
+        this.approvedPatchesEnableNonSecurity = builder.approvedPatchesEnableNonSecurity;
         this.maxResults = builder.maxResults;
         this.name = builder.name;
         this.nextToken = builder.nextToken;
         this.operationSystem = builder.operationSystem;
         this.regionId = builder.regionId;
         this.shareType = builder.shareType;
+        this.sources = builder.sources;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -57,6 +77,20 @@ public class ListPatchBaselinesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return approvedPatches
+     */
+    public java.util.List < String > getApprovedPatches() {
+        return this.approvedPatches;
+    }
+
+    /**
+     * @return approvedPatchesEnableNonSecurity
+     */
+    public Boolean getApprovedPatchesEnableNonSecurity() {
+        return this.approvedPatchesEnableNonSecurity;
     }
 
     /**
@@ -101,13 +135,31 @@ public class ListPatchBaselinesRequest extends Request {
         return this.shareType;
     }
 
+    /**
+     * @return sources
+     */
+    public java.util.List < String > getSources() {
+        return this.sources;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<ListPatchBaselinesRequest, Builder> {
+        private java.util.List < String > approvedPatches; 
+        private Boolean approvedPatchesEnableNonSecurity; 
         private Integer maxResults; 
         private String name; 
         private String nextToken; 
         private String operationSystem; 
         private String regionId; 
         private String shareType; 
+        private java.util.List < String > sources; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -115,16 +167,39 @@ public class ListPatchBaselinesRequest extends Request {
 
         private Builder(ListPatchBaselinesRequest request) {
             super(request);
+            this.approvedPatches = request.approvedPatches;
+            this.approvedPatchesEnableNonSecurity = request.approvedPatchesEnableNonSecurity;
             this.maxResults = request.maxResults;
             this.name = request.name;
             this.nextToken = request.nextToken;
             this.operationSystem = request.operationSystem;
             this.regionId = request.regionId;
             this.shareType = request.shareType;
+            this.sources = request.sources;
+            this.tags = request.tags;
         } 
 
         /**
-         * MaxResults.
+         * ApprovedPatches.
+         */
+        public Builder approvedPatches(java.util.List < String > approvedPatches) {
+            String approvedPatchesShrink = shrink(approvedPatches, "ApprovedPatches", "json");
+            this.putQueryParameter("ApprovedPatches", approvedPatchesShrink);
+            this.approvedPatches = approvedPatches;
+            return this;
+        }
+
+        /**
+         * ApprovedPatchesEnableNonSecurity.
+         */
+        public Builder approvedPatchesEnableNonSecurity(Boolean approvedPatchesEnableNonSecurity) {
+            this.putQueryParameter("ApprovedPatchesEnableNonSecurity", approvedPatchesEnableNonSecurity);
+            this.approvedPatchesEnableNonSecurity = approvedPatchesEnableNonSecurity;
+            return this;
+        }
+
+        /**
+         * The token that is used to retrieve the next page of results.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -133,7 +208,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The share type of the patch baseline.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -142,7 +217,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The ID of the request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -151,7 +226,7 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * OperationSystem.
+         * The number of entries to return on each page.
          */
         public Builder operationSystem(String operationSystem) {
             this.putQueryParameter("OperationSystem", operationSystem);
@@ -160,7 +235,16 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The type of the operating system. Valid values:
+         * <p>
+         * 
+         * *   AliyunLinux
+         * *   Windows
+         * *   Ubuntu
+         * *   Centos
+         * *   Debian
+         * *   RedhatEnterpriseLinux
+         * *   Anolis
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,11 +253,31 @@ public class ListPatchBaselinesRequest extends Request {
         }
 
         /**
-         * ShareType.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
             this.shareType = shareType;
+            return this;
+        }
+
+        /**
+         * Sources.
+         */
+        public Builder sources(java.util.List < String > sources) {
+            String sourcesShrink = shrink(sources, "Sources", "json");
+            this.putQueryParameter("Sources", sourcesShrink);
+            this.sources = sources;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            String tagsShrink = shrink(tags, "Tags", "json");
+            this.putQueryParameter("Tags", tagsShrink);
+            this.tags = tags;
             return this;
         }
 
@@ -184,4 +288,65 @@ public class ListPatchBaselinesRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

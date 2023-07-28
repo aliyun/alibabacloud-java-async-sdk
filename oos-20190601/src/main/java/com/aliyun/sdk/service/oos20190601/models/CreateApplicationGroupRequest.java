@@ -169,7 +169,7 @@ public class CreateApplicationGroupRequest extends Request {
         } 
 
         /**
-         * ApplicationName.
+         * The application name.
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -178,7 +178,7 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -187,7 +187,7 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * CmsGroupId.
+         * The ID of the application group in CloudMonitor.
          */
         public Builder cmsGroupId(String cmsGroupId) {
             this.putQueryParameter("CmsGroupId", cmsGroupId);
@@ -196,7 +196,7 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * DeployRegionId.
+         * The ID of the region in which the related sources reside.
          */
         public Builder deployRegionId(String deployRegionId) {
             this.putQueryParameter("DeployRegionId", deployRegionId);
@@ -205,7 +205,7 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the application group.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -214,7 +214,7 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * ImportTagKey.
+         * The key of the tag. You must set both the ImportTagKey and the ImportTagValue parameters, or leave both of them empty. If you do not set the ImportTagKey and ImportTagValue parameters, the application name is used for this parameter by default.
          */
         public Builder importTagKey(String importTagKey) {
             this.putQueryParameter("ImportTagKey", importTagKey);
@@ -223,7 +223,7 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * ImportTagValue.
+         * The value of the tag. You must set both the ImportTagKey and the ImportTagValue parameters, or leave both of them empty. If you do not set the ImportTagKey and ImportTagValue parameters, the application group name is used for this parameter by default.
          */
         public Builder importTagValue(String importTagValue) {
             this.putQueryParameter("ImportTagValue", importTagValue);
@@ -232,7 +232,7 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the application group.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -241,7 +241,7 @@ public class CreateApplicationGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Set the value to cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

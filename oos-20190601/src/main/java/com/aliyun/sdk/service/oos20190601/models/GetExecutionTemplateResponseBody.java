@@ -62,7 +62,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
         private Template template; 
 
         /**
-         * Content.
+         * The content of the template.
          */
         public Builder content(String content) {
             this.content = content;
@@ -70,7 +70,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Template.
+         * The metadata of the template.
          */
         public Builder template(Template template) {
             this.template = template;
@@ -250,7 +250,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * CreatedBy.
+             * The creator of the template.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -258,7 +258,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * The time when the template was created.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -266,7 +266,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -274,7 +274,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Hash.
+             * The SHA-256 value of the template content.
              */
             public Builder hash(String hash) {
                 this.hash = hash;
@@ -282,7 +282,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * The share type of the template. The share type of a user-created template is **Private**.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -290,7 +290,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tag keys and values. The number of key-value pairs ranges from 1 to 20.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -298,7 +298,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateFormat.
+             * The format of the template. The system automatically determines whether the format is JSON or YAML.
              */
             public Builder templateFormat(String templateFormat) {
                 this.templateFormat = templateFormat;
@@ -306,7 +306,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the template.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -314,7 +314,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -322,7 +322,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersion.
+             * The version of the template. The name of the version consists of the letter v and a number. The number starts from 1.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -330,7 +330,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * The user who last updated the template.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -338,7 +338,7 @@ public class GetExecutionTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the template was last updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

@@ -50,7 +50,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Application.
+         * The information about the application.
          */
         public Builder application(Application application) {
             this.application = application;
@@ -58,7 +58,7 @@ public class CreateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * CreateDate.
+             * The time when the application was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -154,7 +154,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the application.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -162,7 +162,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The application name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +170,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.Map < String, String > tags) {
                 this.tags = tags;
@@ -178,7 +178,7 @@ public class CreateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the application was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

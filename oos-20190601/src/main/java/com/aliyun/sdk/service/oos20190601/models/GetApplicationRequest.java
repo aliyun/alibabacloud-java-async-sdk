@@ -69,7 +69,7 @@ public class GetApplicationRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The application name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -78,7 +78,7 @@ public class GetApplicationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Set the value to cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

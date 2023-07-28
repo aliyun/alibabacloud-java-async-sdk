@@ -86,7 +86,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -94,7 +94,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * The information of the encryption parameter.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -110,7 +110,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -302,7 +302,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Constraints.
+             * The constraints of the encryption parameter.
              */
             public Builder constraints(String constraints) {
                 this.constraints = constraints;
@@ -310,7 +310,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedBy.
+             * The user who created the encryption parameter.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -318,7 +318,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * The time when the encryption parameter was updated.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -326,7 +326,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the encryption parameter.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -334,7 +334,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the encryption parameter.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -342,7 +342,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * The AccessKey ID.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -350,7 +350,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the encryption parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -358,7 +358,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterVersion.
+             * The version number of the encryption parameter.
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -366,7 +366,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * The share type of the encryption parameter.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -374,7 +374,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The data type of the encryption parameter.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -382,7 +382,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * The user who updated the encryption parameter.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -390,7 +390,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the encryption parameter was updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -398,7 +398,7 @@ public class GetSecretParametersByPathResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the encryption parameter.
              */
             public Builder value(String value) {
                 this.value = value;

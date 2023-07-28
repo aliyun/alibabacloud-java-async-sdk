@@ -50,7 +50,7 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ApplicationGroup.
+         * The information about the application group.
          */
         public Builder applicationGroup(ApplicationGroup applicationGroup) {
             this.applicationGroup = applicationGroup;
@@ -58,7 +58,7 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * ApplicationName.
+             * The application name.
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -190,7 +190,7 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * The time when the application group was created.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -198,7 +198,7 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * DeployRegionId.
+             * The ID of the region in which the related resources reside.
              */
             public Builder deployRegionId(String deployRegionId) {
                 this.deployRegionId = deployRegionId;
@@ -206,7 +206,7 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the application group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +214,7 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ImportTagKey.
+             * The key of the tag.
              */
             public Builder importTagKey(String importTagKey) {
                 this.importTagKey = importTagKey;
@@ -222,7 +222,7 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ImportTagValue.
+             * The value of the tag.
              */
             public Builder importTagValue(String importTagValue) {
                 this.importTagValue = importTagValue;
@@ -230,7 +230,7 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the application group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -238,7 +238,7 @@ public class UpdateApplicationGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the application group was updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

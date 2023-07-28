@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GenerateExecutionPolicyRequest extends Request {
     @Query
+    @NameInMap("RamRole")
+    private String ramRole;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -27,6 +31,7 @@ public class GenerateExecutionPolicyRequest extends Request {
 
     private GenerateExecutionPolicyRequest(Builder builder) {
         super(builder);
+        this.ramRole = builder.ramRole;
         this.regionId = builder.regionId;
         this.templateName = builder.templateName;
         this.templateVersion = builder.templateVersion;
@@ -43,6 +48,13 @@ public class GenerateExecutionPolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ramRole
+     */
+    public String getRamRole() {
+        return this.ramRole;
     }
 
     /**
@@ -67,6 +79,7 @@ public class GenerateExecutionPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateExecutionPolicyRequest, Builder> {
+        private String ramRole; 
         private String regionId; 
         private String templateName; 
         private String templateVersion; 
@@ -77,13 +90,23 @@ public class GenerateExecutionPolicyRequest extends Request {
 
         private Builder(GenerateExecutionPolicyRequest request) {
             super(request);
+            this.ramRole = request.ramRole;
             this.regionId = request.regionId;
             this.templateName = request.templateName;
             this.templateVersion = request.templateVersion;
         } 
 
         /**
-         * RegionId.
+         * The RAM role.
+         */
+        public Builder ramRole(String ramRole) {
+            this.putQueryParameter("RamRole", ramRole);
+            this.ramRole = ramRole;
+            return this;
+        }
+
+        /**
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -92,7 +115,7 @@ public class GenerateExecutionPolicyRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the template.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -101,7 +124,7 @@ public class GenerateExecutionPolicyRequest extends Request {
         }
 
         /**
-         * TemplateVersion.
+         * The version of the template. The default value is the latest version of the template.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

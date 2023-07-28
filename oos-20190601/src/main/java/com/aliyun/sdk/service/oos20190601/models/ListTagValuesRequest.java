@@ -110,7 +110,7 @@ public class ListTagValuesRequest extends Request {
         } 
 
         /**
-         * Key.
+         * The tag key to query.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -119,7 +119,7 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of results on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -128,7 +128,7 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -137,7 +137,7 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -146,7 +146,7 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the tagged resource.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

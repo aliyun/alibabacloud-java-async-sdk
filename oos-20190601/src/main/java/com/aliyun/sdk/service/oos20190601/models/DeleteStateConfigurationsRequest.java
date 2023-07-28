@@ -83,7 +83,7 @@ public class DeleteStateConfigurationsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * Deletes desired-state configurations in batches
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -92,7 +92,7 @@ public class DeleteStateConfigurationsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the request.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +101,10 @@ public class DeleteStateConfigurationsRequest extends Request {
         }
 
         /**
-         * StateConfigurationIds.
+         * ## Debugging
+         * <p>
+         * 
+         * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=oos\&api=DeleteStateConfigurations\&type=RPC\&version=2019-06-01)
          */
         public Builder stateConfigurationIds(String stateConfigurationIds) {
             this.putQueryParameter("StateConfigurationIds", stateConfigurationIds);

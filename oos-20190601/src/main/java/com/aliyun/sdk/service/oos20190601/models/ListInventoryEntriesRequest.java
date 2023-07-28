@@ -127,7 +127,7 @@ public class ListInventoryEntriesRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The filter rules for the component.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -136,7 +136,7 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +145,7 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: 1 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -154,7 +154,7 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -163,7 +163,7 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -172,7 +172,17 @@ public class ListInventoryEntriesRequest extends Request {
         }
 
         /**
-         * TypeName.
+         * The name of the component. Valid values:
+         * <p>
+         * 
+         * *   ACS:InstanceInformation
+         * *   ACS:Application
+         * *   ACS:File
+         * *   ACS:Network
+         * *   ACS:WindowsRole
+         * *   ACS:Service
+         * *   ACS:WindowsRegistry
+         * *   ACS:WindowsUpdate
          */
         public Builder typeName(String typeName) {
             this.putQueryParameter("TypeName", typeName);
@@ -238,7 +248,7 @@ public class ListInventoryEntriesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Name.
+             * The name of the component property. Valid values of N: 1 to 5.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -246,7 +256,14 @@ public class ListInventoryEntriesRequest extends Request {
             }
 
             /**
-             * Operator.
+             * The comparison operator that is used to filter property values. Valid values of N: 1 to 5. Valid values:
+             * <p>
+             * 
+             * *   Equal
+             * *   NotEqual
+             * *   BeginWith
+             * *   LessThan
+             * *   GreaterThan
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -254,7 +271,7 @@ public class ListInventoryEntriesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The values of properties. Valid values of the first N: 1 to 5. Valid values of the second N: 1 to 20.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

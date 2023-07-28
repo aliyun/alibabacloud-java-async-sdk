@@ -96,7 +96,7 @@ public class ListActionsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -105,7 +105,7 @@ public class ListActionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -114,7 +114,7 @@ public class ListActionsRequest extends Request {
         }
 
         /**
-         * OOSActionName.
+         * The name of the action. All actions whose names contain the specified action name are returned.
          */
         public Builder OOSActionName(String OOSActionName) {
             this.putQueryParameter("OOSActionName", OOSActionName);
@@ -123,7 +123,7 @@ public class ListActionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

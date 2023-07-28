@@ -83,7 +83,7 @@ public class DeleteTemplatesRequest extends Request {
         } 
 
         /**
-         * AutoDeleteExecutions.
+         * The ID of the request.
          */
         public Builder autoDeleteExecutions(Boolean autoDeleteExecutions) {
             this.putQueryParameter("AutoDeleteExecutions", autoDeleteExecutions);
@@ -92,7 +92,7 @@ public class DeleteTemplatesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The name list of templates to be deleted.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +101,7 @@ public class DeleteTemplatesRequest extends Request {
         }
 
         /**
-         * TemplateNames.
+         * Specifies whether to delete the related executions when a template is deleted.
          */
         public Builder templateNames(String templateNames) {
             this.putQueryParameter("TemplateNames", templateNames);

@@ -69,7 +69,7 @@ public class GetExecutionTemplateRequest extends Request {
         } 
 
         /**
-         * ExecutionId.
+         * The ID of the execution.
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -78,7 +78,7 @@ public class GetExecutionTemplateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

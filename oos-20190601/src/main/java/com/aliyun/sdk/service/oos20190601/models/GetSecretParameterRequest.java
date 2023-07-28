@@ -98,7 +98,7 @@ public class GetSecretParameterRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -107,7 +107,7 @@ public class GetSecretParameterRequest extends Request {
         }
 
         /**
-         * ParameterVersion.
+         * The version number of the common parameter. Valid values: 1 to 100.
          */
         public Builder parameterVersion(Integer parameterVersion) {
             this.putQueryParameter("ParameterVersion", parameterVersion);
@@ -116,7 +116,7 @@ public class GetSecretParameterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -125,7 +125,7 @@ public class GetSecretParameterRequest extends Request {
         }
 
         /**
-         * WithDecryption.
+         * Specifies whether to decrypt the parameter value. The decrypted parameter value is returned only if this parameter is set to true. Otherwise, null is returned.
          */
         public Builder withDecryption(Boolean withDecryption) {
             this.putQueryParameter("WithDecryption", withDecryption);

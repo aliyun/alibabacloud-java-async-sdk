@@ -29,10 +29,6 @@ public class ListApplicationGroupsRequest extends Request {
     private String nextToken;
 
     @Query
-    @NameInMap("Product")
-    private String product;
-
-    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -54,7 +50,6 @@ public class ListApplicationGroupsRequest extends Request {
         this.deployRegionId = builder.deployRegionId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
-        this.product = builder.product;
         this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceProduct = builder.resourceProduct;
@@ -103,13 +98,6 @@ public class ListApplicationGroupsRequest extends Request {
     }
 
     /**
-     * @return product
-     */
-    public String getProduct() {
-        return this.product;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -142,7 +130,6 @@ public class ListApplicationGroupsRequest extends Request {
         private String deployRegionId; 
         private Integer maxResults; 
         private String nextToken; 
-        private String product; 
         private String regionId; 
         private String resourceId; 
         private String resourceProduct; 
@@ -158,7 +145,6 @@ public class ListApplicationGroupsRequest extends Request {
             this.deployRegionId = request.deployRegionId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
-            this.product = request.product;
             this.regionId = request.regionId;
             this.resourceId = request.resourceId;
             this.resourceProduct = request.resourceProduct;
@@ -166,7 +152,7 @@ public class ListApplicationGroupsRequest extends Request {
         } 
 
         /**
-         * ApplicationName.
+         * The name of the application.
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -175,7 +161,7 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * DeployRegionId.
+         * The ID of the region in which the related resources reside.
          */
         public Builder deployRegionId(String deployRegionId) {
             this.putQueryParameter("DeployRegionId", deployRegionId);
@@ -184,7 +170,7 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -193,7 +179,7 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -202,16 +188,7 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * Product.
-         */
-        public Builder product(String product) {
-            this.putQueryParameter("Product", product);
-            this.product = product;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * The ID of the region. Set the value to cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -220,7 +197,7 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the cloud resource.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -229,7 +206,7 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * ResourceProduct.
+         * The code of the product to which the cloud resource belongs.
          */
         public Builder resourceProduct(String resourceProduct) {
             this.putQueryParameter("ResourceProduct", resourceProduct);
@@ -238,7 +215,7 @@ public class ListApplicationGroupsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the cloud resource.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -158,7 +158,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * CreatedBy.
+         * The name of the common parameter.
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -166,7 +166,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * CreatedDate.
+         * The total number of entries returned.
          */
         public Builder createdDate(String createdDate) {
             this.createdDate = createdDate;
@@ -174,7 +174,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The user who created the common parameter.
          */
         public Builder description(String description) {
             this.description = description;
@@ -182,7 +182,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * The version number of the common parameter.
          */
         public Builder id(String id) {
             this.id = id;
@@ -190,7 +190,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The time when the common parameter was created.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -198,7 +198,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The ID of the common parameter.
          */
         public Builder name(String name) {
             this.name = name;
@@ -206,7 +206,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The description of the common parameter.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -214,7 +214,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * ParameterVersions.
+         * The value of the common parameter.
          */
         public Builder parameterVersions(java.util.List < ParameterVersions> parameterVersions) {
             this.parameterVersions = parameterVersions;
@@ -222,7 +222,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The number of entries returned per page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The version information of the common parameter.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -238,7 +238,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The ID of the request.
          */
         public Builder type(String type) {
             this.type = type;
@@ -314,7 +314,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * ParameterVersion.
+             * The time when the common parameter was updated.
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -322,7 +322,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * Queries versions of a common parameter.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -330,7 +330,10 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * ## Debugging
+             * <p>
+             * 
+             * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=oos\&api=ListParameterVersions\&type=RPC\&version=2019-06-01)
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -338,7 +341,7 @@ public class ListParameterVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The user who updated the common parameter.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -98,6 +98,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
 
+    /**
+      * ****
+      *
+     */
     CompletableFuture<ListExecutionLogsResponse> listExecutionLogs(ListExecutionLogsRequest request);
 
     CompletableFuture<ListExecutionRiskyTasksResponse> listExecutionRiskyTasks(ListExecutionRiskyTasksRequest request);
@@ -122,6 +126,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSecretParameterVersionsResponse> listSecretParameterVersions(ListSecretParameterVersionsRequest request);
 
+    /**
+      * Before you call this operation, make sure that you have the permission to manage Key Management Service (KMS) secrets.
+      *
+     */
     CompletableFuture<ListSecretParametersResponse> listSecretParameters(ListSecretParametersRequest request);
 
     CompletableFuture<ListStateConfigurationsResponse> listStateConfigurations(ListStateConfigurationsRequest request);
@@ -138,6 +146,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTemplatesResponse> listTemplates(ListTemplatesRequest request);
 
+    /**
+      * You can call this operation to notify an execution in the following scenarios:
+      * *   If a template contains a special task, such as an approval task, the Operation Orchestration Service (OOS) execution engine sets the execution state to Waiting when the approval task is being run. You can call this operation to specify whether to continue the execution.
+      * *   If you perform debugging in the debug mode, you can call this operation to notify the execution of the subsequent operations after the execution is created or a task is complete.
+      * *   If a high-risk operation task waits for approval, you can call this operation to specify whether to continue the execution.
+      *
+     */
     CompletableFuture<NotifyExecutionResponse> notifyExecution(NotifyExecutionRequest request);
 
     CompletableFuture<RegisterDefaultPatchBaselineResponse> registerDefaultPatchBaseline(RegisterDefaultPatchBaselineRequest request);

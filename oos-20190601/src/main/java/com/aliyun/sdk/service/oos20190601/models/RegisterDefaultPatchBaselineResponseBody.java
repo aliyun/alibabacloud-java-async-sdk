@@ -50,7 +50,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PatchBaseline.
+         * The details of the patch baseline.
          */
         public Builder patchBaseline(PatchBaseline patchBaseline) {
             this.patchBaseline = patchBaseline;
@@ -58,7 +58,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * ApprovalRules.
+             * The rules of scanning and installing patches for the specified operating system.
              */
             public Builder approvalRules(String approvalRules) {
                 this.approvalRules = approvalRules;
@@ -214,7 +214,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedBy.
+             * The user who created the patch baseline.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -222,7 +222,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * The time when the patch baseline was created.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -230,7 +230,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the patch baseline.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +238,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the patch baseline.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -246,7 +246,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the patch baseline.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +254,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * OperationSystem.
+             * The type of the operating system.
              */
             public Builder operationSystem(String operationSystem) {
                 this.operationSystem = operationSystem;
@@ -262,7 +262,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * The share type of the patch baseline.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -270,7 +270,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * The user who last updated the patch baseline.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -278,7 +278,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the patch baseline was last updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

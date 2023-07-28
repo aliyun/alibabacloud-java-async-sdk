@@ -74,7 +74,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         private java.util.List < TemplateVersions> templateVersions; 
 
         /**
-         * MaxResults.
+         * The maximum number of results on each page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +82,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateVersions.
+         * The versions of the template.
          */
         public Builder templateVersions(java.util.List < TemplateVersions> templateVersions) {
             this.templateVersions = templateVersions;
@@ -198,7 +198,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             private String versionName; 
 
             /**
-             * Description.
+             * The description of the version.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -206,7 +206,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateFormat.
+             * The format of the template content. Valid values: YAML and JSON.
              */
             public Builder templateFormat(String templateFormat) {
                 this.templateFormat = templateFormat;
@@ -214,7 +214,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersion.
+             * The number of the version.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -222,7 +222,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * The user who last updated the version.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -230,7 +230,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the version was last updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -238,7 +238,7 @@ public class ListTemplateVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * The name of the version.
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;

@@ -182,7 +182,7 @@ public class NotifyExecutionRequest extends Request {
         } 
 
         /**
-         * ExecutionId.
+         * The ID of the execution.
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -191,7 +191,7 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * ExecutionStatus.
+         * The state of the terminated execution. This parameter is valid if you set the NotifyType parameter to CompleteExecution.
          */
         public Builder executionStatus(String executionStatus) {
             this.putQueryParameter("ExecutionStatus", executionStatus);
@@ -200,7 +200,7 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * LoopItem.
+         * The items of the child node in the loop task.
          */
         public Builder loopItem(String loopItem) {
             this.putQueryParameter("LoopItem", loopItem);
@@ -209,7 +209,7 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * NotifyNote.
+         * The description for the notification.
          */
         public Builder notifyNote(String notifyNote) {
             this.putQueryParameter("NotifyNote", notifyNote);
@@ -218,7 +218,16 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * NotifyType.
+         * The type of the notification. Valid values:
+         * <p>
+         * 
+         * *   **ExecuteTask**: starts to run a specific task. This value is used if you perform debugging in the Debug mode. If you set this parameter to ExecuteTask, you also need to set the Parameters parameter.
+         * *   **CancelTask**: cancels a current task. This value is used if you perform debugging in the Debug mode.
+         * *   **CompleteExecution**: manually terminates an execution if you perform debugging in the Debug mode. You can specify the state of the terminated execution by using the **ExecutionStatus** parameter.
+         * *   **Approve**: approves an execution. For example, you are aware of the risks of an operation task and agree to approve the execution.
+         * *   **Reject**: rejects an execution. For example, you want to reject the execution of a high-risk operation task.
+         * *   **RetryTask**: retries a failed task whose execution mode is Suspend upon Failure.
+         * *   **SkipTask**: skips a failed task whose execution mode is Suspend upon Failure.
          */
         public Builder notifyType(String notifyType) {
             this.putQueryParameter("NotifyType", notifyType);
@@ -227,7 +236,7 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The parameters of the subsequent task. This parameter is valid if you set the NotifyType parameter to ExecuteTask.
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -236,7 +245,7 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the execution resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -245,7 +254,7 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * TaskExecutionId.
+         * The execution ID of the task.
          */
         public Builder taskExecutionId(String taskExecutionId) {
             this.putQueryParameter("TaskExecutionId", taskExecutionId);
@@ -254,7 +263,7 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * TaskExecutionIds.
+         * The execution IDs of the tasks.
          */
         public Builder taskExecutionIds(String taskExecutionIds) {
             this.putQueryParameter("TaskExecutionIds", taskExecutionIds);
@@ -263,7 +272,7 @@ public class NotifyExecutionRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the subsequent task.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

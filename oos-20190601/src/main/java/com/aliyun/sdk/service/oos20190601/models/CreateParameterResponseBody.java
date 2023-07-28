@@ -50,7 +50,7 @@ public class CreateParameterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Parameter.
+         * The information about the common parameter.
          */
         public Builder parameter(Parameter parameter) {
             this.parameter = parameter;
@@ -58,7 +58,7 @@ public class CreateParameterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -242,7 +242,7 @@ public class CreateParameterResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * Constraints.
+             * The constraints of the common parameter.
              */
             public Builder constraints(String constraints) {
                 this.constraints = constraints;
@@ -250,7 +250,7 @@ public class CreateParameterResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedBy.
+             * The user who created the common parameter.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -258,7 +258,7 @@ public class CreateParameterResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * The time when the common parameter was created.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -266,7 +266,7 @@ public class CreateParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the common parameter.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -274,7 +274,7 @@ public class CreateParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the common parameter.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -282,7 +282,7 @@ public class CreateParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the common parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -290,7 +290,7 @@ public class CreateParameterResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterVersion.
+             * The version number of the common parameter.
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -298,7 +298,7 @@ public class CreateParameterResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -306,7 +306,7 @@ public class CreateParameterResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * The share type of the common parameter.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -314,7 +314,7 @@ public class CreateParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -322,7 +322,7 @@ public class CreateParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the common parameter.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -330,7 +330,7 @@ public class CreateParameterResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * The user who updated the common parameter.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -338,7 +338,7 @@ public class CreateParameterResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the common parameter was updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

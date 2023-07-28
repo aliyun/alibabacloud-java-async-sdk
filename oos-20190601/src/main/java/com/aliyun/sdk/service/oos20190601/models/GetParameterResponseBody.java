@@ -50,7 +50,7 @@ public class GetParameterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Parameter.
+         * The description of the common parameter.
          */
         public Builder parameter(Parameter parameter) {
             this.parameter = parameter;
@@ -58,7 +58,7 @@ public class GetParameterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The user who updated the common parameter.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -326,7 +326,7 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The ID of the request.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -334,7 +334,7 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The region ID of the resource.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -342,7 +342,7 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * The value of the common parameter.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -350,7 +350,7 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The information of the common parameter.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -358,7 +358,7 @@ public class GetParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * Queries a common parameter and its value.
              */
             public Builder value(String value) {
                 this.value = value;

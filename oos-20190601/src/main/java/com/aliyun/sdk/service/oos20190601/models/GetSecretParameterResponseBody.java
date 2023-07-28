@@ -50,7 +50,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Parameter.
+         * The information about the encryption parameter.
          */
         public Builder parameter(Parameter parameter) {
             this.parameter = parameter;
@@ -58,7 +58,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -266,7 +266,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Constraints.
+             * The constraints of the encryption parameter.
              */
             public Builder constraints(String constraints) {
                 this.constraints = constraints;
@@ -274,7 +274,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedBy.
+             * The user who created the encryption parameter.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -282,7 +282,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * The time when the encryption parameter was created.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -290,7 +290,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the encryption parameter.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -298,7 +298,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the encryption parameter.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -306,7 +306,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * The ID of the key of Key Management Service (KMS) that is used for encryption.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -314,7 +314,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the encryption parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -322,7 +322,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterVersion.
+             * The version number of the encryption parameter.
              */
             public Builder parameterVersion(Integer parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -330,7 +330,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -338,7 +338,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * The share type of the encryption parameter.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -346,7 +346,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the parameter.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -354,7 +354,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the parameter.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -362,7 +362,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * The user who updated the encryption parameter.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -370,7 +370,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the encryption parameter was updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
@@ -378,7 +378,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the encryption parameter.
              */
             public Builder value(String value) {
                 this.value = value;

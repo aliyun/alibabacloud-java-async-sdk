@@ -212,7 +212,7 @@ public class CreateStateConfigurationRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The description of the desired-state configuration.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -221,7 +221,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * ConfigureMode.
+         * 收集Inventory数据
          */
         public Builder configureMode(String configureMode) {
             this.putQueryParameter("ConfigureMode", configureMode);
@@ -230,7 +230,14 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * Description.
+         * The configuration mode.
+         * <p>
+         * 
+         * ApplyOnce: The configuration is applied only once. After a configuration is updated, the new configuration is applied.
+         * 
+         * ApplyAndMonitor: The configuration is applied only once. After the configuration is applied, the system only checks whether the configuration is migrated in the future.
+         * 
+         * ApplyAndAutoCorrect: The configuration is always applied.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -239,7 +246,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The ID of resource group.
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -248,7 +255,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the template.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -257,7 +264,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The type of the schedule. Valid value: rate.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -266,7 +273,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * ScheduleExpression.
+         * The description.
          */
         public Builder scheduleExpression(String scheduleExpression) {
             this.putQueryParameter("ScheduleExpression", scheduleExpression);
@@ -275,7 +282,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * ScheduleType.
+         * The schedule expression.
          */
         public Builder scheduleType(String scheduleType) {
             this.putQueryParameter("ScheduleType", scheduleType);
@@ -284,7 +291,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The name of the template. The name must be 1 to 200 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_).
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -294,7 +301,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * Targets.
+         * The schedule expression. The interval between two schedules must be a minimum of 30 minutes.
          */
         public Builder targets(String targets) {
             this.putQueryParameter("Targets", targets);
@@ -303,7 +310,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The version of the template.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -312,7 +319,7 @@ public class CreateStateConfigurationRequest extends Request {
         }
 
         /**
-         * TemplateVersion.
+         * The required resources.
          */
         public Builder templateVersion(String templateVersion) {
             this.putQueryParameter("TemplateVersion", templateVersion);

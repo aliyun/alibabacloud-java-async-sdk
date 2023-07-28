@@ -69,7 +69,7 @@ public class DeleteParameterRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the common parameter. The name can be up to 180 characters in length and can contain only letters, digits, hyphens (-), and underscores (\_). It cannot start with aliyun, acs, alibaba, alicloud, or oos.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -78,7 +78,7 @@ public class DeleteParameterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

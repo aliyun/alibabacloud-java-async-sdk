@@ -69,7 +69,7 @@ public class GetPatchBaselineRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the patch baseline.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -78,7 +78,7 @@ public class GetPatchBaselineRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the patch baseline whose details you want to query resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

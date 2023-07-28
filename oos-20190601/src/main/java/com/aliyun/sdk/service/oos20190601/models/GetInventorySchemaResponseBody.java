@@ -74,7 +74,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         private java.util.List < Schemas> schemas; 
 
         /**
-         * MaxResults.
+         * Max results.
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +82,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
         }
 
         /**
-         * Schemas.
+         * The detailed configurations of the component.
          */
         public Builder schemas(java.util.List < Schemas> schemas) {
             this.schemas = schemas;
@@ -150,7 +150,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * DataType.
+             * The data type of the property.
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -158,7 +158,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the property.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -223,7 +223,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Attributes.
+             * The properties of component.
              */
             public Builder attributes(java.util.List < Attributes> attributes) {
                 this.attributes = attributes;
@@ -231,7 +231,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
             }
 
             /**
-             * TypeName.
+             * The name of the component.
              */
             public Builder typeName(String typeName) {
                 this.typeName = typeName;
@@ -239,7 +239,7 @@ public class GetInventorySchemaResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the component.
              */
             public Builder version(String version) {
                 this.version = version;

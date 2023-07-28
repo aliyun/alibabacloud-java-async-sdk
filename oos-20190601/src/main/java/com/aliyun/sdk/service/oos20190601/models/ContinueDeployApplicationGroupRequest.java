@@ -99,7 +99,7 @@ public class ContinueDeployApplicationGroupRequest extends Request {
         } 
 
         /**
-         * ApplicationName.
+         * The name of the application.
          */
         public Builder applicationName(String applicationName) {
             this.putQueryParameter("ApplicationName", applicationName);
@@ -108,7 +108,7 @@ public class ContinueDeployApplicationGroupRequest extends Request {
         }
 
         /**
-         * DeployParameters.
+         * The deployment information about the application group.
          */
         public Builder deployParameters(String deployParameters) {
             this.putQueryParameter("DeployParameters", deployParameters);
@@ -117,7 +117,7 @@ public class ContinueDeployApplicationGroupRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the application group.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -126,7 +126,7 @@ public class ContinueDeployApplicationGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

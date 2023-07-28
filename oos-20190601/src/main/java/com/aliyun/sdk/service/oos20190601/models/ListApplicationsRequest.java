@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListApplicationsRequest extends Request {
     @Query
+    @NameInMap("ApplicationType")
+    private String applicationType;
+
+    @Query
     @NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -38,6 +42,7 @@ public class ListApplicationsRequest extends Request {
 
     private ListApplicationsRequest(Builder builder) {
         super(builder);
+        this.applicationType = builder.applicationType;
         this.maxResults = builder.maxResults;
         this.name = builder.name;
         this.names = builder.names;
@@ -57,6 +62,13 @@ public class ListApplicationsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return applicationType
+     */
+    public String getApplicationType() {
+        return this.applicationType;
     }
 
     /**
@@ -102,6 +114,7 @@ public class ListApplicationsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListApplicationsRequest, Builder> {
+        private String applicationType; 
         private Integer maxResults; 
         private String name; 
         private String names; 
@@ -115,6 +128,7 @@ public class ListApplicationsRequest extends Request {
 
         private Builder(ListApplicationsRequest request) {
             super(request);
+            this.applicationType = request.applicationType;
             this.maxResults = request.maxResults;
             this.name = request.name;
             this.names = request.names;
@@ -124,7 +138,16 @@ public class ListApplicationsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The type of the application.
+         */
+        public Builder applicationType(String applicationType) {
+            this.putQueryParameter("ApplicationType", applicationType);
+            this.applicationType = applicationType;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -133,7 +156,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the application.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -142,7 +165,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * Names.
+         * The names of the applications.
          */
         public Builder names(String names) {
             this.putQueryParameter("Names", names);
@@ -151,7 +174,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -160,7 +183,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Set the value to cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -169,7 +192,7 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

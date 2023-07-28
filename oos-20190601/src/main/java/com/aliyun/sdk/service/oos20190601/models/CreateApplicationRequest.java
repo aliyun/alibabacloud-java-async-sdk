@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateApplicationRequest extends Request {
     @Query
+    @NameInMap("AlarmConfig")
+    private AlarmConfig alarmConfig;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -39,6 +43,7 @@ public class CreateApplicationRequest extends Request {
 
     private CreateApplicationRequest(Builder builder) {
         super(builder);
+        this.alarmConfig = builder.alarmConfig;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.name = builder.name;
@@ -58,6 +63,13 @@ public class CreateApplicationRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return alarmConfig
+     */
+    public AlarmConfig getAlarmConfig() {
+        return this.alarmConfig;
     }
 
     /**
@@ -103,6 +115,7 @@ public class CreateApplicationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateApplicationRequest, Builder> {
+        private AlarmConfig alarmConfig; 
         private String clientToken; 
         private String description; 
         private String name; 
@@ -116,6 +129,7 @@ public class CreateApplicationRequest extends Request {
 
         private Builder(CreateApplicationRequest request) {
             super(request);
+            this.alarmConfig = request.alarmConfig;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.name = request.name;
@@ -125,7 +139,17 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * AlarmConfig.
+         */
+        public Builder alarmConfig(AlarmConfig alarmConfig) {
+            String alarmConfigShrink = shrink(alarmConfig, "AlarmConfig", "json");
+            this.putQueryParameter("AlarmConfig", alarmConfigShrink);
+            this.alarmConfig = alarmConfig;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -134,7 +158,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the application.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -143,7 +167,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Name.
+         * The application name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -152,7 +176,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Set the value to cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,7 +185,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -170,7 +194,7 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -186,4 +210,85 @@ public class CreateApplicationRequest extends Request {
 
     } 
 
+    public static class AlarmConfig extends TeaModel {
+        @NameInMap("ContactGroups")
+        private java.util.List < String > contactGroups;
+
+        @NameInMap("HealthCheckUrl")
+        private String healthCheckUrl;
+
+        @NameInMap("TemplateIds")
+        private java.util.List < String > templateIds;
+
+        private AlarmConfig(Builder builder) {
+            this.contactGroups = builder.contactGroups;
+            this.healthCheckUrl = builder.healthCheckUrl;
+            this.templateIds = builder.templateIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AlarmConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return contactGroups
+         */
+        public java.util.List < String > getContactGroups() {
+            return this.contactGroups;
+        }
+
+        /**
+         * @return healthCheckUrl
+         */
+        public String getHealthCheckUrl() {
+            return this.healthCheckUrl;
+        }
+
+        /**
+         * @return templateIds
+         */
+        public java.util.List < String > getTemplateIds() {
+            return this.templateIds;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > contactGroups; 
+            private String healthCheckUrl; 
+            private java.util.List < String > templateIds; 
+
+            /**
+             * ContactGroups.
+             */
+            public Builder contactGroups(java.util.List < String > contactGroups) {
+                this.contactGroups = contactGroups;
+                return this;
+            }
+
+            /**
+             * HealthCheckUrl.
+             */
+            public Builder healthCheckUrl(String healthCheckUrl) {
+                this.healthCheckUrl = healthCheckUrl;
+                return this;
+            }
+
+            /**
+             * TemplateIds.
+             */
+            public Builder templateIds(java.util.List < String > templateIds) {
+                this.templateIds = templateIds;
+                return this;
+            }
+
+            public AlarmConfig build() {
+                return new AlarmConfig(this);
+            } 
+
+        } 
+
+    }
 }

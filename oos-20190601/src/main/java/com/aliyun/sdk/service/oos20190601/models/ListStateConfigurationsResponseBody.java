@@ -62,7 +62,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         private java.util.List < StateConfigurations> stateConfigurations; 
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * StateConfigurations.
+         * The desired-state configurations.
          */
         public Builder stateConfigurations(java.util.List < StateConfigurations> stateConfigurations) {
             this.stateConfigurations = stateConfigurations;
@@ -274,7 +274,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * ConfigureMode.
+             * The configuration mode.
              */
             public Builder configureMode(String configureMode) {
                 this.configureMode = configureMode;
@@ -282,7 +282,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The creation time.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -290,7 +290,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -298,7 +298,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * The parameters.
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -306,7 +306,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -314,7 +314,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleExpression.
+             * The schedule expression.
              */
             public Builder scheduleExpression(String scheduleExpression) {
                 this.scheduleExpression = scheduleExpression;
@@ -322,7 +322,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleType.
+             * The schedule type.
              */
             public Builder scheduleType(String scheduleType) {
                 this.scheduleType = scheduleType;
@@ -330,7 +330,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * StateConfigurationId.
+             * The ID of the desired-state configuration.
              */
             public Builder stateConfigurationId(String stateConfigurationId) {
                 this.stateConfigurationId = stateConfigurationId;
@@ -338,7 +338,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tag of the auxiliary media asset.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -346,7 +346,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Targets.
+             * The target EMR resource.
              */
             public Builder targets(String targets) {
                 this.targets = targets;
@@ -354,7 +354,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the cluster template.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -362,7 +362,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -370,7 +370,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersion.
+             * The version of the template.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -378,7 +378,7 @@ public class ListStateConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the configuration is updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

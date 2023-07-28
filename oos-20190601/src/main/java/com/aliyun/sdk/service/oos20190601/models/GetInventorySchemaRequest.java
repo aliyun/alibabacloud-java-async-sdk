@@ -111,7 +111,13 @@ public class GetInventorySchemaRequest extends Request {
         } 
 
         /**
-         * Aggregator.
+         * Specifies whether only to return a combination of specified properties.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   true: only returns a combination of specified properties
+         * *   false: returns all properties of the component
          */
         public Builder aggregator(Boolean aggregator) {
             this.putQueryParameter("Aggregator", aggregator);
@@ -120,7 +126,7 @@ public class GetInventorySchemaRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries to return on each page. Valid values: 1 to 100. Default value: 50.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -129,7 +135,7 @@ public class GetInventorySchemaRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -138,7 +144,7 @@ public class GetInventorySchemaRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +153,17 @@ public class GetInventorySchemaRequest extends Request {
         }
 
         /**
-         * TypeName.
+         * The name of the component. Valid values:
+         * <p>
+         * 
+         * *   ACS:InstanceInformation
+         * *   ACS:Application
+         * *   ACS:File
+         * *   ACS:Network
+         * *   ACS:WindowsRole
+         * *   ACS:Service
+         * *   ACS:WindowsUpdate
+         * *   ACS:WindowsRegistry
          */
         public Builder typeName(String typeName) {
             this.putQueryParameter("TypeName", typeName);

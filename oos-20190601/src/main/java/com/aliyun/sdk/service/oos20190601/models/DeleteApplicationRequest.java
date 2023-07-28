@@ -83,7 +83,11 @@ public class DeleteApplicationRequest extends Request {
         } 
 
         /**
-         * Force.
+         * Specifies whether to forcibly delete the application. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -92,7 +96,7 @@ public class DeleteApplicationRequest extends Request {
         }
 
         /**
-         * Name.
+         * The application name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -101,7 +105,7 @@ public class DeleteApplicationRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Set the value to cn-hangzhou.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

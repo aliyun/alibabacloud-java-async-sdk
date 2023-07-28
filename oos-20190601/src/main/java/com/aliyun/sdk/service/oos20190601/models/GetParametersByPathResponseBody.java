@@ -156,6 +156,9 @@ public class GetParametersByPathResponseBody extends TeaModel {
         @NameInMap("ShareType")
         private String shareType;
 
+        @NameInMap("Tags")
+        private java.util.Map < String, ? > tags;
+
         @NameInMap("Type")
         private String type;
 
@@ -177,6 +180,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             this.name = builder.name;
             this.parameterVersion = builder.parameterVersion;
             this.shareType = builder.shareType;
+            this.tags = builder.tags;
             this.type = builder.type;
             this.updatedBy = builder.updatedBy;
             this.updatedDate = builder.updatedDate;
@@ -248,6 +252,13 @@ public class GetParametersByPathResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.Map < String, ? > getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -284,6 +295,7 @@ public class GetParametersByPathResponseBody extends TeaModel {
             private String name; 
             private Integer parameterVersion; 
             private String shareType; 
+            private java.util.Map < String, ? > tags; 
             private String type; 
             private String updatedBy; 
             private String updatedDate; 
@@ -350,6 +362,14 @@ public class GetParametersByPathResponseBody extends TeaModel {
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.Map < String, ? > tags) {
+                this.tags = tags;
                 return this;
             }
 

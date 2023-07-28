@@ -38,7 +38,7 @@ public class DeleteStateConfigurationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * Deletes desired-state configurations in batches.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

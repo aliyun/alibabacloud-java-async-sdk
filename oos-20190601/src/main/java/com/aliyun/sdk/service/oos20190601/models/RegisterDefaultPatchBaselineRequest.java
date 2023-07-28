@@ -69,7 +69,7 @@ public class RegisterDefaultPatchBaselineRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the patch baseline.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -78,7 +78,7 @@ public class RegisterDefaultPatchBaselineRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

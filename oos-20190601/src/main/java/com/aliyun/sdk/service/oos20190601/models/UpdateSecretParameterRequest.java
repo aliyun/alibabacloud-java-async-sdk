@@ -126,7 +126,7 @@ public class UpdateSecretParameterRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the parameter. The description must be 1 to 200 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -135,7 +135,7 @@ public class UpdateSecretParameterRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the parameter. The name must be 1 to 180 characters in length, and can contain letters, digits, hyphens (-), and underscores (\_). It cannot start with ALIYUN, ACS, ALIBABA, ALICLOUD, or OOS.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -144,7 +144,7 @@ public class UpdateSecretParameterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +153,7 @@ public class UpdateSecretParameterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -162,7 +162,7 @@ public class UpdateSecretParameterRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags of the parameter.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -172,7 +172,7 @@ public class UpdateSecretParameterRequest extends Request {
         }
 
         /**
-         * Value.
+         * The value of the parameter. The value must be 1 to 4096 characters in length.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

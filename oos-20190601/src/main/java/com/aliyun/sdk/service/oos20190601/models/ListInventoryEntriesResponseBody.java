@@ -122,7 +122,7 @@ public class ListInventoryEntriesResponseBody extends TeaModel {
         private String typeName; 
 
         /**
-         * CaptureTime.
+         * The time when the request was sent.
          */
         public Builder captureTime(String captureTime) {
             this.captureTime = captureTime;
@@ -130,7 +130,7 @@ public class ListInventoryEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * Entries.
+         * The configurations of the component.
          */
         public Builder entries(java.util.List < java.util.Map<String, ?>> entries) {
             this.entries = entries;
@@ -138,7 +138,7 @@ public class ListInventoryEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ECS instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -146,7 +146,7 @@ public class ListInventoryEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -154,7 +154,7 @@ public class ListInventoryEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -162,7 +162,7 @@ public class ListInventoryEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class ListInventoryEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * SchemaVersion.
+         * The version number of the component.
          */
         public Builder schemaVersion(String schemaVersion) {
             this.schemaVersion = schemaVersion;
@@ -178,7 +178,7 @@ public class ListInventoryEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * TypeName.
+         * The name of the component.
          */
         public Builder typeName(String typeName) {
             this.typeName = typeName;

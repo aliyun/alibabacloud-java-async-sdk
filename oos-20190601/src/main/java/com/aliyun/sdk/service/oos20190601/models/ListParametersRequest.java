@@ -42,6 +42,10 @@ public class ListParametersRequest extends Request {
     private String resourceGroupId;
 
     @Query
+    @NameInMap("ShareType")
+    private String shareType;
+
+    @Query
     @NameInMap("SortField")
     private String sortField;
 
@@ -66,6 +70,7 @@ public class ListParametersRequest extends Request {
         this.recursive = builder.recursive;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.shareType = builder.shareType;
         this.sortField = builder.sortField;
         this.sortOrder = builder.sortOrder;
         this.tags = builder.tags;
@@ -135,6 +140,13 @@ public class ListParametersRequest extends Request {
     }
 
     /**
+     * @return shareType
+     */
+    public String getShareType() {
+        return this.shareType;
+    }
+
+    /**
      * @return sortField
      */
     public String getSortField() {
@@ -170,6 +182,7 @@ public class ListParametersRequest extends Request {
         private Boolean recursive; 
         private String regionId; 
         private String resourceGroupId; 
+        private String shareType; 
         private String sortField; 
         private String sortOrder; 
         private java.util.Map < String, ? > tags; 
@@ -188,6 +201,7 @@ public class ListParametersRequest extends Request {
             this.recursive = request.recursive;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.shareType = request.shareType;
             this.sortField = request.sortField;
             this.sortOrder = request.sortOrder;
             this.tags = request.tags;
@@ -254,6 +268,15 @@ public class ListParametersRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * ShareType.
+         */
+        public Builder shareType(String shareType) {
+            this.putQueryParameter("ShareType", shareType);
+            this.shareType = shareType;
             return this;
         }
 

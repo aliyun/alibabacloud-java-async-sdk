@@ -50,7 +50,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
         private StateConfiguration stateConfiguration; 
 
         /**
-         * RequestId.
+         * The configuration mode.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * StateConfiguration.
+         * The tag.
          */
         public Builder stateConfiguration(StateConfiguration stateConfiguration) {
             this.stateConfiguration = stateConfiguration;
@@ -242,7 +242,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             private String templateVersion; 
 
             /**
-             * ConfigureMode.
+             * The parameters.
              */
             public Builder configureMode(String configureMode) {
                 this.configureMode = configureMode;
@@ -250,7 +250,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The desired-state configuration.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -258,7 +258,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * WB502027
              */
             public Builder description(String description) {
                 this.description = description;
@@ -266,7 +266,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * CreateStateConfiguration
              */
             public Builder parameters(java.util.Map < String, ? > parameters) {
                 this.parameters = parameters;
@@ -282,7 +282,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleExpression.
+             * The version number. If you do not specify this parameter, the system uses the latest version.
              */
             public Builder scheduleExpression(String scheduleExpression) {
                 this.scheduleExpression = scheduleExpression;
@@ -290,7 +290,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * ScheduleType.
+             * Creates a desired-state configuration.
              */
             public Builder scheduleType(String scheduleType) {
                 this.scheduleType = scheduleType;
@@ -298,7 +298,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * StateConfigurationId.
+             * 收集Inventory数据
              */
             public Builder stateConfigurationId(String stateConfigurationId) {
                 this.stateConfigurationId = stateConfigurationId;
@@ -306,7 +306,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The required resources.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -314,7 +314,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Targets.
+             * 1 hour 或 30 minutes
              */
             public Builder targets(String targets) {
                 this.targets = targets;
@@ -330,7 +330,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -338,7 +338,7 @@ public class CreateStateConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersion.
+             * The ID of the request.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;

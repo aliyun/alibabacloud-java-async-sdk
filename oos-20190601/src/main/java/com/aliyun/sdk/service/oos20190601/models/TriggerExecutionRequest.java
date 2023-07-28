@@ -122,7 +122,7 @@ public class TriggerExecutionRequest extends Request {
         }
 
         /**
-         * Content.
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -131,7 +131,7 @@ public class TriggerExecutionRequest extends Request {
         }
 
         /**
-         * ExecutionId.
+         * The ID of the request.
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -140,7 +140,7 @@ public class TriggerExecutionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The message body to be sent to the trigger task.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -149,7 +149,7 @@ public class TriggerExecutionRequest extends Request {
         }
 
         /**
-         * Type.
+         * The operation that you want to perform. Set the value to TriggerExecution.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

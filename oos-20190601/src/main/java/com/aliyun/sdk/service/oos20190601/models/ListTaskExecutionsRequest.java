@@ -264,7 +264,7 @@ public class ListTaskExecutionsRequest extends Request {
         } 
 
         /**
-         * EndDateAfter.
+         * The execution ID of the task.
          */
         public Builder endDateAfter(String endDateAfter) {
             this.putQueryParameter("EndDateAfter", endDateAfter);
@@ -273,7 +273,7 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * EndDateBefore.
+         * Specifies to query task executions that stop running at or later than the specified time.
          */
         public Builder endDateBefore(String endDateBefore) {
             this.putQueryParameter("EndDateBefore", endDateBefore);
@@ -282,7 +282,7 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * ExecutionId.
+         * The status of the execution. Valid values: Running, Started, Success, Failed, Waiting, Cancelled, Pending, and Skipped.
          */
         public Builder executionId(String executionId) {
             this.putQueryParameter("ExecutionId", executionId);
@@ -291,7 +291,7 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * IncludeChildTaskExecution.
+         * The number of entries to return on each page. Valid values: 20 to 100. Default value: 50.
          */
         public Builder includeChildTaskExecution(Boolean includeChildTaskExecution) {
             this.putQueryParameter("IncludeChildTaskExecution", includeChildTaskExecution);
@@ -300,7 +300,7 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -309,7 +309,12 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * Sorts the task executions to query. Valid values:
+         * <p>
+         * 
+         * *   **StartDate**: specifies that the task executions are sorted based on the time when they are created. This is the default value.
+         * *   **EndDate**: specifies that the task executions are sorted based on the time when the time when they stop running.
+         * *   **Status**: specifies that the task executions are sorted based on their statuses.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -318,7 +323,7 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * ParentTaskExecutionId.
+         * Specifies whether to show the child nodes in the loop task. Default value: False.
          */
         public Builder parentTaskExecutionId(String parentTaskExecutionId) {
             this.putQueryParameter("ParentTaskExecutionId", parentTaskExecutionId);
@@ -327,7 +332,7 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the execution.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -336,7 +341,11 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * SortField.
+         * The order in which you want to sort the task executions to query. Valid values:
+         * <p>
+         * 
+         * *   **Ascending**: ascending order.
+         * *   **Descending**: descending order. This is the default value.
          */
         public Builder sortField(String sortField) {
             this.putQueryParameter("SortField", sortField);
@@ -345,7 +354,7 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * SortOrder.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder sortOrder(String sortOrder) {
             this.putQueryParameter("SortOrder", sortOrder);
@@ -354,7 +363,7 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * StartDateAfter.
+         * Specifies to query task executions that stop running at or before the specified time.
          */
         public Builder startDateAfter(String startDateAfter) {
             this.putQueryParameter("StartDateAfter", startDateAfter);
@@ -363,7 +372,7 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * StartDateBefore.
+         * Specifies to query task executions that start to run at or later than the specified time.
          */
         public Builder startDateBefore(String startDateBefore) {
             this.putQueryParameter("StartDateBefore", startDateBefore);
@@ -372,7 +381,7 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * Status.
+         * Specifies to query task executions that start to run at or before the specified time.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -381,7 +390,7 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * TaskAction.
+         * The execution ID of the parent node. In a loop task, set this parameter to the execution ID of the parent node.
          */
         public Builder taskAction(String taskAction) {
             this.putQueryParameter("TaskAction", taskAction);
@@ -390,7 +399,7 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * TaskExecutionId.
+         * The name of the task.
          */
         public Builder taskExecutionId(String taskExecutionId) {
             this.putQueryParameter("TaskExecutionId", taskExecutionId);
@@ -399,7 +408,7 @@ public class ListTaskExecutionsRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The action of the task.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

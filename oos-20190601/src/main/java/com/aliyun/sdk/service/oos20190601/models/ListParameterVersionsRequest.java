@@ -112,7 +112,7 @@ public class ListParameterVersionsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The share type of the common parameter.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -121,7 +121,7 @@ public class ListParameterVersionsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The pagination token.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -130,7 +130,7 @@ public class ListParameterVersionsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The data type of the common parameter.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -139,7 +139,7 @@ public class ListParameterVersionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The number of entries to return on each page. Valid values: 10 to 100. Default value: 50.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +148,7 @@ public class ListParameterVersionsRequest extends Request {
         }
 
         /**
-         * ShareType.
+         * The pagination token.
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);

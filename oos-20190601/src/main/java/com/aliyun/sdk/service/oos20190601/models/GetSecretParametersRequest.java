@@ -83,7 +83,7 @@ public class GetSecretParametersRequest extends Request {
         } 
 
         /**
-         * Names.
+         * The name of the encryption parameter. Multiple encryption parameters can form a JSON array in the format of \["xxxxxxxxx", "yyyyyyyyy", … "zzzzzzzzz"]. Each JSON array can contain a maximum of 10 encryption parameters. Multiple encryption parameters in the array are separated by commas (,).
          */
         public Builder names(String names) {
             this.putQueryParameter("Names", names);
@@ -92,7 +92,7 @@ public class GetSecretParametersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +101,11 @@ public class GetSecretParametersRequest extends Request {
         }
 
         /**
-         * WithDecryption.
+         * Specifies whether to decrypt the parameter value. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder withDecryption(Boolean withDecryption) {
             this.putQueryParameter("WithDecryption", withDecryption);

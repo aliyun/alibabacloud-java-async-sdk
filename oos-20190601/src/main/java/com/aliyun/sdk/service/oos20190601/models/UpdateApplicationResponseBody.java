@@ -50,7 +50,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Application.
+         * The information about the application.
          */
         public Builder application(Application application) {
             this.application = application;
@@ -58,7 +58,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * CreatedDate.
+             * The time when the application was created.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -166,7 +166,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the application.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +174,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The application name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -182,7 +182,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -190,7 +190,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -198,7 +198,7 @@ public class UpdateApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the application was updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

@@ -83,7 +83,7 @@ public class DeleteTemplateRequest extends Request {
         } 
 
         /**
-         * AutoDeleteExecutions.
+         * You can call this operation to delete a template.
          */
         public Builder autoDeleteExecutions(Boolean autoDeleteExecutions) {
             this.putQueryParameter("AutoDeleteExecutions", autoDeleteExecutions);
@@ -92,7 +92,7 @@ public class DeleteTemplateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Specifies whether to delete the related executions when a template is deleted.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +101,7 @@ public class DeleteTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The ID of the request.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

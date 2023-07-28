@@ -82,7 +82,7 @@ public class ValidateTemplateContentRequest extends Request {
         } 
 
         /**
-         * Content.
+         * The content of the template.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -91,7 +91,7 @@ public class ValidateTemplateContentRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -100,7 +100,7 @@ public class ValidateTemplateContentRequest extends Request {
         }
 
         /**
-         * TemplateURL.
+         * The URL that is used to store the content of the Operation Orchestration Service (OOS) template in the Alibaba Cloud Object Storage Service (OSS). Only the public-read URL is supported. You can use this parameter to specify the tasks that you want to run. This way, you do not need to create a template before you start an execution. If you select an existing template, you do not need to specify this parameter.
          */
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);

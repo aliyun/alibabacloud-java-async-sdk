@@ -126,7 +126,7 @@ public class UpdateTemplateRequest extends Request {
         } 
 
         /**
-         * Content.
+         * The content of the template. The content must be in the JSON or YAML format, and its maximum size is 64 KB.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -135,7 +135,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -144,7 +144,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -153,7 +153,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag keys and values. The number of key-value pairs ranges from 1 to 20.
          */
         public Builder tags(java.util.Map < String, ? > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -163,7 +163,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the template. The name can be up to 200 characters in length and can contain letters, digits, hyphens (-), and underscores (\_). The name cannot start with ALIYUN, ACS, ALIBABA, or ALICLOUD.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -172,7 +172,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * VersionName.
+         * The name of the template version.
          */
         public Builder versionName(String versionName) {
             this.putQueryParameter("VersionName", versionName);

@@ -62,7 +62,7 @@ public class CreateTemplateResponseBody extends TeaModel {
         private String templateType; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class CreateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Template.
+         * The metadata of the template.
          */
         public Builder template(Template template) {
             this.template = template;
@@ -78,7 +78,7 @@ public class CreateTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateType.
+         * The type of the template.
          */
         public Builder templateType(String templateType) {
             this.templateType = templateType;
@@ -274,7 +274,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * CreatedBy.
+             * The creator of the template.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -282,7 +282,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * The time when the template was created.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -290,7 +290,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -298,7 +298,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * HasTrigger.
+             * Indicates whether the template was configured with a trigger.
              */
             public Builder hasTrigger(Boolean hasTrigger) {
                 this.hasTrigger = hasTrigger;
@@ -306,7 +306,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Hash.
+             * The SHA-256 value of the template content.
              */
             public Builder hash(String hash) {
                 this.hash = hash;
@@ -314,7 +314,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -322,7 +322,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * The share type of the template. The share type of the template that you create is Private.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -330,7 +330,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the resources.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -338,7 +338,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateFormat.
+             * The format of the template. The system automatically determines whether the format is JSON or YAML.
              */
             public Builder templateFormat(String templateFormat) {
                 this.templateFormat = templateFormat;
@@ -346,7 +346,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the template.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -354,7 +354,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -362,7 +362,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateVersion.
+             * The version of the template. The name of the version consists of the letter v and a number. The number starts from 1.
              */
             public Builder templateVersion(String templateVersion) {
                 this.templateVersion = templateVersion;
@@ -370,7 +370,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * The Alibaba Cloud account that last modified the information about the template.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -378,7 +378,7 @@ public class CreateTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the template was last updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;

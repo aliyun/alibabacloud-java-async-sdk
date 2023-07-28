@@ -74,7 +74,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +82,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is used to retrieve the next page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * The information about the parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -98,7 +98,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -282,7 +282,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
             private String updatedDate; 
 
             /**
-             * CreatedBy.
+             * The user who created the parameter.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -290,7 +290,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedDate.
+             * The time when the parameter was created.
              */
             public Builder createdDate(String createdDate) {
                 this.createdDate = createdDate;
@@ -298,7 +298,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the parameter.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,7 +306,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the parameter.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -314,7 +314,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * KeyId.
+             * The ID of the KMS customer master key (CMK) that is used for encryption.
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -322,7 +322,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -330,7 +330,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterVersion.
+             * The version number of the parameter.
              */
             public Builder parameterVersion(String parameterVersion) {
                 this.parameterVersion = parameterVersion;
@@ -338,7 +338,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -346,7 +346,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * The share type of the parameter.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -354,7 +354,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the parameter.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -362,7 +362,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the parameter.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -370,7 +370,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedBy.
+             * The user who updated the parameter.
              */
             public Builder updatedBy(String updatedBy) {
                 this.updatedBy = updatedBy;
@@ -378,7 +378,7 @@ public class ListSecretParametersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedDate.
+             * The time when the parameter was updated.
              */
             public Builder updatedDate(String updatedDate) {
                 this.updatedDate = updatedDate;
