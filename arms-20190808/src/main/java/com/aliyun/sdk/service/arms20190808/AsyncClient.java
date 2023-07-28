@@ -345,7 +345,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchAlertHistoriesResponse> searchAlertHistories(SearchAlertHistoriesRequest request);
 
     /**
-      * Queries alert rules.
+      * The current operation is no longer maintained. You can call the GetAlertRules operation of Alert Management (New) to query existing alert rules.
       *
      */
     CompletableFuture<SearchAlertRulesResponse> searchAlertRules(SearchAlertRulesRequest request);

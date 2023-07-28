@@ -109,7 +109,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * Schema of Response
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -118,7 +118,15 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type.
+         * <p>
+         * 
+         * WEB-front-end monitoring
+         * APPLICATION-Application Monitoring
+         * PROMETHEUS-PROM monitoring
+         * SYNTHETICTASK-Cloud dial test
+         * ALERTRULE - Application Monitoring Similar
+         * PROMETHEUSALERTRULE - Prometheus monitoring
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -127,7 +135,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The returned result.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -181,7 +189,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * http://arms.${regionId}.aliyun-inc.com:8099/tag/TagResources.json
              */
             public Builder key(String key) {
                 this.key = key;

@@ -50,7 +50,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageBean.
+         * The returned struct.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private String subTitle; 
 
             /**
-             * AlarmContentSubTitle.
+             * The sub-title of the alert notification content.
              */
             public Builder alarmContentSubTitle(String alarmContentSubTitle) {
                 this.alarmContentSubTitle = alarmContentSubTitle;
@@ -142,7 +142,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlarmContentTemplate.
+             * The template of the alert notification.
              */
             public Builder alarmContentTemplate(String alarmContentTemplate) {
                 this.alarmContentTemplate = alarmContentTemplate;
@@ -150,7 +150,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The content of the alert notification.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -158,7 +158,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * SubTitle.
+             * The sub-title of the alert notification.
              */
             public Builder subTitle(String subTitle) {
                 this.subTitle = subTitle;
@@ -259,7 +259,13 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Aggregates.
+             * The aggregation logic of the metric data of the alert rule. Valid values:
+             * <p>
+             * 
+             * *   `AVG`: calculates the average value for each minute
+             * *   `SUM`: calculates the total value for each minute
+             * *   `MAX`: calculates the maximum value for each minute
+             * *   `MIN`: calculates the minimum value for each minute
              */
             public Builder aggregates(String aggregates) {
                 this.aggregates = aggregates;
@@ -267,7 +273,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Alias.
+             * The displayed description of the alert metric.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -275,7 +281,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Measure.
+             * The metric based on which alerts are triggered. For more information, see the "[Alert metrics](https://help.aliyun.com/document_detail/175825.html#h2-url-4)" section in this topic.
              */
             public Builder measure(String measure) {
                 this.measure = measure;
@@ -283,7 +289,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NValue.
+             * The time range when data is requested. Unit: minutes. For example, a value of 5 indicates that the alert rule applies to the data in the last 5 minutes.
              */
             public Builder nValue(Integer nValue) {
                 this.nValue = nValue;
@@ -291,7 +297,17 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The operation logic of the condition. Valid values:
+             * <p>
+             * 
+             * *   CURRENT_GTE: greater than or equal to
+             * *   CURRENT_LTE: less than or equal to
+             * *   PREVIOUS_UP: the increase percentage compared with the last period
+             * *   PREVIOUS_DOWN: the decrease percentage compared with the last period
+             * *   HOH_UP: the increase percentage compared with the last hour
+             * *   HOH_DOWN: the decrease percentage compared with the last hour
+             * *   DOD_UP: the increase percentage compared with the last day
+             * *   DOD_DOWN: the decrease percentage compared with the last day
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -299,7 +315,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The threshold of the condition.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -352,7 +368,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private java.util.List < Rules> rules; 
 
             /**
-             * Operator.
+             * The logical operator between conditions. Valid values: `&`: AND. `|`: OR.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -360,7 +376,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * The condition of the alert rule.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -425,7 +441,13 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the dimension. Valid values:
+             * <p>
+             * 
+             * *   `rpc`: the name of the API
+             * *   `rpcType`: the type of the API call, such as HTTP or DUBBO
+             * *   `endpoint`: the name of the database
+             * *   `rootIp`: the IP address of the host
              */
             public Builder key(String key) {
                 this.key = key;
@@ -433,7 +455,12 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the dimension. Valid values:
+             * <p>
+             * 
+             * *   `STATIC`: checks only the value of this dimension. In this case, you must set the **dimensions.value** parameter.
+             * *   `ALL`: checks the values of all dimensions. The metrics of all API calls are checked. If an API call triggers an alert, the name of the API is displayed in the alert notification. In this case, you do not need to set the **dimensions.value** parameter.
+             * *   `DISABLE`: aggregates the values of all dimensions. In this case, you do not need to set the **dimensions.value** parameter.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -441,7 +468,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the dimension.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -530,7 +557,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AppGroupId.
+             * The ID of the application group that is associated with the alert rule. This parameter is applicable to Enterprise Distributed Application Service (EDAS) applications.
              */
             public Builder appGroupId(String appGroupId) {
                 this.appGroupId = appGroupId;
@@ -538,7 +565,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * The auto-increment ID of the ARMS application. You can ignore this ID.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -546,7 +573,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Dimensions.
+             * The dimensions in the condition.
              */
             public Builder dimensions(java.util.List < Dimensions> dimensions) {
                 this.dimensions = dimensions;
@@ -554,7 +581,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Pid.
+             * The PID of the application that is associated with the alert rule.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -562,7 +589,15 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the metric. Valid values:
+             * <p>
+             * 
+             * *   `txn`: the number of API calls during application monitoring
+             * *   `txn_type`: the types of API calls during application monitoring
+             * *   `db`: database metrics
+             * *   `jvm`: Java virtual machine (JVM) metrics
+             * *   `host`: host metrics
+             * *   `exception`: API call errors
              */
             public Builder type(String type) {
                 this.type = type;
@@ -639,7 +674,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * EndTime.
+             * The end of the time range when the alert rule takes effect within 24 hours per day. This value is a UNIX timestamp. The year, month, and day that are indicated by the timestamp are not displayed in this value. Only the hour, minute, and second are displayed.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -647,7 +682,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NoticeEndTime.
+             * The end of the time range when alert notifications are sent based on the alert rule within 24 hours per day. This value is a UNIX timestamp. The year, month, and day that are indicated by the timestamp are not displayed in this value. Only the hour, minute, and second are displayed.
              */
             public Builder noticeEndTime(Long noticeEndTime) {
                 this.noticeEndTime = noticeEndTime;
@@ -655,7 +690,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NoticeStartTime.
+             * The beginning of the time range when alert notifications are sent based on the alert rule within 24 hours per day. This value is a UNIX timestamp. The year, month, and day that are indicated by the timestamp are not displayed in this value. Only the hour, minute, and second are displayed.
              */
             public Builder noticeStartTime(Long noticeStartTime) {
                 this.noticeStartTime = noticeStartTime;
@@ -663,7 +698,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The beginning of the time range when the alert rule takes effect within 24 hours per day. This value is a UNIX timestamp. The year, month, and day that are indicated by the timestamp are not displayed in this value. Only the hour, minute, and second are displayed.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -968,7 +1003,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * AlarmContext.
+             * The format of the alert notification.
              */
             public Builder alarmContext(AlarmContext alarmContext) {
                 this.alarmContext = alarmContext;
@@ -976,7 +1011,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertLevel.
+             * The severity of the alerts. Only the value `WARN` is supported.
              */
             public Builder alertLevel(String alertLevel) {
                 this.alertLevel = alertLevel;
@@ -984,7 +1019,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertRule.
+             * The conditions of the alert rule. Multiple conditions are separated by the AND or OR logical operators.
              */
             public Builder alertRule(AlertRule alertRule) {
                 this.alertRule = alertRule;
@@ -992,7 +1027,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertTitle.
+             * The name of the alert rule.
              */
             public Builder alertTitle(String alertTitle) {
                 this.alertTitle = alertTitle;
@@ -1000,7 +1035,17 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertType.
+             * The type of the alert rule. Valid values:
+             * <p>
+             * 
+             * *   `1`: custom alert rules that are used to monitor drill-down data sets
+             * *   `3`: custom alert rules that are used to monitor tiled data sets
+             * *   `4`: alert rules that are used to monitor the browser, including the default frontend alert rules
+             * *   `5`: alert rules that are used to monitor applications, including the default application alert rules
+             * *   `6`: the default browser alert rules
+             * *   `7`: the default application alert rules
+             * *   `8`: Tracing Analysis alert rules
+             * *   `101`: Prometheus alert rules
              */
             public Builder alertType(Integer alertType) {
                 this.alertType = alertType;
@@ -1008,7 +1053,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertVersion.
+             * The version of the alert rule. Default value: `1`.
              */
             public Builder alertVersion(Integer alertVersion) {
                 this.alertVersion = alertVersion;
@@ -1024,7 +1069,19 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * The configuration items of the alert rule. The value is a JSON string.
+             * <p>
+             * 
+             * The configuration item **continuous** indicates whether alert notifications are continuously sent. Valid values:
+             * 
+             * *   `true`: Alert notifications are sent every minute.
+             * *   `false`: The alert silence feature is enabled.
+             * 
+             * The configuration item **dataRevision** indicates the data revision policy that is used if no data is obtained or the data is null. Default value: 2. Valid values:
+             * 
+             * *   `0`: overwrites the data by using the value 0
+             * *   `1`: overwrites the data by using the value 1
+             * *   `2`: overwrites the data by using the value null. This value indicates that no alert is triggered if no data exists
              */
             public Builder config(String config) {
                 this.config = config;
@@ -1032,7 +1089,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ContactGroupIdList.
+             * The ID of the contact group. Multiple IDs are separated by commas (,).
              */
             public Builder contactGroupIdList(String contactGroupIdList) {
                 this.contactGroupIdList = contactGroupIdList;
@@ -1040,7 +1097,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ContactGroupIds.
+             * The IDs of the alert contact groups. The value is a JSON array.
              */
             public Builder contactGroupIds(String contactGroupIds) {
                 this.contactGroupIds = contactGroupIds;
@@ -1048,7 +1105,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp that shows when the alert rule was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1056,7 +1113,11 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * HostByAlertManager.
+             * Indicates whether the alert is sent through the alert center. Valid values:
+             * <p>
+             * 
+             * *   `true`
+             * *   `false`
              */
             public Builder hostByAlertManager(Boolean hostByAlertManager) {
                 this.hostByAlertManager = hostByAlertManager;
@@ -1064,7 +1125,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the alert rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1072,7 +1133,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MetricParam.
+             * The information about the application that is associated with the alert rule.
              */
             public Builder metricParam(MetricParam metricParam) {
                 this.metricParam = metricParam;
@@ -1080,7 +1141,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Notice.
+             * The time ranges when the alert rule takes effect and when alert notifications are sent.
              */
             public Builder notice(Notice notice) {
                 this.notice = notice;
@@ -1088,7 +1149,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region to which the alert rule belongs.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1104,7 +1165,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the alert rule. `RUNNING`: The alert rule is enabled. `STOPPED`: The alert rule is disabled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1112,7 +1173,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the Application Real-Time Monitoring Service (ARMS) task that is associated with the alert rule.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -1120,7 +1181,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * The status of the task. This parameter is hidden from users.
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -1128,7 +1189,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The name of the alert.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1136,7 +1197,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The timestamp that shows when the alert rule was updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -1144,7 +1205,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user to which the alert rule belongs.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1221,7 +1282,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * AlertRules.
+             * The details of the alert rules.
              */
             public Builder alertRules(java.util.List < AlertRules> alertRules) {
                 this.alertRules = alertRules;
@@ -1229,7 +1290,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1237,7 +1298,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1245,7 +1306,7 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

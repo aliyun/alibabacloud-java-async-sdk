@@ -22,6 +22,7 @@ public class DeleteRetcodeAppRequest extends Request {
 
     @Query
     @NameInMap("Pid")
+    @Validation(required = true)
     private String pid;
 
     @Query

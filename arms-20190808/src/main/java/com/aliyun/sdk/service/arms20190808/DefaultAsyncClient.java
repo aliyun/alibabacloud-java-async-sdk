@@ -2092,7 +2092,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Queries alert rules.
+      * The current operation is no longer maintained. You can call the GetAlertRules operation of Alert Management (New) to query existing alert rules.
       *
      */
     @Override
