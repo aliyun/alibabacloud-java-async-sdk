@@ -228,6 +228,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAssetsSecurityEventSummaryResponse> describeAssetsSecurityEventSummary(DescribeAssetsSecurityEventSummaryRequest request);
 
+    CompletableFuture<DescribeAttachRecordsResponse> describeAttachRecords(DescribeAttachRecordsRequest request);
+
     CompletableFuture<DescribeAttackAnalysisDataResponse> describeAttackAnalysisData(DescribeAttackAnalysisDataRequest request);
 
     CompletableFuture<DescribeAutoDelConfigResponse> describeAutoDelConfig(DescribeAutoDelConfigRequest request);
@@ -857,6 +859,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<InstallPmAgentResponse> installPmAgent(InstallPmAgentRequest request);
 
+    CompletableFuture<InstallRaspAttachResponse> installRaspAttach(InstallRaspAttachRequest request);
+
     CompletableFuture<InstallUniBackupAgentResponse> installUniBackupAgent(InstallUniBackupAgentRequest request);
 
     CompletableFuture<JoinWebLockProcessWhiteListResponse> joinWebLockProcessWhiteList(JoinWebLockProcessWhiteListRequest request);
@@ -868,6 +872,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAgentlessRiskUuidResponse> listAgentlessRiskUuid(ListAgentlessRiskUuidRequest request);
 
     CompletableFuture<ListAgentlessTaskResponse> listAgentlessTask(ListAgentlessTaskRequest request);
+
+    CompletableFuture<ListAssetCleanConfigResponse> listAssetCleanConfig(ListAssetCleanConfigRequest request);
 
     CompletableFuture<ListAssetRefreshTaskConfigResponse> listAssetRefreshTaskConfig(ListAssetRefreshTaskConfigRequest request);
 
@@ -892,6 +898,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClientUserDefineRulesResponse> listClientUserDefineRules(ListClientUserDefineRulesRequest request);
 
     CompletableFuture<ListCloudAssetInstancesResponse> listCloudAssetInstances(ListCloudAssetInstancesRequest request);
+
+    CompletableFuture<ListCloudVendorRegionsResponse> listCloudVendorRegions(ListCloudVendorRegionsRequest request);
 
     CompletableFuture<ListClusterCnnfStatusDetailResponse> listClusterCnnfStatusDetail(ListClusterCnnfStatusDetailRequest request);
 
@@ -950,6 +958,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAntiBruteForceRuleResponse> modifyAntiBruteForceRule(ModifyAntiBruteForceRuleRequest request);
 
     CompletableFuture<ModifyAppVulScanCycleResponse> modifyAppVulScanCycle(ModifyAppVulScanCycleRequest request);
+
+    CompletableFuture<ModifyAssetCleanConfigResponse> modifyAssetCleanConfig(ModifyAssetCleanConfigRequest request);
 
     /**
       * You can call the ModifyAssetGroup operation to change the server group to which one or more servers belong. After you create a server group by calling the [CreateOrUpdateAssetGroup](~~CreateOrUpdateAssetGroup~~) operation, you can call the ModifyAssetGroup operation to change the server group to which your servers belong.
@@ -1189,6 +1199,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnbindAegisResponse> unbindAegis(UnbindAegisRequest request);
 
     CompletableFuture<UninstallBackupClientResponse> uninstallBackupClient(UninstallBackupClientRequest request);
+
+    CompletableFuture<UninstallRaspAttachResponse> uninstallRaspAttach(UninstallRaspAttachRequest request);
 
     CompletableFuture<UninstallUniBackupAgentResponse> uninstallUniBackupAgent(UninstallUniBackupAgentRequest request);
 

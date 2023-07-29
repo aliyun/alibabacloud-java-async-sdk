@@ -17,6 +17,14 @@ public class ChangeCheckConfigRequest extends Request {
     private java.util.List < AddedCheck> addedCheck;
 
     @Query
+    @NameInMap("ConfigRequirementIds")
+    private ConfigRequirementIds configRequirementIds;
+
+    @Query
+    @NameInMap("ConfigStandardIds")
+    private ConfigStandardIds configStandardIds;
+
+    @Query
     @NameInMap("CycleDays")
     private java.util.List < Integer > cycleDays;
 
@@ -51,6 +59,8 @@ public class ChangeCheckConfigRequest extends Request {
     private ChangeCheckConfigRequest(Builder builder) {
         super(builder);
         this.addedCheck = builder.addedCheck;
+        this.configRequirementIds = builder.configRequirementIds;
+        this.configStandardIds = builder.configStandardIds;
         this.cycleDays = builder.cycleDays;
         this.enableAddCheck = builder.enableAddCheck;
         this.enableAutoCheck = builder.enableAutoCheck;
@@ -79,6 +89,20 @@ public class ChangeCheckConfigRequest extends Request {
      */
     public java.util.List < AddedCheck> getAddedCheck() {
         return this.addedCheck;
+    }
+
+    /**
+     * @return configRequirementIds
+     */
+    public ConfigRequirementIds getConfigRequirementIds() {
+        return this.configRequirementIds;
+    }
+
+    /**
+     * @return configStandardIds
+     */
+    public ConfigStandardIds getConfigStandardIds() {
+        return this.configStandardIds;
     }
 
     /**
@@ -139,6 +163,8 @@ public class ChangeCheckConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<ChangeCheckConfigRequest, Builder> {
         private java.util.List < AddedCheck> addedCheck; 
+        private ConfigRequirementIds configRequirementIds; 
+        private ConfigStandardIds configStandardIds; 
         private java.util.List < Integer > cycleDays; 
         private Boolean enableAddCheck; 
         private Boolean enableAutoCheck; 
@@ -155,6 +181,8 @@ public class ChangeCheckConfigRequest extends Request {
         private Builder(ChangeCheckConfigRequest request) {
             super(request);
             this.addedCheck = request.addedCheck;
+            this.configRequirementIds = request.configRequirementIds;
+            this.configStandardIds = request.configStandardIds;
             this.cycleDays = request.cycleDays;
             this.enableAddCheck = request.enableAddCheck;
             this.enableAutoCheck = request.enableAutoCheck;
@@ -171,6 +199,26 @@ public class ChangeCheckConfigRequest extends Request {
         public Builder addedCheck(java.util.List < AddedCheck> addedCheck) {
             this.putQueryParameter("AddedCheck", addedCheck);
             this.addedCheck = addedCheck;
+            return this;
+        }
+
+        /**
+         * ConfigRequirementIds.
+         */
+        public Builder configRequirementIds(ConfigRequirementIds configRequirementIds) {
+            String configRequirementIdsShrink = shrink(configRequirementIds, "ConfigRequirementIds", "json");
+            this.putQueryParameter("ConfigRequirementIds", configRequirementIdsShrink);
+            this.configRequirementIds = configRequirementIds;
+            return this;
+        }
+
+        /**
+         * ConfigStandardIds.
+         */
+        public Builder configStandardIds(ConfigStandardIds configStandardIds) {
+            String configStandardIdsShrink = shrink(configStandardIds, "ConfigStandardIds", "json");
+            this.putQueryParameter("ConfigStandardIds", configStandardIdsShrink);
+            this.configStandardIds = configStandardIds;
             return this;
         }
 
@@ -318,6 +366,128 @@ public class ChangeCheckConfigRequest extends Request {
 
             public AddedCheck build() {
                 return new AddedCheck(this);
+            } 
+
+        } 
+
+    }
+    public static class ConfigRequirementIds extends TeaModel {
+        @NameInMap("AddIds")
+        private java.util.List < Long > addIds;
+
+        @NameInMap("RemoveIds")
+        private java.util.List < Long > removeIds;
+
+        private ConfigRequirementIds(Builder builder) {
+            this.addIds = builder.addIds;
+            this.removeIds = builder.removeIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfigRequirementIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return addIds
+         */
+        public java.util.List < Long > getAddIds() {
+            return this.addIds;
+        }
+
+        /**
+         * @return removeIds
+         */
+        public java.util.List < Long > getRemoveIds() {
+            return this.removeIds;
+        }
+
+        public static final class Builder {
+            private java.util.List < Long > addIds; 
+            private java.util.List < Long > removeIds; 
+
+            /**
+             * AddIds.
+             */
+            public Builder addIds(java.util.List < Long > addIds) {
+                this.addIds = addIds;
+                return this;
+            }
+
+            /**
+             * RemoveIds.
+             */
+            public Builder removeIds(java.util.List < Long > removeIds) {
+                this.removeIds = removeIds;
+                return this;
+            }
+
+            public ConfigRequirementIds build() {
+                return new ConfigRequirementIds(this);
+            } 
+
+        } 
+
+    }
+    public static class ConfigStandardIds extends TeaModel {
+        @NameInMap("AddIds")
+        private java.util.List < Long > addIds;
+
+        @NameInMap("RemoveIds")
+        private java.util.List < Long > removeIds;
+
+        private ConfigStandardIds(Builder builder) {
+            this.addIds = builder.addIds;
+            this.removeIds = builder.removeIds;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConfigStandardIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return addIds
+         */
+        public java.util.List < Long > getAddIds() {
+            return this.addIds;
+        }
+
+        /**
+         * @return removeIds
+         */
+        public java.util.List < Long > getRemoveIds() {
+            return this.removeIds;
+        }
+
+        public static final class Builder {
+            private java.util.List < Long > addIds; 
+            private java.util.List < Long > removeIds; 
+
+            /**
+             * AddIds.
+             */
+            public Builder addIds(java.util.List < Long > addIds) {
+                this.addIds = addIds;
+                return this;
+            }
+
+            /**
+             * RemoveIds.
+             */
+            public Builder removeIds(java.util.List < Long > removeIds) {
+                this.removeIds = removeIds;
+                return this;
+            }
+
+            public ConfigStandardIds build() {
+                return new ConfigStandardIds(this);
             } 
 
         } 
