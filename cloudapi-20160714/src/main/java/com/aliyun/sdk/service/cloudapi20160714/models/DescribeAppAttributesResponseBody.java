@@ -246,6 +246,9 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("Extend")
+        private String extend;
+
         @NameInMap("ModifiedTime")
         private String modifiedTime;
 
@@ -257,6 +260,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             this.appName = builder.appName;
             this.createdTime = builder.createdTime;
             this.description = builder.description;
+            this.extend = builder.extend;
             this.modifiedTime = builder.modifiedTime;
             this.tags = builder.tags;
         }
@@ -298,6 +302,13 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
         }
 
         /**
+         * @return extend
+         */
+        public String getExtend() {
+            return this.extend;
+        }
+
+        /**
          * @return modifiedTime
          */
         public String getModifiedTime() {
@@ -316,6 +327,7 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
             private String appName; 
             private String createdTime; 
             private String description; 
+            private String extend; 
             private String modifiedTime; 
             private Tags tags; 
 
@@ -348,6 +360,14 @@ public class DescribeAppAttributesResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * Extend.
+             */
+            public Builder extend(String extend) {
+                this.extend = extend;
                 return this;
             }
 

@@ -26,6 +26,10 @@ public class ModifyAppRequest extends Request {
     private String description;
 
     @Query
+    @NameInMap("Extend")
+    private String extend;
+
+    @Query
     @NameInMap("SecurityToken")
     private String securityToken;
 
@@ -38,6 +42,7 @@ public class ModifyAppRequest extends Request {
         this.appId = builder.appId;
         this.appName = builder.appName;
         this.description = builder.description;
+        this.extend = builder.extend;
         this.securityToken = builder.securityToken;
         this.tag = builder.tag;
     }
@@ -77,6 +82,13 @@ public class ModifyAppRequest extends Request {
     }
 
     /**
+     * @return extend
+     */
+    public String getExtend() {
+        return this.extend;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -94,6 +106,7 @@ public class ModifyAppRequest extends Request {
         private Long appId; 
         private String appName; 
         private String description; 
+        private String extend; 
         private String securityToken; 
         private java.util.List < Tag> tag; 
 
@@ -106,6 +119,7 @@ public class ModifyAppRequest extends Request {
             this.appId = request.appId;
             this.appName = request.appName;
             this.description = request.description;
+            this.extend = request.extend;
             this.securityToken = request.securityToken;
             this.tag = request.tag;
         } 
@@ -134,6 +148,15 @@ public class ModifyAppRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Extend.
+         */
+        public Builder extend(String extend) {
+            this.putQueryParameter("Extend", extend);
+            this.extend = extend;
             return this;
         }
 

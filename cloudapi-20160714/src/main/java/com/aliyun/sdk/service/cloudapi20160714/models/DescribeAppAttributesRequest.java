@@ -33,6 +33,10 @@ public class DescribeAppAttributesRequest extends Request {
     private Boolean enableTagAuth;
 
     @Query
+    @NameInMap("Extend")
+    private String extend;
+
+    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -60,6 +64,7 @@ public class DescribeAppAttributesRequest extends Request {
         this.appKey = builder.appKey;
         this.appName = builder.appName;
         this.enableTagAuth = builder.enableTagAuth;
+        this.extend = builder.extend;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.securityToken = builder.securityToken;
@@ -116,6 +121,13 @@ public class DescribeAppAttributesRequest extends Request {
     }
 
     /**
+     * @return extend
+     */
+    public String getExtend() {
+        return this.extend;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -156,6 +168,7 @@ public class DescribeAppAttributesRequest extends Request {
         private String appKey; 
         private String appName; 
         private Boolean enableTagAuth; 
+        private String extend; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String securityToken; 
@@ -173,6 +186,7 @@ public class DescribeAppAttributesRequest extends Request {
             this.appKey = request.appKey;
             this.appName = request.appName;
             this.enableTagAuth = request.enableTagAuth;
+            this.extend = request.extend;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.securityToken = request.securityToken;
@@ -222,6 +236,15 @@ public class DescribeAppAttributesRequest extends Request {
         public Builder enableTagAuth(Boolean enableTagAuth) {
             this.putQueryParameter("EnableTagAuth", enableTagAuth);
             this.enableTagAuth = enableTagAuth;
+            return this;
+        }
+
+        /**
+         * Extend.
+         */
+        public Builder extend(String extend) {
+            this.putQueryParameter("Extend", extend);
+            this.extend = extend;
             return this;
         }
 

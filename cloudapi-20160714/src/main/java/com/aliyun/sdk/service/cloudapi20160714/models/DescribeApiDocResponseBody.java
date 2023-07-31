@@ -57,9 +57,6 @@ public class DescribeApiDocResponseBody extends TeaModel {
     @NameInMap("RequestParameters")
     private RequestParameters requestParameters;
 
-    @NameInMap("ResultDescriptions")
-    private ResultDescriptions resultDescriptions;
-
     @NameInMap("ResultSample")
     private String resultSample;
 
@@ -88,7 +85,6 @@ public class DescribeApiDocResponseBody extends TeaModel {
         this.requestConfig = builder.requestConfig;
         this.requestId = builder.requestId;
         this.requestParameters = builder.requestParameters;
-        this.resultDescriptions = builder.resultDescriptions;
         this.resultSample = builder.resultSample;
         this.resultType = builder.resultType;
         this.stageName = builder.stageName;
@@ -209,13 +205,6 @@ public class DescribeApiDocResponseBody extends TeaModel {
     }
 
     /**
-     * @return resultDescriptions
-     */
-    public ResultDescriptions getResultDescriptions() {
-        return this.resultDescriptions;
-    }
-
-    /**
      * @return resultSample
      */
     public String getResultSample() {
@@ -259,7 +248,6 @@ public class DescribeApiDocResponseBody extends TeaModel {
         private RequestConfig requestConfig; 
         private String requestId; 
         private RequestParameters requestParameters; 
-        private ResultDescriptions resultDescriptions; 
         private String resultSample; 
         private String resultType; 
         private String stageName; 
@@ -382,14 +370,6 @@ public class DescribeApiDocResponseBody extends TeaModel {
          */
         public Builder requestParameters(RequestParameters requestParameters) {
             this.requestParameters = requestParameters;
-            return this;
-        }
-
-        /**
-         * ResultDescriptions.
-         */
-        public Builder resultDescriptions(ResultDescriptions resultDescriptions) {
-            this.resultDescriptions = resultDescriptions;
             return this;
         }
 
@@ -1091,228 +1071,6 @@ public class DescribeApiDocResponseBody extends TeaModel {
 
             public RequestParameters build() {
                 return new RequestParameters(this);
-            } 
-
-        } 
-
-    }
-    public static class ResultDescription extends TeaModel {
-        @NameInMap("Description")
-        private String description;
-
-        @NameInMap("HasChild")
-        private Boolean hasChild;
-
-        @NameInMap("Id")
-        private String id;
-
-        @NameInMap("Key")
-        private String key;
-
-        @NameInMap("Mandatory")
-        private Boolean mandatory;
-
-        @NameInMap("Name")
-        private String name;
-
-        @NameInMap("Pid")
-        private String pid;
-
-        @NameInMap("Type")
-        private String type;
-
-        private ResultDescription(Builder builder) {
-            this.description = builder.description;
-            this.hasChild = builder.hasChild;
-            this.id = builder.id;
-            this.key = builder.key;
-            this.mandatory = builder.mandatory;
-            this.name = builder.name;
-            this.pid = builder.pid;
-            this.type = builder.type;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ResultDescription create() {
-            return builder().build();
-        }
-
-        /**
-         * @return description
-         */
-        public String getDescription() {
-            return this.description;
-        }
-
-        /**
-         * @return hasChild
-         */
-        public Boolean getHasChild() {
-            return this.hasChild;
-        }
-
-        /**
-         * @return id
-         */
-        public String getId() {
-            return this.id;
-        }
-
-        /**
-         * @return key
-         */
-        public String getKey() {
-            return this.key;
-        }
-
-        /**
-         * @return mandatory
-         */
-        public Boolean getMandatory() {
-            return this.mandatory;
-        }
-
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        /**
-         * @return pid
-         */
-        public String getPid() {
-            return this.pid;
-        }
-
-        /**
-         * @return type
-         */
-        public String getType() {
-            return this.type;
-        }
-
-        public static final class Builder {
-            private String description; 
-            private Boolean hasChild; 
-            private String id; 
-            private String key; 
-            private Boolean mandatory; 
-            private String name; 
-            private String pid; 
-            private String type; 
-
-            /**
-             * Description.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * HasChild.
-             */
-            public Builder hasChild(Boolean hasChild) {
-                this.hasChild = hasChild;
-                return this;
-            }
-
-            /**
-             * Id.
-             */
-            public Builder id(String id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * Key.
-             */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * Mandatory.
-             */
-            public Builder mandatory(Boolean mandatory) {
-                this.mandatory = mandatory;
-                return this;
-            }
-
-            /**
-             * Name.
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * Pid.
-             */
-            public Builder pid(String pid) {
-                this.pid = pid;
-                return this;
-            }
-
-            /**
-             * Type.
-             */
-            public Builder type(String type) {
-                this.type = type;
-                return this;
-            }
-
-            public ResultDescription build() {
-                return new ResultDescription(this);
-            } 
-
-        } 
-
-    }
-    public static class ResultDescriptions extends TeaModel {
-        @NameInMap("ResultDescription")
-        private java.util.List < ResultDescription> resultDescription;
-
-        private ResultDescriptions(Builder builder) {
-            this.resultDescription = builder.resultDescription;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ResultDescriptions create() {
-            return builder().build();
-        }
-
-        /**
-         * @return resultDescription
-         */
-        public java.util.List < ResultDescription> getResultDescription() {
-            return this.resultDescription;
-        }
-
-        public static final class Builder {
-            private java.util.List < ResultDescription> resultDescription; 
-
-            /**
-             * ResultDescription.
-             */
-            public Builder resultDescription(java.util.List < ResultDescription> resultDescription) {
-                this.resultDescription = resultDescription;
-                return this;
-            }
-
-            public ResultDescriptions build() {
-                return new ResultDescriptions(this);
             } 
 
         } 

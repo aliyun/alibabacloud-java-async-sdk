@@ -180,7 +180,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAccessControlListsResponse> describeAccessControlLists(DescribeAccessControlListsRequest request);
 
     /**
-      * The ID of the public key.
+      * *   This operation is intended for API providers.
       *
      */
     CompletableFuture<DescribeApiResponse> describeApi(DescribeApiRequest request);

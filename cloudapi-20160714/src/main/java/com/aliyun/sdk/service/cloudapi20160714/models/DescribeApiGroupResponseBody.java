@@ -18,9 +18,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     @NameInMap("BillingStatus")
     private String billingStatus;
 
-    @NameInMap("ClassicVpcSubDomain")
-    private String classicVpcSubDomain;
-
     @NameInMap("CloudMarketCommodity")
     private Boolean cloudMarketCommodity;
 
@@ -69,9 +66,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     @NameInMap("InstanceType")
     private String instanceType;
 
-    @NameInMap("InstanceVipList")
-    private String instanceVipList;
-
     @NameInMap("Ipv6Status")
     private String ipv6Status;
 
@@ -92,9 +86,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     private String requestId;
-
-    @NameInMap("RpcPattern")
-    private String rpcPattern;
 
     @NameInMap("StageItems")
     private StageItems stageItems;
@@ -120,7 +111,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     private DescribeApiGroupResponseBody(Builder builder) {
         this.basePath = builder.basePath;
         this.billingStatus = builder.billingStatus;
-        this.classicVpcSubDomain = builder.classicVpcSubDomain;
         this.cloudMarketCommodity = builder.cloudMarketCommodity;
         this.cmsMonitorGroup = builder.cmsMonitorGroup;
         this.compatibleFlags = builder.compatibleFlags;
@@ -137,7 +127,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         this.illegalStatus = builder.illegalStatus;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
-        this.instanceVipList = builder.instanceVipList;
         this.ipv6Status = builder.ipv6Status;
         this.migrationError = builder.migrationError;
         this.migrationStatus = builder.migrationStatus;
@@ -145,7 +134,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         this.passthroughHeaders = builder.passthroughHeaders;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
-        this.rpcPattern = builder.rpcPattern;
         this.stageItems = builder.stageItems;
         this.status = builder.status;
         this.subDomain = builder.subDomain;
@@ -175,13 +163,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
      */
     public String getBillingStatus() {
         return this.billingStatus;
-    }
-
-    /**
-     * @return classicVpcSubDomain
-     */
-    public String getClassicVpcSubDomain() {
-        return this.classicVpcSubDomain;
     }
 
     /**
@@ -297,13 +278,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     }
 
     /**
-     * @return instanceVipList
-     */
-    public String getInstanceVipList() {
-        return this.instanceVipList;
-    }
-
-    /**
      * @return ipv6Status
      */
     public String getIpv6Status() {
@@ -350,13 +324,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
-    }
-
-    /**
-     * @return rpcPattern
-     */
-    public String getRpcPattern() {
-        return this.rpcPattern;
     }
 
     /**
@@ -411,7 +378,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String basePath; 
         private String billingStatus; 
-        private String classicVpcSubDomain; 
         private Boolean cloudMarketCommodity; 
         private String cmsMonitorGroup; 
         private String compatibleFlags; 
@@ -428,7 +394,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         private String illegalStatus; 
         private String instanceId; 
         private String instanceType; 
-        private String instanceVipList; 
         private String ipv6Status; 
         private String migrationError; 
         private String migrationStatus; 
@@ -436,7 +401,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         private String passthroughHeaders; 
         private String regionId; 
         private String requestId; 
-        private String rpcPattern; 
         private StageItems stageItems; 
         private String status; 
         private String subDomain; 
@@ -462,14 +426,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
          */
         public Builder billingStatus(String billingStatus) {
             this.billingStatus = billingStatus;
-            return this;
-        }
-
-        /**
-         * The VPC second-level domain name.
-         */
-        public Builder classicVpcSubDomain(String classicVpcSubDomain) {
-            this.classicVpcSubDomain = classicVpcSubDomain;
             return this;
         }
 
@@ -611,14 +567,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The VIP list of the instance.
-         */
-        public Builder instanceVipList(String instanceVipList) {
-            this.instanceVipList = instanceVipList;
-            return this;
-        }
-
-        /**
          * The IPv6 status.
          */
         public Builder ipv6Status(String ipv6Status) {
@@ -671,14 +619,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The RPC mode.
-         */
-        public Builder rpcPattern(String rpcPattern) {
-            this.rpcPattern = rpcPattern;
             return this;
         }
 
@@ -791,9 +731,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         @NameInMap("WildcardDomainPatterns")
         private String wildcardDomainPatterns;
 
-        @NameInMap("WssEnable")
-        private String wssEnable;
-
         private DomainItem(Builder builder) {
             this.bindStageName = builder.bindStageName;
             this.certificateId = builder.certificateId;
@@ -809,7 +746,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             this.domainWebSocketStatus = builder.domainWebSocketStatus;
             this.isHttpRedirectToHttps = builder.isHttpRedirectToHttps;
             this.wildcardDomainPatterns = builder.wildcardDomainPatterns;
-            this.wssEnable = builder.wssEnable;
         }
 
         public static Builder builder() {
@@ -918,13 +854,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             return this.wildcardDomainPatterns;
         }
 
-        /**
-         * @return wssEnable
-         */
-        public String getWssEnable() {
-            return this.wssEnable;
-        }
-
         public static final class Builder {
             private String bindStageName; 
             private String certificateId; 
@@ -940,7 +869,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
             private String domainWebSocketStatus; 
             private Boolean isHttpRedirectToHttps; 
             private String wildcardDomainPatterns; 
-            private String wssEnable; 
 
             /**
              * The name of the bound runtime environment.
@@ -1063,14 +991,6 @@ public class DescribeApiGroupResponseBody extends TeaModel {
              */
             public Builder wildcardDomainPatterns(String wildcardDomainPatterns) {
                 this.wildcardDomainPatterns = wildcardDomainPatterns;
-                return this;
-            }
-
-            /**
-             * WssEnable.
-             */
-            public Builder wssEnable(String wssEnable) {
-                this.wssEnable = wssEnable;
                 return this;
             }
 

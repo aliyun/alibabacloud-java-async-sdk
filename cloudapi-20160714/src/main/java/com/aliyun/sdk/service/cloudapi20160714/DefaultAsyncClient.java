@@ -826,7 +826,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The ID of the public key.
+      * *   This operation is intended for API providers.
       *
      */
     @Override

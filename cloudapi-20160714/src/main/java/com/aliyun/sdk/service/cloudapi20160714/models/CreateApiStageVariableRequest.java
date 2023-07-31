@@ -28,6 +28,7 @@ public class CreateApiStageVariableRequest extends Request {
 
     @Query
     @NameInMap("StageRouteModel")
+    @Deprecated
     private String stageRouteModel;
 
     @Query

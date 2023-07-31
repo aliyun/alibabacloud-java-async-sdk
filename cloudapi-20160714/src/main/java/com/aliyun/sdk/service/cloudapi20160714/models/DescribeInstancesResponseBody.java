@@ -237,9 +237,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("NetworkInterfaceId")
-        private String networkInterfaceId;
-
         @NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -251,7 +248,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         private NetworkInterfaceAttribute(Builder builder) {
             this.cidrBlock = builder.cidrBlock;
-            this.networkInterfaceId = builder.networkInterfaceId;
             this.securityGroupId = builder.securityGroupId;
             this.vswitchId = builder.vswitchId;
             this.zoneId = builder.zoneId;
@@ -270,13 +266,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getCidrBlock() {
             return this.cidrBlock;
-        }
-
-        /**
-         * @return networkInterfaceId
-         */
-        public String getNetworkInterfaceId() {
-            return this.networkInterfaceId;
         }
 
         /**
@@ -302,7 +291,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String cidrBlock; 
-            private String networkInterfaceId; 
             private String securityGroupId; 
             private String vswitchId; 
             private String zoneId; 
@@ -312,14 +300,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
-                return this;
-            }
-
-            /**
-             * 弹性网卡ID
-             */
-            public Builder networkInterfaceId(String networkInterfaceId) {
-                this.networkInterfaceId = networkInterfaceId;
                 return this;
             }
 
@@ -501,9 +481,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("UserVswitchId")
         private String userVswitchId;
 
-        @NameInMap("VipTypeList")
-        private String vipTypeList;
-
         @NameInMap("VpcEgressAddress")
         private String vpcEgressAddress;
 
@@ -558,7 +535,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.supportIpv6 = builder.supportIpv6;
             this.userVpcId = builder.userVpcId;
             this.userVswitchId = builder.userVswitchId;
-            this.vipTypeList = builder.vipTypeList;
             this.vpcEgressAddress = builder.vpcEgressAddress;
             this.vpcIntranetEnable = builder.vpcIntranetEnable;
             this.vpcOwnerId = builder.vpcOwnerId;
@@ -821,13 +797,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return vipTypeList
-         */
-        public String getVipTypeList() {
-            return this.vipTypeList;
-        }
-
-        /**
          * @return vpcEgressAddress
          */
         public String getVpcEgressAddress() {
@@ -905,7 +874,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean supportIpv6; 
             private String userVpcId; 
             private String userVswitchId; 
-            private String vipTypeList; 
             private String vpcEgressAddress; 
             private Boolean vpcIntranetEnable; 
             private Long vpcOwnerId; 
@@ -1196,14 +1164,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder userVswitchId(String userVswitchId) {
                 this.userVswitchId = userVswitchId;
-                return this;
-            }
-
-            /**
-             * VipTypeList.
-             */
-            public Builder vipTypeList(String vipTypeList) {
-                this.vipTypeList = vipTypeList;
                 return this;
             }
 
