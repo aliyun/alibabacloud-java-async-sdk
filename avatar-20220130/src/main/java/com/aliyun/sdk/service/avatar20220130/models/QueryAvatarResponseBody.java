@@ -364,6 +364,12 @@ public class QueryAvatarResponseBody extends TeaModel {
         @NameInMap("Image")
         private String image;
 
+        @NameInMap("MakeFailReason")
+        private String makeFailReason;
+
+        @NameInMap("MakeStatus")
+        private String makeStatus;
+
         @NameInMap("ModelType")
         private String modelType;
 
@@ -380,6 +386,8 @@ public class QueryAvatarResponseBody extends TeaModel {
             this.avatarType = builder.avatarType;
             this.description = builder.description;
             this.image = builder.image;
+            this.makeFailReason = builder.makeFailReason;
+            this.makeStatus = builder.makeStatus;
             this.modelType = builder.modelType;
             this.name = builder.name;
             this.portrait = builder.portrait;
@@ -416,6 +424,20 @@ public class QueryAvatarResponseBody extends TeaModel {
         }
 
         /**
+         * @return makeFailReason
+         */
+        public String getMakeFailReason() {
+            return this.makeFailReason;
+        }
+
+        /**
+         * @return makeStatus
+         */
+        public String getMakeStatus() {
+            return this.makeStatus;
+        }
+
+        /**
          * @return modelType
          */
         public String getModelType() {
@@ -447,6 +469,8 @@ public class QueryAvatarResponseBody extends TeaModel {
             private String avatarType; 
             private String description; 
             private String image; 
+            private String makeFailReason; 
+            private String makeStatus; 
             private String modelType; 
             private String name; 
             private String portrait; 
@@ -473,6 +497,22 @@ public class QueryAvatarResponseBody extends TeaModel {
              */
             public Builder image(String image) {
                 this.image = image;
+                return this;
+            }
+
+            /**
+             * MakeFailReason.
+             */
+            public Builder makeFailReason(String makeFailReason) {
+                this.makeFailReason = makeFailReason;
+                return this;
+            }
+
+            /**
+             * MakeStatus.
+             */
+            public Builder makeStatus(String makeStatus) {
+                this.makeStatus = makeStatus;
                 return this;
             }
 
