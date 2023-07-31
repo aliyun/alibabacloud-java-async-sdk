@@ -350,7 +350,7 @@ public class UpdateStackGroupRequest extends Request {
         }
 
         /**
-         * Capabilities.
+         * The option for the stack group. You can specify up to one option.
          */
         public Builder capabilities(java.util.List < String > capabilities) {
             this.putQueryParameter("Capabilities", capabilities);
@@ -510,9 +510,8 @@ public class UpdateStackGroupRequest extends Request {
          * *   SELF_MANAGED: the self-managed permission model. This is the default value. If you use the self-managed model for the stack group, you must create RAM roles for the administrator and execution accounts, and establish a trust relationship between the accounts to deploy stacks within the execution account.
          * *   SERVICE_MANAGED: the service-managed permission model. If you use the service-managed model for the stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.
          * 
-         * > 
-         * *   If stack instances have been created in the stack group, you cannot switch the permission mode of the stack group.
-         * *   If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Step 1: (Optional) Create a delegated administrator account](~~308253~~) and [Step 2: Enable trusted access](~~298229~~).
+         * >- If stack instances have been created in the stack group, you cannot switch the permission mode of the stack group.
+         * >- If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see [Step 1: (Optional) Create a delegated administrator account](~~308253~~) and [Step 2: Enable trusted access](~~298229~~).
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -657,10 +656,7 @@ public class UpdateStackGroupRequest extends Request {
             private java.util.List < String > rdFolderIds; 
 
             /**
-             * The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket. The template body must be 1 to 524,288 bytes in length. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.
-             * <p>
-             * 
-             * >  You must specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.
+             * The list of one or more Alibaba Cloud accounts with which you want to share or unshare the template.
              */
             public Builder accountIds(java.util.List < String > accountIds) {
                 this.accountIds = accountIds;

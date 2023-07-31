@@ -102,7 +102,7 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of stack group operations.
+         * The stack group operations.
          */
         public Builder stackGroupOperations(java.util.List < StackGroupOperations> stackGroupOperations) {
             this.stackGroupOperations = stackGroupOperations;
@@ -242,7 +242,7 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The operation that was performed.
+             * The operation type.
              * <p>
              * 
              * Valid values:
@@ -282,7 +282,7 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the operation.
+             * The operation ID.
              */
             public Builder operationId(String operationId) {
                 this.operationId = operationId;
@@ -306,7 +306,7 @@ public class ListStackGroupOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the operation.
+             * The state of the operation.
              * <p>
              * 
              * Valid values:

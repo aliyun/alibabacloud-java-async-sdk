@@ -110,7 +110,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The parameter name.
+             * The key of the parameter.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -118,7 +118,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter value.
+             * The value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -179,7 +179,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The filter for resource types.
+             * The resource types.
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -293,7 +293,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private java.util.List < String > resourceTypeFilter; 
 
             /**
-             * The resource tags.
+             * The source tags.
              */
             public Builder resourceTags(java.util.Map < String, ? > resourceTags) {
                 this.resourceTags = resourceTags;
@@ -301,7 +301,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The filter for resource types.
+             * The resource types.
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -435,7 +435,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             private String usageType; 
 
             /**
-             * The ID of the region to which the stack belongs.
+             * The region ID of the stack.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -698,7 +698,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
              * The status code of the scenario that fails to be created.
              * <p>
              * 
-             * >  This parameter is returned only if you set the Status parameter to GENERATE_FAILED.
+             * > This parameter is returned only if you set Status to GENERATE_FAILED.
              */
             public Builder failedCode(String failedCode) {
                 this.failedCode = failedCode;
@@ -706,10 +706,10 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The policy based on which the logical ID is generated. Default value: LongTypePrefixAndIndexSuffix. Valid values:
+             * The policy based on which the logical ID is generated. Valid values:
              * <p>
              * 
-             * *   LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix
+             * *   LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix
              * *   LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix
              * *   ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix
              */
@@ -719,7 +719,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters that are configured for the scenario.
+             * The preference parameters of the scenario.
              */
             public Builder preferenceParameters(java.util.List < PreferenceParameters> preferenceParameters) {
                 this.preferenceParameters = preferenceParameters;
@@ -735,7 +735,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The source resource.
+             * The source resources.
              */
             public Builder sourceResources(java.util.List < SourceResources> sourceResources) {
                 this.sourceResources = sourceResources;
@@ -751,7 +751,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The preset information about the stack.
+             * The preset information of the stack.
              */
             public Builder stackProvision(StackProvision stackProvision) {
                 this.stackProvision = stackProvision;
@@ -759,7 +759,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The list of stacks that are associated with the scenario.
+             * The stacks that are associated with the scenario.
              */
             public Builder stacks(java.util.List < Stacks> stacks) {
                 this.stacks = stacks;
@@ -767,7 +767,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the scenario. Valid values:
+             * The state of the scenario. Valid values:
              * <p>
              * 
              * *   GENERATE_IN_PROGRESS: The scenario is being created.
@@ -783,7 +783,7 @@ public class GetTemplateScratchResponseBody extends TeaModel {
              * The reason why the scenario fails to be created.
              * <p>
              * 
-             * >  This parameter is returned only if you set the Status parameter to GENERATE_FAILED.
+             * > This parameter is returned only if you set Status to GENERATE_FAILED.
              */
             public Builder statusReason(String statusReason) {
                 this.statusReason = statusReason;

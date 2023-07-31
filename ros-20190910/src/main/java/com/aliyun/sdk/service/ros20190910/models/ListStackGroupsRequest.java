@@ -125,10 +125,11 @@ public class ListStackGroupsRequest extends Request {
         } 
 
         /**
-         * The ID of the resource group. If you do not specify this parameter, the stack groups in all the resource groups are queried.
+         * The number of the page to return.
          * <p>
          * 
-         * >  If you want to obtain the resource group ID, go to the **Resource Group** page in the **Resource Management** console. For more information, see [View basic information about a resource group](~~151181~~).
+         * *   Pages start from page 1.
+         * *   Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -137,15 +138,36 @@ public class ListStackGroupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The number of entries to return on each page.
          * <p>
          * 
-         * *   Pages start from page 1.
-         * *   Default value: 1.
+         * *   Valid values: 1 to 50.
+         * *   Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The region ID of the stack group. You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group. If you do not specify this parameter, the stack groups in all the resource groups are queried.
+         * <p>
+         * 
+         * > To obtain the resource group ID, go to the **Resource Group** page in the **Resource Management** console. For more information, see [View the basic information about a resource group](~~151181~~).
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -158,28 +180,6 @@ public class ListStackGroupsRequest extends Request {
          * *   ACTIVE
          * *   DELETED
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The tags.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * *   Valid values: 1 to 50.
-         * *   Default value: 10.
-         */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
@@ -187,10 +187,7 @@ public class ListStackGroupsRequest extends Request {
         }
 
         /**
-         * The key of tag N that is added to the stack group.
-         * <p>
-         * 
-         * >  The Tags parameter is optional. If you specify the Tags parameter, you must specify the Tags.N.Key parameter.
+         * The tags that are added to the stack group.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -245,7 +242,10 @@ public class ListStackGroupsRequest extends Request {
             private String value; 
 
             /**
-             * The value of tag N that is added to the stack group.
+             * The key of the tag that is added to the stack group.
+             * <p>
+             * 
+             * > Tags is optional. If you specify Tags, you must specify Tags.N.Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -253,7 +253,7 @@ public class ListStackGroupsRequest extends Request {
             }
 
             /**
-             * The list of stack groups.
+             * The value of the tag that is added to the stack group.
              */
             public Builder value(String value) {
                 this.value = value;

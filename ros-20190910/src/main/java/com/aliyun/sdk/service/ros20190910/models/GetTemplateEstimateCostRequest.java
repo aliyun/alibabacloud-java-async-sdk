@@ -224,7 +224,12 @@ public class GetTemplateEstimateCostRequest extends Request {
         }
 
         /**
-         * StackId.
+         * The stack ID.
+         * <p>
+         * 
+         * This parameter is used to query the estimated price in a configuration change scenario.
+         * 
+         * Assume that the specified stack contains only one Elastic Compute Service (ECS) instance and the instance type is ecs.s6-c1m2.large. You downgrade the instance type to ecs.s6-c1m1.small and specify a new ApsaraDB RDS instance in the template that is used for the price inquiry. The queried result is the sum of the downgrade refund of the ECS instance and the price of the new ApsaraDB RDS instance.
          */
         public Builder stackId(String stackId) {
             this.putQueryParameter("StackId", stackId);
@@ -261,7 +266,7 @@ public class GetTemplateEstimateCostRequest extends Request {
         }
 
         /**
-         * TemplateScratchId.
+         * The ID of the scenario.
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);
@@ -270,7 +275,10 @@ public class GetTemplateEstimateCostRequest extends Request {
         }
 
         /**
-         * TemplateScratchRegionId.
+         * The region ID of the scenario. The default value is the same as the value of the RegionId parameter.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
          */
         public Builder templateScratchRegionId(String templateScratchRegionId) {
             this.putQueryParameter("TemplateScratchRegionId", templateScratchRegionId);

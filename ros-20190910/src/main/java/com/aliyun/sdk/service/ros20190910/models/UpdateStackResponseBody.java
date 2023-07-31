@@ -98,11 +98,17 @@ public class UpdateStackResponseBody extends TeaModel {
         @NameInMap("ParametersCauseInterruptionIfModified")
         private java.util.List < String > parametersCauseInterruptionIfModified;
 
+        @NameInMap("ParametersCauseReplacementIfModified")
+        private java.util.List < String > parametersCauseReplacementIfModified;
+
         @NameInMap("ParametersConditionallyAllowedToBeModified")
         private java.util.List < String > parametersConditionallyAllowedToBeModified;
 
         @NameInMap("ParametersConditionallyCauseInterruptionIfModified")
         private java.util.List < String > parametersConditionallyCauseInterruptionIfModified;
+
+        @NameInMap("ParametersConditionallyCauseReplacementIfModified")
+        private java.util.List < String > parametersConditionallyCauseReplacementIfModified;
 
         @NameInMap("ParametersNotAllowedToBeModified")
         private java.util.List < String > parametersNotAllowedToBeModified;
@@ -113,14 +119,20 @@ public class UpdateStackResponseBody extends TeaModel {
         @NameInMap("ParametersUncertainlyCauseInterruptionIfModified")
         private java.util.List < String > parametersUncertainlyCauseInterruptionIfModified;
 
+        @NameInMap("ParametersUncertainlyCauseReplacementIfModified")
+        private java.util.List < String > parametersUncertainlyCauseReplacementIfModified;
+
         private DryRunResult(Builder builder) {
             this.parametersAllowedToBeModified = builder.parametersAllowedToBeModified;
             this.parametersCauseInterruptionIfModified = builder.parametersCauseInterruptionIfModified;
+            this.parametersCauseReplacementIfModified = builder.parametersCauseReplacementIfModified;
             this.parametersConditionallyAllowedToBeModified = builder.parametersConditionallyAllowedToBeModified;
             this.parametersConditionallyCauseInterruptionIfModified = builder.parametersConditionallyCauseInterruptionIfModified;
+            this.parametersConditionallyCauseReplacementIfModified = builder.parametersConditionallyCauseReplacementIfModified;
             this.parametersNotAllowedToBeModified = builder.parametersNotAllowedToBeModified;
             this.parametersUncertainlyAllowedToBeModified = builder.parametersUncertainlyAllowedToBeModified;
             this.parametersUncertainlyCauseInterruptionIfModified = builder.parametersUncertainlyCauseInterruptionIfModified;
+            this.parametersUncertainlyCauseReplacementIfModified = builder.parametersUncertainlyCauseReplacementIfModified;
         }
 
         public static Builder builder() {
@@ -146,6 +158,13 @@ public class UpdateStackResponseBody extends TeaModel {
         }
 
         /**
+         * @return parametersCauseReplacementIfModified
+         */
+        public java.util.List < String > getParametersCauseReplacementIfModified() {
+            return this.parametersCauseReplacementIfModified;
+        }
+
+        /**
          * @return parametersConditionallyAllowedToBeModified
          */
         public java.util.List < String > getParametersConditionallyAllowedToBeModified() {
@@ -157,6 +176,13 @@ public class UpdateStackResponseBody extends TeaModel {
          */
         public java.util.List < String > getParametersConditionallyCauseInterruptionIfModified() {
             return this.parametersConditionallyCauseInterruptionIfModified;
+        }
+
+        /**
+         * @return parametersConditionallyCauseReplacementIfModified
+         */
+        public java.util.List < String > getParametersConditionallyCauseReplacementIfModified() {
+            return this.parametersConditionallyCauseReplacementIfModified;
         }
 
         /**
@@ -180,14 +206,24 @@ public class UpdateStackResponseBody extends TeaModel {
             return this.parametersUncertainlyCauseInterruptionIfModified;
         }
 
+        /**
+         * @return parametersUncertainlyCauseReplacementIfModified
+         */
+        public java.util.List < String > getParametersUncertainlyCauseReplacementIfModified() {
+            return this.parametersUncertainlyCauseReplacementIfModified;
+        }
+
         public static final class Builder {
             private java.util.List < String > parametersAllowedToBeModified; 
             private java.util.List < String > parametersCauseInterruptionIfModified; 
+            private java.util.List < String > parametersCauseReplacementIfModified; 
             private java.util.List < String > parametersConditionallyAllowedToBeModified; 
             private java.util.List < String > parametersConditionallyCauseInterruptionIfModified; 
+            private java.util.List < String > parametersConditionallyCauseReplacementIfModified; 
             private java.util.List < String > parametersNotAllowedToBeModified; 
             private java.util.List < String > parametersUncertainlyAllowedToBeModified; 
             private java.util.List < String > parametersUncertainlyCauseInterruptionIfModified; 
+            private java.util.List < String > parametersUncertainlyCauseReplacementIfModified; 
 
             /**
              * The parameters that can be modified. If you change only values of the parameters in a stack template and use the template to update the stack, no validation errors are caused.
@@ -211,6 +247,14 @@ public class UpdateStackResponseBody extends TeaModel {
             }
 
             /**
+             * ParametersCauseReplacementIfModified.
+             */
+            public Builder parametersCauseReplacementIfModified(java.util.List < String > parametersCauseReplacementIfModified) {
+                this.parametersCauseReplacementIfModified = parametersCauseReplacementIfModified;
+                return this;
+            }
+
+            /**
              * The parameters that can be modified under specific conditions. If you change only values of the parameters in a stack template and use the template to update the stack, the new values of the parameters determine whether validation errors are caused.
              */
             public Builder parametersConditionallyAllowedToBeModified(java.util.List < String > parametersConditionallyAllowedToBeModified) {
@@ -228,6 +272,14 @@ public class UpdateStackResponseBody extends TeaModel {
              */
             public Builder parametersConditionallyCauseInterruptionIfModified(java.util.List < String > parametersConditionallyCauseInterruptionIfModified) {
                 this.parametersConditionallyCauseInterruptionIfModified = parametersConditionallyCauseInterruptionIfModified;
+                return this;
+            }
+
+            /**
+             * ParametersConditionallyCauseReplacementIfModified.
+             */
+            public Builder parametersConditionallyCauseReplacementIfModified(java.util.List < String > parametersConditionallyCauseReplacementIfModified) {
+                this.parametersConditionallyCauseReplacementIfModified = parametersConditionallyCauseReplacementIfModified;
                 return this;
             }
 
@@ -257,6 +309,14 @@ public class UpdateStackResponseBody extends TeaModel {
              */
             public Builder parametersUncertainlyCauseInterruptionIfModified(java.util.List < String > parametersUncertainlyCauseInterruptionIfModified) {
                 this.parametersUncertainlyCauseInterruptionIfModified = parametersUncertainlyCauseInterruptionIfModified;
+                return this;
+            }
+
+            /**
+             * ParametersUncertainlyCauseReplacementIfModified.
+             */
+            public Builder parametersUncertainlyCauseReplacementIfModified(java.util.List < String > parametersUncertainlyCauseReplacementIfModified) {
+                this.parametersUncertainlyCauseReplacementIfModified = parametersUncertainlyCauseReplacementIfModified;
                 return this;
             }
 

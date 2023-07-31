@@ -25,6 +25,10 @@ public class UpdateStackRequest extends Request {
     private Boolean dryRun;
 
     @Query
+    @NameInMap("DryRunOptions")
+    private java.util.List < String > dryRunOptions;
+
+    @Query
     @NameInMap("Parallelism")
     private Long parallelism;
 
@@ -103,6 +107,7 @@ public class UpdateStackRequest extends Request {
         this.clientToken = builder.clientToken;
         this.disableRollback = builder.disableRollback;
         this.dryRun = builder.dryRun;
+        this.dryRunOptions = builder.dryRunOptions;
         this.parallelism = builder.parallelism;
         this.parameters = builder.parameters;
         this.ramRoleName = builder.ramRoleName;
@@ -155,6 +160,13 @@ public class UpdateStackRequest extends Request {
      */
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    /**
+     * @return dryRunOptions
+     */
+    public java.util.List < String > getDryRunOptions() {
+        return this.dryRunOptions;
     }
 
     /**
@@ -287,6 +299,7 @@ public class UpdateStackRequest extends Request {
         private String clientToken; 
         private Boolean disableRollback; 
         private Boolean dryRun; 
+        private java.util.List < String > dryRunOptions; 
         private Long parallelism; 
         private java.util.List < Parameters> parameters; 
         private String ramRoleName; 
@@ -315,6 +328,7 @@ public class UpdateStackRequest extends Request {
             this.clientToken = request.clientToken;
             this.disableRollback = request.disableRollback;
             this.dryRun = request.dryRun;
+            this.dryRunOptions = request.dryRunOptions;
             this.parallelism = request.parallelism;
             this.parameters = request.parameters;
             this.ramRoleName = request.ramRoleName;
@@ -376,6 +390,15 @@ public class UpdateStackRequest extends Request {
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
             this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * DryRunOptions.
+         */
+        public Builder dryRunOptions(java.util.List < String > dryRunOptions) {
+            this.putQueryParameter("DryRunOptions", dryRunOptions);
+            this.dryRunOptions = dryRunOptions;
             return this;
         }
 

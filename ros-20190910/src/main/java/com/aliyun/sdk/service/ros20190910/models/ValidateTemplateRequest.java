@@ -29,6 +29,10 @@ public class ValidateTemplateRequest extends Request {
     private String templateURL;
 
     @Query
+    @NameInMap("UpdateInfoOptions")
+    private java.util.List < String > updateInfoOptions;
+
+    @Query
     @NameInMap("ValidationOption")
     private String validationOption;
 
@@ -38,6 +42,7 @@ public class ValidateTemplateRequest extends Request {
         this.regionId = builder.regionId;
         this.templateBody = builder.templateBody;
         this.templateURL = builder.templateURL;
+        this.updateInfoOptions = builder.updateInfoOptions;
         this.validationOption = builder.validationOption;
     }
 
@@ -83,6 +88,13 @@ public class ValidateTemplateRequest extends Request {
     }
 
     /**
+     * @return updateInfoOptions
+     */
+    public java.util.List < String > getUpdateInfoOptions() {
+        return this.updateInfoOptions;
+    }
+
+    /**
      * @return validationOption
      */
     public String getValidationOption() {
@@ -94,6 +106,7 @@ public class ValidateTemplateRequest extends Request {
         private String regionId; 
         private String templateBody; 
         private String templateURL; 
+        private java.util.List < String > updateInfoOptions; 
         private String validationOption; 
 
         private Builder() {
@@ -106,6 +119,7 @@ public class ValidateTemplateRequest extends Request {
             this.regionId = request.regionId;
             this.templateBody = request.templateBody;
             this.templateURL = request.templateURL;
+            this.updateInfoOptions = request.updateInfoOptions;
             this.validationOption = request.validationOption;
         } 
 
@@ -142,6 +156,15 @@ public class ValidateTemplateRequest extends Request {
         public Builder templateURL(String templateURL) {
             this.putQueryParameter("TemplateURL", templateURL);
             this.templateURL = templateURL;
+            return this;
+        }
+
+        /**
+         * UpdateInfoOptions.
+         */
+        public Builder updateInfoOptions(java.util.List < String > updateInfoOptions) {
+            this.putQueryParameter("UpdateInfoOptions", updateInfoOptions);
+            this.updateInfoOptions = updateInfoOptions;
             return this;
         }
 

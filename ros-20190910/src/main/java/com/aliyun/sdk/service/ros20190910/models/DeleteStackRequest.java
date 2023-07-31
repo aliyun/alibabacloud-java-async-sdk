@@ -126,7 +126,7 @@ public class DeleteStackRequest extends Request {
         } 
 
         /**
-         * DeleteOptions.
+         * The options for deleting the stack.
          */
         public Builder deleteOptions(java.util.List < String > deleteOptions) {
             this.putQueryParameter("DeleteOptions", deleteOptions);

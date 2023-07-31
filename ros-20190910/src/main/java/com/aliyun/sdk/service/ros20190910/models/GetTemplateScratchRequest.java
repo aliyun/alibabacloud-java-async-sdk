@@ -83,7 +83,7 @@ public class GetTemplateScratchRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the scenario is created.
+         * The region ID of the scenario.
          * <p>
          * 
          * You can call the [DescribeRegions](~~131035~~) operation to query the most recent region list.
@@ -100,11 +100,11 @@ public class GetTemplateScratchRequest extends Request {
          * 
          * *   Source: displays only the data of source nodes.
          * *   Provisions: displays only the data of new nodes.
-         * *   All: displays all data.
+         * *   All: displays the data of all nodes.
          * 
          * For more information about source nodes and new nodes, see [Overview](~~352074~~).
          * 
-         * >  If you do not set this parameter, the node data is not displayed.
+         * > If you do not specify this parameter, the node data is not displayed.
          */
         public Builder showDataOption(String showDataOption) {
             this.putQueryParameter("ShowDataOption", showDataOption);
