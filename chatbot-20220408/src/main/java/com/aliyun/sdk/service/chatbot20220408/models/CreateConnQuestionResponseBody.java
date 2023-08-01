@@ -50,7 +50,7 @@ public class CreateConnQuestionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 关联关系ID
+         * OutlineId.
          */
         public Builder outlineId(Long outlineId) {
             this.outlineId = outlineId;

@@ -50,7 +50,7 @@ public class DeletePerspectiveResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeletePerspectiveResponseBody extends TeaModel {
         }
 
         /**
-         * 删除视角的结果
+         * Result.
          */
         public Builder result(Boolean result) {
             this.result = result;

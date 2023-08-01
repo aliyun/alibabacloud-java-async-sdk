@@ -218,7 +218,7 @@ public class ListIntentResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 是否数组
+             * Array.
              */
             public Builder array(Boolean array) {
                 this.array = array;
@@ -226,7 +226,7 @@ public class ListIntentResponseBody extends TeaModel {
             }
 
             /**
-             * 是否敏感
+             * Encrypt.
              */
             public Builder encrypt(Boolean encrypt) {
                 this.encrypt = encrypt;
@@ -234,7 +234,7 @@ public class ListIntentResponseBody extends TeaModel {
             }
 
             /**
-             * 是否交互式收集
+             * Interactive.
              */
             public Builder interactive(Boolean interactive) {
                 this.interactive = interactive;
@@ -242,7 +242,7 @@ public class ListIntentResponseBody extends TeaModel {
             }
 
             /**
-             * 槽位名
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -250,7 +250,7 @@ public class ListIntentResponseBody extends TeaModel {
             }
 
             /**
-             * 槽位ID
+             * SlotId.
              */
             public Builder slotId(String slotId) {
                 this.slotId = slotId;
@@ -258,7 +258,7 @@ public class ListIntentResponseBody extends TeaModel {
             }
 
             /**
-             * 槽位值（实体名）
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

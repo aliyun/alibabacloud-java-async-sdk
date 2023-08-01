@@ -147,7 +147,7 @@ public class FeedbackRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -156,7 +156,7 @@ public class FeedbackRequest extends Request {
         }
 
         /**
-         * good-点赞、bad-点踩
+         * Feedback.
          */
         public Builder feedback(String feedback) {
             this.putQueryParameter("Feedback", feedback);
@@ -165,7 +165,7 @@ public class FeedbackRequest extends Request {
         }
 
         /**
-         * 点赞、点踩的内容
+         * FeedbackContent.
          */
         public Builder feedbackContent(String feedbackContent) {
             this.putQueryParameter("FeedbackContent", feedbackContent);
@@ -174,7 +174,7 @@ public class FeedbackRequest extends Request {
         }
 
         /**
-         * 机器人ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -183,7 +183,7 @@ public class FeedbackRequest extends Request {
         }
 
         /**
-         * 会话窗单次会话标识
+         * MessageId.
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);
@@ -192,7 +192,7 @@ public class FeedbackRequest extends Request {
         }
 
         /**
-         * 会话Session标识，标识：IM唯一标识会话
+         * SessionId.
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);

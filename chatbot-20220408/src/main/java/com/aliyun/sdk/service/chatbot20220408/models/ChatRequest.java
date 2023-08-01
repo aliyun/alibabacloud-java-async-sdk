@@ -194,7 +194,7 @@ public class ChatRequest extends Request {
         } 
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -203,7 +203,7 @@ public class ChatRequest extends Request {
         }
 
         /**
-         * 机器人实例ID。登录云小蜜控制台，机器人详情->会话接口，查看机器人实例信息，可获得该实例ID。
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -212,7 +212,7 @@ public class ChatRequest extends Request {
         }
 
         /**
-         * 对话流中意图名称。 若指定此名称，机器人会直接进入此意图做问答
+         * IntentName.
          */
         public Builder intentName(String intentName) {
             this.putQueryParameter("IntentName", intentName);
@@ -221,7 +221,7 @@ public class ChatRequest extends Request {
         }
 
         /**
-         * 知识库中知识标题的ID。若指定此ID，那么机器人会直接返回指定知识标题的答案
+         * KnowledgeId.
          */
         public Builder knowledgeId(String knowledgeId) {
             this.putQueryParameter("KnowledgeId", knowledgeId);
@@ -230,7 +230,7 @@ public class ChatRequest extends Request {
         }
 
         /**
-         * 视角编码，用于调用同一知识标题下不同视角的答案。如：Perspective=["FZJBY3raWr"]。使用SDK时以SDK中定义的参数为准
+         * Perspective.
          */
         public Builder perspective(java.util.List < String > perspective) {
             String perspectiveShrink = shrink(perspective, "Perspective", "json");
@@ -249,7 +249,7 @@ public class ChatRequest extends Request {
         }
 
         /**
-         * 访问者ID。用于识别当前会话中的用户
+         * SenderId.
          */
         public Builder senderId(String senderId) {
             this.putQueryParameter("SenderId", senderId);
@@ -258,7 +258,7 @@ public class ChatRequest extends Request {
         }
 
         /**
-         * 当前会话中访问的昵称
+         * SenderNick.
          */
         public Builder senderNick(String senderNick) {
             this.putQueryParameter("SenderNick", senderNick);
@@ -267,7 +267,7 @@ public class ChatRequest extends Request {
         }
 
         /**
-         * 会话ID，用于标识一个访问者的会话和保持上下文信息。对于一个新的访问者，首次调用Chat接口时无需传递此字段，机器人会开启一个会话，并在Chat接口的响应中返回该会话的SessionId。对于该访问者的后续轮次的会话，调用Chat接口时传递当前会话的SessionId，机器人即可基于SessionId继续该轮次会话。长度限制是64个字符
+         * SessionId.
          */
         public Builder sessionId(String sessionId) {
             this.putQueryParameter("SessionId", sessionId);
@@ -276,7 +276,7 @@ public class ChatRequest extends Request {
         }
 
         /**
-         * 机器人访问者的输入
+         * Utterance.
          */
         public Builder utterance(String utterance) {
             this.putQueryParameter("Utterance", utterance);

@@ -119,7 +119,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -128,7 +128,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * 机器人ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -137,7 +137,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * 要修改的机器人备注
+         * Introduction.
          */
         public Builder introduction(String introduction) {
             this.putQueryParameter("Introduction", introduction);
@@ -146,7 +146,7 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
-         * 要修改的机器人名称
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

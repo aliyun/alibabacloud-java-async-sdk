@@ -58,7 +58,7 @@ public class ListSimQuestionResponseBody extends TeaModel {
         }
 
         /**
-         * 相似问列表
+         * SimQuestions.
          */
         public Builder simQuestions(java.util.List < SimQuestions> simQuestions) {
             this.simQuestions = simQuestions;
@@ -134,7 +134,7 @@ public class ListSimQuestionResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 创建时间(UTC 时间)
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -142,7 +142,7 @@ public class ListSimQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间(UTC 时间)
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -150,7 +150,7 @@ public class ListSimQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * 相似问ID
+             * SimQuestionId.
              */
             public Builder simQuestionId(Long simQuestionId) {
                 this.simQuestionId = simQuestionId;
@@ -158,7 +158,7 @@ public class ListSimQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * 相似问标题
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;

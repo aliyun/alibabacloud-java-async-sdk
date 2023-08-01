@@ -62,7 +62,7 @@ public class BeginSessionResponseBody extends TeaModel {
         private String welcomeMessage; 
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class BeginSessionResponseBody extends TeaModel {
         }
 
         /**
-         * 欢迎语
+         * WelcomeMessage.
          */
         public Builder welcomeMessage(String welcomeMessage) {
             this.welcomeMessage = welcomeMessage;

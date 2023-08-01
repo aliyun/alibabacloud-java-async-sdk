@@ -50,7 +50,7 @@ public class CreateFaqResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 知识ID
+         * KnowledgeId.
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.knowledgeId = knowledgeId;

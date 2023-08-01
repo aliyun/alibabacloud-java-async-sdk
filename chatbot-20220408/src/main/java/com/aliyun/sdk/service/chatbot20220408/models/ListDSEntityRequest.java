@@ -148,7 +148,7 @@ public class ListDSEntityRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -157,7 +157,7 @@ public class ListDSEntityRequest extends Request {
         }
 
         /**
-         * 为空：全量自定义实体（默认）
+         * EntityType.
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -166,7 +166,7 @@ public class ListDSEntityRequest extends Request {
         }
 
         /**
-         * 机器人ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -175,7 +175,7 @@ public class ListDSEntityRequest extends Request {
         }
 
         /**
-         * 筛选项，contains匹配，范围：实体名称（未来扩展：实体成员、同义词）
+         * Keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

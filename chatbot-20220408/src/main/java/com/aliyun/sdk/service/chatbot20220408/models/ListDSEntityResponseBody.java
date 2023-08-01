@@ -338,7 +338,7 @@ public class ListDSEntityResponseBody extends TeaModel {
             }
 
             /**
-             * 系统实体code，如@sys.date
+             * SysEntityCode.
              */
             public Builder sysEntityCode(String sysEntityCode) {
                 this.sysEntityCode = sysEntityCode;

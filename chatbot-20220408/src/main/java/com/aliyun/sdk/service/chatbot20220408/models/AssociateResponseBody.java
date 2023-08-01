@@ -74,7 +74,7 @@ public class AssociateResponseBody extends TeaModel {
         private String sessionId; 
 
         /**
-         * 联想的列表
+         * Associate.
          */
         public Builder associate(java.util.List < Associate> associate) {
             this.associate = associate;
@@ -82,7 +82,7 @@ public class AssociateResponseBody extends TeaModel {
         }
 
         /**
-         * 本条会话应答消息的ID
+         * MessageId.
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -90,7 +90,7 @@ public class AssociateResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class AssociateResponseBody extends TeaModel {
         }
 
         /**
-         * 本次会话的ID
+         * SessionId.
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -150,7 +150,7 @@ public class AssociateResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 附带信息
+             * Meta.
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -158,7 +158,7 @@ public class AssociateResponseBody extends TeaModel {
             }
 
             /**
-             * 关联问题的标题
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;

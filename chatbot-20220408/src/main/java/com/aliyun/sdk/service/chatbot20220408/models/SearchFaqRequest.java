@@ -301,7 +301,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -310,7 +310,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 类目唯一标识
+         * CategoryIds.
          */
         public Builder categoryIds(java.util.List < Long > categoryIds) {
             String categoryIdsShrink = shrink(categoryIds, "CategoryIds", "json");
@@ -320,7 +320,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 创建开始时间
+         * CreateTimeBegin.
          */
         public Builder createTimeBegin(String createTimeBegin) {
             this.putBodyParameter("CreateTimeBegin", createTimeBegin);
@@ -329,7 +329,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 创建结束时间
+         * CreateTimeEnd.
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putBodyParameter("CreateTimeEnd", createTimeEnd);
@@ -338,7 +338,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 创建人
+         * CreateUserName.
          */
         public Builder createUserName(String createUserName) {
             this.putBodyParameter("CreateUserName", createUserName);
@@ -347,7 +347,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 失效开始时间
+         * EndTimeBegin.
          */
         public Builder endTimeBegin(String endTimeBegin) {
             this.putBodyParameter("EndTimeBegin", endTimeBegin);
@@ -356,7 +356,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 失效结束时间
+         * EndTimeEnd.
          */
         public Builder endTimeEnd(String endTimeEnd) {
             this.putBodyParameter("EndTimeEnd", endTimeEnd);
@@ -365,7 +365,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 关键字
+         * Keyword.
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -374,7 +374,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 修改开始时间
+         * ModifyTimeBegin.
          */
         public Builder modifyTimeBegin(String modifyTimeBegin) {
             this.putBodyParameter("ModifyTimeBegin", modifyTimeBegin);
@@ -383,7 +383,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 修改结束时间
+         * ModifyTimeEnd.
          */
         public Builder modifyTimeEnd(String modifyTimeEnd) {
             this.putBodyParameter("ModifyTimeEnd", modifyTimeEnd);
@@ -392,7 +392,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 修改人
+         * ModifyUserName.
          */
         public Builder modifyUserName(String modifyUserName) {
             this.putBodyParameter("ModifyUserName", modifyUserName);
@@ -401,7 +401,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 页码 默认1
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -410,7 +410,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 每页数量，默认10，最大50
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -419,7 +419,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 搜索范围： 1-搜索标题相似问, 2-搜索答案, 3-搜索全部
+         * SearchScope.
          */
         public Builder searchScope(Integer searchScope) {
             this.putBodyParameter("SearchScope", searchScope);
@@ -428,7 +428,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 生效开始时间
+         * StartTimeBegin.
          */
         public Builder startTimeBegin(String startTimeBegin) {
             this.putBodyParameter("StartTimeBegin", startTimeBegin);
@@ -437,7 +437,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 生效结束时间
+         * StartTimeEnd.
          */
         public Builder startTimeEnd(String startTimeEnd) {
             this.putBodyParameter("StartTimeEnd", startTimeEnd);
@@ -446,7 +446,7 @@ public class SearchFaqRequest extends Request {
         }
 
         /**
-         * 知识状态: -1-已删除未发布, 1-未发布, 2-已发布, 3-已更新未发布
+         * Status.
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);

@@ -133,7 +133,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -142,7 +142,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * 按机器人名称模糊搜索
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -151,7 +151,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * 分页-第几页，默认1
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -160,7 +160,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * 分页-页面大小，默认10
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +169,7 @@ public class ListInstanceRequest extends Request {
         }
 
         /**
-         * 按机器人类型筛选
+         * RobotType.
          */
         public Builder robotType(String robotType) {
             this.putQueryParameter("RobotType", robotType);

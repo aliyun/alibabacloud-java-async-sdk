@@ -146,7 +146,7 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
         private java.util.Map < String, ? > warnings; 
 
         /**
-         * 业务类型列表
+         * BizTypeList.
          */
         public Builder bizTypeList(java.util.List < String > bizTypeList) {
             this.bizTypeList = bizTypeList;
@@ -154,7 +154,7 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
         }
 
         /**
-         * 任务创建的 UTC 时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -162,7 +162,7 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
         }
 
         /**
-         * job失败信息
+         * Error.
          */
         public Builder error(String error) {
             this.error = error;
@@ -170,7 +170,7 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
         }
 
         /**
-         * 各子发布模块的错误信息，key是子发布模块，value是错误信息
+         * Errors.
          */
         public Builder errors(java.util.Map < String, ? > errors) {
             this.errors = errors;
@@ -178,7 +178,7 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
         }
 
         /**
-         * 任务Id
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -186,7 +186,7 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
         }
 
         /**
-         * 任务修改的 UTC 时间
+         * ModifyTime.
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -194,7 +194,7 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +202,7 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
         }
 
         /**
-         * 任务Id
+         * Response.
          */
         public Builder response(String response) {
             this.response = response;
@@ -210,7 +210,7 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
         }
 
         /**
-         * 任务状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -218,7 +218,7 @@ public class GetInstancePublishTaskStateResponseBody extends TeaModel {
         }
 
         /**
-         * 各子发布模块的警告信息，key是子发布模块，value是警告信息
+         * Warnings.
          */
         public Builder warnings(java.util.Map < String, ? > warnings) {
             this.warnings = warnings;

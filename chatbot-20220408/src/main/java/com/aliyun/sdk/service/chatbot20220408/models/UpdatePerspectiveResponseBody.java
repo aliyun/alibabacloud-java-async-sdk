@@ -38,7 +38,7 @@ public class UpdatePerspectiveResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -86,7 +86,7 @@ public class ChatResponseBody extends TeaModel {
         private String sessionId; 
 
         /**
-         * 本条会话应答消息的ID
+         * MessageId.
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -94,7 +94,7 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * 消息的列表
+         * Messages.
          */
         public Builder messages(java.util.List < Messages> messages) {
             this.messages = messages;
@@ -102,7 +102,7 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * query的分词结果，可能为空
+         * QuerySegList.
          */
         public Builder querySegList(java.util.List < String > querySegList) {
             this.querySegList = querySegList;
@@ -110,7 +110,7 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ChatResponseBody extends TeaModel {
         }
 
         /**
-         * 本次会话的ID
+         * SessionId.
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -170,7 +170,7 @@ public class ChatResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 知识关联知识的ID
+             * KnowledgeId.
              */
             public Builder knowledgeId(String knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -178,7 +178,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 知识的关联知识的标题
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -327,9 +327,7 @@ public class ChatResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 区分答案类型。
-             * <p>
-             * KnowledgeBase:知识库条；
+             * AnswerSource.
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -337,7 +335,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 知识类目
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -345,7 +343,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 命中问题的内容
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -353,7 +351,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 纯文本/富文本答案的标示
+             * ContentType.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -361,7 +359,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 命中语句
+             * HitStatement.
              */
             public Builder hitStatement(String hitStatement) {
                 this.hitStatement = hitStatement;
@@ -369,7 +367,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 命中问题在知识库中的ID
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -377,7 +375,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 关联知识列表
+             * RelatedKnowledges.
              */
             public Builder relatedKnowledges(java.util.List < RelatedKnowledges> relatedKnowledges) {
                 this.relatedKnowledges = relatedKnowledges;
@@ -385,7 +383,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 分数
+             * Score.
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -393,7 +391,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 命中问题的简介
+             * Summary.
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -401,7 +399,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 命中问题的标题
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -478,7 +476,7 @@ public class ChatResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 澄清来源的标识
+             * AnswerSource.
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -486,7 +484,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 澄清的知识id
+             * KnowledgeId.
              */
             public Builder knowledgeId(String knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -494,7 +492,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 推荐内容的分数，当AnswerSource为KNOWLEDGE时，此字段有值
+             * Score.
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -502,11 +500,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 澄清内容，可能是
-             * <p>
-             * 图谱问答的实体、
-             * 知识问答的知识标题、
-             * 表格问答的列值
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -840,7 +834,7 @@ public class ChatResponseBody extends TeaModel {
             private String userDefinedChatTitle; 
 
             /**
-             * 区分答案类型
+             * AnswerSource.
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -848,7 +842,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource为MACHINE_READ时，此字段返回命中文章标题
+             * ArticleTitle.
              */
             public Builder articleTitle(String articleTitle) {
                 this.articleTitle = articleTitle;
@@ -856,7 +850,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 指令参数，如转人工指令的转人工技能组
+             * Commands.
              */
             public Builder commands(java.util.Map < String, ? > commands) {
                 this.commands = commands;
@@ -864,7 +858,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 文本消息的内容
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -872,7 +866,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 纯文本/富文本答案的标示
+             * ContentType.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -880,7 +874,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource为BotFramework时，此字段返回对话单元名称
+             * DialogName.
              */
             public Builder dialogName(String dialogName) {
                 this.dialogName = dialogName;
@@ -888,7 +882,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 此字段返回透传参数
+             * Ext.
              */
             public Builder ext(java.util.Map < String, ? > ext) {
                 this.ext = ext;
@@ -896,7 +890,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource为BotFramework时，此字段返回透传参数
+             * ExternalFlags.
              */
             public Builder externalFlags(java.util.Map < String, ? > externalFlags) {
                 this.externalFlags = externalFlags;
@@ -904,7 +898,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 命中语句
+             * HitStatement.
              */
             public Builder hitStatement(String hitStatement) {
                 this.hitStatement = hitStatement;
@@ -912,7 +906,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource为BotFramework时，此字段返回意图名称
+             * IntentName.
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -928,7 +922,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource为BotFramework时，此字段返回节点Id
+             * NodeId.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -936,7 +930,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource为BotFramework时，此字段返回节点名称
+             * NodeName.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -944,7 +938,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource=BotFramework，ResponseType=SSML时，表示命中对话工厂交互式填槽；否则字段不存在
+             * ResponseType.
              */
             public Builder responseType(String responseType) {
                 this.responseType = responseType;
@@ -952,7 +946,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 分数
+             * Score.
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -960,7 +954,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerSource为BotFramework时，此字段返回专有名词列表
+             * Slots.
              */
             public Builder slots(java.util.List < Slots> slots) {
                 this.slots = slots;
@@ -968,7 +962,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义闲聊主题title
+             * UserDefinedChatTitle.
              */
             public Builder userDefinedChatTitle(String userDefinedChatTitle) {
                 this.userDefinedChatTitle = userDefinedChatTitle;
@@ -1081,7 +1075,7 @@ public class ChatResponseBody extends TeaModel {
             private String voiceTitle; 
 
             /**
-             * 当AnswerType为Recommend时，此字段表示推荐的答案来源
+             * AnswerSource.
              */
             public Builder answerSource(String answerSource) {
                 this.answerSource = answerSource;
@@ -1089,7 +1083,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 本条消息的类型
+             * AnswerType.
              */
             public Builder answerType(String answerType) {
                 this.answerType = answerType;
@@ -1097,7 +1091,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerType为Knowledge时，此字段包含机器人返回的Knowledge对象
+             * Knowledge.
              */
             public Builder knowledge(Knowledge knowledge) {
                 this.knowledge = knowledge;
@@ -1105,7 +1099,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerType为Recommend时，此字段包含机器人返回的Recommend的列表
+             * Recommends.
              */
             public Builder recommends(java.util.List < Recommends> recommends) {
                 this.recommends = recommends;
@@ -1113,7 +1107,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerType为Text时，此字段包含机器人返回的Text对象
+             * Text.
              */
             public Builder text(Text text) {
                 this.text = text;
@@ -1121,7 +1115,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerType为Recommend时，此字段表示推荐或者反问的标题话术
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1129,7 +1123,7 @@ public class ChatResponseBody extends TeaModel {
             }
 
             /**
-             * 当AnswerType为Recommend时，并且问答的机器人为语音机器人，此字段表示列表型答案在语音场景渲染之后的答案内容
+             * VoiceTitle.
              */
             public Builder voiceTitle(String voiceTitle) {
                 this.voiceTitle = voiceTitle;

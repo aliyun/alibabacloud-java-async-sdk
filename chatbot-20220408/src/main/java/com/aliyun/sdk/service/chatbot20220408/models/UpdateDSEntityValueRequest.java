@@ -151,7 +151,7 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -160,7 +160,7 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
-         * 实体类型为synonyms时，表示实体归一化值；当实体类型为regex时，表示正则表达式文本
+         * Content.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -169,7 +169,7 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
-         * 实体ID，修改实体成员时可为空
+         * EntityId.
          */
         public Builder entityId(Long entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -178,7 +178,7 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
-         * 实体成员ID，创建实体成员时为空
+         * EntityValueId.
          */
         public Builder entityValueId(Long entityValueId) {
             this.putQueryParameter("EntityValueId", entityValueId);
@@ -187,7 +187,7 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
-         * 机器人ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -196,7 +196,7 @@ public class UpdateDSEntityValueRequest extends Request {
         }
 
         /**
-         * 实体同义词
+         * Synonyms.
          */
         public Builder synonyms(java.util.List < String > synonyms) {
             String synonymsShrink = shrink(synonyms, "Synonyms", "json");

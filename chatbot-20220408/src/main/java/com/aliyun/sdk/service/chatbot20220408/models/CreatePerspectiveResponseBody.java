@@ -50,7 +50,7 @@ public class CreatePerspectiveResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 视角主键（code_id）
+         * PerspectiveId.
          */
         public Builder perspectiveId(String perspectiveId) {
             this.perspectiveId = perspectiveId;
@@ -58,7 +58,7 @@ public class CreatePerspectiveResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

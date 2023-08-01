@@ -58,7 +58,7 @@ public class CreateSolutionResponseBody extends TeaModel {
         }
 
         /**
-         * 答案ID
+         * SolutionId.
          */
         public Builder solutionId(Long solutionId) {
             this.solutionId = solutionId;

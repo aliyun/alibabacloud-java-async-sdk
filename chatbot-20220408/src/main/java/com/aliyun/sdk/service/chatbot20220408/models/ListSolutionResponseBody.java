@@ -58,7 +58,7 @@ public class ListSolutionResponseBody extends TeaModel {
         }
 
         /**
-         * 答案列表
+         * Solutions.
          */
         public Builder solutions(java.util.List < Solutions> solutions) {
             this.solutions = solutions;
@@ -170,7 +170,7 @@ public class ListSolutionResponseBody extends TeaModel {
             private Long solutionId; 
 
             /**
-             * 答案内容
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -178,7 +178,7 @@ public class ListSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * 答案类型(0纯文本，1富文本）
+             * ContentType.
              */
             public Builder contentType(Integer contentType) {
                 this.contentType = contentType;
@@ -186,7 +186,7 @@ public class ListSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间(UTC 时间)
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -194,7 +194,7 @@ public class ListSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间(UTC 时间)
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -202,7 +202,7 @@ public class ListSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * 视角code列表
+             * PerspectiveCodes.
              */
             public Builder perspectiveCodes(java.util.List < String > perspectiveCodes) {
                 this.perspectiveCodes = perspectiveCodes;
@@ -210,7 +210,7 @@ public class ListSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * 答案纯文本内容
+             * PlainText.
              */
             public Builder plainText(String plainText) {
                 this.plainText = plainText;
@@ -218,7 +218,7 @@ public class ListSolutionResponseBody extends TeaModel {
             }
 
             /**
-             * 答案ID
+             * SolutionId.
              */
             public Builder solutionId(Long solutionId) {
                 this.solutionId = solutionId;

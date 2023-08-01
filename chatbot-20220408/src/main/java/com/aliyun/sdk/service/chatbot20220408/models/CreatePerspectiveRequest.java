@@ -105,7 +105,7 @@ public class CreatePerspectiveRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -114,7 +114,7 @@ public class CreatePerspectiveRequest extends Request {
         }
 
         /**
-         * 视角描述
+         * Description.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -123,7 +123,7 @@ public class CreatePerspectiveRequest extends Request {
         }
 
         /**
-         * 视角名称，长度不超过50字
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

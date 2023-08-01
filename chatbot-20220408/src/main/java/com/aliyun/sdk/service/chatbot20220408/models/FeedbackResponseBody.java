@@ -62,7 +62,7 @@ public class FeedbackResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * good-点赞、bad-点踩
+         * Feedback.
          */
         public Builder feedback(String feedback) {
             this.feedback = feedback;
@@ -70,7 +70,7 @@ public class FeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * 会话窗单次会话标识
+         * MessageId.
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -78,7 +78,7 @@ public class FeedbackResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

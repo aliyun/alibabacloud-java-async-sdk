@@ -98,6 +98,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GenerateUserAccessTokenResponse> generateUserAccessToken(GenerateUserAccessTokenRequest request);
 
+    CompletableFuture<GetAgentInfoResponse> getAgentInfo(GetAgentInfoRequest request);
+
     CompletableFuture<GetAsyncResultResponse> getAsyncResult(GetAsyncResultRequest request);
 
     CompletableFuture<GetInstancePublishTaskStateResponse> getInstancePublishTaskState(GetInstancePublishTaskStateRequest request);
@@ -123,6 +125,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListIntentResponse> listIntent(ListIntentRequest request);
 
     CompletableFuture<ListLgfResponse> listLgf(ListLgfRequest request);
+
+    CompletableFuture<ListSaasInfoResponse> listSaasInfo(ListSaasInfoRequest request);
+
+    CompletableFuture<ListSaasPermissionGroupInfosResponse> listSaasPermissionGroupInfos(ListSaasPermissionGroupInfosRequest request);
 
     CompletableFuture<ListSimQuestionResponse> listSimQuestion(ListSimQuestionRequest request);
 

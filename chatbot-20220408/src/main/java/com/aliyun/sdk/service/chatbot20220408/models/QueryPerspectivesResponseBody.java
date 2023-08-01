@@ -50,7 +50,7 @@ public class QueryPerspectivesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 视角列表
+         * Perspectives.
          */
         public Builder perspectives(java.util.List < Perspectives> perspectives) {
             this.perspectives = perspectives;
@@ -58,7 +58,7 @@ public class QueryPerspectivesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * 创建时间 UTC时间
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -178,7 +178,7 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间 UTC时间
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -186,7 +186,7 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             }
 
             /**
-             * 视角名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +194,7 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             }
 
             /**
-             * 视角编码（用于问答api）
+             * PerspectiveCode.
              */
             public Builder perspectiveCode(String perspectiveCode) {
                 this.perspectiveCode = perspectiveCode;
@@ -202,7 +202,7 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             }
 
             /**
-             * 视角主键（code_id）
+             * PerspectiveId.
              */
             public Builder perspectiveId(String perspectiveId) {
                 this.perspectiveId = perspectiveId;
@@ -210,7 +210,7 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             }
 
             /**
-             * 是否自定义
+             * SelfDefine.
              */
             public Builder selfDefine(Boolean selfDefine) {
                 this.selfDefine = selfDefine;
@@ -218,7 +218,7 @@ public class QueryPerspectivesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据状态：3：选中；1：未选中
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;

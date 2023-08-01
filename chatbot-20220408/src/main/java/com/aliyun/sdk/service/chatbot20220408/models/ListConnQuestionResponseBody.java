@@ -146,7 +146,7 @@ public class ListConnQuestionResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 关联知识ID
+             * ConnQuestionId.
              */
             public Builder connQuestionId(Long connQuestionId) {
                 this.connQuestionId = connQuestionId;
@@ -154,7 +154,7 @@ public class ListConnQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间(UTC 时间)
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -162,7 +162,7 @@ public class ListConnQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间(UTC 时间)
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -170,7 +170,7 @@ public class ListConnQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * 关联关系ID
+             * OutlineId.
              */
             public Builder outlineId(Long outlineId) {
                 this.outlineId = outlineId;
@@ -178,7 +178,7 @@ public class ListConnQuestionResponseBody extends TeaModel {
             }
 
             /**
-             * 关联知识题目
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;

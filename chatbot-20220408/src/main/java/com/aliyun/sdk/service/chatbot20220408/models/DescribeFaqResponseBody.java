@@ -206,7 +206,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         private String title; 
 
         /**
-         * 类目ID
+         * CategoryId.
          */
         public Builder categoryId(Long categoryId) {
             this.categoryId = categoryId;
@@ -214,7 +214,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 创建时间（UTC时间）
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -222,7 +222,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 创建人
+         * CreateUserName.
          */
         public Builder createUserName(String createUserName) {
             this.createUserName = createUserName;
@@ -230,7 +230,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 知识生效状态,根据StartDate, EndDate计算出来: 20-生效中, 21-已失效, 22-待生效
+         * EffectStatus.
          */
         public Builder effectStatus(Integer effectStatus) {
             this.effectStatus = effectStatus;
@@ -238,7 +238,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 失效时间（UTC时间）
+         * EndDate.
          */
         public Builder endDate(String endDate) {
             this.endDate = endDate;
@@ -246,7 +246,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 知识ID
+         * KnowledgeId.
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.knowledgeId = knowledgeId;
@@ -254,7 +254,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 修改时间（UTC时间）
+         * ModifyTime.
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -262,7 +262,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 修改人
+         * ModifyUserName.
          */
         public Builder modifyUserName(String modifyUserName) {
             this.modifyUserName = modifyUserName;
@@ -270,7 +270,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 关联问列表
+         * Outlines.
          */
         public Builder outlines(java.util.List < Outlines> outlines) {
             this.outlines = outlines;
@@ -286,7 +286,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 相似问列表
+         * SimQuestions.
          */
         public Builder simQuestions(java.util.List < SimQuestions> simQuestions) {
             this.simQuestions = simQuestions;
@@ -294,7 +294,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 答案列表
+         * Solutions.
          */
         public Builder solutions(java.util.List < Solutions> solutions) {
             this.solutions = solutions;
@@ -302,7 +302,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 生效时间（UTC时间）
+         * StartDate.
          */
         public Builder startDate(String startDate) {
             this.startDate = startDate;
@@ -310,7 +310,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 知识状态: -1-已删除未发布, 1-未发布, 2-已发布, 3-已更新未发布
+         * Status.
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -318,7 +318,7 @@ public class DescribeFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 标题
+         * Title.
          */
         public Builder title(String title) {
             this.title = title;
@@ -406,7 +406,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 关联知识ID
+             * ConnQuestionId.
              */
             public Builder connQuestionId(Long connQuestionId) {
                 this.connQuestionId = connQuestionId;
@@ -414,7 +414,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间(UTC 时间)
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -422,7 +422,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间(UTC 时间)
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -430,7 +430,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 关联关系ID
+             * OutlineId.
              */
             public Builder outlineId(Long outlineId) {
                 this.outlineId = outlineId;
@@ -438,7 +438,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 关联知识标题
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -515,7 +515,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 创建时间(UTC 时间)
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -523,7 +523,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间(UTC 时间)
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -531,7 +531,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 相似问ID
+             * SimQuestionId.
              */
             public Builder simQuestionId(Long simQuestionId) {
                 this.simQuestionId = simQuestionId;
@@ -539,7 +539,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 相似问标题
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -652,7 +652,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             private Long solutionId; 
 
             /**
-             * 答案内容
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -660,7 +660,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 答案类型(0纯文本，1富文本）
+             * ContentType.
              */
             public Builder contentType(Integer contentType) {
                 this.contentType = contentType;
@@ -668,7 +668,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间(UTC 时间)
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -676,7 +676,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间(UTC 时间)
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -684,7 +684,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 视角code列表
+             * PerspectiveCodes.
              */
             public Builder perspectiveCodes(java.util.List < String > perspectiveCodes) {
                 this.perspectiveCodes = perspectiveCodes;
@@ -692,7 +692,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 答案纯文本内容
+             * PlainText.
              */
             public Builder plainText(String plainText) {
                 this.plainText = plainText;
@@ -700,7 +700,7 @@ public class DescribeFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 答案ID
+             * SolutionId.
              */
             public Builder solutionId(Long solutionId) {
                 this.solutionId = solutionId;

@@ -106,7 +106,7 @@ public class CreateUserSayRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -115,7 +115,7 @@ public class CreateUserSayRequest extends Request {
         }
 
         /**
-         * 机器人ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -191,7 +191,7 @@ public class CreateUserSayRequest extends Request {
             private Integer startIndex; 
 
             /**
-             * 槽位在意图话术中的结束下标（不含）
+             * EndIndex.
              */
             public Builder endIndex(Integer endIndex) {
                 this.endIndex = endIndex;
@@ -199,7 +199,7 @@ public class CreateUserSayRequest extends Request {
             }
 
             /**
-             * 划槽ID
+             * SlotId.
              */
             public Builder slotId(String slotId) {
                 this.slotId = slotId;
@@ -207,7 +207,7 @@ public class CreateUserSayRequest extends Request {
             }
 
             /**
-             * 槽位在意图话术中的起始下标
+             * StartIndex.
              */
             public Builder startIndex(Integer startIndex) {
                 this.startIndex = startIndex;
@@ -274,7 +274,7 @@ public class CreateUserSayRequest extends Request {
             private java.util.List < SlotInfos> slotInfos; 
 
             /**
-             * 用户话术
+             * Content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -282,7 +282,7 @@ public class CreateUserSayRequest extends Request {
             }
 
             /**
-             * 意图ID
+             * IntentId.
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -290,7 +290,7 @@ public class CreateUserSayRequest extends Request {
             }
 
             /**
-             * 划槽信息
+             * SlotInfos.
              */
             public Builder slotInfos(java.util.List < SlotInfos> slotInfos) {
                 this.slotInfos = slotInfos;

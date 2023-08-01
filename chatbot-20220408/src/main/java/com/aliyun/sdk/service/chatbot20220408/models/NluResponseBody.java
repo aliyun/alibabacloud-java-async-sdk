@@ -62,7 +62,7 @@ public class NluResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 本条语言理解应答消息的ID
+         * MessageId.
          */
         public Builder messageId(String messageId) {
             this.messageId = messageId;
@@ -70,7 +70,7 @@ public class NluResponseBody extends TeaModel {
         }
 
         /**
-         * 消息的列表
+         * Messages.
          */
         public Builder messages(java.util.List < Messages> messages) {
             this.messages = messages;
@@ -78,7 +78,7 @@ public class NluResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class NluResponseBody extends TeaModel {
             private String word; 
 
             /**
-             * 名词
+             * StandardWord.
              */
             public Builder standardWord(String standardWord) {
                 this.standardWord = standardWord;
@@ -138,7 +138,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 同义词
+             * Word.
              */
             public Builder word(String word) {
                 this.word = word;
@@ -191,7 +191,7 @@ public class NluResponseBody extends TeaModel {
             private String word; 
 
             /**
-             * 名词
+             * StandardWord.
              */
             public Builder standardWord(String standardWord) {
                 this.standardWord = standardWord;
@@ -199,7 +199,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 同义词
+             * Word.
              */
             public Builder word(String word) {
                 this.word = word;
@@ -252,7 +252,7 @@ public class NluResponseBody extends TeaModel {
             private java.util.List < GlobalSensitiveWordList> globalSensitiveWordList; 
 
             /**
-             * 全局名词列表
+             * GlobalDictList.
              */
             public Builder globalDictList(java.util.List < GlobalDictList> globalDictList) {
                 this.globalDictList = globalDictList;
@@ -260,7 +260,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 全局敏感词列表
+             * GlobalSensitiveWordList.
              */
             public Builder globalSensitiveWordList(java.util.List < GlobalSensitiveWordList> globalSensitiveWordList) {
                 this.globalSensitiveWordList = globalSensitiveWordList;
@@ -337,7 +337,7 @@ public class NluResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 实体名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -345,7 +345,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 实体原词（实体成员）
+             * Origin.
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -353,7 +353,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 实体类型，当前只有text类型
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -361,7 +361,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 实体同义词
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -438,7 +438,7 @@ public class NluResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 实体名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -446,7 +446,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 实体原词（实体成员）
+             * Origin.
              */
             public Builder origin(String origin) {
                 this.origin = origin;
@@ -454,7 +454,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 实体类型，当前只有text类型
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -462,7 +462,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 实体同义词
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -563,7 +563,7 @@ public class NluResponseBody extends TeaModel {
             private java.util.List < SlotList> slotList; 
 
             /**
-             * 意图id
+             * IntentId.
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -571,7 +571,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 匹配详情（匹配过程）
+             * MatchDetail.
              */
             public Builder matchDetail(String matchDetail) {
                 this.matchDetail = matchDetail;
@@ -579,7 +579,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 匹配类型，其枚举值含义如下：  Similarity：query与意图通过意图话术相似度匹配 Lgf：query与意图通过LGF匹配 Classify：query与意图通过模型训练匹配 FewShotLearning：query与意图通过系统内置fewshot模型匹配 BuildIn： query与系统内置意图匹配
+             * MatchType.
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -587,7 +587,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 意图名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -595,7 +595,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 分数
+             * Score.
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -603,7 +603,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 命中意图的槽位列表
+             * SlotList.
              */
             public Builder slotList(java.util.List < SlotList> slotList) {
                 this.slotList = slotList;
@@ -656,7 +656,7 @@ public class NluResponseBody extends TeaModel {
             private java.util.List < IntentList> intentList; 
 
             /**
-             * 实体列表
+             * EntityList.
              */
             public Builder entityList(java.util.List < EntityList> entityList) {
                 this.entityList = entityList;
@@ -664,7 +664,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 意图列表
+             * IntentList.
              */
             public Builder intentList(java.util.List < IntentList> intentList) {
                 this.intentList = intentList;
@@ -717,7 +717,7 @@ public class NluResponseBody extends TeaModel {
             private DsNluInfo dsNluInfo; 
 
             /**
-             * 对话中控的nlu信息
+             * DialogHubNluInfo.
              */
             public Builder dialogHubNluInfo(DialogHubNluInfo dialogHubNluInfo) {
                 this.dialogHubNluInfo = dialogHubNluInfo;
@@ -725,7 +725,7 @@ public class NluResponseBody extends TeaModel {
             }
 
             /**
-             * 对话工厂的nlu信息
+             * DsNluInfo.
              */
             public Builder dsNluInfo(DsNluInfo dsNluInfo) {
                 this.dsNluInfo = dsNluInfo;

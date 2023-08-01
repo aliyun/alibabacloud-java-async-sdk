@@ -58,7 +58,7 @@ public class CreateSimQuestionResponseBody extends TeaModel {
         }
 
         /**
-         * 相似问ID
+         * SimQuestionId.
          */
         public Builder simQuestionId(Long simQuestionId) {
             this.simQuestionId = simQuestionId;

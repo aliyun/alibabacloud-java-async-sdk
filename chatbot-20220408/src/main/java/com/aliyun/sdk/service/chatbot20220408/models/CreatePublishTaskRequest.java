@@ -105,7 +105,7 @@ public class CreatePublishTaskRequest extends Request {
         }
 
         /**
-         * 业务空间key，若不指定则请求默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -114,7 +114,7 @@ public class CreatePublishTaskRequest extends Request {
         }
 
         /**
-         * 发布任务的业务类型，若发布机器人请使用 CreateInstancePublishTask API
+         * BizType.
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -123,7 +123,7 @@ public class CreatePublishTaskRequest extends Request {
         }
 
         /**
-         * 业务类型附加信息，当前仅支持BizType为faq的传参，此字段指定faq类目Id列表，表示只发布指定类目下面的faq知识
+         * DataIdList.
          */
         public Builder dataIdList(java.util.List < String > dataIdList) {
             String dataIdListShrink = shrink(dataIdList, "DataIdList", "json");

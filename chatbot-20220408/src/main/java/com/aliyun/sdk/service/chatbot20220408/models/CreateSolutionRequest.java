@@ -136,7 +136,7 @@ public class CreateSolutionRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -145,7 +145,7 @@ public class CreateSolutionRequest extends Request {
         }
 
         /**
-         * 答案内容
+         * Content.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -154,7 +154,7 @@ public class CreateSolutionRequest extends Request {
         }
 
         /**
-         * 答案类型
+         * ContentType.
          */
         public Builder contentType(Integer contentType) {
             this.putQueryParameter("ContentType", contentType);
@@ -163,7 +163,7 @@ public class CreateSolutionRequest extends Request {
         }
 
         /**
-         * 知识ID
+         * KnowledgeId.
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.putQueryParameter("KnowledgeId", knowledgeId);
@@ -172,7 +172,7 @@ public class CreateSolutionRequest extends Request {
         }
 
         /**
-         * 视角code列表
+         * PerspectiveCodes.
          */
         public Builder perspectiveCodes(java.util.List < String > perspectiveCodes) {
             this.putQueryParameter("PerspectiveCodes", perspectiveCodes);

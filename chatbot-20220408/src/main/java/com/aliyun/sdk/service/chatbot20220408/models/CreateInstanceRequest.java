@@ -133,7 +133,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -142,7 +142,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 机器人备注，不超过50字
+         * Introduction.
          */
         public Builder introduction(String introduction) {
             this.putQueryParameter("Introduction", introduction);
@@ -151,7 +151,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 机器人服务的语言，如zh-cn、en-us，参考 http://www.lingoes.net/zh/translator/langcode.htm   入参全小写，当前只支持 zh-cn、en-us
+         * LanguageCode.
          */
         public Builder languageCode(String languageCode) {
             this.putQueryParameter("LanguageCode", languageCode);
@@ -160,7 +160,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 机器人名称，不超过50字
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -169,7 +169,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 机器人类型
+         * RobotType.
          */
         public Builder robotType(String robotType) {
             this.putQueryParameter("RobotType", robotType);

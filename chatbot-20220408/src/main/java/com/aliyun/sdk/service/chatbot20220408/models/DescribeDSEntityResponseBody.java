@@ -182,7 +182,7 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * 实体ID
+         * EntityId.
          */
         public Builder entityId(Long entityId) {
             this.entityId = entityId;
@@ -190,7 +190,7 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * 实体名称，仅支持中文、大小写字母、数字、下划线
+         * EntityName.
          */
         public Builder entityName(String entityName) {
             this.entityName = entityName;
@@ -198,7 +198,7 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * 实体类型：详见:,EntityTypeEnum[synonyms(同义词),regex(正则)]
+         * EntityType.
          */
         public Builder entityType(String entityType) {
             this.entityType = entityType;
@@ -238,7 +238,7 @@ public class DescribeDSEntityResponseBody extends TeaModel {
         }
 
         /**
-         * 系统实体code，如@sys.date
+         * SysEntityCode.
          */
         public Builder sysEntityCode(String sysEntityCode) {
             this.sysEntityCode = sysEntityCode;

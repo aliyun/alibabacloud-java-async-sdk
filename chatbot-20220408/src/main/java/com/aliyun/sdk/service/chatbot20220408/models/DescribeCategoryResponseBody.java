@@ -50,7 +50,7 @@ public class DescribeCategoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 类目信息
+         * Category.
          */
         public Builder category(Category category) {
             this.category = category;
@@ -134,7 +134,7 @@ public class DescribeCategoryResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * 类目ID
+             * CategoryId.
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;

@@ -182,7 +182,7 @@ public class ListUserSayResponseBody extends TeaModel {
             private Integer startIndex; 
 
             /**
-             * 槽位在意图话术中的下标
+             * EndIndex.
              */
             public Builder endIndex(Integer endIndex) {
                 this.endIndex = endIndex;
@@ -190,7 +190,7 @@ public class ListUserSayResponseBody extends TeaModel {
             }
 
             /**
-             * 意图槽位ID
+             * SlotId.
              */
             public Builder slotId(String slotId) {
                 this.slotId = slotId;
@@ -198,7 +198,7 @@ public class ListUserSayResponseBody extends TeaModel {
             }
 
             /**
-             * 槽位在意图话术中的下标
+             * StartIndex.
              */
             public Builder startIndex(Integer startIndex) {
                 this.startIndex = startIndex;

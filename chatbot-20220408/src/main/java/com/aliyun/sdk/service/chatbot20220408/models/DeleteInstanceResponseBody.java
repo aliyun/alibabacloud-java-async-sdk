@@ -134,7 +134,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * 业务类型列表
+         * BizTypeList.
          */
         public Builder bizTypeList(java.util.List < String > bizTypeList) {
             this.bizTypeList = bizTypeList;
@@ -142,7 +142,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 任务创建的 UTC 时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -150,7 +150,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 任务创建人Id
+         * CreateUserId.
          */
         public Builder createUserId(Long createUserId) {
             this.createUserId = createUserId;
@@ -158,7 +158,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 任务创建人
+         * CreateUserName.
          */
         public Builder createUserName(String createUserName) {
             this.createUserName = createUserName;
@@ -166,7 +166,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * Error.
          */
         public Builder error(String error) {
             this.error = error;
@@ -174,7 +174,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 任务id
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -182,7 +182,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 任务id
+         * Response.
          */
         public Builder response(Long response) {
             this.response = response;
@@ -198,7 +198,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 任务状态，可以在GetInstancePublishTaskState API 了解更多的状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;

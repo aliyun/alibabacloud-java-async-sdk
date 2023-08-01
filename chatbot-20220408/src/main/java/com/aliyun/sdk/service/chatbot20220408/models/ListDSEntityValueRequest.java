@@ -164,7 +164,7 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -173,7 +173,7 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * 实体ID
+         * EntityId.
          */
         public Builder entityId(Long entityId) {
             this.putBodyParameter("EntityId", entityId);
@@ -182,7 +182,7 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * 实体成员ID
+         * EntityValueId.
          */
         public Builder entityValueId(Long entityValueId) {
             this.putBodyParameter("EntityValueId", entityValueId);
@@ -191,7 +191,7 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * 机器人ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -200,7 +200,7 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * 实体成员名称搜索关键词
+         * Keyword.
          */
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
@@ -209,7 +209,7 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * 页码
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -218,7 +218,7 @@ public class ListDSEntityValueRequest extends Request {
         }
 
         /**
-         * 分页大小
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

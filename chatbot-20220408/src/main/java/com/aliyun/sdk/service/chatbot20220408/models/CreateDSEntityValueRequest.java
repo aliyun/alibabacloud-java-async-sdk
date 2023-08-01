@@ -136,7 +136,7 @@ public class CreateDSEntityValueRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -154,7 +154,7 @@ public class CreateDSEntityValueRequest extends Request {
         }
 
         /**
-         * 实体ID，修改实体成员时可为空
+         * EntityId.
          */
         public Builder entityId(Long entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -163,7 +163,7 @@ public class CreateDSEntityValueRequest extends Request {
         }
 
         /**
-         * 机器人ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

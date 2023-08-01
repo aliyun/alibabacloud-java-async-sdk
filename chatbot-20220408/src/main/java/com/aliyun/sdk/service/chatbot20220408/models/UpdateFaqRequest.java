@@ -150,7 +150,7 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -159,7 +159,7 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
-         * 知识的类目ID
+         * CategoryId.
          */
         public Builder categoryId(Long categoryId) {
             this.putBodyParameter("CategoryId", categoryId);
@@ -168,7 +168,7 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
-         * 失效时间
+         * EndDate.
          */
         public Builder endDate(String endDate) {
             this.putBodyParameter("EndDate", endDate);
@@ -177,7 +177,7 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
-         * 知识ID
+         * KnowledgeId.
          */
         public Builder knowledgeId(Long knowledgeId) {
             this.putBodyParameter("KnowledgeId", knowledgeId);
@@ -186,7 +186,7 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
-         * 生效时间
+         * StartDate.
          */
         public Builder startDate(String startDate) {
             this.putBodyParameter("StartDate", startDate);
@@ -195,7 +195,7 @@ public class UpdateFaqRequest extends Request {
         }
 
         /**
-         * 知识标题
+         * Title.
          */
         public Builder title(String title) {
             this.putBodyParameter("Title", title);

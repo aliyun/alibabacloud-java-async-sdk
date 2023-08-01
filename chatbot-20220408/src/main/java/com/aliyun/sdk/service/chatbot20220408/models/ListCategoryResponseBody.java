@@ -50,7 +50,7 @@ public class ListCategoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * list结果
+         * Categories.
          */
         public Builder categories(java.util.List < Categories> categories) {
             this.categories = categories;
@@ -134,7 +134,7 @@ public class ListCategoryResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * 类目ID
+             * CategoryId.
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;

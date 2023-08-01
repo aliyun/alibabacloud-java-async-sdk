@@ -106,7 +106,7 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -115,7 +115,7 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
-         * 机器人ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -124,7 +124,7 @@ public class CreateIntentRequest extends Request {
         }
 
         /**
-         * 意图定义结构体
+         * IntentDefinition.
          */
         public Builder intentDefinition(IntentDefinition intentDefinition) {
             String intentDefinitionShrink = shrink(intentDefinition, "IntentDefinition", "json");
@@ -230,7 +230,7 @@ public class CreateIntentRequest extends Request {
             private String value; 
 
             /**
-             * 是否数组
+             * Array.
              */
             public Builder array(Boolean array) {
                 this.array = array;
@@ -238,7 +238,7 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
-             * 是否脱敏
+             * Encrypt.
              */
             public Builder encrypt(Boolean encrypt) {
                 this.encrypt = encrypt;
@@ -246,7 +246,7 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
-             * 是否交互式
+             * Interactive.
              */
             public Builder interactive(Boolean interactive) {
                 this.interactive = interactive;
@@ -254,7 +254,7 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
-             * 槽位名
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +270,7 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
-             * 关联的实体名
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -336,7 +336,7 @@ public class CreateIntentRequest extends Request {
             private java.util.List < SlotInfos> slotInfos; 
 
             /**
-             * 意图别名
+             * AliasName.
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -344,7 +344,7 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
-             * 意图名称
+             * IntentName.
              */
             public Builder intentName(String intentName) {
                 this.intentName = intentName;
@@ -352,7 +352,7 @@ public class CreateIntentRequest extends Request {
             }
 
             /**
-             * 槽位信息
+             * SlotInfos.
              */
             public Builder slotInfos(java.util.List < SlotInfos> slotInfos) {
                 this.slotInfos = slotInfos;

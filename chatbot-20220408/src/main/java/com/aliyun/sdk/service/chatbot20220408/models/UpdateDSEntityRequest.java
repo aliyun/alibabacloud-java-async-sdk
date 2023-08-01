@@ -136,7 +136,7 @@ public class UpdateDSEntityRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -145,7 +145,7 @@ public class UpdateDSEntityRequest extends Request {
         }
 
         /**
-         * 实体ID
+         * EntityId.
          */
         public Builder entityId(Long entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -154,7 +154,7 @@ public class UpdateDSEntityRequest extends Request {
         }
 
         /**
-         * 实体名称，仅支持中文、大小写字母、数字、下划线
+         * EntityName.
          */
         public Builder entityName(String entityName) {
             this.putQueryParameter("EntityName", entityName);
@@ -163,7 +163,7 @@ public class UpdateDSEntityRequest extends Request {
         }
 
         /**
-         * 实体类型：详见:,EntityTypeEnum[synonyms(同义词),regex(正则)]
+         * EntityType.
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -172,7 +172,7 @@ public class UpdateDSEntityRequest extends Request {
         }
 
         /**
-         * 机器人ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

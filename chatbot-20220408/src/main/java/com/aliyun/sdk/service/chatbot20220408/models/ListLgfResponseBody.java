@@ -206,7 +206,7 @@ public class ListLgfResponseBody extends TeaModel {
             private String ruleText; 
 
             /**
-             * 创建时间
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -214,7 +214,7 @@ public class ListLgfResponseBody extends TeaModel {
             }
 
             /**
-             * 意图ID
+             * IntentId.
              */
             public Builder intentId(Long intentId) {
                 this.intentId = intentId;
@@ -230,7 +230,7 @@ public class ListLgfResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -238,7 +238,7 @@ public class ListLgfResponseBody extends TeaModel {
             }
 
             /**
-             * LGF规则
+             * RuleText.
              */
             public Builder ruleText(String ruleText) {
                 this.ruleText = ruleText;

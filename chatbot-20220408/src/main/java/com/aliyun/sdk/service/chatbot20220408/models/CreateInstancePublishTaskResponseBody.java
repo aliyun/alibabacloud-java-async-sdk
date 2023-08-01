@@ -122,7 +122,7 @@ public class CreateInstancePublishTaskResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * 业务类型列表
+         * BizTypeList.
          */
         public Builder bizTypeList(java.util.List < String > bizTypeList) {
             this.bizTypeList = bizTypeList;
@@ -130,7 +130,7 @@ public class CreateInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 任务创建的 UTC 时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -138,7 +138,7 @@ public class CreateInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * job失败信息
+         * Error.
          */
         public Builder error(String error) {
             this.error = error;
@@ -146,7 +146,7 @@ public class CreateInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 任务Id
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -154,7 +154,7 @@ public class CreateInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 任务修改的 UTC 时间
+         * ModifyTime.
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -162,7 +162,7 @@ public class CreateInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class CreateInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 任务Id
+         * Response.
          */
         public Builder response(String response) {
             this.response = response;
@@ -178,7 +178,7 @@ public class CreateInstancePublishTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 任务状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;

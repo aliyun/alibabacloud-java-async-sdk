@@ -158,7 +158,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String timeZone; 
 
         /**
-         * 机器人头像的URL
+         * Avatar.
          */
         public Builder avatar(String avatar) {
             this.avatar = avatar;
@@ -166,7 +166,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 类目列表
+         * Categories.
          */
         public Builder categories(java.util.List < Categories> categories) {
             this.categories = categories;
@@ -174,7 +174,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 机器人创建的 UTC 时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -182,7 +182,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 机器人状态： EDITING(编辑中)、 PUBLISHED(已发布)
+         * EditStatus.
          */
         public Builder editStatus(String editStatus) {
             this.editStatus = editStatus;
@@ -190,7 +190,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 机器人唯一标识
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -198,7 +198,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 机器人备注
+         * Introduction.
          */
         public Builder introduction(String introduction) {
             this.introduction = introduction;
@@ -206,7 +206,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 机器人服务的语言，如zh-cn、en-us
+         * LanguageCode.
          */
         public Builder languageCode(String languageCode) {
             this.languageCode = languageCode;
@@ -214,7 +214,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 机器人名称
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -222,7 +222,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 机器人类型
+         * RobotType.
          */
         public Builder robotType(String robotType) {
             this.robotType = robotType;
@@ -238,7 +238,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 机器人的时区，参考《公共-时区码》
+         * TimeZone.
          */
         public Builder timeZone(String timeZone) {
             this.timeZone = timeZone;
@@ -302,7 +302,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Long parentCategoryId; 
 
             /**
-             * 类目id
+             * CategoryId.
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -310,7 +310,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 类目名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -318,7 +318,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 父类目id，-1表示根目录
+             * ParentCategoryId.
              */
             public Builder parentCategoryId(Long parentCategoryId) {
                 this.parentCategoryId = parentCategoryId;

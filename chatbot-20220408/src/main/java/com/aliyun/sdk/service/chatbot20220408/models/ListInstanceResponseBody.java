@@ -86,7 +86,7 @@ public class ListInstanceResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 机器人列表信息
+         * Instances.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -94,7 +94,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 分页-第几页
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 分页-页面大小
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 总条数
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class ListInstanceResponseBody extends TeaModel {
             private String robotType; 
 
             /**
-             * 机器人头像的URL
+             * Avatar.
              */
             public Builder avatar(String avatar) {
                 this.avatar = avatar;
@@ -238,7 +238,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 机器人创建的 UTC 时间
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -246,7 +246,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 机器人唯一标识
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -254,7 +254,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 机器人备注
+             * Introduction.
              */
             public Builder introduction(String introduction) {
                 this.introduction = introduction;
@@ -262,7 +262,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 机器人服务的语言
+             * LanguageCode.
              */
             public Builder languageCode(String languageCode) {
                 this.languageCode = languageCode;
@@ -270,7 +270,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 机器人名称
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -278,7 +278,7 @@ public class ListInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 机器人类型
+             * RobotType.
              */
             public Builder robotType(String robotType) {
                 this.robotType = robotType;

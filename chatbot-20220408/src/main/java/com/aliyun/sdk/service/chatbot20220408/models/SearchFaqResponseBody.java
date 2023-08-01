@@ -94,7 +94,7 @@ public class SearchFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 页码 默认1
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class SearchFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 每页数量，默认10，最大500
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class SearchFaqResponseBody extends TeaModel {
         }
 
         /**
-         * 总条数
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -302,7 +302,7 @@ public class SearchFaqResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 类目ID
+             * CategoryId.
              */
             public Builder categoryId(Long categoryId) {
                 this.categoryId = categoryId;
@@ -310,7 +310,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间（UTC时间）
+             * CreateTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -318,7 +318,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人ID
+             * CreateUserId.
              */
             public Builder createUserId(Long createUserId) {
                 this.createUserId = createUserId;
@@ -326,7 +326,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 创建人
+             * CreateUserName.
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -334,7 +334,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 知识生效状态,根据StartDate, EndDate计算出来: 20-生效中, 21-已失效, 22-待生效
+             * EffectStatus.
              */
             public Builder effectStatus(Integer effectStatus) {
                 this.effectStatus = effectStatus;
@@ -342,7 +342,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 命中的相似问
+             * HitSimilarTitles.
              */
             public Builder hitSimilarTitles(java.util.List < String > hitSimilarTitles) {
                 this.hitSimilarTitles = hitSimilarTitles;
@@ -350,7 +350,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 命中的答案
+             * HitSolutions.
              */
             public Builder hitSolutions(java.util.List < String > hitSolutions) {
                 this.hitSolutions = hitSolutions;
@@ -358,7 +358,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 知识ID
+             * KnowledgeId.
              */
             public Builder knowledgeId(Long knowledgeId) {
                 this.knowledgeId = knowledgeId;
@@ -366,7 +366,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间（UTC时间）
+             * ModifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -374,7 +374,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人ID
+             * ModifyUserId.
              */
             public Builder modifyUserId(Long modifyUserId) {
                 this.modifyUserId = modifyUserId;
@@ -382,7 +382,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 修改人
+             * ModifyUserName.
              */
             public Builder modifyUserName(String modifyUserName) {
                 this.modifyUserName = modifyUserName;
@@ -390,7 +390,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 知识状态: -1-已删除未发布, 1-未发布, 2-已发布, 3-已更新未发布
+             * Status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -398,7 +398,7 @@ public class SearchFaqResponseBody extends TeaModel {
             }
 
             /**
-             * 标题
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;

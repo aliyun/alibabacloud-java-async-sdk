@@ -149,7 +149,7 @@ public class ListUserSayRequest extends Request {
         }
 
         /**
-         * 业务空间key,不设置则访问默认业务空间，key值在主账号业务管理页面获取
+         * AgentKey.
          */
         public Builder agentKey(String agentKey) {
             this.putQueryParameter("AgentKey", agentKey);
@@ -158,7 +158,7 @@ public class ListUserSayRequest extends Request {
         }
 
         /**
-         * 筛选用户话术
+         * Content.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -167,7 +167,7 @@ public class ListUserSayRequest extends Request {
         }
 
         /**
-         * 机器人ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -176,7 +176,7 @@ public class ListUserSayRequest extends Request {
         }
 
         /**
-         * 意图ID
+         * IntentId.
          */
         public Builder intentId(Long intentId) {
             this.putQueryParameter("IntentId", intentId);
