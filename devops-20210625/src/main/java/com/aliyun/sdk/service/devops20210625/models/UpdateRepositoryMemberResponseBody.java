@@ -144,9 +144,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
         @NameInMap("expireAt")
         private String expireAt;
 
-        @NameInMap("externUid")
-        private String externUid;
-
         @NameInMap("id")
         private Long id;
 
@@ -168,9 +165,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
         @NameInMap("state")
         private String state;
 
-        @NameInMap("tbUserId")
-        private String tbUserId;
-
         @NameInMap("username")
         private String username;
 
@@ -182,7 +176,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
             this.avatarUrl = builder.avatarUrl;
             this.email = builder.email;
             this.expireAt = builder.expireAt;
-            this.externUid = builder.externUid;
             this.id = builder.id;
             this.memberName = builder.memberName;
             this.memberType = builder.memberType;
@@ -190,7 +183,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
             this.sourceId = builder.sourceId;
             this.sourceType = builder.sourceType;
             this.state = builder.state;
-            this.tbUserId = builder.tbUserId;
             this.username = builder.username;
             this.webUrl = builder.webUrl;
         }
@@ -229,13 +221,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
          */
         public String getExpireAt() {
             return this.expireAt;
-        }
-
-        /**
-         * @return externUid
-         */
-        public String getExternUid() {
-            return this.externUid;
         }
 
         /**
@@ -288,13 +273,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
         }
 
         /**
-         * @return tbUserId
-         */
-        public String getTbUserId() {
-            return this.tbUserId;
-        }
-
-        /**
          * @return username
          */
         public String getUsername() {
@@ -313,7 +291,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
             private String avatarUrl; 
             private String email; 
             private String expireAt; 
-            private String externUid; 
             private Long id; 
             private String memberName; 
             private String memberType; 
@@ -321,7 +298,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
             private Long sourceId; 
             private String sourceType; 
             private String state; 
-            private String tbUserId; 
             private String username; 
             private String webUrl; 
 
@@ -354,14 +330,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
              */
             public Builder expireAt(String expireAt) {
                 this.expireAt = expireAt;
-                return this;
-            }
-
-            /**
-             * externUid.
-             */
-            public Builder externUid(String externUid) {
-                this.externUid = externUid;
                 return this;
             }
 
@@ -418,14 +386,6 @@ public class UpdateRepositoryMemberResponseBody extends TeaModel {
              */
             public Builder state(String state) {
                 this.state = state;
-                return this;
-            }
-
-            /**
-             * tbUserId.
-             */
-            public Builder tbUserId(String tbUserId) {
-                this.tbUserId = tbUserId;
                 return this;
             }
 

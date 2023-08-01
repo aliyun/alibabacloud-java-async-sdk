@@ -141,9 +141,6 @@ public class AddGroupMemberResponseBody extends TeaModel {
         @NameInMap("email")
         private String email;
 
-        @NameInMap("externUid")
-        private String externUid;
-
         @NameInMap("id")
         private Long id;
 
@@ -163,7 +160,6 @@ public class AddGroupMemberResponseBody extends TeaModel {
             this.accessLevel = builder.accessLevel;
             this.avatarUrl = builder.avatarUrl;
             this.email = builder.email;
-            this.externUid = builder.externUid;
             this.id = builder.id;
             this.name = builder.name;
             this.sourceId = builder.sourceId;
@@ -198,13 +194,6 @@ public class AddGroupMemberResponseBody extends TeaModel {
          */
         public String getEmail() {
             return this.email;
-        }
-
-        /**
-         * @return externUid
-         */
-        public String getExternUid() {
-            return this.externUid;
         }
 
         /**
@@ -246,7 +235,6 @@ public class AddGroupMemberResponseBody extends TeaModel {
             private Integer accessLevel; 
             private String avatarUrl; 
             private String email; 
-            private String externUid; 
             private Long id; 
             private String name; 
             private Long sourceId; 
@@ -274,14 +262,6 @@ public class AddGroupMemberResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
-                return this;
-            }
-
-            /**
-             * externUid.
-             */
-            public Builder externUid(String externUid) {
-                this.externUid = externUid;
                 return this;
             }
 

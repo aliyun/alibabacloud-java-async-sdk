@@ -138,9 +138,6 @@ public class GetUserInfoResponseBody extends TeaModel {
         @NameInMap("email")
         private String email;
 
-        @NameInMap("externUid")
-        private String externUid;
-
         @NameInMap("id")
         private Long id;
 
@@ -153,7 +150,6 @@ public class GetUserInfoResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.avatarUrl = builder.avatarUrl;
             this.email = builder.email;
-            this.externUid = builder.externUid;
             this.id = builder.id;
             this.name = builder.name;
             this.username = builder.username;
@@ -182,13 +178,6 @@ public class GetUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * @return externUid
-         */
-        public String getExternUid() {
-            return this.externUid;
-        }
-
-        /**
          * @return id
          */
         public Long getId() {
@@ -212,7 +201,6 @@ public class GetUserInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String avatarUrl; 
             private String email; 
-            private String externUid; 
             private Long id; 
             private String name; 
             private String username; 
@@ -230,14 +218,6 @@ public class GetUserInfoResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
-                return this;
-            }
-
-            /**
-             * externUid.
-             */
-            public Builder externUid(String externUid) {
-                this.externUid = externUid;
                 return this;
             }
 

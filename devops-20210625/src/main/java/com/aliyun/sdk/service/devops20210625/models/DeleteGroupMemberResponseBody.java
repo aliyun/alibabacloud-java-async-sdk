@@ -138,9 +138,6 @@ public class DeleteGroupMemberResponseBody extends TeaModel {
         @NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("externUid")
-        private String externUid;
-
         @NameInMap("id")
         private Long id;
 
@@ -162,7 +159,6 @@ public class DeleteGroupMemberResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.accessLevel = builder.accessLevel;
             this.avatarUrl = builder.avatarUrl;
-            this.externUid = builder.externUid;
             this.id = builder.id;
             this.memberType = builder.memberType;
             this.name = builder.name;
@@ -191,13 +187,6 @@ public class DeleteGroupMemberResponseBody extends TeaModel {
          */
         public String getAvatarUrl() {
             return this.avatarUrl;
-        }
-
-        /**
-         * @return externUid
-         */
-        public String getExternUid() {
-            return this.externUid;
         }
 
         /**
@@ -245,7 +234,6 @@ public class DeleteGroupMemberResponseBody extends TeaModel {
         public static final class Builder {
             private Integer accessLevel; 
             private String avatarUrl; 
-            private String externUid; 
             private Long id; 
             private String memberType; 
             private String name; 
@@ -266,14 +254,6 @@ public class DeleteGroupMemberResponseBody extends TeaModel {
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
-                return this;
-            }
-
-            /**
-             * externUid.
-             */
-            public Builder externUid(String externUid) {
-                this.externUid = externUid;
                 return this;
             }
 

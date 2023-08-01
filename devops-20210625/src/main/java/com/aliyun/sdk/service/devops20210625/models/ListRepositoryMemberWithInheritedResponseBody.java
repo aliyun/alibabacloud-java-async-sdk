@@ -302,9 +302,6 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
         @NameInMap("email")
         private String email;
 
-        @NameInMap("externUserId")
-        private String externUserId;
-
         @NameInMap("id")
         private Long id;
 
@@ -324,7 +321,6 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
             this.accessLevel = builder.accessLevel;
             this.avatarUrl = builder.avatarUrl;
             this.email = builder.email;
-            this.externUserId = builder.externUserId;
             this.id = builder.id;
             this.inherited = builder.inherited;
             this.name = builder.name;
@@ -359,13 +355,6 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
          */
         public String getEmail() {
             return this.email;
-        }
-
-        /**
-         * @return externUserId
-         */
-        public String getExternUserId() {
-            return this.externUserId;
         }
 
         /**
@@ -407,7 +396,6 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
             private Integer accessLevel; 
             private String avatarUrl; 
             private String email; 
-            private String externUserId; 
             private Long id; 
             private Inherited inherited; 
             private String name; 
@@ -435,14 +423,6 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
-                return this;
-            }
-
-            /**
-             * externUserId.
-             */
-            public Builder externUserId(String externUserId) {
-                this.externUserId = externUserId;
                 return this;
             }
 

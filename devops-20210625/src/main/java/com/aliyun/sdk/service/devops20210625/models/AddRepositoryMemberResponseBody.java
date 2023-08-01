@@ -141,9 +141,6 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
         @NameInMap("email")
         private String email;
 
-        @NameInMap("externUserId")
-        private String externUserId;
-
         @NameInMap("id")
         private Long id;
 
@@ -154,7 +151,6 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
             this.accessLevel = builder.accessLevel;
             this.avatarUrl = builder.avatarUrl;
             this.email = builder.email;
-            this.externUserId = builder.externUserId;
             this.id = builder.id;
             this.state = builder.state;
         }
@@ -189,13 +185,6 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
         }
 
         /**
-         * @return externUserId
-         */
-        public String getExternUserId() {
-            return this.externUserId;
-        }
-
-        /**
          * @return id
          */
         public Long getId() {
@@ -213,7 +202,6 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
             private Integer accessLevel; 
             private String avatarUrl; 
             private String email; 
-            private String externUserId; 
             private Long id; 
             private String state; 
 
@@ -238,14 +226,6 @@ public class AddRepositoryMemberResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
-                return this;
-            }
-
-            /**
-             * externUserId.
-             */
-            public Builder externUserId(String externUserId) {
-                this.externUserId = externUserId;
                 return this;
             }
 

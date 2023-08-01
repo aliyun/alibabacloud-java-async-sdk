@@ -270,6 +270,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListUserKeysResponse> listUserKeys(ListUserKeysRequest request);
 
+    CompletableFuture<ListUserResourcesResponse> listUserResources(ListUserResourcesRequest request);
+
     CompletableFuture<ListVariableGroupsResponse> listVariableGroups(ListVariableGroupsRequest request);
 
     CompletableFuture<ListWorkItemAllFieldsResponse> listWorkItemAllFields(ListWorkItemAllFieldsRequest request);
@@ -311,6 +313,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopPipelineRunResponse> stopPipelineRun(StopPipelineRunRequest request);
 
     CompletableFuture<StopVMDeployOrderResponse> stopVMDeployOrder(StopVMDeployOrderRequest request);
+
+    CompletableFuture<TransferRepositoryResponse> transferRepository(TransferRepositoryRequest request);
 
     CompletableFuture<TriggerRepositoryMirrorSyncResponse> triggerRepositoryMirrorSync(TriggerRepositoryMirrorSyncRequest request);
 

@@ -138,9 +138,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
         @NameInMap("email")
         private String email;
 
-        @NameInMap("externUid")
-        private String externUid;
-
         @NameInMap("id")
         private Long id;
 
@@ -150,20 +147,15 @@ public class GetBranchInfoResponseBody extends TeaModel {
         @NameInMap("state")
         private String state;
 
-        @NameInMap("tbUserId")
-        private String tbUserId;
-
         @NameInMap("username")
         private String username;
 
         private Author(Builder builder) {
             this.avatarUrl = builder.avatarUrl;
             this.email = builder.email;
-            this.externUid = builder.externUid;
             this.id = builder.id;
             this.name = builder.name;
             this.state = builder.state;
-            this.tbUserId = builder.tbUserId;
             this.username = builder.username;
         }
 
@@ -190,13 +182,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
         }
 
         /**
-         * @return externUid
-         */
-        public String getExternUid() {
-            return this.externUid;
-        }
-
-        /**
          * @return id
          */
         public Long getId() {
@@ -218,13 +203,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
         }
 
         /**
-         * @return tbUserId
-         */
-        public String getTbUserId() {
-            return this.tbUserId;
-        }
-
-        /**
          * @return username
          */
         public String getUsername() {
@@ -234,11 +212,9 @@ public class GetBranchInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String avatarUrl; 
             private String email; 
-            private String externUid; 
             private Long id; 
             private String name; 
             private String state; 
-            private String tbUserId; 
             private String username; 
 
             /**
@@ -254,14 +230,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
-                return this;
-            }
-
-            /**
-             * externUid.
-             */
-            public Builder externUid(String externUid) {
-                this.externUid = externUid;
                 return this;
             }
 
@@ -290,14 +258,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
             }
 
             /**
-             * tbUserId.
-             */
-            public Builder tbUserId(String tbUserId) {
-                this.tbUserId = tbUserId;
-                return this;
-            }
-
-            /**
              * username.
              */
             public Builder username(String username) {
@@ -319,9 +279,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
         @NameInMap("email")
         private String email;
 
-        @NameInMap("externUid")
-        private String externUid;
-
         @NameInMap("id")
         private Long id;
 
@@ -331,20 +288,15 @@ public class GetBranchInfoResponseBody extends TeaModel {
         @NameInMap("state")
         private String state;
 
-        @NameInMap("tbUserId")
-        private String tbUserId;
-
         @NameInMap("username")
         private String username;
 
         private Committer(Builder builder) {
             this.avatarUrl = builder.avatarUrl;
             this.email = builder.email;
-            this.externUid = builder.externUid;
             this.id = builder.id;
             this.name = builder.name;
             this.state = builder.state;
-            this.tbUserId = builder.tbUserId;
             this.username = builder.username;
         }
 
@@ -371,13 +323,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
         }
 
         /**
-         * @return externUid
-         */
-        public String getExternUid() {
-            return this.externUid;
-        }
-
-        /**
          * @return id
          */
         public Long getId() {
@@ -399,13 +344,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
         }
 
         /**
-         * @return tbUserId
-         */
-        public String getTbUserId() {
-            return this.tbUserId;
-        }
-
-        /**
          * @return username
          */
         public String getUsername() {
@@ -415,11 +353,9 @@ public class GetBranchInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String avatarUrl; 
             private String email; 
-            private String externUid; 
             private Long id; 
             private String name; 
             private String state; 
-            private String tbUserId; 
             private String username; 
 
             /**
@@ -435,14 +371,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
-                return this;
-            }
-
-            /**
-             * externUid.
-             */
-            public Builder externUid(String externUid) {
-                this.externUid = externUid;
                 return this;
             }
 
@@ -467,14 +395,6 @@ public class GetBranchInfoResponseBody extends TeaModel {
              */
             public Builder state(String state) {
                 this.state = state;
-                return this;
-            }
-
-            /**
-             * tbUserId.
-             */
-            public Builder tbUserId(String tbUserId) {
-                this.tbUserId = tbUserId;
                 return this;
             }
 

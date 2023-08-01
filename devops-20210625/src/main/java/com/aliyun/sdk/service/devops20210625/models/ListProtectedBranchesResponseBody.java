@@ -144,9 +144,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         @NameInMap("name")
         private String name;
 
-        @NameInMap("tbUserId")
-        private String tbUserId;
-
         @NameInMap("username")
         private String username;
 
@@ -155,7 +152,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             this.email = builder.email;
             this.id = builder.id;
             this.name = builder.name;
-            this.tbUserId = builder.tbUserId;
             this.username = builder.username;
         }
 
@@ -196,13 +192,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         }
 
         /**
-         * @return tbUserId
-         */
-        public String getTbUserId() {
-            return this.tbUserId;
-        }
-
-        /**
          * @return username
          */
         public String getUsername() {
@@ -214,7 +203,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             private String email; 
             private Long id; 
             private String name; 
-            private String tbUserId; 
             private String username; 
 
             /**
@@ -250,14 +238,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             }
 
             /**
-             * tbUserId.
-             */
-            public Builder tbUserId(String tbUserId) {
-                this.tbUserId = tbUserId;
-                return this;
-            }
-
-            /**
              * username.
              */
             public Builder username(String username) {
@@ -285,9 +265,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         @NameInMap("name")
         private String name;
 
-        @NameInMap("tbUserId")
-        private String tbUserId;
-
         @NameInMap("username")
         private String username;
 
@@ -296,7 +273,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             this.email = builder.email;
             this.id = builder.id;
             this.name = builder.name;
-            this.tbUserId = builder.tbUserId;
             this.username = builder.username;
         }
 
@@ -337,13 +313,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         }
 
         /**
-         * @return tbUserId
-         */
-        public String getTbUserId() {
-            return this.tbUserId;
-        }
-
-        /**
          * @return username
          */
         public String getUsername() {
@@ -355,7 +324,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             private String email; 
             private Long id; 
             private String name; 
-            private String tbUserId; 
             private String username; 
 
             /**
@@ -391,14 +359,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             }
 
             /**
-             * tbUserId.
-             */
-            public Builder tbUserId(String tbUserId) {
-                this.tbUserId = tbUserId;
-                return this;
-            }
-
-            /**
              * username.
              */
             public Builder username(String username) {
@@ -426,9 +386,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         @NameInMap("name")
         private String name;
 
-        @NameInMap("tbUserId")
-        private String tbUserId;
-
         @NameInMap("username")
         private String username;
 
@@ -437,7 +394,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             this.email = builder.email;
             this.id = builder.id;
             this.name = builder.name;
-            this.tbUserId = builder.tbUserId;
             this.username = builder.username;
         }
 
@@ -478,13 +434,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
         }
 
         /**
-         * @return tbUserId
-         */
-        public String getTbUserId() {
-            return this.tbUserId;
-        }
-
-        /**
          * @return username
          */
         public String getUsername() {
@@ -496,7 +445,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
             private String email; 
             private Long id; 
             private String name; 
-            private String tbUserId; 
             private String username; 
 
             /**
@@ -528,14 +476,6 @@ public class ListProtectedBranchesResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
-                return this;
-            }
-
-            /**
-             * tbUserId.
-             */
-            public Builder tbUserId(String tbUserId) {
-                this.tbUserId = tbUserId;
                 return this;
             }
 

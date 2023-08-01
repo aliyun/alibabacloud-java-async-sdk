@@ -138,9 +138,6 @@ public class GetProjectMemberResponseBody extends TeaModel {
         @NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("externUserId")
-        private String externUserId;
-
         @NameInMap("id")
         private Long id;
 
@@ -150,7 +147,6 @@ public class GetProjectMemberResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.accessLevel = builder.accessLevel;
             this.avatarUrl = builder.avatarUrl;
-            this.externUserId = builder.externUserId;
             this.id = builder.id;
             this.name = builder.name;
         }
@@ -178,13 +174,6 @@ public class GetProjectMemberResponseBody extends TeaModel {
         }
 
         /**
-         * @return externUserId
-         */
-        public String getExternUserId() {
-            return this.externUserId;
-        }
-
-        /**
          * @return id
          */
         public Long getId() {
@@ -201,7 +190,6 @@ public class GetProjectMemberResponseBody extends TeaModel {
         public static final class Builder {
             private Integer accessLevel; 
             private String avatarUrl; 
-            private String externUserId; 
             private Long id; 
             private String name; 
 
@@ -218,14 +206,6 @@ public class GetProjectMemberResponseBody extends TeaModel {
              */
             public Builder avatarUrl(String avatarUrl) {
                 this.avatarUrl = avatarUrl;
-                return this;
-            }
-
-            /**
-             * externUserId.
-             */
-            public Builder externUserId(String externUserId) {
-                this.externUserId = externUserId;
                 return this;
             }
 

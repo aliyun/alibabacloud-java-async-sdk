@@ -138,9 +138,6 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
         @NameInMap("createAt")
         private String createAt;
 
-        @NameInMap("externUid")
-        private String externUid;
-
         @NameInMap("id")
         private Long id;
 
@@ -159,7 +156,6 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
         private Result(Builder builder) {
             this.accessLevel = builder.accessLevel;
             this.createAt = builder.createAt;
-            this.externUid = builder.externUid;
             this.id = builder.id;
             this.sourceId = builder.sourceId;
             this.sourceType = builder.sourceType;
@@ -187,13 +183,6 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
          */
         public String getCreateAt() {
             return this.createAt;
-        }
-
-        /**
-         * @return externUid
-         */
-        public String getExternUid() {
-            return this.externUid;
         }
 
         /**
@@ -234,7 +223,6 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
         public static final class Builder {
             private Integer accessLevel; 
             private String createAt; 
-            private String externUid; 
             private Long id; 
             private Long sourceId; 
             private String sourceType; 
@@ -254,14 +242,6 @@ public class DeleteRepositoryMemberResponseBody extends TeaModel {
              */
             public Builder createAt(String createAt) {
                 this.createAt = createAt;
-                return this;
-            }
-
-            /**
-             * externUid.
-             */
-            public Builder externUid(String externUid) {
-                this.externUid = externUid;
                 return this;
             }
 
