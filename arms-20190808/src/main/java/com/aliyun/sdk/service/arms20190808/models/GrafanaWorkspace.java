@@ -57,6 +57,12 @@ public class GrafanaWorkspace extends TeaModel {
     @NameInMap("personalDomainPrefix")
     private String personalDomainPrefix;
 
+    @NameInMap("privateDomain")
+    private String privateDomain;
+
+    @NameInMap("privateIp")
+    private String privateIp;
+
     @NameInMap("protocol")
     private String protocol;
 
@@ -100,6 +106,8 @@ public class GrafanaWorkspace extends TeaModel {
         this.ntmId = builder.ntmId;
         this.personalDomain = builder.personalDomain;
         this.personalDomainPrefix = builder.personalDomainPrefix;
+        this.privateDomain = builder.privateDomain;
+        this.privateIp = builder.privateIp;
         this.protocol = builder.protocol;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -225,6 +233,20 @@ public class GrafanaWorkspace extends TeaModel {
     }
 
     /**
+     * @return privateDomain
+     */
+    public String getPrivateDomain() {
+        return this.privateDomain;
+    }
+
+    /**
+     * @return privateIp
+     */
+    public String getPrivateIp() {
+        return this.privateIp;
+    }
+
+    /**
      * @return protocol
      */
     public String getProtocol() {
@@ -303,6 +325,8 @@ public class GrafanaWorkspace extends TeaModel {
         private String ntmId; 
         private String personalDomain; 
         private String personalDomainPrefix; 
+        private String privateDomain; 
+        private String privateIp; 
         private String protocol; 
         private String regionId; 
         private String resourceGroupId; 
@@ -430,6 +454,22 @@ public class GrafanaWorkspace extends TeaModel {
          */
         public Builder personalDomainPrefix(String personalDomainPrefix) {
             this.personalDomainPrefix = personalDomainPrefix;
+            return this;
+        }
+
+        /**
+         * privateDomain.
+         */
+        public Builder privateDomain(String privateDomain) {
+            this.privateDomain = privateDomain;
+            return this;
+        }
+
+        /**
+         * privateIp.
+         */
+        public Builder privateIp(String privateIp) {
+            this.privateIp = privateIp;
             return this;
         }
 

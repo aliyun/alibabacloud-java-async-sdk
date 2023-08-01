@@ -12,6 +12,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeletePrometheusAlertRuleResponseBody</p>
  */
 public class DeletePrometheusAlertRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Long code;
+
+    @NameInMap("Message")
+    private String message;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -19,6 +25,8 @@ public class DeletePrometheusAlertRuleResponseBody extends TeaModel {
     private Boolean success;
 
     private DeletePrometheusAlertRuleResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -29,6 +37,20 @@ public class DeletePrometheusAlertRuleResponseBody extends TeaModel {
 
     public static DeletePrometheusAlertRuleResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public Long getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -46,8 +68,26 @@ public class DeletePrometheusAlertRuleResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long code; 
+        private String message; 
         private String requestId; 
         private Boolean success; 
+
+        /**
+         * Code.
+         */
+        public Builder code(Long code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
 
         /**
          * RequestId.

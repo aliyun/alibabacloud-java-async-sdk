@@ -12,15 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePrometheusAlertRuleResponseBody</p>
  */
 public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Long code;
+
+    @NameInMap("Message")
+    private String message;
+
     @NameInMap("PrometheusAlertRule")
     private PrometheusAlertRule prometheusAlertRule;
 
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Success")
+    private Boolean success;
+
     private CreatePrometheusAlertRuleResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
         this.prometheusAlertRule = builder.prometheusAlertRule;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -29,6 +41,20 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
 
     public static CreatePrometheusAlertRuleResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return code
+     */
+    public Long getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -45,9 +71,35 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
+        private Long code; 
+        private String message; 
         private PrometheusAlertRule prometheusAlertRule; 
         private String requestId; 
+        private Boolean success; 
+
+        /**
+         * Code.
+         */
+        public Builder code(Long code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
 
         /**
          * PrometheusAlertRule.
@@ -62,6 +114,14 @@ public class CreatePrometheusAlertRuleResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 
