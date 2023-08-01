@@ -83,7 +83,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * 查询的资源的 id 列表。resource id 与 tags 应至少存在一个。
+         * resourceId.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             String resourceIdShrink = shrink(resourceId, "resourceId", "json");
@@ -93,7 +93,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型。目前取值范围：project。
+         * resourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resourceType", resourceType);
@@ -102,7 +102,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 精确查找时过滤的标签键值对。resource id 与 tags 应至少存在一个。
+         * tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -158,7 +158,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 精确过滤的标签的键。
+             * key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -166,7 +166,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * 精确过滤的标签的值。
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;

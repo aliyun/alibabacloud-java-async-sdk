@@ -99,7 +99,7 @@ public class IndexKeysValue extends TeaModel {
         private Boolean docValue; 
 
         /**
-         * 是否包含中文
+         * chn.
          */
         public Builder chn(Boolean chn) {
             this.chn = chn;
@@ -107,7 +107,7 @@ public class IndexKeysValue extends TeaModel {
         }
 
         /**
-         * 大小写敏感
+         * caseSensitive.
          */
         public Builder caseSensitive(Boolean caseSensitive) {
             this.caseSensitive = caseSensitive;
@@ -115,7 +115,7 @@ public class IndexKeysValue extends TeaModel {
         }
 
         /**
-         * 分词符
+         * token.
          */
         public Builder token(java.util.List < String > token) {
             this.token = token;
@@ -123,7 +123,7 @@ public class IndexKeysValue extends TeaModel {
         }
 
         /**
-         * 别名
+         * alias.
          */
         public Builder alias(String alias) {
             this.alias = alias;
@@ -131,7 +131,7 @@ public class IndexKeysValue extends TeaModel {
         }
 
         /**
-         * 字段类型
+         * type.
          */
         public Builder type(String type) {
             this.type = type;
@@ -139,7 +139,7 @@ public class IndexKeysValue extends TeaModel {
         }
 
         /**
-         * 开启统计
+         * doc_value.
          */
         public Builder docValue(Boolean docValue) {
             this.docValue = docValue;

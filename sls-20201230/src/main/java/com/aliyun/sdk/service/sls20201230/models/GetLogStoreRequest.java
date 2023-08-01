@@ -70,7 +70,7 @@ public class GetLogStoreRequest extends Request {
         } 
 
         /**
-         * The logstore name.
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);

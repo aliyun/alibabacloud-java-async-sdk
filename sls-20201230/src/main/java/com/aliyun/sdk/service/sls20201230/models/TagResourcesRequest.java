@@ -85,7 +85,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * 资源的 id 列表，可以一次为多个同类型资源打上相同的标签。
+         * resourceId.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putBodyParameter("resourceId", resourceId);
@@ -94,7 +94,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 资源的类型。目前取值范围：project。
+         * resourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resourceType", resourceType);
@@ -103,7 +103,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 标签列表。
+         * tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -159,7 +159,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 标签的 key。
+             * key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -167,7 +167,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * 标签的 value。
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;

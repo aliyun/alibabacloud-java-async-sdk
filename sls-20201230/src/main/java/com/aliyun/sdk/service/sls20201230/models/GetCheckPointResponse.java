@@ -172,7 +172,7 @@ public class GetCheckPointResponse extends Response {
             }
 
             /**
-             * checkpoint 值。
+             * checkpoint.
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -180,7 +180,7 @@ public class GetCheckPointResponse extends Response {
             }
 
             /**
-             * checkpoint最后的更新时间。Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
+             * updateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -188,7 +188,7 @@ public class GetCheckPointResponse extends Response {
             }
 
             /**
-             * 消费者。
+             * consumer.
              */
             public Builder consumer(String consumer) {
                 this.consumer = consumer;

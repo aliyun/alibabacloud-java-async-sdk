@@ -89,7 +89,7 @@ public class EtlMeta extends TeaModel {
         private String etlMetaValue; 
 
         /**
-         * 是否启用
+         * enable.
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -97,7 +97,7 @@ public class EtlMeta extends TeaModel {
         }
 
         /**
-         * key
+         * etlMetaKey.
          */
         public Builder etlMetaKey(String etlMetaKey) {
             this.etlMetaKey = etlMetaKey;
@@ -105,7 +105,7 @@ public class EtlMeta extends TeaModel {
         }
 
         /**
-         * 名字
+         * etlMetaName.
          */
         public Builder etlMetaName(String etlMetaName) {
             this.etlMetaName = etlMetaName;
@@ -113,7 +113,7 @@ public class EtlMeta extends TeaModel {
         }
 
         /**
-         * tag
+         * etlMetaTag.
          */
         public Builder etlMetaTag(String etlMetaTag) {
             this.etlMetaTag = etlMetaTag;
@@ -121,7 +121,7 @@ public class EtlMeta extends TeaModel {
         }
 
         /**
-         * value
+         * etlMetaValue.
          */
         public Builder etlMetaValue(String etlMetaValue) {
             this.etlMetaValue = etlMetaValue;

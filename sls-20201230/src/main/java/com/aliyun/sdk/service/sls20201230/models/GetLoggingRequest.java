@@ -55,7 +55,7 @@ public class GetLoggingRequest extends Request {
         } 
 
         /**
-         * Project 名称。
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);

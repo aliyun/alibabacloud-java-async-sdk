@@ -83,7 +83,7 @@ public class ListSavedSearchRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -101,7 +101,7 @@ public class ListSavedSearchRequest extends Request {
         }
 
         /**
-         * 默认值为 500。
+         * size.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

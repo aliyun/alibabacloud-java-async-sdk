@@ -70,7 +70,7 @@ public class GetSavedSearchRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);

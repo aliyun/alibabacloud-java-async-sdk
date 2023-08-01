@@ -85,7 +85,7 @@ public class CreateLoggingRequest extends Request {
         } 
 
         /**
-         * Project 名称。
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -94,7 +94,7 @@ public class CreateLoggingRequest extends Request {
         }
 
         /**
-         * 服务日志配置列表。
+         * loggingDetails.
          */
         public Builder loggingDetails(java.util.List < LoggingDetails> loggingDetails) {
             this.putBodyParameter("loggingDetails", loggingDetails);
@@ -103,7 +103,7 @@ public class CreateLoggingRequest extends Request {
         }
 
         /**
-         * 服务日志要保存到的 project 名称。
+         * loggingProject.
          */
         public Builder loggingProject(String loggingProject) {
             this.putBodyParameter("loggingProject", loggingProject);
@@ -159,7 +159,7 @@ public class CreateLoggingRequest extends Request {
             private String type; 
 
             /**
-             * 该种类服务日志要保存到的 logstore 名称。
+             * logstore.
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -167,7 +167,7 @@ public class CreateLoggingRequest extends Request {
             }
 
             /**
-             * 服务日志的种类。可选 "consumergroup_log"、 "logtail_alarm"、"operation_log"、"logtail_profile"、"metering"、"logtail_status"、"scheduled_sql_alert"、 "etl_alert" 等。
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;

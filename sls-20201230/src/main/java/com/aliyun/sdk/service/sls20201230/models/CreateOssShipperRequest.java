@@ -115,7 +115,7 @@ public class CreateOssShipperRequest extends Request {
         } 
 
         /**
-         * Project 名称。
+         * project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -124,7 +124,7 @@ public class CreateOssShipperRequest extends Request {
         }
 
         /**
-         * Logstore 名称。
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -133,7 +133,7 @@ public class CreateOssShipperRequest extends Request {
         }
 
         /**
-         * 日志投递名称。
+         * shipperName.
          */
         public Builder shipperName(String shipperName) {
             this.putBodyParameter("shipperName", shipperName);
@@ -151,7 +151,7 @@ public class CreateOssShipperRequest extends Request {
         }
 
         /**
-         * 投递目标的类型，这里固定为 oss。
+         * targetType.
          */
         public Builder targetType(String targetType) {
             this.putBodyParameter("targetType", targetType);
@@ -207,29 +207,7 @@ public class CreateOssShipperRequest extends Request {
             private String format; 
 
             /**
-             * parquet 格式（必填项columns）：
-             * <p>
-             * { 
-             * "columns": [
-             *    {"name" : "test-col", "type": "text"}
-             *  ]
-             * }
-             * 
-             * csv 格式（必填项columns）：
-             * { 
-             * "columns": ["test-col"], 
-             * "delimiter": ",", 
-             * "quote": "",
-             * "escape": "",
-             * "nullIdentifier": "",
-             * "header": false,
-             * "lineFeed": "\n"
-             *  }
-             * 
-             * json 格式
-             * {
-             * "enableTag": false
-             * }
+             * detail.
              */
             public Builder detail(java.util.Map < String, ? > detail) {
                 this.detail = detail;
@@ -237,7 +215,7 @@ public class CreateOssShipperRequest extends Request {
             }
 
             /**
-             * 支持 json、csv、parquet 三种
+             * format.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -390,7 +368,7 @@ public class CreateOssShipperRequest extends Request {
             private String timeZone; 
 
             /**
-             * 导出间隔，秒，默认值为 300，可取值在 [300,900]之间。
+             * bufferInterval.
              */
             public Builder bufferInterval(Integer bufferInterval) {
                 this.bufferInterval = bufferInterval;
@@ -398,7 +376,7 @@ public class CreateOssShipperRequest extends Request {
             }
 
             /**
-             * 自动控制投递任务创建间隔并设置OSS的一个Object大小（以未压缩计算）上限，单位：MB，默认 128 MB。支持[5,256] 之间的值。
+             * bufferSize.
              */
             public Builder bufferSize(Integer bufferSize) {
                 this.bufferSize = bufferSize;
@@ -406,7 +384,7 @@ public class CreateOssShipperRequest extends Request {
             }
 
             /**
-             * 压缩类型，支持 snappy 与 none，默认值为 none。
+             * compressType.
              */
             public Builder compressType(String compressType) {
                 this.compressType = compressType;
@@ -414,7 +392,7 @@ public class CreateOssShipperRequest extends Request {
             }
 
             /**
-             * 默认为 true，是否启用该配置。
+             * enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -422,7 +400,7 @@ public class CreateOssShipperRequest extends Request {
             }
 
             /**
-             * oss 桶名称
+             * ossBucket.
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;
@@ -430,12 +408,7 @@ public class CreateOssShipperRequest extends Request {
             }
 
             /**
-             * oss 前缀，与 bucket 、pathFormat 一同组成投递的文件路径。示例值: test-prefix、test/prefix。
-             * <p>
-             * 格式要求：可使用 / 分隔各部分，每个部分都必须满足以下条件：
-             * 1. 由大小写字母、数字、下划线_、连字符- 、点号.组成
-             * 2. 长度不超过 253 字符
-             * 3. 必须以大小写字母或者数字开头
+             * ossPrefix.
              */
             public Builder ossPrefix(String ossPrefix) {
                 this.ossPrefix = ossPrefix;
@@ -443,7 +416,7 @@ public class CreateOssShipperRequest extends Request {
             }
 
             /**
-             * 路径格式，默认为 %Y/%m/%d/%H/%M ，不能以 / 开头。任务投递文件到 oss 时会被使用日期时间格式化，例如%Y/%m/%d/%H/%M会被格式化为 2022/01/01/00/59 ，与bucket、ossPrefix 共同组成投递的目标文件路径。
+             * pathFormat.
              */
             public Builder pathFormat(String pathFormat) {
                 this.pathFormat = pathFormat;
@@ -451,7 +424,7 @@ public class CreateOssShipperRequest extends Request {
             }
 
             /**
-             * RAM角色
+             * roleArn.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -459,7 +432,7 @@ public class CreateOssShipperRequest extends Request {
             }
 
             /**
-             * 存储格式配置。
+             * storage.
              */
             public Builder storage(Storage storage) {
                 this.storage = storage;
@@ -467,7 +440,7 @@ public class CreateOssShipperRequest extends Request {
             }
 
             /**
-             * 时区，默认取值为空字符串。可取值的格式为 +8000 等。
+             * timeZone.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

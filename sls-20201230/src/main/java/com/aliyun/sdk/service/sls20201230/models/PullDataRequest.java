@@ -129,7 +129,7 @@ public class PullDataRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);

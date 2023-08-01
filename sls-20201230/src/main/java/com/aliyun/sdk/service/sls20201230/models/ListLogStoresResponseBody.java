@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>ListLogStoresResponseBody</p>
  */
 public class ListLogStoresResponseBody extends TeaModel {
+    @NameInMap("count")
+    private Integer count;
+
     @NameInMap("logstores")
     private java.util.List < String > logstores;
 
@@ -19,6 +22,7 @@ public class ListLogStoresResponseBody extends TeaModel {
     private Integer total;
 
     private ListLogStoresResponseBody(Builder builder) {
+        this.count = builder.count;
         this.logstores = builder.logstores;
         this.total = builder.total;
     }
@@ -29,6 +33,13 @@ public class ListLogStoresResponseBody extends TeaModel {
 
     public static ListLogStoresResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return count
+     */
+    public Integer getCount() {
+        return this.count;
     }
 
     /**
@@ -46,8 +57,17 @@ public class ListLogStoresResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer count; 
         private java.util.List < String > logstores; 
         private Integer total; 
+
+        /**
+         * count.
+         */
+        public Builder count(Integer count) {
+            this.count = count;
+            return this;
+        }
 
         /**
          * logstores.

@@ -97,7 +97,7 @@ public class ListExternalStoreRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -106,7 +106,7 @@ public class ListExternalStoreRequest extends Request {
         }
 
         /**
-         * 可选使用名字 pattern 匹配
+         * externalStoreName.
          */
         public Builder externalStoreName(String externalStoreName) {
             this.putQueryParameter("externalStoreName", externalStoreName);
@@ -124,7 +124,7 @@ public class ListExternalStoreRequest extends Request {
         }
 
         /**
-         * 默认值为 500.
+         * sizs.
          */
         public Builder sizs(Integer sizs) {
             this.putQueryParameter("sizs", sizs);

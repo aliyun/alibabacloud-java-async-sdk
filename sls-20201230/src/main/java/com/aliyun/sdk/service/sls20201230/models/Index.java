@@ -123,7 +123,7 @@ public class Index extends TeaModel {
         private Integer ttl; 
 
         /**
-         * 字段索引
+         * keys.
          */
         public Builder keys(java.util.Map < String, IndexKeysValue > keys) {
             this.keys = keys;
@@ -131,7 +131,7 @@ public class Index extends TeaModel {
         }
 
         /**
-         * 上次修改时间
+         * lastModifyTime.
          */
         public Builder lastModifyTime(Long lastModifyTime) {
             this.lastModifyTime = lastModifyTime;
@@ -139,7 +139,7 @@ public class Index extends TeaModel {
         }
 
         /**
-         * 全文索引
+         * line.
          */
         public Builder line(Line line) {
             this.line = line;
@@ -147,7 +147,7 @@ public class Index extends TeaModel {
         }
 
         /**
-         * 是否开启日志聚类
+         * log_reduce.
          */
         public Builder logReduce(Boolean logReduce) {
             this.logReduce = logReduce;
@@ -155,7 +155,7 @@ public class Index extends TeaModel {
         }
 
         /**
-         * 日志聚类的聚类字段过滤黑名单，仅当日志聚类开启时有效
+         * log_reduce_black_list.
          */
         public Builder logReduceBlackList(java.util.List < String > logReduceBlackList) {
             this.logReduceBlackList = logReduceBlackList;
@@ -163,7 +163,7 @@ public class Index extends TeaModel {
         }
 
         /**
-         * 日志聚类的聚类字段过滤白名单，仅当日志聚类开启时有效
+         * log_reduce_white_list.
          */
         public Builder logReduceWhiteList(java.util.List < String > logReduceWhiteList) {
             this.logReduceWhiteList = logReduceWhiteList;
@@ -171,7 +171,7 @@ public class Index extends TeaModel {
         }
 
         /**
-         * 统计字段最大长度
+         * max_text_len.
          */
         public Builder maxTextLen(Integer maxTextLen) {
             this.maxTextLen = maxTextLen;
@@ -179,7 +179,7 @@ public class Index extends TeaModel {
         }
 
         /**
-         * ttl
+         * ttl.
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;
@@ -268,7 +268,7 @@ public class Index extends TeaModel {
             private java.util.List < String > token; 
 
             /**
-             * 大小写敏感
+             * caseSensitive.
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -276,7 +276,7 @@ public class Index extends TeaModel {
             }
 
             /**
-             * 包含中文
+             * chn.
              */
             public Builder chn(Boolean chn) {
                 this.chn = chn;
@@ -284,7 +284,7 @@ public class Index extends TeaModel {
             }
 
             /**
-             * 排除的字段列表，不能与include_keys同时指定。
+             * exclude_keys.
              */
             public Builder excludeKeys(java.util.List < String > excludeKeys) {
                 this.excludeKeys = excludeKeys;
@@ -292,7 +292,7 @@ public class Index extends TeaModel {
             }
 
             /**
-             * 包含的字段列表，不能与exclude_keys同时指定。
+             * include_keys.
              */
             public Builder includeKeys(java.util.List < String > includeKeys) {
                 this.includeKeys = includeKeys;
@@ -300,7 +300,7 @@ public class Index extends TeaModel {
             }
 
             /**
-             * 分词符
+             * token.
              */
             public Builder token(java.util.List < String > token) {
                 this.token = token;

@@ -146,7 +146,7 @@ public class GetIndexResponseBody extends TeaModel {
         private Integer ttl; 
 
         /**
-         * 索引模式
+         * index_mode.
          */
         public Builder indexMode(String indexMode) {
             this.indexMode = indexMode;
@@ -154,7 +154,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * 字段索引配置。key为字段名称，value为索引配置。
+         * keys.
          */
         public Builder keys(java.util.Map < String, KeysValue > keys) {
             this.keys = keys;
@@ -162,7 +162,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * 上次修改时间
+         * lastModifyTime.
          */
         public Builder lastModifyTime(Long lastModifyTime) {
             this.lastModifyTime = lastModifyTime;
@@ -170,7 +170,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * 配置全文索引。
+         * line.
          */
         public Builder line(Line line) {
             this.line = line;
@@ -178,7 +178,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * 是否开启日志聚类.
+         * log_reduce.
          */
         public Builder logReduce(Boolean logReduce) {
             this.logReduce = logReduce;
@@ -186,7 +186,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * 日志聚类的聚类字段过滤黑名单，仅当日志聚类开启时有效。
+         * log_reduce_black_list.
          */
         public Builder logReduceBlackList(java.util.List < String > logReduceBlackList) {
             this.logReduceBlackList = logReduceBlackList;
@@ -194,7 +194,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * 日志聚类的聚类字段过滤白名单，仅当日志聚类开启时有效。
+         * log_reduce_white_list.
          */
         public Builder logReduceWhiteList(java.util.List < String > logReduceWhiteList) {
             this.logReduceWhiteList = logReduceWhiteList;
@@ -202,7 +202,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * 日志服务默认字段值的最大长度为2048字节，即2 KB。如果您需要修改字段值的最大长度，可设置统计字段（text）最大长度，取值范围为64~16384字节。
+         * max_text_len.
          */
         public Builder maxTextLen(Integer maxTextLen) {
             this.maxTextLen = maxTextLen;
@@ -210,7 +210,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * 存储类型，目前固定取值为pg。
+         * storage.
          */
         public Builder storage(String storage) {
             this.storage = storage;
@@ -218,7 +218,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * 索引文件生命周期，支持7天、30天、90天。
+         * ttl.
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;
@@ -306,7 +306,7 @@ public class GetIndexResponseBody extends TeaModel {
             private java.util.List < String > token; 
 
             /**
-             * 大小写敏感
+             * caseSensitive.
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -314,7 +314,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * 是否包含中文。
+             * chn.
              */
             public Builder chn(Boolean chn) {
                 this.chn = chn;
@@ -322,7 +322,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * 排除的字段列表。
+             * exclude_keys.
              */
             public Builder excludeKeys(java.util.List < String > excludeKeys) {
                 this.excludeKeys = excludeKeys;
@@ -330,7 +330,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * 包含的字段列表。
+             * include_keys.
              */
             public Builder includeKeys(java.util.List < String > includeKeys) {
                 this.includeKeys = includeKeys;
@@ -338,7 +338,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * 分词符列表。
+             * token.
              */
             public Builder token(java.util.List < String > token) {
                 this.token = token;

@@ -85,7 +85,7 @@ public class RemoveConfigFromMachineGroupRequest extends Request {
         } 
 
         /**
-         * project 名称。
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -94,7 +94,7 @@ public class RemoveConfigFromMachineGroupRequest extends Request {
         }
 
         /**
-         * 机器组名称。
+         * machineGroup.
          */
         public Builder machineGroup(String machineGroup) {
             this.putPathParameter("machineGroup", machineGroup);
@@ -103,7 +103,7 @@ public class RemoveConfigFromMachineGroupRequest extends Request {
         }
 
         /**
-         * logtail 配置名称。
+         * configName.
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);

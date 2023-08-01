@@ -86,7 +86,7 @@ public class Shard extends TeaModel {
         private String status; 
 
         /**
-         * Shard的创建时间。Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
+         * createTime.
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -94,7 +94,7 @@ public class Shard extends TeaModel {
         }
 
         /**
-         * 指定Shard范围的结束值，Shard范围中不包含该值。即 shard 包含MD5值在 [inclusiveBeginKey, exclusiveEndKey) 之间的日志。
+         * exclusiveEndKey.
          */
         public Builder exclusiveEndKey(String exclusiveEndKey) {
             this.exclusiveEndKey = exclusiveEndKey;
@@ -102,7 +102,7 @@ public class Shard extends TeaModel {
         }
 
         /**
-         * 指定Shard范围的起始值，Shard范围中包含该值。即 shard 包含MD5值在 [inclusiveBeginKey, exclusiveEndKey) 之间的日志。
+         * inclusiveBeginKey.
          */
         public Builder inclusiveBeginKey(String inclusiveBeginKey) {
             this.inclusiveBeginKey = inclusiveBeginKey;
@@ -110,7 +110,7 @@ public class Shard extends TeaModel {
         }
 
         /**
-         * shard id
+         * shardID.
          */
         public Builder shardID(Integer shardID) {
             this.shardID = shardID;
@@ -118,7 +118,7 @@ public class Shard extends TeaModel {
         }
 
         /**
-         * shard 的读写状态，readwrite 或者 readonly。
+         * status.
          */
         public Builder status(String status) {
             this.status = status;

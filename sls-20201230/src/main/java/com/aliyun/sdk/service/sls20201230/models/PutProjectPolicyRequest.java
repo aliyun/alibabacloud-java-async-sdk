@@ -77,7 +77,7 @@ public class PutProjectPolicyRequest extends Request {
         }
 
         /**
-         * A short description of struct
+         * body.
          */
         public Builder body(String body) {
             this.putBodyParameter("body", body);

@@ -117,7 +117,7 @@ public class EtlJob extends TeaModel {
         private TriggerConfig triggerConfig; 
 
         /**
-         * 是否启用
+         * enable.
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -125,7 +125,7 @@ public class EtlJob extends TeaModel {
         }
 
         /**
-         * 任务名称
+         * etlJobName.
          */
         public Builder etlJobName(String etlJobName) {
             this.etlJobName = etlJobName;
@@ -133,7 +133,7 @@ public class EtlJob extends TeaModel {
         }
 
         /**
-         * 运行函数配置
+         * functionConfig.
          */
         public Builder functionConfig(FunctionConfig functionConfig) {
             this.functionConfig = functionConfig;
@@ -141,7 +141,7 @@ public class EtlJob extends TeaModel {
         }
 
         /**
-         * 参数列表
+         * functionParameter.
          */
         public Builder functionParameter(java.util.Map < String, ? > functionParameter) {
             this.functionParameter = functionParameter;
@@ -149,7 +149,7 @@ public class EtlJob extends TeaModel {
         }
 
         /**
-         * 日志配置
+         * logConfig.
          */
         public Builder logConfig(LogConfig logConfig) {
             this.logConfig = logConfig;
@@ -157,7 +157,7 @@ public class EtlJob extends TeaModel {
         }
 
         /**
-         * 配置数据来源
+         * sourceConfig.
          */
         public Builder sourceConfig(SourceConfig sourceConfig) {
             this.sourceConfig = sourceConfig;
@@ -165,7 +165,7 @@ public class EtlJob extends TeaModel {
         }
 
         /**
-         * 触发器配置
+         * triggerConfig.
          */
         public Builder triggerConfig(TriggerConfig triggerConfig) {
             this.triggerConfig = triggerConfig;
@@ -278,7 +278,7 @@ public class EtlJob extends TeaModel {
             private String serviceName; 
 
             /**
-             * 账户 id
+             * accountId.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -286,7 +286,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * endpoint
+             * endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -294,7 +294,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * 函数名
+             * functionName.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -302,7 +302,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * 函数 provider，可选值为 FunctionCompute 、CloudProdLogDispatch。当值为 FunctionCompute 时，endpoint、accountid 、regionName 、serviceName 、functionName 必选。
+             * functionProvider.
              */
             public Builder functionProvider(String functionProvider) {
                 this.functionProvider = functionProvider;
@@ -310,7 +310,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * 地域
+             * regionName.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -318,7 +318,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * 角色授权
+             * roleArn.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -326,7 +326,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * 服务名
+             * serviceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -394,7 +394,7 @@ public class EtlJob extends TeaModel {
             private String projectName; 
 
             /**
-             * endpoint
+             * endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -402,7 +402,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * logstore 名称
+             * logstoreName.
              */
             public Builder logstoreName(String logstoreName) {
                 this.logstoreName = logstoreName;
@@ -410,7 +410,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * project 名称
+             * projectName.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -452,7 +452,7 @@ public class EtlJob extends TeaModel {
             private String logstoreName; 
 
             /**
-             * logstore 名称
+             * logstoreName.
              */
             public Builder logstoreName(String logstoreName) {
                 this.logstoreName = logstoreName;
@@ -544,7 +544,7 @@ public class EtlJob extends TeaModel {
             private Integer triggerInterval; 
 
             /**
-             * 最大重试次数，必须在[0,100] 之间
+             * maxRetryTime.
              */
             public Builder maxRetryTime(Integer maxRetryTime) {
                 this.maxRetryTime = maxRetryTime;
@@ -552,7 +552,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * 角色授权配置
+             * roleArn.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -560,7 +560,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * 开始位置，可选 latest、at-unixtime， 默认 latest。
+             * startingPosition.
              */
             public Builder startingPosition(String startingPosition) {
                 this.startingPosition = startingPosition;
@@ -568,7 +568,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * startingUnixtime.
              */
             public Builder startingUnixtime(Long startingUnixtime) {
                 this.startingUnixtime = startingUnixtime;
@@ -576,7 +576,7 @@ public class EtlJob extends TeaModel {
             }
 
             /**
-             * 触发间隔，单位为秒，必须在 [3,600] 之间
+             * triggerInterval.
              */
             public Builder triggerInterval(Integer triggerInterval) {
                 this.triggerInterval = triggerInterval;

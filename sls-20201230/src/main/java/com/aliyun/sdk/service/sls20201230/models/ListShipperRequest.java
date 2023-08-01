@@ -70,7 +70,7 @@ public class ListShipperRequest extends Request {
         } 
 
         /**
-         * Project 名称。
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class ListShipperRequest extends Request {
         }
 
         /**
-         * Logstore 名称。
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);

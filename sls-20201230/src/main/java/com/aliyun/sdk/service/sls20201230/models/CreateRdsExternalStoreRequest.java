@@ -100,7 +100,7 @@ public class CreateRdsExternalStoreRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -109,7 +109,7 @@ public class CreateRdsExternalStoreRequest extends Request {
         }
 
         /**
-         * 名称
+         * externalStoreName.
          */
         public Builder externalStoreName(String externalStoreName) {
             this.putBodyParameter("externalStoreName", externalStoreName);
@@ -118,7 +118,7 @@ public class CreateRdsExternalStoreRequest extends Request {
         }
 
         /**
-         * 参数
+         * parameter.
          */
         public Builder parameter(Parameter parameter) {
             this.putBodyParameter("parameter", parameter);
@@ -127,7 +127,7 @@ public class CreateRdsExternalStoreRequest extends Request {
         }
 
         /**
-         * 类型，这里固定为 rds-vpc
+         * storeType.
          */
         public Builder storeType(String storeType) {
             this.putBodyParameter("storeType", storeType);
@@ -271,7 +271,7 @@ public class CreateRdsExternalStoreRequest extends Request {
             private String vpcId; 
 
             /**
-             * RDS MySQL实例的数据库名称。
+             * db.
              */
             public Builder db(String db) {
                 this.db = db;
@@ -279,7 +279,7 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * RDS MySQL实例的内网地址或外网地址。
+             * host.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -287,7 +287,7 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * RDS MySQL实例ID。
+             * instance-id.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -295,7 +295,7 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * RDS MySQL实例中账号对应的密码。
+             * password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -303,7 +303,7 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * RDS MySQL实例的内网或者外网端口。
+             * port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -311,7 +311,7 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * RDS MySQL实例所在地域。
+             * region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -319,7 +319,7 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * RDS MySQL实例的数据库表名称。
+             * table.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -327,7 +327,7 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * RDS MySQL实例中的账号名称。
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -335,7 +335,7 @@ public class CreateRdsExternalStoreRequest extends Request {
             }
 
             /**
-             * RDS MySQL实例所属的VPC ID。
+             * vpc-id.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

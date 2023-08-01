@@ -70,7 +70,7 @@ public class GetAppliedMachineGroupsRequest extends Request {
         } 
 
         /**
-         * project 名称。
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class GetAppliedMachineGroupsRequest extends Request {
         }
 
         /**
-         * logtail 配置名称。
+         * configName.
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);

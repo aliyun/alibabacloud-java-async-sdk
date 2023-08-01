@@ -70,7 +70,7 @@ public class DeleteDomainRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class DeleteDomainRequest extends Request {
         }
 
         /**
-         * 要删除的域名
+         * domainName.
          */
         public Builder domainName(String domainName) {
             this.putPathParameter("domainName", domainName);

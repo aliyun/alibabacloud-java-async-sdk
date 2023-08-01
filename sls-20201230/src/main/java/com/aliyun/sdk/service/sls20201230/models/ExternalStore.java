@@ -65,7 +65,7 @@ public class ExternalStore extends TeaModel {
         private String storeType; 
 
         /**
-         * 外部存储的名称。
+         * externalStoreName.
          */
         public Builder externalStoreName(String externalStoreName) {
             this.externalStoreName = externalStoreName;
@@ -73,7 +73,7 @@ public class ExternalStore extends TeaModel {
         }
 
         /**
-         * 参数
+         * parameter.
          */
         public Builder parameter(java.util.Map < String, ? > parameter) {
             this.parameter = parameter;
@@ -81,7 +81,7 @@ public class ExternalStore extends TeaModel {
         }
 
         /**
-         * 类型。可选 rds-vpc 或者 oss
+         * storeType.
          */
         public Builder storeType(String storeType) {
             this.storeType = storeType;

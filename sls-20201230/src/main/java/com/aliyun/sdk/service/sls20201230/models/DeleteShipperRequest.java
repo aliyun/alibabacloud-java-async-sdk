@@ -85,7 +85,7 @@ public class DeleteShipperRequest extends Request {
         } 
 
         /**
-         * Project 名称。
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -94,7 +94,7 @@ public class DeleteShipperRequest extends Request {
         }
 
         /**
-         * Logstore 名称。
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -103,7 +103,7 @@ public class DeleteShipperRequest extends Request {
         }
 
         /**
-         * 投递任务的名称。
+         * shipperName.
          */
         public Builder shipperName(String shipperName) {
             this.putPathParameter("shipperName", shipperName);

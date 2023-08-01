@@ -62,7 +62,7 @@ public class ListMachineGroupResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * 当前页返回的机器组数量。
+         * count.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class ListMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 机器组名称列表。
+         * machinegroups.
          */
         public Builder machinegroups(java.util.List < String > machinegroups) {
             this.machinegroups = machinegroups;
@@ -78,7 +78,7 @@ public class ListMachineGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 机器组总数量。
+         * total.
          */
         public Builder total(Integer total) {
             this.total = total;

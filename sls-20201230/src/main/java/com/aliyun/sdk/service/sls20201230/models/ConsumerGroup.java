@@ -62,7 +62,7 @@ public class ConsumerGroup extends TeaModel {
         private Integer timeout; 
 
         /**
-         * 消费者名称。
+         * name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -70,7 +70,7 @@ public class ConsumerGroup extends TeaModel {
         }
 
         /**
-         * 是否有序消费
+         * order.
          */
         public Builder order(Boolean order) {
             this.order = order;
@@ -78,7 +78,7 @@ public class ConsumerGroup extends TeaModel {
         }
 
         /**
-         * 消费超时时长，单位为秒
+         * timeout.
          */
         public Builder timeout(Integer timeout) {
             this.timeout = timeout;

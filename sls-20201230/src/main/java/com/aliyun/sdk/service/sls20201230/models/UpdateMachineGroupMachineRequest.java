@@ -24,7 +24,6 @@ public class UpdateMachineGroupMachineRequest extends Request {
 
     @Query
     @NameInMap("action")
-    @Validation(required = true)
     private String action;
 
     @Body
@@ -100,7 +99,7 @@ public class UpdateMachineGroupMachineRequest extends Request {
         } 
 
         /**
-         * project 名称。
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -109,7 +108,7 @@ public class UpdateMachineGroupMachineRequest extends Request {
         }
 
         /**
-         * 机器组名称。
+         * machineGroup.
          */
         public Builder machineGroup(String machineGroup) {
             this.putPathParameter("machineGroup", machineGroup);
@@ -118,7 +117,7 @@ public class UpdateMachineGroupMachineRequest extends Request {
         }
 
         /**
-         * add 表示添加机器到机器组中， delete 表示从机器组中删除机器。
+         * action.
          */
         public Builder action(String action) {
             this.putQueryParameter("action", action);
@@ -127,7 +126,7 @@ public class UpdateMachineGroupMachineRequest extends Request {
         }
 
         /**
-         * 请求结构体。要添加或删除的机器列表。
+         * body.
          */
         public Builder body(java.util.List < String > body) {
             this.putBodyParameter("body", body);

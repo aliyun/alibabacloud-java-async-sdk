@@ -74,7 +74,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * 当前页返回的任务个数。
+         * count.
          */
         public Builder count(Long count) {
             this.count = count;
@@ -82,7 +82,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 任务汇总状态统计。
+         * statistics.
          */
         public Builder statistics(Statistics statistics) {
             this.statistics = statistics;
@@ -98,7 +98,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 任务总数。
+         * total.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -162,7 +162,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             private Long success; 
 
             /**
-             * 运行失败的任务数量。
+             * fail.
              */
             public Builder fail(Long fail) {
                 this.fail = fail;
@@ -170,7 +170,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 正在运行的任务数量。
+             * running.
              */
             public Builder running(Long running) {
                 this.running = running;
@@ -178,7 +178,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 成功完成的任务数量。
+             * success.
              */
             public Builder success(Long success) {
                 this.success = success;
@@ -303,7 +303,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             private String taskStatus; 
 
             /**
-             * 任务 id。
+             * id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -311,7 +311,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 任务错误码。
+             * taskCode.
              */
             public Builder taskCode(String taskCode) {
                 this.taskCode = taskCode;
@@ -319,7 +319,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 投递任务创建时间。Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
+             * taskCreateTime.
              */
             public Builder taskCreateTime(Long taskCreateTime) {
                 this.taskCreateTime = taskCreateTime;
@@ -335,7 +335,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 投递任务结束时间。Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
+             * taskFinishTime.
              */
             public Builder taskFinishTime(Long taskFinishTime) {
                 this.taskFinishTime = taskFinishTime;
@@ -343,7 +343,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 投递任务中的最近一条日志到达服务端时间（非日志时间，是服务端接收时间）。Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
+             * taskLastDataReceiveTime.
              */
             public Builder taskLastDataReceiveTime(Long taskLastDataReceiveTime) {
                 this.taskLastDataReceiveTime = taskLastDataReceiveTime;
@@ -351,7 +351,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 投递任务失败时的具体错误信息。
+             * taskMessage.
              */
             public Builder taskMessage(String taskMessage) {
                 this.taskMessage = taskMessage;
@@ -359,7 +359,7 @@ public class GetShipperStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 任务当前状态，可以是 running、success、fail 三种状态之一。
+             * taskStatus.
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

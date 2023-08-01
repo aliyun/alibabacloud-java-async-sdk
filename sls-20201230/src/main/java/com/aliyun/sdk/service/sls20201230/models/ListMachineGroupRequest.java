@@ -97,7 +97,7 @@ public class ListMachineGroupRequest extends Request {
         } 
 
         /**
-         * project 名称。
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -106,7 +106,7 @@ public class ListMachineGroupRequest extends Request {
         }
 
         /**
-         * 可将 groupName 作为 pattern 匹配名称，只会返回匹配的机器组。例如 test 可以匹配机器组 test-group。
+         * groupName.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("groupName", groupName);
@@ -115,7 +115,7 @@ public class ListMachineGroupRequest extends Request {
         }
 
         /**
-         * 分页请求的起始位置。默认为0。
+         * offset.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -124,7 +124,7 @@ public class ListMachineGroupRequest extends Request {
         }
 
         /**
-         * 分页查询时，设置的每页行数。默认值为2000。
+         * size.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

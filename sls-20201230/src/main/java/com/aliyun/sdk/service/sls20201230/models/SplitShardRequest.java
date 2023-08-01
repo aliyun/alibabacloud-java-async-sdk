@@ -113,7 +113,7 @@ public class SplitShardRequest extends Request {
         } 
 
         /**
-         * Project 名称。
+         * project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -122,7 +122,7 @@ public class SplitShardRequest extends Request {
         }
 
         /**
-         * Logstore 名称。
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -131,7 +131,7 @@ public class SplitShardRequest extends Request {
         }
 
         /**
-         * 必须是一个 readwrite 状态的 shard 的 id。
+         * shard.
          */
         public Builder shard(Integer shard) {
             this.putPathParameter("shard", shard);
@@ -140,7 +140,7 @@ public class SplitShardRequest extends Request {
         }
 
         /**
-         * 分裂的位置。
+         * key.
          */
         public Builder key(String key) {
             this.putQueryParameter("key", key);
@@ -149,7 +149,7 @@ public class SplitShardRequest extends Request {
         }
 
         /**
-         * 要分裂成的 shard 数量，默认为 2。
+         * shardCount.
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("shardCount", shardCount);

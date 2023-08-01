@@ -70,7 +70,7 @@ public class DeleteLogStoreRequest extends Request {
         } 
 
         /**
-         * project 名称
+         * project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class DeleteLogStoreRequest extends Request {
         }
 
         /**
-         * logstore 名称
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);

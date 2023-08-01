@@ -70,7 +70,7 @@ public class GetExternalStoreRequest extends Request {
         } 
 
         /**
-         * project.
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class GetExternalStoreRequest extends Request {
         }
 
         /**
-         * A short description of struct
+         * externalStoreName.
          */
         public Builder externalStoreName(String externalStoreName) {
             this.putPathParameter("externalStoreName", externalStoreName);

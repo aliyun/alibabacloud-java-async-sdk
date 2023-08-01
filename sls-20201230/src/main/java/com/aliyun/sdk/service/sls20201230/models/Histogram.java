@@ -74,7 +74,7 @@ public class Histogram extends TeaModel {
         private Integer to; 
 
         /**
-         * count
+         * count.
          */
         public Builder count(Long count) {
             this.count = count;
@@ -82,7 +82,7 @@ public class Histogram extends TeaModel {
         }
 
         /**
-         * 开始
+         * from.
          */
         public Builder from(Integer from) {
             this.from = from;
@@ -90,7 +90,7 @@ public class Histogram extends TeaModel {
         }
 
         /**
-         * progress
+         * progress.
          */
         public Builder progress(String progress) {
             this.progress = progress;
@@ -98,7 +98,7 @@ public class Histogram extends TeaModel {
         }
 
         /**
-         * 结束
+         * to.
          */
         public Builder to(Integer to) {
             this.to = to;

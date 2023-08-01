@@ -109,7 +109,7 @@ public class GetCursorTimeRequest extends Request {
         }
 
         /**
-         * logstore 名称。
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -127,7 +127,7 @@ public class GetCursorTimeRequest extends Request {
         }
 
         /**
-         * 游标。
+         * cursor.
          */
         public Builder cursor(String cursor) {
             this.putQueryParameter("cursor", cursor);

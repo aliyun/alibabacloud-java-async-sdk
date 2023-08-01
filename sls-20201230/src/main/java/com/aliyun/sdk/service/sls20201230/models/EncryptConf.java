@@ -63,7 +63,7 @@ public class EncryptConf extends TeaModel {
         private EncryptUserCmkConf userCmkInfo; 
 
         /**
-         * enable
+         * enable.
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -71,7 +71,7 @@ public class EncryptConf extends TeaModel {
         }
 
         /**
-         * 加密算法，只支持default和m4。当 enable 为 true 时，此项必选。
+         * encrypt_type.
          */
         public Builder encryptType(String encryptType) {
             this.encryptType = encryptType;

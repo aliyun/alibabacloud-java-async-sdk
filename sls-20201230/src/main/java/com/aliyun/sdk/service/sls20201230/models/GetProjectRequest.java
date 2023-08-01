@@ -55,7 +55,7 @@ public class GetProjectRequest extends Request {
         } 
 
         /**
-         * project.
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);

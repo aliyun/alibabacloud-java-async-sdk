@@ -100,7 +100,7 @@ public class GetCursorRequest extends Request {
         } 
 
         /**
-         * project 名称。
+         * project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -109,7 +109,7 @@ public class GetCursorRequest extends Request {
         }
 
         /**
-         * logstore 名称。
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -127,7 +127,7 @@ public class GetCursorRequest extends Request {
         }
 
         /**
-         * 时间点（Unix时间戳）或者字符串begin、end。
+         * from.
          */
         public Builder from(String from) {
             this.putQueryParameter("from", from);

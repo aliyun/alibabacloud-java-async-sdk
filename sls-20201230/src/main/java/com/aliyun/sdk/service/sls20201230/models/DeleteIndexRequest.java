@@ -70,7 +70,7 @@ public class DeleteIndexRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -79,7 +79,7 @@ public class DeleteIndexRequest extends Request {
         }
 
         /**
-         * project.
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);

@@ -99,7 +99,7 @@ public class GetCheckPointRequest extends Request {
         } 
 
         /**
-         * project 名称。
+         * Project 名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -108,7 +108,7 @@ public class GetCheckPointRequest extends Request {
         }
 
         /**
-         * logstore 名称。
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -117,7 +117,7 @@ public class GetCheckPointRequest extends Request {
         }
 
         /**
-         * 消费组名称。
+         * consumerGroup.
          */
         public Builder consumerGroup(String consumerGroup) {
             this.putPathParameter("consumerGroup", consumerGroup);
@@ -126,10 +126,7 @@ public class GetCheckPointRequest extends Request {
         }
 
         /**
-         * Shard ID。
-         * <p>
-         * 如果指定的Shard不存在，则返回空列表。
-         * 如果不指定Shard，则返回所有Shard的checkpoint。
+         * shard.
          */
         public Builder shard(Integer shard) {
             this.putQueryParameter("shard", shard);

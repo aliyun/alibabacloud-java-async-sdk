@@ -65,7 +65,7 @@ public class EncryptUserCmkConf extends TeaModel {
         private String regionId; 
 
         /**
-         * arn
+         * arn.
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -73,7 +73,7 @@ public class EncryptUserCmkConf extends TeaModel {
         }
 
         /**
-         * cmk_key_id
+         * cmk_key_id.
          */
         public Builder cmkKeyId(String cmkKeyId) {
             this.cmkKeyId = cmkKeyId;
@@ -81,7 +81,7 @@ public class EncryptUserCmkConf extends TeaModel {
         }
 
         /**
-         * region_id
+         * region_id.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;

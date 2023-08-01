@@ -62,7 +62,7 @@ public class ListShipperResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * 返回的投递任务数量。
+         * count.
          */
         public Builder count(Long count) {
             this.count = count;
@@ -70,7 +70,7 @@ public class ListShipperResponseBody extends TeaModel {
         }
 
         /**
-         * 投递任务名称列表。
+         * shipper.
          */
         public Builder shipper(java.util.List < String > shipper) {
             this.shipper = shipper;
@@ -78,7 +78,7 @@ public class ListShipperResponseBody extends TeaModel {
         }
 
         /**
-         * 投递任务的总数量。
+         * total.
          */
         public Builder total(Long total) {
             this.total = total;

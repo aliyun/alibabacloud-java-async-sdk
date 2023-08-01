@@ -197,7 +197,7 @@ public class Logstore extends TeaModel {
         private Integer ttl; 
 
         /**
-         * 接收日志后，自动添加客户端外网IP和日志到达时间
+         * appendMeta.
          */
         public Builder appendMeta(Boolean appendMeta) {
             this.appendMeta = appendMeta;
@@ -205,7 +205,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * 是否开启 shard 自动分裂。当写入数据量超过已有分区（Shard）写入服务能力且持续5分钟以上时，开启自动分裂功能可自动根据数据量增加分区数量
+         * autoSplit.
          */
         public Builder autoSplit(Boolean autoSplit) {
             this.autoSplit = autoSplit;
@@ -213,7 +213,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * 创建时间。
+         * createTime.
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -221,7 +221,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * WebTracking功能支持快速采集各种浏览器以及iOS/Android/APP访问信息，默认关闭
+         * enable_tracking.
          */
         public Builder enableTracking(Boolean enableTracking) {
             this.enableTracking = enableTracking;
@@ -229,7 +229,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * 加密配置
+         * encrypt_conf.
          */
         public Builder encryptConf(EncryptConf encryptConf) {
             this.encryptConf = encryptConf;
@@ -237,7 +237,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * 必须在 (30, ttl) 之间
+         * hot_ttl.
          */
         public Builder hotTtl(Integer hotTtl) {
             this.hotTtl = hotTtl;
@@ -245,7 +245,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * 最后修改时间。
+         * lastModifyTime.
          */
         public Builder lastModifyTime(Integer lastModifyTime) {
             this.lastModifyTime = lastModifyTime;
@@ -253,7 +253,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * logstore 的名称。
+         * logstoreName.
          */
         public Builder logstoreName(String logstoreName) {
             this.logstoreName = logstoreName;
@@ -261,7 +261,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * 最大 shard 数量。
+         * maxSplitShard.
          */
         public Builder maxSplitShard(Integer maxSplitShard) {
             this.maxSplitShard = maxSplitShard;
@@ -269,7 +269,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * [ standard | query ]
+         * mode.
          */
         public Builder mode(String mode) {
             this.mode = mode;
@@ -277,7 +277,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * 日志所属产品类型
+         * productType.
          */
         public Builder productType(String productType) {
             this.productType = productType;
@@ -285,7 +285,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * shard 数量。
+         * shardCount.
          */
         public Builder shardCount(Integer shardCount) {
             this.shardCount = shardCount;
@@ -293,7 +293,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * telemetryType
+         * telemetryType.
          */
         public Builder telemetryType(String telemetryType) {
             this.telemetryType = telemetryType;
@@ -301,7 +301,7 @@ public class Logstore extends TeaModel {
         }
 
         /**
-         * 数据保存的天数。
+         * ttl.
          */
         public Builder ttl(Integer ttl) {
             this.ttl = ttl;

@@ -24,7 +24,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ConsumerGroupHeartBeatResponse> consumerGroupHeartBeat(ConsumerGroupHeartBeatRequest request);
 
+    CompletableFuture<CreateConfigResponse> createConfig(CreateConfigRequest request);
+
     CompletableFuture<CreateConsumerGroupResponse> createConsumerGroup(CreateConsumerGroupRequest request);
+
+    CompletableFuture<CreateDashboardResponse> createDashboard(CreateDashboardRequest request);
 
     CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request);
 
@@ -48,7 +52,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSavedSearchResponse> createSavedSearch(CreateSavedSearchRequest request);
 
+    CompletableFuture<DeleteConfigResponse> deleteConfig(DeleteConfigRequest request);
+
     CompletableFuture<DeleteConsumerGroupResponse> deleteConsumerGroup(DeleteConsumerGroupRequest request);
+
+    CompletableFuture<DeleteDashboardResponse> deleteDashboard(DeleteDashboardRequest request);
 
     CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
 
@@ -76,11 +84,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCheckPointResponse> getCheckPoint(GetCheckPointRequest request);
 
+    CompletableFuture<GetConfigResponse> getConfig(GetConfigRequest request);
+
     CompletableFuture<GetContextLogsResponse> getContextLogs(GetContextLogsRequest request);
 
     CompletableFuture<GetCursorResponse> getCursor(GetCursorRequest request);
 
     CompletableFuture<GetCursorTimeResponse> getCursorTime(GetCursorTimeRequest request);
+
+    CompletableFuture<GetDashboardResponse> getDashboard(GetDashboardRequest request);
 
     CompletableFuture<GetExternalStoreResponse> getExternalStore(GetExternalStoreRequest request);
 
@@ -94,6 +106,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetLogsResponse> getLogs(GetLogsRequest request);
 
+    CompletableFuture<GetLogsV2Response> getLogsV2(GetLogsV2Request request);
+
     CompletableFuture<GetMachineGroupResponse> getMachineGroup(GetMachineGroupRequest request);
 
     CompletableFuture<GetProjectResponse> getProject(GetProjectRequest request);
@@ -106,7 +120,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetShipperStatusResponse> getShipperStatus(GetShipperStatusRequest request);
 
+    CompletableFuture<ListConfigResponse> listConfig(ListConfigRequest request);
+
     CompletableFuture<ListConsumerGroupResponse> listConsumerGroup(ListConsumerGroupRequest request);
+
+    CompletableFuture<ListDashboardResponse> listDashboard(ListDashboardRequest request);
 
     CompletableFuture<ListDomainsResponse> listDomains(ListDomainsRequest request);
 
@@ -142,7 +160,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
+    CompletableFuture<UpdateConfigResponse> updateConfig(UpdateConfigRequest request);
+
     CompletableFuture<UpdateConsumerGroupResponse> updateConsumerGroup(UpdateConsumerGroupRequest request);
+
+    CompletableFuture<UpdateDashboardResponse> updateDashboard(UpdateDashboardRequest request);
 
     CompletableFuture<UpdateIndexResponse> updateIndex(UpdateIndexRequest request);
 

@@ -70,7 +70,7 @@ public class ListConsumerGroupRequest extends Request {
         } 
 
         /**
-         * Project name
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class ListConsumerGroupRequest extends Request {
         }
 
         /**
-         * Logstore name
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);

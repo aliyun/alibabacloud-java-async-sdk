@@ -124,7 +124,7 @@ public class Project extends TeaModel {
         private String status; 
 
         /**
-         * 创建时间
+         * createTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -132,7 +132,7 @@ public class Project extends TeaModel {
         }
 
         /**
-         * 描述
+         * description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -140,7 +140,7 @@ public class Project extends TeaModel {
         }
 
         /**
-         * 最后更新时间
+         * lastModifyTime.
          */
         public Builder lastModifyTime(String lastModifyTime) {
             this.lastModifyTime = lastModifyTime;
@@ -148,7 +148,7 @@ public class Project extends TeaModel {
         }
 
         /**
-         * project owner
+         * owner.
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -156,7 +156,7 @@ public class Project extends TeaModel {
         }
 
         /**
-         * Project名称
+         * projectName.
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
@@ -164,7 +164,7 @@ public class Project extends TeaModel {
         }
 
         /**
-         * 所在区域
+         * region.
          */
         public Builder region(String region) {
             this.region = region;
@@ -172,7 +172,7 @@ public class Project extends TeaModel {
         }
 
         /**
-         * 资源组Id
+         * resourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -180,7 +180,7 @@ public class Project extends TeaModel {
         }
 
         /**
-         * 状态
+         * status.
          */
         public Builder status(String status) {
             this.status = status;

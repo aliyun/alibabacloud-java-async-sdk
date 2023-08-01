@@ -137,7 +137,7 @@ public class PutWebtrackingRequest extends Request {
         }
 
         /**
-         * A short description of struct
+         * logstoreName.
          */
         public Builder logstoreName(String logstoreName) {
             this.putPathParameter("logstoreName", logstoreName);

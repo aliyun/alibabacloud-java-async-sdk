@@ -89,7 +89,7 @@ public class MachineGroup extends TeaModel {
         private java.util.List < String > machineList; 
 
         /**
-         * 机器组属性。
+         * groupAttribute.
          */
         public Builder groupAttribute(GroupAttribute groupAttribute) {
             this.groupAttribute = groupAttribute;
@@ -97,7 +97,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * 机器组名称。
+         * groupName.
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -105,7 +105,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * 机器组种类。目前固定为空字符串。
+         * groupType.
          */
         public Builder groupType(String groupType) {
             this.groupType = groupType;
@@ -113,7 +113,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * 机器组标识种类，支持 IP 标识或者用户自定义标识，即 ip 、userdefined。
+         * machineIdentifyType.
          */
         public Builder machineIdentifyType(String machineIdentifyType) {
             this.machineIdentifyType = machineIdentifyType;
@@ -121,7 +121,7 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
-         * 机器组标识列表。
+         * machineList.
          */
         public Builder machineList(java.util.List < String > machineList) {
             this.machineList = machineList;
@@ -173,7 +173,7 @@ public class MachineGroup extends TeaModel {
             private String groupTopic; 
 
             /**
-             * 机器组所依赖的外部管理系统标识。
+             * externalName.
              */
             public Builder externalName(String externalName) {
                 this.externalName = externalName;
@@ -181,7 +181,7 @@ public class MachineGroup extends TeaModel {
             }
 
             /**
-             * 机器组的日志主题。
+             * groupTopic.
              */
             public Builder groupTopic(String groupTopic) {
                 this.groupTopic = groupTopic;

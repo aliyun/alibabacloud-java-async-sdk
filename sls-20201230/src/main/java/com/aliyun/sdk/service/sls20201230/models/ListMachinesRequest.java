@@ -98,7 +98,7 @@ public class ListMachinesRequest extends Request {
         } 
 
         /**
-         * project 名称。
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -107,7 +107,7 @@ public class ListMachinesRequest extends Request {
         }
 
         /**
-         * 机器组名称。
+         * machineGroup.
          */
         public Builder machineGroup(String machineGroup) {
             this.putPathParameter("machineGroup", machineGroup);
@@ -116,7 +116,7 @@ public class ListMachinesRequest extends Request {
         }
 
         /**
-         * 查询开始行。默认值为0。
+         * offset.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -125,7 +125,7 @@ public class ListMachinesRequest extends Request {
         }
 
         /**
-         * 分页查询时，设置的每页行数。默认值为2000。
+         * size.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

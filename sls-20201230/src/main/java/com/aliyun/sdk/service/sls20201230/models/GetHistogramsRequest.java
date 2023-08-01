@@ -128,7 +128,7 @@ public class GetHistogramsRequest extends Request {
         } 
 
         /**
-         * project 名称。
+         * project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -137,7 +137,7 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * logstore 名称。
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -146,10 +146,7 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * 查询开始时间点。UNIX时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
-         * <p>
-         * 
-         * 时间区间遵循“左闭右开”原则，即该时间区间包括区间开始时间点，但不包括区间结束时间点。如果from和to的值相同，则为无效区间，函数直接返回错误。
+         * from.
          */
         public Builder from(Long from) {
             this.putQueryParameter("from", from);
@@ -158,7 +155,7 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * 查询语句。仅支持查询语句，不支持分析语句。关于查询语句的详细语法，请参见查询语法。
+         * query.
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -167,10 +164,7 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * 查询结束时间点。UNIX时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
-         * <p>
-         * 
-         * 时间区间遵循“左闭右开”原则，即该时间区间包括区间开始时间点，但不包括区间结束时间点。如果from和to的值相同，则为无效区间，函数直接返回错误。
+         * to.
          */
         public Builder to(Long to) {
             this.putQueryParameter("to", to);
@@ -179,7 +173,7 @@ public class GetHistogramsRequest extends Request {
         }
 
         /**
-         * 日志主题。
+         * topic.
          */
         public Builder topic(String topic) {
             this.putQueryParameter("topic", topic);

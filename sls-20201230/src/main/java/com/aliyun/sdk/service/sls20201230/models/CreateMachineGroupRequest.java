@@ -128,7 +128,7 @@ public class CreateMachineGroupRequest extends Request {
         } 
 
         /**
-         * project 名称。
+         * project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -137,7 +137,7 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * 机器组属性。
+         * groupAttribute.
          */
         public Builder groupAttribute(GroupAttribute groupAttribute) {
             this.putBodyParameter("groupAttribute", groupAttribute);
@@ -146,7 +146,7 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * 机器组名称。
+         * groupName.
          */
         public Builder groupName(String groupName) {
             this.putBodyParameter("groupName", groupName);
@@ -155,7 +155,7 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * 机器组类型，可选值，默认为空。
+         * groupType.
          */
         public Builder groupType(String groupType) {
             this.putBodyParameter("groupType", groupType);
@@ -164,7 +164,7 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * 机器组标识种类，支持 ip 、userdefined 两种。
+         * machineIdentifyType.
          */
         public Builder machineIdentifyType(String machineIdentifyType) {
             this.putBodyParameter("machineIdentifyType", machineIdentifyType);
@@ -173,7 +173,7 @@ public class CreateMachineGroupRequest extends Request {
         }
 
         /**
-         * 机器列表。
+         * machineList.
          */
         public Builder machineList(java.util.List < String > machineList) {
             this.putBodyParameter("machineList", machineList);
@@ -227,7 +227,7 @@ public class CreateMachineGroupRequest extends Request {
             private String groupTopic; 
 
             /**
-             * 机器组所依赖的外部管理系统标识。
+             * externalName.
              */
             public Builder externalName(String externalName) {
                 this.externalName = externalName;
@@ -235,7 +235,7 @@ public class CreateMachineGroupRequest extends Request {
             }
 
             /**
-             * 机器组的日志主题。
+             * groupTopic.
              */
             public Builder groupTopic(String groupTopic) {
                 this.groupTopic = groupTopic;

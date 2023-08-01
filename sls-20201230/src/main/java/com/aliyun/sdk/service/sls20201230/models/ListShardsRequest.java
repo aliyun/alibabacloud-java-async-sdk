@@ -70,7 +70,7 @@ public class ListShardsRequest extends Request {
         } 
 
         /**
-         * A short description of struct
+         * project 名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -79,7 +79,7 @@ public class ListShardsRequest extends Request {
         }
 
         /**
-         * logstore 名称。
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);

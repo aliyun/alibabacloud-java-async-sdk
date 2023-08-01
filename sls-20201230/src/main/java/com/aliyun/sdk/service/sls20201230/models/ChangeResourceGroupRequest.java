@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>ChangeResourceGroupRequest</p>
  */
 public class ChangeResourceGroupRequest extends Request {
+    @Host
+    @NameInMap("project")
+    private String project;
+
     @Body
     @NameInMap("resourceGroupId")
     @Validation(required = true)
@@ -28,6 +32,7 @@ public class ChangeResourceGroupRequest extends Request {
 
     private ChangeResourceGroupRequest(Builder builder) {
         super(builder);
+        this.project = builder.project;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
@@ -44,6 +49,13 @@ public class ChangeResourceGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return project
+     */
+    public String getProject() {
+        return this.project;
     }
 
     /**
@@ -68,6 +80,7 @@ public class ChangeResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChangeResourceGroupRequest, Builder> {
+        private String project; 
         private String resourceGroupId; 
         private String resourceId; 
         private String resourceType; 
@@ -78,10 +91,20 @@ public class ChangeResourceGroupRequest extends Request {
 
         private Builder(ChangeResourceGroupRequest request) {
             super(request);
+            this.project = request.project;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
         } 
+
+        /**
+         * project.
+         */
+        public Builder project(String project) {
+            this.putHostParameter("project", project);
+            this.project = project;
+            return this;
+        }
 
         /**
          * resourceGroupId.

@@ -177,7 +177,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * project.
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -195,7 +195,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * 配置全文索引
+         * line.
          */
         public Builder line(Line line) {
             this.putBodyParameter("line", line);
@@ -204,7 +204,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * 开启日志聚类，开启后白名单与黑名单至多生效其中一个。
+         * log_reduce.
          */
         public Builder logReduce(Boolean logReduce) {
             this.putBodyParameter("log_reduce", logReduce);
@@ -213,7 +213,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * 日志聚类的聚类字段黑名单
+         * log_reduce_black_list.
          */
         public Builder logReduceBlackList(java.util.List < String > logReduceBlackList) {
             this.putBodyParameter("log_reduce_black_list", logReduceBlackList);
@@ -222,7 +222,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * 日志聚类的聚类字段白名单
+         * log_reduce_white_list.
          */
         public Builder logReduceWhiteList(java.util.List < String > logReduceWhiteList) {
             this.putBodyParameter("log_reduce_white_list", logReduceWhiteList);
@@ -231,7 +231,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * 统计字段的最大长度
+         * max_text_len.
          */
         public Builder maxTextLen(Integer maxTextLen) {
             this.putBodyParameter("max_text_len", maxTextLen);
@@ -240,7 +240,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * 保存时间，单位为天
+         * ttl.
          */
         public Builder ttl(Integer ttl) {
             this.putBodyParameter("ttl", ttl);
@@ -331,7 +331,7 @@ public class CreateIndexRequest extends Request {
             private java.util.List < String > token; 
 
             /**
-             * 大小写敏感
+             * caseSensitive.
              */
             public Builder caseSensitive(Boolean caseSensitive) {
                 this.caseSensitive = caseSensitive;
@@ -339,7 +339,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * 包含中文
+             * chn.
              */
             public Builder chn(Boolean chn) {
                 this.chn = chn;
@@ -347,7 +347,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * 排除的字段列表，不能与include_keys同时指定。
+             * exclude_keys.
              */
             public Builder excludeKeys(java.util.List < String > excludeKeys) {
                 this.excludeKeys = excludeKeys;
@@ -355,7 +355,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * 包含的字段列表，不能与exclude_keys同时指定。
+             * include_keys.
              */
             public Builder includeKeys(java.util.List < String > includeKeys) {
                 this.includeKeys = includeKeys;
@@ -363,7 +363,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * 分词符列表。可以设置一个分词参数，指定这个字段按照哪一种方式分词。
+             * token.
              */
             public Builder token(java.util.List < String > token) {
                 this.token = token;

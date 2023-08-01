@@ -90,7 +90,7 @@ public class SavedSearch extends TeaModel {
         private String topic; 
 
         /**
-         * displayName
+         * displayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -98,7 +98,7 @@ public class SavedSearch extends TeaModel {
         }
 
         /**
-         * logstore
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.logstore = logstore;
@@ -106,7 +106,7 @@ public class SavedSearch extends TeaModel {
         }
 
         /**
-         * savedsearchName
+         * savedsearchName.
          */
         public Builder savedsearchName(String savedsearchName) {
             this.savedsearchName = savedsearchName;
@@ -114,7 +114,7 @@ public class SavedSearch extends TeaModel {
         }
 
         /**
-         * searchQuery
+         * searchQuery.
          */
         public Builder searchQuery(String searchQuery) {
             this.searchQuery = searchQuery;
@@ -122,7 +122,7 @@ public class SavedSearch extends TeaModel {
         }
 
         /**
-         * topic
+         * topic.
          */
         public Builder topic(String topic) {
             this.topic = topic;

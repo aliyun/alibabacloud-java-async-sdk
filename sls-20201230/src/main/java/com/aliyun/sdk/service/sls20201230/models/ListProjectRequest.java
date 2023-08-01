@@ -123,7 +123,7 @@ public class ListProjectRequest extends Request {
         }
 
         /**
-         * 默认值为 500。
+         * size.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

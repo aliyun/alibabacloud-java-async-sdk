@@ -52,7 +52,7 @@ public class Logging extends TeaModel {
         private String loggingProject; 
 
         /**
-         * logging 配置项
+         * loggingDetails.
          */
         public Builder loggingDetails(java.util.List < LoggingDetails> loggingDetails) {
             this.loggingDetails = loggingDetails;
@@ -60,7 +60,7 @@ public class Logging extends TeaModel {
         }
 
         /**
-         * project 名称。
+         * loggingProject.
          */
         public Builder loggingProject(String loggingProject) {
             this.loggingProject = loggingProject;
@@ -114,7 +114,7 @@ public class Logging extends TeaModel {
             private String type; 
 
             /**
-             * logstore 名称。
+             * logstore.
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -122,7 +122,7 @@ public class Logging extends TeaModel {
             }
 
             /**
-             * logging 类型。
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;

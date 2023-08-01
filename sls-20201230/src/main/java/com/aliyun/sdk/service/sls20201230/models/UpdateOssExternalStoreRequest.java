@@ -101,7 +101,7 @@ public class UpdateOssExternalStoreRequest extends Request {
         } 
 
         /**
-         * project 名称。
+         * project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -110,7 +110,7 @@ public class UpdateOssExternalStoreRequest extends Request {
         }
 
         /**
-         * 外部存储的名称。
+         * externalStoreName.
          */
         public Builder externalStoreName(String externalStoreName) {
             this.putPathParameter("externalStoreName", externalStoreName);
@@ -120,7 +120,7 @@ public class UpdateOssExternalStoreRequest extends Request {
         }
 
         /**
-         * 外部存储的参数。
+         * parameter.
          */
         public Builder parameter(Parameter parameter) {
             this.putBodyParameter("parameter", parameter);
@@ -129,7 +129,7 @@ public class UpdateOssExternalStoreRequest extends Request {
         }
 
         /**
-         * 外部存储的类型。这里固定为 oss
+         * storeType.
          */
         public Builder storeType(String storeType) {
             this.putBodyParameter("storeType", storeType);
@@ -300,7 +300,7 @@ public class UpdateOssExternalStoreRequest extends Request {
             private java.util.List < String > objects; 
 
             /**
-             * 您的AccessKey ID。
+             * accessid.
              */
             public Builder accessid(String accessid) {
                 this.accessid = accessid;
@@ -308,7 +308,7 @@ public class UpdateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * 您的AccessKey Secret。
+             * accesskey.
              */
             public Builder accesskey(String accesskey) {
                 this.accesskey = accesskey;
@@ -316,7 +316,7 @@ public class UpdateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * oss 桶名称。
+             * bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -332,7 +332,7 @@ public class UpdateOssExternalStoreRequest extends Request {
             }
 
             /**
-             * oss 的 endpoint 访问网址。
+             * endpoint.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;

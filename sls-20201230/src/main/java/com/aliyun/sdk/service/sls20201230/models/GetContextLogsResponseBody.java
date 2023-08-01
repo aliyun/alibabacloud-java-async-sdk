@@ -86,7 +86,7 @@ public class GetContextLogsResponseBody extends TeaModel {
         private Long totalLines; 
 
         /**
-         * 向前查询到的日志条数。
+         * back_lines.
          */
         public Builder backLines(Long backLines) {
             this.backLines = backLines;
@@ -94,7 +94,7 @@ public class GetContextLogsResponseBody extends TeaModel {
         }
 
         /**
-         * 向后查询到的日志条数。
+         * forward_lines.
          */
         public Builder forwardLines(Long forwardLines) {
             this.forwardLines = forwardLines;
@@ -102,7 +102,7 @@ public class GetContextLogsResponseBody extends TeaModel {
         }
 
         /**
-         * 获取到的日志，按上下文顺序排列。当根据指定起始日志查询不到上下文日志时，此参数为空。
+         * logs.
          */
         public Builder logs(java.util.List < java.util.Map<String, ?>> logs) {
             this.logs = logs;
@@ -110,10 +110,7 @@ public class GetContextLogsResponseBody extends TeaModel {
         }
 
         /**
-         * 查询的结果是否完整。
-         * <p>
-         * Complete：查询已经完成，返回结果为完整结果。
-         * Incomplete：查询已经完成，返回结果为不完整结果，需要重复请求以获得完整结果。
+         * progress.
          */
         public Builder progress(String progress) {
             this.progress = progress;
@@ -121,7 +118,7 @@ public class GetContextLogsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回的总日志条数，包含请求参数中所指定的起始日志。
+         * total_lines.
          */
         public Builder totalLines(Long totalLines) {
             this.totalLines = totalLines;

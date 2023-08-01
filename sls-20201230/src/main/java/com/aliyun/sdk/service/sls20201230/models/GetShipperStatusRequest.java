@@ -157,7 +157,7 @@ public class GetShipperStatusRequest extends Request {
         } 
 
         /**
-         * Project 名称。
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -166,7 +166,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * Logstore 名称。
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -175,7 +175,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * 日志投递名称。
+         * shipperName.
          */
         public Builder shipperName(String shipperName) {
             this.putPathParameter("shipperName", shipperName);
@@ -184,7 +184,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * 日志投递任务创建开始时间。Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
+         * from.
          */
         public Builder from(Long from) {
             this.putQueryParameter("from", from);
@@ -193,7 +193,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * 查询开始行，默认值为0。
+         * offset.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("offset", offset);
@@ -202,7 +202,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * 分页查询时，设置的每页行数。默认值为100，最大值为500。
+         * size.
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
@@ -211,7 +211,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * 默认为空，表示返回所有状态的任务，支持success、fail和running状态。
+         * status.
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);
@@ -220,7 +220,7 @@ public class GetShipperStatusRequest extends Request {
         }
 
         /**
-         * 日志投递任务创建结束时间。Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
+         * to.
          */
         public Builder to(Long to) {
             this.putQueryParameter("to", to);

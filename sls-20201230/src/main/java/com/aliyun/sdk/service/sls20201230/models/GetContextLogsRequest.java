@@ -145,7 +145,7 @@ public class GetContextLogsRequest extends Request {
         } 
 
         /**
-         * project 名称。
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -154,7 +154,7 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * logstore 名称。
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -163,7 +163,7 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * 指定起始日志往前（上文）的日志条数，取值范围为(0,100]。
+         * back_lines.
          */
         public Builder backLines(Long backLines) {
             this.putQueryParameter("back_lines", backLines);
@@ -172,7 +172,7 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * 指定起始日志往后（下文）的日志条数，取值范围为(0,100]。
+         * forward_lines.
          */
         public Builder forwardLines(Long forwardLines) {
             this.putQueryParameter("forward_lines", forwardLines);
@@ -181,7 +181,7 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * 起始日志所属的LogGroup的唯一身份标识。
+         * pack_id.
          */
         public Builder packId(String packId) {
             this.putQueryParameter("pack_id", packId);
@@ -190,7 +190,7 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * 起始日志在对应LogGroup内的唯一上下文结构标识。
+         * pack_meta.
          */
         public Builder packMeta(String packMeta) {
             this.putQueryParameter("pack_meta", packMeta);
@@ -199,7 +199,7 @@ public class GetContextLogsRequest extends Request {
         }
 
         /**
-         * Logstore中数据的类型。该接口中该参数固定为context_log。
+         * type.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

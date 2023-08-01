@@ -91,7 +91,7 @@ public class Chart extends TeaModel {
         private String type; 
 
         /**
-         * action
+         * action.
          */
         public Builder action(java.util.Map < String, ? > action) {
             this.action = action;
@@ -99,7 +99,7 @@ public class Chart extends TeaModel {
         }
 
         /**
-         * 图表的显示配置
+         * display.
          */
         public Builder display(java.util.Map < String, ? > display) {
             this.display = display;
@@ -107,7 +107,7 @@ public class Chart extends TeaModel {
         }
 
         /**
-         * 查询配置
+         * search.
          */
         public Builder search(java.util.Map < String, ? > search) {
             this.search = search;
@@ -115,7 +115,7 @@ public class Chart extends TeaModel {
         }
 
         /**
-         * 图表标题。支持大小写英文字母、数字、下划线_、连字符-，连字符与下划线不能作为名称开头与结尾，长度必须在[2,64] 之间。
+         * title.
          */
         public Builder title(String title) {
             this.title = title;
@@ -123,7 +123,7 @@ public class Chart extends TeaModel {
         }
 
         /**
-         * 图表的类型。
+         * type.
          */
         public Builder type(String type) {
             this.type = type;

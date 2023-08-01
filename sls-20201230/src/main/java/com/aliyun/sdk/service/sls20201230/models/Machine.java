@@ -74,7 +74,7 @@ public class Machine extends TeaModel {
         private String userdefinedId; 
 
         /**
-         * 机器 ip 地址。
+         * ip.
          */
         public Builder ip(String ip) {
             this.ip = ip;
@@ -82,7 +82,7 @@ public class Machine extends TeaModel {
         }
 
         /**
-         * 最后一次心跳时间。Unix时间戳格式，表示从1970-1-1 00:00:00 UTC计算起的秒数。
+         * lastHeartbeatTime.
          */
         public Builder lastHeartbeatTime(Long lastHeartbeatTime) {
             this.lastHeartbeatTime = lastHeartbeatTime;
@@ -90,7 +90,7 @@ public class Machine extends TeaModel {
         }
 
         /**
-         * 机器的唯一标识。
+         * machine-uniqueid.
          */
         public Builder machineUniqueid(String machineUniqueid) {
             this.machineUniqueid = machineUniqueid;
@@ -98,7 +98,7 @@ public class Machine extends TeaModel {
         }
 
         /**
-         * 机器的用户自定义标识。
+         * userdefined-id.
          */
         public Builder userdefinedId(String userdefinedId) {
             this.userdefinedId = userdefinedId;

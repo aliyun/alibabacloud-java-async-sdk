@@ -97,7 +97,7 @@ public class ListDomainsRequest extends Request {
         } 
 
         /**
-         * Project name
+         * Project名称。
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -106,7 +106,7 @@ public class ListDomainsRequest extends Request {
         }
 
         /**
-         * 用于搜索匹配的自定义域名
+         * domainName.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("domainName", domainName);

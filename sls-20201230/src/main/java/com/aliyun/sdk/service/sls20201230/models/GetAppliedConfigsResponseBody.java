@@ -50,7 +50,7 @@ public class GetAppliedConfigsResponseBody extends TeaModel {
         private Integer count; 
 
         /**
-         * Logtail配置名称列表。
+         * configs.
          */
         public Builder configs(java.util.List < String > configs) {
             this.configs = configs;
@@ -58,7 +58,7 @@ public class GetAppliedConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Logtail配置数量。
+         * count.
          */
         public Builder count(Integer count) {
             this.count = count;

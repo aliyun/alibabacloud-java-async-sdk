@@ -115,7 +115,7 @@ public class CreateOdpsShipperRequest extends Request {
         } 
 
         /**
-         * Project 名称。
+         * project.
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -124,7 +124,7 @@ public class CreateOdpsShipperRequest extends Request {
         }
 
         /**
-         * Logstore 名称。
+         * logstore.
          */
         public Builder logstore(String logstore) {
             this.putPathParameter("logstore", logstore);
@@ -133,7 +133,7 @@ public class CreateOdpsShipperRequest extends Request {
         }
 
         /**
-         * 日志投递名称。
+         * shipperName.
          */
         public Builder shipperName(String shipperName) {
             this.putBodyParameter("shipperName", shipperName);
@@ -151,7 +151,7 @@ public class CreateOdpsShipperRequest extends Request {
         }
 
         /**
-         * 投递目标的类型，这里固定为 odps。
+         * targetType.
          */
         public Builder targetType(String targetType) {
             this.putBodyParameter("targetType", targetType);
@@ -283,7 +283,7 @@ public class CreateOdpsShipperRequest extends Request {
             private String partitionTimeFormat; 
 
             /**
-             * 导入时间间隔，秒，只支持 1800 、3600两种。
+             * bufferInterval.
              */
             public Builder bufferInterval(Integer bufferInterval) {
                 this.bufferInterval = bufferInterval;
@@ -291,7 +291,7 @@ public class CreateOdpsShipperRequest extends Request {
             }
 
             /**
-             * 是否启用该配置，默认为 true。
+             * enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -299,7 +299,7 @@ public class CreateOdpsShipperRequest extends Request {
             }
 
             /**
-             * 要投递的普通列，至少要有一个元素。
+             * fields.
              */
             public Builder fields(java.util.List < String > fields) {
                 this.fields = fields;
@@ -307,7 +307,7 @@ public class CreateOdpsShipperRequest extends Request {
             }
 
             /**
-             * odpsEndpoint
+             * odpsEndpoint.
              */
             public Builder odpsEndpoint(String odpsEndpoint) {
                 this.odpsEndpoint = odpsEndpoint;
@@ -315,7 +315,7 @@ public class CreateOdpsShipperRequest extends Request {
             }
 
             /**
-             * 要投递区域的 odps 项目名称
+             * odpsProject.
              */
             public Builder odpsProject(String odpsProject) {
                 this.odpsProject = odpsProject;
@@ -323,7 +323,7 @@ public class CreateOdpsShipperRequest extends Request {
             }
 
             /**
-             * odps表名
+             * odpsTable.
              */
             public Builder odpsTable(String odpsTable) {
                 this.odpsTable = odpsTable;
@@ -331,7 +331,7 @@ public class CreateOdpsShipperRequest extends Request {
             }
 
             /**
-             * 要投递的分区列，至少要有一个元素。
+             * partitionColumn.
              */
             public Builder partitionColumn(java.util.List < String > partitionColumn) {
                 this.partitionColumn = partitionColumn;
@@ -339,7 +339,7 @@ public class CreateOdpsShipperRequest extends Request {
             }
 
             /**
-             * 时间分区格式
+             * partitionTimeFormat.
              */
             public Builder partitionTimeFormat(String partitionTimeFormat) {
                 this.partitionTimeFormat = partitionTimeFormat;
