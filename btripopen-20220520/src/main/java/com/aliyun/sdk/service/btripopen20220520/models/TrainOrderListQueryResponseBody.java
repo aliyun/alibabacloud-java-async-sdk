@@ -722,6 +722,9 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         @NameInMap("arr_city")
         private String arrCity;
 
+        @NameInMap("arr_city_ad_code")
+        private String arrCityAdCode;
+
         @NameInMap("arr_station")
         private String arrStation;
 
@@ -745,6 +748,9 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
 
         @NameInMap("dep_city")
         private String depCity;
+
+        @NameInMap("dep_city_ad_code")
+        private String depCityAdCode;
 
         @NameInMap("dep_station")
         private String depStation;
@@ -827,6 +833,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         private Module(Builder builder) {
             this.applyId = builder.applyId;
             this.arrCity = builder.arrCity;
+            this.arrCityAdCode = builder.arrCityAdCode;
             this.arrStation = builder.arrStation;
             this.arrTime = builder.arrTime;
             this.btripTitle = builder.btripTitle;
@@ -835,6 +842,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             this.corpName = builder.corpName;
             this.costCenter = builder.costCenter;
             this.depCity = builder.depCity;
+            this.depCityAdCode = builder.depCityAdCode;
             this.depStation = builder.depStation;
             this.depTime = builder.depTime;
             this.departId = builder.departId;
@@ -883,6 +891,13 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
          */
         public String getArrCity() {
             return this.arrCity;
+        }
+
+        /**
+         * @return arrCityAdCode
+         */
+        public String getArrCityAdCode() {
+            return this.arrCityAdCode;
         }
 
         /**
@@ -939,6 +954,13 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
          */
         public String getDepCity() {
             return this.depCity;
+        }
+
+        /**
+         * @return depCityAdCode
+         */
+        public String getDepCityAdCode() {
+            return this.depCityAdCode;
         }
 
         /**
@@ -1126,6 +1148,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         public static final class Builder {
             private Long applyId; 
             private String arrCity; 
+            private String arrCityAdCode; 
             private String arrStation; 
             private String arrTime; 
             private String btripTitle; 
@@ -1134,6 +1157,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             private String corpName; 
             private CostCenter costCenter; 
             private String depCity; 
+            private String depCityAdCode; 
             private String depStation; 
             private String depTime; 
             private String departId; 
@@ -1174,6 +1198,14 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
+                return this;
+            }
+
+            /**
+             * arr_city_ad_code.
+             */
+            public Builder arrCityAdCode(String arrCityAdCode) {
+                this.arrCityAdCode = arrCityAdCode;
                 return this;
             }
 
@@ -1238,6 +1270,14 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
              */
             public Builder depCity(String depCity) {
                 this.depCity = depCity;
+                return this;
+            }
+
+            /**
+             * dep_city_ad_code.
+             */
+            public Builder depCityAdCode(String depCityAdCode) {
+                this.depCityAdCode = depCityAdCode;
                 return this;
             }
 

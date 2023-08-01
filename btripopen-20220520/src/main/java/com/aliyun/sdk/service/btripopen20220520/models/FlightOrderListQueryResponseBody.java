@@ -786,6 +786,9 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         @NameInMap("arr_city")
         private String arrCity;
 
+        @NameInMap("arr_city_ad_code")
+        private String arrCityAdCode;
+
         @NameInMap("btrip_title")
         private String btripTitle;
 
@@ -809,6 +812,9 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
 
         @NameInMap("dep_city")
         private String depCity;
+
+        @NameInMap("dep_city_ad_code")
+        private String depCityAdCode;
 
         @NameInMap("dep_date")
         private String depDate;
@@ -889,6 +895,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             this.applyId = builder.applyId;
             this.arrAirport = builder.arrAirport;
             this.arrCity = builder.arrCity;
+            this.arrCityAdCode = builder.arrCityAdCode;
             this.btripTitle = builder.btripTitle;
             this.cabinClass = builder.cabinClass;
             this.contactName = builder.contactName;
@@ -897,6 +904,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             this.costCenter = builder.costCenter;
             this.depAirport = builder.depAirport;
             this.depCity = builder.depCity;
+            this.depCityAdCode = builder.depCityAdCode;
             this.depDate = builder.depDate;
             this.departId = builder.departId;
             this.departName = builder.departName;
@@ -954,6 +962,13 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return arrCityAdCode
+         */
+        public String getArrCityAdCode() {
+            return this.arrCityAdCode;
+        }
+
+        /**
          * @return btripTitle
          */
         public String getBtripTitle() {
@@ -1007,6 +1022,13 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
          */
         public String getDepCity() {
             return this.depCity;
+        }
+
+        /**
+         * @return depCityAdCode
+         */
+        public String getDepCityAdCode() {
+            return this.depCityAdCode;
         }
 
         /**
@@ -1188,6 +1210,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             private Long applyId; 
             private String arrAirport; 
             private String arrCity; 
+            private String arrCityAdCode; 
             private String btripTitle; 
             private String cabinClass; 
             private String contactName; 
@@ -1196,6 +1219,7 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
             private CostCenter costCenter; 
             private String depAirport; 
             private String depCity; 
+            private String depCityAdCode; 
             private String depDate; 
             private String departId; 
             private String departName; 
@@ -1243,6 +1267,14 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
+                return this;
+            }
+
+            /**
+             * arr_city_ad_code.
+             */
+            public Builder arrCityAdCode(String arrCityAdCode) {
+                this.arrCityAdCode = arrCityAdCode;
                 return this;
             }
 
@@ -1307,6 +1339,14 @@ public class FlightOrderListQueryResponseBody extends TeaModel {
              */
             public Builder depCity(String depCity) {
                 this.depCity = depCity;
+                return this;
+            }
+
+            /**
+             * dep_city_ad_code.
+             */
+            public Builder depCityAdCode(String depCityAdCode) {
+                this.depCityAdCode = depCityAdCode;
                 return this;
             }
 

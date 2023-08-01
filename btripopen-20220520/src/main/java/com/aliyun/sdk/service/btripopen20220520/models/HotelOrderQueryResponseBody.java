@@ -161,6 +161,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         @NameInMap("city")
         private String city;
 
+        @NameInMap("city_ad_code")
+        private String cityAdCode;
+
         @NameInMap("hotel_name")
         private String hotelName;
 
@@ -180,6 +183,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             this.checkIn = builder.checkIn;
             this.checkOut = builder.checkOut;
             this.city = builder.city;
+            this.cityAdCode = builder.cityAdCode;
             this.hotelName = builder.hotelName;
             this.hotelSupportVatInvoiceType = builder.hotelSupportVatInvoiceType;
             this.night = builder.night;
@@ -214,6 +218,13 @@ public class HotelOrderQueryResponseBody extends TeaModel {
          */
         public String getCity() {
             return this.city;
+        }
+
+        /**
+         * @return cityAdCode
+         */
+        public String getCityAdCode() {
+            return this.cityAdCode;
         }
 
         /**
@@ -255,6 +266,7 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private Long checkIn; 
             private Long checkOut; 
             private String city; 
+            private String cityAdCode; 
             private String hotelName; 
             private Integer hotelSupportVatInvoiceType; 
             private Integer night; 
@@ -282,6 +294,14 @@ public class HotelOrderQueryResponseBody extends TeaModel {
              */
             public Builder city(String city) {
                 this.city = city;
+                return this;
+            }
+
+            /**
+             * city_ad_code.
+             */
+            public Builder cityAdCode(String cityAdCode) {
+                this.cityAdCode = cityAdCode;
                 return this;
             }
 

@@ -816,6 +816,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
     }
     public static class TravelerList extends TeaModel {
+        @NameInMap("job_no")
+        private String jobNo;
+
         @NameInMap("user_id")
         private String userId;
 
@@ -823,6 +826,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
         private String userName;
 
         private TravelerList(Builder builder) {
+            this.jobNo = builder.jobNo;
             this.userId = builder.userId;
             this.userName = builder.userName;
         }
@@ -833,6 +837,13 @@ public class ApplyListQueryResponseBody extends TeaModel {
 
         public static TravelerList create() {
             return builder().build();
+        }
+
+        /**
+         * @return jobNo
+         */
+        public String getJobNo() {
+            return this.jobNo;
         }
 
         /**
@@ -850,8 +861,17 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String jobNo; 
             private String userId; 
             private String userName; 
+
+            /**
+             * job_no.
+             */
+            public Builder jobNo(String jobNo) {
+                this.jobNo = jobNo;
+                return this;
+            }
 
             /**
              * user_id.

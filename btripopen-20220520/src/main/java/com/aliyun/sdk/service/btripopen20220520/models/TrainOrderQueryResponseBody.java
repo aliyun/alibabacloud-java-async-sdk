@@ -1905,11 +1905,17 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         @NameInMap("dep_time")
         private String depTime;
 
+        @NameInMap("from_city_ad_code")
+        private String fromCityAdCode;
+
         @NameInMap("from_station_name")
         private String fromStationName;
 
         @NameInMap("run_time")
         private Long runTime;
+
+        @NameInMap("to_city_ad_code")
+        private String toCityAdCode;
 
         @NameInMap("to_station_name")
         private String toStationName;
@@ -1920,8 +1926,10 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         private TrainInfo(Builder builder) {
             this.arrTime = builder.arrTime;
             this.depTime = builder.depTime;
+            this.fromCityAdCode = builder.fromCityAdCode;
             this.fromStationName = builder.fromStationName;
             this.runTime = builder.runTime;
+            this.toCityAdCode = builder.toCityAdCode;
             this.toStationName = builder.toStationName;
             this.trainNo = builder.trainNo;
         }
@@ -1949,6 +1957,13 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return fromCityAdCode
+         */
+        public String getFromCityAdCode() {
+            return this.fromCityAdCode;
+        }
+
+        /**
          * @return fromStationName
          */
         public String getFromStationName() {
@@ -1960,6 +1975,13 @@ public class TrainOrderQueryResponseBody extends TeaModel {
          */
         public Long getRunTime() {
             return this.runTime;
+        }
+
+        /**
+         * @return toCityAdCode
+         */
+        public String getToCityAdCode() {
+            return this.toCityAdCode;
         }
 
         /**
@@ -1979,8 +2001,10 @@ public class TrainOrderQueryResponseBody extends TeaModel {
         public static final class Builder {
             private String arrTime; 
             private String depTime; 
+            private String fromCityAdCode; 
             private String fromStationName; 
             private Long runTime; 
+            private String toCityAdCode; 
             private String toStationName; 
             private String trainNo; 
 
@@ -2001,6 +2025,14 @@ public class TrainOrderQueryResponseBody extends TeaModel {
             }
 
             /**
+             * from_city_ad_code.
+             */
+            public Builder fromCityAdCode(String fromCityAdCode) {
+                this.fromCityAdCode = fromCityAdCode;
+                return this;
+            }
+
+            /**
              * from_station_name.
              */
             public Builder fromStationName(String fromStationName) {
@@ -2013,6 +2045,14 @@ public class TrainOrderQueryResponseBody extends TeaModel {
              */
             public Builder runTime(Long runTime) {
                 this.runTime = runTime;
+                return this;
+            }
+
+            /**
+             * to_city_ad_code.
+             */
+            public Builder toCityAdCode(String toCityAdCode) {
+                this.toCityAdCode = toCityAdCode;
                 return this;
             }
 

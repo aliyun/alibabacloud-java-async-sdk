@@ -611,6 +611,9 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
         @NameInMap("city")
         private String city;
 
+        @NameInMap("city_ad_code")
+        private String cityAdCode;
+
         @NameInMap("contact_name")
         private String contactName;
 
@@ -710,6 +713,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             this.checkIn = builder.checkIn;
             this.checkOut = builder.checkOut;
             this.city = builder.city;
+            this.cityAdCode = builder.cityAdCode;
             this.contactName = builder.contactName;
             this.corpId = builder.corpId;
             this.corpName = builder.corpName;
@@ -784,6 +788,13 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
          */
         public String getCity() {
             return this.city;
+        }
+
+        /**
+         * @return cityAdCode
+         */
+        public String getCityAdCode() {
+            return this.cityAdCode;
         }
 
         /**
@@ -1009,6 +1020,7 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
             private String checkIn; 
             private String checkOut; 
             private String city; 
+            private String cityAdCode; 
             private String contactName; 
             private String corpId; 
             private String corpName; 
@@ -1078,6 +1090,14 @@ public class HotelOrderListQueryResponseBody extends TeaModel {
              */
             public Builder city(String city) {
                 this.city = city;
+                return this;
+            }
+
+            /**
+             * city_ad_code.
+             */
+            public Builder cityAdCode(String cityAdCode) {
+                this.cityAdCode = cityAdCode;
                 return this;
             }
 
