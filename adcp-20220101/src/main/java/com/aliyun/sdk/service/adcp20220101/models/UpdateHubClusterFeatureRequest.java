@@ -13,12 +13,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateHubClusterFeatureRequest extends Request {
     @Query
+    @NameInMap("AccessControlList")
+    private java.util.List < String > accessControlList;
+
+    @Query
     @NameInMap("ApiServerEipId")
     private String apiServerEipId;
 
     @Query
     @NameInMap("ArgoCDEnabled")
     private Boolean argoCDEnabled;
+
+    @Query
+    @NameInMap("ArgoCDHAEnabled")
+    private Boolean argoCDHAEnabled;
 
     @Query
     @NameInMap("ArgoServerEnabled")
@@ -54,6 +62,10 @@ public class UpdateHubClusterFeatureRequest extends Request {
     private String priceLimit;
 
     @Query
+    @NameInMap("PublicAccessEnabled")
+    private Boolean publicAccessEnabled;
+
+    @Query
     @NameInMap("PublicApiServerEnabled")
     private Boolean publicApiServerEnabled;
 
@@ -67,8 +79,10 @@ public class UpdateHubClusterFeatureRequest extends Request {
 
     private UpdateHubClusterFeatureRequest(Builder builder) {
         super(builder);
+        this.accessControlList = builder.accessControlList;
         this.apiServerEipId = builder.apiServerEipId;
         this.argoCDEnabled = builder.argoCDEnabled;
+        this.argoCDHAEnabled = builder.argoCDHAEnabled;
         this.argoServerEnabled = builder.argoServerEnabled;
         this.auditLogEnabled = builder.auditLogEnabled;
         this.clusterId = builder.clusterId;
@@ -77,6 +91,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         this.monitorEnabled = builder.monitorEnabled;
         this.name = builder.name;
         this.priceLimit = builder.priceLimit;
+        this.publicAccessEnabled = builder.publicAccessEnabled;
         this.publicApiServerEnabled = builder.publicApiServerEnabled;
         this.vSwitches = builder.vSwitches;
         this.workflowScheduleMode = builder.workflowScheduleMode;
@@ -96,6 +111,13 @@ public class UpdateHubClusterFeatureRequest extends Request {
     }
 
     /**
+     * @return accessControlList
+     */
+    public java.util.List < String > getAccessControlList() {
+        return this.accessControlList;
+    }
+
+    /**
      * @return apiServerEipId
      */
     public String getApiServerEipId() {
@@ -107,6 +129,13 @@ public class UpdateHubClusterFeatureRequest extends Request {
      */
     public Boolean getArgoCDEnabled() {
         return this.argoCDEnabled;
+    }
+
+    /**
+     * @return argoCDHAEnabled
+     */
+    public Boolean getArgoCDHAEnabled() {
+        return this.argoCDHAEnabled;
     }
 
     /**
@@ -166,6 +195,13 @@ public class UpdateHubClusterFeatureRequest extends Request {
     }
 
     /**
+     * @return publicAccessEnabled
+     */
+    public Boolean getPublicAccessEnabled() {
+        return this.publicAccessEnabled;
+    }
+
+    /**
      * @return publicApiServerEnabled
      */
     public Boolean getPublicApiServerEnabled() {
@@ -187,8 +223,10 @@ public class UpdateHubClusterFeatureRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateHubClusterFeatureRequest, Builder> {
+        private java.util.List < String > accessControlList; 
         private String apiServerEipId; 
         private Boolean argoCDEnabled; 
+        private Boolean argoCDHAEnabled; 
         private Boolean argoServerEnabled; 
         private Boolean auditLogEnabled; 
         private String clusterId; 
@@ -197,6 +235,7 @@ public class UpdateHubClusterFeatureRequest extends Request {
         private Boolean monitorEnabled; 
         private String name; 
         private String priceLimit; 
+        private Boolean publicAccessEnabled; 
         private Boolean publicApiServerEnabled; 
         private java.util.List < String > vSwitches; 
         private String workflowScheduleMode; 
@@ -207,8 +246,10 @@ public class UpdateHubClusterFeatureRequest extends Request {
 
         private Builder(UpdateHubClusterFeatureRequest request) {
             super(request);
+            this.accessControlList = request.accessControlList;
             this.apiServerEipId = request.apiServerEipId;
             this.argoCDEnabled = request.argoCDEnabled;
+            this.argoCDHAEnabled = request.argoCDHAEnabled;
             this.argoServerEnabled = request.argoServerEnabled;
             this.auditLogEnabled = request.auditLogEnabled;
             this.clusterId = request.clusterId;
@@ -217,10 +258,21 @@ public class UpdateHubClusterFeatureRequest extends Request {
             this.monitorEnabled = request.monitorEnabled;
             this.name = request.name;
             this.priceLimit = request.priceLimit;
+            this.publicAccessEnabled = request.publicAccessEnabled;
             this.publicApiServerEnabled = request.publicApiServerEnabled;
             this.vSwitches = request.vSwitches;
             this.workflowScheduleMode = request.workflowScheduleMode;
         } 
+
+        /**
+         * AccessControlList.
+         */
+        public Builder accessControlList(java.util.List < String > accessControlList) {
+            String accessControlListShrink = shrink(accessControlList, "AccessControlList", "json");
+            this.putQueryParameter("AccessControlList", accessControlListShrink);
+            this.accessControlList = accessControlList;
+            return this;
+        }
 
         /**
          * The ID of the EIP.
@@ -237,6 +289,15 @@ public class UpdateHubClusterFeatureRequest extends Request {
         public Builder argoCDEnabled(Boolean argoCDEnabled) {
             this.putQueryParameter("ArgoCDEnabled", argoCDEnabled);
             this.argoCDEnabled = argoCDEnabled;
+            return this;
+        }
+
+        /**
+         * ArgoCDHAEnabled.
+         */
+        public Builder argoCDHAEnabled(Boolean argoCDHAEnabled) {
+            this.putQueryParameter("ArgoCDHAEnabled", argoCDHAEnabled);
+            this.argoCDHAEnabled = argoCDHAEnabled;
             return this;
         }
 
@@ -320,6 +381,15 @@ public class UpdateHubClusterFeatureRequest extends Request {
         public Builder priceLimit(String priceLimit) {
             this.putQueryParameter("PriceLimit", priceLimit);
             this.priceLimit = priceLimit;
+            return this;
+        }
+
+        /**
+         * PublicAccessEnabled.
+         */
+        public Builder publicAccessEnabled(Boolean publicAccessEnabled) {
+            this.putQueryParameter("PublicAccessEnabled", publicAccessEnabled);
+            this.publicAccessEnabled = publicAccessEnabled;
             return this;
         }
 

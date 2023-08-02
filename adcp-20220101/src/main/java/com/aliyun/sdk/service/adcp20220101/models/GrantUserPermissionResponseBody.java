@@ -38,7 +38,7 @@ public class GrantUserPermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
