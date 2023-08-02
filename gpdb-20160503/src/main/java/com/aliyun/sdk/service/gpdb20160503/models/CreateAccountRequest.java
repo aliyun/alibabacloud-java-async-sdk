@@ -39,6 +39,10 @@ public class CreateAccountRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private CreateAccountRequest(Builder builder) {
         super(builder);
         this.accountDescription = builder.accountDescription;
@@ -47,6 +51,7 @@ public class CreateAccountRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.databaseName = builder.databaseName;
         this.ownerId = builder.ownerId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -104,6 +109,13 @@ public class CreateAccountRequest extends Request {
         return this.ownerId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<CreateAccountRequest, Builder> {
         private String accountDescription; 
         private String accountName; 
@@ -111,23 +123,25 @@ public class CreateAccountRequest extends Request {
         private String DBInstanceId; 
         private String databaseName; 
         private Long ownerId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateAccountRequest response) {
-            super(response);
-            this.accountDescription = response.accountDescription;
-            this.accountName = response.accountName;
-            this.accountPassword = response.accountPassword;
-            this.DBInstanceId = response.DBInstanceId;
-            this.databaseName = response.databaseName;
-            this.ownerId = response.ownerId;
+        private Builder(CreateAccountRequest request) {
+            super(request);
+            this.accountDescription = request.accountDescription;
+            this.accountName = request.accountName;
+            this.accountPassword = request.accountPassword;
+            this.DBInstanceId = request.DBInstanceId;
+            this.databaseName = request.databaseName;
+            this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * AccountDescription.
+         * The description of the privileged account.
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -136,7 +150,13 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The name of the privileged account.
+         * <p>
+         * 
+         * *   The name can contain lowercase letters, digits, and underscores (\_).
+         * *   The name must start with a lowercase letter and end with a lowercase letter or a digit.
+         * *   The name cannot start with gp.
+         * *   The name must be 2 to 16 characters in length.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -145,7 +165,12 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The password of the privileged account.
+         * <p>
+         * 
+         * *   The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+         * *   Special characters include `! @ # $ % ^ & * ( ) _ + - =`
+         * *   The password must be 8 to 32 characters in length.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -154,7 +179,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -163,7 +191,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * The name of the database.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -177,6 +205,15 @@ public class CreateAccountRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

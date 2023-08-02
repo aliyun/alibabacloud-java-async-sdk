@@ -98,7 +98,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackupRetentionPeriod.
+         * The number of days for which data backup files are retained.
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -106,7 +106,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * EnableRecoveryPoint.
+         * Indicates whether automatic point-in-time backup is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**: Automatic point-in-time backup is enabled.
+         * *   **false**: Automatic point-in-time backup is disabled.
          */
         public Builder enableRecoveryPoint(Boolean enableRecoveryPoint) {
             this.enableRecoveryPoint = enableRecoveryPoint;
@@ -114,7 +118,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * The cycle based on which backups are performed. If more than one day of the week is specified, the days of the week are separated by commas (,). Valid values:
+         * <p>
+         * 
+         * *   **Monday**
+         * *   **Tuesday**
+         * *   **Wednesday**
+         * *   **Thursday**
+         * *   **Friday**
+         * *   **Saturday**
+         * *   **Sunday**
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -122,7 +135,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupTime.
+         * The backup time. The time is in the HH:mmZ-HH:mmZ format. The time is displayed in UTC.
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -130,7 +143,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RecoveryPointPeriod.
+         * The frequency of the point-in-time backup. Valid values:
+         * <p>
+         * 
+         * *   **1**: per hour
+         * *   **2**: per 2 hours
+         * *   **4**: per 4 hours
+         * *   **8**: per 8 hours
          */
         public Builder recoveryPointPeriod(String recoveryPointPeriod) {
             this.recoveryPointPeriod = recoveryPointPeriod;
@@ -138,7 +157,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -74,7 +74,7 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -82,7 +82,7 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceName.
+         * The name of the instance.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -90,7 +90,7 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class UpgradeDBVersionResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

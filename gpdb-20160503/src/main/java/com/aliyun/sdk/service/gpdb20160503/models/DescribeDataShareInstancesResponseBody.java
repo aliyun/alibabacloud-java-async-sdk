@@ -86,7 +86,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * Details of the instances.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -218,7 +218,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * DBInstanceId.
+             * The ID of the instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -226,7 +226,12 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceMode.
+             * The resource type of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Serverless**: Serverless mode
+             * *   **StorageElasic**: elastic storage mode
+             * *   **Classic**: reserved storage mode
              */
             public Builder DBInstanceMode(String DBInstanceMode) {
                 this.DBInstanceMode = DBInstanceMode;
@@ -234,7 +239,13 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DataShareStatus.
+             * The state of data sharing. Valid values:
+             * <p>
+             * 
+             * *   **opening**: Data sharing is being enabled.
+             * *   **opened**: Data sharing is enabled.
+             * *   **closing**: Data sharing is being disabled.
+             * *   **closed**: Data sharing is disabled.
              */
             public Builder dataShareStatus(String dataShareStatus) {
                 this.dataShareStatus = dataShareStatus;
@@ -242,7 +253,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -250,7 +261,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -258,7 +269,7 @@ public class DescribeDataShareInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

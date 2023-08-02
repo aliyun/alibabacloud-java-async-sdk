@@ -50,7 +50,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * Details of the IP address whitelists.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +58,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             private String securityIPList; 
 
             /**
-             * DBInstanceIPArrayAttribute.
+             * The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute does not appear in the console.
              */
             public Builder DBInstanceIPArrayAttribute(String DBInstanceIPArrayAttribute) {
                 this.DBInstanceIPArrayAttribute = DBInstanceIPArrayAttribute;
@@ -130,7 +130,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceIPArrayName.
+             * The name of the IP address whitelist.
              */
             public Builder DBInstanceIPArrayName(String DBInstanceIPArrayName) {
                 this.DBInstanceIPArrayName = DBInstanceIPArrayName;
@@ -138,7 +138,12 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * The IP addresses listed in the whitelist. You can add up to 1,000 IP addresses to the whitelist. Separate multiple IP addresses with commas (,). The IP addresses must use one of the following formats:
+             * <p>
+             * 
+             * *   0.0.0.0/0
+             * *   10.23.12.24. This is a standard IP address.
+             * *   10.23.12.24/24. This is a CIDR block. The value `/24` indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value in the range of `1 to 32`.
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;

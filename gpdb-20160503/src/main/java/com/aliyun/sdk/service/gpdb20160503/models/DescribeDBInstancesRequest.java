@@ -58,6 +58,10 @@ public class DescribeDBInstancesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -74,6 +78,7 @@ public class DescribeDBInstancesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
     }
 
@@ -168,6 +173,13 @@ public class DescribeDBInstancesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -186,39 +198,47 @@ public class DescribeDBInstancesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDBInstancesRequest response) {
-            super(response);
-            this.DBInstanceCategories = response.DBInstanceCategories;
-            this.DBInstanceDescription = response.DBInstanceDescription;
-            this.DBInstanceIds = response.DBInstanceIds;
-            this.DBInstanceModes = response.DBInstanceModes;
-            this.DBInstanceStatuses = response.DBInstanceStatuses;
-            this.instanceDeployTypes = response.instanceDeployTypes;
-            this.instanceNetworkType = response.instanceNetworkType;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.tag = response.tag;
+        private Builder(DescribeDBInstancesRequest request) {
+            super(request);
+            this.DBInstanceCategories = request.DBInstanceCategories;
+            this.DBInstanceDescription = request.DBInstanceDescription;
+            this.DBInstanceIds = request.DBInstanceIds;
+            this.DBInstanceModes = request.DBInstanceModes;
+            this.DBInstanceStatuses = request.DBInstanceStatuses;
+            this.instanceDeployTypes = request.instanceDeployTypes;
+            this.instanceNetworkType = request.instanceNetworkType;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
         } 
 
         /**
-         * DBInstanceCategories.
+         * The edition of the instance. Separate multiple values with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **basic**: Basic Edition
+         * *   **highavailability**: High-availability Edition
+         * *   **finance**: Enterprise Edition
          */
         public Builder DBInstanceCategories(java.util.List < String > DBInstanceCategories) {
-            this.putQueryParameter("DBInstanceCategories", DBInstanceCategories);
+            String DBInstanceCategoriesShrink = shrink(DBInstanceCategories, "DBInstanceCategories", "simple");
+            this.putQueryParameter("DBInstanceCategories", DBInstanceCategoriesShrink);
             this.DBInstanceCategories = DBInstanceCategories;
             return this;
         }
 
         /**
-         * DBInstanceDescription.
+         * The description of the instance.
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -227,7 +247,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * DBInstanceIds.
+         * The ID of the instance. Separate multiple IDs with commas (,).
          */
         public Builder DBInstanceIds(String DBInstanceIds) {
             this.putQueryParameter("DBInstanceIds", DBInstanceIds);
@@ -236,34 +256,51 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * DBInstanceModes.
+         * The resource type of the instance. Separate multiple values with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **serverless**: Serverless mode
+         * *   **storageelastic**: elastic storage mode
+         * *   **classic**: reserved storage mode
          */
         public Builder DBInstanceModes(java.util.List < String > DBInstanceModes) {
-            this.putQueryParameter("DBInstanceModes", DBInstanceModes);
+            String DBInstanceModesShrink = shrink(DBInstanceModes, "DBInstanceModes", "simple");
+            this.putQueryParameter("DBInstanceModes", DBInstanceModesShrink);
             this.DBInstanceModes = DBInstanceModes;
             return this;
         }
 
         /**
-         * DBInstanceStatuses.
+         * The state of the instance. Separate multiple values with commas (,). For more information, see [Instance statuses](~~86944~~).
+         * <p>
+         * 
+         * >  The value of this parameter must be in lowercase.
          */
         public Builder DBInstanceStatuses(java.util.List < String > DBInstanceStatuses) {
-            this.putQueryParameter("DBInstanceStatuses", DBInstanceStatuses);
+            String DBInstanceStatusesShrink = shrink(DBInstanceStatuses, "DBInstanceStatuses", "simple");
+            this.putQueryParameter("DBInstanceStatuses", DBInstanceStatusesShrink);
             this.DBInstanceStatuses = DBInstanceStatuses;
             return this;
         }
 
         /**
-         * InstanceDeployTypes.
+         * This parameter is no longer used.
          */
         public Builder instanceDeployTypes(java.util.List < String > instanceDeployTypes) {
-            this.putQueryParameter("InstanceDeployTypes", instanceDeployTypes);
+            String instanceDeployTypesShrink = shrink(instanceDeployTypes, "InstanceDeployTypes", "simple");
+            this.putQueryParameter("InstanceDeployTypes", instanceDeployTypesShrink);
             this.instanceDeployTypes = instanceDeployTypes;
             return this;
         }
 
         /**
-         * InstanceNetworkType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **VPC**
+         * *   **Classic**
+         * 
+         * >  If you do not specify this parameter, instances of both network types are returned.
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -281,7 +318,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -290,7 +327,14 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -299,7 +343,10 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -308,7 +355,16 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The ID of the resource group to which the instance belongs.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The list of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -362,7 +418,7 @@ public class DescribeDBInstancesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +426,7 @@ public class DescribeDBInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N.
              */
             public Builder value(String value) {
                 this.value = value;

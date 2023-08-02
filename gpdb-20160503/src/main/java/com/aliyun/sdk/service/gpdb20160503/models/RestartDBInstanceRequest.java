@@ -62,14 +62,14 @@ public class RestartDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RestartDBInstanceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
+        private Builder(RestartDBInstanceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. For more information, see [How to ensure idempotence](~~327176~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -78,7 +78,10 @@ public class RestartDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

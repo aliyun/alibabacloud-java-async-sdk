@@ -62,10 +62,10 @@ public class CreateServiceLinkedRoleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateServiceLinkedRoleRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(CreateServiceLinkedRoleRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -78,7 +78,7 @@ public class CreateServiceLinkedRoleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

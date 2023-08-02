@@ -62,7 +62,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         private Status status; 
 
         /**
-         * DBClusterId.
+         * The ID of instance.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,7 +70,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The information of performance metrics. Each performance metric consists of the parameter name, status, and metric value. The metric information is returned only for the performance parameters specified by **Key**. For example, if you set **Key** to **adbpg_status**, only the metric information of **adbpg_status** is returned.
+         * <p>
+         * 
+         * For more information about performance parameters, see [Performance parameters](~~86943~~).
          */
         public Builder status(Status status) {
             this.status = status;
@@ -130,7 +133,12 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Status.
+             * The status corresponding to the maximum storage usage among all compute nodes. Valid values:
+             * <p>
+             * 
+             * *   **critical**: The compute node storage usage is greater than or equal to 90%. In this case, the instance is locked.
+             * *   **warning**: The compute node storage usage is greater than or equal to 80% and less than 90%.
+             * *   **healthy**: The compute node storage usage is less than 80%.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -138,7 +146,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The metric value of maximum compute node storage usage.
+             * <p>
+             * 
+             * Unit: %.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -191,7 +202,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Status.
+             * The connection health status of the instance. Valid values:
+             * <p>
+             * 
+             * *   **critical**: The instance connection usage is greater than 95%. In this case, this metric is marked in red in the console.
+             * *   **warning**: The instance connection usage is greater than 90% and less than or equal to 95%. In this case, this metric is marked in yellow in the console.
+             * *   **healthy**: The instance connection usage is less than or equal to 90%. In this case, this metric is marked in green in the console.
+             * 
+             * >  The instance connection usage is the maximum connection usage among all the coordinator and compute nodes.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -199,7 +217,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The metric value of instance connection usage.
+             * <p>
+             * 
+             * Unit: %.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -252,7 +273,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Status.
+             * The storage status of the instance. Valid values:
+             * <p>
+             * 
+             * *   **critical**: The instance storage usage is greater than or equal to 90%. In this case, this metric is marked in red in the console and the instance is locked.
+             * *   **warning**: The instance storage usage is greater than or equal to 70% and less than 90%. In this case, this metric is marked in yellow in the console.
+             * *   **healthy**: The instance storage usage is less than 70%. In this case, this metric is marked in green in the console.
+             * 
+             * >  The instance storage usage is the average storage usage of all compute nodes.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -260,7 +288,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The metric value of instance storage usage.
+             * <p>
+             * 
+             * Unit: %.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -313,7 +344,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Status.
+             * The status corresponding to the storage usage of the instance. Valid values:
+             * <p>
+             * 
+             * *   **critical**: The instance storage usage is greater than or equal to 90%. In this case, the instance is locked.
+             * *   **warning**: The instance storage usage is greater than or equal to 70% and less than 90%.
+             * *   **healthy**: The instance storage usage is less than 70%.
+             * 
+             * >  The instance storage usage is the average storage usage of all compute nodes.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -321,7 +359,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The metric value of instance storage usage.
+             * <p>
+             * 
+             * Unit: %.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -330,6 +371,138 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
             public AdbpgDiskUsagePercent build() {
                 return new AdbpgDiskUsagePercent(this);
+            } 
+
+        } 
+
+    }
+    public static class AdbpgInstanceColdDataGb extends TeaModel {
+        @NameInMap("Value")
+        private Float value;
+
+        private AdbpgInstanceColdDataGb(Builder builder) {
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdbpgInstanceColdDataGb create() {
+            return builder().build();
+        }
+
+        /**
+         * @return value
+         */
+        public Float getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private Float value; 
+
+            /**
+             * The metric value of instance storage usage.
+             * <p>
+             * 
+             * Unit: %.
+             */
+            public Builder value(Float value) {
+                this.value = value;
+                return this;
+            }
+
+            public AdbpgInstanceColdDataGb build() {
+                return new AdbpgInstanceColdDataGb(this);
+            } 
+
+        } 
+
+    }
+    public static class AdbpgInstanceHotDataGb extends TeaModel {
+        @NameInMap("Value")
+        private Float value;
+
+        private AdbpgInstanceHotDataGb(Builder builder) {
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdbpgInstanceHotDataGb create() {
+            return builder().build();
+        }
+
+        /**
+         * @return value
+         */
+        public Float getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private Float value; 
+
+            /**
+             * The metric value of instance storage usage.
+             * <p>
+             * 
+             * Unit: %.
+             */
+            public Builder value(Float value) {
+                this.value = value;
+                return this;
+            }
+
+            public AdbpgInstanceHotDataGb build() {
+                return new AdbpgInstanceHotDataGb(this);
+            } 
+
+        } 
+
+    }
+    public static class AdbpgInstanceTotalDataGb extends TeaModel {
+        @NameInMap("Value")
+        private Float value;
+
+        private AdbpgInstanceTotalDataGb(Builder builder) {
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdbpgInstanceTotalDataGb create() {
+            return builder().build();
+        }
+
+        /**
+         * @return value
+         */
+        public Float getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private Float value; 
+
+            /**
+             * The metric value of instance storage usage.
+             * <p>
+             * 
+             * Unit: %.
+             */
+            public Builder value(Float value) {
+                this.value = value;
+                return this;
+            }
+
+            public AdbpgInstanceTotalDataGb build() {
+                return new AdbpgInstanceTotalDataGb(this);
             } 
 
         } 
@@ -374,7 +547,12 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Status.
+             * The status corresponding to the maximum storage usage of the coordinator node. Valid values:
+             * <p>
+             * 
+             * *   **critical**: The coordinator node storage usage is greater than or equal to 90%. In this case, the instance is locked.
+             * *   **warning**: The coordinator node storage usage is greater than or equal to 70% and less than 90%.
+             * *   **healthy**: The coordinator node storage usage is less than 70%.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -382,7 +560,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The metric value of maximum coordinator node storage usage.
+             * <p>
+             * 
+             * Unit: %.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -391,6 +572,138 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
             public AdbpgMasterDiskUsagePercentMax build() {
                 return new AdbpgMasterDiskUsagePercentMax(this);
+            } 
+
+        } 
+
+    }
+    public static class AdbpgMasterStatus extends TeaModel {
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("Value")
+        private Float value;
+
+        private AdbpgMasterStatus(Builder builder) {
+            this.status = builder.status;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdbpgMasterStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return value
+         */
+        public Float getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String status; 
+            private Float value; 
+
+            /**
+             * The availability status of the coordinator node. Valid values:
+             * <p>
+             * 
+             * *   **critical**: Both the primary and standby coordinator nodes are unavailable. In this case, this metric is marked in red in the console.
+             * *   **warning**: The primary or standby coordinator node is unavailable. In this case, this metric is marked in yellow in the console.
+             * *   **healthy**: Both the primary and standby coordinator nodes are available. In this case, this metric is marked in green in the console.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * The metric value of coordinator node availability status. Valid values:
+             */
+            public Builder value(Float value) {
+                this.value = value;
+                return this;
+            }
+
+            public AdbpgMasterStatus build() {
+                return new AdbpgMasterStatus(this);
+            } 
+
+        } 
+
+    }
+    public static class AdbpgSegmentStatus extends TeaModel {
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("Value")
+        private Float value;
+
+        private AdbpgSegmentStatus(Builder builder) {
+            this.status = builder.status;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdbpgSegmentStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return value
+         */
+        public Float getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String status; 
+            private Float value; 
+
+            /**
+             * The availability status of compute nodes. Valid values:
+             * <p>
+             * 
+             * *   **critical**: All the primary and secondary compute nodes are unavailable. In this case, this metric is marked in red in the console.
+             * *   **warning**: Fifty percent or more than fifty percent of compute nodes are unavailable. In this case, this metric is marked in yellow in the console.
+             * *   **healthy**: All compute nodes are available. In this case, this metric is marked in green in the console.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * The metric value of compute node availability status.
+             */
+            public Builder value(Float value) {
+                this.value = value;
+                return this;
+            }
+
+            public AdbpgSegmentStatus build() {
+                return new AdbpgSegmentStatus(this);
             } 
 
         } 
@@ -435,7 +748,11 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Status.
+             * The health status of the instance. Valid values:
+             * <p>
+             * 
+             * *   **critical**: The coordinator node or a compute node is unavailable. In this case, this metric is marked in red in the console.
+             * *   **healthy**: All nodes are available. In this case, this metric is marked in green in the console.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -443,7 +760,11 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The metric value of instance health status. Valid values:
+             * <p>
+             * 
+             * *   **1**: healthy
+             * *   **0**: critical
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -496,7 +817,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Status.
+             * The connection health status of the coordinator node. Valid values:
+             * <p>
+             * 
+             * *   **critical**: The coordinator node connection usage is greater than 95%. In this case, this metric is marked in red in the console.
+             * *   **warning**: The coordinator node connection usage is greater than or equal to 90% and less than 95%. In this case, this metric is marked in yellow in the console.
+             * *   **healthy**: The coordinator node connection usage is less than 90%. In this case, this metric is marked in green in the console.
+             * 
+             * >  The coordinator node connection usage is the maximum connection usage of the coordinator node.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -504,7 +832,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The metric value of coordinator node connection usage.
+             * <p>
+             * 
+             * Unit: %.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -557,7 +888,11 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Status.
+             * The health status of the coordinator node. Valid values:
+             * <p>
+             * 
+             * *   **critical**: The primary or standby coordinator node is unavailable. In this case, this metric is marked in red in the console.
+             * *   **healthy**: Both the primary and standby coordinator nodes are available. In this case, this metric is marked in green in the console.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -565,7 +900,11 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The metric value of coordinator node health status. Valid values:
+             * <p>
+             * 
+             * *   **1**: healthy
+             * *   **0**: critical
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -618,7 +957,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Status.
+             * The connection health status of compute nodes. Valid values:
+             * <p>
+             * 
+             * *   **critical**: The compute node connection usage is greater than or equal to 95%. In this case, this metric is marked in red in the console.
+             * *   **warning**: The compute node connection usage is greater than or equal to 90% and less than 95%. In this case, this metric is marked in yellow in the console.
+             * *   **healthy**: The compute node connection usage is less than 90%. In this case, this metric is marked in green in the console.
+             * 
+             * >  The compute node connection usage is the maximum connection usage among all compute nodes.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -626,7 +972,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The metric value of maximum compute node connection usage.
+             * <p>
+             * 
+             * Unit: %.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -679,7 +1028,14 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Status.
+             * The storage status of compute nodes. Valid values:
+             * <p>
+             * 
+             * *   **critical**: The compute node storage usage is greater than or equal to 90%. In this case, this metric is marked in red in the console and the instance is locked.
+             * *   **warning**: The compute node storage usage is greater than or equal to 80% and less than 90%. In this case, this metric is marked in yellow in the console.
+             * *   **healthy**: The compute node storage usage is less than 80%. In this case, this metric is marked in green in the console.
+             * 
+             * >  The compute node storage usage is the maximum storage usage among all compute nodes.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -687,7 +1043,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The metric value of maximum compute node storage usage.
+             * <p>
+             * 
+             * Unit: %.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -714,8 +1073,23 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         @NameInMap("adbpg_disk_usage_percent")
         private AdbpgDiskUsagePercent adbpgDiskUsagePercent;
 
+        @NameInMap("adbpg_instance_cold_data_gb")
+        private AdbpgInstanceColdDataGb adbpgInstanceColdDataGb;
+
+        @NameInMap("adbpg_instance_hot_data_gb")
+        private AdbpgInstanceHotDataGb adbpgInstanceHotDataGb;
+
+        @NameInMap("adbpg_instance_total_data_gb")
+        private AdbpgInstanceTotalDataGb adbpgInstanceTotalDataGb;
+
         @NameInMap("adbpg_master_disk_usage_percent_max")
         private AdbpgMasterDiskUsagePercentMax adbpgMasterDiskUsagePercentMax;
+
+        @NameInMap("adbpg_master_status")
+        private AdbpgMasterStatus adbpgMasterStatus;
+
+        @NameInMap("adbpg_segment_status")
+        private AdbpgSegmentStatus adbpgSegmentStatus;
 
         @NameInMap("adbpg_status")
         private AdbpgStatus adbpgStatus;
@@ -737,7 +1111,12 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             this.adbpgConnectionStatus = builder.adbpgConnectionStatus;
             this.adbpgDiskStatus = builder.adbpgDiskStatus;
             this.adbpgDiskUsagePercent = builder.adbpgDiskUsagePercent;
+            this.adbpgInstanceColdDataGb = builder.adbpgInstanceColdDataGb;
+            this.adbpgInstanceHotDataGb = builder.adbpgInstanceHotDataGb;
+            this.adbpgInstanceTotalDataGb = builder.adbpgInstanceTotalDataGb;
             this.adbpgMasterDiskUsagePercentMax = builder.adbpgMasterDiskUsagePercentMax;
+            this.adbpgMasterStatus = builder.adbpgMasterStatus;
+            this.adbpgSegmentStatus = builder.adbpgSegmentStatus;
             this.adbpgStatus = builder.adbpgStatus;
             this.nodeMasterConnectionStatus = builder.nodeMasterConnectionStatus;
             this.nodeMasterStatus = builder.nodeMasterStatus;
@@ -782,10 +1161,45 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
         }
 
         /**
+         * @return adbpgInstanceColdDataGb
+         */
+        public AdbpgInstanceColdDataGb getAdbpgInstanceColdDataGb() {
+            return this.adbpgInstanceColdDataGb;
+        }
+
+        /**
+         * @return adbpgInstanceHotDataGb
+         */
+        public AdbpgInstanceHotDataGb getAdbpgInstanceHotDataGb() {
+            return this.adbpgInstanceHotDataGb;
+        }
+
+        /**
+         * @return adbpgInstanceTotalDataGb
+         */
+        public AdbpgInstanceTotalDataGb getAdbpgInstanceTotalDataGb() {
+            return this.adbpgInstanceTotalDataGb;
+        }
+
+        /**
          * @return adbpgMasterDiskUsagePercentMax
          */
         public AdbpgMasterDiskUsagePercentMax getAdbpgMasterDiskUsagePercentMax() {
             return this.adbpgMasterDiskUsagePercentMax;
+        }
+
+        /**
+         * @return adbpgMasterStatus
+         */
+        public AdbpgMasterStatus getAdbpgMasterStatus() {
+            return this.adbpgMasterStatus;
+        }
+
+        /**
+         * @return adbpgSegmentStatus
+         */
+        public AdbpgSegmentStatus getAdbpgSegmentStatus() {
+            return this.adbpgSegmentStatus;
         }
 
         /**
@@ -828,7 +1242,12 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private AdbpgConnectionStatus adbpgConnectionStatus; 
             private AdbpgDiskStatus adbpgDiskStatus; 
             private AdbpgDiskUsagePercent adbpgDiskUsagePercent; 
+            private AdbpgInstanceColdDataGb adbpgInstanceColdDataGb; 
+            private AdbpgInstanceHotDataGb adbpgInstanceHotDataGb; 
+            private AdbpgInstanceTotalDataGb adbpgInstanceTotalDataGb; 
             private AdbpgMasterDiskUsagePercentMax adbpgMasterDiskUsagePercentMax; 
+            private AdbpgMasterStatus adbpgMasterStatus; 
+            private AdbpgSegmentStatus adbpgSegmentStatus; 
             private AdbpgStatus adbpgStatus; 
             private NodeMasterConnectionStatus nodeMasterConnectionStatus; 
             private NodeMasterStatus nodeMasterStatus; 
@@ -836,7 +1255,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             private NodeSegmentDiskStatus nodeSegmentDiskStatus; 
 
             /**
-             * adbgp_segment_disk_usage_percent_max.
+             * The information of maximum compute node storage usage.
+             * <p>
+             * 
+             * >  This parameter value is returned only for instances in elastic storage mode.
              */
             public Builder adbgpSegmentDiskUsagePercentMax(AdbgpSegmentDiskUsagePercentMax adbgpSegmentDiskUsagePercentMax) {
                 this.adbgpSegmentDiskUsagePercentMax = adbgpSegmentDiskUsagePercentMax;
@@ -844,7 +1266,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * adbpg_connection_status.
+             * The information of instance connection health status.
              */
             public Builder adbpgConnectionStatus(AdbpgConnectionStatus adbpgConnectionStatus) {
                 this.adbpgConnectionStatus = adbpgConnectionStatus;
@@ -852,7 +1274,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * adbpg_disk_status.
+             * The information of instance storage status.
+             * <p>
+             * 
+             * >  This parameter value is returned only for instances in elastic storage mode.
              */
             public Builder adbpgDiskStatus(AdbpgDiskStatus adbpgDiskStatus) {
                 this.adbpgDiskStatus = adbpgDiskStatus;
@@ -860,7 +1285,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * adbpg_disk_usage_percent.
+             * The information of instance storage usage.
+             * <p>
+             * 
+             * >  This parameter value is returned only for instances in elastic storage mode.
              */
             public Builder adbpgDiskUsagePercent(AdbpgDiskUsagePercent adbpgDiskUsagePercent) {
                 this.adbpgDiskUsagePercent = adbpgDiskUsagePercent;
@@ -868,7 +1296,34 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * adbpg_master_disk_usage_percent_max.
+             * adbpg_instance_cold_data_gb.
+             */
+            public Builder adbpgInstanceColdDataGb(AdbpgInstanceColdDataGb adbpgInstanceColdDataGb) {
+                this.adbpgInstanceColdDataGb = adbpgInstanceColdDataGb;
+                return this;
+            }
+
+            /**
+             * adbpg_instance_hot_data_gb.
+             */
+            public Builder adbpgInstanceHotDataGb(AdbpgInstanceHotDataGb adbpgInstanceHotDataGb) {
+                this.adbpgInstanceHotDataGb = adbpgInstanceHotDataGb;
+                return this;
+            }
+
+            /**
+             * adbpg_instance_total_data_gb.
+             */
+            public Builder adbpgInstanceTotalDataGb(AdbpgInstanceTotalDataGb adbpgInstanceTotalDataGb) {
+                this.adbpgInstanceTotalDataGb = adbpgInstanceTotalDataGb;
+                return this;
+            }
+
+            /**
+             * The information of maximum coordinator node storage usage.
+             * <p>
+             * 
+             * >  This parameter value is returned only for instances in elastic storage mode.
              */
             public Builder adbpgMasterDiskUsagePercentMax(AdbpgMasterDiskUsagePercentMax adbpgMasterDiskUsagePercentMax) {
                 this.adbpgMasterDiskUsagePercentMax = adbpgMasterDiskUsagePercentMax;
@@ -876,7 +1331,23 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * adbpg_status.
+             * The information of coordinator node availability status.
+             */
+            public Builder adbpgMasterStatus(AdbpgMasterStatus adbpgMasterStatus) {
+                this.adbpgMasterStatus = adbpgMasterStatus;
+                return this;
+            }
+
+            /**
+             * The information of compute node availability status.
+             */
+            public Builder adbpgSegmentStatus(AdbpgSegmentStatus adbpgSegmentStatus) {
+                this.adbpgSegmentStatus = adbpgSegmentStatus;
+                return this;
+            }
+
+            /**
+             * The information of instance health status.
              */
             public Builder adbpgStatus(AdbpgStatus adbpgStatus) {
                 this.adbpgStatus = adbpgStatus;
@@ -884,7 +1355,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * node_master_connection_status.
+             * The information of coordinator node connection health status.
              */
             public Builder nodeMasterConnectionStatus(NodeMasterConnectionStatus nodeMasterConnectionStatus) {
                 this.nodeMasterConnectionStatus = nodeMasterConnectionStatus;
@@ -892,7 +1363,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * node_master_status.
+             * The information of coordinator node health status.
              */
             public Builder nodeMasterStatus(NodeMasterStatus nodeMasterStatus) {
                 this.nodeMasterStatus = nodeMasterStatus;
@@ -900,7 +1371,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * node_segment_connection_status.
+             * The information of compute node connection health status.
              */
             public Builder nodeSegmentConnectionStatus(NodeSegmentConnectionStatus nodeSegmentConnectionStatus) {
                 this.nodeSegmentConnectionStatus = nodeSegmentConnectionStatus;
@@ -908,7 +1379,10 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * node_segment_disk_status.
+             * The information of compute node storage status.
+             * <p>
+             * 
+             * >  This parameter value is returned only for instances in elastic storage mode.
              */
             public Builder nodeSegmentDiskStatus(NodeSegmentDiskStatus nodeSegmentDiskStatus) {
                 this.nodeSegmentDiskStatus = nodeSegmentDiskStatus;

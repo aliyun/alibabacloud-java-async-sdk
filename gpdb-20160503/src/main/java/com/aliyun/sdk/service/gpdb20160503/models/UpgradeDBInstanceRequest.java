@@ -14,18 +14,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpgradeDBInstanceRequest extends Request {
     @Query
     @NameInMap("DBInstanceClass")
-    @Validation(required = true)
     private String DBInstanceClass;
 
     @Query
     @NameInMap("DBInstanceGroupCount")
-    @Validation(required = true)
     private String DBInstanceGroupCount;
 
     @Query
     @NameInMap("DBInstanceId")
     @Validation(required = true)
     private String DBInstanceId;
+
+    @Query
+    @NameInMap("InstanceSpec")
+    private String instanceSpec;
+
+    @Query
+    @NameInMap("MasterNodeNum")
+    private String masterNodeNum;
 
     @Query
     @NameInMap("OwnerId")
@@ -37,17 +43,48 @@ public class UpgradeDBInstanceRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
-    @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("SegDiskPerformanceLevel")
+    private String segDiskPerformanceLevel;
+
+    @Query
+    @NameInMap("SegNodeNum")
+    private String segNodeNum;
+
+    @Query
+    @NameInMap("SegStorageType")
+    private String segStorageType;
+
+    @Query
+    @NameInMap("StorageSize")
+    private String storageSize;
+
+    @Query
+    @NameInMap("UpgradeType")
+    private Long upgradeType;
 
     private UpgradeDBInstanceRequest(Builder builder) {
         super(builder);
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceGroupCount = builder.DBInstanceGroupCount;
         this.DBInstanceId = builder.DBInstanceId;
+        this.instanceSpec = builder.instanceSpec;
+        this.masterNodeNum = builder.masterNodeNum;
         this.ownerId = builder.ownerId;
         this.payType = builder.payType;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.segDiskPerformanceLevel = builder.segDiskPerformanceLevel;
+        this.segNodeNum = builder.segNodeNum;
+        this.segStorageType = builder.segStorageType;
+        this.storageSize = builder.storageSize;
+        this.upgradeType = builder.upgradeType;
     }
 
     public static Builder builder() {
@@ -85,6 +122,20 @@ public class UpgradeDBInstanceRequest extends Request {
     }
 
     /**
+     * @return instanceSpec
+     */
+    public String getInstanceSpec() {
+        return this.instanceSpec;
+    }
+
+    /**
+     * @return masterNodeNum
+     */
+    public String getMasterNodeNum() {
+        return this.masterNodeNum;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -105,30 +156,88 @@ public class UpgradeDBInstanceRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return segDiskPerformanceLevel
+     */
+    public String getSegDiskPerformanceLevel() {
+        return this.segDiskPerformanceLevel;
+    }
+
+    /**
+     * @return segNodeNum
+     */
+    public String getSegNodeNum() {
+        return this.segNodeNum;
+    }
+
+    /**
+     * @return segStorageType
+     */
+    public String getSegStorageType() {
+        return this.segStorageType;
+    }
+
+    /**
+     * @return storageSize
+     */
+    public String getStorageSize() {
+        return this.storageSize;
+    }
+
+    /**
+     * @return upgradeType
+     */
+    public Long getUpgradeType() {
+        return this.upgradeType;
+    }
+
     public static final class Builder extends Request.Builder<UpgradeDBInstanceRequest, Builder> {
         private String DBInstanceClass; 
         private String DBInstanceGroupCount; 
         private String DBInstanceId; 
+        private String instanceSpec; 
+        private String masterNodeNum; 
         private Long ownerId; 
         private String payType; 
         private String regionId; 
+        private String resourceGroupId; 
+        private String segDiskPerformanceLevel; 
+        private String segNodeNum; 
+        private String segStorageType; 
+        private String storageSize; 
+        private Long upgradeType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpgradeDBInstanceRequest response) {
-            super(response);
-            this.DBInstanceClass = response.DBInstanceClass;
-            this.DBInstanceGroupCount = response.DBInstanceGroupCount;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.regionId = response.regionId;
+        private Builder(UpgradeDBInstanceRequest request) {
+            super(request);
+            this.DBInstanceClass = request.DBInstanceClass;
+            this.DBInstanceGroupCount = request.DBInstanceGroupCount;
+            this.DBInstanceId = request.DBInstanceId;
+            this.instanceSpec = request.instanceSpec;
+            this.masterNodeNum = request.masterNodeNum;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.segDiskPerformanceLevel = request.segDiskPerformanceLevel;
+            this.segNodeNum = request.segNodeNum;
+            this.segStorageType = request.segStorageType;
+            this.storageSize = request.storageSize;
+            this.upgradeType = request.upgradeType;
         } 
 
         /**
-         * DBInstanceClass.
+         * This parameter is no longer used.
          */
         public Builder DBInstanceClass(String DBInstanceClass) {
             this.putQueryParameter("DBInstanceClass", DBInstanceClass);
@@ -137,7 +246,7 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceGroupCount.
+         * This parameter is no longer used.
          */
         public Builder DBInstanceGroupCount(String DBInstanceGroupCount) {
             this.putQueryParameter("DBInstanceGroupCount", DBInstanceGroupCount);
@@ -146,11 +255,38 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * The specifications of each compute node. For information about the supported specifications, see [Instance specifications](~~35406~~).
+         * <p>
+         * 
+         * >  This parameter is available only for instances in elastic storage mode.
+         */
+        public Builder instanceSpec(String instanceSpec) {
+            this.putQueryParameter("InstanceSpec", instanceSpec);
+            this.instanceSpec = instanceSpec;
+            return this;
+        }
+
+        /**
+         * The number of coordinator nodes. Valid values: 1 and 2.
+         * <p>
+         * 
+         * >  This parameter is available only on the China site (aliyun.com).
+         */
+        public Builder masterNodeNum(String masterNodeNum) {
+            this.putQueryParameter("MasterNodeNum", masterNodeNum);
+            this.masterNodeNum = masterNodeNum;
             return this;
         }
 
@@ -164,7 +300,7 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * PayType.
+         * This parameter is no longer used.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -173,11 +309,92 @@ public class UpgradeDBInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The performance level of enhanced SSDs (ESSDs). Valid values:
+         * <p>
+         * 
+         * *   **pl0**
+         * *   **pl1**
+         * *   **pl2**
+         */
+        public Builder segDiskPerformanceLevel(String segDiskPerformanceLevel) {
+            this.putQueryParameter("SegDiskPerformanceLevel", segDiskPerformanceLevel);
+            this.segDiskPerformanceLevel = segDiskPerformanceLevel;
+            return this;
+        }
+
+        /**
+         * The number of compute nodes. The number of compute nodes varies based on the instance resource type and edition.
+         * <p>
+         * 
+         * *   Valid values for High-availability Edition instances in elastic storage mode: 4 to 512, in 4 increments
+         * *   Valid values for High-performance Edition instances in elastic storage mode: 2 to 512, in 2 increments
+         * *   Valid values for instances in manual Serverless mode: 2 to 512, in 2 increments
+         */
+        public Builder segNodeNum(String segNodeNum) {
+            this.putQueryParameter("SegNodeNum", segNodeNum);
+            this.segNodeNum = segNodeNum;
+            return this;
+        }
+
+        /**
+         * The disk storage type of the instance after the change. The disk storage type can be changed only to ESSD. Set the value to **cloud_essd**.
+         */
+        public Builder segStorageType(String segStorageType) {
+            this.putQueryParameter("SegStorageType", segStorageType);
+            this.segStorageType = segStorageType;
+            return this;
+        }
+
+        /**
+         * The storage capacity of each compute node. Unit: GB. Valid values: 50 to 6000, in 50 increments.
+         * <p>
+         * 
+         * >  This parameter is available only for instances in elastic storage mode.
+         */
+        public Builder storageSize(String storageSize) {
+            this.putQueryParameter("StorageSize", storageSize);
+            this.storageSize = storageSize;
+            return this;
+        }
+
+        /**
+         * The type of the instance configuration change. Valid values:
+         * <p>
+         * 
+         * *   **0** (default): changes the number of compute nodes.
+         * *   **1**: changes the specifications and storage capacity of each compute node.
+         * *   **2**: changes the number of coordinator nodes.
+         * *   **3**: changes the disk storage type and ESSD performance level of the instance.
+         * 
+         * > *   The supported changes to compute node configurations vary based on the instance resource type. For more information, see the "[Precautions](~~50956~~)" section of the Change compute node configurations topic.
+         * > *   After you specify a change type, only the corresponding parameters take effect. For example, if you set **UpgradeType** to 0, the parameter that is used to change the number of compute nodes takes effect, but the parameter that is used to change the number of coordinator nodes does not.
+         * > *   The number of coordinator nodes can be changed only on the China site (aliyun.com).
+         * > *   The disk storage type can be changed only from ultra disks to ESSDs.
+         */
+        public Builder upgradeType(Long upgradeType) {
+            this.putQueryParameter("UpgradeType", upgradeType);
+            this.upgradeType = upgradeType;
             return this;
         }
 

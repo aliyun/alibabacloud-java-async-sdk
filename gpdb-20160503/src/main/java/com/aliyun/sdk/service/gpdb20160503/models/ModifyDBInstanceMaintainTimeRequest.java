@@ -23,6 +23,10 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
     private String endTime;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("StartTime")
     @Validation(required = true)
     private String startTime;
@@ -31,6 +35,7 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
         this.endTime = builder.endTime;
+        this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
     }
 
@@ -62,6 +67,13 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -71,21 +83,26 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDBInstanceMaintainTimeRequest, Builder> {
         private String DBInstanceId; 
         private String endTime; 
+        private String resourceGroupId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyDBInstanceMaintainTimeRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.startTime = response.startTime;
+        private Builder(ModifyDBInstanceMaintainTimeRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.resourceGroupId = request.resourceGroupId;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -94,7 +111,7 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end time of the maintenance window. The end time must be later than the start time. Specify the time in the HH:mmZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -103,7 +120,16 @@ public class ModifyDBInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The start time of the maintenance window. Specify the time in the HH:mmZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

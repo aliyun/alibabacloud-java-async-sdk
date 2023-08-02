@@ -76,15 +76,19 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(ReleaseInstancePublicConnectionRequest response) {
-            super(response);
-            this.addressType = response.addressType;
-            this.currentConnectionString = response.currentConnectionString;
-            this.DBInstanceId = response.DBInstanceId;
+        private Builder(ReleaseInstancePublicConnectionRequest request) {
+            super(request);
+            this.addressType = request.addressType;
+            this.currentConnectionString = request.currentConnectionString;
+            this.DBInstanceId = request.DBInstanceId;
         } 
 
         /**
-         * AddressType.
+         * The type of the endpoint. Default value: primary. Valid values:
+         * <p>
+         * 
+         * *   **primary**: primary endpoint.
+         * *   **cluster**: cluster endpoint. This type of endpoints can be created only for instances that have multiple coordinator nodes.
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -93,7 +97,10 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * CurrentConnectionString.
+         * The public endpoint of the instance.
+         * <p>
+         * 
+         * You can log on to the AnalyticDB for PostgreSQL console and go to the **Basic Information** page of the instance to view the **public endpoint** in the **Database Connection** section.
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -102,7 +109,10 @@ public class ReleaseInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

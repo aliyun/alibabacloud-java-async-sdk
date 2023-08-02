@@ -50,7 +50,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         private VSwitches vSwitches; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitches.
+         * Details of the vSwitches.
          */
         public Builder vSwitches(VSwitches vSwitches) {
             this.vSwitches = vSwitches;
@@ -218,7 +218,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             private String vSwitchName; 
 
             /**
-             * AliUid.
+             * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -226,7 +226,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * Bid.
+             * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -234,7 +234,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * The CIDR block of the vSwitch.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -242,7 +242,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -250,7 +250,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -258,7 +258,11 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the vSwitch is the default vSwitch. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -266,7 +270,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * IzNo.
+             * The ID of the zone.
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -274,7 +278,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -282,7 +286,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the vSwitch. If **Available** is returned, the vSwitch is available.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -290,7 +294,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -298,7 +302,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * The name of the vSwitch.
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -339,7 +343,7 @@ public class DescribeRdsVSwitchsResponseBody extends TeaModel {
             private java.util.List < VSwitch> vSwitch; 
 
             /**
-             * VSwitch.
+             * Details of the vSwitch.
              */
             public Builder vSwitch(java.util.List < VSwitch> vSwitch) {
                 this.vSwitch = vSwitch;

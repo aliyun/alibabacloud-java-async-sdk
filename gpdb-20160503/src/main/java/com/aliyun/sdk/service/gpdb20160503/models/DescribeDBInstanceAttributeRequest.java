@@ -21,10 +21,15 @@ public class DescribeDBInstanceAttributeRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private DescribeDBInstanceAttributeRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerId = builder.ownerId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -54,22 +59,34 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         return this.ownerId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDBInstanceAttributeRequest, Builder> {
         private String DBInstanceId; 
         private Long ownerId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDBInstanceAttributeRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDBInstanceAttributeRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -83,6 +100,15 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

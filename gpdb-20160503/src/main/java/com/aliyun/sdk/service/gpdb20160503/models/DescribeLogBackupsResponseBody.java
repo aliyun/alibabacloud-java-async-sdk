@@ -98,7 +98,7 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         private Long totalLogSize; 
 
         /**
-         * Items.
+         * Details of the backup sets.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -106,7 +106,7 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of backup sets on the current page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -138,7 +138,7 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalLogSize.
+         * The total size of logs in the time range. Unit: bytes.
          */
         public Builder totalLogSize(Long totalLogSize) {
             this.totalLogSize = totalLogSize;
@@ -238,7 +238,7 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
             private String segmentName; 
 
             /**
-             * BackupId.
+             * The ID of the backup set.
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -246,7 +246,7 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the coordinator node.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -254,7 +254,7 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * LogFileName.
+             * The name of the log backup set that is stored in Object Storage Service (OSS).
              */
             public Builder logFileName(String logFileName) {
                 this.logFileName = logFileName;
@@ -262,7 +262,7 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * LogFileSize.
+             * The size of the log backup set. Unit: bytes.
              */
             public Builder logFileSize(Long logFileSize) {
                 this.logFileSize = logFileSize;
@@ -270,7 +270,7 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * LogTime.
+             * The timestamp of the log.
              */
             public Builder logTime(String logTime) {
                 this.logTime = logTime;
@@ -278,7 +278,7 @@ public class DescribeLogBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * SegmentName.
+             * The name of the compute node.
              */
             public Builder segmentName(String segmentName) {
                 this.segmentName = segmentName;

@@ -63,14 +63,17 @@ public class DescribeHealthStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeHealthStatusRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.key = response.key;
+        private Builder(DescribeHealthStatusRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.key = request.key;
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -79,7 +82,7 @@ public class DescribeHealthStatusRequest extends Request {
         }
 
         /**
-         * Key.
+         * The performance metric that you want to query. Separate multiple values with commas (,). For more information, see [Performance parameters](~~86943~~).
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);

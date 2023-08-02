@@ -76,15 +76,15 @@ public class ModifyDBInstanceSSLRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceSSLRequest response) {
-            super(response);
-            this.connectionString = response.connectionString;
-            this.DBInstanceId = response.DBInstanceId;
-            this.SSLEnabled = response.SSLEnabled;
+        private Builder(ModifyDBInstanceSSLRequest request) {
+            super(request);
+            this.connectionString = request.connectionString;
+            this.DBInstanceId = request.DBInstanceId;
+            this.SSLEnabled = request.SSLEnabled;
         } 
 
         /**
-         * ConnectionString.
+         * The encrypted endpoint. By default, the wildcards are used for instances that are hosted on ECS instances. This way, the endpoints that can be resolved to the same IP address are encrypted.
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -93,7 +93,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -102,7 +102,12 @@ public class ModifyDBInstanceSSLRequest extends Request {
         }
 
         /**
-         * SSLEnabled.
+         * The status of SSL encryption. Valid values:
+         * <p>
+         * 
+         * *   0: disables SSL encryption.
+         * *   1: enables SSL encryption.
+         * *   2: updates SSL encryption.
          */
         public Builder SSLEnabled(Integer SSLEnabled) {
             this.putQueryParameter("SSLEnabled", SSLEnabled);

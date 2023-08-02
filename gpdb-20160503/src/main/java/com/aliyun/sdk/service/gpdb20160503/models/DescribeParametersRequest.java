@@ -49,13 +49,16 @@ public class DescribeParametersRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeParametersRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
+        private Builder(DescribeParametersRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

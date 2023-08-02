@@ -76,15 +76,18 @@ public class ModifyParametersRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyParametersRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.forceRestartInstance = response.forceRestartInstance;
-            this.parameters = response.parameters;
+        private Builder(ModifyParametersRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.forceRestartInstance = request.forceRestartInstance;
+            this.parameters = request.parameters;
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -93,7 +96,11 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * ForceRestartInstance.
+         * Specifies whether to forcibly restart the instance. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder forceRestartInstance(Boolean forceRestartInstance) {
             this.putQueryParameter("ForceRestartInstance", forceRestartInstance);
@@ -102,7 +109,10 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The name and value of the parameter to be modified. Specify the parameter in the `<Parameter name>:<Parameter value>` format.
+         * <p>
+         * 
+         * You can call the [DescribeParameters](~~208310~~) operation to query the parameters that can be modified.
          */
         public Builder parameters(String parameters) {
             this.putQueryParameter("Parameters", parameters);

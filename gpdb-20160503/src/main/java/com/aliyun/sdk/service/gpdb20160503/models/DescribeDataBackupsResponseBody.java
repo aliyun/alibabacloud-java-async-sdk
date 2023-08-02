@@ -86,7 +86,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Items.
+         * Details about the backup sets.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of backup sets on the page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -290,7 +290,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             private String dataType; 
 
             /**
-             * BackupEndTime.
+             * The UTC time when the backup ended. The time is in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -298,7 +298,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupEndTimeLocal.
+             * The local time when the backup ended. The time is in the yyyy-MM-dd HH:mm:ss format. The time is your local time.
              */
             public Builder backupEndTimeLocal(String backupEndTimeLocal) {
                 this.backupEndTimeLocal = backupEndTimeLocal;
@@ -306,7 +306,19 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMode.
+             * The backup mode.
+             * <p>
+             * 
+             * Valid values for full backup:
+             * 
+             * *   Automated: automatic backup
+             * *   Manual: manual backup
+             * 
+             * Valid values for point-in-time backup:
+             * 
+             * *   Automated: point-in-time backup after full backup
+             * *   Manual: manual point-in-time backup
+             * *   Period: point-in-time backup that is triggered by a backup policy
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -314,7 +326,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSetId.
+             * The ID of the backup set.
              */
             public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
@@ -322,7 +334,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSize.
+             * The size of the backup file. Unit: bytes.
              */
             public Builder backupSize(Long backupSize) {
                 this.backupSize = backupSize;
@@ -330,7 +342,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * The UTC time when the backup started. The time is in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -338,7 +350,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTimeLocal.
+             * The local time when the backup started. The time is in the yyyy-MM-dd HH:mm:ss format. The time is your local time.
              */
             public Builder backupStartTimeLocal(String backupStartTimeLocal) {
                 this.backupStartTimeLocal = backupStartTimeLocal;
@@ -346,7 +358,11 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStatus.
+             * The status of the backup set. Valid values:
+             * <p>
+             * 
+             * *   Success
+             * *   Failure
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -354,7 +370,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BaksetName.
+             * The name of a point-in-time backup set or the full backup set.
              */
             public Builder baksetName(String baksetName) {
                 this.baksetName = baksetName;
@@ -362,7 +378,9 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ConsistentTime.
+             * *   For full backup, this parameter indicates the point in time at which the data in the data backup file is consistent.
+             * <p>
+             * *   For point-in-time backup, this parameter indicates that the returned point in time is a timestamp.
              */
             public Builder consistentTime(Long consistentTime) {
                 this.consistentTime = consistentTime;
@@ -370,7 +388,7 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -378,7 +396,11 @@ public class DescribeDataBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DataType.
+             * The type of the backup. Valid values:
+             * <p>
+             * 
+             * *   DATA: full backup
+             * *   RESTOREPOI: point-in-time backup
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;

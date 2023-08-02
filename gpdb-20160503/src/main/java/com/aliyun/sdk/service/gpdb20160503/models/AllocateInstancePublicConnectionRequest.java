@@ -129,19 +129,25 @@ public class AllocateInstancePublicConnectionRequest extends Request {
             super();
         } 
 
-        private Builder(AllocateInstancePublicConnectionRequest response) {
-            super(response);
-            this.addressType = response.addressType;
-            this.connectionStringPrefix = response.connectionStringPrefix;
-            this.DBInstanceId = response.DBInstanceId;
-            this.ownerId = response.ownerId;
-            this.port = response.port;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(AllocateInstancePublicConnectionRequest request) {
+            super(request);
+            this.addressType = request.addressType;
+            this.connectionStringPrefix = request.connectionStringPrefix;
+            this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.port = request.port;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * AddressType.
+         * The network type of the endpoint. Valid values:
+         * <p>
+         * 
+         * *   **primary**: primary endpoint
+         * *   **cluster**: instance endpoint. This value is supported only for an instance that contains multiple coordinator nodes.
+         * 
+         * >  The default value is primary.
          */
         public Builder addressType(String addressType) {
             this.putQueryParameter("AddressType", addressType);
@@ -150,7 +156,10 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * ConnectionStringPrefix.
+         * The prefix of the endpoint.
+         * <p>
+         * 
+         * Specify a prefix for the endpoint. Example: `gp-bp12ga6v69h86****`. In this example, the endpoint is `gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com`.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -159,7 +168,10 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -177,7 +189,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port number. Example: 5432.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

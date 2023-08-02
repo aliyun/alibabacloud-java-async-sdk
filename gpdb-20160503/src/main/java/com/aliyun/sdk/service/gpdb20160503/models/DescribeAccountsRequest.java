@@ -62,14 +62,14 @@ public class DescribeAccountsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAccountsRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.DBInstanceId = response.DBInstanceId;
+        private Builder(DescribeAccountsRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.DBInstanceId = request.DBInstanceId;
         } 
 
         /**
-         * AccountName.
+         * The name of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -78,7 +78,10 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

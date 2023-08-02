@@ -50,7 +50,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Accounts.
+         * Details of the account.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -58,7 +58,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String DBInstanceId; 
 
             /**
-             * AccountDescription.
+             * The description of the account.
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -142,7 +142,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The name of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -150,7 +150,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountStatus.
+             * The state of the account.
+             * <p>
+             * 
+             * *   **0**: The account is being created.
+             * *   **1**: The account is in use.
+             * *   **3**: The account is being deleted.
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -158,7 +163,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceId.
+             * The ID of the instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;

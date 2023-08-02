@@ -114,18 +114,18 @@ public class ModifyBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyBackupPolicyRequest response) {
-            super(response);
-            this.backupRetentionPeriod = response.backupRetentionPeriod;
-            this.DBInstanceId = response.DBInstanceId;
-            this.enableRecoveryPoint = response.enableRecoveryPoint;
-            this.preferredBackupPeriod = response.preferredBackupPeriod;
-            this.preferredBackupTime = response.preferredBackupTime;
-            this.recoveryPointPeriod = response.recoveryPointPeriod;
+        private Builder(ModifyBackupPolicyRequest request) {
+            super(request);
+            this.backupRetentionPeriod = request.backupRetentionPeriod;
+            this.DBInstanceId = request.DBInstanceId;
+            this.enableRecoveryPoint = request.enableRecoveryPoint;
+            this.preferredBackupPeriod = request.preferredBackupPeriod;
+            this.preferredBackupTime = request.preferredBackupTime;
+            this.recoveryPointPeriod = request.recoveryPointPeriod;
         } 
 
         /**
-         * BackupRetentionPeriod.
+         * The number of days for which data backup files are retained. Default value: 7. Maximum value: 7. Valid values: 1 to 7.
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -134,7 +134,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -143,7 +143,13 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * EnableRecoveryPoint.
+         * Specifies whether to enable automatic point-in-time backup.
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: true.
          */
         public Builder enableRecoveryPoint(Boolean enableRecoveryPoint) {
             this.putQueryParameter("EnableRecoveryPoint", enableRecoveryPoint);
@@ -152,7 +158,16 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * The cycle based on which you want to perform a backup. Separate multiple values with commas (,). Valid values:
+         * <p>
+         * 
+         * *   Monday
+         * *   Tuesday
+         * *   Wednesday
+         * *   Thursday
+         * *   Friday
+         * *   Saturday
+         * *   Sunday
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -161,7 +176,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupTime.
+         * The backup window. Specify the backup window in the HH:mmZ-HH:mmZ format. The backup window must be in UTC. Default value: 00:00-01:00.
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);
@@ -170,7 +185,15 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * RecoveryPointPeriod.
+         * The frequency of point-in-time backup.
+         * <p>
+         * 
+         * *   1: per hour
+         * *   2: per 2 hours
+         * *   4: per 4 hours
+         * *   8: per 8 hours
+         * 
+         * Default value: 8.
          */
         public Builder recoveryPointPeriod(String recoveryPointPeriod) {
             this.putQueryParameter("RecoveryPointPeriod", recoveryPointPeriod);

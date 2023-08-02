@@ -48,13 +48,13 @@ public class CheckServiceLinkedRoleRequest extends Request {
             super();
         } 
 
-        private Builder(CheckServiceLinkedRoleRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(CheckServiceLinkedRoleRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

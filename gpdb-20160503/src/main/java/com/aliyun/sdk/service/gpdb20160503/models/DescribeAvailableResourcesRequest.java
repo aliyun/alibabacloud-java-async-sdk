@@ -76,15 +76,19 @@ public class DescribeAvailableResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAvailableResourcesRequest response) {
-            super(response);
-            this.chargeType = response.chargeType;
-            this.region = response.region;
-            this.zoneId = response.zoneId;
+        private Builder(DescribeAvailableResourcesRequest request) {
+            super(request);
+            this.chargeType = request.chargeType;
+            this.region = request.region;
+            this.zoneId = request.zoneId;
         } 
 
         /**
-         * ChargeType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go
+         * *   **Prepaid**: subscription
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -93,7 +97,10 @@ public class DescribeAvailableResourcesRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -102,7 +109,10 @@ public class DescribeAvailableResourcesRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

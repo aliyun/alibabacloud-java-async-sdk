@@ -62,7 +62,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceNetInfos.
+         * The connection information of the instance.
          */
         public Builder DBInstanceNetInfos(DBInstanceNetInfos DBInstanceNetInfos) {
             this.DBInstanceNetInfos = DBInstanceNetInfos;
@@ -70,7 +70,11 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceNetworkType.
+         * The network type of the instance. 
+         * <p>
+         * 
+         * *   **VPC**: a virtual private cloud (VPC)
+         * *   **Classic**: classic network
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.instanceNetworkType = instanceNetworkType;
@@ -78,7 +82,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +206,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             private String vpcInstanceId; 
 
             /**
-             * AddressType.
+             * The IP address type of the instance.
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -210,7 +214,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionString.
+             * The endpoint used to connect to the instance.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -218,7 +222,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * The IP address of the instance.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -226,7 +230,11 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPType.
+             * The type of IP address.
+             * <p>
+             * 
+             * *   Valid values for instances in the classic network: Inner and Public
+             * *   Valid values for instances in a virtual private cloud (VPC): Private and Public
              */
             public Builder IPType(String IPType) {
                 this.IPType = IPType;
@@ -234,7 +242,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number used to connect to the instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -242,7 +250,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * The ID of the VPC.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -250,7 +258,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch. Multiple IDs are separated by commas (,).
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -258,7 +266,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VpcInstanceId.
+             * The ID of the VPC.
              */
             public Builder vpcInstanceId(String vpcInstanceId) {
                 this.vpcInstanceId = vpcInstanceId;

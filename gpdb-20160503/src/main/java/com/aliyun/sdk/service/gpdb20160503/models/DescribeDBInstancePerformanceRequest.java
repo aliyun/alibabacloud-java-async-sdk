@@ -28,6 +28,10 @@ public class DescribeDBInstancePerformanceRequest extends Request {
     private String key;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("StartTime")
     @Validation(required = true)
     private String startTime;
@@ -37,6 +41,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.endTime = builder.endTime;
         this.key = builder.key;
+        this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
     }
 
@@ -75,6 +80,13 @@ public class DescribeDBInstancePerformanceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -85,22 +97,27 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         private String DBInstanceId; 
         private String endTime; 
         private String key; 
+        private String resourceGroupId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDBInstancePerformanceRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.key = response.key;
-            this.startTime = response.startTime;
+        private Builder(DescribeDBInstancePerformanceRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.key = request.key;
+            this.resourceGroupId = request.resourceGroupId;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -109,7 +126,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -118,7 +135,7 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * Key.
+         * The performance metric. Separate multiple values with commas (,). For more information, see [Performance parameters](~~86943~~).
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -127,7 +144,16 @@ public class DescribeDBInstancePerformanceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

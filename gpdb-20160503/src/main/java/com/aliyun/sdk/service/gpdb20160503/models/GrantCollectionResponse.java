@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.gpdb20160503.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GrantCollectionResponse} extends {@link TeaModel}
+ *
+ * <p>GrantCollectionResponse</p>
+ */
+public class GrantCollectionResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private GrantCollectionResponseBody body;
+
+    private GrantCollectionResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static GrantCollectionResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public GrantCollectionResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<GrantCollectionResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(GrantCollectionResponseBody body);
+
+        @Override
+        GrantCollectionResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<GrantCollectionResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private GrantCollectionResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(GrantCollectionResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(GrantCollectionResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public GrantCollectionResponse build() {
+            return new GrantCollectionResponse(this);
+        } 
+
+    } 
+
+}

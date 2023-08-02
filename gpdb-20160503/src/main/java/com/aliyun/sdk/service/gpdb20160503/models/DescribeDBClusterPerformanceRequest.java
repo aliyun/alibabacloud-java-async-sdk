@@ -117,18 +117,21 @@ public class DescribeDBClusterPerformanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBClusterPerformanceRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.key = response.key;
-            this.nodeType = response.nodeType;
-            this.nodes = response.nodes;
-            this.startTime = response.startTime;
+        private Builder(DescribeDBClusterPerformanceRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.key = request.key;
+            this.nodeType = request.nodeType;
+            this.nodes = request.nodes;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -137,7 +140,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDTHH:mmZ` format.
+         * <p>
+         * 
+         * >  The end time must be later than the start time. The interval cannot be more than seven days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -146,7 +152,7 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * Key.
+         * The performance metric that you want to query. Separate multiple values with commas (,). For more information, see [Performance parameters](~~86943~~).
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -155,7 +161,13 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * NodeType.
+         * The node type. Valid values:
+         * <p>
+         * 
+         * *   **master**: coordinator node
+         * *   **segment**: compute node
+         * 
+         * >  If you do not specify this parameter, the performance metrics of all nodes are returned.
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -164,7 +176,15 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * Nodes.
+         * The nodes for which you want to query performance metrics. Separate multiple values with commas (,). Example: `master-10******1,master-10******2`. You can call the [DescribeDBClusterNode](~~390136~~) operation to query the names of nodes.
+         * <p>
+         * 
+         * The nodes can also be filtered based on their metric values. Valid values:
+         * 
+         * *   **top10**: the 10 nodes that have the highest metric values
+         * *   **top20**: the 20 nodes that have the highest metric values
+         * *   **bottom10**: the 10 nodes that have the lowest metric values
+         * *   **bottom20**: the 20 nodes that have the lowest metric values
          */
         public Builder nodes(String nodes) {
             this.putQueryParameter("Nodes", nodes);
@@ -173,7 +193,10 @@ public class DescribeDBClusterPerformanceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDTHH:mmZ` format.
+         * <p>
+         * 
+         * >  You can query monitoring information only within the last 30 days.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

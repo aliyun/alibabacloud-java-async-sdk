@@ -50,7 +50,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         private Vpcs vpcs; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * Vpcs.
+         * Details of the VPCs.
          */
         public Builder vpcs(Vpcs vpcs) {
             this.vpcs = vpcs;
@@ -182,7 +182,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             private String vSwitchName; 
 
             /**
-             * CidrBlock.
+             * The CIDR block of the vSwitch.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -190,7 +190,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -198,7 +198,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -206,7 +206,11 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the vSwitch is the default vSwitch. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -214,7 +218,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * IzNo.
+             * The ID of the zone to which the vSwitch belongs.
              */
             public Builder izNo(String izNo) {
                 this.izNo = izNo;
@@ -222,7 +226,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the vSwitch. If **Available** is returned, the vSwitch is available.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -230,7 +234,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -238,7 +242,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * The name of the vSwitch.
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -399,7 +403,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * AliUid.
+             * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -407,7 +411,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Bid.
+             * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder bid(String bid) {
                 this.bid = bid;
@@ -415,7 +419,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * The CIDR block of the VPC.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -423,7 +427,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -431,7 +435,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * An invalid parameter. It is no longer returned when you call this operation.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -439,7 +443,11 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the VPC is the default VPC. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -447,7 +455,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionNo.
+             * The ID of the region.
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -455,7 +463,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the VPC. If **Available** is returned, the VPC is available.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -463,7 +471,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchs.
+             * Details of the vSwitches.
              */
             public Builder vSwitchs(java.util.List < VSwitchs> vSwitchs) {
                 this.vSwitchs = vSwitchs;
@@ -471,7 +479,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -479,7 +487,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * The name of the VPC.
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -520,7 +528,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             private java.util.List < Vpc> vpc; 
 
             /**
-             * Vpc.
+             * Details of the VPC.
              */
             public Builder vpc(java.util.List < Vpc> vpc) {
                 this.vpc = vpc;

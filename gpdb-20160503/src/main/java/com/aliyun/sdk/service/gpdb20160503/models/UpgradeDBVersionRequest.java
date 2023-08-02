@@ -127,19 +127,19 @@ public class UpgradeDBVersionRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeDBVersionRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.majorVersion = response.majorVersion;
-            this.minorVersion = response.minorVersion;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.switchTime = response.switchTime;
-            this.switchTimeMode = response.switchTimeMode;
+        private Builder(UpgradeDBVersionRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.majorVersion = request.majorVersion;
+            this.minorVersion = request.minorVersion;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.switchTime = request.switchTime;
+            this.switchTimeMode = request.switchTimeMode;
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -148,7 +148,7 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * MajorVersion.
+         * The major version of the instance.
          */
         public Builder majorVersion(String majorVersion) {
             this.putQueryParameter("MajorVersion", majorVersion);
@@ -157,7 +157,7 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * MinorVersion.
+         * The minor version of the instance.
          */
         public Builder minorVersion(String minorVersion) {
             this.putQueryParameter("MinorVersion", minorVersion);
@@ -175,7 +175,7 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -184,7 +184,7 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * SwitchTime.
+         * The upgrade time.
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);
@@ -193,7 +193,7 @@ public class UpgradeDBVersionRequest extends Request {
         }
 
         /**
-         * SwitchTimeMode.
+         * The upgrade method.
          */
         public Builder switchTimeMode(String switchTimeMode) {
             this.putQueryParameter("SwitchTimeMode", switchTimeMode);

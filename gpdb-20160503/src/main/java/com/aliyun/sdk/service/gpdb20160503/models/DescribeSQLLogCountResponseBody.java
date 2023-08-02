@@ -86,7 +86,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DBClusterId.
+         * The ID of the instance.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -94,7 +94,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end time of the query.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -102,7 +102,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * Details of the audit logs of the instance.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -110,7 +110,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start time of the query.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -158,7 +158,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
             private java.util.List < String > point; 
 
             /**
-             * Point.
+             * The time when the audit logs were generated and the number of the audit logs.
              */
             public Builder point(java.util.List < String > point) {
                 this.point = point;
@@ -199,7 +199,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
             private java.util.List < Values> values; 
 
             /**
-             * Values.
+             * Details of the audit logs.
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;
@@ -252,7 +252,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
             private java.util.List < Series> series; 
 
             /**
-             * Name.
+             * The name of the table.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -260,7 +260,7 @@ public class DescribeSQLLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * Series.
+             * Details of the audit logs.
              */
             public Builder series(java.util.List < Series> series) {
                 this.series = series;

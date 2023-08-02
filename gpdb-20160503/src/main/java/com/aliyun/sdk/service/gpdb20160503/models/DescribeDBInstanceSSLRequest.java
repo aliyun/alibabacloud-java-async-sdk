@@ -49,13 +49,13 @@ public class DescribeDBInstanceSSLRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstanceSSLRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
+        private Builder(DescribeDBInstanceSSLRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

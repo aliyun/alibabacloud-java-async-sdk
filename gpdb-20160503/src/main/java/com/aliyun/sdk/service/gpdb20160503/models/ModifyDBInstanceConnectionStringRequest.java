@@ -91,16 +91,16 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceConnectionStringRequest response) {
-            super(response);
-            this.connectionStringPrefix = response.connectionStringPrefix;
-            this.currentConnectionString = response.currentConnectionString;
-            this.DBInstanceId = response.DBInstanceId;
-            this.port = response.port;
+        private Builder(ModifyDBInstanceConnectionStringRequest request) {
+            super(request);
+            this.connectionStringPrefix = request.connectionStringPrefix;
+            this.currentConnectionString = request.currentConnectionString;
+            this.DBInstanceId = request.DBInstanceId;
+            this.port = request.port;
         } 
 
         /**
-         * ConnectionStringPrefix.
+         * The new endpoint of the instance.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -109,7 +109,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * CurrentConnectionString.
+         * The original endpoint of the instance.
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -118,7 +118,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -127,7 +127,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * Port.
+         * The new port number of the instance.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

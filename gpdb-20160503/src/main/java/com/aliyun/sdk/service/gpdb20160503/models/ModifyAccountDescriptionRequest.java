@@ -77,15 +77,21 @@ public class ModifyAccountDescriptionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAccountDescriptionRequest response) {
-            super(response);
-            this.accountDescription = response.accountDescription;
-            this.accountName = response.accountName;
-            this.DBInstanceId = response.DBInstanceId;
+        private Builder(ModifyAccountDescriptionRequest request) {
+            super(request);
+            this.accountDescription = request.accountDescription;
+            this.accountName = request.accountName;
+            this.DBInstanceId = request.DBInstanceId;
         } 
 
         /**
-         * AccountDescription.
+         * The description of the account. The description must meet the following requirements:
+         * <p>
+         * 
+         * *   The description must start with a letter.
+         * *   The description can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   The description cannot start with `http://` or `https://`.
+         * *   The description must be 2 to 256 characters in length.
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -94,7 +100,10 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The name of the database account.
+         * <p>
+         * 
+         * > You can call the [DescribeAccounts](~~~~) operation to query the information about database accounts in a cluster, including the database account name.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -103,7 +112,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

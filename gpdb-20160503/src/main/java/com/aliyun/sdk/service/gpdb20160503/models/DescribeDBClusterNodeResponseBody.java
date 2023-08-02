@@ -62,7 +62,7 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBClusterId.
+         * The ID of the instance.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,7 +70,7 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
         }
 
         /**
-         * Nodes.
+         * The information of nodes.
          */
         public Builder nodes(java.util.List < Nodes> nodes) {
             this.nodes = nodes;
@@ -78,7 +78,7 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDBClusterNodeResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * The name of the node.
              */
             public Builder name(String name) {
                 this.name = name;

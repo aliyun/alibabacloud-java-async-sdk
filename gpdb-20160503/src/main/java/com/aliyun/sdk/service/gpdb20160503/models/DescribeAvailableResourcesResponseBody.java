@@ -62,7 +62,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         private java.util.List < Resources> resources; 
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -70,7 +70,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * Details of the available resources.
          */
         public Builder resources(java.util.List < Resources> resources) {
             this.resources = resources;
@@ -142,7 +142,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             private String step; 
 
             /**
-             * MaxCount.
+             * The maximum number of compute nodes.
              */
             public Builder maxCount(String maxCount) {
                 this.maxCount = maxCount;
@@ -150,7 +150,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * MinCount.
+             * The minimum number of compute nodes.
              */
             public Builder minCount(String minCount) {
                 this.minCount = minCount;
@@ -158,7 +158,10 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * The step size for adding compute nodes.
+             * <p>
+             * 
+             * For example, if the value of this parameter is 4, compute nodes must be added by multiples of 4.
              */
             public Builder step(String step) {
                 this.step = step;
@@ -223,7 +226,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             private String step; 
 
             /**
-             * MaxCount.
+             * The maximum storage capacity of each compute node.
              */
             public Builder maxCount(String maxCount) {
                 this.maxCount = maxCount;
@@ -231,7 +234,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * MinCount.
+             * The minimum storage capacity of each compute node.
              */
             public Builder minCount(String minCount) {
                 this.minCount = minCount;
@@ -239,7 +242,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Step.
+             * The step size for adding storage capacity for compute nodes.
              */
             public Builder step(String step) {
                 this.step = step;
@@ -254,6 +257,9 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
 
     }
     public static class SupportedInstanceClasses extends TeaModel {
+        @NameInMap("Category")
+        private String category;
+
         @NameInMap("Description")
         private String description;
 
@@ -273,6 +279,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         private String storageType;
 
         private SupportedInstanceClasses(Builder builder) {
+            this.category = builder.category;
             this.description = builder.description;
             this.displayClass = builder.displayClass;
             this.instanceClass = builder.instanceClass;
@@ -287,6 +294,13 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
 
         public static SupportedInstanceClasses create() {
             return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -332,6 +346,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String category; 
             private String description; 
             private String displayClass; 
             private String instanceClass; 
@@ -340,7 +355,19 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             private String storageType; 
 
             /**
-             * Description.
+             * The instance edition. Valid values:
+             * <p>
+             * 
+             * *   **HighAvailability**: High-availability Edition
+             * *   **Basic**: Basic Edition
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
+             * The description of compute node specifications.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -348,7 +375,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayClass.
+             * The specifications of each compute node.
              */
             public Builder displayClass(String displayClass) {
                 this.displayClass = displayClass;
@@ -356,7 +383,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClass.
+             * The specifications of each compute node.
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -364,7 +391,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeCount.
+             * Details about the compute nodes.
              */
             public Builder nodeCount(NodeCount nodeCount) {
                 this.nodeCount = nodeCount;
@@ -372,7 +399,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * Details about the storage capacity of compute nodes.
              */
             public Builder storageSize(StorageSize storageSize) {
                 this.storageSize = storageSize;
@@ -380,7 +407,12 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The storage type. Valid values:
+             * <p>
+             * 
+             * *   **cloud_essd**: enhanced SSD (ESSD)
+             * *   **cloud_efficiency**: ultra disk
+             * *   **oss**: Object Storage Service (OSS)
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -445,7 +477,11 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             private java.util.List < SupportedInstanceClasses> supportedInstanceClasses; 
 
             /**
-             * Mode.
+             * The instance resource type. Valid values:
+             * <p>
+             * 
+             * *   **ecs**: elastic storage mode
+             * *   **serverless**: Serverless mode
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -453,7 +489,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedEngineVersion.
+             * The available engine version.
              */
             public Builder supportedEngineVersion(String supportedEngineVersion) {
                 this.supportedEngineVersion = supportedEngineVersion;
@@ -461,7 +497,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedInstanceClasses.
+             * The available specifications.
              */
             public Builder supportedInstanceClasses(java.util.List < SupportedInstanceClasses> supportedInstanceClasses) {
                 this.supportedInstanceClasses = supportedInstanceClasses;
@@ -514,7 +550,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * SupportedEngines.
+             * The available engine version and specifications.
              */
             public Builder supportedEngines(java.util.List < SupportedEngines> supportedEngines) {
                 this.supportedEngines = supportedEngines;
@@ -522,7 +558,7 @@ public class DescribeAvailableResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

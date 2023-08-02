@@ -86,7 +86,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConnectionString.
+         * An invalid parameter. It is no longer returned when you call this operation.
+         * <p>
+         * 
+         * You can call the [DescribeDBInstanceAttribute](~~86910~~) operation to query the endpoint that is used to connect to the instance.
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -94,7 +97,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -102,7 +105,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The order ID.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -110,7 +113,10 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Port.
+         * An invalid parameter. It is no longer returned when you call this operation.
+         * <p>
+         * 
+         * You can call the [DescribeDBInstanceAttribute](~~86910~~) operation to query the port number that is used to connect to the instance.
          */
         public Builder port(String port) {
             this.port = port;
@@ -118,7 +124,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

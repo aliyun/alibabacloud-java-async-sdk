@@ -75,15 +75,15 @@ public class DescribeModifyParameterLogRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeModifyParameterLogRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.startTime = response.startTime;
+        private Builder(DescribeModifyParameterLogRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,7 +92,7 @@ public class DescribeModifyParameterLogRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -101,7 +101,7 @@ public class DescribeModifyParameterLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

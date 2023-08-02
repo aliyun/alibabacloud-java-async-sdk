@@ -50,7 +50,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Parameters.
+         * Details of the parameters.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -58,7 +58,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * CurrentValue.
+             * The current value of the parameter.
              */
             public Builder currentValue(String currentValue) {
                 this.currentValue = currentValue;
@@ -178,7 +178,11 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ForceRestartInstance.
+             * Indicates whether a restart is required for parameter modifications to take effect. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder forceRestartInstance(String forceRestartInstance) {
                 this.forceRestartInstance = forceRestartInstance;
@@ -186,7 +190,11 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * IsChangeableConfig.
+             * Indicates whether the parameter can be modified. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder isChangeableConfig(String isChangeableConfig) {
                 this.isChangeableConfig = isChangeableConfig;
@@ -194,7 +202,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * OptionalRange.
+             * The valid values of the parameter.
              */
             public Builder optionalRange(String optionalRange) {
                 this.optionalRange = optionalRange;
@@ -202,7 +210,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDescription.
+             * The description of the parameter.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -210,7 +218,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -218,7 +226,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * The default value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

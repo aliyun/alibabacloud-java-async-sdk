@@ -62,7 +62,7 @@ public class SetDataShareInstanceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * ErrMessage.
+         * The error message returned if the operation fails.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -70,7 +70,7 @@ public class SetDataShareInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,11 @@ public class SetDataShareInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The state of the operation. Valid values:
+         * <p>
+         * 
+         * *   **success**: The operation is successful.
+         * *   **failed**: The operation fails.
          */
         public Builder status(String status) {
             this.status = status;

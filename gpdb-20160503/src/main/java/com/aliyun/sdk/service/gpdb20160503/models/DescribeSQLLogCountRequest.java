@@ -207,25 +207,28 @@ public class DescribeSQLLogCountRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSQLLogCountRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.database = response.database;
-            this.endTime = response.endTime;
-            this.executeCost = response.executeCost;
-            this.executeState = response.executeState;
-            this.maxExecuteCost = response.maxExecuteCost;
-            this.minExecuteCost = response.minExecuteCost;
-            this.operationClass = response.operationClass;
-            this.operationType = response.operationType;
-            this.queryKeywords = response.queryKeywords;
-            this.sourceIP = response.sourceIP;
-            this.startTime = response.startTime;
-            this.user = response.user;
+        private Builder(DescribeSQLLogCountRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.database = request.database;
+            this.endTime = request.endTime;
+            this.executeCost = request.executeCost;
+            this.executeState = request.executeState;
+            this.maxExecuteCost = request.maxExecuteCost;
+            this.minExecuteCost = request.minExecuteCost;
+            this.operationClass = request.operationClass;
+            this.operationType = request.operationType;
+            this.queryKeywords = request.queryKeywords;
+            this.sourceIP = request.sourceIP;
+            this.startTime = request.startTime;
+            this.user = request.user;
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -234,7 +237,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * Database.
+         * The name of the database.
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -243,7 +246,10 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time. Their interval cannot be more than seven days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -252,7 +258,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * ExecuteCost.
+         * The execution duration of the query. Unit: seconds.
          */
         public Builder executeCost(String executeCost) {
             this.putQueryParameter("ExecuteCost", executeCost);
@@ -261,7 +267,11 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * ExecuteState.
+         * The execution state of the query. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder executeState(String executeState) {
             this.putQueryParameter("ExecuteState", executeState);
@@ -270,7 +280,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * MaxExecuteCost.
+         * The maximum amount of time consumed by a slow query. Minimum value: 0. Unit: seconds.
          */
         public Builder maxExecuteCost(String maxExecuteCost) {
             this.putQueryParameter("MaxExecuteCost", maxExecuteCost);
@@ -279,7 +289,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * MinExecuteCost.
+         * The minimum amount of time consumed by a slow query. Minimum value: 0. Unit: seconds.
          */
         public Builder minExecuteCost(String minExecuteCost) {
             this.putQueryParameter("MinExecuteCost", minExecuteCost);
@@ -288,7 +298,14 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * OperationClass.
+         * The type of the query language. Valid values:
+         * <p>
+         * 
+         * *   **DQL**
+         * *   **DML**
+         * *   **DDL**
+         * *   **DCL**
+         * *   **TCL**
          */
         public Builder operationClass(String operationClass) {
             this.putQueryParameter("OperationClass", operationClass);
@@ -297,7 +314,12 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * The type of the SQL statement.
+         * <p>
+         * 
+         * > *   If the **OperationClass** parameter is specified, the **OperationType** value must belong to the corresponding query language. For example, if the **OperationClass** value is **DQL**, the **OperationType** value must be a **DQL** SQL statement such as **SELECT**.
+         * >*   If the **OperationClass** parameter is not specified, the **OperationType** value can be an SQL statement of all query languages.
+         * >*   If neither of the **OperationClass** and **OperationType** parameters is specified, all types of SQL statements are returned.
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -306,7 +328,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * QueryKeywords.
+         * The keywords used to query.
          */
         public Builder queryKeywords(String queryKeywords) {
             this.putQueryParameter("QueryKeywords", queryKeywords);
@@ -315,7 +337,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * SourceIP.
+         * The source IP address.
          */
         public Builder sourceIP(String sourceIP) {
             this.putQueryParameter("SourceIP", sourceIP);
@@ -324,7 +346,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `yyyy-MM-ddTHH:mmZ` format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -333,7 +355,7 @@ public class DescribeSQLLogCountRequest extends Request {
         }
 
         /**
-         * User.
+         * The username that is used to log on to the database.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

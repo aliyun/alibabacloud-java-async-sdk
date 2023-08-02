@@ -63,14 +63,14 @@ public class ModifySQLCollectorPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySQLCollectorPolicyRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.SQLCollectorStatus = response.SQLCollectorStatus;
+        private Builder(ModifySQLCollectorPolicyRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.SQLCollectorStatus = request.SQLCollectorStatus;
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -79,7 +79,11 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         }
 
         /**
-         * SQLCollectorStatus.
+         * Specifies whether to enable or disable SQL collection.
+         * <p>
+         * 
+         * *   Enable: enables SQL collection.
+         * *   Disabled: disables SQL collection.
          */
         public Builder SQLCollectorStatus(String SQLCollectorStatus) {
             this.putQueryParameter("SQLCollectorStatus", SQLCollectorStatus);

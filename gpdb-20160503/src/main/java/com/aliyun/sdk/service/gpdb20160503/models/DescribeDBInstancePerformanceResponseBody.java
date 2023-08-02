@@ -98,7 +98,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -106,7 +106,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end time of the query.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -114,7 +114,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * The database engine of the instance.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -122,7 +122,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * PerformanceKeys.
+         * Details of the performance metrics. Format: {perf1, perf2, perf3, …}.
          */
         public Builder performanceKeys(java.util.List < String > performanceKeys) {
             this.performanceKeys = performanceKeys;
@@ -130,7 +130,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start time of the query.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;

@@ -77,15 +77,15 @@ public class SwitchDBInstanceNetTypeRequest extends Request {
             super();
         } 
 
-        private Builder(SwitchDBInstanceNetTypeRequest response) {
-            super(response);
-            this.connectionStringPrefix = response.connectionStringPrefix;
-            this.DBInstanceId = response.DBInstanceId;
-            this.port = response.port;
+        private Builder(SwitchDBInstanceNetTypeRequest request) {
+            super(request);
+            this.connectionStringPrefix = request.connectionStringPrefix;
+            this.DBInstanceId = request.DBInstanceId;
+            this.port = request.port;
         } 
 
         /**
-         * ConnectionStringPrefix.
+         * The prefix of the custom endpoint. The prefix must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter. A valid endpoint is in the following format: Prefix.Database engine.rds.aliyuncs.com. Example: test1234.mysql.rds.aliyuncs.com.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -94,7 +94,7 @@ public class SwitchDBInstanceNetTypeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -103,7 +103,11 @@ public class SwitchDBInstanceNetTypeRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port number. Valid values: 3000 to 5999.
+         * <p>
+         * 
+         * > 
+         * *   Only ApsaraDB PolarDB MySQL-compatible edition clusters support this parameter. If you leave this parameter empty, the default port 3306 is used.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

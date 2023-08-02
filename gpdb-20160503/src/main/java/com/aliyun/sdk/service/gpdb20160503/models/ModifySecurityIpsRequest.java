@@ -26,6 +26,14 @@ public class ModifySecurityIpsRequest extends Request {
     private String DBInstanceId;
 
     @Query
+    @NameInMap("ModifyMode")
+    private String modifyMode;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("SecurityIPList")
     @Validation(required = true)
     private String securityIPList;
@@ -35,6 +43,8 @@ public class ModifySecurityIpsRequest extends Request {
         this.DBInstanceIPArrayAttribute = builder.DBInstanceIPArrayAttribute;
         this.DBInstanceIPArrayName = builder.DBInstanceIPArrayName;
         this.DBInstanceId = builder.DBInstanceId;
+        this.modifyMode = builder.modifyMode;
+        this.resourceGroupId = builder.resourceGroupId;
         this.securityIPList = builder.securityIPList;
     }
 
@@ -73,6 +83,20 @@ public class ModifySecurityIpsRequest extends Request {
     }
 
     /**
+     * @return modifyMode
+     */
+    public String getModifyMode() {
+        return this.modifyMode;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return securityIPList
      */
     public String getSecurityIPList() {
@@ -83,22 +107,26 @@ public class ModifySecurityIpsRequest extends Request {
         private String DBInstanceIPArrayAttribute; 
         private String DBInstanceIPArrayName; 
         private String DBInstanceId; 
+        private String modifyMode; 
+        private String resourceGroupId; 
         private String securityIPList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifySecurityIpsRequest response) {
-            super(response);
-            this.DBInstanceIPArrayAttribute = response.DBInstanceIPArrayAttribute;
-            this.DBInstanceIPArrayName = response.DBInstanceIPArrayName;
-            this.DBInstanceId = response.DBInstanceId;
-            this.securityIPList = response.securityIPList;
+        private Builder(ModifySecurityIpsRequest request) {
+            super(request);
+            this.DBInstanceIPArrayAttribute = request.DBInstanceIPArrayAttribute;
+            this.DBInstanceIPArrayName = request.DBInstanceIPArrayName;
+            this.DBInstanceId = request.DBInstanceId;
+            this.modifyMode = request.modifyMode;
+            this.resourceGroupId = request.resourceGroupId;
+            this.securityIPList = request.securityIPList;
         } 
 
         /**
-         * DBInstanceIPArrayAttribute.
+         * The attribute of the IP address whitelist. By default, this parameter is empty. A whitelist with the `hidden` attribute does not appear in the console.
          */
         public Builder DBInstanceIPArrayAttribute(String DBInstanceIPArrayAttribute) {
             this.putQueryParameter("DBInstanceIPArrayAttribute", DBInstanceIPArrayAttribute);
@@ -107,7 +135,10 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * DBInstanceIPArrayName.
+         * The name of the whitelist. If you do not enter a name, IP addresses are added to the default whitelist.
+         * <p>
+         * 
+         * >  You can create up to 50 whitelists for an instance.
          */
         public Builder DBInstanceIPArrayName(String DBInstanceIPArrayName) {
             this.putQueryParameter("DBInstanceIPArrayName", DBInstanceIPArrayName);
@@ -116,7 +147,10 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the instance IDs of all AnalyticDB for PostgreSQL instances in a specific region.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -125,7 +159,35 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * SecurityIPList.
+         * The method of modification. Valid values:
+         * <p>
+         * 
+         * *   **Cover**: overwrites the whitelist.
+         * *   **Append**: appends data to the whitelist.
+         * *   **Delete**: deletes the whitelist.
+         */
+        public Builder modifyMode(String modifyMode) {
+            this.putQueryParameter("ModifyMode", modifyMode);
+            this.modifyMode = modifyMode;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group to which the instance belongs. For more information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The IP addresses listed in the whitelist. You can add up to 1,000 IP addresses to the whitelist. Separate multiple IP addresses with commas (,). The IP addresses must use one of the following formats:
+         * <p>
+         * 
+         * *   0.0.0.0/0
+         * *   10.23.12.24. This is a standard IP address.
+         * *   10.23.12.24/24. This is a CIDR block. The value `/24` indicates that the prefix of the CIDR block is 24-bit long. You can replace 24 with a value in the range of `1 to 32`.
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);

@@ -98,7 +98,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         private String SSLExpiredTime; 
 
         /**
-         * CertCommonName.
+         * The name of the SSL certificate.
          */
         public Builder certCommonName(String certCommonName) {
             this.certCommonName = certCommonName;
@@ -106,7 +106,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -114,7 +114,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceName.
+         * The name of the instance.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -122,7 +122,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLEnabled.
+         * Indicates whether SSL encryption is enabled.
          */
         public Builder SSLEnabled(Boolean SSLEnabled) {
             this.SSLEnabled = SSLEnabled;
@@ -138,7 +138,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLExpiredTime.
+         * The expiration time of the SSL certificate.
          */
         public Builder SSLExpiredTime(String SSLExpiredTime) {
             this.SSLExpiredTime = SSLExpiredTime;

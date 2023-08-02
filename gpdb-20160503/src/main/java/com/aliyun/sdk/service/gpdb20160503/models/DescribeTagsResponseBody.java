@@ -50,7 +50,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         private java.util.List < Tags> tags; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * Details of the tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -110,7 +110,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -118,7 +118,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

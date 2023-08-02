@@ -90,25 +90,33 @@ public class SetDataShareInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(SetDataShareInstanceRequest response) {
-            super(response);
-            this.instanceList = response.instanceList;
-            this.operationType = response.operationType;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(SetDataShareInstanceRequest request) {
+            super(request);
+            this.instanceList = request.instanceList;
+            this.operationType = request.operationType;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * InstanceList.
+         * The ID of the AnalyticDB for PostgreSQL instance in Serverless mode.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.
          */
         public Builder instanceList(java.util.List < String > instanceList) {
-            this.putQueryParameter("InstanceList", instanceList);
+            String instanceListShrink = shrink(instanceList, "InstanceList", "json");
+            this.putQueryParameter("InstanceList", instanceListShrink);
             this.instanceList = instanceList;
             return this;
         }
 
         /**
-         * OperationType.
+         * Specifies whether to enable or disable data sharing. Valid values:
+         * <p>
+         * 
+         * *   **add**: enables data sharing.
+         * *   **remove**: disables data sharing.
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -126,7 +134,10 @@ public class SetDataShareInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

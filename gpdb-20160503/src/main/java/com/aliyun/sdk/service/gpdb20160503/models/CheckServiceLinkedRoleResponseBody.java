@@ -62,7 +62,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * HasServiceLinkedRole.
+         * Indicates whether an SLR is created.
          */
         public Builder hasServiceLinkedRole(String hasServiceLinkedRole) {
             this.hasServiceLinkedRole = hasServiceLinkedRole;
@@ -70,7 +70,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -78,7 +78,7 @@ public class CheckServiceLinkedRoleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

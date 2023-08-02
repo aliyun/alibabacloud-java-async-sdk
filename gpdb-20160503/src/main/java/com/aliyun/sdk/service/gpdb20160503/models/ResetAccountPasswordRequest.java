@@ -77,15 +77,15 @@ public class ResetAccountPasswordRequest extends Request {
             super();
         } 
 
-        private Builder(ResetAccountPasswordRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.accountPassword = response.accountPassword;
-            this.DBInstanceId = response.DBInstanceId;
+        private Builder(ResetAccountPasswordRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.accountPassword = request.accountPassword;
+            this.DBInstanceId = request.DBInstanceId;
         } 
 
         /**
-         * AccountName.
+         * The ID of the instance.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -94,7 +94,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The name of the account.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -103,7 +103,11 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * Before you call this operation, make sure that the following requirements are met:
+         * <p>
+         * 
+         * *   The instance is in the running state.
+         * *   The instance is not locked.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

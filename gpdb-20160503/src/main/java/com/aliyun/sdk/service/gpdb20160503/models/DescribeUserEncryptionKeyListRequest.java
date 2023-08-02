@@ -75,15 +75,15 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserEncryptionKeyListRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(DescribeUserEncryptionKeyListRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -92,7 +92,7 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of KMS keys to return on each page. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -101,7 +101,7 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

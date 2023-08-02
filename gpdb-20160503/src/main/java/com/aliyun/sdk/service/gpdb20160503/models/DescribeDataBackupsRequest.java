@@ -157,21 +157,21 @@ public class DescribeDataBackupsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDataBackupsRequest response) {
-            super(response);
-            this.backupId = response.backupId;
-            this.backupMode = response.backupMode;
-            this.backupStatus = response.backupStatus;
-            this.DBInstanceId = response.DBInstanceId;
-            this.dataType = response.dataType;
-            this.endTime = response.endTime;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
+        private Builder(DescribeDataBackupsRequest request) {
+            super(request);
+            this.backupId = request.backupId;
+            this.backupMode = request.backupMode;
+            this.backupStatus = request.backupStatus;
+            this.DBInstanceId = request.DBInstanceId;
+            this.dataType = request.dataType;
+            this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * BackupId.
+         * The ID of the backup set. If you specify the BackupId parameter, the details of the backup set are returned.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -180,7 +180,13 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * BackupMode.
+         * The backup mode. Valid values:
+         * <p>
+         * 
+         * *   Automated: automatic backup
+         * *   Manual: manual backup
+         * 
+         * If you do not specify this parameter, the records of the backup sets in all modes are returned.
          */
         public Builder backupMode(String backupMode) {
             this.putQueryParameter("BackupMode", backupMode);
@@ -189,7 +195,13 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * BackupStatus.
+         * The status of the backup set. Valid values:
+         * <p>
+         * 
+         * *   Success: The backup is complete.
+         * *   Failed: The backup task fails.
+         * 
+         * If you do not specify this parameter, the records of the backup sets in all states are returned.
          */
         public Builder backupStatus(String backupStatus) {
             this.putQueryParameter("BackupStatus", backupStatus);
@@ -198,7 +210,7 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -207,7 +219,13 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * DataType.
+         * The type of the backup. Valid values:
+         * <p>
+         * 
+         * *   DATA: full backup
+         * *   RESTOREPOI: point-in-time backup
+         * 
+         * If you do not specify this parameter, the records of the full backup set are returned.
          */
         public Builder dataType(String dataType) {
             this.putQueryParameter("DataType", dataType);
@@ -216,7 +234,7 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -225,7 +243,7 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is larger than 0. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -234,7 +252,14 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   30
+         * *   50
+         * *   100
+         * 
+         * Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -243,7 +268,7 @@ public class DescribeDataBackupsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

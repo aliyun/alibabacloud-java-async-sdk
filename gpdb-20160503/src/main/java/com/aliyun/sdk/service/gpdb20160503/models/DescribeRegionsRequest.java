@@ -48,13 +48,16 @@ public class DescribeRegionsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRegionsRequest response) {
-            super(response);
-            this.region = response.region;
+        private Builder(DescribeRegionsRequest request) {
+            super(request);
+            this.region = request.region;
         } 
 
         /**
-         * Region.
+         * The ID of the region.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
