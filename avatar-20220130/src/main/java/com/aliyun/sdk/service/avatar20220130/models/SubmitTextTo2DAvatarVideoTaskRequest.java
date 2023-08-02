@@ -482,10 +482,14 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
         private Boolean isAlpha;
 
         @NameInMap("IsSubtitles")
+        @Deprecated
         private Boolean isSubtitles;
 
         @NameInMap("Resolution")
         private Integer resolution;
+
+        @NameInMap("SubtitleEmbedded")
+        private Boolean subtitleEmbedded;
 
         private VideoInfo(Builder builder) {
             this.alphaFormat = builder.alphaFormat;
@@ -493,6 +497,7 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
             this.isAlpha = builder.isAlpha;
             this.isSubtitles = builder.isSubtitles;
             this.resolution = builder.resolution;
+            this.subtitleEmbedded = builder.subtitleEmbedded;
         }
 
         public static Builder builder() {
@@ -538,12 +543,20 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
             return this.resolution;
         }
 
+        /**
+         * @return subtitleEmbedded
+         */
+        public Boolean getSubtitleEmbedded() {
+            return this.subtitleEmbedded;
+        }
+
         public static final class Builder {
             private Integer alphaFormat; 
             private String backgroundImageUrl; 
             private Boolean isAlpha; 
             private Boolean isSubtitles; 
             private Integer resolution; 
+            private Boolean subtitleEmbedded; 
 
             /**
              * AlphaFormat.
@@ -582,6 +595,14 @@ public class SubmitTextTo2DAvatarVideoTaskRequest extends Request {
              */
             public Builder resolution(Integer resolution) {
                 this.resolution = resolution;
+                return this;
+            }
+
+            /**
+             * SubtitleEmbedded.
+             */
+            public Builder subtitleEmbedded(Boolean subtitleEmbedded) {
+                this.subtitleEmbedded = subtitleEmbedded;
                 return this;
             }
 

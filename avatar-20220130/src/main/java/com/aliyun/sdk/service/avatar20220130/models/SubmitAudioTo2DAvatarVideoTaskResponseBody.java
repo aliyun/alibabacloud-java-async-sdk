@@ -25,7 +25,7 @@ public class SubmitAudioTo2DAvatarVideoTaskResponseBody extends TeaModel {
     private String requestId;
 
     @NameInMap("Success")
-    private String success;
+    private Boolean success;
 
     private SubmitAudioTo2DAvatarVideoTaskResponseBody(Builder builder) {
         this.code = builder.code;
@@ -74,7 +74,7 @@ public class SubmitAudioTo2DAvatarVideoTaskResponseBody extends TeaModel {
     /**
      * @return success
      */
-    public String getSuccess() {
+    public Boolean getSuccess() {
         return this.success;
     }
 
@@ -83,7 +83,7 @@ public class SubmitAudioTo2DAvatarVideoTaskResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
-        private String success; 
+        private Boolean success; 
 
         /**
          * Code.
@@ -120,7 +120,7 @@ public class SubmitAudioTo2DAvatarVideoTaskResponseBody extends TeaModel {
         /**
          * Success.
          */
-        public Builder success(String success) {
+        public Builder success(Boolean success) {
             this.success = success;
             return this;
         }

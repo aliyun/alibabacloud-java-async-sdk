@@ -132,6 +132,9 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
     } 
 
     public static class TaskResult extends TeaModel {
+        @NameInMap("AlphaUrl")
+        private String alphaUrl;
+
         @NameInMap("FailCode")
         private String failCode;
 
@@ -151,6 +154,7 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         private String wordSubtitlesUrl;
 
         private TaskResult(Builder builder) {
+            this.alphaUrl = builder.alphaUrl;
             this.failCode = builder.failCode;
             this.failReason = builder.failReason;
             this.subtitlesUrl = builder.subtitlesUrl;
@@ -165,6 +169,13 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
 
         public static TaskResult create() {
             return builder().build();
+        }
+
+        /**
+         * @return alphaUrl
+         */
+        public String getAlphaUrl() {
+            return this.alphaUrl;
         }
 
         /**
@@ -210,12 +221,21 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String alphaUrl; 
             private String failCode; 
             private String failReason; 
             private String subtitlesUrl; 
             private Integer videoDuration; 
             private String videoUrl; 
             private String wordSubtitlesUrl; 
+
+            /**
+             * AlphaUrl.
+             */
+            public Builder alphaUrl(String alphaUrl) {
+                this.alphaUrl = alphaUrl;
+                return this;
+            }
 
             /**
              * FailCode.
