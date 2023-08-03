@@ -317,6 +317,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeDomainResponse> describeDomain(DescribeDomainRequest request);
 
+    CompletableFuture<DescribeGroupQpsResponse> describeGroupQps(DescribeGroupQpsRequest request);
+
     CompletableFuture<DescribeHistoryApisResponse> describeHistoryApis(DescribeHistoryApisRequest request);
 
     CompletableFuture<DescribeImportOASTaskResponse> describeImportOASTask(DescribeImportOASTaskRequest request);
