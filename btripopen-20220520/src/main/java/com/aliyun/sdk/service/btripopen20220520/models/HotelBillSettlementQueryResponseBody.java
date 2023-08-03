@@ -155,6 +155,18 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("alipay_trade_no")
         private String alipayTradeNo;
 
+        @NameInMap("apply_arr_city_code")
+        private String applyArrCityCode;
+
+        @NameInMap("apply_arr_city_name")
+        private String applyArrCityName;
+
+        @NameInMap("apply_dep_city_code")
+        private String applyDepCityCode;
+
+        @NameInMap("apply_dep_city_name")
+        private String applyDepCityName;
+
         @NameInMap("apply_extend_field")
         private String applyExtendField;
 
@@ -302,6 +314,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("tax_rate")
         private String taxRate;
 
+        @NameInMap("third_itinerary_id")
+        private String thirdItineraryId;
+
         @NameInMap("total_nights")
         private Integer totalNights;
 
@@ -319,6 +334,10 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         private DataList(Builder builder) {
             this.alipayTradeNo = builder.alipayTradeNo;
+            this.applyArrCityCode = builder.applyArrCityCode;
+            this.applyArrCityName = builder.applyArrCityName;
+            this.applyDepCityCode = builder.applyDepCityCode;
+            this.applyDepCityName = builder.applyDepCityName;
             this.applyExtendField = builder.applyExtendField;
             this.applyId = builder.applyId;
             this.billRecordTime = builder.billRecordTime;
@@ -368,6 +387,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.settlementType = builder.settlementType;
             this.status = builder.status;
             this.taxRate = builder.taxRate;
+            this.thirdItineraryId = builder.thirdItineraryId;
             this.totalNights = builder.totalNights;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
@@ -388,6 +408,34 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getAlipayTradeNo() {
             return this.alipayTradeNo;
+        }
+
+        /**
+         * @return applyArrCityCode
+         */
+        public String getApplyArrCityCode() {
+            return this.applyArrCityCode;
+        }
+
+        /**
+         * @return applyArrCityName
+         */
+        public String getApplyArrCityName() {
+            return this.applyArrCityName;
+        }
+
+        /**
+         * @return applyDepCityCode
+         */
+        public String getApplyDepCityCode() {
+            return this.applyDepCityCode;
+        }
+
+        /**
+         * @return applyDepCityName
+         */
+        public String getApplyDepCityName() {
+            return this.applyDepCityName;
         }
 
         /**
@@ -734,6 +782,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdItineraryId
+         */
+        public String getThirdItineraryId() {
+            return this.thirdItineraryId;
+        }
+
+        /**
          * @return totalNights
          */
         public Integer getTotalNights() {
@@ -770,6 +825,10 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String alipayTradeNo; 
+            private String applyArrCityCode; 
+            private String applyArrCityName; 
+            private String applyDepCityCode; 
+            private String applyDepCityName; 
             private String applyExtendField; 
             private String applyId; 
             private String billRecordTime; 
@@ -819,6 +878,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String settlementType; 
             private Integer status; 
             private String taxRate; 
+            private String thirdItineraryId; 
             private Integer totalNights; 
             private String travelerId; 
             private String travelerJobNo; 
@@ -830,6 +890,38 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder alipayTradeNo(String alipayTradeNo) {
                 this.alipayTradeNo = alipayTradeNo;
+                return this;
+            }
+
+            /**
+             * apply_arr_city_code.
+             */
+            public Builder applyArrCityCode(String applyArrCityCode) {
+                this.applyArrCityCode = applyArrCityCode;
+                return this;
+            }
+
+            /**
+             * apply_arr_city_name.
+             */
+            public Builder applyArrCityName(String applyArrCityName) {
+                this.applyArrCityName = applyArrCityName;
+                return this;
+            }
+
+            /**
+             * apply_dep_city_code.
+             */
+            public Builder applyDepCityCode(String applyDepCityCode) {
+                this.applyDepCityCode = applyDepCityCode;
+                return this;
+            }
+
+            /**
+             * apply_dep_city_name.
+             */
+            public Builder applyDepCityName(String applyDepCityName) {
+                this.applyDepCityName = applyDepCityName;
                 return this;
             }
 
@@ -1222,6 +1314,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
+                return this;
+            }
+
+            /**
+             * third_itinerary_id.
+             */
+            public Builder thirdItineraryId(String thirdItineraryId) {
+                this.thirdItineraryId = thirdItineraryId;
                 return this;
             }
 

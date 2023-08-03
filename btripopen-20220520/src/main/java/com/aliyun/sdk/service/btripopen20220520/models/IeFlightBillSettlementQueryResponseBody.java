@@ -184,6 +184,18 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("alipay_trade_no")
         private String alipayTradeNo;
 
+        @NameInMap("apply_arr_city_code")
+        private String applyArrCityCode;
+
+        @NameInMap("apply_arr_city_name")
+        private String applyArrCityName;
+
+        @NameInMap("apply_dep_city_code")
+        private String applyDepCityCode;
+
+        @NameInMap("apply_dep_city_name")
+        private String applyDepCityName;
+
         @NameInMap("apply_extend_field")
         private String applyExtendField;
 
@@ -195,6 +207,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("arr_city")
         private String arrCity;
+
+        @NameInMap("arr_city_code")
+        private String arrCityCode;
 
         @NameInMap("arr_date")
         private String arrDate;
@@ -255,6 +270,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("dep_airport_code")
         private String depAirportCode;
+
+        @NameInMap("dep_city_code")
+        private String depCityCode;
 
         @NameInMap("department")
         private String department;
@@ -376,6 +394,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("tax_rate")
         private String taxRate;
 
+        @NameInMap("third_itinerary_id")
+        private String thirdItineraryId;
+
         @NameInMap("ticket_id")
         private String ticketId;
 
@@ -399,10 +420,15 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.airlineCorpCode = builder.airlineCorpCode;
             this.airlineCorpName = builder.airlineCorpName;
             this.alipayTradeNo = builder.alipayTradeNo;
+            this.applyArrCityCode = builder.applyArrCityCode;
+            this.applyArrCityName = builder.applyArrCityName;
+            this.applyDepCityCode = builder.applyDepCityCode;
+            this.applyDepCityName = builder.applyDepCityName;
             this.applyExtendField = builder.applyExtendField;
             this.applyId = builder.applyId;
             this.arrAirportCode = builder.arrAirportCode;
             this.arrCity = builder.arrCity;
+            this.arrCityCode = builder.arrCityCode;
             this.arrDate = builder.arrDate;
             this.arrStation = builder.arrStation;
             this.arrTime = builder.arrTime;
@@ -423,6 +449,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.costCenterNumber = builder.costCenterNumber;
             this.coupon = builder.coupon;
             this.depAirportCode = builder.depAirportCode;
+            this.depCityCode = builder.depCityCode;
             this.department = builder.department;
             this.departmentId = builder.departmentId;
             this.deptCity = builder.deptCity;
@@ -463,6 +490,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.subOrderId = builder.subOrderId;
             this.taxFee = builder.taxFee;
             this.taxRate = builder.taxRate;
+            this.thirdItineraryId = builder.thirdItineraryId;
             this.ticketId = builder.ticketId;
             this.trade = builder.trade;
             this.travelerId = builder.travelerId;
@@ -508,6 +536,34 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return applyArrCityCode
+         */
+        public String getApplyArrCityCode() {
+            return this.applyArrCityCode;
+        }
+
+        /**
+         * @return applyArrCityName
+         */
+        public String getApplyArrCityName() {
+            return this.applyArrCityName;
+        }
+
+        /**
+         * @return applyDepCityCode
+         */
+        public String getApplyDepCityCode() {
+            return this.applyDepCityCode;
+        }
+
+        /**
+         * @return applyDepCityName
+         */
+        public String getApplyDepCityName() {
+            return this.applyDepCityName;
+        }
+
+        /**
          * @return applyExtendField
          */
         public String getApplyExtendField() {
@@ -533,6 +589,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getArrCity() {
             return this.arrCity;
+        }
+
+        /**
+         * @return arrCityCode
+         */
+        public String getArrCityCode() {
+            return this.arrCityCode;
         }
 
         /**
@@ -673,6 +736,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getDepAirportCode() {
             return this.depAirportCode;
+        }
+
+        /**
+         * @return depCityCode
+         */
+        public String getDepCityCode() {
+            return this.depCityCode;
         }
 
         /**
@@ -956,6 +1026,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdItineraryId
+         */
+        public String getThirdItineraryId() {
+            return this.thirdItineraryId;
+        }
+
+        /**
          * @return ticketId
          */
         public String getTicketId() {
@@ -1002,10 +1079,15 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String airlineCorpCode; 
             private String airlineCorpName; 
             private String alipayTradeNo; 
+            private String applyArrCityCode; 
+            private String applyArrCityName; 
+            private String applyDepCityCode; 
+            private String applyDepCityName; 
             private String applyExtendField; 
             private String applyId; 
             private String arrAirportCode; 
             private String arrCity; 
+            private String arrCityCode; 
             private String arrDate; 
             private String arrStation; 
             private String arrTime; 
@@ -1026,6 +1108,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String costCenterNumber; 
             private Double coupon; 
             private String depAirportCode; 
+            private String depCityCode; 
             private String department; 
             private String departmentId; 
             private String deptCity; 
@@ -1066,6 +1149,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String subOrderId; 
             private Double taxFee; 
             private String taxRate; 
+            private String thirdItineraryId; 
             private String ticketId; 
             private String trade; 
             private String travelerId; 
@@ -1106,6 +1190,38 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * apply_arr_city_code.
+             */
+            public Builder applyArrCityCode(String applyArrCityCode) {
+                this.applyArrCityCode = applyArrCityCode;
+                return this;
+            }
+
+            /**
+             * apply_arr_city_name.
+             */
+            public Builder applyArrCityName(String applyArrCityName) {
+                this.applyArrCityName = applyArrCityName;
+                return this;
+            }
+
+            /**
+             * apply_dep_city_code.
+             */
+            public Builder applyDepCityCode(String applyDepCityCode) {
+                this.applyDepCityCode = applyDepCityCode;
+                return this;
+            }
+
+            /**
+             * apply_dep_city_name.
+             */
+            public Builder applyDepCityName(String applyDepCityName) {
+                this.applyDepCityName = applyDepCityName;
+                return this;
+            }
+
+            /**
              * 审批扩展自定义字段
              */
             public Builder applyExtendField(String applyExtendField) {
@@ -1134,6 +1250,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder arrCity(String arrCity) {
                 this.arrCity = arrCity;
+                return this;
+            }
+
+            /**
+             * arr_city_code.
+             */
+            public Builder arrCityCode(String arrCityCode) {
+                this.arrCityCode = arrCityCode;
                 return this;
             }
 
@@ -1294,6 +1418,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder depAirportCode(String depAirportCode) {
                 this.depAirportCode = depAirportCode;
+                return this;
+            }
+
+            /**
+             * dep_city_code.
+             */
+            public Builder depCityCode(String depCityCode) {
+                this.depCityCode = depCityCode;
                 return this;
             }
 
@@ -1614,6 +1746,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder taxRate(String taxRate) {
                 this.taxRate = taxRate;
+                return this;
+            }
+
+            /**
+             * third_itinerary_id.
+             */
+            public Builder thirdItineraryId(String thirdItineraryId) {
+                this.thirdItineraryId = thirdItineraryId;
                 return this;
             }
 

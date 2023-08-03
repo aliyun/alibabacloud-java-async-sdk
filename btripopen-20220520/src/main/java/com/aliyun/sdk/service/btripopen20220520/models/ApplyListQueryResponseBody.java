@@ -939,6 +939,9 @@ public class ApplyListQueryResponseBody extends TeaModel {
         @NameInMap("itinerary_set_list")
         private java.util.List < ItinerarySetList> itinerarySetList;
 
+        @NameInMap("job_no")
+        private String jobNo;
+
         @NameInMap("status")
         private Integer status;
 
@@ -990,6 +993,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             this.itineraryList = builder.itineraryList;
             this.itineraryRule = builder.itineraryRule;
             this.itinerarySetList = builder.itinerarySetList;
+            this.jobNo = builder.jobNo;
             this.status = builder.status;
             this.statusDesc = builder.statusDesc;
             this.thirdpartBusinessId = builder.thirdpartBusinessId;
@@ -1111,6 +1115,13 @@ public class ApplyListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobNo
+         */
+        public String getJobNo() {
+            return this.jobNo;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -1209,6 +1220,7 @@ public class ApplyListQueryResponseBody extends TeaModel {
             private java.util.List < ItineraryList> itineraryList; 
             private Integer itineraryRule; 
             private java.util.List < ItinerarySetList> itinerarySetList; 
+            private String jobNo; 
             private Integer status; 
             private String statusDesc; 
             private String thirdpartBusinessId; 
@@ -1331,6 +1343,14 @@ public class ApplyListQueryResponseBody extends TeaModel {
              */
             public Builder itinerarySetList(java.util.List < ItinerarySetList> itinerarySetList) {
                 this.itinerarySetList = itinerarySetList;
+                return this;
+            }
+
+            /**
+             * job_no.
+             */
+            public Builder jobNo(String jobNo) {
+                this.jobNo = jobNo;
                 return this;
             }
 
