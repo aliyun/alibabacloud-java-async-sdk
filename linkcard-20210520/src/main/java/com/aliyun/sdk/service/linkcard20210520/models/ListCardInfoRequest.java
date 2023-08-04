@@ -89,6 +89,10 @@ public class ListCardInfoRequest extends Request {
     private String msisdn;
 
     @Query
+    @NameInMap("NetworkType")
+    private String networkType;
+
+    @Query
     @NameInMap("NotifyId")
     private String notifyId;
 
@@ -151,6 +155,7 @@ public class ListCardInfoRequest extends Request {
         this.maxRestFlowPercentage = builder.maxRestFlowPercentage;
         this.minFlow = builder.minFlow;
         this.msisdn = builder.msisdn;
+        this.networkType = builder.networkType;
         this.notifyId = builder.notifyId;
         this.osStatus = builder.osStatus;
         this.pageNo = builder.pageNo;
@@ -310,6 +315,13 @@ public class ListCardInfoRequest extends Request {
     }
 
     /**
+     * @return networkType
+     */
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
+    /**
      * @return notifyId
      */
     public String getNotifyId() {
@@ -399,6 +411,7 @@ public class ListCardInfoRequest extends Request {
         private Double maxRestFlowPercentage; 
         private String minFlow; 
         private String msisdn; 
+        private String networkType; 
         private String notifyId; 
         private String osStatus; 
         private Integer pageNo; 
@@ -435,6 +448,7 @@ public class ListCardInfoRequest extends Request {
             this.maxRestFlowPercentage = request.maxRestFlowPercentage;
             this.minFlow = request.minFlow;
             this.msisdn = request.msisdn;
+            this.networkType = request.networkType;
             this.notifyId = request.notifyId;
             this.osStatus = request.osStatus;
             this.pageNo = request.pageNo;
@@ -615,6 +629,15 @@ public class ListCardInfoRequest extends Request {
         public Builder msisdn(String msisdn) {
             this.putQueryParameter("Msisdn", msisdn);
             this.msisdn = msisdn;
+            return this;
+        }
+
+        /**
+         * NetworkType.
+         */
+        public Builder networkType(String networkType) {
+            this.putQueryParameter("NetworkType", networkType);
+            this.networkType = networkType;
             return this;
         }
 

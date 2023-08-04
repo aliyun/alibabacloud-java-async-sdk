@@ -312,6 +312,9 @@ public class ListOrderResponseBody extends TeaModel {
         @NameInMap("FunctionFee")
         private Integer functionFee;
 
+        @NameInMap("NetworkType")
+        private String networkType;
+
         @NameInMap("OrderDetailUrl")
         private String orderDetailUrl;
 
@@ -362,6 +365,7 @@ public class ListOrderResponseBody extends TeaModel {
             this.expressNoList = builder.expressNoList;
             this.flowType = builder.flowType;
             this.functionFee = builder.functionFee;
+            this.networkType = builder.networkType;
             this.orderDetailUrl = builder.orderDetailUrl;
             this.orderId = builder.orderId;
             this.orderInfo = builder.orderInfo;
@@ -476,6 +480,13 @@ public class ListOrderResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
          * @return orderDetailUrl
          */
         public String getOrderDetailUrl() {
@@ -573,6 +584,7 @@ public class ListOrderResponseBody extends TeaModel {
             private java.util.List < String > expressNoList; 
             private String flowType; 
             private Integer functionFee; 
+            private String networkType; 
             private String orderDetailUrl; 
             private String orderId; 
             private String orderInfo; 
@@ -687,6 +699,14 @@ public class ListOrderResponseBody extends TeaModel {
              */
             public Builder functionFee(Integer functionFee) {
                 this.functionFee = functionFee;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
                 return this;
             }
 

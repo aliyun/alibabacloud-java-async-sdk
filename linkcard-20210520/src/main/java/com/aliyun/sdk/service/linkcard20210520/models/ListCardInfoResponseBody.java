@@ -255,6 +255,9 @@ public class ListCardInfoResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         private String expireTime;
 
+        @NameInMap("FlowLatestModifiedTime")
+        private String flowLatestModifiedTime;
+
         @NameInMap("Iccid")
         private String iccid;
 
@@ -266,6 +269,9 @@ public class ListCardInfoResponseBody extends TeaModel {
 
         @NameInMap("Msisdn")
         private java.util.List < String > msisdn;
+
+        @NameInMap("NetworkType")
+        private String networkType;
 
         @NameInMap("NotifyId")
         private String notifyId;
@@ -324,10 +330,12 @@ public class ListCardInfoResponseBody extends TeaModel {
             this.directionalGroupId = builder.directionalGroupId;
             this.directionalGroupName = builder.directionalGroupName;
             this.expireTime = builder.expireTime;
+            this.flowLatestModifiedTime = builder.flowLatestModifiedTime;
             this.iccid = builder.iccid;
             this.imsi = builder.imsi;
             this.isAutoRecharge = builder.isAutoRecharge;
             this.msisdn = builder.msisdn;
+            this.networkType = builder.networkType;
             this.notifyId = builder.notifyId;
             this.openAccountTime = builder.openAccountTime;
             this.osStatus = builder.osStatus;
@@ -451,6 +459,13 @@ public class ListCardInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return flowLatestModifiedTime
+         */
+        public String getFlowLatestModifiedTime() {
+            return this.flowLatestModifiedTime;
+        }
+
+        /**
          * @return iccid
          */
         public String getIccid() {
@@ -476,6 +491,13 @@ public class ListCardInfoResponseBody extends TeaModel {
          */
         public java.util.List < String > getMsisdn() {
             return this.msisdn;
+        }
+
+        /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
         }
 
         /**
@@ -591,10 +613,12 @@ public class ListCardInfoResponseBody extends TeaModel {
             private Long directionalGroupId; 
             private String directionalGroupName; 
             private String expireTime; 
+            private String flowLatestModifiedTime; 
             private String iccid; 
             private java.util.List < String > imsi; 
             private Boolean isAutoRecharge; 
             private java.util.List < String > msisdn; 
+            private String networkType; 
             private String notifyId; 
             private String openAccountTime; 
             private String osStatus; 
@@ -723,6 +747,14 @@ public class ListCardInfoResponseBody extends TeaModel {
             }
 
             /**
+             * FlowLatestModifiedTime.
+             */
+            public Builder flowLatestModifiedTime(String flowLatestModifiedTime) {
+                this.flowLatestModifiedTime = flowLatestModifiedTime;
+                return this;
+            }
+
+            /**
              * Iccid.
              */
             public Builder iccid(String iccid) {
@@ -751,6 +783,14 @@ public class ListCardInfoResponseBody extends TeaModel {
              */
             public Builder msisdn(java.util.List < String > msisdn) {
                 this.msisdn = msisdn;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
                 return this;
             }
 
