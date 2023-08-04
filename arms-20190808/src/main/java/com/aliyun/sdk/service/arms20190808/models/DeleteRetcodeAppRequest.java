@@ -98,7 +98,7 @@ public class DeleteRetcodeAppRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The application ID.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -107,7 +107,7 @@ public class DeleteRetcodeAppRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -116,7 +116,7 @@ public class DeleteRetcodeAppRequest extends Request {
         }
 
         /**
-         * Pid.
+         * The process identifier (PID) of the application.
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -125,7 +125,7 @@ public class DeleteRetcodeAppRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

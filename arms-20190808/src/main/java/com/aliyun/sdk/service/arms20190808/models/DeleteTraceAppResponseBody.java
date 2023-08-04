@@ -12,15 +12,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTraceAppResponseBody</p>
  */
 public class DeleteTraceAppResponseBody extends TeaModel {
+    @NameInMap("Code")
+    private Long code;
+
     @NameInMap("Data")
     private String data;
+
+    @NameInMap("Message")
+    private String message;
 
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Success")
+    private Boolean success;
+
     private DeleteTraceAppResponseBody(Builder builder) {
+        this.code = builder.code;
         this.data = builder.data;
+        this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -32,10 +44,24 @@ public class DeleteTraceAppResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public Long getCode() {
+        return this.code;
+    }
+
+    /**
      * @return data
      */
     public String getData() {
         return this.data;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -45,9 +71,27 @@ public class DeleteTraceAppResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
+        private Long code; 
         private String data; 
+        private String message; 
         private String requestId; 
+        private Boolean success; 
+
+        /**
+         * Code.
+         */
+        public Builder code(Long code) {
+            this.code = code;
+            return this;
+        }
 
         /**
          * The response in JSON format, including the HTTP status code, error code, response message, and trace ID.
@@ -58,10 +102,26 @@ public class DeleteTraceAppResponseBody extends TeaModel {
         }
 
         /**
+         * Message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
          * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 

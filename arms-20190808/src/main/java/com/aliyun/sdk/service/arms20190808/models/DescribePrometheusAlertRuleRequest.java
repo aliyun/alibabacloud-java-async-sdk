@@ -69,7 +69,7 @@ public class DescribePrometheusAlertRuleRequest extends Request {
         } 
 
         /**
-         * AlertId.
+         * The ID of the alert rule. You can call the ListPrometheusAlertRules operation to query the ID of the alert rule.
          */
         public Builder alertId(Long alertId) {
             this.putQueryParameter("AlertId", alertId);

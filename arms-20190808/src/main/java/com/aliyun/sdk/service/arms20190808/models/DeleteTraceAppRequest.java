@@ -18,6 +18,10 @@ public class DeleteTraceAppRequest extends Request {
     private String appId;
 
     @Query
+    @NameInMap("DeleteReason")
+    private DeleteReason deleteReason;
+
+    @Query
     @NameInMap("Pid")
     @Validation(required = true)
     private String pid;
@@ -35,6 +39,7 @@ public class DeleteTraceAppRequest extends Request {
     private DeleteTraceAppRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
+        this.deleteReason = builder.deleteReason;
         this.pid = builder.pid;
         this.regionId = builder.regionId;
         this.type = builder.type;
@@ -61,6 +66,13 @@ public class DeleteTraceAppRequest extends Request {
     }
 
     /**
+     * @return deleteReason
+     */
+    public DeleteReason getDeleteReason() {
+        return this.deleteReason;
+    }
+
+    /**
      * @return pid
      */
     public String getPid() {
@@ -83,6 +95,7 @@ public class DeleteTraceAppRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteTraceAppRequest, Builder> {
         private String appId; 
+        private DeleteReason deleteReason; 
         private String pid; 
         private String regionId; 
         private String type; 
@@ -94,6 +107,7 @@ public class DeleteTraceAppRequest extends Request {
         private Builder(DeleteTraceAppRequest request) {
             super(request);
             this.appId = request.appId;
+            this.deleteReason = request.deleteReason;
             this.pid = request.pid;
             this.regionId = request.regionId;
             this.type = request.type;
@@ -105,6 +119,16 @@ public class DeleteTraceAppRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
+            return this;
+        }
+
+        /**
+         * DeleteReason.
+         */
+        public Builder deleteReason(DeleteReason deleteReason) {
+            String deleteReasonShrink = shrink(deleteReason, "DeleteReason", "json");
+            this.putQueryParameter("DeleteReason", deleteReasonShrink);
+            this.deleteReason = deleteReason;
             return this;
         }
 
@@ -146,4 +170,126 @@ public class DeleteTraceAppRequest extends Request {
 
     } 
 
+    public static class ReasonIds extends TeaModel {
+        @NameInMap("Id")
+        private Integer id;
+
+        @NameInMap("Name")
+        private String name;
+
+        private ReasonIds(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReasonIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Integer getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Integer id; 
+            private String name; 
+
+            /**
+             * Id.
+             */
+            public Builder id(Integer id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public ReasonIds build() {
+                return new ReasonIds(this);
+            } 
+
+        } 
+
+    }
+    public static class DeleteReason extends TeaModel {
+        @NameInMap("ReasonIds")
+        private java.util.List < ReasonIds> reasonIds;
+
+        @NameInMap("Remark")
+        private String remark;
+
+        private DeleteReason(Builder builder) {
+            this.reasonIds = builder.reasonIds;
+            this.remark = builder.remark;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeleteReason create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reasonIds
+         */
+        public java.util.List < ReasonIds> getReasonIds() {
+            return this.reasonIds;
+        }
+
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        public static final class Builder {
+            private java.util.List < ReasonIds> reasonIds; 
+            private String remark; 
+
+            /**
+             * ReasonIds.
+             */
+            public Builder reasonIds(java.util.List < ReasonIds> reasonIds) {
+                this.reasonIds = reasonIds;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
+                return this;
+            }
+
+            public DeleteReason build() {
+                return new DeleteReason(this);
+            } 
+
+        } 
+
+    }
 }

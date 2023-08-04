@@ -86,7 +86,7 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,11 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether the Browser Monitoring task was deleted. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,7 +106,11 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned for the operation. Valid values:
+         * <p>
+         * 
+         * *   **Success** is returned if the operation is successful.
+         * *   An error message is returned if the operation fails.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +118,7 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +126,12 @@ public class DeleteRetcodeAppResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * true: The request was successful.
+         * 
+         * false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

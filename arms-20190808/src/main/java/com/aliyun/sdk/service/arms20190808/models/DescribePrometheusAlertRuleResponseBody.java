@@ -102,7 +102,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * PrometheusAlertRule.
+         * The returned struct.
          */
         public Builder prometheusAlertRule(PrometheusAlertRule prometheusAlertRule) {
             this.prometheusAlertRule = prometheusAlertRule;
@@ -110,7 +110,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the annotation.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +178,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the annotation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -231,7 +231,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the tag.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -239,7 +239,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -412,7 +412,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * AlertId.
+             * The ID of the alert rule.
              */
             public Builder alertId(Long alertId) {
                 this.alertId = alertId;
@@ -420,7 +420,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * AlertName.
+             * The name of the alert rule.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -428,7 +428,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Annotations.
+             * The annotations of the alert rule.
              */
             public Builder annotations(java.util.List < Annotations> annotations) {
                 this.annotations = annotations;
@@ -436,7 +436,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -444,7 +444,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * DispatchRuleId.
+             * The ID of the notification policy. This parameter is returned if the **NotifyType** parameter is set to `DISPATCH_RULE`.
              */
             public Builder dispatchRuleId(Long dispatchRuleId) {
                 this.dispatchRuleId = dispatchRuleId;
@@ -452,7 +452,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the alert. Valid values: 1 to 1440. Unit: minutes.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -460,7 +460,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Expression.
+             * The expression of the alert rule.
              */
             public Builder expression(String expression) {
                 this.expression = expression;
@@ -468,7 +468,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * The tags of the alert rule.
              */
             public Builder labels(java.util.List < Labels> labels) {
                 this.labels = labels;
@@ -476,7 +476,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The alert message. Tags can be referenced in the {{$labels.xxx}} format.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -484,7 +484,11 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyType.
+             * The method of that is used to send alert notifications. Valid values:
+             * <p>
+             * 
+             * *   `ALERT_MANAGER`: Alert notifications are sent by Operation Center.
+             * *   `DISPATCH_RULE`: Alert notifications are sent based on the specified notification policy.
              */
             public Builder notifyType(String notifyType) {
                 this.notifyType = notifyType;
@@ -492,7 +496,11 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the alert rule is enabled. Valid values:
+             * <p>
+             * 
+             * *   `1`: The alert rule is enabled.
+             * *   `0`: The alert rule is disabled.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -500,7 +508,7 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the alert rule.
              */
             public Builder type(String type) {
                 this.type = type;

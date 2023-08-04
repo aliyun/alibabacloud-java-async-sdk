@@ -22,6 +22,14 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("GroupName")
+    private String groupName;
+
+    @Query
+    @NameInMap("MostRegionId")
+    private String mostRegionId;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -39,6 +47,8 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         super(builder);
         this.allSubClustersSuccess = builder.allSubClustersSuccess;
         this.clusterId = builder.clusterId;
+        this.groupName = builder.groupName;
+        this.mostRegionId = builder.mostRegionId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.subClustersJson = builder.subClustersJson;
@@ -72,6 +82,20 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
     }
 
     /**
+     * @return groupName
+     */
+    public String getGroupName() {
+        return this.groupName;
+    }
+
+    /**
+     * @return mostRegionId
+     */
+    public String getMostRegionId() {
+        return this.mostRegionId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -95,6 +119,8 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
     public static final class Builder extends Request.Builder<UpdatePrometheusGlobalViewRequest, Builder> {
         private Boolean allSubClustersSuccess; 
         private String clusterId; 
+        private String groupName; 
+        private String mostRegionId; 
         private String regionId; 
         private String resourceGroupId; 
         private String subClustersJson; 
@@ -107,6 +133,8 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
             super(request);
             this.allSubClustersSuccess = request.allSubClustersSuccess;
             this.clusterId = request.clusterId;
+            this.groupName = request.groupName;
+            this.mostRegionId = request.mostRegionId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.subClustersJson = request.subClustersJson;
@@ -127,6 +155,24 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * GroupName.
+         */
+        public Builder groupName(String groupName) {
+            this.putQueryParameter("GroupName", groupName);
+            this.groupName = groupName;
+            return this;
+        }
+
+        /**
+         * MostRegionId.
+         */
+        public Builder mostRegionId(String mostRegionId) {
+            this.putQueryParameter("MostRegionId", mostRegionId);
+            this.mostRegionId = mostRegionId;
             return this;
         }
 
