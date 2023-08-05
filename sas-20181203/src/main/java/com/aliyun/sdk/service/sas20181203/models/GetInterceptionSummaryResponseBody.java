@@ -50,7 +50,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InterceptionSummary.
+         * The statistics.
          */
         public Builder interceptionSummary(InterceptionSummary interceptionSummary) {
             this.interceptionSummary = interceptionSummary;
@@ -58,7 +58,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -206,7 +206,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             private Integer ruleCount; 
 
             /**
-             * CloseClusterCount.
+             * The number of clusters that are not protected.
              */
             public Builder closeClusterCount(Integer closeClusterCount) {
                 this.closeClusterCount = closeClusterCount;
@@ -214,7 +214,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * CloseRuleCount.
+             * The number of disabled cluster defense rules.
              */
             public Builder closeRuleCount(Integer closeRuleCount) {
                 this.closeRuleCount = closeRuleCount;
@@ -222,7 +222,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterCount.
+             * The total number of clusters.
              */
             public Builder clusterCount(Integer clusterCount) {
                 this.clusterCount = clusterCount;
@@ -230,7 +230,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * InterceptionCountInDays.
+             * The total number of interception records for the specified cluster.
              */
             public Builder interceptionCountInDays(Integer interceptionCountInDays) {
                 this.interceptionCountInDays = interceptionCountInDays;
@@ -238,7 +238,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * OpenClusterCount.
+             * The number of clusters that are protected.
              */
             public Builder openClusterCount(Integer openClusterCount) {
                 this.openClusterCount = openClusterCount;
@@ -246,7 +246,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * OpenRuleCount.
+             * The number of enabled cluster defense rules.
              */
             public Builder openRuleCount(Integer openRuleCount) {
                 this.openRuleCount = openRuleCount;
@@ -254,7 +254,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCount180Day.
+             * The number of security risks that are detected in the last 180 days.
              */
             public Builder riskCount180Day(Long riskCount180Day) {
                 this.riskCount180Day = riskCount180Day;
@@ -262,7 +262,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCount30Day.
+             * The number of security risks that are detected in the last 30 days.
              */
             public Builder riskCount30Day(Long riskCount30Day) {
                 this.riskCount30Day = riskCount30Day;
@@ -270,7 +270,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCountToday.
+             * The number of security risks that are detected in the last 24 hours.
              */
             public Builder riskCountToday(Long riskCountToday) {
                 this.riskCountToday = riskCountToday;
@@ -278,7 +278,7 @@ public class GetInterceptionSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RuleCount.
+             * The total number of cluster defense rules.
              */
             public Builder ruleCount(Integer ruleCount) {
                 this.ruleCount = ruleCount;

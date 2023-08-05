@@ -50,7 +50,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InterceptionRuleDetail.
+         * The details of the rule.
          */
         public Builder interceptionRuleDetail(InterceptionRuleDetail interceptionRuleDetail) {
             this.interceptionRuleDetail = interceptionRuleDetail;
@@ -58,7 +58,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -202,7 +202,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ImageList.
+             * An array that consists of the name of the image specified for the network object.
              */
             public Builder imageList(java.util.List < String > imageList) {
                 this.imageList = imageList;
@@ -210,7 +210,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace to which the network object belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -218,7 +218,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * An array that consists of the port range of the destination network object.
              */
             public Builder ports(java.util.List < String > ports) {
                 this.ports = ports;
@@ -226,7 +226,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The type of the rule.
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -234,7 +234,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TagList.
+             * An array that consists of the labels specified for the network object.
              */
             public Builder tagList(java.util.List < String > tagList) {
                 this.tagList = tagList;
@@ -242,7 +242,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the network object.
              */
             public Builder targetId(Integer targetId) {
                 this.targetId = targetId;
@@ -250,7 +250,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the object.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -258,7 +258,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the network object.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -383,7 +383,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -391,7 +391,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ImageList.
+             * The images of the network object.
              */
             public Builder imageList(java.util.List < String > imageList) {
                 this.imageList = imageList;
@@ -399,7 +399,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace to which the network object belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -407,7 +407,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The type of the rule.
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -415,7 +415,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TagList.
+             * The labels specified for the network object.
              */
             public Builder tagList(java.util.List < String > tagList) {
                 this.tagList = tagList;
@@ -423,7 +423,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the network object.
              */
             public Builder targetId(Integer targetId) {
                 this.targetId = targetId;
@@ -431,7 +431,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the object.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -439,7 +439,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the network object.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -564,7 +564,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             private SrcTarget srcTarget; 
 
             /**
-             * DstTarget.
+             * The destination network object.
              */
             public Builder dstTarget(DstTarget dstTarget) {
                 this.dstTarget = dstTarget;
@@ -572,7 +572,13 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InterceptType.
+             * The interception mode. Valid values:
+             * <p>
+             * 
+             * *   **0**: monitor
+             * *   **1**: block
+             * *   **2**: alert
+             * *   **3**: allow
              */
             public Builder interceptType(Long interceptType) {
                 this.interceptType = interceptType;
@@ -580,7 +586,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OrderIndex.
+             * The priority of the rule. Valid values: 1 to 1000. A smaller value indicates a higher priority.
              */
             public Builder orderIndex(Long orderIndex) {
                 this.orderIndex = orderIndex;
@@ -588,7 +594,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * The ID of the rule.
              */
             public Builder ruleId(Long ruleId) {
                 this.ruleId = ruleId;
@@ -596,7 +602,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -604,7 +610,11 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleSwitch.
+             * The status of the defense rule. Valid values:
+             * <p>
+             * 
+             * *   **1**: The rule is enabled.
+             * *   **0**: The rule is disabled.
              */
             public Builder ruleSwitch(Integer ruleSwitch) {
                 this.ruleSwitch = ruleSwitch;
@@ -612,7 +622,11 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * The type of the rule. Valid values:
+             * <p>
+             * 
+             * *   **suggest**: a suggestion rule
+             * *   **customize**: a custom rule
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -620,7 +634,7 @@ public class GetInterceptionRuleDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SrcTarget.
+             * The source network object.
              */
             public Builder srcTarget(SrcTarget srcTarget) {
                 this.srcTarget = srcTarget;

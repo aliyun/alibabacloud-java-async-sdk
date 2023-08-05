@@ -50,7 +50,7 @@ public class DeleteInterceptionTargetResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class DeleteInterceptionTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * Indicates whether the network objects are removed. Valid values:
+         * <p>
+         * 
+         * *   **true**: The network objects are removed.
+         * *   **false**: The network objects fail to be removed.
          */
         public Builder result(Boolean result) {
             this.result = result;

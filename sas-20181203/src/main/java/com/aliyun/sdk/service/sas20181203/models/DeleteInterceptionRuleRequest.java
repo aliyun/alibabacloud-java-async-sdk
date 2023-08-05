@@ -69,7 +69,10 @@ public class DeleteInterceptionRuleRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster that you want to query.
+         * <p>
+         * 
+         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -78,7 +81,7 @@ public class DeleteInterceptionRuleRequest extends Request {
         }
 
         /**
-         * RuleIds.
+         * The IDs of the rules that you want to delete.
          */
         public Builder ruleIds(java.util.List < Long > ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);

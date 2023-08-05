@@ -210,7 +210,7 @@ public class DescribeCheckWarningsRequest extends Request {
         }
 
         /**
-         * The name of container.
+         * The name of the container.
          */
         public Builder containerName(String containerName) {
             this.putQueryParameter("ContainerName", containerName);

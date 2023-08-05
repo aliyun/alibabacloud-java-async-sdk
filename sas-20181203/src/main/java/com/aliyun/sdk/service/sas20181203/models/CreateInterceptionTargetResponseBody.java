@@ -50,7 +50,7 @@ public class CreateInterceptionTargetResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateInterceptionTargetResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The response parameters.
          */
         public Builder result(Boolean result) {
             this.result = result;

@@ -155,7 +155,7 @@ public class CreateInterceptionTargetRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * The name of the application to which the network object belongs.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -164,7 +164,7 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -173,7 +173,7 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * ClusterName.
+         * The cluster name.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -182,7 +182,7 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * ImageList.
+         * An array that consists of the images of the network object.
          */
         public Builder imageList(java.util.List < String > imageList) {
             this.putQueryParameter("ImageList", imageList);
@@ -191,7 +191,7 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace to which the network object belongs.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -200,7 +200,7 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * TagList.
+         * An array that consists of the labels specified for the network object.
          */
         public Builder tagList(java.util.List < String > tagList) {
             this.putQueryParameter("TagList", tagList);
@@ -209,7 +209,7 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * TargetName.
+         * The object name.
          */
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);
@@ -218,7 +218,9 @@ public class CreateInterceptionTargetRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The object type. Valid value: 
+         * <p>
+         * - **IMAGE**: specifies an image
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

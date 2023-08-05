@@ -50,7 +50,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppNetwork.
+         * The information about the application network topology.
          */
         public Builder appNetwork(AppNetwork appNetwork) {
             this.appNetwork = appNetwork;
@@ -58,7 +58,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             private String srcNodeType; 
 
             /**
-             * DstNodeId.
+             * The ID of the destination node.
              */
             public Builder dstNodeId(String dstNodeId) {
                 this.dstNodeId = dstNodeId;
@@ -166,7 +166,11 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * DstNodeType.
+             * The type of the destination node. Valid values:
+             * <p>
+             * 
+             * *   **app**: an application
+             * *   **internet**: a network node in another cluster
              */
             public Builder dstNodeType(String dstNodeType) {
                 this.dstNodeType = dstNodeType;
@@ -174,7 +178,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the edge.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -182,7 +186,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The number of the destination port.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -190,7 +194,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * SrcNodeId.
+             * The ID of the source node.
              */
             public Builder srcNodeId(String srcNodeId) {
                 this.srcNodeId = srcNodeId;
@@ -198,7 +202,11 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * SrcNodeType.
+             * The type of the source node. Valid values:
+             * <p>
+             * 
+             * *   **app**: an application
+             * *   **internet**: a network node in another cluster
              */
             public Builder srcNodeType(String srcNodeType) {
                 this.srcNodeType = srcNodeType;
@@ -251,7 +259,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The ID of the namespace.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -259,7 +267,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the custom namespace.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -360,7 +368,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ContainerIds.
+             * The list of the container IDs.
              */
             public Builder containerIds(java.util.List < String > containerIds) {
                 this.containerIds = containerIds;
@@ -368,7 +376,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the node.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -376,7 +384,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -384,7 +392,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * The ID of the namespace.
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -392,7 +400,14 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * The risk level. Valid values:
+             * <p>
+             * 
+             * *   **3**: high
+             * *   **2**: medium
+             * *   **1**: low
+             * *   **0**: warning
+             * *   **-1**: unknown
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -400,7 +415,11 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the node. Valid values:
+             * <p>
+             * 
+             * *   **app**: an application
+             * *   **internet**: a network node in another cluster
              */
             public Builder type(String type) {
                 this.type = type;
@@ -465,7 +484,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             private java.util.List < Node> node; 
 
             /**
-             * Edge.
+             * The information about the topology edge.
              */
             public Builder edge(java.util.List < Edge> edge) {
                 this.edge = edge;
@@ -473,7 +492,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(java.util.List < Namespace> namespace) {
                 this.namespace = namespace;
@@ -481,7 +500,7 @@ public class GetAppNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * Node.
+             * The information about the application node.
              */
             public Builder node(java.util.List < Node> node) {
                 this.node = node;

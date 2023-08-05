@@ -50,7 +50,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The exposure details about the server.
+         * The list of exposure details of the server.
          */
         public Builder exposedChains(java.util.List < ExposedChains> exposedChains) {
             this.exposedChains = exposedChains;
@@ -169,7 +169,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
              * *   **later**: medium
              * *   **nntf**: low
              * 
-             * >  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
+             * > We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -180,12 +180,12 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
              * The type of the vulnerability. Valid values:
              * <p>
              * 
-             * *   **cve**: Linux software vulnerabilities
-             * *   **sys**: Windows system vulnerabilities
-             * *   **cms**: Web-CMS vulnerabilities
-             * *   **app**: application vulnerabilities
-             * *   **emg**: urgent vulnerabilities
-             * *   **sca**: middleware vulnerabilities
+             * *   **cve**: Linux software vulnerability
+             * *   **sys**: Windows system vulnerability
+             * *   **cms**: Web-CMS vulnerability
+             * *   **app**: application vulnerability
+             * *   **emg**: urgent vulnerability
+             * *   **sca**: middleware vulnerability
              */
             public Builder type(String type) {
                 this.type = type;
@@ -305,7 +305,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
              * *   **later**: medium
              * *   **nntf**: low
              * 
-             * >  We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
+             * > We recommend that you fix the vulnerabilities that have the **high** priority at the earliest opportunity.
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -316,12 +316,12 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
              * The type of the vulnerability. Valid values:
              * <p>
              * 
-             * *   **cve**: Linux software vulnerabilities
-             * *   **sys**: Windows system vulnerabilities
-             * *   **cms**: Web-CMS vulnerabilities
-             * *   **app**: application vulnerabilities
-             * *   **emg**: urgent vulnerabilities
-             * *   **sca**: middleware vulnerabilities
+             * *   **cve**: Linux software vulnerability
+             * *   **sys**: Windows system vulnerability
+             * *   **cms**: Web-CMS vulnerability
+             * *   **app**: application vulnerability
+             * *   **emg**: urgent vulnerability
+             * *   **sca**: middleware vulnerability
              */
             public Builder type(String type) {
                 this.type = type;
@@ -526,7 +526,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The information about all vulnerabilities on the server.
+             * The details of all vulnerabilities on the server.
              */
             public Builder allVulList(java.util.List < AllVulList> allVulList) {
                 this.allVulList = allVulList;
@@ -542,7 +542,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * The IP address that is exposed.
              */
             public Builder exposureIp(String exposureIp) {
                 this.exposureIp = exposureIp;
@@ -572,11 +572,11 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the value of the ExposureType parameter.
+             * The ID of the instance to which the resource belongs. The valid values of this parameter vary based on the ExposureType parameter.
              * <p>
              * 
-             * *   If the value of the ExposureType parameter is **INTERNET_IP**, the value of this parameter is an empty string.
-             * *   If the value of the ExposureType parameter is **SLB**, the value of this parameter is the ID of the Internet-facing SLB instance.
+             * *   If the value of the ExposureType parameter is **INTERNET_IP**, this parameter is empty.
+             * *   If the value of the ExposureType parameter is **SLB**, the value of this parameter is the ID of the SLB instance.
              * *   If the value of the ExposureType parameter is **EIP**, the value of this parameter is the ID of the EIP.
              * *   If the value of the ExposureType parameter is **DNAT**, the value of this parameter is the ID of the NAT gateway.
              */
@@ -594,7 +594,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * The instance ID of the server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -637,7 +637,7 @@ public class DescribeExposedInstanceDetailResponseBody extends TeaModel {
              * The region in which the server resides.
              * <p>
              * 
-             * >  For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
+             * > For more information about the mapping between region IDs and region names, see [Regions and zones](~~40654~~).
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

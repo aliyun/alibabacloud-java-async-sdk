@@ -55,7 +55,7 @@ public class DeleteInterceptionTargetRequest extends Request {
         } 
 
         /**
-         * TargetIds.
+         * The IDs of the network objects that you want to remove. You can call the [ListInterceptionTargetPage](~~ListInterceptionTargetPage~~) operation to query the IDs of the network objects.
          */
         public Builder targetIds(String targetIds) {
             this.putQueryParameter("TargetIds", targetIds);

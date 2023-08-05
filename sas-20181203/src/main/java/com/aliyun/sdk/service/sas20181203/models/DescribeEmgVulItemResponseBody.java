@@ -153,6 +153,9 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         @NameInMap("Progress")
         private Integer progress;
 
+        @NameInMap("RaspDefend")
+        private Integer raspDefend;
+
         @NameInMap("Status")
         private Integer status;
 
@@ -167,6 +170,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             this.name = builder.name;
             this.pendingCount = builder.pendingCount;
             this.progress = builder.progress;
+            this.raspDefend = builder.raspDefend;
             this.status = builder.status;
             this.type = builder.type;
         }
@@ -229,6 +233,13 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
         }
 
         /**
+         * @return raspDefend
+         */
+        public Integer getRaspDefend() {
+            return this.raspDefend;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -250,6 +261,7 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
             private String name; 
             private Integer pendingCount; 
             private Integer progress; 
+            private Integer raspDefend; 
             private Integer status; 
             private String type; 
 
@@ -309,6 +321,14 @@ public class DescribeEmgVulItemResponseBody extends TeaModel {
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
+                return this;
+            }
+
+            /**
+             * RaspDefend.
+             */
+            public Builder raspDefend(Integer raspDefend) {
+                this.raspDefend = raspDefend;
                 return this;
             }
 

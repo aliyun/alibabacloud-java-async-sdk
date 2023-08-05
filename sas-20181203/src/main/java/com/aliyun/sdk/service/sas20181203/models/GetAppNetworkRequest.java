@@ -82,7 +82,10 @@ public class GetAppNetworkRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster to which the container belongs.
+         * <p>
+         * 
+         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -91,7 +94,10 @@ public class GetAppNetworkRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end timestamp of the query. Unit: milliseconds.
+         * <p>
+         * 
+         * > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -100,7 +106,10 @@ public class GetAppNetworkRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start timestamp of the query. Unit: milliseconds.
+         * <p>
+         * 
+         * > The days between the start timestamp and the end timestamp cannot exceed **seven** days.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

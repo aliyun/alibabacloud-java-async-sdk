@@ -70,7 +70,10 @@ public class GetInterceptionRuleDetailRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the container cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -79,7 +82,10 @@ public class GetInterceptionRuleDetailRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the rule.
+         * <p>
+         * 
+         * > You can call the [ListInterceptionRulePage](~~ListInterceptionRulePage~~) operation to query the IDs of rules.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
