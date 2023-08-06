@@ -54,7 +54,7 @@ public class GetMessageContactDeletionStatusRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * The ID of the contact.
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);

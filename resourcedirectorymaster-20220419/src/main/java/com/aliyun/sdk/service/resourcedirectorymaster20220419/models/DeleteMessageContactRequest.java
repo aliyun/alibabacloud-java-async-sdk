@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteMessageContactRequest extends Request {
     @Query
     @NameInMap("ContactId")
+    @Validation(required = true)
     private String contactId;
 
     @Query
@@ -68,7 +69,7 @@ public class DeleteMessageContactRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * The ID of the contact.
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -77,7 +78,11 @@ public class DeleteMessageContactRequest extends Request {
         }
 
         /**
-         * RetainContactInMembers.
+         * Specifies whether to retain the contact for members. Valid values:
+         * <p>
+         * 
+         * *   true (default): retains the contact for members. In this case, the contact can still receive messages for the members.
+         * *   false: does not retain the contact for members. In this case, the contact can no longer receive messages for the members. If you set this parameter to false, the response is asynchronously returned. You can call [GetMessageContactDeletionStatus](~~GetMessageContactDeletionStatus~~) to obtain the deletion result.
          */
         public Builder retainContactInMembers(Boolean retainContactInMembers) {
             this.putQueryParameter("RetainContactInMembers", retainContactInMembers);

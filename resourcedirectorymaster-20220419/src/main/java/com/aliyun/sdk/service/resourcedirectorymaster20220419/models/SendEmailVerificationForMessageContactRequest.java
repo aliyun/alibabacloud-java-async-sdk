@@ -68,7 +68,7 @@ public class SendEmailVerificationForMessageContactRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * The ID of the contact.
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -77,7 +77,10 @@ public class SendEmailVerificationForMessageContactRequest extends Request {
         }
 
         /**
-         * EmailAddress.
+         * The email address of the contact.
+         * <p>
+         * 
+         * The specified email address must be the one you specify when you call [AddMessageContact](~~AddMessageContact~~).
          */
         public Builder emailAddress(String emailAddress) {
             this.putQueryParameter("EmailAddress", emailAddress);

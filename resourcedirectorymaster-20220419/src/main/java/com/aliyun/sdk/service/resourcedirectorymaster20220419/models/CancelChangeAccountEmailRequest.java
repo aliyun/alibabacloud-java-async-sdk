@@ -55,7 +55,7 @@ public class CancelChangeAccountEmailRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The Alibaba Cloud account ID of the member.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);

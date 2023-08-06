@@ -50,7 +50,7 @@ public class AddMessageContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Contact.
+         * The information about the contact.
          */
         public Builder contact(Contact contact) {
             this.contact = contact;
@@ -58,7 +58,7 @@ public class AddMessageContactResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class AddMessageContactResponseBody extends TeaModel {
             private String createDate; 
 
             /**
-             * ContactId.
+             * The ID of the contact.
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -118,7 +118,7 @@ public class AddMessageContactResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the contact was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;

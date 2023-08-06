@@ -124,7 +124,7 @@ public class UpdateMessageContactRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * The ID of the contact.
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -133,7 +133,10 @@ public class UpdateMessageContactRequest extends Request {
         }
 
         /**
-         * EmailAddress.
+         * The email address of the contact.
+         * <p>
+         * 
+         * After you specify an email address, you need to call [SendEmailVerificationForMessageContact](~~SendEmailVerificationForMessageContact~~) to send verification information to the email address. After the verification is passed, the email address takes effect.
          */
         public Builder emailAddress(String emailAddress) {
             this.putQueryParameter("EmailAddress", emailAddress);
@@ -142,7 +145,7 @@ public class UpdateMessageContactRequest extends Request {
         }
 
         /**
-         * MessageTypes.
+         * The types of messages received by the contact.
          */
         public Builder messageTypes(java.util.List < String > messageTypes) {
             this.putQueryParameter("MessageTypes", messageTypes);
@@ -151,7 +154,7 @@ public class UpdateMessageContactRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the contact.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -160,7 +163,12 @@ public class UpdateMessageContactRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The mobile phone number of the contact.
+         * <p>
+         * 
+         * Specify the mobile phone number in the `<Country code>-<Mobile phone number>` format.
+         * 
+         * After you specify a mobile phone number, you need to call [SendPhoneVerificationForMessageContact](~~SendPhoneVerificationForMessageContact~~) to send verification information to the mobile phone number. After the verification is passed, the mobile phone number takes effect.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -169,7 +177,58 @@ public class UpdateMessageContactRequest extends Request {
         }
 
         /**
-         * Title.
+         * The job title of the contact.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   FinanceDirector
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   TechnicalDirector
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   MaintenanceDirector
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   CEO
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   ProjectDirector
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Other
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

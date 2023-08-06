@@ -86,7 +86,7 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ContactVerifications.
+         * The record for the contact to be verified.
          */
         public Builder contactVerifications(java.util.List < ContactVerifications> contactVerifications) {
             this.contactVerifications = contactVerifications;
@@ -94,7 +94,7 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
             private String target; 
 
             /**
-             * ContactId.
+             * The ID of the contact.
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -178,7 +178,11 @@ public class ListMessageContactVerificationsResponseBody extends TeaModel {
             }
 
             /**
-             * Target.
+             * The object that is used for verification. Valid values:
+             * <p>
+             * 
+             * - Mobile phone number
+             * - Email address
              */
             public Builder target(String target) {
                 this.target = target;

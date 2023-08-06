@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetMessageContactRequest extends Request {
     @Query
     @NameInMap("ContactId")
+    @Validation(required = true)
     private String contactId;
 
     private GetMessageContactRequest(Builder builder) {
@@ -54,7 +55,7 @@ public class GetMessageContactRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * The ID of the contact.
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);

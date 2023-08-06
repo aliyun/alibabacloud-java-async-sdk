@@ -70,7 +70,7 @@ public class DeregisterDelegatedAdministratorRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * The Alibaba Cloud account ID of the member in the resource directory.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -79,7 +79,7 @@ public class DeregisterDelegatedAdministratorRequest extends Request {
         }
 
         /**
-         * ServicePrincipal.
+         * The identifier of the trusted service.
          */
         public Builder servicePrincipal(String servicePrincipal) {
             this.putQueryParameter("ServicePrincipal", servicePrincipal);

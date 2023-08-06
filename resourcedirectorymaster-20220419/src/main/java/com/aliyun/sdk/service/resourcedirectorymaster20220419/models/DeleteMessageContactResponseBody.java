@@ -50,7 +50,7 @@ public class DeleteMessageContactResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class DeleteMessageContactResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The deletion status of the contact. Valid values:
+         * <p>
+         * 
+         * *   Deleting
+         * *   Deleted
          */
         public Builder status(String status) {
             this.status = status;

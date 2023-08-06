@@ -68,7 +68,7 @@ public class SendPhoneVerificationForMessageContactRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * The ID of the contact.
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -77,7 +77,12 @@ public class SendPhoneVerificationForMessageContactRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The mobile phone number of the contact.
+         * <p>
+         * 
+         * The value must be in the `<Country code>-<Mobile phone number>` format.
+         * 
+         * The specified mobile phone number must be the one you specify when you call the [AddMessageContact](~~AddMessageContact~~) operation.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

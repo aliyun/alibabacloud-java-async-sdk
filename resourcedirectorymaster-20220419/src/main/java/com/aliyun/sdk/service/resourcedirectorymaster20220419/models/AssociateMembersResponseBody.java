@@ -50,7 +50,7 @@ public class AssociateMembersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Members.
+         * The time when the contact was bound to the object.
          */
         public Builder members(java.util.List < Members> members) {
             this.members = members;
@@ -58,7 +58,7 @@ public class AssociateMembersResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class AssociateMembersResponseBody extends TeaModel {
             private String modifyDate; 
 
             /**
-             * ContactId.
+             * The ID of the contact.
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -130,7 +130,12 @@ public class AssociateMembersResponseBody extends TeaModel {
             }
 
             /**
-             * MemberId.
+             * The ID of the object. Valid values:
+             * <p>
+             * 
+             * - ID of the resource directory
+             * - ID of the folder
+             * - ID of the member
              */
             public Builder memberId(String memberId) {
                 this.memberId = memberId;
@@ -138,7 +143,7 @@ public class AssociateMembersResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyDate.
+             * The time when the contact was bound to the object.
              */
             public Builder modifyDate(String modifyDate) {
                 this.modifyDate = modifyDate;

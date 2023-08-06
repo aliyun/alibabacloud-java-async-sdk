@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DisassociateMembersRequest extends Request {
     @Query
     @NameInMap("ContactId")
+    @Validation(required = true)
     private String contactId;
 
     @Query
     @NameInMap("Members")
+    @Validation(required = true)
     private java.util.List < String > members;
 
     private DisassociateMembersRequest(Builder builder) {
@@ -68,7 +70,7 @@ public class DisassociateMembersRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * The ID of the contact.
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -77,7 +79,7 @@ public class DisassociateMembersRequest extends Request {
         }
 
         /**
-         * Members.
+         * The IDs of objects from which you want to unbind the contact.
          */
         public Builder members(java.util.List < String > members) {
             this.putQueryParameter("Members", members);

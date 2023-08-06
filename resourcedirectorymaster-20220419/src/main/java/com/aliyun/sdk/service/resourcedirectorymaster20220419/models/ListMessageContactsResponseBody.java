@@ -86,7 +86,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Contacts.
+         * The time when the contact was bound to the objects.
          */
         public Builder contacts(java.util.List < Contacts> contacts) {
             this.contacts = contacts;
@@ -94,7 +94,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +266,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * AssociatedDate.
+             * The time when the contact was bound to the objects.
              */
             public Builder associatedDate(String associatedDate) {
                 this.associatedDate = associatedDate;
@@ -274,7 +274,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * ContactId.
+             * The ID of the contact.
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -282,7 +282,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the contact was added.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -290,7 +290,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * EmailAddress.
+             * The email address of the contact.
              */
             public Builder emailAddress(String emailAddress) {
                 this.emailAddress = emailAddress;
@@ -298,7 +298,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Members.
+             * The IDs of objects to which the contact is bound.
              */
             public Builder members(java.util.List < String > members) {
                 this.members = members;
@@ -306,7 +306,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * MessageTypes.
+             * The types of messages received by the contact.
              */
             public Builder messageTypes(java.util.List < String > messageTypes) {
                 this.messageTypes = messageTypes;
@@ -314,7 +314,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the contact.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -322,7 +322,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * The mobile phone number of the contact.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -330,7 +330,12 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the contact. Valid values:
+             * <p>
+             * 
+             * - Verifying
+             * - Active
+             * - Deleting
              */
             public Builder status(String status) {
                 this.status = status;
@@ -338,7 +343,7 @@ public class ListMessageContactsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The job title of the contact.
              */
             public Builder title(String title) {
                 this.title = title;

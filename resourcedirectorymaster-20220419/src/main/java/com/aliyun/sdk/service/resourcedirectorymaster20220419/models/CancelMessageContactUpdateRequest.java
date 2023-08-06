@@ -82,7 +82,7 @@ public class CancelMessageContactUpdateRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * The ID of the contact.
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -91,7 +91,7 @@ public class CancelMessageContactUpdateRequest extends Request {
         }
 
         /**
-         * EmailAddress.
+         * The email address of the contact.
          */
         public Builder emailAddress(String emailAddress) {
             this.putQueryParameter("EmailAddress", emailAddress);
@@ -100,7 +100,10 @@ public class CancelMessageContactUpdateRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The mobile phone number of the contact.
+         * <p>
+         * 
+         * Specify the mobile phone number in the `<Country code>-<Mobile phone number>` format.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

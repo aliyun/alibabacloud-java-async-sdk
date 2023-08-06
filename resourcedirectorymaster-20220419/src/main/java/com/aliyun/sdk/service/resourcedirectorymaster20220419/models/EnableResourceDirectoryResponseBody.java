@@ -50,7 +50,7 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
         private ResourceDirectory resourceDirectory; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceDirectory.
+         * The information about the resource directory.
          */
         public Builder resourceDirectory(ResourceDirectory resourceDirectory) {
             this.resourceDirectory = resourceDirectory;
@@ -146,7 +146,7 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
             private String rootFolderId; 
 
             /**
-             * CreateTime.
+             * The time when the resource directory was enabled.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -154,7 +154,7 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * MasterAccountId.
+             * The ID of the management account.
              */
             public Builder masterAccountId(String masterAccountId) {
                 this.masterAccountId = masterAccountId;
@@ -162,7 +162,7 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * MasterAccountName.
+             * The name of the management account.
              */
             public Builder masterAccountName(String masterAccountName) {
                 this.masterAccountName = masterAccountName;
@@ -170,7 +170,7 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceDirectoryId.
+             * The ID of the resource directory.
              */
             public Builder resourceDirectoryId(String resourceDirectoryId) {
                 this.resourceDirectoryId = resourceDirectoryId;
@@ -178,7 +178,7 @@ public class EnableResourceDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * RootFolderId.
+             * The ID of the Root folder.
              */
             public Builder rootFolderId(String rootFolderId) {
                 this.rootFolderId = rootFolderId;

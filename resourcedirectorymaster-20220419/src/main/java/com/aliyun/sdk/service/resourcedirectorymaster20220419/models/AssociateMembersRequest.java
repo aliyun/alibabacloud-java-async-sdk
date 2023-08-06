@@ -68,7 +68,7 @@ public class AssociateMembersRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * The ID of the contact.
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -77,7 +77,7 @@ public class AssociateMembersRequest extends Request {
         }
 
         /**
-         * Members.
+         * The IDs of objects to which you want to bind the contact.
          */
         public Builder members(java.util.List < String > members) {
             this.putQueryParameter("Members", members);

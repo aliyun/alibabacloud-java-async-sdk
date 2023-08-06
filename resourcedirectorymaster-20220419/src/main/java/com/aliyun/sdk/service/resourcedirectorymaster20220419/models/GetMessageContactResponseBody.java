@@ -50,7 +50,7 @@ public class GetMessageContactResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Contact.
+         * The information about the contact.
          */
         public Builder contact(Contact contact) {
             this.contact = contact;
@@ -58,7 +58,7 @@ public class GetMessageContactResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class GetMessageContactResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * ContactId.
+             * The ID of the contact.
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -202,7 +202,7 @@ public class GetMessageContactResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the contact was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -210,7 +210,7 @@ public class GetMessageContactResponseBody extends TeaModel {
             }
 
             /**
-             * EmailAddress.
+             * The email address of the contact.
              */
             public Builder emailAddress(String emailAddress) {
                 this.emailAddress = emailAddress;
@@ -218,7 +218,7 @@ public class GetMessageContactResponseBody extends TeaModel {
             }
 
             /**
-             * Members.
+             * The IDs of objects to which the contact is bound.
              */
             public Builder members(java.util.List < String > members) {
                 this.members = members;
@@ -226,7 +226,7 @@ public class GetMessageContactResponseBody extends TeaModel {
             }
 
             /**
-             * MessageTypes.
+             * The types of messages received by the contact.
              */
             public Builder messageTypes(java.util.List < String > messageTypes) {
                 this.messageTypes = messageTypes;
@@ -234,7 +234,7 @@ public class GetMessageContactResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the contact.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -242,7 +242,7 @@ public class GetMessageContactResponseBody extends TeaModel {
             }
 
             /**
-             * PhoneNumber.
+             * The mobile phone number of the contact.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -250,7 +250,12 @@ public class GetMessageContactResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the contact. Valid values:
+             * <p>
+             * 
+             * *   Verifying
+             * *   Active
+             * *   Deleting
              */
             public Builder status(String status) {
                 this.status = status;
@@ -258,7 +263,7 @@ public class GetMessageContactResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The job title of the contact.
              */
             public Builder title(String title) {
                 this.title = title;

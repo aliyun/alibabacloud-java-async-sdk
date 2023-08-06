@@ -50,7 +50,7 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ContactDeletionStatus.
+         * The deletion information of the contact.
          */
         public Builder contactDeletionStatus(ContactDeletionStatus contactDeletionStatus) {
             this.contactDeletionStatus = contactDeletionStatus;
@@ -58,7 +58,7 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
             private java.util.List < String > messageTypes; 
 
             /**
-             * AccountId.
+             * The Alibaba Cloud account ID of the member.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -118,7 +118,7 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * MessageTypes.
+             * The types of messages received by the contact.
              */
             public Builder messageTypes(java.util.List < String > messageTypes) {
                 this.messageTypes = messageTypes;
@@ -183,7 +183,7 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ContactId.
+             * The ID of the contact.
              */
             public Builder contactId(String contactId) {
                 this.contactId = contactId;
@@ -191,7 +191,7 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FailReasonList.
+             * The types of messages received by the contact.
              */
             public Builder failReasonList(java.util.List < FailReasonList> failReasonList) {
                 this.failReasonList = failReasonList;
@@ -199,7 +199,11 @@ public class GetMessageContactDeletionStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The deletion status of the contact. Valid values:
+             * <p>
+             * 
+             * *   Deleting
+             * *   Failed
              */
             public Builder status(String status) {
                 this.status = status;

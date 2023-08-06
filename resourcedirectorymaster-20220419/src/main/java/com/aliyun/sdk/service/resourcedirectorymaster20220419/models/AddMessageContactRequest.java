@@ -14,14 +14,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class AddMessageContactRequest extends Request {
     @Query
     @NameInMap("EmailAddress")
+    @Validation(required = true)
     private String emailAddress;
 
     @Query
     @NameInMap("MessageTypes")
+    @Validation(required = true)
     private java.util.List < String > messageTypes;
 
     @Query
     @NameInMap("Name")
+    @Validation(required = true)
     private String name;
 
     @Query
@@ -30,6 +33,7 @@ public class AddMessageContactRequest extends Request {
 
     @Query
     @NameInMap("Title")
+    @Validation(required = true)
     private String title;
 
     private AddMessageContactRequest(Builder builder) {
@@ -110,7 +114,10 @@ public class AddMessageContactRequest extends Request {
         } 
 
         /**
-         * EmailAddress.
+         * The email address of the contact.
+         * <p>
+         * 
+         * After you specify an email address, you need to call [SendEmailVerificationForMessageContact](~~SendEmailVerificationForMessageContact~~) to send verification information to the email address. After the verification is passed, the email address takes effect.
          */
         public Builder emailAddress(String emailAddress) {
             this.putQueryParameter("EmailAddress", emailAddress);
@@ -119,7 +126,7 @@ public class AddMessageContactRequest extends Request {
         }
 
         /**
-         * MessageTypes.
+         * The types of messages received by the contact.
          */
         public Builder messageTypes(java.util.List < String > messageTypes) {
             this.putQueryParameter("MessageTypes", messageTypes);
@@ -128,7 +135,12 @@ public class AddMessageContactRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the contact.
+         * <p>
+         * 
+         * The name must be unique in your resource directory.
+         * 
+         * The name must be 2 to 12 characters in length and can contain only letters.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -137,7 +149,14 @@ public class AddMessageContactRequest extends Request {
         }
 
         /**
-         * PhoneNumber.
+         * The mobile phone number of the contact.
+         * <p>
+         * 
+         * Specify the mobile phone number in the `<Country code>-<Mobile phone number>` format.
+         * 
+         * > Only mobile phone numbers in the `86-<Mobile phone number>` format in the Chinese mainland are supported.
+         * 
+         * After you specify a mobile phone number, you need to call [SendPhoneVerificationForMessageContact](~~SendPhoneVerificationForMessageContact~~) to send verification information to the mobile phone number. After the verification is passed, the mobile phone number takes effect.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -146,7 +165,58 @@ public class AddMessageContactRequest extends Request {
         }
 
         /**
-         * Title.
+         * The job title of the contact.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   FinanceDirector
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   TechnicalDirector
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   MaintenanceDirector
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   CEO
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   ProjectDirector
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Other
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

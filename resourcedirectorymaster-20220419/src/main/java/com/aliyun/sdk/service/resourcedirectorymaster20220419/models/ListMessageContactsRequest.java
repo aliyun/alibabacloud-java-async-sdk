@@ -96,7 +96,7 @@ public class ListMessageContactsRequest extends Request {
         } 
 
         /**
-         * ContactId.
+         * The ID of the contact.
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
@@ -105,7 +105,12 @@ public class ListMessageContactsRequest extends Request {
         }
 
         /**
-         * Member.
+         * The ID of the object to which the contact is bound. Valid values:
+         * <p>
+         * 
+         * *   ID of the resource directory
+         * *   ID of the folder
+         * *   ID of the member
          */
         public Builder member(String member) {
             this.putQueryParameter("Member", member);
@@ -114,7 +119,7 @@ public class ListMessageContactsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +128,7 @@ public class ListMessageContactsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
