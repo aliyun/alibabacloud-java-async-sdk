@@ -22,6 +22,10 @@ public class CreateSiteMonitorRequest extends Request {
     private String alertIds;
 
     @Query
+    @NameInMap("CustomSchedule")
+    private String customSchedule;
+
+    @Query
     @NameInMap("Interval")
     private String interval;
 
@@ -47,6 +51,7 @@ public class CreateSiteMonitorRequest extends Request {
         super(builder);
         this.address = builder.address;
         this.alertIds = builder.alertIds;
+        this.customSchedule = builder.customSchedule;
         this.interval = builder.interval;
         this.ispCities = builder.ispCities;
         this.optionsJson = builder.optionsJson;
@@ -79,6 +84,13 @@ public class CreateSiteMonitorRequest extends Request {
      */
     public String getAlertIds() {
         return this.alertIds;
+    }
+
+    /**
+     * @return customSchedule
+     */
+    public String getCustomSchedule() {
+        return this.customSchedule;
     }
 
     /**
@@ -119,6 +131,7 @@ public class CreateSiteMonitorRequest extends Request {
     public static final class Builder extends Request.Builder<CreateSiteMonitorRequest, Builder> {
         private String address; 
         private String alertIds; 
+        private String customSchedule; 
         private String interval; 
         private String ispCities; 
         private String optionsJson; 
@@ -133,6 +146,7 @@ public class CreateSiteMonitorRequest extends Request {
             super(request);
             this.address = request.address;
             this.alertIds = request.alertIds;
+            this.customSchedule = request.customSchedule;
             this.interval = request.interval;
             this.ispCities = request.ispCities;
             this.optionsJson = request.optionsJson;
@@ -162,6 +176,15 @@ public class CreateSiteMonitorRequest extends Request {
         public Builder alertIds(String alertIds) {
             this.putQueryParameter("AlertIds", alertIds);
             this.alertIds = alertIds;
+            return this;
+        }
+
+        /**
+         * CustomSchedule.
+         */
+        public Builder customSchedule(String customSchedule) {
+            this.putQueryParameter("CustomSchedule", customSchedule);
+            this.customSchedule = customSchedule;
             return this;
         }
 

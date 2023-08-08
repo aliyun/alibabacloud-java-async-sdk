@@ -574,6 +574,148 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         } 
 
     }
+    public static class Days extends TeaModel {
+        @NameInMap("days")
+        private java.util.List < Integer > days;
+
+        private Days(Builder builder) {
+            this.days = builder.days;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Days create() {
+            return builder().build();
+        }
+
+        /**
+         * @return days
+         */
+        public java.util.List < Integer > getDays() {
+            return this.days;
+        }
+
+        public static final class Builder {
+            private java.util.List < Integer > days; 
+
+            /**
+             * days.
+             */
+            public Builder days(java.util.List < Integer > days) {
+                this.days = days;
+                return this;
+            }
+
+            public Days build() {
+                return new Days(this);
+            } 
+
+        } 
+
+    }
+    public static class CustomSchedule extends TeaModel {
+        @NameInMap("days")
+        private Days days;
+
+        @NameInMap("end_hour")
+        private Integer endHour;
+
+        @NameInMap("start_hour")
+        private Integer startHour;
+
+        @NameInMap("time_zone")
+        private String timeZone;
+
+        private CustomSchedule(Builder builder) {
+            this.days = builder.days;
+            this.endHour = builder.endHour;
+            this.startHour = builder.startHour;
+            this.timeZone = builder.timeZone;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomSchedule create() {
+            return builder().build();
+        }
+
+        /**
+         * @return days
+         */
+        public Days getDays() {
+            return this.days;
+        }
+
+        /**
+         * @return endHour
+         */
+        public Integer getEndHour() {
+            return this.endHour;
+        }
+
+        /**
+         * @return startHour
+         */
+        public Integer getStartHour() {
+            return this.startHour;
+        }
+
+        /**
+         * @return timeZone
+         */
+        public String getTimeZone() {
+            return this.timeZone;
+        }
+
+        public static final class Builder {
+            private Days days; 
+            private Integer endHour; 
+            private Integer startHour; 
+            private String timeZone; 
+
+            /**
+             * days.
+             */
+            public Builder days(Days days) {
+                this.days = days;
+                return this;
+            }
+
+            /**
+             * end_hour.
+             */
+            public Builder endHour(Integer endHour) {
+                this.endHour = endHour;
+                return this;
+            }
+
+            /**
+             * start_hour.
+             */
+            public Builder startHour(Integer startHour) {
+                this.startHour = startHour;
+                return this;
+            }
+
+            /**
+             * time_zone.
+             */
+            public Builder timeZone(String timeZone) {
+                this.timeZone = timeZone;
+                return this;
+            }
+
+            public CustomSchedule build() {
+                return new CustomSchedule(this);
+            } 
+
+        } 
+
+    }
     public static class IspCity extends TeaModel {
         @NameInMap("City")
         private String city;
@@ -1446,6 +1588,9 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("AgentGroup")
         private String agentGroup;
 
+        @NameInMap("CustomSchedule")
+        private CustomSchedule customSchedule;
+
         @NameInMap("Interval")
         private String interval;
 
@@ -1470,6 +1615,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         private SiteMonitors(Builder builder) {
             this.address = builder.address;
             this.agentGroup = builder.agentGroup;
+            this.customSchedule = builder.customSchedule;
             this.interval = builder.interval;
             this.ispCities = builder.ispCities;
             this.optionJson = builder.optionJson;
@@ -1499,6 +1645,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          */
         public String getAgentGroup() {
             return this.agentGroup;
+        }
+
+        /**
+         * @return customSchedule
+         */
+        public CustomSchedule getCustomSchedule() {
+            return this.customSchedule;
         }
 
         /**
@@ -1553,6 +1706,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String address; 
             private String agentGroup; 
+            private CustomSchedule customSchedule; 
             private String interval; 
             private IspCities ispCities; 
             private OptionJson optionJson; 
@@ -1574,6 +1728,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
              */
             public Builder agentGroup(String agentGroup) {
                 this.agentGroup = agentGroup;
+                return this;
+            }
+
+            /**
+             * CustomSchedule.
+             */
+            public Builder customSchedule(CustomSchedule customSchedule) {
+                this.customSchedule = customSchedule;
                 return this;
             }
 
