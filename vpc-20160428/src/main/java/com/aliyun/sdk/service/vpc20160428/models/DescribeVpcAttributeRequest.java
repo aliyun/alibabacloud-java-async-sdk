@@ -154,7 +154,11 @@ public class DescribeVpcAttributeRequest extends Request {
         } 
 
         /**
-         * The region ID of the VPC.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request without performing the operation. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. After the request passes the check, a 2xx HTTP status code is returned and the operation is performed. This is the default value.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -163,7 +167,11 @@ public class DescribeVpcAttributeRequest extends Request {
         }
 
         /**
-         * The name of the VPC.
+         * Specifies whether the VPC is the default VPC. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): no
+         * *   **true**: yes
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -190,7 +198,10 @@ public class DescribeVpcAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the VPC belongs.
+         * The region ID of the VPC.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -217,11 +228,7 @@ public class DescribeVpcAttributeRequest extends Request {
         }
 
         /**
-         * Indicates whether the ClassicLink feature is enabled. Valid values:
-         * <p>
-         * 
-         * *   **true**: yes
-         * *   **false** (default): no
+         * The ID of the VPC that you want to query.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

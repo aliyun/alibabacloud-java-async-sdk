@@ -42,6 +42,9 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("EndTime")
     private String endTime;
 
+    @NameInMap("FastLinkMode")
+    private String fastLinkMode;
+
     @NameInMap("GmtModified")
     private String gmtModified;
 
@@ -117,6 +120,9 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("ReservationOrderType")
     private String reservationOrderType;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("Role")
     private String role;
 
@@ -138,6 +144,9 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
+    @NameInMap("Tags")
+    private Tags tags;
+
     @NameInMap("VpcInstanceId")
     private String vpcInstanceId;
 
@@ -152,6 +161,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         this.crossBorder = builder.crossBorder;
         this.description = builder.description;
         this.endTime = builder.endTime;
+        this.fastLinkMode = builder.fastLinkMode;
         this.gmtModified = builder.gmtModified;
         this.hasReservationData = builder.hasReservationData;
         this.hcRate = builder.hcRate;
@@ -177,6 +187,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         this.reservationBandwidth = builder.reservationBandwidth;
         this.reservationInternetChargeType = builder.reservationInternetChargeType;
         this.reservationOrderType = builder.reservationOrderType;
+        this.resourceGroupId = builder.resourceGroupId;
         this.role = builder.role;
         this.routerId = builder.routerId;
         this.routerInterfaceId = builder.routerInterfaceId;
@@ -184,6 +195,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         this.spec = builder.spec;
         this.status = builder.status;
         this.success = builder.success;
+        this.tags = builder.tags;
         this.vpcInstanceId = builder.vpcInstanceId;
     }
 
@@ -263,6 +275,13 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return fastLinkMode
+     */
+    public String getFastLinkMode() {
+        return this.fastLinkMode;
     }
 
     /**
@@ -441,6 +460,13 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return role
      */
     public String getRole() {
@@ -490,6 +516,13 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return tags
+     */
+    public Tags getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return vpcInstanceId
      */
     public String getVpcInstanceId() {
@@ -507,6 +540,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         private Boolean crossBorder; 
         private String description; 
         private String endTime; 
+        private String fastLinkMode; 
         private String gmtModified; 
         private String hasReservationData; 
         private Integer hcRate; 
@@ -532,6 +566,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         private String reservationBandwidth; 
         private String reservationInternetChargeType; 
         private String reservationOrderType; 
+        private String resourceGroupId; 
         private String role; 
         private String routerId; 
         private String routerInterfaceId; 
@@ -539,6 +574,7 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         private String spec; 
         private String status; 
         private Boolean success; 
+        private Tags tags; 
         private String vpcInstanceId; 
 
         /**
@@ -631,6 +667,14 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * FastLinkMode.
+         */
+        public Builder fastLinkMode(String fastLinkMode) {
+            this.fastLinkMode = fastLinkMode;
             return this;
         }
 
@@ -881,6 +925,14 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * Indicates whether the router interface is the requester or the acceptor of the peering connection.
          */
         public Builder role(String role) {
@@ -966,6 +1018,14 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * Tags.
+         */
+        public Builder tags(Tags tags) {
+            this.tags = tags;
+            return this;
+        }
+
+        /**
          * The ID of the virtual private cloud (VPC) to which the router interface belongs.
          */
         public Builder vpcInstanceId(String vpcInstanceId) {
@@ -979,4 +1039,106 @@ public class DescribeRouterInterfaceAttributeResponseBody extends TeaModel {
 
     } 
 
+    public static class TagsTags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private TagsTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagsTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public TagsTags build() {
+                return new TagsTags(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Tags")
+        private java.util.List < TagsTags> tags;
+
+        private Tags(Builder builder) {
+            this.tags = builder.tags;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < TagsTags> getTags() {
+            return this.tags;
+        }
+
+        public static final class Builder {
+            private java.util.List < TagsTags> tags; 
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < TagsTags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

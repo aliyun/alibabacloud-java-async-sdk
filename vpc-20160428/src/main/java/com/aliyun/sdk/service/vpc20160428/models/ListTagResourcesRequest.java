@@ -192,11 +192,11 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If this is your first query or no subsequent query is to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the value to the value of **NextToken** that is returned in the last call.
+         * *   You do not need to specify this parameter for the first request.
+         * *   You must specify the token that is obtained from the previous query as the value of **NextToken**.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -223,10 +223,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the resource belongs.
+         * The region ID of the resource.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -235,7 +235,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource ID. You can specify up to 20 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -262,15 +262,15 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
+         * The resource type. Valid values:
          * <p>
          * 
-         * *   **VPC**: virtual private cloud (VPC)
-         * *   **VSWITCH**: vSwitch
-         * *   **ROUTETABLE**: route table
-         * *   **EIP**: EIP
-         * *   **VpnGateWay**: VPN gateway
-         * *   **NATGATEWAY**: NAT gateway
+         * *   **VPC**
+         * *   **VSWITCH**
+         * *   **ROUTETABLE**
+         * *   **EIP**
+         * *   **VpnGateway**
+         * *   **NATGATEWAY**
          * *   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan
          */
         public Builder resourceType(String resourceType) {
@@ -280,7 +280,12 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag value. You can specify up to 20 tag values. It can be an empty string.
+         * <p>
+         * 
+         * The value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The value must start with a letter but cannot start with `aliyun` or `acs:`. The value cannot contain `http://` or `https://`.
+         * 
+         * >  You must specify at least one of **ResourceId.N** and **Tag.N** (**Tag.N.Key** and **Tag.N.Value**).
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

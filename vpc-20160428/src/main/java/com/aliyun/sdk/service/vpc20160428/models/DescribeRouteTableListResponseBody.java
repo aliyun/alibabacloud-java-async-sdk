@@ -86,7 +86,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The number of entries returned.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the VPC to which the route table belongs.
+         * The detailed information about the route tables.
          */
         public Builder routerTableList(RouterTableList routerTableList) {
             this.routerTableList = routerTableList;
@@ -118,7 +118,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information about the route tables.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -211,7 +211,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The value of the tag that is added to the route table.
+             * The key of the tag that is added to the route table.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -219,7 +219,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The value of the tag that is added to the route table.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -510,10 +510,102 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The ID of the route table.
+             * The type of the cloud resource with which the route table is associated. Valid values:
+             * <p>
+             * 
+             * *   **VSwitch**: a vSwitch
+             * *   **Gateway**: an IPv4 gateway
              */
             public Builder associateType(String associateType) {
                 this.associateType = associateType;
+                return this;
+            }
+
+            /**
+             * The time when the route table was created.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * The description of the route table.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The detailed information about the IPv4 gateway.
+             */
+            public Builder gatewayIds(GatewayIds gatewayIds) {
+                this.gatewayIds = gatewayIds;
+                return this;
+            }
+
+            /**
+             * The ID of the Alibaba Cloud account to which the route table belongs.
+             */
+            public Builder ownerId(Long ownerId) {
+                this.ownerId = ownerId;
+                return this;
+            }
+
+            /**
+             * The ID of the resource group to which the route table belongs.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The ID of the route table.
+             */
+            public Builder routeTableId(String routeTableId) {
+                this.routeTableId = routeTableId;
+                return this;
+            }
+
+            /**
+             * The name of the route table.
+             */
+            public Builder routeTableName(String routeTableName) {
+                this.routeTableName = routeTableName;
+                return this;
+            }
+
+            /**
+             * The type of the route table. Valid values:
+             * <p>
+             * 
+             * *   **Custom**: a custom route table
+             * *   **System**: a system route table
+             */
+            public Builder routeTableType(String routeTableType) {
+                this.routeTableType = routeTableType;
+                return this;
+            }
+
+            /**
+             * The ID of the router to which the route table belongs.
+             */
+            public Builder routerId(String routerId) {
+                this.routerId = routerId;
+                return this;
+            }
+
+            /**
+             * The type of the router to which the route table belongs. Valid values:
+             * <p>
+             * 
+             * *   **VRouter**: a vRouter
+             * *   **VBR**: a VBR
+             */
+            public Builder routerType(String routerType) {
+                this.routerType = routerType;
                 return this;
             }
 
@@ -525,105 +617,13 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
              * *   **Available**: available
              * *   **Deleting**: being deleted
              */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The type of the route table. Valid values:
-             * <p>
-             * 
-             * *   **Custom**: a custom route table
-             * *   **System**: a system route table
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * GatewayIds.
-             */
-            public Builder gatewayIds(GatewayIds gatewayIds) {
-                this.gatewayIds = gatewayIds;
-                return this;
-            }
-
-            /**
-             * The description of the route table.
-             */
-            public Builder ownerId(Long ownerId) {
-                this.ownerId = ownerId;
-                return this;
-            }
-
-            /**
-             * The type of the router to which the route table belongs. Valid values:
-             * <p>
-             * 
-             * *   **VRouter**: a vRouter
-             * *   **VBR**: a VBR
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * The ID of the Alibaba Cloud account to which the route table belongs.
-             */
-            public Builder routeTableId(String routeTableId) {
-                this.routeTableId = routeTableId;
-                return this;
-            }
-
-            /**
-             * The tag added to the route table.
-             */
-            public Builder routeTableName(String routeTableName) {
-                this.routeTableName = routeTableName;
-                return this;
-            }
-
-            /**
-             * The ID of the resource group to which the route table belongs.
-             */
-            public Builder routeTableType(String routeTableType) {
-                this.routeTableType = routeTableType;
-                return this;
-            }
-
-            /**
-             * The type of the cloud resource with which the route table is associated. Valid values:
-             * <p>
-             * 
-             * *   **VSwitch**: a vSwitch
-             * *   **Gateway**: an IPv4 gateway
-             */
-            public Builder routerId(String routerId) {
-                this.routerId = routerId;
-                return this;
-            }
-
-            /**
-             * The name of the route table.
-             */
-            public Builder routerType(String routerType) {
-                this.routerType = routerType;
-                return this;
-            }
-
-            /**
-             * The ID of the router to which the route table belongs.
-             */
             public Builder status(String status) {
                 this.status = status;
                 return this;
             }
 
             /**
-             * The key of the tag that is added to the route table.
+             * The tag added to the route table.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -631,7 +631,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed information about the IPv4 gateway.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchIds(VSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -639,7 +639,7 @@ public class DescribeRouteTableListResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the route table was created.
+             * The ID of the VPC to which the route table belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

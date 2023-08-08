@@ -126,7 +126,7 @@ public class GetDhcpOptionsSetRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the DHCP options set.
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.putQueryParameter("DhcpOptionsSetId", dhcpOptionsSetId);
@@ -153,13 +153,10 @@ public class GetDhcpOptionsSetRequest extends Request {
         }
 
         /**
-         * The status of the DHCP options set. Valid values:
+         * The region ID of the DHCP options set that you want to query.
          * <p>
          * 
-         * *   **Available**: available
-         * *   **InUse**: in use
-         * *   **Deleted**: deleted
-         * *   **Pending**: being configured
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

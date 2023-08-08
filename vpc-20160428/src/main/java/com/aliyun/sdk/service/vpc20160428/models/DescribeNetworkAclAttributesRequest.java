@@ -126,11 +126,12 @@ public class DescribeNetworkAclAttributesRequest extends Request {
         } 
 
         /**
-         * The action to be performed on network traffic that matches the rule. Valid values:
+         * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * *   **accept**: allows network traffic.
-         * *   **drop**: blocks network traffic.
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -139,7 +140,7 @@ public class DescribeNetworkAclAttributesRequest extends Request {
         }
 
         /**
-         * The ID of the inbound rule.
+         * The ID of the network ACL.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -157,7 +158,10 @@ public class DescribeNetworkAclAttributesRequest extends Request {
         }
 
         /**
-         * The name of the inbound rule.
+         * The region ID of the network ACL.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

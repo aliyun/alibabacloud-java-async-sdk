@@ -369,8 +369,8 @@ public class CreateVpnConnectionRequest extends Request {
          * Specifies whether to automatically configure routes. Valid values:
          * <p>
          * 
-         * *   **true** (default): automatically configures routes.
-         * *   **false**: does not automatically configure routes.
+         * *   **true** (default)
+         * *   **false**
          */
         public Builder autoConfigRoute(Boolean autoConfigRoute) {
             this.putQueryParameter("AutoConfigRoute", autoConfigRoute);
@@ -383,14 +383,16 @@ public class CreateVpnConnectionRequest extends Request {
          * <p>
          * 
          * *   **BgpConfig.EnableBgp**: specifies whether to enable BGP. Valid values: **true** and **false**. Default value: false.
-         * *   **BgpConfig.LocalAsn**: the autonomous system number (ASN) of Alibaba Cloud. Valid values: **1** to **4294967295**. Default value: **45104**.
-         * *   **BgpConfig.TunnelCidr**: the CIDR block of the IPsec tunnel. The CIDR block must belong to 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.
+         * *   **BgpConfig.LocalAsn**: the ASN on the Alibaba Cloud side. Valid values: **1** to **4294967295**. Default value: **45104**.
+         * *   **BgpConfig.TunnelCidr**: the CIDR block of the IPsec tunnel. The CIDR block must fall within 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.
          * *   **LocalBgpIp**: the BGP IP address on the Alibaba Cloud side. This IP address must fall within the CIDR block of the IPsec tunnel.
          * 
          * > 
+         * 
          * *   This parameter is required when the VPN gateway has dynamic BGP enabled.
-         * *   Before you configure BGP, we recommend that you learn about how BGP works and the limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).
-         * *   We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. Refer to the relevant documentation for the valid range of a private ASN.
+         * 
+         * *   Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~).
+         * *   We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. Refer to the relevant documentation for the private ASN range.
          */
         public Builder bgpConfig(String bgpConfig) {
             this.putQueryParameter("BgpConfig", bgpConfig);
@@ -402,9 +404,9 @@ public class CreateVpnConnectionRequest extends Request {
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters.
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** for each API request may be different.
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -422,11 +424,11 @@ public class CreateVpnConnectionRequest extends Request {
         }
 
         /**
-         * Specifies whether to immediately start IPsec negotiations. Valid values:
+         * Specify whether to immediately start IPsec negotiations after the configuration takes effect. Valid values:
          * <p>
          * 
          * *   **true**: immediately starts IPsec negotiations after the configuration is complete.
-         * *   **false**: starts IPsec negotiations when inbound traffic is detected. This is the default value.
+         * *   **false** (default): starts IPsec negotiations when inbound traffic is received.
          */
         public Builder effectImmediately(Boolean effectImmediately) {
             this.putQueryParameter("EffectImmediately", effectImmediately);
@@ -438,8 +440,8 @@ public class CreateVpnConnectionRequest extends Request {
          * Specifies whether to enable the dead peer detection (DPD) feature. Valid values:
          * <p>
          * 
-         * *   **true** (default): enables DPD. The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no feedback is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.
-         * *   **false**: disables DPD. The initiator of the IPsec-VPN connection does not send DPD packets.
+         * *   **true** (default) The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no response is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.
+         * *   **false**: disables DPD. The IPsec initiator does not send DPD packets.
          */
         public Builder enableDpd(Boolean enableDpd) {
             this.putQueryParameter("EnableDpd", enableDpd);
@@ -451,8 +453,8 @@ public class CreateVpnConnectionRequest extends Request {
          * Specifies whether to enable NAT traversal. Valid values:
          * <p>
          * 
-         * *   **true** (default): yes After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the VPN tunnel.
-         * *   **false**: no
+         * *   **true** (default) After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the VPN tunnel.
+         * *   **false**
          */
         public Builder enableNatTraversal(Boolean enableNatTraversal) {
             this.putQueryParameter("EnableNatTraversal", enableNatTraversal);
@@ -461,7 +463,7 @@ public class CreateVpnConnectionRequest extends Request {
         }
 
         /**
-         * EnableTunnelsBgp.
+         * 是否为隧道开启BGP功能。取值：**true**或**false**（默认值）。
          */
         public Builder enableTunnelsBgp(Boolean enableTunnelsBgp) {
             this.putQueryParameter("EnableTunnelsBgp", enableTunnelsBgp);
@@ -475,7 +477,7 @@ public class CreateVpnConnectionRequest extends Request {
          * 
          * *   **HealthCheckConfig.enable**: specifies whether to enable health checks. Valid values: **true** and **false**. Default value: false.
          * *   **HealthCheckConfig.dip**: the destination IP address configured for health checks.
-         * *   **HealthCheckConfig.sip**: the source IP address configured for health checks.
+         * *   **HealthCheckConfig.sip:** the source IP address that is used for health checks.
          * *   **HealthCheckConfig.interval**: the time interval of health check retries. Unit: seconds. Default value: **3**.
          * *   **HealthCheckConfig.retry**: the maximum number of health check retries. Default value: **3**.
          */
@@ -491,11 +493,11 @@ public class CreateVpnConnectionRequest extends Request {
          * 
          * *   **IkeConfig.Psk**: The pre-shared key that is used for authentication between the VPN gateway and the data center. The key must be 1 to 100 characters in length.
          * 
-         *     If you do not specify a pre-shared key, the system generates a random 16-bit string as the pre-shared key. You can call the [DescribeVpnConnection](~~120374~~) operation to query the pre-shared key that is generated by the system.
+         *         If you do not specify a pre-shared key, the system generates a random 16-character string as the pre-shared key. You can call the DescribeVpnConnection operation to query the pre-shared key generated by the system. 
          * 
-         * > The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the data center. Otherwise, you cannot establish a connection between the data center and the VPN gateway.
+         *           The pre-shared key of the IPsec-VPN connection must be the same as the authentication key of the data center. Otherwise, the connection between the data center and the VPN gateway cannot be established. 
          * 
-         * *   **IkeConfig.IkeVersion**: the version of the IKE protocol. Valid values: **ikev1** and **ikev2**. Default value: **ikev1**.
+         * *   **IkeConfig.IkeVersion**: the IKE version. Valid values: **ikev1** and **ikev2**. Default value: **ikev1**.
          * 
          * *   **IkeConfig.IkeMode**: the negotiation mode of IKEv1. Valid values: **main** and **aggressive**. Default value: **main**.
          * 
@@ -518,13 +520,13 @@ public class CreateVpnConnectionRequest extends Request {
         }
 
         /**
-         * The configuration of Phase 2 negotiations:
+         * The configurations of Phase 2 negotiations:
          * <p>
          * 
          * *   **IpsecConfig.IpsecEncAlg**: the encryption algorithm that is used in Phase 2 negotiations. Valid values: **aes**, **aes192**, **aes256**, **des**, and **3des**. Default value: **aes**.
          * *   **IpsecConfig. IpsecAuthAlg**: the authentication algorithm that is used in Phase 2 negotiations. Valid values: **md5**, **sha1**, **sha256**, **sha384**, and **sha512**. Default value: **md5**.
          * *   **IpsecConfig. IpsecPfs**: the Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiations. Valid values: **disabled**, **group1**, **group2**, **group5**, and **group14**. Default value: **group2**.
-         * *   **IpsecConfig. IpsecLifetime**: the SA lifetime determined by Phase 2 negotiations. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.
+         * *   **IpsecConfig. IpsecLifetime**: the SA lifetime that is determined by Phase 2 negotiations. Unit: seconds. Valid values: **0** to **86400**. Default value: **86400**.
          */
         public Builder ipsecConfig(String ipsecConfig) {
             this.putQueryParameter("IpsecConfig", ipsecConfig);
@@ -533,7 +535,7 @@ public class CreateVpnConnectionRequest extends Request {
         }
 
         /**
-         * The CIDR block on the VPC side. The CIDR block is used in Phase 2 negotiations.
+         * The CIDR block on the virtual private cloud (VPC) side. The CIDR block is used in Phase 2 negotiations.
          * <p>
          * 
          * Separate CIDR blocks with commas (,). Example: 192.168.1.0/24,192.168.2.0/24.
@@ -580,7 +582,7 @@ public class CreateVpnConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the region where you want to create the IPsec-VPN connection. You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.
+         * The ID of the region where the IPsec-VPN connection is created. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -589,10 +591,10 @@ public class CreateVpnConnectionRequest extends Request {
         }
 
         /**
-         * The certificate authority (CA) certificate of the peer when a ShangMi (SM) VPN gateway is used to create the IPsec-VPN connection.
+         * The peer CA certificate when a ShangMi (SM) VPN gateway is used to establish the IPsec-VPN connection.
          * <p>
          * 
-         * *   This parameter is required when an SM VPN gateway is used to create the IPsec-VPN connection.
+         * *   This parameter is required when an SM VPN gateway is used to establish the IPsec-VPN connection.
          * *   You can ignore this parameter when a standard VPN gateway is used to create the IPsec-VPN connection.
          */
         public Builder remoteCaCertificate(String remoteCaCertificate) {
@@ -602,7 +604,7 @@ public class CreateVpnConnectionRequest extends Request {
         }
 
         /**
-         * The CIDR block of the data center. This CIDR block is used in Phase 2 negotiations.
+         * The CIDR block on the data center side. This CIDR block is used in Phase 2 negotiations.
          * <p>
          * 
          * Separate CIDR blocks with commas (,). Example: 192.168.3.0/24,192.168.4.0/24.
@@ -637,7 +639,12 @@ public class CreateVpnConnectionRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag value.
+         * <p>
+         * 
+         * The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+         * 
+         * Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -646,7 +653,10 @@ public class CreateVpnConnectionRequest extends Request {
         }
 
         /**
-         * TunnelOptionsSpecification.
+         * 配置隧道。
+         * <p>
+         * 
+         * 如果当前VPN网关实例支持创建双隧道模式的IPsec-VPN连接，您必须同时为IPsec-VPN连接添加主隧道和备隧道的配置（即配置**TunnelOptionsSpecification**数组下的参数）。一个IPsec-VPN连接下仅支持添加主备两条隧道。
          */
         public Builder tunnelOptionsSpecification(java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification) {
             this.putBodyParameter("TunnelOptionsSpecification", tunnelOptionsSpecification);
@@ -792,7 +802,12 @@ public class CreateVpnConnectionRequest extends Request {
             private String tunnelCidr; 
 
             /**
-             * LocalAsn.
+             * 隧道本端（阿里云侧）的自治系统号。自治系统号取值范围：**1**~**4294967295**。默认值：**45104**。
+             * <p>
+             * 
+             * > - 当您为IPsec连接开启BGP功能后（即指定**EnableTunnelsBgp**参数的值为**true**）需要配置该参数。
+             * - 在添加BGP配置前，建议您先了解BGP动态路由功能的工作机制和使用限制。更多信息，请参见[VPN网关支持BGP动态路由公告](~~170235~~)。
+             * - 建议您使用自治系统号的私有号码与阿里云建立BGP连接。自治系统号的私有号码范围请自行查阅文档。
              */
             public Builder localAsn(Long localAsn) {
                 this.localAsn = localAsn;
@@ -800,7 +815,7 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * LocalBgpIp.
+             * 隧道本端（阿里云侧）的BGP地址。该地址为BGP网段内的一个IP地址。
              */
             public Builder localBgpIp(String localBgpIp) {
                 this.localBgpIp = localBgpIp;
@@ -808,7 +823,10 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * TunnelCidr.
+             * 隧道的BGP网段。该网段需是一个在169.254.0.0/16内的掩码长度为30的网段。
+             * <p>
+             * 
+             * >在一个VPN网关实例下，每个隧道的BGP网段需保持唯一。
              */
             public Builder tunnelCidr(String tunnelCidr) {
                 this.tunnelCidr = tunnelCidr;
@@ -945,7 +963,14 @@ public class CreateVpnConnectionRequest extends Request {
             private String remoteId; 
 
             /**
-             * IkeAuthAlg.
+             * 第一阶段协商的认证算法。
+             * <p>
+             * 
+             * <props="intl"><ph>取值：**md5**、**sha1**、**sha256**、**sha384**、**sha512**。默认值：**md5**。</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为普通型，则取值：**md5**、**sha1**、**sha256**、**sha384**、**sha512**。默认值：**md5**。</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为国密型，则取值为**sm3**（默认值）。</ph></props>
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -953,7 +978,14 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * IkeEncAlg.
+             * 第一阶段协商的加密算法。
+             * <p>
+             * 
+             * <props="intl"><ph>取值：**aes**、**aes192**、**aes256**、**des**或**3des**。默认值：**aes**。 </ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为普通型，则取值为**aes**、**aes192**、**aes256**、**des**或**3des**。默认值：**aes**。</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为国密型，则取值为**sm4**（默认值）。</ph></props>
              */
             public Builder ikeEncAlg(String ikeEncAlg) {
                 this.ikeEncAlg = ikeEncAlg;
@@ -961,7 +993,10 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * IkeLifetime.
+             * 第一阶段协商出的SA的生存周期。单位：秒。
+             * <p>
+             * 
+             * 取值范围：**0**~**86400**。默认值：**86400**。
              */
             public Builder ikeLifetime(Long ikeLifetime) {
                 this.ikeLifetime = ikeLifetime;
@@ -969,7 +1004,13 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * IkeMode.
+             * IKE版本的协商模式。取值：**main**或**aggressive**。默认值：**main**。   
+             * <p>
+             * 
+             * - **main**：主模式，协商过程安全性高。
+             * - **aggressive**：野蛮模式，协商快速且协商成功率高。
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为国密型，则协商模式仅支持**main**。</ph></props>
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -977,7 +1018,9 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * IkePfs.
+             * 第一阶段协商使用的Diffie-Hellman密钥交换算法。默认值：**group2**。   
+             * <p>
+             * 取值：**group1**、**group2**、**group5**、**group14**。
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -985,7 +1028,12 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * IkeVersion.
+             * IKE协议的版本。取值：**ikev1**或**ikev2**。默认值：**ikev1**。
+             * <p>
+             * 
+             * 相对于IKEv1版本，IKEv2版本简化了SA的协商过程并且对于多网段的场景提供了更好的支持。
+             *    
+             * <props="china"><ph>如果VPN网关实例类型为国密型，则IKE版本仅支持**ikev1**。</ph></props>
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -993,7 +1041,10 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * LocalId.
+             * 隧道本端（阿里云侧）的标识，用于第一阶段的协商。长度限制为100个字符。默认值为隧道的IP地址。
+             * <p>
+             * 
+             * **LocalId**支持FQDN格式，如果您使用FQDN格式，协商模式建议选择为**aggressive**（野蛮模式）。
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -1001,7 +1052,13 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * Psk.
+             * 预共享密钥，用于隧道与隧道对端之间的身份认证。
+             * <p>
+             * 
+             *     - 密钥长度为1~100个字符，支持数字、大小写英文字母以及以下字符。```~!\`@#$%^&*()_-+={}[]|;:\",.<>/?```
+             *     - 若您未指定预共享密钥，系统会随机生成一个16位的字符串作为预共享密钥。您可以调用[DescribeVpnConnection](~~120374~~)接口查询系统自动生成的预共享密钥。     
+             * 
+             *         > 隧道及隧道对端的预共享密钥需一致，否则系统无法正常建立隧道。
              */
             public Builder psk(String psk) {
                 this.psk = psk;
@@ -1009,7 +1066,10 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * RemoteId.
+             * 隧道对端的标识，用于第一阶段的协商。长度限制为100个字符。默认值为隧道关联的用户网关的IP地址。
+             * <p>
+             * 
+             * **RemoteId**支持FQDN格式，如果您使用FQDN格式，协商模式建议选择为**aggressive**（野蛮模式）。
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -1086,7 +1146,14 @@ public class CreateVpnConnectionRequest extends Request {
             private String ipsecPfs; 
 
             /**
-             * IpsecAuthAlg.
+             * 第二阶段协商的认证算法。
+             * <p>
+             * 
+             * <props="intl"><ph>取值：**md5**、**sha1**、**sha256**、**sha384**、**sha512**。默认值：**md5**。</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为普通型，则取值：**md5**、**sha1**、**sha256**、**sha384**、**sha512**。默认值：**md5**。</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为国密型，则取值为**sm3**（默认值）。</ph></props>
              */
             public Builder ipsecAuthAlg(String ipsecAuthAlg) {
                 this.ipsecAuthAlg = ipsecAuthAlg;
@@ -1094,7 +1161,14 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * IpsecEncAlg.
+             * 第二阶段协商的加密算法。
+             * <p>
+             * 
+             * <props="intl"><ph>取值：**aes**、**aes192**、**aes256**、**des**或**3des**。默认值：**aes**。 </ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为普通型，则取值为**aes**、**aes192**、**aes256**、**des**或**3des**。默认值：**aes**。</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为国密型，则取值为**sm4**（默认值）。</ph></props>
              */
             public Builder ipsecEncAlg(String ipsecEncAlg) {
                 this.ipsecEncAlg = ipsecEncAlg;
@@ -1102,7 +1176,10 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * IpsecLifetime.
+             * 第二阶段协商出的SA的生存周期。单位：秒。
+             * <p>
+             * 
+             * 取值范围：**0**~**86400**。默认值：**86400**。
              */
             public Builder ipsecLifetime(Long ipsecLifetime) {
                 this.ipsecLifetime = ipsecLifetime;
@@ -1110,7 +1187,10 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * IpsecPfs.
+             * 第二阶段协商使用的Diffie-Hellman密钥交换算法。默认值：**group2**。   
+             * <p>
+             * 
+             * 取值：**disabled**、**group1**、**group2**、**group5**、**group14**。
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;
@@ -1235,7 +1315,11 @@ public class CreateVpnConnectionRequest extends Request {
             private TunnelIpsecConfig tunnelIpsecConfig; 
 
             /**
-             * The ID of the customer gateway.
+             * 隧道关联的用户网关ID。
+             * <p>
+             * 
+             * > - 在VPN网关实例支持创建双隧道模式的IPsec-VPN连接的场景下，本参数必填。
+             * - 如果当前VPN网关实例支持创建双隧道模式的IPsec-VPN连接，您必须同时为IPsec-VPN连接添加主隧道和备隧道的配置（即配置**TunnelOptionsSpecification**数组下的参数）。一个IPsec-VPN连接仅支持添加主备两条隧道。
              */
             public Builder customerGatewayId(String customerGatewayId) {
                 this.customerGatewayId = customerGatewayId;
@@ -1243,11 +1327,12 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the dead peer detection (DPD) feature. Valid values:
+             * 是否为隧道开启DPD（对等体存活检测）功能。取值：
              * <p>
              * 
-             * *   **true** (default): enables DPD. The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no feedback is received from the peer within a specified period of time, the connection fails. ISAKMP SAs and IPsec SAs are deleted. The IPsec tunnel is also deleted.
-             * *   **false**: disables DPD. The initiator of the IPsec-VPN connection does not send DPD packets.
+             * - **true**（默认值）：开启DPD功能。IPsec发起端会发送DPD报文用来检测对端的设备是否存活，如果在设定时间内未收到正确回应则认为对端已经断线，IPsec将删除ISAKMP SA和相应的IPsec SA，安全隧道同样也会被删除。
+             * 
+             * - **false**：不开启DPD功能，IPsec发起端不会发送DPD探测报文。
              */
             public Builder enableDpd(Boolean enableDpd) {
                 this.enableDpd = enableDpd;
@@ -1255,11 +1340,12 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable NAT traversal. Valid values:
+             * 是否为隧道开启NAT穿越功能。取值：
              * <p>
              * 
-             * *   **true** (default): yes After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the VPN tunnel.
-             * *   **false**: no
+             * - **true**（默认值）：开启NAT穿越功能。开启后，IKE协商过程会删除对UDP端口号的验证过程，同时实现对隧道中NAT网关设备的发现功能。
+             * 
+             * - **false**：不开启NAT穿越功能。
              */
             public Builder enableNatTraversal(Boolean enableNatTraversal) {
                 this.enableNatTraversal = enableNatTraversal;
@@ -1267,11 +1353,12 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * The certificate authority (CA) certificate of the peer when a ShangMi (SM) VPN gateway is used to create the IPsec-VPN connection.
+             * 如果当前VPN网关实例为国密型VPN网关，您需要为隧道配置对端的CA证书。
              * <p>
              * 
-             * *   This parameter is required when an SM VPN gateway is used to create the IPsec-VPN connection.
-             * *   You can ignore this parameter when a standard VPN gateway is used to create the IPsec-VPN connection.
+             * - 对于国密型VPN网关，此项必填。
+             * 
+             * - 对于普通型VPN网关，此项需要为空。
              */
             public Builder remoteCaCertificate(String remoteCaCertificate) {
                 this.remoteCaCertificate = remoteCaCertificate;
@@ -1279,7 +1366,11 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * Role.
+             * 隧道的角色。取值：
+             * <p>
+             * 
+             * - **master**：表示当前隧道为主隧道。
+             * - **slave**：表示当前隧道为备隧道。
              */
             public Builder role(String role) {
                 this.role = role;
@@ -1287,7 +1378,7 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * TunnelBgpConfig.
+             * 为隧道添加BGP配置。
              */
             public Builder tunnelBgpConfig(TunnelBgpConfig tunnelBgpConfig) {
                 this.tunnelBgpConfig = tunnelBgpConfig;
@@ -1295,7 +1386,7 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * TunnelIkeConfig.
+             * 第一阶段协商的配置信息。
              */
             public Builder tunnelIkeConfig(TunnelIkeConfig tunnelIkeConfig) {
                 this.tunnelIkeConfig = tunnelIkeConfig;
@@ -1303,7 +1394,7 @@ public class CreateVpnConnectionRequest extends Request {
             }
 
             /**
-             * TunnelIpsecConfig.
+             * 第二阶段协商的配置信息。
              */
             public Builder tunnelIpsecConfig(TunnelIpsecConfig tunnelIpsecConfig) {
                 this.tunnelIpsecConfig = tunnelIpsecConfig;

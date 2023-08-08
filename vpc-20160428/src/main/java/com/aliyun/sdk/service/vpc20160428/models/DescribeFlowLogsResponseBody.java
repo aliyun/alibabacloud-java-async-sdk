@@ -311,6 +311,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("FlowLogDeliverErrorMessage")
+        private String flowLogDeliverErrorMessage;
+
+        @NameInMap("FlowLogDeliverStatus")
+        private String flowLogDeliverStatus;
+
         @NameInMap("FlowLogId")
         private String flowLogId;
 
@@ -355,6 +361,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             this.businessStatus = builder.businessStatus;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
+            this.flowLogDeliverErrorMessage = builder.flowLogDeliverErrorMessage;
+            this.flowLogDeliverStatus = builder.flowLogDeliverStatus;
             this.flowLogId = builder.flowLogId;
             this.flowLogName = builder.flowLogName;
             this.logStoreName = builder.logStoreName;
@@ -404,6 +412,20 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return flowLogDeliverErrorMessage
+         */
+        public String getFlowLogDeliverErrorMessage() {
+            return this.flowLogDeliverErrorMessage;
+        }
+
+        /**
+         * @return flowLogDeliverStatus
+         */
+        public String getFlowLogDeliverStatus() {
+            return this.flowLogDeliverStatus;
         }
 
         /**
@@ -502,6 +524,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private String businessStatus; 
             private String creationTime; 
             private String description; 
+            private String flowLogDeliverErrorMessage; 
+            private String flowLogDeliverStatus; 
             private String flowLogId; 
             private String flowLogName; 
             private String logStoreName; 
@@ -549,6 +573,22 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * FlowLogDeliverErrorMessage.
+             */
+            public Builder flowLogDeliverErrorMessage(String flowLogDeliverErrorMessage) {
+                this.flowLogDeliverErrorMessage = flowLogDeliverErrorMessage;
+                return this;
+            }
+
+            /**
+             * FlowLogDeliverStatus.
+             */
+            public Builder flowLogDeliverStatus(String flowLogDeliverStatus) {
+                this.flowLogDeliverStatus = flowLogDeliverStatus;
                 return this;
             }
 

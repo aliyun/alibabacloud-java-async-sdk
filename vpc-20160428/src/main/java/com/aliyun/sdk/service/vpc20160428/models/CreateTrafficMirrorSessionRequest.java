@@ -59,6 +59,10 @@ public class CreateTrafficMirrorSessionRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("TrafficMirrorFilterId")
     @Validation(required = true)
     private String trafficMirrorFilterId;
@@ -103,6 +107,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
         this.trafficMirrorFilterId = builder.trafficMirrorFilterId;
         this.trafficMirrorSessionDescription = builder.trafficMirrorSessionDescription;
         this.trafficMirrorSessionName = builder.trafficMirrorSessionName;
@@ -203,6 +208,13 @@ public class CreateTrafficMirrorSessionRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return trafficMirrorFilterId
      */
     public String getTrafficMirrorFilterId() {
@@ -263,6 +275,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
         private String trafficMirrorFilterId; 
         private String trafficMirrorSessionDescription; 
         private String trafficMirrorSessionName; 
@@ -288,6 +301,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
             this.trafficMirrorFilterId = request.trafficMirrorFilterId;
             this.trafficMirrorSessionDescription = request.trafficMirrorSessionDescription;
             this.trafficMirrorSessionName = request.trafficMirrorSessionName;
@@ -298,7 +312,12 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         } 
 
         /**
-         * The ID of the traffic mirror destination. You can specify only an elastic network interface (ENI) or a Server Load Balancer (SLB) instance as a traffic mirror destination.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -307,11 +326,11 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * The type of the traffic mirror destination. Valid values:
+         * Specifies whether to perform a dry run. Valid values:
          * <p>
          * 
-         * *   **NetworkInterface**: an ENI
-         * *   **SLB**: an SLB instance
+         * *   **true**: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -320,7 +339,11 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * The ID of the traffic mirror source. You can specify only an ENI as the traffic mirror source. The default value of **N** is **1**, which means that you can add only one traffic mirror source to a traffic mirror session.
+         * Specifies whether to enable the traffic mirror session. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): does not enable the traffic mirror session.
+         * *   **true**: enables the traffic mirror session.
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -347,7 +370,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
+         * The maximum transmission unit (MTU). Default value: **1500**.
          */
         public Builder packetLength(Integer packetLength) {
             this.putQueryParameter("PacketLength", packetLength);
@@ -356,7 +379,10 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * The maximum transmission unit (MTU). Default value: **1500**.
+         * The priority of the traffic mirror session. Valid values: **1** to **32766**.
+         * <p>
+         * 
+         * A smaller value indicates a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -365,7 +391,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * The ID of the traffic mirror session.
+         * The ID of the region to which the traffic mirror session belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -374,7 +400,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the resource group to which the mirrored traffic belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -401,10 +427,16 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * The priority of the traffic mirror session. Valid values: **1** to **32766**.
-         * <p>
-         * 
-         * A smaller value indicates a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The ID of the filter.
          */
         public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
             this.putQueryParameter("TrafficMirrorFilterId", trafficMirrorFilterId);
@@ -413,12 +445,10 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * The description of the traffic mirror session.
          * <p>
          * 
-         * You can use the client to generate the value, but you must ensure that the value is unique among all requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** might be different for each API request.
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder trafficMirrorSessionDescription(String trafficMirrorSessionDescription) {
             this.putQueryParameter("TrafficMirrorSessionDescription", trafficMirrorSessionDescription);
@@ -427,11 +457,10 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
+         * The name of the traffic mirror session.
          * <p>
          * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, the operation is performed.
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder trafficMirrorSessionName(String trafficMirrorSessionName) {
             this.putQueryParameter("TrafficMirrorSessionName", trafficMirrorSessionName);
@@ -449,7 +478,7 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * The ID of the filter.
+         * The ID of the traffic mirror destination. You can specify only an elastic network interface (ENI) or a Server Load Balancer (SLB) instance as a traffic mirror destination.
          */
         public Builder trafficMirrorTargetId(String trafficMirrorTargetId) {
             this.putQueryParameter("TrafficMirrorTargetId", trafficMirrorTargetId);
@@ -458,10 +487,11 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * The VXLAN network identifier (VNI). Valid values: **0** to **16777215**.
+         * The type of the traffic mirror destination. Valid values:
          * <p>
          * 
-         * You can use VNIs to identify mirrored traffic from different sessions at the traffic mirror destination. You can specify a custom VNI or use a random VNI allocated by the system. If you want the system to randomly allocate a VNI, do not enter a value.
+         * *   **NetworkInterface**: an ENI
+         * *   **SLB**: an SLB instance
          */
         public Builder trafficMirrorTargetType(String trafficMirrorTargetType) {
             this.putQueryParameter("TrafficMirrorTargetType", trafficMirrorTargetType);
@@ -470,11 +500,10 @@ public class CreateTrafficMirrorSessionRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the traffic mirror session. Valid values:
+         * The VXLAN network identifier (VNI). Valid values: **0** to **16777215**.
          * <p>
          * 
-         * *   **false** (default): does not enable the traffic mirror session.
-         * *   **true**: enables the traffic mirror session.
+         * You can use VNIs to identify mirrored traffic from different sessions at the traffic mirror destination. You can specify a custom VNI or use a random VNI allocated by the system. If you want the system to randomly allocate a VNI, do not enter a value.
          */
         public Builder virtualNetworkId(Integer virtualNetworkId) {
             this.putQueryParameter("VirtualNetworkId", virtualNetworkId);
@@ -489,4 +518,65 @@ public class CreateTrafficMirrorSessionRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

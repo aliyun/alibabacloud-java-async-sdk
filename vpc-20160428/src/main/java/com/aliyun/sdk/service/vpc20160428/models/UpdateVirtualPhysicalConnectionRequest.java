@@ -127,49 +127,15 @@ public class UpdateVirtualPhysicalConnectionRequest extends Request {
         } 
 
         /**
-         * The region ID of the hosted connection.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder expectSpec(String expectSpec) {
-            this.putQueryParameter("ExpectSpec", expectSpec);
-            this.expectSpec = expectSpec;
-            return this;
-        }
-
-        /**
          * Specifies whether to check the request without performing the operation. Valid values:
          * <p>
          * 
          * *   **true**: checks the request without performing the operation. The VLAN ID of the hosted connection is not changed. The system checks the required parameters, request syntax, and instance status. If the check fails, the corresponding error message is returned. If the request passes the check, the system returns the ID of the request.
          * *   **false** (default): sends the request. If the request passes the check, the VLAN ID of the hosted connection is changed.
          */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Indicates whether the VLAN ID of the hosted connection is changed. Valid values:
-         * <p>
-         * 
-         * *   **true**: The VLAN ID of the hosted connection is changed.
-         * *   **false**: The VLAN ID of the hosted connection is not changed.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -183,9 +149,30 @@ public class UpdateVirtualPhysicalConnectionRequest extends Request {
          * 
          * **M** indicates Mbit/s and **G** indicates Gbit/s.
          */
-        public Builder token(String token) {
-            this.putQueryParameter("Token", token);
-            this.token = token;
+        public Builder expectSpec(String expectSpec) {
+            this.putQueryParameter("ExpectSpec", expectSpec);
+            this.expectSpec = expectSpec;
+            return this;
+        }
+
+        /**
+         * The ID of the shared Express Connect circuit.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The region ID of the hosted connection.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -196,6 +183,19 @@ public class UpdateVirtualPhysicalConnectionRequest extends Request {
          * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
          * 
          * >  If you do not specify this parameter, the system automatically uses **RequestId** as **ClientToken**. The value of **RequestId** in each API request may be different.
+         */
+        public Builder token(String token) {
+            this.putQueryParameter("Token", token);
+            this.token = token;
+            return this;
+        }
+
+        /**
+         * The VLAN ID of the hosted connection. Valid values: **0** to **2999**.
+         * <p>
+         * 
+         * *   If the VLAN ID is set to **0**, it indicates that the switch port of the virtual border router (VBR) is a Layer 3 router interface instead of a VLAN interface. When a Layer 3 router interface is used, each Express Connect circuit corresponds to a VBR.
+         * *   If the VLAN ID is set to a value from **1** to **2999**, the switch port of the VBR is a Layer 3 VLAN subinterface. When a Layer 3 VLAN subinterface is used, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit with which the VBR is associated can be used to connect to VPCs that belong to different Alibaba Cloud accounts. VBRs in different VLANs are isolated from each other at Layer 2.
          */
         public Builder vlanId(Long vlanId) {
             this.putQueryParameter("VlanId", vlanId);

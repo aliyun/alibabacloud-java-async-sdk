@@ -211,57 +211,6 @@ public class CreateNatIpRequest extends Request {
         } 
 
         /**
-         * The ID of the CIDR block to which the NAT IP address belongs.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The CIDR block to which the NAT IP address belongs.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * The description of the NAT IP address.
-         * <p>
-         * 
-         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
-         */
-        public Builder natGatewayId(String natGatewayId) {
-            this.putQueryParameter("NatGatewayId", natGatewayId);
-            this.natGatewayId = natGatewayId;
-            return this;
-        }
-
-        /**
-         * The NAT IP address.
-         */
-        public Builder natIp(String natIp) {
-            this.putQueryParameter("NatIp", natIp);
-            this.natIp = natIp;
-            return this;
-        }
-
-        /**
-         * The NAT IP address that you want to create.
-         * <p>
-         * 
-         * If you do not specify an IP address, the system selects a random IP address from the specified CIDR block.
-         */
-        public Builder natIpCidr(String natIpCidr) {
-            this.putQueryParameter("NatIpCidr", natIpCidr);
-            this.natIpCidr = natIpCidr;
-            return this;
-        }
-
-        /**
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
@@ -269,9 +218,9 @@ public class CreateNatIpRequest extends Request {
          * 
          * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
-        public Builder natIpDescription(String natIpDescription) {
-            this.putQueryParameter("NatIpDescription", natIpDescription);
-            this.natIpDescription = natIpDescription;
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -281,6 +230,60 @@ public class CreateNatIpRequest extends Request {
          * 
          * *   **true**: sends the precheck request but does not create the NAT IP address. The system checks your AccessKey pair, the Resource Access Management (RAM) user permissions, and the required parameters. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
          * *   **false** (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the NAT IP address is created.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * The ID of the Virtual Private Cloud (VPC) NAT gateway for which you want to create the NAT IP address.
+         */
+        public Builder natGatewayId(String natGatewayId) {
+            this.putQueryParameter("NatGatewayId", natGatewayId);
+            this.natGatewayId = natGatewayId;
+            return this;
+        }
+
+        /**
+         * The NAT IP address that you want to create.
+         * <p>
+         * 
+         * If you do not specify an IP address, the system selects a random IP address from the specified CIDR block.
+         */
+        public Builder natIp(String natIp) {
+            this.putQueryParameter("NatIp", natIp);
+            this.natIp = natIp;
+            return this;
+        }
+
+        /**
+         * The CIDR block to which the NAT IP address belongs.
+         */
+        public Builder natIpCidr(String natIpCidr) {
+            this.putQueryParameter("NatIpCidr", natIpCidr);
+            this.natIpCidr = natIpCidr;
+            return this;
+        }
+
+        /**
+         * The description of the NAT IP address.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         */
+        public Builder natIpDescription(String natIpDescription) {
+            this.putQueryParameter("NatIpDescription", natIpDescription);
+            this.natIpDescription = natIpDescription;
+            return this;
+        }
+
+        /**
+         * The name of the NAT IP address.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.
          */
         public Builder natIpName(String natIpName) {
             this.putQueryParameter("NatIpName", natIpName);
@@ -307,10 +310,10 @@ public class CreateNatIpRequest extends Request {
         }
 
         /**
-         * The name of the NAT IP address.
+         * The region ID of the NAT gateway to which the NAT IP address that you want to create belongs.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

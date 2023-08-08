@@ -121,7 +121,10 @@ public class ActivateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the router interface belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -148,7 +151,7 @@ public class ActivateRouterInterfaceRequest extends Request {
         }
 
         /**
-         * RouterInterfaceId.
+         * The ID of the router interface.
          */
         public Builder routerInterfaceId(String routerInterfaceId) {
             this.putQueryParameter("RouterInterfaceId", routerInterfaceId);

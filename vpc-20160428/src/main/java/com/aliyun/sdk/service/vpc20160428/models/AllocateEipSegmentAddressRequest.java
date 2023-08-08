@@ -224,6 +224,36 @@ public class AllocateEipSegmentAddressRequest extends Request {
         } 
 
         /**
+         * The maximum bandwidth of the EIP. Unit: Mbit/s.
+         * <p>
+         * 
+         * *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**, the valid values for **Bandwidth** are **1** to **500**.
+         * *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**, the valid values for **Bandwidth** are **1** to **200**.
+         * *   When **InstanceChargeType** is set to **PrePaid**, the valid values for **Bandwidth** are **1** to **1000**.
+         * 
+         * Default value: **5**. Unit: Mbit/s.
+         */
+        public Builder bandwidth(String bandwidth) {
+            this.putQueryParameter("Bandwidth", bandwidth);
+            this.bandwidth = bandwidth;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request. 
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among all requests. The **client token** can contain only ASCII characters. 
+         * 
+         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** for each API request may be different.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
          * The subnet mask length of the contiguous EIPs. Valid values:
          * <p>
          * 
@@ -235,25 +265,9 @@ public class AllocateEipSegmentAddressRequest extends Request {
          * 
          * >  The number of contiguous EIPs allocated by the system may be less than the requested number because one, three, or four EIPs may be reserved.
          */
-        public Builder bandwidth(String bandwidth) {
-            this.putQueryParameter("Bandwidth", bandwidth);
-            this.bandwidth = bandwidth;
-            return this;
-        }
-
-        /**
-         * The maximum bandwidth of the EIP. Unit: Mbit/s.
-         * <p>
-         * 
-         * *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**, the valid values for **Bandwidth** are **1** to **500**.
-         * *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**, the valid values for **Bandwidth** are **1** to **200**.
-         * *   When **InstanceChargeType** is set to **PrePaid**, the valid values for **Bandwidth** are **1** to **1000**.
-         * 
-         * Default value: **5**. Unit: Mbit/s.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
+        public Builder eipMask(String eipMask) {
+            this.putQueryParameter("EipMask", eipMask);
+            this.eipMask = eipMask;
             return this;
         }
 
@@ -264,9 +278,9 @@ public class AllocateEipSegmentAddressRequest extends Request {
          * *   **PayByBandwidth** (default): pay-by-bandwidth
          * *   **PayByTraffic**: pay-by-data-transfer
          */
-        public Builder eipMask(String eipMask) {
-            this.putQueryParameter("EipMask", eipMask);
-            this.eipMask = eipMask;
+        public Builder internetChargeType(String internetChargeType) {
+            this.putQueryParameter("InternetChargeType", internetChargeType);
+            this.internetChargeType = internetChargeType;
             return this;
         }
 
@@ -290,15 +304,6 @@ public class AllocateEipSegmentAddressRequest extends Request {
          * 
          * If your services are deployed in China East 1 Finance, this parameter is required and you must set the value to **BGP_FinanceCloud**.
          */
-        public Builder internetChargeType(String internetChargeType) {
-            this.putQueryParameter("InternetChargeType", internetChargeType);
-            this.internetChargeType = internetChargeType;
-            return this;
-        }
-
-        /**
-         * The ID of the contiguous EIP group.
-         */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
             this.isp = isp;
@@ -306,7 +311,7 @@ public class AllocateEipSegmentAddressRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * Set the value to **public**, which specifies the Internet.
          */
         public Builder netmode(String netmode) {
             this.putQueryParameter("Netmode", netmode);
@@ -333,7 +338,10 @@ public class AllocateEipSegmentAddressRequest extends Request {
         }
 
         /**
-         * Set the value to **public**, which specifies the Internet.
+         * The region ID of the contiguous EIPs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -342,7 +350,7 @@ public class AllocateEipSegmentAddressRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

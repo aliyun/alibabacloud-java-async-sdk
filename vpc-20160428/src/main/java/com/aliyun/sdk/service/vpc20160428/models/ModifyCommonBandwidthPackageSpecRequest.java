@@ -141,7 +141,10 @@ public class ModifyCommonBandwidthPackageSpecRequest extends Request {
         } 
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.
+         * <p>
+         * 
+         * Valid values: **1** to **1000**.
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -150,7 +153,7 @@ public class ModifyCommonBandwidthPackageSpecRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the EIP bandwidth plan.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
@@ -177,10 +180,10 @@ public class ModifyCommonBandwidthPackageSpecRequest extends Request {
         }
 
         /**
-         * The maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.
+         * The region ID of the EIP bandwidth plan.
          * <p>
          * 
-         * Valid values: **1** to **1000**.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

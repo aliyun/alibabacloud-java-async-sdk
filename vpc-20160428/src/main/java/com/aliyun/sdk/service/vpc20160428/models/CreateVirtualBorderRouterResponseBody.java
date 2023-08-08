@@ -50,7 +50,7 @@ public class CreateVirtualBorderRouterResponseBody extends TeaModel {
         private String vbrId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateVirtualBorderRouterResponseBody extends TeaModel {
         }
 
         /**
-         * VbrId.
+         * The ID of the VBR.
          */
         public Builder vbrId(String vbrId) {
             this.vbrId = vbrId;

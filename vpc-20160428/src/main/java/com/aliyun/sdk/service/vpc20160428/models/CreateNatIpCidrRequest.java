@@ -197,11 +197,38 @@ public class CreateNatIpCidrRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **CreateNatIpCidr**.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: prechecks the request but does not create the NAT CIDR block. The system checks the required parameters, request syntax, and limits. If the request fails check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the request. If the request passes the check, an HTTP 2xx status code is returned and the NAT CIDR block is created.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * The ID of the Virtual Private Cloud (VPC) NAT gateway with which you want to associate the CIDR block.
+         */
+        public Builder natGatewayId(String natGatewayId) {
+            this.putQueryParameter("NatGatewayId", natGatewayId);
+            this.natGatewayId = natGatewayId;
             return this;
         }
 
@@ -216,9 +243,9 @@ public class CreateNatIpCidrRequest extends Request {
          * *   The NAT CIDR block cannot overlap with the private CIDR block of the VPC to which the NAT gateway belongs. If you want to use other IP addresses from the private CIDR block of the VPC to provide NAT services, create a vSwitch and attach the vSwitch to another VPC NAT gateway.
          * *   If you want to use public IP addresses to provide NAT services, make sure that the public IP addresses fall within a customer CIDR block of the VPC to which the VPC NAT gateway belongs. For more information, see [What is customer CIDR block?](~~185311~~).
          */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
+        public Builder natIpCidr(String natIpCidr) {
+            this.putQueryParameter("NatIpCidr", natIpCidr);
+            this.natIpCidr = natIpCidr;
             return this;
         }
 
@@ -228,29 +255,6 @@ public class CreateNatIpCidrRequest extends Request {
          * 
          * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
-        public Builder natGatewayId(String natGatewayId) {
-            this.putQueryParameter("NatGatewayId", natGatewayId);
-            this.natGatewayId = natGatewayId;
-            return this;
-        }
-
-        /**
-         * The ID of the NAT CIDR block.
-         */
-        public Builder natIpCidr(String natIpCidr) {
-            this.putQueryParameter("NatIpCidr", natIpCidr);
-            this.natIpCidr = natIpCidr;
-            return this;
-        }
-
-        /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** of each API request may be different.
-         */
         public Builder natIpCidrDescription(String natIpCidrDescription) {
             this.putQueryParameter("NatIpCidrDescription", natIpCidrDescription);
             this.natIpCidrDescription = natIpCidrDescription;
@@ -258,11 +262,10 @@ public class CreateNatIpCidrRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the request without performing the operation. Valid values:
+         * The name of the CIDR block.
          * <p>
          * 
-         * *   **true**: prechecks the request but does not create the NAT CIDR block. The system checks the required parameters, request syntax, and limits. If the request fails check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the check, an HTTP 2xx status code is returned and the NAT CIDR block is created.
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.
          */
         public Builder natIpCidrName(String natIpCidrName) {
             this.putQueryParameter("NatIpCidrName", natIpCidrName);
@@ -289,10 +292,10 @@ public class CreateNatIpCidrRequest extends Request {
         }
 
         /**
-         * The name of the CIDR block.
+         * The region ID of the NAT gateway with which you want to associate the CIDR block.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter. It cannot start with `http://` or `https://`.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

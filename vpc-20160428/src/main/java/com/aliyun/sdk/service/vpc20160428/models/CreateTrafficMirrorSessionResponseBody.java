@@ -62,7 +62,7 @@ public class CreateTrafficMirrorSessionResponseBody extends TeaModel {
         private String trafficMirrorSessionId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class CreateTrafficMirrorSessionResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the mirrored traffic belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -78,7 +78,7 @@ public class CreateTrafficMirrorSessionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group to which the mirrored traffic belongs.
+         * The ID of the traffic mirror session.
          */
         public Builder trafficMirrorSessionId(String trafficMirrorSessionId) {
             this.trafficMirrorSessionId = trafficMirrorSessionId;

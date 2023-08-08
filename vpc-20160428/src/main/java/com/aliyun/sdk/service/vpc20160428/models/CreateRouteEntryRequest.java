@@ -224,18 +224,12 @@ public class CreateRouteEntryRequest extends Request {
         } 
 
         /**
-         * The type of next hop of the custom route entry. Valid values:
+         * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * *   **Instance**: an Elastic Compute Service (ECS) instance. This is the default value.
-         * *   **HaVip**: a high-availability virtual IP address (HAVIP).
-         * *   **RouterInterface**: a router interface.
-         * *   **NetworkInterface**: an elastic network interface (ENI).
-         * *   **VpnGateway**: a VPN gateway.
-         * *   **IPv6Gateway**: an IPv6 gateway.
-         * *   **NatGateway**: a NAT gateway.
-         * *   **Attachment**: a transit router.
-         * *   **VpcPeer**: a VPC peering connection.
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -244,7 +238,10 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * The weight of the next hop of the ECMP route entry.
+         * The description of the custom route entry.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -253,10 +250,11 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * The name of the custom route entry that you want to add.
+         * The destination CIDR block of the custom route entry. Both IPv4 and IPv6 CIDR blocks are supported. Make sure that the destination CIDR block meets the following requirements:
          * <p>
          * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * *   The destination CIDR block is not 100.64.0.0/10 or a subset of 100.64.0.0/10.
+         * *   The destination CIDR block of the custom route entry is different from the destination CIDR blocks of other route entries in the same route table.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -265,10 +263,7 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * The description of the custom route entry.
-         * <p>
-         * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * The ID of the next hop.
          */
         public Builder nextHopId(String nextHopId) {
             this.putQueryParameter("NextHopId", nextHopId);
@@ -286,7 +281,18 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * The type of next hop of the ECMP route entry. Set the value to **RouterInterface**.
+         * The type of next hop of the custom route entry. Valid values:
+         * <p>
+         * 
+         * *   **Instance**: an Elastic Compute Service (ECS) instance. This is the default value.
+         * *   **HaVip**: a high-availability virtual IP address (HAVIP).
+         * *   **RouterInterface**: a router interface.
+         * *   **NetworkInterface**: an elastic network interface (ENI).
+         * *   **VpnGateway**: a VPN gateway.
+         * *   **IPv6Gateway**: an IPv6 gateway.
+         * *   **NatGateway**: a NAT gateway.
+         * *   **Attachment**: a transit router.
+         * *   **VpcPeer**: a VPC peering connection.
          */
         public Builder nextHopType(String nextHopType) {
             this.putQueryParameter("NextHopType", nextHopType);
@@ -313,7 +319,10 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the next hop.
+         * The region ID of the route table.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -340,7 +349,10 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * The ID of the next hop of the ECMP route.
+         * The name of the custom route entry that you want to add.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder routeEntryName(String routeEntryName) {
             this.putQueryParameter("RouteEntryName", routeEntryName);
@@ -349,12 +361,7 @@ public class CreateRouteEntryRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The ClientToken value can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         * The ID of the route table to which you want to add a custom route entry.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -420,7 +427,7 @@ public class CreateRouteEntryRequest extends Request {
             private Integer weight; 
 
             /**
-             * The ID of the custom route entry.
+             * The ID of the next hop of the ECMP route.
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -436,7 +443,7 @@ public class CreateRouteEntryRequest extends Request {
             }
 
             /**
-             * The ID of the request.
+             * The weight of the next hop of the ECMP route entry.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

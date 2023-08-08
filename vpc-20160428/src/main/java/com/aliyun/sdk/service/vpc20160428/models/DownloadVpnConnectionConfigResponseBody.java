@@ -688,9 +688,6 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         @NameInMap("Remote")
         private String remote;
 
-        @NameInMap("RightCaCert")
-        private String rightCaCert;
-
         @NameInMap("TunnelId")
         private String tunnelId;
 
@@ -699,7 +696,6 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             this.ipsecConfig = builder.ipsecConfig;
             this.local = builder.local;
             this.remote = builder.remote;
-            this.rightCaCert = builder.rightCaCert;
             this.tunnelId = builder.tunnelId;
         }
 
@@ -740,13 +736,6 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * @return rightCaCert
-         */
-        public String getRightCaCert() {
-            return this.rightCaCert;
-        }
-
-        /**
          * @return tunnelId
          */
         public String getTunnelId() {
@@ -758,7 +747,6 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             private TunnelConfigIpsecConfig ipsecConfig; 
             private String local; 
             private String remote; 
-            private String rightCaCert; 
             private String tunnelId; 
 
             /**
@@ -790,14 +778,6 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
              */
             public Builder remote(String remote) {
                 this.remote = remote;
-                return this;
-            }
-
-            /**
-             * RightCaCert.
-             */
-            public Builder rightCaCert(String rightCaCert) {
-                this.rightCaCert = rightCaCert;
                 return this;
             }
 

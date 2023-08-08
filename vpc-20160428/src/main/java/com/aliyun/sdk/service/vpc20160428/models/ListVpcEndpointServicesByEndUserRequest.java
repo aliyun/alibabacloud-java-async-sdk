@@ -154,7 +154,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -163,10 +163,11 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * The region ID of the gateway endpoint.
+         * The token that is used for the next query. Valid values:
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
+         * *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -193,11 +194,10 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
+         * The region ID of the gateway endpoint.
          * <p>
          * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If **NextToken** is returned, the value is the token that is used for the next query.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -224,7 +224,7 @@ public class ListVpcEndpointServicesByEndUserRequest extends Request {
         }
 
         /**
-         * The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
+         * The name of the endpoint service that you want to query.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

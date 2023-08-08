@@ -186,7 +186,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration of the client.
+         * The client configuration.
          */
         public Builder clientConfig(String clientConfig) {
             this.clientConfig = clientConfig;
@@ -194,7 +194,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The key of the client.
+         * The client key.
          */
         public Builder clientKey(String clientKey) {
             this.clientKey = clientKey;
@@ -240,7 +240,7 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -267,9 +267,9 @@ public class DescribeSslVpnClientCertResponseBody extends TeaModel {
          * The status of the SSL client certificate. Valid values:
          * <p>
          * 
-         * *   **expiring-soon**: The certificate expires in one week.
-         * *   **normal**: The certificate is active.
-         * *   **expired**: The certificate has expired.
+         * *   **expiring-soon**
+         * *   **normal**
+         * *   **expired**
          */
         public Builder status(String status) {
             this.status = status;

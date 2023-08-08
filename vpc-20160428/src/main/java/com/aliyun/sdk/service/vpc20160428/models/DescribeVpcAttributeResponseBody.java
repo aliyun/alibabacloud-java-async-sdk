@@ -326,15 +326,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         private String vpcName; 
 
         /**
-         * The type of the IPv6 CIDR block. Valid values:
+         * The list of Cloud Enterprise Network (CEN) instances to which the VPC is attached.
          * <p>
          * 
-         * - **BGP** (default): an IPv6 CIDR block provided by Alibaba Cloud over Border Gateway Protocol (BGP)
-         * - **ChinaMobile**: an IPv6 CIDR block provided by China Mobile (single ISP)
-         * - **ChinaUnicom**: an IPv6 CIDR block provided by China Unicom (single ISP)
-         * - **ChinaTelecom**: an IPv6 CIDR block provided by China Telecom (single ISP)
-         * 
-         * >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.
+         * If the VPC is not attached to a CEN instance, the parameter is not returned.
          */
         public Builder associatedCens(AssociatedCens associatedCens) {
             this.associatedCens = associatedCens;
@@ -342,7 +337,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The secondary IPv4 CIDR block of the VPC.
+         * The IPv4 CIDR block of the VPC.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = cidrBlock;
@@ -350,7 +345,11 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the VPC.
+         * Indicates whether the ClassicLink feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
          */
         public Builder classicLinkEnabled(Boolean classicLinkEnabled) {
             this.classicLinkEnabled = classicLinkEnabled;
@@ -358,7 +357,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * CloudResources.
+         * The list of resources deployed in the VPC.
          */
         public Builder cloudResources(CloudResources cloudResources) {
             this.cloudResources = cloudResources;
@@ -366,7 +365,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vRouter that belongs to the VPC.
+         * The time when the VPC was created.
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -374,7 +373,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the CEN instance belongs.
+         * The description of the VPC.
          */
         public Builder description(String description) {
             this.description = description;
@@ -382,96 +381,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the CEN instance to which the VPC is attached.
-         * <p>
-         * 
-         * **Attached** is returned only if the VPC is attached to a CEN instance.
+         * The ID of the DHCP options set.
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.dhcpOptionsSetId = dhcpOptionsSetId;
-            return this;
-        }
-
-        /**
-         * The user CIDR block. Multiple CIDR blocks are separated by commas (,). At most three CIDR blocks are returned.
-         */
-        public Builder dhcpOptionsSetStatus(String dhcpOptionsSetStatus) {
-            this.dhcpOptionsSetStatus = dhcpOptionsSetStatus;
-            return this;
-        }
-
-        /**
-         * Ipv4GatewayId.
-         */
-        public Builder ipv4GatewayId(String ipv4GatewayId) {
-            this.ipv4GatewayId = ipv4GatewayId;
-            return this;
-        }
-
-        /**
-         * The list of resources deployed in the VPC.
-         */
-        public Builder ipv6CidrBlock(String ipv6CidrBlock) {
-            this.ipv6CidrBlock = ipv6CidrBlock;
-            return this;
-        }
-
-        /**
-         * Ipv6CidrBlocks.
-         */
-        public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
-            this.ipv6CidrBlocks = ipv6CidrBlocks;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder isDefault(Boolean isDefault) {
-            this.isDefault = isDefault;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * The ID of the DHCP options set.
-         */
-        public Builder regionId(String regionId) {
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The list of Cloud Enterprise Network (CEN) instances to which the VPC is attached.
-         * <p>
-         * 
-         * If the VPC is not attached to a CEN instance, the parameter is not returned.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The ID of the CEN instance to which the VPC is attached.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The information about the IPv6 CIDR blocks of the VPC.
-         */
-        public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
-            this.secondaryCidrBlocks = secondaryCidrBlocks;
             return this;
         }
 
@@ -484,13 +397,105 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
          * *   **Deleted**: deleted
          * *   **Pending**: being configured
          */
+        public Builder dhcpOptionsSetStatus(String dhcpOptionsSetStatus) {
+            this.dhcpOptionsSetStatus = dhcpOptionsSetStatus;
+            return this;
+        }
+
+        /**
+         * The ID of the IPv4 gateway.
+         */
+        public Builder ipv4GatewayId(String ipv4GatewayId) {
+            this.ipv4GatewayId = ipv4GatewayId;
+            return this;
+        }
+
+        /**
+         * The IPv6 CIDR block of the VPC.
+         */
+        public Builder ipv6CidrBlock(String ipv6CidrBlock) {
+            this.ipv6CidrBlock = ipv6CidrBlock;
+            return this;
+        }
+
+        /**
+         * The information about the IPv6 CIDR blocks of the VPC.
+         */
+        public Builder ipv6CidrBlocks(Ipv6CidrBlocks ipv6CidrBlocks) {
+            this.ipv6CidrBlocks = ipv6CidrBlocks;
+            return this;
+        }
+
+        /**
+         * Indicates whether the VPC is the default VPC. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false** (default): no
+         */
+        public Builder isDefault(Boolean isDefault) {
+            this.isDefault = isDefault;
+            return this;
+        }
+
+        /**
+         * The ID of the Alibaba Cloud account to which the VPC belongs.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * The region ID of the VPC.
+         */
+        public Builder regionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The secondary IPv4 CIDR block of the VPC.
+         */
+        public Builder secondaryCidrBlocks(SecondaryCidrBlocks secondaryCidrBlocks) {
+            this.secondaryCidrBlocks = secondaryCidrBlocks;
+            return this;
+        }
+
+        /**
+         * The status of the VPC. Valid values:
+         * <p>
+         * 
+         * *   **Available**: available
+         * *   **Pending**: being configured
+         */
         public Builder status(String status) {
             this.status = status;
             return this;
         }
 
         /**
-         * SupportIpv4Gateway.
+         * Indicates whether the VPC supports IPv4 gateways. 
+         * <p>
+         * 
+         * - **true**: yes
+         * - **false**: no
          */
         public Builder supportIpv4Gateway(Boolean supportIpv4Gateway) {
             this.supportIpv4Gateway = supportIpv4Gateway;
@@ -506,12 +511,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The type of resources deployed in the VPC. Valid values:
-         * <p>
-         * 
-         * - **VSwitch**: vSwitches
-         * - **VRouter**: vRouters
-         * - **RouteTable**: route tables
+         * The user CIDR block. Multiple CIDR blocks are separated by commas (,). At most three CIDR blocks are returned.
          */
         public Builder userCidrs(UserCidrs userCidrs) {
             this.userCidrs = userCidrs;
@@ -519,7 +519,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The list of vSwitches deployed in the VPC.
+         * The ID of the vRouter that belongs to the VPC.
          */
         public Builder vRouterId(String vRouterId) {
             this.vRouterId = vRouterId;
@@ -527,7 +527,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The number of resources deployed in the VPC.
+         * The list of vSwitches deployed in the VPC.
          */
         public Builder vSwitchIds(VSwitchIds vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
@@ -535,7 +535,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The IPv4 CIDR block of the VPC.
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -543,7 +543,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The IPv6 CIDR block of the VPC.
+         * The name of the VPC.
          */
         public Builder vpcName(String vpcName) {
             this.vpcName = vpcName;
@@ -607,11 +607,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String cenStatus; 
 
             /**
-             * Indicates whether the VPC supports IPv4 gateways. 
-             * <p>
-             * 
-             * - **true**: yes
-             * - **false**: no
+             * The ID of the CEN instance to which the VPC is attached.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -619,7 +615,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IPv6 CIDR block of the VPC.
+             * The ID of the Alibaba Cloud account to which the CEN instance belongs.
              */
             public Builder cenOwnerId(Long cenOwnerId) {
                 this.cenOwnerId = cenOwnerId;
@@ -627,7 +623,10 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the IPv4 gateway.
+             * The status of the CEN instance to which the VPC is attached.
+             * <p>
+             * 
+             * **Attached** is returned only if the VPC is attached to a CEN instance.
              */
             public Builder cenStatus(String cenStatus) {
                 this.cenStatus = cenStatus;
@@ -721,7 +720,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * ResourceCount.
+             * The number of resources deployed in the VPC.
              */
             public Builder resourceCount(Integer resourceCount) {
                 this.resourceCount = resourceCount;
@@ -729,7 +728,12 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of resources deployed in the VPC. Valid values:
+             * <p>
+             * 
+             * - **VSwitch**: vSwitches
+             * - **VRouter**: vRouters
+             * - **RouteTable**: route tables
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -823,7 +827,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private String ipv6Isp; 
 
             /**
-             * The list of resources deployed in the VPC.
+             * The IPv6 CIDR block of the VPC.
              */
             public Builder ipv6CidrBlock(String ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;
@@ -831,7 +835,15 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6Isp.
+             * The type of the IPv6 CIDR block. Valid values:
+             * <p>
+             * 
+             * - **BGP** (default): an IPv6 CIDR block provided by Alibaba Cloud over Border Gateway Protocol (BGP)
+             * - **ChinaMobile**: an IPv6 CIDR block provided by China Mobile (single ISP)
+             * - **ChinaUnicom**: an IPv6 CIDR block provided by China Unicom (single ISP)
+             * - **ChinaTelecom**: an IPv6 CIDR block provided by China Telecom (single ISP)
+             * 
+             * >  If your Alibaba Cloud account is allowed to activate single-ISP bandwidth, valid values are: **ChinaTelecom**, **ChinaUnicom**, and **ChinaMobile**.
              */
             public Builder ipv6Isp(String ipv6Isp) {
                 this.ipv6Isp = ipv6Isp;
@@ -872,7 +884,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
             private java.util.List < Ipv6CidrBlock> ipv6CidrBlock; 
 
             /**
-             * The list of resources deployed in the VPC.
+             * The IPv6 CIDR block of the VPC.
              */
             public Builder ipv6CidrBlock(java.util.List < Ipv6CidrBlock> ipv6CidrBlock) {
                 this.ipv6CidrBlock = ipv6CidrBlock;

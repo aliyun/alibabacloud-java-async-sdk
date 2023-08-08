@@ -182,10 +182,12 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the region to which the mirrored traffic belongs.
+         * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -194,7 +196,11 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -221,7 +227,10 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region to which the mirrored traffic belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,12 +257,10 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * The description of the filter.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder trafficMirrorFilterDescription(String trafficMirrorFilterDescription) {
             this.putQueryParameter("TrafficMirrorFilterDescription", trafficMirrorFilterDescription);
@@ -262,10 +269,7 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends Request {
         }
 
         /**
-         * The name of the filter.
-         * <p>
-         * 
-         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+         * The ID of the filter.
          */
         public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
             this.putQueryParameter("TrafficMirrorFilterId", trafficMirrorFilterId);
@@ -274,11 +278,10 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the request without performing the operation. Valid values:
+         * The name of the filter.
          * <p>
          * 
-         * *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.
+         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder trafficMirrorFilterName(String trafficMirrorFilterName) {
             this.putQueryParameter("TrafficMirrorFilterName", trafficMirrorFilterName);

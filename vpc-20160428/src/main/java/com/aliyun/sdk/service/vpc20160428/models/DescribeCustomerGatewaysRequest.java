@@ -170,7 +170,7 @@ public class DescribeCustomerGatewaysRequest extends Request {
          * The ID of the customer gateway.
          * <p>
          * 
-         * >  If you do not specify a customer gateway ID, the system queries all customer gateways in the current region by default.
+         * > If you do not specify a customer gateway ID, the system queries all customer gateways in the current region by default.
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.putQueryParameter("CustomerGatewayId", customerGatewayId);
@@ -215,7 +215,7 @@ public class DescribeCustomerGatewaysRequest extends Request {
         }
 
         /**
-         * The region ID of the customer gateway.
+         * The ID of the region where the customer gateway is deployed.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
@@ -245,7 +245,12 @@ public class DescribeCustomerGatewaysRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag value.
+         * <p>
+         * 
+         * The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+         * 
+         * Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

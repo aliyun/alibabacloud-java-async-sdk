@@ -62,7 +62,7 @@ public class CreateDhcpOptionsSetResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * DhcpOptionsSetId.
+         * The ID of the DHCP options set that is created.
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.dhcpOptionsSetId = dhcpOptionsSetId;
@@ -70,7 +70,7 @@ public class CreateDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

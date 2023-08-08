@@ -86,11 +86,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The metering method that is used after the renewal takes effect. Valid values:
-         * <p>
-         * 
-         * *   **PayByBandwidth**: pay-by-bandwidth
-         * *   **PayByTraffic**: pay-by-data-transfer
+         * The details about the EIP.
          */
         public Builder eipAddresses(EipAddresses eipAddresses) {
             this.eipAddresses = eipAddresses;
@@ -98,7 +94,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the EIP.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +102,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The network type. The value is set to **public**, which indicates the Internet.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,11 +110,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The billing method of the EIP. Valid values:
-         * <p>
-         * 
-         * *   **PostPaid**: pay-as-you-go
-         * *   **PrePaid**: subscription
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -126,10 +118,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of contiguous EIPs.
-         * <p>
-         * 
-         * This value is returned only when you query contiguous EIP groups.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -169,7 +158,11 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * LockReason.
+             * The reason why the EIP is locked. Valid values:
+             * <p>
+             * 
+             * *   **financial**: The EIP is locked due to overdue payments.
+             * *   **security**: The EIP is locked for security reasons.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -210,7 +203,11 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private java.util.List < LockReason> lockReason; 
 
             /**
-             * LockReason.
+             * The reason why the EIP is locked. Valid values:
+             * <p>
+             * 
+             * *   **financial**: The EIP is locked due to overdue payments.
+             * *   **security**: The EIP is locked for security reasons.
              */
             public Builder lockReason(java.util.List < LockReason> lockReason) {
                 this.lockReason = lockReason;
@@ -304,7 +301,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key of the EIP.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -312,7 +309,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value of the EIP.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -838,7 +835,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * The tag key of the EIP.
+             * The ID of the EIP.
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -846,10 +843,102 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth after the renewal takes effect. Unit: Mbit/s.
+             * The time when the EIP was created. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder allocationTime(String allocationTime) {
                 this.allocationTime = allocationTime;
+                return this;
+            }
+
+            /**
+             * The maximum bandwidth of the EIP. Unit: Mbit/s.
+             */
+            public Builder bandwidth(String bandwidth) {
+                this.bandwidth = bandwidth;
+                return this;
+            }
+
+            /**
+             * The maximum bandwidth of the EIP bandwidth plan with which the EIP is associated. Unit: Mbit/s.
+             */
+            public Builder bandwidthPackageBandwidth(String bandwidthPackageBandwidth) {
+                this.bandwidthPackageBandwidth = bandwidthPackageBandwidth;
+                return this;
+            }
+
+            /**
+             * The ID of the EIP bandwidth plan.
+             */
+            public Builder bandwidthPackageId(String bandwidthPackageId) {
+                this.bandwidthPackageId = bandwidthPackageId;
+                return this;
+            }
+
+            /**
+             * The type of the bandwidth. Only **CommonBandwidthPackage** (EIP Bandwidth Plan) is returned.
+             */
+            public Builder bandwidthPackageType(String bandwidthPackageType) {
+                this.bandwidthPackageType = bandwidthPackageType;
+                return this;
+            }
+
+            /**
+             * The service status of the EIP. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: active
+             * *   **FinancialLocked**: locked
+             */
+            public Builder businessStatus(String businessStatus) {
+                this.businessStatus = businessStatus;
+                return this;
+            }
+
+            /**
+             * The billing method of the EIP. Valid values:
+             * <p>
+             * 
+             * *   **PostPaid**: pay-as-you-go
+             * *   **PrePaid**: subscription
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * Indicates whether deletion protection is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**: enabled
+             * *   **false**: disabled
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
+                return this;
+            }
+
+            /**
+             * The description of the EIP.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The maximum bandwidth of the EIP when it is not associated with an EIP bandwidth plan. Unit: Mbit/s.
+             */
+            public Builder eipBandwidth(String eipBandwidth) {
+                this.eipBandwidth = eipBandwidth;
+                return this;
+            }
+
+            /**
+             * The time when the EIP expires. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
+             */
+            public Builder expiredTime(String expiredTime) {
+                this.expiredTime = expiredTime;
                 return this;
             }
 
@@ -860,8 +949,20 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * *   **false**: no
              * *   **true**: yes
              */
-            public Builder bandwidth(String bandwidth) {
-                this.bandwidth = bandwidth;
+            public Builder HDMonitorStatus(String HDMonitorStatus) {
+                this.HDMonitorStatus = HDMonitorStatus;
+                return this;
+            }
+
+            /**
+             * Indicates whether renewal data is included.
+             * <p>
+             * 
+             * *   **false**: no
+             * *   **true**: yes This parameter returns **true** only when the **IncludeReservationData** parameter is set to **true** and some orders have not taken effect.
+             */
+            public Builder hasReservationData(String hasReservationData) {
+                this.hasReservationData = hasReservationData;
                 return this;
             }
 
@@ -885,121 +986,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * 
              * If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.
              */
-            public Builder bandwidthPackageBandwidth(String bandwidthPackageBandwidth) {
-                this.bandwidthPackageBandwidth = bandwidthPackageBandwidth;
-                return this;
-            }
-
-            /**
-             * Indicates whether level-2 throttling is configured. Valid values:
-             * <p>
-             * 
-             * *   **true**: yes
-             * *   **false**: no
-             */
-            public Builder bandwidthPackageId(String bandwidthPackageId) {
-                this.bandwidthPackageId = bandwidthPackageId;
-                return this;
-            }
-
-            /**
-             * The ID of the IP address pool to which the EIP belongs.
-             */
-            public Builder bandwidthPackageType(String bandwidthPackageType) {
-                this.bandwidthPackageType = bandwidthPackageType;
-                return this;
-            }
-
-            /**
-             * The edition of Anti-DDoS. 
-             * <p>
-             * 
-             * - If an empty value is returned, it indicates that Anti-DDoS Origin Basic is used.
-             * - If **AntiDDoS_Enhanced** is returned, it indicates that Anti-DDoS Pro/Premium is used.
-             */
-            public Builder businessStatus(String businessStatus) {
-                this.businessStatus = businessStatus;
-                return this;
-            }
-
-            /**
-             * The name of the EIP.
-             */
-            public Builder chargeType(String chargeType) {
-                this.chargeType = chargeType;
-                return this;
-            }
-
-            /**
-             * The ID of the resource group.
-             */
-            public Builder deletionProtection(Boolean deletionProtection) {
-                this.deletionProtection = deletionProtection;
-                return this;
-            }
-
-            /**
-             * The region ID of the associated instance.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The maximum bandwidth of the EIP bandwidth plan with which the EIP is associated. Unit: Mbit/s.
-             */
-            public Builder eipBandwidth(String eipBandwidth) {
-                this.eipBandwidth = eipBandwidth;
-                return this;
-            }
-
-            /**
-             * The reason why the EIP is locked. Valid values:
-             * <p>
-             * 
-             * *   **financial**: The EIP is locked due to overdue payments.
-             * *   **security**: The EIP is locked for security reasons.
-             */
-            public Builder expiredTime(String expiredTime) {
-                this.expiredTime = expiredTime;
-                return this;
-            }
-
-            /**
-             * The type of the bandwidth. Only **CommonBandwidthPackage** (EIP Bandwidth Plan) is returned.
-             */
-            public Builder HDMonitorStatus(String HDMonitorStatus) {
-                this.HDMonitorStatus = HDMonitorStatus;
-                return this;
-            }
-
-            /**
-             * The ID of the VPC that has IPv4 gateways enabled and that is deployed in the same region as the EIP. 
-             * <p>
-             * 
-             * When you associate an EIP with an IP address, the system can enable the IP address to access the Internet based on VPC route configurations. 
-             * 
-             * >  This parameter is returned if **InstanceType** is set to **IpAddress**. In this case, the EIP is associated with an IP address.
-             */
-            public Builder hasReservationData(String hasReservationData) {
-                this.hasReservationData = hasReservationData;
-                return this;
-            }
-
-            /**
-             * The zone of the EIP. 
-             * <p>
-             * 
-             * This parameter is returned only if your account is included in the whitelist.
-             */
             public Builder ISP(String ISP) {
                 this.ISP = ISP;
                 return this;
             }
 
             /**
-             * The ID of the EIP.
+             * The ID of the associated instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1007,30 +1000,10 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the EIP expires. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
+             * The region ID of the associated instance.
              */
             public Builder instanceRegionId(String instanceRegionId) {
                 this.instanceRegionId = instanceRegionId;
-                return this;
-            }
-
-            /**
-             * The service status of the EIP. Valid values:
-             * <p>
-             * 
-             * *   **Normal**: active
-             * *   **FinancialLocked**: locked
-             */
-            public Builder instanceType(String instanceType) {
-                this.instanceType = instanceType;
-                return this;
-            }
-
-            /**
-             * The tag value of the EIP.
-             */
-            public Builder internetChargeType(String internetChargeType) {
-                this.internetChargeType = internetChargeType;
                 return this;
             }
 
@@ -1045,96 +1018,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * *   **NetworkInterface**: a secondary ENI
              * *   **IpAddress**: an IP address
              */
-            public Builder ipAddress(String ipAddress) {
-                this.ipAddress = ipAddress;
-                return this;
-            }
-
-            /**
-             * Indicates whether the resource is created by the service account.
-             * <p>
-             * 
-             * *   **0**: no
-             * *   **1**: yes
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            /**
-             * The maximum bandwidth of the EIP when it is not associated with an EIP bandwidth plan. Unit: Mbit/s.
-             */
-            public Builder netmode(String netmode) {
-                this.netmode = netmode;
-                return this;
-            }
-
-            /**
-             * OperationLocks.
-             */
-            public Builder operationLocks(OperationLocks operationLocks) {
-                this.operationLocks = operationLocks;
-                return this;
-            }
-
-            /**
-             * PublicIpAddressPoolId.
-             */
-            public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
-                this.publicIpAddressPoolId = publicIpAddressPoolId;
-                return this;
-            }
-
-            /**
-             * Indicates whether renewal data is included.
-             * <p>
-             * 
-             * *   **false**: no
-             * *   **true**: yes This parameter returns **true** only when the **IncludeReservationData** parameter is set to **true** and some orders have not taken effect.
-             */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
-                return this;
-            }
-
-            /**
-             * The ID of the EIP bandwidth plan.
-             */
-            public Builder reservationActiveTime(String reservationActiveTime) {
-                this.reservationActiveTime = reservationActiveTime;
-                return this;
-            }
-
-            /**
-             * The region ID of the EIP.
-             */
-            public Builder reservationBandwidth(String reservationBandwidth) {
-                this.reservationBandwidth = reservationBandwidth;
-                return this;
-            }
-
-            /**
-             * The ID of the associated instance.
-             */
-            public Builder reservationInternetChargeType(String reservationInternetChargeType) {
-                this.reservationInternetChargeType = reservationInternetChargeType;
-                return this;
-            }
-
-            /**
-             * The maximum bandwidth of the EIP. Unit: Mbit/s.
-             */
-            public Builder reservationOrderType(String reservationOrderType) {
-                this.reservationOrderType = reservationOrderType;
-                return this;
-            }
-
-            /**
-             * The tag list of the EIP.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
                 return this;
             }
 
@@ -1145,13 +1030,126 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              * *   **PayByBandwidth**: pay-by-bandwidth
              * *   **PayByTraffic**: pay-by-data-transfer
              */
+            public Builder internetChargeType(String internetChargeType) {
+                this.internetChargeType = internetChargeType;
+                return this;
+            }
+
+            /**
+             * The IP address of the EIP.
+             */
+            public Builder ipAddress(String ipAddress) {
+                this.ipAddress = ipAddress;
+                return this;
+            }
+
+            /**
+             * The name of the EIP.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The network type. The value is set to **public**, which indicates the Internet.
+             */
+            public Builder netmode(String netmode) {
+                this.netmode = netmode;
+                return this;
+            }
+
+            /**
+             * The details about the locked EIPs.
+             */
+            public Builder operationLocks(OperationLocks operationLocks) {
+                this.operationLocks = operationLocks;
+                return this;
+            }
+
+            /**
+             * The ID of the IP address pool to which the EIP belongs.
+             */
+            public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
+                this.publicIpAddressPoolId = publicIpAddressPoolId;
+                return this;
+            }
+
+            /**
+             * The region ID of the EIP.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * The time when the renewal takes effect. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
+             */
+            public Builder reservationActiveTime(String reservationActiveTime) {
+                this.reservationActiveTime = reservationActiveTime;
+                return this;
+            }
+
+            /**
+             * The bandwidth after the renewal takes effect. Unit: Mbit/s.
+             */
+            public Builder reservationBandwidth(String reservationBandwidth) {
+                this.reservationBandwidth = reservationBandwidth;
+                return this;
+            }
+
+            /**
+             * The metering method that is used after the renewal takes effect. Valid values:
+             * <p>
+             * 
+             * *   **PayByBandwidth**: pay-by-bandwidth
+             * *   **PayByTraffic**: pay-by-data-transfer
+             */
+            public Builder reservationInternetChargeType(String reservationInternetChargeType) {
+                this.reservationInternetChargeType = reservationInternetChargeType;
+                return this;
+            }
+
+            /**
+             * The type of the renewal order. Valid values:
+             * <p>
+             * 
+             * *   **RENEWCHANGE**: renewal with an upgrade or a downgrade
+             * *   **TEMP_UPGRADE**: temporary upgrade
+             * *   **UPGRADE**: upgrade
+             */
+            public Builder reservationOrderType(String reservationOrderType) {
+                this.reservationOrderType = reservationOrderType;
+                return this;
+            }
+
+            /**
+             * The ID of the resource group.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Indicates whether level-2 throttling is configured. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
+             */
             public Builder secondLimited(Boolean secondLimited) {
                 this.secondLimited = secondLimited;
                 return this;
             }
 
             /**
-             * SecurityProtectionTypes.
+             * The edition of Anti-DDoS. 
+             * <p>
+             * 
+             * - If an empty value is returned, it indicates that Anti-DDoS Origin Basic is used.
+             * - If **AntiDDoS_Enhanced** is returned, it indicates that Anti-DDoS Pro/Premium is used.
              */
             public Builder securityProtectionTypes(SecurityProtectionTypes securityProtectionTypes) {
                 this.securityProtectionTypes = securityProtectionTypes;
@@ -1159,11 +1157,10 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether deletion protection is enabled. Valid values:
+             * The IDs of contiguous EIPs.
              * <p>
              * 
-             * *   **true**: enabled
-             * *   **false**: disabled
+             * This value is returned only when you query contiguous EIP groups.
              */
             public Builder segmentInstanceId(String segmentInstanceId) {
                 this.segmentInstanceId = segmentInstanceId;
@@ -1171,7 +1168,11 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the locked EIPs.
+             * Indicates whether the resource is created by the service account.
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
              */
             public Builder serviceManaged(Integer serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -1179,7 +1180,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the EIP.
+             * The status of the EIP. Valid values:
+             * <p>
+             * 
+             * *   **Associating**: being associated
+             * *   **Unassociating**: being disassociated
+             * *   **InUse**: allocated
+             * *   **Available**: available
+             * *   **Releasing**: being released
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1187,7 +1195,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tag list of the EIP.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1195,7 +1203,12 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC that has IPv4 gateways enabled and that is deployed in the same region as the EIP. 
+             * <p>
+             * 
+             * When you associate an EIP with an IP address, the system can enable the IP address to access the Internet based on VPC route configurations. 
+             * 
+             * >  This parameter is returned if **InstanceType** is set to **IpAddress**. In this case, the EIP is associated with an IP address.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1203,7 +1216,10 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * Zone.
+             * The zone of the EIP. 
+             * <p>
+             * 
+             * This parameter is returned only if your account is included in the whitelist.
              */
             public Builder zone(String zone) {
                 this.zone = zone;

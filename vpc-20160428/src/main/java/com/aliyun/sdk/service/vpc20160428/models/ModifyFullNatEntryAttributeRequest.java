@@ -281,11 +281,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         } 
 
         /**
-         * The protocol of the packets that are forwarded by the port. Valid values:
-         * <p>
-         * 
-         * *   **TCP**: TCP
-         * *   **UDP**: UDP
+         * The backend IP address to be modified in FULLNAT address translation.
          */
         public Builder accessIp(String accessIp) {
             this.putQueryParameter("AccessIp", accessIp);
@@ -294,10 +290,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the FULLNAT entry.
-         * <p>
-         * 
-         * The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * The backend port to be modified in FULLNAT port mapping. Valid values: **1** to **65535**.
          */
         public Builder accessPort(String accessPort) {
             this.putQueryParameter("AccessPort", accessPort);
@@ -306,41 +299,16 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the FULLNAT table to be modified.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * The region ID of the Virtual Private Cloud (VPC) NAT gateway to which the FULLNAT entry to be modified belongs.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
-         */
-        public Builder fullNatEntryDescription(String fullNatEntryDescription) {
-            this.putQueryParameter("FullNatEntryDescription", fullNatEntryDescription);
-            this.fullNatEntryDescription = fullNatEntryDescription;
-            return this;
-        }
-
-        /**
-         * The NAT IP address to be modified.
-         */
-        public Builder fullNatEntryId(String fullNatEntryId) {
-            this.putQueryParameter("FullNatEntryId", fullNatEntryId);
-            this.fullNatEntryId = fullNatEntryId;
             return this;
         }
 
@@ -351,18 +319,9 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
          * *   **true**: prechecks the request but does not modify the FULLNAT entry. The system checks your AccessKey pair, the RAM user permissions, and the required parameters. If the request fails the precheck, an error code is returned. If the request passes the check, the `DryRunOperation` error code is returned.
          * *   **false**: sends the API request. After the request passes the check, a 2XX HTTP status code is returned and the FULLNAT entry is modified. This is the default value.
          */
-        public Builder fullNatEntryName(String fullNatEntryName) {
-            this.putQueryParameter("FullNatEntryName", fullNatEntryName);
-            this.fullNatEntryName = fullNatEntryName;
-            return this;
-        }
-
-        /**
-         * The ID of the elastic network interface (ENI) to be modified.
-         */
-        public Builder fullNatTableId(String fullNatTableId) {
-            this.putQueryParameter("FullNatTableId", fullNatTableId);
-            this.fullNatTableId = fullNatTableId;
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
@@ -372,6 +331,49 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
          * 
          * This parameter is optional. If you enter a description, the description must be 2 to 256 characters in length, and cannot start with `http://` or `https://`.
          */
+        public Builder fullNatEntryDescription(String fullNatEntryDescription) {
+            this.putQueryParameter("FullNatEntryDescription", fullNatEntryDescription);
+            this.fullNatEntryDescription = fullNatEntryDescription;
+            return this;
+        }
+
+        /**
+         * The ID of the FULLNAT entry to be modified.
+         */
+        public Builder fullNatEntryId(String fullNatEntryId) {
+            this.putQueryParameter("FullNatEntryId", fullNatEntryId);
+            this.fullNatEntryId = fullNatEntryId;
+            return this;
+        }
+
+        /**
+         * The new name of the FULLNAT entry.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         */
+        public Builder fullNatEntryName(String fullNatEntryName) {
+            this.putQueryParameter("FullNatEntryName", fullNatEntryName);
+            this.fullNatEntryName = fullNatEntryName;
+            return this;
+        }
+
+        /**
+         * The ID of the FULLNAT table to be modified.
+         */
+        public Builder fullNatTableId(String fullNatTableId) {
+            this.putQueryParameter("FullNatTableId", fullNatTableId);
+            this.fullNatTableId = fullNatTableId;
+            return this;
+        }
+
+        /**
+         * The protocol of the packets that are forwarded by the port. Valid values:
+         * <p>
+         * 
+         * *   **TCP**: TCP
+         * *   **UDP**: UDP
+         */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
             this.ipProtocol = ipProtocol;
@@ -379,7 +381,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * The backend IP address to be modified in FULLNAT address translation.
+         * The NAT IP address to be modified.
          */
         public Builder natIp(String natIp) {
             this.putQueryParameter("NatIp", natIp);
@@ -388,7 +390,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * The backend port to be modified in FULLNAT port mapping. Valid values: **1** to **65535**.
+         * The frontend port to be modified in FULLNAT port mapping. Valid values: **1** to **65535**.
          */
         public Builder natIpPort(String natIpPort) {
             this.putQueryParameter("NatIpPort", natIpPort);
@@ -397,7 +399,7 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * The frontend port to be modified in FULLNAT port mapping. Valid values: **1** to **65535**.
+         * The ID of the elastic network interface (ENI) to be modified.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -424,7 +426,10 @@ public class ModifyFullNatEntryAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Virtual Private Cloud (VPC) NAT gateway to which the FULLNAT entry to be modified belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

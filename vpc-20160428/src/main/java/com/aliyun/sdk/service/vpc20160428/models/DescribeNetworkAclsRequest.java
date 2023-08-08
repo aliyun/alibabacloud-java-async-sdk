@@ -223,7 +223,12 @@ public class DescribeNetworkAclsRequest extends Request {
         } 
 
         /**
-         * The ID of the inbound rule.
+         * The client token that you want to use to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -232,7 +237,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * The total number of entries returned.
+         * The ID of the network ACL.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -241,7 +246,10 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * The details about the network ACL.
+         * The name of the network ACL.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder networkAclName(String networkAclName) {
             this.putQueryParameter("NetworkAclName", networkAclName);
@@ -259,7 +267,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * The description of the network ACL.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -268,7 +276,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * The name of the network ACL.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -277,7 +285,10 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * The ID of the network ACL.
+         * The region ID of the network ACL.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -286,7 +297,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * The time when the network ACL was created.
+         * The ID of the associated instance.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -313,7 +324,10 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * The ID of the associated VPC.
+         * The type of the associated instance. Set the value to **VSwitch**.
+         * <p>
+         * 
+         * This parameter is valid only if **ResourceType** and **ResourceId** are both set.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -331,11 +345,7 @@ public class DescribeNetworkAclsRequest extends Request {
         }
 
         /**
-         * The status of the network ACL. Valid values:
-         * <p>
-         * 
-         * *   **Available**
-         * *   **Modifying**
+         * The ID of the virtual private cloud (VPC) to which the network ACL belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -389,7 +399,10 @@ public class DescribeNetworkAclsRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the network ACL belongs.
+             * The tag key. You can specify at most 20 tag keys. It cannot be an empty string.
+             * <p>
+             * 
+             * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -397,7 +410,10 @@ public class DescribeNetworkAclsRequest extends Request {
             }
 
             /**
-             * The region ID of the network ACL.
+             * The tag value. You can specify at most 20 tag values. It can be an empty string.
+             * <p>
+             * 
+             * The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter but cannot start with `aliyun` or `acs:`. It cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

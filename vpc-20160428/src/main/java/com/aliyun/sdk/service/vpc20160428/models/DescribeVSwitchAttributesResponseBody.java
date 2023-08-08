@@ -24,6 +24,9 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     @NameInMap("Description")
     private String description;
 
+    @NameInMap("EnabledIpv6")
+    private Boolean enabledIpv6;
+
     @NameInMap("Ipv6CidrBlock")
     private String ipv6CidrBlock;
 
@@ -71,6 +74,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         this.cidrBlock = builder.cidrBlock;
         this.creationTime = builder.creationTime;
         this.description = builder.description;
+        this.enabledIpv6 = builder.enabledIpv6;
         this.ipv6CidrBlock = builder.ipv6CidrBlock;
         this.isDefault = builder.isDefault;
         this.networkAclId = builder.networkAclId;
@@ -121,6 +125,13 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return enabledIpv6
+     */
+    public Boolean getEnabledIpv6() {
+        return this.enabledIpv6;
     }
 
     /**
@@ -226,6 +237,7 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
         private String cidrBlock; 
         private String creationTime; 
         private String description; 
+        private Boolean enabledIpv6; 
         private String ipv6CidrBlock; 
         private Boolean isDefault; 
         private String networkAclId; 
@@ -270,6 +282,14 @@ public class DescribeVSwitchAttributesResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EnabledIpv6.
+         */
+        public Builder enabledIpv6(Boolean enabledIpv6) {
+            this.enabledIpv6 = enabledIpv6;
             return this;
         }
 

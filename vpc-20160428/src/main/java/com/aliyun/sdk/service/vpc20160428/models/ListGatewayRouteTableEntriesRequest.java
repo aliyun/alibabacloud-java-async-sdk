@@ -168,7 +168,7 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         } 
 
         /**
-         * The request ID.
+         * The destination CIDR block of the route in the gateway route table.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
@@ -177,11 +177,7 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
-         * <p>
-         * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+         * The ID of the gateway route table that you want to query.
          */
         public Builder gatewayRouteTableId(String gatewayRouteTableId) {
             this.putQueryParameter("GatewayRouteTableId", gatewayRouteTableId);
@@ -190,7 +186,7 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         }
 
         /**
-         * The ID of the gateway route table that you want to query.
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **10**.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -199,7 +195,11 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         }
 
         /**
-         * The destination CIDR block of the route in the gateway route table.
+         * The token that determines the start point of the query. Valid values:
+         * <p>
+         * 
+         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
+         * *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -226,11 +226,10 @@ public class ListGatewayRouteTableEntriesRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. Valid values:
+         * The region ID of the gateway route table.
          * <p>
          * 
-         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
-         * *   If a next query is to be sent, set the parameter to the value of NextToken that is returned from the last call.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

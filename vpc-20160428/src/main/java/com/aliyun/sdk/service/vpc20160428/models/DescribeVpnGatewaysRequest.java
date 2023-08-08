@@ -223,7 +223,11 @@ public class DescribeVpnGatewaysRequest extends Request {
         } 
 
         /**
-         * The page number of the returned page.
+         * The payment status of the VPN gateway. Valid values:
+         * <p>
+         * 
+         * *   **Normal**
+         * *   **FinancialLocked**
          */
         public Builder businessStatus(String businessStatus) {
             this.putQueryParameter("BusinessStatus", businessStatus);
@@ -232,10 +236,11 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * The type of the VPN gateway.
+         * Specifies whether to return information about pending orders. Valid values:
          * <p>
          * 
-         * The value is set to **Normal**, which indicates a standard NAT gateway.
+         * *   **false** (default)
+         * *   **true**
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -262,7 +267,7 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -271,7 +276,7 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * The list of VPN gateways.
+         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -280,12 +285,10 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * The tag key. The tag key cannot be an empty string.
+         * The region ID of the VPN gateway.
          * <p>
          * 
-         * It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
-         * 
-         * You can specify at most 20 tag keys in each call.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -312,7 +315,14 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The status of the VPN gateway. Valid values:
+         * <p>
+         * 
+         * *   **init**
+         * *   **provisioning**
+         * *   **active**
+         * *   **updating**
+         * *   **deleting**
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -321,7 +331,12 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The value of tag N to add to the resource.
+         * <p>
+         * 
+         * The value of this parameter can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+         * 
+         * Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -330,12 +345,7 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * The tag value.
-         * <p>
-         * 
-         * The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
-         * 
-         * Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
+         * The ID of the virtual private cloud (VPC) to which the VPN gateway belongs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -344,7 +354,7 @@ public class DescribeVpnGatewaysRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);
@@ -398,11 +408,12 @@ public class DescribeVpnGatewaysRequest extends Request {
             private String value; 
 
             /**
-             * The status of the pending order.
+             * The tag key. The tag key cannot be an empty string.
              * <p>
              * 
-             * *   **1**: indicates that the order for renewal or the order for renewal with a specification change has not taken effect.
-             * *   **2**: indicates that the order for a temporary upgrade has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, **ReservationIpsec**, **ReservationMaxConnections**, **ReservationSpec**, and **ReservationSsl** indicate the previous specification.
+             * It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * 
+             * You can specify at most 20 tag keys in each call.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -410,7 +421,12 @@ public class DescribeVpnGatewaysRequest extends Request {
             }
 
             /**
-             * The ID of the VPC to which the VPN gateway belongs.
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * 
+             * Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
              */
             public Builder value(String value) {
                 this.value = value;

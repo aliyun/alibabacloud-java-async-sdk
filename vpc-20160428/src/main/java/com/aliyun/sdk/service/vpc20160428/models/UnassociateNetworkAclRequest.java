@@ -140,7 +140,12 @@ public class UnassociateNetworkAclRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * >  If you do not set this parameter, the system uses the value of **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,12 +154,7 @@ public class UnassociateNetworkAclRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-         * 
-         * >  If you do not set this parameter, the system uses the value of **RequestId** as **ClientToken**. The value of **RequestId** may be different for each API request.
+         * The ID of the network ACL that you want to disassociate from a resource.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -172,7 +172,7 @@ public class UnassociateNetworkAclRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **UnassociateNetworkAcl**.
+         * The region ID of the network ACL. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +253,7 @@ public class UnassociateNetworkAclRequest extends Request {
             private String resourceType; 
 
             /**
-             * The region ID of the network ACL. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+             * The ID of the resource from which you want to disassociate the network ACL.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -261,7 +261,10 @@ public class UnassociateNetworkAclRequest extends Request {
             }
 
             /**
-             * The ID of the network ACL that you want to disassociate from a resource.
+             * The type of the resource from which you want to disassociate the network ACL. Set the value to **VSwitch**.
+             * <p>
+             * 
+             * Valid values of **N**: 0 to 29. You can disassociate a network ACL from at most 30 resources at a time.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

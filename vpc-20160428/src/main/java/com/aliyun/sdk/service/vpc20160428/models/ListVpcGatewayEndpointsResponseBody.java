@@ -86,7 +86,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The name of the endpoint service.
+         * The list of gateway endpoints.
          */
         public Builder endpoints(java.util.List < Endpoints> endpoints) {
             this.endpoints = endpoints;
@@ -94,7 +94,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,11 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the gateway endpoint.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next queries are sent.
+         * *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +114,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the gateway endpoint.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the gateway endpoint.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -339,7 +343,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * AssociatedRouteTables.
+             * The ID of the route table associated with the gateway endpoint.
              */
             public Builder associatedRouteTables(java.util.List < String > associatedRouteTables) {
                 this.associatedRouteTables = associatedRouteTables;
@@ -347,7 +351,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -355,7 +359,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+             * The description of the gateway endpoint.
              */
             public Builder endpointDescription(String endpointDescription) {
                 this.endpointDescription = endpointDescription;
@@ -363,10 +367,34 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.
+             * The ID of the gateway endpoint.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
+                return this;
+            }
+
+            /**
+             * The name of the gateway endpoint.
+             */
+            public Builder endpointName(String endpointName) {
+                this.endpointName = endpointName;
+                return this;
+            }
+
+            /**
+             * The status of the gateway endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Creating**
+             * *   **Created**
+             * *   **Modifying**
+             * *   **Associating**
+             * *   **Dissociating**
+             * *   **Deleting**
+             */
+            public Builder endpointStatus(String endpointStatus) {
+                this.endpointStatus = endpointStatus;
                 return this;
             }
 
@@ -375,22 +403,6 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
              * <p>
              * 
              * For more information about the syntax and structure of the access policy, see [Policy syntax and structure](~~93739~~).
-             */
-            public Builder endpointName(String endpointName) {
-                this.endpointName = endpointName;
-                return this;
-            }
-
-            /**
-             * EndpointStatus.
-             */
-            public Builder endpointStatus(String endpointStatus) {
-                this.endpointStatus = endpointStatus;
-                return this;
-            }
-
-            /**
-             * The number of entries returned per page.
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -406,15 +418,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the gateway endpoint. Valid values:
-             * <p>
-             * 
-             * *   **Creating**
-             * *   **Created**
-             * *   **Modifying**
-             * *   **Associating**
-             * *   **Dissociating**
-             * *   **Deleting**
+             * The name of the endpoint service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -430,7 +434,7 @@ public class ListVpcGatewayEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the route table associated with the gateway endpoint.
+             * The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

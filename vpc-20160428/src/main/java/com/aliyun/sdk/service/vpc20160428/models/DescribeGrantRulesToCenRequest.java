@@ -262,7 +262,7 @@ public class DescribeGrantRulesToCenRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

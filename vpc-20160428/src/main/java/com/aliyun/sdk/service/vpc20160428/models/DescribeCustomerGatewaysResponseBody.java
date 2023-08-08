@@ -86,7 +86,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of customer gateways.
+         * The tag value.
          */
         public Builder customerGateways(CustomerGateways customerGateways) {
             this.customerGateways = customerGateways;
@@ -94,7 +94,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -110,7 +110,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * The number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

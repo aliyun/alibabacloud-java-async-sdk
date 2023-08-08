@@ -373,7 +373,12 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The filter value used to query resources. Specify the time in the ISO 8601 standard in `YYYY-MM-DDThh:mmZ` format. The time must be in UTC.
+         * The ID of the EIP that you want to query.
+         * <p>
+         * 
+         * You can enter up to 50 IDs of EIPs. Separate multiple IDs with commas (,).
+         * 
+         * >  If both the **EipAddress** and **AllocationId** parameters are set, you can enter up to 50 IDs of EIPs in **AllocationId**, and enter up to 50 IP addresses of EIPs in **EipAddress**.
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -382,7 +387,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The total number of entries returned.
+         * The ID of the cloud resource.
          */
         public Builder associatedInstanceId(String associatedInstanceId) {
             this.putQueryParameter("AssociatedInstanceId", associatedInstanceId);
@@ -391,7 +396,17 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * The type of the cloud resource with which you want to associate the EIP. Valid values:
+         * <p>
+         * 
+         * *   **EcsInstance** (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)
+         * *   **SlbInstance**: a Server Load Balancer (SLB) instance in a VPC
+         * *   **Nat**: a NAT gateway
+         * *   **HaVip**: a high-availability virtual IP address (HAVIP)
+         * *   **NetworkInterface**: a secondary ENI
+         * *   **IpAddress**: an IP address
+         * 
+         * >  You can associate only one EIP with each ECS instance, SLB instance, HAVIP, or IP address. You can associate multiple EIPs with each NAT gateway. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see [EIP overview](~~72125~~).
          */
         public Builder associatedInstanceType(String associatedInstanceType) {
             this.putQueryParameter("AssociatedInstanceType", associatedInstanceType);
@@ -400,45 +415,15 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The details about the EIP.
+         * The billing method of the EIP. Valid values:
+         * <p>
+         * 
+         * *   **PostPaid**: pay-as-you-go
+         * *   **PrePaid**: subscription
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
-            return this;
-        }
-
-        /**
-         * The time when the renewal takes effect. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * The filter value used to query resources. Specify the time in the ISO 8601 standard in `YYYY-MM-DDThh:mmZ` format. The time must be in UTC.
-         */
-        public Builder eipAddress(String eipAddress) {
-            this.putQueryParameter("EipAddress", eipAddress);
-            this.eipAddress = eipAddress;
-            return this;
-        }
-
-        /**
-         * The status of the EIP. Valid values:
-         * <p>
-         * 
-         * *   **Associating**: being associated
-         * *   **Unassociating**: being disassociated
-         * *   **InUse**: allocated
-         * *   **Available**: available
-         * *   **Releasing**: being released
-         */
-        public Builder eipName(String eipName) {
-            this.putQueryParameter("EipName", eipName);
-            this.eipName = eipName;
             return this;
         }
 
@@ -449,6 +434,58 @@ public class DescribeEipAddressesRequest extends Request {
          * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
          * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * The IP address of the EIP that you want to query.
+         * <p>
+         * 
+         * You can enter up to 50 IP addresses of EIPs. Separate multiple IP addresses with commas (,).
+         * 
+         * >  If both the **EipAddress** and **AllocationId** parameters are set, you can enter up to 50 IP addresses of EIPs in **EipAddress**, and enter up to 50 IDs of EIPs in **AllocationId**.
+         */
+        public Builder eipAddress(String eipAddress) {
+            this.putQueryParameter("EipAddress", eipAddress);
+            this.eipAddress = eipAddress;
+            return this;
+        }
+
+        /**
+         * The name of the EIP.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         */
+        public Builder eipName(String eipName) {
+            this.putQueryParameter("EipName", eipName);
+            this.eipName = eipName;
+            return this;
+        }
+
+        /**
+         * The line type. Valid values:
+         * <p>
+         * 
+         * *   **BGP** (default): BGP (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.
+         * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).
+         * 
+         * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).
+         * 
+         * If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
+         * 
+         * *   **ChinaTelecom**: China Telecom
+         * *   **ChinaUnicom**: China Unicom
+         * *   **ChinaMobile**: China Mobile
+         * *   **ChinaTelecom_L2**: China Telecom L2
+         * *   **ChinaUnicom_L2**: China Unicom L2
+         * *   **ChinaMobile_L2**: China Mobile L2
+         * 
+         * If your services are deployed in China East 1 Finance, you must set this parameter to **BGP_FinanceCloud**.
+         */
         public Builder ISP(String ISP) {
             this.putQueryParameter("ISP", ISP);
             this.ISP = ISP;
@@ -456,7 +493,11 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The filter key used to query resources. Set the value to **CreationStartTime**, which indicates the time when the system started to create the resource.
+         * Specifies whether to return information about pending orders. Valid values:
+         * <p>
+         * 
+         * *   **false** (default): does not return information about pending orders.
+         * *   **true**: returns information about pending orders.
          */
         public Builder includeReservationData(Boolean includeReservationData) {
             this.putQueryParameter("IncludeReservationData", includeReservationData);
@@ -465,7 +506,11 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The reason why the EIP is locked. Valid values:
+         * <p>
+         * 
+         * *   **financial**: The EIP is locked due to overdue payments.
+         * *   **security**: The EIP is locked for security reasons.
          */
         public Builder lockReason(String lockReason) {
             this.putQueryParameter("LockReason", lockReason);
@@ -492,7 +537,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The ID of the cloud resource.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -501,11 +546,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The billing method of the EIP. Valid values:
-         * <p>
-         * 
-         * *   **PostPaid**: pay-as-you-go
-         * *   **PrePaid**: subscription
+         * The number of entries to return on each page. Maximum value: **100**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -514,7 +555,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The time when the EIP was created. The time is displayed in `YYYY-MM-DDThh:mm:ssZ` format.
+         * The IP address pool to which the EIP that you want to query belongs.
          */
         public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
             this.putQueryParameter("PublicIpAddressPoolId", publicIpAddressPoolId);
@@ -523,24 +564,10 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The line type. Valid values:
+         * The region ID of the EIP.
          * <p>
          * 
-         * *   **BGP** (default): BGP (Multi-ISP) lines. All regions support BGP (Multi-ISP) EIPs.
-         * *   **BGP_PRO**: BGP (Multi-ISP) Pro lines. Only the following regions support BGP (Multi-ISP) Pro lines: China (Hong Kong), Singapore, Malaysia (Kuala Lumpur), Philippines (Manila), Indonesia (Jakarta), and Thailand (Bangkok).
-         * 
-         * For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro, see [EIP line types](~~32321~~).
-         * 
-         * If you are allowed to use single-ISP bandwidth, you can also choose one of the following values:
-         * 
-         * *   **ChinaTelecom**: China Telecom
-         * *   **ChinaUnicom**: China Unicom
-         * *   **ChinaMobile**: China Mobile
-         * *   **ChinaTelecom_L2**: China Telecom L2
-         * *   **ChinaUnicom_L2**: China Unicom L2
-         * *   **ChinaMobile_L2**: China Mobile L2
-         * 
-         * If your services are deployed in China East 1 Finance, you must set this parameter to **BGP_FinanceCloud**.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -549,17 +576,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The type of the cloud resource with which you want to associate the EIP. Valid values:
-         * <p>
-         * 
-         * *   **EcsInstance** (default): an Elastic Compute Service (ECS) instance in a virtual private cloud (VPC)
-         * *   **SlbInstance**: a Server Load Balancer (SLB) instance in a VPC
-         * *   **Nat**: a NAT gateway
-         * *   **HaVip**: a high-availability virtual IP address (HAVIP)
-         * *   **NetworkInterface**: a secondary ENI
-         * *   **IpAddress**: an IP address
-         * 
-         * >  You can associate only one EIP with each ECS instance, SLB instance, HAVIP, or IP address. You can associate multiple EIPs with each NAT gateway. The number of EIPs that you can associate with a secondary ENI depends on the association mode. For more information, see [EIP overview](~~72125~~).
+         * The ID of the resource group to which the EIPs belong.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -586,12 +603,11 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The type of the renewal order. Valid values:
+         * Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:
          * <p>
          * 
-         * *   **RENEWCHANGE**: renewal with an upgrade or a downgrade
-         * *   **TEMP_UPGRADE**: temporary upgrade
-         * *   **UPGRADE**: upgrade
+         * *   **false** (default): no
+         * *   **true**: yes
          */
         public Builder securityProtectionEnabled(Boolean securityProtectionEnabled) {
             this.putQueryParameter("SecurityProtectionEnabled", securityProtectionEnabled);
@@ -600,11 +616,7 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The reason why the EIP is locked. Valid values:
-         * <p>
-         * 
-         * *   **financial**: The EIP is locked due to overdue payments.
-         * *   **security**: The EIP is locked for security reasons.
+         * The IDs of the contiguous EIPs.
          */
         public Builder segmentInstanceId(String segmentInstanceId) {
             this.putQueryParameter("SegmentInstanceId", segmentInstanceId);
@@ -613,7 +625,14 @@ public class DescribeEipAddressesRequest extends Request {
         }
 
         /**
-         * The filter key used to query resources. Set the value to **CreationEndTime**, which indicates the time when the system completed creating the resource.
+         * The status of the EIP. Valid values:
+         * <p>
+         * 
+         * *   **Associating**: being associated
+         * *   **Unassociating**: being disassociated
+         * *   **InUse**: allocated
+         * *   **Available**: available
+         * *   **Releasing**: being released
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -667,10 +686,7 @@ public class DescribeEipAddressesRequest extends Request {
             private String value; 
 
             /**
-             * The name of the EIP.
-             * <p>
-             * 
-             * The name must be 1 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+             * The filter key used to query resources. Set the value to **CreationStartTime**, which indicates the time when the system started to create the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -678,7 +694,7 @@ public class DescribeEipAddressesRequest extends Request {
             }
 
             /**
-             * The IP address pool to which the EIP that you want to query belongs.
+             * The filter value used to query resources. Specify the time in the ISO 8601 standard in `YYYY-MM-DDThh:mmZ` format. The time must be in UTC.
              */
             public Builder value(String value) {
                 this.value = value;

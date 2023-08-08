@@ -140,7 +140,12 @@ public class AssociateNetworkAclRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -149,12 +154,7 @@ public class AssociateNetworkAclRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * The ID of the network ACL.
          */
         public Builder networkAclId(String networkAclId) {
             this.putQueryParameter("NetworkAclId", networkAclId);
@@ -172,7 +172,7 @@ public class AssociateNetworkAclRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **AssociateNetworkAcl**.
+         * The region ID of the network ACL. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -253,7 +253,7 @@ public class AssociateNetworkAclRequest extends Request {
             private String resourceType; 
 
             /**
-             * The region ID of the network ACL. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+             * The ID of the resource with which you want to associate the network ACL.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -261,7 +261,10 @@ public class AssociateNetworkAclRequest extends Request {
             }
 
             /**
-             * The ID of the network ACL.
+             * The type of resource with which you want to associate the network ACL. Set the value to **VSwitch**.
+             * <p>
+             * 
+             * Valid values of **N**: **0** to **29**. You can associate a network ACL with up to 30 vSwitches.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

@@ -86,7 +86,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The time when the EIP bandwidth plan was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+         * The details of the EIP bandwidth plan.
          */
         public Builder commonBandwidthPackages(CommonBandwidthPackages commonBandwidthPackages) {
             this.commonBandwidthPackages = commonBandwidthPackages;
@@ -94,7 +94,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the renewal took effect. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the EIP bandwidth plan.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,11 +118,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the EIP bandwidth plan. Valid values:
-         * <p>
-         * 
-         * *   **Available**: The EIP bandwidth plan is available.
-         * *   **Modifying**: The EIP bandwidth plan is being modified.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -186,7 +182,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             private String ipAddress; 
 
             /**
-             * AllocationId.
+             * The ID of the EIP.
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -194,7 +190,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * BandwidthPackageIpRelationStatus.
+             * Indicates whether the EIP is associated with the EIP bandwidth plan.
+             * <p>
+             * 
+             * *   **BINDED**: The EIP is associated with the EIP bandwidth plan.
+             * *   **BINDING**: The EIP is being associated with the EIP bandwidth plan.
              */
             public Builder bandwidthPackageIpRelationStatus(String bandwidthPackageIpRelationStatus) {
                 this.bandwidthPackageIpRelationStatus = bandwidthPackageIpRelationStatus;
@@ -202,11 +202,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The edition of Anti-DDoS. 
-             * <p>
-             * 
-             * - If this parameter is empty, it indicates that Anti-DDoS Origin Basic was enabled.
-             * - If **AntiDDoS_Enhanced** is returned, it indicates that Anti-DDoS Pro/Premium was enabled.
+             * The public IP address.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -707,7 +703,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The new maximum bandwidth. Unit: Mbit/s.
+             * The maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -715,10 +711,59 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the EIP bandwidth plan.
+             * The ID of the EIP bandwidth plan.
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
+                return this;
+            }
+
+            /**
+             * The service state of the EIP bandwidth plan.
+             * <p>
+             * 
+             * *   **Normal**: The EIP bandwidth plan works as expected.
+             * *   **FinancialLocked**: The EIP bandwidth plan has an overdue payment.
+             * *   **Unactivated**: The EIP bandwidth plan is not activated.
+             */
+            public Builder businessStatus(String businessStatus) {
+                this.businessStatus = businessStatus;
+                return this;
+            }
+
+            /**
+             * The time when the EIP bandwidth plan was created. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * Indicates whether deletion protection was enabled.
+             * <p>
+             * 
+             * *   **true**: Deletion protection was enabled.
+             * *   **false**: Deletion protection was disabled.
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
+                return this;
+            }
+
+            /**
+             * The description of the EIP bandwidth plan.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The time when the EIP bandwidth plan expired. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+             */
+            public Builder expiredTime(String expiredTime) {
+                this.expiredTime = expiredTime;
                 return this;
             }
 
@@ -729,77 +774,8 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
              * *   **false**: The information about pending orders was not returned.
              * *   **true**: The information about pending orders was returned.
              */
-            public Builder businessStatus(String businessStatus) {
-                this.businessStatus = businessStatus;
-                return this;
-            }
-
-            /**
-             * The new metering method.
-             * <p>
-             * 
-             * **PayByTraffic**: the pay-by-data-transfer metering method
-             */
-            public Builder creationTime(String creationTime) {
-                this.creationTime = creationTime;
-                return this;
-            }
-
-            /**
-             * The billing method of the EIP bandwidth plan.
-             * <p>
-             * 
-             * **PostPaid**: the pay-as-you-go billing method
-             */
-            public Builder deletionProtection(Boolean deletionProtection) {
-                this.deletionProtection = deletionProtection;
-                return this;
-            }
-
-            /**
-             * The ID of the resource group.
-             */
-            public Builder description(String description) {
-                this.description = description;
-                return this;
-            }
-
-            /**
-             * The metering method of the EIP bandwidth plan.
-             * <p>
-             * 
-             * **PayByTraffic**: the pay-by-data-transfer metering method.
-             */
-            public Builder expiredTime(String expiredTime) {
-                this.expiredTime = expiredTime;
-                return this;
-            }
-
-            /**
-             * The ID of the EIP.
-             */
             public Builder hasReservationData(String hasReservationData) {
                 this.hasReservationData = hasReservationData;
-                return this;
-            }
-
-            /**
-             * The public IP address.
-             */
-            public Builder ISP(String ISP) {
-                this.ISP = ISP;
-                return this;
-            }
-
-            /**
-             * Indicates whether the EIP bandwidth plan was created by the service account.
-             * <p>
-             * 
-             * *   **0**: The EIP bandwidth plan was not created by the service account.
-             * *   **1**: The EIP bandwidth plan was created by the service account.
-             */
-            public Builder instanceChargeType(String instanceChargeType) {
-                this.instanceChargeType = instanceChargeType;
                 return this;
             }
 
@@ -821,13 +797,35 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
              * 
              * If your services are deployed in China East 1 Finance, **BGP_FinanceCloud** is returned.
              */
+            public Builder ISP(String ISP) {
+                this.ISP = ISP;
+                return this;
+            }
+
+            /**
+             * The billing method of the EIP bandwidth plan.
+             * <p>
+             * 
+             * **PostPaid**: the pay-as-you-go billing method
+             */
+            public Builder instanceChargeType(String instanceChargeType) {
+                this.instanceChargeType = instanceChargeType;
+                return this;
+            }
+
+            /**
+             * The metering method of the EIP bandwidth plan.
+             * <p>
+             * 
+             * **PayByTraffic**: the pay-by-data-transfer metering method.
+             */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
                 return this;
             }
 
             /**
-             * The elastic IP addresses (EIPs) associated with the EIP bandwidth plan.
+             * The name of the EIP bandwidth plan.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -835,11 +833,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the EIP is associated with the EIP bandwidth plan.
-             * <p>
-             * 
-             * *   **BINDED**: The EIP is associated with the EIP bandwidth plan.
-             * *   **BINDING**: The EIP is being associated with the EIP bandwidth plan.
+             * The elastic IP addresses (EIPs) associated with the EIP bandwidth plan.
              */
             public Builder publicIpAddresses(PublicIpAddresses publicIpAddresses) {
                 this.publicIpAddresses = publicIpAddresses;
@@ -847,7 +841,10 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the EIP bandwidth plan.
+             * The percentage of the minimum bandwidth commitment. **20** is returned.
+             * <p>
+             * 
+             * >  This parameter is available only on the Alibaba Cloud China site.
              */
             public Builder ratio(Integer ratio) {
                 this.ratio = ratio;
@@ -855,10 +852,37 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.
+             * The region ID of the EIP bandwidth plan.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * The time when the renewal took effect. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+             */
+            public Builder reservationActiveTime(String reservationActiveTime) {
+                this.reservationActiveTime = reservationActiveTime;
+                return this;
+            }
+
+            /**
+             * The new maximum bandwidth. Unit: Mbit/s.
+             */
+            public Builder reservationBandwidth(String reservationBandwidth) {
+                this.reservationBandwidth = reservationBandwidth;
+                return this;
+            }
+
+            /**
+             * The new metering method.
+             * <p>
+             * 
+             * **PayByTraffic**: the pay-by-data-transfer metering method
+             */
+            public Builder reservationInternetChargeType(String reservationInternetChargeType) {
+                this.reservationInternetChargeType = reservationInternetChargeType;
                 return this;
             }
 
@@ -870,45 +894,13 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
              * *   **TEMP_UPGRADE**: temporary upgrade
              * *   **UPGRADE**: upgrade
              */
-            public Builder reservationActiveTime(String reservationActiveTime) {
-                this.reservationActiveTime = reservationActiveTime;
-                return this;
-            }
-
-            /**
-             * The service state of the EIP bandwidth plan.
-             * <p>
-             * 
-             * *   **Normal**: The EIP bandwidth plan works as expected.
-             * *   **FinancialLocked**: The EIP bandwidth plan has an overdue payment.
-             * *   **Unactivated**: The EIP bandwidth plan is not activated.
-             */
-            public Builder reservationBandwidth(String reservationBandwidth) {
-                this.reservationBandwidth = reservationBandwidth;
-                return this;
-            }
-
-            /**
-             * The region ID of the EIP bandwidth plan.
-             */
-            public Builder reservationInternetChargeType(String reservationInternetChargeType) {
-                this.reservationInternetChargeType = reservationInternetChargeType;
-                return this;
-            }
-
-            /**
-             * The percentage of the minimum bandwidth commitment. **20** is returned.
-             * <p>
-             * 
-             * >  This parameter is available only on the Alibaba Cloud China site.
-             */
             public Builder reservationOrderType(String reservationOrderType) {
                 this.reservationOrderType = reservationOrderType;
                 return this;
             }
 
             /**
-             * The name of the EIP bandwidth plan.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -916,7 +908,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityProtectionTypes.
+             * The edition of Anti-DDoS. 
+             * <p>
+             * 
+             * - If this parameter is empty, it indicates that Anti-DDoS Origin Basic was enabled.
+             * - If **AntiDDoS_Enhanced** is returned, it indicates that Anti-DDoS Pro/Premium was enabled.
              */
             public Builder securityProtectionTypes(SecurityProtectionTypes securityProtectionTypes) {
                 this.securityProtectionTypes = securityProtectionTypes;
@@ -924,7 +920,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the EIP bandwidth plan expired. The time is displayed in the `YYYY-MM-DDThh:mm:ssZ` format.
+             * Indicates whether the EIP bandwidth plan was created by the service account.
+             * <p>
+             * 
+             * *   **0**: The EIP bandwidth plan was not created by the service account.
+             * *   **1**: The EIP bandwidth plan was created by the service account.
              */
             public Builder serviceManaged(Integer serviceManaged) {
                 this.serviceManaged = serviceManaged;
@@ -932,11 +932,11 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether deletion protection was enabled.
+             * The status of the EIP bandwidth plan. Valid values:
              * <p>
              * 
-             * *   **true**: Deletion protection was enabled.
-             * *   **false**: Deletion protection was disabled.
+             * *   **Available**: The EIP bandwidth plan is available.
+             * *   **Modifying**: The EIP bandwidth plan is being modified.
              */
             public Builder status(String status) {
                 this.status = status;

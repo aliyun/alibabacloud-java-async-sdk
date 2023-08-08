@@ -183,20 +183,11 @@ public class UnassociateHaVipRequest extends Request {
         } 
 
         /**
-         * The ID of the HAVIP that you want to disassociate.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder force(String force) {
-            this.putQueryParameter("Force", force);
-            this.force = force;
             return this;
         }
 
@@ -209,9 +200,27 @@ public class UnassociateHaVipRequest extends Request {
          * 
          * >  If you set the value to **False**, you cannot disassociate the HAVIP from the primary instance.
          */
+        public Builder force(String force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
+            return this;
+        }
+
+        /**
+         * The ID of the HAVIP that you want to disassociate.
+         */
         public Builder haVipId(String haVipId) {
             this.putQueryParameter("HaVipId", haVipId);
             this.haVipId = haVipId;
+            return this;
+        }
+
+        /**
+         * The ID of the ECS instance or ENI from which you want to disassociate the HAVIP.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -223,15 +232,6 @@ public class UnassociateHaVipRequest extends Request {
          * *   **NetworkInterface**: an ENI
          * 
          * >  If you want to disassociate the HAVIP from an ENI, this parameter is required.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * InstanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -258,7 +258,10 @@ public class UnassociateHaVipRequest extends Request {
         }
 
         /**
-         * The ID of the ECS instance or ENI from which you want to disassociate the HAVIP.
+         * The ID of the region to which the HAVIP belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

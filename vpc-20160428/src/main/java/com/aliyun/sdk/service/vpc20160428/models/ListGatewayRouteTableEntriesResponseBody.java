@@ -74,7 +74,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The ID of the next hop.
+         * The details of the routes in the gateway route table.
          */
         public Builder gatewayRouteEntryModels(java.util.List < GatewayRouteEntryModels> gatewayRouteEntryModels) {
             this.gatewayRouteEntryModels = gatewayRouteEntryModels;
@@ -82,7 +82,11 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The token that determines the start point of the query. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next queries are sent.
+         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +94,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the routes in the gateway route table.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,12 +102,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the route. Valid values:
-         * <p>
-         * 
-         * *   **Pending**
-         * *   **Available**
-         * *   **Modifying**
+         * The total number of entries returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -179,7 +178,11 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * Enabled.
+             * Indicates whether the route is available. Valid values:
+             * <p>
+             * 
+             * *   **0**: unavailable
+             * *   **1**: available
              */
             public Builder enabled(String enabled) {
                 this.enabled = enabled;
@@ -187,7 +190,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the route.
+             * The ID of the next hop.
              */
             public Builder nextHopId(String nextHopId) {
                 this.nextHopId = nextHopId;
@@ -195,11 +198,17 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the route is available. Valid values:
+             * The type of the next hop. Valid values:
              * <p>
              * 
-             * *   **0**: unavailable
-             * *   **1**: available
+             * *   **Instance** (default): an ECS instance
+             * *   **HaVip**: a high-availability virtual IP address (HAVIP)
+             * *   **VpnGateway**: a VPN gateway
+             * *   **NatGateway**: a NAT gateway
+             * *   **NetworkInterface**: a secondary ENI
+             * *   **RouterInterface**: a router interface
+             * *   **IPv6Gateway**: an IPv6 gateway
+             * *   **Attachment**: a transit router
              */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
@@ -207,7 +216,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the route.
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -320,7 +329,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The destination CIDR block of the route.
+             * The name of the route.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -328,7 +337,7 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the next hop.
+             * The destination CIDR block of the route.
              */
             public Builder destinationCidrBlock(String destinationCidrBlock) {
                 this.destinationCidrBlock = destinationCidrBlock;
@@ -336,10 +345,21 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the next hop.
+             * The name of the route.
+             * <p>
+             * 
+             * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * The ID of the next hop.
+             */
+            public Builder nextHopId(String nextHopId) {
+                this.nextHopId = nextHopId;
                 return this;
             }
 
@@ -351,34 +371,13 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
              * *   **NetworkInterface**: an elastic network interface (ENI)
              * *   **Local**: a local next hop
              */
-            public Builder nextHopId(String nextHopId) {
-                this.nextHopId = nextHopId;
-                return this;
-            }
-
-            /**
-             * The name of the route.
-             * <p>
-             * 
-             * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
-             */
             public Builder nextHopType(String nextHopType) {
                 this.nextHopType = nextHopType;
                 return this;
             }
 
             /**
-             * The type of the next hop. Valid values:
-             * <p>
-             * 
-             * *   **Instance** (default): an ECS instance
-             * *   **HaVip**: a high-availability virtual IP address (HAVIP)
-             * *   **VpnGateway**: a VPN gateway
-             * *   **NatGateway**: a NAT gateway
-             * *   **NetworkInterface**: a secondary ENI
-             * *   **RouterInterface**: a router interface
-             * *   **IPv6Gateway**: an IPv6 gateway
-             * *   **Attachment**: a transit router
+             * The information about the next hop.
              */
             public Builder nextHops(java.util.List < NextHops> nextHops) {
                 this.nextHops = nextHops;
@@ -386,7 +385,12 @@ public class ListGatewayRouteTableEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the route.
+             * The status of the route. Valid values:
+             * <p>
+             * 
+             * *   **Pending**
+             * *   **Available**
+             * *   **Modifying**
              */
             public Builder status(String status) {
                 this.status = status;

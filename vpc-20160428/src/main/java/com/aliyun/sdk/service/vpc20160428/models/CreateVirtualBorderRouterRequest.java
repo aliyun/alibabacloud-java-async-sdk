@@ -79,12 +79,20 @@ public class CreateVirtualBorderRouterRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
 
     @Query
     @NameInMap("VbrOwnerId")
@@ -113,8 +121,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
         this.peeringSubnetMask = builder.peeringSubnetMask;
         this.physicalConnectionId = builder.physicalConnectionId;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tags = builder.tags;
         this.vbrOwnerId = builder.vbrOwnerId;
         this.vlanId = builder.vlanId;
     }
@@ -245,6 +255,13 @@ public class CreateVirtualBorderRouterRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -256,6 +273,13 @@ public class CreateVirtualBorderRouterRequest extends Request {
      */
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
     }
 
     /**
@@ -289,8 +313,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
         private String peeringSubnetMask; 
         private String physicalConnectionId; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tags> tags; 
         private Long vbrOwnerId; 
         private Integer vlanId; 
 
@@ -316,14 +342,20 @@ public class CreateVirtualBorderRouterRequest extends Request {
             this.peeringSubnetMask = request.peeringSubnetMask;
             this.physicalConnectionId = request.physicalConnectionId;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tags = request.tags;
             this.vbrOwnerId = request.vbrOwnerId;
             this.vlanId = request.vlanId;
         } 
 
         /**
-         * The ID of the request.
+         * The bandwidth of the VBR. Unit: Mbit/s.
+         * <p>
+         * 
+         * *   When you create a VBR for a dedicated connection, valid values are **50**, **100**, **200**, **300**, **400**, **500**, **1000**, **2048**, **5120**, **8192**, **10240**, **20480**, **40960**, **50120**, **61440**, and **102400**.
+         * *   You do not need to set this parameter when you create a VBR for a hosted connection. The bandwidth is already configured when the hosted connection is created.
          */
         public Builder bandwidth(Long bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -332,26 +364,14 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The IP address of the gateway device in the data center. Only the owner of the VBR can set or modify this parameter.
+         * The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
          * <p>
          * 
-         * When you create a VBR for the owner of the Express Connect circuit, this parameter is required.
+         * >  Only the owner of the Express Connect circuit can set this parameter.
          */
         public Builder circuitCode(String circuitCode) {
             this.putQueryParameter("CircuitCode", circuitCode);
             this.circuitCode = circuitCode;
-            return this;
-        }
-
-        /**
-         * The IPv6 address of the VBR. Only the owner of the VBR can set or modify this parameter.
-         * <p>
-         * 
-         * When you create a VBR for the owner of the Express Connect circuit, this parameter is required.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
             return this;
         }
 
@@ -363,6 +383,18 @@ public class CreateVirtualBorderRouterRequest extends Request {
          * 
          * >  If you do not set this parameter, the system automatically sets **ClientToken** to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * The description of the VBR.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+         */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
@@ -370,7 +402,11 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The ID of the VBR.
+         * Specifies whether to enable IPv6. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables IPv6.
+         * *   **false** (default): disables IPv6.
          */
         public Builder enableIpv6(Boolean enableIpv6) {
             this.putQueryParameter("EnableIpv6", enableIpv6);
@@ -379,10 +415,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The subnet mask of the IP addresses of the VBR and the gateway device in the data center.
+         * The IP address of the VBR. Only the owner of the VBR can set or modify this parameter.
          * <p>
          * 
-         * The two IP addresses must fall within the same subnet.
+         * When you create a VBR for the owner of the Express Connect circuit, this parameter is required.
          */
         public Builder localGatewayIp(String localGatewayIp) {
             this.putQueryParameter("LocalGatewayIp", localGatewayIp);
@@ -391,10 +427,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The subnet mask of the IPv6 addresses of the VBR and the gateway device in the data center.
+         * The IPv6 address of the VBR. Only the owner of the VBR can set or modify this parameter.
          * <p>
          * 
-         * The two IPv6 addresses must fall within the same subnet.
+         * When you create a VBR for the owner of the Express Connect circuit, this parameter is required.
          */
         public Builder localIpv6GatewayIp(String localIpv6GatewayIp) {
             this.putQueryParameter("LocalIpv6GatewayIp", localIpv6GatewayIp);
@@ -403,7 +439,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **CreateVirtualBorderRouter**.
+         * The name of the VBR.
+         * <p>
+         * 
+         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -430,10 +469,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The description of the VBR.
+         * The IP address of the gateway device in the data center. Only the owner of the VBR can set or modify this parameter.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length. The description must start with a letter but cannot start with `http://` or `https://`.
+         * When you create a VBR for the owner of the Express Connect circuit, this parameter is required.
          */
         public Builder peerGatewayIp(String peerGatewayIp) {
             this.putQueryParameter("PeerGatewayIp", peerGatewayIp);
@@ -442,11 +481,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable IPv6. Valid values:
+         * The IPv6 address of the gateway device in the data center. Only the owner of the VBR can set or modify this parameter.
          * <p>
          * 
-         * *   **true**: enables IPv6.
-         * *   **false** (default): disables IPv6.
+         * When you create a VBR for the owner of the Express Connect circuit, this parameter is required.
          */
         public Builder peerIpv6GatewayIp(String peerIpv6GatewayIp) {
             this.putQueryParameter("PeerIpv6GatewayIp", peerIpv6GatewayIp);
@@ -455,11 +493,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The bandwidth of the VBR. Unit: Mbit/s.
+         * The subnet mask of the IPv6 addresses of the VBR and the gateway device in the data center.
          * <p>
          * 
-         * *   When you create a VBR for a dedicated connection, valid values are **50**, **100**, **200**, **300**, **400**, **500**, **1000**, **2048**, **5120**, **8192**, **10240**, **20480**, **40960**, **50120**, **61440**, and **102400**.
-         * *   You do not need to set this parameter when you create a VBR for a hosted connection. The bandwidth is already configured when the hosted connection is created.
+         * The two IPv6 addresses must fall within the same subnet.
          */
         public Builder peeringIpv6SubnetMask(String peeringIpv6SubnetMask) {
             this.putQueryParameter("PeeringIpv6SubnetMask", peeringIpv6SubnetMask);
@@ -468,10 +505,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The name of the VBR.
+         * The subnet mask of the IP addresses of the VBR and the gateway device in the data center.
          * <p>
          * 
-         * The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
+         * The two IP addresses must fall within the same subnet.
          */
         public Builder peeringSubnetMask(String peeringSubnetMask) {
             this.putQueryParameter("PeeringSubnetMask", peeringSubnetMask);
@@ -480,10 +517,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The VLAN ID of the VBR. Valid values: **0 to 2999**.
+         * The ID of the Express Connect circuit.
          * <p>
          * 
-         * >  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.
+         * You can create a VBR for a dedicated connection or a hosted connection.
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.putQueryParameter("PhysicalConnectionId", physicalConnectionId);
@@ -492,14 +529,23 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The account ID of the VBR owner.
+         * The region ID of the Express Connect circuit.
          * <p>
          * 
-         * The default value is the ID of the current Alibaba Cloud account.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -522,10 +568,19 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The circuit code of the Express Connect circuit. The circuit code is provided by the connectivity provider.
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * The account ID of the VBR owner.
          * <p>
          * 
-         * >  Only the owner of the Express Connect circuit can set this parameter.
+         * The default value is the ID of the current Alibaba Cloud account.
          */
         public Builder vbrOwnerId(Long vbrOwnerId) {
             this.putQueryParameter("VbrOwnerId", vbrOwnerId);
@@ -534,10 +589,10 @@ public class CreateVirtualBorderRouterRequest extends Request {
         }
 
         /**
-         * The IP address of the VBR. Only the owner of the VBR can set or modify this parameter.
+         * The VLAN ID of the VBR. Valid values: **0 to 2999**.
          * <p>
          * 
-         * When you create a VBR for the owner of the Express Connect circuit, this parameter is required.
+         * >  Only the owner of the Express Connect circuit can set this parameter. The VLAN IDs of two VBRs of the same the Express Connect circuit must be different.
          */
         public Builder vlanId(Integer vlanId) {
             this.putQueryParameter("VlanId", vlanId);
@@ -552,4 +607,65 @@ public class CreateVirtualBorderRouterRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

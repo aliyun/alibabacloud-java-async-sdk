@@ -172,8 +172,8 @@ public class UnTagResourcesRequest extends Request {
          * Specifies whether to remove all tags from the specified resource. Valid values:
          * <p>
          * 
-         * *   **true**: removes all tags from the specified resource.
-         * *   **false**: does not remove all tags from the specified resource. This is the default value.
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -200,7 +200,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the resource belongs.
+         * The region ID of the resource.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
@@ -212,7 +212,7 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The resource ID. You can specify up to 20 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -242,13 +242,13 @@ public class UnTagResourcesRequest extends Request {
          * The resource type. Valid values:
          * <p>
          * 
-         * *   **VPC**: a virtual private cloud (VPC)
-         * *   **VSWITCH**: a vSwitch
-         * *   **ROUTETABLE**: a route table
-         * *   **EIP**: an elastic IP address (EIP)
-         * *   **VpnGateway**: a VPN gateway
-         * *   **NATGATEWAY**: a NAT gateway
-         * *   **COMMONBANDWIDTHPACKAGE**: an EIP bandwidth plan
+         * *   **VPC**
+         * *   **VSWITCH**
+         * *   **ROUTETABLE**
+         * *   **EIP**
+         * *   **VpnGateway**
+         * *   **NATGATEWAY**
+         * *   **COMMONBANDWIDTHPACKAGE**: EIP bandwidth plan
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -257,7 +257,10 @@ public class UnTagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The key of the tag that you want to remove. You can specify at most 20 tag keys. It can be an empty string.
+         * <p>
+         * 
+         * The key cannot exceed 64 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-). The key must start with a letter but cannot start with `aliyun` or `acs:`. The key cannot contain `http://` or `https://`.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

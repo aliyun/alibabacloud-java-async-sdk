@@ -238,29 +238,11 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The ID of the EIP bandwidth plan.
          */
         public Builder bandwidthPackageId(String bandwidthPackageId) {
             this.putQueryParameter("BandwidthPackageId", bandwidthPackageId);
             this.bandwidthPackageId = bandwidthPackageId;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group.
-         */
-        public Builder includeReservationData(Boolean includeReservationData) {
-            this.putQueryParameter("IncludeReservationData", includeReservationData);
-            this.includeReservationData = includeReservationData;
             return this;
         }
 
@@ -270,6 +252,28 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
          * 
          * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and instance status. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
          * *   **false**: performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * Specifies whether to return the information about pending orders. Valid values:
+         * <p>
+         * 
+         * *   **false**: does not return the information about pending orders. This is the default value.
+         * *   **true**: returns the information about pending orders.
+         */
+        public Builder includeReservationData(Boolean includeReservationData) {
+            this.putQueryParameter("IncludeReservationData", includeReservationData);
+            this.includeReservationData = includeReservationData;
+            return this;
+        }
+
+        /**
+         * The name of the EIP bandwidth plan.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -296,11 +300,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:
-         * <p>
-         * 
-         * *   **false**: disables Anti-DDoS Pro/Premium. This is the default value.
-         * *   **true**: enables Anti-DDoS Pro/Premium.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -309,7 +309,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -318,7 +318,10 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The name of the EIP bandwidth plan.
+         * The region ID of the EIP bandwidth plan.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to obtain the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -327,7 +330,7 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -354,7 +357,11 @@ public class DescribeCommonBandwidthPackagesRequest extends Request {
         }
 
         /**
-         * The number of the returned page.
+         * Specifies whether to enable Anti-DDoS Pro/Premium. Valid values:
+         * <p>
+         * 
+         * *   **false**: disables Anti-DDoS Pro/Premium. This is the default value.
+         * *   **true**: enables Anti-DDoS Pro/Premium.
          */
         public Builder securityProtectionEnabled(Boolean securityProtectionEnabled) {
             this.putQueryParameter("SecurityProtectionEnabled", securityProtectionEnabled);

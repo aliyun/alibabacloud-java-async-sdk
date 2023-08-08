@@ -50,7 +50,7 @@ public class CreateVirtualPhysicalConnectionResponseBody extends TeaModel {
         private String virtualPhysicalConnection; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateVirtualPhysicalConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * VirtualPhysicalConnection.
+         * The ID of the hosted connection.
          */
         public Builder virtualPhysicalConnection(String virtualPhysicalConnection) {
             this.virtualPhysicalConnection = virtualPhysicalConnection;

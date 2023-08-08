@@ -154,7 +154,10 @@ public class DeletePublicIpAddressPoolRequest extends Request {
         } 
 
         /**
-         * The ID of the region where you want to create the IP address pool.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -163,7 +166,11 @@ public class DeletePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -190,11 +197,7 @@ public class DeletePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform a dry run. Valid values:
-         * <p>
-         * 
-         * *   **true**: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
+         * The ID of the IP address pool.
          */
         public Builder publicIpAddressPoolId(String publicIpAddressPoolId) {
             this.putQueryParameter("PublicIpAddressPoolId", publicIpAddressPoolId);
@@ -203,7 +206,7 @@ public class DeletePublicIpAddressPoolRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where you want to create the IP address pool.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

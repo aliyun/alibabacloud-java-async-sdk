@@ -125,7 +125,7 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The static public IP address of the gateway device in the data center.
+         * The public IP address of the gateway device in the data center.
          */
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = ipAddress;
@@ -141,7 +141,7 @@ public class CreateCustomerGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

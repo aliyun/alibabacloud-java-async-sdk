@@ -7,27 +7,23 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateVSwitchResponseBody} extends {@link TeaModel}
+ * {@link SecondApplyPhysicalConnectionLOAResponseBody} extends {@link TeaModel}
  *
- * <p>CreateVSwitchResponseBody</p>
+ * <p>SecondApplyPhysicalConnectionLOAResponseBody</p>
  */
-public class CreateVSwitchResponseBody extends TeaModel {
+public class SecondApplyPhysicalConnectionLOAResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VSwitchId")
-    private String vSwitchId;
-
-    private CreateVSwitchResponseBody(Builder builder) {
+    private SecondApplyPhysicalConnectionLOAResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.vSwitchId = builder.vSwitchId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateVSwitchResponseBody create() {
+    public static SecondApplyPhysicalConnectionLOAResponseBody create() {
         return builder().build();
     }
 
@@ -38,35 +34,19 @@ public class CreateVSwitchResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return vSwitchId
-     */
-    public String getVSwitchId() {
-        return this.vSwitchId;
-    }
-
     public static final class Builder {
         private String requestId; 
-        private String vSwitchId; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        /**
-         * The ID of the vSwitch.
-         */
-        public Builder vSwitchId(String vSwitchId) {
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-
-        public CreateVSwitchResponseBody build() {
-            return new CreateVSwitchResponseBody(this);
+        public SecondApplyPhysicalConnectionLOAResponseBody build() {
+            return new SecondApplyPhysicalConnectionLOAResponseBody(this);
         } 
 
     } 

@@ -719,12 +719,6 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
     }
     public static class TunnelBgpConfig extends TeaModel {
-        @NameInMap("BgpStatus")
-        private String bgpStatus;
-
-        @NameInMap("EnableBgp")
-        private Boolean enableBgp;
-
         @NameInMap("LocalAsn")
         private Long localAsn;
 
@@ -741,8 +735,6 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         private String tunnelCidr;
 
         private TunnelBgpConfig(Builder builder) {
-            this.bgpStatus = builder.bgpStatus;
-            this.enableBgp = builder.enableBgp;
             this.localAsn = builder.localAsn;
             this.localBgpIp = builder.localBgpIp;
             this.peerAsn = builder.peerAsn;
@@ -756,20 +748,6 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
 
         public static TunnelBgpConfig create() {
             return builder().build();
-        }
-
-        /**
-         * @return bgpStatus
-         */
-        public String getBgpStatus() {
-            return this.bgpStatus;
-        }
-
-        /**
-         * @return enableBgp
-         */
-        public Boolean getEnableBgp() {
-            return this.enableBgp;
         }
 
         /**
@@ -808,29 +786,11 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String bgpStatus; 
-            private Boolean enableBgp; 
             private Long localAsn; 
             private String localBgpIp; 
             private Long peerAsn; 
             private String peerBgpIp; 
             private String tunnelCidr; 
-
-            /**
-             * BgpStatus.
-             */
-            public Builder bgpStatus(String bgpStatus) {
-                this.bgpStatus = bgpStatus;
-                return this;
-            }
-
-            /**
-             * EnableBgp.
-             */
-            public Builder enableBgp(Boolean enableBgp) {
-                this.enableBgp = enableBgp;
-                return this;
-            }
 
             /**
              * LocalAsn.
@@ -1213,9 +1173,6 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         @NameInMap("State")
         private String state;
 
-        @NameInMap("Status")
-        private String status;
-
         @NameInMap("TunnelBgpConfig")
         private TunnelBgpConfig tunnelBgpConfig;
 
@@ -1239,7 +1196,6 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             this.remoteCaCertificate = builder.remoteCaCertificate;
             this.role = builder.role;
             this.state = builder.state;
-            this.status = builder.status;
             this.tunnelBgpConfig = builder.tunnelBgpConfig;
             this.tunnelId = builder.tunnelId;
             this.tunnelIkeConfig = builder.tunnelIkeConfig;
@@ -1305,13 +1261,6 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * @return status
-         */
-        public String getStatus() {
-            return this.status;
-        }
-
-        /**
          * @return tunnelBgpConfig
          */
         public TunnelBgpConfig getTunnelBgpConfig() {
@@ -1354,7 +1303,6 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
             private String remoteCaCertificate; 
             private String role; 
             private String state; 
-            private String status; 
             private TunnelBgpConfig tunnelBgpConfig; 
             private String tunnelId; 
             private TunnelIkeConfig tunnelIkeConfig; 
@@ -1422,14 +1370,6 @@ public class ModifyVpnConnectionAttributeResponseBody extends TeaModel {
              */
             public Builder state(String state) {
                 this.state = state;
-                return this;
-            }
-
-            /**
-             * Status.
-             */
-            public Builder status(String status) {
-                this.status = status;
                 return this;
             }
 

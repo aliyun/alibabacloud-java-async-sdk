@@ -50,7 +50,7 @@ public class AllocateEipSegmentAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EipSegmentInstanceId.
+         * The ID of the contiguous EIP group.
          */
         public Builder eipSegmentInstanceId(String eipSegmentInstanceId) {
             this.eipSegmentInstanceId = eipSegmentInstanceId;
@@ -58,7 +58,7 @@ public class AllocateEipSegmentAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -126,7 +126,7 @@ public class GetVpcGatewayEndpointAttributeRequest extends Request {
         } 
 
         /**
-         * The description of the gateway endpoint.
+         * The ID of the gateway endpoint.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -153,7 +153,10 @@ public class GetVpcGatewayEndpointAttributeRequest extends Request {
         }
 
         /**
-         * The name of the endpoint service.
+         * The region ID of the gateway endpoint.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

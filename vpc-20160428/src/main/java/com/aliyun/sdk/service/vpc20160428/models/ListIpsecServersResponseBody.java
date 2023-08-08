@@ -86,7 +86,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of IPsec servers.
+         * The Diffie-Hellman key exchange algorithm.
          */
         public Builder ipsecServers(java.util.List < IpsecServers> ipsecServers) {
             this.ipsecServers = ipsecServers;
@@ -94,7 +94,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,11 +102,11 @@ public class ListIpsecServersResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is used for the next query. Valid values:
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
-         * *   If a value of **NextToken** is not returned, it indicates that no subsequent query is to be sent.
-         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+         * *   If no value is returned for **NextToken**, no next queries are sent.
+         * *   If a value is returned for **NextToken**, the value can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -114,7 +114,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListIpsecServersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

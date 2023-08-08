@@ -74,7 +74,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         private java.util.List < Services> services; 
 
         /**
-         * The ID of the endpoint service.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -82,7 +82,11 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * The list of entries returned.
+         * The token that is used for the next query. Valid values:
+         * <p>
+         * 
+         * *   If no value is returned for **NextToken**, no next queries are sent.
+         * *   If **NextToken** is returned, the value is the token that is used for the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +94,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the endpoint service.
+         * The list of entries returned.
          */
         public Builder services(java.util.List < Services> services) {
             this.services = services;
@@ -186,7 +190,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             private Boolean supportPolicy; 
 
             /**
-             * The domain name of the cloud service to which the endpoint service belongs.
+             * The default access policy.
              */
             public Builder defaultPolicyDocument(String defaultPolicyDocument) {
                 this.defaultPolicyDocument = defaultPolicyDocument;
@@ -194,7 +198,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceDomain.
+             * The domain name of the cloud service to which the endpoint service belongs.
              */
             public Builder serviceDomain(String serviceDomain) {
                 this.serviceDomain = serviceDomain;
@@ -202,10 +206,18 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
             }
 
             /**
-             * The default access policy.
+             * The ID of the endpoint service.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
+                return this;
+            }
+
+            /**
+             * The name of the endpoint service.
+             */
+            public Builder serviceName(String serviceName) {
+                this.serviceName = serviceName;
                 return this;
             }
 
@@ -215,14 +227,6 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
              * 
              * *   **false**: no
              * *   **true**: yes
-             */
-            public Builder serviceName(String serviceName) {
-                this.serviceName = serviceName;
-                return this;
-            }
-
-            /**
-             * SupportPolicy.
              */
             public Builder supportPolicy(Boolean supportPolicy) {
                 this.supportPolicy = supportPolicy;

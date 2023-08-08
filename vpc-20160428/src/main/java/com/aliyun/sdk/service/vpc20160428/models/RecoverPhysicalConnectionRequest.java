@@ -98,7 +98,11 @@ public class RecoverPhysicalConnectionRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * Specifies whether to precheck the request only. Valid values:
+         * <p>
+         * 
+         * *   **true**: only prechecks the request but does not resume the Express Connect circuit. The system prechecks the request syntax, instance status, and whether the required parameters are specified. An error message is returned if the request fails to pass the precheck. If the request passes the precheck, the system returns the ID of the request.
+         * *   **false** (default): sends the request. If the request passes the precheck, the Express Connect circuit is resumed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -107,11 +111,10 @@ public class RecoverPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * Specifies whether to precheck the request only. Valid values:
+         * The ID of the Express Connect circuit.
          * <p>
          * 
-         * *   **true**: only prechecks the request but does not resume the Express Connect circuit. The system prechecks the request syntax, instance status, and whether the required parameters are specified. An error message is returned if the request fails to pass the precheck. If the request passes the precheck, the system returns the ID of the request.
-         * *   **false** (default): sends the request. If the request passes the precheck, the Express Connect circuit is resumed.
+         * >  You can resume only shared Express Connect circuits.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -120,7 +123,10 @@ public class RecoverPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Express Connect circuit.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -129,10 +135,10 @@ public class RecoverPhysicalConnectionRequest extends Request {
         }
 
         /**
-         * The region ID of the Express Connect circuit.
+         * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * You can use the client to generate a token, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);

@@ -38,7 +38,7 @@ public class AssociateVpcCidrBlockResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The operation that you want to perform. Set the value to **AssociateVpcCidrBlock**.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

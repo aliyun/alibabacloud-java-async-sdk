@@ -656,6 +656,108 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    public static class VirtualBorderRouterTypeTags extends TeaModel {
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
+        private VirtualBorderRouterTypeTags(Builder builder) {
+            this.tags = builder.tags;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VirtualBorderRouterTypeTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tags> tags; 
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            public VirtualBorderRouterTypeTags build() {
+                return new VirtualBorderRouterTypeTags(this);
+            } 
+
+        } 
+
+    }
     public static class VirtualBorderRouterType extends TeaModel {
         @NameInMap("AccessPointId")
         private String accessPointId;
@@ -741,11 +843,17 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         @NameInMap("RecoveryTime")
         private String recoveryTime;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("RouteTableId")
         private String routeTableId;
 
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("Tags")
+        private VirtualBorderRouterTypeTags tags;
 
         @NameInMap("TerminationTime")
         private String terminationTime;
@@ -791,8 +899,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             this.physicalConnectionOwnerUid = builder.physicalConnectionOwnerUid;
             this.physicalConnectionStatus = builder.physicalConnectionStatus;
             this.recoveryTime = builder.recoveryTime;
+            this.resourceGroupId = builder.resourceGroupId;
             this.routeTableId = builder.routeTableId;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.terminationTime = builder.terminationTime;
             this.type = builder.type;
             this.vbrId = builder.vbrId;
@@ -1005,6 +1115,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return routeTableId
          */
         public String getRouteTableId() {
@@ -1016,6 +1133,13 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
          */
         public String getStatus() {
             return this.status;
+        }
+
+        /**
+         * @return tags
+         */
+        public VirtualBorderRouterTypeTags getTags() {
+            return this.tags;
         }
 
         /**
@@ -1082,8 +1206,10 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             private String physicalConnectionOwnerUid; 
             private String physicalConnectionStatus; 
             private String recoveryTime; 
+            private String resourceGroupId; 
             private String routeTableId; 
             private String status; 
+            private VirtualBorderRouterTypeTags tags; 
             private String terminationTime; 
             private String type; 
             private String vbrId; 
@@ -1344,6 +1470,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * The ID of the VBR route table.
              */
             public Builder routeTableId(String routeTableId) {
@@ -1364,6 +1498,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(VirtualBorderRouterTypeTags tags) {
+                this.tags = tags;
                 return this;
             }
 

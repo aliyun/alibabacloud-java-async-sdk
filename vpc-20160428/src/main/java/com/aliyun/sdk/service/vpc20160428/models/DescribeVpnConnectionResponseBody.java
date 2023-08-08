@@ -1108,9 +1108,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
         @NameInMap("BgpStatus")
         private String bgpStatus;
 
-        @NameInMap("EnableBgp")
-        private String enableBgp;
-
         @NameInMap("LocalAsn")
         private String localAsn;
 
@@ -1128,7 +1125,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
         private TunnelBgpConfig(Builder builder) {
             this.bgpStatus = builder.bgpStatus;
-            this.enableBgp = builder.enableBgp;
             this.localAsn = builder.localAsn;
             this.localBgpIp = builder.localBgpIp;
             this.peerAsn = builder.peerAsn;
@@ -1149,13 +1145,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
          */
         public String getBgpStatus() {
             return this.bgpStatus;
-        }
-
-        /**
-         * @return enableBgp
-         */
-        public String getEnableBgp() {
-            return this.enableBgp;
         }
 
         /**
@@ -1195,7 +1184,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bgpStatus; 
-            private String enableBgp; 
             private String localAsn; 
             private String localBgpIp; 
             private String peerAsn; 
@@ -1207,14 +1195,6 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
              */
             public Builder bgpStatus(String bgpStatus) {
                 this.bgpStatus = bgpStatus;
-                return this;
-            }
-
-            /**
-             * EnableBgp.
-             */
-            public Builder enableBgp(String enableBgp) {
-                this.enableBgp = enableBgp;
                 return this;
             }
 

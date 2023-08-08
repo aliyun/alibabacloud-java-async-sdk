@@ -182,36 +182,6 @@ public class UpdateIpv4GatewayAttributeRequest extends Request {
         } 
 
         /**
-         * The new description of the IPv4 gateway.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The region ID of the IPv4 gateway whose name or description you want to modify.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder ipv4GatewayDescription(String ipv4GatewayDescription) {
-            this.putQueryParameter("Ipv4GatewayDescription", ipv4GatewayDescription);
-            this.ipv4GatewayDescription = ipv4GatewayDescription;
-            return this;
-        }
-
-        /**
          * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
@@ -219,9 +189,9 @@ public class UpdateIpv4GatewayAttributeRequest extends Request {
          * 
          * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
-        public Builder ipv4GatewayId(String ipv4GatewayId) {
-            this.putQueryParameter("Ipv4GatewayId", ipv4GatewayId);
-            this.ipv4GatewayId = ipv4GatewayId;
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -231,6 +201,33 @@ public class UpdateIpv4GatewayAttributeRequest extends Request {
          * 
          * *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
          * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * The new description of the IPv4 gateway.
+         */
+        public Builder ipv4GatewayDescription(String ipv4GatewayDescription) {
+            this.putQueryParameter("Ipv4GatewayDescription", ipv4GatewayDescription);
+            this.ipv4GatewayDescription = ipv4GatewayDescription;
+            return this;
+        }
+
+        /**
+         * The ID of the IPv4 gateway whose name or description you want to modify.
+         */
+        public Builder ipv4GatewayId(String ipv4GatewayId) {
+            this.putQueryParameter("Ipv4GatewayId", ipv4GatewayId);
+            this.ipv4GatewayId = ipv4GatewayId;
+            return this;
+        }
+
+        /**
+         * The new name of the IPv4 gateway.
          */
         public Builder ipv4GatewayName(String ipv4GatewayName) {
             this.putQueryParameter("Ipv4GatewayName", ipv4GatewayName);
@@ -257,7 +254,10 @@ public class UpdateIpv4GatewayAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the IPv4 gateway whose name or description you want to modify.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

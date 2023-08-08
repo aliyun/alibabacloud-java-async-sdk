@@ -63,6 +63,10 @@ public class CreateVpcGatewayEndpointRequest extends Request {
     private String serviceName;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("VpcId")
     @Validation(required = true)
     private String vpcId;
@@ -81,6 +85,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.serviceName = builder.serviceName;
+        this.tag = builder.tag;
         this.vpcId = builder.vpcId;
     }
 
@@ -182,6 +187,13 @@ public class CreateVpcGatewayEndpointRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -201,6 +213,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String serviceName; 
+        private java.util.List < Tag> tag; 
         private String vpcId; 
 
         private Builder() {
@@ -221,11 +234,15 @@ public class CreateVpcGatewayEndpointRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.serviceName = request.serviceName;
+            this.tag = request.tag;
             this.vpcId = request.vpcId;
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length.
+         * <p>
+         * 
+         * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. The value of **RequestId** of each API request may be different.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -234,7 +251,11 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform a dry run. Valid values:
+         * <p>
+         * 
+         * *   **true**: performs a dry run. The system checks your AccessKey pair, the RAM user permissions, and the required parameters If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
+         * *   **false** (default): performs a dry run and sends the request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -243,7 +264,10 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * EndpointDescription.
+         * The description of the gateway endpoint.
+         * <p>
+         * 
+         * The description must be 1 to 255 characters in length.
          */
         public Builder endpointDescription(String endpointDescription) {
             this.putQueryParameter("EndpointDescription", endpointDescription);
@@ -252,7 +276,10 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * EndpointName.
+         * The name of the gateway endpoint.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length.
          */
         public Builder endpointName(String endpointName) {
             this.putQueryParameter("EndpointName", endpointName);
@@ -279,7 +306,10 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * PolicyDocument.
+         * The access policy for the cloud service.
+         * <p>
+         * 
+         * For more information about the syntax and structure of the access policy, see [Policy syntax and structure](~~93739~~).
          */
         public Builder policyDocument(String policyDocument) {
             this.putQueryParameter("PolicyDocument", policyDocument);
@@ -288,7 +318,10 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the gateway endpoint.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -324,7 +357,7 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * The time when the gateway endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+         * The name of the endpoint service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -333,7 +366,19 @@ public class CreateVpcGatewayEndpointRequest extends Request {
         }
 
         /**
-         * The name of the gateway endpoint.
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The ID of the virtual private cloud (VPC) where you want to create the gateway endpoint.
+         * <p>
+         * 
+         * The VPC and gateway endpoint must be deployed in the same region.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -348,4 +393,65 @@ public class CreateVpcGatewayEndpointRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

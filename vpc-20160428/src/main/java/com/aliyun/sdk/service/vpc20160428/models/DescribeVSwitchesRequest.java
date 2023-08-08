@@ -58,6 +58,10 @@ public class DescribeVSwitchesRequest extends Request {
     private String routeTableId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -90,6 +94,7 @@ public class DescribeVSwitchesRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.routeTableId = builder.routeTableId;
+        this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
         this.vSwitchName = builder.vSwitchName;
         this.vSwitchOwnerId = builder.vSwitchOwnerId;
@@ -188,6 +193,13 @@ public class DescribeVSwitchesRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -234,6 +246,7 @@ public class DescribeVSwitchesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String routeTableId; 
+        private java.util.List < Tag> tag; 
         private String vSwitchId; 
         private String vSwitchName; 
         private Long vSwitchOwnerId; 
@@ -257,6 +270,7 @@ public class DescribeVSwitchesRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.routeTableId = request.routeTableId;
+            this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
             this.vSwitchName = request.vSwitchName;
             this.vSwitchOwnerId = request.vSwitchOwnerId;
@@ -265,7 +279,11 @@ public class DescribeVSwitchesRequest extends Request {
         } 
 
         /**
-         * The ID of the resource group to which the vSwitch belongs.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -274,7 +292,13 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * Specifies whether to query the default vSwitch in the specified region. Valid values:
+         * <p>
+         * 
+         * *   **true**: queries the default vSwitch in the specified region.
+         * *   **false**: does not query the default vSwitch in the specified region.
+         * 
+         * If you do not specify this parameter, the system queries all vSwitches in the specified region by default.
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -301,7 +325,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -310,7 +334,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -319,13 +343,10 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * Specifies whether to query the default vSwitch in the specified region. Valid values:
+         * The region ID of the vSwitch. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          * <p>
          * 
-         * *   **true**: queries the default vSwitch in the specified region.
-         * *   **false**: does not query the default vSwitch in the specified region.
-         * 
-         * If you do not specify this parameter, the system queries all vSwitches in the specified region by default.
+         * >  You must set at least one of the **RegionId** and **VpcId** parameters.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -334,7 +355,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the resource belongs.
+         * The ID of the resource group to which the vSwitch belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -361,11 +382,29 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The ID of the route table.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
             this.routeTableId = routeTableId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The ID of the vSwitch that you want to query.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
             return this;
         }
 
@@ -375,15 +414,6 @@ public class DescribeVSwitchesRequest extends Request {
          * 
          * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
-        public Builder vSwitchId(String vSwitchId) {
-            this.putQueryParameter("VSwitchId", vSwitchId);
-            this.vSwitchId = vSwitchId;
-            return this;
-        }
-
-        /**
-         * The ID of the route table.
-         */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);
             this.vSwitchName = vSwitchName;
@@ -391,7 +421,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * The ID of the Alibaba Cloud account to which the resource belongs.
          */
         public Builder vSwitchOwnerId(Long vSwitchOwnerId) {
             this.putQueryParameter("VSwitchOwnerId", vSwitchOwnerId);
@@ -400,7 +430,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The region ID of the vSwitch. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * The ID of the VPC to which the vSwitches belong.
          * <p>
          * 
          * >  You must set at least one of the **RegionId** and **VpcId** parameters.
@@ -412,11 +442,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * Specifies whether to check the request without performing the operation. Valid values:
-         * <p>
-         * 
-         * *   **true**: checks the request without performing the operation. The system checks the required parameters, request syntax, and limits. If the request fails check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
-         * *   **false**: sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed. This is the default value.
+         * The ID of the zone to which the vSwitch belongs. You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -431,4 +457,65 @@ public class DescribeVSwitchesRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

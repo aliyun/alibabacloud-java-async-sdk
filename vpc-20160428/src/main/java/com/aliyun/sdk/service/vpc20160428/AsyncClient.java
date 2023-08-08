@@ -18,6 +18,11 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+      * After you call this operation, the router interface enters the **Activating** state. After the router interface is activated, it enters the **Active** state.
+      * >  You cannot activate a router interface that has overdue payments.
+      *
+     */
     CompletableFuture<ActivateRouterInterfaceResponse> activateRouterInterface(ActivateRouterInterfaceRequest request);
 
     /**
@@ -64,26 +69,29 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddIPv6TranslatorAclListEntryResponse> addIPv6TranslatorAclListEntry(AddIPv6TranslatorAclListEntryRequest request);
 
     /**
-      * The CIDR block.
-      * >  You cannot set the **CidrBlock** and **CidrMask** parameters at the same time.
+      * Before you call this operation, take note of the following limits:
+      * *   The CIDR block and the IP address pool must belong to the same region.
+      * *   The CIDR block and the IP address pool must use the same line type.
+      * *   The **AddPublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+      *     *   If the CIDR block is in the **Modifying** state, the CIDR block is being added. In this state, you can only query the CIDR block and cannot perform other operations.
+      *     *   If the CIDR block is in the **Created** state, the CIDR block is added.
+      * *   You cannot repeatedly call the **AddPublicIpAddressPoolCidrBlock** operation to add a CIDR block to an IP address pool within the specified period of time.
       *
      */
     CompletableFuture<AddPublicIpAddressPoolCidrBlockResponse> addPublicIpAddressPoolCidrBlock(AddPublicIpAddressPoolCidrBlockRequest request);
 
     /**
-      * The client token that is used to ensure the idempotence of the request.
-      * You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.
-      * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+      * *   The **AddSourcesToTrafficMirrorSession** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session:
+      *     *   If the traffic mirror session is in the **Modifying** state, the traffic mirror source is being added to the traffic mirror session.
+      *     *   If the traffic mirror session is in the **Created** state, the traffic mirror source is being added to the traffic mirror session.
+      * *   You cannot repeatedly call the **AddSourcesToTrafficMirrorSession** operation to add a traffic mirror source to a traffic mirror session within the specified period of time.
       *
      */
     CompletableFuture<AddSourcesToTrafficMirrorSessionResponse> addSourcesToTrafficMirrorSession(AddSourcesToTrafficMirrorSessionRequest request);
 
     /**
-      * The maximum bandwidth of the EIP. Unit: Mbit/s.
-      * *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByBandwidth**, valid values for **Bandwidth** are **1** to **500**.
-      * *   When **InstanceChargeType** is set to **PostPaid** and **InternetChargeType** is set to **PayByTraffic**, valid values for **Bandwidth** are **1** to **200**.
-      * *   When **InstanceChargeType** is set to **PrePaid**, valid values for **Bandwidth** are **1** to **1000**.
-      * Default value: **5**. Unit: Mbit/s.
+      * Before you call this operation, make sure that you understand the billing methods and pricing of EIPs. For more information, see [Billing overview](~~122035~~).
+      * After you call this operation, the system randomly allocates an EIP that is in the **Available** state in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. IGMP and SCTP are not supported.
       *
      */
     CompletableFuture<AllocateEipAddressResponse> allocateEipAddress(AllocateEipAddressRequest request);
@@ -91,7 +99,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AllocateEipAddressProResponse> allocateEipAddressPro(AllocateEipAddressProRequest request);
 
     /**
-      * The operation that you want to perform. The operation that you want to perform. Set the value to **AllocateEipSegmentAddress**.
+      * **AllocateEipSegmentAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipSegment](/help/en/elastic-ip-address/latest/156063) operation to query the status of a contiguous EIP group: 
+      * - If the contiguous EIP group is in the **Allocating** state, the EIPs are being allocated. In this case, you can only perform the query operation and cannot perform other operations.
+      * - If the contiguous EIP group is in the **Allocated** state, the EIPs are allocated.
       *
      */
     CompletableFuture<AllocateEipSegmentAddressResponse> allocateEipSegmentAddress(AllocateEipSegmentAddressRequest request);
@@ -113,8 +123,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyPhysicalConnectionLOAResponse> applyPhysicalConnectionLOA(ApplyPhysicalConnectionLOARequest request);
 
     /**
-      * The ID of the region to which the EIP belongs.
-      * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+      * *   You can associate an EIP with an Elastic Compute Service (ECS) instance, a Classic Load Balancer (CLB) instance, a secondary elastic network interface (ENI), a NAT gateway, or a high-availability virtual IP address (HAVIP) in the same region. The ECS instance and CLB instance must be deployed in a virtual private cloud (VPC).
+      * *   **AssociateEipAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP.
+      *     *   If the EIP is in the **Associating** state, the EIP is being associated. In this state, you can only query the EIP and cannot perform other operations.
+      *     *   If the EIP is in the **InUse** state, the EIP is associated.
+      * *   You cannot repeatedly call **AssociateEipAddress** to associate an EIP with an instance within the specified period of time.
       *
      */
     CompletableFuture<AssociateEipAddressResponse> associateEipAddress(AssociateEipAddressRequest request);
@@ -161,7 +174,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssociateHaVipResponse> associateHaVip(AssociateHaVipRequest request);
 
     /**
-      * The ID of the resource with which you want to associate the network ACL.
+      * *   The **AssociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+      *     *   If the network ACL is in the **BINDING** state, the network ACL is being associated.
+      *     *   If the network ACL is in the **BINDED** state, the network ACL is associated.
+      * *   You cannot repeatedly call the **AssociateNetworkAcl** operation to associate a network ACL within the specified period of time.
       *
      */
     CompletableFuture<AssociateNetworkAclResponse> associateNetworkAcl(AssociateNetworkAclRequest request);
@@ -179,15 +195,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssociateRouteTableWithGatewayResponse> associateRouteTableWithGateway(AssociateRouteTableWithGatewayRequest request);
 
     /**
-      * The ID of the gateway endpoint to be associated with the route table.
+      * When you call this operation, take note of the following limits:
+      * *   The gateway endpoint to be associated with the route table cannot be in one of the following states: **Creating**, **Modifying**, **Associating**, **Dissociating**, or **Deleting**.
+      * *   The route table cannot be in one of the following states: **Creating**, **Modifying**, **Associating**, **Dissociating**, or **Deleting**.
+      * *   The gateway endpoint and route table must belong to the same virtual private cloud (VPC).
+      * *   The route table cannot be shared.
+      * *   You cannot associate a gateway endpoint with a virtual border router (VBR) route table.
+      * *   You can associate a gateway endpoint with at most 20 route tables at a time.
+      * *   **AssociateRouteTablesWithVpcGatewayEndpoint** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [GetVpcGatewayEndpointAttribute](~~311017~~) operation to query whether a route table is associated with a gateway endpoint.
+      *     *   If the **Associating** status is returned, the route table is being associated with the gateway endpoint.
+      *     *   If the **Created** status is returned, the route table is associated with the gateway endpoint.
+      * *   You cannot repeatedly call the **AssociateRouteTablesWithVpcGatewayEndpoint** operation within a specific period of time.
       *
      */
     CompletableFuture<AssociateRouteTablesWithVpcGatewayEndpointResponse> associateRouteTablesWithVpcGatewayEndpoint(AssociateRouteTablesWithVpcGatewayEndpointRequest request);
 
     /**
-      * The IP version. Valid values:
-      * *   **IPV4**: IPv4
-      * *   **IPV6**: IPv6. If you set **IpVersion** to **IPV6** and do not set **SecondaryCidrBlock**, you can add IPv6 CIDR blocks to the VPC.
+      * *   The following list describes the limits on the maximum number of secondary CIDR blocks that can be added:
+      *     *   You can add up to five secondary IPv4 CIDR blocks to each VPC.
+      *     *   You can add up to three secondary IPv6 CIDR blocks to each VPC.
+      * *   You cannot repeatedly call the **AssociateVpcCidrBlock** operation to add secondary CIDR blocks to a VPC within the specified period of time.
       *
      */
     CompletableFuture<AssociateVpcCidrBlockResponse> associateVpcCidrBlock(AssociateVpcCidrBlockRequest request);
@@ -340,14 +367,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFlowLogResponse> createFlowLog(CreateFlowLogRequest request);
 
     /**
-      * The region ID of the NAT gateway.
-      * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+      * Each DNAT entry consists of the following parameters: **ExternalIp**, **ExternalPort**, **IpProtocol**, **InternalIp**, and **InternalPort**. After you add a DNAT entry, the NAT gateway forwards packets of the specified protocol from **ExternalIp:ExternalPort** to **InternalIp:InternalPort** and sends responses back through the same route.
+      * When you call this operation, take note of the following limits:
+      * *   **CreateForwardEntry** is an asynchronous operation. After you make a request, a DNAT entry ID is returned but the specified DNAT entry is not added. The system adds the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+      *     *   If the DNAT entry is in the **Pending** state, the system is adding the DNAT entry. You can only query the status of the DNAT entry, but cannot perform other operations.
+      *     *   If the DNAT entry is in the **Available** state, the DNAT entry is added.
+      * *   You cannot repeatedly call the **CreateForwardEntry** operation to add a DNAT entry within the specified period of time.
+      * *   All combinations of **ExternalIp**, **ExternalPort**, and **IpProtocol** used in DNAT entries must be unique. You cannot distribute requests to more than one Elastic Compute Service (ECS) instance if these requests are initiated from the same source IP address, received on the same port, and use the same protocol.
+      * *   The combinations of **IpProtocol**, **InternalIp**, and **InternalPort** must be unique.
+      * *   If one or more DNAT entries in the DNAT table are in the **Pending** or **Modifying** state, you cannot add DNAT entries to the DNAT table.
+      * *   You can add at most 100 DNAT entries to a DNAT table.
+      * *   For an elastic IP address (EIP) used by an Internet NAT gateway or a NAT IP address used by a Virtual Private Cloud (VPC) NAT gateway, take note of the following limit: If the IP address has IP mapping enabled and is specified in a DNAT entry, the IP address cannot be used by another DNAT or SNAT entry.
       *
      */
     CompletableFuture<CreateForwardEntryResponse> createForwardEntry(CreateForwardEntryRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to **CreateFullNatEntry**.
+      * *   **CreateFullNatEntry** is an asynchronous operation. After you make a request, a FULLNAT entry ID is returned but the specified FULLNAT entry is not added. The system adds the entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+      *     *   If the FULLNAT entry is in the **Pending** state, the system is adding the FULLNAT entry. You can only query the status of the FULLNAT entry, but cannot perform other operations.
+      *     *   If the FULLNAT entry is in the **Available** state, the FULLNAT entry is added.
+      * *   You cannot repeatedly call the **CreateFullNatEntry** operation to add a FULLNAT entry to the FULLNAT table within the specified period of time.
       *
      */
     CompletableFuture<CreateFullNatEntryResponse> createFullNatEntry(CreateFullNatEntryRequest request);
@@ -436,13 +475,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNatGatewayResponse> createNatGateway(CreateNatGatewayRequest request);
 
     /**
-      * The ID of the Virtual Private Cloud (VPC) NAT gateway for which you want to create the NAT IP address.
+      * **CreateNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT IP address is not created. The system creates the NAT IP address in the background. You can call the [ListNatIps](~~287000~~) operation to query the status of a NAT IP address.
+      * *   If a NAT IP address is in the **Creating** state, the NAT IP address is being created. In this case, you can only query the NAT IP address but cannot perform other operations.
+      * *   If a NAT IP address is in the **Available** state, the NAT IP address is created.
+      * You cannot repeatedly call the **CreateNatIp** operation to create a NAT IP address within the specified period of time.
       *
      */
     CompletableFuture<CreateNatIpResponse> createNatIp(CreateNatIpRequest request);
 
     /**
-      * The ID of the Virtual Private Cloud (VPC) NAT gateway with which you want to associate the CIDR block.
+      * You cannot repeatedly call the **CreateNatIpCidr** operation to create a NAT CIDR block within the specified period of time.
       *
      */
     CompletableFuture<CreateNatIpCidrResponse> createNatIpCidr(CreateNatIpCidrRequest request);
@@ -450,7 +492,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateNetworkAclResponse> createNetworkAcl(CreateNetworkAclRequest request);
 
     /**
-      * The access point ID of the Express Connect circuit.
+      * You can apply for a dedicated Express Connect circuit for yourself or create a hosted connection for a tenant. After your application is approved, the Express Connect circuit changes to the **Initial** state. You can contact the connectivity provider to start construction.
+      * When you call this operation, take note of the following limits:
+      * *   If your Alibaba Cloud account has more than five Express Connect circuits that are not in the **Enabled** state, you cannot apply for another Express Connect circuit.
+      * *   If your Alibaba Cloud account has an Express Connect circuit with overdue payments, you cannot apply for another Express Connect circuit.
       *
      */
     CompletableFuture<CreatePhysicalConnectionResponse> createPhysicalConnection(CreatePhysicalConnectionRequest request);
@@ -471,13 +516,48 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePublicIpAddressPoolResponse> createPublicIpAddressPool(CreatePublicIpAddressPoolRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to **CreateRouteEntries**.
+      * *   **CreateRouteEntries** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry:
+      *     *   If the route entry is in the **Creating** state, the route entry is being created.
+      *     *   If the route entry is in the **Created** state, the route entry is created.
+      * *   You cannot repeatedly call the **CreateRouteEntries** operation to create the same route entry within the specified period of time.
+      * **When you call this operation to add custom route entries to the route table of a vRouter, take note of the following items:**
+      * *   A route table can contain up to 200 custom route entries.
+      * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+      * *   The destination CIDR block (**DstCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or its subnets.
+      * *   The destination CIDR blocks (**DstCidrBlock**) of route entries in the same route table must be unique.
+      * *   If you do not include the mask length when you specify the destination CIDR block (**DstCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
+      * *   Multiple custom route entries can point to the same next hop (**NextHop**).
+      * *   The next hop (**NextHop**) of a custom route entry must belong to the same VPC as the route table.
       *
      */
     CompletableFuture<CreateRouteEntriesResponse> createRouteEntries(CreateRouteEntriesRequest request);
 
     /**
-      * The ID of the route table to which you want to add a custom route entry.
+      * *   **CreateRouteEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeRouteEntryList](~~138148~~) operation to query the status of a route entry.
+      *     *   If the route entry is in the **Creating** state, the route entry is being created.
+      *     *   If the route entry is in the **Created** state, the route entry is created.
+      * *   You cannot repeatedly call the **CreateRouteEntry** operation to add a custom route entry to the route table of a vRouter or a VBR within the specified period of time.
+      * **When you call this operation to add a custom route entry to the route table of a vRouter, take note of the following limits:**
+      * *   A route table can contain up to 200 custom route entries.
+      * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be the same as or overlap with the CIDR block of a vSwitch in the virtual private cloud (VPC).
+      * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
+      * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
+      * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
+      * *   Multiple custom route entries can point to the same next hop (**NextHopId**).
+      * *   The next hop (**NextHopId**) of a custom route entry must belong to the same VPC as the route table.
+      * *   Equal-cost multi-path (ECMP) routing can be configured by specifying the **NextHopList** parameter.
+      *     *   When you add non-ECMP route entries, you must specify **DestinationCidrBlock**, **NextHopType**, and **NextHopId**, and you must not specify **NextHopList**.
+      *     *   When you add route entries for ECMP routing, you must specify **DestinationCidrBlock** and **NextHopList**, and you must not specify **NextHopType** or **NextHopId**.
+      * **When you call this operation to add a custom route entry to the route table of a VBR, take note of the following limits:**
+      * *   A route table can contain up to 200 custom route entries.
+      * *   The **NextHopList** parameter is not supported.
+      * *   The destination CIDR block (**DestinationCidrBlock**) of a custom route entry cannot be 100.64.0.0/10 or a subset of it.
+      * *   The destination CIDR blocks (**DestinationCidrBlock**) of route entries in the same route table must be unique.
+      * *   If you do not include the mask length when you specify the destination CIDR block (**DestinationCidrBlock**), the destination CIDR block is considered a host IP address whose mask length is 32 bits.
+      * *   Multiple custom route entries can point to the same next hop (**NextHopId**).
+      * *   The next hop (**NextHopId**) of a custom route entry must be a router interface associated with the VBR.
+      * *   You can add route entries only when the VBR is in the **Active** state, and the Express Connect circuit associated with the VBR is in the **Enabled** state and is not locked due to overdue payments.
+      * *   Only non-ECMP route entries are supported. When you add non-ECMP route entries, you must specify **DestinationCidrBlock**, **NextHopType**, and **NextHopId**, and you cannot specify **NextHopList**.
       *
      */
     CompletableFuture<CreateRouteEntryResponse> createRouteEntry(CreateRouteEntryRequest request);
@@ -537,21 +617,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTrafficMirrorFilterResponse> createTrafficMirrorFilter(CreateTrafficMirrorFilterRequest request);
 
     /**
-      * The ID of the filter.
+      * *   The **CreateTrafficMirrorFilterRules** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of an inbound or outbound rule:
+      *     *   If the rule is in the **Creating** state, the rule is being created.
+      *     *   If the rule is in the **Created** state, the rule is created.
+      * *   You cannot repeatedly call the **CreateTrafficMirrorFilterRules** operation to create an inbound or outbound rule for a traffic mirroring filter.
       *
      */
     CompletableFuture<CreateTrafficMirrorFilterRulesResponse> createTrafficMirrorFilterRules(CreateTrafficMirrorFilterRulesRequest request);
 
     /**
-      * The description of the traffic mirror session.
-      * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+      * **CreateTrafficMirrorSession** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session:
+      * *   If the traffic mirror session is in the **Creating** state, the traffic mirror session is being created.
+      * *   If the traffic mirror session is in the **Created** state, the traffic mirror session is created.
       *
      */
     CompletableFuture<CreateTrafficMirrorSessionResponse> createTrafficMirrorSession(CreateTrafficMirrorSessionRequest request);
 
     /**
-      * The zone ID of the vSwitch.
-      * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
+      * When you call this operation, take note of the following limits:
+      * *   You can create at most 150 vSwitches in a virtual private cloud (VPC).
+      * *   The first IP address and last three IP addresses of each vSwitch CIDR block are reserved. For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved.
+      * *   The number of instances in a vSwitch cannot exceed the remaining capacity of the VPC. The remaining capacity is the difference between 15,000 and the current number of instances.
+      * *   Each instance can belong to only one vSwitch.
+      * *   vSwitches do not support multicast or broadcast.
+      * *   After you create a vSwitch, you cannot modify its CIDR block.
+      * *   The **CreateVSwitch** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVSwitchAttributes](~~94567~~) operation to query the status of a vSwitch:
+      *     *   If the vSwitch is in the **Pending** state, the vSwitch is being configured.
+      *     *   If the vSwitch is in the **Available** state, the vSwitch is available.
+      * *   You cannot repeatedly call the **CreateVSwitch** operation to create a vSwitch in a VPC within the specified period of time.
       *
      */
     CompletableFuture<CreateVSwitchResponse> createVSwitch(CreateVSwitchRequest request);
@@ -570,16 +663,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVcoRouteEntryResponse> createVcoRouteEntry(CreateVcoRouteEntryRequest request);
 
     /**
-      * The ID of the Express Connect circuit.
-      * You can create a VBR for a dedicated connection or a hosted connection.
+      * When you create a VBR, the VBR is in the **Enabled** state by default.
       *
      */
     CompletableFuture<CreateVirtualBorderRouterResponse> createVirtualBorderRouter(CreateVirtualBorderRouterRequest request);
 
     /**
-      * The payer for the hosted connection. Valid values:
-      * *   **PayByPhysicalConnectionOwner**: The partner pays for the hosted connection.
-      * *   **PayByVirtualPhysicalConnectionOwner**: The tenant pays for the hosted connection.
+      * Before you call this API operation, familiarize yourself with the workflow for creating a hosted connection and the environment requirements. For more information, see [Overview](~~146571~~) and [Operation guide for Express Connect partners](~~155987~~).
       *
      */
     CompletableFuture<CreateVirtualPhysicalConnectionResponse> createVirtualPhysicalConnection(CreateVirtualPhysicalConnectionRequest request);
@@ -600,8 +690,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVpcResponse> createVpc(CreateVpcRequest request);
 
     /**
-      * The description of the gateway endpoint.
-      * The description must be 1 to 255 characters in length.
+      * *   **CreateVpcGatewayEndpoint** is an asynchronous operation. After you send a request, the system returns an **EndpointId** and runs the task in the background. You can call the [GetDhcpOptionsSet](~~189208~~) operation to query the status of a gateway endpoint.
+      *     *   If the gateway endpoint is in the **Creating** state, the gateway endpoint is being created.
+      *     *   If the gateway endpoint is in the **Created** state, the gateway endpoint is created.
+      * *   You cannot repeatedly call the **CreateVpcGatewayEndpoint** operation for the same endpoint service within the specified period of time.
       *
      */
     CompletableFuture<CreateVpcGatewayEndpointResponse> createVpcGatewayEndpoint(CreateVpcGatewayEndpointRequest request);
@@ -613,33 +705,42 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateVpcPrefixListResponse> createVpcPrefixList(CreateVpcPrefixListRequest request);
 
     /**
-      * Specifies the party that must pay for the shared Express Connect circuit. Valid values:
-      * *   **PayByPhysicalConnectionOwner**: If you set the value to PayByPhysicalConnectionOwner, the Express Connect partner must pay for the shared Express Connect circuit.
-      * *   **PayByVirtualPhysicalConnectionOwner**: If you set the value to PayByVirtualPhysicalConnectionOwner, the tenant must pay for the shared Express Connect circuit.
+      * If an Express Connect partner has created a virtual border router (VBR) for a tenant before, the Express Connect partner can push the Express Connect circuit that is associated with the VBR to the tenant account by adding a shared port for the tenant account. The service of the tenant is not interrupted in this process.
+      * Preparations:
+      * Before the Express Connect partner performs the operation, the Express Connect partner must notify the tenant and request the tenant to enable outbound data transfer billing. For more information, see [Enable outbound data transfer billing](~~274385~~).
+      * What to do next:
+      * 1\\. After the Express Connect partner performs the operation, a shared port is added for the tenant account. The tenant must call the [ConfirmPhysicalConnection](~~324198~~) operation to accept the shared port.
+      * 2\\. Then, the Express Connect partner must call the [AttachVbrToVpconn](~~324191~~) operation to associate the VBR with the newly added shared port that belongs to the tenant account.
       *
      */
     CompletableFuture<CreateVpconnFromVbrResponse> createVpconnFromVbr(CreateVpconnFromVbrRequest request);
 
     /**
+      * # Usage notes
       * By default, an IPsec-VPN connection created by calling the `CreateVpnAttachment` operation is not associated with a resource. You can associate an IPsec-VPN connection with a transit router by calling the [CreateTransitRouterVpnAttachment](~~443993~~) operation.
-      * ## Prerequisites
-      * Before you create an IPsec-VPN connection, make sure that you created a customer gateway in the region where you want to create the IPsec-VPN connection. For more information, see [CreateCustomerGateway](/help/en/vpn-gateway/latest/createcustomergateway). 
+      * # Prerequisites
+      * Before you create an IPsec-VPN connection, make sure that you created a customer gateway in the region where you want to create the IPsec-VPN connection. For more information, see [CreateCustomerGateway](~~120368~~).
       * If you want to add BGP configurations to an IPsec-VPN connection, make sure that an autonomous system number (ASN) is assigned to the customer gateway.
       *
      */
     CompletableFuture<CreateVpnAttachmentResponse> createVpnAttachment(CreateVpnAttachmentRequest request);
 
     /**
-      * *   **CreateVpnConnection** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      * # Usage notes
+      * *   **CreateVpnConnection** is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call [DescribeVpnGateway](~~73720~~) to query the status of the task.
       *     *   If the VPN gateway is in the **updating** state, the IPsec-VPN connection is being created.
-      *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection has been created.
+      *     *   If the VPN gateway is in the **active** state, the IPsec-VPN connection is created.
       * *   You cannot repeatedly call **CreateVpnConnection** to create an IPsec-VPN connection on a VPN gateway within the specified period of time.
       *
      */
     CompletableFuture<CreateVpnConnectionResponse> createVpnConnection(CreateVpnConnectionRequest request);
 
     /**
-      * The region ID of the VPN gateway. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+      * ## Usage notes
+      * *   Before you create a VPN gateway, we recommend that you understand its limits. For more information, see [Limits on VPN gateways](~~65290~~).
+      * *   The **CreateVpnGateway** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call [DescribeVpnGateway](~~73720~~) to query the status of a VPN gateway.
+      *     *   If the VPN gateway is in the **provisioning** state, the VPN gateway is being created.
+      *     *   If a VPN gateway is in the **active** state, the VPN gateway has been created.
       *
      */
     CompletableFuture<CreateVpnGatewayResponse> createVpnGateway(CreateVpnGatewayRequest request);
@@ -708,14 +809,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteFlowLogResponse> deleteFlowLog(DeleteFlowLogRequest request);
 
     /**
-      * The region ID of the NAT gateway.
-      * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+      * *   **DeleteForwardEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified DNAT entry is not deleted. The system deletes the entry in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+      *     *   If the DNAT entry is in the **Deleting** state, the system is deleting the DNAT entry. In this case, you can only query the status of the DNAT entry, but cannot perform other operations.
+      *     *   If the DNAT entry cannot be found, it is deleted.
+      * >  If a DNAT table has DNAT entries in the **Pending** state, you cannot delete the DNAT entries.
+      * *   You cannot repeatedly call the **DeleteForwardEntry** operation to delete a DNAT entry within the specified period of time.
       *
      */
     CompletableFuture<DeleteForwardEntryResponse> deleteForwardEntry(DeleteForwardEntryRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to **DeleteFullNatEntry**.
+      * **DeleteFullNatEntry** is an asynchronous operation. After you make a request, the ID of the request is returned but the FULLNAT entry is not deleted. The system deletes the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+      * *   If the FULLNAT entry is in the **Deleting** state, the system is deleting the FULLNAT entry. In this case, you can query the status of the FULLNAT entry, but cannot perform other operations.
+      * *   If the FULLNAT entry cannot be found, the FULLNAT entry is deleted.
+      * You cannot repeatedly call the **DeleteFullNatEntry** operation to delete a FULLNAT entry within the specified period of time.
       *
      */
     CompletableFuture<DeleteFullNatEntryResponse> deleteFullNatEntry(DeleteFullNatEntryRequest request);
@@ -766,7 +873,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteIpsecServerResponse> deleteIpsecServer(DeleteIpsecServerRequest request);
 
     /**
-      * The ID of the IPv4 gateway that you want to delete.
+      * *   Before you delete an IPv4 gateway, make sure that no route tables are associated with the IPv4 gateway.
+      * *   The **DeleteIpv4Gateway** operation is an asynchronous operation. After you call this operation, the system returns a **request ID**. However, the deletion task is still being run in the background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of the IPv4 gateway.
+      *     *   If the IPv4 gateway is in the **Deleting** state, the IPv4 gateway is being deleted.
+      *     *   If the IPv4 gateway cannot be queried, the deletion is complete.
+      * *   After you call the **DeleteIpv4Gateway** operation to delete an IPv4 gateway, you cannot call the operation again to delete the IPv4 gateway until the deletion task is complete.
       *
      */
     CompletableFuture<DeleteIpv4GatewayResponse> deleteIpv4Gateway(DeleteIpv4GatewayRequest request);
@@ -797,14 +908,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteIpv6InternetBandwidthResponse> deleteIpv6InternetBandwidth(DeleteIpv6InternetBandwidthRequest request);
 
     /**
-      * The ID of the region where the NAT gateway is deployed.
-      * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+      * *   **DeleteNatGateway** is an asynchronous operation. After you make a request, the ID of the request is returned but the NAT gateway is not deleted. The system deletes the NAT gateway in the background. You can call the [DescribeNatGateways](~~36054~~) to query the status of a NAT gateway.
+      *     *   If a NAT gateway is in the **Deleting** state, the NAT gateway is being deleted. In this case, you can query the NAT gateway but you cannot perform other operations.
+      *     *   If the NAY gateway cannot be found, the NAT gateway is deleted.
+      *         After you delete a NAT gateway, you cannot restore the NAT gateway. Proceed with caution.
+      * *   You cannot repeatedly call the **DeleteNatGateway** operation to delete a NAT gateway within the specified period of time.
       *
      */
     CompletableFuture<DeleteNatGatewayResponse> deleteNatGateway(DeleteNatGatewayRequest request);
 
     /**
-      * The ID of the NAT IP address that you want to delete.
+      * *   **DeleteNatIp** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified NAT IP address is not deleted. The system deletes the NAT IP address in the background. You can call the [ListNatIps](~~281979~~) operation to query the status of a NAT IP address.
+      *     *   If a NAT IP address is in the **Deleting** state, the NAT IP address is being deleted. In this case, you can only query the NAT IP address but cannot perform other operations.
+      *     *   If the NAT IP address cannot be found, it is deleted.
+      * *   You cannot repeatedly call the **DeleteNatIp** operation to delete a NAT IP address within the specified period of time.
       *
      */
     CompletableFuture<DeleteNatIpResponse> deleteNatIp(DeleteNatIpRequest request);
@@ -829,13 +946,23 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePhysicalConnectionResponse> deletePhysicalConnection(DeletePhysicalConnectionRequest request);
 
     /**
-      * The ID of the IP address pool.
+      * *   The **DeletePublicIpAddressPool** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPools](~~429433~~) operation to query the status of an IP address pool:
+      *     *   If the IP address pool is in the **Deleting** state, the IP address pool is being deleted. In this state. you can only query the IP address pool and cannot perform other operations.
+      *     *   If you cannot query the IP address pool, the IP address pool is deleted.
+      * *   You cannot repeatedly call the **DeletePublicIpAddressPool** operation to delete an IP address pool within the specified period of time.
+      * ## Prerequisites
+      * Before you delete an IP address pool, make sure that no IP address in the pool is being used.
       *
      */
     CompletableFuture<DeletePublicIpAddressPoolResponse> deletePublicIpAddressPool(DeletePublicIpAddressPoolRequest request);
 
     /**
-      * The ID of the IP address pool.
+      * *   The **DeletePublicIpAddressPoolCidrBlock** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPublicIpAddressPoolCidrBlocks](~~429436~~) operation to query the status of a CIDR block in an IP address pool:
+      *     *   If the CIDR block is in the **Deleting** state, the CIDR block is being deleted. In this state, you can only query the CIDR block and cannot perform other operations.
+      *     *   If you cannot query the CIDR block, the CIDR block is deleted.
+      * *   You cannot repeatedly call the **DeletePublicIpAddressPoolCidrBlock** operation to delete a CIDR block within the specified period of time.
+      * ## Prerequisites
+      * Before you delete a CIDR block, make sure that it is not being used.
       *
      */
     CompletableFuture<DeletePublicIpAddressPoolCidrBlockResponse> deletePublicIpAddressPoolCidrBlock(DeletePublicIpAddressPoolCidrBlockRequest request);
@@ -910,21 +1037,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSslVpnServerResponse> deleteSslVpnServer(DeleteSslVpnServerRequest request);
 
     /**
-      * The ID of the filter.
+      * *   The **DeleteTrafficMirrorFilter** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of a filter:
+      *     *   If the filter is in the **Deleting** state, the filter is being deleted.
+      *     *   If you cannot query the filter, the filter is deleted.
+      * *   You cannot repeatedly call the **DeleteTrafficMirrorFilter** operation to delete a filter within the specified period of time.
       *
      */
     CompletableFuture<DeleteTrafficMirrorFilterResponse> deleteTrafficMirrorFilter(DeleteTrafficMirrorFilterRequest request);
 
     /**
-      * The ID of the filter.
+      * *   The **DeleteTrafficMirrorFilterRules** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of an inbound or outbound rule:
+      *     *   If the rule is in the **Deleting** state, the rule is being deleted.
+      *     *   If you cannot query the rule, the rule is deleted.
+      * *   You cannot repeatedly call the **DeleteTrafficMirrorFilterRules** operation to delete an inbound or outbound rule within the specified period of time.
       *
      */
     CompletableFuture<DeleteTrafficMirrorFilterRulesResponse> deleteTrafficMirrorFilterRules(DeleteTrafficMirrorFilterRulesRequest request);
 
     /**
-      * The client token that is used to ensure the idempotence of the request.
-      * You can use the client to generate the value, but you must make sure that it is unique among all requests. ClientToken can contain only ASCII characters.
-      * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+      * *   **DeleteTrafficMirrorSession** is an asynchronous operation. After you send the request, the system returns a request ID and runs the task in the background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session.
+      *     *   If the traffic mirror session is in the **Deleting** state, the traffic mirror session is being deleted.
+      *     *   If you cannot query the traffic mirror session, the traffic mirror session is deleted.
+      * *   You cannot repeatedly call the **DeleteTrafficMirrorSession** operation to delete a traffic mirror session within the specified period of time.
       *
      */
     CompletableFuture<DeleteTrafficMirrorSessionResponse> deleteTrafficMirrorSession(DeleteTrafficMirrorSessionRequest request);
@@ -978,7 +1112,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVpcGatewayEndpointResponse> deleteVpcGatewayEndpoint(DeleteVpcGatewayEndpointRequest request);
 
     /**
-      * The ID of the prefix list that you want to delete.
+      * You cannot repeatedly call the **DeleteDhcpOptionsSet** operation to delete a prefix list within the specified period of time.
       *
      */
     CompletableFuture<DeleteVpcPrefixListResponse> deleteVpcPrefixList(DeleteVpcPrefixListRequest request);
@@ -1047,7 +1181,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEcGrantRelationResponse> describeEcGrantRelation(DescribeEcGrantRelationRequest request);
 
     /**
-      * The number of the page to return. Default value: **1**.
+      * You can call this operation to query the information about EIPs in a specified region, including the maximum bandwidth, billing methods, and associated instances.
       *
      */
     CompletableFuture<DescribeEipAddressesResponse> describeEipAddresses(DescribeEipAddressesRequest request);
@@ -1216,7 +1350,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request);
 
     /**
-      * The region to which the DHCP options set belongs. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+      * *   The **DetachDhcpOptionsSetFromVpc** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeVpcAttribute](~~94565~~) operation to query the status of a DHCP options set:
+      *     *   If the DHCP options set is in the **Pending** state, the DHCP options set is being disassociated.
+      *     *   If the DHCP options set is in the **UnUsed** state, the DHCP options set is disassociated.
+      * *   You cannot repeatedly call the **DetachDhcpOptionsSetFromVpc** operation to disassociate a DHCP options set from a VPC within the specified period of time.
       *
      */
     CompletableFuture<DetachDhcpOptionsSetFromVpcResponse> detachDhcpOptionsSetFromVpc(DetachDhcpOptionsSetFromVpcRequest request);
@@ -1250,8 +1387,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableNatGatewayEcsMetricResponse> enableNatGatewayEcsMetric(EnableNatGatewayEcsMetricRequest request);
 
     /**
-      * The region ID of the Express Connect circuit.
-      * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+      * When you call this operation, take note of the following limits:
+      * *   You can enable only an Express Connect circuit that is in the **Confirmed** state.
+      * *   After you enable an Express Connect circuit, it changes to the **Enabled** state.
       *
      */
     CompletableFuture<EnablePhysicalConnectionResponse> enablePhysicalConnection(EnablePhysicalConnectionRequest request);
@@ -1259,7 +1397,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableVpcClassicLinkResponse> enableVpcClassicLink(EnableVpcClassicLinkRequest request);
 
     /**
-      * The ID of the IPv4 gateway that you want to activate.
+      * *   The **EnableVpcIpv4Gateway** operation is asynchronous. After you send the request, the system returns **RequestId**. However, the operation is still being performed in the system background. You can call the [GetIpv4GatewayAttribute](~~407670~~) operation to query the status of an IPv4 gateway:
+      *     *   If the IPv4 gateway is in the **Activating** state, the IPv4 gateway is being activated.
+      *     *   If the IPv4 gateway is in the **Created** state, the IPv4 gateway is activated.
+      * *   You cannot repeatedly call the **EnableVpcIpv4Gateway** operation to activate an IPv4 gateway within the specified period of time.
       *
      */
     CompletableFuture<EnableVpcIpv4GatewayResponse> enableVpcIpv4Gateway(EnableVpcIpv4GatewayRequest request);
@@ -1348,9 +1489,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPublicIpAddressPoolsResponse> listPublicIpAddressPools(ListPublicIpAddressPoolsRequest request);
 
     /**
-      * *   Set **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object to be queried.
-      * *   **Tag.N** is a resource tag that consists of a key-value pair. If you set only **Tag.N.Key**, all tag values that are associated with the specified key are returned. If you set only **Tag.N.Value**, an error message is returned.
-      * *   If you set **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
+      * ## Usage notes
+      * *   You must specify **ResourceId.N** or **Tag.N** that consists of **Tag.N.Key** and **Tag.N.Value** in the request to specify the object that you want to query.
+      * *   **Tag.N** is a resource tag that consists of a key-value pair. If you specify only **Tag.N.Key**, all tag values that are associated with the specified key are returned. If you specify only **Tag.N.Value**, an error message is returned.
+      * *   If you specify **Tag.N** and **ResourceId.N** to filter tags, **ResourceId.N** must match all specified key-value pairs.
       * *   If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.
       *
      */
@@ -1404,8 +1546,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyCommonBandwidthPackageIpBandwidthResponse> modifyCommonBandwidthPackageIpBandwidth(ModifyCommonBandwidthPackageIpBandwidthRequest request);
 
     /**
-      * The region ID of the EIP bandwidth plan.
-      * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+      * *   The **ModifyCommonBandwidthPackageSpec** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeCommonBandwidthPackages](~~120309~~) operation to query the status of an EIP bandwidth plan:
+      *     *   If the EIP bandwidth plan is in the **Modifying** state, the maximum bandwidth of the EIP bandwidth plan is being modified. In this state, you can only query the EIP bandwidth plan and cannot perform other operations.
+      *     *   If the EIP bandwidth plan is in the **Available** state, the maximum bandwidth of the EIP bandwidth plan is modified.
+      * *   You cannot repeatedly call the **ModifyCommonBandwidthPackageSpec** operation to modify the maximum bandwidth of an EIP bandwidth plan within the specified period of time.
       *
      */
     CompletableFuture<ModifyCommonBandwidthPackageSpecResponse> modifyCommonBandwidthPackageSpec(ModifyCommonBandwidthPackageSpecRequest request);
@@ -1436,13 +1580,19 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyFlowLogAttributeResponse> modifyFlowLogAttribute(ModifyFlowLogAttributeRequest request);
 
     /**
-      * The ID of the DNAT table to which the DNAT entry belongs.
+      * *   **ModifyForwardEntry** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeForwardTableEntries](~~36053~~) operation to query the status of a DNAT entry.
+      *     *   **Pending**: indicates that the system is modifying the DNAT entry. You can only query the DNAT entry, but cannot perform other operations.
+      *     *   **Available**: indicates that the DNAT entry is modified.
+      * *   You cannot repeatedly call the **ModifyForwardEntry** operation to modify a DNAT entry within the specified period of time.
       *
      */
     CompletableFuture<ModifyForwardEntryResponse> modifyForwardEntry(ModifyForwardEntryRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to **ModifyFullNatEntryAttribute**.
+      * *   **ModifyFullNatEntryAttribute** is an asynchronous operation. After you make a request, the ID of the request is returned but the specified FULLNAT entry is not modified. The system modifies the FULLNAT entry in the background. You can call the [ListFullNatEntries](~~348779~~) operation to query the status of a FULLNAT entry.
+      *     *   **Modifying**: indicates that the system is modifying the FULLNAT entry. You can query the FULLNAT entry, but cannot perform other operations.
+      *     *   **Available**: indicates that the FULLNAT entry is modified.
+      * *   You cannot repeatedly call the **ModifyFullNatEntryAttribute** operation to modify a FULLNAT entry within the specified period of time.
       *
      */
     CompletableFuture<ModifyFullNatEntryAttributeResponse> modifyFullNatEntryAttribute(ModifyFullNatEntryAttributeRequest request);
@@ -1519,7 +1669,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyNatGatewaySpecResponse> modifyNatGatewaySpec(ModifyNatGatewaySpecRequest request);
 
     /**
-      * The ID of the NAT IP address that you want to modify.
+      * You cannot repeatedly call the **ModifyNatIpAttribute** operation to modify the name and description of a NAT IP address within the specified period of time.
       *
      */
     CompletableFuture<ModifyNatIpAttributeResponse> modifyNatIpAttribute(ModifyNatIpAttributeRequest request);
@@ -1582,7 +1732,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifySslVpnServerResponse> modifySslVpnServer(ModifySslVpnServerRequest request);
 
     /**
-      * The ID of the vRouter.
+      * You cannot repeatedly call the **ModifyVRouterAttribute** operation to modify the name and description of a vRouter within the specified period of time.
       *
      */
     CompletableFuture<ModifyVRouterAttributeResponse> modifyVRouterAttribute(ModifyVRouterAttributeRequest request);
@@ -1623,7 +1773,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyVpcAttributeResponse> modifyVpcAttribute(ModifyVpcAttributeRequest request);
 
     /**
-      * The ID of the prefix list.
+      * *   The **ModifyVpcPrefixList** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListPrefixLists](~~311535~~) to query the status of a prefix list.
+      *     *   If the prefix list is in the **Modifying** state, the configuration of the prefix list is being modified.
+      *     *   If the prefix list is in the **Created** state, the configuration of the prefix list is modified.
+      *     *   After the configuration of the prefix list is modified, you can call the [GetVpcPrefixListAssociations](~~445478~~) operation to query information about the network instances that are associated with the prefix list and determine whether the associated network instances use the new CIDR blocks. If the association **status** of the prefix list is **Created**, the new CIDR blocks are used by the network instances that are associated with the prefix list.
+      * *   You cannot repeatedly call **ModifyVpcPrefixList** to modify the configuration of a prefix list within the specified period of time.
       *
      */
     CompletableFuture<ModifyVpcPrefixListResponse> modifyVpcPrefixList(ModifyVpcPrefixListRequest request);
@@ -1718,8 +1872,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublishVpnRouteEntryResponse> publishVpnRouteEntry(PublishVpnRouteEntryRequest request);
 
     /**
-      * The ID of the Express Connect circuit.
-      * >  You can resume only shared Express Connect circuits.
+      * You can call this API operation to resume a suspended Express Connect circuit. You can resume only shared Express Connect circuits by calling this API operation.
       *
      */
     CompletableFuture<RecoverPhysicalConnectionResponse> recoverPhysicalConnection(RecoverPhysicalConnectionRequest request);
@@ -1763,9 +1916,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveIPv6TranslatorAclListEntryResponse> removeIPv6TranslatorAclListEntry(RemoveIPv6TranslatorAclListEntryRequest request);
 
     /**
-      * The client token that is used to ensure the idempotence of the request.
-      * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
-      * >  If you do not set this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+      * *   The **RemoveSourcesFromTrafficMirrorSession** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session:
+      *     *   If the traffic mirror session is in the **Modifying** state, the traffic mirror source is being deleted.
+      *     *   If the traffic mirror session is in the **Created** state, the traffic mirror source is deleted.
+      * *   You cannot repeatedly call the **RemoveSourcesFromTrafficMirrorSession** operation to delete a traffic mirror source from a traffic mirror session within the specified period of time.
       *
      */
     CompletableFuture<RemoveSourcesFromTrafficMirrorSessionResponse> removeSourcesFromTrafficMirrorSession(RemoveSourcesFromTrafficMirrorSessionRequest request);
@@ -1801,6 +1955,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RevokeInstanceFromVbrResponse> revokeInstanceFromVbr(RevokeInstanceFromVbrRequest request);
 
+    CompletableFuture<SecondApplyPhysicalConnectionLOAResponse> secondApplyPhysicalConnectionLOA(SecondApplyPhysicalConnectionLOARequest request);
+
     /**
       * You cannot repeatedly call **SetHighDefinitionMonitorLogStatus** within a specific period of time.
       *
@@ -1808,7 +1964,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetHighDefinitionMonitorLogStatusResponse> setHighDefinitionMonitorLogStatus(SetHighDefinitionMonitorLogStatusRequest request);
 
     /**
-      * The ID of the resource. You can specify up to 20 IDs.
+      * ## Usage notes
+      * Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following limits:
+      * *   The keys of tags that are added to the same instance must be unique.
+      * *   You cannot create tags without adding them to instances. All tags must be added to instances.
+      * *   Tag information is not shared across regions.
+      *     For example, you cannot view the tags that are created in the China (Hangzhou) region from the China (Shanghai) region.
+      * *   Virtual private clouds (VPCs), route tables, vSwitches, and elastic IP addresses (EIPs) that belong to the same Alibaba Cloud account and are deployed in the same region share tag information with each other.
+      *     For example, if you added a tag to a VPC, the tag is available to vSwitches, route tables, and EIPs that belong to the same account and are deployed in the same region in which the VPC is created. You can select this tag from the editing page without the need to enter the tag again. You can modify the key and the value of a tag or remove a tag from an instance. After you delete an instance, all tags that are added to the instance are deleted.
+      * *   You can add up to 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.
       *
      */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
@@ -1843,9 +2007,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnTagResourcesResponse> unTagResources(UnTagResourcesRequest request);
 
     /**
-      * Specifies whether to disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway. Valid values:
-      * *   **false** (default): does not disassociate the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway.
-      * *   **true**: disassociates the EIP from a NAT gateway if a DNAT or SNAT entry is added to the NAT gateway.
+      * *   **UnassociateEipAddress** is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the [DescribeEipAddresses](~~120193~~) operation to query the status of an EIP:
+      *     *   If the EIP is in the **Unassociating** state, the EIP is being disassociated. In this state, you can only query the EIP and cannot perform other operations.
+      *     *   If the EIP is in the **Available** state, the EIP is disassociated.
+      * *   You cannot repeatedly call the **UnassociateEipAddress** operation to disassociate an EIP within the specified period of time.
       *
      */
     CompletableFuture<UnassociateEipAddressResponse> unassociateEipAddress(UnassociateEipAddressRequest request);
@@ -1853,13 +2018,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnassociateGlobalAccelerationInstanceResponse> unassociateGlobalAccelerationInstance(UnassociateGlobalAccelerationInstanceRequest request);
 
     /**
-      * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The `ClientToken` value can contain only ASCII characters and cannot exceed 64 characters in length.
+      * When you call this operation, take note of the following limits:
+      * *   The ECS instance must be in the **Running** or **Stopped** state.
+      * *   The HAVIP must be in the **Available** or **InUse** state.
+      * *   The **UnassociateHaVip** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeHaVips](~~114611~~) operation to query the status of an HAVIP:
+      *     *   If the HAVIP is in the **Unassociating** state, the HAVIP is being disassociated.
+      *     *   If the HAVIP is in the **Inuse** or **Available** state, the HAVIP is disassociated.
+      * *   You cannot repeatedly call the **UnassociateHaVip** operation to disassociate an HAVIP within the specified period of time.
       *
      */
     CompletableFuture<UnassociateHaVipResponse> unassociateHaVip(UnassociateHaVipRequest request);
 
     /**
-      * The ID of the resource from which you want to disassociate the network ACL.
+      * *   The **UnassociateNetworkAcl** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [DescribeNetworkAclAttributes](~~116542~~) operation to query the status of a network ACL:
+      *     *   If the network ACL is in the **UNBINDING** state, the network ACL is being disassociated from the vSwitch.
+      *     *   If the network ACL is in the **UNBINDED** state, the network ACL is disassociated from the vSwitch.
+      * *   You cannot repeatedly call the **UnassociateNetworkAcl** operation to disassociate a network ACL from a vSwitch within the specified period of time.
       *
      */
     CompletableFuture<UnassociateNetworkAclResponse> unassociateNetworkAcl(UnassociateNetworkAclRequest request);
@@ -1899,7 +2073,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateIpsecServerResponse> updateIpsecServer(UpdateIpsecServerRequest request);
 
     /**
-      * The ID of the IPv4 gateway whose name or description you want to modify.
+      * You cannot repeatedly call the **UpdateIpv4GatewayAttribute** operation to modify the name or description of an IPv4 gateway within the specified period of time.
       *
      */
     CompletableFuture<UpdateIpv4GatewayAttributeResponse> updateIpv4GatewayAttribute(UpdateIpv4GatewayAttributeRequest request);
@@ -1928,26 +2102,31 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateNetworkAclEntriesResponse> updateNetworkAclEntries(UpdateNetworkAclEntriesRequest request);
 
     /**
-      * The ID of the IP address pool.
+      * You cannot repeatedly call the **UpdatePublicIpAddressPoolAttribute** operation to modify the attributes of an IP address pool within the specified period of time.
       *
      */
     CompletableFuture<UpdatePublicIpAddressPoolAttributeResponse> updatePublicIpAddressPoolAttribute(UpdatePublicIpAddressPoolAttributeRequest request);
 
     /**
-      * The ID of the filter.
+      * You cannot repeatedly call the **UpdateTrafficMirrorFilterAttribute** operation to modify the configuration of a filter for traffic mirroring within the specified period of time.
       *
      */
     CompletableFuture<UpdateTrafficMirrorFilterAttributeResponse> updateTrafficMirrorFilterAttribute(UpdateTrafficMirrorFilterAttributeRequest request);
 
     /**
-      * The ID of the inbound or outbound rule.
+      * *   The **UpdateTrafficMirrorFilterRuleAttribute** operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorFilters](~~261353~~) operation to query the status of an inbound or outbound rule:
+      *     *   If the rule is in the **Modifying** state, the rule is being modified.
+      *     *   If the rule is in the **Created** state, the rule is modified.
+      * *   You cannot repeatedly call the **UpdateTrafficMirrorFilterRuleAttribute** operation to modify an inbound or outbound rule within the specified period of time.
       *
      */
     CompletableFuture<UpdateTrafficMirrorFilterRuleAttributeResponse> updateTrafficMirrorFilterRuleAttribute(UpdateTrafficMirrorFilterRuleAttributeRequest request);
 
     /**
-      * The description of the traffic mirror session.
-      * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+      * *   The **UpdateTrafficMirrorSessionAttribute** operation is asynchronous. After you send a request, the system returns the request ID. However, the operation is still being performed in the system background. You can call the [ListTrafficMirrorSessions](~~261367~~) operation to query the status of a traffic mirror session.
+      *     *   If the traffic mirror session is in the **Modifying** state, the configuration of the traffic mirror session is being modified.
+      *     *   If the traffic mirror session is in the **Created** state, the configuration of the traffic mirror session is modified.
+      * *   After you call the **UpdateTrafficMirrorSessionAttribute** operation to modify the configuration of a traffic mirror session, you cannot call the operation again to modify the configuration of the traffic mirror session until the previous modification task is complete.
       *
      */
     CompletableFuture<UpdateTrafficMirrorSessionAttributeResponse> updateTrafficMirrorSessionAttribute(UpdateTrafficMirrorSessionAttributeRequest request);
@@ -1957,7 +2136,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateVirtualPhysicalConnectionResponse> updateVirtualPhysicalConnection(UpdateVirtualPhysicalConnectionRequest request);
 
     /**
-      * The ID of the gateway endpoint that you want to modify.
+      * *   **UpdateVpcGatewayEndpointAttribute** is an asynchronous operation. After you send a request, the system returns a **request ID** and runs the task in the background. You can call the [GetVpcGatewayEndpointAttribute](~~311017~~) operation to query the status of a gateway endpoint.
+      *     *   If the gateway endpoint is in the **Updating** state, it is being modified.
+      *     *   If the gateway endpoint is in the **Created** state, it is modified.
+      * *   You cannot call the **UpdateVpcGatewayEndpointAttribute** operation within a specific period of time.
       *
      */
     CompletableFuture<UpdateVpcGatewayEndpointAttributeResponse> updateVpcGatewayEndpointAttribute(UpdateVpcGatewayEndpointAttributeRequest request);

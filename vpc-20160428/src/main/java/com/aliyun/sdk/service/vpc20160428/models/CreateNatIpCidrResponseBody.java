@@ -50,7 +50,7 @@ public class CreateNatIpCidrResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NatIpCidrId.
+         * The ID of the NAT CIDR block.
          */
         public Builder natIpCidrId(String natIpCidrId) {
             this.natIpCidrId = natIpCidrId;
@@ -58,7 +58,7 @@ public class CreateNatIpCidrResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

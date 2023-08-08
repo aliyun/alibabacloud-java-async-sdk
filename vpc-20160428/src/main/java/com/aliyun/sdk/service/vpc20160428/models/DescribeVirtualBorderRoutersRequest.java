@@ -39,12 +39,20 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     @Query
     @NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
+
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
 
     private DescribeVirtualBorderRoutersRequest(Builder builder) {
         super(builder);
@@ -54,8 +62,10 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -114,6 +124,13 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -127,6 +144,13 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<DescribeVirtualBorderRoutersRequest, Builder> {
         private java.util.List < Filter> filter; 
         private Boolean includeCrossAccountVbr; 
@@ -134,8 +158,10 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -149,8 +175,10 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tags = request.tags;
         } 
 
         /**
@@ -212,6 +240,15 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -226,6 +263,15 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 
@@ -301,6 +347,76 @@ public class DescribeVirtualBorderRoutersRequest extends Request {
 
             public Filter build() {
                 return new Filter(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The filter conditions. You can specify at most five filter conditions. The following filter conditions are supported:
+             * <p>
+             * 
+             * *   **PhysicalConnectionId**: Filter by Express Connect circuit ID.
+             * *   **VbrId**: Filter by VBR ID.
+             * *   **Status**: Filter by VBR status.
+             * *   **Name**: Filter by VBR name.
+             * *   **AccessPointId**: Filter by access point ID.
+             * *   **eccId**: Filter by Express Cloud Connect (ECC) instance ID.
+             * *   **type**: Filter by Express Connect circuit type.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

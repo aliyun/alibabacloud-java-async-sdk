@@ -210,7 +210,7 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         } 
 
         /**
-         * The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
+         * The ID of the gateway endpoint.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -219,10 +219,10 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * The region ID of the gateway endpoint.
+         * The name of the gateway endpoint.
          * <p>
          * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * The name must be 1 to 128 characters in length.
          */
         public Builder endpointName(String endpointName) {
             this.putQueryParameter("EndpointName", endpointName);
@@ -231,7 +231,7 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of entries to return per page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -243,8 +243,8 @@ public class ListVpcGatewayEndpointsRequest extends Request {
          * The token that is used for the next query. Valid values:
          * <p>
          * 
-         * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If **NextToken** is not empty, the value indicates the token that is used for the next query.
+         * *   If this is your first query and no next queries are to be sent, ignore this parameter.
+         * *   If a next query is to be performed, set the value to the NextToken value returned in the last call to the ListListenerCertificates operation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -271,7 +271,10 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * The list of gateway endpoints.
+         * The region ID of the gateway endpoint.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -307,7 +310,7 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The name of the endpoint service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

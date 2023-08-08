@@ -131,6 +131,108 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    public static class RouterInterfaceTypeTags extends TeaModel {
+        @NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
+        private RouterInterfaceTypeTags(Builder builder) {
+            this.tags = builder.tags;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RouterInterfaceTypeTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tags> tags; 
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
+                return this;
+            }
+
+            public RouterInterfaceTypeTags build() {
+                return new RouterInterfaceTypeTags(this);
+            } 
+
+        } 
+
+    }
     public static class RouterInterfaceType extends TeaModel {
         @NameInMap("AccessPointId")
         private String accessPointId;
@@ -228,6 +330,9 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         @NameInMap("ReservationOrderType")
         private String reservationOrderType;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Role")
         private String role;
 
@@ -245,6 +350,9 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
 
         @NameInMap("Status")
         private String status;
+
+        @NameInMap("Tags")
+        private RouterInterfaceTypeTags tags;
 
         @NameInMap("VpcInstanceId")
         private String vpcInstanceId;
@@ -282,12 +390,14 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             this.reservationBandwidth = builder.reservationBandwidth;
             this.reservationInternetChargeType = builder.reservationInternetChargeType;
             this.reservationOrderType = builder.reservationOrderType;
+            this.resourceGroupId = builder.resourceGroupId;
             this.role = builder.role;
             this.routerId = builder.routerId;
             this.routerInterfaceId = builder.routerInterfaceId;
             this.routerType = builder.routerType;
             this.spec = builder.spec;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.vpcInstanceId = builder.vpcInstanceId;
         }
 
@@ -524,6 +634,13 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return role
          */
         public String getRole() {
@@ -566,6 +683,13 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public RouterInterfaceTypeTags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return vpcInstanceId
          */
         public String getVpcInstanceId() {
@@ -605,12 +729,14 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             private String reservationBandwidth; 
             private String reservationInternetChargeType; 
             private String reservationOrderType; 
+            private String resourceGroupId; 
             private String role; 
             private String routerId; 
             private String routerInterfaceId; 
             private String routerType; 
             private String spec; 
             private String status; 
+            private RouterInterfaceTypeTags tags; 
             private String vpcInstanceId; 
 
             /**
@@ -896,6 +1022,14 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * Indicates whether the router interface is the initiator or acceptor of the peering connection.
              */
             public Builder role(String role) {
@@ -944,6 +1078,14 @@ public class DescribeRouterInterfacesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(RouterInterfaceTypeTags tags) {
+                this.tags = tags;
                 return this;
             }
 

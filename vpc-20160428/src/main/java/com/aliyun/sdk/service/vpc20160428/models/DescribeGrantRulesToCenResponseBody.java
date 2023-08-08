@@ -86,7 +86,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the authorized CEN instance.
+         * The information about the authorization.
          */
         public Builder cenGrantRules(CenGrantRules cenGrantRules) {
             this.cenGrantRules = cenGrantRules;
@@ -94,7 +94,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the authorization.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,7 +182,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             private String creationTime; 
 
             /**
-             * The UID of the Alibaba Cloud account to which the authorized CEN instance belongs.
+             * The ID of the authorized CEN instance.
              */
             public Builder cenInstanceId(String cenInstanceId) {
                 this.cenInstanceId = cenInstanceId;
@@ -190,7 +190,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance was created.
+             * The UID of the Alibaba Cloud account to which the authorized CEN instance belongs.
              */
             public Builder cenOwnerId(Long cenOwnerId) {
                 this.cenOwnerId = cenOwnerId;
@@ -198,7 +198,7 @@ public class DescribeGrantRulesToCenResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the instance was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;

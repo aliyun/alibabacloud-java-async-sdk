@@ -86,7 +86,7 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
         private String resourceGroupId; 
 
         /**
-         * AllocationId.
+         * The ID of the specified EIP.
          */
         public Builder allocationId(String allocationId) {
             this.allocationId = allocationId;
@@ -94,7 +94,7 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
         }
 
         /**
-         * EipAddress.
+         * The IP address of the requested EIP.
          */
         public Builder eipAddress(String eipAddress) {
             this.eipAddress = eipAddress;
@@ -102,7 +102,7 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address of the requested EIP.
+         * The order number. This parameter is returned only when **InstanceChargeType** is set to **PrePaid**.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -110,7 +110,7 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the specified EIP.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

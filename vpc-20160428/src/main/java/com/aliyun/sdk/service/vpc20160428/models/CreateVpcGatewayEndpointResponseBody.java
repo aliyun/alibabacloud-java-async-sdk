@@ -98,7 +98,7 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         private String serviceName; 
 
         /**
-         * CreationTime.
+         * The time when the gateway endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -106,7 +106,7 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointId.
+         * The ID of the gateway endpoint.
          */
         public Builder endpointId(String endpointId) {
             this.endpointId = endpointId;
@@ -114,7 +114,7 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * EndpointName.
+         * The name of the gateway endpoint.
          */
         public Builder endpointName(String endpointName) {
             this.endpointName = endpointName;
@@ -122,7 +122,7 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class CreateVpcGatewayEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * The name of the endpoint service.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;

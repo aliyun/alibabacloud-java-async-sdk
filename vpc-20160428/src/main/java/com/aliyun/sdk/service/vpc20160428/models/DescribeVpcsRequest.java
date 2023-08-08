@@ -59,6 +59,10 @@ public class DescribeVpcsRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("VpcId")
     private String vpcId;
 
@@ -83,6 +87,7 @@ public class DescribeVpcsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
         this.vpcId = builder.vpcId;
         this.vpcName = builder.vpcName;
         this.vpcOwnerId = builder.vpcOwnerId;
@@ -179,6 +184,13 @@ public class DescribeVpcsRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -211,6 +223,7 @@ public class DescribeVpcsRequest extends Request {
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
         private String vpcId; 
         private String vpcName; 
         private Long vpcOwnerId; 
@@ -232,17 +245,14 @@ public class DescribeVpcsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
             this.vpcId = request.vpcId;
             this.vpcName = request.vpcName;
             this.vpcOwnerId = request.vpcOwnerId;
         } 
 
         /**
-         * Indicates whether the VPC is the default VPC in the region. Valid values:
-         * <p>
-         * 
-         * *   **true**: yes
-         * *   **false**: no
+         * The ID of the DHCP options set.
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.putQueryParameter("DhcpOptionsSetId", dhcpOptionsSetId);
@@ -251,7 +261,11 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The number of entries returned.
+         * Specifies whether to check the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request but does not query VPCs. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user is authorized, and whether the required parameters are set. If the request fails to pass the check, an error message is returned. If the request passes the check, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and VPCs are queried.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -260,7 +274,11 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The number of the returned page.
+         * Specifies whether to query the default VPC in the specified region. Valid values:
+         * <p>
+         * 
+         * *   **true** (default): yes
+         * *   **false**: no
          */
         public Builder isDefault(Boolean isDefault) {
             this.putQueryParameter("IsDefault", isDefault);
@@ -287,7 +305,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The time when the VPC was created.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -296,11 +314,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The status of the VPC. Valid values:
-         * <p>
-         * 
-         * *   **Pending**: being configured
-         * *   **Available**: available
+         * The number of entries to return per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -309,7 +323,10 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The region ID of the VPC.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -318,7 +335,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The details of the VPCs.
+         * The ID of the resource group to which the VPC to be queried belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -345,7 +362,19 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The ID of the DHCP options set.
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The ID of the VPC.
+         * <p>
+         * 
+         * You can specify up to 20 VPC IDs. Separate multiple IDs with commas (,).
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -354,7 +383,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The name of the VPC.
          */
         public Builder vpcName(String vpcName) {
             this.putQueryParameter("VpcName", vpcName);
@@ -363,7 +392,7 @@ public class DescribeVpcsRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * The ID of the Alibaba Cloud account to which the VPC belongs.
          */
         public Builder vpcOwnerId(Long vpcOwnerId) {
             this.putQueryParameter("VpcOwnerId", vpcOwnerId);
@@ -378,4 +407,65 @@ public class DescribeVpcsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

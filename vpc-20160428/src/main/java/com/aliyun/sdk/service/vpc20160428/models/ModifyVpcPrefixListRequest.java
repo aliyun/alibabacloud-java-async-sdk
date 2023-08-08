@@ -233,10 +233,12 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The CIDR block to be added to the prefix list.
+         * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * >  If the CIDR block already exists in the prefix list, you can only modify the description of the CIDR block by setting the **AddPrefixListEntry.N.Description** parameter.
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -245,10 +247,11 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The description of the CIDR block to be added to the prefix list.
+         * Specifies whether to only precheck the request. Valid values:
          * <p>
          * 
-         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+         * *   **true**: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -257,7 +260,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The maximum number of CIDR blocks supported by the prefix list after the configuration of the prefix list is modified.
          */
         public Builder maxEntries(Integer maxEntries) {
             this.putQueryParameter("MaxEntries", maxEntries);
@@ -284,7 +287,10 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The ID of the prefix list.
+         * The new description of the prefix list.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder prefixListDescription(String prefixListDescription) {
             this.putQueryParameter("PrefixListDescription", prefixListDescription);
@@ -293,12 +299,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * The ID of the prefix list.
          */
         public Builder prefixListId(String prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -307,11 +308,10 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * Specifies whether to only precheck the request. Valid values:
+         * The new name of the prefix list.
          * <p>
          * 
-         * *   **true**: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false** (default): sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder prefixListName(String prefixListName) {
             this.putQueryParameter("PrefixListName", prefixListName);
@@ -320,7 +320,7 @@ public class ModifyVpcPrefixListRequest extends Request {
         }
 
         /**
-         * The maximum number of CIDR blocks supported by the prefix list after the configuration of the prefix list is modified.
+         * The region ID of the prefix list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -401,7 +401,10 @@ public class ModifyVpcPrefixListRequest extends Request {
             private String description; 
 
             /**
-             * The CIDR block that you want to delete from the prefix list.
+             * The CIDR block to be added to the prefix list.
+             * <p>
+             * 
+             * >  If the CIDR block already exists in the prefix list, you can only modify the description of the CIDR block by setting the **AddPrefixListEntry.N.Description** parameter.
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -409,7 +412,10 @@ public class ModifyVpcPrefixListRequest extends Request {
             }
 
             /**
-             * The description of the CIDR block that you want to delete.
+             * The description of the CIDR block to be added to the prefix list.
+             * <p>
+             * 
+             * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -462,7 +468,7 @@ public class ModifyVpcPrefixListRequest extends Request {
             private String description; 
 
             /**
-             * The region ID of the prefix list.
+             * The CIDR block that you want to delete from the prefix list.
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -470,10 +476,7 @@ public class ModifyVpcPrefixListRequest extends Request {
             }
 
             /**
-             * The new description of the prefix list.
-             * <p>
-             * 
-             * The description must be 1 to 256 characters in length, and cannot start with `http://` or `https://`.
+             * The description of the CIDR block that you want to delete.
              */
             public Builder description(String description) {
                 this.description = description;

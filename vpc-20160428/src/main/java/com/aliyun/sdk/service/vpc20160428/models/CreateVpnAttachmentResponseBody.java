@@ -145,7 +145,7 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -156,8 +156,8 @@ public class CreateVpnAttachmentResponseBody extends TeaModel {
          * Indicates whether the current operation is successful.
          * <p>
          * 
-         * *   **true**: The operation is successful.
-         * *   **false**: The operation failed.
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;

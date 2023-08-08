@@ -99,6 +99,10 @@ public class CreateRouterInterfaceRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -126,6 +130,10 @@ public class CreateRouterInterfaceRequest extends Request {
     @Validation(required = true)
     private String spec;
 
+    @Query
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
+
     private CreateRouterInterfaceRequest(Builder builder) {
         super(builder);
         this.accessPointId = builder.accessPointId;
@@ -149,12 +157,14 @@ public class CreateRouterInterfaceRequest extends Request {
         this.period = builder.period;
         this.pricingCycle = builder.pricingCycle;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.role = builder.role;
         this.routerId = builder.routerId;
         this.routerType = builder.routerType;
         this.spec = builder.spec;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -318,6 +328,13 @@ public class CreateRouterInterfaceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -359,6 +376,13 @@ public class CreateRouterInterfaceRequest extends Request {
         return this.spec;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<CreateRouterInterfaceRequest, Builder> {
         private String accessPointId; 
         private Boolean autoPay; 
@@ -381,12 +405,14 @@ public class CreateRouterInterfaceRequest extends Request {
         private Integer period; 
         private String pricingCycle; 
         private String regionId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String role; 
         private String routerId; 
         private String routerType; 
         private String spec; 
+        private java.util.List < Tags> tags; 
 
         private Builder() {
             super();
@@ -415,12 +441,14 @@ public class CreateRouterInterfaceRequest extends Request {
             this.period = request.period;
             this.pricingCycle = request.pricingCycle;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.role = request.role;
             this.routerId = request.routerId;
             this.routerType = request.routerType;
             this.spec = request.spec;
+            this.tags = request.tags;
         } 
 
         /**
@@ -675,6 +703,15 @@ public class CreateRouterInterfaceRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -752,6 +789,15 @@ public class CreateRouterInterfaceRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public CreateRouterInterfaceRequest build() {
             return new CreateRouterInterfaceRequest(this);
@@ -759,4 +805,65 @@ public class CreateRouterInterfaceRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

@@ -170,10 +170,34 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         private String vpcId; 
 
         /**
-         * CreationTime.
+         * The time when the endpoint was created. The time follows the ISO 8601 standard in UTC in the YYYY-MM-DDThh:mm:ssZ format.
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
+            return this;
+        }
+
+        /**
+         * The description of the gateway endpoint.
+         */
+        public Builder endpointDescription(String endpointDescription) {
+            this.endpointDescription = endpointDescription;
+            return this;
+        }
+
+        /**
+         * The ID of the gateway endpoint.
+         */
+        public Builder endpointId(String endpointId) {
+            this.endpointId = endpointId;
+            return this;
+        }
+
+        /**
+         * The name of the gateway endpoint.
+         */
+        public Builder endpointName(String endpointName) {
+            this.endpointName = endpointName;
             return this;
         }
 
@@ -188,37 +212,13 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
          * *   **Dissociating**: being disassociated
          * *   **Deleting**: being deleted
          */
-        public Builder endpointDescription(String endpointDescription) {
-            this.endpointDescription = endpointDescription;
-            return this;
-        }
-
-        /**
-         * The access policy for the cloud service.
-         */
-        public Builder endpointId(String endpointId) {
-            this.endpointId = endpointId;
-            return this;
-        }
-
-        /**
-         * The time when the endpoint was created. The time follows the ISO 8601 standard in UTC in the YYYY-MM-DDThh:mm:ssZ format.
-         */
-        public Builder endpointName(String endpointName) {
-            this.endpointName = endpointName;
-            return this;
-        }
-
-        /**
-         * EndpointStatus.
-         */
         public Builder endpointStatus(String endpointStatus) {
             this.endpointStatus = endpointStatus;
             return this;
         }
 
         /**
-         * PolicyDocument.
+         * The access policy for the cloud service.
          */
         public Builder policyDocument(String policyDocument) {
             this.policyDocument = policyDocument;
@@ -226,7 +226,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -242,7 +242,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RouteTables.
+         * The ID of the route table associated with the gateway endpoint.
          */
         public Builder routeTables(java.util.List < String > routeTables) {
             this.routeTables = routeTables;
@@ -250,7 +250,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the route table associated with the gateway endpoint.
+         * The name of the endpoint service.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -266,7 +266,7 @@ public class GetVpcGatewayEndpointAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * The ID of the virtual private cloud (VPC) to which the gateway endpoint belongs.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;

@@ -50,7 +50,7 @@ public class CreatePhysicalConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PhysicalConnectionId.
+         * The ID of the Express Connect circuit.
          */
         public Builder physicalConnectionId(String physicalConnectionId) {
             this.physicalConnectionId = physicalConnectionId;
@@ -58,7 +58,7 @@ public class CreatePhysicalConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

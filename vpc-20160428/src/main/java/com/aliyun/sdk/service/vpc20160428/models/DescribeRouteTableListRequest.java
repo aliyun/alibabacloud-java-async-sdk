@@ -62,6 +62,10 @@ public class DescribeRouteTableListRequest extends Request {
     private String routerType;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("VpcId")
     private String vpcId;
 
@@ -79,6 +83,7 @@ public class DescribeRouteTableListRequest extends Request {
         this.routeTableName = builder.routeTableName;
         this.routerId = builder.routerId;
         this.routerType = builder.routerType;
+        this.tag = builder.tag;
         this.vpcId = builder.vpcId;
     }
 
@@ -180,6 +185,13 @@ public class DescribeRouteTableListRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -199,6 +211,7 @@ public class DescribeRouteTableListRequest extends Request {
         private String routeTableName; 
         private String routerId; 
         private String routerType; 
+        private java.util.List < Tag> tag; 
         private String vpcId; 
 
         private Builder() {
@@ -219,6 +232,7 @@ public class DescribeRouteTableListRequest extends Request {
             this.routeTableName = request.routeTableName;
             this.routerId = request.routerId;
             this.routerType = request.routerType;
+            this.tag = request.tag;
             this.vpcId = request.vpcId;
         } 
 
@@ -241,7 +255,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -250,7 +264,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the route table to be queried belongs.
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -259,7 +273,10 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The region ID of the VPC to which the route table belongs.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -268,7 +285,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeRouteTableList**.
+         * The ID of the resource group to which the route table to be queried belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -295,7 +312,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The name of the route table that you want to query.
+         * The ID of the route table that you want to query.
          */
         public Builder routeTableId(String routeTableId) {
             this.putQueryParameter("RouteTableId", routeTableId);
@@ -304,7 +321,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The name of the route table that you want to query.
          */
         public Builder routeTableName(String routeTableName) {
             this.putQueryParameter("RouteTableName", routeTableName);
@@ -313,10 +330,7 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The ID of the virtual private cloud (VPC) to which the route table belongs.
-         * <p>
-         * 
-         * After this parameter is set, the value of the **RouterType** parameter is automatically set to **VRouter**.
+         * The ID of the router to which the route table belongs.
          */
         public Builder routerId(String routerId) {
             this.putQueryParameter("RouterId", routerId);
@@ -325,7 +339,11 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The ID of the router to which the route table belongs.
+         * The type of the router to which the route table belongs. Valid values:
+         * <p>
+         * 
+         * *   **VRouter** (default): a vRouter
+         * *   **VBR**: a virtual border router (VBR)
          */
         public Builder routerType(String routerType) {
             this.putQueryParameter("RouterType", routerType);
@@ -334,7 +352,19 @@ public class DescribeRouteTableListRequest extends Request {
         }
 
         /**
-         * The ID of the route table that you want to query.
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The ID of the virtual private cloud (VPC) to which the route table belongs.
+         * <p>
+         * 
+         * After this parameter is set, the value of the **RouterType** parameter is automatically set to **VRouter**.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -349,4 +379,25 @@ public class DescribeRouteTableListRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        private Tag(Builder builder) {
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        public static final class Builder {
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

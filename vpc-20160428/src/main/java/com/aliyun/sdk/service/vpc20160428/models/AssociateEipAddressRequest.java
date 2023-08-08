@@ -224,6 +224,53 @@ public class AssociateEipAddressRequest extends Request {
         } 
 
         /**
+         * The ID of the EIP that you want to associate with an instance.
+         */
+        public Builder allocationId(String allocationId) {
+            this.putQueryParameter("AllocationId", allocationId);
+            this.allocationId = allocationId;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
+         * 
+         * >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request may be different.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * The ID of the instance with which you want to associate the EIP.
+         * <p>
+         * 
+         * You can enter the ID of a NAT gateway, CLB instance, ECS instance, secondary ENI, HAVIP, or IP address.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The region ID of the instance with which you want to associate the EIP.
+         * <p>
+         * 
+         * >  This parameter is required only when the EIP is associated with a shared-bandwidth Global Accelerator (GA) instance.
+         */
+        public Builder instanceRegionId(String instanceRegionId) {
+            this.putQueryParameter("InstanceRegionId", instanceRegionId);
+            this.instanceRegionId = instanceRegionId;
+            return this;
+        }
+
+        /**
          * The type of instance with which you want to associate the EIP. Valid values:
          * <p>
          * 
@@ -236,30 +283,9 @@ public class AssociateEipAddressRequest extends Request {
          * 
          * >  If you do not set this parameter, the type of the instance with which you want to associate the EIP is **EcsInstance**. If the type of the instance with which you want to associate the EIP is not **EcsInstance**, this parameter is required.
          */
-        public Builder allocationId(String allocationId) {
-            this.putQueryParameter("AllocationId", allocationId);
-            this.allocationId = allocationId;
-            return this;
-        }
-
-        /**
-         * ClientToken.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The region ID of the instance with which you want to associate the EIP.
-         * <p>
-         * 
-         * >  This parameter is required only when the EIP is associated with a shared-bandwidth Global Accelerator (GA) instance.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 
@@ -272,32 +298,6 @@ public class AssociateEipAddressRequest extends Request {
          * *   **BINDED**: cut-through mode
          * 
          * >  This parameter is required only when **InstanceType** is set to **NetworkInterface**.
-         */
-        public Builder instanceRegionId(String instanceRegionId) {
-            this.putQueryParameter("InstanceRegionId", instanceRegionId);
-            this.instanceRegionId = instanceRegionId;
-            return this;
-        }
-
-        /**
-         * An IP address in the CIDR block of the vSwitch.
-         * <p>
-         * 
-         * If you do not set this parameter, the system allocates a private IP address based on the VPC ID and vSwitch ID.
-         */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
-            return this;
-        }
-
-        /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. ClientToken can contain only ASCII characters.
-         * 
-         * >  If you do not set this parameter, the system sets **ClientToken** to the value of **RequestId**. The value of **RequestId** for each API request may be different.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -324,12 +324,10 @@ public class AssociateEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the VPC that has IPv4 gateways enabled and that is deployed in the same region as the EIP.
+         * An IP address in the CIDR block of the vSwitch.
          * <p>
          * 
-         * When you associate an EIP with an IP address, the system can enable the IP address to access the Internet based on VPC route configurations.
-         * 
-         * >  This parameter is required if **InstanceType** is set to **IpAddress**. In this case, the EIP is associated with an IP address.
+         * If you do not set this parameter, the system allocates a private IP address based on the VPC ID and vSwitch ID.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -338,10 +336,10 @@ public class AssociateEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the instance with which you want to associate the EIP.
+         * The ID of the region to which the EIP belongs.
          * <p>
          * 
-         * You can enter the ID of a NAT gateway, CLB instance, ECS instance, secondary ENI, HAVIP, or IP address.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -368,7 +366,12 @@ public class AssociateEipAddressRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the VPC that has IPv4 gateways enabled and that is deployed in the same region as the EIP.
+         * <p>
+         * 
+         * When you associate an EIP with an IP address, the system can enable the IP address to access the Internet based on VPC route configurations.
+         * 
+         * >  This parameter is required if **InstanceType** is set to **IpAddress**. In this case, the EIP is associated with an IP address.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

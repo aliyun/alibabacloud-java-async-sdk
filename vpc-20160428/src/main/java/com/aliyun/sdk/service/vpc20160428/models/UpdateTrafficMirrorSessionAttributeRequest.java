@@ -280,7 +280,12 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         } 
 
         /**
-         * The ID of the traffic mirror session.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -289,7 +294,11 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the traffic mirror destination.
+         * Specifies whether to precheck the request without performing the operation. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false**: sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed. This is the default value.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -298,7 +307,11 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * Specifies whether to enable the traffic mirror session.
+         * <p>
+         * 
+         * *   **false**: disables the traffic mirror session. This is the default value.
+         * *   **true**: enables the traffic mirror session.
          */
         public Builder enabled(Boolean enabled) {
             this.putQueryParameter("Enabled", enabled);
@@ -334,7 +347,10 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the traffic mirror session. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
+         * The priority of the traffic mirror session. Valid values: **1** to **32766**.
+         * <p>
+         * 
+         * A smaller value specifies a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -343,7 +359,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the traffic mirror session. You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list. For more information about regions that support traffic mirroring, see [Overview of traffic mirroring](~~207513~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -370,10 +386,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * The priority of the traffic mirror session. Valid values: **1** to **32766**.
-         * <p>
-         * 
-         * A smaller value specifies a higher priority. You cannot specify identical priorities for traffic mirror sessions that are created in the same region by using the same account.
+         * The ID of the traffic mirror filter.
          */
         public Builder trafficMirrorFilterId(String trafficMirrorFilterId) {
             this.putQueryParameter("TrafficMirrorFilterId", trafficMirrorFilterId);
@@ -382,16 +395,44 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * The description of the traffic mirror session.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder trafficMirrorSessionDescription(String trafficMirrorSessionDescription) {
             this.putQueryParameter("TrafficMirrorSessionDescription", trafficMirrorSessionDescription);
             this.trafficMirrorSessionDescription = trafficMirrorSessionDescription;
+            return this;
+        }
+
+        /**
+         * The ID of the traffic mirror session.
+         */
+        public Builder trafficMirrorSessionId(String trafficMirrorSessionId) {
+            this.putQueryParameter("TrafficMirrorSessionId", trafficMirrorSessionId);
+            this.trafficMirrorSessionId = trafficMirrorSessionId;
+            return this;
+        }
+
+        /**
+         * The name of the traffic mirror session.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
+         */
+        public Builder trafficMirrorSessionName(String trafficMirrorSessionName) {
+            this.putQueryParameter("TrafficMirrorSessionName", trafficMirrorSessionName);
+            this.trafficMirrorSessionName = trafficMirrorSessionName;
+            return this;
+        }
+
+        /**
+         * The ID of the traffic mirror destination.
+         */
+        public Builder trafficMirrorTargetId(String trafficMirrorTargetId) {
+            this.putQueryParameter("TrafficMirrorTargetId", trafficMirrorTargetId);
+            this.trafficMirrorTargetId = trafficMirrorTargetId;
             return this;
         }
 
@@ -402,31 +443,9 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
          * *   **NetworkInterface**: an ENI
          * *   **SLB**: an internal-facing Server Load Balancer (SLB) instance
          */
-        public Builder trafficMirrorSessionId(String trafficMirrorSessionId) {
-            this.putQueryParameter("TrafficMirrorSessionId", trafficMirrorSessionId);
-            this.trafficMirrorSessionId = trafficMirrorSessionId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to precheck the request without performing the operation. Valid values:
-         * <p>
-         * 
-         * *   **true**: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
-         * *   **false**: sends the request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed. This is the default value.
-         */
-        public Builder trafficMirrorSessionName(String trafficMirrorSessionName) {
-            this.putQueryParameter("TrafficMirrorSessionName", trafficMirrorSessionName);
-            this.trafficMirrorSessionName = trafficMirrorSessionName;
-            return this;
-        }
-
-        /**
-         * The ID of the traffic mirror filter.
-         */
-        public Builder trafficMirrorTargetId(String trafficMirrorTargetId) {
-            this.putQueryParameter("TrafficMirrorTargetId", trafficMirrorTargetId);
-            this.trafficMirrorTargetId = trafficMirrorTargetId;
+        public Builder trafficMirrorTargetType(String trafficMirrorTargetType) {
+            this.putQueryParameter("TrafficMirrorTargetType", trafficMirrorTargetType);
+            this.trafficMirrorTargetType = trafficMirrorTargetType;
             return this;
         }
 
@@ -435,19 +454,6 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends Request {
          * <p>
          * 
          * You can use VNIs to identify mirrored traffic from different sessions at the traffic mirror destination. If you do not specify a VNI, the system randomly allocates a VNI. If you want the system to randomly allocate a VNI, ignore this parameter.
-         */
-        public Builder trafficMirrorTargetType(String trafficMirrorTargetType) {
-            this.putQueryParameter("TrafficMirrorTargetType", trafficMirrorTargetType);
-            this.trafficMirrorTargetType = trafficMirrorTargetType;
-            return this;
-        }
-
-        /**
-         * Specifies whether to enable the traffic mirror session.
-         * <p>
-         * 
-         * *   **false**: disables the traffic mirror session. This is the default value.
-         * *   **true**: enables the traffic mirror session.
          */
         public Builder virtualNetworkId(Integer virtualNetworkId) {
             this.putQueryParameter("VirtualNetworkId", virtualNetworkId);

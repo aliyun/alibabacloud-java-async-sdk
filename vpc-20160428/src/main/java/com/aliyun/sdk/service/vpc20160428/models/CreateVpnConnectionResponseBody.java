@@ -74,7 +74,7 @@ public class CreateVpnConnectionResponseBody extends TeaModel {
         private String vpnConnectionId; 
 
         /**
-         * The timestamp generated when the IPsec-VPN connection was created. Unit: milliseconds.
+         * The timestamp generated when the IPsec-VPN connection was established. Unit: milliseconds.
          * <p>
          * 
          * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
@@ -93,7 +93,7 @@ public class CreateVpnConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

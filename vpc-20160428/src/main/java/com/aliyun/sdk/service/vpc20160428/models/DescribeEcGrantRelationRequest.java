@@ -112,7 +112,11 @@ public class DescribeEcGrantRelationRequest extends Request {
         } 
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The ID of the instance.
+         * <p>
+         * 
+         * *   If you set **InstanceType** to **VBR**, specify a VBR ID.
+         * *   If you set **InstanceType** to **VPC**, specify a VPC ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -121,11 +125,11 @@ public class DescribeEcGrantRelationRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The type of instance. Valid values:
          * <p>
          * 
-         * *   If you set **InstanceType** to **VBR**, specify a VBR ID.
-         * *   If you set **InstanceType** to **VPC**, specify a VPC ID.
+         * *   **VBR**: queries the permissions that are granted to a VBR.
+         * *   **VPC**: queries the permissions that are granted from a VPC.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -134,11 +138,20 @@ public class DescribeEcGrantRelationRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -148,15 +161,6 @@ public class DescribeEcGrantRelationRequest extends Request {
          * 
          * *   If **InstanceType** is set to **VBR**, this parameter is required.
          * *   If **InstanceType** is set to **VPC**, you can ignore this parameter.
-         */
-        public Builder pageSize(Long pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
          */
         public Builder vbrRegionNo(String vbrRegionNo) {
             this.putQueryParameter("VbrRegionNo", vbrRegionNo);

@@ -153,7 +153,10 @@ public class ModifyVRouterAttributeRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the vRouter.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -180,10 +183,10 @@ public class ModifyVRouterAttributeRequest extends Request {
         }
 
         /**
-         * The description of the vRouter.
+         * The ID of the region where the vRouter is deployed.
          * <p>
          * 
-         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -210,7 +213,7 @@ public class ModifyVRouterAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the vRouter.
          */
         public Builder vRouterId(String vRouterId) {
             this.putQueryParameter("VRouterId", vRouterId);
@@ -219,7 +222,10 @@ public class ModifyVRouterAttributeRequest extends Request {
         }
 
         /**
-         * VRouterName.
+         * The name of the vRouter.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder vRouterName(String vRouterName) {
             this.putQueryParameter("VRouterName", vRouterName);

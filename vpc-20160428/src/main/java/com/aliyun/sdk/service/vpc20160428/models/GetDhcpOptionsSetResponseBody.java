@@ -146,7 +146,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         private java.util.List < Tags> tags; 
 
         /**
-         * AssociateVpcs.
+         * The information about the virtual private cloud (VPC) that is associated with the DHCP options set.
          */
         public Builder associateVpcs(java.util.List < AssociateVpcs> associateVpcs) {
             this.associateVpcs = associateVpcs;
@@ -154,11 +154,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The lease time of the IPv6 addresses for the DHCP options set.
-         * <p>
-         * 
-         * *   If you use hours as the unit, Valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.
-         * *   If you use days as the unit, Valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.
+         * The configuration information about the DHCP options set.
          */
         public Builder dhcpOptions(DhcpOptions dhcpOptions) {
             this.dhcpOptions = dhcpOptions;
@@ -166,7 +162,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the DHCP options set.
+         * The description of the DHCP options set.
          */
         public Builder dhcpOptionsSetDescription(String dhcpOptionsSetDescription) {
             this.dhcpOptionsSetDescription = dhcpOptionsSetDescription;
@@ -174,7 +170,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The IP address of the DNS server.
+         * The ID of the DHCP options set.
          */
         public Builder dhcpOptionsSetId(String dhcpOptionsSetId) {
             this.dhcpOptionsSetId = dhcpOptionsSetId;
@@ -182,7 +178,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The suffix of the hostname.
+         * The name of the DHCP options set.
          */
         public Builder dhcpOptionsSetName(String dhcpOptionsSetName) {
             this.dhcpOptionsSetName = dhcpOptionsSetName;
@@ -190,11 +186,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The lease time of the IPv4 addresses for the DHCP options set.
-         * <p>
-         * 
-         * *   If you use hours as the unit, valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.
-         * *   If you use days as the unit, valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.
+         * The ID of the Alibaba Cloud account to which the DHCP options set belongs.
          */
         public Builder ownerId(Long ownerId) {
             this.ownerId = ownerId;
@@ -202,7 +194,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration information about the DHCP options set.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +210,13 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the DHCP options set belongs.
+         * The status of the DHCP options set. Valid values:
+         * <p>
+         * 
+         * *   **Available**: available
+         * *   **InUse**: in use
+         * *   **Deleted**: deleted
+         * *   **Pending**: being configured
          */
         public Builder status(String status) {
             this.status = status;
@@ -278,7 +276,11 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * AssociateStatus.
+             * The status of the VPC that is associated with the DHCP options set. Valid values:
+             * <p>
+             * 
+             * *   **InUse**: in use
+             * *   **Pending**: being configured
              */
             public Builder associateStatus(String associateStatus) {
                 this.associateStatus = associateStatus;
@@ -286,7 +288,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC that is associated with the DHCP options set.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -363,11 +365,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             private String leaseTime; 
 
             /**
-             * The status of the VPC that is associated with the DHCP options set. Valid values:
-             * <p>
-             * 
-             * *   **InUse**: in use
-             * *   **Pending**: being configured
+             * The suffix of the hostname.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -375,7 +373,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the virtual private cloud (VPC) that is associated with the DHCP options set.
+             * The IP address of the DNS server.
              */
             public Builder domainNameServers(String domainNameServers) {
                 this.domainNameServers = domainNameServers;
@@ -383,7 +381,11 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             }
 
             /**
-             * Ipv6LeaseTime.
+             * The lease time of the IPv6 addresses for the DHCP options set.
+             * <p>
+             * 
+             * *   If you use hours as the unit, Valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.
+             * *   If you use days as the unit, Valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.
              */
             public Builder ipv6LeaseTime(String ipv6LeaseTime) {
                 this.ipv6LeaseTime = ipv6LeaseTime;
@@ -391,7 +393,11 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC that is associated with the DHCP options set.
+             * The lease time of the IPv4 addresses for the DHCP options set.
+             * <p>
+             * 
+             * *   If you use hours as the unit, valid values are **24h to 1176h** and **87600h to 175200h**. Default value: **87600h**.
+             * *   If you use days as the unit, valid values are **1d to 49d** and **3650d to 7300d**. Default value: **3650d**.
              */
             public Builder leaseTime(String leaseTime) {
                 this.leaseTime = leaseTime;

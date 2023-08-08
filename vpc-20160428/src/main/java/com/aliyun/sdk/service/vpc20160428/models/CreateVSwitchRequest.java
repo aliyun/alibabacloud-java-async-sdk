@@ -50,6 +50,10 @@ public class CreateVSwitchRequest extends Request {
     private Long resourceOwnerId;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("VSwitchName")
     private String vSwitchName;
 
@@ -78,6 +82,7 @@ public class CreateVSwitchRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.tag = builder.tag;
         this.vSwitchName = builder.vSwitchName;
         this.vpcId = builder.vpcId;
         this.vpcIpv6CidrBlock = builder.vpcIpv6CidrBlock;
@@ -161,6 +166,13 @@ public class CreateVSwitchRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitchName
      */
     public String getVSwitchName() {
@@ -198,6 +210,7 @@ public class CreateVSwitchRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private java.util.List < Tag> tag; 
         private String vSwitchName; 
         private String vpcId; 
         private String vpcIpv6CidrBlock; 
@@ -218,6 +231,7 @@ public class CreateVSwitchRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.tag = request.tag;
             this.vSwitchName = request.vSwitchName;
             this.vpcId = request.vpcId;
             this.vpcIpv6CidrBlock = request.vpcIpv6CidrBlock;
@@ -225,7 +239,12 @@ public class CreateVSwitchRequest extends Request {
         } 
 
         /**
-         * The ID of the VPC where you want to create the vSwitch.
+         * The CIDR block of the vSwitch. Take note of the following limits:
+         * <p>
+         * 
+         * *   The subnet mask of the CIDR block must be 16 to 29 bits in length.
+         * *   The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.
+         * *   The CIDR block of a vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -234,7 +253,12 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
+         * 
+         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -243,7 +267,10 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The IPv6 CIDR block of the VPC.
+         * The description of the vSwitch.
+         * <p>
+         * 
+         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -252,10 +279,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The name of the vSwitch.
-         * <p>
-         * 
-         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
+         * The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: **0** to **255**.
          */
         public Builder ipv6CidrBlock(Integer ipv6CidrBlock) {
             this.putQueryParameter("Ipv6CidrBlock", ipv6CidrBlock);
@@ -282,7 +306,10 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The last eight bits of the IPv6 CIDR block of the vSwitch. Valid values: **0** to **255**.
+         * The region ID of the vSwitch.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -309,12 +336,19 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The name of the vSwitch.
          * <p>
          * 
-         * You can use the client to generate the value, but you must make sure that it is unique among all requests. The token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, **ClientToken** is set to the value of **RequestId**. The value of **RequestId** may be different for each API request.
+         * The name must be 1 to 128 characters in length, and cannot start with `http://` or `https://`.
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);
@@ -323,10 +357,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The description of the vSwitch.
-         * <p>
-         * 
-         * The description must be 1 to 256 characters in length and cannot start with `http://` or `https://`.
+         * The ID of the VPC where you want to create the vSwitch.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -335,7 +366,7 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The IPv6 CIDR block of the VPC.
          */
         public Builder vpcIpv6CidrBlock(String vpcIpv6CidrBlock) {
             this.putQueryParameter("VpcIpv6CidrBlock", vpcIpv6CidrBlock);
@@ -344,12 +375,10 @@ public class CreateVSwitchRequest extends Request {
         }
 
         /**
-         * The CIDR block of the vSwitch. Take note of the following limits:
+         * The zone ID of the vSwitch.
          * <p>
          * 
-         * *   The subnet mask of the CIDR block must be 16 to 29 bits in length.
-         * *   The CIDR block of the vSwitch must fall within the CIDR block of the VPC to which the vSwitch belongs.
-         * *   The CIDR block of a vSwitch cannot be the same as the destination CIDR block in a route entry of the VPC. However, it can be a subset of the destination CIDR block.
+         * You can call the [DescribeZones](~~36064~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -364,4 +393,65 @@ public class CreateVSwitchRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

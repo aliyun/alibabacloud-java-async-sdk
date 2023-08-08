@@ -167,10 +167,7 @@ public class ModifyEipAddressAttributeRequest extends Request {
         } 
 
         /**
-         * The region ID of the EIP.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * The ID of the pay-as-you-go EIP.
          */
         public Builder allocationId(String allocationId) {
             this.putQueryParameter("AllocationId", allocationId);
@@ -179,10 +176,11 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * The new name of the EIP.
+         * The new maximum bandwidth of the EIP. Valid values:
          * <p>
          * 
-         * The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-).
+         * *   **1** to **200** if the metering method is pay-by-data-transfer. Unit: Mbit/s.
+         * *   **1** to **500** if the metering method is pay-by-bandwidth. Unit: Mbit/s.
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -191,7 +189,10 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The new description of the EIP.
+         * <p>
+         * 
+         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -200,7 +201,10 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The new name of the EIP.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and can contain digits, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -227,10 +231,10 @@ public class ModifyEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * The new description of the EIP.
+         * The region ID of the EIP.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with `http://` or `https://`.
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

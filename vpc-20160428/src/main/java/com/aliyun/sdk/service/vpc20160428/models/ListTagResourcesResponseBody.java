@@ -62,11 +62,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * The token that determines the start point of the query. Valid values:
+         * A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:
          * <p>
          * 
          * *   If no value is returned for **NextToken**, no next queries are sent.
-         * *   If a value of **NextToken** is returned, the value is the token that is used for the subsequent query.
+         * *   If a value is returned for **NextToken**, the value is used to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -82,7 +82,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The details about the resource to which the tags are added.
+         * The tag key.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
