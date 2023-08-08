@@ -81,6 +81,18 @@ public class CreateFileTransRequest extends Request {
     @Validation(required = true)
     private String transResultOssPath;
 
+    @Body
+    @NameInMap("VideoOutputEnabled")
+    private Boolean videoOutputEnabled;
+
+    @Body
+    @NameInMap("VideoOutputOssBucket")
+    private String videoOutputOssBucket;
+
+    @Body
+    @NameInMap("VideoOutputOssPath")
+    private String videoOutputOssPath;
+
     private CreateFileTransRequest(Builder builder) {
         super(builder);
         this.abilityParams = builder.abilityParams;
@@ -99,6 +111,9 @@ public class CreateFileTransRequest extends Request {
         this.transKey = builder.transKey;
         this.transResultOssBucket = builder.transResultOssBucket;
         this.transResultOssPath = builder.transResultOssPath;
+        this.videoOutputEnabled = builder.videoOutputEnabled;
+        this.videoOutputOssBucket = builder.videoOutputOssBucket;
+        this.videoOutputOssPath = builder.videoOutputOssPath;
     }
 
     public static Builder builder() {
@@ -226,6 +241,27 @@ public class CreateFileTransRequest extends Request {
         return this.transResultOssPath;
     }
 
+    /**
+     * @return videoOutputEnabled
+     */
+    public Boolean getVideoOutputEnabled() {
+        return this.videoOutputEnabled;
+    }
+
+    /**
+     * @return videoOutputOssBucket
+     */
+    public String getVideoOutputOssBucket() {
+        return this.videoOutputOssBucket;
+    }
+
+    /**
+     * @return videoOutputOssPath
+     */
+    public String getVideoOutputOssPath() {
+        return this.videoOutputOssPath;
+    }
+
     public static final class Builder extends Request.Builder<CreateFileTransRequest, Builder> {
         private java.util.Map < String, ? > abilityParams; 
         private String appKey; 
@@ -243,6 +279,9 @@ public class CreateFileTransRequest extends Request {
         private String transKey; 
         private String transResultOssBucket; 
         private String transResultOssPath; 
+        private Boolean videoOutputEnabled; 
+        private String videoOutputOssBucket; 
+        private String videoOutputOssPath; 
 
         private Builder() {
             super();
@@ -266,6 +305,9 @@ public class CreateFileTransRequest extends Request {
             this.transKey = request.transKey;
             this.transResultOssBucket = request.transResultOssBucket;
             this.transResultOssPath = request.transResultOssPath;
+            this.videoOutputEnabled = request.videoOutputEnabled;
+            this.videoOutputOssBucket = request.videoOutputOssBucket;
+            this.videoOutputOssPath = request.videoOutputOssPath;
         } 
 
         /**
@@ -278,7 +320,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 管控台创建的项目AppKey。
+         * AppKey.
          */
         public Builder appKey(String appKey) {
             this.putBodyParameter("AppKey", appKey);
@@ -296,12 +338,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 音频转写使用的语言模型。
-         * <p>
-         * cn：中文。
-         * en：英文。
-         * yue：粤语。
-         * fspk：中英文自由说。
+         * AudioLanguage.
          */
         public Builder audioLanguage(String audioLanguage) {
             this.putBodyParameter("AudioLanguage", audioLanguage);
@@ -310,7 +347,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 需要转写音频所在的OSS Bucket。
+         * AudioOssBucket.
          */
         public Builder audioOssBucket(String audioOssBucket) {
             this.putBodyParameter("AudioOssBucket", audioOssBucket);
@@ -319,7 +356,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 需要转写音频所在的OSS文件路径或者自定义可下载文件地址（http|https）。如果AudioOssBucket非空，则需要赋值OSS文件路径（/...../*.mp3）；如果AudioOssBucket为空，则需要赋值自定义可下载文件地址（http://……/*.mp3）。
+         * AudioOssPath.
          */
         public Builder audioOssPath(String audioOssPath) {
             this.putBodyParameter("AudioOssPath", audioOssPath);
@@ -328,7 +365,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 是否开启mp3格式音频转码，默认是false。
+         * AudioOutputEnabled.
          */
         public Builder audioOutputEnabled(Boolean audioOutputEnabled) {
             this.putBodyParameter("AudioOutputEnabled", audioOutputEnabled);
@@ -337,7 +374,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 开启音频转码时，转码音频写入到的OSS Bucket。
+         * AudioOutputOssBucket.
          */
         public Builder audioOutputOssBucket(String audioOutputOssBucket) {
             this.putBodyParameter("AudioOutputOssBucket", audioOutputOssBucket);
@@ -346,7 +383,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 开启音频转码时，转码音频写入到的OSS文件路径。
+         * AudioOutputOssPath.
          */
         public Builder audioOutputOssPath(String audioOutputOssPath) {
             this.putBodyParameter("AudioOutputOssPath", audioOutputOssPath);
@@ -355,11 +392,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 是否开启说话人角色区分。注，只对16K及以上采样率生效
-         * <p>
-         * 不设置：不使用说话人角色区分。
-         * 0：说话人角色区分结果为不定人数。
-         * 2：说话人角色区分结果为2人。
+         * AudioRoleNum.
          */
         public Builder audioRoleNum(String audioRoleNum) {
             this.putBodyParameter("AudioRoleNum", audioRoleNum);
@@ -368,7 +401,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 是否开启有效音频片断检测结果写入，默认是false。
+         * AudioSegmentsEnabled.
          */
         public Builder audioSegmentsEnabled(Boolean audioSegmentsEnabled) {
             this.putBodyParameter("AudioSegmentsEnabled", audioSegmentsEnabled);
@@ -395,7 +428,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 用户设置的任务标识，在任务查询或任务结束回调时会原样返回。
+         * TransKey.
          */
         public Builder transKey(String transKey) {
             this.putBodyParameter("TransKey", transKey);
@@ -404,7 +437,7 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 识别及智能提取结果写入到的OSS Bucket。
+         * TransResultOssBucket.
          */
         public Builder transResultOssBucket(String transResultOssBucket) {
             this.putBodyParameter("TransResultOssBucket", transResultOssBucket);
@@ -413,13 +446,38 @@ public class CreateFileTransRequest extends Request {
         }
 
         /**
-         * 识别及智能提取结果写入到的OSS文件路径。
-         * <p>
-         * 示例：目录/文件名
+         * TransResultOssPath.
          */
         public Builder transResultOssPath(String transResultOssPath) {
             this.putBodyParameter("TransResultOssPath", transResultOssPath);
             this.transResultOssPath = transResultOssPath;
+            return this;
+        }
+
+        /**
+         * VideoOutputEnabled.
+         */
+        public Builder videoOutputEnabled(Boolean videoOutputEnabled) {
+            this.putBodyParameter("VideoOutputEnabled", videoOutputEnabled);
+            this.videoOutputEnabled = videoOutputEnabled;
+            return this;
+        }
+
+        /**
+         * VideoOutputOssBucket.
+         */
+        public Builder videoOutputOssBucket(String videoOutputOssBucket) {
+            this.putBodyParameter("VideoOutputOssBucket", videoOutputOssBucket);
+            this.videoOutputOssBucket = videoOutputOssBucket;
+            return this;
+        }
+
+        /**
+         * VideoOutputOssPath.
+         */
+        public Builder videoOutputOssPath(String videoOutputOssPath) {
+            this.putBodyParameter("VideoOutputOssPath", videoOutputOssPath);
+            this.videoOutputOssPath = videoOutputOssPath;
             return this;
         }
 

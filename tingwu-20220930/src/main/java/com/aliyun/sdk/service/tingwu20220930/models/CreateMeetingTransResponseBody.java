@@ -74,7 +74,7 @@ public class CreateMeetingTransResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 状态码。
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class CreateMeetingTransResponseBody extends TeaModel {
         }
 
         /**
-         * 返回对象。
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class CreateMeetingTransResponseBody extends TeaModel {
         }
 
         /**
-         * 状态说明。
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class CreateMeetingTransResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID，仅用于联调。
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class CreateMeetingTransResponseBody extends TeaModel {
             private String meetingKey; 
 
             /**
-             * 会议ID。
+             * MeetingId.
              */
             public Builder meetingId(String meetingId) {
                 this.meetingId = meetingId;
@@ -170,7 +170,7 @@ public class CreateMeetingTransResponseBody extends TeaModel {
             }
 
             /**
-             * 会议语音推流地址。
+             * MeetingJoinUrl.
              */
             public Builder meetingJoinUrl(String meetingJoinUrl) {
                 this.meetingJoinUrl = meetingJoinUrl;
@@ -178,7 +178,7 @@ public class CreateMeetingTransResponseBody extends TeaModel {
             }
 
             /**
-             * 用户创建会议时设置的会议标识。
+             * MeetingKey.
              */
             public Builder meetingKey(String meetingKey) {
                 this.meetingKey = meetingKey;

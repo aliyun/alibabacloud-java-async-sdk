@@ -74,7 +74,7 @@ public class StopMeetingTransResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 状态码。
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class StopMeetingTransResponseBody extends TeaModel {
         }
 
         /**
-         * 返回对象。
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class StopMeetingTransResponseBody extends TeaModel {
         }
 
         /**
-         * 状态说明。
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class StopMeetingTransResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID，仅用于联调。
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class StopMeetingTransResponseBody extends TeaModel {
             private String meetingStatus; 
 
             /**
-             * 会议ID。
+             * MeetingId.
              */
             public Builder meetingId(String meetingId) {
                 this.meetingId = meetingId;
@@ -170,7 +170,7 @@ public class StopMeetingTransResponseBody extends TeaModel {
             }
 
             /**
-             * 用户创建会议时设置的会议标识。
+             * MeetingKey.
              */
             public Builder meetingKey(String meetingKey) {
                 this.meetingKey = meetingKey;
@@ -178,15 +178,7 @@ public class StopMeetingTransResponseBody extends TeaModel {
             }
 
             /**
-             * 会议状态。
-             * <p>
-             * NEW：新会议。
-             * ONGOING：会议转写中。
-             * PAUSED：会议转写暂停。
-             * PRE_COMPLETE：会议转写结束后，进行会后智能提取。
-             * COMPLETED：会议完成。
-             * FAILED：会议转写结束后，会后智能提取失败。
-             * INVALID：无效会议。
+             * MeetingStatus.
              */
             public Builder meetingStatus(String meetingStatus) {
                 this.meetingStatus = meetingStatus;

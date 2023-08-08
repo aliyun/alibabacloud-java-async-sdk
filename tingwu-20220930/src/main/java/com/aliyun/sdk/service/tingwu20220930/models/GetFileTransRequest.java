@@ -55,7 +55,7 @@ public class GetFileTransRequest extends Request {
         } 
 
         /**
-         * 任务ID。
+         * TransId.
          */
         public Builder transId(String transId) {
             this.putPathParameter("TransId", transId);

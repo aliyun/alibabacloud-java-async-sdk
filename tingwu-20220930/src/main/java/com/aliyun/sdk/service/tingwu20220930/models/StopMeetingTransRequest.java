@@ -83,7 +83,7 @@ public class StopMeetingTransRequest extends Request {
         } 
 
         /**
-         * 会议ID。
+         * MeetingId.
          */
         public Builder meetingId(String meetingId) {
             this.putPathParameter("MeetingId", meetingId);
@@ -92,11 +92,7 @@ public class StopMeetingTransRequest extends Request {
         }
 
         /**
-         * 会后进行识别结果角色区分人数，在AudioOutputEnabled=true、MeetingResultEnabled=true且DocResultEnabled=true 时生效，默认是1。
-         * <p>
-         * 0：按多人进行角色区分。
-         * 1：按1人进行角色区分，即不区分。
-         * 2：按2人进行角色区分。
+         * MeetingRoleNum.
          */
         public Builder meetingRoleNum(Integer meetingRoleNum) {
             this.putBodyParameter("MeetingRoleNum", meetingRoleNum);
@@ -105,7 +101,7 @@ public class StopMeetingTransRequest extends Request {
         }
 
         /**
-         * 会后结果中docResult字段是否只存储角色时间戳映射信息，即不带转写文字结果，默认是false。
+         * OnlyRoleSplitResult.
          */
         public Builder onlyRoleSplitResult(Boolean onlyRoleSplitResult) {
             this.putBodyParameter("OnlyRoleSplitResult", onlyRoleSplitResult);

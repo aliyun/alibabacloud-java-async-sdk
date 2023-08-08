@@ -74,7 +74,7 @@ public class CreateFileTransResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 状态码。
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class CreateFileTransResponseBody extends TeaModel {
         }
 
         /**
-         * 返回对象。
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class CreateFileTransResponseBody extends TeaModel {
         }
 
         /**
-         * 状态说明。
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class CreateFileTransResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID，仅用于联调。
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class CreateFileTransResponseBody extends TeaModel {
             private String transKey; 
 
             /**
-             * 任务ID。
+             * TransId.
              */
             public Builder transId(String transId) {
                 this.transId = transId;
@@ -158,7 +158,7 @@ public class CreateFileTransResponseBody extends TeaModel {
             }
 
             /**
-             * 用户创建任务时设置的任务标识。
+             * TransKey.
              */
             public Builder transKey(String transKey) {
                 this.transKey = transKey;

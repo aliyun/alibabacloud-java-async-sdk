@@ -55,7 +55,7 @@ public class GetMeetingTransRequest extends Request {
         } 
 
         /**
-         * 会议ID。
+         * MeetingId.
          */
         public Builder meetingId(String meetingId) {
             this.putPathParameter("MeetingId", meetingId);

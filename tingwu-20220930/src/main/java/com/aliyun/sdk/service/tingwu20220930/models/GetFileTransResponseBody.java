@@ -74,7 +74,7 @@ public class GetFileTransResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 状态码。
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class GetFileTransResponseBody extends TeaModel {
         }
 
         /**
-         * 返回对象。
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class GetFileTransResponseBody extends TeaModel {
         }
 
         /**
-         * 状态说明。
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class GetFileTransResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID，仅用于联调。
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class GetFileTransResponseBody extends TeaModel {
             private String transStatus; 
 
             /**
-             * 任务ID。
+             * TransId.
              */
             public Builder transId(String transId) {
                 this.transId = transId;
@@ -170,7 +170,7 @@ public class GetFileTransResponseBody extends TeaModel {
             }
 
             /**
-             * 用户创建任务时设置的任务标识。
+             * TransKey.
              */
             public Builder transKey(String transKey) {
                 this.transKey = transKey;
@@ -178,12 +178,7 @@ public class GetFileTransResponseBody extends TeaModel {
             }
 
             /**
-             * 任务状态。
-             * <p>
-             * ONGOING：任务进行中。
-             * COMPLETED：任务完成。
-             * FAILED：任务失败
-             * INVALID：无效任务。
+             * TransStatus.
              */
             public Builder transStatus(String transStatus) {
                 this.transStatus = transStatus;

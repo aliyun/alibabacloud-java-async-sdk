@@ -446,7 +446,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 管控台创建的项目AppKey。
+         * AppKey.
          */
         public Builder appKey(String appKey) {
             this.putBodyParameter("AppKey", appKey);
@@ -464,7 +464,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 会议上传音频采样位数，当前支持：16。
+         * AudioBitRate.
          */
         public Builder audioBitRate(Integer audioBitRate) {
             this.putBodyParameter("AudioBitRate", audioBitRate);
@@ -473,7 +473,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 音频编码格式，PCM（无压缩的PCM文件或WAV文件）或OPUS（压缩的OPUS文件）。
+         * AudioFormat.
          */
         public Builder audioFormat(String audioFormat) {
             this.putBodyParameter("AudioFormat", audioFormat);
@@ -482,13 +482,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 音频转写使用的语言模型。
-         * <p>
-         * cn：中文。
-         * en：英文。
-         * yue：粤语。
-         * fspk：中英文自由说。
-         * multi：动态语言切换。
+         * AudioLanguage.
          */
         public Builder audioLanguage(String audioLanguage) {
             this.putBodyParameter("AudioLanguage", audioLanguage);
@@ -497,7 +491,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 是否开启mp3格式音频同步转码，默认是false。
+         * AudioOutputEnabled.
          */
         public Builder audioOutputEnabled(Boolean audioOutputEnabled) {
             this.putBodyParameter("AudioOutputEnabled", audioOutputEnabled);
@@ -506,7 +500,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启音频同步转码时，转码音频写入到的OSS Bucket，需要与管控台项目配置的OSS Bucket一致。
+         * AudioOutputOssBucket.
          */
         public Builder audioOutputOssBucket(String audioOutputOssBucket) {
             this.putBodyParameter("AudioOutputOssBucket", audioOutputOssBucket);
@@ -515,7 +509,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启音频同步转码时，转码音频写入到的OSS文件路径，需要以"tingwu/"为前缀。
+         * AudioOutputOssPath.
          */
         public Builder audioOutputOssPath(String audioOutputOssPath) {
             this.putBodyParameter("AudioOutputOssPath", audioOutputOssPath);
@@ -524,7 +518,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 音频打包方式，基于听悟约定的Protobuf格式封装多路音频流时设置为multi。
+         * AudioPackage.
          */
         public Builder audioPackage(String audioPackage) {
             this.putBodyParameter("AudioPackage", audioPackage);
@@ -533,7 +527,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 音频采样率，当前支持：16000。
+         * AudioSampleRate.
          */
         public Builder audioSampleRate(Integer audioSampleRate) {
             this.putBodyParameter("AudioSampleRate", audioSampleRate);
@@ -542,7 +536,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启会后智能提取时，是否开启有效音频片断检测结果写入，默认是false。
+         * AudioSegmentsEnabled.
          */
         public Builder audioSegmentsEnabled(Boolean audioSegmentsEnabled) {
             this.putBodyParameter("AudioSegmentsEnabled", audioSegmentsEnabled);
@@ -551,7 +545,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启会后智能提取时，是否会中识别结果写入，默认是false。
+         * DocResultEnabled.
          */
         public Builder docResultEnabled(Boolean docResultEnabled) {
             this.putBodyParameter("DocResultEnabled", docResultEnabled);
@@ -569,7 +563,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 用户设置的会议标识，在会中查询或会后结束回调时会原样返回。
+         * MeetingKey.
          */
         public Builder meetingKey(String meetingKey) {
             this.putBodyParameter("MeetingKey", meetingKey);
@@ -578,7 +572,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 是否开启会后智能提取，默认是false。
+         * MeetingResultEnabled.
          */
         public Builder meetingResultEnabled(Boolean meetingResultEnabled) {
             this.putBodyParameter("MeetingResultEnabled", meetingResultEnabled);
@@ -587,7 +581,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启会后智能提取时，提取结果写入到的OSS Bucket，需要与管控台项目配置的OSS Bucket一致。
+         * MeetingResultOssBucket.
          */
         public Builder meetingResultOssBucket(String meetingResultOssBucket) {
             this.putBodyParameter("MeetingResultOssBucket", meetingResultOssBucket);
@@ -596,7 +590,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启会后智能提取时，提取结果写入到的OSS文件路径，需要以"tingwu/"为前缀。
+         * MeetingResultOssPath.
          */
         public Builder meetingResultOssPath(String meetingResultOssPath) {
             this.putBodyParameter("MeetingResultOssPath", meetingResultOssPath);
@@ -605,11 +599,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启会中实时结果返回且音频打包方式为multi时，设置发言人识别结果返回等级，默认是1。
-         * <p>
-         * 0：不返回识别结果。
-         * 1：识别出完整句子时返回识别结果。
-         * 2：识别出中间结果及完整句子时返回识别结果。
+         * RealtimeActiveResultLevel.
          */
         public Builder realtimeActiveResultLevel(Integer realtimeActiveResultLevel) {
             this.putBodyParameter("RealtimeActiveResultLevel", realtimeActiveResultLevel);
@@ -618,7 +608,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 是否开启会中实时结果返回，默认是true。
+         * RealtimeResultEnabled.
          */
         public Builder realtimeResultEnabled(Boolean realtimeResultEnabled) {
             this.putBodyParameter("RealtimeResultEnabled", realtimeResultEnabled);
@@ -627,11 +617,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 开启会中实时结果返回时，设置识别结果返回等级，默认是1。
-         * <p>
-         * 0：不返回识别结果。
-         * 1：识别出完整句子时返回识别结果。
-         * 2：识别出中间结果及完整句子时返回识别结果。
+         * RealtimeResultLevel.
          */
         public Builder realtimeResultLevel(Integer realtimeResultLevel) {
             this.putBodyParameter("RealtimeResultLevel", realtimeResultLevel);
@@ -640,7 +626,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 会中识别消息结果header中是否包含MeetingKey、MeetingId，默认是false。
+         * RealtimeResultMeetingInfoEnabled.
          */
         public Builder realtimeResultMeetingInfoEnabled(Boolean realtimeResultMeetingInfoEnabled) {
             this.putBodyParameter("RealtimeResultMeetingInfoEnabled", realtimeResultMeetingInfoEnabled);
@@ -649,7 +635,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 会中识别消息是否包含words信息，默认是true。
+         * RealtimeResultWordsEnabled.
          */
         public Builder realtimeResultWordsEnabled(Boolean realtimeResultWordsEnabled) {
             this.putBodyParameter("RealtimeResultWordsEnabled", realtimeResultWordsEnabled);
@@ -667,7 +653,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 多通道Active流识别结果翻译等级。0：不返回翻译结果。 1：识别出完整句子时返回翻译结果。 2：识别出中间结果及完整句子时返回翻译结果。默认是1。
+         * TranslateActiveResultLevel.
          */
         public Builder translateActiveResultLevel(Integer translateActiveResultLevel) {
             this.putBodyParameter("TranslateActiveResultLevel", translateActiveResultLevel);
@@ -676,7 +662,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 翻译目标语言集合，多个语言间用英文逗号","分隔，当前支持cn、en。
+         * TranslateLanguages.
          */
         public Builder translateLanguages(String translateLanguages) {
             this.putBodyParameter("TranslateLanguages", translateLanguages);
@@ -685,7 +671,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 是否开启会中翻译，默认是false。
+         * TranslateResultEnabled.
          */
         public Builder translateResultEnabled(Boolean translateResultEnabled) {
             this.putBodyParameter("TranslateResultEnabled", translateResultEnabled);
@@ -694,7 +680,7 @@ public class CreateMeetingTransRequest extends Request {
         }
 
         /**
-         * 单通道识别或多通道mix流识别结果翻译等级。0：不返回翻译结果。 1：识别出完整句子时返回翻译结果。 2：识别出中间结果及完整句子时返回翻译结果。默认是1。
+         * TranslateResultLevel.
          */
         public Builder translateResultLevel(Integer translateResultLevel) {
             this.putBodyParameter("TranslateResultLevel", translateResultLevel);
