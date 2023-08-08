@@ -62,7 +62,7 @@ public class DescribeActionEventPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the event history feature is enabled.
+         * The operation that you want to perform. Set the value to **DescribeActionEventPolicy**.
          */
         public Builder enableEventLog(String enableEventLog) {
             this.enableEventLog = enableEventLog;
@@ -70,7 +70,7 @@ public class DescribeActionEventPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region.
+         * Indicates whether the event history feature is enabled.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -78,7 +78,7 @@ public class DescribeActionEventPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

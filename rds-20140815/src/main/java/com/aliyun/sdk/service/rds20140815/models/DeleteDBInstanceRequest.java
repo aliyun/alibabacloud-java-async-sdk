@@ -125,7 +125,7 @@ public class DeleteDBInstanceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -152,7 +152,14 @@ public class DeleteDBInstanceRequest extends Request {
         }
 
         /**
-         * ReleasedKeepPolicy.
+         * The policy that is used to retain archived backup files if the instance is released. Default value: None. Valid values:
+         * <p>
+         * 
+         * *   **None**: No archived backup files are retained.
+         * *   **Lastest**: Only the last archived backup file is retained.
+         * *   **All**: All archived backup files are retained.
+         * 
+         * > This parameter takes effect only when **BackupPolicyMode** is set to **DataBackupPolicy**.
          */
         public Builder releasedKeepPolicy(String releasedKeepPolicy) {
             this.putQueryParameter("ReleasedKeepPolicy", releasedKeepPolicy);

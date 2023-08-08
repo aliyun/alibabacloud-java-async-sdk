@@ -157,7 +157,7 @@ public class RestartDBInstanceRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The unique ID of the secondary instance. You can call [DescribeDBInstanceHAConfig](~~26244~~) to query the secondary instance ID.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

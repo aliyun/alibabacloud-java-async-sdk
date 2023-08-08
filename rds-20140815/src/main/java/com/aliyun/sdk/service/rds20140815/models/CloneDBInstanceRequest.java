@@ -448,7 +448,11 @@ public class CloneDBInstanceRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
+         * *   **false**: disables automatic payment. In this case, you must manually pay for the instance. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, click **Expenses**. On the page that appears, select **Orders** from the left-side navigation pane. On the Orders page, find the order and complete the payment.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -484,7 +488,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * BpeEnabled.
+         * This parameter is not publicly available.
          */
         public Builder bpeEnabled(String bpeEnabled) {
             this.putQueryParameter("BpeEnabled", bpeEnabled);
@@ -493,7 +497,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * BurstingEnabled.
+         * This parameter is not publicly available.
          */
         public Builder burstingEnabled(Boolean burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);

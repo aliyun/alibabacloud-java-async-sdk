@@ -376,6 +376,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteBackupFileResponse> deleteBackupFile(DeleteBackupFileRequest request);
 
+    /**
+      * ### Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
+      * ### References
+      * > Note Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Release an ApsaraDB RDS for MySQL instance](~~96057~~)
+      * *   [Release an ApsaraDB RDS for PostgreSQL instance](~~96749~~)
+      * *   [Release an ApsaraDB RDS for SQL Server instance](~~95662~~)
+      * *   [Release an ApsaraDB RDS for MariaDB instance](~~97128~~)
+      *
+     */
     CompletableFuture<DeleteDBInstanceResponse> deleteDBInstance(DeleteDBInstanceRequest request);
 
     CompletableFuture<DeleteDBInstanceEndpointResponse> deleteDBInstanceEndpoint(DeleteDBInstanceEndpointRequest request);
@@ -395,6 +409,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteDBNodesResponse> deleteDBNodes(DeleteDBNodesRequest request);
 
+    /**
+      * ### Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * ### References
+      * > Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts for calling this operation.
+      * *   [Configure the dedicated proxy endpoint of an ApsaraDB RDS for MySQL instance](~~184921~~)
+      * *   [Configure the dedicated proxy endpoint for an ApsaraDB RDS for PostgreSQL instance](~~418274~~)
+      *
+     */
     CompletableFuture<DeleteDBProxyEndpointAddressResponse> deleteDBProxyEndpointAddress(DeleteDBProxyEndpointAddressRequest request);
 
     /**
@@ -781,7 +805,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDTCSecurityIpHostsForSQLServerResponse> describeDTCSecurityIpHostsForSQLServer(DescribeDTCSecurityIpHostsForSQLServerRequest request);
 
     /**
-      * >  If the specified request parameters are invalid, no database information is returned.
+      * ### Supported database engines
+      * *   MySQL
+      * *   PostgreSQL
+      * *   SQL Server
+      * *   MariaDB
       *
      */
     CompletableFuture<DescribeDatabasesResponse> describeDatabases(DescribeDatabasesRequest request);

@@ -50,7 +50,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the information about databases.
+         * The information about databases.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -561,7 +561,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * AdvancedInfo.
+             * The advanced information about the database.
+             * <p>
+             * 
+             * > This parameter is returned only for instances that run SQL Server.
              */
             public Builder advancedInfo(AdvancedInfo advancedInfo) {
                 this.advancedInfo = advancedInfo;
@@ -569,7 +572,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * BasicInfo.
+             * The basic information of the database.
+             * <p>
+             * 
+             * > This parameter is returned only for instances that run SQL Server.
              */
             public Builder basicInfo(BasicInfo basicInfo) {
                 this.basicInfo = basicInfo;
@@ -588,7 +594,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              * The collation of the character set. The example value C stands for localization.
              * <p>
              * 
-             * >  This parameter is returned only for instances that run PostgreSQL.
+             * > This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder collate(String collate) {
                 this.collate = collate;
@@ -599,7 +605,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              * The limit on the number of concurrent requests. The value -1 indicates that the number of concurrent requests is unlimited.
              * <p>
              * 
-             * >  This parameter is returned only for instances that run PostgreSQL.
+             * > This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder connLimit(String connLimit) {
                 this.connLimit = connLimit;
@@ -610,7 +616,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              * The type of the character set.
              * <p>
              * 
-             * >  This parameter is returned only for instances that run PostgreSQL.
+             * > This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder ctype(String ctype) {
                 this.ctype = ctype;
@@ -655,7 +661,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the instance to which the database belongs.
+             * The database engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -663,7 +669,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * A reserved parameter.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -671,7 +677,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The reserved parameter.
+             * A reserved parameter.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -687,7 +693,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * RuntimeInfo.
+             * The running of the database.
+             * <p>
+             * 
+             * > This parameter is returned only for instances that run SQL Server.
              */
             public Builder runtimeInfo(RuntimeInfo runtimeInfo) {
                 this.runtimeInfo = runtimeInfo;
@@ -698,7 +707,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              * The tablespace of the database.
              * <p>
              * 
-             * >  This parameter is returned only for instances that run PostgreSQL.
+             * > This parameter is returned only for instances that run PostgreSQL.
              */
             public Builder tablespace(String tablespace) {
                 this.tablespace = tablespace;

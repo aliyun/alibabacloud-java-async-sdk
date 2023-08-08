@@ -50,7 +50,7 @@ public class DeleteDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -58,7 +58,7 @@ public class DeleteDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

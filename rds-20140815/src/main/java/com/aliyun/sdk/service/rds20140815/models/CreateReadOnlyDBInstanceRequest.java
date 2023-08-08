@@ -509,7 +509,11 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether payment is automatically made during renewal. Valid values:
+         * <p>
+         * 
+         * *   **True**: enables automatic payment. Make sure that your Alibaba Cloud account has adequate balance.
+         * *   **False** (default): disables automatic payment. You have to manually pay the order in the console. Log on to the ApsaraDB RDS console. In the upper-right corner, choose **Expenses > User Center**. In the left-side navigation pane, click **Orders**. On the page that appears, find your order and complete the payment.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -534,7 +538,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * BpeEnabled.
+         * This parameter is not publicly available.
          */
         public Builder bpeEnabled(String bpeEnabled) {
             this.putQueryParameter("BpeEnabled", bpeEnabled);
@@ -543,7 +547,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * BurstingEnabled.
+         * This parameter is not publicly available.
          */
         public Builder burstingEnabled(Boolean burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);

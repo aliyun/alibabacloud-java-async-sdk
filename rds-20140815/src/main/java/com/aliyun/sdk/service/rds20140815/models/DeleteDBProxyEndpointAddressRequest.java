@@ -113,7 +113,7 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -122,7 +122,16 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBProxyConnectStringNetType.
+         * The network type of the proxy endpoint. Valid values:
+         * <p>
+         * 
+         * *   **Public**: Internet
+         * *   **VPC**: virtual private cloud (VPC)
+         * *   **Classic**: classic network
+         * 
+         * If the instance runs MySQL, the default value of this parameter is **Classic**.
+         * 
+         * > If the instance runs PostgreSQL, you must set this parameter to **Public** or **VPC**.
          */
         public Builder DBProxyConnectStringNetType(String DBProxyConnectStringNetType) {
             this.putQueryParameter("DBProxyConnectStringNetType", DBProxyConnectStringNetType);
@@ -131,7 +140,7 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBProxyEndpointId.
+         * The ID of the proxy endpoint. You can call the [DescribeDBProxyEndpoint](~~610507~~) operation to query the ID of the proxy endpoint.
          */
         public Builder DBProxyEndpointId(String DBProxyEndpointId) {
             this.putQueryParameter("DBProxyEndpointId", DBProxyEndpointId);
@@ -140,7 +149,7 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * DBProxyEngineType.
+         * A reserved parameter. You do not need to specify this parameter.
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -149,7 +158,7 @@ public class DeleteDBProxyEndpointAddressRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
