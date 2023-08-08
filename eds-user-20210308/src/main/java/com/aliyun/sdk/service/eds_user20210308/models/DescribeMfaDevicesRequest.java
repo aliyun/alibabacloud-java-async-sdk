@@ -88,16 +88,16 @@ public class DescribeMfaDevicesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMfaDevicesRequest response) {
-            super(response);
-            this.endUserIds = response.endUserIds;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
-            this.serialNumbers = response.serialNumbers;
+        private Builder(DescribeMfaDevicesRequest request) {
+            super(request);
+            this.endUserIds = request.endUserIds;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.serialNumbers = request.serialNumbers;
         } 
 
         /**
-         * EndUserIds.
+         * The list of username of convenience users.
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putQueryParameter("EndUserIds", endUserIds);
@@ -106,7 +106,10 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return. Valid values: 1 to 500.
+         * <p>
+         * 
+         * Default value: 100.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -115,7 +118,7 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The query token. Set the value to the NextToken value returned in the last call.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -124,7 +127,7 @@ public class DescribeMfaDevicesRequest extends Request {
         }
 
         /**
-         * SerialNumbers.
+         * The list of serial numbers of the virtual MFA devices.
          */
         public Builder serialNumbers(java.util.List < String > serialNumbers) {
             this.putQueryParameter("SerialNumbers", serialNumbers);

@@ -49,13 +49,13 @@ public class ListPropertyValueRequest extends Request {
             super();
         } 
 
-        private Builder(ListPropertyValueRequest response) {
-            super(response);
-            this.propertyId = response.propertyId;
+        private Builder(ListPropertyValueRequest request) {
+            super(request);
+            this.propertyId = request.propertyId;
         } 
 
         /**
-         * PropertyId.
+         * Queries property values of a user property.
          */
         public Builder propertyId(Long propertyId) {
             this.putQueryParameter("PropertyId", propertyId);

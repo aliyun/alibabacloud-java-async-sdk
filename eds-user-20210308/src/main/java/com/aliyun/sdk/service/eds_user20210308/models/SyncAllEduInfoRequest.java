@@ -7,12 +7,12 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListPropertyRequest} extends {@link RequestModel}
+ * {@link SyncAllEduInfoRequest} extends {@link RequestModel}
  *
- * <p>ListPropertyRequest</p>
+ * <p>SyncAllEduInfoRequest</p>
  */
-public class ListPropertyRequest extends Request {
-    private ListPropertyRequest(Builder builder) {
+public class SyncAllEduInfoRequest extends Request {
+    private SyncAllEduInfoRequest(Builder builder) {
         super(builder);
     }
 
@@ -20,7 +20,7 @@ public class ListPropertyRequest extends Request {
         return new Builder();
     }
 
-    public static ListPropertyRequest create() {
+    public static SyncAllEduInfoRequest create() {
         return builder().build();
     }
 
@@ -29,19 +29,19 @@ public class ListPropertyRequest extends Request {
         return new Builder(this);
     }
 
-    public static final class Builder extends Request.Builder<ListPropertyRequest, Builder> {
+    public static final class Builder extends Request.Builder<SyncAllEduInfoRequest, Builder> {
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListPropertyRequest request) {
+        private Builder(SyncAllEduInfoRequest request) {
             super(request);
         } 
 
         @Override
-        public ListPropertyRequest build() {
-            return new ListPropertyRequest(this);
+        public SyncAllEduInfoRequest build() {
+            return new SyncAllEduInfoRequest(this);
         } 
 
     } 

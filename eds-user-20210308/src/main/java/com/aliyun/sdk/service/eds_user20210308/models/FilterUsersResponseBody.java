@@ -62,7 +62,7 @@ public class FilterUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * NextToken.
+         * The token that is used to query the next page. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to perform the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
-         * users
+         * Details of the convenience users.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -95,8 +95,12 @@ public class FilterUsersResponseBody extends TeaModel {
         @NameInMap("ExternalName")
         private String externalName;
 
+        @NameInMap("JobNumber")
+        private String jobNumber;
+
         private ExternalInfo(Builder builder) {
             this.externalName = builder.externalName;
+            this.jobNumber = builder.jobNumber;
         }
 
         public static Builder builder() {
@@ -114,14 +118,30 @@ public class FilterUsersResponseBody extends TeaModel {
             return this.externalName;
         }
 
+        /**
+         * @return jobNumber
+         */
+        public String getJobNumber() {
+            return this.jobNumber;
+        }
+
         public static final class Builder {
             private String externalName; 
+            private String jobNumber; 
 
             /**
-             * ExternalName.
+             * The name of the external system account to which the user is connected.
              */
             public Builder externalName(String externalName) {
                 this.externalName = externalName;
+                return this;
+            }
+
+            /**
+             * The student ID or employee ID of the external system account that is connected to the user.
+             */
+            public Builder jobNumber(String jobNumber) {
+                this.jobNumber = jobNumber;
                 return this;
             }
 
@@ -171,7 +191,7 @@ public class FilterUsersResponseBody extends TeaModel {
             private Long propertyValueId; 
 
             /**
-             * PropertyValue.
+             * The property value.
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -179,7 +199,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyValueId.
+             * The ID of the property value.
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;
@@ -280,7 +300,7 @@ public class FilterUsersResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * PropertyId.
+             * The ID of the property.
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -288,7 +308,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyKey.
+             * The name of the property.
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -296,7 +316,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyType.
+             * The ID of property.
              */
             public Builder propertyType(Integer propertyType) {
                 this.propertyType = propertyType;
@@ -304,7 +324,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyValues.
+             * Details of the property value.
              */
             public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
                 this.propertyValues = propertyValues;
@@ -312,7 +332,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user that is bound to the property.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -320,7 +340,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The name of the user that is bound to the property.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -338,8 +358,14 @@ public class FilterUsersResponseBody extends TeaModel {
         @NameInMap("DesktopCount")
         private Long desktopCount;
 
+        @NameInMap("DesktopGroupCount")
+        private Long desktopGroupCount;
+
         @NameInMap("Email")
         private String email;
+
+        @NameInMap("EnableAdminAccess")
+        private Boolean enableAdminAccess;
 
         @NameInMap("EndUserId")
         private String endUserId;
@@ -350,8 +376,17 @@ public class FilterUsersResponseBody extends TeaModel {
         @NameInMap("Id")
         private Long id;
 
+        @NameInMap("IsTenantManager")
+        private Boolean isTenantManager;
+
+        @NameInMap("OwnerType")
+        private String ownerType;
+
         @NameInMap("Phone")
         private String phone;
+
+        @NameInMap("Remark")
+        private String remark;
 
         @NameInMap("Status")
         private Long status;
@@ -361,11 +396,16 @@ public class FilterUsersResponseBody extends TeaModel {
 
         private Users(Builder builder) {
             this.desktopCount = builder.desktopCount;
+            this.desktopGroupCount = builder.desktopGroupCount;
             this.email = builder.email;
+            this.enableAdminAccess = builder.enableAdminAccess;
             this.endUserId = builder.endUserId;
             this.externalInfo = builder.externalInfo;
             this.id = builder.id;
+            this.isTenantManager = builder.isTenantManager;
+            this.ownerType = builder.ownerType;
             this.phone = builder.phone;
+            this.remark = builder.remark;
             this.status = builder.status;
             this.userSetPropertiesModels = builder.userSetPropertiesModels;
         }
@@ -386,10 +426,24 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return desktopGroupCount
+         */
+        public Long getDesktopGroupCount() {
+            return this.desktopGroupCount;
+        }
+
+        /**
          * @return email
          */
         public String getEmail() {
             return this.email;
+        }
+
+        /**
+         * @return enableAdminAccess
+         */
+        public Boolean getEnableAdminAccess() {
+            return this.enableAdminAccess;
         }
 
         /**
@@ -414,10 +468,31 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return isTenantManager
+         */
+        public Boolean getIsTenantManager() {
+            return this.isTenantManager;
+        }
+
+        /**
+         * @return ownerType
+         */
+        public String getOwnerType() {
+            return this.ownerType;
+        }
+
+        /**
          * @return phone
          */
         public String getPhone() {
             return this.phone;
+        }
+
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
         }
 
         /**
@@ -436,16 +511,21 @@ public class FilterUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long desktopCount; 
+            private Long desktopGroupCount; 
             private String email; 
+            private Boolean enableAdminAccess; 
             private String endUserId; 
             private ExternalInfo externalInfo; 
             private Long id; 
+            private Boolean isTenantManager; 
+            private String ownerType; 
             private String phone; 
+            private String remark; 
             private Long status; 
             private java.util.List < UserSetPropertiesModels> userSetPropertiesModels; 
 
             /**
-             * DesktopCount.
+             * The number of cloud desktops that are assigned to the user.
              */
             public Builder desktopCount(Long desktopCount) {
                 this.desktopCount = desktopCount;
@@ -453,7 +533,15 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The number of authorized desktop groups that are owned by the user. This value is returned if you set `IncludeDesktopGroupCount` to `true`.
+             */
+            public Builder desktopGroupCount(Long desktopGroupCount) {
+                this.desktopGroupCount = desktopGroupCount;
+                return this;
+            }
+
+            /**
+             * The email address of the user.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -461,7 +549,15 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * EnableAdminAccess.
+             */
+            public Builder enableAdminAccess(Boolean enableAdminAccess) {
+                this.enableAdminAccess = enableAdminAccess;
+                return this;
+            }
+
+            /**
+             * The name of the user.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -469,7 +565,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalInfo.
+             * The additional information about the user.
              */
             public Builder externalInfo(ExternalInfo externalInfo) {
                 this.externalInfo = externalInfo;
@@ -477,7 +573,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the user.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -485,7 +581,23 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * Specifies whether the user is a tenant administrator.
+             */
+            public Builder isTenantManager(Boolean isTenantManager) {
+                this.isTenantManager = isTenantManager;
+                return this;
+            }
+
+            /**
+             * The type of the account ownership.
+             */
+            public Builder ownerType(String ownerType) {
+                this.ownerType = ownerType;
+                return this;
+            }
+
+            /**
+             * The mobile number of the user.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -493,7 +605,15 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The remarks of the user.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
+                return this;
+            }
+
+            /**
+             * The status of the user.
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -501,7 +621,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserSetPropertiesModels.
+             * Details of the user properties.
              */
             public Builder userSetPropertiesModels(java.util.List < UserSetPropertiesModels> userSetPropertiesModels) {
                 this.userSetPropertiesModels = userSetPropertiesModels;

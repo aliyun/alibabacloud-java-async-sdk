@@ -49,9 +49,9 @@ public class UnlockUsersRequest extends Request {
             super();
         } 
 
-        private Builder(UnlockUsersRequest response) {
-            super(response);
-            this.users = response.users;
+        private Builder(UnlockUsersRequest request) {
+            super(request);
+            this.users = request.users;
         } 
 
         /**

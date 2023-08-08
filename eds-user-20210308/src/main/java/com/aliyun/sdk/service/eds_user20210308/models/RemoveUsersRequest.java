@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RemoveUsersRequest extends Request {
     @Body
     @NameInMap("Users")
+    @Validation(required = true)
     private java.util.List < String > users;
 
     private RemoveUsersRequest(Builder builder) {
@@ -48,9 +49,9 @@ public class RemoveUsersRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveUsersRequest response) {
-            super(response);
-            this.users = response.users;
+        private Builder(RemoveUsersRequest request) {
+            super(request);
+            this.users = request.users;
         } 
 
         /**

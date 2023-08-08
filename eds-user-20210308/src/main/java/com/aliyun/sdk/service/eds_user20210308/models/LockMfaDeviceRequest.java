@@ -48,9 +48,9 @@ public class LockMfaDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(LockMfaDeviceRequest response) {
-            super(response);
-            this.serialNumber = response.serialNumber;
+        private Builder(LockMfaDeviceRequest request) {
+            super(request);
+            this.serialNumber = request.serialNumber;
         } 
 
         /**

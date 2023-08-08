@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RemovePropertyRequest extends Request {
     @Body
     @NameInMap("PropertyId")
+    @Validation(required = true)
     private Long propertyId;
 
     private RemovePropertyRequest(Builder builder) {
@@ -48,9 +49,9 @@ public class RemovePropertyRequest extends Request {
             super();
         } 
 
-        private Builder(RemovePropertyRequest response) {
-            super(response);
-            this.propertyId = response.propertyId;
+        private Builder(RemovePropertyRequest request) {
+            super(request);
+            this.propertyId = request.propertyId;
         } 
 
         /**

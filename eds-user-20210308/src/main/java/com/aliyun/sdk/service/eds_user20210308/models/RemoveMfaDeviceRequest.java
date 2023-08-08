@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class RemoveMfaDeviceRequest extends Request {
     @Query
     @NameInMap("SerialNumber")
+    @Validation(required = true)
     private String serialNumber;
 
     private RemoveMfaDeviceRequest(Builder builder) {
@@ -48,9 +49,9 @@ public class RemoveMfaDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveMfaDeviceRequest response) {
-            super(response);
-            this.serialNumber = response.serialNumber;
+        private Builder(RemoveMfaDeviceRequest request) {
+            super(request);
+            this.serialNumber = request.serialNumber;
         } 
 
         /**

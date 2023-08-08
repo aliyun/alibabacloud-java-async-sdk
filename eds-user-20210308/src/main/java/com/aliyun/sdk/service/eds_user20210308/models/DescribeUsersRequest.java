@@ -33,6 +33,10 @@ public class DescribeUsersRequest extends Request {
     @NameInMap("NextToken")
     private String nextToken;
 
+    @Body
+    @NameInMap("OrgId")
+    private String orgId;
+
     private DescribeUsersRequest(Builder builder) {
         super(builder);
         this.endUserIds = builder.endUserIds;
@@ -40,6 +44,7 @@ public class DescribeUsersRequest extends Request {
         this.filter = builder.filter;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
+        this.orgId = builder.orgId;
     }
 
     public static Builder builder() {
@@ -90,24 +95,33 @@ public class DescribeUsersRequest extends Request {
         return this.nextToken;
     }
 
+    /**
+     * @return orgId
+     */
+    public String getOrgId() {
+        return this.orgId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeUsersRequest, Builder> {
         private java.util.List < String > endUserIds; 
         private java.util.List < String > excludeEndUserIds; 
         private String filter; 
         private Long maxResults; 
         private String nextToken; 
+        private String orgId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeUsersRequest response) {
-            super(response);
-            this.endUserIds = response.endUserIds;
-            this.excludeEndUserIds = response.excludeEndUserIds;
-            this.filter = response.filter;
-            this.maxResults = response.maxResults;
-            this.nextToken = response.nextToken;
+        private Builder(DescribeUsersRequest request) {
+            super(request);
+            this.endUserIds = request.endUserIds;
+            this.excludeEndUserIds = request.excludeEndUserIds;
+            this.filter = request.filter;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
+            this.orgId = request.orgId;
         } 
 
         /**
@@ -152,6 +166,15 @@ public class DescribeUsersRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * OrgId.
+         */
+        public Builder orgId(String orgId) {
+            this.putBodyParameter("OrgId", orgId);
+            this.orgId = orgId;
             return this;
         }
 

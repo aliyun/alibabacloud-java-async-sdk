@@ -50,7 +50,7 @@ public class ResetUserPasswordResponseBody extends TeaModel {
         private ResetUsersResult resetUsersResult; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

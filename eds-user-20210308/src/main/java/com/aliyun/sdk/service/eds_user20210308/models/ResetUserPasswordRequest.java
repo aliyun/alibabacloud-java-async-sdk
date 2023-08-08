@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ResetUserPasswordRequest extends Request {
     @Body
+    @NameInMap("NotifyType")
+    private Integer notifyType;
+
+    @Body
     @NameInMap("Users")
     @Validation(required = true)
     private java.util.List < String > users;
 
     private ResetUserPasswordRequest(Builder builder) {
         super(builder);
+        this.notifyType = builder.notifyType;
         this.users = builder.users;
     }
 
@@ -36,6 +41,13 @@ public class ResetUserPasswordRequest extends Request {
     }
 
     /**
+     * @return notifyType
+     */
+    public Integer getNotifyType() {
+        return this.notifyType;
+    }
+
+    /**
      * @return users
      */
     public java.util.List < String > getUsers() {
@@ -43,16 +55,27 @@ public class ResetUserPasswordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ResetUserPasswordRequest, Builder> {
+        private Integer notifyType; 
         private java.util.List < String > users; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ResetUserPasswordRequest response) {
-            super(response);
-            this.users = response.users;
+        private Builder(ResetUserPasswordRequest request) {
+            super(request);
+            this.notifyType = request.notifyType;
+            this.users = request.users;
         } 
+
+        /**
+         * NotifyType.
+         */
+        public Builder notifyType(Integer notifyType) {
+            this.putBodyParameter("NotifyType", notifyType);
+            this.notifyType = notifyType;
+            return this;
+        }
 
         /**
          * Users.

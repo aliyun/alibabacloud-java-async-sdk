@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreatePropertyRequest extends Request {
     @Body
     @NameInMap("PropertyKey")
+    @Validation(required = true)
     private String propertyKey;
 
     @Body
@@ -61,10 +62,10 @@ public class CreatePropertyRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePropertyRequest response) {
-            super(response);
-            this.propertyKey = response.propertyKey;
-            this.propertyValues = response.propertyValues;
+        private Builder(CreatePropertyRequest request) {
+            super(request);
+            this.propertyKey = request.propertyKey;
+            this.propertyValues = request.propertyValues;
         } 
 
         /**

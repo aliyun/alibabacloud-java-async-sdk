@@ -70,7 +70,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * users
+         * Users.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -101,18 +101,42 @@ public class DescribeUsersResponseBody extends TeaModel {
         @NameInMap("Id")
         private Long id;
 
+        @NameInMap("IsTenantManager")
+        private Boolean isTenantManager;
+
+        @NameInMap("NickName")
+        private String nickName;
+
+        @NameInMap("OrgId")
+        private String orgId;
+
+        @NameInMap("OwnerType")
+        private String ownerType;
+
         @NameInMap("Phone")
         private String phone;
 
+        @NameInMap("Remark")
+        private String remark;
+
         @NameInMap("Status")
         private Long status;
+
+        @NameInMap("WyId")
+        private String wyId;
 
         private Users(Builder builder) {
             this.email = builder.email;
             this.endUserId = builder.endUserId;
             this.id = builder.id;
+            this.isTenantManager = builder.isTenantManager;
+            this.nickName = builder.nickName;
+            this.orgId = builder.orgId;
+            this.ownerType = builder.ownerType;
             this.phone = builder.phone;
+            this.remark = builder.remark;
             this.status = builder.status;
+            this.wyId = builder.wyId;
         }
 
         public static Builder builder() {
@@ -145,10 +169,45 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return isTenantManager
+         */
+        public Boolean getIsTenantManager() {
+            return this.isTenantManager;
+        }
+
+        /**
+         * @return nickName
+         */
+        public String getNickName() {
+            return this.nickName;
+        }
+
+        /**
+         * @return orgId
+         */
+        public String getOrgId() {
+            return this.orgId;
+        }
+
+        /**
+         * @return ownerType
+         */
+        public String getOwnerType() {
+            return this.ownerType;
+        }
+
+        /**
          * @return phone
          */
         public String getPhone() {
             return this.phone;
+        }
+
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
         }
 
         /**
@@ -158,12 +217,25 @@ public class DescribeUsersResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return wyId
+         */
+        public String getWyId() {
+            return this.wyId;
+        }
+
         public static final class Builder {
             private String email; 
             private String endUserId; 
             private Long id; 
+            private Boolean isTenantManager; 
+            private String nickName; 
+            private String orgId; 
+            private String ownerType; 
             private String phone; 
+            private String remark; 
             private Long status; 
+            private String wyId; 
 
             /**
              * Email.
@@ -190,6 +262,38 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
+             * IsTenantManager.
+             */
+            public Builder isTenantManager(Boolean isTenantManager) {
+                this.isTenantManager = isTenantManager;
+                return this;
+            }
+
+            /**
+             * NickName.
+             */
+            public Builder nickName(String nickName) {
+                this.nickName = nickName;
+                return this;
+            }
+
+            /**
+             * OrgId.
+             */
+            public Builder orgId(String orgId) {
+                this.orgId = orgId;
+                return this;
+            }
+
+            /**
+             * OwnerType.
+             */
+            public Builder ownerType(String ownerType) {
+                this.ownerType = ownerType;
+                return this;
+            }
+
+            /**
              * Phone.
              */
             public Builder phone(String phone) {
@@ -198,10 +302,26 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(Long status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * WyId.
+             */
+            public Builder wyId(String wyId) {
+                this.wyId = wyId;
                 return this;
             }
 

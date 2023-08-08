@@ -14,18 +14,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class SetUserPropertyValueRequest extends Request {
     @Body
     @NameInMap("PropertyId")
+    @Validation(required = true)
     private Long propertyId;
 
     @Body
     @NameInMap("PropertyValueId")
+    @Validation(required = true)
     private Long propertyValueId;
 
     @Body
     @NameInMap("UserId")
+    @Validation(required = true)
     private Long userId;
 
     @Body
     @NameInMap("UserName")
+    @Validation(required = true)
     private String userName;
 
     private SetUserPropertyValueRequest(Builder builder) {
@@ -87,12 +91,12 @@ public class SetUserPropertyValueRequest extends Request {
             super();
         } 
 
-        private Builder(SetUserPropertyValueRequest response) {
-            super(response);
-            this.propertyId = response.propertyId;
-            this.propertyValueId = response.propertyValueId;
-            this.userId = response.userId;
-            this.userName = response.userName;
+        private Builder(SetUserPropertyValueRequest request) {
+            super(request);
+            this.propertyId = request.propertyId;
+            this.propertyValueId = request.propertyValueId;
+            this.userId = request.userId;
+            this.userName = request.userName;
         } 
 
         /**
@@ -114,7 +118,7 @@ public class SetUserPropertyValueRequest extends Request {
         }
 
         /**
-         * UserId.
+         * Associates a user property with a user.
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("UserId", userId);
@@ -123,7 +127,7 @@ public class SetUserPropertyValueRequest extends Request {
         }
 
         /**
-         * UserName.
+         * SetUserPropertyValue
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

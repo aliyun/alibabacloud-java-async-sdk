@@ -62,7 +62,7 @@ public class ListPropertyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NextToken.
+         * The information about the properties.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * users
+         * The ID of the request.
          */
         public Builder properties(java.util.List < Properties> properties) {
             this.properties = properties;
@@ -78,7 +78,7 @@ public class ListPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the property.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -203,7 +203,7 @@ public class ListPropertyResponseBody extends TeaModel {
             private java.util.List < PropertyValues> propertyValues; 
 
             /**
-             * PropertyId.
+             * The operation that you want to perform. Set the value to **ListProperty**.
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -211,7 +211,7 @@ public class ListPropertyResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyKey.
+             * Queries all user properties within an Alibaba Cloud account.
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -219,7 +219,7 @@ public class ListPropertyResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyValues.
+             * ListProperty
              */
             public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
                 this.propertyValues = propertyValues;

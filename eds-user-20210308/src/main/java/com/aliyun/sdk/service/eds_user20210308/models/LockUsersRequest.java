@@ -49,9 +49,9 @@ public class LockUsersRequest extends Request {
             super();
         } 
 
-        private Builder(LockUsersRequest response) {
-            super(response);
-            this.users = response.users;
+        private Builder(LockUsersRequest request) {
+            super(request);
+            this.users = request.users;
         } 
 
         /**

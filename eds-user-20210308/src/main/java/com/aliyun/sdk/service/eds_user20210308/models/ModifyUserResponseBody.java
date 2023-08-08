@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link LockMfaDeviceResponseBody} extends {@link TeaModel}
+ * {@link ModifyUserResponseBody} extends {@link TeaModel}
  *
- * <p>LockMfaDeviceResponseBody</p>
+ * <p>ModifyUserResponseBody</p>
  */
-public class LockMfaDeviceResponseBody extends TeaModel {
+public class ModifyUserResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private LockMfaDeviceResponseBody(Builder builder) {
+    private ModifyUserResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class LockMfaDeviceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static LockMfaDeviceResponseBody create() {
+    public static ModifyUserResponseBody create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class LockMfaDeviceResponseBody extends TeaModel {
             return this;
         }
 
-        public LockMfaDeviceResponseBody build() {
-            return new LockMfaDeviceResponseBody(this);
+        public ModifyUserResponseBody build() {
+            return new ModifyUserResponseBody(this);
         } 
 
     } 

@@ -50,7 +50,7 @@ public class UnlockUsersResponseBody extends TeaModel {
         private UnlockUsersResult unlockUsersResult; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -76,15 +76,15 @@ public class UpdatePropertyRequest extends Request {
             super();
         } 
 
-        private Builder(UpdatePropertyRequest response) {
-            super(response);
-            this.propertyId = response.propertyId;
-            this.propertyKey = response.propertyKey;
-            this.propertyValues = response.propertyValues;
+        private Builder(UpdatePropertyRequest request) {
+            super(request);
+            this.propertyId = request.propertyId;
+            this.propertyKey = request.propertyKey;
+            this.propertyValues = request.propertyValues;
         } 
 
         /**
-         * PropertyId.
+         * The operation that you want to perform. Set the value to **UpdateProperty**.
          */
         public Builder propertyId(Long propertyId) {
             this.putBodyParameter("PropertyId", propertyId);
@@ -93,7 +93,7 @@ public class UpdatePropertyRequest extends Request {
         }
 
         /**
-         * PropertyKey.
+         * The property values that failed to be modified.
          */
         public Builder propertyKey(String propertyKey) {
             this.putBodyParameter("PropertyKey", propertyKey);
@@ -102,7 +102,7 @@ public class UpdatePropertyRequest extends Request {
         }
 
         /**
-         * PropertyValues.
+         * The new property value N.
          */
         public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
             this.putBodyParameter("PropertyValues", propertyValues);
@@ -156,7 +156,7 @@ public class UpdatePropertyRequest extends Request {
             private Long propertyValueId; 
 
             /**
-             * PropertyValue.
+             * The error code.
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -164,7 +164,7 @@ public class UpdatePropertyRequest extends Request {
             }
 
             /**
-             * PropertyValueId.
+             * The ID of the property that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property ID.
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;

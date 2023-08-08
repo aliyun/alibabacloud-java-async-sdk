@@ -50,7 +50,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
         private UpdateResult updateResult; 
 
         /**
-         * Id of the request
+         * The name of the property.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateResult.
+         * The ID of the property.
          */
         public Builder updateResult(UpdateResult updateResult) {
             this.updateResult = updateResult;
@@ -211,7 +211,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             private Long propertyValueId; 
 
             /**
-             * PropertyValue.
+             * Modifies a user property.
              */
             public Builder propertyValue(String propertyValue) {
                 this.propertyValue = propertyValue;
@@ -219,7 +219,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyValueId.
+             * The value of the property.
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;
@@ -272,7 +272,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             private java.util.List < SavePropertyValues> savePropertyValues; 
 
             /**
-             * FailedPropertyValues.
+             * UpdateProperty
              */
             public Builder failedPropertyValues(java.util.List < FailedPropertyValues> failedPropertyValues) {
                 this.failedPropertyValues = failedPropertyValues;
@@ -280,7 +280,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * SavePropertyValues.
+             * The ID of the request.
              */
             public Builder savePropertyValues(java.util.List < SavePropertyValues> savePropertyValues) {
                 this.savePropertyValues = savePropertyValues;
@@ -345,7 +345,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             private SavePropertyValueModel savePropertyValueModel; 
 
             /**
-             * PropertyId.
+             * The ID of the property.
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -353,7 +353,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * PropertyKey.
+             * The ID of property value N that you want to modify. You can call the [ListProperty](~~410890~~) operation to query the property value ID.
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -361,7 +361,7 @@ public class UpdatePropertyResponseBody extends TeaModel {
             }
 
             /**
-             * SavePropertyValueModel.
+             * The property values that were modified.
              */
             public Builder savePropertyValueModel(SavePropertyValueModel savePropertyValueModel) {
                 this.savePropertyValueModel = savePropertyValueModel;

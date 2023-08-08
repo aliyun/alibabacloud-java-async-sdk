@@ -63,14 +63,14 @@ public class CheckUsedPropertyValueRequest extends Request {
             super();
         } 
 
-        private Builder(CheckUsedPropertyValueRequest response) {
-            super(response);
-            this.propertyId = response.propertyId;
-            this.propertyValueId = response.propertyValueId;
+        private Builder(CheckUsedPropertyValueRequest request) {
+            super(request);
+            this.propertyId = request.propertyId;
+            this.propertyValueId = request.propertyValueId;
         } 
 
         /**
-         * PropertyId.
+         * CheckUsedPropertyValue
          */
         public Builder propertyId(Long propertyId) {
             this.putQueryParameter("PropertyId", propertyId);

@@ -62,7 +62,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * mfa device list
+         * Details about the virtual MFA devices.
          */
         public Builder mfaDevices(java.util.List < MfaDevices> mfaDevices) {
             this.mfaDevices = mfaDevices;
@@ -70,7 +70,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +214,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ConsecutiveFails.
+             * The number of consecutive failures to bind the virtual MFA device, or the number of MFA failures based on the virtual MFA device.
              */
             public Builder consecutiveFails(Integer consecutiveFails) {
                 this.consecutiveFails = consecutiveFails;
@@ -222,7 +222,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceType.
+             * The types of the virtual MFA device. Set the value to TOTP_VIRTUAL, which indicates that the virtual MFA devices follow the Time-based One-time Password (TOTP) algorithm.
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -230,7 +230,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * This parameter is unavailable.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -238,7 +238,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * The username of the convenience user that uses the virtual MFA device.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -246,7 +246,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtEnabled.
+             * The time when the virtual MFA device was enabled. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder gmtEnabled(String gmtEnabled) {
                 this.gmtEnabled = gmtEnabled;
@@ -254,7 +254,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtUnlock.
+             * The time when a locked virtual MFA device is automatically unlocked. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder gmtUnlock(String gmtUnlock) {
                 this.gmtUnlock = gmtUnlock;
@@ -262,7 +262,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * This parameter is unavailable.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -270,7 +270,7 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * SerialNumber.
+             * The serial number of the virtual MFA device, which is a unique identifier.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -278,7 +278,12 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the virtual MFA device. Valid values:
+             * <p>
+             * 
+             * *   UNBOUND
+             * *   NORMAL
+             * *   LOCKED
              */
             public Builder status(String status) {
                 this.status = status;

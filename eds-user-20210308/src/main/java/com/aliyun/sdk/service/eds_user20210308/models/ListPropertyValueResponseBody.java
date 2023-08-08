@@ -50,7 +50,7 @@ public class ListPropertyValueResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * users
+         * PropertyValueInfos.
          */
         public Builder propertyValueInfos(java.util.List < PropertyValueInfos> propertyValueInfos) {
             this.propertyValueInfos = propertyValueInfos;
@@ -58,7 +58,7 @@ public class ListPropertyValueResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * ListPropertyValue
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

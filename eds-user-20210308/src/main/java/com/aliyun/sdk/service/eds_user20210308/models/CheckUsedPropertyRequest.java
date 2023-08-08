@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CheckUsedPropertyRequest extends Request {
     @Query
     @NameInMap("PropertyId")
+    @Validation(required = true)
     private Long propertyId;
 
     private CheckUsedPropertyRequest(Builder builder) {
@@ -48,9 +49,9 @@ public class CheckUsedPropertyRequest extends Request {
             super();
         } 
 
-        private Builder(CheckUsedPropertyRequest response) {
-            super(response);
-            this.propertyId = response.propertyId;
+        private Builder(CheckUsedPropertyRequest request) {
+            super(request);
+            this.propertyId = request.propertyId;
         } 
 
         /**

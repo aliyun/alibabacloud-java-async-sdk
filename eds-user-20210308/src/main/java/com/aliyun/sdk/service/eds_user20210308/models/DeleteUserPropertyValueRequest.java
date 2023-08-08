@@ -14,14 +14,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteUserPropertyValueRequest extends Request {
     @Body
     @NameInMap("PropertyId")
+    @Validation(required = true)
     private Long propertyId;
 
     @Body
     @NameInMap("PropertyValueId")
+    @Validation(required = true)
     private Long propertyValueId;
 
     @Body
     @NameInMap("UserId")
+    @Validation(required = true)
     private Long userId;
 
     private DeleteUserPropertyValueRequest(Builder builder) {
@@ -74,15 +77,15 @@ public class DeleteUserPropertyValueRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteUserPropertyValueRequest response) {
-            super(response);
-            this.propertyId = response.propertyId;
-            this.propertyValueId = response.propertyValueId;
-            this.userId = response.userId;
+        private Builder(DeleteUserPropertyValueRequest request) {
+            super(request);
+            this.propertyId = request.propertyId;
+            this.propertyValueId = request.propertyValueId;
+            this.userId = request.userId;
         } 
 
         /**
-         * PropertyId.
+         * DeleteUserPropertyValue
          */
         public Builder propertyId(Long propertyId) {
             this.putBodyParameter("PropertyId", propertyId);
@@ -100,7 +103,7 @@ public class DeleteUserPropertyValueRequest extends Request {
         }
 
         /**
-         * UserId.
+         * Dissociates a user property from a user.
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("UserId", userId);

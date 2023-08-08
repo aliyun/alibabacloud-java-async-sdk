@@ -50,7 +50,7 @@ public class CreateUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CreateResult.
+         * The result of user creation.
          */
         public Builder createResult(CreateResult createResult) {
             this.createResult = createResult;
@@ -58,7 +58,7 @@ public class CreateUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,10 +81,14 @@ public class CreateUsersResponseBody extends TeaModel {
         @NameInMap("Phone")
         private String phone;
 
+        @NameInMap("Remark")
+        private String remark;
+
         private CreatedUsers(Builder builder) {
             this.email = builder.email;
             this.endUserId = builder.endUserId;
             this.phone = builder.phone;
+            this.remark = builder.remark;
         }
 
         public static Builder builder() {
@@ -116,13 +120,21 @@ public class CreateUsersResponseBody extends TeaModel {
             return this.phone;
         }
 
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
         public static final class Builder {
             private String email; 
             private String endUserId; 
             private String phone; 
+            private String remark; 
 
             /**
-             * Email.
+             * The email address of the end user.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -130,7 +142,7 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * The name of the end user.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -138,10 +150,18 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * The mobile number of the end user.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * The remarks of the end user.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 
@@ -227,7 +247,7 @@ public class CreateUsersResponseBody extends TeaModel {
             private String phone; 
 
             /**
-             * Email.
+             * The email address of the end user.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -235,7 +255,7 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * The name of the end user.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -243,7 +263,7 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * The error code returned if the request failed.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -251,7 +271,7 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -259,7 +279,7 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * The mobile number of the end user.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -312,7 +332,7 @@ public class CreateUsersResponseBody extends TeaModel {
             private java.util.List < FailedUsers> failedUsers; 
 
             /**
-             * CreatedUsers.
+             * Details of the created convenience users.
              */
             public Builder createdUsers(java.util.List < CreatedUsers> createdUsers) {
                 this.createdUsers = createdUsers;
@@ -320,7 +340,7 @@ public class CreateUsersResponseBody extends TeaModel {
             }
 
             /**
-             * FailedUsers.
+             * Details of the convenience users that failed to be created.
              */
             public Builder failedUsers(java.util.List < FailedUsers> failedUsers) {
                 this.failedUsers = failedUsers;
