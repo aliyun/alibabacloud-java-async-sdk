@@ -383,6 +383,9 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         @NameInMap("BandwidthPackageType")
         private String bandwidthPackageType;
 
+        @NameInMap("BizType")
+        private String bizType;
+
         @NameInMap("BusinessStatus")
         private String businessStatus;
 
@@ -486,6 +489,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             this.bandwidthPackageBandwidth = builder.bandwidthPackageBandwidth;
             this.bandwidthPackageId = builder.bandwidthPackageId;
             this.bandwidthPackageType = builder.bandwidthPackageType;
+            this.bizType = builder.bizType;
             this.businessStatus = builder.businessStatus;
             this.chargeType = builder.chargeType;
             this.deletionProtection = builder.deletionProtection;
@@ -568,6 +572,13 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
          */
         public String getBandwidthPackageType() {
             return this.bandwidthPackageType;
+        }
+
+        /**
+         * @return bizType
+         */
+        public String getBizType() {
+            return this.bizType;
         }
 
         /**
@@ -801,6 +812,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
             private String bandwidthPackageBandwidth; 
             private String bandwidthPackageId; 
             private String bandwidthPackageType; 
+            private String bizType; 
             private String businessStatus; 
             private String chargeType; 
             private Boolean deletionProtection; 
@@ -879,6 +891,14 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
              */
             public Builder bandwidthPackageType(String bandwidthPackageType) {
                 this.bandwidthPackageType = bandwidthPackageType;
+                return this;
+            }
+
+            /**
+             * BizType.
+             */
+            public Builder bizType(String bizType) {
+                this.bizType = bizType;
                 return this;
             }
 

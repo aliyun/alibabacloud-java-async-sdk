@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreatePublicIpAddressPoolRequest extends Request {
     @Query
+    @NameInMap("BizType")
+    private String bizType;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -61,8 +65,13 @@ public class CreatePublicIpAddressPoolRequest extends Request {
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
+    @Query
+    @NameInMap("Zones")
+    private java.util.List < String > zones;
+
     private CreatePublicIpAddressPoolRequest(Builder builder) {
         super(builder);
+        this.bizType = builder.bizType;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
         this.dryRun = builder.dryRun;
@@ -75,6 +84,7 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.tag = builder.tag;
+        this.zones = builder.zones;
     }
 
     public static Builder builder() {
@@ -88,6 +98,13 @@ public class CreatePublicIpAddressPoolRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return bizType
+     */
+    public String getBizType() {
+        return this.bizType;
     }
 
     /**
@@ -174,7 +191,15 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return zones
+     */
+    public java.util.List < String > getZones() {
+        return this.zones;
+    }
+
     public static final class Builder extends Request.Builder<CreatePublicIpAddressPoolRequest, Builder> {
+        private String bizType; 
         private String clientToken; 
         private String description; 
         private Boolean dryRun; 
@@ -187,6 +212,7 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private java.util.List < Tag> tag; 
+        private java.util.List < String > zones; 
 
         private Builder() {
             super();
@@ -194,6 +220,7 @@ public class CreatePublicIpAddressPoolRequest extends Request {
 
         private Builder(CreatePublicIpAddressPoolRequest request) {
             super(request);
+            this.bizType = request.bizType;
             this.clientToken = request.clientToken;
             this.description = request.description;
             this.dryRun = request.dryRun;
@@ -206,7 +233,17 @@ public class CreatePublicIpAddressPoolRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.tag = request.tag;
+            this.zones = request.zones;
         } 
+
+        /**
+         * BizType.
+         */
+        public Builder bizType(String bizType) {
+            this.putQueryParameter("BizType", bizType);
+            this.bizType = bizType;
+            return this;
+        }
 
         /**
          * The client token that you want to use to ensure the idempotence of the request.
@@ -345,6 +382,15 @@ public class CreatePublicIpAddressPoolRequest extends Request {
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * Zones.
+         */
+        public Builder zones(java.util.List < String > zones) {
+            this.putQueryParameter("Zones", zones);
+            this.zones = zones;
             return this;
         }
 

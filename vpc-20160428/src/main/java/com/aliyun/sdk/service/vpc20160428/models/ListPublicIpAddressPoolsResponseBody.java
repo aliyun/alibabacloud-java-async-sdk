@@ -177,6 +177,9 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
     }
     public static class PublicIpAddressPoolList extends TeaModel {
+        @NameInMap("BizType")
+        private String bizType;
+
         @NameInMap("CreationTime")
         private String creationTime;
 
@@ -222,7 +225,11 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         @NameInMap("UserType")
         private Boolean userType;
 
+        @NameInMap("Zones")
+        private java.util.List < String > zones;
+
         private PublicIpAddressPoolList(Builder builder) {
+            this.bizType = builder.bizType;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.ipAddressRemaining = builder.ipAddressRemaining;
@@ -238,6 +245,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             this.totalIpNum = builder.totalIpNum;
             this.usedIpNum = builder.usedIpNum;
             this.userType = builder.userType;
+            this.zones = builder.zones;
         }
 
         public static Builder builder() {
@@ -246,6 +254,13 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
         public static PublicIpAddressPoolList create() {
             return builder().build();
+        }
+
+        /**
+         * @return bizType
+         */
+        public String getBizType() {
+            return this.bizType;
         }
 
         /**
@@ -353,7 +368,15 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             return this.userType;
         }
 
+        /**
+         * @return zones
+         */
+        public java.util.List < String > getZones() {
+            return this.zones;
+        }
+
         public static final class Builder {
+            private String bizType; 
             private String creationTime; 
             private String description; 
             private Boolean ipAddressRemaining; 
@@ -369,6 +392,15 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
             private Integer totalIpNum; 
             private Integer usedIpNum; 
             private Boolean userType; 
+            private java.util.List < String > zones; 
+
+            /**
+             * BizType.
+             */
+            public Builder bizType(String bizType) {
+                this.bizType = bizType;
+                return this;
+            }
 
             /**
              * The region ID of the IP address pool.
@@ -517,6 +549,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
              */
             public Builder userType(Boolean userType) {
                 this.userType = userType;
+                return this;
+            }
+
+            /**
+             * Zones.
+             */
+            public Builder zones(java.util.List < String > zones) {
+                this.zones = zones;
                 return this;
             }
 

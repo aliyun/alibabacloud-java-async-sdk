@@ -407,6 +407,9 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("BandwidthPackageId")
         private String bandwidthPackageId;
 
+        @NameInMap("BizType")
+        private String bizType;
+
         @NameInMap("BusinessStatus")
         private String businessStatus;
 
@@ -473,9 +476,13 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
         @NameInMap("Tags")
         private Tags tags;
 
+        @NameInMap("Zone")
+        private String zone;
+
         private CommonBandwidthPackage(Builder builder) {
             this.bandwidth = builder.bandwidth;
             this.bandwidthPackageId = builder.bandwidthPackageId;
+            this.bizType = builder.bizType;
             this.businessStatus = builder.businessStatus;
             this.creationTime = builder.creationTime;
             this.deletionProtection = builder.deletionProtection;
@@ -498,6 +505,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             this.serviceManaged = builder.serviceManaged;
             this.status = builder.status;
             this.tags = builder.tags;
+            this.zone = builder.zone;
         }
 
         public static Builder builder() {
@@ -520,6 +528,13 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
          */
         public String getBandwidthPackageId() {
             return this.bandwidthPackageId;
+        }
+
+        /**
+         * @return bizType
+         */
+        public String getBizType() {
+            return this.bizType;
         }
 
         /**
@@ -676,9 +691,17 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             return this.tags;
         }
 
+        /**
+         * @return zone
+         */
+        public String getZone() {
+            return this.zone;
+        }
+
         public static final class Builder {
             private String bandwidth; 
             private String bandwidthPackageId; 
+            private String bizType; 
             private String businessStatus; 
             private String creationTime; 
             private Boolean deletionProtection; 
@@ -701,6 +724,7 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
             private Integer serviceManaged; 
             private String status; 
             private Tags tags; 
+            private String zone; 
 
             /**
              * The maximum bandwidth of the EIP bandwidth plan. Unit: Mbit/s.
@@ -715,6 +739,14 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
+                return this;
+            }
+
+            /**
+             * BizType.
+             */
+            public Builder bizType(String bizType) {
+                this.bizType = bizType;
                 return this;
             }
 
@@ -948,6 +980,14 @@ public class DescribeCommonBandwidthPackagesResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * Zone.
+             */
+            public Builder zone(String zone) {
+                this.zone = zone;
                 return this;
             }
 
