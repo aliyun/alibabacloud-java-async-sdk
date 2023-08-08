@@ -18,12 +18,32 @@ public class ListGrantVSwitchEnisRequest extends Request {
     private String cenId;
 
     @Query
+    @NameInMap("MaxResults")
+    private Long maxResults;
+
+    @Query
+    @NameInMap("NetworkInterfaceId")
+    private java.util.List < String > networkInterfaceId;
+
+    @Query
+    @NameInMap("NetworkInterfaceName")
+    private String networkInterfaceName;
+
+    @Query
+    @NameInMap("NextToken")
+    private String nextToken;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
     @Query
     @NameInMap("OwnerId")
     private Long ownerId;
+
+    @Query
+    @NameInMap("PrimaryIpAddress")
+    private String primaryIpAddress;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -46,8 +66,13 @@ public class ListGrantVSwitchEnisRequest extends Request {
     private ListGrantVSwitchEnisRequest(Builder builder) {
         super(builder);
         this.cenId = builder.cenId;
+        this.maxResults = builder.maxResults;
+        this.networkInterfaceId = builder.networkInterfaceId;
+        this.networkInterfaceName = builder.networkInterfaceName;
+        this.nextToken = builder.nextToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.primaryIpAddress = builder.primaryIpAddress;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.vSwitchId = builder.vSwitchId;
@@ -75,6 +100,34 @@ public class ListGrantVSwitchEnisRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Long getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return networkInterfaceId
+     */
+    public java.util.List < String > getNetworkInterfaceId() {
+        return this.networkInterfaceId;
+    }
+
+    /**
+     * @return networkInterfaceName
+     */
+    public String getNetworkInterfaceName() {
+        return this.networkInterfaceName;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -86,6 +139,13 @@ public class ListGrantVSwitchEnisRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return primaryIpAddress
+     */
+    public String getPrimaryIpAddress() {
+        return this.primaryIpAddress;
     }
 
     /**
@@ -118,8 +178,13 @@ public class ListGrantVSwitchEnisRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListGrantVSwitchEnisRequest, Builder> {
         private String cenId; 
+        private Long maxResults; 
+        private java.util.List < String > networkInterfaceId; 
+        private String networkInterfaceName; 
+        private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String primaryIpAddress; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String vSwitchId; 
@@ -132,8 +197,13 @@ public class ListGrantVSwitchEnisRequest extends Request {
         private Builder(ListGrantVSwitchEnisRequest request) {
             super(request);
             this.cenId = request.cenId;
+            this.maxResults = request.maxResults;
+            this.networkInterfaceId = request.networkInterfaceId;
+            this.networkInterfaceName = request.networkInterfaceName;
+            this.nextToken = request.nextToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.primaryIpAddress = request.primaryIpAddress;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.vSwitchId = request.vSwitchId;
@@ -146,6 +216,42 @@ public class ListGrantVSwitchEnisRequest extends Request {
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
             this.cenId = cenId;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Long maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceId.
+         */
+        public Builder networkInterfaceId(java.util.List < String > networkInterfaceId) {
+            this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
+            this.networkInterfaceId = networkInterfaceId;
+            return this;
+        }
+
+        /**
+         * NetworkInterfaceName.
+         */
+        public Builder networkInterfaceName(String networkInterfaceName) {
+            this.putQueryParameter("NetworkInterfaceName", networkInterfaceName);
+            this.networkInterfaceName = networkInterfaceName;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -164,6 +270,15 @@ public class ListGrantVSwitchEnisRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PrimaryIpAddress.
+         */
+        public Builder primaryIpAddress(String primaryIpAddress) {
+            this.putQueryParameter("PrimaryIpAddress", primaryIpAddress);
+            this.primaryIpAddress = primaryIpAddress;
             return this;
         }
 

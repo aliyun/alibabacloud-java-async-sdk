@@ -15,6 +15,12 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     @NameInMap("GrantVSwitchEnis")
     private java.util.List < GrantVSwitchEnis> grantVSwitchEnis;
 
+    @NameInMap("MaxResults")
+    private Long maxResults;
+
+    @NameInMap("NextToken")
+    private String nextToken;
+
     @NameInMap("RequestId")
     private String requestId;
 
@@ -23,6 +29,8 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
 
     private ListGrantVSwitchEnisResponseBody(Builder builder) {
         this.grantVSwitchEnis = builder.grantVSwitchEnis;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.totalCount = builder.totalCount;
     }
@@ -43,6 +51,20 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxResults
+     */
+    public Long getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -58,6 +80,8 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < GrantVSwitchEnis> grantVSwitchEnis; 
+        private Long maxResults; 
+        private String nextToken; 
         private String requestId; 
         private String totalCount; 
 
@@ -66,6 +90,22 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
          */
         public Builder grantVSwitchEnis(java.util.List < GrantVSwitchEnis> grantVSwitchEnis) {
             this.grantVSwitchEnis = grantVSwitchEnis;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Long maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -98,6 +138,12 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         @NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
+        @NameInMap("NetworkInterfaceName")
+        private String networkInterfaceName;
+
+        @NameInMap("PrimaryIpAddress")
+        private String primaryIpAddress;
+
         @NameInMap("TransitRouterFlag")
         private Boolean transitRouterFlag;
 
@@ -110,6 +156,8 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         private GrantVSwitchEnis(Builder builder) {
             this.description = builder.description;
             this.networkInterfaceId = builder.networkInterfaceId;
+            this.networkInterfaceName = builder.networkInterfaceName;
+            this.primaryIpAddress = builder.primaryIpAddress;
             this.transitRouterFlag = builder.transitRouterFlag;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -138,6 +186,20 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         }
 
         /**
+         * @return networkInterfaceName
+         */
+        public String getNetworkInterfaceName() {
+            return this.networkInterfaceName;
+        }
+
+        /**
+         * @return primaryIpAddress
+         */
+        public String getPrimaryIpAddress() {
+            return this.primaryIpAddress;
+        }
+
+        /**
          * @return transitRouterFlag
          */
         public Boolean getTransitRouterFlag() {
@@ -161,6 +223,8 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
         public static final class Builder {
             private String description; 
             private String networkInterfaceId; 
+            private String networkInterfaceName; 
+            private String primaryIpAddress; 
             private Boolean transitRouterFlag; 
             private String vSwitchId; 
             private String vpcId; 
@@ -178,6 +242,22 @@ public class ListGrantVSwitchEnisResponseBody extends TeaModel {
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
+                return this;
+            }
+
+            /**
+             * NetworkInterfaceName.
+             */
+            public Builder networkInterfaceName(String networkInterfaceName) {
+                this.networkInterfaceName = networkInterfaceName;
+                return this;
+            }
+
+            /**
+             * PrimaryIpAddress.
+             */
+            public Builder primaryIpAddress(String primaryIpAddress) {
+                this.primaryIpAddress = primaryIpAddress;
                 return this;
             }
 
