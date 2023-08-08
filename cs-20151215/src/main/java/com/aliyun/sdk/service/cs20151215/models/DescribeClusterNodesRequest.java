@@ -125,7 +125,7 @@ public class DescribeClusterNodesRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -134,7 +134,7 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * 节点实例ID，按照实例ID进行过滤。  节点池ID不为空时会忽略此字段。多节点用逗号分割
+         * instanceIds.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("instanceIds", instanceIds);
@@ -143,7 +143,7 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * 节点池ID。
+         * nodepool_id.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putQueryParameter("nodepool_id", nodepoolId);
@@ -152,7 +152,7 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * 分页数量
+         * pageNumber.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -161,7 +161,7 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * 每页大小。
+         * pageSize.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -170,7 +170,7 @@ public class DescribeClusterNodesRequest extends Request {
         }
 
         /**
-         * 节点状态。默认值：all。
+         * state.
          */
         public Builder state(String state) {
             this.putQueryParameter("state", state);

@@ -38,7 +38,7 @@ public class FixNodePoolVulsResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * 修复任务ID
+         * task_id.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

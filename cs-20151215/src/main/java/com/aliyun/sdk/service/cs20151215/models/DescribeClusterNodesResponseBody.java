@@ -50,7 +50,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         private Page page; 
 
         /**
-         * 节点信息列表。
+         * The details of the nodes that are returned.
          */
         public Builder nodes(java.util.List < Nodes> nodes) {
             this.nodes = nodes;
@@ -58,7 +58,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
         }
 
         /**
-         * 分页信息。
+         * The pagination details.
          */
         public Builder page(Page page) {
             this.page = page;
@@ -326,7 +326,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * 节点创建时间。
+             * The time when the node was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -334,7 +334,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 错误信息说明。
+             * The error message that was generated when the node was created.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -342,7 +342,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点过期时间。
+             * The expiration time of the node.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -350,7 +350,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点主机名。
+             * The name of the host.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -358,7 +358,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点使用的镜像ID。
+             * The ID of the system image that is used by the node.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -366,7 +366,11 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点付费类型。
+             * The billing method of the instance on which the node is deployed. Valid values:
+             * <p>
+             * 
+             * *   `PrePaid`: the subscription billing method. If the value is PrePaid, make sure that you have a sufficient balance or credit in your account. Otherwise, an `InvalidPayMethod` error is returned.
+             * *   `PostPaid`: the pay-as-you-go billing method.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -374,7 +378,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点实例ID。
+             * The ID of the instance on which the node is deployed.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -382,7 +386,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点名称。
+             * The name of the instance on which the node is deployed.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -390,7 +394,11 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点实例角色类型，Master或Worker。
+             * The role of the node. Valid values:
+             * <p>
+             * 
+             * *   Master: master node
+             * *   Worker: worker node
              */
             public Builder instanceRole(String instanceRole) {
                 this.instanceRole = instanceRole;
@@ -398,7 +406,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点实例状态，
+             * The status of the node.
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -406,7 +414,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点实例类型。
+             * The instance type of the node.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -414,7 +422,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点实例所属ECS实例簇名称。
+             * The Elastic Compute Service (ECS) instance family of the node.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -422,7 +430,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点IP地址。
+             * The IP address of the node.
              */
             public Builder ipAddress(java.util.List < String > ipAddress) {
                 this.ipAddress = ipAddress;
@@ -430,7 +438,11 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点是否为aliyun实例。
+             * Indicates whether the instance on which the node is deployed is provided by Alibaba Cloud. Valid values:
+             * <p>
+             * 
+             * *   `true`: The instance is provided by Alibaba Cloud.
+             * *   `false`: The instance is not provided by Alibaba Cloud.
              */
             public Builder isAliyunNode(Boolean isAliyunNode) {
                 this.isAliyunNode = isAliyunNode;
@@ -438,7 +450,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点名称，该名称是k8s专用名称。
+             * The name of the node. This name is the identifier of the node in the cluster.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -446,7 +458,13 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点状态，是否Ready。
+             * Indicates whether the node is ready. Valid values:
+             * <p>
+             * 
+             * *   `Ready`: The node is ready.
+             * *   `NotReady`: The node is not ready.
+             * *   `Unknown`: The status of the node is unknown.
+             * *   `Offline`: The node is offline.
              */
             public Builder nodeStatus(String nodeStatus) {
                 this.nodeStatus = nodeStatus;
@@ -454,7 +472,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点池ID。
+             * The ID of the node pool.
              */
             public Builder nodepoolId(String nodepoolId) {
                 this.nodepoolId = nodepoolId;
@@ -462,7 +480,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 节点通过什么方式创建出来的，例如：ROS。
+             * Indicates how the node is initialized. A node can be manually created or created by using Resource Orchestration Service (ROS).
              */
             public Builder source(String source) {
                 this.source = source;
@@ -470,7 +488,12 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 抢占时实例类型
+             * The type of the preemptible instance. Valid values:
+             * <p>
+             * 
+             * *   NoSpot: a non-preemptible instance.
+             * *   SpotWithPriceLimit: a preemptible instance that is configured with the highest bid price.
+             * *   SpotAsPriceGo: a preemptible instance for which the system automatically bids based on the current market price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -478,7 +501,14 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * ECS运行状态，例如：Running。
+             * The status of the node. Valid values:
+             * <p>
+             * 
+             * *   `pending`: The node is being created.
+             * *   `running`: The node is running.
+             * *   `starting`: The node is being started.
+             * *   `stopping`: The node is being stopped.
+             * *   `stopped`: The node is stopped.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -543,7 +573,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * 总页数。
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -551,7 +581,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 单页展示结果数量。
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -559,7 +589,7 @@ public class DescribeClusterNodesResponseBody extends TeaModel {
             }
 
             /**
-             * 结果总条数。
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

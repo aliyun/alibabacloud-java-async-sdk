@@ -125,7 +125,7 @@ public class UpdateTemplateRequest extends Request {
         } 
 
         /**
-         * 部署模板ID。
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putPathParameter("TemplateId", templateId);
@@ -134,7 +134,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * 部署模板描述信息。
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -143,7 +143,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * 部署模板名称。
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -152,7 +152,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * 部署模板标签
+         * tags.
          */
         public Builder tags(String tags) {
             this.putBodyParameter("tags", tags);
@@ -161,7 +161,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * 部署模板yaml。
+         * template.
          */
         public Builder template(String template) {
             this.putBodyParameter("template", template);
@@ -170,7 +170,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * 部署模板类型。
+         * template_type.
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("template_type", templateType);

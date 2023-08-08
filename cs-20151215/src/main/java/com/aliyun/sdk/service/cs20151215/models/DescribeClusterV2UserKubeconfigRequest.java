@@ -69,7 +69,7 @@ public class DescribeClusterV2UserKubeconfigRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class DescribeClusterV2UserKubeconfigRequest extends Request {
         }
 
         /**
-         * 是否为内网访问。
+         * PrivateIpAddress.
          */
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

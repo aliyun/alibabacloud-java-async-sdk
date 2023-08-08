@@ -58,7 +58,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         }
 
         /**
-         * 是否已购买云安全CVE修复服务
+         * vuls_fix_service_purchased.
          */
         public Builder vulsFixServicePurchased(Boolean vulsFixServicePurchased) {
             this.vulsFixServicePurchased = vulsFixServicePurchased;
@@ -176,11 +176,15 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         @NameInMap("instance_id")
         private String instanceId;
 
+        @NameInMap("node_name")
+        private String nodeName;
+
         @NameInMap("vul_list")
         private java.util.List < VulList> vulList;
 
         private VulRecords(Builder builder) {
             this.instanceId = builder.instanceId;
+            this.nodeName = builder.nodeName;
             this.vulList = builder.vulList;
         }
 
@@ -200,6 +204,13 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeName
+         */
+        public String getNodeName() {
+            return this.nodeName;
+        }
+
+        /**
          * @return vulList
          */
         public java.util.List < VulList> getVulList() {
@@ -208,6 +219,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String instanceId; 
+            private String nodeName; 
             private java.util.List < VulList> vulList; 
 
             /**
@@ -215,6 +227,14 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * node_name.
+             */
+            public Builder nodeName(String nodeName) {
+                this.nodeName = nodeName;
                 return this;
             }
 

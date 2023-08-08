@@ -74,7 +74,7 @@ public class MaintenanceWindow extends TeaModel {
         private String weeklyPeriod; 
 
         /**
-         * 维护时长。取值范围1～24，单位为小时。 默认值：3h。
+         * duration.
          */
         public Builder duration(String duration) {
             this.duration = duration;
@@ -82,7 +82,7 @@ public class MaintenanceWindow extends TeaModel {
         }
 
         /**
-         * 是否开启维护窗口。默认值false。
+         * enable.
          */
         public Builder enable(Boolean enable) {
             this.enable = enable;
@@ -90,7 +90,7 @@ public class MaintenanceWindow extends TeaModel {
         }
 
         /**
-         * 维护起始时间。Golang标准时间格式"15:04:05Z"。
+         * maintenance_time.
          */
         public Builder maintenanceTime(String maintenanceTime) {
             this.maintenanceTime = maintenanceTime;
@@ -98,7 +98,7 @@ public class MaintenanceWindow extends TeaModel {
         }
 
         /**
-         * 维护周期。取值范围为:Monday~Sunday，多个值用逗号分隔。 默认值：Thursday。
+         * weekly_period.
          */
         public Builder weeklyPeriod(String weeklyPeriod) {
             this.weeklyPeriod = weeklyPeriod;

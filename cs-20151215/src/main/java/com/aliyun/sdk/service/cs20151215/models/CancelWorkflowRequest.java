@@ -70,7 +70,7 @@ public class CancelWorkflowRequest extends Request {
         } 
 
         /**
-         * 工作流名称。
+         * workflowName.
          */
         public Builder workflowName(String workflowName) {
             this.putPathParameter("workflowName", workflowName);
@@ -79,7 +79,7 @@ public class CancelWorkflowRequest extends Request {
         }
 
         /**
-         * 执行的操作，目前只支持cancel。
+         * action.
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);

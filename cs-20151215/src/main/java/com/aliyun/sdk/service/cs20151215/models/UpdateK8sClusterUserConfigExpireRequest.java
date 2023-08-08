@@ -19,7 +19,7 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
 
     @Body
     @NameInMap("expire_hour")
-    @Validation(required = true, maximum = 87600)
+    @Validation(required = true, maximum = 876000)
     private Long expireHour;
 
     @Body
@@ -85,7 +85,7 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         } 
 
         /**
-         * 集群id
+         * The ID of the cluster that you want to manage.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -94,7 +94,7 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         }
 
         /**
-         * kubeconfig过期小时
+         * expire_hour.
          */
         public Builder expireHour(Long expireHour) {
             this.putBodyParameter("expire_hour", expireHour);
@@ -103,7 +103,7 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         }
 
         /**
-         * 指定用户id
+         * user.
          */
         public Builder user(String user) {
             this.putBodyParameter("user", user);

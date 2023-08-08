@@ -30,6 +30,9 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     @NameInMap("node_quota")
     private Long nodeQuota;
 
+    @NameInMap("quotas")
+    private java.util.Map < String, QuotasValue > quotas;
+
     private DescribeUserQuotaResponseBody(Builder builder) {
         this.amkClusterQuota = builder.amkClusterQuota;
         this.askClusterQuota = builder.askClusterQuota;
@@ -37,6 +40,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         this.clusterQuota = builder.clusterQuota;
         this.edgeImprovedNodepoolQuota = builder.edgeImprovedNodepoolQuota;
         this.nodeQuota = builder.nodeQuota;
+        this.quotas = builder.quotas;
     }
 
     public static Builder builder() {
@@ -89,6 +93,13 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         return this.nodeQuota;
     }
 
+    /**
+     * @return quotas
+     */
+    public java.util.Map < String, QuotasValue > getQuotas() {
+        return this.quotas;
+    }
+
     public static final class Builder {
         private Long amkClusterQuota; 
         private Long askClusterQuota; 
@@ -96,9 +107,10 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         private Long clusterQuota; 
         private EdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota; 
         private Long nodeQuota; 
+        private java.util.Map < String, QuotasValue > quotas; 
 
         /**
-         * 托管版集群配额。
+         * The quota of Container Service for Kubernetes (ACK) managed clusters. Default value: 20. To increase the quota, [go to the Quota Center page to submit a ticket](https://quotas.console.aliyun.com/products/csk/quotas).
          */
         public Builder amkClusterQuota(Long amkClusterQuota) {
             this.amkClusterQuota = amkClusterQuota;
@@ -106,7 +118,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * Serverless集群配额。
+         * The quota of serverless Kubernetes (ASK) clusters. Default value: 20. To increase the quota, [go to the Quota Center page to submit a ticket](https://quotas.console.aliyun.com/products/csk/quotas).
          */
         public Builder askClusterQuota(Long askClusterQuota) {
             this.askClusterQuota = askClusterQuota;
@@ -114,7 +126,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * 集群节点池配额。
+         * The quota of node pools in an ACK cluster. Default value: 20. To increase the quota, [go to the Quota Center page to submit a ticket](https://quotas.console.aliyun.com/products/csk/quotas).
          */
         public Builder clusterNodepoolQuota(Long clusterNodepoolQuota) {
             this.clusterNodepoolQuota = clusterNodepoolQuota;
@@ -122,7 +134,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * 专有版集群托管版集群的总配额。
+         * The quota of clusters within an Alibaba Cloud account. Default value: 50. To increase the quota, [go to the Quota Center page to submit a ticket](https://quotas.console.aliyun.com/products/csk/quotas).
          */
         public Builder clusterQuota(Long clusterQuota) {
             this.clusterQuota = clusterQuota;
@@ -130,7 +142,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * 边缘增强型节点池quota
+         * The quota of enhanced edge node pools.
          */
         public Builder edgeImprovedNodepoolQuota(EdgeImprovedNodepoolQuota edgeImprovedNodepoolQuota) {
             this.edgeImprovedNodepoolQuota = edgeImprovedNodepoolQuota;
@@ -138,10 +150,18 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * 单集群的节点配额。
+         * The quota of nodes in an ACK cluster. Default value: 100. To increase the quota, [go to the Quota Center page to submit a ticket](https://quotas.console.aliyun.com/products/csk/quotas).
          */
         public Builder nodeQuota(Long nodeQuota) {
             this.nodeQuota = nodeQuota;
+            return this;
+        }
+
+        /**
+         * quotas.
+         */
+        public Builder quotas(java.util.Map < String, QuotasValue > quotas) {
+            this.quotas = quotas;
             return this;
         }
 
@@ -202,7 +222,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
             private Integer period; 
 
             /**
-             * 每个边缘增强型节点池允许的最大带宽，单位Mbps
+             * The maximum bandwidth of each enhanced node pool. Unit: Mbit/s.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -210,7 +230,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * 每个账号下允许创建的边缘增强型节点池数量。
+             * The quota of enhanced edge node pools within an Alibaba Cloud account.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -218,7 +238,10 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
             }
 
             /**
-             * 每个边缘增强型节点池最大购买时长，单位月。由于边缘增强型节点池为按量付费，用户暂时无需关注该字段。
+             * The maximum subscription duration of an enhanced edge node pool. Unit: months.
+             * <p>
+             * 
+             * >  Enhanced node pools use the pay-as-you-go billing method. Therefore, this parameter is not required.
              */
             public Builder period(Integer period) {
                 this.period = period;

@@ -238,7 +238,7 @@ public class AttachInstancesRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -247,7 +247,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * CPU亲和策略。
+         * cpu_policy.
          */
         public Builder cpuPolicy(String cpuPolicy) {
             this.putBodyParameter("cpu_policy", cpuPolicy);
@@ -256,7 +256,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * 是否格式化数据盘。
+         * format_disk.
          */
         public Builder formatDisk(Boolean formatDisk) {
             this.putBodyParameter("format_disk", formatDisk);
@@ -265,7 +265,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * 自定义镜像ID。
+         * image_id.
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("image_id", imageId);
@@ -274,7 +274,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * 实例列表。
+         * instances.
          */
         public Builder instances(java.util.List < String > instances) {
             this.putBodyParameter("instances", instances);
@@ -283,7 +283,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * 是否为边缘节点。
+         * is_edge_worker.
          */
         public Builder isEdgeWorker(Boolean isEdgeWorker) {
             this.putBodyParameter("is_edge_worker", isEdgeWorker);
@@ -292,7 +292,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * 是否保留实例名称。
+         * keep_instance_name.
          */
         public Builder keepInstanceName(Boolean keepInstanceName) {
             this.putBodyParameter("keep_instance_name", keepInstanceName);
@@ -301,7 +301,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * key_pair名称，与login_password二选一
+         * key_pair.
          */
         public Builder keyPair(String keyPair) {
             this.putBodyParameter("key_pair", keyPair);
@@ -310,7 +310,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * 节点池ID，欲将节点添加到哪个节点池中。。
+         * nodepool_id.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putBodyParameter("nodepool_id", nodepoolId);
@@ -319,7 +319,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * password，与key_pair二选一。
+         * password.
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -328,7 +328,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * RDS实例列表。
+         * rds_instances.
          */
         public Builder rdsInstances(java.util.List < String > rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
@@ -346,7 +346,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * 节点标签。
+         * tags.
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);
@@ -355,7 +355,7 @@ public class AttachInstancesRequest extends Request {
         }
 
         /**
-         * 节点自定义数据。
+         * user_data.
          */
         public Builder userData(String userData) {
             this.putBodyParameter("user_data", userData);

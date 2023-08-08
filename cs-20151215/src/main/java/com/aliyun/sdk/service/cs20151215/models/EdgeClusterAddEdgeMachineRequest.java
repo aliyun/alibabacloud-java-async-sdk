@@ -113,7 +113,7 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         } 
 
         /**
-         * cluster id
+         * clusterid.
          */
         public Builder clusterid(String clusterid) {
             this.putPathParameter("clusterid", clusterid);
@@ -122,7 +122,7 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * edge machine id
+         * edge_machineid.
          */
         public Builder edgeMachineid(String edgeMachineid) {
             this.putPathParameter("edge_machineid", edgeMachineid);
@@ -131,7 +131,7 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * expired
+         * expired.
          */
         public Builder expired(Long expired) {
             this.putBodyParameter("expired", expired);
@@ -140,7 +140,7 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * nodepool_id
+         * nodepool_id.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putBodyParameter("nodepool_id", nodepoolId);
@@ -149,7 +149,7 @@ public class EdgeClusterAddEdgeMachineRequest extends Request {
         }
 
         /**
-         * options
+         * options.
          */
         public Builder options(String options) {
             this.putBodyParameter("options", options);

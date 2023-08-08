@@ -27,6 +27,10 @@ public class RemoveNodePoolNodesRequest extends Request {
     private Boolean drainNode;
 
     @Query
+    @NameInMap("instance_ids")
+    private java.util.List < String > instanceIds;
+
+    @Query
     @NameInMap("nodes")
     private java.util.List < String > nodes;
 
@@ -39,6 +43,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         this.clusterId = builder.clusterId;
         this.nodepoolId = builder.nodepoolId;
         this.drainNode = builder.drainNode;
+        this.instanceIds = builder.instanceIds;
         this.nodes = builder.nodes;
         this.releaseNode = builder.releaseNode;
     }
@@ -78,6 +83,13 @@ public class RemoveNodePoolNodesRequest extends Request {
     }
 
     /**
+     * @return instanceIds
+     */
+    public java.util.List < String > getInstanceIds() {
+        return this.instanceIds;
+    }
+
+    /**
      * @return nodes
      */
     public java.util.List < String > getNodes() {
@@ -95,6 +107,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         private String clusterId; 
         private String nodepoolId; 
         private Boolean drainNode; 
+        private java.util.List < String > instanceIds; 
         private java.util.List < String > nodes; 
         private Boolean releaseNode; 
 
@@ -107,12 +120,13 @@ public class RemoveNodePoolNodesRequest extends Request {
             this.clusterId = request.clusterId;
             this.nodepoolId = request.nodepoolId;
             this.drainNode = request.drainNode;
+            this.instanceIds = request.instanceIds;
             this.nodes = request.nodes;
             this.releaseNode = request.releaseNode;
         } 
 
         /**
-         * 集群ID。
+         * c23421cfa74454bc8b37163fd19af\*\*\*\*
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -121,7 +135,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * 节点池ID。
+         * np97de2cfb1ba042398dd8f5504c94\*\*\*\*
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -130,7 +144,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * 是否排水节点。
+         * true
          */
         public Builder drainNode(Boolean drainNode) {
             this.putQueryParameter("drain_node", drainNode);
@@ -139,7 +153,17 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * 移除节点列表。
+         * i-bp1c70fqbv1nlu9xxxxx
+         */
+        public Builder instanceIds(java.util.List < String > instanceIds) {
+            String instanceIdsShrink = shrink(instanceIds, "instance_ids", "json");
+            this.putQueryParameter("instance_ids", instanceIdsShrink);
+            this.instanceIds = instanceIds;
+            return this;
+        }
+
+        /**
+         * cn-hangzhou.172.16.xxx.xxx
          */
         public Builder nodes(java.util.List < String > nodes) {
             String nodesShrink = shrink(nodes, "nodes", "json");
@@ -149,7 +173,7 @@ public class RemoveNodePoolNodesRequest extends Request {
         }
 
         /**
-         * 是否释放节点。
+         * true
          */
         public Builder releaseNode(Boolean releaseNode) {
             this.putQueryParameter("release_node", releaseNode);

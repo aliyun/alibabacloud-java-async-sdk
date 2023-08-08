@@ -22,7 +22,6 @@ public class DescribeTemplatesRequest extends Request {
 
     @Query
     @NameInMap("template_type")
-    @Validation(required = true)
     private String templateType;
 
     private DescribeTemplatesRequest(Builder builder) {
@@ -83,7 +82,7 @@ public class DescribeTemplatesRequest extends Request {
         } 
 
         /**
-         * 对查询结果进行分页处理，指定返回第几页的数据。  默认值为 1
+         * page_num.
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("page_num", pageNum);
@@ -92,7 +91,7 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * 对查询结果进行分页处理，指定每页包含的数据条数。  默认值为 10
+         * page_size.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -101,7 +100,7 @@ public class DescribeTemplatesRequest extends Request {
         }
 
         /**
-         * 模板类型，部署模板类型，目前一共有2种类型，取值为：kubernetes或compose。
+         * template_type.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("template_type", templateType);

@@ -50,7 +50,7 @@ public class OpenAckServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 开通服务的订单号。
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -58,7 +58,7 @@ public class OpenAckServiceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

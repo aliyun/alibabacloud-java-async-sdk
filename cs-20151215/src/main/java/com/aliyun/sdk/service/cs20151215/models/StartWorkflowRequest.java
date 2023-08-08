@@ -307,7 +307,7 @@ public class StartWorkflowRequest extends Request {
         } 
 
         /**
-         * bam文件输出名称。
+         * mapping_bam_out_filename.
          */
         public Builder mappingBamOutFilename(String mappingBamOutFilename) {
             this.putBodyParameter("mapping_bam_out_filename", mappingBamOutFilename);
@@ -316,7 +316,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * bam文件输出路径。
+         * mapping_bam_out_path.
          */
         public Builder mappingBamOutPath(String mappingBamOutPath) {
             this.putBodyParameter("mapping_bam_out_path", mappingBamOutPath);
@@ -325,7 +325,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * 存放mapping的bucket名称。
+         * mapping_bucket_name.
          */
         public Builder mappingBucketName(String mappingBucketName) {
             this.putBodyParameter("mapping_bucket_name", mappingBucketName);
@@ -334,7 +334,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * mapping的第一个fastq文件名。
+         * mapping_fastq_first_filename.
          */
         public Builder mappingFastqFirstFilename(String mappingFastqFirstFilename) {
             this.putBodyParameter("mapping_fastq_first_filename", mappingFastqFirstFilename);
@@ -343,7 +343,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * mapping的fastq文件路径。
+         * mapping_fastq_path.
          */
         public Builder mappingFastqPath(String mappingFastqPath) {
             this.putBodyParameter("mapping_fastq_path", mappingFastqPath);
@@ -352,7 +352,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * mapping的第二个fastq文件名。
+         * mapping_fastq_second_filename.
          */
         public Builder mappingFastqSecondFilename(String mappingFastqSecondFilename) {
             this.putBodyParameter("mapping_fastq_second_filename", mappingFastqSecondFilename);
@@ -361,7 +361,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * 是否进行dup。
+         * mapping_is_mark_dup.
          */
         public Builder mappingIsMarkDup(String mappingIsMarkDup) {
             this.putBodyParameter("mapping_is_mark_dup", mappingIsMarkDup);
@@ -370,7 +370,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * mapping oss数据的存放region。
+         * mapping_oss_region.
          */
         public Builder mappingOssRegion(String mappingOssRegion) {
             this.putBodyParameter("mapping_oss_region", mappingOssRegion);
@@ -379,7 +379,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * mapping的reference文件位置。
+         * mapping_reference_path.
          */
         public Builder mappingReferencePath(String mappingReferencePath) {
             this.putBodyParameter("mapping_reference_path", mappingReferencePath);
@@ -388,7 +388,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * SLA类型，可选值：s、g、p。 白银级（s）：超过90 Gbp的部分，按1.5 Gbp/min计算增加的时间。 黄金级（g）：超过90 Gbp的部分，按2 Gbp/min计算增加的时间。 铂金级（p）：超过90 Gbp的部分，按3 Gbp/min计算增加的时间。
+         * service.
          */
         public Builder service(String service) {
             this.putBodyParameter("service", service);
@@ -397,7 +397,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * 存放wgs的bucket名称。
+         * wgs_bucket_name.
          */
         public Builder wgsBucketName(String wgsBucketName) {
             this.putBodyParameter("wgs_bucket_name", wgsBucketName);
@@ -406,7 +406,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * wgs的第一个fastq文件名。
+         * wgs_fastq_first_filename.
          */
         public Builder wgsFastqFirstFilename(String wgsFastqFirstFilename) {
             this.putBodyParameter("wgs_fastq_first_filename", wgsFastqFirstFilename);
@@ -415,7 +415,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * wgs的fastq文件路径。
+         * wgs_fastq_path.
          */
         public Builder wgsFastqPath(String wgsFastqPath) {
             this.putBodyParameter("wgs_fastq_path", wgsFastqPath);
@@ -424,7 +424,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * wgs的第二个fastq文件名。
+         * wgs_fastq_second_filename.
          */
         public Builder wgsFastqSecondFilename(String wgsFastqSecondFilename) {
             this.putBodyParameter("wgs_fastq_second_filename", wgsFastqSecondFilename);
@@ -433,7 +433,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * wgs oss数据的存放region。
+         * wgs_oss_region.
          */
         public Builder wgsOssRegion(String wgsOssRegion) {
             this.putBodyParameter("wgs_oss_region", wgsOssRegion);
@@ -442,7 +442,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * wgs的reference文件路径。
+         * wgs_reference_path.
          */
         public Builder wgsReferencePath(String wgsReferencePath) {
             this.putBodyParameter("wgs_reference_path", wgsReferencePath);
@@ -451,7 +451,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * wgs的vcf输出文件名称。
+         * wgs_vcf_out_filename.
          */
         public Builder wgsVcfOutFilename(String wgsVcfOutFilename) {
             this.putBodyParameter("wgs_vcf_out_filename", wgsVcfOutFilename);
@@ -460,7 +460,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * wgs的vcf输出路径。
+         * wgs_vcf_out_path.
          */
         public Builder wgsVcfOutPath(String wgsVcfOutPath) {
             this.putBodyParameter("wgs_vcf_out_path", wgsVcfOutPath);
@@ -469,7 +469,7 @@ public class StartWorkflowRequest extends Request {
         }
 
         /**
-         * 工作流类型，可选值：wgs或mapping。
+         * workflow_type.
          */
         public Builder workflowType(String workflowType) {
             this.putBodyParameter("workflow_type", workflowType);

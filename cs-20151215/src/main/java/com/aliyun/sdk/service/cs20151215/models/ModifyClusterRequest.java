@@ -181,7 +181,7 @@ public class ModifyClusterRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -190,7 +190,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * 集群是否绑定EIP，用于公网访问API Server。 true | false
+         * api_server_eip.
          */
         public Builder apiServerEip(Boolean apiServerEip) {
             this.putBodyParameter("api_server_eip", apiServerEip);
@@ -199,7 +199,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * 集群API Server 公网连接端点。
+         * api_server_eip_id.
          */
         public Builder apiServerEipId(String apiServerEipId) {
             this.putBodyParameter("api_server_eip_id", apiServerEipId);
@@ -208,7 +208,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * 集群是否开启删除保护。默认值false。
+         * deletion_protection.
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putBodyParameter("deletion_protection", deletionProtection);
@@ -217,7 +217,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * 启用或禁用 RRSA 功能。true: 启用，false: 禁用
+         * enable_rrsa.
          */
         public Builder enableRrsa(Boolean enableRrsa) {
             this.putBodyParameter("enable_rrsa", enableRrsa);
@@ -226,7 +226,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * 域名是否重新绑定到Ingress的SLB地址。
+         * ingress_domain_rebinding.
          */
         public Builder ingressDomainRebinding(String ingressDomainRebinding) {
             this.putBodyParameter("ingress_domain_rebinding", ingressDomainRebinding);
@@ -235,7 +235,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * 集群的Ingress SLB的ID。
+         * ingress_loadbalancer_id.
          */
         public Builder ingressLoadbalancerId(String ingressLoadbalancerId) {
             this.putBodyParameter("ingress_loadbalancer_id", ingressLoadbalancerId);
@@ -244,7 +244,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * 实例删除保护，防止通过控制台或API误删除释放节点。
+         * instance_deletion_protection.
          */
         public Builder instanceDeletionProtection(Boolean instanceDeletionProtection) {
             this.putBodyParameter("instance_deletion_protection", instanceDeletionProtection);
@@ -262,7 +262,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * 集群资源组ID。
+         * resource_group_id.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resource_group_id", resourceGroupId);

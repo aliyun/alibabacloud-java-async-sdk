@@ -69,7 +69,7 @@ public class DescribeTemplateAttributeRequest extends Request {
         } 
 
         /**
-         * 模板ID。
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putPathParameter("TemplateId", templateId);
@@ -78,7 +78,7 @@ public class DescribeTemplateAttributeRequest extends Request {
         }
 
         /**
-         * 模板类型，值为创建部署模板时指定的模板类型。
+         * template_type.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("template_type", templateType);

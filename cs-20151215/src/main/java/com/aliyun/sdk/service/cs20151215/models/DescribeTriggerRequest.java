@@ -113,7 +113,7 @@ public class DescribeTriggerRequest extends Request {
         } 
 
         /**
-         * 集群ID
+         * cluster_id.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -122,7 +122,7 @@ public class DescribeTriggerRequest extends Request {
         }
 
         /**
-         * 应用名称。
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -131,7 +131,7 @@ public class DescribeTriggerRequest extends Request {
         }
 
         /**
-         * 应用所属命名空间。
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -140,7 +140,7 @@ public class DescribeTriggerRequest extends Request {
         }
 
         /**
-         * 应用类型。
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -149,7 +149,7 @@ public class DescribeTriggerRequest extends Request {
         }
 
         /**
-         * 触发器行为。
+         * action.
          */
         public Builder action(String action) {
             this.putQueryParameter("action", action);

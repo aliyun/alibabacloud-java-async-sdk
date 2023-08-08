@@ -62,7 +62,7 @@ public class Addon extends TeaModel {
         private String name; 
 
         /**
-         * 插件配置参数。
+         * config.
          */
         public Builder config(String config) {
             this.config = config;
@@ -70,7 +70,7 @@ public class Addon extends TeaModel {
         }
 
         /**
-         * 是否禁止默认安装。true | false。
+         * disabled.
          */
         public Builder disabled(Boolean disabled) {
             this.disabled = disabled;
@@ -78,7 +78,7 @@ public class Addon extends TeaModel {
         }
 
         /**
-         * 插件名称。
+         * name.
          */
         public Builder name(String name) {
             this.name = name;

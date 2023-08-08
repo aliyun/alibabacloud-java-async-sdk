@@ -182,7 +182,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         private String updated; 
 
         /**
-         * 集群ID。
+         * The ID of the ACK cluster.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -190,7 +190,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 任务创建时间。
+         * The time when the task was created.
          */
         public Builder created(String created) {
             this.created = created;
@@ -198,7 +198,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 任务当前运行阶段。
+         * current_stage.
          */
         public Builder currentStage(String currentStage) {
             this.currentStage = currentStage;
@@ -206,7 +206,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 任务错误信息。
+         * error.
          */
         public Builder error(Error error) {
             this.error = error;
@@ -214,7 +214,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 任务产生的事件。
+         * events.
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -222,7 +222,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 任务参数。
+         * parameters.
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             this.parameters = parameters;
@@ -230,7 +230,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 任务阶段。
+         * stages.
          */
         public Builder stages(java.util.List < Stages> stages) {
             this.stages = stages;
@@ -238,7 +238,12 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 任务当前状态。
+         * The state of the task. Valid values:
+         * <p>
+         * 
+         * *   `running`: The task is running.
+         * *   `fail`: The task failed.
+         * *   `success`: The task is complete.
          */
         public Builder state(String state) {
             this.state = state;
@@ -246,7 +251,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 任务执行对象。
+         * target.
          */
         public Builder target(Target target) {
             this.target = target;
@@ -254,7 +259,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 任务ID。
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -262,7 +267,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 任务执行详情。
+         * The execution result of the task.
          */
         public Builder taskResult(java.util.List < TaskResult> taskResult) {
             this.taskResult = taskResult;
@@ -270,7 +275,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 当前任务类型。
+         * The task type. A value of `cluster_scaleout` indicates a scale-out task.
          */
         public Builder taskType(String taskType) {
             this.taskType = taskType;
@@ -278,7 +283,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * 任务更新时间。
+         * The time when the task was updated.
          */
         public Builder updated(String updated) {
             this.updated = updated;
@@ -330,7 +335,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * 错误码。
+             * code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -338,7 +343,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 错误消息。
+             * message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -439,7 +444,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String timestamp; 
 
             /**
-             * 事件动作。
+             * action.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -447,7 +452,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 事件等级。
+             * level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -455,7 +460,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 事件消息。
+             * message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -463,7 +468,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 事件原因。
+             * reason.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -471,7 +476,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 事件来源。
+             * source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -479,7 +484,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 事件生成时间。
+             * timestamp.
              */
             public Builder timestamp(String timestamp) {
                 this.timestamp = timestamp;
@@ -568,7 +573,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * 任务阶段结束时间。
+             * end_time.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -576,7 +581,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 任务阶段信息。
+             * message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -584,7 +589,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 任务阶段输出。
+             * outputs.
              */
             public Builder outputs(java.util.Map < String, ? > outputs) {
                 this.outputs = outputs;
@@ -592,7 +597,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 任务阶段开始时间。
+             * start_time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -600,7 +605,12 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 任务阶段状态。
+             * The state of the task. Valid values:
+             * <p>
+             * 
+             * *   `running`: The task is running.
+             * *   `fail`: The task failed.
+             * *   `success`: The task is complete.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -653,7 +663,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 任务执行对象ID。
+             * id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -661,7 +671,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 任务执行对象类型。
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -714,7 +724,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 操作的资源，例如：实例ID。
+             * The resources that are managed by the task. For a scale-out task, the value of this parameter the ID of the instance that is added by the task.
              */
             public Builder data(String data) {
                 this.data = data;
@@ -722,7 +732,12 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 资源的状态。
+             * The state of the scaling of the resource. Valid values:
+             * <p>
+             * 
+             * *   `success`: The scale-out task is successful.
+             * *   `failed`: The scale-out task failed.
+             * *   `initail`: The scale-out task is initializing.
              */
             public Builder status(String status) {
                 this.status = status;

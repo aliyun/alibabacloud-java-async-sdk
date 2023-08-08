@@ -114,7 +114,7 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * 是否删除全部自定义标签，仅当tag_keys为空时生效，取值：[true,false]。
+         * all.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("all", all);
@@ -123,7 +123,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 资源所属的地域ID
+         * region_id.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);
@@ -132,16 +132,17 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 资源ID。数组长度取值范围为：1~50
+         * resource_ids.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
-            this.putQueryParameter("resource_ids", resourceIds);
+            String resourceIdsShrink = shrink(resourceIds, "resource_ids", "json");
+            this.putQueryParameter("resource_ids", resourceIdsShrink);
             this.resourceIds = resourceIds;
             return this;
         }
 
         /**
-         * 资源类型定义。取值范围： 只支持CLUSTER这一种资源类型
+         * resource_type.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resource_type", resourceType);
@@ -150,10 +151,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 资源的标签键。N的取值范围：1~20
+         * tag_keys.
          */
         public Builder tagKeys(java.util.List < String > tagKeys) {
-            this.putQueryParameter("tag_keys", tagKeys);
+            String tagKeysShrink = shrink(tagKeys, "tag_keys", "json");
+            this.putQueryParameter("tag_keys", tagKeysShrink);
             this.tagKeys = tagKeys;
             return this;
         }

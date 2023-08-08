@@ -22,6 +22,10 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
     private String kubernetesVersion;
 
     @Query
+    @NameInMap("Mode")
+    private String mode;
+
+    @Query
     @NameInMap("Profile")
     private String profile;
 
@@ -38,6 +42,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         super(builder);
         this.clusterType = builder.clusterType;
         this.kubernetesVersion = builder.kubernetesVersion;
+        this.mode = builder.mode;
         this.profile = builder.profile;
         this.region = builder.region;
         this.runtime = builder.runtime;
@@ -71,6 +76,13 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
     }
 
     /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
      * @return profile
      */
     public String getProfile() {
@@ -94,6 +106,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeKubernetesVersionMetadataRequest, Builder> {
         private String clusterType; 
         private String kubernetesVersion; 
+        private String mode; 
         private String profile; 
         private String region; 
         private String runtime; 
@@ -106,13 +119,14 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
             super(request);
             this.clusterType = request.clusterType;
             this.kubernetesVersion = request.kubernetesVersion;
+            this.mode = request.mode;
             this.profile = request.profile;
             this.region = request.region;
             this.runtime = request.runtime;
         } 
 
         /**
-         * 集群类型。
+         * ClusterType.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -121,7 +135,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * 要查询的版本，如果为空则查所有版本。
+         * KubernetesVersion.
          */
         public Builder kubernetesVersion(String kubernetesVersion) {
             this.putQueryParameter("KubernetesVersion", kubernetesVersion);
@@ -130,7 +144,16 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * 边缘集群标识，用于区分边缘集群，取值：Default或Edge。
+         * Mode.
+         */
+        public Builder mode(String mode) {
+            this.putQueryParameter("Mode", mode);
+            this.mode = mode;
+            return this;
+        }
+
+        /**
+         * Profile.
          */
         public Builder profile(String profile) {
             this.putQueryParameter("Profile", profile);
@@ -139,7 +162,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * 地域ID。
+         * Region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -148,7 +171,7 @@ public class DescribeKubernetesVersionMetadataRequest extends Request {
         }
 
         /**
-         * 运行时。
+         * runtime.
          */
         public Builder runtime(String runtime) {
             this.putQueryParameter("runtime", runtime);

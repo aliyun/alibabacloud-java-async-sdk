@@ -50,7 +50,7 @@ public class CreateEdgeMachineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * edge machine id
+         * The ID of the cloud-native box.
          */
         public Builder edgeMachineId(String edgeMachineId) {
             this.edgeMachineId = edgeMachineId;
@@ -58,7 +58,7 @@ public class CreateEdgeMachineResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

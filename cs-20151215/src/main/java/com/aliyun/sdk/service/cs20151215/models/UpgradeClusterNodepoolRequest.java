@@ -31,6 +31,10 @@ public class UpgradeClusterNodepoolRequest extends Request {
     private String kubernetesVersion;
 
     @Body
+    @NameInMap("runtime_type")
+    private String runtimeType;
+
+    @Body
     @NameInMap("runtime_version")
     private String runtimeVersion;
 
@@ -40,6 +44,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         this.nodepoolId = builder.nodepoolId;
         this.imageId = builder.imageId;
         this.kubernetesVersion = builder.kubernetesVersion;
+        this.runtimeType = builder.runtimeType;
         this.runtimeVersion = builder.runtimeVersion;
     }
 
@@ -85,6 +90,13 @@ public class UpgradeClusterNodepoolRequest extends Request {
     }
 
     /**
+     * @return runtimeType
+     */
+    public String getRuntimeType() {
+        return this.runtimeType;
+    }
+
+    /**
      * @return runtimeVersion
      */
     public String getRuntimeVersion() {
@@ -96,6 +108,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         private String nodepoolId; 
         private String imageId; 
         private String kubernetesVersion; 
+        private String runtimeType; 
         private String runtimeVersion; 
 
         private Builder() {
@@ -108,11 +121,12 @@ public class UpgradeClusterNodepoolRequest extends Request {
             this.nodepoolId = request.nodepoolId;
             this.imageId = request.imageId;
             this.kubernetesVersion = request.kubernetesVersion;
+            this.runtimeType = request.runtimeType;
             this.runtimeVersion = request.runtimeVersion;
         } 
 
         /**
-         * ClusterId.
+         * c106f377e16f34eb1808d6b9362c9\*\*\*\*
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -121,7 +135,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * NodepoolId.
+         * np31da1b38983f4511b490fc62108a\*\*\*\*
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -130,7 +144,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * 节点系统镜像ID。
+         * image_id.
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("image_id", imageId);
@@ -139,7 +153,7 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * 节点Kubernetes版本。
+         * kubernetes_version.
          */
         public Builder kubernetesVersion(String kubernetesVersion) {
             this.putBodyParameter("kubernetes_version", kubernetesVersion);
@@ -148,7 +162,16 @@ public class UpgradeClusterNodepoolRequest extends Request {
         }
 
         /**
-         * 节点运行时版本。
+         * runtime_type.
+         */
+        public Builder runtimeType(String runtimeType) {
+            this.putBodyParameter("runtime_type", runtimeType);
+            this.runtimeType = runtimeType;
+            return this;
+        }
+
+        /**
+         * runtime_version.
          */
         public Builder runtimeVersion(String runtimeVersion) {
             this.putBodyParameter("runtime_version", runtimeVersion);

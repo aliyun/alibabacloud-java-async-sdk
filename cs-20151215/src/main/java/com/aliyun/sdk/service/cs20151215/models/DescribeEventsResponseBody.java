@@ -50,7 +50,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         private PageInfo pageInfo; 
 
         /**
-         * events.
+         * The details of the event.
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -122,7 +122,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * 事件级别
+             * The level of the event.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -130,7 +130,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件详情
+             * The details of the event.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -138,7 +138,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件状态
+             * The state of the event.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -251,7 +251,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 集群ID
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -259,7 +259,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件描述
+             * The description of the event.
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -267,7 +267,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件ID
+             * The ID of the event.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -275,7 +275,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件源
+             * The source of the event.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -283,7 +283,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件
+             * The subject of the event.
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -291,7 +291,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件开始事件
+             * The time when the event started.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -299,7 +299,25 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件类型
+             * The type of the event. Valid values:
+             * <p>
+             * 
+             * *   `cluster_create`: cluster creation.
+             * *   `cluster_scaleout`: cluster scale-out.
+             * *   `cluster_attach`: adding existing nodes.
+             * *   `cluster_delete`: cluster deletion.
+             * *   `cluster_upgrade`: cluster upgrades.
+             * *   `cluster_migrate`: cluster migration.
+             * *   `cluster_node_delete`: node removal.
+             * *   `cluster_node_drain`: node draining.
+             * *   `cluster_modify`: cluster modifications.
+             * *   `cluster_configuration_modify`: modifications to cluster control configurations.
+             * *   `cluster_addon_install`: component installation.
+             * *   `cluster_addon_upgrade`: component upgrades.
+             * *   `cluster_addon_uninstall`: component uninstallation.
+             * *   `runtime_upgrade`: runtime upgrades.
+             * *   `nodepool_upgrade`: node pool upgrades.
+             * *   `nodepool_update`: node pool updates.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -364,7 +382,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * 每页记录数量
+             * page_number.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -372,7 +390,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 页数
+             * page_size.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -380,7 +398,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 结果总数
+             * total_count.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

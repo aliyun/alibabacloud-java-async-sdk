@@ -62,7 +62,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         private java.util.List < Tasks> tasks; 
 
         /**
-         * 分页信息。
+         * page_info.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -70,7 +70,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         }
 
         /**
-         * 任务数组。
+         * tasks.
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -142,7 +142,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * 页数。
+             * page_number.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -150,7 +150,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * 每页数量。
+             * page_size.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -158,7 +158,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * 结果总数。
+             * total_count.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -211,7 +211,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * 错误码。
+             * code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -219,7 +219,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * 错误信息。
+             * message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -320,7 +320,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             private String updated; 
 
             /**
-             * 创建时间。
+             * created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -336,7 +336,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * 任务状态。
+             * state.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -344,7 +344,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * 任务ID。
+             * task_id.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -352,7 +352,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * 任务类型。
+             * task_type.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -360,7 +360,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
             }
 
             /**
-             * 更新时间。
+             * updated.
              */
             public Builder updated(String updated) {
                 this.updated = updated;

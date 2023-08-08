@@ -50,7 +50,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         private PageInfo pageInfo; 
 
         /**
-         * 集群详情列表。
+         * The list of the details of the queried cluster.
          */
         public Builder clusters(java.util.List < Clusters> clusters) {
             this.clusters = clusters;
@@ -58,7 +58,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         }
 
         /**
-         * 分页信息。
+         * The pagination details.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -434,7 +434,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * 集群ID。
+             * The ID of the queried cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -442,7 +442,11 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 托管版集群类型，面向托管集群。 • ack.pro.small：专业托管集群。 • ack.standard ：标准托管集群。
+             * The type of the managed Kubernetes cluster. This parameter is returned for a managed Kubernetes cluster. Valid values:
+             * <p>
+             * 
+             * *   `ack.pro.small`: professional managed Kubernetes cluster
+             * *   `ack.standard`: standard managed Kubernetes cluster
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
@@ -450,7 +454,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群类型。
+             * The type of the cluster. Valid values:
+             * <p>
+             * 
+             * *   `Kubernetes`: dedicated Kubernetes cluster
+             * *   `ManagedKubernetes`: managed Kubernetes cluster
+             * *   `Ask`: ASK cluster
+             * *   `ExternalKubernetes`: registered external cluster
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -458,7 +468,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群初始化时间。
+             * The time when the cluster was created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -466,7 +476,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群当前版本。
+             * The Kubernetes version of the cluster.
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -474,7 +484,11 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群是否开启删除保护。
+             * Indicates whether deletion protection is enabled for the cluster. After deletion protection is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:
+             * <p>
+             * 
+             * *   `true`: deletion protection is enabled for the cluster. The cluster cannot be deleted in the ACK console or by calling API operations.
+             * *   `false`: deletion protection is disabled for the cluster. The cluster can be deleted in the ACK console or by calling API operations.
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -482,7 +496,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群使用的Docker版本。
+             * The Docker version that is used by the cluster.
              */
             public Builder dockerVersion(String dockerVersion) {
                 this.dockerVersion = dockerVersion;
@@ -490,7 +504,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群负载均衡服务的ID。
+             * The ID of the Server Load Balancer (SLB) instance that is used for the Ingress of the cluster.
+             * <p>
+             * 
+             * The default SLB specification is slb.s1.small, which belongs to the high-performance instance type.
              */
             public Builder externalLoadbalancerId(String externalLoadbalancerId) {
                 this.externalLoadbalancerId = externalLoadbalancerId;
@@ -498,7 +515,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群初始化版本。
+             * The Kubernetes version of the cluster. The Kubernetes versions provided by ACK are consistent with the open source Kubernetes versions. We recommend that you select the latest Kubernetes version. If you do not specify a Kubernetes version, the latest Kubernetes version is used by default.
+             * <p>
+             * 
+             * You can create clusters of the latest two Kubernetes versions in the ACK console. You can create ACK clusters of earlier Kubernetes versions by calling API operations. For more information about the Kubernetes versions supported by ACK, see [Release notes for Kubernetes versions](~~185269~~).
              */
             public Builder initVersion(String initVersion) {
                 this.initVersion = initVersion;
@@ -506,7 +526,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * maintenance_window.
+             * The maintenance window of the cluster. This feature is available only in professional managed Kubernetes clusters.
              */
             public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
                 this.maintenanceWindow = maintenanceWindow;
@@ -514,7 +534,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群访问地址列表。
+             * The address of the cluster API server. It includes an internal endpoint and a public endpoint.
              */
             public Builder masterUrl(String masterUrl) {
                 this.masterUrl = masterUrl;
@@ -522,7 +542,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群元数据信息。
+             * The metadata of the cluster.
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -530,7 +550,10 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群名称。
+             * The name of the cluster.
+             * <p>
+             * 
+             * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).
              */
             public Builder name(String name) {
                 this.name = name;
@@ -538,7 +561,13 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群使用的网络类型，例如：VPC网络。
+             * The network mode of the cluster. Valid values:
+             * <p>
+             * 
+             * *   `classic`: classic network
+             * *   `vpc`: virtual private cloud (VPC)
+             * *   `overlay`: overlay network
+             * *   `calico`: network powered by Calico
              */
             public Builder networkMode(String networkMode) {
                 this.networkMode = networkMode;
@@ -546,7 +575,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群可升级版本。
+             * The Kubernetes version to which the cluster can be upgraded.
              */
             public Builder nextVersion(String nextVersion) {
                 this.nextVersion = nextVersion;
@@ -554,7 +583,11 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群是否开启Private Zone。
+             * Indicates whether Alibaba Cloud DNS PrivateZone is enabled. Valid values:
+             * <p>
+             * 
+             * *   `true`: Alibaba Cloud DNS PrivateZone is enabled.
+             * *   `false`: Alibaba Cloud DNS PrivateZone is disabled.
              */
             public Builder privateZone(Boolean privateZone) {
                 this.privateZone = privateZone;
@@ -562,7 +595,11 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 边缘集群表示，用于区分边缘托管版集群。
+             * The identifier of the cluster. Valid values:
+             * <p>
+             * 
+             * *   `Edge`: The cluster is a managed edge Kubernetes cluster.
+             * *   `Default`: The cluster is not a managed edge Kubernetes cluster.
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -570,7 +607,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 地域ID。
+             * The ID of the region where the cluster is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -578,7 +615,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群资源组ID。
+             * The ID of the resource group to which the cluster belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -586,7 +623,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群安全组ID。
+             * The ID of the security group to which the instances of the cluster belong.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -594,7 +631,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群节点数。
+             * The number of nodes in the cluster. Master nodes and worker nodes are included.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -602,7 +639,19 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群运行状态。
+             * The status of the cluster. Valid values:
+             * <p>
+             * 
+             * *   `initial`: The cluster is being created.
+             * *   `failed`: The cluster failed to be created.
+             * *   `running`: The cluster is running.
+             * *   `updating`: The cluster is being upgraded.
+             * *   `updating_failed`: The cluster failed to be upgraded.
+             * *   `scaling`: The cluster is being scaled.
+             * *   `stopped`: The cluster is stopped.
+             * *   `deleting`: The cluster is being deleted.
+             * *   `deleted`: The cluster is deleted.
+             * *   `delete_failed`: The cluster failed to be deleted.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -610,7 +659,16 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * POD网段地址。
+             * The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:
+             * <p>
+             * 
+             * *   10.0.0.0/8
+             * *   172.16-31.0.0/12-16
+             * *   192.168.0.0/16
+             * 
+             * The CIDR block of pods cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after the cluster is created.
+             * 
+             * For more information about subnetting for ACK clusters, see [Plan CIDR blocks for ACK clusters in a VPC](~~86500~~).
              */
             public Builder subnetCidr(String subnetCidr) {
                 this.subnetCidr = subnetCidr;
@@ -618,7 +676,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群标签。
+             * The labels of the cluster.
              */
             public Builder tags(java.util.List < Tag > tags) {
                 this.tags = tags;
@@ -626,7 +684,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群更新时间。
+             * The time when the cluster was updated.
              */
             public Builder updated(String updated) {
                 this.updated = updated;
@@ -634,7 +692,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群所在的VPC ID。
+             * The ID of the VPC where the cluster is deployed. You must specify a VPC when you create a cluster.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -642,7 +700,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群使用的虚拟交换ID。
+             * The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. We recommend that you select vSwitches in different zones to ensure high availability.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -650,7 +708,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 集群Worker RAM角色。
+             * The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes that are created on Elastic Compute Service (ECS) instances.
              */
             public Builder workerRamRoleName(String workerRamRoleName) {
                 this.workerRamRoleName = workerRamRoleName;
@@ -658,7 +716,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 可用区ID。
+             * The ID of the zone where the cluster is deployed.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -723,7 +781,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * 分页数。
+             * The number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -731,7 +789,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 单页大小。
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -739,7 +797,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             }
 
             /**
-             * 结果总数。
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

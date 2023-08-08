@@ -50,7 +50,7 @@ public class AttachInstancesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * 节点信息列表。
+         * The details of the added nodes.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -58,7 +58,7 @@ public class AttachInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * 任务ID。
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -122,7 +122,7 @@ public class AttachInstancesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * 状态码。
+             * The code that indicates the task result.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -130,7 +130,7 @@ public class AttachInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 实例ID。
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -138,7 +138,7 @@ public class AttachInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 添加结果描述。
+             * Indicates whether the ECS instances are successfully added to the ACK cluster.
              */
             public Builder message(String message) {
                 this.message = message;

@@ -112,7 +112,7 @@ public class CreateTemplateRequest extends Request {
         } 
 
         /**
-         * 模板描述。
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -121,7 +121,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * 模板名称。
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -130,7 +130,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * 模板标签。
+         * tags.
          */
         public Builder tags(String tags) {
             this.putBodyParameter("tags", tags);
@@ -139,7 +139,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * YAML格式的模板内容。
+         * template.
          */
         public Builder template(String template) {
             this.putBodyParameter("template", template);
@@ -148,7 +148,7 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
-         * 模板类型。默认值：kubernetes
+         * template_type.
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("template_type", templateType);

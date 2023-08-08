@@ -50,7 +50,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         private java.util.List < Templates> templates; 
 
         /**
-         * 分页信息。
+         * The pagination details.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -58,7 +58,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * 模板列表。
+         * The list of the templates returned .
          */
         public Builder templates(java.util.List < Templates> templates) {
             this.templates = templates;
@@ -122,7 +122,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * 当前页数。
+             * The page number of the returned page.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -130,7 +130,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 单页最大数据条数。
+             * The maximum number of entries returned per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -138,7 +138,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 结果总数。
+             * The total number of entries returned.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -287,7 +287,14 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             private String updated; 
 
             /**
-             * 模板访问权限，取值为：private、pubilc或shared。。
+             * The access control policy of the template. Valid values:
+             * <p>
+             * 
+             * *   `private`: The template is private.
+             * *   `public`: The template is public.
+             * *   `shared`: The template can be shared.
+             * 
+             * Default value: `private`.
              */
             public Builder acl(String acl) {
                 this.acl = acl;
@@ -295,7 +302,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 模板创建时间。
+             * The time when the template was created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -303,7 +310,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 模板描述信息。
+             * The description of the template.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -311,7 +318,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 模板ID。会模板随着更新而变化。
+             * The ID of the template.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -319,7 +326,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 模板名称。
+             * The name of the template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -327,7 +334,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 模板标签，如果不显式指定了，默认为模板名称。
+             * The tag of the template. By default, the value is the name of the template.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -335,7 +342,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 模板详情。
+             * The template content in YAML format.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -343,7 +350,11 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 部署模板类型。
+             * The type of the template. The value can be a custom value.
+             * <p>
+             * 
+             * *   If the value is `kubernetes`, it indicates that the template is displayed on the Templates page in the ACK console.
+             * *   If the value is `compose`, it indicates that the template is displayed on the Container Service - Swarm page in the console. However, Container Service for Swarm is deprecated.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -351,7 +362,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 模板唯一ID。
+             * The ID of the parent template. The value of `template_with_hist_id` is the same for each template version. This allows you to manage different template versions.
              */
             public Builder templateWithHistId(String templateWithHistId) {
                 this.templateWithHistId = templateWithHistId;
@@ -359,7 +370,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 模板修改时间。
+             * The time when the template was updated.
              */
             public Builder updated(String updated) {
                 this.updated = updated;

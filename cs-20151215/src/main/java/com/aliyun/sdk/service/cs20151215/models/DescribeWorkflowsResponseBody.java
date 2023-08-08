@@ -38,7 +38,7 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
         private java.util.List < Jobs> jobs; 
 
         /**
-         * job信息
+         * The list of the jobs.
          */
         public Builder jobs(java.util.List < Jobs> jobs) {
             this.jobs = jobs;
@@ -102,7 +102,7 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
             private String jobName; 
 
             /**
-             * 集群ID。
+             * The ID of the ACK cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -110,7 +110,7 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流创建时间。
+             * The time when the workflow was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -118,7 +118,7 @@ public class DescribeWorkflowsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作流名称。
+             * The name of the workflow.
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;

@@ -50,7 +50,7 @@ public class RemoveNodePoolNodesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class RemoveNodePoolNodesResponseBody extends TeaModel {
         }
 
         /**
-         * 任务ID。
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

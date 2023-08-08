@@ -85,7 +85,7 @@ public class CreateEdgeMachineRequest extends Request {
         } 
 
         /**
-         * hostname
+         * hostname.
          */
         public Builder hostname(String hostname) {
             this.putBodyParameter("hostname", hostname);
@@ -94,7 +94,7 @@ public class CreateEdgeMachineRequest extends Request {
         }
 
         /**
-         * model
+         * model.
          */
         public Builder model(String model) {
             this.putBodyParameter("model", model);
@@ -103,7 +103,7 @@ public class CreateEdgeMachineRequest extends Request {
         }
 
         /**
-         * sn
+         * sn.
          */
         public Builder sn(String sn) {
             this.putBodyParameter("sn", sn);

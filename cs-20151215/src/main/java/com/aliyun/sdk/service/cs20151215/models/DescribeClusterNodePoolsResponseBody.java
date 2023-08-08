@@ -38,7 +38,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         private java.util.List < Nodepools> nodepools; 
 
         /**
-         * 节点池列表
+         * The list of the returned node pools.
          */
         public Builder nodepools(java.util.List < Nodepools> nodepools) {
             this.nodepools = nodepools;
@@ -150,7 +150,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * EIP带宽峰值
+             * The peak bandwidth of the elastic IP address (EIP).
              */
             public Builder eipBandwidth(Long eipBandwidth) {
                 this.eipBandwidth = eipBandwidth;
@@ -158,7 +158,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * EIP实例计费方式
+             * The billing method of the EIP. Valid values:
+             * <p>
+             * 
+             * *   `PayByBandwidth`: pay-by-bandwidth
+             * *   `PayByTraffic`: pay-by-data-transfer
              */
             public Builder eipInternetChargeType(String eipInternetChargeType) {
                 this.eipInternetChargeType = eipInternetChargeType;
@@ -166,7 +170,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 自动伸缩
+             * Indicates whether auto scaling is enabled.
+             * <p>
+             * 
+             * *   `true`: Auto scaling is enabled for the node pool.
+             * *   `false`: Auto scaling is disabled for the node pool. If you set this parameter to `false`, other parameters in the `auto_scaling` section does not take effect.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -174,7 +182,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否绑定EIP
+             * Indicates whether an EIP is associated with the node pool. Valid values:
+             * <p>
+             * 
+             * *   `true`: An EIP is associated with the node pool.
+             * *   `false`: No EIP is associated with the node pool.
              */
             public Builder isBondEip(Boolean isBondEip) {
                 this.isBondEip = isBondEip;
@@ -182,7 +194,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 最大节点数	
+             * The maximum number of Elastic Compute Service (ECS) instances supported by the node pool.
              */
             public Builder maxInstances(Long maxInstances) {
                 this.maxInstances = maxInstances;
@@ -190,7 +202,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 最小节点数	
+             * The minimum number of ECS instances.
              */
             public Builder minInstances(Long minInstances) {
                 this.minInstances = minInstances;
@@ -198,7 +210,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 扩容组类型
+             * The minimum number of ECS instances that must be kept in the node pool. Valid values:
+             * <p>
+             * 
+             * *   `cpu`: regular instance
+             * *   `gpu`: GPU-accelerated instance
+             * *   `gpushare`: shared GPU-accelerated instance
+             * *   `spot`: preemptible instance
              */
             public Builder type(String type) {
                 this.type = type;
@@ -287,7 +305,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private String improvedPeriod; 
 
             /**
-             * 边缘增强型节点池的网络带宽，单位M
+             * bandwidth.
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -295,7 +313,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 边缘增强型节点池绑定的云连接网实例ID(CCNID)
+             * ccn_id.
              */
             public Builder ccnId(String ccnId) {
                 this.ccnId = ccnId;
@@ -303,7 +321,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 边缘增强型节点池绑定的云连接网实例所属的区域
+             * ccn_region_id.
              */
             public Builder ccnRegionId(String ccnRegionId) {
                 this.ccnRegionId = ccnRegionId;
@@ -311,7 +329,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 边缘增强型节点池绑定的云企业网实例ID(CENID)
+             * cen_id.
              */
             public Builder cenId(String cenId) {
                 this.cenId = cenId;
@@ -319,7 +337,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 边缘增强型节点池的购买时长，单位月
+             * improved_period.
              */
             public Builder improvedPeriod(String improvedPeriod) {
                 this.improvedPeriod = improvedPeriod;
@@ -444,7 +462,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * 是否开启云监控	
+             * Indicates where the CloudMonitor agent is installed on ECS nodes of the cluster. After the CloudMonitor agent is installed, you can view monitoring information about the ECS instances in the CloudMonitor console. Installation is recommended. Valid values:
+             * <p>
+             * 
+             * *   `true` The CloudMonitor agent is installed on ECS nodes.
+             * *   `false`: The CloudMonitor agent is not installed on ECS nodes.
              */
             public Builder cmsEnabled(Boolean cmsEnabled) {
                 this.cmsEnabled = cmsEnabled;
@@ -452,7 +474,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * CPU管理策略	
+             * The CPU management policy. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later.
+             * <p>
+             * 
+             * *   `static`: This policy allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.
+             * *   `none`: indicates that the default CPU affinity is used.
              */
             public Builder cpuPolicy(String cpuPolicy) {
                 this.cpuPolicy = cpuPolicy;
@@ -460,7 +486,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * ECS标签
+             * The labels of the nodes. You can add labels to the nodes in the cluster. You must add labels based on the following rules:
+             * <p>
+             * 
+             * *   Each label is a case-sensitive key-value pair. You can add up to 20 labels.
+             * *   A key must be unique and cannot exceed 64 characters in length. A value can be empty and cannot exceed 128 characters in length. Keys and values cannot start with `aliyun`, `acs:`, `https://`, or `http://`. For more information, see [Labels and Selectors](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set).
              */
             public Builder labels(java.util.List < Tag > labels) {
                 this.labels = labels;
@@ -468,7 +498,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义节点名称
+             * node_name_mode.
              */
             public Builder nodeNameMode(String nodeNameMode) {
                 this.nodeNameMode = nodeNameMode;
@@ -476,7 +506,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 容器运行时	
+             * The name of the container runtime.
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -484,7 +514,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 容器运行时版本	
+             * The version of the container runtime.
              */
             public Builder runtimeVersion(String runtimeVersion) {
                 this.runtimeVersion = runtimeVersion;
@@ -492,7 +522,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 污点配置
+             * The taints that are added to nodes. Taints are added to nodes to prevent pods from being scheduled to inappropriate nodes. However, toleration rules allow pods to be scheduled to nodes with matching taints. For more information, see [taint-and-toleration](https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/).
              */
             public Builder taints(java.util.List < Taint > taints) {
                 this.taints = taints;
@@ -500,7 +530,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点自定义数据
+             * The user-defined data of the node pool. For more information, see [Generate user-defined data](~~49121~~).
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -577,7 +607,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private Long surgePercentage; 
 
             /**
-             * 是否启用自动升级，自修复
+             * Indicates whether auto upgrade is enabled. Valid values:
+             * <p>
+             * 
+             * *   `true`: Auto upgrade is enabled.
+             * *   `true`: Auto upgrade is disabled.
              */
             public Builder autoUpgrade(Boolean autoUpgrade) {
                 this.autoUpgrade = autoUpgrade;
@@ -585,7 +619,10 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 最大不可用节点数量
+             * The maximum number of nodes that can be in the unschedulable state. Valid values: 1 to 1000.
+             * <p>
+             * 
+             * Default value: 1
              */
             public Builder maxUnavailable(Long maxUnavailable) {
                 this.maxUnavailable = maxUnavailable;
@@ -593,7 +630,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 额外节点数量
+             * The number of nodes that are temporarily added to the node pool during an auto upgrade.
              */
             public Builder surge(Long surge) {
                 this.surge = surge;
@@ -601,7 +638,10 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 额外节点比例， 和surge 二选一
+             * The percentage of temporary nodes to the nodes in the node pool. You must set this parameter or `surge`.
+             * <p>
+             * 
+             * The number of extra nodes = The percentage of extra nodes × The number of nodes in the node pool. For example, the percentage of extra nodes is set to 50% and the number of nodes in the node pool is six. The number of extra nodes will be three.
              */
             public Builder surgePercentage(Long surgePercentage) {
                 this.surgePercentage = surgePercentage;
@@ -666,7 +706,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private UpgradeConfig upgradeConfig; 
 
             /**
-             * 是否启用自动修复
+             * Indicates whether auto repair is enabled. Auto repair is enabled only when `enable=true` is specified.
+             * <p>
+             * 
+             * *   `true`: Auto repair is enabled.
+             * *   `false`: Auto repair is disabled.
              */
             public Builder autoRepair(Boolean autoRepair) {
                 this.autoRepair = autoRepair;
@@ -674,7 +718,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启托管版节点池
+             * Indicates whether managed node pools are enabled. Valid values:
+             * <p>
+             * 
+             * *   `true`: Managed node pools are enabled.
+             * *   `false`: Managed node pools are disabled. Other parameters in this section take effect only when `enable=true` is specified.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -682,7 +730,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否启用自动修复
+             * The configurations of auto upgrade. The configurations take effect only when `enable=true` is specified.
              */
             public Builder upgradeConfig(UpgradeConfig upgradeConfig) {
                 this.upgradeConfig = upgradeConfig;
@@ -807,7 +855,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private String updated; 
 
             /**
-             * 节点池创建时间
+             * The time when the node pool was created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -815,7 +863,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否为默认节点池
+             * Indicates whether the node pool is a default node pool. An ACK cluster usually has only one default node pool. Valid values:
+             * <p>
+             * 
+             * *   `true`: The node pool is a default node pool.
+             * *   `false`: The node pool is not a default node pool.
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -823,7 +875,10 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点池名称
+             * The name of the node pool.
+             * <p>
+             * 
+             * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). It cannot start with a hyphen (-).
              */
             public Builder name(String name) {
                 this.name = name;
@@ -831,7 +886,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点池ID
+             * The ID of the node pool.
              */
             public Builder nodepoolId(String nodepoolId) {
                 this.nodepoolId = nodepoolId;
@@ -839,7 +894,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点池所在地域ID
+             * The ID of the region where the node pool is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -847,7 +902,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组ID
+             * The ID of the resource group to which the node pool belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -855,7 +910,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点池类型
+             * The type of the node pool. Valid values:
+             * <p>
+             * 
+             * *   `edge`: edge node pools.
+             * *   `ess`: cloud node pools.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -863,7 +922,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点池更新时间
+             * The time when the node pool was last updated.
              */
             public Builder updated(String updated) {
                 this.updated = updated;
@@ -872,6 +931,67 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
 
             public NodepoolInfo build() {
                 return new NodepoolInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class PrivatePoolOptions extends TeaModel {
+        @NameInMap("id")
+        private String id;
+
+        @NameInMap("match_criteria")
+        private String matchCriteria;
+
+        private PrivatePoolOptions(Builder builder) {
+            this.id = builder.id;
+            this.matchCriteria = builder.matchCriteria;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivatePoolOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return matchCriteria
+         */
+        public String getMatchCriteria() {
+            return this.matchCriteria;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String matchCriteria; 
+
+            /**
+             * id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * match_criteria.
+             */
+            public Builder matchCriteria(String matchCriteria) {
+                this.matchCriteria = matchCriteria;
+                return this;
+            }
+
+            public PrivatePoolOptions build() {
+                return new PrivatePoolOptions(this);
             } 
 
         } 
@@ -916,7 +1036,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private String priceLimit; 
 
             /**
-             * 抢占式实例规格
+             * The instance type for preemptible instances.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -924,7 +1044,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 单台实例上限价格，单位：元/小时
+             * The price limit of a preemptible instance. Unit: USD/hour.
              */
             public Builder priceLimit(String priceLimit) {
                 this.priceLimit = priceLimit;
@@ -996,6 +1116,9 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         @NameInMap("platform")
         private String platform;
 
+        @NameInMap("private_pool_options")
+        private PrivatePoolOptions privatePoolOptions;
+
         @NameInMap("ram_policy")
         private String ramPolicy;
 
@@ -1061,6 +1184,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
             this.platform = builder.platform;
+            this.privatePoolOptions = builder.privatePoolOptions;
             this.ramPolicy = builder.ramPolicy;
             this.rdsInstances = builder.rdsInstances;
             this.scalingGroupId = builder.scalingGroupId;
@@ -1220,6 +1344,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
         }
 
         /**
+         * @return privatePoolOptions
+         */
+        public PrivatePoolOptions getPrivatePoolOptions() {
+            return this.privatePoolOptions;
+        }
+
+        /**
          * @return ramPolicy
          */
         public String getRamPolicy() {
@@ -1344,6 +1475,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private Long period; 
             private String periodUnit; 
             private String platform; 
+            private PrivatePoolOptions privatePoolOptions; 
             private String ramPolicy; 
             private java.util.List < String > rdsInstances; 
             private String scalingGroupId; 
@@ -1361,7 +1493,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private java.util.List < String > vswitchIds; 
 
             /**
-             * 自动续费	
+             * Indicates whether auto-renewal is enabled for the nodes in the node pool. This parameter takes effect only when `instance_charge_type` is set to `PrePaid`. Valid values:
+             * <p>
+             * 
+             * *   `true`: Auto-renewal is enabled.
+             * *   `false`: Auto-renewal is disabled.
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -1369,7 +1505,10 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 自动付费时长	
+             * The duration of the auto-renewal. This parameter takes effect and is required only when `instance_charge_type` is set to `PrePaid`.
+             * <p>
+             * 
+             * If `PeriodUnit=Month` is specified, the valid values are 1, 2, 3, 6, and 12.
              */
             public Builder autoRenewPeriod(Long autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
@@ -1377,7 +1516,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 当MultiAZPolicy取值为COST_OPTIMIZED时，如果因价格、库存等原因无法创建足够的抢占式实例，是否允许自动尝试创建按量实例满足ECS实例数量要求。取值范围：true：允许。false：不允许。默认值：true
+             * Indicates whether pay-as-you-go instances are automatically created to meet the required number of ECS instances when the preemptible instances cannot be created due to reasons such as the cost or inventory availability. This parameter takes effect when `multi_az_policy` is set to `COST_OPTIMIZED`. Valid values:
+             * <p>
+             * 
+             * *   `true`: Pay-as-you-go instances are automatically created to meet the required number of ECS instances if preemptible instances cannot be created.
+             * *   `false`: Pay-as-you-go instances are not created to meet the required number of ECS instances if preemptible instances cannot be created.
              */
             public Builder compensateWithOnDemand(Boolean compensateWithOnDemand) {
                 this.compensateWithOnDemand = compensateWithOnDemand;
@@ -1385,7 +1528,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 数据盘配置	
+             * The configurations of the data disks attached to the nodes in the node pool. The configurations include the disk type and disk size.
              */
             public Builder dataDisks(java.util.List < DataDisk > dataDisks) {
                 this.dataDisks = dataDisks;
@@ -1393,7 +1536,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 部署集ID。
+             * deploymentset_id.
              */
             public Builder deploymentsetId(String deploymentsetId) {
                 this.deploymentsetId = deploymentsetId;
@@ -1401,7 +1544,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点池期望节点数
+             * desired_size.
              */
             public Builder desiredSize(Long desiredSize) {
                 this.desiredSize = desiredSize;
@@ -1409,7 +1552,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 镜像ID	
+             * The ID of the custom image. You can call `DescribeKubernetesVersionMetadata` to query the images supported by ACK.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1417,7 +1560,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点付费类型	
+             * The billing method of the nodes in the node pool. Valid values:
+             * <p>
+             * 
+             * *   `PrePaid`: subscription
+             * *   `PostPaid`: pay-as-you-go
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1425,7 +1572,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点类型	
+             * The instance types of the nodes in the node pool.
              */
             public Builder instanceTypes(java.util.List < String > instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -1433,7 +1580,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点公网IP网络计费类型
+             * The billing method of the public IP address of the node.
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -1441,7 +1588,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点公网IP出带宽最大值，单位为Mbps（Mega bit per second），取值范围：1~100
+             * The maximum outbound bandwidth of the public IP address of the node. Unit: Mbit/s. Valid values: 1 to 100.
              */
             public Builder internetMaxBandwidthOut(Long internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -1449,7 +1596,10 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 密钥对名称，和login_password二选一。
+             * The name of the key pair. You must set this parameter or the `login_password` parameter.
+             * <p>
+             * 
+             * You must set `key_pair` if the node pool is a managed node pool.
              */
             public Builder keyPair(String keyPair) {
                 this.keyPair = keyPair;
@@ -1457,7 +1607,10 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 登录密码，返回结果是加密的。
+             * The password for SSH logon. You must set this parameter or the `key_pair` parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.
+             * <p>
+             * 
+             * For security purposes, the returned password is encrypted.
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -1465,7 +1618,18 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 多可用区伸缩组ECS实例扩缩容策略
+             * The ECS instance scaling policy for a multi-zone scaling group. Valid values:
+             * <p>
+             * 
+             * *   `PRIORITY`: the scaling group is scaled based on the VSwitchIds.N parameter. When an ECS instance cannot be created in the zone where the vSwitch with the highest priority resides, the system uses the vSwitch with the next highest priority to create the ECS instance.
+             * 
+             * *   `COST_OPTIMIZED`: ECS instances are created based on the vCPU unit price in ascending order. Preemptible instances are preferentially created when multiple instance types are specified in the scaling configurations. You can set the `CompensateWithOnDemand` parameter to specify whether to automatically create pay-as-you-go instances when preemptible instances cannot be created due to insufficient resources.
+             * 
+             *     **
+             * 
+             *     **Note** `COST_OPTIMIZED` is valid only when multiple instance types are specified or at least one preemptible instance type is specified.
+             * 
+             * *   `BALANCE`: ECS instances are evenly distributed across multiple zones specified by the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call `RebalanceInstances` of Auto Scaling (ESS) to balance the instance distribution among zones. For more information, see [RebalanceInstances](~~71516~~).
              */
             public Builder multiAzPolicy(String multiAzPolicy) {
                 this.multiAzPolicy = multiAzPolicy;
@@ -1473,7 +1637,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 伸缩组所需要按量实例个数的最小值，取值范围：0~1000。当按量实例个数少于该值时，将优先创建按量实例
+             * The minimum number of pay-as-you-go instances that must be kept in the scaling group. Valid values: 0 to 1000. When the number of pay-as-you-go instances is lower than this value, pay-as-you-go instances are preferentially created to meet the required number.
              */
             public Builder onDemandBaseCapacity(Long onDemandBaseCapacity) {
                 this.onDemandBaseCapacity = onDemandBaseCapacity;
@@ -1481,7 +1645,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 伸缩组满足最小按量实例数（OnDemandBaseCapacity）要求后，超出的实例中按量实例应占的比例，取值范围：0～100
+             * The percentage of pay-as-you-go instances among the extra instances that exceed the number specified by `on_demand_base_capacity`. Valid values: 0 to 100.
              */
             public Builder onDemandPercentageAboveBaseCapacity(Long onDemandPercentageAboveBaseCapacity) {
                 this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
@@ -1489,7 +1653,10 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 包年包月时长	
+             * The subscription duration of worker nodes. This parameter takes effect and is required only when `instance_charge_type` is set to `PrePaid`.
+             * <p>
+             * 
+             * If `PeriodUnit=Month` is specified, the valid values are 1, 2, 3, 6, 12, 24, 36, 48, and 60.
              */
             public Builder period(Long period) {
                 this.period = period;
@@ -1497,7 +1664,10 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 自动付费周期	
+             * The billing cycle of the nodes. This parameter takes effect only when `instance_charge_type` is set to `PrePaid`.
+             * <p>
+             * 
+             * Valid value: `Month`
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -1505,7 +1675,13 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 操作系统发行版。取值： CentOS，AliyunLinux，Windows，WindowsCore
+             * The release version of the operating system. Valid values:
+             * <p>
+             * 
+             * *   `CentOS`
+             * *   `AliyunLinux`
+             * *   `Windows`
+             * *   `WindowsCore`
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -1513,7 +1689,15 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * RAM 角色名称	
+             * private_pool_options.
+             */
+            public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+                this.privatePoolOptions = privatePoolOptions;
+                return this;
+            }
+
+            /**
+             * The name of the worker Resource Access Management (RAM) role. The RAM role is assigned to the worker nodes of the cluster to allow the worker nodes to manage ECS instances.
              */
             public Builder ramPolicy(String ramPolicy) {
                 this.ramPolicy = ramPolicy;
@@ -1521,7 +1705,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * RDS列表	
+             * The IDs of the ApsaraDB RDS instances.
              */
             public Builder rdsInstances(java.util.List < String > rdsInstances) {
                 this.rdsInstances = rdsInstances;
@@ -1529,7 +1713,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 扩容组ID	
+             * The ID of the scaling group.
              */
             public Builder scalingGroupId(String scalingGroupId) {
                 this.scalingGroupId = scalingGroupId;
@@ -1537,7 +1721,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 扩容节点策略	
+             * The scaling mode of the scaling group. Valid values:
+             * <p>
+             * 
+             * *   `release`: the standard mode. ECS instances are created and released based on the resource usage.
+             * *   `recycle`: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances attached with local disks.
              */
             public Builder scalingPolicy(String scalingPolicy) {
                 this.scalingPolicy = scalingPolicy;
@@ -1545,7 +1733,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 安全组ID。
+             * The ID of the security group to which the node pool is added. If the node pool is added to multiple security groups, the first ID in the value of `security_group_ids` is returned.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1553,7 +1741,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 安全组ID列表
+             * The IDs of the security groups to which the node pool is added.
              */
             public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -1561,7 +1749,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 指定可用实例规格的个数，伸缩组将按成本最低的多个规格均衡创建抢占式实例。取值范围：1~10
+             * The number of available instance types. The scaling group creates preemptible instances of multiple instance types at the lowest cost. Valid values: 1 to 10.
              */
             public Builder spotInstancePools(Long spotInstancePools) {
                 this.spotInstancePools = spotInstancePools;
@@ -1569,7 +1757,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启补齐抢占式实例。开启后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例
+             * Indicates whether preemptible instances are supplemented when the number of preemptible instances drops below the specified minimum number. If this parameter is set to true, when the scaling group receives a system message that a preemptible instance is to be reclaimed, the scaling group attempts to create a new instance to replace this instance. Valid values:
+             * <p>
+             * 
+             * *   `true`: Supplement to preemptible instances is enabled.
+             * *   `false`: Supplement to preemptible instances is disabled.
              */
             public Builder spotInstanceRemedy(Boolean spotInstanceRemedy) {
                 this.spotInstanceRemedy = spotInstanceRemedy;
@@ -1577,7 +1769,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 抢占实例价格上限配置
+             * The bid configurations of preemptible instances.
              */
             public Builder spotPriceLimit(java.util.List < SpotPriceLimit> spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -1585,7 +1777,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 抢占式实例类型
+             * The bidding policy of preemptible instances. Valid values:
+             * <p>
+             * 
+             * *   NoSpot: non-preemptible instance.
+             * *   SpotWithPriceLimit: specifies the highest bid for the preemptible instance.
+             * *   SpotAsPriceGo: automatically submits bids based on the up-to-date market price.
+             * 
+             * For more information, see [Preemptible instances](~~157759~~).
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -1593,7 +1792,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 系统盘类型。	
+             * The type of system disk. Valid values:
+             * <p>
+             * 
+             * *   `cloud_efficiency`: ultra disk
+             * *   `cloud_ssd`: standard SSD
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -1601,7 +1804,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点系统盘磁盘性能，只针对ESSD磁盘生效
+             * system_disk_performance_level.
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
@@ -1609,7 +1812,10 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 系统盘大小	
+             * The system disk size of a worker node. Unit: GiB.
+             * <p>
+             * 
+             * Valid values: 20 to 500
              */
             public Builder systemDiskSize(Long systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -1617,7 +1823,10 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点标签	
+             * The labels that are added only to ECS instances.
+             * <p>
+             * 
+             * A key must be unique and cannot exceed 128 characters in length. Neither keys nor values can start with aliyun or acs:. Neither keys nor values can contain https:// or http://.
              */
             public Builder tags(java.util.List < Tag > tags) {
                 this.tags = tags;
@@ -1625,7 +1834,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 虚拟交换机ID
+             * The IDs of vSwitches.
              */
             public Builder vswitchIds(java.util.List < String > vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -1750,7 +1959,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private Long totalNodes; 
 
             /**
-             * 失败的节点数	
+             * The number of failed nodes.
              */
             public Builder failedNodes(Long failedNodes) {
                 this.failedNodes = failedNodes;
@@ -1758,7 +1967,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 处于健康状态的节点数	
+             * The number of healthy nodes.
              */
             public Builder healthyNodes(Long healthyNodes) {
                 this.healthyNodes = healthyNodes;
@@ -1766,7 +1975,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 正在创建的节点数	
+             * The number of nodes that are being created.
              */
             public Builder initialNodes(Long initialNodes) {
                 this.initialNodes = initialNodes;
@@ -1774,7 +1983,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 离线节点数	
+             * The number of offline nodes.
              */
             public Builder offlineNodes(Long offlineNodes) {
                 this.offlineNodes = offlineNodes;
@@ -1782,7 +1991,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 正在被移除的节点数
+             * The number of nodes that are being removed.
              */
             public Builder removingNodes(Long removingNodes) {
                 this.removingNodes = removingNodes;
@@ -1790,7 +1999,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 正在工作节点数	
+             * The number of running nodes.
              */
             public Builder servingNodes(Long servingNodes) {
                 this.servingNodes = servingNodes;
@@ -1798,7 +2007,14 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点池状态	
+             * The status of the node pool. Valid values:
+             * <p>
+             * 
+             * *   `active`: The node pool is active.
+             * *   `scaling`: The node pool is being scaled.
+             * *   `removing`: Nodes are being removed from the node pool.
+             * *   `deleting`: The node pool is being deleted.
+             * *   `updating`: The node pool is being updated.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1806,7 +2022,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点总数	
+             * The total number of nodes in the node pool.
              */
             public Builder totalNodes(Long totalNodes) {
                 this.totalNodes = totalNodes;
@@ -1847,7 +2063,11 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private Boolean teeEnable; 
 
             /**
-             * 是否为加密计算节点池	
+             * Indicates whether confidential computing is enabled. Valid values:
+             * <p>
+             * 
+             * *   `true`: confidential computing is enabled.
+             * *   `false`: confidential computing is disabled.
              */
             public Builder teeEnable(Boolean teeEnable) {
                 this.teeEnable = teeEnable;
@@ -1996,7 +2216,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             private TeeConfig teeConfig; 
 
             /**
-             * 自动伸缩配置详情
+             * The configurations of auto scaling.
              */
             public Builder autoScaling(AutoScaling autoScaling) {
                 this.autoScaling = autoScaling;
@@ -2004,7 +2224,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 边缘节点池网络相关的配置。该值只对edge类型的节点池有意义
+             * interconnect_config.
              */
             public Builder interconnectConfig(InterconnectConfig interconnectConfig) {
                 this.interconnectConfig = interconnectConfig;
@@ -2012,7 +2232,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 边缘节点池的网络类型。basic：基础型；improved：增强型。该值只对edge类型的节点池有意义
+             * interconnect_mode.
              */
             public Builder interconnectMode(String interconnectMode) {
                 this.interconnectMode = interconnectMode;
@@ -2020,7 +2240,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 集群配置信息
+             * The configurations of the cluster.
              */
             public Builder kubernetesConfig(KubernetesConfig kubernetesConfig) {
                 this.kubernetesConfig = kubernetesConfig;
@@ -2028,7 +2248,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 托管节点池配置
+             * The configurations of managed node pools. Managed node pools are available only in professional managed Kubernetes clusters.
              */
             public Builder management(Management management) {
                 this.management = management;
@@ -2036,7 +2256,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 边缘节点池允许容纳的最大节点数量. 节点池内可以容纳的最大节点数量，该参数大于等于0。0表示无额外限制(仅受限于集群整体可以容纳的节点数，节点池本身无额外限制)。边缘节点池该参数值往往大于0；ess类型节点池和默认的edge类型节点池该参数值为0
+             * max_nodes.
              */
             public Builder maxNodes(Long maxNodes) {
                 this.maxNodes = maxNodes;
@@ -2044,7 +2264,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点池配置详情
+             * The information about the node pool.
              */
             public Builder nodepoolInfo(NodepoolInfo nodepoolInfo) {
                 this.nodepoolInfo = nodepoolInfo;
@@ -2052,7 +2272,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 扩容组配置详情
+             * The configurations of the scaling group.
              */
             public Builder scalingGroup(ScalingGroup scalingGroup) {
                 this.scalingGroup = scalingGroup;
@@ -2060,7 +2280,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点池状态详情
+             * The status details about the node pool.
              */
             public Builder status(Status status) {
                 this.status = status;
@@ -2068,7 +2288,7 @@ public class DescribeClusterNodePoolsResponseBody extends TeaModel {
             }
 
             /**
-             * 加密计算配置详情
+             * The configurations of confidential computing.
              */
             public Builder teeConfig(TeeConfig teeConfig) {
                 this.teeConfig = teeConfig;

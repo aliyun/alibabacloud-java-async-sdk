@@ -70,7 +70,7 @@ public class DescribeClusterAddonsUpgradeStatusRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,7 +79,7 @@ public class DescribeClusterAddonsUpgradeStatusRequest extends Request {
         }
 
         /**
-         * 组件名称列表。
+         * componentIds.
          */
         public Builder componentIds(java.util.List < String > componentIds) {
             String componentIdsShrink = shrink(componentIds, "componentIds", "json");

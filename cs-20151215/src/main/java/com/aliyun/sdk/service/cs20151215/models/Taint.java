@@ -62,7 +62,7 @@ public class Taint extends TeaModel {
         private String value; 
 
         /**
-         * 污点生效策略。
+         * effect.
          */
         public Builder effect(String effect) {
             this.effect = effect;
@@ -70,7 +70,7 @@ public class Taint extends TeaModel {
         }
 
         /**
-         * key值。
+         * key.
          */
         public Builder key(String key) {
             this.key = key;
@@ -78,7 +78,7 @@ public class Taint extends TeaModel {
         }
 
         /**
-         * value值。
+         * value.
          */
         public Builder value(String value) {
             this.value = value;

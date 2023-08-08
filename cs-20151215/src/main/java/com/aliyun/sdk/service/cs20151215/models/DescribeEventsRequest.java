@@ -96,7 +96,7 @@ public class DescribeEventsRequest extends Request {
         } 
 
         /**
-         * 集群ID
+         * cluster_id.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("cluster_id", clusterId);
@@ -105,7 +105,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * 没页记录数量
+         * page_number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -114,7 +114,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * 页数
+         * page_size.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -123,7 +123,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * 事件类型
+         * type.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

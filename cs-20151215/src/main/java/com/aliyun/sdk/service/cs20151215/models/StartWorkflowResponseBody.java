@@ -38,7 +38,7 @@ public class StartWorkflowResponseBody extends TeaModel {
         private String jobName; 
 
         /**
-         * 工作流名称
+         * The name of the workflow that is created.
          */
         public Builder jobName(String jobName) {
             this.jobName = jobName;

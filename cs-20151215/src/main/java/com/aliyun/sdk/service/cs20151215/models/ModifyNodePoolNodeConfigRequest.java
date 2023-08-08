@@ -98,7 +98,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +107,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * 节点池ID。
+         * NodepoolId.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -116,7 +116,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * Kubelet参数配置。
+         * kubelet_config.
          */
         public Builder kubeletConfig(KubeletConfig kubeletConfig) {
             this.putBodyParameter("kubelet_config", kubeletConfig);
@@ -125,7 +125,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * 轮转配置。
+         * rolling_policy.
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -311,7 +311,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             private java.util.Map < String, ? > systemReserved; 
 
             /**
-             * CPU管理器策略。
+             * cpuManagerPolicy.
              */
             public Builder cpuManagerPolicy(String cpuManagerPolicy) {
                 this.cpuManagerPolicy = cpuManagerPolicy;
@@ -319,7 +319,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * 事件记录的个数的突发峰值上限。
+             * eventBurst.
              */
             public Builder eventBurst(Long eventBurst) {
                 this.eventBurst = eventBurst;
@@ -327,7 +327,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * 每秒可生成的事件数量。
+             * eventRecordQPS.
              */
             public Builder eventRecordQPS(Long eventRecordQPS) {
                 this.eventRecordQPS = eventRecordQPS;
@@ -335,7 +335,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * 触发Pod驱逐操作的一组硬性门限。
+             * evictionHard.
              */
             public Builder evictionHard(java.util.Map < String, ? > evictionHard) {
                 this.evictionHard = evictionHard;
@@ -343,7 +343,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * 设置一组驱逐阈值。
+             * evictionSoft.
              */
             public Builder evictionSoft(java.util.Map < String, ? > evictionSoft) {
                 this.evictionSoft = evictionSoft;
@@ -351,7 +351,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * 设置一组驱逐宽限期。
+             * evictionSoftGracePeriod.
              */
             public Builder evictionSoftGracePeriod(java.util.Map < String, ? > evictionSoftGracePeriod) {
                 this.evictionSoftGracePeriod = evictionSoftGracePeriod;
@@ -359,7 +359,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * 每秒发送到API Server的突发请求数量上限。
+             * kubeAPIBurst.
              */
             public Builder kubeAPIBurst(Long kubeAPIBurst) {
                 this.kubeAPIBurst = kubeAPIBurst;
@@ -367,7 +367,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * 与API Server通信的每秒查询个数。
+             * kubeAPIQPS.
              */
             public Builder kubeAPIQPS(Long kubeAPIQPS) {
                 this.kubeAPIQPS = kubeAPIQPS;
@@ -375,7 +375,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * kubernetes系统预留的资源配置。
+             * kubeReserved.
              */
             public Builder kubeReserved(java.util.Map < String, ? > kubeReserved) {
                 this.kubeReserved = kubeReserved;
@@ -383,7 +383,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * 突发性镜像拉取的个数上限。
+             * registryBurst.
              */
             public Builder registryBurst(Long registryBurst) {
                 this.registryBurst = registryBurst;
@@ -391,7 +391,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * 镜像仓库的QPS上限。
+             * registryPullQPS.
              */
             public Builder registryPullQPS(Long registryPullQPS) {
                 this.registryPullQPS = registryPullQPS;
@@ -399,7 +399,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * 是否逐一拉取镜像。
+             * serializeImagePulls.
              */
             public Builder serializeImagePulls(Boolean serializeImagePulls) {
                 this.serializeImagePulls = serializeImagePulls;
@@ -407,7 +407,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             }
 
             /**
-             * 系统预留的资源配置。
+             * systemReserved.
              */
             public Builder systemReserved(java.util.Map < String, ? > systemReserved) {
                 this.systemReserved = systemReserved;
@@ -448,7 +448,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             private Long maxParallelism; 
 
             /**
-             * 最大不可用节点数。
+             * max_parallelism.
              */
             public Builder maxParallelism(Long maxParallelism) {
                 this.maxParallelism = maxParallelism;

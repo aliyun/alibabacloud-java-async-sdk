@@ -50,7 +50,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
         private java.util.Map < String, StandardComponentsValue > standardComponents; 
 
         /**
-         * 组件分组信息，例如：存储类组件，网络组件等。
+         * The details of the returned components.
          */
         public Builder componentGroups(java.util.List < ComponentGroups> componentGroups) {
             this.componentGroups = componentGroups;
@@ -58,7 +58,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * 标准组件信息，包含各个组件的描述信息。
+         * StandardComponents.
          */
         public Builder standardComponents(java.util.Map < String, StandardComponentsValue > standardComponents) {
             this.standardComponents = standardComponents;
@@ -98,7 +98,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * 组件名称。
+             * The name of the component.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -151,7 +151,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
             private java.util.List < Items> items; 
 
             /**
-             * 组件组名称。
+             * The name of the component group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -159,7 +159,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
             }
 
             /**
-             * 组件列表
+             * The names of the components in the component group.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;

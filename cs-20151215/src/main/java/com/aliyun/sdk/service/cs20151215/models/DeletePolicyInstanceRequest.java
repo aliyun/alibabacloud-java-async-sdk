@@ -84,7 +84,7 @@ public class DeletePolicyInstanceRequest extends Request {
         } 
 
         /**
-         * 目标集群id
+         * cluster_id.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -93,7 +93,7 @@ public class DeletePolicyInstanceRequest extends Request {
         }
 
         /**
-         * 策略治理规则名称
+         * policy_name.
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policy_name", policyName);
@@ -102,7 +102,7 @@ public class DeletePolicyInstanceRequest extends Request {
         }
 
         /**
-         * 策略规则实例id
+         * instance_name.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("instance_name", instanceName);

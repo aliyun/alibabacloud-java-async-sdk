@@ -54,7 +54,7 @@ public class OpenAckServiceRequest extends Request {
         } 
 
         /**
-         * 要开通的服务类型
+         * type.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

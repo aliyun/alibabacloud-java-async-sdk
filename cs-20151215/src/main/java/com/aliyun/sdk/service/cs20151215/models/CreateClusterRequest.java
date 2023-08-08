@@ -1289,7 +1289,7 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * 集群组件配置
+         * addons.
          */
         public Builder addons(java.util.List < Addon > addons) {
             this.putBodyParameter("addons", addons);
@@ -1298,7 +1298,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 合法的请求token身份，用于apiserver服务端认证请求token是否合法。
+         * api_audiences.
          */
         public Builder apiAudiences(String apiAudiences) {
             this.putBodyParameter("api_audiences", apiAudiences);
@@ -1307,7 +1307,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 付费类型。
+         * charge_type.
          */
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("charge_type", chargeType);
@@ -1316,7 +1316,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * CIS安全加固
+         * cis_enabled.
          */
         public Builder cisEnabled(Boolean cisEnabled) {
             this.putBodyParameter("cis_enabled", cisEnabled);
@@ -1325,7 +1325,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 为ECS安装云监控
+         * cloud_monitor_flags.
          */
         public Builder cloudMonitorFlags(Boolean cloudMonitorFlags) {
             this.putBodyParameter("cloud_monitor_flags", cloudMonitorFlags);
@@ -1334,7 +1334,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群本地域名
+         * cluster_domain.
          */
         public Builder clusterDomain(String clusterDomain) {
             this.putBodyParameter("cluster_domain", clusterDomain);
@@ -1343,7 +1343,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 托管版集群类型
+         * cluster_spec.
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putBodyParameter("cluster_spec", clusterSpec);
@@ -1352,7 +1352,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群类型
+         * cluster_type.
          */
         public Builder clusterType(String clusterType) {
             this.putBodyParameter("cluster_type", clusterType);
@@ -1361,7 +1361,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * POD网络网段
+         * container_cidr.
          */
         public Builder containerCidr(String containerCidr) {
             this.putBodyParameter("container_cidr", containerCidr);
@@ -1370,7 +1370,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 需要采集日志的组件
+         * controlplane_log_components.
          */
         public Builder controlplaneLogComponents(java.util.List < String > controlplaneLogComponents) {
             this.putBodyParameter("controlplane_log_components", controlplaneLogComponents);
@@ -1379,7 +1379,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 使用已有log project时，需要指定log project
+         * controlplane_log_project.
          */
         public Builder controlplaneLogProject(String controlplaneLogProject) {
             this.putBodyParameter("controlplane_log_project", controlplaneLogProject);
@@ -1388,7 +1388,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 控制平面日志
+         * controlplane_log_ttl.
          */
         public Builder controlplaneLogTtl(String controlplaneLogTtl) {
             this.putBodyParameter("controlplane_log_ttl", controlplaneLogTtl);
@@ -1397,7 +1397,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * CPU策略
+         * cpu_policy.
          */
         public Builder cpuPolicy(String cpuPolicy) {
             this.putBodyParameter("cpu_policy", cpuPolicy);
@@ -1406,7 +1406,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 自定义证书SAN
+         * custom_san.
          */
         public Builder customSan(String customSan) {
             this.putBodyParameter("custom_san", customSan);
@@ -1415,7 +1415,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群删除保护
+         * deletion_protection.
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putBodyParameter("deletion_protection", deletionProtection);
@@ -1424,7 +1424,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 失败回滚
+         * disable_rollback.
          */
         public Builder disableRollback(Boolean disableRollback) {
             this.putBodyParameter("disable_rollback", disableRollback);
@@ -1433,7 +1433,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 启用 RRSA 功能
+         * enable_rrsa.
          */
         public Builder enableRrsa(Boolean enableRrsa) {
             this.putBodyParameter("enable_rrsa", enableRrsa);
@@ -1442,7 +1442,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Secret落盘加密
+         * encryption_provider_key.
          */
         public Builder encryptionProviderKey(String encryptionProviderKey) {
             this.putBodyParameter("encryption_provider_key", encryptionProviderKey);
@@ -1451,7 +1451,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 使用EIP暴露apiServer
+         * endpoint_public_access.
          */
         public Builder endpointPublicAccess(Boolean endpointPublicAccess) {
             this.putBodyParameter("endpoint_public_access", endpointPublicAccess);
@@ -1460,7 +1460,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 使用已有节点创建集群时，是否格式化已有实例的磁盘
+         * format_disk.
          */
         public Builder formatDisk(Boolean formatDisk) {
             this.putBodyParameter("format_disk", formatDisk);
@@ -1469,7 +1469,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 自定义镜像
+         * image_id.
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("image_id", imageId);
@@ -1478,7 +1478,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 操作系统镜像类型
+         * image_type.
          */
         public Builder imageType(String imageType) {
             this.putBodyParameter("image_type", imageType);
@@ -1487,7 +1487,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 使用已有节点创建集群时，已有实例列表
+         * instances.
          */
         public Builder instances(java.util.List < String > instances) {
             this.putBodyParameter("instances", instances);
@@ -1496,7 +1496,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群IP Stack
+         * ip_stack.
          */
         public Builder ipStack(String ipStack) {
             this.putBodyParameter("ip_stack", ipStack);
@@ -1505,7 +1505,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 自动创建企业安全组
+         * is_enterprise_security_group.
          */
         public Builder isEnterpriseSecurityGroup(Boolean isEnterpriseSecurityGroup) {
             this.putBodyParameter("is_enterprise_security_group", isEnterpriseSecurityGroup);
@@ -1514,7 +1514,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 使用已有节点创建集群时，是否保留实例名称。
+         * keep_instance_name.
          */
         public Builder keepInstanceName(Boolean keepInstanceName) {
             this.putBodyParameter("keep_instance_name", keepInstanceName);
@@ -1523,7 +1523,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 密钥对名称，和login_password二选一。
+         * key_pair.
          */
         public Builder keyPair(String keyPair) {
             this.putBodyParameter("key_pair", keyPair);
@@ -1532,7 +1532,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群版本
+         * kubernetes_version.
          */
         public Builder kubernetesVersion(String kubernetesVersion) {
             this.putBodyParameter("kubernetes_version", kubernetesVersion);
@@ -1541,7 +1541,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 负载均衡规格
+         * load_balancer_spec.
          */
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putBodyParameter("load_balancer_spec", loadBalancerSpec);
@@ -1550,7 +1550,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * ASK 集群开启日志服务
+         * logging_type.
          */
         public Builder loggingType(String loggingType) {
             this.putBodyParameter("logging_type", loggingType);
@@ -1559,7 +1559,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * SSH登录密码。密码规则为8~30 个字符，且至少同时包含三项（大小写字母、数字和特殊符号），和key_pair二选一。
+         * login_password.
          */
         public Builder loginPassword(String loginPassword) {
             this.putBodyParameter("login_password", loginPassword);
@@ -1568,7 +1568,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Master节点是否自动续费
+         * master_auto_renew.
          */
         public Builder masterAutoRenew(Boolean masterAutoRenew) {
             this.putBodyParameter("master_auto_renew", masterAutoRenew);
@@ -1577,7 +1577,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Master节点自动续费时长
+         * master_auto_renew_period.
          */
         public Builder masterAutoRenewPeriod(Long masterAutoRenewPeriod) {
             this.putBodyParameter("master_auto_renew_period", masterAutoRenewPeriod);
@@ -1586,7 +1586,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Master节点数量
+         * master_count.
          */
         public Builder masterCount(Long masterCount) {
             this.putBodyParameter("master_count", masterCount);
@@ -1595,7 +1595,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Master节点付费类型
+         * master_instance_charge_type.
          */
         public Builder masterInstanceChargeType(String masterInstanceChargeType) {
             this.putBodyParameter("master_instance_charge_type", masterInstanceChargeType);
@@ -1604,7 +1604,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Master节点类型
+         * master_instance_types.
          */
         public Builder masterInstanceTypes(java.util.List < String > masterInstanceTypes) {
             this.putBodyParameter("master_instance_types", masterInstanceTypes);
@@ -1613,7 +1613,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Master节点包年包月时长
+         * master_period.
          */
         public Builder masterPeriod(Long masterPeriod) {
             this.putBodyParameter("master_period", masterPeriod);
@@ -1622,7 +1622,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Master节点包年包月周期
+         * master_period_unit.
          */
         public Builder masterPeriodUnit(String masterPeriodUnit) {
             this.putBodyParameter("master_period_unit", masterPeriodUnit);
@@ -1631,7 +1631,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Master节点系统盘类型
+         * master_system_disk_category.
          */
         public Builder masterSystemDiskCategory(String masterSystemDiskCategory) {
             this.putBodyParameter("master_system_disk_category", masterSystemDiskCategory);
@@ -1640,7 +1640,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Master节点系统盘磁盘性能，只针对ESSD磁盘生效
+         * master_system_disk_performance_level.
          */
         public Builder masterSystemDiskPerformanceLevel(String masterSystemDiskPerformanceLevel) {
             this.putBodyParameter("master_system_disk_performance_level", masterSystemDiskPerformanceLevel);
@@ -1649,7 +1649,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Master节点系统盘大小，至少40
+         * master_system_disk_size.
          */
         public Builder masterSystemDiskSize(Long masterSystemDiskSize) {
             this.putBodyParameter("master_system_disk_size", masterSystemDiskSize);
@@ -1658,7 +1658,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Master节点自动快照备份策略
+         * master_system_disk_snapshot_policy_id.
          */
         public Builder masterSystemDiskSnapshotPolicyId(String masterSystemDiskSnapshotPolicyId) {
             this.putBodyParameter("master_system_disk_snapshot_policy_id", masterSystemDiskSnapshotPolicyId);
@@ -1667,7 +1667,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Master节点使用的虚拟交换机
+         * master_vswitch_ids.
          */
         public Builder masterVswitchIds(java.util.List < String > masterVswitchIds) {
             this.putBodyParameter("master_vswitch_ids", masterVswitchIds);
@@ -1676,7 +1676,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群名称。
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -1685,7 +1685,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 使用自动创建专有网络创建ASK集群时，是否在vpc中创建Nat网关并配置SNAT规则。
+         * nat_gateway.
          */
         public Builder natGateway(Boolean natGateway) {
             this.putBodyParameter("nat_gateway", natGateway);
@@ -1694,7 +1694,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 节点IP数量
+         * node_cidr_mask.
          */
         public Builder nodeCidrMask(String nodeCidrMask) {
             this.putBodyParameter("node_cidr_mask", nodeCidrMask);
@@ -1703,7 +1703,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 自定义节点名称
+         * node_name_mode.
          */
         public Builder nodeNameMode(String nodeNameMode) {
             this.putBodyParameter("node_name_mode", nodeNameMode);
@@ -1712,7 +1712,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 节点服务端口范围
+         * node_port_range.
          */
         public Builder nodePortRange(String nodePortRange) {
             this.putBodyParameter("node_port_range", nodePortRange);
@@ -1721,7 +1721,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Worker节点数量
+         * num_of_nodes.
          */
         public Builder numOfNodes(Long numOfNodes) {
             this.putBodyParameter("num_of_nodes", numOfNodes);
@@ -1730,7 +1730,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 操作系统平台类型
+         * os_type.
          */
         public Builder osType(String osType) {
             this.putBodyParameter("os_type", osType);
@@ -1739,7 +1739,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 包年包月时间。
+         * period.
          */
         public Builder period(Long period) {
             this.putBodyParameter("period", period);
@@ -1748,7 +1748,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 包年包月时间单位。
+         * period_unit.
          */
         public Builder periodUnit(String periodUnit) {
             this.putBodyParameter("period_unit", periodUnit);
@@ -1757,7 +1757,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 操作系统发行版
+         * platform.
          */
         public Builder platform(String platform) {
             this.putBodyParameter("platform", platform);
@@ -1766,7 +1766,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 创建Terway网络类型的集群时，需要为pod指定单独的虚拟交换机
+         * pod_vswitch_ids.
          */
         public Builder podVswitchIds(java.util.List < String > podVswitchIds) {
             this.putBodyParameter("pod_vswitch_ids", podVswitchIds);
@@ -1775,7 +1775,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 面向场景时的集群类型。  Default：非边缘场景集群。 Edge：边缘场景集群。
+         * profile.
          */
         public Builder profile(String profile) {
             this.putBodyParameter("profile", profile);
@@ -1784,7 +1784,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * Proxy代理模式，ipvs|iptables
+         * proxy_mode.
          */
         public Builder proxyMode(String proxyMode) {
             this.putBodyParameter("proxy_mode", proxyMode);
@@ -1793,7 +1793,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * RDS白名单
+         * rds_instances.
          */
         public Builder rdsInstances(java.util.List < String > rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
@@ -1802,7 +1802,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 地域ID
+         * region_id.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("region_id", regionId);
@@ -1811,7 +1811,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群所属资源组ID
+         * resource_group_id.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resource_group_id", resourceGroupId);
@@ -1829,7 +1829,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 安全组ID，和is_enterprise_security_group二选一
+         * security_group_id.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putBodyParameter("security_group_id", securityGroupId);
@@ -1838,7 +1838,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * serviceaccount token中的签发身份，即token payload中的iss字段。
+         * service_account_issuer.
          */
         public Builder serviceAccountIssuer(String serviceAccountIssuer) {
             this.putBodyParameter("service_account_issuer", serviceAccountIssuer);
@@ -1847,7 +1847,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 服务网络网段
+         * service_cidr.
          */
         public Builder serviceCidr(String serviceCidr) {
             this.putBodyParameter("service_cidr", serviceCidr);
@@ -1856,7 +1856,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 创建ASK集群时，服务发现类型
+         * service_discovery_types.
          */
         public Builder serviceDiscoveryTypes(java.util.List < String > serviceDiscoveryTypes) {
             this.putBodyParameter("service_discovery_types", serviceDiscoveryTypes);
@@ -1865,7 +1865,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 若您集群内的节点、应用等需要访问公网，勾选该项后我们将为您创建 NAT 网关并自动配置 SNAT 规则
+         * snat_entry.
          */
         public Builder snatEntry(Boolean snatEntry) {
             this.putBodyParameter("snat_entry", snatEntry);
@@ -1874,7 +1874,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 等保安全加固
+         * soc_enabled.
          */
         public Builder socEnabled(Boolean socEnabled) {
             this.putBodyParameter("soc_enabled", socEnabled);
@@ -1883,7 +1883,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 允许公网ssh登录
+         * ssh_flags.
          */
         public Builder sshFlags(Boolean sshFlags) {
             this.putBodyParameter("ssh_flags", sshFlags);
@@ -1892,7 +1892,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群标签
+         * tags.
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);
@@ -1901,7 +1901,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 节点污点信息
+         * taints.
          */
         public Builder taints(java.util.List < Taint > taints) {
             this.putBodyParameter("taints", taints);
@@ -1910,7 +1910,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群创建超时时间
+         * timeout_mins.
          */
         public Builder timeoutMins(Long timeoutMins) {
             this.putBodyParameter("timeout_mins", timeoutMins);
@@ -1919,7 +1919,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 时区
+         * timezone.
          */
         public Builder timezone(String timezone) {
             this.putBodyParameter("timezone", timezone);
@@ -1928,7 +1928,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 自定义集群CA
+         * user_ca.
          */
         public Builder userCa(String userCa) {
             this.putBodyParameter("user_ca", userCa);
@@ -1937,7 +1937,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 节点自定义数据
+         * user_data.
          */
         public Builder userData(String userData) {
             this.putBodyParameter("user_data", userData);
@@ -1946,7 +1946,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群专有网络ID。
+         * vpcid.
          */
         public Builder vpcid(String vpcid) {
             this.putBodyParameter("vpcid", vpcid);
@@ -1955,7 +1955,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群节点所在虚拟交换机。
+         * vswitch_ids.
          */
         public Builder vswitchIds(java.util.List < String > vswitchIds) {
             this.putBodyParameter("vswitch_ids", vswitchIds);
@@ -1964,7 +1964,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Worker节点到期是否自动续费
+         * worker_auto_renew.
          */
         public Builder workerAutoRenew(Boolean workerAutoRenew) {
             this.putBodyParameter("worker_auto_renew", workerAutoRenew);
@@ -1973,7 +1973,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Worker节点自动续费时长
+         * worker_auto_renew_period.
          */
         public Builder workerAutoRenewPeriod(Long workerAutoRenewPeriod) {
             this.putBodyParameter("worker_auto_renew_period", workerAutoRenewPeriod);
@@ -1982,7 +1982,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Worker节点数据盘配置
+         * worker_data_disks.
          */
         public Builder workerDataDisks(java.util.List < WorkerDataDisks> workerDataDisks) {
             this.putBodyParameter("worker_data_disks", workerDataDisks);
@@ -1991,7 +1991,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Worker节点付费类型
+         * worker_instance_charge_type.
          */
         public Builder workerInstanceChargeType(String workerInstanceChargeType) {
             this.putBodyParameter("worker_instance_charge_type", workerInstanceChargeType);
@@ -2000,7 +2000,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Worker节点类型
+         * worker_instance_types.
          */
         public Builder workerInstanceTypes(java.util.List < String > workerInstanceTypes) {
             this.putBodyParameter("worker_instance_types", workerInstanceTypes);
@@ -2009,7 +2009,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Worker节点包年包月时长
+         * worker_period.
          */
         public Builder workerPeriod(Long workerPeriod) {
             this.putBodyParameter("worker_period", workerPeriod);
@@ -2018,7 +2018,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Worker节点包年包月周期
+         * worker_period_unit.
          */
         public Builder workerPeriodUnit(String workerPeriodUnit) {
             this.putBodyParameter("worker_period_unit", workerPeriodUnit);
@@ -2027,7 +2027,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Worker节点系统盘类型
+         * worker_system_disk_category.
          */
         public Builder workerSystemDiskCategory(String workerSystemDiskCategory) {
             this.putBodyParameter("worker_system_disk_category", workerSystemDiskCategory);
@@ -2036,7 +2036,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Worker节点磁盘性能，只对ESSD类型磁盘生效
+         * worker_system_disk_performance_level.
          */
         public Builder workerSystemDiskPerformanceLevel(String workerSystemDiskPerformanceLevel) {
             this.putBodyParameter("worker_system_disk_performance_level", workerSystemDiskPerformanceLevel);
@@ -2045,7 +2045,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Worker节点系统盘大小
+         * worker_system_disk_size.
          */
         public Builder workerSystemDiskSize(Long workerSystemDiskSize) {
             this.putBodyParameter("worker_system_disk_size", workerSystemDiskSize);
@@ -2054,7 +2054,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Worker节点系统盘快照备份策略
+         * worker_system_disk_snapshot_policy_id.
          */
         public Builder workerSystemDiskSnapshotPolicyId(String workerSystemDiskSnapshotPolicyId) {
             this.putBodyParameter("worker_system_disk_snapshot_policy_id", workerSystemDiskSnapshotPolicyId);
@@ -2063,7 +2063,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 集群Worker节点所在虚拟交换机
+         * worker_vswitch_ids.
          */
         public Builder workerVswitchIds(java.util.List < String > workerVswitchIds) {
             this.putBodyParameter("worker_vswitch_ids", workerVswitchIds);
@@ -2072,7 +2072,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * 使用自动创建专有网络创建ASK集群时，需要指定专有网络的可用区
+         * zone_id.
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("zone_id", zoneId);
@@ -2152,7 +2152,7 @@ public class CreateClusterRequest extends Request {
             private String size; 
 
             /**
-             * 集群Worker节点数据盘类型
+             * category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -2160,7 +2160,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 集群Worker节点数据盘是否加密
+             * encrypted.
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -2168,7 +2168,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 集群Worker节点数据盘磁盘性能等级，仅对ESSD磁盘生效
+             * performance_level.
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -2176,7 +2176,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * 集群Worker节点数据盘大小
+             * size.
              */
             public Builder size(String size) {
                 this.size = size;

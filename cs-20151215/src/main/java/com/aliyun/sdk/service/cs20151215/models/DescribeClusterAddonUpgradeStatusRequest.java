@@ -70,7 +70,7 @@ public class DescribeClusterAddonUpgradeStatusRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -79,7 +79,7 @@ public class DescribeClusterAddonUpgradeStatusRequest extends Request {
         }
 
         /**
-         * 组件ID。
+         * The ID of the add-on. For example, nginx-ingress-controller, flexvolume, and metrics-server.
          */
         public Builder componentId(String componentId) {
             this.putPathParameter("ComponentId", componentId);

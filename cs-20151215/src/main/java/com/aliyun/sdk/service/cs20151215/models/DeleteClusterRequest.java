@@ -97,7 +97,7 @@ public class DeleteClusterRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +106,7 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * 是否保留SLB。  true：保留 false：不保留 默认值：false。
+         * keep_slb.
          */
         public Builder keepSlb(Boolean keepSlb) {
             this.putQueryParameter("keep_slb", keepSlb);
@@ -115,7 +115,7 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * 是否保留所有资源,如果设置了该值，将会忽略retain_resources。  true：保留 false：不保留 默认值：fase。
+         * retain_all_resources.
          */
         public Builder retainAllResources(Boolean retainAllResources) {
             this.putQueryParameter("retain_all_resources", retainAllResources);
@@ -124,7 +124,7 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * 要保留的资源列表。
+         * retain_resources.
          */
         public Builder retainResources(java.util.List < String > retainResources) {
             String retainResourcesShrink = shrink(retainResources, "retain_resources", "json");

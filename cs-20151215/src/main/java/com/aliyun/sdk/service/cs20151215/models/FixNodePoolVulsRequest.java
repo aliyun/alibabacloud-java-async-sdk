@@ -31,8 +31,8 @@ public class FixNodePoolVulsRequest extends Request {
     private RolloutPolicy rolloutPolicy;
 
     @Body
-    @NameInMap("vul_list")
-    private java.util.List < String > vulList;
+    @NameInMap("vuls")
+    private java.util.List < String > vuls;
 
     private FixNodePoolVulsRequest(Builder builder) {
         super(builder);
@@ -40,7 +40,7 @@ public class FixNodePoolVulsRequest extends Request {
         this.nodepoolId = builder.nodepoolId;
         this.nodes = builder.nodes;
         this.rolloutPolicy = builder.rolloutPolicy;
-        this.vulList = builder.vulList;
+        this.vuls = builder.vuls;
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public class FixNodePoolVulsRequest extends Request {
     }
 
     /**
-     * @return vulList
+     * @return vuls
      */
-    public java.util.List < String > getVulList() {
-        return this.vulList;
+    public java.util.List < String > getVuls() {
+        return this.vuls;
     }
 
     public static final class Builder extends Request.Builder<FixNodePoolVulsRequest, Builder> {
@@ -96,7 +96,7 @@ public class FixNodePoolVulsRequest extends Request {
         private String nodepoolId; 
         private java.util.List < String > nodes; 
         private RolloutPolicy rolloutPolicy; 
-        private java.util.List < String > vulList; 
+        private java.util.List < String > vuls; 
 
         private Builder() {
             super();
@@ -108,11 +108,11 @@ public class FixNodePoolVulsRequest extends Request {
             this.nodepoolId = request.nodepoolId;
             this.nodes = request.nodes;
             this.rolloutPolicy = request.rolloutPolicy;
-            this.vulList = request.vulList;
+            this.vuls = request.vuls;
         } 
 
         /**
-         * 集群ID
+         * cluster_id.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -121,7 +121,7 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * 节点池ID
+         * nodepool_id.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("nodepool_id", nodepoolId);
@@ -130,7 +130,7 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * 待修复的节点名称列表
+         * nodes.
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putBodyParameter("nodes", nodes);
@@ -139,7 +139,7 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * 轮转修复策略
+         * rollout_policy.
          */
         public Builder rolloutPolicy(RolloutPolicy rolloutPolicy) {
             this.putBodyParameter("rollout_policy", rolloutPolicy);
@@ -148,11 +148,11 @@ public class FixNodePoolVulsRequest extends Request {
         }
 
         /**
-         * 待修复的漏洞名称列表
+         * vuls.
          */
-        public Builder vulList(java.util.List < String > vulList) {
-            this.putBodyParameter("vul_list", vulList);
-            this.vulList = vulList;
+        public Builder vuls(java.util.List < String > vuls) {
+            this.putBodyParameter("vuls", vuls);
+            this.vuls = vuls;
             return this;
         }
 
@@ -190,7 +190,7 @@ public class FixNodePoolVulsRequest extends Request {
             private Long maxParallelism; 
 
             /**
-             * 轮转修复时的最大并行度
+             * max_parallelism.
              */
             public Builder maxParallelism(Long maxParallelism) {
                 this.maxParallelism = maxParallelism;

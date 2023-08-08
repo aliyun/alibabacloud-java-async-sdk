@@ -69,7 +69,7 @@ public class UpgradeClusterAddonsRequest extends Request {
         } 
 
         /**
-         * 集群ID
+         * cf4299b79b3e34226abfdc80a4bda\*\*\*\*
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class UpgradeClusterAddonsRequest extends Request {
         }
 
         /**
-         * Request body，类型是对象数组
+         * body.
          */
         public Builder body(java.util.List < UpgradeClusterAddonsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -105,6 +105,9 @@ public class UpgradeClusterAddonsRequest extends Request {
         @Validation(required = true)
         private String nextVersion;
 
+        @NameInMap("policy")
+        private String policy;
+
         @NameInMap("version")
         private String version;
 
@@ -112,6 +115,7 @@ public class UpgradeClusterAddonsRequest extends Request {
             this.componentName = builder.componentName;
             this.config = builder.config;
             this.nextVersion = builder.nextVersion;
+            this.policy = builder.policy;
             this.version = builder.version;
         }
 
@@ -145,6 +149,13 @@ public class UpgradeClusterAddonsRequest extends Request {
         }
 
         /**
+         * @return policy
+         */
+        public String getPolicy() {
+            return this.policy;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -155,10 +166,11 @@ public class UpgradeClusterAddonsRequest extends Request {
             private String componentName; 
             private String config; 
             private String nextVersion; 
+            private String policy; 
             private String version; 
 
             /**
-             * 组件名称
+             * component_name.
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -166,7 +178,7 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * 组件自定义参数
+             * config.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -174,7 +186,7 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * 可升级版本
+             * next_version.
              */
             public Builder nextVersion(String nextVersion) {
                 this.nextVersion = nextVersion;
@@ -182,7 +194,15 @@ public class UpgradeClusterAddonsRequest extends Request {
             }
 
             /**
-             * 当前版本
+             * policy.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
+                return this;
+            }
+
+            /**
+             * version.
              */
             public Builder version(String version) {
                 this.version = version;

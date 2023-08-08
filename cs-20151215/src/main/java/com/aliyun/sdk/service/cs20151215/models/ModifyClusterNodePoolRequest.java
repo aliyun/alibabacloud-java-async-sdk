@@ -168,7 +168,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -177,7 +177,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * 节点池ID。
+         * NodepoolId.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -186,7 +186,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * 自动伸缩节点池配置。
+         * auto_scaling.
          */
         public Builder autoScaling(AutoScaling autoScaling) {
             this.putBodyParameter("auto_scaling", autoScaling);
@@ -195,7 +195,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * 集群配置。
+         * kubernetes_config.
          */
         public Builder kubernetesConfig(KubernetesConfig kubernetesConfig) {
             this.putBodyParameter("kubernetes_config", kubernetesConfig);
@@ -204,7 +204,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * 托管版节点池配置。
+         * management.
          */
         public Builder management(Management management) {
             this.putBodyParameter("management", management);
@@ -213,7 +213,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * 节点池配置。
+         * nodepool_info.
          */
         public Builder nodepoolInfo(NodepoolInfo nodepoolInfo) {
             this.putBodyParameter("nodepool_info", nodepoolInfo);
@@ -222,7 +222,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * 扩容组配置。
+         * scaling_group.
          */
         public Builder scalingGroup(ScalingGroup scalingGroup) {
             this.putBodyParameter("scaling_group", scalingGroup);
@@ -231,7 +231,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * 加密计算配置。
+         * tee_config.
          */
         public Builder teeConfig(TeeConfig teeConfig) {
             this.putBodyParameter("tee_config", teeConfig);
@@ -240,7 +240,7 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
-         * 是否同步更新节点标签及污点。
+         * update_nodes.
          */
         public Builder updateNodes(Boolean updateNodes) {
             this.putBodyParameter("update_nodes", updateNodes);
@@ -354,7 +354,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String type; 
 
             /**
-             * 带宽峰值。
+             * eip_bandwidth.
              */
             public Builder eipBandwidth(Long eipBandwidth) {
                 this.eipBandwidth = eipBandwidth;
@@ -362,7 +362,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * EIP计费类型。
+             * eip_internet_charge_type.
              */
             public Builder eipInternetChargeType(String eipInternetChargeType) {
                 this.eipInternetChargeType = eipInternetChargeType;
@@ -370,7 +370,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 是否开启自动伸缩。
+             * enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -378,7 +378,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 是否绑定EIP。
+             * is_bond_eip.
              */
             public Builder isBondEip(Boolean isBondEip) {
                 this.isBondEip = isBondEip;
@@ -386,7 +386,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 最大实例数。
+             * max_instances.
              */
             public Builder maxInstances(Long maxInstances) {
                 this.maxInstances = maxInstances;
@@ -394,7 +394,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 最小实例数。
+             * min_instances.
              */
             public Builder minInstances(Long minInstances) {
                 this.minInstances = minInstances;
@@ -402,7 +402,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 自动伸缩节点类型。
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -515,7 +515,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String userData; 
 
             /**
-             * 是否开启云监控。
+             * cms_enabled.
              */
             public Builder cmsEnabled(Boolean cmsEnabled) {
                 this.cmsEnabled = cmsEnabled;
@@ -523,7 +523,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * CPU管理策略。
+             * cpu_policy.
              */
             public Builder cpuPolicy(String cpuPolicy) {
                 this.cpuPolicy = cpuPolicy;
@@ -531,7 +531,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 节点标签。
+             * labels.
              */
             public Builder labels(java.util.List < Tag > labels) {
                 this.labels = labels;
@@ -539,7 +539,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 容器运行时。
+             * runtime.
              */
             public Builder runtime(String runtime) {
                 this.runtime = runtime;
@@ -547,7 +547,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 容器运行时版本。
+             * runtime_version.
              */
             public Builder runtimeVersion(String runtimeVersion) {
                 this.runtimeVersion = runtimeVersion;
@@ -555,7 +555,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 污点配置。
+             * taints.
              */
             public Builder taints(java.util.List < Taint > taints) {
                 this.taints = taints;
@@ -563,7 +563,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 实例自定义数据。
+             * user_data.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -640,7 +640,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private Long surgePercentage; 
 
             /**
-             * 是否启用自动升级，自修复。
+             * auto_upgrade.
              */
             public Builder autoUpgrade(Boolean autoUpgrade) {
                 this.autoUpgrade = autoUpgrade;
@@ -648,7 +648,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 最大不可用节点数量。
+             * max_unavailable.
              */
             public Builder maxUnavailable(Long maxUnavailable) {
                 this.maxUnavailable = maxUnavailable;
@@ -656,7 +656,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 额外节点数量。
+             * surge.
              */
             public Builder surge(Long surge) {
                 this.surge = surge;
@@ -664,7 +664,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 额外节点比例， 和surge 二选一。
+             * surge_percentage.
              */
             public Builder surgePercentage(Long surgePercentage) {
                 this.surgePercentage = surgePercentage;
@@ -729,7 +729,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private UpgradeConfig upgradeConfig; 
 
             /**
-             * 是否开启自动修复。
+             * auto_repair.
              */
             public Builder autoRepair(Boolean autoRepair) {
                 this.autoRepair = autoRepair;
@@ -737,7 +737,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 是否启用托管节点池。
+             * enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -745,7 +745,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 自动升级配置。
+             * upgrade_config.
              */
             public Builder upgradeConfig(UpgradeConfig upgradeConfig) {
                 this.upgradeConfig = upgradeConfig;
@@ -798,7 +798,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String resourceGroupId; 
 
             /**
-             * 节点池名称。
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -806,7 +806,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 资源组ID。
+             * resource_group_id.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -815,6 +815,67 @@ public class ModifyClusterNodePoolRequest extends Request {
 
             public NodepoolInfo build() {
                 return new NodepoolInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class PrivatePoolOptions extends TeaModel {
+        @NameInMap("id")
+        private String id;
+
+        @NameInMap("match_criteria")
+        private String matchCriteria;
+
+        private PrivatePoolOptions(Builder builder) {
+            this.id = builder.id;
+            this.matchCriteria = builder.matchCriteria;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivatePoolOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return matchCriteria
+         */
+        public String getMatchCriteria() {
+            return this.matchCriteria;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String matchCriteria; 
+
+            /**
+             * id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * match_criteria.
+             */
+            public Builder matchCriteria(String matchCriteria) {
+                this.matchCriteria = matchCriteria;
+                return this;
+            }
+
+            public PrivatePoolOptions build() {
+                return new PrivatePoolOptions(this);
             } 
 
         } 
@@ -859,7 +920,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String priceLimit; 
 
             /**
-             * 抢占式实例规格
+             * instance_type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -867,7 +928,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 单台实例上限价格，单位：元/小时。
+             * price_limit.
              */
             public Builder priceLimit(String priceLimit) {
                 this.priceLimit = priceLimit;
@@ -936,6 +997,9 @@ public class ModifyClusterNodePoolRequest extends Request {
         @NameInMap("platform")
         private String platform;
 
+        @NameInMap("private_pool_options")
+        private PrivatePoolOptions privatePoolOptions;
+
         @NameInMap("rds_instances")
         private java.util.List < String > rdsInstances;
 
@@ -988,6 +1052,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
             this.platform = builder.platform;
+            this.privatePoolOptions = builder.privatePoolOptions;
             this.rdsInstances = builder.rdsInstances;
             this.scalingPolicy = builder.scalingPolicy;
             this.spotInstancePools = builder.spotInstancePools;
@@ -1136,6 +1201,13 @@ public class ModifyClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return privatePoolOptions
+         */
+        public PrivatePoolOptions getPrivatePoolOptions() {
+            return this.privatePoolOptions;
+        }
+
+        /**
          * @return rdsInstances
          */
         public java.util.List < String > getRdsInstances() {
@@ -1231,6 +1303,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private Long period; 
             private String periodUnit; 
             private String platform; 
+            private PrivatePoolOptions privatePoolOptions; 
             private java.util.List < String > rdsInstances; 
             private String scalingPolicy; 
             private Long spotInstancePools; 
@@ -1244,7 +1317,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private java.util.List < String > vswitchIds; 
 
             /**
-             * 节点池节点是启用自动续费
+             * auto_renew.
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -1252,7 +1325,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 节点池节点自动续费周期
+             * auto_renew_period.
              */
             public Builder autoRenewPeriod(Long autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
@@ -1260,7 +1333,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 当MultiAZPolicy取值为COST_OPTIMIZED时，如果因价格、库存等原因无法创建足够的抢占式实例，是否允许自动尝试创建按量实例满足ECS实例数量要求。取值范围：true：允许。false：不允许。默认值：true
+             * compensate_with_on_demand.
              */
             public Builder compensateWithOnDemand(Boolean compensateWithOnDemand) {
                 this.compensateWithOnDemand = compensateWithOnDemand;
@@ -1268,7 +1341,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 数据盘配置。
+             * data_disks.
              */
             public Builder dataDisks(java.util.List < DataDisk > dataDisks) {
                 this.dataDisks = dataDisks;
@@ -1276,7 +1349,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 节点池期望节点数
+             * desired_size.
              */
             public Builder desiredSize(Long desiredSize) {
                 this.desiredSize = desiredSize;
@@ -1284,7 +1357,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 自定义镜像
+             * image_id.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -1292,7 +1365,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 节点付费类型。
+             * instance_charge_type.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -1300,7 +1373,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 节点实例规格。
+             * instance_types.
              */
             public Builder instanceTypes(java.util.List < String > instanceTypes) {
                 this.instanceTypes = instanceTypes;
@@ -1308,7 +1381,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 节点公网IP网络计费类型
+             * internet_charge_type.
              */
             public Builder internetChargeType(String internetChargeType) {
                 this.internetChargeType = internetChargeType;
@@ -1316,7 +1389,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 节点公网IP出带宽最大值，单位为Mbps（Mega bit per second），取值范围：1~100
+             * internet_max_bandwidth_out.
              */
             public Builder internetMaxBandwidthOut(Long internetMaxBandwidthOut) {
                 this.internetMaxBandwidthOut = internetMaxBandwidthOut;
@@ -1324,7 +1397,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 密钥对名称，和login_password二选一。
+             * key_pair.
              */
             public Builder keyPair(String keyPair) {
                 this.keyPair = keyPair;
@@ -1332,7 +1405,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * SSH登录密码，和key_pari二选一。
+             * login_password.
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -1340,7 +1413,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 多可用区伸缩组ECS实例扩缩容策略
+             * multi_az_policy.
              */
             public Builder multiAzPolicy(String multiAzPolicy) {
                 this.multiAzPolicy = multiAzPolicy;
@@ -1348,7 +1421,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 伸缩组所需要按量实例个数的最小值，取值范围：0~1000。当按量实例个数少于该值时，将优先创建按量实例。
+             * on_demand_base_capacity.
              */
             public Builder onDemandBaseCapacity(Long onDemandBaseCapacity) {
                 this.onDemandBaseCapacity = onDemandBaseCapacity;
@@ -1356,7 +1429,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 伸缩组满足最小按量实例数（OnDemandBaseCapacity）要求后，超出的实例中按量实例应占的比例，取值范围：0～100。
+             * on_demand_percentage_above_base_capacity.
              */
             public Builder onDemandPercentageAboveBaseCapacity(Long onDemandPercentageAboveBaseCapacity) {
                 this.onDemandPercentageAboveBaseCapacity = onDemandPercentageAboveBaseCapacity;
@@ -1364,7 +1437,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 包年包月时长
+             * period.
              */
             public Builder period(Long period) {
                 this.period = period;
@@ -1372,7 +1445,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 付费周期
+             * period_unit.
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -1380,7 +1453,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 操作系统发行版。
+             * platform.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -1388,7 +1461,15 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * RDS实例列表。
+             * private_pool_options.
+             */
+            public Builder privatePoolOptions(PrivatePoolOptions privatePoolOptions) {
+                this.privatePoolOptions = privatePoolOptions;
+                return this;
+            }
+
+            /**
+             * rds_instances.
              */
             public Builder rdsInstances(java.util.List < String > rdsInstances) {
                 this.rdsInstances = rdsInstances;
@@ -1396,7 +1477,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 扩容策略。
+             * scaling_policy.
              */
             public Builder scalingPolicy(String scalingPolicy) {
                 this.scalingPolicy = scalingPolicy;
@@ -1404,7 +1485,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 指定可用实例规格的个数，伸缩组将按成本最低的多个规格均衡创建抢占式实例。取值范围：1~10。
+             * spot_instance_pools.
              */
             public Builder spotInstancePools(Long spotInstancePools) {
                 this.spotInstancePools = spotInstancePools;
@@ -1412,7 +1493,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 是否开启补齐抢占式实例。开启后，当收到抢占式实例将被回收的系统消息时，伸缩组将尝试创建新的实例，替换掉将被回收的抢占式实例。
+             * spot_instance_remedy.
              */
             public Builder spotInstanceRemedy(Boolean spotInstanceRemedy) {
                 this.spotInstanceRemedy = spotInstanceRemedy;
@@ -1420,7 +1501,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 抢占实例价格上限配置
+             * spot_price_limit.
              */
             public Builder spotPriceLimit(java.util.List < SpotPriceLimit> spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -1428,7 +1509,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 抢占式实例类型
+             * spot_strategy.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -1436,7 +1517,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 节点系统盘类型。
+             * system_disk_category.
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
                 this.systemDiskCategory = systemDiskCategory;
@@ -1444,7 +1525,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 节点系统盘磁盘性能，只针对ESSD磁盘生效
+             * system_disk_performance_level.
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
@@ -1452,7 +1533,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 节点系统盘大小。
+             * system_disk_size.
              */
             public Builder systemDiskSize(Long systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -1460,7 +1541,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * ECS标签。
+             * tags.
              */
             public Builder tags(java.util.List < Tag > tags) {
                 this.tags = tags;
@@ -1468,7 +1549,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * 节点使用的虚拟交换机ID。
+             * vswitch_ids.
              */
             public Builder vswitchIds(java.util.List < String > vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -1509,7 +1590,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private Boolean teeEnable; 
 
             /**
-             * 是否为加密计算节点池。
+             * tee_enable.
              */
             public Builder teeEnable(Boolean teeEnable) {
                 this.teeEnable = teeEnable;

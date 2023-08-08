@@ -124,7 +124,7 @@ public class DescribeEdgeMachinesRequest extends Request {
         } 
 
         /**
-         * host name
+         * hostname.
          */
         public Builder hostname(String hostname) {
             this.putQueryParameter("hostname", hostname);
@@ -133,7 +133,7 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * life state
+         * life_state.
          */
         public Builder lifeState(String lifeState) {
             this.putQueryParameter("life_state", lifeState);
@@ -142,7 +142,7 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * model
+         * model.
          */
         public Builder model(String model) {
             this.putQueryParameter("model", model);
@@ -151,7 +151,7 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * online state
+         * online_state.
          */
         public Builder onlineState(String onlineState) {
             this.putQueryParameter("online_state", onlineState);
@@ -160,7 +160,7 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * page number
+         * page_number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -169,7 +169,7 @@ public class DescribeEdgeMachinesRequest extends Request {
         }
 
         /**
-         * page size
+         * page_size.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);

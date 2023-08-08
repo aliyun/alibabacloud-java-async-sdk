@@ -55,7 +55,7 @@ public class DeleteTemplateRequest extends Request {
         } 
 
         /**
-         * 模板ID。
+         * TemplateId.
          */
         public Builder templateId(String templateId) {
             this.putPathParameter("TemplateId", templateId);

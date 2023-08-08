@@ -83,7 +83,7 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -92,7 +92,7 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         }
 
         /**
-         * ApiServer是否为内网地址。
+         * PrivateIpAddress.
          */
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -101,7 +101,7 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         }
 
         /**
-         * 临时kubeconfig有效期，单位：分钟。  最小值：15（15分钟）  最大值：4320（3天）。
+         * TemporaryDurationMinutes.
          */
         public Builder temporaryDurationMinutes(Long temporaryDurationMinutes) {
             this.putQueryParameter("TemporaryDurationMinutes", temporaryDurationMinutes);

@@ -23,6 +23,7 @@ public class DeleteClusterNodesRequest extends Request {
 
     @Body
     @NameInMap("nodes")
+    @Validation(required = true)
     private java.util.List < String > nodes;
 
     @Body
@@ -97,7 +98,7 @@ public class DeleteClusterNodesRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +107,7 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * 是否自动排空节点上的Pod。
+         * drain_node.
          */
         public Builder drainNode(Boolean drainNode) {
             this.putBodyParameter("drain_node", drainNode);
@@ -115,7 +116,7 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * 移除节点列表。
+         * nodes.
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putBodyParameter("nodes", nodes);
@@ -124,7 +125,7 @@ public class DeleteClusterNodesRequest extends Request {
         }
 
         /**
-         * 是否同时释放 ECS
+         * release_node.
          */
         public Builder releaseNode(Boolean releaseNode) {
             this.putBodyParameter("release_node", releaseNode);

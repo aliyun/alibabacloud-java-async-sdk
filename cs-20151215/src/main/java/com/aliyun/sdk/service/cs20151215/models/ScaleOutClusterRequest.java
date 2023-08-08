@@ -356,7 +356,7 @@ public class ScaleOutClusterRequest extends Request {
         } 
 
         /**
-         * 扩容目标集群的集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -365,7 +365,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * 在节点上安装云监控
+         * cloud_monitor_flags.
          */
         public Builder cloudMonitorFlags(Boolean cloudMonitorFlags) {
             this.putBodyParameter("cloud_monitor_flags", cloudMonitorFlags);
@@ -374,7 +374,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * 扩容节点数
+         * count.
          */
         public Builder count(Long count) {
             this.putBodyParameter("count", count);
@@ -383,7 +383,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * CPU亲和性策略
+         * cpu_policy.
          */
         public Builder cpuPolicy(String cpuPolicy) {
             this.putBodyParameter("cpu_policy", cpuPolicy);
@@ -392,7 +392,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * 自定义镜像
+         * image_id.
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("image_id", imageId);
@@ -401,7 +401,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * keypair名称，和login_password二选一。
+         * key_pair.
          */
         public Builder keyPair(String keyPair) {
             this.putBodyParameter("key_pair", keyPair);
@@ -410,7 +410,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * SSH登录密码，和key_pair二选一。
+         * login_password.
          */
         public Builder loginPassword(String loginPassword) {
             this.putBodyParameter("login_password", loginPassword);
@@ -419,7 +419,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * RDS白名单
+         * rds_instances.
          */
         public Builder rdsInstances(java.util.List < String > rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);
@@ -437,7 +437,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * 节点标签
+         * tags.
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);
@@ -446,7 +446,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * 节点污点信息
+         * taints.
          */
         public Builder taints(java.util.List < Taint > taints) {
             this.putBodyParameter("taints", taints);
@@ -455,7 +455,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * 节点自定义数据
+         * user_data.
          */
         public Builder userData(String userData) {
             this.putBodyParameter("user_data", userData);
@@ -464,7 +464,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * 虚拟交换机
+         * vswitch_ids.
          */
         public Builder vswitchIds(java.util.List < String > vswitchIds) {
             this.putBodyParameter("vswitch_ids", vswitchIds);
@@ -473,7 +473,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * Worker节点到期是否自动续费
+         * worker_auto_renew.
          */
         public Builder workerAutoRenew(Boolean workerAutoRenew) {
             this.putBodyParameter("worker_auto_renew", workerAutoRenew);
@@ -482,7 +482,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * Worker节点自动续费时长
+         * worker_auto_renew_period.
          */
         public Builder workerAutoRenewPeriod(Long workerAutoRenewPeriod) {
             this.putBodyParameter("worker_auto_renew_period", workerAutoRenewPeriod);
@@ -491,7 +491,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * Worker节点数据盘配置
+         * worker_data_disks.
          */
         public Builder workerDataDisks(java.util.List < WorkerDataDisks> workerDataDisks) {
             this.putBodyParameter("worker_data_disks", workerDataDisks);
@@ -500,7 +500,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * Worker节点付费类型
+         * worker_instance_charge_type.
          */
         public Builder workerInstanceChargeType(String workerInstanceChargeType) {
             this.putBodyParameter("worker_instance_charge_type", workerInstanceChargeType);
@@ -509,7 +509,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * Worker节点实例规格
+         * worker_instance_types.
          */
         public Builder workerInstanceTypes(java.util.List < String > workerInstanceTypes) {
             this.putBodyParameter("worker_instance_types", workerInstanceTypes);
@@ -518,7 +518,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * Worker节点包年包月时长
+         * worker_period.
          */
         public Builder workerPeriod(Long workerPeriod) {
             this.putBodyParameter("worker_period", workerPeriod);
@@ -527,7 +527,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * Worker节点包年包月周期
+         * worker_period_unit.
          */
         public Builder workerPeriodUnit(String workerPeriodUnit) {
             this.putBodyParameter("worker_period_unit", workerPeriodUnit);
@@ -536,7 +536,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * Worker节点系统盘类型
+         * worker_system_disk_category.
          */
         public Builder workerSystemDiskCategory(String workerSystemDiskCategory) {
             this.putBodyParameter("worker_system_disk_category", workerSystemDiskCategory);
@@ -545,7 +545,7 @@ public class ScaleOutClusterRequest extends Request {
         }
 
         /**
-         * Worker节点系统盘大小
+         * worker_system_disk_size.
          */
         public Builder workerSystemDiskSize(Long workerSystemDiskSize) {
             this.putBodyParameter("worker_system_disk_size", workerSystemDiskSize);
@@ -623,7 +623,7 @@ public class ScaleOutClusterRequest extends Request {
             private String size; 
 
             /**
-             * 自动快照策略ID，云盘会按照快照策略自动备份。
+             * auto_snapshot_policy_id.
              */
             public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
                 this.autoSnapshotPolicyId = autoSnapshotPolicyId;
@@ -631,7 +631,7 @@ public class ScaleOutClusterRequest extends Request {
             }
 
             /**
-             * 数据盘类型,默认值：cloud_efficiency
+             * category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -639,7 +639,7 @@ public class ScaleOutClusterRequest extends Request {
             }
 
             /**
-             * 是否对数据盘加密
+             * encrypted.
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -647,7 +647,7 @@ public class ScaleOutClusterRequest extends Request {
             }
 
             /**
-             * 数据盘大小，单位为GiB。  取值范围：[40,32768]
+             * size.
              */
             public Builder size(String size) {
                 this.size = size;

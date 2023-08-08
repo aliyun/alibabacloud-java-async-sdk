@@ -69,7 +69,7 @@ public class ModifyClusterConfigurationRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class ModifyClusterConfigurationRequest extends Request {
         }
 
         /**
-         * 自定义配置。
+         * customize_config.
          */
         public Builder customizeConfig(java.util.List < CustomizeConfig> customizeConfig) {
             this.putBodyParameter("customize_config", customizeConfig);
@@ -132,7 +132,7 @@ public class ModifyClusterConfigurationRequest extends Request {
             private String value; 
 
             /**
-             * key值。
+             * key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -140,7 +140,7 @@ public class ModifyClusterConfigurationRequest extends Request {
             }
 
             /**
-             * value值。
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -193,7 +193,7 @@ public class ModifyClusterConfigurationRequest extends Request {
             private String name; 
 
             /**
-             * 组件配置。
+             * configs.
              */
             public Builder configs(java.util.List < Configs> configs) {
                 this.configs = configs;
@@ -201,7 +201,7 @@ public class ModifyClusterConfigurationRequest extends Request {
             }
 
             /**
-             * 组件名称。
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;

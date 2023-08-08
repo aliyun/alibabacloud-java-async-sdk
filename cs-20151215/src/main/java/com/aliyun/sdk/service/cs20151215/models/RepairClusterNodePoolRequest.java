@@ -84,7 +84,7 @@ public class RepairClusterNodePoolRequest extends Request {
         } 
 
         /**
-         * 集群ID
+         * cluster_id.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -93,7 +93,7 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * 节点池ID
+         * nodepool_id.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("nodepool_id", nodepoolId);
@@ -102,7 +102,7 @@ public class RepairClusterNodePoolRequest extends Request {
         }
 
         /**
-         * 节点列表，如果不指定则表示当前节点池内所有节点
+         * nodes.
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putBodyParameter("nodes", nodes);

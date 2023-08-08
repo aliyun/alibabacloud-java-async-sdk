@@ -212,7 +212,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             private String architecture; 
 
             /**
-             * 镜像ID。	
+             * image_id.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -220,7 +220,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 镜像名称。	
+             * image_name.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -228,7 +228,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 操作系统发行版。取值范围： CentOS,AliyunLinux,Windows,WindowsCore。
+             * platform.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -236,7 +236,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 镜像版本。
+             * os_version.
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -244,7 +244,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 镜像类型。	
+             * image_type.
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -252,7 +252,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 操作系统发行版本号。
+             * os_type.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -260,7 +260,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 镜像分类
+             * image_category.
              */
             public Builder imageCategory(String imageCategory) {
                 this.imageCategory = imageCategory;
@@ -268,7 +268,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 镜像架构
+             * architecture.
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -298,8 +298,14 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         @NameInMap("version")
         private String version;
 
-        @NameInMap("multi_az")
-        private String multiAz;
+        @NameInMap("release_date")
+        private String releaseDate;
+
+        @NameInMap("expiration_date")
+        private String expirationDate;
+
+        @NameInMap("creatable")
+        private Boolean creatable;
 
         private DescribeKubernetesVersionMetadataResponseBody(Builder builder) {
             this.capabilities = builder.capabilities;
@@ -307,7 +313,9 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             this.metaData = builder.metaData;
             this.runtimes = builder.runtimes;
             this.version = builder.version;
-            this.multiAz = builder.multiAz;
+            this.releaseDate = builder.releaseDate;
+            this.expirationDate = builder.expirationDate;
+            this.creatable = builder.creatable;
         }
 
         public static Builder builder() {
@@ -354,10 +362,24 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
         }
 
         /**
-         * @return multiAz
+         * @return releaseDate
          */
-        public String getMultiAz() {
-            return this.multiAz;
+        public String getReleaseDate() {
+            return this.releaseDate;
+        }
+
+        /**
+         * @return expirationDate
+         */
+        public String getExpirationDate() {
+            return this.expirationDate;
+        }
+
+        /**
+         * @return creatable
+         */
+        public Boolean getCreatable() {
+            return this.creatable;
         }
 
         public static final class Builder {
@@ -366,10 +388,12 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             private java.util.Map < String, ? > metaData; 
             private java.util.List < Runtime > runtimes; 
             private String version; 
-            private String multiAz; 
+            private String releaseDate; 
+            private String expirationDate; 
+            private Boolean creatable; 
 
             /**
-             * Kubernetes版本特性。	
+             * capabilities.
              */
             public Builder capabilities(java.util.Map < String, ? > capabilities) {
                 this.capabilities = capabilities;
@@ -377,7 +401,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * ECS系统镜像列表。	
+             * images.
              */
             public Builder images(java.util.List < Images> images) {
                 this.images = images;
@@ -385,7 +409,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * Kubernetes版本元数据信息。	
+             * meta_data.
              */
             public Builder metaData(java.util.Map < String, ? > metaData) {
                 this.metaData = metaData;
@@ -393,7 +417,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 容器运行时详情。	
+             * runtimes.
              */
             public Builder runtimes(java.util.List < Runtime > runtimes) {
                 this.runtimes = runtimes;
@@ -401,7 +425,7 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * Kubernetes版本。	
+             * version.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -409,10 +433,26 @@ public class DescribeKubernetesVersionMetadataResponse extends Response {
             }
 
             /**
-             * 是否为多可用区。
+             * release_date.
              */
-            public Builder multiAz(String multiAz) {
-                this.multiAz = multiAz;
+            public Builder releaseDate(String releaseDate) {
+                this.releaseDate = releaseDate;
+                return this;
+            }
+
+            /**
+             * expiration_date.
+             */
+            public Builder expirationDate(String expirationDate) {
+                this.expirationDate = expirationDate;
+                return this;
+            }
+
+            /**
+             * creatable.
+             */
+            public Builder creatable(Boolean creatable) {
+                this.creatable = creatable;
                 return this;
             }
 

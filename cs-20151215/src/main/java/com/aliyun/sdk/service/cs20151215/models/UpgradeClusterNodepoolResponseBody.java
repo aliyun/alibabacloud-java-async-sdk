@@ -15,8 +15,12 @@ public class UpgradeClusterNodepoolResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("task_id")
+    private String taskId;
+
     private UpgradeClusterNodepoolResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -34,14 +38,30 @@ public class UpgradeClusterNodepoolResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private String taskId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * task_id.
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
             return this;
         }
 

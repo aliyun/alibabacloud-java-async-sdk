@@ -69,7 +69,7 @@ public class GrantPermissionsRequest extends Request {
         } 
 
         /**
-         * 指定 RAM 用户的 UID
+         * uid.
          */
         public Builder uid(String uid) {
             this.putPathParameter("uid", uid);
@@ -78,7 +78,7 @@ public class GrantPermissionsRequest extends Request {
         }
 
         /**
-         * 请求体参数
+         * body.
          */
         public Builder body(java.util.List < GrantPermissionsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -183,7 +183,7 @@ public class GrantPermissionsRequest extends Request {
             private String roleType; 
 
             /**
-             * 授权目标集群id
+             * cluster.
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -191,7 +191,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * 该授权是否是自定义授权
+             * is_custom.
              */
             public Builder isCustom(Boolean isCustom) {
                 this.isCustom = isCustom;
@@ -199,7 +199,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * 是否是 RAM 角色授权
+             * is_ram_role.
              */
             public Builder isRamRole(Boolean isRamRole) {
                 this.isRamRole = isRamRole;
@@ -207,7 +207,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * 命名空间名称
+             * namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -215,7 +215,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * 预置的角色名称
+             * role_name.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -223,7 +223,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * 授权类型
+             * role_type.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;

@@ -200,7 +200,7 @@ public class DescribeTriggerResponse extends Response {
             private String token; 
 
             /**
-             * 触发器ID。
+             * id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -208,7 +208,7 @@ public class DescribeTriggerResponse extends Response {
             }
 
             /**
-             * 触发器名称。
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -216,7 +216,7 @@ public class DescribeTriggerResponse extends Response {
             }
 
             /**
-             * 集群ID
+             * cluster_id.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -224,7 +224,7 @@ public class DescribeTriggerResponse extends Response {
             }
 
             /**
-             * 触发器项目名称
+             * project_id.
              */
             public Builder projectId(String projectId) {
                 this.projectId = projectId;
@@ -232,7 +232,7 @@ public class DescribeTriggerResponse extends Response {
             }
 
             /**
-             * 触发器类型。
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -240,7 +240,7 @@ public class DescribeTriggerResponse extends Response {
             }
 
             /**
-             * 触发器行为
+             * action.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -248,7 +248,7 @@ public class DescribeTriggerResponse extends Response {
             }
 
             /**
-             * Token
+             * token.
              */
             public Builder token(String token) {
                 this.token = token;

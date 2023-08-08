@@ -50,7 +50,7 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * 节点池ID。
+         * The ID of the node pool.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.nodepoolId = nodepoolId;
@@ -58,7 +58,7 @@ public class ModifyClusterNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * 任务ID。
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

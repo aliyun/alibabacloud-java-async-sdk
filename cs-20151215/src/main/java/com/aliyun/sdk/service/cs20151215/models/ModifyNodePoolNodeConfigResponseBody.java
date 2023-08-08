@@ -62,7 +62,7 @@ public class ModifyNodePoolNodeConfigResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * 节点池ID。
+         * nodepool_id.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.nodepoolId = nodepoolId;
@@ -70,7 +70,7 @@ public class ModifyNodePoolNodeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * request_id.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ModifyNodePoolNodeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * 任务ID。
+         * task_id.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -55,7 +55,7 @@ public class DescribeEdgeMachineActiveProcessRequest extends Request {
         } 
 
         /**
-         * edge machine id
+         * edge_machineid.
          */
         public Builder edgeMachineid(String edgeMachineid) {
             this.putPathParameter("edge_machineid", edgeMachineid);

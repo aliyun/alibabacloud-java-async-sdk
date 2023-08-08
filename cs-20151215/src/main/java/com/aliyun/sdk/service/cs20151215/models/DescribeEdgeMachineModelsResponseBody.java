@@ -38,7 +38,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
         private java.util.List < Models> models; 
 
         /**
-         * Id of the request
+         * The list of details about the models of cloud-native boxes.
          */
         public Builder models(java.util.List < Models> models) {
             this.models = models;
@@ -162,7 +162,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             private String modelId; 
 
             /**
-             * cpu
+             * The number of CPU cores.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -170,7 +170,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * cpu arch
+             * The CPU architecture.
              */
             public Builder cpuArch(String cpuArch) {
                 this.cpuArch = cpuArch;
@@ -178,7 +178,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * created
+             * The time when the cloud-native box was created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -186,7 +186,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * description
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -194,7 +194,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * manage runtime
+             * Indicates whether the Docker runtime is managed.
              */
             public Builder manageRuntime(Integer manageRuntime) {
                 this.manageRuntime = manageRuntime;
@@ -202,7 +202,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * memory
+             * The memory size. Unit: GB.
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
@@ -210,7 +210,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * model
+             * The model of the cloud-native box.
              */
             public Builder model(String model) {
                 this.model = model;
@@ -218,7 +218,7 @@ public class DescribeEdgeMachineModelsResponseBody extends TeaModel {
             }
 
             /**
-             * model id
+             * The ID of the cloud-native box.
              */
             public Builder modelId(String modelId) {
                 this.modelId = modelId;

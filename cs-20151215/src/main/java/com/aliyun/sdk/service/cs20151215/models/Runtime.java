@@ -50,7 +50,7 @@ public class Runtime extends TeaModel {
         private String version; 
 
         /**
-         * 容器运行时名称
+         * name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -58,7 +58,7 @@ public class Runtime extends TeaModel {
         }
 
         /**
-         * 容器运行时版本
+         * version.
          */
         public Builder version(String version) {
             this.version = version;

@@ -83,7 +83,7 @@ public class MigrateClusterRequest extends Request {
         } 
 
         /**
-         * 集群ID
+         * cluster_id.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -92,7 +92,7 @@ public class MigrateClusterRequest extends Request {
         }
 
         /**
-         * bucket访问端点。
+         * oss_bucket_endpoint.
          */
         public Builder ossBucketEndpoint(String ossBucketEndpoint) {
             this.putBodyParameter("oss_bucket_endpoint", ossBucketEndpoint);
@@ -101,7 +101,7 @@ public class MigrateClusterRequest extends Request {
         }
 
         /**
-         * bucket名称。
+         * oss_bucket_name.
          */
         public Builder ossBucketName(String ossBucketName) {
             this.putBodyParameter("oss_bucket_name", ossBucketName);

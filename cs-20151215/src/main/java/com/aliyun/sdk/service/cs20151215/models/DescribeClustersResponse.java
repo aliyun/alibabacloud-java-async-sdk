@@ -140,7 +140,7 @@ public class DescribeClustersResponse extends Response {
             private String value; 
 
             /**
-             * 标签名。
+             * key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -148,7 +148,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 标签值。
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -525,7 +525,7 @@ public class DescribeClustersResponse extends Response {
             private String zoneId; 
 
             /**
-             * 集群ID。
+             * cluster_id.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -533,7 +533,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群类型。
+             * cluster_type.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -541,7 +541,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群创建时间。
+             * created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -549,7 +549,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群当前版本。
+             * current_version.
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -557,7 +557,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 节点系统盘类型。
+             * data_disk_category.
              */
             public Builder dataDiskCategory(String dataDiskCategory) {
                 this.dataDiskCategory = dataDiskCategory;
@@ -565,7 +565,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 节点系统盘大小。
+             * data_disk_size.
              */
             public Builder dataDiskSize(Long dataDiskSize) {
                 this.dataDiskSize = dataDiskSize;
@@ -573,7 +573,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群是否开启删除保护。
+             * deletion_protection.
              */
             public Builder deletionProtection(Boolean deletionProtection) {
                 this.deletionProtection = deletionProtection;
@@ -581,7 +581,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 容器运行时版本。
+             * docker_version.
              */
             public Builder dockerVersion(String dockerVersion) {
                 this.dockerVersion = dockerVersion;
@@ -589,7 +589,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群Ingerss SLB实例的ID。
+             * external_loadbalancer_id.
              */
             public Builder externalLoadbalancerId(String externalLoadbalancerId) {
                 this.externalLoadbalancerId = externalLoadbalancerId;
@@ -597,7 +597,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群创建时版本。
+             * init_version.
              */
             public Builder initVersion(String initVersion) {
                 this.initVersion = initVersion;
@@ -605,7 +605,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群的endpoint地址。
+             * master_url.
              */
             public Builder masterUrl(String masterUrl) {
                 this.masterUrl = masterUrl;
@@ -613,7 +613,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群元数据。
+             * meta_data.
              */
             public Builder metaData(String metaData) {
                 this.metaData = metaData;
@@ -621,7 +621,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群名称。
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -629,7 +629,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群使用的网络类型。
+             * network_mode.
              */
             public Builder networkMode(String networkMode) {
                 this.networkMode = networkMode;
@@ -637,7 +637,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群是否开启Private Zone，默认false。
+             * private_zone.
              */
             public Builder privateZone(Boolean privateZone) {
                 this.privateZone = privateZone;
@@ -645,7 +645,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群标识，区分是否为边缘托管版。
+             * profile.
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -653,7 +653,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群所在地域ID。
+             * region_id.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -661,7 +661,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群资源组ID。
+             * resource_group_id.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -669,7 +669,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群安全组ID。
+             * security_group_id.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -677,7 +677,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群内实例数量。
+             * size.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -685,7 +685,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群运行状态。
+             * state.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -693,7 +693,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * POD网络。
+             * subnet_cidr.
              */
             public Builder subnetCidr(String subnetCidr) {
                 this.subnetCidr = subnetCidr;
@@ -701,7 +701,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群标签。
+             * tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -709,7 +709,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群更新时间。
+             * updated.
              */
             public Builder updated(String updated) {
                 this.updated = updated;
@@ -717,7 +717,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群使用的VPC ID。
+             * vpc_id.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -725,7 +725,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 虚拟交换机网络ID。
+             * vswitch_cidr.
              */
             public Builder vswitchCidr(String vswitchCidr) {
                 this.vswitchCidr = vswitchCidr;
@@ -733,7 +733,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 节点使用的Vswitch ID。
+             * vswitch_id.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -741,7 +741,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群Worker节点RAM角色名称。
+             * worker_ram_role_name.
              */
             public Builder workerRamRoleName(String workerRamRoleName) {
                 this.workerRamRoleName = workerRamRoleName;
@@ -749,7 +749,7 @@ public class DescribeClustersResponse extends Response {
             }
 
             /**
-             * 集群所在Region内的区域ID。
+             * zone_id.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

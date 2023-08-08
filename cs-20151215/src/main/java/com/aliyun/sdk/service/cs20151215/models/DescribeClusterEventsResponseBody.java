@@ -50,7 +50,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         private PageInfo pageInfo; 
 
         /**
-         * 事件列表。
+         * events.
          */
         public Builder events(java.util.List < Events> events) {
             this.events = events;
@@ -58,7 +58,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 分页信息。
+         * page_info.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -122,7 +122,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             private String reason; 
 
             /**
-             * 事件级别。
+             * level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -130,7 +130,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件详情。
+             * message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -138,7 +138,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件状态。
+             * reason.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -251,7 +251,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 集群ID。
+             * cluster_id.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -259,7 +259,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件描述。
+             * data.
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -267,7 +267,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件ID。
+             * event_id.
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -275,7 +275,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件源。
+             * source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -283,7 +283,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件子项。
+             * subject.
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -291,7 +291,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件开始时间。
+             * time.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -299,7 +299,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件类型。
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -364,7 +364,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * 分页页数。
+             * page_number.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -372,7 +372,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 每页大小。
+             * page_size.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -380,7 +380,7 @@ public class DescribeClusterEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 结果总数。
+             * total_count.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -86,7 +86,7 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         private String step; 
 
         /**
-         * logs of activate
+         * The list of details about the activation progress.
          */
         public Builder logs(String logs) {
             this.logs = logs;
@@ -94,7 +94,7 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         }
 
         /**
-         * process of activate
+         * The activation progress.
          */
         public Builder progress(Long progress) {
             this.progress = progress;
@@ -102,7 +102,7 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         }
 
         /**
-         * state of activate
+         * The status of the cloud-native box.
          */
         public Builder state(String state) {
             this.state = state;
@@ -118,7 +118,7 @@ public class DescribeEdgeMachineActiveProcessResponseBody extends TeaModel {
         }
 
         /**
-         * step of activate
+         * The current step of the activation process.
          */
         public Builder step(String step) {
             this.step = step;

@@ -158,7 +158,7 @@ public class DescirbeWorkflowResponseBody extends TeaModel {
         private String userInputData; 
 
         /**
-         * 工作流创建时间。
+         * The time when the workflow was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -166,7 +166,7 @@ public class DescirbeWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * 工作流经过时长。
+         * The duration of the workflow.
          */
         public Builder duration(String duration) {
             this.duration = duration;
@@ -174,7 +174,7 @@ public class DescirbeWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * 任务结束时间。
+         * The time when the workflow ended.
          */
         public Builder finishTime(String finishTime) {
             this.finishTime = finishTime;
@@ -182,7 +182,7 @@ public class DescirbeWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * 输入数据大小。
+         * The size of the input data.
          */
         public Builder inputDataSize(String inputDataSize) {
             this.inputDataSize = inputDataSize;
@@ -190,7 +190,7 @@ public class DescirbeWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * 工作流名称。
+         * The name of the workflow.
          */
         public Builder jobName(String jobName) {
             this.jobName = jobName;
@@ -198,7 +198,7 @@ public class DescirbeWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * 工作流所在命名空间。
+         * The namespace to which the workflow belongs.
          */
         public Builder jobNamespace(String jobNamespace) {
             this.jobNamespace = jobNamespace;
@@ -206,7 +206,7 @@ public class DescirbeWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * 输出数据大小。
+         * The size of the output data.
          */
         public Builder outputDataSize(String outputDataSize) {
             this.outputDataSize = outputDataSize;
@@ -214,7 +214,7 @@ public class DescirbeWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * 工作流当前状态。
+         * The current state of the workflow.
          */
         public Builder status(String status) {
             this.status = status;
@@ -222,7 +222,7 @@ public class DescirbeWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * 碱基对个数。
+         * The number of base pairs.
          */
         public Builder totalBases(String totalBases) {
             this.totalBases = totalBases;
@@ -230,7 +230,7 @@ public class DescirbeWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * Reads个数。
+         * The number of reads.
          */
         public Builder totalReads(String totalReads) {
             this.totalReads = totalReads;
@@ -238,7 +238,7 @@ public class DescirbeWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * 用户输入参数。
+         * The user input parameters.
          */
         public Builder userInputData(String userInputData) {
             this.userInputData = userInputData;

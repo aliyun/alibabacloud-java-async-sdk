@@ -122,7 +122,11 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         private String template; 
 
         /**
-         * 规则治理动作 ● enforce: 拦截违规部署 ● inform：告警
+         * The action of the policy. Valid values:
+         * <p>
+         * 
+         * *   `enforce`: blocks deployments that match the policy.
+         * *   `inform`: generates alerts for deployments that match the policy.
          */
         public Builder action(String action) {
             this.action = action;
@@ -130,7 +134,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * 规则模板类型
+         * The type of the policy.
          */
         public Builder category(String category) {
             this.category = category;
@@ -138,7 +142,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * 规则模板描述
+         * The description of the policy.
          */
         public Builder description(String description) {
             this.description = description;
@@ -146,7 +150,11 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * 软删除标志：0表示未删除 1表示删除
+         * Indicates whether the policy is deleted. Valid values:
+         * <p>
+         * 
+         * *   0: The policy is not deleted.
+         * *   1: The policy is deleted.
          */
         public Builder isDeleted(Integer isDeleted) {
             this.isDeleted = isDeleted;
@@ -154,7 +162,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * 策略治理规则名称
+         * The name of the policy that is returned.
          */
         public Builder name(String name) {
             this.name = name;
@@ -162,7 +170,11 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * 是否需要配置策略： 0表示需要参数配置 1表示无需参数配置
+         * Indicates whether parameters are required. Valid values:
+         * <p>
+         * 
+         * *   0: Parameters are required.
+         * *   1: Parameters are optional.
          */
         public Builder noConfig(Integer noConfig) {
             this.noConfig = noConfig;
@@ -170,7 +182,12 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * 规则治理等级
+         * The severity level of the policy. Valid values:
+         * <p>
+         * 
+         * *   `high`
+         * *   `medium`
+         * *   `low`
          */
         public Builder severity(String severity) {
             this.severity = severity;
@@ -178,7 +195,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * 规则模板详情
+         * The content of the policy.
          */
         public Builder template(String template) {
             this.template = template;

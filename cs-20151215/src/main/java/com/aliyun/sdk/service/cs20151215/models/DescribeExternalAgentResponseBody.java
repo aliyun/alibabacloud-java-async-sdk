@@ -38,7 +38,7 @@ public class DescribeExternalAgentResponseBody extends TeaModel {
         private String config; 
 
         /**
-         * 代理配置。
+         * The agent configurations in YAML format.
          */
         public Builder config(String config) {
             this.config = config;

@@ -188,7 +188,7 @@ public class DescribeUserPermissionResponse extends Response {
             private Long isRamRole; 
 
             /**
-             * 集群访问配置
+             * resource_id.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -196,7 +196,7 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * 授权类型
+             * resource_type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -204,7 +204,7 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * 自定义角色名称
+             * role_name.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -212,7 +212,7 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * 预置的角色类型
+             * role_type.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -220,7 +220,7 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * 是否为集群 owner 的授权
+             * is_owner.
              */
             public Builder isOwner(Long isOwner) {
                 this.isOwner = isOwner;
@@ -228,7 +228,7 @@ public class DescribeUserPermissionResponse extends Response {
             }
 
             /**
-             * 是否为ram 角色授权
+             * is_ram_role.
              */
             public Builder isRamRole(Long isRamRole) {
                 this.isRamRole = isRamRole;

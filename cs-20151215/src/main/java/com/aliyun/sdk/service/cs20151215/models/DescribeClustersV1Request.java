@@ -138,7 +138,7 @@ public class DescribeClustersV1Request extends Request {
         } 
 
         /**
-         * 集群规格。
+         * cluster_spec.
          */
         public Builder clusterSpec(String clusterSpec) {
             this.putQueryParameter("cluster_spec", clusterSpec);
@@ -147,7 +147,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * 集群类型。
+         * cluster_type.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("cluster_type", clusterType);
@@ -156,7 +156,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * 通过集群名称进行模糊查询。
+         * name.
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -165,7 +165,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * 分页数。
+         * page_number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -174,7 +174,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * 单页大小。
+         * page_size.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -183,7 +183,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * 集群标识。
+         * profile.
          */
         public Builder profile(String profile) {
             this.putQueryParameter("profile", profile);
@@ -192,7 +192,7 @@ public class DescribeClustersV1Request extends Request {
         }
 
         /**
-         * 地域。
+         * region_id.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);

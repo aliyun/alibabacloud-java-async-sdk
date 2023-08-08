@@ -55,7 +55,7 @@ public class DescribeTaskInfoRequest extends Request {
         } 
 
         /**
-         * 任务ID。
+         * task_id.
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("task_id", taskId);

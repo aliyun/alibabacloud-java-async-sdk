@@ -84,7 +84,7 @@ public class ScaleClusterNodePoolRequest extends Request {
         } 
 
         /**
-         * 集群ID
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -93,7 +93,7 @@ public class ScaleClusterNodePoolRequest extends Request {
         }
 
         /**
-         * 节点池ID
+         * NodepoolId.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -102,7 +102,7 @@ public class ScaleClusterNodePoolRequest extends Request {
         }
 
         /**
-         * 扩容节点数量
+         * count.
          */
         public Builder count(Long count) {
             this.putBodyParameter("count", count);

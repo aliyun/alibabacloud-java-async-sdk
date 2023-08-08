@@ -86,7 +86,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * 触发器行为。
+         * The action that the trigger performs. For example, a value of `redeploy` indicates that the trigger redeploys the application.
          */
         public Builder action(String action) {
             this.action = action;
@@ -94,7 +94,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * 集群ID。
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -102,7 +102,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * 触发器ID。
+         * The ID of the trigger.
          */
         public Builder id(String id) {
             this.id = id;
@@ -110,7 +110,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * 触发器项目名称。
+         * The name of the project.
          */
         public Builder projectId(String projectId) {
             this.projectId = projectId;
@@ -118,7 +118,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * 触发器类型。默认值为 deployment 。
+         * The type of trigger. Default value: deployment.
          */
         public Builder type(String type) {
             this.type = type;

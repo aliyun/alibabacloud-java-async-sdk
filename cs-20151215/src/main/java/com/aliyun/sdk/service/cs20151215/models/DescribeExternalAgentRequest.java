@@ -69,7 +69,7 @@ public class DescribeExternalAgentRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class DescribeExternalAgentRequest extends Request {
         }
 
         /**
-         * 是否获取内网访问凭据。  true：获取内网连接凭据 false：获取公网连接凭据 默认值：false。
+         * PrivateIpAddress.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);

@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteTriggerRequest extends Request {
     @Path
     @NameInMap("cluster_id")
+    @Validation(required = true)
     private String clusterId;
 
     @Path
@@ -69,7 +70,7 @@ public class DeleteTriggerRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * cluster_id.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -78,7 +79,7 @@ public class DeleteTriggerRequest extends Request {
         }
 
         /**
-         * 触发器ID。
+         * Id.
          */
         public Builder id(String id) {
             this.putPathParameter("Id", id);

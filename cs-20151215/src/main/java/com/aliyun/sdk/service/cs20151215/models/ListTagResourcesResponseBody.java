@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * 下一个查询开始Token，为空说明没有下一个
+         * The token that is used to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * 资源标签列表。
+         * The details of the queried labels and resources.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -154,7 +154,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * 资源ID。
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -162,7 +162,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型。
+             * The type of the resource. For more information, see [Labels](~~110425~~).
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -170,7 +170,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签key。
+             * The key of the label.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签值。
+             * The value of the label.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -219,7 +219,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private java.util.List < TagResource> tagResource; 
 
             /**
-             * 资源标签。
+             * The labels of the resource.
              */
             public Builder tagResource(java.util.List < TagResource> tagResource) {
                 this.tagResource = tagResource;

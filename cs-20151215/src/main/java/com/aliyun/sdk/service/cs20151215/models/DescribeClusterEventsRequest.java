@@ -27,7 +27,7 @@ public class DescribeClusterEventsRequest extends Request {
 
     @Query
     @NameInMap("task_id")
-    private Long taskId;
+    private String taskId;
 
     private DescribeClusterEventsRequest(Builder builder) {
         super(builder);
@@ -74,7 +74,7 @@ public class DescribeClusterEventsRequest extends Request {
     /**
      * @return taskId
      */
-    public Long getTaskId() {
+    public String getTaskId() {
         return this.taskId;
     }
 
@@ -82,7 +82,7 @@ public class DescribeClusterEventsRequest extends Request {
         private String clusterId; 
         private Long pageNumber; 
         private Long pageSize; 
-        private Long taskId; 
+        private String taskId; 
 
         private Builder() {
             super();
@@ -97,7 +97,7 @@ public class DescribeClusterEventsRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +106,7 @@ public class DescribeClusterEventsRequest extends Request {
         }
 
         /**
-         * 分页页数。
+         * page_number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("page_number", pageNumber);
@@ -115,7 +115,7 @@ public class DescribeClusterEventsRequest extends Request {
         }
 
         /**
-         * 每页大小。
+         * page_size.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -124,9 +124,9 @@ public class DescribeClusterEventsRequest extends Request {
         }
 
         /**
-         * 查询的任务ID。
+         * task_id.
          */
-        public Builder taskId(Long taskId) {
+        public Builder taskId(String taskId) {
             this.putQueryParameter("task_id", taskId);
             this.taskId = taskId;
             return this;

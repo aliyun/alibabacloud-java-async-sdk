@@ -55,7 +55,7 @@ public class DescribeUserPermissionRequest extends Request {
         } 
 
         /**
-         * RAM 用户的 UID
+         * uid.
          */
         public Builder uid(String uid) {
             this.putPathParameter("uid", uid);

@@ -113,7 +113,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * 下一次查询Token。
+         * next_token.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("next_token", nextToken);
@@ -122,7 +122,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 地域ID
+         * region_id.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("region_id", regionId);
@@ -131,7 +131,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 集群ID列表。
+         * resource_ids.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             String resourceIdsShrink = shrink(resourceIds, "resource_ids", "json");
@@ -141,7 +141,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型，只支持Cluster
+         * resource_type.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("resource_type", resourceType);
@@ -150,7 +150,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 按标签查找。
+         * tags.
          */
         public Builder tags(java.util.List < Tag > tags) {
             String tagsShrink = shrink(tags, "tags", "json");

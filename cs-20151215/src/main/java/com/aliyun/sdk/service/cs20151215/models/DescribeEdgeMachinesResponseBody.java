@@ -50,7 +50,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         private PageInfo pageInfo; 
 
         /**
-         * Id of the request
+         * The list of details about cloud-native boxes.
          */
         public Builder edgeMachines(java.util.List < EdgeMachines> edgeMachines) {
             this.edgeMachines = edgeMachines;
@@ -58,7 +58,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
         }
 
         /**
-         * page info
+         * The pagination details.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -206,7 +206,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             private String updated; 
 
             /**
-             * actvite time
+             * The time when the cloud-native box was activated.
              */
             public Builder activeTime(String activeTime) {
                 this.activeTime = activeTime;
@@ -214,7 +214,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * created time
+             * The time when the cloud-native box was created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -222,7 +222,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * edge machine id
+             * The ID of the cloud-native box.
              */
             public Builder edgeMachineId(String edgeMachineId) {
                 this.edgeMachineId = edgeMachineId;
@@ -230,7 +230,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * hostname
+             * The `hostname` of the cloud-native box.
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -238,7 +238,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * life state
+             * The lifecycle status of the cloud-native box.
              */
             public Builder lifeState(String lifeState) {
                 this.lifeState = lifeState;
@@ -246,7 +246,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * model
+             * The model of the cloud-native box.
              */
             public Builder model(String model) {
                 this.model = model;
@@ -254,7 +254,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * name of edgemachine
+             * The name of the cloud-native box.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -262,7 +262,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * online state
+             * The online status of the cloud-native box.
              */
             public Builder onlineState(String onlineState) {
                 this.onlineState = onlineState;
@@ -270,7 +270,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * sn
+             * The serial number of the cloud-native box.
              */
             public Builder sn(String sn) {
                 this.sn = sn;
@@ -278,7 +278,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * update time
+             * The time when the cloud-native box was last updated.
              */
             public Builder updated(String updated) {
                 this.updated = updated;
@@ -343,7 +343,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * page number
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -351,7 +351,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * page size
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -359,7 +359,7 @@ public class DescribeEdgeMachinesResponseBody extends TeaModel {
             }
 
             /**
-             * total count
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

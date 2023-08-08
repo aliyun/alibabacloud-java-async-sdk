@@ -321,7 +321,7 @@ public class ScaleClusterRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -330,7 +330,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 节点是否安装云监控插件。
+         * cloud_monitor_flags.
          */
         public Builder cloudMonitorFlags(Boolean cloudMonitorFlags) {
             this.putBodyParameter("cloud_monitor_flags", cloudMonitorFlags);
@@ -339,7 +339,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 扩容节点数。
+         * count.
          */
         public Builder count(Long count) {
             this.putBodyParameter("count", count);
@@ -348,7 +348,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 节点CPU策略。
+         * cpu_policy.
          */
         public Builder cpuPolicy(String cpuPolicy) {
             this.putBodyParameter("cpu_policy", cpuPolicy);
@@ -357,7 +357,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 失败是否回滚。
+         * disable_rollback.
          */
         public Builder disableRollback(Boolean disableRollback) {
             this.putBodyParameter("disable_rollback", disableRollback);
@@ -366,7 +366,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * keypair名称，和login_password二选一。
+         * key_pair.
          */
         public Builder keyPair(String keyPair) {
             this.putBodyParameter("key_pair", keyPair);
@@ -375,7 +375,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * SSH登录密码。和keypair二选一。
+         * login_password.
          */
         public Builder loginPassword(String loginPassword) {
             this.putBodyParameter("login_password", loginPassword);
@@ -384,7 +384,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 集群标签。
+         * tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putBodyParameter("tags", tags);
@@ -393,7 +393,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 节点污点标记。
+         * taints.
          */
         public Builder taints(java.util.List < Taints> taints) {
             this.putBodyParameter("taints", taints);
@@ -402,7 +402,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 节点交换机ID列表。
+         * vswitch_ids.
          */
         public Builder vswitchIds(java.util.List < String > vswitchIds) {
             this.putBodyParameter("vswitch_ids", vswitchIds);
@@ -411,7 +411,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 节点是否开启Worker节点自动续费。
+         * worker_auto_renew.
          */
         public Builder workerAutoRenew(Boolean workerAutoRenew) {
             this.putBodyParameter("worker_auto_renew", workerAutoRenew);
@@ -420,7 +420,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 自动续费周期。
+         * worker_auto_renew_period.
          */
         public Builder workerAutoRenewPeriod(Long workerAutoRenewPeriod) {
             this.putBodyParameter("worker_auto_renew_period", workerAutoRenewPeriod);
@@ -429,7 +429,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 是否挂载数据盘。
+         * worker_data_disk.
          */
         public Builder workerDataDisk(Boolean workerDataDisk) {
             this.putBodyParameter("worker_data_disk", workerDataDisk);
@@ -438,7 +438,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * Worker数据盘类型、大小等配置的组合。
+         * worker_data_disks.
          */
         public Builder workerDataDisks(java.util.List < WorkerDataDisks> workerDataDisks) {
             this.putBodyParameter("worker_data_disks", workerDataDisks);
@@ -447,7 +447,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 节点付费类型。
+         * worker_instance_charge_type.
          */
         public Builder workerInstanceChargeType(String workerInstanceChargeType) {
             this.putBodyParameter("worker_instance_charge_type", workerInstanceChargeType);
@@ -456,7 +456,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * Worker节点ECS规格类型。
+         * worker_instance_types.
          */
         public Builder workerInstanceTypes(java.util.List < String > workerInstanceTypes) {
             this.putBodyParameter("worker_instance_types", workerInstanceTypes);
@@ -465,7 +465,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 节点包年包月时长。
+         * worker_period.
          */
         public Builder workerPeriod(Long workerPeriod) {
             this.putBodyParameter("worker_period", workerPeriod);
@@ -474,7 +474,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 当指定为PrePaid的时候需要指定周期。
+         * worker_period_unit.
          */
         public Builder workerPeriodUnit(String workerPeriodUnit) {
             this.putBodyParameter("worker_period_unit", workerPeriodUnit);
@@ -483,7 +483,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 节点系统盘类型。
+         * worker_system_disk_category.
          */
         public Builder workerSystemDiskCategory(String workerSystemDiskCategory) {
             this.putBodyParameter("worker_system_disk_category", workerSystemDiskCategory);
@@ -492,7 +492,7 @@ public class ScaleClusterRequest extends Request {
         }
 
         /**
-         * 节点系统盘大小
+         * worker_system_disk_size.
          */
         public Builder workerSystemDiskSize(Long workerSystemDiskSize) {
             this.putBodyParameter("worker_system_disk_size", workerSystemDiskSize);
@@ -534,7 +534,7 @@ public class ScaleClusterRequest extends Request {
             private String key; 
 
             /**
-             * 标签值。
+             * key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -599,7 +599,7 @@ public class ScaleClusterRequest extends Request {
             private String value; 
 
             /**
-             * 污点生效策略。
+             * effect.
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -607,7 +607,7 @@ public class ScaleClusterRequest extends Request {
             }
 
             /**
-             * 污点键。
+             * key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -615,7 +615,7 @@ public class ScaleClusterRequest extends Request {
             }
 
             /**
-             * 污点值。
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -680,7 +680,7 @@ public class ScaleClusterRequest extends Request {
             private String size; 
 
             /**
-             * 数据盘类型。
+             * category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -688,7 +688,7 @@ public class ScaleClusterRequest extends Request {
             }
 
             /**
-             * 是否对数据盘加密。
+             * encrypted.
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
@@ -696,7 +696,7 @@ public class ScaleClusterRequest extends Request {
             }
 
             /**
-             * 数据盘大小。
+             * size.
              */
             public Builder size(String size) {
                 this.size = size;

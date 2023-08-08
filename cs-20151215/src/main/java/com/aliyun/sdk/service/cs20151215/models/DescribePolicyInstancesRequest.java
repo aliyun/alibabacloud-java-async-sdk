@@ -83,7 +83,7 @@ public class DescribePolicyInstancesRequest extends Request {
         } 
 
         /**
-         * 目标集群ID
+         * cluster_id.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -92,7 +92,7 @@ public class DescribePolicyInstancesRequest extends Request {
         }
 
         /**
-         * 策略实例名称
+         * instance_name.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("instance_name", instanceName);
@@ -101,7 +101,7 @@ public class DescribePolicyInstancesRequest extends Request {
         }
 
         /**
-         * 策略类型
+         * policy_name.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("policy_name", policyName);

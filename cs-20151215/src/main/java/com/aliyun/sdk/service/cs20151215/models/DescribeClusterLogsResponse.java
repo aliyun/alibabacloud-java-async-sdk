@@ -176,7 +176,7 @@ public class DescribeClusterLogsResponse extends Response {
             private String updated; 
 
             /**
-             * 日志ID。
+             * ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -184,7 +184,7 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * 集群ID。
+             * cluster_id.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -192,7 +192,7 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * 日志内容。
+             * cluster_log.
              */
             public Builder clusterLog(String clusterLog) {
                 this.clusterLog = clusterLog;
@@ -200,7 +200,7 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * 日志创建时间。
+             * created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -208,7 +208,7 @@ public class DescribeClusterLogsResponse extends Response {
             }
 
             /**
-             * 日志更新时间。
+             * updated.
              */
             public Builder updated(String updated) {
                 this.updated = updated;

@@ -69,7 +69,7 @@ public class DeleteEdgeMachineRequest extends Request {
         } 
 
         /**
-         * edge machine id
+         * edge_machineid.
          */
         public Builder edgeMachineid(String edgeMachineid) {
             this.putPathParameter("edge_machineid", edgeMachineid);
@@ -78,7 +78,7 @@ public class DeleteEdgeMachineRequest extends Request {
         }
 
         /**
-         * whether force delete
+         * force.
          */
         public Builder force(String force) {
             this.putQueryParameter("force", force);

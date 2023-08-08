@@ -14,10 +14,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyClusterAddonRequest extends Request {
     @Path
     @NameInMap("cluster_id")
+    @Validation(required = true)
     private String clusterId;
 
     @Path
     @NameInMap("component_id")
+    @Validation(required = true)
     private String componentId;
 
     @Body
@@ -82,7 +84,7 @@ public class ModifyClusterAddonRequest extends Request {
         } 
 
         /**
-         * 集群ID
+         * cluster_id.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -91,7 +93,7 @@ public class ModifyClusterAddonRequest extends Request {
         }
 
         /**
-         * 组件ID
+         * component_id.
          */
         public Builder componentId(String componentId) {
             this.putPathParameter("component_id", componentId);
@@ -100,7 +102,7 @@ public class ModifyClusterAddonRequest extends Request {
         }
 
         /**
-         * 自定义参数设置
+         * config.
          */
         public Builder config(String config) {
             this.putBodyParameter("config", config);

@@ -236,7 +236,7 @@ public class DescribePolicyInstancesResponse extends Response {
             private String policyAction; 
 
             /**
-             * 策略实例实施者UID
+             * ali_uid.
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
@@ -244,7 +244,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * 目标集群ID
+             * cluster_id.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -252,7 +252,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * 规则实例名称
+             * instance_name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -260,7 +260,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * 策略治理规则名称
+             * policy_name.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -268,7 +268,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * 策略类型名称
+             * policy_category.
              */
             public Builder policyCategory(String policyCategory) {
                 this.policyCategory = policyCategory;
@@ -276,7 +276,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * 规则模板描述
+             * policy_description.
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -284,7 +284,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * 当前规则实例的配置参数
+             * policy_parameters.
              */
             public Builder policyParameters(String policyParameters) {
                 this.policyParameters = policyParameters;
@@ -292,7 +292,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * 规则实例治理等级
+             * policy_severity.
              */
             public Builder policySeverity(String policySeverity) {
                 this.policySeverity = policySeverity;
@@ -300,7 +300,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * 策略实例实施范围： 默认"*"代表集群所有ns 否则返回作用namespaces名称，多个namespaces以逗号分隔
+             * policy_scope.
              */
             public Builder policyScope(String policyScope) {
                 this.policyScope = policyScope;
@@ -308,7 +308,7 @@ public class DescribePolicyInstancesResponse extends Response {
             }
 
             /**
-             * 规则治理动作  deny: 拦截违规部署  warn：告警
+             * policy_action.
              */
             public Builder policyAction(String policyAction) {
                 this.policyAction = policyAction;

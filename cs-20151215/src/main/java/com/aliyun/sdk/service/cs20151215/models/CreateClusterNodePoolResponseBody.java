@@ -38,7 +38,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
         private String nodepoolId; 
 
         /**
-         * 节点池ID
+         * The ID of the node pool that is created.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.nodepoolId = nodepoolId;

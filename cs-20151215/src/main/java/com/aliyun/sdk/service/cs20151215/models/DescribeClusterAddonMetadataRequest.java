@@ -84,7 +84,7 @@ public class DescribeClusterAddonMetadataRequest extends Request {
         } 
 
         /**
-         * 集群ID
+         * cluster_id.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -93,7 +93,7 @@ public class DescribeClusterAddonMetadataRequest extends Request {
         }
 
         /**
-         * 组件ID
+         * component_id.
          */
         public Builder componentId(String componentId) {
             this.putPathParameter("component_id", componentId);
@@ -102,7 +102,7 @@ public class DescribeClusterAddonMetadataRequest extends Request {
         }
 
         /**
-         * 组件版本
+         * version.
          */
         public Builder version(String version) {
             this.putPathParameter("version", version);

@@ -69,7 +69,7 @@ public class ModifyClusterTagsRequest extends Request {
         } 
 
         /**
-         * 汲取ID
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class ModifyClusterTagsRequest extends Request {
         }
 
         /**
-         * 集群标签列表。
+         * body.
          */
         public Builder body(java.util.List < Tag > body) {
             this.putBodyParameter("body", body);

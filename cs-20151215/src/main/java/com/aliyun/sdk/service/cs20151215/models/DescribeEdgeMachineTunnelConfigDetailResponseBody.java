@@ -110,7 +110,7 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         private String tunnelEndpoint; 
 
         /**
-         * device name
+         * The name of the cloud-native box.
          */
         public Builder deviceName(String deviceName) {
             this.deviceName = deviceName;
@@ -118,7 +118,7 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * Id of the request
+         * The model of the cloud-native box.
          */
         public Builder model(String model) {
             this.model = model;
@@ -126,7 +126,7 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * product key
+         * The product key.
          */
         public Builder productKey(String productKey) {
             this.productKey = productKey;
@@ -134,7 +134,7 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * request id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * sn
+         * The serial number of the cloud-native box.
          */
         public Builder sn(String sn) {
             this.sn = sn;
@@ -150,7 +150,7 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * token
+         * The token.
          */
         public Builder token(String token) {
             this.token = token;
@@ -158,7 +158,7 @@ public class DescribeEdgeMachineTunnelConfigDetailResponseBody extends TeaModel 
         }
 
         /**
-         * tunnel endpoint
+         * The backend endpoint of the tunnel.
          */
         public Builder tunnelEndpoint(String tunnelEndpoint) {
             this.tunnelEndpoint = tunnelEndpoint;

@@ -50,7 +50,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         private java.util.List < PolicyInstances> policyInstances; 
 
         /**
-         * instances_severity_count.
+         * Information about the number of policy instances of each severity level.
          */
         public Builder instancesSeverityCount(java.util.Map < String, ? > instancesSeverityCount) {
             this.instancesSeverityCount = instancesSeverityCount;
@@ -58,7 +58,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 不同策略类型下的策略实例计数列表
+         * Details about policy instances of different types.
          */
         public Builder policyInstances(java.util.List < PolicyInstances> policyInstances) {
             this.policyInstances = policyInstances;
@@ -146,7 +146,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             private String policySeverity; 
 
             /**
-             * policy_category.
+             * The type of the policy. For more information about different types of policies and their descriptions, see [Predefined security policies of ACK](https://www.alibabacloud.com/help/doc-detail/359819.html).
              */
             public Builder policyCategory(String policyCategory) {
                 this.policyCategory = policyCategory;
@@ -154,7 +154,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * policy_description.
+             * The description of the policy.
              */
             public Builder policyDescription(String policyDescription) {
                 this.policyDescription = policyDescription;
@@ -162,7 +162,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * policy_instances_count.
+             * The number of policy instances that are deployed. If this parameter is empty, it indicates that no policy instance is deployed from the policy.
              */
             public Builder policyInstancesCount(Long policyInstancesCount) {
                 this.policyInstancesCount = policyInstancesCount;
@@ -170,7 +170,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * policy_name.
+             * The name of the policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -178,7 +178,7 @@ public class DescribePolicyInstancesStatusResponseBody extends TeaModel {
             }
 
             /**
-             * policy_severity.
+             * The severity level of the policy.
              */
             public Builder policySeverity(String policySeverity) {
                 this.policySeverity = policySeverity;

@@ -86,7 +86,7 @@ public class StandardComponentsValue extends TeaModel {
         private Boolean disabled; 
 
         /**
-         * 组件名称。
+         * name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -94,7 +94,7 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * 组件版本。
+         * version.
          */
         public Builder version(String version) {
             this.version = version;
@@ -102,7 +102,7 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * 组件描述信息。
+         * description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -110,7 +110,7 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * 是否为必需组件。
+         * required.
          */
         public Builder required(String required) {
             this.required = required;
@@ -118,7 +118,7 @@ public class StandardComponentsValue extends TeaModel {
         }
 
         /**
-         * 是否禁止默认安装。
+         * disabled.
          */
         public Builder disabled(Boolean disabled) {
             this.disabled = disabled;

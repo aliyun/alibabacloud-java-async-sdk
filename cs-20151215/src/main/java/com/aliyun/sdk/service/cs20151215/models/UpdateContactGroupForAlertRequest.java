@@ -54,7 +54,7 @@ public class UpdateContactGroupForAlertRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The cluster ID. You can call the ListCluster operation to query the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);

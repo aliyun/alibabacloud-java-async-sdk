@@ -19,7 +19,12 @@ public class UpgradeClusterRequest extends Request {
 
     @Body
     @NameInMap("component_name")
+    @Deprecated
     private String componentName;
+
+    @Body
+    @NameInMap("master_only")
+    private Boolean masterOnly;
 
     @Body
     @NameInMap("next_version")
@@ -27,12 +32,14 @@ public class UpgradeClusterRequest extends Request {
 
     @Body
     @NameInMap("version")
+    @Deprecated
     private String version;
 
     private UpgradeClusterRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.componentName = builder.componentName;
+        this.masterOnly = builder.masterOnly;
         this.nextVersion = builder.nextVersion;
         this.version = builder.version;
     }
@@ -65,6 +72,13 @@ public class UpgradeClusterRequest extends Request {
     }
 
     /**
+     * @return masterOnly
+     */
+    public Boolean getMasterOnly() {
+        return this.masterOnly;
+    }
+
+    /**
      * @return nextVersion
      */
     public String getNextVersion() {
@@ -81,6 +95,7 @@ public class UpgradeClusterRequest extends Request {
     public static final class Builder extends Request.Builder<UpgradeClusterRequest, Builder> {
         private String clusterId; 
         private String componentName; 
+        private Boolean masterOnly; 
         private String nextVersion; 
         private String version; 
 
@@ -92,12 +107,13 @@ public class UpgradeClusterRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.componentName = request.componentName;
+            this.masterOnly = request.masterOnly;
             this.nextVersion = request.nextVersion;
             this.version = request.version;
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +122,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * 组件名称，集群升级时取值"k8s"。
+         * component_name.
          */
         public Builder componentName(String componentName) {
             this.putBodyParameter("component_name", componentName);
@@ -115,7 +131,16 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * 目标版本。
+         * master_only.
+         */
+        public Builder masterOnly(Boolean masterOnly) {
+            this.putBodyParameter("master_only", masterOnly);
+            this.masterOnly = masterOnly;
+            return this;
+        }
+
+        /**
+         * next_version.
          */
         public Builder nextVersion(String nextVersion) {
             this.putBodyParameter("next_version", nextVersion);
@@ -124,7 +149,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * 当前版本。
+         * version.
          */
         public Builder version(String version) {
             this.putBodyParameter("version", version);

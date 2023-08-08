@@ -236,7 +236,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             private String updated; 
 
             /**
-             * 编排模板ID，模板每次修改，这个ID都会改变。	
+             * id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -244,7 +244,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * 编排模板权限。取值：private，public，shared。
+             * acl.
              */
             public Builder acl(String acl) {
                 this.acl = acl;
@@ -252,7 +252,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * 编排模板名称。	
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -260,7 +260,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * 编排模板内容。	
+             * template.
              */
             public Builder template(String template) {
                 this.template = template;
@@ -268,7 +268,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * 编排模板类型
+             * template_type.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -276,7 +276,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * 编排模板描述。
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -284,7 +284,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * 部署模板的标签。
+             * tags.
              */
             public Builder tags(String tags) {
                 this.tags = tags;
@@ -292,7 +292,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * 编排模板ID，该ID唯一不随更新而改变。	
+             * template_with_hist_id.
              */
             public Builder templateWithHistId(String templateWithHistId) {
                 this.templateWithHistId = templateWithHistId;
@@ -300,7 +300,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * 编排模板创建时间。
+             * created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -308,7 +308,7 @@ public class DescribeTemplateAttributeResponse extends Response {
             }
 
             /**
-             * 编排模板修改时间。	
+             * updated.
              */
             public Builder updated(String updated) {
                 this.updated = updated;

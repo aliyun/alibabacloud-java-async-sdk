@@ -22,10 +22,15 @@ public class DescribeNodePoolVulsRequest extends Request {
     @Validation(required = true)
     private String nodepoolId;
 
+    @Query
+    @NameInMap("necessity")
+    private String necessity;
+
     private DescribeNodePoolVulsRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.nodepoolId = builder.nodepoolId;
+        this.necessity = builder.necessity;
     }
 
     public static Builder builder() {
@@ -55,9 +60,17 @@ public class DescribeNodePoolVulsRequest extends Request {
         return this.nodepoolId;
     }
 
+    /**
+     * @return necessity
+     */
+    public String getNecessity() {
+        return this.necessity;
+    }
+
     public static final class Builder extends Request.Builder<DescribeNodePoolVulsRequest, Builder> {
         private String clusterId; 
         private String nodepoolId; 
+        private String necessity; 
 
         private Builder() {
             super();
@@ -67,6 +80,7 @@ public class DescribeNodePoolVulsRequest extends Request {
             super(request);
             this.clusterId = request.clusterId;
             this.nodepoolId = request.nodepoolId;
+            this.necessity = request.necessity;
         } 
 
         /**
@@ -84,6 +98,15 @@ public class DescribeNodePoolVulsRequest extends Request {
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("nodepool_id", nodepoolId);
             this.nodepoolId = nodepoolId;
+            return this;
+        }
+
+        /**
+         * necessity.
+         */
+        public Builder necessity(String necessity) {
+            this.putQueryParameter("necessity", necessity);
+            this.necessity = necessity;
             return this;
         }
 

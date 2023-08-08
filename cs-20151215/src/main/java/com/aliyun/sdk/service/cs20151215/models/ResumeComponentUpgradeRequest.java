@@ -70,7 +70,7 @@ public class ResumeComponentUpgradeRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterid(String clusterid) {
             this.putPathParameter("clusterid", clusterid);
@@ -79,7 +79,7 @@ public class ResumeComponentUpgradeRequest extends Request {
         }
 
         /**
-         * 组件ID。
+         * The component ID.
          */
         public Builder componentid(String componentid) {
             this.putPathParameter("componentid", componentid);

@@ -38,7 +38,7 @@ public class DescribeClusterV2UserKubeconfigResponseBody extends TeaModel {
         private String config; 
 
         /**
-         * kubeconfig内容。
+         * config.
          */
         public Builder config(String config) {
             this.config = config;

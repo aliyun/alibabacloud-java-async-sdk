@@ -200,7 +200,7 @@ public class DescribeClusterResourcesResponse extends Response {
             private Long autoCreate; 
 
             /**
-             * 集群ID。
+             * cluster_id.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -208,7 +208,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * 资源创建时间。
+             * created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -216,7 +216,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * 资源实例ID。
+             * instance_id.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -224,7 +224,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * 资源元信息。
+             * resource_info.
              */
             public Builder resourceInfo(String resourceInfo) {
                 this.resourceInfo = resourceInfo;
@@ -232,7 +232,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * 资源类型。
+             * resource_type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -240,7 +240,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * 资源状态。
+             * state.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -248,7 +248,7 @@ public class DescribeClusterResourcesResponse extends Response {
             }
 
             /**
-             * 是否为自动创建。
+             * auto_create.
              */
             public Builder autoCreate(Long autoCreate) {
                 this.autoCreate = autoCreate;

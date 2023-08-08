@@ -100,7 +100,7 @@ public class CreateTriggerRequest extends Request {
         } 
 
         /**
-         * 集群ID
+         * cluster_id.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -110,7 +110,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * 触发器行为
+         * action.
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);
@@ -119,7 +119,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * 项目名称。
+         * project_id.
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("project_id", projectId);
@@ -128,7 +128,7 @@ public class CreateTriggerRequest extends Request {
         }
 
         /**
-         * 触发器类型。默认deployment。
+         * type.
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);

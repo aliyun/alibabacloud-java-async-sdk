@@ -139,7 +139,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -148,7 +148,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * 节点CPU架构,支持amd64、arm、arm64。边缘托管集群专有字段。
+         * arch.
          */
         public Builder arch(String arch) {
             this.putBodyParameter("arch", arch);
@@ -157,7 +157,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * 数据盘挂载
+         * format_disk.
          */
         public Builder formatDisk(Boolean formatDisk) {
             this.putBodyParameter("format_disk", formatDisk);
@@ -166,7 +166,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * 保留实例名称
+         * keep_instance_name.
          */
         public Builder keepInstanceName(Boolean keepInstanceName) {
             this.putBodyParameter("keep_instance_name", keepInstanceName);
@@ -175,7 +175,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * 节点池ID。将节点加入指定节点池。
+         * nodepool_id.
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putBodyParameter("nodepool_id", nodepoolId);
@@ -184,7 +184,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * 边缘托管版集群节点的接入配置。
+         * options.
          */
         public Builder options(String options) {
             this.putBodyParameter("options", options);
@@ -193,7 +193,7 @@ public class DescribeClusterAttachScriptsRequest extends Request {
         }
 
         /**
-         * RDS白名单
+         * rds_instances.
          */
         public Builder rdsInstances(java.util.List < String > rdsInstances) {
             this.putBodyParameter("rds_instances", rdsInstances);

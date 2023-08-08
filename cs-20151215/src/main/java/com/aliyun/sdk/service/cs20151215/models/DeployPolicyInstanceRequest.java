@@ -112,7 +112,7 @@ public class DeployPolicyInstanceRequest extends Request {
         } 
 
         /**
-         * 目标集群id
+         * c8155823d057948c69a\*\*\*\*
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("cluster_id", clusterId);
@@ -121,7 +121,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * 策略治理规则名称
+         * ACKAllowedRepos
          */
         public Builder policyName(String policyName) {
             this.putPathParameter("policy_name", policyName);
@@ -130,7 +130,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * 规则治理动作
+         * action.
          */
         public Builder action(String action) {
             this.putBodyParameter("action", action);
@@ -139,7 +139,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * 限制策略实施的命名空间，为空时表示所有命名空间
+         * namespaces.
          */
         public Builder namespaces(java.util.List < String > namespaces) {
             this.putBodyParameter("namespaces", namespaces);
@@ -148,7 +148,7 @@ public class DeployPolicyInstanceRequest extends Request {
         }
 
         /**
-         * 当前规则实例的配置参数
+         * parameters.
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             this.putBodyParameter("parameters", parameters);

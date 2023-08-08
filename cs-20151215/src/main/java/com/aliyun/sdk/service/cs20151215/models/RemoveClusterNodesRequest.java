@@ -98,7 +98,7 @@ public class RemoveClusterNodesRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -107,7 +107,7 @@ public class RemoveClusterNodesRequest extends Request {
         }
 
         /**
-         * 是否排空节点上的Pod。
+         * drain_node.
          */
         public Builder drainNode(Boolean drainNode) {
             this.putBodyParameter("drain_node", drainNode);
@@ -116,7 +116,7 @@ public class RemoveClusterNodesRequest extends Request {
         }
 
         /**
-         * 要移除的Node列表。
+         * nodes.
          */
         public Builder nodes(java.util.List < String > nodes) {
             this.putBodyParameter("nodes", nodes);
@@ -125,7 +125,7 @@ public class RemoveClusterNodesRequest extends Request {
         }
 
         /**
-         * 是否同时释放ECS。
+         * release_node.
          */
         public Builder releaseNode(Boolean releaseNode) {
             this.putBodyParameter("release_node", releaseNode);

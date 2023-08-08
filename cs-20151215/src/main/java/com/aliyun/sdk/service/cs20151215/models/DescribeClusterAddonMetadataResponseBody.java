@@ -62,7 +62,7 @@ public class DescribeClusterAddonMetadataResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * 组件参数Schema
+         * The schema of component parameters.
          */
         public Builder configSchema(String configSchema) {
             this.configSchema = configSchema;
@@ -70,7 +70,7 @@ public class DescribeClusterAddonMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * 组件名称
+         * The name of the component.
          */
         public Builder name(String name) {
             this.name = name;
@@ -78,7 +78,7 @@ public class DescribeClusterAddonMetadataResponseBody extends TeaModel {
         }
 
         /**
-         * 组件版本
+         * The version of the component.
          */
         public Builder version(String version) {
             this.version = version;

@@ -69,7 +69,7 @@ public class InstallClusterAddonsRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -78,7 +78,7 @@ public class InstallClusterAddonsRequest extends Request {
         }
 
         /**
-         * Addon列表。
+         * body.
          */
         public Builder body(java.util.List < InstallClusterAddonsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -146,7 +146,7 @@ public class InstallClusterAddonsRequest extends Request {
             private String version; 
 
             /**
-             * 组件配置信息。
+             * config.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -154,7 +154,7 @@ public class InstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * 组件名称。
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -162,7 +162,7 @@ public class InstallClusterAddonsRequest extends Request {
             }
 
             /**
-             * 组件版本号。
+             * version.
              */
             public Builder version(String version) {
                 this.version = version;

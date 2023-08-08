@@ -84,7 +84,7 @@ public class DeleteClusterNodepoolRequest extends Request {
         } 
 
         /**
-         * 集群ID
+         * c61da77e8bfbc4c4c999af2b51b65\*\*\*\*
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -93,7 +93,7 @@ public class DeleteClusterNodepoolRequest extends Request {
         }
 
         /**
-         * 节点池ID。
+         * np30db56bcac7843dca90b999c8928\*\*\*\*
          */
         public Builder nodepoolId(String nodepoolId) {
             this.putPathParameter("NodepoolId", nodepoolId);
@@ -102,7 +102,7 @@ public class DeleteClusterNodepoolRequest extends Request {
         }
 
         /**
-         * 是否强制删除。
+         * false
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("force", force);

@@ -86,7 +86,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         private UpgradeTask upgradeTask; 
 
         /**
-         * 错误信息描述。
+         * The error message returned during the update.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -94,7 +94,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 预检查返回ID。
+         * The ID of the precheck report.
          */
         public Builder precheckReportId(String precheckReportId) {
             this.precheckReportId = precheckReportId;
@@ -102,7 +102,13 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 升级状态。
+         * The status of the update. Valid values:
+         * <p>
+         * 
+         * *   `success`: The update is successful.
+         * *   `fail`: The update failed.
+         * *   `pause`: The update is paused.
+         * *   `running`: The update is in progress.
          */
         public Builder status(String status) {
             this.status = status;
@@ -110,7 +116,14 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 升级任务执行到哪一步了。
+         * The current phase of the update. Valid values:
+         * <p>
+         * 
+         * *   `not_start`: The update is not started.
+         * *   `prechecking`: The precheck is in progress.
+         * *   `upgrading`: The update is in progress.
+         * *   `pause`: The update is paused.
+         * *   `success`: The update is successful.
          */
         public Builder upgradeStep(String upgradeStep) {
             this.upgradeStep = upgradeStep;
@@ -118,7 +131,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * 升级任务详情。
+         * The details of the update task.
          */
         public Builder upgradeTask(UpgradeTask upgradeTask) {
             this.upgradeTask = upgradeTask;
@@ -170,7 +183,7 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 任务描述信息。
+             * The description of the update task.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -178,7 +191,12 @@ public class GetUpgradeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * 任务状态：  emptry、running、success、failed
+             * The status of the update task. Valid values:
+             * <p>
+             * 
+             * *   `running`: The update task is being executed.
+             * *   `Success`: The update task is successfully executed.
+             * *   `Failed`: The update task failed.
              */
             public Builder status(String status) {
                 this.status = status;
