@@ -1307,12 +1307,18 @@ public class CreateClusterNodePoolRequest extends Request {
         @NameInMap("spot_strategy")
         private String spotStrategy;
 
+        @NameInMap("system_disk_bursting_enabled")
+        private Boolean systemDiskBurstingEnabled;
+
         @NameInMap("system_disk_category")
         @Validation(required = true)
         private String systemDiskCategory;
 
         @NameInMap("system_disk_performance_level")
         private String systemDiskPerformanceLevel;
+
+        @NameInMap("system_disk_provisioned_iops")
+        private Long systemDiskProvisionedIops;
 
         @NameInMap("system_disk_size")
         @Validation(required = true)
@@ -1355,8 +1361,10 @@ public class CreateClusterNodePoolRequest extends Request {
             this.spotInstanceRemedy = builder.spotInstanceRemedy;
             this.spotPriceLimit = builder.spotPriceLimit;
             this.spotStrategy = builder.spotStrategy;
+            this.systemDiskBurstingEnabled = builder.systemDiskBurstingEnabled;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskPerformanceLevel = builder.systemDiskPerformanceLevel;
+            this.systemDiskProvisionedIops = builder.systemDiskProvisionedIops;
             this.systemDiskSize = builder.systemDiskSize;
             this.tags = builder.tags;
             this.vswitchIds = builder.vswitchIds;
@@ -1574,6 +1582,13 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return systemDiskBurstingEnabled
+         */
+        public Boolean getSystemDiskBurstingEnabled() {
+            return this.systemDiskBurstingEnabled;
+        }
+
+        /**
          * @return systemDiskCategory
          */
         public String getSystemDiskCategory() {
@@ -1585,6 +1600,13 @@ public class CreateClusterNodePoolRequest extends Request {
          */
         public String getSystemDiskPerformanceLevel() {
             return this.systemDiskPerformanceLevel;
+        }
+
+        /**
+         * @return systemDiskProvisionedIops
+         */
+        public Long getSystemDiskProvisionedIops() {
+            return this.systemDiskProvisionedIops;
         }
 
         /**
@@ -1638,8 +1660,10 @@ public class CreateClusterNodePoolRequest extends Request {
             private Boolean spotInstanceRemedy; 
             private java.util.List < SpotPriceLimit> spotPriceLimit; 
             private String spotStrategy; 
+            private Boolean systemDiskBurstingEnabled; 
             private String systemDiskCategory; 
             private String systemDiskPerformanceLevel; 
+            private Long systemDiskProvisionedIops; 
             private Long systemDiskSize; 
             private java.util.List < Tags> tags; 
             private java.util.List < String > vswitchIds; 
@@ -1877,6 +1901,14 @@ public class CreateClusterNodePoolRequest extends Request {
             }
 
             /**
+             * system_disk_bursting_enabled.
+             */
+            public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
+                this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
+                return this;
+            }
+
+            /**
              * system_disk_category.
              */
             public Builder systemDiskCategory(String systemDiskCategory) {
@@ -1889,6 +1921,14 @@ public class CreateClusterNodePoolRequest extends Request {
              */
             public Builder systemDiskPerformanceLevel(String systemDiskPerformanceLevel) {
                 this.systemDiskPerformanceLevel = systemDiskPerformanceLevel;
+                return this;
+            }
+
+            /**
+             * system_disk_provisioned_iops.
+             */
+            public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
+                this.systemDiskProvisionedIops = systemDiskProvisionedIops;
                 return this;
             }
 

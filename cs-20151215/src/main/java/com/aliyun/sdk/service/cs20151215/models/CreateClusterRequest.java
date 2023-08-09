@@ -119,7 +119,6 @@ public class CreateClusterRequest extends Request {
 
     @Body
     @NameInMap("key_pair")
-    @Validation(required = true)
     private String keyPair;
 
     @Body
@@ -136,7 +135,6 @@ public class CreateClusterRequest extends Request {
 
     @Body
     @NameInMap("login_password")
-    @Validation(required = true)
     private String loginPassword;
 
     @Body
@@ -157,7 +155,6 @@ public class CreateClusterRequest extends Request {
 
     @Body
     @NameInMap("master_instance_types")
-    @Validation(required = true)
     private java.util.List < String > masterInstanceTypes;
 
     @Body
@@ -170,7 +167,6 @@ public class CreateClusterRequest extends Request {
 
     @Body
     @NameInMap("master_system_disk_category")
-    @Validation(required = true)
     private String masterSystemDiskCategory;
 
     @Body
@@ -179,7 +175,6 @@ public class CreateClusterRequest extends Request {
 
     @Body
     @NameInMap("master_system_disk_size")
-    @Validation(required = true)
     private Long masterSystemDiskSize;
 
     @Body
@@ -188,7 +183,6 @@ public class CreateClusterRequest extends Request {
 
     @Body
     @NameInMap("master_vswitch_ids")
-    @Validation(required = true)
     private java.util.List < String > masterVswitchIds;
 
     @Body
@@ -213,8 +207,12 @@ public class CreateClusterRequest extends Request {
     private String nodePortRange;
 
     @Body
+    @NameInMap("nodepools")
+    private java.util.List < Nodepool > nodepools;
+
+    @Body
     @NameInMap("num_of_nodes")
-    @Validation(required = true)
+    @Deprecated
     private Long numOfNodes;
 
     @Body
@@ -327,54 +325,62 @@ public class CreateClusterRequest extends Request {
 
     @Body
     @NameInMap("worker_auto_renew")
+    @Deprecated
     private Boolean workerAutoRenew;
 
     @Body
     @NameInMap("worker_auto_renew_period")
+    @Deprecated
     private Long workerAutoRenewPeriod;
 
     @Body
     @NameInMap("worker_data_disks")
+    @Deprecated
     private java.util.List < WorkerDataDisks> workerDataDisks;
 
     @Body
     @NameInMap("worker_instance_charge_type")
+    @Deprecated
     private String workerInstanceChargeType;
 
     @Body
     @NameInMap("worker_instance_types")
-    @Validation(required = true)
+    @Deprecated
     private java.util.List < String > workerInstanceTypes;
 
     @Body
     @NameInMap("worker_period")
+    @Deprecated
     private Long workerPeriod;
 
     @Body
     @NameInMap("worker_period_unit")
+    @Deprecated
     private String workerPeriodUnit;
 
     @Body
     @NameInMap("worker_system_disk_category")
-    @Validation(required = true)
+    @Deprecated
     private String workerSystemDiskCategory;
 
     @Body
     @NameInMap("worker_system_disk_performance_level")
+    @Deprecated
     private String workerSystemDiskPerformanceLevel;
 
     @Body
     @NameInMap("worker_system_disk_size")
-    @Validation(required = true)
+    @Deprecated
     private Long workerSystemDiskSize;
 
     @Body
     @NameInMap("worker_system_disk_snapshot_policy_id")
+    @Deprecated
     private String workerSystemDiskSnapshotPolicyId;
 
     @Body
     @NameInMap("worker_vswitch_ids")
-    @Validation(required = true)
+    @Deprecated
     private java.util.List < String > workerVswitchIds;
 
     @Body
@@ -431,6 +437,7 @@ public class CreateClusterRequest extends Request {
         this.nodeCidrMask = builder.nodeCidrMask;
         this.nodeNameMode = builder.nodeNameMode;
         this.nodePortRange = builder.nodePortRange;
+        this.nodepools = builder.nodepools;
         this.numOfNodes = builder.numOfNodes;
         this.osType = builder.osType;
         this.period = builder.period;
@@ -823,6 +830,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return nodepools
+     */
+    public java.util.List < Nodepool > getNodepools() {
+        return this.nodepools;
+    }
+
+    /**
      * @return numOfNodes
      */
     public Long getNumOfNodes() {
@@ -1151,6 +1165,7 @@ public class CreateClusterRequest extends Request {
         private String nodeCidrMask; 
         private String nodeNameMode; 
         private String nodePortRange; 
+        private java.util.List < Nodepool > nodepools; 
         private Long numOfNodes; 
         private String osType; 
         private Long period; 
@@ -1246,6 +1261,7 @@ public class CreateClusterRequest extends Request {
             this.nodeCidrMask = request.nodeCidrMask;
             this.nodeNameMode = request.nodeNameMode;
             this.nodePortRange = request.nodePortRange;
+            this.nodepools = request.nodepools;
             this.numOfNodes = request.numOfNodes;
             this.osType = request.osType;
             this.period = request.period;
@@ -1717,6 +1733,15 @@ public class CreateClusterRequest extends Request {
         public Builder nodePortRange(String nodePortRange) {
             this.putBodyParameter("node_port_range", nodePortRange);
             this.nodePortRange = nodePortRange;
+            return this;
+        }
+
+        /**
+         * nodepools.
+         */
+        public Builder nodepools(java.util.List < Nodepool > nodepools) {
+            this.putBodyParameter("nodepools", nodepools);
+            this.nodepools = nodepools;
             return this;
         }
 
