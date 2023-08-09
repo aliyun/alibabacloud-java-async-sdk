@@ -28,6 +28,11 @@ public class CreateVectorIndexRequest extends Request {
     private Integer dimension;
 
     @Query
+    @NameInMap("HnswM")
+    @Validation(maximum = 1000, minimum = 1)
+    private Integer hnswM;
+
+    @Query
     @NameInMap("ManagerAccount")
     @Validation(required = true)
     private String managerAccount;
@@ -50,6 +55,10 @@ public class CreateVectorIndexRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PqEnable")
+    private Integer pqEnable;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -58,11 +67,13 @@ public class CreateVectorIndexRequest extends Request {
         this.collection = builder.collection;
         this.DBInstanceId = builder.DBInstanceId;
         this.dimension = builder.dimension;
+        this.hnswM = builder.hnswM;
         this.managerAccount = builder.managerAccount;
         this.managerAccountPassword = builder.managerAccountPassword;
         this.metrics = builder.metrics;
         this.namespace = builder.namespace;
         this.ownerId = builder.ownerId;
+        this.pqEnable = builder.pqEnable;
         this.regionId = builder.regionId;
     }
 
@@ -101,6 +112,13 @@ public class CreateVectorIndexRequest extends Request {
     }
 
     /**
+     * @return hnswM
+     */
+    public Integer getHnswM() {
+        return this.hnswM;
+    }
+
+    /**
      * @return managerAccount
      */
     public String getManagerAccount() {
@@ -136,6 +154,13 @@ public class CreateVectorIndexRequest extends Request {
     }
 
     /**
+     * @return pqEnable
+     */
+    public Integer getPqEnable() {
+        return this.pqEnable;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -146,11 +171,13 @@ public class CreateVectorIndexRequest extends Request {
         private String collection; 
         private String DBInstanceId; 
         private Integer dimension; 
+        private Integer hnswM; 
         private String managerAccount; 
         private String managerAccountPassword; 
         private String metrics; 
         private String namespace; 
         private Long ownerId; 
+        private Integer pqEnable; 
         private String regionId; 
 
         private Builder() {
@@ -162,11 +189,13 @@ public class CreateVectorIndexRequest extends Request {
             this.collection = request.collection;
             this.DBInstanceId = request.DBInstanceId;
             this.dimension = request.dimension;
+            this.hnswM = request.hnswM;
             this.managerAccount = request.managerAccount;
             this.managerAccountPassword = request.managerAccountPassword;
             this.metrics = request.metrics;
             this.namespace = request.namespace;
             this.ownerId = request.ownerId;
+            this.pqEnable = request.pqEnable;
             this.regionId = request.regionId;
         } 
 
@@ -194,6 +223,15 @@ public class CreateVectorIndexRequest extends Request {
         public Builder dimension(Integer dimension) {
             this.putQueryParameter("Dimension", dimension);
             this.dimension = dimension;
+            return this;
+        }
+
+        /**
+         * HnswM.
+         */
+        public Builder hnswM(Integer hnswM) {
+            this.putQueryParameter("HnswM", hnswM);
+            this.hnswM = hnswM;
             return this;
         }
 
@@ -239,6 +277,15 @@ public class CreateVectorIndexRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PqEnable.
+         */
+        public Builder pqEnable(Integer pqEnable) {
+            this.putQueryParameter("PqEnable", pqEnable);
+            this.pqEnable = pqEnable;
             return this;
         }
 

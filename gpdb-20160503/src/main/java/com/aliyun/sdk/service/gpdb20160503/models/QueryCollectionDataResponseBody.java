@@ -159,8 +159,8 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         @NameInMap("Metadata")
         private java.util.Map < String, String > metadata;
 
-        @NameInMap("Similarity")
-        private Double similarity;
+        @NameInMap("Score")
+        private Double score;
 
         @NameInMap("Values")
         private Values values;
@@ -168,7 +168,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         private Match(Builder builder) {
             this.id = builder.id;
             this.metadata = builder.metadata;
-            this.similarity = builder.similarity;
+            this.score = builder.score;
             this.values = builder.values;
         }
 
@@ -195,10 +195,10 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return similarity
+         * @return score
          */
-        public Double getSimilarity() {
-            return this.similarity;
+        public Double getScore() {
+            return this.score;
         }
 
         /**
@@ -211,7 +211,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private java.util.Map < String, String > metadata; 
-            private Double similarity; 
+            private Double score; 
             private Values values; 
 
             /**
@@ -231,10 +231,10 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             }
 
             /**
-             * Similarity.
+             * Score.
              */
-            public Builder similarity(Double similarity) {
-                this.similarity = similarity;
+            public Builder score(Double score) {
+                this.score = score;
                 return this;
             }
 

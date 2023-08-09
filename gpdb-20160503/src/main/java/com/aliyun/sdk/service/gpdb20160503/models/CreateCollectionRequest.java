@@ -31,6 +31,11 @@ public class CreateCollectionRequest extends Request {
     private String fullTextRetrievalFields;
 
     @Query
+    @NameInMap("HnswM")
+    @Validation(maximum = 1000, minimum = 1)
+    private Integer hnswM;
+
+    @Query
     @NameInMap("ManagerAccount")
     @Validation(required = true)
     private String managerAccount;
@@ -46,6 +51,10 @@ public class CreateCollectionRequest extends Request {
     private String metadata;
 
     @Query
+    @NameInMap("Metrics")
+    private String metrics;
+
+    @Query
     @NameInMap("Namespace")
     private String namespace;
 
@@ -58,6 +67,10 @@ public class CreateCollectionRequest extends Request {
     private String parser;
 
     @Query
+    @NameInMap("PqEnable")
+    private Integer pqEnable;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -67,12 +80,15 @@ public class CreateCollectionRequest extends Request {
         this.DBInstanceId = builder.DBInstanceId;
         this.dimension = builder.dimension;
         this.fullTextRetrievalFields = builder.fullTextRetrievalFields;
+        this.hnswM = builder.hnswM;
         this.managerAccount = builder.managerAccount;
         this.managerAccountPassword = builder.managerAccountPassword;
         this.metadata = builder.metadata;
+        this.metrics = builder.metrics;
         this.namespace = builder.namespace;
         this.ownerId = builder.ownerId;
         this.parser = builder.parser;
+        this.pqEnable = builder.pqEnable;
         this.regionId = builder.regionId;
     }
 
@@ -118,6 +134,13 @@ public class CreateCollectionRequest extends Request {
     }
 
     /**
+     * @return hnswM
+     */
+    public Integer getHnswM() {
+        return this.hnswM;
+    }
+
+    /**
      * @return managerAccount
      */
     public String getManagerAccount() {
@@ -136,6 +159,13 @@ public class CreateCollectionRequest extends Request {
      */
     public String getMetadata() {
         return this.metadata;
+    }
+
+    /**
+     * @return metrics
+     */
+    public String getMetrics() {
+        return this.metrics;
     }
 
     /**
@@ -160,6 +190,13 @@ public class CreateCollectionRequest extends Request {
     }
 
     /**
+     * @return pqEnable
+     */
+    public Integer getPqEnable() {
+        return this.pqEnable;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -171,12 +208,15 @@ public class CreateCollectionRequest extends Request {
         private String DBInstanceId; 
         private Long dimension; 
         private String fullTextRetrievalFields; 
+        private Integer hnswM; 
         private String managerAccount; 
         private String managerAccountPassword; 
         private String metadata; 
+        private String metrics; 
         private String namespace; 
         private Long ownerId; 
         private String parser; 
+        private Integer pqEnable; 
         private String regionId; 
 
         private Builder() {
@@ -189,12 +229,15 @@ public class CreateCollectionRequest extends Request {
             this.DBInstanceId = request.DBInstanceId;
             this.dimension = request.dimension;
             this.fullTextRetrievalFields = request.fullTextRetrievalFields;
+            this.hnswM = request.hnswM;
             this.managerAccount = request.managerAccount;
             this.managerAccountPassword = request.managerAccountPassword;
             this.metadata = request.metadata;
+            this.metrics = request.metrics;
             this.namespace = request.namespace;
             this.ownerId = request.ownerId;
             this.parser = request.parser;
+            this.pqEnable = request.pqEnable;
             this.regionId = request.regionId;
         } 
 
@@ -235,6 +278,15 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
+         * HnswM.
+         */
+        public Builder hnswM(Integer hnswM) {
+            this.putQueryParameter("HnswM", hnswM);
+            this.hnswM = hnswM;
+            return this;
+        }
+
+        /**
          * ManagerAccount.
          */
         public Builder managerAccount(String managerAccount) {
@@ -262,6 +314,15 @@ public class CreateCollectionRequest extends Request {
         }
 
         /**
+         * Metrics.
+         */
+        public Builder metrics(String metrics) {
+            this.putQueryParameter("Metrics", metrics);
+            this.metrics = metrics;
+            return this;
+        }
+
+        /**
          * Namespace.
          */
         public Builder namespace(String namespace) {
@@ -285,6 +346,15 @@ public class CreateCollectionRequest extends Request {
         public Builder parser(String parser) {
             this.putQueryParameter("Parser", parser);
             this.parser = parser;
+            return this;
+        }
+
+        /**
+         * PqEnable.
+         */
+        public Builder pqEnable(Integer pqEnable) {
+            this.putQueryParameter("PqEnable", pqEnable);
+            this.pqEnable = pqEnable;
             return this;
         }
 
