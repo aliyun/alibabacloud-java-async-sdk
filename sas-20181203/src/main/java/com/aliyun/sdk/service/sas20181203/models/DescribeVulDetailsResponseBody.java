@@ -186,6 +186,9 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         private String intranetIp;
 
+        @NameInMap("OtherId")
+        private String otherId;
+
         @NameInMap("Poc")
         private String poc;
 
@@ -237,6 +240,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
+            this.otherId = builder.otherId;
             this.poc = builder.poc;
             this.pocCreateTime = builder.pocCreateTime;
             this.pocDisclosureTime = builder.pocDisclosureTime;
@@ -335,6 +339,13 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
          */
         public String getIntranetIp() {
             return this.intranetIp;
+        }
+
+        /**
+         * @return otherId
+         */
+        public String getOtherId() {
+            return this.otherId;
         }
 
         /**
@@ -440,6 +451,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
+            private String otherId; 
             private String poc; 
             private Long pocCreateTime; 
             private Long pocDisclosureTime; 
@@ -553,6 +565,14 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
+                return this;
+            }
+
+            /**
+             * OtherId.
+             */
+            public Builder otherId(String otherId) {
+                this.otherId = otherId;
                 return this;
             }
 

@@ -180,7 +180,7 @@ public class OperationSuspEventsRequest extends Request {
          * The IDs of alert events.
          * <p>
          * 
-         * >  You can call the [DescribeAlarmEventList](~~DescribeAlarmEventList~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.
+         * >  You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the IDs of alert events from the SecurityEventIds response parameter.
          */
         public Builder suspiciousEventIds(String suspiciousEventIds) {
             this.putQueryParameter("SuspiciousEventIds", suspiciousEventIds);
