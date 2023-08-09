@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class EnablePhysicalConnectionRequest extends Request {
     @Query
+    @NameInMap("ByPassSp")
+    private Boolean byPassSp;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -44,6 +48,7 @@ public class EnablePhysicalConnectionRequest extends Request {
 
     private EnablePhysicalConnectionRequest(Builder builder) {
         super(builder);
+        this.byPassSp = builder.byPassSp;
         this.clientToken = builder.clientToken;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -64,6 +69,13 @@ public class EnablePhysicalConnectionRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return byPassSp
+     */
+    public Boolean getByPassSp() {
+        return this.byPassSp;
     }
 
     /**
@@ -116,6 +128,7 @@ public class EnablePhysicalConnectionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<EnablePhysicalConnectionRequest, Builder> {
+        private Boolean byPassSp; 
         private String clientToken; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -130,6 +143,7 @@ public class EnablePhysicalConnectionRequest extends Request {
 
         private Builder(EnablePhysicalConnectionRequest request) {
             super(request);
+            this.byPassSp = request.byPassSp;
             this.clientToken = request.clientToken;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -138,6 +152,15 @@ public class EnablePhysicalConnectionRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * ByPassSp.
+         */
+        public Builder byPassSp(Boolean byPassSp) {
+            this.putQueryParameter("ByPassSp", byPassSp);
+            this.byPassSp = byPassSp;
+            return this;
+        }
 
         /**
          * The client token that is used to ensure the idempotence of the request.
