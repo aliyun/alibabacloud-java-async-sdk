@@ -246,12 +246,7 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * The ID of the activation code.
          */
         public Builder activationId(String activationId) {
             this.putQueryParameter("ActivationId", activationId);
@@ -260,7 +255,7 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The tags that are added to the resource.
+         * The ID of managed instance N. Valid values of N: 1 to 50.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -269,7 +264,7 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The name of the managed instance.
+         * The internal or public IP address of the managed instance.
          */
         public Builder instanceIp(String instanceIp) {
             this.putQueryParameter("InstanceIp", instanceIp);
@@ -278,12 +273,7 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * The name of the managed instance.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -292,7 +282,11 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the activation code.
+         * The operating system type of the managed instance. Valid values:
+         * <p>
+         * 
+         * *   windows
+         * *   linux
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -319,7 +313,12 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The instance IDs. Valid values of N: 1 to 50.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -328,7 +327,12 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The instance ID. Valid values of N: 1 to 50.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -337,7 +341,10 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The internal or public IP address of the managed instance.
+         * The region ID of the managed instance. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -364,12 +371,7 @@ public class DescribeManagedInstancesRequest extends Request {
         }
 
         /**
-         * The key of tag N that is added to the instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-         * <p>
-         * 
-         * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
-         * 
-         * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
+         * The tags of the managed instance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -423,7 +425,12 @@ public class DescribeManagedInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The number of entries returned per page.
+             * The key of tag N of the managed instance. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
+             * 
+             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -431,7 +438,10 @@ public class DescribeManagedInstancesRequest extends Request {
             }
 
             /**
-             * The request ID.
+             * The value of tag N of the managed instance. Valid values of N: 1 to 20. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

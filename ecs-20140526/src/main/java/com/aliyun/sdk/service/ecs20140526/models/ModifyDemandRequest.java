@@ -289,7 +289,7 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -316,7 +316,7 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
+         * The name of the demand. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with [http:// or https://](http://https://). It can contain letters, digits, colons (:), underscores (\_), periods (.), and hyphens (-).
          * <p>
          * 
          * The default value is the instance type name.
@@ -328,14 +328,14 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
+         * The end time of the subscription period. Specify the time in the [ISO 8601](~~25696~~)standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
          * <p>
          * 
-         * If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm).
+         * If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the minute (mm).
          * 
-         * The value of EndTime must be later than the value of Starttime.
+         * The value of EndTime must be later than the value of StartTime.
          * 
-         * Typically, the interval between the two times cannot be more than 10 days.
+         * in most cases, the interval between StartTime and EndTime cannot be more than 10 days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -344,11 +344,11 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Default value: PostPaid. Valid values:
+         * The billing method of the instance. Valid values:
          * <p>
          * 
          * *   PrePaid: subscription
-         * *   PostPaid: pay-as-you-go
+         * *   PostPaid (default): pay-as-you-go
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -357,7 +357,7 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The instance type. For more information, see [Instance families](~~25378~~) or call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of the filed instance type, or see [Select instance types](~~58291~~) to learn how to select instance types.
+         * The instance type. For more information, see [Instance families](~~25378~~). You can also call the [DescribeInstanceTypes](~~25620~~) operation to query the performance data of the specified instance type. To learn how to select instance types, see [Select instance types](~~58291~~).
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -384,7 +384,7 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The subscription period of the resource. Unit: month. You must specify the parameter. This parameter is valid only when `InstanceChargeType` is set to PrePaid. Valid values:
+         * The subscription period of the resource. Unit: month. You must specify this parameter. This parameter is valid only if you set `InstanceChargeType` to PrePaid. Valid values:
          * <p>
          * 
          * *   Valid values when PeriodUnit is set to Week: 1, 2, 3, and 4.
@@ -397,12 +397,12 @@ public class ModifyDemandRequest extends Request {
         }
 
         /**
-         * The unit of the subscription period of the resource. Default value: Month. Valid values:
+         * The unit of the subscription period of the resource. Valid values:
          * <p>
          * 
          * *   Day
          * *   Week
-         * *   Month
+         * *   Month. This is the default value.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -441,11 +441,11 @@ public class ModifyDemandRequest extends Request {
          * The start time of the subscription period. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
          * <p>
          * 
-         * If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the specified minute (mm).
+         * If the value of seconds (ss) is not 00, the time is automatically set to the beginning of the minute (mm).
          * 
-         * The value of EndTime must be later than the value of Starttime.
+         * The value of EndTime must be later than the value of StartTime.
          * 
-         * Typically, the interval between the two times cannot be more than 10 days.
+         * In most cases, the interval between StartTime and EndTime cannot be more than 10 days.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -457,7 +457,7 @@ public class ModifyDemandRequest extends Request {
          * The zone ID of the instance. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
          * <p>
          * 
-         * This parameter is empty by default. If you do not specify a zone, the system randomly selects one.
+         * This parameter is empty by default. If you leave this parameter empty, the system randomly selects a zone.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

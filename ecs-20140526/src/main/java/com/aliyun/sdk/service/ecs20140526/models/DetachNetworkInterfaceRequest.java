@@ -178,7 +178,10 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the instance
+         * The ID of the trunk ENI.
+         * <p>
+         * 
+         * >  This parameter is unavailable for use.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -187,7 +190,7 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * The ID of the instance
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -214,7 +217,7 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The ID of the ENI.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,10 +244,7 @@ public class DetachNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the trunk ENI.
-         * <p>
-         * 
-         * >  This parameter is unavailable for use.
+         * The ID of the request.
          */
         public Builder trunkNetworkInstanceId(String trunkNetworkInstanceId) {
             this.putQueryParameter("TrunkNetworkInstanceId", trunkNetworkInstanceId);

@@ -86,7 +86,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details of the image creation task.
+         * Details of the image creation task.
          */
         public Builder imagePipelineExecution(ImagePipelineExecution imagePipelineExecution) {
             this.imagePipelineExecution = imagePipelineExecution;
@@ -94,7 +94,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * The maximum number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -110,7 +110,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * > This parameter is unavailable.
+             * > This parameter is not publicly available.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is unavailable.
+             * > This parameter is not publicly available.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -388,7 +388,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The data that is returned.
+             * The data returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -421,7 +421,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
              * *   SUCCESS
              * *   FAILED
              * *   CANCELLING
-             * *   CANCELED
+             * *   CANCELLED
              */
             public Builder status(String status) {
                 this.status = status;
@@ -429,7 +429,7 @@ public class DescribeImagePipelineExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is unavailable.
+             * > This parameter is not publicly available.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

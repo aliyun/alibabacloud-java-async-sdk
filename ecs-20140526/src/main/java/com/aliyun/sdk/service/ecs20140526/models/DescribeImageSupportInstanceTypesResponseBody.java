@@ -74,7 +74,11 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the image.
+         * The key of filter N. Only the image ID can be used to filter instance types. Valid values:
+         * <p>
+         * 
+         * *   imagId: image ID
+         * *   filter: image ID
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -82,7 +86,26 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the instance types that are supported by the image.
+         * {
+         * <p>
+         *     "RequestId": "CF661E2D-4AFE-4BCD-959A-A65E14416B44",
+         *     "RegionId": "cn-hangzhou",
+         *     "ImageId": "ubuntu_16_0402_64_20G_alibase_20180409.vhd",
+         *     "InstanceTypes": {
+         *         "InstanceType": [{
+         *             "InstanceTypeId": "ecs.t1.xsmall",
+         *             "CpuCoreCount": 1,
+         *             "MemorySize": 0.5,
+         *             "InstanceTypeFamily": "ecs.t1"
+         *         },
+         *         {
+         *             "InstanceTypeId": "ecs.t1.small",
+         *             "CpuCoreCount": 1,
+         *             "MemorySize": 1,
+         *             "InstanceTypeFamily": "ecs.t1"
+         *         }]
+         *     }
+         * }
          */
         public Builder instanceTypes(InstanceTypes instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -90,7 +113,26 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the image.
+         * {
+         * <p>
+         *     "RequestId": "CF661E2D-4AFE-4BCD-959A-A65E14416B44",
+         *     "RegionId": "cn-hangzhou",
+         *     "ImageId": "ubuntu_16_0402_64_20G_alibase_20180409.vhd",
+         *     "InstanceTypes": {
+         *         "InstanceType": [{
+         *             "InstanceTypeId": "ecs.t1.xsmall",
+         *             "CpuCoreCount": 1,
+         *             "MemorySize": 0.5,
+         *             "InstanceTypeFamily": "ecs.t1"
+         *         },
+         *         {
+         *             "InstanceTypeId": "ecs.t1.small",
+         *             "CpuCoreCount": 1,
+         *             "MemorySize": 1,
+         *             "InstanceTypeFamily": "ecs.t1"
+         *         }]
+         *     }
+         * }
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -182,7 +224,7 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family.
+             * DescribeImageSupportInstanceTypes
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -190,7 +232,7 @@ public class DescribeImageSupportInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance type.
+             * Queries the instance types supported by an image.
              */
             public Builder instanceTypeId(String instanceTypeId) {
                 this.instanceTypeId = instanceTypeId;

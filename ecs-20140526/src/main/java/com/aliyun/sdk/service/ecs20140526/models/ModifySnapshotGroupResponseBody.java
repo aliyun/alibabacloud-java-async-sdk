@@ -38,7 +38,7 @@ public class ModifySnapshotGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * The new description of the snapshot-consistent group. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

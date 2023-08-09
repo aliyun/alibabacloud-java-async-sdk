@@ -62,7 +62,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the monitored data of the ENI.
+         * The details about the monitoring data of the secondary ENI.
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -70,7 +70,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the secondary ENI.
+             * The secondary ENI ID.
              */
             public Builder eniId(String eniId) {
                 this.eniId = eniId;
@@ -226,7 +226,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The average rate of data traffic received by the secondary ENI over the internal network. Unit: Kbit/s.
+             * The average rate of data received by the secondary ENI over the internal network. Unit: Kbit/s.
              */
             public Builder intranetRx(String intranetRx) {
                 this.intranetRx = intranetRx;
@@ -234,7 +234,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The average rate of data traffic sent by the secondary ENI over the internal network. Unit: Kbit/s.
+             * The average rate of data sent by the secondary ENI over the internal network. Unit: Kbit/s.
              */
             public Builder intranetTx(String intranetTx) {
                 this.intranetTx = intranetTx;
@@ -258,7 +258,7 @@ public class DescribeEniMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the monitored data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The timestamp to query the monitoring data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

@@ -238,7 +238,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * SharedTime.
+             * The time when the image was shared. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
              */
             public Builder sharedTime(String sharedTime) {
                 this.sharedTime = sharedTime;

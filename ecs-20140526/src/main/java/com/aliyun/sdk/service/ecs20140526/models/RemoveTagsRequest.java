@@ -173,7 +173,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +182,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * The key of tag N of the resource. Valid values of N: 1 to 20. It cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.
+         * The ID of the resource. For example, if you set ResourceType to instance, you must set this parameter to the ID of the related instance.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -209,10 +209,23 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * The key of tag N of the resource.
+         * The type of the resource. Valid values:
          * <p>
          * 
-         * >  We recommend that you use the Tag.N.Key parameter to ensure future compatibility.
+         * *   instance
+         * *   disk
+         * *   snapshot
+         * *   image
+         * *   securitygroup
+         * *   volume
+         * *   eni
+         * *   ddh
+         * *   keypair
+         * *   launchtemplate
+         * *   reservedinstance
+         * *   snapshotpolicy
+         * 
+         * All values must be in lowercase.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -221,7 +234,7 @@ public class RemoveTagsRequest extends Request {
         }
 
         /**
-         * The value of tag N of the resource. Valid values of N: 1 to 20. It can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -275,10 +288,7 @@ public class RemoveTagsRequest extends Request {
             private String value; 
 
             /**
-             * The value of tag N of the resource.
-             * <p>
-             * 
-             * >  We recommend that you use the Tag.N.Value parameter to ensure future compatibility.
+             * The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -286,7 +296,7 @@ public class RemoveTagsRequest extends Request {
             }
 
             /**
-             * The value of tag N of the resource. Valid values of N: 1 to 20. It can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. It cannot start with acs: or aliyun.
+             * The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs: or aliyun.
              */
             public Builder value(String value) {
                 this.value = value;

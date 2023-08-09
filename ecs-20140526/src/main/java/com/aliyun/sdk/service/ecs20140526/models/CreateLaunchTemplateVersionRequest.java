@@ -29,6 +29,10 @@ public class CreateLaunchTemplateVersionRequest extends Request {
     private java.util.List < DataDisk> dataDisk;
 
     @Query
+    @NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @Query
     @NameInMap("DeploymentSetId")
     private String deploymentSetId;
 
@@ -200,6 +204,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         this.sourceRegionId = builder.sourceRegionId;
         this.autoReleaseTime = builder.autoReleaseTime;
         this.dataDisk = builder.dataDisk;
+        this.deletionProtection = builder.deletionProtection;
         this.deploymentSetId = builder.deploymentSetId;
         this.description = builder.description;
         this.enableVmOsConfig = builder.enableVmOsConfig;
@@ -282,6 +287,13 @@ public class CreateLaunchTemplateVersionRequest extends Request {
      */
     public java.util.List < DataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     /**
@@ -576,6 +588,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         private String sourceRegionId; 
         private String autoReleaseTime; 
         private java.util.List < DataDisk> dataDisk; 
+        private Boolean deletionProtection; 
         private String deploymentSetId; 
         private String description; 
         private Boolean enableVmOsConfig; 
@@ -628,6 +641,7 @@ public class CreateLaunchTemplateVersionRequest extends Request {
             this.sourceRegionId = request.sourceRegionId;
             this.autoReleaseTime = request.autoReleaseTime;
             this.dataDisk = request.dataDisk;
+            this.deletionProtection = request.deletionProtection;
             this.deploymentSetId = request.deploymentSetId;
             this.description = request.description;
             this.enableVmOsConfig = request.enableVmOsConfig;
@@ -709,6 +723,15 @@ public class CreateLaunchTemplateVersionRequest extends Request {
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
             this.putQueryParameter("DataDisk", dataDisk);
             this.dataDisk = dataDisk;
+            return this;
+        }
+
+        /**
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
             return this;
         }
 

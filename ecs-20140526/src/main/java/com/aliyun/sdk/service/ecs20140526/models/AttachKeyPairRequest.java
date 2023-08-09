@@ -177,7 +177,7 @@ public class AttachKeyPairRequest extends Request {
         }
 
         /**
-         * The region ID of the SSH key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID of the SSH key pair. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

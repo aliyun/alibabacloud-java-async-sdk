@@ -274,64 +274,11 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * The execution results.
          */
         public Builder commandId(String commandId) {
             this.putQueryParameter("CommandId", commandId);
             this.commandId = commandId;
-            return this;
-        }
-
-        /**
-         * The information about the tag.
-         */
-        public Builder contentEncoding(String contentEncoding) {
-            this.putQueryParameter("ContentEncoding", contentEncoding);
-            this.contentEncoding = contentEncoding;
-            return this;
-        }
-
-        /**
-         * The tags to use for query.
-         */
-        public Builder includeHistory(Boolean includeHistory) {
-            this.putQueryParameter("IncludeHistory", includeHistory);
-            this.includeHistory = includeHistory;
-            return this;
-        }
-
-        /**
-         * The encoding method of the `Output` response parameter. Valid values:
-         * <p>
-         * 
-         * *   PlainText: returns the original command content and command output.
-         * *   Base64: returns the Base64-encoded command content and command output.
-         * 
-         * Default value: Base64.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * Specifies whether to return the results of historical scheduled executions. Valid values:
-         * <p>
-         * 
-         * *   true: returns the results of historical scheduled executions. When this parameter is set to true, the `InvokeId` parameter must be set to the ID of a scheduled execution.
-         * *   false: does not return the results of historical scheduled executions.
-         * 
-         * Default value: false.
-         */
-        public Builder invokeId(String invokeId) {
-            this.putQueryParameter("InvokeId", invokeId);
-            this.invokeId = invokeId;
             return this;
         }
 
@@ -342,6 +289,47 @@ public class DescribeInvocationResultsRequest extends Request {
          * Maximum value: 50.
          * 
          * Default value: 10.
+         */
+        public Builder contentEncoding(String contentEncoding) {
+            this.putQueryParameter("ContentEncoding", contentEncoding);
+            this.contentEncoding = contentEncoding;
+            return this;
+        }
+
+        /**
+         * The information about the tag.
+         */
+        public Builder includeHistory(Boolean includeHistory) {
+            this.putQueryParameter("IncludeHistory", includeHistory);
+            this.includeHistory = includeHistory;
+            return this;
+        }
+
+        /**
+         * The page number of the returned page.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the command execution.
+         */
+        public Builder invokeId(String invokeId) {
+            this.putQueryParameter("InvokeId", invokeId);
+            this.invokeId = invokeId;
+            return this;
+        }
+
+        /**
+         * The page number of the page to return.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder invokeRecordStatus(String invokeRecordStatus) {
             this.putQueryParameter("InvokeRecordStatus", invokeRecordStatus);
@@ -368,12 +356,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The key of tag N of the command execution. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-         * <p>
-         * 
-         * If a single tag is specified to query resources, up to 1,000 resources with this tag can be returned. If multiple tags are specified to query resources, up to 1,000 resources with all these tags can be returned. To query more than 1,000 resources with specified tags, call the [ListTagResources](~~110425~~) operation.
-         * 
-         * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+         * The ID of the command.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -382,10 +365,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The value of tag N of the command execution. Valid values of N: 1 to 20. The tag value can be an empty string.
-         * <p>
-         * 
-         * It can be up to 128 characters in length and cannot contain `http://` or `https://`.
+         * The ID of the container.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -394,7 +374,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the command.
+         * The number of entries returned per page.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -403,15 +383,7 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The execution state of the command. Valid values:
-         * <p>
-         * 
-         * *   Running
-         * *   Finished
-         * *   Failed
-         * *   Stopped
-         * 
-         * > To ensure compatibility, we recommend that you use the `InvocationStatus` parameter instead of the InvokeRecordStatus parameter.
+         * The name of the user who ran the command on the instance.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -438,7 +410,26 @@ public class DescribeInvocationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The error code returned when the command cannot be sent or run. Valid values:
+         * <p>
+         * 
+         * *   If this parameter is empty, the command is run normally.
+         * *   InstanceNotExists: The specified instance does not exist is released.
+         * *   InstanceReleased: The instance was released while the command was being run on the instance.
+         * *   InstanceNotRunning: The instance is not in the Running state while the command is being run.
+         * *   CommandNotApplicable: The command is not applicable to the specified instance.
+         * *   AccountNotExists: The specified account does not exist.
+         * *   DirectoryNotExists: The specified directory does not exist.
+         * *   BadCronExpression: The cron expression used to specify the execution time is invalid.
+         * *   ClientNotRunning: The Cloud Assistant client is not running.
+         * *   ClientNotResponse: The Cloud Assistant client is not responding.
+         * *   ClientIsUpgrading: The Cloud Assistant client is being upgraded.
+         * *   ClientNeedUpgrade: The Cloud Assistant client needs to be upgraded.
+         * *   DeliveryTimeout: The request to send the command timed out.
+         * *   ExecutionTimeout: The command execution timed out.
+         * *   ExecutionException: An exception occurred while the command was being run.
+         * *   ExecutionInterrupted: The execution was interrupted.
+         * *   ExitCodeNonzero: The command execution is complete, but the exit code is not 0.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -492,7 +483,7 @@ public class DescribeInvocationResultsRequest extends Request {
             private String value; 
 
             /**
-             * The number of entries returned per page.
+             * The ID of the instance
              */
             public Builder key(String key) {
                 this.key = key;
@@ -500,7 +491,7 @@ public class DescribeInvocationResultsRequest extends Request {
             }
 
             /**
-             * The page number of the returned page.
+             * The execution state of the command.
              */
             public Builder value(String value) {
                 this.value = value;

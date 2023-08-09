@@ -144,7 +144,7 @@ public class CancelTaskRequest extends Request {
         }
 
         /**
-         * The region ID of the task. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The ID of the task. You can call the [DescribeTasks](~~25622~~) operation to query the list of task IDs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -171,7 +171,7 @@ public class CancelTaskRequest extends Request {
         }
 
         /**
-         * The ID of the task. You can call the [DescribeTasks](~~25622~~) operation to query the list of task IDs.
+         * The ID of the request.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

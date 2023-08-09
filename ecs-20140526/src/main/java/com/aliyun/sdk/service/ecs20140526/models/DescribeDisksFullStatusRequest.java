@@ -292,7 +292,7 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The ID of the event. Valid values of N: 1 to 100.
+         * The ID of event N. Valid values of N: 1 to 100.
          */
         public Builder eventId(java.util.List < String > eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -301,7 +301,7 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The event type. Valid values:
+         * The event type of the EBS device. Valid values:
          * <p>
          * 
          * *   Degraded: The performance of the EBS device is degraded.
@@ -320,8 +320,8 @@ public class DescribeDisksFullStatusRequest extends Request {
          * <p>
          * 
          * *   Impaired: The EBS device is damaged.
-         * *   Warning: The performance of the EBS device may be degraded.
-         * *   Initializing: The disk is being initialized.
+         * *   Warning: The performance of the EBS device is degraded.
+         * *   Initializing: The EBS device is being initialized.
          * *   InsufficientData: The status cannot be determined due to insufficient data.
          * *   NotApplicable: The EBS device cannot be used.
          */
@@ -350,7 +350,7 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be a positive integer.
+         * The page number. Pages start from page 1. The value must be a positive integer.
          * <p>
          * 
          * Default value: 1.
@@ -362,7 +362,7 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100.
+         * The number of entries per page. Valid values: 1 to 100.
          * <p>
          * 
          * Default value: 10.
@@ -383,7 +383,7 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the EBS device belongs. When you use this property to query resources, the number of resources that are contained in the specified resource group cannot exceed 1,000.
+         * The ID of the resource group to which the EBS device belongs. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -413,12 +413,12 @@ public class DescribeDisksFullStatusRequest extends Request {
          * The lifecycle status of the EBS device. For more information, see [Disk status](~~25689~~). Valid values:
          * <p>
          * 
-         * *   In_use: The disk is in use.
-         * *   Available: The disk can be attached.
-         * *   Attaching: The disk is being attached.
-         * *   Detaching: The disk is being detached.
-         * *   Creating: The disk is being created.
-         * *   ReIniting: The disk is being initialized.
+         * *   In_use: The EBS device is in use.
+         * *   Available: The EBS device can be attached.
+         * *   Attaching: The EBS device is being attached.
+         * *   Detaching: The EBS device is being detached.
+         * *   Creating: The EBS device is being created.
+         * *   ReIniting: The EBS device is being initialized.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -427,7 +427,7 @@ public class DescribeDisksFullStatusRequest extends Request {
         }
 
         /**
-         * The tags of the instance.
+         * The tags to add to the EBS device.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -481,10 +481,10 @@ public class DescribeDisksFullStatusRequest extends Request {
             private String start; 
 
             /**
-             * The end of the time range in which to query occurred events.
+             * The end of the time range to query occurred events.
              * <p>
              * 
-             * The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is specified in UTC.
+             * Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
              */
             public Builder end(String end) {
                 this.end = end;
@@ -492,10 +492,10 @@ public class DescribeDisksFullStatusRequest extends Request {
             }
 
             /**
-             * The start of the time range in which to query occurred events.
+             * The beginning of the time range to query occurred events.
              * <p>
              * 
-             * The time follows the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time specified in UTC.
+             * Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in UTC.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -548,10 +548,10 @@ public class DescribeDisksFullStatusRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N added to the EBS device. A key-value pair consists of a key specified by the Tag.N.Key parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
+             * The key of tag N to add to the EBS device. A key-value pair consists of a key specified by the Tag.N.Key parameter and a value specified by the `Tag.N.Value` parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
              * <p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added are returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added are returned.
+             * Up to 1,000 resources with the specified tags can be returned in the response.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -559,7 +559,7 @@ public class DescribeDisksFullStatusRequest extends Request {
             }
 
             /**
-             * The value of tag N added to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the Tag.N.Value parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
+             * The value of tag N to add to the EBS device. A key-value pair consists of a key specified by the `Tag.N.Key` parameter and a value specified by the Tag.N.Value parameter. The two parameters are associated with each other. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

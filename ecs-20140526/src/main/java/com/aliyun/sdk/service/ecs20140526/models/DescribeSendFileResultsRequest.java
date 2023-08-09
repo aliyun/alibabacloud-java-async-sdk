@@ -232,7 +232,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The ID of the instance whose records you want to query.
+         * The ID of the instance for which you want to query file sending records.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -250,7 +250,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The name of the file whose records you want to query.
+         * The name of the file whose sending records you want to query.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -277,7 +277,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1.
@@ -291,10 +291,10 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          * <p>
          * 
-         * Maximum value: 50.
+         * Valid values: 1 to 50.
          * 
          * Default value: 10.
          */
@@ -305,7 +305,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the ECS instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -314,7 +314,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. After you set this parameter, you need to specify ResourceGroupId when you send files to query the file sending results in the specified resource group.
+         * The ID of the resource group. After you set this parameter, file sending results in the specified resource group are queried.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -341,7 +341,7 @@ public class DescribeSendFileResultsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags list.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -395,7 +395,12 @@ public class DescribeSendFileResultsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N of the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
+             * 
+             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -403,7 +408,10 @@ public class DescribeSendFileResultsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N of the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

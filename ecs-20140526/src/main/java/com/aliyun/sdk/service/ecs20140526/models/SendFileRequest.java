@@ -320,7 +320,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The content of the file. The content must not exceed 32 KB in size after it is encoded in Base64.
+         * The content of the remote file. The content must not exceed 32 KB in size after it is encoded in Base64.
          * <p>
          * 
          * *   If `ContentType` is set to `PlainText`, the Content value is in plaintext.
@@ -336,8 +336,8 @@ public class SendFileRequest extends Request {
          * The content type of the file. Valid values:
          * <p>
          * 
-         * *   PlainText: The command content is not encoded.
-         * *   Base64: The command content is Base64-encoded.
+         * *   PlainText: The file content is not encoded.
+         * *   Base64: The file content is Base64-encoded.
          * 
          * Default value: PlainText.
          */
@@ -357,7 +357,10 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The user group of the file. This parameter takes effect only on Linux instances. Default value: root.
+         * The user group of the file. This parameter takes effect only for Linux instances. Default value: root. The user group name can be up to 64 characters in length.
+         * <p>
+         * 
+         * >  If you want to use a non-root user group, make sure that the user group exists in the instances.
          */
         public Builder fileGroup(String fileGroup) {
             this.putQueryParameter("FileGroup", fileGroup);
@@ -366,10 +369,10 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The permissions on the file. This parameter takes effect only on Linux instances. You can configure this parameter in the same way as you configure the chmod command.
+         * The permissions on the file. This parameter takes effect only for Linux instances. You can configure this parameter in the same way as you configure the chmod command.
          * <p>
          * 
-         * Default value: 0644, which indicates that the owner of the file has the read and write permissions on the file and that the user group of the file and other users have only the read permissions on the file.
+         * Default value: 0644, which indicates that the owner of the file has the read and write permissions on the file and that the user group of the file and other users have the read-only permissions on the file.
          */
         public Builder fileMode(String fileMode) {
             this.putQueryParameter("FileMode", fileMode);
@@ -378,7 +381,10 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The owner of the file. This parameter takes effect only on Linux instances. Default value: root.
+         * The owner of the file. This parameter takes effect only for Linux instances. Default value: root. The value can be up to 64 characters in length.
+         * <p>
+         * 
+         * >  If you want to use a non-root user, make sure that the user exists in the instances.
          */
         public Builder fileOwner(String fileOwner) {
             this.putQueryParameter("FileOwner", fileOwner);
@@ -387,7 +393,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The IDs of instances to which to send the file. A maximum of 50 instance IDs can be specified.
+         * The ID of instance N to which to send the file. Up to 50 instance IDs can be specified in each request. Valid values of N: 1 to 50.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -447,11 +453,11 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The ID of the resource group for send files. When specify this parameter:
+         * The ID of the resource group. When you specify this parameter, take note of the following items:
          * <p>
          * 
-         * - The InstanceId of the ECS instance must belongs to the resource group.
-         * - Support via the parameter to filter out results of send file(via Call [DescribeSendFileResults](~~184117~~)).
+         * *   The ECS instance specified by the InstanceId parameter must belong to this resource group.
+         * *   If you specify this parameter, you can call the [DescribeSendFileResults](~~184117~~) operation to query file sending results in the specified resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -478,7 +484,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -487,7 +493,7 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The destination directory on the instance to which to send the file. If the specified directory does not exist, the system creates the directory on the instance.
+         * The destination directory on the instance to which to send the file. If the specified directory does not exist, the system creates the directory on the instance. The value supports all character sets and cannot exceed 255 characters in length.
          */
         public Builder targetDir(String targetDir) {
             this.putQueryParameter("TargetDir", targetDir);
@@ -496,11 +502,11 @@ public class SendFileRequest extends Request {
         }
 
         /**
-         * The timeout period for sending the file. Unit: seconds.
+         * The timeout period for the file sending task. Unit: seconds.
          * <p>
          * 
-         * *   A timeout error occurs when a file cannot be sent because the process slows down or because a specific module or the Cloud Assistant client does not exist.
-         * *   If the specified timeout period is less than 10 seconds, the system automatically sets the timeout period to 10 seconds to ensure that the file is sent to the instances.
+         * *   A timeout error occurs when a file cannot be sent because the process slows down or because a specific module or Cloud Assistant Agent does not exist.
+         * *   If the specified timeout period is less than 10 seconds, the system sets the timeout period to 10 seconds to ensure that the file can be sent to the instances.
          * 
          * Default value: 60.
          */
@@ -556,7 +562,12 @@ public class SendFileRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N to add to the file sending task. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
+             * 
+             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -564,7 +575,10 @@ public class SendFileRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N to add to the file sending task. Valid values of N: 1 to 20. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

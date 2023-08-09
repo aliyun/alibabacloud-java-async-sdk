@@ -94,7 +94,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -181,10 +181,10 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
              * The name of the event type. Valid values:
              * <p>
              * 
-             * *   Degraded: The performance of the EBS device was degraded.
-             * *   SeverelyDegraded: The performance of the EBS device was severely degraded.
-             * *   Stalled: The performance of the EBS device was severely affected.
-             * *   ErrorDetected: The local disk was damaged.
+             * *   Degraded: The performance of the EBS device is degraded.
+             * *   SeverelyDegraded: The performance of the EBS device is severely degraded.
+             * *   Stalled: The performance of the EBS device is severely affected.
+             * *   ErrorDetected: The local disk is damaged.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -590,7 +590,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of EBS device N.
+             * The EBS device ID.
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -606,7 +606,7 @@ public class DescribeDisksFullStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance that you query.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

@@ -254,10 +254,10 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
+         * The number of entries to return on each page.
          * <p>
          * 
-         * Default value: 1.
+         * Default value: 10.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -266,10 +266,10 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.
          * <p>
          * 
-         * Default value: 10.
+         * > Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -278,7 +278,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The tags of the launch template.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -305,10 +305,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.
-         * <p>
-         * 
-         * > Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.
+         * The IDs of launch templates. You can specify up to 100 launch template IDs. You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.
          */
         public Builder templateResourceGroupId(String templateResourceGroupId) {
             this.putQueryParameter("TemplateResourceGroupId", templateResourceGroupId);
@@ -317,7 +314,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * The tags of the launch template.
+         * The tag of the launch template.
          */
         public Builder templateTag(java.util.List < TemplateTag> templateTag) {
             this.putQueryParameter("TemplateTag", templateTag);
@@ -371,10 +368,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the launch template. Valid values of N: 1 to 20.
-             * <p>
-             * 
-             * Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.
+             * The value of tag N of the launch template. Valid values of N: 1 to 20.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -382,7 +376,10 @@ public class DescribeLaunchTemplatesRequest extends Request {
             }
 
             /**
-             * The value of tag N of the launch template. Valid values of N: 1 to 20.
+             * The number of the page to return. Pages start from page 1.
+             * <p>
+             * 
+             * Default value: 1.
              */
             public Builder value(String value) {
                 this.value = value;

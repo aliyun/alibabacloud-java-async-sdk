@@ -86,7 +86,7 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the instances that match the capacity reservation.
+         * The instance ID.
          */
         public Builder capacityReservationItem(CapacityReservationItem capacityReservationItem) {
             this.capacityReservationItem = capacityReservationItem;
@@ -94,7 +94,7 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * Details about the instances that match the capacity reservation.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The token used to start the next query.
+         * The request ID.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The total number of entries returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The maximum number of entries returned per page.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -158,7 +158,7 @@ public class DescribeCapacityReservationInstancesResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The instance ID.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

@@ -138,7 +138,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The description of the diagnostic metric set.
+         * testDescription
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -147,7 +147,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The IDs of diagnostic metrics. You can specify up to 100 diagnostic metric IDs.
+         * The ID of diagnostic metric.
          */
         public Builder metricIds(java.util.List < String > metricIds) {
             this.putQueryParameter("MetricIds", metricIds);
@@ -156,7 +156,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The name of the diagnostic metric set.
+         * my_dms
          */
         public Builder metricSetName(String metricSetName) {
             this.putQueryParameter("MetricSetName", metricSetName);
@@ -165,7 +165,10 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to create the diagnostic metric set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The type of the resource.
+         * <p>
+         * 
+         * Default value: instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,10 +177,7 @@ public class CreateDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The type of the resource.
-         * <p>
-         * 
-         * Default value: instance.
+         * The name of the diagnostic metric set.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

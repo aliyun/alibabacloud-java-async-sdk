@@ -238,7 +238,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -246,7 +246,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource.
+         * The resource ID.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -254,7 +254,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The resource type. The value of ResourceType can only be instance, which indicates that only instances are supported.
+         * The type of the resource. ResourceType can only be set to instance, which indicates that only instances are supported.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -262,7 +262,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The severity level of the diagnostic report. The value of this parameter is determined by the metric with the highest severity level among all diagnostic metrics. Valid values:
+         * The severity level of the diagnostic report. The value of this parameter is determined by the highest severity level of all diagnostic metrics. Valid values:
          * <p>
          * 
          * *   Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.
@@ -525,7 +525,7 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * An array that consists of the details about the diagnosed issues.
+             * The diagnosed issues.
              */
             public Builder issues(Issues issues) {
                 this.issues = issues;
@@ -568,9 +568,9 @@ public class DescribeDiagnosticReportAttributesResponseBody extends TeaModel {
              * The state of the diagnostic metric. Valid values:
              * <p>
              * 
-             * *   InProgress: The diagnostic is in progress.
-             * *   Finished: The diagnostic is complete.
-             * *   Failed: The diagnostic failed.
+             * *   InProgress.
+             * *   Finished.
+             * *   Failed.
              */
             public Builder status(String status) {
                 this.status = status;

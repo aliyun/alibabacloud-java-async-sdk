@@ -219,7 +219,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * The IDs of the image templates. You can specify at most 20 IDs.
+         * The ID of image template N. Valid values of N: 1 to 20.
          */
         public Builder imagePipelineId(java.util.List < String > imagePipelineId) {
             this.putQueryParameter("ImagePipelineId", imagePipelineId);
@@ -288,7 +288,7 @@ public class DescribeImagePipelinesRequest extends Request {
          * The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
          * <p>
          * 
-         * > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * >  Resources in the default resource group are displayed in the response regardless of how this parameter is set.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -315,7 +315,7 @@ public class DescribeImagePipelinesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The key of tag N of the image template. Valid values of N: 1 to 20.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

@@ -176,7 +176,7 @@ public class DescribeInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * The IDs of instances. You can specify the IDs of up to 100 instances.
+         * The instance IDs. You can specify up to 100 instance IDs.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -203,7 +203,7 @@ public class DescribeInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1.
@@ -217,7 +217,7 @@ public class DescribeInstanceMaintenanceAttributesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 100.
+         * The number of entries per page. Valid values: 1 to 100.
          * <p>
          * 
          * Default value: 10.

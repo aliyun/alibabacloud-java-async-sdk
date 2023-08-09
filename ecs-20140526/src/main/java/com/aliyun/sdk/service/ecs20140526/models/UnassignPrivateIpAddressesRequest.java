@@ -186,7 +186,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * The secondary private IP addresses to unassign.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -213,7 +213,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The secondary private IP addresses to unassign.
+         * Secondary private IP address N to unassign Valid values of N: 1 to 10.
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -222,7 +222,7 @@ public class UnassignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The ID of the ENI.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

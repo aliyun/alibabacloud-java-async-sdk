@@ -50,7 +50,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the activation code and its usage information.
+         * The time when the activation code was created.
          */
         public Builder activation(Activation activation) {
             this.activation = activation;
@@ -58,7 +58,7 @@ public class DeleteActivationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Details of the activation code and its usage information.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             private Long timeToLiveInHours; 
 
             /**
-             * The ID of the activation code.
+             * ActivationId.
              */
             public Builder activationId(String activationId) {
                 this.activationId = activationId;
@@ -202,7 +202,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the activation code was created.
+             * The number of instances that were deregistered.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -210,7 +210,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that were deregistered.
+             * The maximum number of times that the activation code can be used to register managed instances.
              */
             public Builder deregisteredCount(Integer deregisteredCount) {
                 this.deregisteredCount = deregisteredCount;
@@ -218,7 +218,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the activation code.
+             * The number of registered instances.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -226,7 +226,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of times that the activation code can be used to register managed instances.
+             * The description of the activation code.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -234,7 +234,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The default instance name prefix.
+             * The IP addresses of hosts that are allowed to use the activation code.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -242,7 +242,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of hosts that are allowed to use the activation code.
+             * The validity period of the activation code. Unit: hours.
              */
             public Builder ipAddressRange(String ipAddressRange) {
                 this.ipAddressRange = ipAddressRange;
@@ -250,7 +250,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The number of registered instances.
+             * The default instance name prefix.
              */
             public Builder registeredCount(Integer registeredCount) {
                 this.registeredCount = registeredCount;
@@ -258,7 +258,7 @@ public class DeleteActivationResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the activation code. Unit: hours.
+             * The ID of the activation code.
              */
             public Builder timeToLiveInHours(Long timeToLiveInHours) {
                 this.timeToLiveInHours = timeToLiveInHours;

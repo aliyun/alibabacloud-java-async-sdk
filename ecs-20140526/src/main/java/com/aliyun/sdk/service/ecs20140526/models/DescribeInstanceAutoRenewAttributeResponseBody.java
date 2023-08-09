@@ -86,7 +86,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the renewal attributes of instances.
+         * The renewal attributes of instances.
          */
         public Builder instanceRenewAttributes(InstanceRenewAttributes instanceRenewAttributes) {
             this.instanceRenewAttributes = instanceRenewAttributes;
@@ -118,7 +118,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances.
+         * The total number of queried instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             private String renewalStatus; 
 
             /**
-             * Indicates whether auto-renewal was enabled.
+             * Indicates whether auto-renewal is enabled.
              */
             public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
                 this.autoRenewEnabled = autoRenewEnabled;
@@ -222,7 +222,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -243,7 +243,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
              * 
              * *   AutoRenewal: Auto-renewal is enabled for the instance.
              * *   Normal: Auto-renewal is disabled for the instance.
-             * *   NotRenewal: The instance is not to be renewed. The system no longer sends expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal state to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.
+             * *   NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the [ModifyInstanceAutoRenewAttribute](~~52843~~) operation to change its auto-renewal status to `Normal`. Then, you can manually renew the instance or enable auto-renewal for the instance.
              */
             public Builder renewalStatus(String renewalStatus) {
                 this.renewalStatus = renewalStatus;

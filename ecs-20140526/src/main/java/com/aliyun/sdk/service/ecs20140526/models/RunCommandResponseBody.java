@@ -62,7 +62,7 @@ public class RunCommandResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CommandId.
+         * The command ID.
          */
         public Builder commandId(String commandId) {
             this.commandId = commandId;
@@ -70,7 +70,7 @@ public class RunCommandResponseBody extends TeaModel {
         }
 
         /**
-         * InvokeId.
+         * The command task ID.
          */
         public Builder invokeId(String invokeId) {
             this.invokeId = invokeId;

@@ -62,7 +62,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of diagnostic metrics.
+         * The ID of the diagnostic metric.
          */
         public Builder metrics(java.util.List < Metrics> metrics) {
             this.metrics = metrics;
@@ -70,7 +70,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * The query token returned in this call.
+         * The list of diagnostic metrics.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -78,7 +78,7 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The query token returned in this call.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,50 +190,10 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
             private String supportedOperatingSystem; 
 
             /**
-             * The description of the diagnostic metric.
+             * CPU diagnostic
              */
             public Builder description(String description) {
                 this.description = description;
-                return this;
-            }
-
-            /**
-             * Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.
-             */
-            public Builder guestMetric(Boolean guestMetric) {
-                this.guestMetric = guestMetric;
-                return this;
-            }
-
-            /**
-             * The category of the diagnostic metric.
-             */
-            public Builder metricCategory(String metricCategory) {
-                this.metricCategory = metricCategory;
-                return this;
-            }
-
-            /**
-             * The ID of the diagnostic metric.
-             */
-            public Builder metricId(String metricId) {
-                this.metricId = metricId;
-                return this;
-            }
-
-            /**
-             * The name of the diagnostic metric.
-             */
-            public Builder metricName(String metricName) {
-                this.metricName = metricName;
-                return this;
-            }
-
-            /**
-             * The resource type supported by the diagnostic metric.
-             */
-            public Builder resourceType(String resourceType) {
-                this.resourceType = resourceType;
                 return this;
             }
 
@@ -244,6 +204,46 @@ public class DescribeDiagnosticMetricsResponseBody extends TeaModel {
              * *   Windows
              * *   Linux
              * *   All: both Windows and Linux
+             */
+            public Builder guestMetric(Boolean guestMetric) {
+                this.guestMetric = guestMetric;
+                return this;
+            }
+
+            /**
+             * The description of the diagnostic metric.
+             */
+            public Builder metricCategory(String metricCategory) {
+                this.metricCategory = metricCategory;
+                return this;
+            }
+
+            /**
+             * The name of the diagnostic metric.
+             */
+            public Builder metricId(String metricId) {
+                this.metricId = metricId;
+                return this;
+            }
+
+            /**
+             * CPU diagnostic
+             */
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * Indicates whether the diagnostic metric needs to be assessed by running a Cloud Assistant command in a guest operating system.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * SupportedOperatingSystem.
              */
             public Builder supportedOperatingSystem(String supportedOperatingSystem) {
                 this.supportedOperatingSystem = supportedOperatingSystem;

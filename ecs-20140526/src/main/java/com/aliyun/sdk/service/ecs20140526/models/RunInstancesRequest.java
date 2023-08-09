@@ -54,6 +54,10 @@ public class RunInstancesRequest extends Request {
     private java.util.List < Arn> arn;
 
     @Query
+    @NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @Query
     @NameInMap("AutoReleaseTime")
     private String autoReleaseTime;
 
@@ -333,6 +337,7 @@ public class RunInstancesRequest extends Request {
         this.affinity = builder.affinity;
         this.amount = builder.amount;
         this.arn = builder.arn;
+        this.autoPay = builder.autoPay;
         this.autoReleaseTime = builder.autoReleaseTime;
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
@@ -482,6 +487,13 @@ public class RunInstancesRequest extends Request {
      */
     public java.util.List < Arn> getArn() {
         return this.arn;
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -957,6 +969,7 @@ public class RunInstancesRequest extends Request {
         private String affinity; 
         private Integer amount; 
         private java.util.List < Arn> arn; 
+        private Boolean autoPay; 
         private String autoReleaseTime; 
         private Boolean autoRenew; 
         private Integer autoRenewPeriod; 
@@ -1040,6 +1053,7 @@ public class RunInstancesRequest extends Request {
             this.affinity = request.affinity;
             this.amount = request.amount;
             this.arn = request.arn;
+            this.autoPay = request.autoPay;
             this.autoReleaseTime = request.autoReleaseTime;
             this.autoRenew = request.autoRenew;
             this.autoRenewPeriod = request.autoRenewPeriod;
@@ -1204,6 +1218,15 @@ public class RunInstancesRequest extends Request {
         public Builder arn(java.util.List < Arn> arn) {
             this.putQueryParameter("Arn", arn);
             this.arn = arn;
+            return this;
+        }
+
+        /**
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
             return this;
         }
 
@@ -2615,7 +2638,13 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * BurstingEnabled.
+             * Specifies whether to enable the burst feature for the system disk. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * > This parameter is available only if you set `SystemDisk.Category` to `cloud_auto`.
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -2661,7 +2690,12 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * ProvisionedIops.
+             * The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
+             * <p>
+             * 
+             * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
+             * 
+             * > This parameter is available only if you set the SystemDisk.Category parameter to cloud_auto. For more information, see [ESSD AutoPL disks](~~368372~~) and [Modify the performance configurations of an ESSD AutoPL disk](~~413275~~).
              */
             public Builder provisionedIops(Long provisionedIops) {
                 this.provisionedIops = provisionedIops;

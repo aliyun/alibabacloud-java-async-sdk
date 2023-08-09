@@ -286,7 +286,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable.
+         * > 该参数正在邀测中，暂未开放使用。
          */
         public Builder ipv4PrefixSets(Ipv4PrefixSets ipv4PrefixSets) {
             this.ipv4PrefixSets = ipv4PrefixSets;
@@ -294,7 +294,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable.
+         * > 该参数正在邀测中，暂未开放使用。
          */
         public Builder ipv6PrefixSets(Ipv6PrefixSets ipv6PrefixSets) {
             this.ipv6PrefixSets = ipv6PrefixSets;
@@ -318,7 +318,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ENI ID.
+         * The ID of the ENI.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.networkInterfaceId = networkInterfaceId;
@@ -350,7 +350,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the private IP addresses.
+         * The private IP addresses.
          */
         public Builder privateIpSets(PrivateIpSets privateIpSets) {
             this.privateIpSets = privateIpSets;
@@ -422,7 +422,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the vSwitch with which the ENI is associated.
+         * The ID of the vSwitch to which the ENI is connected.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
@@ -438,7 +438,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the zone in which the ENI resides.
+         * The zone ID of the ENI.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -478,7 +478,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String ipv4Prefix; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * > 该参数正在邀测中，暂未开放使用。
              */
             public Builder ipv4Prefix(String ipv4Prefix) {
                 this.ipv4Prefix = ipv4Prefix;
@@ -560,7 +560,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String ipv6Prefix; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable.
+             * > 该参数正在邀测中，暂未开放使用。
              */
             public Builder ipv6Prefix(String ipv6Prefix) {
                 this.ipv6Prefix = ipv6Prefix;
@@ -736,7 +736,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String privateIpAddress; 
 
             /**
-             * Indicates whether the private IP address is the primary private IP address.
+             * Indicates whether the IP address is the primary private IP address.
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -879,7 +879,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * The tag key of the ENI.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -887,7 +887,7 @@ public class CreateNetworkInterfaceResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The tag value of the ENI.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

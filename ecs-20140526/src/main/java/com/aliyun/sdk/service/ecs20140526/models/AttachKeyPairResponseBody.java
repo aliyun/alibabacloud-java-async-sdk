@@ -86,7 +86,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * The number of instances to which the key pair fails to be bound.
+         * The number of instances to which the SSH key pair fails to be bound.
          */
         public Builder failCount(String failCount) {
             this.failCount = failCount;
@@ -94,7 +94,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The names of the key pairs.
+         * The name of the SSH key pair.
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -102,7 +102,7 @@ public class AttachKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

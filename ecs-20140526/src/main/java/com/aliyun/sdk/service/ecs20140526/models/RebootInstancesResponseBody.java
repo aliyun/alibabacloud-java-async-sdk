@@ -50,7 +50,7 @@ public class RebootInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the responses returned for the instances, which contain the state of each instance before and after the operation is called, and the results of the operation .
+         * Details about the responses returned for the instances, which contain the status of each instance before and after the operation is called and the operation results.
          */
         public Builder instanceResponses(InstanceResponses instanceResponses) {
             this.instanceResponses = instanceResponses;
@@ -146,7 +146,7 @@ public class RebootInstancesResponseBody extends TeaModel {
             private String previousStatus; 
 
             /**
-             * The error code returned for the instance. A return value of 200 indicates success. For more information, see the "Error codes" section in this topic.
+             * The error code that is returned for the operation on the instance. The value 200 indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -154,7 +154,7 @@ public class RebootInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The current state of the instance.
+             * The current status of the instance.
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -170,7 +170,7 @@ public class RebootInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message for this instance operation. The return value \"Success\" indicates that this operation is successful. For more information, see the "Error codes" section in this topic.
+             * The error message that is returned for the operation on the instance. The return value Success indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -178,7 +178,7 @@ public class RebootInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance before the operation is called.
+             * The status of the instance before the operation is called.
              */
             public Builder previousStatus(String previousStatus) {
                 this.previousStatus = previousStatus;

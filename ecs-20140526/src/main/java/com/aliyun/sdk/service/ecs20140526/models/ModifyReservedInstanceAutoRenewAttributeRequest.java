@@ -208,7 +208,7 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The auto-renewal term of the reserved instance. Valid values:
+         * The auto-renewal cycle.
          * <p>
          * 
          * Valid values: 1 and 3.
@@ -220,10 +220,10 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The unit of the auto-renewal term.
+         * The unit of the auto-renewal duration.
          * <p>
          * 
-         * Valid value: Year.
+         * Valid values: Year and Month.
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -232,7 +232,7 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID of the reserved instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -241,11 +241,11 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically renew the reserved instance. Valid values:
+         * Specifies whether to automatically renew the reserved instances. Valid values:
          * <p>
          * 
-         * *   AutoRenewal: automatically renew the reserved instance.
-         * *   Normal: manually renew the reserved instance.
+         * *   AutoRenewal: automatically renews the reserved instances.
+         * *   Normal: manually renews the reserved instances.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);
@@ -254,7 +254,7 @@ public class ModifyReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The ID of reserved instance N.
+         * The IDs of the reserved instances.
          */
         public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);

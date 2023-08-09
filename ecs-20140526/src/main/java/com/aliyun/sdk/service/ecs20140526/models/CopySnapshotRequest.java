@@ -32,6 +32,10 @@ public class CopySnapshotRequest extends Request {
     private String destinationSnapshotName;
 
     @Query
+    @NameInMap("DestinationStorageLocationArn")
+    private String destinationStorageLocationArn;
+
+    @Query
     @NameInMap("Encrypted")
     private Boolean encrypted;
 
@@ -79,6 +83,7 @@ public class CopySnapshotRequest extends Request {
         this.destinationRegionId = builder.destinationRegionId;
         this.destinationSnapshotDescription = builder.destinationSnapshotDescription;
         this.destinationSnapshotName = builder.destinationSnapshotName;
+        this.destinationStorageLocationArn = builder.destinationStorageLocationArn;
         this.encrypted = builder.encrypted;
         this.KMSKeyId = builder.KMSKeyId;
         this.ownerId = builder.ownerId;
@@ -130,6 +135,13 @@ public class CopySnapshotRequest extends Request {
      */
     public String getDestinationSnapshotName() {
         return this.destinationSnapshotName;
+    }
+
+    /**
+     * @return destinationStorageLocationArn
+     */
+    public String getDestinationStorageLocationArn() {
+        return this.destinationStorageLocationArn;
     }
 
     /**
@@ -207,6 +219,7 @@ public class CopySnapshotRequest extends Request {
         private String destinationRegionId; 
         private String destinationSnapshotDescription; 
         private String destinationSnapshotName; 
+        private String destinationStorageLocationArn; 
         private Boolean encrypted; 
         private String KMSKeyId; 
         private Long ownerId; 
@@ -228,6 +241,7 @@ public class CopySnapshotRequest extends Request {
             this.destinationRegionId = request.destinationRegionId;
             this.destinationSnapshotDescription = request.destinationSnapshotDescription;
             this.destinationSnapshotName = request.destinationSnapshotName;
+            this.destinationStorageLocationArn = request.destinationStorageLocationArn;
             this.encrypted = request.encrypted;
             this.KMSKeyId = request.KMSKeyId;
             this.ownerId = request.ownerId;
@@ -279,6 +293,15 @@ public class CopySnapshotRequest extends Request {
         public Builder destinationSnapshotName(String destinationSnapshotName) {
             this.putQueryParameter("DestinationSnapshotName", destinationSnapshotName);
             this.destinationSnapshotName = destinationSnapshotName;
+            return this;
+        }
+
+        /**
+         * DestinationStorageLocationArn.
+         */
+        public Builder destinationStorageLocationArn(String destinationStorageLocationArn) {
+            this.putQueryParameter("DestinationStorageLocationArn", destinationStorageLocationArn);
+            this.destinationStorageLocationArn = destinationStorageLocationArn;
             return this;
         }
 

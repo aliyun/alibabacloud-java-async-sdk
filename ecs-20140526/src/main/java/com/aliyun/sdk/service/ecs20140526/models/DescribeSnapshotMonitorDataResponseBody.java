@@ -50,7 +50,7 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the monitoring data of snapshot sizes.
+         * The monitoring data of snapshot sizes.
          */
         public Builder monitorData(MonitorData monitorData) {
             this.monitorData = monitorData;
@@ -110,7 +110,7 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * The snapshot size. Unit: bytes.
+             * The total size of snapshots. Unit: bytes.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -118,7 +118,7 @@ public class DescribeSnapshotMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp that corresponds to the snapshot size.
+             * The timestamp that corresponds to a snapshot size.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

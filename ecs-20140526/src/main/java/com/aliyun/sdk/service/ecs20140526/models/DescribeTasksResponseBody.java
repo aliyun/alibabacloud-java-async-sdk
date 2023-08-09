@@ -266,7 +266,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -298,7 +298,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
+             * The state of the task.
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;

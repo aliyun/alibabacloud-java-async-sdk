@@ -74,7 +74,7 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         private String webSocketUrl; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the session.
+         * The session ID.
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;

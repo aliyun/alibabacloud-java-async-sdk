@@ -62,7 +62,7 @@ public class CreateDiskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The cloud disk ID.
+         * The disk ID.
          */
         public Builder diskId(String diskId) {
             this.diskId = diskId;

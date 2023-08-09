@@ -190,7 +190,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The IDs of instances to be queried.
+         * The IDs of instances.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -199,7 +199,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The operating system of the instance. Valid values:
+         * The operating system type of the instance. Valid values:
          * <p>
          * 
          * *   Windows
@@ -230,7 +230,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The page number to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1.
@@ -244,7 +244,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. If you specify the **InstanceId** parameter, this parameter does not take effect. Maximum value: 50.
+         * The number of entries per page. If you specify **InstanceId**, this parameter does not take effect. Valid values: 1 to 50.
          * <p>
          * 
          * Default value: 10.

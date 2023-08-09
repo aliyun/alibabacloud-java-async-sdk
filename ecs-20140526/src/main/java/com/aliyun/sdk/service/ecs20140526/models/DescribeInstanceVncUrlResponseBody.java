@@ -50,7 +50,7 @@ public class DescribeInstanceVncUrlResponseBody extends TeaModel {
         private String vncUrl; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeInstanceVncUrlResponseBody extends TeaModel {
         }
 
         /**
-         * VncUrl.
+         * The URL of the VNC management terminal.
          */
         public Builder vncUrl(String vncUrl) {
             this.vncUrl = vncUrl;

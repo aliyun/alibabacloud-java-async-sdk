@@ -148,12 +148,12 @@ public class RedeployInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly stop the instance that is in the Running (Running) state.
+         * Specifies whether to forcefully stop the instance that is in the Running state.
          * <p>
          * 
-         * Default value: false
+         * Default value: false.
          * 
-         * > A forcible stop is equivalent to a power outage and unsaved data may be lost. We recommend that you redeploy instances that are in the Stopped state.
+         * > A forced stop is equivalent to a power outage, and unsaved data may be lost. We recommend that you redeploy instances that are in the Stopped state.
          */
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);

@@ -50,7 +50,7 @@ public class CreateSnapshotResponseBody extends TeaModel {
         private String snapshotId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * The snapshot ID.
+         * SnapshotId.
          */
         public Builder snapshotId(String snapshotId) {
             this.snapshotId = snapshotId;

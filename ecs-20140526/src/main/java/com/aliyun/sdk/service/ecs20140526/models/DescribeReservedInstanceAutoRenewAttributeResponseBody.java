@@ -50,7 +50,7 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
         private ReservedInstanceRenewAttributes reservedInstanceRenewAttributes; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,7 +145,7 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
              * The unit of the auto-renewal duration.
              * <p>
              * 
-             * Valid value: Year.
+             * Valid values: Year and Month.
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -153,7 +153,7 @@ public class DescribeReservedInstanceAutoRenewAttributeResponseBody extends TeaM
             }
 
             /**
-             * The auto-renewal state of the reserved instance. Valid values:
+             * The auto-renewal status of the reserved instance. Valid values:
              * <p>
              * 
              * *   AutoRenewal: The reserved instance is automatically renewed.

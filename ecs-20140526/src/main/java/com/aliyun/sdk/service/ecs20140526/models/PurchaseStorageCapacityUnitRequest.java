@@ -265,7 +265,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The SCU capacity. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5210, 10240, 20480, and 52100.
+         * The capacity of the SCU. Unit: GiB. Valid values: 20, 40, 100, 200, 500, 1024, 2048, 5210, 10240, 20480, and 52100.
          */
         public Builder capacity(Integer capacity) {
             this.putQueryParameter("Capacity", capacity);
@@ -274,7 +274,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The value of `ClientToken` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -292,7 +292,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The request source. The value is automatically set to OpenAPI and does not need to be changed. Default value: OpenAPI.
+         * The source of the request. The value is automatically set to OpenAPI and does not need to be changed. Default value: OpenAPI.
          */
         public Builder fromApp(String fromApp) {
             this.putQueryParameter("FromApp", fromApp);
@@ -301,7 +301,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The SCU name. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The name of the SCU. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -328,7 +328,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The SCU validity period. Valid values:
+         * The validity period of the SCU. Valid values:
          * <p>
          * 
          * *   Valid values when PeriodUnit is set to Month: 1, 2, 3, and 6.
@@ -343,7 +343,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The unit of the the SCU validity period. Valid values:
+         * The unit of the validity period of the SCU. Valid values:
          * <p>
          * 
          * *   Month
@@ -358,7 +358,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The ID of the region in which to purchase the SCU. After this parameter is specified, the purchased SCU can be used to offset the bills of only pay-as-you-go disks that reside in the specified region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The ID of the region in which to purchase the SCU. The purchased SCU can offset the bills of pay-as-you-go disks that reside in the specified region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -385,7 +385,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The time when the SCU takes effect. This can be up to six months later than the time when the SCU is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * The time at which the SCU takes effect. It can be up to six months later than the time at which the SCU is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          * <p>
          * 
          * This parameter is empty by default. If this parameter is left empty, the SCU takes effect immediately after it is created.
@@ -397,7 +397,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
         }
 
         /**
-         * The tags to add to the SCUs.
+         * The list of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -451,7 +451,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the SCU. N indicates the number of tag keys that can be specified. Valid values of N: 1 to 20. The tag value cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
+             * The key of tag N to add to the SCU. N is the identifier of the tag key that you specify. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -459,7 +459,7 @@ public class PurchaseStorageCapacityUnitRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the SCU. N indicates the number of tag values that can be specified and corresponds to the N in `Tag.N.Key`. Valid values: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
+             * The value of tag N. N is the identifier of the tag value that you specify and corresponds to the N in `Tag.N.Key`. Valid values: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with `acs:` or contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

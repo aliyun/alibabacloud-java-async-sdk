@@ -206,7 +206,7 @@ public class ModifyDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable automatic payment. Valid values:
+         * Specifies whether to automatically complete the payment. Valid values:
          * <p>
          * 
          * *   true (default): The payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.
@@ -219,7 +219,7 @@ public class ModifyDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -231,8 +231,8 @@ public class ModifyDiskChargeTypeRequest extends Request {
          * The new billing method of the disk. Valid values:
          * <p>
          * 
-         * *   PrePaid (default): subscription.
-         * *   PostPaid: pay-as-you-go.
+         * *   PrePaid (default): changes the billing method from pay-as-you-go to subscription.
+         * *   PostPaid: changes the billing method from subscription to pay-as-you-go.
          */
         public Builder diskChargeType(String diskChargeType) {
             this.putQueryParameter("DiskChargeType", diskChargeType);
@@ -241,7 +241,7 @@ public class ModifyDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * The IDs of disks. The value is a JSON array that consists of up to 16 disk IDs. Separate the disk IDs with commas (,).
+         * The disk IDs. Set this parameter to a JSON array that consists of up to 16 disk IDs. Separate the disk IDs with commas (,).
          */
         public Builder diskIds(String diskIds) {
             this.putQueryParameter("DiskIds", diskIds);
@@ -250,7 +250,7 @@ public class ModifyDiskChargeTypeRequest extends Request {
         }
 
         /**
-         * The ID of the instance to which the disk is attached.
+         * The ID of the instance to which disks are attached.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

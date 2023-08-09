@@ -50,7 +50,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about permissions on ENIs.
+         * The permission on the ENI.
          */
         public Builder networkInterfacePermission(NetworkInterfacePermission networkInterfacePermission) {
             this.networkInterfacePermission = networkInterfacePermission;
@@ -58,7 +58,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Details about permissions on ENIs.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * The ID of the Alibaba Cloud partner (a certified ISV).
+             * The ID of the permission on the ENI.
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -166,7 +166,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ENI.
+             * The ID of the Alibaba Cloud partner (a certified ISV).
              */
             public Builder networkInterfaceId(String networkInterfaceId) {
                 this.networkInterfaceId = networkInterfaceId;
@@ -174,7 +174,7 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the permission on the ENI.
+             * The name of the Alibaba Cloud service.
              */
             public Builder networkInterfacePermissionId(String networkInterfacePermissionId) {
                 this.networkInterfacePermissionId = networkInterfacePermissionId;
@@ -182,10 +182,18 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
             }
 
             /**
-             * The permission on the ENI.
+             * The ID of the ENI.
              */
             public Builder permission(String permission) {
                 this.permission = permission;
+                return this;
+            }
+
+            /**
+             * PermissionState.
+             */
+            public Builder permissionState(String permissionState) {
+                this.permissionState = permissionState;
                 return this;
             }
 
@@ -197,14 +205,6 @@ public class CreateNetworkInterfacePermissionResponseBody extends TeaModel {
              * *   Granted: The permission is granted.
              * *   Revoking: The permission is being revoked.
              * *   Revoked: The permission is revoked.
-             */
-            public Builder permissionState(String permissionState) {
-                this.permissionState = permissionState;
-                return this;
-            }
-
-            /**
-             * The name of the Alibaba Cloud service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

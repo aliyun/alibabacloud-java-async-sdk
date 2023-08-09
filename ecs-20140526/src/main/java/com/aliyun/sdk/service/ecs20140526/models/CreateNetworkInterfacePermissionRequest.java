@@ -179,7 +179,7 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud partner (a certified ISV) or individual user.
+         * The ID of the ENI.
          */
         public Builder accountId(Long accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -188,7 +188,10 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * The permission on the ENI. Set the value to InstanceAttach.
+         * <p>
+         * 
+         * InstanceAttach: allows authorized users to attach the ENI to an ECS instance. The ENI and the ECS instance must reside in the same zone.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -215,10 +218,7 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * The permission on the ENI. Set the value to InstanceAttach.
-         * <p>
-         * 
-         * InstanceAttach: allows authorized users to attach the ENI to an ECS instance. The ENI and the ECS instance must reside in the same zone.
+         * The ID of the request.
          */
         public Builder permission(String permission) {
             this.putQueryParameter("Permission", permission);
@@ -227,7 +227,7 @@ public class CreateNetworkInterfacePermissionRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The ID of the Alibaba Cloud partner (a certified ISV) or individual user.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

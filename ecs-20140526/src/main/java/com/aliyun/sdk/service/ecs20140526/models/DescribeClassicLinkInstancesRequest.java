@@ -176,7 +176,7 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         }
 
         /**
-         * The instance ID. You can specify up to 100 instance IDs in a single request. Separate the instance IDs with commas (,).
+         * The instance ID. You can specify a maximum of 100 instance IDs in a single request. Separate the instance IDs with commas (,).
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -218,7 +218,7 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -245,7 +245,7 @@ public class DescribeClassicLinkInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC. The ClassicLink feature must be enabled for the specified VPC. For more information, see [Establish a ClassicLink connection](~~65413~~).
+         * The VPC ID. The ClassicLink feature must be enabled for the specified VPC. For more information, see [Establish a ClassicLink connection](~~65413~~).
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

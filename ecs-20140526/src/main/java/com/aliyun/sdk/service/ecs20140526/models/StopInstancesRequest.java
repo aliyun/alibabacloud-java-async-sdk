@@ -205,13 +205,7 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * Specifies the batch operation mode. Valid values:
-         * <p>
-         * 
-         * *   AllTogether: In this mode, a success message is returned if all specified instances are stopped. If one or more of the specified instances fail the check when you set the DryRun parameter to false, none of the specified instances can be stopped and an error message is returned.
-         * *   SuccessFirst: In this mode, each instance is separately stopped. The response contains the operation results for each instance.
-         * 
-         * Default value: AllTogether.
+         * The IDs of instances.
          */
         public Builder batchOptimization(String batchOptimization) {
             this.putQueryParameter("BatchOptimization", batchOptimization);
@@ -220,16 +214,7 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to perform only a dry run, without performing the actual request. Valid Values:
-         * <p>
-         * 
-         * *   true: performs a dry run, but the request is not made. The system checks the request for potential issues, including required parameters, request syntax, and instance status. If the request passes the dry run, `DRYRUN.SUCCESS` is returned. Otherwise, an error message is returned.
-         * 
-         * > If you set `BatchOptimization` to `SuccessFirst` and `DryRun` to true, only `DRYRUN.SUCCESS` is returned regardless of whether the request passes the dry run.
-         * 
-         * *   false: performs a dry run and sends the request. If the request passes the dry run, the operation is performed.
-         * 
-         * Default value: false.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -238,13 +223,13 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcibly stop the instance. Valid values:
+         * The stop mode of the pay-as-you-go instance. Valid values:
          * <p>
          * 
-         * *   true: forcibly stops the instance. This operation is equivalent to the power-off operation in common scenarios. Cache data that is not written to storage devices on the instance is lost.
-         * *   false: normally stops the instance.
+         * *   StopCharging: economical mode. For information about the conditions on which `StopCharging` takes effect, see the "Conditions for enabling economical mode" section in [Economical mode](~~63353~~).
+         * *   KeepCharging: standard mode. You continue to be charged for instances that are stopped in standard mode.
          * 
-         * Default value: false.
+         * Default value: If the conditions for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.
          */
         public Builder forceStop(Boolean forceStop) {
             this.putQueryParameter("ForceStop", forceStop);
@@ -253,7 +238,7 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of instances.
+         * The ID of instance N. Valid values of N: 1 to 100.
          */
         public Builder instanceId(java.util.List < String > instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -280,7 +265,13 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * Specifies whether to forcibly stop the instance. Valid values:
+         * <p>
+         * 
+         * *   true: forcibly stops the instance. This operation is equivalent to the power-off operation in common scenarios. Cache data that is not written to storage devices on the instance is lost.
+         * *   false: normally stops the instance.
+         * 
+         * Default value: false.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -307,13 +298,13 @@ public class StopInstancesRequest extends Request {
         }
 
         /**
-         * The stop mode of the pay-as-you-go instance. Valid values:
+         * Specifies the batch operation mode. Valid values:
          * <p>
          * 
-         * *   StopCharging: economical mode. For information about the conditions on which `StopCharging` takes effect, see the "Conditions for enabling economical mode" section in [Economical mode](~~63353~~).
-         * *   KeepCharging: standard mode. You continue to be charged for instances that are stopped in standard mode.
+         * *   AllTogether: In this mode, a success message is returned if all specified instances are stopped. If one or more of the specified instances fail the check when you set the DryRun parameter to false, none of the specified instances can be stopped and an error message is returned.
+         * *   SuccessFirst: In this mode, each instance is separately stopped. The response contains the operation results for each instance.
          * 
-         * Default value: If the conditions for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is [StopCharging](~~63353#default~~). For more information, see the "Enable economical mode" section in `Economical mode`. Otherwise, the default value is `KeepCharging`.
+         * Default value: AllTogether.
          */
         public Builder stoppedMode(String stoppedMode) {
             this.putQueryParameter("StoppedMode", stoppedMode);

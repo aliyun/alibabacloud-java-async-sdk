@@ -65,7 +65,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
          * Details about preemptible instances in the zones of the specified region.
          * <p>
          * 
-         * > The returned values are sorted based on the historical percentages of average preemptible instance prices relative to pay-as-you-go instance prices for instance types.
+         * > The return values are sorted based on the historical percentages of average prices of preemptible instances of the specified instance type relative to pay-as-you-go instance prices.
          */
         public Builder availableSpotZones(AvailableSpotZones availableSpotZones) {
             this.availableSpotZones = availableSpotZones;
@@ -73,7 +73,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region where the instance resides.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -81,7 +81,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,10 +157,10 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             private Float interruptionRate; 
 
             /**
-             * The percentage of the average preemptible instance relative to the pay-as-you-go instance price in the last 30 days. Unit: percentage (%). Valid values: 1 to 100.
+             * The percentage of the average preemptible instance price relative to the pay-as-you-go instance price in the last 30 days. Unit: %. Valid values: 1 to 100.
              * <p>
              * 
-             * You can calculate the average preemptible instance price based on the returned value. For example, if the pay-as-you-go instance price is 1 and the returned value of this parameter is 20, the average preemptible instance price for the last 30 days is 0.2.
+             * You can calculate the average preemptible instance price based on the return value. For example, if the pay-as-you-go instance price is 1 and the return value of this parameter is 20, the average preemptible instance price in the last 30 days is 0.2.
              */
             public Builder averageSpotDiscount(Integer averageSpotDiscount) {
                 this.averageSpotDiscount = averageSpotDiscount;
@@ -176,7 +176,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * The release rate range of preemptible instances in the last 30 days, which corresponds to the ` InterruptionRate  `value. Valid values:
+             * The release rate range of preemptible instances in the last 30 days, which corresponds to the value of the `InterruptionRate` parameter. Valid values:
              * <p>
              * 
              * *   0-3%
@@ -190,7 +190,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             }
 
             /**
-             * The average release rate of preemptible instances forn the last 30 days. Unit: percent (%).
+             * The average release rate of preemptible instances in the last 30 days. Unit: %.
              */
             public Builder interruptionRate(Float interruptionRate) {
                 this.interruptionRate = interruptionRate;
@@ -284,7 +284,7 @@ public class DescribeSpotAdviceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Details about preemptible instances in the last 30 days, including release rates and percentages of average preemptible instance prices relative to pay-as-you-go instance prices.
+             * Details about preemptible instances in the last 30 days, including the release rate of preemptible instances and percentages of average prices of preemptible instances relative to pay-as-you-go instance prices.
              */
             public Builder availableSpotResources(AvailableSpotResources availableSpotResources) {
                 this.availableSpotResources = availableSpotResources;

@@ -141,7 +141,7 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         }
 
         /**
-         * MetricSetIds.
+         * The ID of diagnostic metric set N.
          */
         public Builder metricSetIds(java.util.List < String > metricSetIds) {
             this.putQueryParameter("MetricSetIds", metricSetIds);

@@ -296,7 +296,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The instance types.
+         * The instance type.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -305,7 +305,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The maximum number of entries per page.
          * <p>
          * 
          * Maximum value: 100.
@@ -319,7 +319,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The token used to start the query. Set the value to the NextToken value obtained from the response to the previous request.
+         * The pagination token that is used in the request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -346,7 +346,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * > This parameter is no longer used.
+         * > This parameter is deprecated.
          */
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
@@ -355,7 +355,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the elasticity assurance belongs. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the elasticity assurances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -364,10 +364,10 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the snapshot belongs. When you use this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.
+         * The ID of the resource group. If you configure this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.
          * <p>
          * 
-         * > Resources in the default resource group are displayed in the response regardless of how this parameter is set.
+         * > Resources in the default resource group are displayed in the response regardless of whether you configure this parameter.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -394,14 +394,14 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The state of the elasticity assurance to query. Valid values:
+         * The status of the elasticity assurances. Valid values:
          * <p>
          * 
-         * *   All: Queries the elasticity assurances in all states.
-         * *   Preparing: The elasticity assurance is being prepared.
-         * *   Prepared: Queries the elasticity assurances that have not taken effect.
-         * *   Active: Queries the elasticity assurances that are in effect.
-         * *   Released: Queries the elasticity assurances that are released.
+         * *   All
+         * *   Preparing
+         * *   Prepared
+         * *   Active
+         * *   Released
          * 
          * Default value: Active.
          */
@@ -412,7 +412,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The tags to use for the query.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -421,7 +421,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
         }
 
         /**
-         * The zone ID of the elasticity assurance.
+         * The zone ID of the elasticity assurances.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -463,7 +463,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
             private String ids; 
 
             /**
-             * The IDs of elasticity assurances. The value can be a JSON array that consists of up to 100 elasticity assurance IDs. Separate the IDs with commas (,).
+             * The IDs of the elasticity assurances. The value can be a JSON array that consists of up to 100 elasticity assurance IDs. Separate the IDs with commas (,).
              */
             public Builder ids(String ids) {
                 this.ids = ids;
@@ -516,10 +516,10 @@ public class DescribeElasticityAssurancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag N. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.
+             * The key of tag N. Valid values of N: 1 to 20.
              * <p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources with this tag are returned. If multiple tags are specified to query resources, up to 1,000 resources with all these tags are returned. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.
+             * If you specify a tag to query resources, up to 1,000 resources with this tag are returned in the response. If you specify multiple tags to query resources, up to 1,000 resources with all these tags are returned in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -527,7 +527,7 @@ public class DescribeElasticityAssurancesRequest extends Request {
             }
 
             /**
-             * The value of a tag N. N is the identifier for the tag, which you can use to set and query the tag. Valid values of N: 1 to 20.
+             * The value of tag N. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

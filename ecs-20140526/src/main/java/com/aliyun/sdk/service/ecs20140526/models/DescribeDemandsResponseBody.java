@@ -98,7 +98,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Demands.
+         * The filing tickets whose regions meet the filter condition.
          */
         public Builder demands(Demands demands) {
             this.demands = demands;
@@ -106,7 +106,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +122,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -130,7 +130,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of queried filing tickets.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -226,7 +226,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             private String supplyStatus; 
 
             /**
-             * Amount.
+             * The number of delivered instances.
              */
             public Builder amount(Integer amount) {
                 this.amount = amount;
@@ -234,7 +234,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * PrivatePoolId.
+             * The ID of the private pool that corresponds to the demand.
              */
             public Builder privatePoolId(String privatePoolId) {
                 this.privatePoolId = privatePoolId;
@@ -242,7 +242,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * SupplyEndTime.
+             * The end time when the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder supplyEndTime(String supplyEndTime) {
                 this.supplyEndTime = supplyEndTime;
@@ -250,7 +250,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * SupplyStartTime.
+             * The start time when the filed resources are delivered and available. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder supplyStartTime(String supplyStartTime) {
                 this.supplyStartTime = supplyStartTime;
@@ -258,7 +258,11 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * SupplyStatus.
+             * The delivery status of the filed resource. Valid values:
+             * <p>
+             * 
+             * *   Delivered: The filed resource is delivered.
+             * *   Delivering: The filed resource is being delivered.
              */
             public Builder supplyStatus(String supplyStatus) {
                 this.supplyStatus = supplyStatus;
@@ -556,7 +560,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * AvailableAmount.
+             * The number of instances available for the filed resources.
              */
             public Builder availableAmount(Integer availableAmount) {
                 this.availableAmount = availableAmount;
@@ -564,7 +568,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The feedback on the denied request for filing resources.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -572,7 +576,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * DeliveringAmount.
+             * The number of instances to be delivered in the filed resources.
              */
             public Builder deliveringAmount(Integer deliveringAmount) {
                 this.deliveringAmount = deliveringAmount;
@@ -580,7 +584,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * DemandDescription.
+             * The description of the filing ticket.
              */
             public Builder demandDescription(String demandDescription) {
                 this.demandDescription = demandDescription;
@@ -588,7 +592,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * DemandId.
+             * The ID of the filing ticket.
              */
             public Builder demandId(String demandId) {
                 this.demandId = demandId;
@@ -596,7 +600,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * DemandName.
+             * The name of the filing ticket.
              */
             public Builder demandName(String demandName) {
                 this.demandName = demandName;
@@ -604,7 +608,15 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * DemandStatus.
+             * The status of the filing ticket or resource consumption. Valid values:
+             * <p>
+             * 
+             * *   Creating: The filing ticket is being created.
+             * *   Active: The filed resources are being supplied.
+             * *   Expired: The filing ticket expires.
+             * *   Finished: The filed resources are consumed.
+             * *   Refused: The filing request is denied. For reasons why the request is denied, see the `Comment` parameter in the response.
+             * *   Cancelled: The filing request is canceled. After the filing request is canceled, the delivery status of the resources becomes invalid.
              */
             public Builder demandStatus(String demandStatus) {
                 this.demandStatus = demandStatus;
@@ -612,7 +624,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * DemandTime.
+             * The time when the filing ticket was created. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder demandTime(String demandTime) {
                 this.demandTime = demandTime;
@@ -620,7 +632,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The expected end time for the purchase of the filed resources. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -628,7 +640,11 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceChargeType.
+             * The billing method of the filed resources. Valid values:
+             * <p>
+             * 
+             * *   Prepaid: subscription
+             * *   Postpaid: pay-as-you-go
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -636,7 +652,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the filed instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -644,7 +660,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamily.
+             * The instance family of the filed instance.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -652,7 +668,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * The usage duration of the filed resources.
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -660,7 +676,13 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodUnit.
+             * The unit of the usage duration of the filed resources. Valid values:
+             * <p>
+             * 
+             * *   Hour
+             * *   Day
+             * *
+             * *   Month
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -668,7 +690,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The expected start time for the purchase of the filed resources. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -676,7 +698,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * SupplyInfos.
+             * Details about the delivery status of the filed resources.
              */
             public Builder supplyInfos(SupplyInfos supplyInfos) {
                 this.supplyInfos = supplyInfos;
@@ -684,7 +706,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAmount.
+             * The number of filed instances.
              */
             public Builder totalAmount(Integer totalAmount) {
                 this.totalAmount = totalAmount;
@@ -692,7 +714,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * UsedAmount.
+             * The number of consumed instances.
              */
             public Builder usedAmount(Integer usedAmount) {
                 this.usedAmount = usedAmount;
@@ -700,7 +722,7 @@ public class DescribeDemandsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone where the filed resource resides.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

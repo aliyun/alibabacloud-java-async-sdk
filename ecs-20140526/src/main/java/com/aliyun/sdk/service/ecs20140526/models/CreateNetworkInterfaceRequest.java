@@ -468,7 +468,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -498,7 +498,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable for general users.
+         * > 该参数正在邀测中，暂未开放使用。
          */
         public Builder ipv4Prefix(java.util.List < String > ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
@@ -507,7 +507,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable to general users.
+         * > 该参数正在邀测中，暂未开放使用。
          */
         public Builder ipv4PrefixCount(Integer ipv4PrefixCount) {
             this.putQueryParameter("Ipv4PrefixCount", ipv4PrefixCount);
@@ -516,7 +516,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The IPv6 addresses to assign to the ENI. You can specify up to 10 IPv6 addresses. Valid values of N: 1 to 10.
+         * IPv6 address N to assign to the ENI. Valid values of N: 1 to 10.
          * <p>
          * 
          * Example: Ipv6Address.1=2001:db8:1234:1a00::\*\*\*\*
@@ -530,7 +530,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The number of IPv6 addresses to generate at random for the ENI. Valid values: 1 to 10.
+         * The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.
          * <p>
          * 
          * > To assign IPv6 addresses to the ENI, you must specify `Ipv6Addresses.N` or `Ipv6AddressCount` but not both.
@@ -542,7 +542,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable for general users.
+         * > 该参数正在邀测中，暂未开放使用。
          */
         public Builder ipv6Prefix(java.util.List < String > ipv6Prefix) {
             this.putQueryParameter("Ipv6Prefix", ipv6Prefix);
@@ -551,7 +551,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable to general users.
+         * > 该参数正在邀测中，暂未开放使用。
          */
         public Builder ipv6PrefixCount(Integer ipv6PrefixCount) {
             this.putQueryParameter("Ipv6PrefixCount", ipv6PrefixCount);
@@ -560,7 +560,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The name of the ENI. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).
+         * The name of the ENI. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          * <p>
          * 
          * This parameter is empty by default.
@@ -572,13 +572,13 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The communication mode of the ENI. Valid values:
+         * The communication model of the ENI. Valid values:
          * <p>
          * 
-         * *   Standard: The TCP communication mode is used.
-         * *   HighPerformance: Elastic RDMA Interface (ERI) is enabled and the remote direct memory access (RDMA) communication mode is used.
+         * *   Standard: uses the TCP communication mode.
+         * *   HighPerformance: enables Elastic RDMA Interface (ERI) and uses the remote direct memory access (RDMA) communication mode.
          * 
-         * > HighPerformance supports only the c7re RDMA-enhanced instance family. The maximum number of ENIs in the RDMA mode that can be attached to a c7re instance is determined by the instance type. The c7re instance family is in invitational preview in Beijing Zone K. For more information, see [Instance families](~~25378~~).
+         * > HighPerformance supports only the c7re RDMA-enhanced instance family. The maximum number of ENIs in the RDMA mode that can be attached to a c7re instance is determined by the instance type. The c7re instance family is in invitational preview in Beijing Zone K. For more information, see [Overview of instance families](~~25378~~).
          * 
          * Default value: Standard.
          */
@@ -607,10 +607,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The primary private IP address to assign to the ENI.
+         * The primary private IP address of the ENI.
          * <p>
          * 
-         * The specified IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. If this parameter is not specified, an idle IP address is randomly assigned from within the CIDR block of the vSwitch.
+         * The specified IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. If this parameter is not specified, an idle IP address is assigned from within the vSwitch CIDR block at random.
          */
         public Builder primaryIpAddress(String primaryIpAddress) {
             this.putQueryParameter("PrimaryIpAddress", primaryIpAddress);
@@ -619,10 +619,10 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * Secondary private IP address N to assign to the ENI. The IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. Valid values of N: 0 to 10.
+         * Secondary private IP address N to assign to the ENI. This IP address must be an idle IP address within the CIDR block of the vSwitch with which to associate the ENI. Valid values of N: 0 to 10.
          * <p>
          * 
-         * > To assign secondary private IP addresses to the ENI, you cannot specify both the `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` parameters.
+         * > To assign secondary private IP addresses to the ENI, you can specify `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` but not both.
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -634,9 +634,9 @@ public class CreateNetworkInterfaceRequest extends Request {
          * The number of queues supported by the ENI. Valid values: 1 to 2048.
          * <p>
          * 
-         * When you attach the ENI to an instance, make sure that the value of this parameter is smaller than the maximum number of queues per ENI allowed for the instance type. To view the maximum number of queues per ENI allowed for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the `MaximumQueueNumberPerEni` response parameter.
+         * When you attach the ENI to an instance, make sure that the value of this parameter is less than the maximum number of queues per ENI that is allowed for the instance type. To view the maximum number of queues per ENI allowed for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the return value of `MaximumQueueNumberPerEni`.
          * 
-         * This parameter is empty by default. If this parameter is not specified when you attach the ENI to an instance, the default number of queues per ENI for the instance type of this instance is used. To view the default number of queues per ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the `SecondaryEniQueueNumber` response parameter.
+         * This parameter is left empty by default. If you do not specify this parameter, the default number of queues per ENI for the instance type of an instance is used when you attach the ENI to the instance. To view the default number of queues per ENI for an instance type, you can call the [DescribeInstanceTypes](~~25620~~) operation and then check the return value of `SecondaryEniQueueNumber`.
          */
         public Builder queueNumber(Integer queueNumber) {
             this.putQueryParameter("QueueNumber", queueNumber);
@@ -645,7 +645,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable to general users.
+         * > This parameter is in invitational preview and is not publicly available.
          */
         public Builder queuePairNumber(Integer queuePairNumber) {
             this.putQueryParameter("QueuePairNumber", queuePairNumber);
@@ -654,7 +654,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -663,7 +663,7 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which to assign the ENI. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.
+         * The ID of the resource group to which you want to assign the ENI. You can call the [ListResourceGroups](~~158855~~) operation to query the most recent resource group list.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -711,10 +711,12 @@ public class CreateNetworkInterfaceRequest extends Request {
         }
 
         /**
-         * The IDs of security groups to which to assign the ENI. The security group and the ENI must belong to the same VPC. The valid values of N are determined by the maximum number of security groups to which an ENI can be assigned. For more information, see [Limits](~~25412~~).
+         * The ID of security group N to which to assign the ENI. The security group and the ENI must belong to the same VPC. The valid values of N are determined based on the maximum number of security groups to which an ENI can be assigned. For more information, see [Limits](~~25412~~).
          * <p>
          * 
-         * > You must specify `SecurityGroupId` or `SecurityGroupIds.N` but not both.
+         * **
+         * 
+         * You must specify **SecurityGroupId** or SecurityGroupIds.N but not both.````
          */
         public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
             this.putQueryParameter("SecurityGroupIds", securityGroupIds);
@@ -795,7 +797,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
+             * The key of tag N to add to the ENI. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -803,7 +805,7 @@ public class CreateNetworkInterfaceRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the ENI. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length. It cannot start with acs: or contain `http://` or `https://`.
+             * The value of tag N to add to the ENI. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with acs: or contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

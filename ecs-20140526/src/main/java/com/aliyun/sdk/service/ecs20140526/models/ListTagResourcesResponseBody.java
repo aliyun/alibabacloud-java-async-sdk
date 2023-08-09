@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * The token used to start the next query.
+         * A pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the resources and tags, including resource IDs, resource types, and tag key-value pairs.
+         * The details about the resources and tags, such as the resource ID, the resource type, tag keys, and tag values.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -154,7 +154,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The ID of the resource.
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -162,7 +162,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. Valid values:
+             * The type of a resource. Valid values:
              * <p>
              * 
              * *   instance: ECS instance
@@ -180,7 +180,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
              * *   snapshotpolicy: automatic snapshot policy
              * *   elasticityassurance: elasticity assurance
              * *   capacityreservation: capacity reservation
-             * *   command: Cloud Assistant command.
+             * *   command: Cloud Assistant command
              * *   invocation: Cloud Assistant command execution result
              */
             public Builder resourceType(String resourceType) {
@@ -189,7 +189,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -197,7 +197,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

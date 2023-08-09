@@ -217,13 +217,10 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the reserved instance. Valid values:
+         * The auto-renewal duration. Unit: months. This parameter takes effect only when AutoRenew is set to true.
          * <p>
          * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * Valid values: 12 and 36. Default value: 12.
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -232,10 +229,7 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The auto-renewal duration. Unit: months. This parameter takes effect only when AutoRenew is set to true.
-         * <p>
-         * 
-         * Valid values: 12 and 36. Default value: 12.
+         * The request ID.
          */
         public Builder autoRenewPeriod(Integer autoRenewPeriod) {
             this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
@@ -244,7 +238,13 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * Specifies whether to enable auto-renewal for the reserved instance. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -271,12 +271,10 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The validity period of the reserved instance.
+         * The unit of the validity period of the reserved instance.
          * <p>
          * 
-         * Valid values: 1 and 3.
-         * 
-         * Default value: 1.
+         * Set the value to Year.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -285,10 +283,7 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The unit of the validity period of the reserved instance.
-         * <p>
-         * 
-         * Set the value to Year.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -297,7 +292,12 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The validity period of the reserved instance.
+         * <p>
+         * 
+         * Valid values: 1 and 3.
+         * 
+         * Default value: 1.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -306,7 +306,10 @@ public class RenewReservedInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the reserved instances.
+         * The ID of the reserved instance. You can call the [DescribeReservedInstances](~~100065~~) operation to query the IDs of reserved instances that you purchased.
+         * <p>
+         * 
+         * You can specify up to 10 IDs of reserved instances in a single request.
          */
         public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);

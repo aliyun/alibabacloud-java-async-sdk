@@ -274,10 +274,10 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
+         * The number of the page to return.
          * <p>
          * 
-         * Pages start from page 1.
+         * Page start from page 1.
          * 
          * Default value: 1.
          */
@@ -311,7 +311,12 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * ResourceIds.
+         * The ID of resource N that is associated with the task. Valid values of N: 1 to 100.
+         * <p>
+         * 
+         * *   If TaskAction is set to ImportImage or ExportImage, set the resource ID to an image ID.
+         * *   If TaskAction is set to RedeployInstance, set the resource ID to an Elastic Compute Service (ECS) instance ID.
+         * *   If TaskAction is set to ModifyDiskSpec, set the resource ID to a disk ID.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);
@@ -362,7 +367,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The IDs of the tasks. You can specify up to 100 tasks at a time. Separate multiple task IDs with commas (,).
+         * The ID of the task. You can specify up to 100 task IDs at a time. Separate the task IDs with commas (,).
          */
         public Builder taskIds(String taskIds) {
             this.putQueryParameter("TaskIds", taskIds);
@@ -371,14 +376,14 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The status of the task. Valid values:
+         * The state of the task. Valid values:
          * <p>
          * 
          * *   Finished
          * *   Processing
          * *   Failed
          * 
-         * This parameter has no default value.
+         * This parameter is empty by default.
          * 
          * >  The system only retrieves tasks in the Finished, Processing, and Failed states and ignores other values.
          */

@@ -205,29 +205,20 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. For more information, see [Billing overview](~~25398~~). Valid values:
+         * The preemption policy for the preemptible or pay-as-you-go instance. Valid values:
          * <p>
          * 
-         * *   PrePaid: subscription
-         * *   PostPaid: pay-as-you-go
+         * *   NoSpot: The instance is a regular pay-as-you-go instance.
+         * *   SpotWithPriceLimit: The instance is a preemptible instance with user-defined maximum hourly prices.
+         * *   SpotAsPriceGo: The system automatically offers a bid, which is not higher than the pay-as-you-go price for the same instance type.
          * 
-         * Default value: PostPaid.
+         * Default value: NoSpot.
+         * 
+         * >  This parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
             this.instanceChargeType = instanceChargeType;
-            return this;
-        }
-
-        /**
-         * The instance type. For more information about the values, see [Instance families](~~25378~~).
-         * <p>
-         * 
-         * >  This parameter is required.
-         */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
             return this;
         }
 
@@ -240,6 +231,15 @@ public class DescribeBandwidthLimitationRequest extends Request {
          * *   Create: creates an ECS instance.
          * 
          * Default value: Create.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * 473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E
          */
         public Builder operationType(String operationType) {
             this.putQueryParameter("OperationType", operationType);
@@ -266,7 +266,7 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * PrePaid
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -275,10 +275,7 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The ID of the resource.
-         * <p>
-         * 
-         * >  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.
+         * The ID of the request.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -305,16 +302,10 @@ public class DescribeBandwidthLimitationRequest extends Request {
         }
 
         /**
-         * The preemption policy for the preemptible or pay-as-you-go instance. Valid values:
+         * The ID of the resource.
          * <p>
          * 
-         * *   NoSpot: The instance is a regular pay-as-you-go instance.
-         * *   SpotWithPriceLimit: The instance is a preemptible instance with user-defined maximum hourly prices.
-         * *   SpotAsPriceGo: The system automatically offers a bid, which is not higher than the pay-as-you-go price for the same instance type.
-         * 
-         * Default value: NoSpot.
-         * 
-         * >  This parameter takes effect only when the InstanceChargeType parameter is set to PostPaid.
+         * >  This parameter is required when the OperationType parameter is set to Upgrade or Downgrade.
          */
         public Builder spotStrategy(String spotStrategy) {
             this.putQueryParameter("SpotStrategy", spotStrategy);

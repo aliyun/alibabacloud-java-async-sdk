@@ -327,10 +327,10 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The locked mode of the instance. Valid values:
+         * The reason why the instance is locked. Valid values:
          * <p>
          * 
-         * *   financial: Your account has one or more overdue payments or the reserved instance has expired.
+         * *   financial: You have an overdue payment in your account, or the reserved instance has expired.
          * *   security: The reserved instance is locked for security reasons.
          */
         public Builder lockReason(String lockReason) {
@@ -340,7 +340,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The payment option for the reserved instance. Valid values:
+         * The payment option of the reserved instances. Valid values:
          * <p>
          * 
          * *   No Upfront
@@ -372,7 +372,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The page number to return. Pages start from page 1.
+         * The page number. Pages start from page 1.
          * <p>
          * 
          * Default value: 1.
@@ -384,7 +384,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100.
+         * The number of entries per page. Maximum value: 100.
          * <p>
          * 
          * Default value: 10.
@@ -396,7 +396,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -405,7 +405,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the reserved instances. Valid values of N: 1 to 100.
+         * The ID of reserved instance N. Valid values of N: 1 to 100.
          */
         public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);
@@ -414,7 +414,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The reserved instance name.
+         * The name of the reserved instance.
          */
         public Builder reservedInstanceName(String reservedInstanceName) {
             this.putQueryParameter("ReservedInstanceName", reservedInstanceName);
@@ -441,11 +441,11 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The scope of reserved instance N. Valid values:
+         * The scope of the reserved instances. Valid values:
          * <p>
          * 
-         * *   Region: regional
-         * *   Zone: zonal
+         * *   Region
+         * *   Zone
          * 
          * Default value: Region.
          */
@@ -471,7 +471,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The tags list.
+         * The tags to add to the instances.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -480,7 +480,7 @@ public class DescribeReservedInstancesRequest extends Request {
         }
 
         /**
-         * The zone ID of the reserved instance is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
+         * The zone ID of the reserved instances. This parameter is required when Scope is set to Zone. You can call the [DescribeZones](~~25610~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -534,10 +534,10 @@ public class DescribeReservedInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N of the reserved instance. Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key must be 1 to 128 characters in length. It cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+             * The key of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag key cannot start with acs: or aliyun.
              * <p>
              * 
-             * Up to 1,000 resources that match the specified tags can be returned in the response. To query more than 1,000 resources that match the specified tags, call the [ListTagResources](~~110425~~) operation.
+             * Up to 1,000 resources with the specified tags can be returned in the response. To query more than 1,000 resources with the specified tags, call the [ListTagResources](~~110425~~) operation.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -545,7 +545,7 @@ public class DescribeReservedInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag N that belongs to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or contain [http:// or https://.](http://https://。)
+             * The value of tag N to add to the reserved instance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain [http:// or https://](http://https://。). The tag value cannot start with acs:.
              */
             public Builder value(String value) {
                 this.value = value;

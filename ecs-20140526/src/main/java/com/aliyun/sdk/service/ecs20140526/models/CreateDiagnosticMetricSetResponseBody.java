@@ -50,7 +50,7 @@ public class CreateDiagnosticMetricSetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the diagnostic metric set, which is the unique identifier of the set.
+         * MetricSetId.
          */
         public Builder metricSetId(String metricSetId) {
             this.metricSetId = metricSetId;
@@ -58,7 +58,7 @@ public class CreateDiagnosticMetricSetResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the diagnostic metric set, which is the unique identifier of the set.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -246,7 +246,7 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -255,58 +255,11 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder deploymentSetName(String deploymentSetName) {
             this.putQueryParameter("DeploymentSetName", deploymentSetName);
             this.deploymentSetName = deploymentSetName;
-            return this;
-        }
-
-        /**
-         * The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * The deployment domain. Set the value to Default.
-         * <p>
-         * 
-         * Default: Instances in the deployment set are distributed only within the current zone.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
-
-        /**
-         * The deployment granularity. Set the value to host.
-         * <p>
-         * 
-         * host: Instances in the deployment set are dispersed at the granularity of hosts.
-         */
-        public Builder granularity(String granularity) {
-            this.putQueryParameter("Granularity", granularity);
-            this.granularity = granularity;
-            return this;
-        }
-
-        /**
-         * The number of deployment set groups in the deployment set. Valid values: 1 to 7.
-         * <p>
-         * 
-         * Default value: 3.
-         * 
-         * > This parameter takes effect only when `Strategy` is set to AvailabilityGroup.
-         */
-        public Builder groupCount(Long groupCount) {
-            this.putQueryParameter("GroupCount", groupCount);
-            this.groupCount = groupCount;
             return this;
         }
 
@@ -318,6 +271,51 @@ public class CreateDeploymentSetRequest extends Request {
          * *   KeepStopped: leaves the instances in the Stopped state and starts them after resources are replenished.
          * 
          * Default value: CancelMembershipAndStart.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * The name of the deployment set. The name must be 2 to 128 characters in length, It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         */
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The deployment domain. Set the value to Default.
+         * <p>
+         * 
+         * Default: Instances in the deployment set are distributed only within the current zone.
+         */
+        public Builder granularity(String granularity) {
+            this.putQueryParameter("Granularity", granularity);
+            this.granularity = granularity;
+            return this;
+        }
+
+        /**
+         * The deployment strategy. Valid values:
+         * <p>
+         * 
+         * *   Availability: high availability strategy.
+         * *   AvailabilityGroup: high availability group strategy.
+         * 
+         * Default value: Availability.
+         */
+        public Builder groupCount(Long groupCount) {
+            this.putQueryParameter("GroupCount", groupCount);
+            this.groupCount = groupCount;
+            return this;
+        }
+
+        /**
+         * The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
          */
         public Builder onUnableToRedeployFailedInstance(String onUnableToRedeployFailedInstance) {
             this.putQueryParameter("OnUnableToRedeployFailedInstance", onUnableToRedeployFailedInstance);
@@ -344,7 +342,7 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * Creates a deployment set in a specific region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -371,13 +369,10 @@ public class CreateDeploymentSetRequest extends Request {
         }
 
         /**
-         * The deployment strategy. Valid values:
+         * The deployment granularity. Set the value to host.
          * <p>
          * 
-         * *   Availability: high availability strategy.
-         * *   AvailabilityGroup: high availability group strategy.
-         * 
-         * Default value: Availability.
+         * host: Instances in the deployment set are dispersed at the granularity of hosts.
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);

@@ -176,10 +176,10 @@ public class JoinSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          * <p>
          * 
-         * > If this parameter is specified, the `NetworkInterfaceId` parameter cannot be specified.
+         * > If you configure this parameter, you cannot configure `NetworkInterfaceId`.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -188,10 +188,10 @@ public class JoinSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the ENI.
+         * The ENI ID.
          * <p>
          * 
-         * > If this parameter is specified, the `InstanceId` parameter cannot be specified.
+         * > If you configure this parameter, you cannot configure `InstanceId`.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -218,11 +218,11 @@ public class JoinSecurityGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the instance or ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          * <p>
          * 
-         * *   You do not need to specify a region ID when you add an instance to a security group.
-         * *   You must specify a region ID when you add an ENI to a security group.
+         * *   If you want to add an instance to a security group, you do not need to specify a region ID.
+         * *   If you want to add an ENI to a security group, you must specify the region ID of the ENI.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -249,7 +249,7 @@ public class JoinSecurityGroupRequest extends Request {
         }
 
         /**
-         * The ID of the security group to which you want to add the instance or ENI. You can call the [DescribeSecurityGroups](~~25556~~) operation to query available security groups.
+         * The ID of the security group. You can call the [DescribeSecurityGroups](~~25556~~) operation to query the most recent security group list.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

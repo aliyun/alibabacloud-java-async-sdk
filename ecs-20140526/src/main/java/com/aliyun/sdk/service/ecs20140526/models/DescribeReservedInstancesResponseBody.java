@@ -86,7 +86,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The returned page number.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -252,7 +252,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of the reserved instance tag N.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -260,7 +260,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the reserved instance tag N.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -546,7 +546,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Indicates the allocation status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:
+             * Indicates the sharing status of the reserved instance when the AllocationType parameter is set to Shared. Valid values:
              * <p>
              * 
              * *   allocated: The reserved instance is allocated to another account.
@@ -598,7 +598,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The payment options for the reserved instance.
+             * The payment option.
              */
             public Builder offeringType(String offeringType) {
                 this.offeringType = offeringType;
@@ -617,8 +617,8 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
              * The operating system of the image used by the instance. Valid values:
              * <p>
              * 
-             * *   Windows: Windows Server operating system
-             * *   Linux: Linux and UNIX-like operating system
+             * *   Windows
+             * *   Linux
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -626,7 +626,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the instance resides.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -658,7 +658,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates range.
+             * The scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -666,7 +666,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The validation time.
+             * The effective time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -682,7 +682,7 @@ public class DescribeReservedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the reserved instance tags.
+             * Details about the tags of the reserved instance.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

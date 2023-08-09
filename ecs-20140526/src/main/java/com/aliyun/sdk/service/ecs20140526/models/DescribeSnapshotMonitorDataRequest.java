@@ -192,11 +192,11 @@ public class DescribeSnapshotMonitorDataRequest extends Request {
         }
 
         /**
-         * The snapshot type. Valid values:
+         * The type of the snapshot. Valid values:
          * <p>
          * 
-         * *   Standard: normal snapshot
-         * *   Flash: local snapshot
+         * *   Standard: normal snapshot.
+         * *   Flash: local snapshot.
          * 
          * Default value: Standard.
          */

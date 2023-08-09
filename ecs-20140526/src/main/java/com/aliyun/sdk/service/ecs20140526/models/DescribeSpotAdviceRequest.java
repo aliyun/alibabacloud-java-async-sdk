@@ -260,7 +260,7 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The number of GPUs that the GPU-accelerated instance has. For information about the valid values, see [GPU-accelerated compute optimized instance types](~~108496~~).
+         * The number of GPUs that a GPU-accelerated instance has. For information about the valid values, see [GPU-accelerated compute optimized instance types](~~108496~~).
          */
         public Builder gpuAmount(Integer gpuAmount) {
             this.putQueryParameter("GpuAmount", gpuAmount);
@@ -278,7 +278,7 @@ public class DescribeSpotAdviceRequest extends Request {
          * *   NVIDIA V100
          * *   NVIDIA A100
          * 
-         * This parameter is empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute optimized instance types](~~108496~~).
+         * This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see [GPU-accelerated compute optimized instance types](~~108496~~).
          */
         public Builder gpuSpec(String gpuSpec) {
             this.putQueryParameter("GpuSpec", gpuSpec);
@@ -290,11 +290,11 @@ public class DescribeSpotAdviceRequest extends Request {
          * The level of the instance family. Valid values:
          * <p>
          * 
-         * *   EntryLevel: entry level.
-         * *   EnterpriseLevel: enterprise level.
-         * *   CreditEntryLevel: credit-based entry level. For more information, see [Overview](~~59977~~) of burstable instances.
+         * *   EntryLevel.
+         * *   EnterpriseLevel.
+         * *   CreditEntryLevel. For more information, see [Overview of burstable instances](~~59977~~).
          * 
-         * This parameter is empty by default, which indicates that instance families of all levels are queried.
+         * This parameter is left empty by default, which indicates that instance families at all levels are queried.
          */
         public Builder instanceFamilyLevel(String instanceFamilyLevel) {
             this.putQueryParameter("InstanceFamilyLevel", instanceFamilyLevel);
@@ -312,7 +312,7 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The instance types. You can specify to 10 instance types.
+         * The instance types. You can specify up to 10 instance types.
          */
         public Builder instanceTypes(java.util.List < String > instanceTypes) {
             this.putQueryParameter("InstanceTypes", instanceTypes);
@@ -366,7 +366,7 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -393,10 +393,10 @@ public class DescribeSpotAdviceRequest extends Request {
         }
 
         /**
-         * The ID of the zone.
+         * The zone ID.
          * <p>
          * 
-         * This parameter is empty by default, which indicates that all zones in the specified region are queried.
+         * This parameter is left empty by default, which indicates that all zones in the specified region are queried.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

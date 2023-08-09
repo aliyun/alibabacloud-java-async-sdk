@@ -86,7 +86,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * An array that consists of the details about the elasticity assurances.
+         * Details about the elasticity assurances.
          */
         public Builder elasticityAssuranceSet(ElasticityAssuranceSet elasticityAssuranceSet) {
             this.elasticityAssuranceSet = elasticityAssuranceSet;
@@ -94,7 +94,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The maximum number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -102,7 +102,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * The token used to start the next query.
+         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -110,7 +110,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The type of the instance.
+             * The instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -202,7 +202,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances of an instance type for which capacity is reserved.
+             * The total number of instances for which capacity of an instance type is reserved.
              */
             public Builder totalAmount(Integer totalAmount) {
                 this.totalAmount = totalAmount;
@@ -218,7 +218,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone in which the instance is located.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -312,7 +312,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key of the elasticity assurance.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -320,7 +320,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value of the elasticity assurance.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -582,7 +582,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             private Integer usedAssuranceTimes; 
 
             /**
-             * An array that consists of the details about the allocated resources.
+             * Details about the allocated resources.
              */
             public Builder allocatedResources(AllocatedResources allocatedResources) {
                 this.allocatedResources = allocatedResources;
@@ -606,7 +606,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method of the instance. Set the value to PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.
+             * The billing method of the instance. The value can be only PostPaid. Only pay-as-you-go instances can be created by using elasticity assurances.
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
@@ -614,7 +614,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is unavailable for public use.
+             * > This parameter is not publicly available.
              */
             public Builder latestStartTime(String latestStartTime) {
                 this.latestStartTime = latestStartTime;
@@ -634,7 +634,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
              * <p>
              * 
              * *   Open: open private pool
-             * *   Target: targeted private pool
+             * *   Target: specific private pool
              */
             public Builder privatePoolOptionsMatchCriteria(String privatePoolOptionsMatchCriteria) {
                 this.privatePoolOptionsMatchCriteria = privatePoolOptionsMatchCriteria;
@@ -650,7 +650,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the elasticity assurance belongs.
+             * The region ID of the elasticity assurance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -658,7 +658,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the elasticity assurance is assigned.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -677,8 +677,8 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
              * Indicates when the elasticity assurance takes effect. Valid values:
              * <p>
              * 
-             * *   Now: The elasticity assurance takes effect as soon as it is created.
-             * *   Later: The elasticity assurance takes effect at the specified time.
+             * *   Now: The elasticity assurance takes effect immediately after it is created.
+             * *   Later: The elasticity assurance takes effect at a specified time.
              */
             public Builder startTimeType(String startTimeType) {
                 this.startTimeType = startTimeType;
@@ -686,13 +686,13 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the elasticity assurance. Valid values:
+             * The status of the elasticity assurance. Valid values:
              * <p>
              * 
-             * *   Preparing: The elasticity assurance is being prepared.
-             * *   Prepared: The elasticity assurance has not taken effect.
-             * *   Active: The elasticity assurance is in effect.
-             * *   Released: The elasticity assurance is released.
+             * *   Preparing
+             * *   Prepared
+             * *   Active
+             * *   Released
              */
             public Builder status(String status) {
                 this.status = status;
@@ -700,7 +700,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the elasticity assurances.
+             * The tags of the elasticity assurance.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -708,7 +708,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of times that the elasticity assurance has been applied.
+             * The total number of times that the elasticity assurance is applied.
              */
             public Builder totalAssuranceTimes(String totalAssuranceTimes) {
                 this.totalAssuranceTimes = totalAssuranceTimes;
@@ -716,7 +716,7 @@ public class DescribeElasticityAssurancesResponseBody extends TeaModel {
             }
 
             /**
-             * > This parameter is unavailable for public use.
+             * > This parameter is not publicly available.
              */
             public Builder usedAssuranceTimes(Integer usedAssuranceTimes) {
                 this.usedAssuranceTimes = usedAssuranceTimes;

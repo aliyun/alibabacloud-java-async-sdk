@@ -70,7 +70,7 @@ public class DeleteDiagnosticMetricSetsRequest extends Request {
         } 
 
         /**
-         * The IDs of diagnostic metric sets. You can specify up to 10 set IDs.
+         * The ID of diagnostic metric set.
          */
         public Builder metricSetIds(java.util.List < String > metricSetIds) {
             this.putQueryParameter("MetricSetIds", metricSetIds);
@@ -79,7 +79,7 @@ public class DeleteDiagnosticMetricSetsRequest extends Request {
         }
 
         /**
-         * The region ID of the diagnostic metric set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The IDs of diagnostic metric sets. You can specify up to 10 set IDs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

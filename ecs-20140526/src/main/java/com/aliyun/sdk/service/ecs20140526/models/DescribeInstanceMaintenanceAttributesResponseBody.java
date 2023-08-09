@@ -86,7 +86,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         private Integer totalCount; 
 
         /**
-         * Details about the maintenance attributes.
+         * The maintenance attributes.
          */
         public Builder maintenanceAttributes(MaintenanceAttributes maintenanceAttributes) {
             this.maintenanceAttributes = maintenanceAttributes;
@@ -94,7 +94,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -231,7 +231,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * Details about the supported maintenance actions.
+             * The supported maintenance actions.
              */
             public Builder supportedValues(SupportedValues supportedValues) {
                 this.supportedValues = supportedValues;
@@ -242,9 +242,9 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
              * The current maintenance action. Valid values:
              * <p>
              * 
-             * *   Stop: The instance goes down.
-             * *   AutoRecover: The instance is automatically recovered.
-             * *   AutoRedeploy: Failover is performed on the instance, which may damage the data disks.
+             * *   Stop: stops the instance.
+             * *   AutoRecover: automatically recovers the instance.
+             * *   AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -431,7 +431,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the instance
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -439,7 +439,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * Details about the maintenance window.
+             * The maintenance windows.
              */
             public Builder maintenanceWindows(MaintenanceWindows maintenanceWindows) {
                 this.maintenanceWindows = maintenanceWindows;
@@ -447,7 +447,7 @@ public class DescribeInstanceMaintenanceAttributesResponseBody extends TeaModel 
             }
 
             /**
-             * Indicates whether an event notification was sent before instance shutdown.
+             * Indicates whether an event notification was sent before maintenance.
              */
             public Builder notifyOnMaintenance(Boolean notifyOnMaintenance) {
                 this.notifyOnMaintenance = notifyOnMaintenance;

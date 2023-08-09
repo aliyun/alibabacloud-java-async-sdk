@@ -133,6 +133,9 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
     }
     public static class LaunchResult extends TeaModel {
+        @NameInMap("Amount")
+        private Integer amount;
+
         @NameInMap("ErrorCode")
         private String errorCode;
 
@@ -152,6 +155,7 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         private String zoneId;
 
         private LaunchResult(Builder builder) {
+            this.amount = builder.amount;
             this.errorCode = builder.errorCode;
             this.errorMsg = builder.errorMsg;
             this.instanceIds = builder.instanceIds;
@@ -166,6 +170,13 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
 
         public static LaunchResult create() {
             return builder().build();
+        }
+
+        /**
+         * @return amount
+         */
+        public Integer getAmount() {
+            return this.amount;
         }
 
         /**
@@ -211,12 +222,21 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer amount; 
             private String errorCode; 
             private String errorMsg; 
             private InstanceIds instanceIds; 
             private String instanceType; 
             private String spotStrategy; 
             private String zoneId; 
+
+            /**
+             * The number of instances. Valid values: 1 to 100000.
+             */
+            public Builder amount(Integer amount) {
+                this.amount = amount;
+                return this;
+            }
 
             /**
              * The error code returned when the instance cannot be created.

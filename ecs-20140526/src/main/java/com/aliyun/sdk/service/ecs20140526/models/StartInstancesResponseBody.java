@@ -50,7 +50,7 @@ public class StartInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the ECS instance, such as the status of each instance before and after the operation is called and the operation results.
+         * The error code that is returned for the operation on the ECS instance. The value 200 indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
          */
         public Builder instanceResponses(InstanceResponses instanceResponses) {
             this.instanceResponses = instanceResponses;
@@ -58,7 +58,7 @@ public class StartInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The information about the ECS instance, such as the status of each instance before and after the operation is called and the operation results.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class StartInstancesResponseBody extends TeaModel {
             private String previousStatus; 
 
             /**
-             * The error code that is returned for the operation on the ECS instance. The value 200 indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
+             * The error message that is returned for the operation on the ECS instance. The value success indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -154,7 +154,7 @@ public class StartInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ECS instance after the operation is called.
+             * The status of the ECS instance before the operation is called.
              */
             public Builder currentStatus(String currentStatus) {
                 this.currentStatus = currentStatus;
@@ -162,7 +162,7 @@ public class StartInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ECS instance.
+             * The status of the ECS instance after the operation is called.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -170,7 +170,7 @@ public class StartInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The error message that is returned for the operation on the ECS instance. The value success indicates that the operation is successful. For more information, see the "Error codes" section in this topic.
+             * The ID of the ECS instance.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -178,7 +178,7 @@ public class StartInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the ECS instance before the operation is called.
+             * PreviousStatus.
              */
             public Builder previousStatus(String previousStatus) {
                 this.previousStatus = previousStatus;

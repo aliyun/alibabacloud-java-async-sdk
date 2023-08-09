@@ -50,7 +50,7 @@ public class ModifyInstanceNetworkSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * The order ID.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -58,7 +58,7 @@ public class ModifyInstanceNetworkSpecResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

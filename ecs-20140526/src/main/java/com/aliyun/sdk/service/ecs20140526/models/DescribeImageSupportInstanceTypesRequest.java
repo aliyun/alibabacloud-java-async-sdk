@@ -162,7 +162,11 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * ActionType.
+         * The scenario in which you want to use the image. Valid values:
+         * <p>
+         * 
+         * - CreateEcs (default): instance creation
+         * - ChangeOS: replacement of the system disk or operating system
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -171,7 +175,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * The filters used to filter instance types.
+         * The number of vCPUs of the instance type.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -180,7 +184,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * The ID of the image.
+         * The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -198,7 +202,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
         }
 
         /**
-         * The region ID of the image. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * Details about the instance types that are supported by the image.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -270,11 +274,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             private String value; 
 
             /**
-             * The key of filter N. Only the image ID can be used to filter instance types. Valid values:
-             * <p>
-             * 
-             * *   imagId: image ID
-             * *   filter: image ID
+             * Filter N used to filter instance types.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -282,7 +282,7 @@ public class DescribeImageSupportInstanceTypesRequest extends Request {
             }
 
             /**
-             * The value of filter N.
+             * The ID of the image.
              */
             public Builder value(String value) {
                 this.value = value;

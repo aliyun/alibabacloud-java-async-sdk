@@ -50,7 +50,11 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the auto-renewal attributes of the dedicated hosts.
+         * The unit of the auto-renewal period. Valid values:
+         * <p>
+         * 
+         * *   Week
+         * *   Month
          */
         public Builder dedicatedHostRenewAttributes(DedicatedHostRenewAttributes dedicatedHostRenewAttributes) {
             this.dedicatedHostRenewAttributes = dedicatedHostRenewAttributes;
@@ -58,7 +62,7 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Details about the auto-renewal attributes of the dedicated hosts.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,11 +162,11 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
             private String renewalStatus; 
 
             /**
-             * Indicates whether the subscription dedicated host is automatically renewed. Valid values:
+             * Indicates whether the subscription dedicated host is automatically renewed along with the subscription Elastic Compute Service (ECS) instances hosted on it if the new expiration time of the renewed instances is later than the expiration time of the dedicated host. Valid values:
              * <p>
              * 
-             * *   true: The dedicated host is automatically renewed.
-             * *   false: The dedicated host is not automatically renewed.
+             * *   AutoRenewWithEcs: The subscription dedicated host is automatically renewed along with the subscription ECS instances hosted on it.
+             * *   StopRenewWithEcs: The subscription dedicated host is not automatically renewed along with the subscription ECS instances hosted on it.
              */
             public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
                 this.autoRenewEnabled = autoRenewEnabled;
@@ -170,42 +174,10 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the subscription dedicated host is automatically renewed along with the subscription Elastic Compute Service (ECS) instances hosted on it if the new expiration time of the renewed instances is later than the expiration time of the dedicated host. Valid values:
-             * <p>
-             * 
-             * *   AutoRenewWithEcs: The subscription dedicated host is automatically renewed along with the subscription ECS instances hosted on it.
-             * *   StopRenewWithEcs: The subscription dedicated host is not automatically renewed along with the subscription ECS instances hosted on it.
+             * AutoRenewWithEcs.
              */
             public Builder autoRenewWithEcs(String autoRenewWithEcs) {
                 this.autoRenewWithEcs = autoRenewWithEcs;
-                return this;
-            }
-
-            /**
-             * The ID of the dedicated host.
-             */
-            public Builder dedicatedHostId(String dedicatedHostId) {
-                this.dedicatedHostId = dedicatedHostId;
-                return this;
-            }
-
-            /**
-             * The auto-renewal period.
-             */
-            public Builder duration(Integer duration) {
-                this.duration = duration;
-                return this;
-            }
-
-            /**
-             * The unit of the auto-renewal period. Valid values:
-             * <p>
-             * 
-             * *   Week
-             * *   Month
-             */
-            public Builder periodUnit(String periodUnit) {
-                this.periodUnit = periodUnit;
                 return this;
             }
 
@@ -216,6 +188,34 @@ public class DescribeDedicatedHostAutoRenewResponseBody extends TeaModel {
              * *   AutoRenewal: The dedicated host is automatically renewed.
              * *   Normal: The dedicated host is not automatically renewed, and you will receive notifications for renewal.
              * *   NotRenewal: The dedicated host is not renewed, and no expiration notification is sent. Notifications for renewal are automatically sent three days before the dedicated host expires. You can change the value of this parameter from NotRenewal to Normal for the dedicated host and manually renew it by calling the [RenewDedicatedHosts](~~93287~~) operation. Alternatively, you can set this parameter to AutoRenewal to configure the dedicated host to be automatically renewed.
+             */
+            public Builder dedicatedHostId(String dedicatedHostId) {
+                this.dedicatedHostId = dedicatedHostId;
+                return this;
+            }
+
+            /**
+             * The ID of the dedicated host.
+             */
+            public Builder duration(Integer duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * The auto-renewal period.
+             */
+            public Builder periodUnit(String periodUnit) {
+                this.periodUnit = periodUnit;
+                return this;
+            }
+
+            /**
+             * Indicates whether the subscription dedicated host is automatically renewed. Valid values:
+             * <p>
+             * 
+             * *   true: The dedicated host is automatically renewed.
+             * *   false: The dedicated host is not automatically renewed.
              */
             public Builder renewalStatus(String renewalStatus) {
                 this.renewalStatus = renewalStatus;

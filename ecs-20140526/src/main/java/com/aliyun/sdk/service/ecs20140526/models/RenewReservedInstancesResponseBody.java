@@ -62,7 +62,7 @@ public class RenewReservedInstancesResponseBody extends TeaModel {
         private ReservedInstanceIdSets reservedInstanceIdSets; 
 
         /**
-         * The order ID.
+         * OrderId.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -70,7 +70,7 @@ public class RenewReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The IDs of the reserved instances.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class RenewReservedInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The IDs of the reserved instances.
+         * The ID of the reserved instance.
          */
         public Builder reservedInstanceIdSets(ReservedInstanceIdSets reservedInstanceIdSets) {
             this.reservedInstanceIdSets = reservedInstanceIdSets;

@@ -266,8 +266,8 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
          * The retention period of the snapshot copy in the destination region. Unit: days. Valid values:
          * <p>
          * 
-         * *   \-1: The snapshot is permanently retained.
-         * *   1 to 65535: The automatic snapshot is retained for the specified number of days.
+         * *   \-1: The snapshot copy is permanently retained.
+         * *   A value in the range of 1 to 65535: The snapshot copy is retained for the specified number of days.
          * 
          * Default value: -1.
          */
@@ -278,11 +278,11 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable cross-region replication for the automatic snapshot.
+         * Specifies whether to enable cross-region replication for snapshots.
          * <p>
          * 
-         * *   true: enables cross-region replication for snapshots.
-         * *   false: disables cross-region replication for snapshots.
+         * *   true
+         * *   false
          */
         public Builder enableCrossRegionCopy(Boolean enableCrossRegionCopy) {
             this.putQueryParameter("EnableCrossRegionCopy", enableCrossRegionCopy);
@@ -300,7 +300,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -327,7 +327,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * > This parameter is unavailable.
+         * > This parameter is not publicly available.
          */
         public Builder storageLocationArn(String storageLocationArn) {
             this.putQueryParameter("StorageLocationArn", storageLocationArn);
@@ -336,7 +336,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The tags to add to the automatic snapshot policy.
+         * The tags to add to the snapshot.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -354,7 +354,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).
+         * The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with [http:// or https://. It can contain letters, digits, colons (.), underscores (\_), and hyphens (-).](http://https://。、（:）、（\_）（-）。)
          * <p>
          * 
          * This parameter is empty by default.
@@ -375,7 +375,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The days of the week on which to create automatic snapshots. Valid values: 1 to 7, which correspond to Monday to Sunday. 1 indicates Monday.
+         * The days of the week on which to create automatic snapshots. Valid values: 1 to 7, which correspond to Monday to Sunday. 1 indicates Monday. Format description:
          * <p>
          * 
          * *   Set this parameter to a JSON-formatted array. For example, a value of \["1"] specifies automatic snapshots to be created every Monday.
@@ -392,7 +392,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
          * <p>
          * 
          * *   \-1: The snapshot is permanently retained.
-         * *   1 to 65535: The automatic snapshot is retained for the specified number of days.
+         * *   A value in the range of 1 to 65535: The snapshot is retained for the specified number of days.
          * 
          * Default value: -1.
          */
@@ -403,10 +403,10 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
         }
 
         /**
-         * The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 on-the-hour points in time from 00:00:00 to 23:00:00. 1 indicates 01:00:00. Format description:
+         * The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 on-the-hour points in time from 00:00:00 to 23:00:00. 1 indicates 01:00:00. Format description:
          * <p>
          * 
-         * *   You must set this parameter to a JSON-formatted array. For example, a value of \["1"] specifies automatic snapshots to be created at 01:00:00.
+         * *   Set this parameter to a JSON-formatted array. For example, a value of \["1"] specifies automatic snapshots to be created at 01:00:00.
          * *   To schedule multiple automatic snapshots to be created in a day, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of 24 points in time. For example, a value of \["1","3","5"] specifies automatic snapshots to be created at 01:00:00, 03:00:00, and 05:00:00.
          */
         public Builder timePoints(String timePoints) {
@@ -461,7 +461,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. The tag key cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+             * The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. The tag key cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
              */
             public Builder key(String key) {
                 this.key = key;
@@ -469,7 +469,7 @@ public class CreateAutoSnapshotPolicyRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. The tag value cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
+             * The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length. The tag value cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
              */
             public Builder value(String value) {
                 this.value = value;

@@ -70,7 +70,7 @@ public class CreateElasticityAssuranceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the elasticity assurance.
+         * The elasticity assurance ID.
          */
         public Builder privatePoolOptionsId(String privatePoolOptionsId) {
             this.privatePoolOptionsId = privatePoolOptionsId;

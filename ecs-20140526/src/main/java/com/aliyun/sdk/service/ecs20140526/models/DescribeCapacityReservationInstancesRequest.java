@@ -186,12 +186,7 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries per page.
-         * <p>
-         * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -200,7 +195,7 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.
+         * The ID of the capacity reservation.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -227,7 +222,12 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the capacity reservation. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -288,7 +288,7 @@ public class DescribeCapacityReservationInstancesRequest extends Request {
             private String id; 
 
             /**
-             * The ID of the capacity reservation.
+             * The token used to start the next query.
              */
             public Builder id(String id) {
                 this.id = id;

@@ -322,7 +322,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total CPU credits of the burstable instance.
+             * The total number of CPU credits of the burstable instance.
              */
             public Builder CPUCreditBalance(Float CPUCreditBalance) {
                 this.CPUCreditBalance = CPUCreditBalance;
@@ -362,7 +362,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -378,7 +378,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The public data traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.
+             * The Internet traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit.
              */
             public Builder internetRX(Integer internetRX) {
                 this.internetRX = internetRX;
@@ -386,7 +386,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The public data traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.
+             * The Internet traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit.
              */
             public Builder internetTX(Integer internetTX) {
                 this.internetTX = internetTX;
@@ -402,7 +402,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The internal data traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.
+             * The internal data traffic received by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit.
              */
             public Builder intranetRX(Integer intranetRX) {
                 this.intranetRX = intranetRX;
@@ -410,7 +410,7 @@ public class DescribeInstanceMonitorDataResponseBody extends TeaModel {
             }
 
             /**
-             * The internal data traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit/s.
+             * The internal data traffic sent by the instance during the period that is specified by the `Period` parameter. The period starts from the point in time that is specified by the `TimeStamp` parameter. Unit: Kbit.
              */
             public Builder intranetTX(Integer intranetTX) {
                 this.intranetTX = intranetTX;

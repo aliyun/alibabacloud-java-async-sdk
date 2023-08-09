@@ -216,7 +216,7 @@ public class DescribeEniMonitorDataRequest extends Request {
         }
 
         /**
-         * The ID of the secondary ENI. By default, all secondary ENIs that are bound to the specified instance are queried.
+         * The secondary ENI ID. By default, all secondary ENIs that are bound to the specified instance are queried.
          */
         public Builder eniId(String eniId) {
             this.putQueryParameter("EniId", eniId);
@@ -252,7 +252,7 @@ public class DescribeEniMonitorDataRequest extends Request {
         }
 
         /**
-         * The interval at which to retrieve monitored data. Unit: seconds. Valid values:
+         * The interval at which to retrieve monitoring data. Unit: seconds. Valid values:
          * <p>
          * 
          * *   60
@@ -268,7 +268,7 @@ public class DescribeEniMonitorDataRequest extends Request {
         }
 
         /**
-         * The region ID of the secondary ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

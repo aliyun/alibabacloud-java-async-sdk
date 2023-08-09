@@ -178,12 +178,7 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * The query token that is returned in this call. If the return value is empty, no more data is returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -192,7 +187,12 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -219,7 +219,7 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * The ID of the prefix list.
+         * The query token. Set the value to the `NextToken` value returned in the previous call to the DescribePrefixListAssociations operation. Leave this parameter empty the first time you call this operation.
          */
         public Builder prefixListId(String prefixListId) {
             this.putQueryParameter("PrefixListId", prefixListId);
@@ -228,7 +228,7 @@ public class DescribePrefixListAssociationsRequest extends Request {
         }
 
         /**
-         * The region ID of the prefix list. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The ID of the prefix list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

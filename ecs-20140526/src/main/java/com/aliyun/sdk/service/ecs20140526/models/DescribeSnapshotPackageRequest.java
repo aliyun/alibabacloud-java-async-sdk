@@ -181,10 +181,7 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
-         * <p>
-         * 
-         * Default value: 1.
+         * The region ID of the snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -193,10 +190,7 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100.
-         * <p>
-         * 
-         * Default value: 10.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -205,7 +199,7 @@ public class DescribeSnapshotPackageRequest extends Request {
         }
 
         /**
-         * The region ID of the snapshot. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The ID of the request.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

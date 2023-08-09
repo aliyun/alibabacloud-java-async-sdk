@@ -237,7 +237,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 500.
+         * The maximum number of entries per page. Valid values: 1 to 500.
          * <p>
          * 
          * Default value: 50.
@@ -249,7 +249,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
+         * The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -276,7 +276,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -303,7 +303,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * The status of the image creation task. You can specify multiple values at the same time. Separate the values with commas (,). Example: `BUILDING,DISTRIBUTING`. Valid values:
+         * The status of the image creation task. You can specify multiple values. Separate the values with commas (,). Example: `BUILDING,DISTRIBUTING`. Valid values:
          * <p>
          * 
          * *   BUILDING
@@ -323,7 +323,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
         }
 
         /**
-         * > This parameter is unavailable.
+         * > This parameter is not publicly available.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -377,7 +377,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             private String value; 
 
             /**
-             * > This parameter is unavailable.
+             * > This parameter is not publicly available.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -385,7 +385,7 @@ public class DescribeImagePipelineExecutionsRequest extends Request {
             }
 
             /**
-             * > This parameter is unavailable.
+             * > This parameter is not publicly available.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -166,7 +166,7 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         }
 
         /**
-         * The region ID of the deployment set. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +193,14 @@ public class DescribeDeploymentSetSupportedInstanceTypeFamilyRequest extends Req
         }
 
         /**
-         * Strategy.
+         * The deployment strategy. Valid values:
+         * <p>
+         * 
+         * *   Availability: high availability strategy.
+         * *   AvailabilityGroup: high availability group strategy.
+         * *   LowLatency: low latency strategy.
+         * 
+         * Default value: Availability.
          */
         public Builder strategy(String strategy) {
             this.putQueryParameter("Strategy", strategy);

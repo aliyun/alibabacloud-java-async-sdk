@@ -149,7 +149,7 @@ public class DeleteActivationRequest extends Request {
         }
 
         /**
-         * The ID of the activation code.
+         * The ID of the request.
          */
         public Builder activationId(String activationId) {
             this.putQueryParameter("ActivationId", activationId);
@@ -176,10 +176,7 @@ public class DeleteActivationRequest extends Request {
         }
 
         /**
-         * The region ID of the activation code. The following regions are supported: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The ID of the activation code.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

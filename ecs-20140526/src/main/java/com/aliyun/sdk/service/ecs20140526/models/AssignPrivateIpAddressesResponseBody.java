@@ -50,7 +50,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the ENI.
+         * Details about the ENI and the secondary private IP addresses that are assigned to the ENI.
          */
         public Builder assignedPrivateIpAddressesSet(AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet) {
             this.assignedPrivateIpAddressesSet = assignedPrivateIpAddressesSet;
@@ -58,7 +58,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +204,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             private PrivateIpSet privateIpSet; 
 
             /**
-             * > This parameter is in invitational preview and is unavailable for general users.
+             * > 该参数正在邀测中，暂未开放使用。
              */
             public Builder ipv4PrefixSet(Ipv4PrefixSet ipv4PrefixSet) {
                 this.ipv4PrefixSet = ipv4PrefixSet;
@@ -220,7 +220,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
             }
 
             /**
-             * The private IP addresses assigned to the ENI.
+             * The secondary private IP addresses that are assigned to the ENI.
              */
             public Builder privateIpSet(PrivateIpSet privateIpSet) {
                 this.privateIpSet = privateIpSet;

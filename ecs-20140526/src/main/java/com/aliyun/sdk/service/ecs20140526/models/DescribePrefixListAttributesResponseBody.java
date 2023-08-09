@@ -122,11 +122,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The IP address family of the prefix list. Valid values:
-         * <p>
-         * 
-         * *   IPv4
-         * *   IPv6
+         * The name of the prefix list.
          */
         public Builder addressFamily(String addressFamily) {
             this.addressFamily = addressFamily;
@@ -134,7 +130,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the prefix list was created.
+         * The maximum number of entries that the prefix list can contain.
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -142,7 +138,11 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The description of the prefix list.
+         * The IP address family of the prefix list. Valid values:
+         * <p>
+         * 
+         * *   IPv4
+         * *   IPv6
          */
         public Builder description(String description) {
             this.description = description;
@@ -150,7 +150,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the entries in the prefix list.
+         * The description of the entry in the prefix list.
          */
         public Builder entries(Entries entries) {
             this.entries = entries;
@@ -158,7 +158,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum number of entries that the prefix list can contain.
+         * The ID of the request.
          */
         public Builder maxEntries(Integer maxEntries) {
             this.maxEntries = maxEntries;
@@ -166,7 +166,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the prefix list.
+         * Details about the entries in the prefix list.
          */
         public Builder prefixListId(String prefixListId) {
             this.prefixListId = prefixListId;
@@ -174,7 +174,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the prefix list.
+         * The ID of the prefix list.
          */
         public Builder prefixListName(String prefixListName) {
             this.prefixListName = prefixListName;
@@ -182,7 +182,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The description of the prefix list.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -234,7 +234,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * The CIDR block in the entry in the prefix list.
+             * Cidr.
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -242,7 +242,7 @@ public class DescribePrefixListAttributesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the entry in the prefix list.
+             * The CIDR block in the entry in the prefix list.
              */
             public Builder description(String description) {
                 this.description = description;

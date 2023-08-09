@@ -263,6 +263,136 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
+         * The working directory of the command on the instance.
+         * <p>
+         * 
+         * Default value:
+         * 
+         * *   For Linux instances, the default value is the home directory of the root user, which is the `/root` directory.
+         * *   For Windows instances, the default value is the directory where the Cloud Assistant client process resides. Example: `C:\Windows\System32\`.
+         */
+        public Builder commandContent(String commandContent) {
+            this.putQueryParameter("CommandContent", commandContent);
+            this.commandContent = commandContent;
+            return this;
+        }
+
+        /**
+         * The tags to add to the command.
+         */
+        public Builder contentEncoding(String contentEncoding) {
+            this.putQueryParameter("ContentEncoding", contentEncoding);
+            this.contentEncoding = contentEncoding;
+            return this;
+        }
+
+        /**
+         * The command type. Valid values:
+         * <p>
+         * 
+         * *   RunBatScript: batch commands. These commands are applicable to Windows instances.
+         * *   RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.
+         * *   RunShellScript: shell commands. These commands are applicable to Linux instances.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * The encoding mode of the command content (CommandContent). Valid values:
+         * <p>
+         * 
+         * *   PlainText: The command content is not encoded.
+         * *   Base64: The command content is Base64-encoded.
+         * 
+         * Default value: Base64.
+         * 
+         * > If the specified value of this parameter is invalid, Base64 is used by default.
+         */
+        public Builder enableParameter(Boolean enableParameter) {
+            this.putQueryParameter("EnableParameter", enableParameter);
+            this.enableParameter = enableParameter;
+            return this;
+        }
+
+        /**
+         * The description of the command. The description supports all character sets and can be up to 512 characters in length.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * The name of the command. The name supports all character sets and can be up to 128 characters in length.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Tag N to add to the command.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * Specifies whether to use custom parameters in the command.
+         * <p>
+         * 
+         * Default value: false.
+         */
+        public Builder timeout(Long timeout) {
+            this.putQueryParameter("Timeout", timeout);
+            this.timeout = timeout;
+            return this;
+        }
+
+        /**
          * The Base64-encoded content of the command.
          * <p>
          * 
@@ -301,133 +431,6 @@ public class CreateCommandRequest extends Request {
          *         *   Linux: 2.2.3.309
          *         *   Windows: 2.1.3.309
          */
-        public Builder commandContent(String commandContent) {
-            this.putQueryParameter("CommandContent", commandContent);
-            this.commandContent = commandContent;
-            return this;
-        }
-
-        /**
-         * The encoding mode of the command content (CommandContent). Valid values:
-         * <p>
-         * 
-         * *   PlainText: The command content is not encoded.
-         * *   Base64: The command content is Base64-encoded.
-         * 
-         * Default value: Base64.
-         * 
-         * > If the specified value of this parameter is invalid, Base64 is used by default.
-         */
-        public Builder contentEncoding(String contentEncoding) {
-            this.putQueryParameter("ContentEncoding", contentEncoding);
-            this.contentEncoding = contentEncoding;
-            return this;
-        }
-
-        /**
-         * The description of the command. The description supports all character sets and can be up to 512 characters in length.
-         */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
-            return this;
-        }
-
-        /**
-         * Specifies whether to use custom parameters in the command.
-         * <p>
-         * 
-         * Default value: false.
-         */
-        public Builder enableParameter(Boolean enableParameter) {
-            this.putQueryParameter("EnableParameter", enableParameter);
-            this.enableParameter = enableParameter;
-            return this;
-        }
-
-        /**
-         * The name of the command. The name supports all character sets and can be up to 128 characters in length.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("Name", name);
-            this.name = name;
-            return this;
-        }
-
-        /**
-         * OwnerAccount.
-         */
-        public Builder ownerAccount(String ownerAccount) {
-            this.putQueryParameter("OwnerAccount", ownerAccount);
-            this.ownerAccount = ownerAccount;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * The ID of the region in which to create the command. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerAccount.
-         */
-        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
-            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
-            this.resourceOwnerAccount = resourceOwnerAccount;
-            return this;
-        }
-
-        /**
-         * ResourceOwnerId.
-         */
-        public Builder resourceOwnerId(Long resourceOwnerId) {
-            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
-            this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * The tags to add to the command.
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The maximum timeout period for the command execution on the instance. Unit: seconds. When a command cannot be run, a timeout error occurs. After that, the command process is forcefully terminated by canceling the PID of the command.
-         * <p>
-         * 
-         * Default value: 60.
-         */
-        public Builder timeout(Long timeout) {
-            this.putQueryParameter("Timeout", timeout);
-            this.timeout = timeout;
-            return this;
-        }
-
-        /**
-         * The command type. Valid values:
-         * <p>
-         * 
-         * *   RunBatScript: batch commands. These commands are applicable to Windows instances.
-         * *   RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.
-         * *   RunShellScript: shell commands. These commands are applicable to Linux instances.
-         */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
             this.type = type;
@@ -435,13 +438,7 @@ public class CreateCommandRequest extends Request {
         }
 
         /**
-         * The working directory of the command on the instance.
-         * <p>
-         * 
-         * Default value:
-         * 
-         * *   For Linux instances, the default value is the home directory of the root user, which is the `/root` directory.
-         * *   For Windows instances, the default value is the directory where the Cloud Assistant client process resides. Example: `C:\Windows\System32\`.
+         * /root/
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);
@@ -495,12 +492,10 @@ public class CreateCommandRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string.
              * <p>
              * 
-             * If a single tag is specified to query resources, up to 1,000 resources that have this tag added can be displayed in the response. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags added can be displayed in the response. To query more than 1,000 resources that have specified tags added, call the [ListTagResources](~~110425~~) operation.
-             * 
-             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * It can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -508,10 +503,7 @@ public class CreateCommandRequest extends Request {
             }
 
             /**
-             * The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string.
-             * <p>
-             * 
-             * It can be up to 128 characters in length and cannot contain `http://` or `https://`.
+             * The ID of the command.
              */
             public Builder value(String value) {
                 this.value = value;

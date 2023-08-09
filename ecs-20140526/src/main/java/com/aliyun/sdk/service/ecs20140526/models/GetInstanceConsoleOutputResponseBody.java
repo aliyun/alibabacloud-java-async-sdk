@@ -74,7 +74,7 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The Base64-encoded command output of the instance.
+         * ConsoleOutput.
          */
         public Builder consoleOutput(String consoleOutput) {
             this.consoleOutput = consoleOutput;
@@ -82,7 +82,7 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The instance ID.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -90,7 +90,7 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the last log entry was generated in the Linux kernel. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC+8.
+         * LastUpdateTime.
          */
         public Builder lastUpdateTime(String lastUpdateTime) {
             this.lastUpdateTime = lastUpdateTime;
@@ -98,7 +98,7 @@ public class GetInstanceConsoleOutputResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -163,7 +163,7 @@ public class GetInstanceConsoleOutputRequest extends Request {
         }
 
         /**
-         * The instance ID.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -190,7 +190,7 @@ public class GetInstanceConsoleOutputRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -199,13 +199,7 @@ public class GetInstanceConsoleOutputRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove formatting symbols from the returned command output. Valid values:
-         * <p>
-         * 
-         * *   true
-         * *   false
-         * 
-         * Default value: false.
+         * RemoveSymbols.
          */
         public Builder removeSymbols(Boolean removeSymbols) {
             this.putQueryParameter("RemoveSymbols", removeSymbols);

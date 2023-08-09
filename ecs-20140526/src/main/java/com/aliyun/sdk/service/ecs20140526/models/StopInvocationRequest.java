@@ -172,7 +172,7 @@ public class StopInvocationRequest extends Request {
         }
 
         /**
-         * The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query the IDs of all command tasks.
+         * The ID of instance N on which you want to stop the process of the Cloud Assistant command. You can specify up to 50 instance IDs in each request. Valid values of N: 1 to 50.
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);
@@ -199,7 +199,7 @@ public class StopInvocationRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The ID of the command task. You can call the [DescribeInvocations](~~64840~~) operation to query the IDs of all command tasks.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

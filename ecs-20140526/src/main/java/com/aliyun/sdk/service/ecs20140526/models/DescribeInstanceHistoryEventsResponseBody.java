@@ -86,7 +86,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about historical system events of the instance.
+         * The information about instance system events.
          */
         public Builder instanceSystemEventSet(InstanceSystemEventSet instanceSystemEventSet) {
             this.instanceSystemEventSet = instanceSystemEventSet;
@@ -94,7 +94,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of instances.
+         * The total number of instances returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -343,7 +343,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              * *   cloud_efficiency: ultra disk
              * *   cloud_ssd: standard SSD
              * *   cloud_essd: enhanced SSD (ESSD)
-             * *   local_ssd_pro: I/O-intensive local disk.
+             * *   local_ssd_pro: I/O-intensive local disk
              * *   local_hdd_pro: throughput-intensive local disk
              * *   ephemeral: retired local disk
              * *   ephemeral_ssd: retired local SSD
@@ -510,6 +510,9 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
         @NameInMap("Rack")
         private String rack;
 
+        @NameInMap("ResponseResult")
+        private String responseResult;
+
         private ExtendedAttribute(Builder builder) {
             this.canAccept = builder.canAccept;
             this.code = builder.code;
@@ -524,6 +527,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             this.punishType = builder.punishType;
             this.punishUrl = builder.punishUrl;
             this.rack = builder.rack;
+            this.responseResult = builder.responseResult;
         }
 
         public static Builder builder() {
@@ -625,6 +629,13 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             return this.rack;
         }
 
+        /**
+         * @return responseResult
+         */
+        public String getResponseResult() {
+            return this.responseResult;
+        }
+
         public static final class Builder {
             private String canAccept; 
             private String code; 
@@ -639,9 +650,10 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             private String punishType; 
             private String punishUrl; 
             private String rack; 
+            private String responseResult; 
 
             /**
-             * CanAccept.
+             * Indicates whether the event can be handled.
              */
             public Builder canAccept(String canAccept) {
                 this.canAccept = canAccept;
@@ -649,7 +661,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the system event type.
+             * The code of the security violation.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -684,8 +696,8 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              * The type of the host. Valid values:
              * <p>
              * 
-             * *   ddh: dedicated host
-             * *   managehost: physical machine in a smart hosting pool
+             * - ddh: dedicated host
+             * - managehost: physical machine in a smart hosting pool
              */
             public Builder hostType(String hostType) {
                 this.hostType = hostType;
@@ -693,7 +705,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the inactive disks that have been released and must be cleared.
+             * The information about the inactive disks that have been released and must be cleared.
              */
             public Builder inactiveDisks(InactiveDisks inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -701,7 +713,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The migration solution of the instance. Valid value: MigrationPlan. Instances can be migrated only by using migration plans.
+             * The migration solution of the instance. Valid value: MigrationPlan, which indicates that instances can be migrated only by using migration plans.
              */
             public Builder migrationOptions(MigrationOptions migrationOptions) {
                 this.migrationOptions = migrationOptions;
@@ -709,7 +721,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The online repair policy of the damaged disk. Valid value: IsolateOnly, which indicates that damaged disks are isolated but not repaired.
+             * The online repair policy for the damaged disk. Valid value: IsolateOnly, which indicates that damaged disks are isolated but not repaired.
              */
             public Builder onlineRepairPolicy(String onlineRepairPolicy) {
                 this.onlineRepairPolicy = onlineRepairPolicy;
@@ -717,7 +729,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PunishDomain.
+             * The illegal domain name.
              */
             public Builder punishDomain(String punishDomain) {
                 this.punishDomain = punishDomain;
@@ -725,7 +737,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PunishType.
+             * The type of the penalty.
              */
             public Builder punishType(String punishType) {
                 this.punishType = punishType;
@@ -733,7 +745,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PunishUrl.
+             * The illegal URL.
              */
             public Builder punishUrl(String punishUrl) {
                 this.punishUrl = punishUrl;
@@ -745,6 +757,14 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
              */
             public Builder rack(String rack) {
                 this.rack = rack;
+                return this;
+            }
+
+            /**
+             * ResponseResult.
+             */
+            public Builder responseResult(String responseResult) {
+                this.responseResult = responseResult;
                 return this;
             }
 
@@ -966,7 +986,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the scheduled execution of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The scheduled start time of the system event. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -982,7 +1002,7 @@ public class DescribeInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of a resource. Valid values:
+             * The type of the resource. Valid values:
              * <p>
              * 
              * *   instance: ECS instance

@@ -86,7 +86,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The number of instances that were deregistered.
+         * The activation codes and their usage information.
          */
         public Builder activationList(java.util.List < ActivationList> activationList) {
             this.activationList = activationList;
@@ -94,7 +94,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the activation code and its usage information.
+         * The page number.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The number of entries per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the activation code was created.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key of the activation code.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value of the activation code.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -339,7 +339,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             private Long timeToLiveInHours; 
 
             /**
-             * Information about the tags of the activation code.
+             * The ID of the activation code.
              */
             public Builder activationId(String activationId) {
                 this.activationId = activationId;
@@ -347,7 +347,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of times that the activation code can be used to register managed instances.
+             * The time when the activation code was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -355,7 +355,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the activation code.
+             * The number of instances that were deregistered.
              */
             public Builder deregisteredCount(Integer deregisteredCount) {
                 this.deregisteredCount = deregisteredCount;
@@ -363,7 +363,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The default instance name prefix.
+             * The description of the activation code.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -371,7 +371,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the activation code. Unit: hours.
+             * Indicates whether the activation code is disabled.
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -379,7 +379,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of registered instances.
+             * The maximum number of times that the activation code can be used to register managed instances.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -387,7 +387,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses of the hosts that can use the activation code.
+             * The default instance name prefix.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -395,7 +395,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the activation code.
+             * The IP addresses of hosts that are allowed to use the activation code.
              */
             public Builder ipAddressRange(String ipAddressRange) {
                 this.ipAddressRange = ipAddressRange;
@@ -403,7 +403,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the activation code is disabled.
+             * The number of instances that were registered.
              */
             public Builder registeredCount(Integer registeredCount) {
                 this.registeredCount = registeredCount;
@@ -411,7 +411,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * The key of tag N of the activation code.
+             * The tags of the activation code.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -419,7 +419,7 @@ public class DescribeActivationsResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the tags of the activation code.
+             * The validity period of the activation code. Unit: hours.
              */
             public Builder timeToLiveInHours(Long timeToLiveInHours) {
                 this.timeToLiveInHours = timeToLiveInHours;

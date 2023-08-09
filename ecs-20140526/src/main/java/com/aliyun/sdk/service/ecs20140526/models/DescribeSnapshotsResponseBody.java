@@ -98,7 +98,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +130,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the snapshots.
+         * The details about the snapshots.
          */
         public Builder snapshots(Snapshots snapshots) {
             this.snapshots = snapshots;
@@ -138,7 +138,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of snapshots.
+         * The total number of snapshots returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -580,10 +580,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String usage; 
 
             /**
-             * The snapshot type.
+             * The type of the snapshot.
              * <p>
              * 
-             * >  This parameter will be removed in the future. We recommend that you use the `InstantAccess` parameter to ensure future compatibility.
+             * >  This parameter will be deprecated in the future. We recommend that you use `InstantAccess` to ensure future compatibility.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -618,8 +618,8 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * Indicates whether the instant access feature is enabled. Valid values:
              * <p>
              * 
-             * *   true: The instant access feature is enabled. This feature can be enabled only for enhanced SSDs (ESSDs).
-             * *   false: The instant access feature is disabled. The snapshot is a normal snapshot for which the instant access feature is disabled.
+             * *   true. This feature can be enabled only for enhanced SSDs (ESSDs).
+             * *   false. The snapshot is a normal snapshot for which the instant access feature is disabled.
              */
             public Builder instantAccess(Boolean instantAccess) {
                 this.instantAccess = instantAccess;
@@ -670,7 +670,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining time required to create the snapshot. Unit: seconds.
+             * The remaining time that is required to create the snapshot. Unit: seconds.
              */
             public Builder remainTime(Integer remainTime) {
                 this.remainTime = remainTime;
@@ -678,7 +678,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -686,7 +686,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The retention period of the automatic snapshot. Unit: days.
+             * The retention period of the automatic snapshot. Unit: day.
              */
             public Builder retentionDays(Integer retentionDays) {
                 this.retentionDays = retentionDays;
@@ -702,7 +702,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the snapshot. This parameter is returned only if a snapshot name was specified when the snapshot was created.
+             * The display name of the snapshot. This parameter is returned only if a snapshot display name was specified when the snapshot was created.
              */
             public Builder snapshotName(String snapshotName) {
                 this.snapshotName = snapshotName;
@@ -718,12 +718,12 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of snapshot. Valid values:
+             * The type of the snapshot. Valid values:
              * <p>
              * 
-             * *   auto or timer: automatic snapshot.
-             * *   user: manual snapshot.
-             * *   all: all snapshot types.
+             * *   auto or timer: automatic snapshot
+             * *   user: manual snapshot
+             * *   all: all snapshot types
              */
             public Builder snapshotType(String snapshotType) {
                 this.snapshotType = snapshotType;
@@ -731,7 +731,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source disk. This parameter is retained even after the source disk is released.
+             * The source disk ID. This parameter is retained even after the source disk is released.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -739,7 +739,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The capacity of the source disk for which the snapshot was created. Unit: GiB.
+             * The capacity of the source disk. Unit: GiB.
              */
             public Builder sourceDiskSize(String sourceDiskSize) {
                 this.sourceDiskSize = sourceDiskSize;
@@ -767,7 +767,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source snapshot.
+             * The source snapshot ID.
              */
             public Builder sourceSnapshotId(String sourceSnapshotId) {
                 this.sourceSnapshotId = sourceSnapshotId;
@@ -778,7 +778,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              * The type of the source disk.
              * <p>
              * 
-             * > This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.
+             * > This parameter will be deprecated in the future. We recommend that you use other parameters to ensure future compatibility.
              */
             public Builder sourceStorageType(String sourceStorageType) {
                 this.sourceStorageType = sourceStorageType;
@@ -786,7 +786,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The snapshot status. Valid values:
+             * The status of the snapshot. Valid values:
              * <p>
              * 
              * *   progressing
@@ -799,7 +799,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the snapshot.
+             * The tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

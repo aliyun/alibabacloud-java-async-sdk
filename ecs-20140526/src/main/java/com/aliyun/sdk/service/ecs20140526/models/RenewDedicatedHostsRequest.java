@@ -192,7 +192,7 @@ public class RenewDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence?](~~25693~~)
+         * The request ID.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -201,7 +201,7 @@ public class RenewDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The IDs of dedicated hosts. You can specify the IDs of up to 100 subscription dedicated hosts. Specify the dedicated host IDs in a JSON array. Example: `["dh-xxxxxxxxx", "dh-yyyyyyyyy", … "dh-zzzzzzzzz"]`. Separate the IDs with commas (,).
+         * The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder dedicatedHostIds(String dedicatedHostIds) {
             this.putQueryParameter("DedicatedHostIds", dedicatedHostIds);
@@ -228,19 +228,6 @@ public class RenewDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The renewal duration. Valid values:
-         * <p>
-         * 
-         * *   Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
-         * *   Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.
-         */
-        public Builder period(Integer period) {
-            this.putQueryParameter("Period", period);
-            this.period = period;
-            return this;
-        }
-
-        /**
          * The unit of the renewal period. Valid values:
          * <p>
          * 
@@ -249,6 +236,15 @@ public class RenewDedicatedHostsRequest extends Request {
          * 
          * Default value: Month.
          */
+        public Builder period(Integer period) {
+            this.putQueryParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate a client token. Make sure that a unique client token is used for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence?](~~25693~~)
+         */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
             this.periodUnit = periodUnit;
@@ -256,7 +252,11 @@ public class RenewDedicatedHostsRequest extends Request {
         }
 
         /**
-         * The region ID of the dedicated host. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The renewal duration. Valid values:
+         * <p>
+         * 
+         * *   Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.
+         * *   Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -135,13 +135,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return on each page. Maximum value: 100.
-         * <p>
-         * 
-         * Default value:
-         * 
-         * *   If this parameter is left empty, the default value is 10.
-         * *   If this parameter is set to a value greater than 100, the default value is 100.
+         * The ID of the request.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -150,7 +144,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The IDs of diagnostic metrics.
+         * The ID of diagnostic metric.
          */
         public Builder metricIds(java.util.List < String > metricIds) {
             this.putQueryParameter("MetricIds", metricIds);
@@ -159,7 +153,13 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeDiagnosticMetrics operation. Leave this parameter empty the first time you call this operation.
+         * The maximum number of entries to return on each page. Maximum value: 100.
+         * <p>
+         * 
+         * Default value:
+         * 
+         * *   If this parameter is left empty, the default value is 10.
+         * *   If this parameter is set to a value greater than 100, the default value is 100.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -168,7 +168,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The region ID of the diagnostic metric. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The IDs of diagnostic metrics.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -177,7 +177,7 @@ public class DescribeDiagnosticMetricsRequest extends Request {
         }
 
         /**
-         * The resource type supported by the diagnostic metric.
+         * The query token. Set the value to the `NextToken` value returned in the last call to the DescribeDiagnosticMetrics operation. Leave this parameter empty the first time you call this operation.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

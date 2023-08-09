@@ -70,7 +70,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The order ID.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,9 +145,9 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
              * The unit of currency for the bill.
              * <p>
              * 
-             * Alibaba Cloud China site (aliyun.com): CNY.
+             * Alibaba Cloud China site (aliyun.com): CNY
              * 
-             * Alibaba Cloud International site (alibabacloud.com): USD.
+             * Alibaba Cloud International site (alibabacloud.com): USD
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -155,7 +155,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The cost value.
+             * The charged amount.
              */
             public Builder fee(String fee) {
                 this.fee = fee;
@@ -163,7 +163,7 @@ public class ModifyDedicatedHostsChargeTypeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated host.
+             * The IDs of the dedicated hosts.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

@@ -204,12 +204,7 @@ public class DescribeActivationsRequest extends Request {
         }
 
         /**
-         * The page number of the page to return.
-         * <p>
-         * 
-         * Pages start from page 1.
-         * 
-         * Default value: 1.
+         * The ID of the activation code.
          */
         public Builder activationId(String activationId) {
             this.putQueryParameter("ActivationId", activationId);
@@ -218,12 +213,7 @@ public class DescribeActivationsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum value: 50.
-         * 
-         * Default value: 10.
+         * The default instance name prefix.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -250,7 +240,12 @@ public class DescribeActivationsRequest extends Request {
         }
 
         /**
-         * An array that consists of the tags of the activation code.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -259,7 +254,12 @@ public class DescribeActivationsRequest extends Request {
         }
 
         /**
-         * The information about the tag of the activation code.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: 1 to 50.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -268,7 +268,10 @@ public class DescribeActivationsRequest extends Request {
         }
 
         /**
-         * The default instance name prefix.
+         * The region ID of the command. Supported regions: China (Qingdao), China (Beijing), China (Zhangjiakou), China (Hohhot), China (Hangzhou), China (Shanghai), China (Shenzhen), China (Heyuan), and China (Hong Kong).
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -295,12 +298,7 @@ public class DescribeActivationsRequest extends Request {
         }
 
         /**
-         * The key of tag N of the activation code. Valid values of N: 1 to 20. The tag key cannot be an empty string.
-         * <p>
-         * 
-         * Up to 1,000 resources that have the specified tags can be returned in the response. To query more than 1,000 resources that have the specified tags, call the [ListTagResources](~~110425~~) operation.
-         * 
-         * The tag key is up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+         * The tags of the activation code.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -354,7 +352,12 @@ public class DescribeActivationsRequest extends Request {
             private String value; 
 
             /**
-             * The number of entries to return on each page.
+             * The key of tag N of the activation code. Valid values of N: 1 to 20. The tag key cannot be an empty string.
+             * <p>
+             * 
+             * If a single tag is specified to query resources, up to 1,000 resources that have this tag can be returned. If multiple tags are specified to query resources, up to 1,000 resources that have all these tags can be returned. To query more than 1,000 resources that have specified tags, call the [ListTagResources](~~110425~~) operation.
+             * 
+             * The tag key can be up to 64 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -362,7 +365,10 @@ public class DescribeActivationsRequest extends Request {
             }
 
             /**
-             * The ID of the request.
+             * The value of tag N of the activation code. Valid values of N: 1 to 20. The tag value can be an empty string.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

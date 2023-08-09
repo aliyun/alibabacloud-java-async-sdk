@@ -166,7 +166,7 @@ public class DescribeReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The region ID of the reserved instance. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The region ID of the reserved instances. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -175,7 +175,7 @@ public class DescribeReservedInstanceAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The ID of reserved instance N.
+         * The IDs of the reserved instances.
          */
         public Builder reservedInstanceId(java.util.List < String > reservedInstanceId) {
             this.putQueryParameter("ReservedInstanceId", reservedInstanceId);

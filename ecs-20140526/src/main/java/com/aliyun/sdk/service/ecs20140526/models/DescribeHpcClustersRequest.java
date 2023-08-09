@@ -191,7 +191,12 @@ public class DescribeHpcClustersRequest extends Request {
         }
 
         /**
-         * The IDs of HPC clusters. The value is a JSON array that consists of up to 100 HPC cluster IDs. Separate the HPC cluster IDs with commas (,).
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,12 +205,12 @@ public class DescribeHpcClustersRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The number of entries per page.
          * <p>
          * 
-         * Pages start from page 1.
+         * Maximum value: 100.
          * 
-         * Default value: 1.
+         * Default value: 10.
          */
         public Builder hpcClusterIds(String hpcClusterIds) {
             this.putQueryParameter("HpcClusterIds", hpcClusterIds);
@@ -232,12 +237,7 @@ public class DescribeHpcClustersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
-         * <p>
-         * 
-         * Maximum value: 100.
-         * 
-         * Default value: 10.
+         * The number of entries per page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -246,7 +246,7 @@ public class DescribeHpcClustersRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The request ID.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -255,7 +255,7 @@ public class DescribeHpcClustersRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among the requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The IDs of HPC clusters. The value is a JSON array that consists of up to 100 HPC cluster IDs. Separate the HPC cluster IDs with commas (,).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

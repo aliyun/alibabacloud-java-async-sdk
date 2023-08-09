@@ -233,13 +233,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The retention period of the snapshot copy in the destination region. Unit: days. Valid values:
-         * <p>
-         * 
-         * *   \-1: The snapshot is permanently retained.
-         * *   1 to 65535: The automatic snapshot is retained for the specified number of days.
-         * 
-         * Default value: -1.
+         * The ID of the request.
          */
         public Builder copiedSnapshotsRetentionDays(Integer copiedSnapshotsRetentionDays) {
             this.putQueryParameter("CopiedSnapshotsRetentionDays", copiedSnapshotsRetentionDays);
@@ -248,11 +242,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable cross-region replication for the automatic snapshot.
-         * <p>
-         * 
-         * *   true: enables cross-region replication for the automatic snapshot.
-         * *   false: disables cross-region replication for the automatic snapshot.
+         * The destination region to which to copy the snapshot. You can specify only a single destination region.
          */
         public Builder enableCrossRegionCopy(Boolean enableCrossRegionCopy) {
             this.putQueryParameter("EnableCrossRegionCopy", enableCrossRegionCopy);
@@ -288,7 +278,13 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The destination region to which to copy the snapshot. You can specify only a single destination region.
+         * The retention period of the snapshot copy in the destination region. Unit: days. Valid values:
+         * <p>
+         * 
+         * *   \-1: The snapshot is permanently retained.
+         * *   1 to 65535: The automatic snapshot is retained for the specified number of days.
+         * 
+         * Default value: -1.
          */
         public Builder targetCopyRegions(String targetCopyRegions) {
             this.putQueryParameter("TargetCopyRegions", targetCopyRegions);
@@ -297,7 +293,7 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The ID of the automatic snapshot policy. You can call the [DescribeAutoSnapshotPolicyEx](~~25530~~) operation to query available automatic snapshot policies.
+         * The name of the automatic snapshot policy. If this parameter is not specified, the original name of the automatic snapshot policy is retained.
          */
         public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
             this.putQueryParameter("autoSnapshotPolicyId", autoSnapshotPolicyId);
@@ -306,7 +302,13 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The name of the automatic snapshot policy. If this parameter is not specified, the original name of the automatic snapshot policy is retained.
+         * The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. For example, a value of 1 indicates 01:00:00.
+         * <p>
+         * 
+         * To schedule multiple automatic snapshots to be created in a day, you can specify multiple hours.
+         * 
+         * *   You can specify up to 24 points in time.
+         * *   You must set this parameter to a JSON array such as `["0", "1", ... "23"]`. Separate the points in time with commas (,).
          */
         public Builder autoSnapshotPolicyName(String autoSnapshotPolicyName) {
             this.putQueryParameter("autoSnapshotPolicyName", autoSnapshotPolicyName);
@@ -315,26 +317,11 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The region ID of the automatic snapshot policy to be modified. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
+         * The ID of the automatic snapshot policy. You can call the [DescribeAutoSnapshotPolicyEx](~~25530~~) operation to query available automatic snapshot policies.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The days of the week on which to create automatic snapshots. Valid values are 1 to 7, which correspond to the days of the week. For example, a value of 1 indicates Monday.
-         * <p>
-         * 
-         * To schedule multiple automatic snapshots to be created in a week, you can specify multiple days.
-         * 
-         * *   You can specify up to seven days over a one-week period.
-         * *   You must set this parameter to a JSON array such as `["1", "2" ... "7"]`. Separate the values in the array with commas (,).
-         */
-        public Builder repeatWeekdays(String repeatWeekdays) {
-            this.putQueryParameter("repeatWeekdays", repeatWeekdays);
-            this.repeatWeekdays = repeatWeekdays;
             return this;
         }
 
@@ -347,6 +334,19 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
          * 
          * Default value: -1.
          */
+        public Builder repeatWeekdays(String repeatWeekdays) {
+            this.putQueryParameter("repeatWeekdays", repeatWeekdays);
+            this.repeatWeekdays = repeatWeekdays;
+            return this;
+        }
+
+        /**
+         * Specifies whether to enable cross-region replication for the automatic snapshot.
+         * <p>
+         * 
+         * *   true: enables cross-region replication for the automatic snapshot.
+         * *   false: disables cross-region replication for the automatic snapshot.
+         */
         public Builder retentionDays(Integer retentionDays) {
             this.putQueryParameter("retentionDays", retentionDays);
             this.retentionDays = retentionDays;
@@ -354,13 +354,13 @@ public class ModifyAutoSnapshotPolicyExRequest extends Request {
         }
 
         /**
-         * The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. For example, a value of 1 indicates 01:00:00.
+         * The days of the week on which to create automatic snapshots. Valid values are 1 to 7, which correspond to the days of the week. For example, a value of 1 indicates Monday.
          * <p>
          * 
-         * To schedule multiple automatic snapshots to be created in a day, you can specify multiple hours.
+         * To schedule multiple automatic snapshots to be created in a week, you can specify multiple days.
          * 
-         * *   You can specify up to 24 points in time.
-         * *   You must set this parameter to a JSON array such as `["0", "1", ... "23"]`. Separate the points in time with commas (,).
+         * *   You can specify up to seven days over a one-week period.
+         * *   You must set this parameter to a JSON array such as `["1", "2" ... "7"]`. Separate the values in the array with commas (,).
          */
         public Builder timePoints(String timePoints) {
             this.putQueryParameter("timePoints", timePoints);

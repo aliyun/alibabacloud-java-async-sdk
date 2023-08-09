@@ -304,7 +304,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value specifies that the elasticity assurance can be applied for an unlimited number of times within its effective period.
+         * The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value indicates that the elasticity assurance can be applied an unlimited number of times within its effective period.
          * <p>
          * 
          * Default value: Unlimited.
@@ -316,7 +316,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique across requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the token, but make sure that the token is unique among requests. The `token` can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -328,7 +328,7 @@ public class CreateElasticityAssuranceRequest extends Request {
          * The description of the elasticity assurance. The description must be 2 to 256 characters in length and cannot start with `http://` or `https://`.
          * <p>
          * 
-         * By default, this parameter is empty.
+         * This parameter is empty by default.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -337,7 +337,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The total number of instances of an instance type for which you want to reserve capacity.
+         * The total number of instances for which the capacity of an instance type is reserved.
          * <p>
          * 
          * Valid values: 1 to 1000.
@@ -349,7 +349,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * > This parameter is no longer available.
+         * > This parameter is no longer used.
          */
         public Builder instanceCpuCoreCount(Integer instanceCpuCoreCount) {
             this.putQueryParameter("InstanceCpuCoreCount", instanceCpuCoreCount);
@@ -391,7 +391,7 @@ public class CreateElasticityAssuranceRequest extends Request {
          * *   When the `PeriodUnit` parameter is set to `Month`, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.
          * *   When the `PeriodUnit` parameter is set to `Year`, the valid values are 1, 2, 3, 4, and 5.
          * 
-         * Default value: 1
+         * Default value: 1.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -460,7 +460,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The tags that are added to the elasticity assurance.
+         * The tags to add to the elasticity assurance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -469,7 +469,7 @@ public class CreateElasticityAssuranceRequest extends Request {
         }
 
         /**
-         * The zone ID of the elasticity assurance. Currently, an elasticity assurance can be used to reserve resources within a single zone.
+         * The zone IDs of the elasticity assurances. Currently, an elasticity assurance can be used to reserve resources within a single zone.
          */
         public Builder zoneId(java.util.List < String > zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -527,7 +527,7 @@ public class CreateElasticityAssuranceRequest extends Request {
              * <p>
              * 
              * *   Open: open private pool
-             * *   Target: targeted private pool
+             * *   Target: specified private pool
              * 
              * Default value: Open.
              */
@@ -537,7 +537,7 @@ public class CreateElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * The name of the elasticity assurance. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+             * The name of the elasticity assurance. The name must be 2 to 128 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
              */
             public Builder name(String name) {
                 this.name = name;
@@ -590,7 +590,7 @@ public class CreateElasticityAssuranceRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. You cannot specify empty strings as tag keys. The tag key can be up to 128 characters in length, but cannot contain `http://` or `https://`, nor start with `acs:` or `aliyun`.
+             * The key of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -598,7 +598,7 @@ public class CreateElasticityAssuranceRequest extends Request {
             }
 
             /**
-             * The value of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length, but cannot contain `http://` or `https://`, nor start with `acs:`.
+             * The value of tag N to add to the elasticity assurance. Valid values of N: 1 to 20. The tag value can be an empty string. It can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;

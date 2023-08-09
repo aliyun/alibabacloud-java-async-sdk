@@ -387,7 +387,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The security group ID.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The **token** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -396,7 +396,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The request ID.
+         * This parameter is deprecated. Use `Permissions.N.Description` to specify the description of security group rule N.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -405,7 +405,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Ipv6DestCidrIp` to specify the destination IPv6 CIDR block.
+         * This parameter is deprecated. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.
          */
         public Builder destCidrIp(String destCidrIp) {
             this.putQueryParameter("DestCidrIp", destCidrIp);
@@ -414,7 +414,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.DestPrefixListId` to specify the ID of the destination prefix list.
+         * This parameter is deprecated. Use `Permissions.N.DestGroupId` to specify the ID of the destination security group.
          */
         public Builder destGroupId(String destGroupId) {
             this.putQueryParameter("DestGroupId", destGroupId);
@@ -423,7 +423,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.DestGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the destination security group.
+         * This parameter is deprecated. Use `Permissions.N.DestGroupOwnerAccount` to specify the Alibaba Cloud account that manages the destination security group.
          */
         public Builder destGroupOwnerAccount(String destGroupOwnerAccount) {
             this.putQueryParameter("DestGroupOwnerAccount", destGroupOwnerAccount);
@@ -432,7 +432,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.NicType` to specify the NIC type.
+         * This parameter is deprecated. Use `Permissions.N.DestGroupOwnerId` to specify the ID of the Alibaba Cloud account that manages the destination security group.
          */
         public Builder destGroupOwnerId(Long destGroupOwnerId) {
             this.putQueryParameter("DestGroupOwnerId", destGroupOwnerId);
@@ -441,7 +441,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.PortRange` to specify the range of destination ports.
+         * This parameter is deprecated. Use `Permissions.N.DestPrefixListId` to specify the ID of the destination prefix list.
          */
         public Builder destPrefixListId(String destPrefixListId) {
             this.putQueryParameter("DestPrefixListId", destPrefixListId);
@@ -450,7 +450,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.DestCidrIp` to specify the destination IPv4 CIDR block.
+         * This parameter is deprecated. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.
          */
         public Builder ipProtocol(String ipProtocol) {
             this.putQueryParameter("IpProtocol", ipProtocol);
@@ -459,7 +459,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.DestGroupId` to specify the ID of the destination security group.
+         * This parameter is deprecated. Use `Permissions.N.Ipv6DestCidrIp` to specify the destination IPv6 CIDR block.
          */
         public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
             this.putQueryParameter("Ipv6DestCidrIp", ipv6DestCidrIp);
@@ -468,7 +468,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.SourcePortRange` to specify the range of source ports.
+         * This parameter is deprecated. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
          */
         public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
             this.putQueryParameter("Ipv6SourceCidrIp", ipv6SourceCidrIp);
@@ -477,7 +477,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Description` to specify the description of security group rule N.
+         * This parameter is deprecated. Use `Permissions.N.NicType` to specify the NIC type.
          */
         public Builder nicType(String nicType) {
             this.putQueryParameter("NicType", nicType);
@@ -504,7 +504,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * Security group rule N. Valid values of N: 1 to 100.
+         * The security group rules. Valid values of N: 1 to 100.
          */
         public Builder permissions(java.util.List < Permissions> permissions) {
             this.putQueryParameter("Permissions", permissions);
@@ -513,7 +513,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Priority` to specify the rule priority.
+         * This parameter is deprecated. Use `Permissions.N.Policy` to specify whether to allow outbound access.
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -522,7 +522,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.
+         * This parameter is deprecated. Use `Permissions.N.PortRange` to specify the range of destination ports.
          */
         public Builder portRange(String portRange) {
             this.putQueryParameter("PortRange", portRange);
@@ -531,7 +531,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.IpProtocol` to specify the transport layer protocol.
+         * This parameter is deprecated. Use `Permissions.N.Priority` to specify the rule priority.
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -540,7 +540,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate a value, but you must make sure that the value is unique among requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
+         * The region ID of the source security group. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -567,7 +567,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * Security group rule N. Valid values of N: 1 to 100.
+         * The security group ID.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -576,7 +576,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.Ipv6SourceCidrIp` to specify the source IPv6 CIDR block.
+         * This parameter is deprecated. Use `Permissions.N.SourceCidrIp` to specify the source IPv4 CIDR block.
          */
         public Builder sourceCidrIp(String sourceCidrIp) {
             this.putQueryParameter("SourceCidrIp", sourceCidrIp);
@@ -585,7 +585,7 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
         }
 
         /**
-         * This parameter is deprecated. Use `Permissions.N.DestGroupOwnerAccount` to specify the Alibaba Cloud account that manages the destination security group.
+         * This parameter is deprecated. Use `Permissions.N.SourcePortRange` to specify the range of source ports.
          */
         public Builder sourcePortRange(String sourcePortRange) {
             this.putQueryParameter("SourcePortRange", sourcePortRange);
@@ -795,7 +795,10 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             private String sourcePortRange; 
 
             /**
-             * This parameter is deprecated. Use `Permissions.N.Policy` to specify whether to accept inbound access.
+             * The description of security group rule N. The description must be 1 to 512 characters in length.
+             * <p>
+             * 
+             * Valid values of N: 1 to 100.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -803,12 +806,10 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The destination IPv6 CIDR block to which you want to control access. CIDR blocks and IPv6 addresses are supported.
+             * The destination IPv4 CIDR block for security group rule N. CIDR blocks and IPv4 addresses are supported.
              * <p>
              * 
              * Valid values of N: 1 to 100.
-             * 
-             * > This parameter takes effect only when the destination is ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and the `DestCidrIp` parameter.
              */
             public Builder destCidrIp(String destCidrIp) {
                 this.destCidrIp = destCidrIp;
@@ -816,15 +817,19 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The ID of the destination prefix list to which you want to control access. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
+             * The ID of the destination security group to be referenced in security group rule N.
              * <p>
+             * 
+             * *   At least one of `DestGroupId`, `DestCidrIp`, `Ipv6DestCidrIp`, and `DestPrefixListId` must be configured.
+             * *   If `DestGroupId` is configured but `DestCidrIp` is not configured, the value of `NicType` must be set to intranet.
+             * *   If both `DestGroupId` and `DestCidrIp` are configured, the value of `DestCidrIp` prevails by default.
+             * 
+             * Valid values of N: 1 to 100.
              * 
              * Take note of the following items:
              * 
-             * *   If a security group is in the classic network, you cannot reference prefix lists in the security group rules. For information about the limits on security groups and prefix lists, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
-             * *   If you specify `DestCidrIp`, `Ipv6DestCidrIp`, or `DestGroupId`, Permissions.N.DestPrefixListId is ignored.
-             * 
-             * Valid values of N: 1 to 100.
+             * *   For advanced security groups, security groups cannot be used as authorization objects.
+             * *   For each basic security group, a maximum of 20 security groups can be used as authorization objects.
              */
             public Builder destGroupId(String destGroupId) {
                 this.destGroupId = destGroupId;
@@ -832,11 +837,11 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that manages the destination security group when you set a security group rule across accounts.
+             * The Alibaba Cloud account that manages the destination security group when you configure security group rule N across accounts.
              * <p>
              * 
-             * *   If both `DestGroupOwnerId` and `DestGroupOwnerAccount` are not specified, the rule is created to control access to another security group within your Alibaba Cloud account.
-             * *   If you specify the `DestCidrIp` parameter, the `DestGroupOwnerId` parameter is ignored.
+             * *   If both `DestGroupOwnerAccount` and `DestGroupOwnerId` are not configured, the rule is created to control access to another security group within your Alibaba Cloud account.
+             * *   If `DestCidrIp` is configured, `DestGroupOwnerAccount` is ignored.
              * 
              * Valid values of N: 1 to 100.
              */
@@ -846,17 +851,11 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The type of the network interface controller (NIC) that belongs to the security group rule when the security group is in the classic network. Valid values:
+             * The ID of the Alibaba Cloud account that manages the destination security group when you configure security group rule N across accounts.
              * <p>
              * 
-             * *   internet: public NIC
-             * 
-             * *   intranet: internal NIC
-             * 
-             *     *   If the security group is in a VPC, this parameter is set to intranet by default and cannot be changed.
-             *     *   If you specify only DestGroupId when you configure access between security groups, this parameter must be set to intranet.
-             * 
-             * Default value: internet.
+             * *   If both `DestGroupOwnerId` and `DestGroupOwnerAccount` are not configured, the rule is created to control access to another security group within your Alibaba Cloud account.
+             * *   If `DestCidrIp` is configured, `DestGroupOwnerId` is ignored.
              * 
              * Valid values of N: 1 to 100.
              */
@@ -866,13 +865,13 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The range of destination ports that correspond to the transport layer protocol for the security group rule. Valid values:
+             * The ID of the destination prefix list to be referenced in security group rule N. You can call the [DescribePrefixLists](~~205046~~) operation to query the IDs of available prefix lists.
              * <p>
              * 
-             * *   If the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port number range is 1 to 65535. Specify a port range in the format of \<Start port number>/\<End port number>. Example: 1/200.
-             * *   Valid values if you set the IpProtocol property to icmp: -1/-1.
-             * *   Valid values if you set the IpProtocol property to gre: -1/-1.
-             * *   Valid values if you set the IpProtocol property to all: -1/-1.
+             * Take note of the following items:
+             * 
+             * *   If a security group is in the classic network, you cannot reference prefix lists in the security group rules. For information about the limits on security groups and prefix lists, see the "Security group limits" section in [Limits](~~25412#SecurityGroupQuota1~~).
+             * *   If you configured `DestCidrIp`, `Ipv6DestCidrIp`, or `DestGroupId`, DestPrefixListId is ignored.
              * 
              * Valid values of N: 1 to 100.
              */
@@ -882,8 +881,15 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The destination IPv4 CIDR block to which you want to control access. CIDR blocks and IPv4 addresses are supported.
+             * The transport layer protocol of security group rule N. The value of this parameter is case-insensitive. Valid values:
              * <p>
+             * 
+             * *   TCP.
+             * *   UDP.
+             * *   ICMP.
+             * *   ICMPv6.
+             * *   GRE.
+             * *   ALL: All protocols are supported.
              * 
              * Valid values of N: 1 to 100.
              */
@@ -893,19 +899,12 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The ID of the security group to be referenced as the destination in the security group rule.
+             * The destination IPv6 CIDR block for security group rule N. CIDR blocks and IPv6 addresses are supported.
              * <p>
-             * 
-             * *   At least one of `DestGroupId`, `DestCidrIp`, `Ipv6DestCidrIp`, and `DestPrefixListId` must be specified.
-             * *   If `DestGroupId` is specified but `DestCidrIp` is not specified, the `NicType` parameter must be set to intranet.
-             * *   If both `DestGroupId` and `DestCidrIp` are specified, `DestCidrIp` takes precedence.
              * 
              * Valid values of N: 1 to 100.
              * 
-             * When you call this operation, take note of the following items:
-             * 
-             * *   Security groups cannot be referenced as destinations or sources in the rules of advanced security groups.
-             * *   Up to 20 security groups can be referenced as destinations or sources in the rules of each basic security group.
+             * > This parameter takes effect only when the destination is ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot configure both this parameter and `DestCidrIp`.
              */
             public Builder ipv6DestCidrIp(String ipv6DestCidrIp) {
                 this.ipv6DestCidrIp = ipv6DestCidrIp;
@@ -913,17 +912,14 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The range of source ports that correspond to the transport layer protocol for the security group rule. Valid values:
+             * The source IPv6 CIDR block for security group rule N. CIDR blocks and IPv6 addresses are supported.
              * <p>
              * 
-             * *   If the Permissions.N.IpProtocol parameter is set to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
-             * *   Valid values if you set the IpProtocol property to icmp: -1/-1.
-             * *   Valid values if you set the IpProtocol property to gre: -1/-1.
-             * *   Valid values if you set the IpProtocol property to all: -1/-1.
-             * 
-             * This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
+             * This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
              * 
              * Valid values of N: 1 to 100.
+             * 
+             * > This parameter takes effect only when the source is ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot configure both this parameter and `SourceCidrIp`.
              */
             public Builder ipv6SourceCidrIp(String ipv6SourceCidrIp) {
                 this.ipv6SourceCidrIp = ipv6SourceCidrIp;
@@ -931,13 +927,54 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The description of the security group rule. The description must be 1 to 512 characters in length.
+             * The network interface controller (NIC) type of security group rule N when the security group is in the classic network. Valid values:
              * <p>
+             * 
+             * *   internet: public NIC
+             * 
+             * *   intranet: internal NIC
+             * 
+             *     *   If the security group is in a VPC, this parameter is set to intranet by default and cannot be changed.
+             *     *   If you configure only DestGroupId when you configure access between security groups, this parameter must be set to intranet.
+             * 
+             * Default value: internet.
              * 
              * Valid values of N: 1 to 100.
              */
             public Builder nicType(String nicType) {
                 this.nicType = nicType;
+                return this;
+            }
+
+            /**
+             * The action of security group rule N that determines whether to allow outbound access. Valid values:
+             * <p>
+             * 
+             * *   accept: allows access.
+             * *   drop: denies access and returns no responses. In this case, the request times out or the connection cannot be established.
+             * 
+             * Default value: accept.
+             * 
+             * Valid values of N: 1 to 100.
+             */
+            public Builder policy(String policy) {
+                this.policy = policy;
+                return this;
+            }
+
+            /**
+             * The range of destination ports that correspond to the transport layer protocol for security group rule N. Valid values:
+             * <p>
+             * 
+             * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
+             * *   If you set IpProtocol to ICMP, the port number range is -1/-1.
+             * *   If you set IpProtocol to GRE, the port number range is -1/-1.
+             * *   If you set IpProtocol to ALL, the port number range is -1/-1.
+             * 
+             * Valid values of N: 1 to 100.
+             */
+            public Builder portRange(String portRange) {
+                this.portRange = portRange;
                 return this;
             }
 
@@ -949,8 +986,8 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
              * 
              * Valid values of N: 1 to 100.
              */
-            public Builder policy(String policy) {
-                this.policy = policy;
+            public Builder priority(String priority) {
+                this.priority = priority;
                 return this;
             }
 
@@ -958,42 +995,9 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
              * The source IPv4 CIDR block for security group rule N. CIDR blocks and IPv4 addresses are supported.
              * <p>
              * 
-             * This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
+             * This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
              * 
              * Valid values of N: 1 to 100.
-             */
-            public Builder portRange(String portRange) {
-                this.portRange = portRange;
-                return this;
-            }
-
-            /**
-             * The transport layer protocol of the security group rule. These values are case-insensitive. Valid values:
-             * <p>
-             * 
-             * *   TCP
-             * *   UDP
-             * *   ICMP
-             * *   ICMPv6
-             * *   GRE
-             * *   ALL: All protocols are supported.
-             * 
-             * Valid values of N: 1 to 100.
-             */
-            public Builder priority(String priority) {
-                this.priority = priority;
-                return this;
-            }
-
-            /**
-             * The source IPv6 CIDR block. You must set this parameter to an IPv6 address or CIDR block.
-             * <p>
-             * 
-             * This parameter is specified to meet quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
-             * 
-             * Valid values of N: 1 to 100.
-             * 
-             * > This parameter takes effect only when the source is ECS instances that reside in VPCs and support IPv6 CIDR blocks. You cannot specify both this parameter and the `SourceCidrIp` parameter.
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;
@@ -1001,11 +1005,15 @@ public class AuthorizeSecurityGroupEgressRequest extends Request {
             }
 
             /**
-             * The Alibaba Cloud account that manages the destination security group when you set a security group rule across accounts.
+             * The range of source ports that correspond to the transport layer protocol for security group rule N. Valid values:
              * <p>
              * 
-             * *   If both `DestGroupOwnerAccount` and `DestGroupOwnerId` are not specified, the rule is created to control access to another security group within your Alibaba Cloud account.
-             * *   If `DestCidrIp` is specified, `DestGroupOwnerAccount` is ignored.
+             * *   If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.
+             * *   If you set IpProtocol to ICMP, the port number range is -1/-1.
+             * *   If you set IpProtocol to GRE, the port number range is -1/-1.
+             * *   If you set IpProtocol to ALL, the port number range is -1/-1.
+             * 
+             * This parameter is supported by quintuple rules. For more information, see [Security group quintuple rules](~~97439~~).
              * 
              * Valid values of N: 1 to 100.
              */

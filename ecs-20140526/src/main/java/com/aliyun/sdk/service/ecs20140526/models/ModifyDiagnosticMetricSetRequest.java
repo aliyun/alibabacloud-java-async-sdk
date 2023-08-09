@@ -160,7 +160,7 @@ public class ModifyDiagnosticMetricSetRequest extends Request {
         }
 
         /**
-         * The IDs of diagnostic metrics.
+         * The ID of diagnostic metric N.
          */
         public Builder metricIds(java.util.List < String > metricIds) {
             this.putQueryParameter("MetricIds", metricIds);

@@ -229,7 +229,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable for general users.
+         * > 该参数正在邀测中，暂未开放使用。
          */
         public Builder ipv4Prefix(java.util.List < String > ipv4Prefix) {
             this.putQueryParameter("Ipv4Prefix", ipv4Prefix);
@@ -238,7 +238,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * > This parameter is in invitational preview and is unavailable for general users.
+         * > 该参数正在邀测中，暂未开放使用。
          */
         public Builder ipv4PrefixCount(Integer ipv4PrefixCount) {
             this.putQueryParameter("Ipv4PrefixCount", ipv4PrefixCount);
@@ -247,7 +247,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The ENI ID.
+         * The ID of the ENI.
          */
         public Builder networkInterfaceId(String networkInterfaceId) {
             this.putQueryParameter("NetworkInterfaceId", networkInterfaceId);
@@ -274,13 +274,13 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * One or more secondary private IP addresses that are selected from the CIDR block of the vSwitch that is connected to the ENI. Valid values of the number of secondary private IP addresses:
+         * Secondary private IP address N to be automatically assigned from the CIDR block of the vSwitch that is connected to the ENI. Valid values of N:
          * <p>
          * 
-         * *   When the ENI is in the Available (`Available`) state, the valid values range from 1 to 32.
-         * *   When the ENI is in the InUse (`InUse`) state, the valid values are subject to the instance type. For more information, see [Instance families](~~25378~~).
+         * *   When the ENI is in the Available (`Available`) state, the valid values of N are 1 to 50.
+         * *   When the ENI is in the InUse (`InUse`) state, the valid values of N are subject to the instance type. For more information, see [Overview of instance families](~~25378~~).
          * 
-         * To assign secondary private IP addresses to the ENI, you cannot specify the `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` parameters at the same time.
+         * To assign secondary private IP addresses to the ENI, you must specify `PrivateIpAddress.N` or `SecondaryPrivateIpAddressCount` but not both.
          */
         public Builder privateIpAddress(java.util.List < String > privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -289,7 +289,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent list of regions.
+         * The region ID of the ENI. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -319,7 +319,7 @@ public class AssignPrivateIpAddressesRequest extends Request {
          * The number of private IP addresses to be automatically assigned from the CIDR block of the vSwitch that is connected to the ENI.
          * <p>
          * 
-         * To assign secondary private IP addresses to the ENI, you cannot specify the `PrivateIpAddress.N` and `SecondaryPrivateIpAddressCount` parameters at the same time.
+         * To assign secondary private IP addresses to the ENI, you must specify `PrivateIpAddress.N` or `SecondaryPrivateIpAddressCount` but not both.
          */
         public Builder secondaryPrivateIpAddressCount(Integer secondaryPrivateIpAddressCount) {
             this.putQueryParameter("SecondaryPrivateIpAddressCount", secondaryPrivateIpAddressCount);

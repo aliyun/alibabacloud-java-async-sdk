@@ -62,7 +62,7 @@ public class DescribeDiagnosticMetricSetsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MetricSets.
+         * A collection of diagnostic metrics.
          */
         public Builder metricSets(java.util.List < MetricSets> metricSets) {
             this.metricSets = metricSets;

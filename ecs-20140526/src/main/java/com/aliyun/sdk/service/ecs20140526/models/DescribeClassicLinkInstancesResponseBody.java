@@ -86,7 +86,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The details about the ClassicLink connections between the instances located in the classic network and the VPCs.
+         * The details of the ClassicLink connections between the instances reside in the classic network and VPCs.
          */
         public Builder links(Links links) {
             this.links = links;
@@ -178,7 +178,7 @@ public class DescribeClassicLinkInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

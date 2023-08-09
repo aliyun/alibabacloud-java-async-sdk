@@ -86,7 +86,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information about the launch templates.
+         * The information about the launch template.
          */
         public Builder launchTemplateSets(LaunchTemplateSets launchTemplateSets) {
             this.launchTemplateSets = launchTemplateSets;
@@ -94,7 +94,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The total number of launch templates.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The ID of the request.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The page number of the returned page.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of launch templates.
+         * The information about the launch templates.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The key of tag N of the launch template.
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N of the launch template.
+             * The key of tag N of the launch template.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -356,7 +356,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             private Tags tags; 
 
             /**
-             * The time when the launch template was created.
+             * The ID of the resource group to which the launch template belongs.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -364,7 +364,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The creator of the launch template.
+             * The latest version number of the launch template.
              */
             public Builder createdBy(String createdBy) {
                 this.createdBy = createdBy;
@@ -372,7 +372,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The default version number of the launch template.
+             * The time when the launch template was modified.
              */
             public Builder defaultVersionNumber(Long defaultVersionNumber) {
                 this.defaultVersionNumber = defaultVersionNumber;
@@ -380,7 +380,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The latest version number of the launch template.
+             * The tags of the launch template.
              */
             public Builder latestVersionNumber(Long latestVersionNumber) {
                 this.latestVersionNumber = latestVersionNumber;
@@ -388,7 +388,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the launch template.
+             * The time when the launch template was created.
              */
             public Builder launchTemplateId(String launchTemplateId) {
                 this.launchTemplateId = launchTemplateId;
@@ -396,7 +396,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the launch template.
+             * The default version number of the launch template.
              */
             public Builder launchTemplateName(String launchTemplateName) {
                 this.launchTemplateName = launchTemplateName;
@@ -404,7 +404,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the launch template was modified.
+             * The ID of the launch template.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -412,7 +412,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the launch template belongs.
+             * The creator of the launch template.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -420,7 +420,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the launch template.
+             * The tag of the launch template.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
