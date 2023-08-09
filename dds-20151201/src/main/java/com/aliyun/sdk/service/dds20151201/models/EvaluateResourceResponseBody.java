@@ -86,7 +86,7 @@ public class EvaluateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine of the instance. The returned value is MongoDB.
+         * The database engine of the instance. Only MongoDB is returned.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -94,7 +94,7 @@ public class EvaluateResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The major engine version of the instance.
+         * The version of the database engine.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;

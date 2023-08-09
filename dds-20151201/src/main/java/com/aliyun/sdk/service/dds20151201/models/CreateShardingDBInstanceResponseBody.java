@@ -62,7 +62,7 @@ public class CreateShardingDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +70,7 @@ public class CreateShardingDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The order ID.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class CreateShardingDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

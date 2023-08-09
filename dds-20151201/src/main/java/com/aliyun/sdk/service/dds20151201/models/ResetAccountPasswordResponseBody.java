@@ -38,7 +38,7 @@ public class ResetAccountPasswordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * The account for which you want to reset the password. Set the value to **root**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

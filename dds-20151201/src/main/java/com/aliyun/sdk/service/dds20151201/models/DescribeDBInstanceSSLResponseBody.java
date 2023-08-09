@@ -82,7 +82,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the SSL certificate expires. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * The time when the SSL certificate expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in Coordinated Universal Time (UTC).
          */
         public Builder SSLExpiredTime(String SSLExpiredTime) {
             this.SSLExpiredTime = SSLExpiredTime;

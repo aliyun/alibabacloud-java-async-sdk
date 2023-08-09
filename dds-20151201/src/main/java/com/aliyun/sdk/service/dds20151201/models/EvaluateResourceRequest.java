@@ -253,7 +253,7 @@ public class EvaluateResourceRequest extends Request {
         } 
 
         /**
-         * The instance type.
+         * The stype of the instance.
          * <p>
          * 
          * > This parameter is required when you check whether resources are sufficient for creating or upgrading a replica set instance. For more information about instance types, see [Instance types](~~57141~~).
@@ -283,14 +283,14 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The major engine version of the instance. Valid values:
+         * The version of the database engine. Valid values:
          * <p>
          * 
-         * *   **6.0**
          * *   **5.0**
          * *   **4.4**
          * *   **4.2**
          * *   **4.0**
+         * *   **3.4**
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -317,7 +317,7 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The number of read-only nodes. Valid values: **1** to **5**.
+         * The number of read-only nodes in the instance. Valid values: **1** to **5**.
          * <p>
          * 
          * > This parameter is not required for standalone or serverless instances.
@@ -329,7 +329,7 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -341,7 +341,7 @@ public class EvaluateResourceRequest extends Request {
          * The number of nodes in the instance.
          * <p>
          * 
-         * *   Valid values for standalone instances: **1**
+         * *   Set the value to **1** for standalone instances.
          * *   Valid values for replica set instances: **3**, **5**, and **7**
          * 
          * > This parameter is not required for serverless instances.
@@ -380,7 +380,7 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The node information. This parameter is required when you check whether resources are sufficient for creating or upgrading a sharded cluster instance.
+         * The node information about the sharded cluster instance. This parameter is required when you check whether resources are sufficient for creating or upgrading a sharded cluster instance.
          * <p>
          * 
          * To check whether resources are sufficient for creating a sharded cluster instance, specify the specifications of each node in the instance. The value must be a JSON string. Example:
@@ -402,7 +402,7 @@ public class EvaluateResourceRequest extends Request {
          * *   Storage: the storage space of the node.
          * *   DBInstanceClass: the instance type of the node. For more information, see [Sharded cluster instance types](~~311414~~).
          * 
-         * To check whether resources are sufficient for upgrading a node of a sharded cluster instance, specify only the information of the node to be upgraded. The value must be a JSON string. Example:
+         * To check whether resources are sufficient for upgrading a single node of a sharded cluster instance, specify only the information about the node to be upgraded. The value must be a JSON string. Example:
          * 
          *     {
          *          "NodeId": "d-bp147c4d9ca7****", "NodeClass": "dds.shard.standard"
@@ -420,10 +420,9 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the replica set instance. Unit: GB.
+         * 副本集的存储空间，单位为GB。
          * <p>
-         * 
-         * > This parameter is required for the instances that use cloud disks.
+         * > 实例规格为云盘型时，该参数必填。</props>
          */
         public Builder storage(String storage) {
             this.putQueryParameter("Storage", storage);
@@ -432,7 +431,7 @@ public class EvaluateResourceRequest extends Request {
         }
 
         /**
-         * The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
+         * The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the zone ID.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -186,11 +186,14 @@ public class UntagResourcesRequest extends Request {
          * Specifies whether to remove all tags from the instances. Valid values:
          * <p>
          * 
-         * *   **true**: Remove all tags from the instances.
-         * *   **false**: Do not remove all tags from the instances.
+         * *   **true**: removes all tags from the instances.
+         * *   **false**: does not remove all tags from the instances.
          * 
-         * > * Default value: **false**.
-         * > * If you specify the **TagKey** parameter together with this parameter, this parameter does not take effect.
+         * > 
+         * 
+         * *   Default value: **false**.
+         * 
+         * *   If you specify the **TagKey** parameter together with this parameter, this parameter does not take effect.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -226,7 +229,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the instances you want to query belong.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -235,7 +238,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The list of resource IDs.
+         * The resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);

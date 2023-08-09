@@ -62,16 +62,7 @@ public class DescribeAuditLogFilterResponseBody extends TeaModel {
         private String roleType; 
 
         /**
-         * The type of the audit log entries. Valid values:
-         * <p>
-         * 
-         * *   **admin**: O\&M and management operations
-         * *   **slow**: slow query logs
-         * *   **query**: query operations
-         * *   **insert**: insert operations
-         * *   **update**: update operations
-         * *   **delete**: delete operations
-         * *   **command**: protocol commands such as the aggregate method
+         * Filter.
          */
         public Builder filter(String filter) {
             this.filter = filter;
@@ -79,7 +70,7 @@ public class DescribeAuditLogFilterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -87,7 +78,7 @@ public class DescribeAuditLogFilterResponseBody extends TeaModel {
         }
 
         /**
-         * The role of the node.
+         * RoleType.
          */
         public Builder roleType(String roleType) {
             this.roleType = roleType;

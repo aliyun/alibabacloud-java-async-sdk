@@ -163,7 +163,7 @@ public class ModifyDBInstanceMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * DBInstanceId.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -172,7 +172,7 @@ public class ModifyDBInstanceMonitorRequest extends Request {
         }
 
         /**
-         * The collection frequency of monitoring data. Valid values: **1** or **300**. Unit: seconds.
+         * Granularity.
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);

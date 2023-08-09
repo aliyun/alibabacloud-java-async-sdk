@@ -148,7 +148,7 @@ public class DescribeDBInstanceTDEInfoRequest extends Request {
         }
 
         /**
-         * The ID of the Message Queue for Apache Kafka instance to be deleted.
+         * DBInstanceId.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

@@ -191,7 +191,7 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the instance
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -200,10 +200,10 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * The ID of the shard in the sharded cluster instance.
+         * The ID of the shard node in the sharded cluster instance.
          * <p>
          * 
-         * >  You must specify this parameter if the value of **DBInstanceId** is the ID of a sharded cluster instance.
+         * > You must specify this parameter if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -248,11 +248,14 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * The IDs of the roles that you want to switch. You can call the [DescribeRoleZoneInfo](~~123802~~) operation to query IDs of roles and roles of nodes.
+         * The IDs of the roles who switch the primary and secondary nodes for the instance. You can call the [DescribeRoleZoneInfo](~~123802~~) operation to view the IDs and information of roles of nodes.
          * <p>
          * 
-         * > * Separate role IDs with commas (,). If this parameter is not specified, roles of the primary and secondary nodes are switched.
-         * > * If the value of **DBInstanceId** is the ID of a sharded cluster instance, the roles to be switched must belong to one shard.
+         * > 
+         * 
+         * *   Separate role IDs with commas (,). If this parameter is not specified, the primary and secondary nodes are switched.
+         * 
+         * *   If you set the **DBInstanceId** parameter to the ID of a sharded cluster instance, the roles who switch the primary and secondary nodes for the instance must belong to one shard node.
          */
         public Builder roleIds(String roleIds) {
             this.putQueryParameter("RoleIds", roleIds);
@@ -270,11 +273,11 @@ public class SwitchDBInstanceHARequest extends Request {
         }
 
         /**
-         * The time when roles of the primary and secondary nodes are switched. Valid values:
+         * The time when the primary and secondary nodes are switched. Valid values:
          * <p>
          * 
-         * *   0: The roles are switched immediately.
-         * *   1: The roles are switched during the maintenance period.
+         * *   0: The primary and secondary nodes are immediately switched.
+         * *   1: The primary and secondary nodes are switched during the O\&M time period.
          */
         public Builder switchMode(Integer switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);

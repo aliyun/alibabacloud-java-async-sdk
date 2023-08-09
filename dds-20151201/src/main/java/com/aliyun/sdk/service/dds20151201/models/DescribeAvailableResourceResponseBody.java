@@ -58,7 +58,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The available database types.
+         * The supported database types.
          */
         public Builder supportedDBTypes(SupportedDBTypes supportedDBTypes) {
             this.supportedDBTypes = supportedDBTypes;
@@ -211,7 +211,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance class.
+             * The instance family.
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -219,7 +219,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * The type of the instance.
              */
             public Builder instanceClassRemark(String instanceClassRemark) {
                 this.instanceClassRemark = instanceClassRemark;
@@ -325,7 +325,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String nodeType; 
 
             /**
-             * Details about the available resources.
+             * The details of the available resources.
              */
             public Builder availableResources(AvailableResources availableResources) {
                 this.availableResources = availableResources;
@@ -443,7 +443,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The available node types.
+             * The supported instance types.
              */
             public Builder supportedNodeTypes(SupportedNodeTypes supportedNodeTypes) {
                 this.supportedNodeTypes = supportedNodeTypes;
@@ -537,7 +537,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * The available storage engines.
+             * The supported storage engines.
              */
             public Builder supportedEngines(SupportedEngines supportedEngines) {
                 this.supportedEngines = supportedEngines;
@@ -651,7 +651,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The region ID of the instance.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -659,7 +659,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The available storage engine versions.
+             * The supported storage engine versions.
              */
             public Builder supportedEngineVersions(SupportedEngineVersions supportedEngineVersions) {
                 this.supportedEngineVersions = supportedEngineVersions;
@@ -667,7 +667,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -772,8 +772,8 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
              * The architecture of the instance. Valid values:
              * <p>
              * 
-             * - **normal**: replica set instance
-             * - **sharding**: sharded cluster instance
+             * *   **normal**: replica set instance
+             * *   **sharding**: sharded cluster instance
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;

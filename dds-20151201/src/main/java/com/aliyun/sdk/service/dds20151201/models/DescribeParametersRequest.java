@@ -193,8 +193,8 @@ public class DescribeParametersRequest extends Request {
          * The type of the database account. Valid values:
          * <p>
          * 
-         * *   mongos: an account that can be used to log on to mongos
-         * *   shard: an account that can be used to log on to shards
+         * *   mongos: an account that can be used to log on to a mongos node.
+         * *   shard: an account that can be used to log on to a shard node.
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -203,10 +203,10 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the instance
          * <p>
          * 
-         * >  If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
+         * > If you set this parameter to the ID of a sharded cluster instance, you must also specify the **NodeId** parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -215,7 +215,7 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * ExtraParam.
+         * terrform use
          */
         public Builder extraParam(String extraParam) {
             this.putQueryParameter("ExtraParam", extraParam);
@@ -224,10 +224,10 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * The ID of the mongos or shard in the specified sharded cluster instance.
+         * The ID of the mongos or shard node in the specified sharded cluster instance.
          * <p>
          * 
-         * >  This parameter is valid only if you set the **DBInstanceId** parameter to the ID of a sharded cluster instance.
+         * > This parameter is valid when the **DBInstanceId** parameter is set to the ID of a sharded cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

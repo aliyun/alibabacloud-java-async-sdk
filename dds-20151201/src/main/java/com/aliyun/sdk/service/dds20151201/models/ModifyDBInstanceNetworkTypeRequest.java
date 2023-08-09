@@ -62,6 +62,11 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
     @NameInMap("VpcId")
     private String vpcId;
 
+    @Query
+    @NameInMap("ZoneId")
+    @Validation(required = true)
+    private String zoneId;
+
     private ModifyDBInstanceNetworkTypeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -76,6 +81,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         this.securityToken = builder.securityToken;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -175,6 +181,13 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         return this.vpcId;
     }
 
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBInstanceNetworkTypeRequest, Builder> {
         private String regionId; 
         private Integer classicExpiredDays; 
@@ -188,6 +201,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         private String securityToken; 
         private String vSwitchId; 
         private String vpcId; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -207,6 +221,7 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
             this.securityToken = request.securityToken;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -334,6 +349,15 @@ public class ModifyDBInstanceNetworkTypeRequest extends Request {
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
             this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 

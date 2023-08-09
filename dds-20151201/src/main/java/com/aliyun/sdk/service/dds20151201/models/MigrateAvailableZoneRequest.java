@@ -157,7 +157,7 @@ public class MigrateAvailableZoneRequest extends Request {
          * The ID of the instance.
          * <p>
          * 
-         * >  If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.
+         * > If the instance is deployed in a VPC, you must specify the **Vswitch** parameter.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -220,7 +220,7 @@ public class MigrateAvailableZoneRequest extends Request {
          * The ID of the vSwitch in the destination zone.
          * <p>
          * 
-         * >  If the instance is deployed in a VPC, you must specify this parameter.
+         * > If the instance is deployed in a VPC, you must specify this parameter.
          */
         public Builder vswitch(String vswitch) {
             this.putQueryParameter("Vswitch", vswitch);
@@ -232,8 +232,11 @@ public class MigrateAvailableZoneRequest extends Request {
          * The ID of the destination zone.
          * <p>
          * 
-         * > * The source zone and the destination zone belong to the same region.
-         * > * You can call the [DescribeRegions](~~61933~~) operation to query the most recent zone list.
+         * > 
+         * 
+         * *   The source zone and the destination zone belong to the same region.
+         * 
+         * *   You can call the [DescribeRegions](~~61933~~) operation to query the zone ID.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -181,7 +181,7 @@ public class ModifyResourceGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the most recent region list.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

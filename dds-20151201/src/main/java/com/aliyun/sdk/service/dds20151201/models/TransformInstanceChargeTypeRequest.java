@@ -239,7 +239,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
          * *   **true**
          * *   **false**
          * 
-         * > The default value is **true**.
+         * > Default value: **true**.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -248,13 +248,13 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable auto-renewal for the instance. Valid values:
+         * Specifies whether to enable auto-renewal. Valid values:
          * <p>
          * 
          * *   **true**
          * *   **false**
          * 
-         * > The default value is **false**.
+         * > Default value: **false**.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -321,7 +321,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * The subscription duration of the instance. Unit: months. Valid values: **1**\~ **9**, **12**, **24**, and **36**.
+         * The subscription duration of the instance. Unit: months. Valid values: **1, 2, 3, 4, 5, 6, 7, 8, 9******, **12**, **24**, and **36**.
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);

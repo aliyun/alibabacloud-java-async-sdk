@@ -91,8 +91,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is applicable to replica set instances or sharded cluster instances.
-      * >  After you confirm that the data recovery conditions are met by calling this operation, you can call the [CreateDBInstance](~~61763~~) operation to restore data to a new instance.
+      * You can call this operation to check whether an ApsaraDB for MongoDB instance meets the data recovery conditions.
       *
      */
     @Override
@@ -129,9 +128,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB before you call this operation.
-      * For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
-      * To create sharded cluster instances, you can call the [CreateShardingDBInstance](~~61884~~) operation.
+      * Creates or clones an ApsaraDB for MongoDB replica set instance.
       *
      */
     @Override
@@ -182,8 +179,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing) of ApsaraDB for MongoDB.
-      * This operation is applicable only to sharded cluster instances.
+      * The ID of the request.
       *
      */
     @Override
@@ -202,8 +198,8 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * *   Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
-      * *   For more information about the instance types of ApsaraDB for MongoDB instances, see [Instance types](~~57141~~).
-      * *   To create standalone and replica set instances, you can call the [CreateDBInstance](~~61763~~) operation.
+      * *   For more information about the instance types of ApsaraDB for MongoDB, see [Instance types](~~57141~~).
+      * *   To create standalone instances and replica set instances, you can call the [CreateDBInstance](~~61763~~) operation.
       *
      */
     @Override
@@ -221,10 +217,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Ensure that the instance meets the following conditions when you call this operation:
+      * Before you call this operation, make sure that the instance meets the following requirements:
       * *   The instance is in the running state.
-      * *   The billing method of the instance is pay-as-you-go.
-      * >  After an instance is released, all the data in the instance is lost and cannot be retrieved. Exercise caution when you release instances.
+      * *   A pay-as-you-go instance is used.
+      * > After you release an ApsaraDB for MongoDB instance, data in the instance can no longer be recovered. Proceed with caution.
       *
      */
     @Override
@@ -324,9 +320,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   The instance must be in the running state when you call this operation.
-      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
-      * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
+      * The role of the node in the instance. Valid values:
+      * *   **primary**
+      * *   **secondary**
       *
      */
     @Override
@@ -378,6 +374,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeAuditRecordsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * You can call this operation to query zones in which you can create an ApsaraDB for MongoDB instance.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeAvailabilityZonesResponse> describeAvailabilityZones(DescribeAvailabilityZonesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAvailabilityZones").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAvailabilityZonesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAvailabilityZonesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -547,11 +561,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  For more information about this function, see [~~131048~~](~~131048~~)Configure TDE.
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   A replica set or sharded cluster instance is used.
-      * *   The storage engine of the instance is WiredTiger.
-      * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version of your instance is earlier than 4.0, you can call [UpgradeDBInstanceEngineVersion](~~67608~~) to upgrade the database engine.
+      * You can call this operation to query whether TDE is enabled for an ApsaraDB for MongoDB instance.
       *
      */
     @Override
@@ -951,7 +961,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+      * Before you call this operation, make sure that the instance meets the following requirements:
       * *   The billing method of the instance is subscription.
       * *   The instance has expired and is in the **Locking** state.
       *
@@ -971,7 +981,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading an instance, or upgrading a single node of a sharded cluster instance.
+      * This operation is applicable to replica set instances and sharded cluster instances. You can call this operation to check whether resources are sufficient for creating an instance, upgrading a replica set or sharded cluster instance, or upgrading a single node of the sharded cluster instance.
       * > You can call this operation a maximum of 200 times per minute.
       *
      */
@@ -1004,10 +1014,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Precautions
       * *   This operation is available only for replica set instances that run MongoDB 4.2 or earlier and sharded cluster instances.
       * *   If you have applied for a public endpoint for the ApsaraDB for MongoDB instance, you must call the [ReleasePublicNetworkAddress](~~67604~~) operation to release the public endpoint before you call the MigrateAvailableZone operation.
-      * *   Transparent data encryption (TDE) is disabled for the instance.
+      * *   Transparent data encryption (TDE) is disabled for the ApsaraDB for MongoDB instance.
       * *   The source zone and the destination zone belong to the same region.
       * *   A vSwitch is created in the destination zone. This prerequisite must be met if the instance resides in a virtual private cloud (VPC). For more information about how to create a vSwitch, see [Work with vSwitches](~~65387~~).
       *
@@ -1257,10 +1266,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * TDE can be used to perform real-time I/O encryption and decryption on data files. Data is encrypted before being written to disks, and decrypted before being read from disks to the memory. For more information, see [Configure TDE](~~131048~~).
-      * >  After TDE is enabled, it cannot be disabled.
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   A replica set or sharded cluster instance is used.
+      * TDE allows you to perform real-time I/O encryption and decryption on data files. Data is encrypted before it is written to a disk and is decrypted when it is read from the disk to the memory. For more information, see [Configure TDE](~~131048~~).
+      * > You cannot disable TDE after it is enabled.
+      * Before you call this API operation, make sure that the ApsaraDB for MongoDB instance meets the following requirements:
+      * *   The instance is a replica set or sharded cluster instance.
       * *   The storage engine of the instance is WiredTiger.
       * *   The database engine version of the instance is 4.0 or 4.2. If the database engine version is earlier than 4.0, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
       *
@@ -1342,10 +1351,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that the following requirements are met:
-      * *   A replica set or sharded cluster instance is used.
-      * *   The database version of the instance is 4.0 (with the minor version of mongodb\\_20190408\\_3.0.11 or later) or 4.2. You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the database engine version of the instance. If necessary, you can call the [UpgradeDBInstanceEngineVersion](~~67608~~) operation to upgrade the database engine.
-      * *   The instance is in a VPC. If the network type is Classic Network, you can call the [ModifyDBInstanceNetworkType](~~62138~~) operation to switch the network type to VPC.
+      * You can call this operation to enable or disable password-free access from the same VPC as an ApsaraDB for MongoDB instance.
       *
      */
     @Override
@@ -1382,8 +1388,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Before you call this operation, make sure that you understand the billing methods and pricing of ApsaraDB for MongoDB. For more information, go to the Pricing tab of the ApsaraDB for MongoDB product page at [the international site (alibabacloud.com)](https://www.alibabacloud.com/zh/product/apsaradb-for-mongodb/pricing).
-      * This operation is applicable only to sharded cluster instances.
+      * Make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product#/mongodb/detail) of ApsaraDB for MongoDB before you call this operation.
+      * This operation is applicable to only sharded cluster instances.
       *
      */
     @Override
@@ -1421,7 +1427,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Resource Management enables you to build an organizational structure for resources based on your business needs. You can use a resource directory, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
+      * Resource Management allows you to build an organizational structure for resources based on your business requirements. You can use resource directories, folders, accounts, and resource groups to hierarchically organize and manage resources. For more information, see [What is Resource Management?](~~94475~~)
       *
      */
     @Override
@@ -1578,9 +1584,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The instance must be in the running state when you call this operation.
-      * > * This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
-      * > * On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
+      * The instance must be running when you call this operation.
+      * > 
+      * *   This operation is applicable to replica set instances and sharded cluster instances, but cannot be performed on standalone instances.
+      * *   On replica set instances, the switch is performed between instances. On sharded cluster instances, the switch is performed between shards.
       *
      */
     @Override
@@ -1669,8 +1676,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * - You can remove up to 20 tags at a time.
-      * - If you remove a tag from all instances, the tag is automatically deleted.
+      * > 
+      * *   You can remove up to 20 tags at a time.
+      * *   If you remove a tag from all instances, the tag is automatically deleted.
       *
      */
     @Override

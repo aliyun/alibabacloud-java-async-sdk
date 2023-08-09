@@ -239,7 +239,9 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * NewPort.
+         * this parameter can be used. The new port should be within the range of 1000 to 65535.
+         * <p>
+         * >When the DBInstanceId parameter is passed in as a cloud disk instance ID
          */
         public Builder newPort(Integer newPort) {
             this.putQueryParameter("NewPort", newPort);

@@ -7,18 +7,34 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeAvailableResourceRequest} extends {@link RequestModel}
+ * {@link DescribeAvailabilityZonesRequest} extends {@link RequestModel}
  *
- * <p>DescribeAvailableResourceRequest</p>
+ * <p>DescribeAvailabilityZonesRequest</p>
  */
-public class DescribeAvailableResourceRequest extends Request {
+public class DescribeAvailabilityZonesRequest extends Request {
+    @Query
+    @NameInMap("AcceptLanguage")
+    private String acceptLanguage;
+
     @Query
     @NameInMap("DbType")
     private String dbType;
 
     @Query
+    @NameInMap("ExcludeSecondaryZoneId")
+    private String excludeSecondaryZoneId;
+
+    @Query
+    @NameInMap("ExcludeZoneId")
+    private String excludeZoneId;
+
+    @Query
     @NameInMap("InstanceChargeType")
     private String instanceChargeType;
+
+    @Query
+    @NameInMap("MongoType")
+    private String mongoType;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -50,13 +66,25 @@ public class DescribeAvailableResourceRequest extends Request {
     private String securityToken;
 
     @Query
+    @NameInMap("StorageSupport")
+    private String storageSupport;
+
+    @Query
+    @NameInMap("StorageType")
+    private String storageType;
+
+    @Query
     @NameInMap("ZoneId")
     private String zoneId;
 
-    private DescribeAvailableResourceRequest(Builder builder) {
+    private DescribeAvailabilityZonesRequest(Builder builder) {
         super(builder);
+        this.acceptLanguage = builder.acceptLanguage;
         this.dbType = builder.dbType;
+        this.excludeSecondaryZoneId = builder.excludeSecondaryZoneId;
+        this.excludeZoneId = builder.excludeZoneId;
         this.instanceChargeType = builder.instanceChargeType;
+        this.mongoType = builder.mongoType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -64,6 +92,8 @@ public class DescribeAvailableResourceRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
+        this.storageSupport = builder.storageSupport;
+        this.storageType = builder.storageType;
         this.zoneId = builder.zoneId;
     }
 
@@ -71,13 +101,20 @@ public class DescribeAvailableResourceRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeAvailableResourceRequest create() {
+    public static DescribeAvailabilityZonesRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return acceptLanguage
+     */
+    public String getAcceptLanguage() {
+        return this.acceptLanguage;
     }
 
     /**
@@ -88,10 +125,31 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     /**
+     * @return excludeSecondaryZoneId
+     */
+    public String getExcludeSecondaryZoneId() {
+        return this.excludeSecondaryZoneId;
+    }
+
+    /**
+     * @return excludeZoneId
+     */
+    public String getExcludeZoneId() {
+        return this.excludeZoneId;
+    }
+
+    /**
      * @return instanceChargeType
      */
     public String getInstanceChargeType() {
         return this.instanceChargeType;
+    }
+
+    /**
+     * @return mongoType
+     */
+    public String getMongoType() {
+        return this.mongoType;
     }
 
     /**
@@ -144,15 +202,33 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     /**
+     * @return storageSupport
+     */
+    public String getStorageSupport() {
+        return this.storageSupport;
+    }
+
+    /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
         return this.zoneId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeAvailableResourceRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeAvailabilityZonesRequest, Builder> {
+        private String acceptLanguage; 
         private String dbType; 
+        private String excludeSecondaryZoneId; 
+        private String excludeZoneId; 
         private String instanceChargeType; 
+        private String mongoType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -160,16 +236,22 @@ public class DescribeAvailableResourceRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
+        private String storageSupport; 
+        private String storageType; 
         private String zoneId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeAvailableResourceRequest request) {
+        private Builder(DescribeAvailabilityZonesRequest request) {
             super(request);
+            this.acceptLanguage = request.acceptLanguage;
             this.dbType = request.dbType;
+            this.excludeSecondaryZoneId = request.excludeSecondaryZoneId;
+            this.excludeZoneId = request.excludeZoneId;
             this.instanceChargeType = request.instanceChargeType;
+            this.mongoType = request.mongoType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -177,11 +259,26 @@ public class DescribeAvailableResourceRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
+            this.storageSupport = request.storageSupport;
+            this.storageType = request.storageType;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * The architecture of the instance. Valid values:
+         * Specifies the language of the returned values of the **RegionName** and **ZoneName** parameters. Default value: zh. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese.
+         * *   **en**: English
+         */
+        public Builder acceptLanguage(String acceptLanguage) {
+            this.putQueryParameter("AcceptLanguage", acceptLanguage);
+            this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * The database engine type of the instance. Valid values:
          * <p>
          * 
          * *   **normal**: replica set instance
@@ -190,6 +287,24 @@ public class DescribeAvailableResourceRequest extends Request {
         public Builder dbType(String dbType) {
             this.putQueryParameter("DbType", dbType);
             this.dbType = dbType;
+            return this;
+        }
+
+        /**
+         * ExcludeSecondaryZoneId.
+         */
+        public Builder excludeSecondaryZoneId(String excludeSecondaryZoneId) {
+            this.putQueryParameter("ExcludeSecondaryZoneId", excludeSecondaryZoneId);
+            this.excludeSecondaryZoneId = excludeSecondaryZoneId;
+            return this;
+        }
+
+        /**
+         * ExcludeZoneId.
+         */
+        public Builder excludeZoneId(String excludeZoneId) {
+            this.putQueryParameter("ExcludeZoneId", excludeZoneId);
+            this.excludeZoneId = excludeZoneId;
             return this;
         }
 
@@ -203,6 +318,15 @@ public class DescribeAvailableResourceRequest extends Request {
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
             this.instanceChargeType = instanceChargeType;
+            return this;
+        }
+
+        /**
+         * The edition of the ApsaraDB for MongoDB instance. The instance can be of a high-availability edition or beta edition.
+         */
+        public Builder mongoType(String mongoType) {
+            this.putQueryParameter("MongoType", mongoType);
+            this.mongoType = mongoType;
             return this;
         }
 
@@ -225,7 +349,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~61933~~) operation to query the latest available regions.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the latest available regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -234,7 +358,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -270,7 +394,37 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * The ID of the zone. You can call the [DescribeRegions](~~61933~~) operation to query the available zones.
+         * The zones to be displayed. The values include the zones in which you can create an instance that uses cloud disks, the zones in which you can create an instance that uses local disks, and the zones in which you can create an instance that uses cloud disks and local disks.
+         */
+        public Builder storageSupport(String storageSupport) {
+            this.putQueryParameter("StorageSupport", storageSupport);
+            this.storageSupport = storageSupport;
+            return this;
+        }
+
+        /**
+         * The storage type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **cloud_essd1**: PL1.enhanced SSD (ESSD)
+         * *   **cloud_essd2**: PL2 ESSD.
+         * *   **cloud_essd3**: PL3 ESSD.
+         * *   **local_ssd**: local SSD.
+         * 
+         * > 
+         * 
+         * *   Instances of MongoDB 4.4 and later only support cloud disks. **cloud_essd1** is selected if you leave this parameter empty.
+         * 
+         * *   Instances of MongoDB 4.2 and earlier support only local disks. **local_ssd** is selected if you leave this parameter empty.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
+            return this;
+        }
+
+        /**
+         * The zone ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query available zones.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -279,8 +433,8 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         @Override
-        public DescribeAvailableResourceRequest build() {
-            return new DescribeAvailableResourceRequest(this);
+        public DescribeAvailabilityZonesRequest build() {
+            return new DescribeAvailabilityZonesRequest(this);
         } 
 
     } 

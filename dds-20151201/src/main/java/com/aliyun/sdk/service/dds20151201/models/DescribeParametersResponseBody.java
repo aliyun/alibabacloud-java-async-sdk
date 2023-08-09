@@ -86,7 +86,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         private RunningParameters runningParameters; 
 
         /**
-         * The list of instance parameters in the configuration template.
+         * The parameter settings in the configuration template.
          */
         public Builder configParameters(ConfigParameters configParameters) {
             this.configParameters = configParameters;
@@ -94,7 +94,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine. Default value: **mongodb**.
+         * The database engine of the instance. Default value: **mongodb**.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -102,7 +102,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The version number of the database.
+         * The version of the database engine.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -118,7 +118,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The list of instance parameters that have taken effect.
+         * The parameter settings for the running instance.
          */
         public Builder runningParameters(RunningParameters runningParameters) {
             this.runningParameters = runningParameters;
@@ -230,7 +230,7 @@ public class DescribeParametersResponseBody extends TeaModel {
              * <p>
              * 
              * *   **false**: A restart is not required. Modifications take effect immediately.
-             * *   **true**: A restart is required for modifications to take effect.
+             * *   **true**: A restart is required for parameter modifications to take effect.
              */
             public Builder forceRestart(Boolean forceRestart) {
                 this.forceRestart = forceRestart;
@@ -238,11 +238,11 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter is modifiable.
+             * Indicates whether the parameter value can be changed.
              * <p>
              * 
-             * *   **false**: The parameter is not modifiable.
-             * *   **true**: The parameter is modifiable.
+             * *   **false**: The parameter value cannot be changed.
+             * *   **true**: The parameter value can be changed.
              */
             public Builder modifiableStatus(Boolean modifiableStatus) {
                 this.modifiableStatus = modifiableStatus;
@@ -420,7 +420,12 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * CharacterType.
+             * 实例的角色类型，取值说明：
+             * <p>
+             * 
+             * - **db**：shard角色。
+             * - **cs**：config server角色。
+             * - **mongos**：mongos角色。
              */
             public Builder characterType(String characterType) {
                 this.characterType = characterType;
@@ -440,7 +445,7 @@ public class DescribeParametersResponseBody extends TeaModel {
              * <p>
              * 
              * *   **false**: A restart is not required. Modifications take effect immediately.
-             * *   **true**: A restart is required for modifications to take effect.
+             * *   **true**: A restart is required for parameter modifications to take effect.
              */
             public Builder forceRestart(String forceRestart) {
                 this.forceRestart = forceRestart;
@@ -448,11 +453,11 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter is modifiable.
+             * Indicates whether the parameter value can be changed.
              * <p>
              * 
-             * *   **false**: The parameter is not modifiable.
-             * *   **true**: The parameter is modifiable.
+             * *   **false**: The parameter value cannot be changed.
+             * *   **true**: The parameter value can be changed.
              */
             public Builder modifiableStatus(String modifiableStatus) {
                 this.modifiableStatus = modifiableStatus;

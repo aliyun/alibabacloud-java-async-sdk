@@ -241,8 +241,8 @@ public class ModifyNodeSpecBatchRequest extends Request {
          * Specifies whether to enable automatic payment for the instance. Valid values:
          * <p>
          * 
-         * *   **true**: enables automatic payment. Make sure that your account balance is sufficient.
-         * *   **false**: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, click **Expenses** to go to the **Billing Management** console. In the left-side navigation pane, click **Orders**. On the **Orders** page, find the order and complete the payment.
+         * *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
+         * *   **false**: disables automatic payment. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, choose **Expenses** > User Center to go to the **Billing Management** console. In the left-side navigation pane, click **Orders**. On the **Orders** page, find the order and complete the payment.
          * 
          * Default value: **true**.
          */
@@ -262,7 +262,7 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -271,7 +271,7 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The coupon code. Default value: **youhuiquan_promotion_option_id_for_blank**.
+         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -280,7 +280,7 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The ID of the instance whose configurations you want to change.
+         * The ID of the instance whose configurations you want to modify.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -289,17 +289,19 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The time when the changed configurations take effect. Valid values:
+         * The time when the modified configurations take effect. Valid values:
          * <p>
          * 
          * *   **Immediately**: The configurations immediately take effect.
-         * 
          * *   **MaintainTime**: The configurations take effect during the maintenance window of the instance.
          * 
-         *   > *   You can call the [ModifyDBInstanceMaintainTime](~~62008~~) operation to modify the maintenance window of an instance.
-         *    *   You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the maintenance window of an instance.
+         * > 
          * 
-         *     Default value: **Immediately**.
+         * *   You can call the [ModifyDBInstanceMaintainTime](~~62008~~) operation to modify the maintenance window of an instance.
+         * 
+         * *   You can call the [DescribeDBInstanceAttribute](~~62010~~) operation to view the maintenance window of an instance.
+         * 
+         * Default value: **Immediately**.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -308,7 +310,7 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The configuration information of the mongos nodes or shard nodes whose configurations you want to change. For more information, see [Instance types](~~57141~~).
+         * The configuration information of the mongos nodes or shard nodes whose configurations you want to modify. For more information, see [Instance types](~~57141~~).
          */
         public Builder nodesInfo(String nodesInfo) {
             this.putQueryParameter("NodesInfo", nodesInfo);
@@ -317,14 +319,13 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The type of configuration changes. Valid values:
+         * The type of configuration modifications. Valid values:
          * <p>
          * 
          * *   **UPGRADE**
-         * 
          * *   **DOWNGRADE**
          * 
-         * > This parameter can be configured only when the billing method of the instance is subscription.
+         * > This parameter is available only if the billing method of the instance is subscription.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -351,7 +352,7 @@ public class ModifyNodeSpecBatchRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61933~~) operation to query the region ID of the instance.
+         * The ID of the region. You can call the [DescribeRegions](~~61933~~) operation to query the latest available regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

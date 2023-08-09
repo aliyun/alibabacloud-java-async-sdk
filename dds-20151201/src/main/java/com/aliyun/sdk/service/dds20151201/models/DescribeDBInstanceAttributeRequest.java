@@ -190,7 +190,11 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * Specifies whether the instance is deleted. Valid values:
+         * <p>
+         * 
+         * *   **false**: queries details about running instances.
+         * *   **true**: queries details about deleted instances.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -199,7 +203,10 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The database engine of the instance. Set the value to **MongoDB**.
+         * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
+         * <p>
+         * 
+         * > This parameter is available only if you use the China site (aliyun.com).
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -208,10 +215,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * 实例是否已删除，取值说明： 
-         * <p>
-         * - **false**：实例正常运行，查询运行中实例信息。
-         * - **true**：实例已删除，查询被删除实例的信息。
+         * The ID of the request.
          */
         public Builder isDelete(Boolean isDelete) {
             this.putQueryParameter("IsDelete", isDelete);
@@ -238,10 +242,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
-         * <p>
-         * 
-         * > This parameter is available only if you use the China site (aliyun.com).
+         * Details of the instance.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
