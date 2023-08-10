@@ -39,6 +39,10 @@ public class ListTensorboardsRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("ShowOwn")
+    private Boolean showOwn;
+
+    @Query
     @NameInMap("SortBy")
     private String sortBy;
 
@@ -78,6 +82,7 @@ public class ListTensorboardsRequest extends Request {
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.showOwn = builder.showOwn;
         this.sortBy = builder.sortBy;
         this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
@@ -144,6 +149,13 @@ public class ListTensorboardsRequest extends Request {
     }
 
     /**
+     * @return showOwn
+     */
+    public Boolean getShowOwn() {
+        return this.showOwn;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -206,6 +218,7 @@ public class ListTensorboardsRequest extends Request {
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Boolean showOwn; 
         private String sortBy; 
         private String sourceId; 
         private String sourceType; 
@@ -227,6 +240,7 @@ public class ListTensorboardsRequest extends Request {
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.showOwn = request.showOwn;
             this.sortBy = request.sortBy;
             this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
@@ -288,6 +302,15 @@ public class ListTensorboardsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ShowOwn.
+         */
+        public Builder showOwn(Boolean showOwn) {
+            this.putQueryParameter("ShowOwn", showOwn);
+            this.showOwn = showOwn;
             return this;
         }
 

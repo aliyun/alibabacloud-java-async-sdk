@@ -21,6 +21,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("Caller")
     private String caller;
 
+    @NameInMap("Driver")
+    private String driver;
+
     @NameInMap("EnableErrorMonitoringInAIMaster")
     private Boolean enableErrorMonitoringInAIMaster;
 
@@ -49,6 +52,7 @@ public class JobSettings extends TeaModel {
         this.advancedSettings = builder.advancedSettings;
         this.businessUserId = builder.businessUserId;
         this.caller = builder.caller;
+        this.driver = builder.driver;
         this.enableErrorMonitoringInAIMaster = builder.enableErrorMonitoringInAIMaster;
         this.enableOssAppend = builder.enableOssAppend;
         this.enableRDMA = builder.enableRDMA;
@@ -86,6 +90,13 @@ public class JobSettings extends TeaModel {
      */
     public String getCaller() {
         return this.caller;
+    }
+
+    /**
+     * @return driver
+     */
+    public String getDriver() {
+        return this.driver;
     }
 
     /**
@@ -148,6 +159,7 @@ public class JobSettings extends TeaModel {
         private java.util.Map < String, ? > advancedSettings; 
         private String businessUserId; 
         private String caller; 
+        private String driver; 
         private Boolean enableErrorMonitoringInAIMaster; 
         private Boolean enableOssAppend; 
         private Boolean enableRDMA; 
@@ -178,6 +190,14 @@ public class JobSettings extends TeaModel {
          */
         public Builder caller(String caller) {
             this.caller = caller;
+            return this;
+        }
+
+        /**
+         * Driver.
+         */
+        public Builder driver(String driver) {
+            this.driver = driver;
             return this;
         }
 
