@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.eiam20211201.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link GetForgetPasswordConfigurationResponse} extends {@link TeaModel}
+ *
+ * <p>GetForgetPasswordConfigurationResponse</p>
+ */
+public class GetForgetPasswordConfigurationResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private GetForgetPasswordConfigurationResponseBody body;
+
+    private GetForgetPasswordConfigurationResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static GetForgetPasswordConfigurationResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public GetForgetPasswordConfigurationResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<GetForgetPasswordConfigurationResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(GetForgetPasswordConfigurationResponseBody body);
+
+        @Override
+        GetForgetPasswordConfigurationResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<GetForgetPasswordConfigurationResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private GetForgetPasswordConfigurationResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(GetForgetPasswordConfigurationResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(GetForgetPasswordConfigurationResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public GetForgetPasswordConfigurationResponse build() {
+            return new GetForgetPasswordConfigurationResponse(this);
+        } 
+
+    } 
+
+}

@@ -51,7 +51,7 @@ public class CreateUserRequest extends Request {
 
     @Query
     @NameInMap("Password")
-    @Validation(required = true, maxLength = 64)
+    @Validation(maxLength = 64)
     private String password;
 
     @Query

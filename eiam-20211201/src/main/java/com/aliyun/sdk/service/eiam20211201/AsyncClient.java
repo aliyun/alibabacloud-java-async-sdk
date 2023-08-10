@@ -80,6 +80,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DisableApplicationProvisioningResponse> disableApplicationProvisioning(DisableApplicationProvisioningRequest request);
 
+    CompletableFuture<DisableApplicationSsoResponse> disableApplicationSso(DisableApplicationSsoRequest request);
+
     CompletableFuture<DisableUserResponse> disableUser(DisableUserRequest request);
 
     CompletableFuture<EnableApplicationResponse> enableApplication(EnableApplicationRequest request);
@@ -89,6 +91,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableApplicationClientSecretResponse> enableApplicationClientSecret(EnableApplicationClientSecretRequest request);
 
     CompletableFuture<EnableApplicationProvisioningResponse> enableApplicationProvisioning(EnableApplicationProvisioningRequest request);
+
+    CompletableFuture<EnableApplicationSsoResponse> enableApplicationSso(EnableApplicationSsoRequest request);
 
     CompletableFuture<EnableUserResponse> enableUser(EnableUserRequest request);
 
@@ -101,6 +105,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetApplicationProvisioningScopeResponse> getApplicationProvisioningScope(GetApplicationProvisioningScopeRequest request);
 
     CompletableFuture<GetApplicationSsoConfigResponse> getApplicationSsoConfig(GetApplicationSsoConfigRequest request);
+
+    CompletableFuture<GetForgetPasswordConfigurationResponse> getForgetPasswordConfiguration(GetForgetPasswordConfigurationRequest request);
 
     CompletableFuture<GetGroupResponse> getGroup(GetGroupRequest request);
 
@@ -187,6 +193,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<SetApplicationSsoConfigResponse> setApplicationSsoConfig(SetApplicationSsoConfigRequest request);
+
+    CompletableFuture<SetForgetPasswordConfigurationResponse> setForgetPasswordConfiguration(SetForgetPasswordConfigurationRequest request);
 
     CompletableFuture<SetPasswordComplexityConfigurationResponse> setPasswordComplexityConfiguration(SetPasswordComplexityConfigurationRequest request);
 

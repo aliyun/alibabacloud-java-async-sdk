@@ -641,7 +641,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 账户同步页面渲染方式
+             * Client-side rendering, Valid values: 
+             * <p>
+             * - standard：standard mode.
+             * - template：template mode.
              */
             public Builder configOperateMode(String configOperateMode) {
                 this.configOperateMode = configOperateMode;
