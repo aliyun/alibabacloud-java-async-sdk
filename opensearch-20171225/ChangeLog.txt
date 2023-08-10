@@ -1,6 +1,9 @@
 2023-08-10 Version: 1.0.1
 - Generated java-async 2017-12-25 for OpenSearch.
 
+2023-08-10 Version: 1.0.1
+- Generated java-async 2017-12-25 for OpenSearch.
+
 2022-02-21 Version: 1.0.0
 - Generated java-async 2017-12-25 for OpenSearch.
 
