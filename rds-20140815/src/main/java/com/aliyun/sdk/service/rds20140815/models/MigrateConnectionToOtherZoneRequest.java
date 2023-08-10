@@ -23,6 +23,14 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
     private String DBInstanceId;
 
     @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @Query
     @NameInMap("ZoneId")
     @Validation(required = true)
     private String zoneId;
@@ -31,6 +39,8 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
         super(builder);
         this.connectionString = builder.connectionString;
         this.DBInstanceId = builder.DBInstanceId;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.zoneId = builder.zoneId;
     }
 
@@ -62,6 +72,20 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -71,6 +95,8 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
     public static final class Builder extends Request.Builder<MigrateConnectionToOtherZoneRequest, Builder> {
         private String connectionString; 
         private String DBInstanceId; 
+        private Long ownerId; 
+        private Long resourceOwnerId; 
         private String zoneId; 
 
         private Builder() {
@@ -81,6 +107,8 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
             super(request);
             this.connectionString = request.connectionString;
             this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.zoneId = request.zoneId;
         } 
 
@@ -99,6 +127,24 @@ public class MigrateConnectionToOtherZoneRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

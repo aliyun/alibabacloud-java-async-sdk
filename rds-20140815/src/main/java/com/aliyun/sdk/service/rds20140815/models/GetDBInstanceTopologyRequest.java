@@ -17,9 +17,19 @@ public class GetDBInstanceTopologyRequest extends Request {
     @Validation(required = true)
     private String DBInstanceId;
 
+    @Query
+    @NameInMap("OwnerId")
+    private Long ownerId;
+
+    @Query
+    @NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
     private GetDBInstanceTopologyRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -42,8 +52,24 @@ public class GetDBInstanceTopologyRequest extends Request {
         return this.DBInstanceId;
     }
 
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<GetDBInstanceTopologyRequest, Builder> {
         private String DBInstanceId; 
+        private Long ownerId; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -52,6 +78,8 @@ public class GetDBInstanceTopologyRequest extends Request {
         private Builder(GetDBInstanceTopologyRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -60,6 +88,24 @@ public class GetDBInstanceTopologyRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
