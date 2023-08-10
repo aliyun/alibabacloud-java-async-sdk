@@ -156,6 +156,9 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         @NameInMap("IpProtocol")
         private String ipProtocol;
 
+        @NameInMap("NatGatewayId")
+        private String natGatewayId;
+
         @NameInMap("Status")
         private String status;
 
@@ -168,6 +171,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             this.internalIp = builder.internalIp;
             this.internalPort = builder.internalPort;
             this.ipProtocol = builder.ipProtocol;
+            this.natGatewayId = builder.natGatewayId;
             this.status = builder.status;
         }
 
@@ -236,6 +240,13 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         }
 
         /**
+         * @return natGatewayId
+         */
+        public String getNatGatewayId() {
+            return this.natGatewayId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -251,6 +262,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
             private String internalIp; 
             private String internalPort; 
             private String ipProtocol; 
+            private String natGatewayId; 
             private String status; 
 
             /**
@@ -329,6 +341,14 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
              */
             public Builder ipProtocol(String ipProtocol) {
                 this.ipProtocol = ipProtocol;
+                return this;
+            }
+
+            /**
+             * NatGatewayId.
+             */
+            public Builder natGatewayId(String natGatewayId) {
+                this.natGatewayId = natGatewayId;
                 return this;
             }
 

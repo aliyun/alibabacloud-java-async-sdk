@@ -106,6 +106,10 @@ public class DescribeEipAddressesRequest extends Request {
     @NameInMap("Status")
     private String status;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private DescribeEipAddressesRequest(Builder builder) {
         super(builder);
         this.filter = builder.filter;
@@ -131,6 +135,7 @@ public class DescribeEipAddressesRequest extends Request {
         this.securityProtectionEnabled = builder.securityProtectionEnabled;
         this.segmentInstanceId = builder.segmentInstanceId;
         this.status = builder.status;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -307,6 +312,13 @@ public class DescribeEipAddressesRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<DescribeEipAddressesRequest, Builder> {
         private java.util.List < Filter> filter; 
         private String allocationId; 
@@ -331,6 +343,7 @@ public class DescribeEipAddressesRequest extends Request {
         private Boolean securityProtectionEnabled; 
         private String segmentInstanceId; 
         private String status; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -361,6 +374,7 @@ public class DescribeEipAddressesRequest extends Request {
             this.securityProtectionEnabled = request.securityProtectionEnabled;
             this.segmentInstanceId = request.segmentInstanceId;
             this.status = request.status;
+            this.tag = request.tag;
         } 
 
         /**
@@ -640,6 +654,15 @@ public class DescribeEipAddressesRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public DescribeEipAddressesRequest build() {
             return new DescribeEipAddressesRequest(this);
@@ -703,6 +726,67 @@ public class DescribeEipAddressesRequest extends Request {
 
             public Filter build() {
                 return new Filter(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The filter key used to query resources. Set the value to **CreationStartTime**, which indicates the time when the system started to create the resource.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The filter value used to query resources. Specify the time in the ISO 8601 standard in `YYYY-MM-DDThh:mmZ` format. The time must be in UTC.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
             } 
 
         } 

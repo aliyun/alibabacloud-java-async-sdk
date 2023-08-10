@@ -132,6 +132,9 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     } 
 
     public static class SnatTableEntry extends TeaModel {
+        @NameInMap("NatGatewayId")
+        private String natGatewayId;
+
         @NameInMap("SnatEntryId")
         private String snatEntryId;
 
@@ -154,6 +157,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         private String status;
 
         private SnatTableEntry(Builder builder) {
+            this.natGatewayId = builder.natGatewayId;
             this.snatEntryId = builder.snatEntryId;
             this.snatEntryName = builder.snatEntryName;
             this.snatIp = builder.snatIp;
@@ -169,6 +173,13 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
 
         public static SnatTableEntry create() {
             return builder().build();
+        }
+
+        /**
+         * @return natGatewayId
+         */
+        public String getNatGatewayId() {
+            return this.natGatewayId;
         }
 
         /**
@@ -221,6 +232,7 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String natGatewayId; 
             private String snatEntryId; 
             private String snatEntryName; 
             private String snatIp; 
@@ -228,6 +240,14 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
             private String sourceCIDR; 
             private String sourceVSwitchId; 
             private String status; 
+
+            /**
+             * NatGatewayId.
+             */
+            public Builder natGatewayId(String natGatewayId) {
+                this.natGatewayId = natGatewayId;
+                return this;
+            }
 
             /**
              * The ID of the SNAT entry.

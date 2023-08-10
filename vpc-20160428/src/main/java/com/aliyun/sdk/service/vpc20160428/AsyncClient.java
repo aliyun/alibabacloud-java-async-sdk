@@ -1731,6 +1731,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifySslVpnServerResponse> modifySslVpnServer(ModifySslVpnServerRequest request);
 
+    CompletableFuture<ModifyTunnelAttributeResponse> modifyTunnelAttribute(ModifyTunnelAttributeRequest request);
+
     /**
       * You cannot repeatedly call the **ModifyVRouterAttribute** operation to modify the name and description of a vRouter within the specified period of time.
       *
