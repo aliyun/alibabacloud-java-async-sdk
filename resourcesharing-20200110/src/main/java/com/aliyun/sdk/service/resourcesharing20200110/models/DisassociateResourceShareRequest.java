@@ -121,7 +121,11 @@ public class DisassociateResourceShareRequest extends Request {
         }
 
         /**
-         * The information of the entities that are associated with the resource share.
+         * The owner of the resource share. Valid values:
+         * <p>
+         * 
+         * *   Self: The resource share belongs to the current account. This is the default value. If you are the management account or a member of a resource directory and you want to remove resources or principals from a resource share, set this parameter to Self.
+         * *   OtherAccounts: The resource share belongs to another account. If you are not the management account or a member of a resource directory and you want to exit a resource share, set this parameter to OtherAccounts.
          */
         public Builder resourceOwner(String resourceOwner) {
             this.putQueryParameter("ResourceOwner", resourceOwner);
@@ -130,12 +134,7 @@ public class DisassociateResourceShareRequest extends Request {
         }
 
         /**
-         * The ID of a shared resource.
-         * <p>
-         * 
-         * Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.
-         * 
-         * >  Resources.N.ResourceId and Resources.N.ResourceType must be used in pairs.
+         * The ID of the resource share.
          */
         public Builder resourceShareId(String resourceShareId) {
             this.putQueryParameter("ResourceShareId", resourceShareId);
@@ -207,11 +206,12 @@ public class DisassociateResourceShareRequest extends Request {
             private String resourceType; 
 
             /**
-             * The owner of the resource share. Valid values:
+             * The ID of a shared resource.
              * <p>
              * 
-             * *   Self: The resource share belongs to the current account. This is the default value. If you are the management account or a member of a resource directory and you want to remove resources or principals from a resource share, set this parameter to Self.
-             * *   OtherAccounts: The resource share belongs to another account. If you are not the management account or a member of a resource directory and you want to exit a resource share, set this parameter to OtherAccounts.
+             * Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.
+             * 
+             * >  Resources.N.ResourceId and Resources.N.ResourceType must be used in pairs.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -219,10 +219,14 @@ public class DisassociateResourceShareRequest extends Request {
             }
 
             /**
-             * The ID of a principal.
+             * The type of a shared resource.
              * <p>
              * 
-             * Valid values of N: 1 to 5. This indicates that a maximum of five principals can be specified at a time.
+             * Valid values of N: 1 to 5. This indicates that a maximum of five shared resources can be specified at a time.
+             * 
+             * For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).
+             * 
+             * >  Resources.N.ResourceId and Resources.N.ResourceType must be used in pairs.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

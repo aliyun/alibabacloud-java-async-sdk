@@ -108,7 +108,11 @@ public class UpdateResourceShareRequest extends Request {
         }
 
         /**
-         * The information of the resource share.
+         * Specifies whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:
+         * <p>
+         * 
+         * *   false: Resources in the resource share can be shared only with accounts in the resource directory.
+         * *   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.
          */
         public Builder allowExternalTargets(Boolean allowExternalTargets) {
             this.putQueryParameter("AllowExternalTargets", allowExternalTargets);
@@ -117,11 +121,7 @@ public class UpdateResourceShareRequest extends Request {
         }
 
         /**
-         * Specifies whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:
-         * <p>
-         * 
-         * *   false: Resources in the resource share can be shared only with accounts in the resource directory.
-         * *   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.
+         * The ID of the resource share.
          */
         public Builder resourceShareId(String resourceShareId) {
             this.putQueryParameter("ResourceShareId", resourceShareId);
@@ -130,7 +130,12 @@ public class UpdateResourceShareRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The new name of the resource share.
+         * <p>
+         * 
+         * The name must be 1 to 50 characters in length.
+         * 
+         * The name can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder resourceShareName(String resourceShareName) {
             this.putQueryParameter("ResourceShareName", resourceShareName);

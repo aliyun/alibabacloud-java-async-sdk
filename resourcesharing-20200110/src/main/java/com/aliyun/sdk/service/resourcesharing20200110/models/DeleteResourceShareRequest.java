@@ -79,7 +79,7 @@ public class DeleteResourceShareRequest extends Request {
         }
 
         /**
-         * ResourceShareId.
+         * The ID of the resource share.
          */
         public Builder resourceShareId(String resourceShareId) {
             this.putQueryParameter("ResourceShareId", resourceShareId);

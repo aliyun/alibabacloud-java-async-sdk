@@ -50,11 +50,7 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
         private java.util.List < ResourceShareAssociations> resourceShareAssociations; 
 
         /**
-         * The time when the disassociation of the entity was updated. The value of this parameter depends on the value of the AssociationType parameter:
-         * <p>
-         * 
-         * *   If the value of `AssociationType` is `Resource`, the value of this parameter is the time when the disassociation of the resource was updated.
-         * *   If the value of `AssociationType` is `Target`, the value of this parameter is the time when the disassociation of the principal was updated.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -62,11 +58,7 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the entity. The value of this parameter depends on the value of the AssociationType parameter:
-         * <p>
-         * 
-         * *   If the value of `AssociationType` is `Resource`, the value of this parameter is the ID of the resource.
-         * *   If the value of `AssociationType` is `Target`, the value of this parameter is the ID of the resource directory, folder, or member.
+         * The information of the entities that are associated with the resource share.
          */
         public Builder resourceShareAssociations(java.util.List < ResourceShareAssociations> resourceShareAssociations) {
             this.resourceShareAssociations = resourceShareAssociations;
@@ -202,14 +194,6 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * AssociationStatus.
-             */
-            public Builder associationStatus(String associationStatus) {
-                this.associationStatus = associationStatus;
-                return this;
-            }
-
-            /**
              * The association status. Valid values:
              * <p>
              * 
@@ -221,44 +205,16 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
              * 
              * >  The system deletes the records of entities in the `Failed` or `Disassociated` state within 48 hours to 96 hours.
              */
-            public Builder associationStatusMessage(String associationStatusMessage) {
-                this.associationStatusMessage = associationStatusMessage;
-                return this;
-            }
-
-            /**
-             * AssociationType.
-             */
-            public Builder associationType(String associationType) {
-                this.associationType = associationType;
-                return this;
-            }
-
-            /**
-             * The ID of the resource share.
-             */
-            public Builder createTime(String createTime) {
-                this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * The time when the disassociation of the entity was performed. The value of this parameter depends on the value of the AssociationType parameter:
-             * <p>
-             * 
-             * *   If the value of `AssociationType` is `Resource`, the value of this parameter is the time when the resource was disassociated from the resource share.
-             * *   If the value of `AssociationType` is `Target`, the value of this parameter is the time when the principal was disassociated from the resource share.
-             */
-            public Builder entityId(String entityId) {
-                this.entityId = entityId;
+            public Builder associationStatus(String associationStatus) {
+                this.associationStatus = associationStatus;
                 return this;
             }
 
             /**
              * The cause of the disassociation failure.
              */
-            public Builder entityType(String entityType) {
-                this.entityType = entityType;
+            public Builder associationStatusMessage(String associationStatusMessage) {
+                this.associationStatusMessage = associationStatusMessage;
                 return this;
             }
 
@@ -269,8 +225,32 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
              * *   Resource
              * *   Target
              */
-            public Builder resourceShareId(String resourceShareId) {
-                this.resourceShareId = resourceShareId;
+            public Builder associationType(String associationType) {
+                this.associationType = associationType;
+                return this;
+            }
+
+            /**
+             * The time when the disassociation of the entity was performed. The value of this parameter depends on the value of the AssociationType parameter:
+             * <p>
+             * 
+             * *   If the value of `AssociationType` is `Resource`, the value of this parameter is the time when the resource was disassociated from the resource share.
+             * *   If the value of `AssociationType` is `Target`, the value of this parameter is the time when the principal was disassociated from the resource share.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * The ID of the entity. The value of this parameter depends on the value of the AssociationType parameter:
+             * <p>
+             * 
+             * *   If the value of `AssociationType` is `Resource`, the value of this parameter is the ID of the resource.
+             * *   If the value of `AssociationType` is `Target`, the value of this parameter is the ID of the resource directory, folder, or member.
+             */
+            public Builder entityId(String entityId) {
+                this.entityId = entityId;
                 return this;
             }
 
@@ -281,13 +261,33 @@ public class DisassociateResourceShareResponseBody extends TeaModel {
              * *   If the value of AssociationType is Resource, the value of this parameter is the type of the resource. For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).
              * *   If the value of AssociationType is Target, the value of this parameter is Account.
              */
+            public Builder entityType(String entityType) {
+                this.entityType = entityType;
+                return this;
+            }
+
+            /**
+             * The ID of the resource share.
+             */
+            public Builder resourceShareId(String resourceShareId) {
+                this.resourceShareId = resourceShareId;
+                return this;
+            }
+
+            /**
+             * The name of the resource share.
+             */
             public Builder resourceShareName(String resourceShareName) {
                 this.resourceShareName = resourceShareName;
                 return this;
             }
 
             /**
-             * The name of the resource share.
+             * The time when the disassociation of the entity was updated. The value of this parameter depends on the value of the AssociationType parameter:
+             * <p>
+             * 
+             * *   If the value of `AssociationType` is `Resource`, the value of this parameter is the time when the disassociation of the resource was updated.
+             * *   If the value of `AssociationType` is `Target`, the value of this parameter is the time when the disassociation of the principal was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

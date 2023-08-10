@@ -62,7 +62,7 @@ public class ListPermissionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The version of the permission.
+         * The token that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * The creation time.
+         * The information about the permission.
          */
         public Builder permissions(java.util.List < Permissions> permissions) {
             this.permissions = permissions;
@@ -78,11 +78,7 @@ public class ListPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the version is the default version. Valid values:
-         * <p>
-         * 
-         * *   false: The version is not the default version.
-         * *   true: The version is the default version.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,18 +190,10 @@ public class ListPermissionsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The creation time.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * DefaultPermission.
-             */
-            public Builder defaultPermission(Boolean defaultPermission) {
-                this.defaultPermission = defaultPermission;
                 return this;
             }
 
@@ -216,16 +204,36 @@ public class ListPermissionsResponseBody extends TeaModel {
              * *   false: The permission is not the default permission.
              * *   true: The permission is the default permission.
              */
+            public Builder defaultPermission(Boolean defaultPermission) {
+                this.defaultPermission = defaultPermission;
+                return this;
+            }
+
+            /**
+             * Indicates whether the version is the default version. Valid values:
+             * <p>
+             * 
+             * *   false: The version is not the default version.
+             * *   true: The version is the default version.
+             */
             public Builder defaultVersion(Boolean defaultVersion) {
                 this.defaultVersion = defaultVersion;
                 return this;
             }
 
             /**
-             * The update time.
+             * The name of the permission.
              */
             public Builder permissionName(String permissionName) {
                 this.permissionName = permissionName;
+                return this;
+            }
+
+            /**
+             * The version of the permission.
+             */
+            public Builder permissionVersion(String permissionVersion) {
+                this.permissionVersion = permissionVersion;
                 return this;
             }
 
@@ -235,21 +243,13 @@ public class ListPermissionsResponseBody extends TeaModel {
              * 
              * For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).
              */
-            public Builder permissionVersion(String permissionVersion) {
-                this.permissionVersion = permissionVersion;
-                return this;
-            }
-
-            /**
-             * ResourceType.
-             */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
                 return this;
             }
 
             /**
-             * UpdateTime.
+             * The update time.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

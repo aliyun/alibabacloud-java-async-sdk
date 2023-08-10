@@ -106,7 +106,10 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * The information about the permission.
+         * The maximum number of entries to return for a single request.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -115,7 +118,7 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * The name of the permission.
+         * The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -124,7 +127,10 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The type of the shared resources.
+         * <p>
+         * 
+         * For more information about the types of resources that can be shared, see [Services that work with Resource Sharing](~~450526~~).
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -62,7 +62,7 @@ public class ListResourceSharesResponseBody extends TeaModel {
         private java.util.List < ResourceShares> resourceShares; 
 
         /**
-         * The information of the resource shares.
+         * The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListResourceSharesResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the resource share was updated.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListResourceSharesResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the resource share.
+         * The information of the resource shares.
          */
         public Builder resourceShares(java.util.List < ResourceShares> resourceShares) {
             this.resourceShares = resourceShares;
@@ -190,10 +190,46 @@ public class ListResourceSharesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * AllowExternalTargets.
+             * Indicates whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:
+             * <p>
+             * 
+             * *   false: Resources in the resource share can be shared only with accounts in the resource directory.
+             * *   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.
              */
             public Builder allowExternalTargets(Boolean allowExternalTargets) {
                 this.allowExternalTargets = allowExternalTargets;
+                return this;
+            }
+
+            /**
+             * The time when the resource share was created.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * The ID of the resource share.
+             */
+            public Builder resourceShareId(String resourceShareId) {
+                this.resourceShareId = resourceShareId;
+                return this;
+            }
+
+            /**
+             * The name of the resource share.
+             */
+            public Builder resourceShareName(String resourceShareName) {
+                this.resourceShareName = resourceShareName;
+                return this;
+            }
+
+            /**
+             * The owner of the resource share.
+             */
+            public Builder resourceShareOwner(String resourceShareOwner) {
+                this.resourceShareOwner = resourceShareOwner;
                 return this;
             }
 
@@ -208,49 +244,13 @@ public class ListResourceSharesResponseBody extends TeaModel {
              * 
              * >  The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.
              */
-            public Builder createTime(String createTime) {
-                this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * Indicates whether resources in the resource share can be shared with accounts outside the resource directory. Valid values:
-             * <p>
-             * 
-             * *   false: Resources in the resource share can be shared only with accounts in the resource directory.
-             * *   true: Resources in the resource share can be shared with both accounts in the resource directory and accounts outside the resource directory.
-             */
-            public Builder resourceShareId(String resourceShareId) {
-                this.resourceShareId = resourceShareId;
-                return this;
-            }
-
-            /**
-             * The time when the resource share was created.
-             */
-            public Builder resourceShareName(String resourceShareName) {
-                this.resourceShareName = resourceShareName;
-                return this;
-            }
-
-            /**
-             * The ID of the resource share.
-             */
-            public Builder resourceShareOwner(String resourceShareOwner) {
-                this.resourceShareOwner = resourceShareOwner;
-                return this;
-            }
-
-            /**
-             * ResourceShareStatus.
-             */
             public Builder resourceShareStatus(String resourceShareStatus) {
                 this.resourceShareStatus = resourceShareStatus;
                 return this;
             }
 
             /**
-             * The owner of the resource share.
+             * The time when the resource share was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

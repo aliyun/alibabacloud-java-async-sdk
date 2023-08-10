@@ -94,7 +94,7 @@ public class DisassociateResourceSharePermissionRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The name of the permission. For more information, see [Permission library](~~465474~~).
          */
         public Builder permissionName(String permissionName) {
             this.putQueryParameter("PermissionName", permissionName);
@@ -103,7 +103,7 @@ public class DisassociateResourceSharePermissionRequest extends Request {
         }
 
         /**
-         * The name of the permission. For more information, see [Permission library](~~465474~~).
+         * The ID of the resource share.
          */
         public Builder resourceShareId(String resourceShareId) {
             this.putQueryParameter("ResourceShareId", resourceShareId);

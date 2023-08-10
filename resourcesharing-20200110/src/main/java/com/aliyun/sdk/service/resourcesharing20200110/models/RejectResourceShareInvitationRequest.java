@@ -79,7 +79,10 @@ public class RejectResourceShareInvitationRequest extends Request {
         }
 
         /**
-         * The ID of the invitation.
+         * The ID of the resource sharing invitation.
+         * <p>
+         * 
+         * You can call the [ListResourceShareInvitations](~~450564~~) operation to obtain the ID of a resource sharing invitation.
          */
         public Builder resourceShareInvitationId(String resourceShareInvitationId) {
             this.putQueryParameter("ResourceShareInvitationId", resourceShareInvitationId);

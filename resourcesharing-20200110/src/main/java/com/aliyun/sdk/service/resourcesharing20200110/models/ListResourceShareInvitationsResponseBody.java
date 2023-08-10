@@ -62,14 +62,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         private java.util.List < ResourceShareInvitations> resourceShareInvitations; 
 
         /**
-         * The status of the invitation. Valid values:
-         * <p>
-         * 
-         * *   Pending: The invitation is waiting for confirmation.
-         * *   Accepted: The invitation is accepted.
-         * *   Cancelled: The invitation is canceled.
-         * *   Rejected: The invitation is rejected.
-         * *   Expired: The invitation has expired.
+         * The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -77,7 +70,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the invitation was created. The time is displayed in UTC.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -85,7 +78,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the resource share.
+         * The information of the resource sharing invitations.
          */
         public Builder resourceShareInvitations(java.util.List < ResourceShareInvitations> resourceShareInvitations) {
             this.resourceShareInvitations = resourceShareInvitations;
@@ -197,7 +190,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The Alibaba Cloud account ID of the inviter.
+             * The time when the invitation was created. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -205,7 +198,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiverAccountId.
+             * The Alibaba Cloud account ID of the invitee.
              */
             public Builder receiverAccountId(String receiverAccountId) {
                 this.receiverAccountId = receiverAccountId;
@@ -213,7 +206,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account ID of the invitee.
+             * The ID of the resource share.
              */
             public Builder resourceShareId(String resourceShareId) {
                 this.resourceShareId = resourceShareId;
@@ -221,7 +214,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceShareInvitationId.
+             * The ID of the invitation.
              */
             public Builder resourceShareInvitationId(String resourceShareInvitationId) {
                 this.resourceShareInvitationId = resourceShareInvitationId;
@@ -229,7 +222,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the invitation.
+             * The name of the resource share.
              */
             public Builder resourceShareName(String resourceShareName) {
                 this.resourceShareName = resourceShareName;
@@ -237,7 +230,7 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * SenderAccountId.
+             * The Alibaba Cloud account ID of the inviter.
              */
             public Builder senderAccountId(String senderAccountId) {
                 this.senderAccountId = senderAccountId;
@@ -245,7 +238,14 @@ public class ListResourceShareInvitationsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource share.
+             * The status of the invitation. Valid values:
+             * <p>
+             * 
+             * *   Pending: The invitation is waiting for confirmation.
+             * *   Accepted: The invitation is accepted.
+             * *   Cancelled: The invitation is canceled.
+             * *   Rejected: The invitation is rejected.
+             * *   Expired: The invitation has expired.
              */
             public Builder status(String status) {
                 this.status = status;

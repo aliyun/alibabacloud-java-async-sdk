@@ -120,7 +120,10 @@ public class ListResourceShareInvitationsRequest extends Request {
         }
 
         /**
-         * The IDs of the resource sharing invitations.
+         * The maximum number of entries to return for a single request.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);

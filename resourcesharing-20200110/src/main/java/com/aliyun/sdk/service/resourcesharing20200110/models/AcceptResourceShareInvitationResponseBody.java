@@ -50,7 +50,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         private ResourceShareInvitation resourceShareInvitation; 
 
         /**
-         * The ID of the resource share.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the resource share.
+         * The information of the resource sharing invitation.
          */
         public Builder resourceShareInvitation(ResourceShareInvitation resourceShareInvitation) {
             this.resourceShareInvitation = resourceShareInvitation;
@@ -177,7 +177,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * The time when the invitation was created. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -185,7 +185,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiverAccountId.
+             * The Alibaba Cloud account ID of the invitee.
              */
             public Builder receiverAccountId(String receiverAccountId) {
                 this.receiverAccountId = receiverAccountId;
@@ -193,7 +193,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account ID of the invitee.
+             * The ID of the resource share.
              */
             public Builder resourceShareId(String resourceShareId) {
                 this.resourceShareId = resourceShareId;
@@ -201,7 +201,7 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account ID of the inviter.
+             * The ID of the invitation.
              */
             public Builder resourceShareInvitationId(String resourceShareInvitationId) {
                 this.resourceShareInvitationId = resourceShareInvitationId;
@@ -209,10 +209,18 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the invitation was created. The time is displayed in UTC.
+             * The name of the resource share.
              */
             public Builder resourceShareName(String resourceShareName) {
                 this.resourceShareName = resourceShareName;
+                return this;
+            }
+
+            /**
+             * The Alibaba Cloud account ID of the inviter.
+             */
+            public Builder senderAccountId(String senderAccountId) {
+                this.senderAccountId = senderAccountId;
                 return this;
             }
 
@@ -225,14 +233,6 @@ public class AcceptResourceShareInvitationResponseBody extends TeaModel {
              * *   Cancelled: The invitation is canceled.
              * *   Rejected: The invitation is rejected.
              * *   Expired: The invitation has expired.
-             */
-            public Builder senderAccountId(String senderAccountId) {
-                this.senderAccountId = senderAccountId;
-                return this;
-            }
-
-            /**
-             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

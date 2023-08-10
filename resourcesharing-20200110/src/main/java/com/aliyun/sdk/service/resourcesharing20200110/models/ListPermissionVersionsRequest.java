@@ -107,7 +107,10 @@ public class ListPermissionVersionsRequest extends Request {
         }
 
         /**
-         * The information about the permission.
+         * The maximum number of entries to return for a single request.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -116,7 +119,7 @@ public class ListPermissionVersionsRequest extends Request {
         }
 
         /**
-         * The name of the permission.
+         * The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -125,7 +128,7 @@ public class ListPermissionVersionsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The name of the permission.
          */
         public Builder permissionName(String permissionName) {
             this.putQueryParameter("PermissionName", permissionName);

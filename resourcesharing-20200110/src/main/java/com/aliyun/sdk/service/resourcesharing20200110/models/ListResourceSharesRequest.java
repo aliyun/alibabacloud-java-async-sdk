@@ -163,7 +163,10 @@ public class ListResourceSharesRequest extends Request {
         }
 
         /**
-         * The ID of a resource share.
+         * The maximum number of entries to return for a single request.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -172,7 +175,7 @@ public class ListResourceSharesRequest extends Request {
         }
 
         /**
-         * The name of the permission. For more information, see [Permission library](~~465474~~).
+         * The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -181,7 +184,7 @@ public class ListResourceSharesRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The name of the permission. For more information, see [Permission library](~~465474~~).
          */
         public Builder permissionName(String permissionName) {
             this.putQueryParameter("PermissionName", permissionName);
@@ -190,15 +193,11 @@ public class ListResourceSharesRequest extends Request {
         }
 
         /**
-         * The status of the resource share. Valid values:
+         * The owner of the resource shares. Valid values:
          * <p>
          * 
-         * *   Active: The resource share is enabled.
-         * *   Pending: The resource share is associated with one or more resource sharing invitations that are waiting for confirmation.
-         * *   Deleting: The resource share is being deleted.
-         * *   Deleted: The resource share is deleted.
-         * 
-         * >  The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.
+         * *   Self: the current account
+         * *   OtherAccounts: an account other than the current account
          */
         public Builder resourceOwner(String resourceOwner) {
             this.putQueryParameter("ResourceOwner", resourceOwner);
@@ -216,10 +215,7 @@ public class ListResourceSharesRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return for a single request.
-         * <p>
-         * 
-         * Valid values: 1 to 100. Default value: 20.
+         * The name of the resource share.
          */
         public Builder resourceShareName(String resourceShareName) {
             this.putQueryParameter("ResourceShareName", resourceShareName);
@@ -228,7 +224,15 @@ public class ListResourceSharesRequest extends Request {
         }
 
         /**
-         * The `token` that is used to initiate the next request. If the response of the current request is truncated, you can use the token to initiate another request and obtain the remaining records.
+         * The status of the resource share. Valid values:
+         * <p>
+         * 
+         * *   Active: The resource share is enabled.
+         * *   Pending: The resource share is associated with one or more resource sharing invitations that are waiting for confirmation.
+         * *   Deleting: The resource share is being deleted.
+         * *   Deleted: The resource share is deleted.
+         * 
+         * >  The system deletes the records of resource shares in the Deleted state within 48 hours to 96 hours after you delete the resource shares.
          */
         public Builder resourceShareStatus(String resourceShareStatus) {
             this.putQueryParameter("ResourceShareStatus", resourceShareStatus);
