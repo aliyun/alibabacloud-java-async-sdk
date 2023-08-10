@@ -63,14 +63,14 @@ public class ListDataSourceTablesRequest extends Request {
             super();
         } 
 
-        private Builder(ListDataSourceTablesRequest response) {
-            super(response);
-            this.dataSourceType = response.dataSourceType;
-            this.params = response.params;
+        private Builder(ListDataSourceTablesRequest request) {
+            super(request);
+            this.dataSourceType = request.dataSourceType;
+            this.params = request.params;
         } 
 
         /**
-         * dataSourceType.
+         * rds
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putPathParameter("dataSourceType", dataSourceType);
@@ -79,7 +79,7 @@ public class ListDataSourceTablesRequest extends Request {
         }
 
         /**
-         * params.
+         * N/A
          */
         public Builder params(String params) {
             this.putQueryParameter("params", params);

@@ -50,7 +50,7 @@ public class ListSortScriptsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListSortScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The scripts of the application version.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -158,7 +158,7 @@ public class ListSortScriptsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * createTime.
+             * The time when the script was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -166,7 +166,7 @@ public class ListSortScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * modifyTime.
+             * The time when the script was last modified.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -174,7 +174,7 @@ public class ListSortScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * scope.
+             * The sort phase to which the script applies.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -182,7 +182,7 @@ public class ListSortScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * scriptName.
+             * The name of the script.
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -190,7 +190,14 @@ public class ListSortScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the script. Valid values:
+             * <p>
+             * 
+             * *   configurable: The script is created, but no script files are uploaded.
+             * *   not compiled: The script is not compiled.
+             * *   compile failed: The compilation of the script failed.
+             * *   compile successful: The script is compiled.
+             * *   released: The script is published.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -198,7 +205,7 @@ public class ListSortScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the script.
              */
             public Builder type(String type) {
                 this.type = type;

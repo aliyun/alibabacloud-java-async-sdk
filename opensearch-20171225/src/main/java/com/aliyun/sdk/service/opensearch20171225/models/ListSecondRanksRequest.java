@@ -63,14 +63,14 @@ public class ListSecondRanksRequest extends Request {
             super();
         } 
 
-        private Builder(ListSecondRanksRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appId = response.appId;
+        private Builder(ListSecondRanksRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appId = request.appId;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,7 +79,7 @@ public class ListSecondRanksRequest extends Request {
         }
 
         /**
-         * appId.
+         * 110157886
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);

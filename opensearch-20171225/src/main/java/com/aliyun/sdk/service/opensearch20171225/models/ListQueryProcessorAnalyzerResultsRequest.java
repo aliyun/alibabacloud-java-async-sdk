@@ -91,16 +91,16 @@ public class ListQueryProcessorAnalyzerResultsRequest extends Request {
             super();
         } 
 
-        private Builder(ListQueryProcessorAnalyzerResultsRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appId = response.appId;
-            this.name = response.name;
-            this.text = response.text;
+        private Builder(ListQueryProcessorAnalyzerResultsRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appId = request.appId;
+            this.name = request.name;
+            this.text = request.text;
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -109,7 +109,7 @@ public class ListQueryProcessorAnalyzerResultsRequest extends Request {
         }
 
         /**
-         * appId.
+         * The version number.
          */
         public Builder appId(String appId) {
             this.putPathParameter("appId", appId);
@@ -118,7 +118,7 @@ public class ListQueryProcessorAnalyzerResultsRequest extends Request {
         }
 
         /**
-         * name.
+         * The name of the test.
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -127,7 +127,7 @@ public class ListQueryProcessorAnalyzerResultsRequest extends Request {
         }
 
         /**
-         * text.
+         * The text to be tested.
          */
         public Builder text(String text) {
             this.putQueryParameter("text", text);

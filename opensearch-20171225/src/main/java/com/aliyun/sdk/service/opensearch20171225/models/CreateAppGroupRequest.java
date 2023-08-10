@@ -12,8 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAppGroupRequest</p>
  */
 public class CreateAppGroupRequest extends Request {
+    @Body
+    @NameInMap("body")
+    private AppGroup body;
+
     private CreateAppGroupRequest(Builder builder) {
         super(builder);
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -29,15 +34,33 @@ public class CreateAppGroupRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return body
+     */
+    public AppGroup getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<CreateAppGroupRequest, Builder> {
+        private AppGroup body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateAppGroupRequest response) {
-            super(response);
+        private Builder(CreateAppGroupRequest request) {
+            super(request);
+            this.body = request.body;
         } 
+
+        /**
+         * body.
+         */
+        public Builder body(AppGroup body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
 
         @Override
         public CreateAppGroupRequest build() {

@@ -77,15 +77,15 @@ public class GetScriptFileNamesRequest extends Request {
             super();
         } 
 
-        private Builder(GetScriptFileNamesRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appVersionId = response.appVersionId;
-            this.scriptName = response.scriptName;
+        private Builder(GetScriptFileNamesRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appVersionId = request.appVersionId;
+            this.scriptName = request.scriptName;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -94,7 +94,7 @@ public class GetScriptFileNamesRequest extends Request {
         }
 
         /**
-         * appVersionId.
+         * 123456
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);
@@ -103,7 +103,7 @@ public class GetScriptFileNamesRequest extends Request {
         }
 
         /**
-         * scriptName.
+         * file_names
          */
         public Builder scriptName(String scriptName) {
             this.putPathParameter("scriptName", scriptName);

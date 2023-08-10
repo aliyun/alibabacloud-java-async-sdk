@@ -90,16 +90,16 @@ public class GetFunctionInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(GetFunctionInstanceRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.functionName = response.functionName;
-            this.instanceName = response.instanceName;
-            this.output = response.output;
+        private Builder(GetFunctionInstanceRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.functionName = request.functionName;
+            this.instanceName = request.instanceName;
+            this.output = request.output;
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -108,7 +108,7 @@ public class GetFunctionInstanceRequest extends Request {
         }
 
         /**
-         * functionName.
+         * The name of the feature.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -117,7 +117,7 @@ public class GetFunctionInstanceRequest extends Request {
         }
 
         /**
-         * instanceName.
+         * The name of the instance.
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("instanceName", instanceName);
@@ -126,7 +126,12 @@ public class GetFunctionInstanceRequest extends Request {
         }
 
         /**
-         * output.
+         * Specifies the richness of returned information. Valid values:
+         * <p>
+         * 
+         * *   simple: displays only the basic information.
+         * *   normal: displays information such as createParameters and cron. This is the default value.
+         * *   detail: returns the details of the training task.
          */
         public Builder output(String output) {
             this.putQueryParameter("output", output);

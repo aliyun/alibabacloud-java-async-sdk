@@ -50,7 +50,7 @@ public class RemoveDataCollectionResponseBody extends TeaModel {
         private String result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class RemoveDataCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * N/A
          */
         public Builder result(String result) {
             this.result = result;

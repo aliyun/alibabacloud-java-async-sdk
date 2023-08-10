@@ -50,7 +50,7 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The information about the intervention dictionary.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -146,7 +146,7 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
             private String updated; 
 
             /**
-             * analyzer.
+             * The custom analyzer.
              */
             public Builder analyzer(String analyzer) {
                 this.analyzer = analyzer;
@@ -154,7 +154,7 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * The time when the intervention dictionary was created.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -162,7 +162,7 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the intervention dictionary.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +170,15 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the intervention dictionary. Valid values:
+             * <p>
+             * 
+             * *   stopword: an intervention dictionary for stop word filtering
+             * *   synonym: an intervention dictionary for synonym configuration
+             * *   correction: an intervention dictionary for spelling correction
+             * *   category_prediction: an intervention dictionary for category prediction
+             * *   ner: an intervention dictionary for named entity recognition (NER)
+             * *   term_weighting: an intervention dictionary for term weight analysis
              */
             public Builder type(String type) {
                 this.type = type;
@@ -178,7 +186,7 @@ public class RemoveInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the intervention dictionary was last updated.
              */
             public Builder updated(String updated) {
                 this.updated = updated;

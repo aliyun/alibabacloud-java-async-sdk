@@ -48,13 +48,13 @@ public class RemoveInterventionDictionaryRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveInterventionDictionaryRequest response) {
-            super(response);
-            this.name = response.name;
+        private Builder(RemoveInterventionDictionaryRequest request) {
+            super(request);
+            this.name = request.name;
         } 
 
         /**
-         * name.
+         * "my_dict"
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);

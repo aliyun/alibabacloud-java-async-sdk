@@ -77,15 +77,15 @@ public class DescribeQueryProcessorRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeQueryProcessorRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appId = response.appId;
-            this.name = response.name;
+        private Builder(DescribeQueryProcessorRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appId = request.appId;
+            this.name = request.name;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -94,7 +94,7 @@ public class DescribeQueryProcessorRequest extends Request {
         }
 
         /**
-         * appId.
+         * 110157886
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -103,7 +103,7 @@ public class DescribeQueryProcessorRequest extends Request {
         }
 
         /**
-         * name.
+         * test
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);

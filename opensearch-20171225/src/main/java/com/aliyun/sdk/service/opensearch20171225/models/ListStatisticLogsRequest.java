@@ -171,22 +171,22 @@ public class ListStatisticLogsRequest extends Request {
             super();
         } 
 
-        private Builder(ListStatisticLogsRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.moduleName = response.moduleName;
-            this.columns = response.columns;
-            this.distinct = response.distinct;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.query = response.query;
-            this.sortBy = response.sortBy;
-            this.startTime = response.startTime;
-            this.stopTime = response.stopTime;
+        private Builder(ListStatisticLogsRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.moduleName = request.moduleName;
+            this.columns = request.columns;
+            this.distinct = request.distinct;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.query = request.query;
+            this.sortBy = request.sortBy;
+            this.startTime = request.startTime;
+            this.stopTime = request.stopTime;
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -195,7 +195,14 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * moduleName.
+         * The name of the module. Valid values:
+         * <p>
+         * 
+         * - hot:the rankings of hotwords
+         * - error: application error logs
+         * - slow-log: slow query logs
+         * 
+         * Only hot is supported.
          */
         public Builder moduleName(String moduleName) {
             this.putPathParameter("moduleName", moduleName);
@@ -204,7 +211,10 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * columns.
+         * The fields to query. Example: columns=wordsTopPv.
+         * <p>
+         * 
+         * For more information, see [Metrics in statistical reports](https://www.alibabacloud.com/help/en/opensearch/latest/statistical-report).
          */
         public Builder columns(String columns) {
             this.putQueryParameter("columns", columns);
@@ -213,7 +223,7 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * distinct.
+         * The content of the query clause.
          */
         public Builder distinct(Boolean distinct) {
             this.putQueryParameter("distinct", distinct);
@@ -222,7 +232,7 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -231,7 +241,7 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -240,7 +250,7 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * query.
+         * The content of the query clause.
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -249,7 +259,7 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * sortBy.
+         * The content of the sort clause.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("sortBy", sortBy);
@@ -258,7 +268,7 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * startTime.
+         * The beginning of the time range to query. The default value is the timestamp of 00:00:00 on the current day.
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -267,7 +277,7 @@ public class ListStatisticLogsRequest extends Request {
         }
 
         /**
-         * stopTime.
+         * The end of the time range to query. The default value is the timestamp of 24:00:00 on the current day.
          */
         public Builder stopTime(Integer stopTime) {
             this.putQueryParameter("stopTime", stopTime);

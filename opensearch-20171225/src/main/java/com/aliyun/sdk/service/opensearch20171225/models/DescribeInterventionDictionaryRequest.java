@@ -49,13 +49,13 @@ public class DescribeInterventionDictionaryRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInterventionDictionaryRequest response) {
-            super(response);
-            this.name = response.name;
+        private Builder(DescribeInterventionDictionaryRequest request) {
+            super(request);
+            this.name = request.name;
         } 
 
         /**
-         * name.
+         * my_dict
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);

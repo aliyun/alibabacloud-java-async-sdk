@@ -88,16 +88,16 @@ public class ListModelsRequest extends Request {
             super();
         } 
 
-        private Builder(ListModelsRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.type = response.type;
+        private Builder(ListModelsRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.type = request.type;
         } 
 
         /**
-         * appGroupIdentity.
+         * group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -106,7 +106,7 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -115,7 +115,7 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -124,7 +124,7 @@ public class ListModelsRequest extends Request {
         }
 
         /**
-         * type.
+         * pop
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

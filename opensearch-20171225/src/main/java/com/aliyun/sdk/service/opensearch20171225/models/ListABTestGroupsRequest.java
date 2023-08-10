@@ -63,14 +63,14 @@ public class ListABTestGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListABTestGroupsRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.sceneId = response.sceneId;
+        private Builder(ListABTestGroupsRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.sceneId = request.sceneId;
         } 
 
         /**
-         * appGroupIdentity.
+         * "my_app_group_name"
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,7 +79,7 @@ public class ListABTestGroupsRequest extends Request {
         }
 
         /**
-         * sceneId.
+         * 20404
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);

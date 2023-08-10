@@ -50,7 +50,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,10 @@ public class ListSortExpressionsResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The information about the rough sort or fine sort expressions that were returned.
+         * <p>
+         * 
+         * For more information, see [FirstRank](~~170007~~) and [SecondRank](~~170008~~).
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -146,7 +149,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * active.
+             * Indicates whether the expression is the default one.
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -154,7 +157,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * The time when the expression was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -162,7 +165,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * The description of the expression.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +173,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the expression.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +181,7 @@ public class ListSortExpressionsResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the expression was last updated.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

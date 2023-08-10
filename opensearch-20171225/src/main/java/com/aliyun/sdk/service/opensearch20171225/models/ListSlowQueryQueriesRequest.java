@@ -63,14 +63,14 @@ public class ListSlowQueryQueriesRequest extends Request {
             super();
         } 
 
-        private Builder(ListSlowQueryQueriesRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.categoryIndex = response.categoryIndex;
+        private Builder(ListSlowQueryQueriesRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.categoryIndex = request.categoryIndex;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,7 +79,7 @@ public class ListSlowQueryQueriesRequest extends Request {
         }
 
         /**
-         * categoryIndex.
+         * 0
          */
         public Builder categoryIndex(String categoryIndex) {
             this.putPathParameter("categoryIndex", categoryIndex);

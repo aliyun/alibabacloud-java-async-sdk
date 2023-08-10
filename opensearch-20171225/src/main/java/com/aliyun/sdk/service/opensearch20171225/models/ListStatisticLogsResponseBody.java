@@ -62,7 +62,7 @@ public class ListStatisticLogsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,10 @@ public class ListStatisticLogsResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The return result. For more information, see:
+         * <p>
+         * 
+         * *   [Parameters of hotwords rankings](~~421248~~)
          */
         public Builder result(java.util.List < java.util.Map<String, ?>> result) {
             this.result = result;
@@ -78,7 +81,7 @@ public class ListStatisticLogsResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * The total number of the queried logs.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

@@ -50,7 +50,21 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The type of the intervention dictionary. Valid values:
+         * <p>
+         * 
+         * *   stopword: an intervention dictionary for stop word filtering
+         * *   synonym: an intervention dictionary for synonym configuration
+         * *   correction: an intervention dictionary for spelling correction
+         * *   category_prediction: an intervention dictionary for category prediction
+         * *   ner: an intervention dictionary for named entity recognition (NER)
+         * *   term_weighting: an intervention dictionary for term weight analysis
+         * *   suggest_allowlist: a drop-down suggestion whitelist
+         * *   suggest_denylist: a drop-down suggestion blacklist
+         * *   hot_allowlist: a top search whitelist
+         * *   hot_denylist: a top search blacklist
+         * *   hint_allowlist: a shading whitelist
+         * *   hint_denylist: a shading blacklist
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +72,7 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The ID of the request.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -146,7 +160,7 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
             private String updated; 
 
             /**
-             * analyzer.
+             * Creates an intervention dictionary.
              */
             public Builder analyzer(String analyzer) {
                 this.analyzer = analyzer;
@@ -154,7 +168,7 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * The name of the intervention dictionary.
              */
             public Builder created(String created) {
                 this.created = created;
@@ -178,7 +192,7 @@ public class CreateInterventionDictionaryResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * CreateInterventionDictionary
              */
             public Builder updated(String updated) {
                 this.updated = updated;

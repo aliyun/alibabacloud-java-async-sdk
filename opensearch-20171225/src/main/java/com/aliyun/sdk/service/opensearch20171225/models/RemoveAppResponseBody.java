@@ -50,7 +50,7 @@ public class RemoveAppResponseBody extends TeaModel {
         private java.util.List < Integer > result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class RemoveAppResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * N/A
          */
         public Builder result(java.util.List < Integer > result) {
             this.result = result;

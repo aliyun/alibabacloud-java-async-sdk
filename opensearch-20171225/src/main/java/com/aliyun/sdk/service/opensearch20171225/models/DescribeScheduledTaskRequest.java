@@ -63,14 +63,14 @@ public class DescribeScheduledTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeScheduledTaskRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.taskId = response.taskId;
+        private Builder(DescribeScheduledTaskRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,7 +79,7 @@ public class DescribeScheduledTaskRequest extends Request {
         }
 
         /**
-         * taskId.
+         * 2f12c585-5873-11ea-974a-7cd30ad3e268
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);

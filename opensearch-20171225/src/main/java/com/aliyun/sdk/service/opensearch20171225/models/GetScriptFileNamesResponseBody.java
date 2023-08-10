@@ -50,7 +50,7 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The files of the script.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -81,10 +81,14 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
         @NameInMap("modifyTime")
         private String modifyTime;
 
+        @NameInMap("pathName")
+        private String pathName;
+
         private Result(Builder builder) {
             this.createTime = builder.createTime;
             this.fileName = builder.fileName;
             this.modifyTime = builder.modifyTime;
+            this.pathName = builder.pathName;
         }
 
         public static Builder builder() {
@@ -116,13 +120,21 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
             return this.modifyTime;
         }
 
+        /**
+         * @return pathName
+         */
+        public String getPathName() {
+            return this.pathName;
+        }
+
         public static final class Builder {
             private String createTime; 
             private String fileName; 
             private String modifyTime; 
+            private String pathName; 
 
             /**
-             * createTime.
+             * The time when the script file was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -130,7 +142,7 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
             }
 
             /**
-             * fileName.
+             * The name of the script file.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -138,10 +150,18 @@ public class GetScriptFileNamesResponseBody extends TeaModel {
             }
 
             /**
-             * modifyTime.
+             * The time when the script file was last modified.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
+                return this;
+            }
+
+            /**
+             * pathName.
+             */
+            public Builder pathName(String pathName) {
+                this.pathName = pathName;
                 return this;
             }
 

@@ -49,13 +49,13 @@ public class ListInterventionDictionaryRelatedEntitiesRequest extends Request {
             super();
         } 
 
-        private Builder(ListInterventionDictionaryRelatedEntitiesRequest response) {
-            super(response);
-            this.name = response.name;
+        private Builder(ListInterventionDictionaryRelatedEntitiesRequest request) {
+            super(request);
+            this.name = request.name;
         } 
 
         /**
-         * name.
+         * my_dict
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);

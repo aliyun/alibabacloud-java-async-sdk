@@ -49,13 +49,13 @@ public class ListABTestScenesRequest extends Request {
             super();
         } 
 
-        private Builder(ListABTestScenesRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
+        private Builder(ListABTestScenesRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);

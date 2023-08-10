@@ -63,14 +63,14 @@ public class ListSearchStrategiesRequest extends Request {
             super();
         } 
 
-        private Builder(ListSearchStrategiesRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appId = response.appId;
+        private Builder(ListSearchStrategiesRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appId = request.appId;
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,7 +79,7 @@ public class ListSearchStrategiesRequest extends Request {
         }
 
         /**
-         * appId.
+         * The ID of the version.
          */
         public Builder appId(String appId) {
             this.putPathParameter("appId", appId);

@@ -48,13 +48,13 @@ public class ListQueryProcessorNersRequest extends Request {
             super();
         } 
 
-        private Builder(ListQueryProcessorNersRequest response) {
-            super(response);
-            this.domain = response.domain;
+        private Builder(ListQueryProcessorNersRequest request) {
+            super(request);
+            this.domain = request.domain;
         } 
 
         /**
-         * domain.
+         * ECOMMERCE
          */
         public Builder domain(String domain) {
             this.putQueryParameter("domain", domain);

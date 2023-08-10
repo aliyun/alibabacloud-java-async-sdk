@@ -63,14 +63,14 @@ public class ListInterventionDictionaryNerResultsRequest extends Request {
             super();
         } 
 
-        private Builder(ListInterventionDictionaryNerResultsRequest response) {
-            super(response);
-            this.name = response.name;
-            this.query = response.query;
+        private Builder(ListInterventionDictionaryNerResultsRequest request) {
+            super(request);
+            this.name = request.name;
+            this.query = request.query;
         } 
 
         /**
-         * name.
+         * my_dict
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -79,7 +79,7 @@ public class ListInterventionDictionaryNerResultsRequest extends Request {
         }
 
         /**
-         * query.
+         * Soymilk
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);

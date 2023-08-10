@@ -63,14 +63,14 @@ public class GetFunctionDefaultInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(GetFunctionDefaultInstanceRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.functionName = response.functionName;
+        private Builder(GetFunctionDefaultInstanceRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.functionName = request.functionName;
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,7 +79,7 @@ public class GetFunctionDefaultInstanceRequest extends Request {
         }
 
         /**
-         * functionName.
+         * The name of the feature.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);

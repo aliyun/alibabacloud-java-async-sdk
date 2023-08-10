@@ -32,12 +32,17 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
     @Validation(required = true, maximum = 999999999)
     private Integer experimentId;
 
+    @Body
+    @NameInMap("body")
+    private java.util.List < String > body;
+
     private UpdateABTestFixedFlowDividersRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
         this.sceneId = builder.sceneId;
         this.groupId = builder.groupId;
         this.experimentId = builder.experimentId;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -81,26 +86,35 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         return this.experimentId;
     }
 
+    /**
+     * @return body
+     */
+    public java.util.List < String > getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<UpdateABTestFixedFlowDividersRequest, Builder> {
         private String appGroupIdentity; 
         private Integer sceneId; 
         private Integer groupId; 
         private Integer experimentId; 
+        private java.util.List < String > body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateABTestFixedFlowDividersRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.sceneId = response.sceneId;
-            this.groupId = response.groupId;
-            this.experimentId = response.experimentId;
+        private Builder(UpdateABTestFixedFlowDividersRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.sceneId = request.sceneId;
+            this.groupId = request.groupId;
+            this.experimentId = request.experimentId;
+            this.body = request.body;
         } 
 
         /**
-         * appGroupIdentity.
+         * "my_app_group_name"
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -109,7 +123,7 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * sceneId.
+         * 20404
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -118,7 +132,7 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * groupId.
+         * 13467
          */
         public Builder groupId(Integer groupId) {
             this.putPathParameter("groupId", groupId);
@@ -127,11 +141,20 @@ public class UpdateABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * experimentId.
+         * 12889
          */
         public Builder experimentId(Integer experimentId) {
             this.putPathParameter("experimentId", experimentId);
             this.experimentId = experimentId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(java.util.List < String > body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

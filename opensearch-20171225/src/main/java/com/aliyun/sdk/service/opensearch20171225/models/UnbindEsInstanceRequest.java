@@ -49,13 +49,13 @@ public class UnbindEsInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(UnbindEsInstanceRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
+        private Builder(UnbindEsInstanceRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);

@@ -63,14 +63,14 @@ public class RankPreviewQueryRequest extends Request {
             super();
         } 
 
-        private Builder(RankPreviewQueryRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.modelName = response.modelName;
+        private Builder(RankPreviewQueryRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.modelName = request.modelName;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,7 +79,7 @@ public class RankPreviewQueryRequest extends Request {
         }
 
         /**
-         * modelName.
+         * model_name
          */
         public Builder modelName(String modelName) {
             this.putPathParameter("modelName", modelName);

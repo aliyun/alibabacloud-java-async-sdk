@@ -50,7 +50,7 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The details of the test group.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -146,7 +146,7 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * created.
+             * The time when the test group was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -154,7 +154,7 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the test group.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -162,7 +162,7 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the test group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +170,11 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the test group. Valid values:
+             * <p>
+             * 
+             * *   0: not in effect
+             * *   1: in effect
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -178,7 +182,7 @@ public class UpdateABTestGroupResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the test group was last modified.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

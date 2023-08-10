@@ -50,7 +50,7 @@ public class UpdateSummariesResponseBody extends TeaModel {
         private Boolean result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateSummariesResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * Indicates whether the operation was successful.
          */
         public Builder result(Boolean result) {
             this.result = result;

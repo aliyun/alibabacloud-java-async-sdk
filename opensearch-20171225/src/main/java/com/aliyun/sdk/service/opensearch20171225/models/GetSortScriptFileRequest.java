@@ -91,16 +91,16 @@ public class GetSortScriptFileRequest extends Request {
             super();
         } 
 
-        private Builder(GetSortScriptFileRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.scriptName = response.scriptName;
-            this.appVersionId = response.appVersionId;
-            this.fileName = response.fileName;
+        private Builder(GetSortScriptFileRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.scriptName = request.scriptName;
+            this.appVersionId = request.appVersionId;
+            this.fileName = request.fileName;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -109,7 +109,7 @@ public class GetSortScriptFileRequest extends Request {
         }
 
         /**
-         * scriptName.
+         * UserScorer.cava
          */
         public Builder scriptName(String scriptName) {
             this.putPathParameter("scriptName", scriptName);
@@ -118,7 +118,7 @@ public class GetSortScriptFileRequest extends Request {
         }
 
         /**
-         * appVersionId.
+         * 123456
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);
@@ -127,7 +127,7 @@ public class GetSortScriptFileRequest extends Request {
         }
 
         /**
-         * fileName.
+         * script1
          */
         public Builder fileName(String fileName) {
             this.putPathParameter("fileName", fileName);

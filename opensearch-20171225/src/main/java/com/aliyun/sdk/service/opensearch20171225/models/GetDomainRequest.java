@@ -63,14 +63,14 @@ public class GetDomainRequest extends Request {
             super();
         } 
 
-        private Builder(GetDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.appGroupIdentity = response.appGroupIdentity;
+        private Builder(GetDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.appGroupIdentity = request.appGroupIdentity;
         } 
 
         /**
-         * domainName.
+         * N/A
          */
         public Builder domainName(String domainName) {
             this.putPathParameter("domainName", domainName);
@@ -79,7 +79,7 @@ public class GetDomainRequest extends Request {
         }
 
         /**
-         * appGroupIdentity.
+         * my_app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putQueryParameter("appGroupIdentity", appGroupIdentity);

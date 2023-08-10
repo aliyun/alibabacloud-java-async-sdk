@@ -77,15 +77,15 @@ public class UpdateFunctionDefaultInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateFunctionDefaultInstanceRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.functionName = response.functionName;
-            this.instanceName = response.instanceName;
+        private Builder(UpdateFunctionDefaultInstanceRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.functionName = request.functionName;
+            this.instanceName = request.instanceName;
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -94,7 +94,7 @@ public class UpdateFunctionDefaultInstanceRequest extends Request {
         }
 
         /**
-         * functionName.
+         * The name of the feature.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -103,7 +103,7 @@ public class UpdateFunctionDefaultInstanceRequest extends Request {
         }
 
         /**
-         * 实例名称
+         * The name of the instance.
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("instanceName", instanceName);

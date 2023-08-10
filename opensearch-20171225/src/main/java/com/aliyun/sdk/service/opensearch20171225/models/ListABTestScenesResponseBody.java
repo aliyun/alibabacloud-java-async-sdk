@@ -50,7 +50,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,10 @@ public class ListABTestScenesResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The details of the test scenarios.
+         * <p>
+         * 
+         * For more information, see [ABTestScene](~~173618~~).
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -158,7 +161,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * created.
+             * The time when the test scenario was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -166,7 +169,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the test group.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -174,7 +177,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the test group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -182,7 +185,11 @@ public class ListABTestScenesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the test scenario. Valid values:
+             * <p>
+             * 
+             * *   0: not in effect
+             * *   1: in effect
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -190,7 +197,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the test scenario was last modified.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;
@@ -198,7 +205,7 @@ public class ListABTestScenesResponseBody extends TeaModel {
             }
 
             /**
-             * values.
+             * The name of the test scenario.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;

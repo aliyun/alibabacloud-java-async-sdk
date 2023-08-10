@@ -141,20 +141,20 @@ public class ListFunctionInstancesRequest extends Request {
             super();
         } 
 
-        private Builder(ListFunctionInstancesRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.functionName = response.functionName;
-            this.functionType = response.functionType;
-            this.modelType = response.modelType;
-            this.output = response.output;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.source = response.source;
+        private Builder(ListFunctionInstancesRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.functionName = request.functionName;
+            this.functionType = request.functionType;
+            this.modelType = request.modelType;
+            this.output = request.output;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.source = request.source;
         } 
 
         /**
-         * 实例名称
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -163,7 +163,7 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * 功能名称
+         * The name of the feature.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -172,7 +172,7 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * 功能类型
+         * The type of the feature.
          */
         public Builder functionType(String functionType) {
             this.putQueryParameter("functionType", functionType);
@@ -181,7 +181,7 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * 模型类型
+         * The type of the model.
          */
         public Builder modelType(String modelType) {
             this.putQueryParameter("modelType", modelType);
@@ -190,7 +190,12 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * 返回信息的丰富度
+         * The richness of the returned information. Valid values:
+         * <p>
+         * 
+         * *   normal: displays information such as createParameters and cron. This is the default value.
+         * *   simple: displays only the basic information.
+         * *   detail: returns the details of the training task.
          */
         public Builder output(String output) {
             this.putQueryParameter("output", output);
@@ -199,7 +204,7 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * 页码
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -208,7 +213,7 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * 每页大小
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -217,7 +222,12 @@ public class ListFunctionInstancesRequest extends Request {
         }
 
         /**
-         * 实例来源
+         * How the instance is created. Valid values:
+         * <p>
+         * 
+         * *   builtin: The instance is created by system.
+         * *   user: The instance is created by user. This is the default value.
+         * *   all: all instances
          */
         public Builder source(String source) {
             this.putQueryParameter("source", source);

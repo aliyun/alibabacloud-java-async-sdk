@@ -32,12 +32,22 @@ public class UpdateABTestExperimentRequest extends Request {
     @Validation(required = true, maximum = 999999999)
     private Integer experimentId;
 
+    @Body
+    @NameInMap("body")
+    private ABTestExperiment body;
+
+    @Query
+    @NameInMap("dryRun")
+    private Boolean dryRun;
+
     private UpdateABTestExperimentRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
         this.sceneId = builder.sceneId;
         this.groupId = builder.groupId;
         this.experimentId = builder.experimentId;
+        this.body = builder.body;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -81,26 +91,44 @@ public class UpdateABTestExperimentRequest extends Request {
         return this.experimentId;
     }
 
+    /**
+     * @return body
+     */
+    public ABTestExperiment getBody() {
+        return this.body;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<UpdateABTestExperimentRequest, Builder> {
         private String appGroupIdentity; 
         private Integer sceneId; 
         private Integer groupId; 
         private Integer experimentId; 
+        private ABTestExperiment body; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateABTestExperimentRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.sceneId = response.sceneId;
-            this.groupId = response.groupId;
-            this.experimentId = response.experimentId;
+        private Builder(UpdateABTestExperimentRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.sceneId = request.sceneId;
+            this.groupId = request.groupId;
+            this.experimentId = request.experimentId;
+            this.body = request.body;
+            this.dryRun = request.dryRun;
         } 
 
         /**
-         * appGroupIdentity.
+         * "my_app_group_name"
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -109,7 +137,7 @@ public class UpdateABTestExperimentRequest extends Request {
         }
 
         /**
-         * sceneId.
+         * 20404
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -118,7 +146,7 @@ public class UpdateABTestExperimentRequest extends Request {
         }
 
         /**
-         * groupId.
+         * 13467
          */
         public Builder groupId(Integer groupId) {
             this.putPathParameter("groupId", groupId);
@@ -127,11 +155,29 @@ public class UpdateABTestExperimentRequest extends Request {
         }
 
         /**
-         * experimentId.
+         * 12889
          */
         public Builder experimentId(Integer experimentId) {
             this.putPathParameter("experimentId", experimentId);
             this.experimentId = experimentId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(ABTestExperiment body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
+         * dryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

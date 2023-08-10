@@ -50,7 +50,7 @@ public class ListInterventionDictionaryRelatedEntitiesResponseBody extends TeaMo
         private java.util.List < java.util.Map<String, ?>> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListInterventionDictionaryRelatedEntitiesResponseBody extends TeaMo
         }
 
         /**
-         * result.
+         * The information about each application and each query analysis rule. If no query analysis rule references the intervention dictionary, the value of the result parameter is an empty list.
          */
         public Builder result(java.util.List < java.util.Map<String, ?>> result) {
             this.result = result;

@@ -75,15 +75,15 @@ public class ListQuotaReviewTasksRequest extends Request {
             super();
         } 
 
-        private Builder(ListQuotaReviewTasksRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListQuotaReviewTasksRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -92,7 +92,7 @@ public class ListQuotaReviewTasksRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -101,7 +101,7 @@ public class ListQuotaReviewTasksRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

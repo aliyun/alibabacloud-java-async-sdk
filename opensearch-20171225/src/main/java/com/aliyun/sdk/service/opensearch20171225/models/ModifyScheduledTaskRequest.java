@@ -22,10 +22,15 @@ public class ModifyScheduledTaskRequest extends Request {
     @Validation(required = true)
     private String taskId;
 
+    @Body
+    @NameInMap("body")
+    private Object body;
+
     private ModifyScheduledTaskRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
         this.taskId = builder.taskId;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -55,22 +60,31 @@ public class ModifyScheduledTaskRequest extends Request {
         return this.taskId;
     }
 
+    /**
+     * @return body
+     */
+    public Object getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<ModifyScheduledTaskRequest, Builder> {
         private String appGroupIdentity; 
         private String taskId; 
+        private Object body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyScheduledTaskRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.taskId = response.taskId;
+        private Builder(ModifyScheduledTaskRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.taskId = request.taskId;
+            this.body = request.body;
         } 
 
         /**
-         * appGroupIdentity.
+         * "my_app_group_name"
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,11 +93,20 @@ public class ModifyScheduledTaskRequest extends Request {
         }
 
         /**
-         * taskId.
+         * "2f12c585-5873-11ea-974a-7cd30ad3e268"
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
             this.taskId = taskId;
+            return this;
+        }
+
+        /**
+         * 请求参数。
+         */
+        public Builder body(Object body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

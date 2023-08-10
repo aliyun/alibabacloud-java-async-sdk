@@ -63,14 +63,14 @@ public class ListUserAnalyzersRequest extends Request {
             super();
         } 
 
-        private Builder(ListUserAnalyzersRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListUserAnalyzersRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * pageNumber.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -79,7 +79,7 @@ public class ListUserAnalyzersRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries to return on each page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);

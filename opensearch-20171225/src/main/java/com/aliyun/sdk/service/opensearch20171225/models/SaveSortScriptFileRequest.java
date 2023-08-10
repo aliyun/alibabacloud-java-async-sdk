@@ -32,12 +32,22 @@ public class SaveSortScriptFileRequest extends Request {
     @Validation(required = true)
     private String fileName;
 
+    @Body
+    @NameInMap("content")
+    private String content;
+
+    @Body
+    @NameInMap("version")
+    private Integer version;
+
     private SaveSortScriptFileRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
         this.scriptName = builder.scriptName;
         this.appVersionId = builder.appVersionId;
         this.fileName = builder.fileName;
+        this.content = builder.content;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -81,26 +91,44 @@ public class SaveSortScriptFileRequest extends Request {
         return this.fileName;
     }
 
+    /**
+     * @return content
+     */
+    public String getContent() {
+        return this.content;
+    }
+
+    /**
+     * @return version
+     */
+    public Integer getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<SaveSortScriptFileRequest, Builder> {
         private String appGroupIdentity; 
         private String scriptName; 
         private String appVersionId; 
         private String fileName; 
+        private String content; 
+        private Integer version; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SaveSortScriptFileRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.scriptName = response.scriptName;
-            this.appVersionId = response.appVersionId;
-            this.fileName = response.fileName;
+        private Builder(SaveSortScriptFileRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.scriptName = request.scriptName;
+            this.appVersionId = request.appVersionId;
+            this.fileName = request.fileName;
+            this.content = request.content;
+            this.version = request.version;
         } 
 
         /**
-         * appGroupIdentity.
+         * \"\"1111\"\"
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -109,7 +137,7 @@ public class SaveSortScriptFileRequest extends Request {
         }
 
         /**
-         * scriptName.
+         * \"\"11111\"\"
          */
         public Builder scriptName(String scriptName) {
             this.putPathParameter("scriptName", scriptName);
@@ -118,7 +146,7 @@ public class SaveSortScriptFileRequest extends Request {
         }
 
         /**
-         * appVersionId.
+         * \"\"111111\"\"
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);
@@ -132,6 +160,24 @@ public class SaveSortScriptFileRequest extends Request {
         public Builder fileName(String fileName) {
             this.putPathParameter("fileName", fileName);
             this.fileName = fileName;
+            return this;
+        }
+
+        /**
+         * content.
+         */
+        public Builder content(String content) {
+            this.putBodyParameter("content", content);
+            this.content = content;
+            return this;
+        }
+
+        /**
+         * version.
+         */
+        public Builder version(Integer version) {
+            this.putBodyParameter("version", version);
+            this.version = version;
             return this;
         }
 

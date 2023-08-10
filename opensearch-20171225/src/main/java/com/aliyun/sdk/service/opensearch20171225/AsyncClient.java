@@ -30,24 +30,35 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateABTestSceneResponse> createABTestScene(CreateABTestSceneRequest request);
 
+    /**
+      * *   When you create a standard application, a new version of the application is created if the specified application name already exists.
+      * *   When you create a version of an existing application, you must set the autoSwitch and realtimeShared parameters.
+      * *   When you create a version of an existing application, the value of the quota parameter is the same as that of the quota parameter in the previous version of the application.
+      * *   When you create a version of an existing application, the modification of the quota parameter does not take effect.
+      *
+     */
     CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request);
 
     CompletableFuture<CreateAppGroupResponse> createAppGroup(CreateAppGroupRequest request);
 
-    CompletableFuture<CreateDataCollectionResponse> createDataCollection(CreateDataCollectionRequest request);
-
     CompletableFuture<CreateFirstRankResponse> createFirstRank(CreateFirstRankRequest request);
 
+    /**
+      * You can call the [GetFunctionCurrentVersion](~~421377~~) operation to query the latest version of the current feature. The response of the operation includes the createParameters parameter that is used to create an algorithm instance, the usageParameters parameter, and the requirements for setting these parameters.
+      *
+     */
     CompletableFuture<CreateFunctionInstanceResponse> createFunctionInstance(CreateFunctionInstanceRequest request);
 
     CompletableFuture<CreateFunctionTaskResponse> createFunctionTask(CreateFunctionTaskRequest request);
 
     CompletableFuture<CreateInterventionDictionaryResponse> createInterventionDictionary(CreateInterventionDictionaryRequest request);
 
-    CompletableFuture<CreateModelResponse> createModel(CreateModelRequest request);
-
     CompletableFuture<CreateQueryProcessorResponse> createQueryProcessor(CreateQueryProcessorRequest request);
 
+    /**
+      * ****
+      *
+     */
     CompletableFuture<CreateScheduledTaskResponse> createScheduledTask(CreateScheduledTaskRequest request);
 
     CompletableFuture<CreateSearchStrategyResponse> createSearchStrategy(CreateSearchStrategyRequest request);
@@ -66,7 +77,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteFunctionInstanceResponse> deleteFunctionInstance(DeleteFunctionInstanceRequest request);
 
-    CompletableFuture<DeleteModelResponse> deleteModel(DeleteModelRequest request);
+    CompletableFuture<DeleteFunctionTaskResponse> deleteFunctionTask(DeleteFunctionTaskRequest request);
 
     CompletableFuture<DeleteSortScriptResponse> deleteSortScript(DeleteSortScriptRequest request);
 
@@ -82,10 +93,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAppGroupResponse> describeAppGroup(DescribeAppGroupRequest request);
 
-    CompletableFuture<DescribeAppGroupDataReportResponse> describeAppGroupDataReport(DescribeAppGroupDataReportRequest request);
-
-    CompletableFuture<DescribeAppGroupStatisticsResponse> describeAppGroupStatistics(DescribeAppGroupStatisticsRequest request);
-
     CompletableFuture<DescribeAppStatisticsResponse> describeAppStatistics(DescribeAppStatisticsRequest request);
 
     CompletableFuture<DescribeAppsResponse> describeApps(DescribeAppsRequest request);
@@ -95,8 +102,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeFirstRankResponse> describeFirstRank(DescribeFirstRankRequest request);
 
     CompletableFuture<DescribeInterventionDictionaryResponse> describeInterventionDictionary(DescribeInterventionDictionaryRequest request);
-
-    CompletableFuture<DescribeModelResponse> describeModel(DescribeModelRequest request);
 
     CompletableFuture<DescribeQueryProcessorResponse> describeQueryProcessor(DescribeQueryProcessorRequest request);
 
@@ -126,9 +131,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetFunctionInstanceResponse> getFunctionInstance(GetFunctionInstanceRequest request);
 
-    CompletableFuture<GetFunctionVersionResponse> getFunctionVersion(GetFunctionVersionRequest request);
+    CompletableFuture<GetFunctionTaskResponse> getFunctionTask(GetFunctionTaskRequest request);
 
-    CompletableFuture<GetModelProgressResponse> getModelProgress(GetModelProgressRequest request);
+    CompletableFuture<GetFunctionVersionResponse> getFunctionVersion(GetFunctionVersionRequest request);
 
     CompletableFuture<GetModelReportResponse> getModelReport(GetModelReportRequest request);
 
@@ -140,24 +145,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetSortScriptFileResponse> getSortScriptFile(GetSortScriptFileRequest request);
 
-    CompletableFuture<GetValidationErrorResponse> getValidationError(GetValidationErrorRequest request);
-
-    CompletableFuture<GetValidationReportResponse> getValidationReport(GetValidationReportRequest request);
-
     CompletableFuture<ListABTestExperimentsResponse> listABTestExperiments(ListABTestExperimentsRequest request);
 
     CompletableFuture<ListABTestFixedFlowDividersResponse> listABTestFixedFlowDividers(ListABTestFixedFlowDividersRequest request);
 
     CompletableFuture<ListABTestGroupsResponse> listABTestGroups(ListABTestGroupsRequest request);
 
-    CompletableFuture<ListABTestMetricsResponse> listABTestMetrics(ListABTestMetricsRequest request);
-
     CompletableFuture<ListABTestScenesResponse> listABTestScenes(ListABTestScenesRequest request);
 
-    CompletableFuture<ListAppGroupErrorsResponse> listAppGroupErrors(ListAppGroupErrorsRequest request);
-
-    CompletableFuture<ListAppGroupMetricsResponse> listAppGroupMetrics(ListAppGroupMetricsRequest request);
-
+    /**
+      * *   This operation allows you to query applications by application name, instance ID, and application type.
+      * *   This operation can sort the applications based on their creation time.
+      * *   This operation supports the parameters for paging.
+      *
+     */
     CompletableFuture<ListAppGroupsResponse> listAppGroups(ListAppGroupsRequest request);
 
     CompletableFuture<ListAppsResponse> listApps(ListAppsRequest request);
@@ -167,8 +168,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataSourceTableFieldsResponse> listDataSourceTableFields(ListDataSourceTableFieldsRequest request);
 
     CompletableFuture<ListDataSourceTablesResponse> listDataSourceTables(ListDataSourceTablesRequest request);
-
-    CompletableFuture<ListDeployedAlgorithmModelsResponse> listDeployedAlgorithmModels(ListDeployedAlgorithmModelsRequest request);
 
     CompletableFuture<ListFirstRanksResponse> listFirstRanks(ListFirstRanksRequest request);
 
@@ -196,8 +195,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListQuotaReviewTasksResponse> listQuotaReviewTasks(ListQuotaReviewTasksRequest request);
 
-    CompletableFuture<ListRamRolesResponse> listRamRoles(ListRamRolesRequest request);
-
     CompletableFuture<ListScheduledTasksResponse> listScheduledTasks(ListScheduledTasksRequest request);
 
     CompletableFuture<ListSearchStrategiesResponse> listSearchStrategies(ListSearchStrategiesRequest request);
@@ -216,17 +213,22 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListStatisticReportResponse> listStatisticReport(ListStatisticReportRequest request);
 
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
     CompletableFuture<ListUserAnalyzerEntriesResponse> listUserAnalyzerEntries(ListUserAnalyzerEntriesRequest request);
 
     CompletableFuture<ListUserAnalyzersResponse> listUserAnalyzers(ListUserAnalyzersRequest request);
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=ModifyAppGroup\\&type=ROA\\&version=2017-12-25)
+      *
+     */
     CompletableFuture<ModifyAppGroupResponse> modifyAppGroup(ModifyAppGroupRequest request);
 
     CompletableFuture<ModifyAppGroupQuotaResponse> modifyAppGroupQuota(ModifyAppGroupQuotaRequest request);
 
     CompletableFuture<ModifyFirstRankResponse> modifyFirstRank(ModifyFirstRankRequest request);
-
-    CompletableFuture<ModifyModelResponse> modifyModel(ModifyModelRequest request);
 
     CompletableFuture<ModifyQueryProcessorResponse> modifyQueryProcessor(ModifyQueryProcessorRequest request);
 
@@ -244,8 +246,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ReleaseSortScriptResponse> releaseSortScript(ReleaseSortScriptRequest request);
 
+    /**
+      * > If an application has two versions, you can delete only the offline version.
+      *
+     */
     CompletableFuture<RemoveAppResponse> removeApp(RemoveAppRequest request);
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=OpenSearch\\&api=RemoveAppGroup\\&type=ROA\\&version=2017-12-25)
+      *
+     */
     CompletableFuture<RemoveAppGroupResponse> removeAppGroup(RemoveAppGroupRequest request);
 
     CompletableFuture<RemoveDataCollectionResponse> removeDataCollection(RemoveDataCollectionRequest request);
@@ -272,11 +283,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StartSlowQueryAnalyzerResponse> startSlowQueryAnalyzer(StartSlowQueryAnalyzerRequest request);
 
-    CompletableFuture<TrainModelResponse> trainModel(TrainModelRequest request);
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
+    /**
+      * The ID of the request.
+      *
+     */
     CompletableFuture<UnbindESUserAnalyzerResponse> unbindESUserAnalyzer(UnbindESUserAnalyzerRequest request);
 
     CompletableFuture<UnbindEsInstanceResponse> unbindEsInstance(UnbindEsInstanceRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     CompletableFuture<UpdateABTestExperimentResponse> updateABTestExperiment(UpdateABTestExperimentRequest request);
 
@@ -294,6 +311,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateSearchStrategyResponse> updateSearchStrategy(UpdateSearchStrategyRequest request);
 
+    /**
+      * You can call this operation to modify the description of a sort script.
+      *
+     */
     CompletableFuture<UpdateSortScriptResponse> updateSortScript(UpdateSortScriptRequest request);
 
     CompletableFuture<UpdateSummariesResponse> updateSummaries(UpdateSummariesRequest request);

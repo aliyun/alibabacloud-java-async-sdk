@@ -50,7 +50,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The information about the fine sort expression.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -194,7 +194,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * active.
+             * Indicates whether the expression is the default one.
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -210,7 +210,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * The description of the expression.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -218,7 +218,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the expression. This parameter appears only in the response.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -226,7 +226,11 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * isDefault.
+             * Indicates whether the expression is the default one. This parameter appears only in the response. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder isDefault(String isDefault) {
                 this.isDefault = isDefault;
@@ -234,7 +238,11 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * isSys.
+             * Indicates whether the expression is a system expression. This parameter appears only in the response. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder isSys(String isSys) {
                 this.isSys = isSys;
@@ -242,7 +250,10 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * meta.
+             * The content of the fine sort expression.
+             * <p>
+             * 
+             * You can define an expression that consists of fields, feature functions, and mathematical functions to implement complex sort logic.
              */
             public Builder meta(String meta) {
                 this.meta = meta;
@@ -250,7 +261,7 @@ public class ModifySecondRankResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the expression.
              */
             public Builder name(String name) {
                 this.name = name;

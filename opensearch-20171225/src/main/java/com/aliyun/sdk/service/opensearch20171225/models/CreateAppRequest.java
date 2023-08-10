@@ -17,6 +17,10 @@ public class CreateAppRequest extends Request {
     @Validation(required = true)
     private String appGroupIdentity;
 
+    @Body
+    @NameInMap("body")
+    private App body;
+
     @Query
     @NameInMap("dryRun")
     private Boolean dryRun;
@@ -24,6 +28,7 @@ public class CreateAppRequest extends Request {
     private CreateAppRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
+        this.body = builder.body;
         this.dryRun = builder.dryRun;
     }
 
@@ -48,6 +53,13 @@ public class CreateAppRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public App getBody() {
+        return this.body;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -56,20 +68,22 @@ public class CreateAppRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAppRequest, Builder> {
         private String appGroupIdentity; 
+        private App body; 
         private Boolean dryRun; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateAppRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.dryRun = response.dryRun;
+        private Builder(CreateAppRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.body = request.body;
+            this.dryRun = request.dryRun;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -78,7 +92,16 @@ public class CreateAppRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * body.
+         */
+        public Builder body(App body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
+         * true
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

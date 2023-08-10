@@ -62,7 +62,7 @@ public class ListStatisticReportResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,14 @@ public class ListStatisticReportResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The queried reports. Valid values:
+         * <p>
+         * 
+         * For more information about the metrics in data quality reports, see the Upload behavioral data section of [Data collection 2.0](~~131547~~).
+         * 
+         * For more information about the metrics in application and A/B test reports, see the Core metrics section of [Metrics of statistical reports](~~187654~~).
+         * 
+         * For more information about the metrics in query analysis reports, see the Query analysis metrics section of [Metrics of statistical reports](~~187654~~).
          */
         public Builder result(java.util.List < java.util.Map<String, ?>> result) {
             this.result = result;
@@ -78,7 +85,7 @@ public class ListStatisticReportResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * The total number of the queried reports.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

@@ -50,7 +50,7 @@ public class ListModelsResponseBody extends TeaModel {
         private java.util.List < java.util.Map<String, ?>> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,10 @@ public class ListModelsResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The details of the models.
+         * <p>
+         * 
+         * For more information, see [Model](~~180898~~).
          */
         public Builder result(java.util.List < java.util.Map<String, ?>> result) {
             this.result = result;

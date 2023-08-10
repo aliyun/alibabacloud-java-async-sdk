@@ -63,14 +63,14 @@ public class DescribeAppStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAppStatisticsRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appId = response.appId;
+        private Builder(DescribeAppStatisticsRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appId = request.appId;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,7 +79,7 @@ public class DescribeAppStatisticsRequest extends Request {
         }
 
         /**
-         * appId.
+         * 110157886
          */
         public Builder appId(String appId) {
             this.putPathParameter("appId", appId);

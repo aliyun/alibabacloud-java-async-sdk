@@ -77,15 +77,15 @@ public class GetSearchStrategyRequest extends Request {
             super();
         } 
 
-        private Builder(GetSearchStrategyRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appId = response.appId;
-            this.strategyName = response.strategyName;
+        private Builder(GetSearchStrategyRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appId = request.appId;
+            this.strategyName = request.strategyName;
         } 
 
         /**
-         * appGroupIdentity.
+         * The ID of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -94,7 +94,7 @@ public class GetSearchStrategyRequest extends Request {
         }
 
         /**
-         * appId.
+         * The version of the application.
          */
         public Builder appId(String appId) {
             this.putPathParameter("appId", appId);
@@ -103,7 +103,7 @@ public class GetSearchStrategyRequest extends Request {
         }
 
         /**
-         * strategyName.
+         * The name of the policy.
          */
         public Builder strategyName(String strategyName) {
             this.putPathParameter("strategyName", strategyName);

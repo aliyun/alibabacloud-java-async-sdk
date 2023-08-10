@@ -145,20 +145,20 @@ public class ListStatisticReportRequest extends Request {
             super();
         } 
 
-        private Builder(ListStatisticReportRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.moduleName = response.moduleName;
-            this.columns = response.columns;
-            this.endTime = response.endTime;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.query = response.query;
-            this.startTime = response.startTime;
+        private Builder(ListStatisticReportRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.moduleName = request.moduleName;
+            this.columns = request.columns;
+            this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.query = request.query;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * appGroupIdentity.
+         * app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -167,7 +167,7 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * moduleName.
+         * suggest
          */
         public Builder moduleName(String moduleName) {
             this.putPathParameter("moduleName", moduleName);
@@ -176,7 +176,7 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * columns.
+         * pv,uv
          */
         public Builder columns(String columns) {
             this.putQueryParameter("columns", columns);
@@ -185,7 +185,7 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * endTime.
+         * 1582646399
          */
         public Builder endTime(Integer endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -194,7 +194,7 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -203,7 +203,7 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -212,7 +212,7 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * query.
+         * bizType:test,sceneTag:myTag
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -221,7 +221,7 @@ public class ListStatisticReportRequest extends Request {
         }
 
         /**
-         * startTime.
+         * 1582214400
          */
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("startTime", startTime);

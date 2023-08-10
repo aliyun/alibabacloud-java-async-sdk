@@ -50,7 +50,7 @@ public class CreateSecondRankResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateSecondRankResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The information about the fine sort expression.
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

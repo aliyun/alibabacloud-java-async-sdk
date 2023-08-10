@@ -22,6 +22,10 @@ public class UpdateFetchFieldsRequest extends Request {
     @Validation(required = true)
     private Integer appId;
 
+    @Body
+    @NameInMap("body")
+    private java.util.List < String > body;
+
     @Query
     @NameInMap("dryRun")
     private Boolean dryRun;
@@ -30,6 +34,7 @@ public class UpdateFetchFieldsRequest extends Request {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
         this.appId = builder.appId;
+        this.body = builder.body;
         this.dryRun = builder.dryRun;
     }
 
@@ -61,6 +66,13 @@ public class UpdateFetchFieldsRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public java.util.List < String > getBody() {
+        return this.body;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -70,21 +82,23 @@ public class UpdateFetchFieldsRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateFetchFieldsRequest, Builder> {
         private String appGroupIdentity; 
         private Integer appId; 
+        private java.util.List < String > body; 
         private Boolean dryRun; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateFetchFieldsRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appId = response.appId;
-            this.dryRun = response.dryRun;
+        private Builder(UpdateFetchFieldsRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appId = request.appId;
+            this.body = request.body;
+            this.dryRun = request.dryRun;
         } 
 
         /**
-         * appGroupIdentity.
+         * "my_app_group_name"
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -93,7 +107,7 @@ public class UpdateFetchFieldsRequest extends Request {
         }
 
         /**
-         * appId.
+         * 110157886
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -102,7 +116,16 @@ public class UpdateFetchFieldsRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * body.
+         */
+        public Builder body(java.util.List < String > body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
+         * true
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

@@ -62,7 +62,7 @@ public class ListInterventionDictionariesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,10 @@ public class ListInterventionDictionariesResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The information about each intervention dictionary.
+         * <p>
+         * 
+         * For more information, see [InterventionDictionary](~~173608~~).
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -78,7 +81,7 @@ public class ListInterventionDictionariesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -178,7 +181,7 @@ public class ListInterventionDictionariesResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * analyzer.
+             * The custom analyzer.
              */
             public Builder analyzer(String analyzer) {
                 this.analyzer = analyzer;
@@ -186,7 +189,7 @@ public class ListInterventionDictionariesResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * The time when the intervention dictionary was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -194,7 +197,7 @@ public class ListInterventionDictionariesResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the intervention dictionary.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -202,7 +205,7 @@ public class ListInterventionDictionariesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the intervention dictionary.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +213,15 @@ public class ListInterventionDictionariesResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the intervention dictionary. Valid values:
+             * <p>
+             * 
+             * *   stopword: an intervention dictionary for stop word filtering
+             * *   synonym: an intervention dictionary for synonym configuration
+             * *   correction: an intervention dictionary for spelling correction
+             * *   category_prediction: an intervention dictionary for category prediction
+             * *   ner: an intervention dictionary for named entity recognition (NER)
+             * *   term_weighting: an intervention dictionary for term weight analysis
              */
             public Builder type(String type) {
                 this.type = type;
@@ -218,7 +229,7 @@ public class ListInterventionDictionariesResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the intervention dictionary was last updated.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

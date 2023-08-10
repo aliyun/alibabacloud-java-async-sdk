@@ -17,9 +17,14 @@ public class CreateScheduledTaskRequest extends Request {
     @Validation(required = true)
     private String appGroupIdentity;
 
+    @Body
+    @NameInMap("body")
+    private ScheduledTask body;
+
     private CreateScheduledTaskRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -42,24 +47,42 @@ public class CreateScheduledTaskRequest extends Request {
         return this.appGroupIdentity;
     }
 
+    /**
+     * @return body
+     */
+    public ScheduledTask getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<CreateScheduledTaskRequest, Builder> {
         private String appGroupIdentity; 
+        private ScheduledTask body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateScheduledTaskRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
+        private Builder(CreateScheduledTaskRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.body = request.body;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
             this.appGroupIdentity = appGroupIdentity;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(ScheduledTask body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

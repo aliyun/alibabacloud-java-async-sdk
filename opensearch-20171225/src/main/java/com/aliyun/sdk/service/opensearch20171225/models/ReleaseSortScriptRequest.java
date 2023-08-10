@@ -77,15 +77,15 @@ public class ReleaseSortScriptRequest extends Request {
             super();
         } 
 
-        private Builder(ReleaseSortScriptRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.scriptName = response.scriptName;
-            this.appVersionId = response.appVersionId;
+        private Builder(ReleaseSortScriptRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.scriptName = request.scriptName;
+            this.appVersionId = request.appVersionId;
         } 
 
         /**
-         * appGroupIdentity.
+         * \"\"1234\"\"
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -94,7 +94,7 @@ public class ReleaseSortScriptRequest extends Request {
         }
 
         /**
-         * scriptName.
+         * \"\"test\"\"
          */
         public Builder scriptName(String scriptName) {
             this.putPathParameter("scriptName", scriptName);
@@ -103,7 +103,7 @@ public class ReleaseSortScriptRequest extends Request {
         }
 
         /**
-         * appVersionId.
+         * \"\"12345\"\"
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);

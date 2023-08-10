@@ -50,7 +50,7 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,10 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The details of the tests.
+         * <p>
+         * 
+         * For more information, see [ABTestExperiment](~~173617~~).
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -170,7 +173,7 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * created.
+             * The time when the test was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -178,7 +181,7 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the test group.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -186,7 +189,7 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the test group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +197,11 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * online.
+             * The status of the test. Valid values:
+             * <p>
+             * 
+             * *   true: in effect
+             * *   false: not in effect
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -202,7 +209,7 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * params.
+             * The parameters of the test.
              */
             public Builder params(java.util.Map < String, ? > params) {
                 this.params = params;
@@ -210,7 +217,10 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * traffic.
+             * The percentage of traffic that is routed to the test.
+             * <p>
+             * 
+             * Valid values: \[0,100].
              */
             public Builder traffic(Integer traffic) {
                 this.traffic = traffic;
@@ -218,7 +228,7 @@ public class ListABTestExperimentsResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the test was last modified.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

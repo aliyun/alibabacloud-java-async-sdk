@@ -142,20 +142,20 @@ public class ListFunctionTasksRequest extends Request {
             super();
         } 
 
-        private Builder(ListFunctionTasksRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.functionName = response.functionName;
-            this.instanceName = response.instanceName;
-            this.endTime = response.endTime;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
-            this.status = response.status;
+        private Builder(ListFunctionTasksRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.functionName = request.functionName;
+            this.instanceName = request.instanceName;
+            this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
+            this.status = request.status;
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -164,7 +164,7 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * functionName.
+         * The name of the feature.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -173,7 +173,7 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * instanceName.
+         * The name of the instance.
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("instanceName", instanceName);
@@ -182,7 +182,7 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * endTime.
+         * The end time is less than the specified time. Specify the time in the UNIX timestamp format. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -191,7 +191,7 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -200,7 +200,7 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries to return on each page. Default value: 1.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -209,7 +209,7 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * startTime.
+         * The start time is greater than the specified time. Specify the time in the UNIX timestamp format. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -218,7 +218,12 @@ public class ListFunctionTasksRequest extends Request {
         }
 
         /**
-         * status.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * *   success
+         * *   failed
+         * *   running
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

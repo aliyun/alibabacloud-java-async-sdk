@@ -91,16 +91,16 @@ public class DeleteSortScriptFileRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSortScriptFileRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appVersionId = response.appVersionId;
-            this.scriptName = response.scriptName;
-            this.fileName = response.fileName;
+        private Builder(DeleteSortScriptFileRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appVersionId = request.appVersionId;
+            this.scriptName = request.scriptName;
+            this.fileName = request.fileName;
         } 
 
         /**
-         * appGroupIdentity.
+         * search
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -109,7 +109,7 @@ public class DeleteSortScriptFileRequest extends Request {
         }
 
         /**
-         * appVersionId.
+         * 1234567
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);
@@ -118,7 +118,7 @@ public class DeleteSortScriptFileRequest extends Request {
         }
 
         /**
-         * scriptName.
+         * cava
          */
         public Builder scriptName(String scriptName) {
             this.putPathParameter("scriptName", scriptName);
@@ -127,7 +127,7 @@ public class DeleteSortScriptFileRequest extends Request {
         }
 
         /**
-         * fileName.
+         * cavafile
          */
         public Builder fileName(String fileName) {
             this.putPathParameter("fileName", fileName);

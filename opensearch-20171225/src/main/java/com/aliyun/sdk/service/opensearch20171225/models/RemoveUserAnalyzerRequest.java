@@ -49,13 +49,13 @@ public class RemoveUserAnalyzerRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveUserAnalyzerRequest response) {
-            super(response);
-            this.name = response.name;
+        private Builder(RemoveUserAnalyzerRequest request) {
+            super(request);
+            this.name = request.name;
         } 
 
         /**
-         * name.
+         * "kevin_test"
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);

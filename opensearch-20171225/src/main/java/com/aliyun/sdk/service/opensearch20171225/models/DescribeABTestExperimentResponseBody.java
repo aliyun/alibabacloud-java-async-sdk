@@ -50,7 +50,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The details of the test.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -98,7 +98,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             private String firstFormulaName; 
 
             /**
-             * first_formula_name.
+             * The name of the rough sort policy.
              */
             public Builder firstFormulaName(String firstFormulaName) {
                 this.firstFormulaName = firstFormulaName;
@@ -211,7 +211,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * created.
+             * The time when the test was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -219,7 +219,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the test.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -227,7 +227,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the test.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -235,7 +235,11 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * online.
+             * The status of the test. Valid values:
+             * <p>
+             * 
+             * *   true: in effect
+             * *   false: not in effect
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -243,7 +247,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * params.
+             * The parameters of the test.
              */
             public Builder params(Params params) {
                 this.params = params;
@@ -251,7 +255,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * traffic.
+             * The percentage of traffic that is routed to the test.
              */
             public Builder traffic(Integer traffic) {
                 this.traffic = traffic;
@@ -259,7 +263,7 @@ public class DescribeABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the test was last modified.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

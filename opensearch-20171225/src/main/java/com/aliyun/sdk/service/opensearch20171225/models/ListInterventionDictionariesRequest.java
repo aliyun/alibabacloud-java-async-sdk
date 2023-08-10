@@ -74,15 +74,15 @@ public class ListInterventionDictionariesRequest extends Request {
             super();
         } 
 
-        private Builder(ListInterventionDictionariesRequest response) {
-            super(response);
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.types = response.types;
+        private Builder(ListInterventionDictionariesRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.types = request.types;
         } 
 
         /**
-         * pageNumber.
+         * 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -91,7 +91,7 @@ public class ListInterventionDictionariesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -100,7 +100,7 @@ public class ListInterventionDictionariesRequest extends Request {
         }
 
         /**
-         * types.
+         * \-
          */
         public Builder types(String types) {
             this.putQueryParameter("types", types);

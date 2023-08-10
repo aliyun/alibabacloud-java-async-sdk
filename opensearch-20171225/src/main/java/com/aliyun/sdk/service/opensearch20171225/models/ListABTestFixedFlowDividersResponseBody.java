@@ -50,7 +50,7 @@ public class ListABTestFixedFlowDividersResponseBody extends TeaModel {
         private java.util.List < String > result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListABTestFixedFlowDividersResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The queried whitelists.
          */
         public Builder result(java.util.List < String > result) {
             this.result = result;

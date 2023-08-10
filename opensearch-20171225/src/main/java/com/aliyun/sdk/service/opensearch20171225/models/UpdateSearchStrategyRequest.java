@@ -27,11 +27,16 @@ public class UpdateSearchStrategyRequest extends Request {
     @Validation(required = true)
     private String strategyName;
 
+    @Body
+    @NameInMap("body")
+    private SearchStrategy body;
+
     private UpdateSearchStrategyRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
         this.appId = builder.appId;
         this.strategyName = builder.strategyName;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -68,20 +73,29 @@ public class UpdateSearchStrategyRequest extends Request {
         return this.strategyName;
     }
 
+    /**
+     * @return body
+     */
+    public SearchStrategy getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<UpdateSearchStrategyRequest, Builder> {
         private String appGroupIdentity; 
         private String appId; 
         private String strategyName; 
+        private SearchStrategy body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateSearchStrategyRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appId = response.appId;
-            this.strategyName = response.strategyName;
+        private Builder(UpdateSearchStrategyRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appId = request.appId;
+            this.strategyName = request.strategyName;
+            this.body = request.body;
         } 
 
         /**
@@ -108,6 +122,15 @@ public class UpdateSearchStrategyRequest extends Request {
         public Builder strategyName(String strategyName) {
             this.putPathParameter("strategyName", strategyName);
             this.strategyName = strategyName;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(SearchStrategy body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

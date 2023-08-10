@@ -50,7 +50,7 @@ public class GetSortScriptResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetSortScriptResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The details of the script
          */
         public Builder result(Result result) {
             this.result = result;
@@ -146,7 +146,7 @@ public class GetSortScriptResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * createTime.
+             * The time when the script was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -154,7 +154,7 @@ public class GetSortScriptResponseBody extends TeaModel {
             }
 
             /**
-             * modifyTime.
+             * The time when the script was last modified.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -162,7 +162,7 @@ public class GetSortScriptResponseBody extends TeaModel {
             }
 
             /**
-             * scope.
+             * The sort phase to which the script applies.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -170,7 +170,7 @@ public class GetSortScriptResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the script. For more information, see the Script status table.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -178,7 +178,7 @@ public class GetSortScriptResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the script.
              */
             public Builder type(String type) {
                 this.type = type;

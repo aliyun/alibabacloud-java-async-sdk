@@ -50,7 +50,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The details of the test.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -170,7 +170,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * created.
+             * The time when the test was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -178,7 +178,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the test.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -186,7 +186,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the test.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +194,11 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * online.
+             * The status of the test. Valid values:
+             * <p>
+             * 
+             * *   true: in effect
+             * *   false: not in effect
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -202,7 +206,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * params.
+             * The parameters of the test.
              */
             public Builder params(java.util.Map < String, ? > params) {
                 this.params = params;
@@ -210,7 +214,10 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * traffic.
+             * The percentage of traffic that is routed to the test.
+             * <p>
+             * 
+             * Value values: 0 to 100.
              */
             public Builder traffic(Integer traffic) {
                 this.traffic = traffic;
@@ -218,7 +225,7 @@ public class UpdateABTestExperimentResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the test was last modified.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

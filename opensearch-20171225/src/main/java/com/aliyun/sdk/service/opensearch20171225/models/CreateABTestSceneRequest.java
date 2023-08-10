@@ -17,9 +17,19 @@ public class CreateABTestSceneRequest extends Request {
     @Validation(required = true)
     private String appGroupIdentity;
 
+    @Body
+    @NameInMap("body")
+    private ABTestScene body;
+
+    @Query
+    @NameInMap("dryRun")
+    private Boolean dryRun;
+
     private CreateABTestSceneRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
+        this.body = builder.body;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -42,24 +52,60 @@ public class CreateABTestSceneRequest extends Request {
         return this.appGroupIdentity;
     }
 
+    /**
+     * @return body
+     */
+    public ABTestScene getBody() {
+        return this.body;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<CreateABTestSceneRequest, Builder> {
         private String appGroupIdentity; 
+        private ABTestScene body; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateABTestSceneRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
+        private Builder(CreateABTestSceneRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.body = request.body;
+            this.dryRun = request.dryRun;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
             this.appGroupIdentity = appGroupIdentity;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(ABTestScene body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
+         * dryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

@@ -15,8 +15,12 @@ public class RenewAppGroupResponseBody extends TeaModel {
     @NameInMap("requestId")
     private String requestId;
 
+    @NameInMap("result")
+    private Boolean result;
+
     private RenewAppGroupResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.result = builder.result;
     }
 
     public static Builder builder() {
@@ -34,14 +38,30 @@ public class RenewAppGroupResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return result
+     */
+    public Boolean getResult() {
+        return this.result;
+    }
+
     public static final class Builder {
         private String requestId; 
+        private Boolean result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The return result.
+         */
+        public Builder result(Boolean result) {
+            this.result = result;
             return this;
         }
 

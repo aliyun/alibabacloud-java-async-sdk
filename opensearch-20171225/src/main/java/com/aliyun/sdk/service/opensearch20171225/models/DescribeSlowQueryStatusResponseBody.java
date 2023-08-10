@@ -50,7 +50,7 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The return result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -122,7 +122,7 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * appGroupId.
+             * The ID of the application.
              */
             public Builder appGroupId(String appGroupId) {
                 this.appGroupId = appGroupId;
@@ -130,7 +130,11 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * The network type of the slow query optimization service. Valid values:
+             * <p>
+             * 
+             * *   outer: the Internet
+             * *   internal: the internal network
              */
             public Builder region(String region) {
                 this.region = region;
@@ -138,7 +142,12 @@ public class DescribeSlowQueryStatusResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the slow query optimization service. Valid values:
+             * <p>
+             * 
+             * *   enabled
+             * *   disabled
+             * *   n/a
              */
             public Builder status(String status) {
                 this.status = status;

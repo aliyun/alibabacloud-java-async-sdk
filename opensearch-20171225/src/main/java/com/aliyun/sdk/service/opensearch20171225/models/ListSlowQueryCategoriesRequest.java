@@ -49,13 +49,13 @@ public class ListSlowQueryCategoriesRequest extends Request {
             super();
         } 
 
-        private Builder(ListSlowQueryCategoriesRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
+        private Builder(ListSlowQueryCategoriesRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);

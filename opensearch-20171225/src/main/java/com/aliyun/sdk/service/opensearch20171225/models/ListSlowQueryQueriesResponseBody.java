@@ -50,7 +50,7 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The return result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
             private Integer start; 
 
             /**
-             * appQuery.
+             * The content of the optimization suggestion for the query.
              */
             public Builder appQuery(String appQuery) {
                 this.appQuery = appQuery;
@@ -142,7 +142,7 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * end.
+             * The end of the time range that was queried.
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -150,7 +150,7 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * The ID of the optimization suggestion.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -158,7 +158,7 @@ public class ListSlowQueryQueriesResponseBody extends TeaModel {
             }
 
             /**
-             * start.
+             * The beginning of the time range that was queried.
              */
             public Builder start(Integer start) {
                 this.start = start;

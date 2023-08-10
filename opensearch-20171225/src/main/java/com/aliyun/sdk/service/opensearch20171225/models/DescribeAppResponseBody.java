@@ -50,7 +50,7 @@ public class DescribeAppResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeAppResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The information about the version.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -296,7 +296,7 @@ public class DescribeAppResponseBody extends TeaModel {
             private String spec; 
 
             /**
-             * computeResource.
+             * The computing resources. Unit: logical computing units (LCUs).
              */
             public Builder computeResource(Integer computeResource) {
                 this.computeResource = computeResource;
@@ -304,7 +304,7 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * docSize.
+             * The storage capacity. Unit: GB.
              */
             public Builder docSize(Integer docSize) {
                 this.docSize = docSize;
@@ -312,7 +312,7 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * qps.
+             * The number of search requests per second. You are charged based on the number of search requests per second in the earlier billing model.
              */
             public Builder qps(Integer qps) {
                 this.qps = qps;
@@ -320,7 +320,16 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * spec.
+             * The specifications of the application. Valid values:
+             * <p>
+             * 
+             * *   opensearch.share.junior: basic
+             * *   opensearch.share.common: shared general-purpose
+             * *   opensearch.share.compute: shared computing
+             * *   opensearch.share.storage: shared storage
+             * *   opensearch.private.common: exclusive general-purpose
+             * *   opensearch.private.compute: exclusive computing
+             * *   opensearch.private.storage: exclusive storage
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -505,7 +514,7 @@ public class DescribeAppResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * algoDeploymentId.
+             * The ID of the created rough sort expression.
              */
             public Builder algoDeploymentId(Integer algoDeploymentId) {
                 this.algoDeploymentId = algoDeploymentId;
@@ -513,7 +522,7 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * autoSwitch.
+             * Indicates whether the version is automatically published to the online environment.
              */
             public Builder autoSwitch(Boolean autoSwitch) {
                 this.autoSwitch = autoSwitch;
@@ -529,7 +538,7 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * The timestamp when the version was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -537,7 +546,7 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * The description of the version.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -553,7 +562,7 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * fetchFields.
+             * The default display fields.
              */
             public Builder fetchFields(java.util.List < String > fetchFields) {
                 this.fetchFields = fetchFields;
@@ -561,7 +570,7 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the version.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -569,7 +578,7 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * progressPercent.
+             * The progress of data import, in percentage. For example, a value of 83 indicates 83%.
              */
             public Builder progressPercent(Integer progressPercent) {
                 this.progressPercent = progressPercent;
@@ -577,7 +586,7 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * quota.
+             * The quota information about the version.
              */
             public Builder quota(Quota quota) {
                 this.quota = quota;
@@ -585,7 +594,7 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * schema.
+             * The application schema.
              */
             public Builder schema(java.util.Map < String, ? > schema) {
                 this.schema = schema;
@@ -593,7 +602,16 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the version. Valid values:
+             * <p>
+             * 
+             * *   ok
+             * *   stopped
+             * *   frozen
+             * *   initializing
+             * *   unavailable
+             * *   data_waiting
+             * *   data_preparing
              */
             public Builder status(String status) {
                 this.status = status;
@@ -601,7 +619,12 @@ public class DescribeAppResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the application. Valid values:
+             * <p>
+             * 
+             * *   standard: a standard application.
+             * *   advance: an advanced application which is of an old application type. New applications cannot be of this type.
+             * *   enhanced: an advanced application which is of a new application type.
              */
             public Builder type(String type) {
                 this.type = type;

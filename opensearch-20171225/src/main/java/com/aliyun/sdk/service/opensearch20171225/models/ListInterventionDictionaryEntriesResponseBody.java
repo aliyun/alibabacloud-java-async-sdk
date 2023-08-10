@@ -62,7 +62,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,10 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The information about each intervention entry.
+         * <p>
+         * 
+         * For more information, see [InterventionDictionaryEntry](~~173606~~).
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -78,7 +81,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -154,7 +157,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             private String token; 
 
             /**
-             * order.
+             * The sequence number.
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -162,7 +165,45 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * tag.
+             * The internal name of the identified entity type. Valid values:
+             * <p>
+             * 
+             * *   brand
+             * *   category
+             * *   material
+             * *   element
+             * *   style
+             * *   color
+             * *   function
+             * *   scenario
+             * *   people
+             * *   season
+             * *   model
+             * *   region
+             * *   name
+             * *   adjective
+             * *   category-modifier
+             * *   size
+             * *   quality
+             * *   suit
+             * *   new-release
+             * *   series
+             * *   marketing
+             * *   entertainment
+             * *   organization
+             * *   movie
+             * *   game
+             * *   number
+             * *   unit
+             * *   common
+             * *   new-word
+             * *   proper-noun
+             * *   symbol
+             * *   prefix
+             * *   suffix
+             * *   gift
+             * *   negative
+             * *   agent
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -170,7 +211,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * tagLabel.
+             * The description of the internal name of the identified entity type.
              */
             public Builder tagLabel(String tagLabel) {
                 this.tagLabel = tagLabel;
@@ -178,7 +219,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * token.
+             * The entity.
              */
             public Builder token(String token) {
                 this.token = token;
@@ -291,7 +332,11 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             private String word; 
 
             /**
-             * cmd.
+             * The action. Valid values:
+             * <p>
+             * 
+             * *   add
+             * *   delete
              */
             public Builder cmd(String cmd) {
                 this.cmd = cmd;
@@ -299,7 +344,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * The timestamp when the intervention entry was created.
              */
             public Builder created(Long created) {
                 this.created = created;
@@ -307,7 +352,12 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * relevance.
+             * The content of an intervention entry for category prediction.
+             * <p>
+             * 
+             * The parameter returns key-value pairs. The key in a key-value pair indicates the ID of the category. The value in a key-value pair indicates the relevance value of the category. A value of 0 indicates irrelevant. A value of 1 indicates slightly relevant. A value of 2 indicates relevant.
+             * 
+             * Example: {"2":1, "100":0}
              */
             public Builder relevance(java.util.Map < String, ? > relevance) {
                 this.relevance = relevance;
@@ -315,7 +365,10 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the intervention entry. Valid value:
+             * <p>
+             * 
+             * *   ACTIVE: The intervention entry takes effect.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -323,7 +376,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * tokens.
+             * The content of an intervention entry for term weight analysis.
              */
             public Builder tokens(java.util.List < Tokens> tokens) {
                 this.tokens = tokens;
@@ -331,7 +384,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The timestamp when the intervention entry was last updated.
              */
             public Builder updated(Long updated) {
                 this.updated = updated;
@@ -339,7 +392,7 @@ public class ListInterventionDictionaryEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * word.
+             * The intervention query in the intervention entry.
              */
             public Builder word(String word) {
                 this.word = word;

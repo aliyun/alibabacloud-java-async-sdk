@@ -12,12 +12,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateMergedTableRequest</p>
  */
 public class GenerateMergedTableRequest extends Request {
+    @Body
+    @NameInMap("body")
+    private Schema body;
+
     @Query
     @NameInMap("spec")
     private String spec;
 
     private GenerateMergedTableRequest(Builder builder) {
         super(builder);
+        this.body = builder.body;
         this.spec = builder.spec;
     }
 
@@ -35,6 +40,13 @@ public class GenerateMergedTableRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public Schema getBody() {
+        return this.body;
+    }
+
+    /**
      * @return spec
      */
     public String getSpec() {
@@ -42,19 +54,30 @@ public class GenerateMergedTableRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GenerateMergedTableRequest, Builder> {
+        private Schema body; 
         private String spec; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GenerateMergedTableRequest response) {
-            super(response);
-            this.spec = response.spec;
+        private Builder(GenerateMergedTableRequest request) {
+            super(request);
+            this.body = request.body;
+            this.spec = request.spec;
         } 
 
         /**
-         * spec.
+         * body.
+         */
+        public Builder body(Schema body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
+         * \-
          */
         public Builder spec(String spec) {
             this.putQueryParameter("spec", spec);

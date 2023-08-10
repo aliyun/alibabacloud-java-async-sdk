@@ -110,7 +110,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code.
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -126,7 +126,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Latency.
+         * The time consumed for the request, in milliseconds.
          */
         public Builder latency(Long latency) {
             this.latency = latency;
@@ -134,7 +134,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The result of the request.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -158,7 +158,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the request.
          */
         public Builder status(String status) {
             this.status = status;
@@ -210,7 +210,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             private String required; 
 
             /**
-             * Name.
+             * The name of the parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -218,7 +218,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * Indicates whether the parameter is required.
              */
             public Builder required(String required) {
                 this.required = required;
@@ -283,7 +283,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * Condition.
+             * The condition.
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -291,7 +291,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Dependency.
+             * The dependency.
              */
             public Builder dependency(String dependency) {
                 this.dependency = dependency;
@@ -299,7 +299,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -352,7 +352,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             private String required; 
 
             /**
-             * Name.
+             * The name of the parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -360,7 +360,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Required.
+             * Indicates whether the parameter is required.
              */
             public Builder required(String required) {
                 this.required = required;
@@ -425,7 +425,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             private java.util.List < UsageParameters> usageParameters; 
 
             /**
-             * CreateParameters.
+             * The parameters that are used to create the instance.
              */
             public Builder createParameters(java.util.List < CreateParameters> createParameters) {
                 this.createParameters = createParameters;
@@ -433,7 +433,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * Depends.
+             * The dependencies of the instance.
              */
             public Builder depends(java.util.List < Depends> depends) {
                 this.depends = depends;
@@ -441,7 +441,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * UsageParameters.
+             * The parameters that are used to use the instance online.
              */
             public Builder usageParameters(java.util.List < UsageParameters> usageParameters) {
                 this.usageParameters = usageParameters;
@@ -542,7 +542,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             private String versionName; 
 
             /**
-             * FunctionName.
+             * The name of the feature.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -550,7 +550,11 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionType.
+             * The type of the feature. Valid values:
+             * <p>
+             * 
+             * *   PAAS
+             * *   SAAS
              */
             public Builder functionType(String functionType) {
                 this.functionType = functionType;
@@ -558,7 +562,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * ModelType.
+             * The type of the model.
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
@@ -566,7 +570,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionConfig.
+             * The configuration information about the instance.
              */
             public Builder versionConfig(VersionConfig versionConfig) {
                 this.versionConfig = versionConfig;
@@ -574,7 +578,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * The ID of the version.
              */
             public Builder versionId(Long versionId) {
                 this.versionId = versionId;
@@ -582,7 +586,7 @@ public class GetFunctionCurrentVersionResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * The name of the version.
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;

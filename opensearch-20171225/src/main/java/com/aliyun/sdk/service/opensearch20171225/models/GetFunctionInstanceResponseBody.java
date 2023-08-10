@@ -110,7 +110,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Code.
+         * The error code. If no error occurs, this parameter is left empty.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code.
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -126,7 +126,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Latency.
+         * The time consumed for the request, in milliseconds.
          */
         public Builder latency(Long latency) {
             this.latency = latency;
@@ -134,7 +134,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The details of the instance.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -158,7 +158,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the request.
          */
         public Builder status(String status) {
             this.status = status;
@@ -222,7 +222,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             private String language; 
 
             /**
-             * Category.
+             * The category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -230,7 +230,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The industry.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -238,7 +238,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The abbreviation of the language that applies.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -291,7 +291,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the parameter.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -299,7 +299,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the parameter.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -352,7 +352,14 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             private Long lastRunTime; 
 
             /**
-             * DagStatus.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   success: succeeded
+             * *   failed: failed
+             * *   untrained: to be trained
+             * *   pending: being scheduled
+             * *   running: being trained
              */
             public Builder dagStatus(String dagStatus) {
                 this.dagStatus = dagStatus;
@@ -360,7 +367,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LastRunTime.
+             * The time consumed for the most recent run, in milliseconds.
              */
             public Builder lastRunTime(Long lastRunTime) {
                 this.lastRunTime = lastRunTime;
@@ -369,6 +376,67 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
 
             public Task build() {
                 return new Task(this);
+            } 
+
+        } 
+
+    }
+    public static class UsageParameters extends TeaModel {
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("Value")
+        private String value;
+
+        private UsageParameters(Builder builder) {
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UsageParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String name; 
+            private String value; 
+
+            /**
+             * The name of the parameter.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * The value of the parameter.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public UsageParameters build() {
+                return new UsageParameters(this);
             } 
 
         } 
@@ -414,6 +482,9 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
         @NameInMap("Task")
         private Task task;
 
+        @NameInMap("UsageParameters")
+        private java.util.List < UsageParameters> usageParameters;
+
         @NameInMap("VersionId")
         private Long versionId;
 
@@ -431,6 +502,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             this.source = builder.source;
             this.status = builder.status;
             this.task = builder.task;
+            this.usageParameters = builder.usageParameters;
             this.versionId = builder.versionId;
         }
 
@@ -534,6 +606,13 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return usageParameters
+         */
+        public java.util.List < UsageParameters> getUsageParameters() {
+            return this.usageParameters;
+        }
+
+        /**
          * @return versionId
          */
         public Long getVersionId() {
@@ -554,10 +633,11 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             private String source; 
             private String status; 
             private Task task; 
+            private java.util.List < UsageParameters> usageParameters; 
             private Long versionId; 
 
             /**
-             * Belongs.
+             * The information about the instance.
              */
             public Builder belongs(Belongs belongs) {
                 this.belongs = belongs;
@@ -565,7 +645,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateParameters.
+             * The parameters that are used to create the instance.
              */
             public Builder createParameters(java.util.List < CreateParameters> createParameters) {
                 this.createParameters = createParameters;
@@ -573,7 +653,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the task was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -581,7 +661,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Cron.
+             * The cron expression used to schedule training, in the format of (Minutes Hours DayofMonth Month DayofWeek). If the value is empty, it indicates that no periodic training is performed.
              */
             public Builder cron(String cron) {
                 this.cron = cron;
@@ -589,7 +669,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the instance.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -597,7 +677,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendInfo.
+             * The extended information, which is a JSON string.
              */
             public Builder extendInfo(String extendInfo) {
                 this.extendInfo = extendInfo;
@@ -605,7 +685,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * The name of the feature.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -613,7 +693,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionType.
+             * The type of the feature.
              */
             public Builder functionType(String functionType) {
                 this.functionType = functionType;
@@ -621,7 +701,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -629,7 +709,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ModelType.
+             * The type of the model.
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
@@ -637,7 +717,11 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * How the instance is created. Valid values:
+             * <p>
+             * 
+             * *   user: The instance is created by user.
+             * *   builtin: The instance is created by the system.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -645,7 +729,11 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance. Valid values:
+             * <p>
+             * 
+             * 1.  unavailable: No model is available. Models must be trained before you can use them.
+             * 2.  available: Models can be used.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -653,7 +741,7 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Task.
+             * The information about the training task. This parameter is not displayed if no task is available.
              */
             public Builder task(Task task) {
                 this.task = task;
@@ -661,7 +749,15 @@ public class GetFunctionInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * The parameters that are used.
+             */
+            public Builder usageParameters(java.util.List < UsageParameters> usageParameters) {
+                this.usageParameters = usageParameters;
+                return this;
+            }
+
+            /**
+             * The ID of the version.
              */
             public Builder versionId(Long versionId) {
                 this.versionId = versionId;

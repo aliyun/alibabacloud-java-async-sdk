@@ -98,7 +98,7 @@ public class CreateFunctionTaskResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class CreateFunctionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code.
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -114,7 +114,7 @@ public class CreateFunctionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Latency.
+         * The time consumed for the request, in milliseconds.
          */
         public Builder latency(Long latency) {
             this.latency = latency;
@@ -122,7 +122,7 @@ public class CreateFunctionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class CreateFunctionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class CreateFunctionTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the request.
          */
         public Builder status(String status) {
             this.status = status;

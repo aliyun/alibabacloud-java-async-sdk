@@ -63,14 +63,14 @@ public class GetFunctionVersionRequest extends Request {
             super();
         } 
 
-        private Builder(GetFunctionVersionRequest response) {
-            super(response);
-            this.functionName = response.functionName;
-            this.versionId = response.versionId;
+        private Builder(GetFunctionVersionRequest request) {
+            super(request);
+            this.functionName = request.functionName;
+            this.versionId = request.versionId;
         } 
 
         /**
-         * functionName.
+         * The name of the feature.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -79,7 +79,7 @@ public class GetFunctionVersionRequest extends Request {
         }
 
         /**
-         * versionId.
+         * The ID of the version.
          */
         public Builder versionId(Integer versionId) {
             this.putPathParameter("versionId", versionId);

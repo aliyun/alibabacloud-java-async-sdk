@@ -50,7 +50,7 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,10 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The priority settings of entity types.
+         * <p>
+         * 
+         * For more information, see [Priority settings of entity types](~~173616~~).
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -134,7 +137,7 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * label.
+             * The name of the entity type.
              */
             public Builder label(String label) {
                 this.label = label;
@@ -142,7 +145,10 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
             }
 
             /**
-             * order.
+             * The priority of an entity type among entity types that have the same priority level.
+             * <p>
+             * 
+             * A smaller value indicates a higher priority. Default value: 0.
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -150,7 +156,12 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
             }
 
             /**
-             * priority.
+             * The priority level of the entity type.
+             * <p>
+             * 
+             * *   HIGH
+             * *   MIDDLE
+             * *   LOW
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -158,7 +169,7 @@ public class ListQueryProcessorNersResponseBody extends TeaModel {
             }
 
             /**
-             * tag.
+             * The internal name of the entity type.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

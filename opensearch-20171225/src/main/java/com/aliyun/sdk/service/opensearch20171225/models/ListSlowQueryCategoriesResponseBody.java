@@ -50,7 +50,7 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The data returned.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -122,7 +122,14 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
             private Integer start; 
 
             /**
-             * analyzeStatus.
+             * The status of the analysis. Valid values:
+             * <p>
+             * 
+             * *   PENDING: preparing
+             * *   SUCCESS: succeeded
+             * *   RUNNING: running
+             * *   FAILED: failed
+             * *   N/A: unknown
              */
             public Builder analyzeStatus(String analyzeStatus) {
                 this.analyzeStatus = analyzeStatus;
@@ -130,7 +137,7 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * end.
+             * The timestamp that indicates the end of the time range to query.
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -138,7 +145,7 @@ public class ListSlowQueryCategoriesResponseBody extends TeaModel {
             }
 
             /**
-             * start.
+             * The timestamp that indicates the beginning of the time range to query.
              */
             public Builder start(Integer start) {
                 this.start = start;

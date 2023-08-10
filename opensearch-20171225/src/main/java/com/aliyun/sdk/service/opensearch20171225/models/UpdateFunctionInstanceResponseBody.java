@@ -98,7 +98,7 @@ public class UpdateFunctionInstanceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * 错误码
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class UpdateFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code.
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -114,7 +114,7 @@ public class UpdateFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 耗时
+         * The time consumed for the request, in milliseconds.
          */
         public Builder latency(Long latency) {
             this.latency = latency;
@@ -122,7 +122,7 @@ public class UpdateFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class UpdateFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class UpdateFunctionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the request. Valid values:
+         * <p>
+         * 
+         * *       OK: The request was successful.
+         * *       FAIL: The request failed.
          */
         public Builder status(String status) {
             this.status = status;

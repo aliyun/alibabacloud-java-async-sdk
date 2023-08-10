@@ -50,7 +50,7 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,10 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The information about each query analysis rule.
+         * <p>
+         * 
+         * For more information, see [QueryProcessor](~~170014~~).
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -170,7 +173,7 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * active.
+             * Indicates whether the query analysis rule is the default one.
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -178,7 +181,7 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * The time when the query analysis rule was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -186,7 +189,12 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
             }
 
             /**
-             * domain.
+             * The type of the industry. Valid values:
+             * <p>
+             * 
+             * *   GENERAL
+             * *   ECOMMERCE
+             * *   IT_CONTENT
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -194,7 +202,7 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
             }
 
             /**
-             * indexes.
+             * The indexes to which the query analysis rule applies.
              */
             public Builder indexes(java.util.List < String > indexes) {
                 this.indexes = indexes;
@@ -202,7 +210,7 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the query analysis rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +218,10 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
             }
 
             /**
-             * processors.
+             * The features that are used in the query analysis rule.
+             * <p>
+             * 
+             * For more information, see the ["Processor"](~~170014~~) section of the QueryProcessor topic.
              */
             public Builder processors(java.util.List < java.util.Map<String, ?>> processors) {
                 this.processors = processors;
@@ -218,7 +229,7 @@ public class ListQueryProcessorsResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the query analysis rule was last updated.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

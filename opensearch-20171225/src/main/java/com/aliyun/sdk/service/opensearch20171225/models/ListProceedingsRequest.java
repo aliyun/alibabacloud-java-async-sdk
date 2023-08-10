@@ -17,9 +17,14 @@ public class ListProceedingsRequest extends Request {
     @Validation(required = true)
     private String appGroupIdentity;
 
+    @Query
+    @NameInMap("filterFinished")
+    private Boolean filterFinished;
+
     private ListProceedingsRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
+        this.filterFinished = builder.filterFinished;
     }
 
     public static Builder builder() {
@@ -42,24 +47,42 @@ public class ListProceedingsRequest extends Request {
         return this.appGroupIdentity;
     }
 
+    /**
+     * @return filterFinished
+     */
+    public Boolean getFilterFinished() {
+        return this.filterFinished;
+    }
+
     public static final class Builder extends Request.Builder<ListProceedingsRequest, Builder> {
         private String appGroupIdentity; 
+        private Boolean filterFinished; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListProceedingsRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
+        private Builder(ListProceedingsRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.filterFinished = request.filterFinished;
         } 
 
         /**
-         * appGroupIdentity.
+         * The ID of the application instance group.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
             this.appGroupIdentity = appGroupIdentity;
+            return this;
+        }
+
+        /**
+         * Specifies whether the filtering is complete.
+         */
+        public Builder filterFinished(Boolean filterFinished) {
+            this.putQueryParameter("filterFinished", filterFinished);
+            this.filterFinished = filterFinished;
             return this;
         }
 

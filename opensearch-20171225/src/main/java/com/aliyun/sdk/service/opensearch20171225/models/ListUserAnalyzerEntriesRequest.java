@@ -90,16 +90,16 @@ public class ListUserAnalyzerEntriesRequest extends Request {
             super();
         } 
 
-        private Builder(ListUserAnalyzerEntriesRequest response) {
-            super(response);
-            this.name = response.name;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.word = response.word;
+        private Builder(ListUserAnalyzerEntriesRequest request) {
+            super(request);
+            this.name = request.name;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.word = request.word;
         } 
 
         /**
-         * name.
+         * kevin_test
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -108,7 +108,7 @@ public class ListUserAnalyzerEntriesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -117,7 +117,7 @@ public class ListUserAnalyzerEntriesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -126,7 +126,7 @@ public class ListUserAnalyzerEntriesRequest extends Request {
         }
 
         /**
-         * word.
+         * kevintest
          */
         public Builder word(String word) {
             this.putQueryParameter("word", word);

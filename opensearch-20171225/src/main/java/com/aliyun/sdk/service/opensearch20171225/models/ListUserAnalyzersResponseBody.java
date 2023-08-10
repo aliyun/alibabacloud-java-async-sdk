@@ -62,7 +62,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,10 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The custom analyzer.
+         * <p>
+         * 
+         * For more information, see [UserAnalyzer](~~178934~~).
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -78,7 +81,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * The total number.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -190,7 +193,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * available.
+             * Indicates whether the application is available.
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -198,7 +201,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * The timestamp when the application was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -206,7 +209,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             }
 
             /**
-             * entriesCount.
+             * The number of intervention entries.
              */
             public Builder entriesCount(Integer entriesCount) {
                 this.entriesCount = entriesCount;
@@ -214,7 +217,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             }
 
             /**
-             * entriesLimit.
+             * The maximum number of intervention entries that can be created in the dictionary.
              */
             public Builder entriesLimit(Integer entriesLimit) {
                 this.entriesLimit = entriesLimit;
@@ -222,7 +225,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the dictionary.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -230,7 +233,10 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type. Valid value:
+             * <p>
+             * 
+             * *   segment
              */
             public Builder type(String type) {
                 this.type = type;
@@ -238,7 +244,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The timestamp when the application was last updated.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;
@@ -351,7 +357,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * available.
+             * Indicates whether the application is available.
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -359,7 +365,21 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             }
 
             /**
-             * business.
+             * The basic analyzer. Valid values:
+             * <p>
+             * 
+             * *   chn_standard: [a common analyzer in Chinese](~~179424~~)
+             * *   chn_scene_name: an analyzer for person names in Chinese
+             * *   chn_ecommerce: [an analyzer for E-commerce in Chinese](~~179424~~)
+             * *   chn_it_content: [an analyzer for IT content in Chinese](~~179424~~)
+             * *   en_min: a small-granularity analyzer in English
+             * *   th_standard: a common analyzer in Thai
+             * *   th_ecommerce: an analyzer for E-commerce in Thai
+             * *   vn_standard: a common analyzer in Vietnamese
+             * *   chn_community_it: an analyzer for IT community content in Chinese
+             * *   chn_ecommerce_general: a common analyzer for the E-commerce industry in Chinese
+             * *   chn_esports_general: a common analyzer for the gaming industry in Chinese
+             * *   chn_edu_question: an analyzer for question search of the education industry in Chinese
              */
             public Builder business(String business) {
                 this.business = business;
@@ -367,7 +387,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             }
 
             /**
-             * created.
+             * The timestamp when the application was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -375,7 +395,10 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             }
 
             /**
-             * dicts.
+             * The dictionaries that are used by the custom analyzer.
+             * <p>
+             * 
+             * For more information, see [UserDict](~~178933~~).
              */
             public Builder dicts(java.util.List < Dicts> dicts) {
                 this.dicts = dicts;
@@ -383,7 +406,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the custom analyzer.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -391,7 +414,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the custom analyzer.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -399,7 +422,7 @@ public class ListUserAnalyzersResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The timestamp when the application was last updated.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

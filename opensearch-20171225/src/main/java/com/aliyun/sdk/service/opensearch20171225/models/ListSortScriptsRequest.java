@@ -63,14 +63,14 @@ public class ListSortScriptsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSortScriptsRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appVersionId = response.appVersionId;
+        private Builder(ListSortScriptsRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appVersionId = request.appVersionId;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,7 +79,7 @@ public class ListSortScriptsRequest extends Request {
         }
 
         /**
-         * appVersionId.
+         * 110142366
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);

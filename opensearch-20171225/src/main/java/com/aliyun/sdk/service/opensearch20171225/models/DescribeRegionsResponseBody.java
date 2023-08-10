@@ -50,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The result that was returned.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * consoleUrl.
+             * The URL of the OpenSearch console.
              */
             public Builder consoleUrl(String consoleUrl) {
                 this.consoleUrl = consoleUrl;
@@ -142,7 +142,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * endpoint.
+             * The endpoint of the region.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -150,7 +150,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * localName.
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -158,7 +158,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -76,15 +76,15 @@ public class ListQueryProcessorsRequest extends Request {
             super();
         } 
 
-        private Builder(ListQueryProcessorsRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appId = response.appId;
-            this.isActive = response.isActive;
+        private Builder(ListQueryProcessorsRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appId = request.appId;
+            this.isActive = request.isActive;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -93,7 +93,7 @@ public class ListQueryProcessorsRequest extends Request {
         }
 
         /**
-         * appId.
+         * 110157886
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -102,7 +102,7 @@ public class ListQueryProcessorsRequest extends Request {
         }
 
         /**
-         * isActive.
+         * 0
          */
         public Builder isActive(Integer isActive) {
             this.putQueryParameter("isActive", isActive);

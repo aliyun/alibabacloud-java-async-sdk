@@ -50,7 +50,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The details of the data collection task.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -194,7 +194,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * created.
+             * The time when the data collection task was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -202,7 +202,12 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * dataCollectionType.
+             * The type of the data that is collected by the task. Valid values:
+             * <p>
+             * 
+             * *   behavior: behavioral data
+             * *   item_info: project data
+             * *   industry_specific: industry-specific data
              */
             public Builder dataCollectionType(String dataCollectionType) {
                 this.dataCollectionType = dataCollectionType;
@@ -210,7 +215,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the data collection task.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -218,7 +223,11 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * industryName.
+             * The industry to which the data collection task applies. Valid values:
+             * <p>
+             * 
+             * *   general
+             * *   ecommerce
              */
             public Builder industryName(String industryName) {
                 this.industryName = industryName;
@@ -226,7 +235,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the data collection task.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -234,7 +243,13 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the data collection task. Valid values:
+             * <p>
+             * 
+             * *   0: disabled
+             * *   1: being enabled
+             * *   2: enabled
+             * *   3: failed to be enabled
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -242,7 +257,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * sundialId.
+             * The ID of the sundial.
              */
             public Builder sundialId(String sundialId) {
                 this.sundialId = sundialId;
@@ -250,7 +265,16 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   server
+             * 
+             * *   web
+             * 
+             * *   app
+             * 
+             *     Note: Only server is supported.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -258,7 +282,7 @@ public class DescribeDataCollctionResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the data collection task was updated.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

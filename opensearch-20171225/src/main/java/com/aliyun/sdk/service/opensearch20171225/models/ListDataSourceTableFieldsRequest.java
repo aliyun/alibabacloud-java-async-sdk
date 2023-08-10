@@ -22,10 +22,15 @@ public class ListDataSourceTableFieldsRequest extends Request {
     @Validation(required = true)
     private String params;
 
+    @Query
+    @NameInMap("rawType")
+    private Boolean rawType;
+
     private ListDataSourceTableFieldsRequest(Builder builder) {
         super(builder);
         this.dataSourceType = builder.dataSourceType;
         this.params = builder.params;
+        this.rawType = builder.rawType;
     }
 
     public static Builder builder() {
@@ -55,22 +60,31 @@ public class ListDataSourceTableFieldsRequest extends Request {
         return this.params;
     }
 
+    /**
+     * @return rawType
+     */
+    public Boolean getRawType() {
+        return this.rawType;
+    }
+
     public static final class Builder extends Request.Builder<ListDataSourceTableFieldsRequest, Builder> {
         private String dataSourceType; 
         private String params; 
+        private Boolean rawType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListDataSourceTableFieldsRequest response) {
-            super(response);
-            this.dataSourceType = response.dataSourceType;
-            this.params = response.params;
+        private Builder(ListDataSourceTableFieldsRequest request) {
+            super(request);
+            this.dataSourceType = request.dataSourceType;
+            this.params = request.params;
+            this.rawType = request.rawType;
         } 
 
         /**
-         * dataSourceType.
+         * dataSourceType
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putPathParameter("dataSourceType", dataSourceType);
@@ -79,11 +93,20 @@ public class ListDataSourceTableFieldsRequest extends Request {
         }
 
         /**
-         * params.
+         * {}
          */
         public Builder params(String params) {
             this.putQueryParameter("params", params);
             this.params = params;
+            return this;
+        }
+
+        /**
+         * Whether to return the original field type of the data source
+         */
+        public Builder rawType(Boolean rawType) {
+            this.putQueryParameter("rawType", rawType);
+            this.rawType = rawType;
             return this;
         }
 

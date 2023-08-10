@@ -27,11 +27,21 @@ public class UpdateABTestGroupRequest extends Request {
     @Validation(required = true, maximum = 999999999)
     private Integer groupId;
 
+    @Body
+    @NameInMap("body")
+    private ABTestGroup body;
+
+    @Query
+    @NameInMap("dryRun")
+    private Boolean dryRun;
+
     private UpdateABTestGroupRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
         this.sceneId = builder.sceneId;
         this.groupId = builder.groupId;
+        this.body = builder.body;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -68,24 +78,42 @@ public class UpdateABTestGroupRequest extends Request {
         return this.groupId;
     }
 
+    /**
+     * @return body
+     */
+    public ABTestGroup getBody() {
+        return this.body;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<UpdateABTestGroupRequest, Builder> {
         private String appGroupIdentity; 
         private Integer sceneId; 
         private Integer groupId; 
+        private ABTestGroup body; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateABTestGroupRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.sceneId = response.sceneId;
-            this.groupId = response.groupId;
+        private Builder(UpdateABTestGroupRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.sceneId = request.sceneId;
+            this.groupId = request.groupId;
+            this.body = request.body;
+            this.dryRun = request.dryRun;
         } 
 
         /**
-         * appGroupIdentity.
+         * "my_app_group_name"
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -94,7 +122,7 @@ public class UpdateABTestGroupRequest extends Request {
         }
 
         /**
-         * sceneId.
+         * 20404
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -103,11 +131,29 @@ public class UpdateABTestGroupRequest extends Request {
         }
 
         /**
-         * groupId.
+         * 13467
          */
         public Builder groupId(Integer groupId) {
             this.putPathParameter("groupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(ABTestGroup body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
+         * dryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

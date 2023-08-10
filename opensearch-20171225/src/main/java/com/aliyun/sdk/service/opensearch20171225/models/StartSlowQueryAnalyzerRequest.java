@@ -49,13 +49,13 @@ public class StartSlowQueryAnalyzerRequest extends Request {
             super();
         } 
 
-        private Builder(StartSlowQueryAnalyzerRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
+        private Builder(StartSlowQueryAnalyzerRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
         } 
 
         /**
-         * appGroupIdentity.
+         * "my_app_group_name"
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);

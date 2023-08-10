@@ -50,7 +50,7 @@ public class CreateFirstRankResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateFirstRankResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The information about the rough sort expression.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -122,7 +122,7 @@ public class CreateFirstRankResponseBody extends TeaModel {
             private Float weight; 
 
             /**
-             * arg.
+             * The parameters that are used by a function in the expression.
              */
             public Builder arg(String arg) {
                 this.arg = arg;
@@ -130,7 +130,7 @@ public class CreateFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * attribute.
+             * The attribute, feature function, or field to be searched for.
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -138,7 +138,10 @@ public class CreateFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * weight.
+             * The weight.
+             * <p>
+             * 
+             * Valid values: \[-100000,100000] (excluding 0).
              */
             public Builder weight(Float weight) {
                 this.weight = weight;
@@ -203,7 +206,7 @@ public class CreateFirstRankResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * active.
+             * Indicates whether the expression is the default one.
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -211,7 +214,7 @@ public class CreateFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * meta.
+             * The content of the expression.
              */
             public Builder meta(java.util.List < Meta> meta) {
                 this.meta = meta;
@@ -219,7 +222,7 @@ public class CreateFirstRankResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the expression.
              */
             public Builder name(String name) {
                 this.name = name;

@@ -22,6 +22,10 @@ public class CreateFirstRankRequest extends Request {
     @Validation(required = true)
     private Integer appId;
 
+    @Body
+    @NameInMap("body")
+    private FirstRank body;
+
     @Query
     @NameInMap("dryRun")
     private Boolean dryRun;
@@ -30,6 +34,7 @@ public class CreateFirstRankRequest extends Request {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
         this.appId = builder.appId;
+        this.body = builder.body;
         this.dryRun = builder.dryRun;
     }
 
@@ -61,6 +66,13 @@ public class CreateFirstRankRequest extends Request {
     }
 
     /**
+     * @return body
+     */
+    public FirstRank getBody() {
+        return this.body;
+    }
+
+    /**
      * @return dryRun
      */
     public Boolean getDryRun() {
@@ -70,21 +82,23 @@ public class CreateFirstRankRequest extends Request {
     public static final class Builder extends Request.Builder<CreateFirstRankRequest, Builder> {
         private String appGroupIdentity; 
         private Integer appId; 
+        private FirstRank body; 
         private Boolean dryRun; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateFirstRankRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appId = response.appId;
-            this.dryRun = response.dryRun;
+        private Builder(CreateFirstRankRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appId = request.appId;
+            this.body = request.body;
+            this.dryRun = request.dryRun;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -93,7 +107,7 @@ public class CreateFirstRankRequest extends Request {
         }
 
         /**
-         * appId.
+         * 110157886
          */
         public Builder appId(Integer appId) {
             this.putPathParameter("appId", appId);
@@ -102,7 +116,16 @@ public class CreateFirstRankRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * body.
+         */
+        public Builder body(FirstRank body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
+         * true
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);

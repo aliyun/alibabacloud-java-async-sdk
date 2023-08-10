@@ -50,7 +50,7 @@ public class ValidateDataSourcesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * Id of the request
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

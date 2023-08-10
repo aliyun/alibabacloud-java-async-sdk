@@ -37,6 +37,10 @@ public class ListAppGroupsRequest extends Request {
     private Integer sortBy;
 
     @Query
+    @NameInMap("tags")
+    private java.util.List < Tags> tags;
+
+    @Query
     @NameInMap("type")
     private String type;
 
@@ -48,6 +52,7 @@ public class ListAppGroupsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
         this.sortBy = builder.sortBy;
+        this.tags = builder.tags;
         this.type = builder.type;
     }
 
@@ -107,6 +112,13 @@ public class ListAppGroupsRequest extends Request {
     }
 
     /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -120,25 +132,27 @@ public class ListAppGroupsRequest extends Request {
         private Integer pageSize; 
         private String resourceGroupId; 
         private Integer sortBy; 
+        private java.util.List < Tags> tags; 
         private String type; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListAppGroupsRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.name = response.name;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
-            this.sortBy = response.sortBy;
-            this.type = response.type;
+        private Builder(ListAppGroupsRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.name = request.name;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.sortBy = request.sortBy;
+            this.tags = request.tags;
+            this.type = request.type;
         } 
 
         /**
-         * instanceId.
+         * ops-cn-xxxx
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -147,7 +161,7 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * name.
+         * my_name
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -156,7 +170,7 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -165,7 +179,7 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -174,7 +188,7 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * resourceGroupId.
+         * ""
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("resourceGroupId", resourceGroupId);
@@ -183,7 +197,7 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * sortBy.
+         * 0
          */
         public Builder sortBy(Integer sortBy) {
             this.putQueryParameter("sortBy", sortBy);
@@ -192,7 +206,17 @@ public class ListAppGroupsRequest extends Request {
         }
 
         /**
-         * type.
+         * tags.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            String tagsShrink = shrink(tags, "tags", "json");
+            this.putQueryParameter("tags", tagsShrink);
+            this.tags = tags;
+            return this;
+        }
+
+        /**
+         * standard
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);
@@ -207,4 +231,65 @@ public class ListAppGroupsRequest extends Request {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @NameInMap("key")
+        private String key;
+
+        @NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

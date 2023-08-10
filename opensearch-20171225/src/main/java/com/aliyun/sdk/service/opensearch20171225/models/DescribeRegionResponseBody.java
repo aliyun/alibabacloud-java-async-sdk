@@ -50,7 +50,7 @@ public class DescribeRegionResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeRegionResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The result that was returned.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -110,7 +110,7 @@ public class DescribeRegionResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * config.
+             * The configurations.
              */
             public Builder config(java.util.Map < String, ? > config) {
                 this.config = config;
@@ -118,7 +118,36 @@ public class DescribeRegionResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * The ID of the region. Valid values:
+             * <p>
+             * 
+             * cn-hangzhou: China (Hangzhou)
+             * 
+             * cn-shanghai: China (Shanghai)
+             * 
+             * cn-qingdao: China (Qingdao)
+             * 
+             * cn-beijing: China (Beijing)
+             * 
+             * cn-zhangjiakou: China (Zhangjiakou)
+             * 
+             * cn-shenzhen: China (Shenzhen)
+             * 
+             * ap-southeast-1: Singapore (Singapore)
+             * 
+             * cn-internal: Internal Center
+             * 
+             * cn-zhangbei-in: Internal Center (Zhangjiakou)
+             * 
+             * us-west-1-in: Internal Center (US)
+             * 
+             * rus-west-1-in: Internal Center (Russia)
+             * 
+             * cn-daily: Daily Environment
+             * 
+             * cn-test: Joint Debugging
+             * 
+             * pre-hangzhou: China (Hangzhou)-Staging
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -17,9 +17,34 @@ public class ModifyAppGroupRequest extends Request {
     @Validation(required = true)
     private String appGroupIdentity;
 
+    @Body
+    @NameInMap("currentVersion")
+    private String currentVersion;
+
+    @Body
+    @NameInMap("description")
+    private String description;
+
+    @Body
+    @NameInMap("domain")
+    private String domain;
+
+    @Body
+    @NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @Query
+    @NameInMap("dryRun")
+    private Boolean dryRun;
+
     private ModifyAppGroupRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
+        this.currentVersion = builder.currentVersion;
+        this.description = builder.description;
+        this.domain = builder.domain;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -42,24 +67,119 @@ public class ModifyAppGroupRequest extends Request {
         return this.appGroupIdentity;
     }
 
+    /**
+     * @return currentVersion
+     */
+    public String getCurrentVersion() {
+        return this.currentVersion;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return domain
+     */
+    public String getDomain() {
+        return this.domain;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<ModifyAppGroupRequest, Builder> {
         private String appGroupIdentity; 
+        private String currentVersion; 
+        private String description; 
+        private String domain; 
+        private String resourceGroupId; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyAppGroupRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
+        private Builder(ModifyAppGroupRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.currentVersion = request.currentVersion;
+            this.description = request.description;
+            this.domain = request.domain;
+            this.resourceGroupId = request.resourceGroupId;
+            this.dryRun = request.dryRun;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app_group_name
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
             this.appGroupIdentity = appGroupIdentity;
+            return this;
+        }
+
+        /**
+         * currentVersion
+         */
+        public Builder currentVersion(String currentVersion) {
+            this.putBodyParameter("currentVersion", currentVersion);
+            this.currentVersion = currentVersion;
+            return this;
+        }
+
+        /**
+         * The description of the instance.
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * The type of the industry. Valid values:
+         * <p>
+         * 
+         * *   GENERAL
+         * *   ECOMMERCE
+         * *   IT_CONTENT
+         */
+        public Builder domain(String domain) {
+            this.putBodyParameter("domain", domain);
+            this.domain = domain;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putBodyParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * true
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

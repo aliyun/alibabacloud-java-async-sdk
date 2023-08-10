@@ -102,17 +102,27 @@ public class GetFunctionCurrentVersionRequest extends Request {
             super();
         } 
 
-        private Builder(GetFunctionCurrentVersionRequest response) {
-            super(response);
-            this.functionName = response.functionName;
-            this.category = response.category;
-            this.domain = response.domain;
-            this.functionType = response.functionType;
-            this.modelType = response.modelType;
+        private Builder(GetFunctionCurrentVersionRequest request) {
+            super(request);
+            this.functionName = request.functionName;
+            this.category = request.category;
+            this.domain = request.domain;
+            this.functionType = request.functionType;
+            this.modelType = request.modelType;
         } 
 
         /**
-         * functionName.
+         * The name of the feature. Valid values:
+         * <p>
+         * 
+         * *   ctr: click-through rate (CTR) model
+         * *   pop: popularity model
+         * *   category: category model
+         * *   hot: hotword model
+         * *   hint: shading model
+         * *   suggest: drop-down suggestion model
+         * *   analyzer: word segmentation model
+         * *   termweight: word weight model
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -121,7 +131,7 @@ public class GetFunctionCurrentVersionRequest extends Request {
         }
 
         /**
-         * category.
+         * The category. By default, this parameter is left empty.
          */
         public Builder category(String category) {
             this.putQueryParameter("category", category);
@@ -130,7 +140,7 @@ public class GetFunctionCurrentVersionRequest extends Request {
         }
 
         /**
-         * domain.
+         * The industry. By default, this parameter is left empty, which indicates General-purpose Edition.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("domain", domain);
@@ -139,7 +149,11 @@ public class GetFunctionCurrentVersionRequest extends Request {
         }
 
         /**
-         * functionType.
+         * The type of the feature. Valid values:
+         * <p>
+         * 
+         * *   PAAS. This is the default value.
+         * *   SAAS.
          */
         public Builder functionType(String functionType) {
             this.putQueryParameter("functionType", functionType);
@@ -148,7 +162,17 @@ public class GetFunctionCurrentVersionRequest extends Request {
         }
 
         /**
-         * modelType.
+         * The type of the model. The following features correspond to different model types:
+         * <p>
+         * 
+         * *   CTR model: tf_checkpoint
+         * *   Popularity model: pop
+         * *   Category model: offline_inference
+         * *   Hotword model: offline_inference
+         * *   Shading model: offline_inference
+         * *   Drop-down suggestion model: offline_inference
+         * *   Word segmentation model: text
+         * *   Word weight model: tf_checkpoint
          */
         public Builder modelType(String modelType) {
             this.putQueryParameter("modelType", modelType);

@@ -62,7 +62,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,10 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The details of the scheduled tasks.
+         * <p>
+         * 
+         * For more information, see [ScheduledTask](~~173610~~).
          */
         public Builder result(java.util.List < java.util.Map<String, ?>> result) {
             this.result = result;
@@ -78,7 +81,7 @@ public class ListScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * The total number of the returned scheduled tasks.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

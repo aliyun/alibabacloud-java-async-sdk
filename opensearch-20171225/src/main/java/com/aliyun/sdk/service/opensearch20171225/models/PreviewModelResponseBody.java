@@ -62,7 +62,7 @@ public class PreviewModelResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class PreviewModelResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The result that was returned.
          */
         public Builder result(java.util.List < java.util.Map<String, ?>> result) {
             this.result = result;
@@ -78,7 +78,7 @@ public class PreviewModelResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;

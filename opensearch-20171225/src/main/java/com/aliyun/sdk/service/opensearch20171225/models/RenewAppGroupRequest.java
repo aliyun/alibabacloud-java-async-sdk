@@ -17,9 +17,19 @@ public class RenewAppGroupRequest extends Request {
     @Validation(required = true)
     private String appGroupIdentity;
 
+    @Body
+    @NameInMap("body")
+    private PrepayOrderInfo body;
+
+    @Query
+    @NameInMap("clientToken")
+    private String clientToken;
+
     private RenewAppGroupRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
+        this.body = builder.body;
+        this.clientToken = builder.clientToken;
     }
 
     public static Builder builder() {
@@ -42,24 +52,60 @@ public class RenewAppGroupRequest extends Request {
         return this.appGroupIdentity;
     }
 
+    /**
+     * @return body
+     */
+    public PrepayOrderInfo getBody() {
+        return this.body;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
     public static final class Builder extends Request.Builder<RenewAppGroupRequest, Builder> {
         private String appGroupIdentity; 
+        private PrepayOrderInfo body; 
+        private String clientToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(RenewAppGroupRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
+        private Builder(RenewAppGroupRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.body = request.body;
+            this.clientToken = request.clientToken;
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
             this.appGroupIdentity = appGroupIdentity;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(PrepayOrderInfo body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
+         * Guaranteed request idempotence
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("clientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

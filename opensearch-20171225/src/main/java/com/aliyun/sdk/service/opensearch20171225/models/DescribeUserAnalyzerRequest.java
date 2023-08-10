@@ -62,14 +62,14 @@ public class DescribeUserAnalyzerRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserAnalyzerRequest response) {
-            super(response);
-            this.name = response.name;
-            this.with = response.with;
+        private Builder(DescribeUserAnalyzerRequest request) {
+            super(request);
+            this.name = request.name;
+            this.with = request.with;
         } 
 
         /**
-         * name.
+         * kevin_test
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -78,7 +78,7 @@ public class DescribeUserAnalyzerRequest extends Request {
         }
 
         /**
-         * with.
+         * all
          */
         public Builder with(String with) {
             this.putQueryParameter("with", with);

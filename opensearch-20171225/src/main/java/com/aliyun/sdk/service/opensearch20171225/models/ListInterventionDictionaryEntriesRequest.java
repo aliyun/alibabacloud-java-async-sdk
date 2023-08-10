@@ -88,16 +88,16 @@ public class ListInterventionDictionaryEntriesRequest extends Request {
             super();
         } 
 
-        private Builder(ListInterventionDictionaryEntriesRequest response) {
-            super(response);
-            this.name = response.name;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.word = response.word;
+        private Builder(ListInterventionDictionaryEntriesRequest request) {
+            super(request);
+            this.name = request.name;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.word = request.word;
         } 
 
         /**
-         * name.
+         * my_dict
          */
         public Builder name(String name) {
             this.putPathParameter("name", name);
@@ -106,7 +106,7 @@ public class ListInterventionDictionaryEntriesRequest extends Request {
         }
 
         /**
-         * pageNumber.
+         * 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("pageNumber", pageNumber);
@@ -115,7 +115,7 @@ public class ListInterventionDictionaryEntriesRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -124,7 +124,7 @@ public class ListInterventionDictionaryEntriesRequest extends Request {
         }
 
         /**
-         * word.
+         * Test
          */
         public Builder word(String word) {
             this.putQueryParameter("word", word);

@@ -50,7 +50,7 @@ public class PushUserAnalyzerEntriesResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class PushUserAnalyzerEntriesResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * N/A
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

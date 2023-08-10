@@ -63,14 +63,14 @@ public class RemoveDataCollectionRequest extends Request {
             super();
         } 
 
-        private Builder(RemoveDataCollectionRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.dataCollectionIdentity = response.dataCollectionIdentity;
+        private Builder(RemoveDataCollectionRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.dataCollectionIdentity = request.dataCollectionIdentity;
         } 
 
         /**
-         * appGroupIdentity.
+         * "my_app_group_name"
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,7 +79,7 @@ public class RemoveDataCollectionRequest extends Request {
         }
 
         /**
-         * dataCollectionIdentity.
+         * 286
          */
         public Builder dataCollectionIdentity(String dataCollectionIdentity) {
             this.putPathParameter("dataCollectionIdentity", dataCollectionIdentity);

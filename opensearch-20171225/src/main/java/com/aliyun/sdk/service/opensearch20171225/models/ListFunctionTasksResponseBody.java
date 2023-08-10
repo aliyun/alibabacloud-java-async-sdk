@@ -122,7 +122,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code.
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -138,7 +138,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Latency.
+         * The time consumed for the request, in milliseconds.
          */
         public Builder latency(Long latency) {
             this.latency = latency;
@@ -146,7 +146,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +154,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The returned result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -170,7 +170,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the request.
          */
         public Builder status(String status) {
             this.status = status;
@@ -178,7 +178,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of records that meet the requirements.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -201,6 +201,9 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         @NameInMap("FunctionName")
         private String functionName;
 
+        @NameInMap("Generation")
+        private String generation;
+
         @NameInMap("Progress")
         private Long progress;
 
@@ -217,6 +220,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             this.endTime = builder.endTime;
             this.extendInfo = builder.extendInfo;
             this.functionName = builder.functionName;
+            this.generation = builder.generation;
             this.progress = builder.progress;
             this.runId = builder.runId;
             this.startTime = builder.startTime;
@@ -253,6 +257,13 @@ public class ListFunctionTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return generation
+         */
+        public String getGeneration() {
+            return this.generation;
+        }
+
+        /**
          * @return progress
          */
         public Long getProgress() {
@@ -284,13 +295,14 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             private Long endTime; 
             private String extendInfo; 
             private String functionName; 
+            private String generation; 
             private Long progress; 
             private String runId; 
             private Long startTime; 
             private String status; 
 
             /**
-             * EndTime.
+             * The timestamp that indicates the end time. Unit: milliseconds. 0 indicates that the task has not ended.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -298,7 +310,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendInfo.
+             * The value is a JSON string. It includes model evaluation information and training error information.
              */
             public Builder extendInfo(String extendInfo) {
                 this.extendInfo = extendInfo;
@@ -306,7 +318,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * The name of the feature.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -314,7 +326,15 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The number of iterations.
+             */
+            public Builder generation(String generation) {
+                this.generation = generation;
+                return this;
+            }
+
+            /**
+             * The progress. 90 indicates 90%.
              */
             public Builder progress(Long progress) {
                 this.progress = progress;
@@ -322,7 +342,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * RunId.
+             * The ID of the task.
              */
             public Builder runId(String runId) {
                 this.runId = runId;
@@ -330,7 +350,7 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The timestamp that indicates the start time. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -338,7 +358,12 @@ public class ListFunctionTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   success
+             * *   failed
+             * *   running
              */
             public Builder status(String status) {
                 this.status = status;

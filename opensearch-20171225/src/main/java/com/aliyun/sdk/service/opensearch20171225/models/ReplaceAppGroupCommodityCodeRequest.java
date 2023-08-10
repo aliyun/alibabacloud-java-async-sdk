@@ -49,13 +49,13 @@ public class ReplaceAppGroupCommodityCodeRequest extends Request {
             super();
         } 
 
-        private Builder(ReplaceAppGroupCommodityCodeRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
+        private Builder(ReplaceAppGroupCommodityCodeRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);

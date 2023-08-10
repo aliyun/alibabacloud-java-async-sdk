@@ -91,16 +91,16 @@ public class ListABTestFixedFlowDividersRequest extends Request {
             super();
         } 
 
-        private Builder(ListABTestFixedFlowDividersRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.sceneId = response.sceneId;
-            this.groupId = response.groupId;
-            this.experimentId = response.experimentId;
+        private Builder(ListABTestFixedFlowDividersRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.sceneId = request.sceneId;
+            this.groupId = request.groupId;
+            this.experimentId = request.experimentId;
         } 
 
         /**
-         * appGroupIdentity.
+         * "my_app_group_name"
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -109,7 +109,7 @@ public class ListABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * sceneId.
+         * 12889
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
@@ -118,7 +118,7 @@ public class ListABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * groupId.
+         * 13467
          */
         public Builder groupId(Integer groupId) {
             this.putPathParameter("groupId", groupId);
@@ -127,7 +127,7 @@ public class ListABTestFixedFlowDividersRequest extends Request {
         }
 
         /**
-         * experimentId.
+         * 20404
          */
         public Builder experimentId(Integer experimentId) {
             this.putPathParameter("experimentId", experimentId);

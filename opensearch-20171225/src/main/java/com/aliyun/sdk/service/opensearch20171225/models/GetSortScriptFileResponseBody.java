@@ -50,7 +50,7 @@ public class GetSortScriptFileResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetSortScriptFileResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The content of the sort script.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -134,7 +134,7 @@ public class GetSortScriptFileResponseBody extends TeaModel {
             private Long version; 
 
             /**
-             * content.
+             * The script content that is encoded in the Base64 format.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -142,7 +142,7 @@ public class GetSortScriptFileResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * The time when the script was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -150,7 +150,7 @@ public class GetSortScriptFileResponseBody extends TeaModel {
             }
 
             /**
-             * modifyTime.
+             * The last time when the script was last modified.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -158,7 +158,7 @@ public class GetSortScriptFileResponseBody extends TeaModel {
             }
 
             /**
-             * version.
+             * The version of the script.
              */
             public Builder version(Long version) {
                 this.version = version;

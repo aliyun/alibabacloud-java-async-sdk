@@ -50,7 +50,7 @@ public class ListInterventionDictionaryNerResultsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,10 @@ public class ListInterventionDictionaryNerResultsResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The NER result.
+         * <p>
+         * 
+         * For more information, see [InterventionDictionaryEntry](~~173606~~).
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -134,7 +137,7 @@ public class ListInterventionDictionaryNerResultsResponseBody extends TeaModel {
             private String token; 
 
             /**
-             * order.
+             * The sequence number.
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -142,7 +145,45 @@ public class ListInterventionDictionaryNerResultsResponseBody extends TeaModel {
             }
 
             /**
-             * tag.
+             * The internal name of the identified entity type. Valid values:
+             * <p>
+             * 
+             * *   brand
+             * *   category
+             * *   material
+             * *   element
+             * *   style
+             * *   color
+             * *   function
+             * *   scenario
+             * *   people
+             * *   season
+             * *   model
+             * *   region
+             * *   name
+             * *   adjective
+             * *   category-modifier
+             * *   size
+             * *   quality
+             * *   suit
+             * *   new-release
+             * *   series
+             * *   marketing
+             * *   entertainment
+             * *   organization
+             * *   movie
+             * *   game
+             * *   number
+             * *   unit
+             * *   common
+             * *   new-word
+             * *   proper-noun
+             * *   symbol
+             * *   prefix
+             * *   suffix
+             * *   gift
+             * *   negative
+             * *   agent
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -150,7 +191,7 @@ public class ListInterventionDictionaryNerResultsResponseBody extends TeaModel {
             }
 
             /**
-             * tagLabel.
+             * The description of the internal name of the identified entity type.
              */
             public Builder tagLabel(String tagLabel) {
                 this.tagLabel = tagLabel;
@@ -158,7 +199,7 @@ public class ListInterventionDictionaryNerResultsResponseBody extends TeaModel {
             }
 
             /**
-             * token.
+             * The entity.
              */
             public Builder token(String token) {
                 this.token = token;

@@ -50,7 +50,7 @@ public class DescribeUserAnalyzerResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeUserAnalyzerResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The details of the custom analyzer.
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

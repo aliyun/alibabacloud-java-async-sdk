@@ -77,15 +77,15 @@ public class CreateFunctionTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFunctionTaskRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.functionName = response.functionName;
-            this.instanceName = response.instanceName;
+        private Builder(CreateFunctionTaskRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.functionName = request.functionName;
+            this.instanceName = request.instanceName;
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -94,7 +94,7 @@ public class CreateFunctionTaskRequest extends Request {
         }
 
         /**
-         * functionName.
+         * The name of the feature.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -103,7 +103,7 @@ public class CreateFunctionTaskRequest extends Request {
         }
 
         /**
-         * instanceName.
+         * The name of the instance.
          */
         public Builder instanceName(String instanceName) {
             this.putPathParameter("instanceName", instanceName);

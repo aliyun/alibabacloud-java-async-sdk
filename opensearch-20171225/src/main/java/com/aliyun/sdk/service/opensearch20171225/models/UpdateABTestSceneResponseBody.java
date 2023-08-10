@@ -50,7 +50,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The details of the test scenario. For more information, see [ABTestScene](https://www.alibabacloud.com/help/en/opensearch/latest/abtestscene).
          */
         public Builder result(Result result) {
             this.result = result;
@@ -170,7 +170,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * created.
+             * The time when the test scenario was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -178,7 +178,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the test scenario.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -186,7 +186,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the test scenario.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +194,10 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * online.
+             * The status of the test. Valid values:
+             * <p>
+             * - true: enabled
+             * - false: stopped
              */
             public Builder online(Boolean online) {
                 this.online = online;
@@ -202,7 +205,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * params.
+             * The parameters of the A/B test.
              */
             public Builder params(java.util.Map < String, ? > params) {
                 this.params = params;
@@ -210,7 +213,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * traffic.
+             * The percentage of traffic that is allocated to the A/B test. Valid values: [0,100].
              */
             public Builder traffic(Integer traffic) {
                 this.traffic = traffic;
@@ -218,7 +221,7 @@ public class UpdateABTestSceneResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the test scenario was last modified.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

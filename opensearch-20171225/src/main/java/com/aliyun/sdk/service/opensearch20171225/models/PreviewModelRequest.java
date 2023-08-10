@@ -76,15 +76,15 @@ public class PreviewModelRequest extends Request {
             super();
         } 
 
-        private Builder(PreviewModelRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.modelName = response.modelName;
-            this.query = response.query;
+        private Builder(PreviewModelRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.modelName = request.modelName;
+            this.query = request.query;
         } 
 
         /**
-         * appGroupIdentity.
+         * my_app
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -93,7 +93,7 @@ public class PreviewModelRequest extends Request {
         }
 
         /**
-         * modelName.
+         * model_name
          */
         public Builder modelName(String modelName) {
             this.putPathParameter("modelName", modelName);
@@ -102,7 +102,7 @@ public class PreviewModelRequest extends Request {
         }
 
         /**
-         * query.
+         * query
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);

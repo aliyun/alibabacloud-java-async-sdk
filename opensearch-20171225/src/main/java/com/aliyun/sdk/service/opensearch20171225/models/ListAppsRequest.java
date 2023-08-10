@@ -88,12 +88,12 @@ public class ListAppsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAppsRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.group = response.group;
-            this.page = response.page;
-            this.size = response.size;
+        private Builder(ListAppsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.group = request.group;
+            this.page = request.page;
+            this.size = request.size;
         } 
 
         /**
@@ -106,7 +106,7 @@ public class ListAppsRequest extends Request {
         }
 
         /**
-         * group.
+         * true
          */
         public Builder group(Boolean group) {
             this.putQueryParameter("group", group);
@@ -115,7 +115,7 @@ public class ListAppsRequest extends Request {
         }
 
         /**
-         * page.
+         * 0
          */
         public Builder page(Integer page) {
             this.putQueryParameter("page", page);
@@ -124,7 +124,7 @@ public class ListAppsRequest extends Request {
         }
 
         /**
-         * size.
+         * 0
          */
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);

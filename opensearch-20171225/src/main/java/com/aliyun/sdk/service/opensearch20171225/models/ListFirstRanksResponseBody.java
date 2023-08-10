@@ -50,7 +50,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,10 @@ public class ListFirstRanksResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The information about each rough sort expression.
+         * <p>
+         * 
+         * For more information, see [FirstRank](~~170007~~).
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -122,7 +125,10 @@ public class ListFirstRanksResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * arg.
+             * The parameters that are used by a function in the expression.
+             * <p>
+             * 
+             * For more information, see [Rough sort functions](~~180765~~).
              */
             public Builder arg(String arg) {
                 this.arg = arg;
@@ -130,7 +136,10 @@ public class ListFirstRanksResponseBody extends TeaModel {
             }
 
             /**
-             * attribute.
+             * The attribute, feature function, or field to be searched for.
+             * <p>
+             * 
+             * For more information about supported feature functions, see [Rough sort functions](~~180765~~).
              */
             public Builder attribute(String attribute) {
                 this.attribute = attribute;
@@ -138,7 +147,10 @@ public class ListFirstRanksResponseBody extends TeaModel {
             }
 
             /**
-             * weight.
+             * The weight.
+             * <p>
+             * 
+             * Valid values: \[-100000,100000] (excluding 0).
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -239,7 +251,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * active.
+             * Indicates whether the expression is the default one.
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -255,7 +267,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
             }
 
             /**
-             * description.
+             * The description of the expression.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -263,7 +275,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
             }
 
             /**
-             * meta.
+             * The content of the expression.
              */
             public Builder meta(java.util.List < Meta> meta) {
                 this.meta = meta;
@@ -271,7 +283,7 @@ public class ListFirstRanksResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the expression.
              */
             public Builder name(String name) {
                 this.name = name;

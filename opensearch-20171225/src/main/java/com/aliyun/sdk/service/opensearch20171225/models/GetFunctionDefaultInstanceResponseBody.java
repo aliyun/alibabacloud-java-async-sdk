@@ -134,7 +134,7 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -142,7 +142,7 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 功能名称
+         * The name of the feature.
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -150,7 +150,7 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code.
          */
         public Builder httpCode(Long httpCode) {
             this.httpCode = httpCode;
@@ -158,7 +158,7 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 实例名称
+         * The name of the instance.
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -166,7 +166,7 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Latency.
+         * The default running time.
          */
         public Builder latency(Long latency) {
             this.latency = latency;
@@ -174,7 +174,7 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -182,7 +182,7 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * The result of the request.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -198,7 +198,7 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the request.
          */
         public Builder status(String status) {
             this.status = status;
@@ -238,7 +238,7 @@ public class GetFunctionDefaultInstanceResponseBody extends TeaModel {
             private String instanceName; 
 
             /**
-             * 实例名称
+             * The default instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

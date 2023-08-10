@@ -17,9 +17,14 @@ public class BindEsInstanceRequest extends Request {
     @Validation(required = true)
     private String appGroupIdentity;
 
+    @Body
+    @NameInMap("body")
+    private java.util.Map < String, ? > body;
+
     private BindEsInstanceRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
@@ -42,16 +47,25 @@ public class BindEsInstanceRequest extends Request {
         return this.appGroupIdentity;
     }
 
+    /**
+     * @return body
+     */
+    public java.util.Map < String, ? > getBody() {
+        return this.body;
+    }
+
     public static final class Builder extends Request.Builder<BindEsInstanceRequest, Builder> {
         private String appGroupIdentity; 
+        private java.util.Map < String, ? > body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(BindEsInstanceRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
+        private Builder(BindEsInstanceRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.body = request.body;
         } 
 
         /**
@@ -60,6 +74,15 @@ public class BindEsInstanceRequest extends Request {
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
             this.appGroupIdentity = appGroupIdentity;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(java.util.Map < String, ? > body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 

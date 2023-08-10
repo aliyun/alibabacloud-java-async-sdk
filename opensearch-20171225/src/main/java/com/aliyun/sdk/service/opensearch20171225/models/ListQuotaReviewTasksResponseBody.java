@@ -62,7 +62,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,10 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The information about the ticket for application quota approval.
+         * <p>
+         * 
+         * For more information, see [QuotaReviewTask](~~173609~~).
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -78,7 +81,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
         }
 
         /**
-         * totalCount.
+         * The total number of the returned tickets.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -298,7 +301,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             private Boolean pending; 
 
             /**
-             * appGroupId.
+             * The ID of the application.
              */
             public Builder appGroupId(Integer appGroupId) {
                 this.appGroupId = appGroupId;
@@ -306,7 +309,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * appGroupName.
+             * The name of the application.
              */
             public Builder appGroupName(String appGroupName) {
                 this.appGroupName = appGroupName;
@@ -314,7 +317,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * appGroupType.
+             * The type of the application.
              */
             public Builder appGroupType(String appGroupType) {
                 this.appGroupType = appGroupType;
@@ -322,7 +325,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * approved.
+             * Indicates whether the ticket is approved.
              */
             public Builder approved(Boolean approved) {
                 this.approved = approved;
@@ -330,7 +333,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * available.
+             * Indicates whether the model is available.
              */
             public Builder available(Boolean available) {
                 this.available = available;
@@ -338,7 +341,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * The time when the ticket was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -346,7 +349,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * gmtModified.
+             * The time when the ticket was last updated.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -354,7 +357,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the ticket.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -362,7 +365,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * memo.
+             * The remarks of the ticket.
              */
             public Builder memo(String memo) {
                 this.memo = memo;
@@ -370,7 +373,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * newComputeResource.
+             * The computing resource quota that is applied for.
              */
             public Builder newComputeResource(Integer newComputeResource) {
                 this.newComputeResource = newComputeResource;
@@ -378,7 +381,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * newSocSize.
+             * The storage capacity quota that is applied for.
              */
             public Builder newSocSize(Integer newSocSize) {
                 this.newSocSize = newSocSize;
@@ -386,7 +389,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * newSpec.
+             * The application specifications that are applied for.
              */
             public Builder newSpec(String newSpec) {
                 this.newSpec = newSpec;
@@ -394,7 +397,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * oldComputeResource.
+             * The original quota of computing resources.
              */
             public Builder oldComputeResource(Integer oldComputeResource) {
                 this.oldComputeResource = oldComputeResource;
@@ -402,7 +405,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * oldDocSize.
+             * The original quota of storage capacity.
              */
             public Builder oldDocSize(Integer oldDocSize) {
                 this.oldDocSize = oldDocSize;
@@ -410,7 +413,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * oldSpec.
+             * The original application specifications.
              */
             public Builder oldSpec(String oldSpec) {
                 this.oldSpec = oldSpec;
@@ -418,7 +421,7 @@ public class ListQuotaReviewTasksResponseBody extends TeaModel {
             }
 
             /**
-             * pending.
+             * Indicates whether the ticket is pending.
              */
             public Builder pending(Boolean pending) {
                 this.pending = pending;

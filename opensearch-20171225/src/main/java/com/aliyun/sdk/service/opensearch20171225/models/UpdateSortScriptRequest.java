@@ -77,15 +77,15 @@ public class UpdateSortScriptRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSortScriptRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.appVersionId = response.appVersionId;
-            this.scriptName = response.scriptName;
+        private Builder(UpdateSortScriptRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.appVersionId = request.appVersionId;
+            this.scriptName = request.scriptName;
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application or the ID of the application.
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -94,7 +94,7 @@ public class UpdateSortScriptRequest extends Request {
         }
 
         /**
-         * appVersionId.
+         * The version number of the application.
          */
         public Builder appVersionId(String appVersionId) {
             this.putPathParameter("appVersionId", appVersionId);
@@ -103,7 +103,7 @@ public class UpdateSortScriptRequest extends Request {
         }
 
         /**
-         * scriptName.
+         * The name of the script.
          */
         public Builder scriptName(String scriptName) {
             this.putPathParameter("scriptName", scriptName);

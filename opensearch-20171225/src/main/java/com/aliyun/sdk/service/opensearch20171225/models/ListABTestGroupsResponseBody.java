@@ -50,7 +50,7 @@ public class ListABTestGroupsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,10 @@ public class ListABTestGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The test groups.
+         * <p>
+         * 
+         * For more information, see [ABTestGroup](~~178935~~).
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -146,7 +149,7 @@ public class ListABTestGroupsResponseBody extends TeaModel {
             private Integer updated; 
 
             /**
-             * created.
+             * The time when the test group was created.
              */
             public Builder created(Integer created) {
                 this.created = created;
@@ -154,7 +157,7 @@ public class ListABTestGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the test group.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -162,7 +165,7 @@ public class ListABTestGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the test group.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +173,11 @@ public class ListABTestGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The status of the test group. Valid values:
+             * <p>
+             * 
+             * *   0: not in effect
+             * *   1: in effect
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -178,7 +185,7 @@ public class ListABTestGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * updated.
+             * The time when the test group was last modified.
              */
             public Builder updated(Integer updated) {
                 this.updated = updated;

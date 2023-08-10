@@ -22,10 +22,20 @@ public class UpdateABTestSceneRequest extends Request {
     @Validation(required = true, maximum = 999999999)
     private Integer sceneId;
 
+    @Body
+    @NameInMap("body")
+    private ABTestScene body;
+
+    @Query
+    @NameInMap("dryRun")
+    private Boolean dryRun;
+
     private UpdateABTestSceneRequest(Builder builder) {
         super(builder);
         this.appGroupIdentity = builder.appGroupIdentity;
         this.sceneId = builder.sceneId;
+        this.body = builder.body;
+        this.dryRun = builder.dryRun;
     }
 
     public static Builder builder() {
@@ -55,22 +65,40 @@ public class UpdateABTestSceneRequest extends Request {
         return this.sceneId;
     }
 
+    /**
+     * @return body
+     */
+    public ABTestScene getBody() {
+        return this.body;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
     public static final class Builder extends Request.Builder<UpdateABTestSceneRequest, Builder> {
         private String appGroupIdentity; 
         private Integer sceneId; 
+        private ABTestScene body; 
+        private Boolean dryRun; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateABTestSceneRequest response) {
-            super(response);
-            this.appGroupIdentity = response.appGroupIdentity;
-            this.sceneId = response.sceneId;
+        private Builder(UpdateABTestSceneRequest request) {
+            super(request);
+            this.appGroupIdentity = request.appGroupIdentity;
+            this.sceneId = request.sceneId;
+            this.body = request.body;
+            this.dryRun = request.dryRun;
         } 
 
         /**
-         * appGroupIdentity.
+         * The name of the application
          */
         public Builder appGroupIdentity(String appGroupIdentity) {
             this.putPathParameter("appGroupIdentity", appGroupIdentity);
@@ -79,11 +107,29 @@ public class UpdateABTestSceneRequest extends Request {
         }
 
         /**
-         * sceneId.
+         * The ID of the test scenario
          */
         public Builder sceneId(Integer sceneId) {
             this.putPathParameter("sceneId", sceneId);
             this.sceneId = sceneId;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        public Builder body(ABTestScene body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
+            return this;
+        }
+
+        /**
+         * dryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("dryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 
