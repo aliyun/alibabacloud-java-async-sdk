@@ -1523,7 +1523,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * For more information about the SQL review feature, see [SQL review](https://icms.alibaba-inc.com/content/dms/doc?l=1\\&m=61777\\&n=2433364).
+      * For more information about the SQL review feature, see [SQL review](~~60374~~).
       *
      */
     @Override

@@ -17,6 +17,11 @@ public class RefundPayAsYouGoOrderRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    @Query
     @NameInMap("OrderId")
     @Validation(required = true)
     private String orderId;
@@ -29,6 +34,7 @@ public class RefundPayAsYouGoOrderRequest extends Request {
     private RefundPayAsYouGoOrderRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
         this.orderId = builder.orderId;
         this.tid = builder.tid;
     }
@@ -54,6 +60,13 @@ public class RefundPayAsYouGoOrderRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return orderId
      */
     public String getOrderId() {
@@ -69,6 +82,7 @@ public class RefundPayAsYouGoOrderRequest extends Request {
 
     public static final class Builder extends Request.Builder<RefundPayAsYouGoOrderRequest, Builder> {
         private String regionId; 
+        private String instanceId; 
         private String orderId; 
         private Long tid; 
 
@@ -79,6 +93,7 @@ public class RefundPayAsYouGoOrderRequest extends Request {
         private Builder(RefundPayAsYouGoOrderRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
             this.orderId = request.orderId;
             this.tid = request.tid;
         } 
@@ -89,6 +104,15 @@ public class RefundPayAsYouGoOrderRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 

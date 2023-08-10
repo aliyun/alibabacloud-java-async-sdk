@@ -238,7 +238,7 @@ public class ListStandardGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the security rule set.
              */
             public Builder groupId(Long groupId) {
                 this.groupId = groupId;
