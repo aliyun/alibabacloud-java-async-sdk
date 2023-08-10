@@ -12,9 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSynchronizationJobRequest</p>
  */
 public class CreateSynchronizationJobRequest extends Request {
+    @Query
     @NameInMap("DestinationEndpoint")
     private DestinationEndpoint destinationEndpoint;
 
+    @Query
     @NameInMap("SourceEndpoint")
     private SourceEndpoint sourceEndpoint;
 
@@ -233,29 +235,30 @@ public class CreateSynchronizationJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSynchronizationJobRequest response) {
-            super(response);
-            this.destinationEndpoint = response.destinationEndpoint;
-            this.sourceEndpoint = response.sourceEndpoint;
-            this.accountId = response.accountId;
-            this.clientToken = response.clientToken;
-            this.DBInstanceCount = response.DBInstanceCount;
-            this.destRegion = response.destRegion;
-            this.ownerId = response.ownerId;
-            this.payType = response.payType;
-            this.period = response.period;
-            this.regionId = response.regionId;
-            this.sourceRegion = response.sourceRegion;
-            this.synchronizationJobClass = response.synchronizationJobClass;
-            this.topology = response.topology;
-            this.usedTime = response.usedTime;
-            this.networkType = response.networkType;
+        private Builder(CreateSynchronizationJobRequest request) {
+            super(request);
+            this.destinationEndpoint = request.destinationEndpoint;
+            this.sourceEndpoint = request.sourceEndpoint;
+            this.accountId = request.accountId;
+            this.clientToken = request.clientToken;
+            this.DBInstanceCount = request.DBInstanceCount;
+            this.destRegion = request.destRegion;
+            this.ownerId = request.ownerId;
+            this.payType = request.payType;
+            this.period = request.period;
+            this.regionId = request.regionId;
+            this.sourceRegion = request.sourceRegion;
+            this.synchronizationJobClass = request.synchronizationJobClass;
+            this.topology = request.topology;
+            this.usedTime = request.usedTime;
+            this.networkType = request.networkType;
         } 
 
         /**
          * DestinationEndpoint.
          */
         public Builder destinationEndpoint(DestinationEndpoint destinationEndpoint) {
+            this.putQueryParameter("DestinationEndpoint", destinationEndpoint);
             this.destinationEndpoint = destinationEndpoint;
             return this;
         }
@@ -264,12 +267,13 @@ public class CreateSynchronizationJobRequest extends Request {
          * SourceEndpoint.
          */
         public Builder sourceEndpoint(SourceEndpoint sourceEndpoint) {
+            this.putQueryParameter("SourceEndpoint", sourceEndpoint);
             this.sourceEndpoint = sourceEndpoint;
             return this;
         }
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -278,7 +282,7 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -287,7 +291,7 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * DBInstanceCount.
+         * If you set the **SourceEndpoint.InstanceType** parameter to **DRDS**, you must specify the DBInstanceCount parameter. This parameter specifies the number of private RDS instances attached to the source PolarDB-X instance. Default value: **1**.
          */
         public Builder DBInstanceCount(Integer DBInstanceCount) {
             this.putQueryParameter("DBInstanceCount", DBInstanceCount);
@@ -296,7 +300,10 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * DestRegion.
+         * The ID of the region where the destination database resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>
+         * 
+         * >  If the **SourceRegion** parameter is set to the China (Hong Kong) region or a region outside the Chinese mainland, you must set the DestRegion parameter to the same region ID.
          */
         public Builder destRegion(String destRegion) {
             this.putQueryParameter("DestRegion", destRegion);
@@ -314,7 +321,11 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the data synchronization instance.
+         * <p>
+         * 
+         * *   **PrePaid**: subscription
+         * *   **PostPaid** (default value): pay-as-you-go
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -323,7 +334,13 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * Period.
+         * The billing cycle of the subscription instance. Valid values:
+         * <p>
+         * 
+         * *   **Year**
+         * *   **Month**
+         * 
+         * >  You must specify this parameter only if you set the PayType parameter to **PrePaid**.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -341,7 +358,7 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * SourceRegion.
+         * The ID of the region where the source database resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder sourceRegion(String sourceRegion) {
             this.putQueryParameter("SourceRegion", sourceRegion);
@@ -350,7 +367,10 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * SynchronizationJobClass.
+         * The specification of the data synchronization instance. Valid values: **micro**, **small**, **medium**, and **large**.
+         * <p>
+         * 
+         * >  For more information about the test performance of each specification, see [Specifications of data synchronization instances](~~26605~~).
          */
         public Builder synchronizationJobClass(String synchronizationJobClass) {
             this.putQueryParameter("SynchronizationJobClass", synchronizationJobClass);
@@ -359,7 +379,15 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * Topology.
+         * The synchronization topology. Valid values:
+         * <p>
+         * 
+         * *   **oneway**: one-way synchronization
+         * *   **bidirectional**: two-way synchronization
+         * 
+         * > 
+         * *   The default value is **oneway**.
+         * *   This parameter can be set to **bidirectional** only when the **SourceEndpoint.InstanceType** and **DestinationEndpoint.InstanceType** parameters are set to **MySQL**, **PolarDB**, or **Redis**.
          */
         public Builder topology(String topology) {
             this.putQueryParameter("Topology", topology);
@@ -368,7 +396,13 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * The subscription length.
+         * <p>
+         * 
+         * *   If the billing cycle is **Year**, the value range is **1 to 5**.
+         * *   If the billing cycle is **Month**, the value range is **1 to 60**.
+         * 
+         * >  You must specify this parameter only if you set the PayType parameter to **PrePaid**.
          */
         public Builder usedTime(Integer usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -377,7 +411,7 @@ public class CreateSynchronizationJobRequest extends Request {
         }
 
         /**
-         * networkType.
+         * The network type. Valid value: **Intranet**, which indicates virtual private cloud (VPC).
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("networkType", networkType);
@@ -419,7 +453,17 @@ public class CreateSynchronizationJobRequest extends Request {
             private String instanceType; 
 
             /**
-             * InstanceType.
+             * The instance type of the destination database. Valid values:
+             * <p>
+             * 
+             * *   **MySQL**: ApsaraDB RDS for MySQL instance or self-managed MySQL database
+             * *   **PolarDB**: PolarDB for MySQL cluster or PolarDB O Edition cluster
+             * *   **Redis**: Redis database
+             * *   **MaxCompute**: MaxCompute project
+             * 
+             * > 
+             * *   Default value: **MySQL**.
+             * *   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](~~130744~~).
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -460,7 +504,17 @@ public class CreateSynchronizationJobRequest extends Request {
             private String instanceType; 
 
             /**
-             * InstanceType.
+             * The instance type of the source database. Valid values:
+             * <p>
+             * 
+             * *   **MySQL**: ApsaraDB RDS for MySQL instance or self-managed MySQL database
+             * *   **PolarDB**: PolarDB for MySQL cluster or PolarDB O Edition cluster
+             * *   **Redis**: Redis database
+             * *   **DRDS**: PolarDB-X instance V1.0
+             * 
+             * > 
+             * *   Default value: **MySQL**.
+             * *   For more information about the supported source and destination databases, see [Database types, initial synchronization types, and synchronization topologies](~~130744~~).
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;

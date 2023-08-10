@@ -89,16 +89,16 @@ public class WhiteIpListRequest extends Request {
             super();
         } 
 
-        private Builder(WhiteIpListRequest response) {
-            super(response);
-            this.destinationRegion = response.destinationRegion;
-            this.region = response.region;
-            this.regionId = response.regionId;
-            this.type = response.type;
+        private Builder(WhiteIpListRequest request) {
+            super(request);
+            this.destinationRegion = request.destinationRegion;
+            this.region = request.region;
+            this.regionId = request.regionId;
+            this.type = request.type;
         } 
 
         /**
-         * DestinationRegion.
+         * The HTTP status code.
          */
         public Builder destinationRegion(String destinationRegion) {
             this.putQueryParameter("DestinationRegion", destinationRegion);
@@ -107,7 +107,12 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region where the destination instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>
+         * 
+         * > 
+         * *   If the destination instance is a self-managed database with a public IP address or a third-party cloud database, you can set the parameter to **cn-hangzhou** or the ID of the closest region.
+         * *   If the DTS task is a data migration or data synchronization task, you must specify this parameter.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -125,7 +130,10 @@ public class WhiteIpListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The ID of the region where the source instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>
+         * 
+         * >  If the source instance is a self-managed database with a public IP address or a third-party cloud database, you can set the parameter to **cn-hangzhou** or the ID of the closest region.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

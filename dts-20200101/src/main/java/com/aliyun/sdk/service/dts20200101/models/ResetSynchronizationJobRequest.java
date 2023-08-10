@@ -101,17 +101,17 @@ public class ResetSynchronizationJobRequest extends Request {
             super();
         } 
 
-        private Builder(ResetSynchronizationJobRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.synchronizationDirection = response.synchronizationDirection;
-            this.synchronizationJobId = response.synchronizationJobId;
+        private Builder(ResetSynchronizationJobRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.synchronizationDirection = request.synchronizationDirection;
+            this.synchronizationJobId = request.synchronizationJobId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -138,7 +138,15 @@ public class ResetSynchronizationJobRequest extends Request {
         }
 
         /**
-         * SynchronizationDirection.
+         * The synchronization direction. Valid values:
+         * <p>
+         * 
+         * *   **Forward**
+         * *   **Reverse**
+         * 
+         * > 
+         * *   Default value: **Forward**.
+         * *   You can set this parameter to **Reverse** to stop reverse synchronization only when the topology is two-way synchronization.
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -147,7 +155,7 @@ public class ResetSynchronizationJobRequest extends Request {
         }
 
         /**
-         * SynchronizationJobId.
+         * The ID of the data synchronization instance. You can call the **DescribeSynchronizationJobs** operation to query the instance ID.
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.putQueryParameter("SynchronizationJobId", synchronizationJobId);

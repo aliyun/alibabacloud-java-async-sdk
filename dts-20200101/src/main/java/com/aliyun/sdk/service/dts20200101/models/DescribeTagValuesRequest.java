@@ -127,19 +127,25 @@ public class DescribeTagValuesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTagValuesRequest response) {
-            super(response);
-            this.category = response.category;
-            this.key = response.key;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
+        private Builder(DescribeTagValuesRequest request) {
+            super(request);
+            this.category = request.category;
+            this.key = request.key;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
-         * Category.
+         * The type of the tag key. Valid values:
+         * <p>
+         * 
+         * *   **Custom**: The tag key is created by users.
+         * *   **System**: The tag key is created by the system.
+         * 
+         * >  By default, if the parameter is left empty, both custom tag keys and system tag keys are returned.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -148,7 +154,10 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * Key.
+         * The tag key.
+         * <p>
+         * 
+         * >  This parameter is required.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -157,7 +166,7 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the start page to return for a tag key that has multiple values. The valid value ranges from 1 to the maximum value of the INTEGER data type. This parameter is often used with the PageSize parameter. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -166,7 +175,7 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of tag values to return each time for a tag key that has multiple values. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -175,7 +184,7 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -184,7 +193,10 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the data migration, data synchronization, or change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
+         * <p>
+         * 
+         * >  If this parameter is left empty, the values of all tag keys of the current user are returned.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -193,7 +205,7 @@ public class DescribeTagValuesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Set the value to **ALIYUN::DTS::INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

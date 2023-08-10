@@ -90,16 +90,16 @@ public class TransferInstanceClassRequest extends Request {
             super();
         } 
 
-        private Builder(TransferInstanceClassRequest response) {
-            super(response);
-            this.dtsJobId = response.dtsJobId;
-            this.instanceClass = response.instanceClass;
-            this.orderType = response.orderType;
-            this.regionId = response.regionId;
+        private Builder(TransferInstanceClassRequest request) {
+            super(request);
+            this.dtsJobId = request.dtsJobId;
+            this.instanceClass = request.instanceClass;
+            this.orderType = request.orderType;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DtsJobId.
+         * The ID of the data migration or data synchronization task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -108,7 +108,13 @@ public class TransferInstanceClassRequest extends Request {
         }
 
         /**
-         * InstanceClass.
+         * The new instance class of the DTS instance. You can call the [DescribeDtsJobDetail](~~208925~~) operation to query the original instance class of the DTS instance.
+         * <p>
+         * 
+         * *   DTS supports the following instance classes for a data migration instance: **xxlarge**, **xlarge**, **large**, **medium**, and **small**.
+         * *   DTS supports the following instance classes for a data synchronization instance: **large**, **medium**, **small**, and **micro**.
+         * 
+         * >  For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -117,7 +123,11 @@ public class TransferInstanceClassRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * Specifies whether to upgrade or downgrade the DTS instance. Valid values:
+         * <p>
+         * 
+         * *   **UPGRADE**
+         * *   **DOWNGRADE**
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -126,7 +136,7 @@ public class TransferInstanceClassRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

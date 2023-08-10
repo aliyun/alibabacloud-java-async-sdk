@@ -158,7 +158,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The error code. This parameter will be removed in the future.
          */
         public Builder code(String code) {
             this.code = code;
@@ -166,7 +166,10 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  If the specified **JobId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **ErrMessage** and **JobId** is returned for **DynamicMessage**.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -174,7 +177,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -182,7 +185,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -190,7 +193,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -198,7 +201,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * MigrationJobId.
+         * The ID of the DTS task on which the precheck is performed.
          */
         public Builder migrationJobId(String migrationJobId) {
             this.migrationJobId = migrationJobId;
@@ -206,7 +209,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -214,7 +217,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * ScheduleJobId.
+         * The ID of the precheck task.
          */
         public Builder scheduleJobId(String scheduleJobId) {
             this.scheduleJobId = scheduleJobId;
@@ -222,7 +225,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * SkipItems.
+         * The shortened name of the precheck item.
          */
         public Builder skipItems(String skipItems) {
             this.skipItems = skipItems;
@@ -230,7 +233,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * SkipNames.
+         * The name of the precheck item.
          */
         public Builder skipNames(String skipNames) {
             this.skipNames = skipNames;
@@ -238,7 +241,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

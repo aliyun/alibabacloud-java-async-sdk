@@ -115,18 +115,18 @@ public class SkipPreCheckRequest extends Request {
             super();
         } 
 
-        private Builder(SkipPreCheckRequest response) {
-            super(response);
-            this.dtsJobId = response.dtsJobId;
-            this.jobId = response.jobId;
-            this.regionId = response.regionId;
-            this.skip = response.skip;
-            this.skipPreCheckItems = response.skipPreCheckItems;
-            this.skipPreCheckNames = response.skipPreCheckNames;
+        private Builder(SkipPreCheckRequest request) {
+            super(request);
+            this.dtsJobId = request.dtsJobId;
+            this.jobId = request.jobId;
+            this.regionId = request.regionId;
+            this.skip = request.skip;
+            this.skipPreCheckItems = request.skipPreCheckItems;
+            this.skipPreCheckNames = request.skipPreCheckNames;
         } 
 
         /**
-         * DtsJobId.
+         * The ID of the data migration, data synchronization, or change tracking task.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -135,7 +135,7 @@ public class SkipPreCheckRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the precheck task. You can call the **DescribePreCheckStatus** operation to query the task ID.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -144,7 +144,7 @@ public class SkipPreCheckRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -153,7 +153,13 @@ public class SkipPreCheckRequest extends Request {
         }
 
         /**
-         * Skip.
+         * Specifies whether to skip the precheck item. Valid values:
+         * <p>
+         * 
+         * *   **true**: skips the precheck item.
+         * *   **false**: does not skip the precheck item.
+         * 
+         * >  This parameter is required.
          */
         public Builder skip(Boolean skip) {
             this.putQueryParameter("Skip", skip);
@@ -162,7 +168,22 @@ public class SkipPreCheckRequest extends Request {
         }
 
         /**
-         * SkipPreCheckItems.
+         * The shortened name of the precheck item. Valid values:
+         * <p>
+         * 
+         * *   **CHECK_SAME_OBJ**: object name conflict
+         * 
+         * *   **CHECK_SAME_USER**: multiple usernames for one instance
+         * 
+         * *   **CHECK_SRC**: source database version
+         * 
+         * *   **CHECK_TOPOLOGY**: topology type
+         * 
+         * > For more information about the topologies supported by DTS, see [Synchronization topologies](~~124115~~).
+         * 
+         * *   **CHECK_SERVER_ID**: the server ID of the source database
+         * 
+         * >  Separate multiple shortened names with commas (,).
          */
         public Builder skipPreCheckItems(String skipPreCheckItems) {
             this.putQueryParameter("SkipPreCheckItems", skipPreCheckItems);
@@ -171,7 +192,22 @@ public class SkipPreCheckRequest extends Request {
         }
 
         /**
-         * SkipPreCheckNames.
+         * The name of the precheck item. This parameter corresponds to the **SkipPreCheckItems** parameter. Valid values:
+         * <p>
+         * 
+         * *   **CHECK_SAME_OBJ_DETAIL**: object name conflict
+         * 
+         * *   **CHECK_SAME_USER_DETAIL**: multiple usernames for one instance
+         * 
+         * *   **CHECK_SRC_DETAIL**: source database version
+         * 
+         * *   **CHECK_TOPOLOGY_DETAIL**: topology type
+         * 
+         * > For more information about the topologies supported by DTS, see [Synchronization topologies](~~124115~~).
+         * 
+         * *   **CHECK_SERVER_ID_DETAIL**: the server ID of the source database
+         * 
+         * >  Separate multiple item names with commas (,).
          */
         public Builder skipPreCheckNames(String skipPreCheckNames) {
             this.putQueryParameter("SkipPreCheckNames", skipPreCheckNames);

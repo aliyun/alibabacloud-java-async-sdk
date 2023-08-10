@@ -114,18 +114,18 @@ public class DescribeSynchronizationJobStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSynchronizationJobStatusRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.synchronizationDirection = response.synchronizationDirection;
-            this.synchronizationJobId = response.synchronizationJobId;
+        private Builder(DescribeSynchronizationJobStatusRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.synchronizationDirection = request.synchronizationDirection;
+            this.synchronizationJobId = request.synchronizationJobId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -134,7 +134,7 @@ public class DescribeSynchronizationJobStatusRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -152,7 +152,7 @@ public class DescribeSynchronizationJobStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the data synchronization instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,7 +161,15 @@ public class DescribeSynchronizationJobStatusRequest extends Request {
         }
 
         /**
-         * SynchronizationDirection.
+         * The synchronization direction. Valid values:
+         * <p>
+         * 
+         * *   **Forward**
+         * *   **Reverse**
+         * 
+         * >  Default value: **Forward**.
+         * 
+         * The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -170,7 +178,7 @@ public class DescribeSynchronizationJobStatusRequest extends Request {
         }
 
         /**
-         * SynchronizationJobId.
+         * The ID of the data synchronization instance. You can call the [DescribeSynchronizationJobs](~~49454~~) operation to query the instance ID.
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.putQueryParameter("SynchronizationJobId", synchronizationJobId);

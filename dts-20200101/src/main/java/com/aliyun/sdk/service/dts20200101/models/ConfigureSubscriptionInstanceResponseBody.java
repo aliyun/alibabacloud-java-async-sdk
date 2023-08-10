@@ -74,7 +74,7 @@ public class ConfigureSubscriptionInstanceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * ErrCode.
+         * The error code returned if the request failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -82,7 +82,7 @@ public class ConfigureSubscriptionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -90,7 +90,7 @@ public class ConfigureSubscriptionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ConfigureSubscriptionInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(String success) {
             this.success = success;

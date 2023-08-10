@@ -75,15 +75,18 @@ public class DescribeDTSIPRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDTSIPRequest response) {
-            super(response);
-            this.destinationEndpointRegion = response.destinationEndpointRegion;
-            this.regionId = response.regionId;
-            this.sourceEndpointRegion = response.sourceEndpointRegion;
+        private Builder(DescribeDTSIPRequest request) {
+            super(request);
+            this.destinationEndpointRegion = request.destinationEndpointRegion;
+            this.regionId = request.regionId;
+            this.sourceEndpointRegion = request.sourceEndpointRegion;
         } 
 
         /**
-         * DestinationEndpointRegion.
+         * The ID of the region where the destination instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>
+         * 
+         * >  If the destination instance is a self-managed database with a public IP address, you can set the parameter to **cn-hangzhou** or the ID of the closest region.
          */
         public Builder destinationEndpointRegion(String destinationEndpointRegion) {
             this.putQueryParameter("DestinationEndpointRegion", destinationEndpointRegion);
@@ -101,7 +104,10 @@ public class DescribeDTSIPRequest extends Request {
         }
 
         /**
-         * SourceEndpointRegion.
+         * The ID of the region where the source instance resides. For more information, see [List of supported regions](~~141033~~).
+         * <p>
+         * 
+         * >  If the source instance is a self-managed database with a public IP address, you can set the parameter to **cn-hangzhou** or the ID of the closest region.
          */
         public Builder sourceEndpointRegion(String sourceEndpointRegion) {
             this.putQueryParameter("SourceEndpointRegion", sourceEndpointRegion);

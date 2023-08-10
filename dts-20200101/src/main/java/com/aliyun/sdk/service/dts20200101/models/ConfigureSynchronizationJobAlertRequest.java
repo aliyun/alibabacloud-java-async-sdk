@@ -166,22 +166,22 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
             super();
         } 
 
-        private Builder(ConfigureSynchronizationJobAlertRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.delayAlertPhone = response.delayAlertPhone;
-            this.delayAlertStatus = response.delayAlertStatus;
-            this.delayOverSeconds = response.delayOverSeconds;
-            this.errorAlertPhone = response.errorAlertPhone;
-            this.errorAlertStatus = response.errorAlertStatus;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.synchronizationDirection = response.synchronizationDirection;
-            this.synchronizationJobId = response.synchronizationJobId;
+        private Builder(ConfigureSynchronizationJobAlertRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.delayAlertPhone = request.delayAlertPhone;
+            this.delayAlertStatus = request.delayAlertStatus;
+            this.delayOverSeconds = request.delayOverSeconds;
+            this.errorAlertPhone = request.errorAlertPhone;
+            this.errorAlertStatus = request.errorAlertStatus;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.synchronizationDirection = request.synchronizationDirection;
+            this.synchronizationJobId = request.synchronizationJobId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -190,7 +190,12 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * DelayAlertPhone.
+         * The mobile phone numbers that receive latency-related alerts. Separate mobile phone numbers with commas (,).
+         * <p>
+         * 
+         * > 
+         * *   This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.
+         * *   International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can [set alert rules for DTS tasks in the Cloud Monitor console](~~175876~~).
          */
         public Builder delayAlertPhone(String delayAlertPhone) {
             this.putQueryParameter("DelayAlertPhone", delayAlertPhone);
@@ -199,7 +204,15 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * DelayAlertStatus.
+         * Specifies whether to monitor task latency. Valid values:
+         * <p>
+         * 
+         * *   **enable**: yes
+         * *   **disable**: no
+         * 
+         * > 
+         * *   The default value is **enable**.
+         * *   You must specify at least one of the DelayAlertStatus and **ErrorAlertStatus** parameters.
          */
         public Builder delayAlertStatus(String delayAlertStatus) {
             this.putQueryParameter("DelayAlertStatus", delayAlertStatus);
@@ -208,7 +221,10 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * DelayOverSeconds.
+         * The threshold for triggering latency alerts. The unit is seconds and the value must be an integer. You can set the threshold based on your business needs. To avoid delay fluctuations caused by network and database loads, we recommend that you set the threshold to more than 10 seconds.
+         * <p>
+         * 
+         * >  If the **DelayAlertStatus** parameter is set to **enable**, this parameter must be specified.
          */
         public Builder delayOverSeconds(String delayOverSeconds) {
             this.putQueryParameter("DelayOverSeconds", delayOverSeconds);
@@ -217,7 +233,12 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * ErrorAlertPhone.
+         * The mobile phone numbers that receive status-related alerts. Separate mobile phone numbers with commas (,).
+         * <p>
+         * 
+         * > 
+         * *   This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.
+         * *   International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can [set alert rules for DTS tasks in the Cloud Monitor console](~~175876~~).
          */
         public Builder errorAlertPhone(String errorAlertPhone) {
             this.putQueryParameter("ErrorAlertPhone", errorAlertPhone);
@@ -226,7 +247,16 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * ErrorAlertStatus.
+         * Specifies whether to monitor task status. Valid values:
+         * <p>
+         * 
+         * *   **enable**: yes
+         * *   **disable**: no
+         * 
+         * > 
+         * *   The default value is **enable**.
+         * *   You must specify at least one of the **DelayAlertStatus** and ErrorAlertStatus parameters.
+         * *   If the task that you monitor enters an abnormal state, an alert is triggered.
          */
         public Builder errorAlertStatus(String errorAlertStatus) {
             this.putQueryParameter("ErrorAlertStatus", errorAlertStatus);
@@ -253,7 +283,13 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * SynchronizationDirection.
+         * The synchronization direction. Valid values:
+         * <p>
+         * 
+         * *   **Forward**
+         * *   **Reverse**
+         * 
+         * >  Default value: **Forward**.
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -262,7 +298,7 @@ public class ConfigureSynchronizationJobAlertRequest extends Request {
         }
 
         /**
-         * SynchronizationJobId.
+         * The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.putQueryParameter("SynchronizationJobId", synchronizationJobId);

@@ -158,7 +158,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * DelayAlertPhone.
+         * The mobile phone numbers that receive latency-related alerts.
          */
         public Builder delayAlertPhone(String delayAlertPhone) {
             this.delayAlertPhone = delayAlertPhone;
@@ -166,7 +166,11 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * DelayAlertStatus.
+         * Indicates whether task latency is monitored. Valid values:
+         * <p>
+         * 
+         * *   **enable**: yes
+         * *   **disable**: no
          */
         public Builder delayAlertStatus(String delayAlertStatus) {
             this.delayAlertStatus = delayAlertStatus;
@@ -174,7 +178,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * DelayOverSeconds.
+         * The threshold for triggering latency alerts. Unit: seconds.
          */
         public Builder delayOverSeconds(String delayOverSeconds) {
             this.delayOverSeconds = delayOverSeconds;
@@ -182,7 +186,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -190,7 +194,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -198,7 +202,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorAlertPhone.
+         * The mobile phone numbers that receive status-related alerts.
          */
         public Builder errorAlertPhone(String errorAlertPhone) {
             this.errorAlertPhone = errorAlertPhone;
@@ -206,7 +210,11 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorAlertStatus.
+         * Indicates whether task status is monitored. Valid values:
+         * <p>
+         * 
+         * *   **enable**: yes
+         * *   **disable**: no
          */
         public Builder errorAlertStatus(String errorAlertStatus) {
             this.errorAlertStatus = errorAlertStatus;
@@ -214,7 +222,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * MigrationJobId.
+         * The ID of the data migration instance.
          */
         public Builder migrationJobId(String migrationJobId) {
             this.migrationJobId = migrationJobId;
@@ -222,7 +230,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * MigrationJobName.
+         * The name of the data migration task.
          */
         public Builder migrationJobName(String migrationJobName) {
             this.migrationJobName = migrationJobName;
@@ -230,7 +238,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +246,7 @@ public class DescribeMigrationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;

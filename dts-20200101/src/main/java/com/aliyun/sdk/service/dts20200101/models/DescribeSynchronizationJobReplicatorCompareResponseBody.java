@@ -86,7 +86,7 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         private Boolean synchronizationReplicatorCompareEnable; 
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -94,7 +94,7 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -102,7 +102,7 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -118,7 +118,11 @@ public class DescribeSynchronizationJobReplicatorCompareResponseBody extends Tea
         }
 
         /**
-         * SynchronizationReplicatorCompareEnable.
+         * Indicates whether image matching is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**: Image matching is enabled.
+         * *   **false**: Image matching is disabled.
          */
         public Builder synchronizationReplicatorCompareEnable(Boolean synchronizationReplicatorCompareEnable) {
             this.synchronizationReplicatorCompareEnable = synchronizationReplicatorCompareEnable;

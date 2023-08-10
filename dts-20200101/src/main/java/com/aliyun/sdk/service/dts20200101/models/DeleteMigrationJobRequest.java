@@ -88,16 +88,16 @@ public class DeleteMigrationJobRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteMigrationJobRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.migrationJobId = response.migrationJobId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(DeleteMigrationJobRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.migrationJobId = request.migrationJobId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -106,7 +106,7 @@ public class DeleteMigrationJobRequest extends Request {
         }
 
         /**
-         * MigrationJobId.
+         * The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query all data migration instances.
          */
         public Builder migrationJobId(String migrationJobId) {
             this.putQueryParameter("MigrationJobId", migrationJobId);

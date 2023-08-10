@@ -102,17 +102,23 @@ public class TransferPayTypeRequest extends Request {
             super();
         } 
 
-        private Builder(TransferPayTypeRequest response) {
-            super(response);
-            this.buyCount = response.buyCount;
-            this.chargeType = response.chargeType;
-            this.dtsJobId = response.dtsJobId;
-            this.period = response.period;
-            this.regionId = response.regionId;
+        private Builder(TransferPayTypeRequest request) {
+            super(request);
+            this.buyCount = request.buyCount;
+            this.chargeType = request.chargeType;
+            this.dtsJobId = request.dtsJobId;
+            this.period = request.period;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * BuyCount.
+         * The subscription length.
+         * <p>
+         * 
+         * *   If the **Period** parameter is set to **Year**, the value range is **1** to **5**.
+         * *   If the **Period** parameter is set to **Month**, the value range is **1** to **60**.
+         * 
+         * >  You must specify this parameter only if you set the **ChargeType** parameter to **PrePaid**.
          */
         public Builder buyCount(String buyCount) {
             this.putQueryParameter("BuyCount", buyCount);
@@ -121,7 +127,15 @@ public class TransferPayTypeRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The billing method that you want to use. Valid values:
+         * <p>
+         * 
+         * *   **PrePaid**: subscription
+         * *   **PostPaid**: pay-as-you-go
+         * 
+         * > 
+         * *   The billing method of subscription instances cannot be changed to pay-as-you-go. To prevent resource waste, determine whether you need to change the billing method of your resources.
+         * *   If you do not need to change the billing method, specify the current billing method.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -130,7 +144,7 @@ public class TransferPayTypeRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the data synchronization or change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -139,7 +153,13 @@ public class TransferPayTypeRequest extends Request {
         }
 
         /**
-         * Period.
+         * The billing cycle of the subscription instance. Valid values:
+         * <p>
+         * 
+         * *   **Year**
+         * *   **Month** (default value)
+         * 
+         * >  You must specify this parameter only if you set the **ChargeType** parameter to **PrePaid**.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -148,7 +168,7 @@ public class TransferPayTypeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

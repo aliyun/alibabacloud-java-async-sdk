@@ -100,17 +100,17 @@ public class DescribeDtsJobDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDtsJobDetailRequest response) {
-            super(response);
-            this.dtsInstanceID = response.dtsInstanceID;
-            this.dtsJobId = response.dtsJobId;
-            this.regionId = response.regionId;
-            this.syncSubJobHistory = response.syncSubJobHistory;
-            this.synchronizationDirection = response.synchronizationDirection;
+        private Builder(DescribeDtsJobDetailRequest request) {
+            super(request);
+            this.dtsInstanceID = request.dtsInstanceID;
+            this.dtsJobId = request.dtsJobId;
+            this.regionId = request.regionId;
+            this.syncSubJobHistory = request.syncSubJobHistory;
+            this.synchronizationDirection = request.synchronizationDirection;
         } 
 
         /**
-         * DtsInstanceID.
+         * DescribeDtsJobDetail
          */
         public Builder dtsInstanceID(String dtsInstanceID) {
             this.putQueryParameter("DtsInstanceID", dtsInstanceID);
@@ -119,7 +119,28 @@ public class DescribeDtsJobDetailRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * The state of the data migration or data synchronization task.
+         * <p>
+         * 
+         * Valid values for a data migration task:
+         * 
+         * *   **NotStarted**: The migration is not started.
+         * *   **Migrating**: The migration is in progress.
+         * *   **Failed**: The migration failed.
+         * *   **Finished**: The migration is complete.
+         * 
+         * Valid values for a data synchronization task:
+         * 
+         * *   **NotStarted**: The task is not started.
+         * *   **Prechecking**: The task is in precheck.
+         * *   **PrecheckFailed**: The task failed to pass the precheck.
+         * *   **Initializing**: The task is performing initial synchronization.
+         * *   **InitializeFailed**: Initial synchronization failed.
+         * *   **Synchronizing**: The task is in progress.
+         * *   **Failed**: The task failed to synchronize data.
+         * *   **Suspending**: The task is paused.
+         * *   **Modifying**: The objects in the task are being modified.
+         * *   **Finished**: The task is complete.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -128,7 +149,7 @@ public class DescribeDtsJobDetailRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the data migration, data synchronization, or change tracking task.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -137,7 +158,7 @@ public class DescribeDtsJobDetailRequest extends Request {
         }
 
         /**
-         * 是否返回所有的同步子任务
+         * SyncSubJobHistory.
          */
         public Builder syncSubJobHistory(Boolean syncSubJobHistory) {
             this.putQueryParameter("SyncSubJobHistory", syncSubJobHistory);
@@ -146,7 +167,7 @@ public class DescribeDtsJobDetailRequest extends Request {
         }
 
         /**
-         * SynchronizationDirection.
+         * Queries the details of a data migration, data synchronization, or change tracking task.
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);

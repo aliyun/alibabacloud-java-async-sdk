@@ -156,21 +156,21 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyConsumerGroupPasswordRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.consumerGroupID = response.consumerGroupID;
-            this.consumerGroupName = response.consumerGroupName;
-            this.consumerGroupPassword = response.consumerGroupPassword;
-            this.consumerGroupUserName = response.consumerGroupUserName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.subscriptionInstanceId = response.subscriptionInstanceId;
-            this.consumerGroupNewPassword = response.consumerGroupNewPassword;
+        private Builder(ModifyConsumerGroupPasswordRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.consumerGroupID = request.consumerGroupID;
+            this.consumerGroupName = request.consumerGroupName;
+            this.consumerGroupPassword = request.consumerGroupPassword;
+            this.consumerGroupUserName = request.consumerGroupUserName;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.subscriptionInstanceId = request.subscriptionInstanceId;
+            this.consumerGroupNewPassword = request.consumerGroupNewPassword;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -179,7 +179,10 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         }
 
         /**
-         * ConsumerGroupID.
+         * The ID of the consumer group.
+         * <p>
+         * 
+         * You can call the [DescribeConsumerGroup](~~122886~~) operation to query the consumer group ID.
          */
         public Builder consumerGroupID(String consumerGroupID) {
             this.putQueryParameter("ConsumerGroupID", consumerGroupID);
@@ -188,7 +191,7 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         }
 
         /**
-         * ConsumerGroupName.
+         * The name of the consumer group. You can call the [DescribeConsumerGroup](~~122886~~) operation to query the consumer group name.
          */
         public Builder consumerGroupName(String consumerGroupName) {
             this.putQueryParameter("ConsumerGroupName", consumerGroupName);
@@ -197,7 +200,7 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         }
 
         /**
-         * ConsumerGroupPassword.
+         * The current password of the consumer group.
          */
         public Builder consumerGroupPassword(String consumerGroupPassword) {
             this.putQueryParameter("ConsumerGroupPassword", consumerGroupPassword);
@@ -206,7 +209,7 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         }
 
         /**
-         * ConsumerGroupUserName.
+         * The username of the consumer group. You can call the [DescribeConsumerGroup](~~122886~~) operation to query the username.
          */
         public Builder consumerGroupUserName(String consumerGroupUserName) {
             this.putQueryParameter("ConsumerGroupUserName", consumerGroupUserName);
@@ -233,7 +236,7 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         }
 
         /**
-         * SubscriptionInstanceId.
+         * The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.
          */
         public Builder subscriptionInstanceId(String subscriptionInstanceId) {
             this.putQueryParameter("SubscriptionInstanceId", subscriptionInstanceId);
@@ -242,7 +245,11 @@ public class ModifyConsumerGroupPasswordRequest extends Request {
         }
 
         /**
-         * consumerGroupNewPassword.
+         * The new password of the consumer group.
+         * <p>
+         * 
+         * *   A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.
+         * *   A password must be 8 to 32 characters in length.
          */
         public Builder consumerGroupNewPassword(String consumerGroupNewPassword) {
             this.putQueryParameter("consumerGroupNewPassword", consumerGroupNewPassword);

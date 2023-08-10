@@ -98,7 +98,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -114,7 +114,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * The ID of the data migration or data synchronization task.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -122,7 +122,10 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ProgressSummaryDetails.
+         * The returned information about the migrated or synchronized objects in arrays.
+         * <p>
+         * 
+         * >  The arrays are in the following format: \[{"key":"Function","state":5,"totalCount":22},{"key":"Procedure","state":5,"totalCount":26},{"key":"Table","state":0,"totalCount":68},{"key":"View","state":5,"totalCount":100}].
          */
         public Builder progressSummaryDetails(java.util.List < ProgressSummaryDetails> progressSummaryDetails) {
             this.progressSummaryDetails = progressSummaryDetails;
@@ -130,7 +133,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +141,11 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +209,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * Key.
+             * The type of migrated or synchronized object. Valid values: **Table**, **Constraint**, **Index**, **View**, **Materialize View**, **Type**, **Synonym**, **Trigger**, **Function**, **Procedure**, **Package**, **Default**, **Rule**, **PlanGuide**, and **Sequence**.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -210,7 +217,15 @@ public class SummaryJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The state of the data migration or data synchronization task. Valid values:
+             * <p>
+             * 
+             * *   **0**: The task was complete.
+             * *   **1**: The task was waiting to start.
+             * *   **2**: The task was being initialized.
+             * *   **3**: The task was in progress.
+             * *   **4**: An error occurred.
+             * *   **5**: The task failed.
              */
             public Builder state(Integer state) {
                 this.state = state;
@@ -218,7 +233,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of migrated or synchronized objects.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

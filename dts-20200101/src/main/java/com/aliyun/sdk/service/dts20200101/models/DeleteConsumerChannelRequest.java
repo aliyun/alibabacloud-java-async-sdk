@@ -89,16 +89,16 @@ public class DeleteConsumerChannelRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteConsumerChannelRequest response) {
-            super(response);
-            this.consumerGroupId = response.consumerGroupId;
-            this.dtsInstanceId = response.dtsInstanceId;
-            this.dtsJobId = response.dtsJobId;
-            this.regionId = response.regionId;
+        private Builder(DeleteConsumerChannelRequest request) {
+            super(request);
+            this.consumerGroupId = request.consumerGroupId;
+            this.dtsInstanceId = request.dtsInstanceId;
+            this.dtsJobId = request.dtsJobId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * ConsumerGroupId.
+         * The ID of the consumer group. You can call the [DescribeConsumerChannel](~~264169~~) operation to query the consumer group ID.
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putQueryParameter("ConsumerGroupId", consumerGroupId);
@@ -107,7 +107,10 @@ public class DeleteConsumerChannelRequest extends Request {
         }
 
         /**
-         * DtsInstanceId.
+         * The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
+         * <p>
+         * 
+         * >  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -116,7 +119,10 @@ public class DeleteConsumerChannelRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+         * <p>
+         * 
+         * >  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -125,7 +131,7 @@ public class DeleteConsumerChannelRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

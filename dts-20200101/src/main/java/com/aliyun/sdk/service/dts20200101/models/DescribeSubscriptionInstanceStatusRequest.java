@@ -88,16 +88,16 @@ public class DescribeSubscriptionInstanceStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSubscriptionInstanceStatusRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.subscriptionInstanceId = response.subscriptionInstanceId;
+        private Builder(DescribeSubscriptionInstanceStatusRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.subscriptionInstanceId = request.subscriptionInstanceId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -124,7 +124,7 @@ public class DescribeSubscriptionInstanceStatusRequest extends Request {
         }
 
         /**
-         * SubscriptionInstanceId.
+         * The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](~~49442~~) operation to query the instance ID.
          */
         public Builder subscriptionInstanceId(String subscriptionInstanceId) {
             this.putQueryParameter("SubscriptionInstanceId", subscriptionInstanceId);

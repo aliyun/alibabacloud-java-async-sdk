@@ -102,17 +102,20 @@ public class ListTagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(ListTagResourcesRequest response) {
-            super(response);
-            this.nextToken = response.nextToken;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
+        private Builder(ListTagResourcesRequest request) {
+            super(request);
+            this.nextToken = request.nextToken;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
 
         /**
-         * NextToken.
+         * The query token.
+         * <p>
+         * 
+         * >  If a query does not return all results, you can specify the returned **NextToken** parameter in the next query to obtain more results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -121,7 +124,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the data migration, data synchronization, or change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +142,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Valid value: **ALIYUN::DTS::INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -202,7 +205,12 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * > 
+             * *   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.
+             * *   You must specify at least one of the **ResourceId.N** and Tag.N.Key parameters. The parameters cannot be empty strings.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -210,7 +218,12 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * > 
+             * *   N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.
+             * *   This parameter can be an empty string.
              */
             public Builder value(String value) {
                 this.value = value;

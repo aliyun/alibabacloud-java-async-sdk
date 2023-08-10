@@ -110,7 +110,7 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The error code. This parameter will be removed in the future.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,10 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. The value of this parameter is used to replace the **%s** variable in the value of the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  For example, if the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -126,7 +129,7 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +137,7 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +145,7 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -150,7 +153,7 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +161,7 @@ public class ModifyDtsJobNameResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

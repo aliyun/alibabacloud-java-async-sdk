@@ -116,18 +116,21 @@ public class ModifySubscriptionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySubscriptionRequest response) {
-            super(response);
-            this.dbList = response.dbList;
-            this.dtsInstanceId = response.dtsInstanceId;
-            this.dtsJobId = response.dtsJobId;
-            this.regionId = response.regionId;
-            this.subscriptionDataTypeDDL = response.subscriptionDataTypeDDL;
-            this.subscriptionDataTypeDML = response.subscriptionDataTypeDML;
+        private Builder(ModifySubscriptionRequest request) {
+            super(request);
+            this.dbList = request.dbList;
+            this.dtsInstanceId = request.dtsInstanceId;
+            this.dtsJobId = request.dtsJobId;
+            this.regionId = request.regionId;
+            this.subscriptionDataTypeDDL = request.subscriptionDataTypeDDL;
+            this.subscriptionDataTypeDML = request.subscriptionDataTypeDML;
         } 
 
         /**
-         * DbList.
+         * The objects of the change tracking task. The value is a JSON string. For more information, see [Objects of DTS tasks](~~209545~~).
+         * <p>
+         * 
+         * >  You can call the [DescribeDtsJobDetail](~~208925~~) operation to query the original objects of the task.
          */
         public Builder dbList(String dbList) {
             this.putQueryParameter("DbList", dbList);
@@ -136,7 +139,7 @@ public class ModifySubscriptionRequest extends Request {
         }
 
         /**
-         * DtsInstanceId.
+         * The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -145,7 +148,7 @@ public class ModifySubscriptionRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -154,7 +157,7 @@ public class ModifySubscriptionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -163,7 +166,11 @@ public class ModifySubscriptionRequest extends Request {
         }
 
         /**
-         * SubscriptionDataTypeDDL.
+         * Specifies whether to retrieve data definition language (DDL) statements. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder subscriptionDataTypeDDL(Boolean subscriptionDataTypeDDL) {
             this.putQueryParameter("SubscriptionDataTypeDDL", subscriptionDataTypeDDL);
@@ -172,7 +179,11 @@ public class ModifySubscriptionRequest extends Request {
         }
 
         /**
-         * SubscriptionDataTypeDML.
+         * Specifies whether to retrieve data manipulation language (DML) statements. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder subscriptionDataTypeDML(Boolean subscriptionDataTypeDML) {
             this.putQueryParameter("SubscriptionDataTypeDML", subscriptionDataTypeDML);

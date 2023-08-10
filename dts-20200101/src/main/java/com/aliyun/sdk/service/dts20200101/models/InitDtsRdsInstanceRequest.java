@@ -113,18 +113,18 @@ public class InitDtsRdsInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(InitDtsRdsInstanceRequest response) {
-            super(response);
-            this.dtsInstanceId = response.dtsInstanceId;
-            this.endpointCenId = response.endpointCenId;
-            this.endpointInstanceId = response.endpointInstanceId;
-            this.endpointInstanceType = response.endpointInstanceType;
-            this.endpointRegion = response.endpointRegion;
-            this.regionId = response.regionId;
+        private Builder(InitDtsRdsInstanceRequest request) {
+            super(request);
+            this.dtsInstanceId = request.dtsInstanceId;
+            this.endpointCenId = request.endpointCenId;
+            this.endpointInstanceId = request.endpointInstanceId;
+            this.endpointInstanceType = request.endpointInstanceType;
+            this.endpointRegion = request.endpointRegion;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DtsInstanceId.
+         * The ID of the data synchronization task.
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -133,7 +133,10 @@ public class InitDtsRdsInstanceRequest extends Request {
         }
 
         /**
-         * EndpointCenId.
+         * If the node is a self-managed MySQL database that is connected over CEN, you must specify the ID of the CEN instance.
+         * <p>
+         * 
+         * > You must specify the **EndpointRegion** and **EndpointInstanceId** parameters or the EndpointCenId parameter based on the type of the node.
          */
         public Builder endpointCenId(String endpointCenId) {
             this.putQueryParameter("EndpointCenId", endpointCenId);
@@ -142,7 +145,11 @@ public class InitDtsRdsInstanceRequest extends Request {
         }
 
         /**
-         * EndpointInstanceId.
+         * If the node is an ApsaraDB RDS for MySQL instance, you must specify the ID of the ApsaraDB RDS for MySQL instance.
+         * <p>
+         * 
+         * > *   You must also specify the **EndpointRegion** parameter.
+         * >*   You must specify the EndpointInstanceId parameter or the **EndpointCenId** parameter based on the type of the node.
          */
         public Builder endpointInstanceId(String endpointInstanceId) {
             this.putQueryParameter("EndpointInstanceId", endpointInstanceId);
@@ -151,7 +158,11 @@ public class InitDtsRdsInstanceRequest extends Request {
         }
 
         /**
-         * EndpointInstanceType.
+         * The type of the node. Valid values:
+         * <p>
+         * 
+         * *   **RDS**: an ApsaraDB RDS for MySQL instance
+         * *   **CEN**: a self-managed MySQL database that is connected over CEN
          */
         public Builder endpointInstanceType(String endpointInstanceType) {
             this.putQueryParameter("EndpointInstanceType", endpointInstanceType);
@@ -160,7 +171,11 @@ public class InitDtsRdsInstanceRequest extends Request {
         }
 
         /**
-         * EndpointRegion.
+         * If the node is an ApsaraDB RDS for MySQL instance, you must specify the region in which the ApsaraDB RDS for MySQL instance resides.
+         * <p>
+         * 
+         * > *   You must also specify the **EndpointInstanceId** parameter.
+         * >*   You must specify the EndpointRegion parameter or the **EndpointCenId** parameter based on the type of the node.
          */
         public Builder endpointRegion(String endpointRegion) {
             this.putQueryParameter("EndpointRegion", endpointRegion);
@@ -169,7 +184,7 @@ public class InitDtsRdsInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the active geo-redundancy database cluster resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

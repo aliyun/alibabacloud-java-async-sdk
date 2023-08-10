@@ -74,7 +74,7 @@ public class ConfigureSynchronizationJobReplicatorCompareResponseBody extends Te
         private String success; 
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -82,7 +82,7 @@ public class ConfigureSynchronizationJobReplicatorCompareResponseBody extends Te
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -90,7 +90,7 @@ public class ConfigureSynchronizationJobReplicatorCompareResponseBody extends Te
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ConfigureSynchronizationJobReplicatorCompareResponseBody extends Te
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;

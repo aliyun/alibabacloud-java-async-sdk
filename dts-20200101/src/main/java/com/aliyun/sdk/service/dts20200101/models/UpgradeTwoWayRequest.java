@@ -76,15 +76,18 @@ public class UpgradeTwoWayRequest extends Request {
             super();
         } 
 
-        private Builder(UpgradeTwoWayRequest response) {
-            super(response);
-            this.instanceClass = response.instanceClass;
-            this.instanceId = response.instanceId;
-            this.regionId = response.regionId;
+        private Builder(UpgradeTwoWayRequest request) {
+            super(request);
+            this.instanceClass = request.instanceClass;
+            this.instanceId = request.instanceId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * InstanceClass.
+         * The instance class of the two-way synchronization task. Valid values: **large**, **medium**, **micro**, and **small**.
+         * <p>
+         * 
+         * >  For more information, see [Specifications of data synchronization instances](~~26605~~).
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -93,7 +96,7 @@ public class UpgradeTwoWayRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the data synchronization instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -102,7 +105,7 @@ public class UpgradeTwoWayRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

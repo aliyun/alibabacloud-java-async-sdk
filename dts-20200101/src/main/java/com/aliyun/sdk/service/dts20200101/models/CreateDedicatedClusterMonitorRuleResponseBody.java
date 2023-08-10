@@ -7,17 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ConfigureDtsJobResponseBody} extends {@link TeaModel}
+ * {@link CreateDedicatedClusterMonitorRuleResponseBody} extends {@link TeaModel}
  *
- * <p>ConfigureDtsJobResponseBody</p>
+ * <p>CreateDedicatedClusterMonitorRuleResponseBody</p>
  */
-public class ConfigureDtsJobResponseBody extends TeaModel {
-    @NameInMap("DtsInstanceId")
-    private String dtsInstanceId;
-
-    @NameInMap("DtsJobId")
-    private String dtsJobId;
-
+public class CreateDedicatedClusterMonitorRuleResponseBody extends TeaModel {
     @NameInMap("ErrCode")
     private String errCode;
 
@@ -33,9 +27,7 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
     @NameInMap("Success")
     private String success;
 
-    private ConfigureDtsJobResponseBody(Builder builder) {
-        this.dtsInstanceId = builder.dtsInstanceId;
-        this.dtsJobId = builder.dtsJobId;
+    private CreateDedicatedClusterMonitorRuleResponseBody(Builder builder) {
         this.errCode = builder.errCode;
         this.errMessage = builder.errMessage;
         this.httpStatusCode = builder.httpStatusCode;
@@ -47,22 +39,8 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ConfigureDtsJobResponseBody create() {
+    public static CreateDedicatedClusterMonitorRuleResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return dtsInstanceId
-     */
-    public String getDtsInstanceId() {
-        return this.dtsInstanceId;
-    }
-
-    /**
-     * @return dtsJobId
-     */
-    public String getDtsJobId() {
-        return this.dtsJobId;
     }
 
     /**
@@ -101,8 +79,6 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String dtsInstanceId; 
-        private String dtsJobId; 
         private String errCode; 
         private String errMessage; 
         private String httpStatusCode; 
@@ -110,23 +86,7 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * DtsInstanceId.
-         */
-        public Builder dtsInstanceId(String dtsInstanceId) {
-            this.dtsInstanceId = dtsInstanceId;
-            return this;
-        }
-
-        /**
-         * DtsJobId.
-         */
-        public Builder dtsJobId(String dtsJobId) {
-            this.dtsJobId = dtsJobId;
-            return this;
-        }
-
-        /**
-         * ErrCode.
+         * The error code returned if the request failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +94,7 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +102,7 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -150,7 +110,7 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,15 +118,15 @@ public class ConfigureDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(String success) {
             this.success = success;
             return this;
         }
 
-        public ConfigureDtsJobResponseBody build() {
-            return new ConfigureDtsJobResponseBody(this);
+        public CreateDedicatedClusterMonitorRuleResponseBody build() {
+            return new CreateDedicatedClusterMonitorRuleResponseBody(this);
         } 
 
     } 

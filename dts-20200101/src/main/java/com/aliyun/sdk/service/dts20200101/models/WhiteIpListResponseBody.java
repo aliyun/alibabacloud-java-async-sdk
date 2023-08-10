@@ -130,7 +130,7 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic error code. This parameter will be removed in the future.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -138,7 +138,11 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The call was successful.
+         * *   **false**: The call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -146,7 +150,7 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The CIDR blocks of DTS servers. Multiple CIDR blocks are separated by commas (,).
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -154,7 +158,7 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The ID of the request.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +166,7 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * IpList.
+         * The dynamic part in the error message. This parameter is used to replace **%s** in the **ErrMessage** parameter.
          */
         public Builder ipList(String ipList) {
             this.ipList = ipList;
@@ -170,7 +174,7 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The error code returned if the call failed.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +182,7 @@ public class WhiteIpListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The error message returned if the call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

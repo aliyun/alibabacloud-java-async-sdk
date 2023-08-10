@@ -98,7 +98,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * DestinationConnectionStatus.
+         * The connectivity of DTS servers to the destination database.
          */
         public Builder destinationConnectionStatus(java.util.Map < String, ? > destinationConnectionStatus) {
             this.destinationConnectionStatus = destinationConnectionStatus;
@@ -106,7 +106,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -114,7 +114,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -122,7 +122,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SourceConnectionStatus.
+         * The connectivity of DTS servers to the source database.
          */
         public Builder sourceConnectionStatus(java.util.Map < String, ? > sourceConnectionStatus) {
             this.sourceConnectionStatus = sourceConnectionStatus;
@@ -138,7 +138,7 @@ public class DescribeConnectionStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;

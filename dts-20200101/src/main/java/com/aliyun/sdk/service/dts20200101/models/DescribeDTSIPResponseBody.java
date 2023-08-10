@@ -98,7 +98,7 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * DynamicCode.
+         * The internal error code. This parameter will be removed in the future.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -106,7 +106,7 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The CIDR blocks of DTS servers.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -114,7 +114,7 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -122,7 +122,7 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -130,7 +130,7 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDTSIPResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;

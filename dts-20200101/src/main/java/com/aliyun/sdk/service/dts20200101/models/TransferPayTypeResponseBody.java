@@ -158,7 +158,11 @@ public class TransferPayTypeResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ChargeType.
+         * The billing method of the DTS instance. Valid values:
+         * <p>
+         * 
+         * *   **PrePaid**: subscription
+         * *   **PostPaid**: pay-as-you-go
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -166,7 +170,7 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The error code. This parameter will be removed in the future.
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +178,7 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the DTS task.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.dtsJobId = dtsJobId;
@@ -182,7 +186,10 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -190,7 +197,12 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The expiration time of the subscription instance. The value is a UNIX timestamp.
+         * <p>
+         * 
+         * > 
+         * *   If the DTS instance is a pay-as-you-go instance, the value of this parameter is empty.
+         * *   You can use a search engine to obtain a UNIX timestamp converter.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -198,7 +210,7 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -206,7 +218,7 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -214,7 +226,7 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -222,7 +234,7 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the DTS instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -230,7 +242,7 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +250,11 @@ public class TransferPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The call was successful.
+         * *   **false**: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

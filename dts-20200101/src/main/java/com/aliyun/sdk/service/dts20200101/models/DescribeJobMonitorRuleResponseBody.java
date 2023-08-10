@@ -146,7 +146,7 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         private java.util.List < String > topics; 
 
         /**
-         * Code.
+         * The error code. This parameter will be removed in the future.
          */
         public Builder code(String code) {
             this.code = code;
@@ -154,7 +154,7 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the data migration, data synchronization, or change tracking task.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.dtsJobId = dtsJobId;
@@ -162,7 +162,10 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  If the specified **DtsJobId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **ErrMessage** and **DtsJobId** is returned for **DynamicMessage**.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -170,7 +173,7 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -178,7 +181,7 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -186,7 +189,7 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -194,7 +197,7 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * MonitorRules.
+         * The monitoring rules of the DTS task.
          */
         public Builder monitorRules(java.util.List < MonitorRules> monitorRules) {
             this.monitorRules = monitorRules;
@@ -202,7 +205,7 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -210,7 +213,11 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The call was successful.
+         * *   **false**:The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +225,7 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Topics.
+         * The topics of all subtasks in the distributed change tracking task.
          */
         public Builder topics(java.util.List < String > topics) {
             this.topics = topics;
@@ -235,19 +242,39 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         @NameInMap("DelayRuleTime")
         private Long delayRuleTime;
 
+        @NameInMap("JobId")
+        private String jobId;
+
+        @NameInMap("JobType")
+        private String jobType;
+
+        @NameInMap("NoticeValue")
+        private Integer noticeValue;
+
+        @NameInMap("Period")
+        private Integer period;
+
         @NameInMap("Phone")
         private String phone;
 
         @NameInMap("State")
         private String state;
 
+        @NameInMap("Times")
+        private Integer times;
+
         @NameInMap("Type")
         private String type;
 
         private MonitorRules(Builder builder) {
             this.delayRuleTime = builder.delayRuleTime;
+            this.jobId = builder.jobId;
+            this.jobType = builder.jobType;
+            this.noticeValue = builder.noticeValue;
+            this.period = builder.period;
             this.phone = builder.phone;
             this.state = builder.state;
+            this.times = builder.times;
             this.type = builder.type;
         }
 
@@ -267,6 +294,34 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobId
+         */
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        /**
+         * @return jobType
+         */
+        public String getJobType() {
+            return this.jobType;
+        }
+
+        /**
+         * @return noticeValue
+         */
+        public Integer getNoticeValue() {
+            return this.noticeValue;
+        }
+
+        /**
+         * @return period
+         */
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        /**
          * @return phone
          */
         public String getPhone() {
@@ -281,6 +336,13 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return times
+         */
+        public Integer getTimes() {
+            return this.times;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -289,12 +351,21 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long delayRuleTime; 
+            private String jobId; 
+            private String jobType; 
+            private Integer noticeValue; 
+            private Integer period; 
             private String phone; 
             private String state; 
+            private Integer times; 
             private String type; 
 
             /**
-             * DelayRuleTime.
+             * The threshold that triggers the alert.
+             * <p>
+             * 
+             * *   If the request parameter **Type** of the [CreateJobMonitorRule](~~212332~~) operation is set to **delay**, the unit of DelayRuleTime is seconds.
+             * *   If the request parameter **Type** of the [CreateJobMonitorRule](~~212332~~) operation is set to **full_timeout**, the unit of DelayRuleTime is hours.
              */
             public Builder delayRuleTime(Long delayRuleTime) {
                 this.delayRuleTime = delayRuleTime;
@@ -302,7 +373,39 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * JobId.
+             */
+            public Builder jobId(String jobId) {
+                this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * JobType.
+             */
+            public Builder jobType(String jobType) {
+                this.jobType = jobType;
+                return this;
+            }
+
+            /**
+             * NoticeValue.
+             */
+            public Builder noticeValue(Integer noticeValue) {
+                this.noticeValue = noticeValue;
+                return this;
+            }
+
+            /**
+             * Period.
+             */
+            public Builder period(Integer period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * The mobile phone numbers that receive alert notifications. Multiple mobile numbers are separated by commas (,).
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -310,7 +413,11 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * Indicates whether the monitoring rule is enabled. Valid values:
+             * <p>
+             * 
+             * *   **Y**: The monitoring rule is enabled.
+             * *   **N**: The monitoring rule is disabled.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -318,7 +425,19 @@ public class DescribeJobMonitorRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * Times.
+             */
+            public Builder times(Integer times) {
+                this.times = times;
+                return this;
+            }
+
+            /**
+             * The type of the monitoring rule. Valid values:
+             * <p>
+             * 
+             * *   **delay**: If the task latency reaches the threshold, an alert is triggered.
+             * *   **error**: If an exception occurs, an alert is triggered.
              */
             public Builder type(String type) {
                 this.type = type;

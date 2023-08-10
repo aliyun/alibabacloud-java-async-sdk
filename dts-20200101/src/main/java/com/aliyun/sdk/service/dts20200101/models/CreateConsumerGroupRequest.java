@@ -130,19 +130,19 @@ public class CreateConsumerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateConsumerGroupRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.consumerGroupName = response.consumerGroupName;
-            this.consumerGroupPassword = response.consumerGroupPassword;
-            this.consumerGroupUserName = response.consumerGroupUserName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.subscriptionInstanceId = response.subscriptionInstanceId;
+        private Builder(CreateConsumerGroupRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.consumerGroupName = request.consumerGroupName;
+            this.consumerGroupPassword = request.consumerGroupPassword;
+            this.consumerGroupUserName = request.consumerGroupUserName;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.subscriptionInstanceId = request.subscriptionInstanceId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -151,7 +151,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * ConsumerGroupName.
+         * The name of the consumer group. The name cannot exceed 128 characters in length. We recommend that you use an informative name for easy identification.
          */
         public Builder consumerGroupName(String consumerGroupName) {
             this.putQueryParameter("ConsumerGroupName", consumerGroupName);
@@ -160,7 +160,11 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * ConsumerGroupPassword.
+         * The password that corresponds to the username of the consumer group.
+         * <p>
+         * 
+         * *   A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.
+         * *   A password must be 8 to 32 characters in length.
          */
         public Builder consumerGroupPassword(String consumerGroupPassword) {
             this.putQueryParameter("ConsumerGroupPassword", consumerGroupPassword);
@@ -169,7 +173,11 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * ConsumerGroupUserName.
+         * The username of the consumer group.
+         * <p>
+         * 
+         * *   A username must contain one or more of the following characters: uppercase letters, lowercase letters, digits, and underscores (\_).
+         * *   A username cannot exceed 16 characters in length.
          */
         public Builder consumerGroupUserName(String consumerGroupUserName) {
             this.putQueryParameter("ConsumerGroupUserName", consumerGroupUserName);
@@ -196,7 +204,7 @@ public class CreateConsumerGroupRequest extends Request {
         }
 
         /**
-         * SubscriptionInstanceId.
+         * The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.
          */
         public Builder subscriptionInstanceId(String subscriptionInstanceId) {
             this.putQueryParameter("SubscriptionInstanceId", subscriptionInstanceId);

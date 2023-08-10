@@ -146,7 +146,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         private Long totalRecordCount; 
 
         /**
-         * DataInitializationDetailList.
+         * The details of full data migration.
          */
         public Builder dataInitializationDetailList(DataInitializationDetailList dataInitializationDetailList) {
             this.dataInitializationDetailList = dataInitializationDetailList;
@@ -154,7 +154,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DataSynchronizationDetailList.
+         * The details of incremental data migration.
          */
         public Builder dataSynchronizationDetailList(DataSynchronizationDetailList dataSynchronizationDetailList) {
             this.dataSynchronizationDetailList = dataSynchronizationDetailList;
@@ -162,7 +162,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -170,7 +170,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -178,7 +178,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -186,7 +186,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The maximum number of data migration instances that can be displayed on one page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -194,7 +194,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +202,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * StructureInitializationDetailList.
+         * The details of schema migration.
          */
         public Builder structureInitializationDetailList(StructureInitializationDetailList structureInitializationDetailList) {
             this.structureInitializationDetailList = structureInitializationDetailList;
@@ -210,7 +210,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -218,7 +218,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries that are returned.
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -342,7 +342,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             private String totalRowNum; 
 
             /**
-             * DestinationOwnerDBName.
+             * The name of the database to which the migration object in the destination instance belongs.
              */
             public Builder destinationOwnerDBName(String destinationOwnerDBName) {
                 this.destinationOwnerDBName = destinationOwnerDBName;
@@ -350,7 +350,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if full data migration failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -358,7 +358,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FinishRowNum.
+             * The number of records that have been migrated.
              */
             public Builder finishRowNum(String finishRowNum) {
                 this.finishRowNum = finishRowNum;
@@ -366,7 +366,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MigrationTime.
+             * The time taken by full data migration.
              */
             public Builder migrationTime(String migrationTime) {
                 this.migrationTime = migrationTime;
@@ -374,7 +374,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceOwnerDBName.
+             * The name of the database to which the migration object in the source instance belongs.
              */
             public Builder sourceOwnerDBName(String sourceOwnerDBName) {
                 this.sourceOwnerDBName = sourceOwnerDBName;
@@ -382,7 +382,13 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of full data migration. Valid values:
+             * <p>
+             * 
+             * - **NotStarted**: Full data migration is not started.
+             * - **Migrating**: Full data migration is in progress.
+             * - **Failed**: Full data migration failed.
+             * - **Finished**: Full data migration is completed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -390,7 +396,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The table name.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -398,7 +404,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRowNum.
+             * The total number of records that are supposed to be migrated by the task.
              */
             public Builder totalRowNum(String totalRowNum) {
                 this.totalRowNum = totalRowNum;
@@ -528,7 +534,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * DestinationOwnerDBName.
+             * The name of the database to which the migration object in the destination instance belongs.
              */
             public Builder destinationOwnerDBName(String destinationOwnerDBName) {
                 this.destinationOwnerDBName = destinationOwnerDBName;
@@ -536,7 +542,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if incremental data migration failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -544,7 +550,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceOwnerDBName.
+             * The name of the database to which the migration object in the source instance belongs.
              */
             public Builder sourceOwnerDBName(String sourceOwnerDBName) {
                 this.sourceOwnerDBName = sourceOwnerDBName;
@@ -552,7 +558,13 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of incremental data migration. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**: Incremental data migration is not started.
+             * *   **Migrating**: Incremental data migration is in progress.
+             * *   **Failed**: Incremental data migration failed.
+             * *   **Finished**: Incremental data migration is completed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -560,7 +572,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The table name.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -714,7 +726,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DestinationOwnerDBName.
+             * The name of the database to which the migration object in the destination instance belongs.
              */
             public Builder destinationOwnerDBName(String destinationOwnerDBName) {
                 this.destinationOwnerDBName = destinationOwnerDBName;
@@ -722,7 +734,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if constraints failed to be created.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -730,7 +742,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectDefinition.
+             * The syntax to create constraints.
              */
             public Builder objectDefinition(String objectDefinition) {
                 this.objectDefinition = objectDefinition;
@@ -738,7 +750,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectName.
+             * The name of migration object.
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -746,7 +758,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * The type of the migration object. The value is **Table**.
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -754,7 +766,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceOwnerDBName.
+             * The name of the database to which the migration object in the source instance belongs.
              */
             public Builder sourceOwnerDBName(String sourceOwnerDBName) {
                 this.sourceOwnerDBName = sourceOwnerDBName;
@@ -762,7 +774,13 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of constraint creation. Valid values:
+             * <p>
+             * 
+             * - **NotStarted**
+             * - **Migrating**
+             * - **Failed**
+             * - **Finished**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -928,7 +946,10 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ConstraintList.
+             * The constraints of the migration object, such as indexes and foreign keys. 
+             * <p>
+             * 
+             * >  This parameter is returned only if the **ObjectType** parameter is set to **Table** and the migration object has constraints.
              */
             public Builder constraintList(ConstraintList constraintList) {
                 this.constraintList = constraintList;
@@ -936,7 +957,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationOwnerDBName.
+             * The name of the database to which the migration object in the destination instance belongs.
              */
             public Builder destinationOwnerDBName(String destinationOwnerDBName) {
                 this.destinationOwnerDBName = destinationOwnerDBName;
@@ -944,7 +965,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if schema migration failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -952,7 +973,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectDefinition.
+             * The schema of the migration object.
              */
             public Builder objectDefinition(String objectDefinition) {
                 this.objectDefinition = objectDefinition;
@@ -960,7 +981,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectName.
+             * The name of migration object.
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -968,7 +989,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * The type of the migration object. Valid values: **Table**, **Constraint**, **Index**, **View**, **Materialize View**, **Type**, **Synonym**, **Trigger**, **Function**, **Procedure**, **Package**, **Default**, **Rule**, **PlanGuide**, and **Sequence**.
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -976,7 +997,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceOwnerDBName.
+             * The name of the database to which the migration object in the source instance belongs.
              */
             public Builder sourceOwnerDBName(String sourceOwnerDBName) {
                 this.sourceOwnerDBName = sourceOwnerDBName;
@@ -984,7 +1005,13 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of schema migration. Valid values:
+             * <p>
+             * 
+             * - **NotStarted**: Schema migration is not started.
+             * - **Migrating**: Schema migration is in progress.
+             * - **Failed**: Schema migration failed.
+             * - **Finished**: Schema migration is completed.
              */
             public Builder status(String status) {
                 this.status = status;

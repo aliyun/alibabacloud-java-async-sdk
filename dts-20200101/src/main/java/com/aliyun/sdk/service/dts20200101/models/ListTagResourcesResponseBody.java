@@ -98,7 +98,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -106,7 +106,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -114,7 +114,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The query token.
+         * <p>
+         * 
+         * >  If a query does not return all results, you can specify the returned **NextToken** parameter in the next query to obtain more results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +125,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +133,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +141,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * The collection of tags.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -214,7 +217,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * ResourceId.
+             * The ID of the DTS instance.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -222,7 +225,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The resource type. Valid value: **ALIYUN::DTS::INSTANCE**.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -230,7 +233,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -238,7 +241,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value that corresponds to the tag key.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -88,16 +88,16 @@ public class DeleteSynchronizationJobRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSynchronizationJobRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.synchronizationJobId = response.synchronizationJobId;
+        private Builder(DeleteSynchronizationJobRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.synchronizationJobId = request.synchronizationJobId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -124,7 +124,7 @@ public class DeleteSynchronizationJobRequest extends Request {
         }
 
         /**
-         * SynchronizationJobId.
+         * The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.putQueryParameter("SynchronizationJobId", synchronizationJobId);

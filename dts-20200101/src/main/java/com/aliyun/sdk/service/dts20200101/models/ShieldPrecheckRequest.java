@@ -76,15 +76,15 @@ public class ShieldPrecheckRequest extends Request {
             super();
         } 
 
-        private Builder(ShieldPrecheckRequest response) {
-            super(response);
-            this.dtsInstanceId = response.dtsInstanceId;
-            this.precheckItems = response.precheckItems;
-            this.regionId = response.regionId;
+        private Builder(ShieldPrecheckRequest request) {
+            super(request);
+            this.dtsInstanceId = request.dtsInstanceId;
+            this.precheckItems = request.precheckItems;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DtsInstanceId.
+         * The ID of the data migration or data synchronization instance. You can call the **DescribeMigrationJobs** or DescribeSynchronizationJobs operation to query the instance ID.
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -93,7 +93,20 @@ public class ShieldPrecheckRequest extends Request {
         }
 
         /**
-         * PrecheckItems.
+         * The precheck items that you want to ignore. Separate multiple items with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **CHECK_SAME_OBJ**: schema name conflict
+         * 
+         * *   **CHECK_SAME_USER**: multiple usernames for one instance
+         * 
+         * *   **CHECK_SRC**: source database version
+         * 
+         * *   **CHECK_TOPOLOGY**: topology
+         * 
+         * > For more information about the topologies supported by DTS, see [Synchronization topologies](~~124115~~).
+         * 
+         * *   **CHECK_SERVER_ID**: value of server_id in the source database
          */
         public Builder precheckItems(String precheckItems) {
             this.putQueryParameter("PrecheckItems", precheckItems);

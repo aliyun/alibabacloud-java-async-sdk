@@ -33,7 +33,7 @@ public class ModifySynchronizationObjectRequest extends Request {
     @Validation(required = true)
     private String synchronizationJobId;
 
-    @Query
+    @Body
     @NameInMap("SynchronizationObjects")
     @Validation(required = true)
     private String synchronizationObjects;
@@ -115,18 +115,18 @@ public class ModifySynchronizationObjectRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySynchronizationObjectRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.synchronizationDirection = response.synchronizationDirection;
-            this.synchronizationJobId = response.synchronizationJobId;
-            this.synchronizationObjects = response.synchronizationObjects;
+        private Builder(ModifySynchronizationObjectRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.synchronizationDirection = request.synchronizationDirection;
+            this.synchronizationJobId = request.synchronizationJobId;
+            this.synchronizationObjects = request.synchronizationObjects;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -153,7 +153,15 @@ public class ModifySynchronizationObjectRequest extends Request {
         }
 
         /**
-         * SynchronizationDirection.
+         * The synchronization direction. Valid values:
+         * <p>
+         * 
+         * *   **Forward**
+         * *   **Reverse**
+         * 
+         * > 
+         * *   Default value: **Forward**.
+         * *   This parameter is required only when the topology of the data synchronization instance is two-way synchronization.
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -162,7 +170,7 @@ public class ModifySynchronizationObjectRequest extends Request {
         }
 
         /**
-         * SynchronizationJobId.
+         * The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.putQueryParameter("SynchronizationJobId", synchronizationJobId);
@@ -174,7 +182,7 @@ public class ModifySynchronizationObjectRequest extends Request {
          * SynchronizationObjects.
          */
         public Builder synchronizationObjects(String synchronizationObjects) {
-            this.putQueryParameter("SynchronizationObjects", synchronizationObjects);
+            this.putBodyParameter("SynchronizationObjects", synchronizationObjects);
             this.synchronizationObjects = synchronizationObjects;
             return this;
         }

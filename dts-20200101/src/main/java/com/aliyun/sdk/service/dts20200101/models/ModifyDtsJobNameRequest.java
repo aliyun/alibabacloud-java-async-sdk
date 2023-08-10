@@ -19,6 +19,7 @@ public class ModifyDtsJobNameRequest extends Request {
 
     @Query
     @NameInMap("DtsJobName")
+    @Validation(required = true)
     private String dtsJobName;
 
     @Query
@@ -75,15 +76,15 @@ public class ModifyDtsJobNameRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDtsJobNameRequest response) {
-            super(response);
-            this.dtsJobId = response.dtsJobId;
-            this.dtsJobName = response.dtsJobName;
-            this.regionId = response.regionId;
+        private Builder(ModifyDtsJobNameRequest request) {
+            super(request);
+            this.dtsJobId = request.dtsJobId;
+            this.dtsJobName = request.dtsJobName;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DtsJobId.
+         * The ID of the data migration, data synchronization, or change tracking task.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -92,7 +93,10 @@ public class ModifyDtsJobNameRequest extends Request {
         }
 
         /**
-         * DtsJobName.
+         * The new name of the DTS task.
+         * <p>
+         * 
+         * >  We recommend that you specify a descriptive name for easy identification. You do not need to use a unique name.
          */
         public Builder dtsJobName(String dtsJobName) {
             this.putQueryParameter("DtsJobName", dtsJobName);
@@ -101,7 +105,7 @@ public class ModifyDtsJobNameRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

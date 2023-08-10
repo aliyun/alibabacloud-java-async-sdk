@@ -101,17 +101,17 @@ public class ModifyDtsJobPasswordRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDtsJobPasswordRequest response) {
-            super(response);
-            this.dtsJobId = response.dtsJobId;
-            this.endpoint = response.endpoint;
-            this.password = response.password;
-            this.regionId = response.regionId;
-            this.userName = response.userName;
+        private Builder(ModifyDtsJobPasswordRequest request) {
+            super(request);
+            this.dtsJobId = request.dtsJobId;
+            this.endpoint = request.endpoint;
+            this.password = request.password;
+            this.regionId = request.regionId;
+            this.userName = request.userName;
         } 
 
         /**
-         * DtsJobId.
+         * The ID of the data migration, data synchronization, or change tracking task.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -120,7 +120,13 @@ public class ModifyDtsJobPasswordRequest extends Request {
         }
 
         /**
-         * Endpoint.
+         * Specifies the database to which the password belongs. Valid values:
+         * <p>
+         * 
+         * *   **src**: source database
+         * *   **dest**: destination database
+         * 
+         * >  This parameter must be specified.
          */
         public Builder endpoint(String endpoint) {
             this.putQueryParameter("Endpoint", endpoint);
@@ -129,7 +135,10 @@ public class ModifyDtsJobPasswordRequest extends Request {
         }
 
         /**
-         * Password.
+         * The new password of the account.
+         * <p>
+         * 
+         * >  This parameter must be specified and cannot be the same as the current password.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -138,7 +147,7 @@ public class ModifyDtsJobPasswordRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +156,10 @@ public class ModifyDtsJobPasswordRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The account of the source or destination database.
+         * <p>
+         * 
+         * >  This parameter must be specified.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

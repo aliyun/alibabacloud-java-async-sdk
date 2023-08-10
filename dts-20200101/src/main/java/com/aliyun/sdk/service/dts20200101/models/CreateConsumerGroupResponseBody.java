@@ -86,7 +86,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * ConsumerGroupID.
+         * The ID of the consumer group.
          */
         public Builder consumerGroupID(String consumerGroupID) {
             this.consumerGroupID = consumerGroupID;
@@ -94,7 +94,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -102,7 +102,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -110,7 +110,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;

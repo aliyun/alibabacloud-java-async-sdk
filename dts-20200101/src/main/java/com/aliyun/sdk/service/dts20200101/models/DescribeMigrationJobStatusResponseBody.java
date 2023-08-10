@@ -242,7 +242,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * DataInitializationStatus.
+         * The status of full data migration.
          */
         public Builder dataInitializationStatus(DataInitializationStatus dataInitializationStatus) {
             this.dataInitializationStatus = dataInitializationStatus;
@@ -250,7 +250,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DataSynchronizationStatus.
+         * The status of incremental data migration.
          */
         public Builder dataSynchronizationStatus(DataSynchronizationStatus dataSynchronizationStatus) {
             this.dataSynchronizationStatus = dataSynchronizationStatus;
@@ -258,7 +258,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DestinationEndpoint.
+         * The connection settings of the destination instance.
          */
         public Builder destinationEndpoint(DestinationEndpoint destinationEndpoint) {
             this.destinationEndpoint = destinationEndpoint;
@@ -266,7 +266,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -274,7 +274,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -282,7 +282,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * MigrationJobClass.
+         * The specification of the data migration instance. Valid values: **small**, **medium**, **large**, **xlarge**, and **2xlarge**. For more information, see [Specifications of data migration instances](~~26606~~).
          */
         public Builder migrationJobClass(String migrationJobClass) {
             this.migrationJobClass = migrationJobClass;
@@ -290,7 +290,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * MigrationJobId.
+         * The ID of the data migration instance.
          */
         public Builder migrationJobId(String migrationJobId) {
             this.migrationJobId = migrationJobId;
@@ -298,7 +298,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * MigrationJobName.
+         * The name of the data migration task.
          */
         public Builder migrationJobName(String migrationJobName) {
             this.migrationJobName = migrationJobName;
@@ -306,7 +306,16 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * MigrationJobStatus.
+         * The status of the data migration task. Valid values:
+         * <p>
+         * 
+         * *   **NotStarted**: The task is not started.
+         * *   **Prechecking**: The task is being prechecked.
+         * *   **PrecheckFailed**: The task failed to pass the precheck.
+         * *   **Migrating**: The task is migrating data.
+         * *   **Suspending**: The task is paused.
+         * *   **MigrationFailed**: The task failed to migrate data.
+         * *   **Finished**: The task is completed.
          */
         public Builder migrationJobStatus(String migrationJobStatus) {
             this.migrationJobStatus = migrationJobStatus;
@@ -314,7 +323,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * MigrationMode.
+         * The migration types.
          */
         public Builder migrationMode(MigrationMode migrationMode) {
             this.migrationMode = migrationMode;
@@ -322,7 +331,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * MigrationObject.
+         * The objects that are migrated by the task.
          */
         public Builder migrationObject(String migrationObject) {
             this.migrationObject = migrationObject;
@@ -330,7 +339,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * The billing method of the data migration instance. The value is **PostPaid** (pay-as-you-go).
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -338,7 +347,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PrecheckStatus.
+         * The precheck details.
          */
         public Builder precheckStatus(PrecheckStatus precheckStatus) {
             this.precheckStatus = precheckStatus;
@@ -346,7 +355,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -354,7 +363,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SourceEndpoint.
+         * The connection settings of the source instance.
          */
         public Builder sourceEndpoint(SourceEndpoint sourceEndpoint) {
             this.sourceEndpoint = sourceEndpoint;
@@ -362,7 +371,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * StructureInitializationStatus.
+         * The status of schema migration.
          */
         public Builder structureInitializationStatus(StructureInitializationStatus structureInitializationStatus) {
             this.structureInitializationStatus = structureInitializationStatus;
@@ -370,7 +379,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -454,7 +463,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The error message returned if full data migration failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -462,7 +471,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * The migration progress. Unit: %.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -470,7 +479,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The number of records that have been migrated during full data migration.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -478,7 +487,13 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of full data migration. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**: Full data migration is not started.
+             * *   **Migrating**: Full data migration is in progress.
+             * *   **Failed**: Full data migration failed.
+             * *   **Finished**: Full data migration is completed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -567,7 +582,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Checkpoint.
+             * The UNIX timestamp generated when the latest incremental data is migrated. Unit: seconds.
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -575,7 +590,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Delay.
+             * The latency of incremental data migration. Unit: seconds.
              */
             public Builder delay(String delay) {
                 this.delay = delay;
@@ -583,7 +598,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if incremental data migration failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -591,7 +606,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * The progress of incremental data migration. Unit: %.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -599,7 +614,14 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of incremental data migration. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**: Incremental data migration is not started.
+             * *   **Migrating**: Incremental data migration is in progress.
+             * *   **Failed**: Incremental data migration failed.
+             * *   **Finished**: Incremental data migration is completed.
+             * *   **Catched**: Incremental data migration is not delayed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -621,7 +643,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         private String engineName;
 
         @NameInMap("IP")
-        private String IP;
+        private String ip;
 
         @NameInMap("InstanceId")
         private String instanceId;
@@ -641,7 +663,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         private DestinationEndpoint(Builder builder) {
             this.databaseName = builder.databaseName;
             this.engineName = builder.engineName;
-            this.IP = builder.IP;
+            this.ip = builder.ip;
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
             this.port = builder.port;
@@ -672,10 +694,10 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return IP
+         * @return ip
          */
-        public String getIP() {
-            return this.IP;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -716,7 +738,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String databaseName; 
             private String engineName; 
-            private String IP; 
+            private String ip; 
             private String instanceId; 
             private String instanceType; 
             private String port; 
@@ -724,7 +746,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private String oracleSID; 
 
             /**
-             * DatabaseName.
+             * The name of the database to which the migration object in the destination instance belongs.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -732,7 +754,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EngineName.
+             * The database type of the destination instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -740,15 +762,15 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * IP.
+             * The endpoint of the destination instance.
              */
-            public Builder IP(String IP) {
-                this.IP = IP;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 
             /**
-             * InstanceId.
+             * The ID of the destination instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -756,7 +778,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the destination instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -764,7 +786,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The database service port of the destination instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -772,7 +794,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The database account of the destination instance.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -780,7 +802,10 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * oracleSID.
+             * The system ID (SID) of the Oracle database.
+             * <p>
+             * 
+             * >  This parameter is returned only if the database type of the destination instance is **Oracle**.
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -845,7 +870,11 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private Boolean structureInitialization; 
 
             /**
-             * dataInitialization.
+             * Indicates whether full data migration is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder dataInitialization(Boolean dataInitialization) {
                 this.dataInitialization = dataInitialization;
@@ -853,7 +882,11 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * dataSynchronization.
+             * Indicates whether incremental data migration is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
@@ -861,7 +894,11 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * structureInitialization.
+             * Indicates whether schema migration is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * *   **false**: no
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;
@@ -938,7 +975,11 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private String repairMethod; 
 
             /**
-             * CheckStatus.
+             * The precheck result. Valid values:
+             * <p>
+             * 
+             * *   **Success**: The task passed the precheck.
+             * *   **Failed**: The task failed to pass the precheck.
              */
             public Builder checkStatus(String checkStatus) {
                 this.checkStatus = checkStatus;
@@ -946,7 +987,10 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if the task failed to pass the precheck.
+             * <p>
+             * 
+             * >  This parameter is returned only if the return value of the **CheckStatus** parameter is **Failed**.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -954,7 +998,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ItemName.
+             * The name of the precheck item.
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -962,7 +1006,10 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RepairMethod.
+             * The method to fix the precheck failure.
+             * <p>
+             * 
+             * >  This parameter is returned only if the return value of the **CheckStatus** parameter is **Failed**.
              */
             public Builder repairMethod(String repairMethod) {
                 this.repairMethod = repairMethod;
@@ -1068,7 +1115,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Detail.
+             * The result of each precheck item.
              */
             public Builder detail(Detail detail) {
                 this.detail = detail;
@@ -1076,7 +1123,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * The precheck progress. Unit: %.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -1084,7 +1131,14 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The precheck status. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**
+             * *   **Suspending**:
+             * *   **Checking**
+             * *   **Failed**
+             * *   **Finished**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1106,7 +1160,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         private String engineName;
 
         @NameInMap("IP")
-        private String IP;
+        private String ip;
 
         @NameInMap("InstanceId")
         private String instanceId;
@@ -1126,7 +1180,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         private SourceEndpoint(Builder builder) {
             this.databaseName = builder.databaseName;
             this.engineName = builder.engineName;
-            this.IP = builder.IP;
+            this.ip = builder.ip;
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
             this.port = builder.port;
@@ -1157,10 +1211,10 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return IP
+         * @return ip
          */
-        public String getIP() {
-            return this.IP;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -1201,7 +1255,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String databaseName; 
             private String engineName; 
-            private String IP; 
+            private String ip; 
             private String instanceId; 
             private String instanceType; 
             private String port; 
@@ -1209,7 +1263,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private String oracleSID; 
 
             /**
-             * DatabaseName.
+             * The name of the database to which the migration object in the source instance belongs.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -1217,7 +1271,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * EngineName.
+             * The database type of the source instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -1225,15 +1279,15 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * IP.
+             * The endpoint of the source instance.
              */
-            public Builder IP(String IP) {
-                this.IP = IP;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 
             /**
-             * InstanceId.
+             * The ID of the source instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1241,7 +1295,15 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the source instance.
+             * <p>
+             * 
+             * *   **RDS**: ApsaraDB RDS instance
+             * *   **ECS**: self-managed database that is hosted on Elastic Compute Service (ECS)
+             * *   **LocalInstance**: self-managed database with a public IP address
+             * *   **Express**: self-managed database that is connected over Express Connect, VPN Gateway, or Smart Access Gateway
+             * *   **MongoDB**: ApsaraDB for MongoDB instance
+             * *   **POLARDB**: PolarDB for MySQL cluster (available only for the China site)
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1249,7 +1311,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The database service port of the source instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -1257,7 +1319,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The database account of the source instance.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1265,7 +1327,10 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * oracleSID.
+             * The SID of the Oracle database.
+             * <p>
+             * 
+             * >  This parameter is returned only if the database type of the source instance is **Oracle**.
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -1342,7 +1407,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The error message returned if schema migration failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1350,7 +1415,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * The progress of schema migration. Unit: %.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -1358,7 +1423,7 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The number of tables whose schemas have been migrated.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -1366,7 +1431,13 @@ public class DescribeMigrationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of schema migration. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**: Schema migration is not started.
+             * *   **Migrating**: Schema migration is in progress.
+             * *   **Failed**: Schema migration failed.
+             * *   **Finished**: Schema migration is completed.
              */
             public Builder status(String status) {
                 this.status = status;

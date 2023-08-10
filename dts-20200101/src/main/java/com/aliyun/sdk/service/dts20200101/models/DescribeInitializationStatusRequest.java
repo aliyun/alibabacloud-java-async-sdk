@@ -115,18 +115,18 @@ public class DescribeInitializationStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeInitializationStatusRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.synchronizationJobId = response.synchronizationJobId;
+        private Builder(DescribeInitializationStatusRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.synchronizationJobId = request.synchronizationJobId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -144,7 +144,7 @@ public class DescribeInitializationStatusRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -153,7 +153,7 @@ public class DescribeInitializationStatusRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,7 +171,7 @@ public class DescribeInitializationStatusRequest extends Request {
         }
 
         /**
-         * SynchronizationJobId.
+         * The ID of the data synchronization instance. You can call the [DescribeSynchronizationJobs](~~49454~~) operation to query the instance ID.
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.putQueryParameter("SynchronizationJobId", synchronizationJobId);

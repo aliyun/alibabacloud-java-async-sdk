@@ -28,7 +28,6 @@ public class UntagResourcesRequest extends Request {
 
     @Query
     @NameInMap("ResourceType")
-    @Validation(required = true)
     private String resourceType;
 
     @Query
@@ -103,17 +102,25 @@ public class UntagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(UntagResourcesRequest response) {
-            super(response);
-            this.all = response.all;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tagKey = response.tagKey;
+        private Builder(UntagResourcesRequest request) {
+            super(request);
+            this.all = request.all;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tagKey = request.tagKey;
         } 
 
         /**
-         * All.
+         * Specifies whether to unbind all tags from the specified instances. Valid values:
+         * <p>
+         * 
+         * *   **true**: unbinds all tags from the specified instances.
+         * *   **false**: To unbind only specific tags, you must specify the **TagKey.N** parameter.
+         * 
+         * > 
+         * *   You must specify at least one of the All and **TagKey.N** parameters.
+         * *   If you specify both the All parameter and the **TagKey.N** parameter, the All parameter does not take effect.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -122,7 +129,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the data migration, data synchronization, or change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -140,7 +147,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Valid value: **ALIYUN::DTS::INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

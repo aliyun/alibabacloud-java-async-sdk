@@ -98,7 +98,7 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * ConsumerGroupID.
+         * The ID of the consumer group. You can specify this parameter on a downstream client when you consume tracked data.
          */
         public Builder consumerGroupID(String consumerGroupID) {
             this.consumerGroupID = consumerGroupID;
@@ -106,7 +106,7 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -114,7 +114,7 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -122,7 +122,7 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -130,7 +130,7 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class CreateConsumerChannelResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;

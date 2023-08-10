@@ -62,14 +62,19 @@ public class StopDtsJobsRequest extends Request {
             super();
         } 
 
-        private Builder(StopDtsJobsRequest response) {
-            super(response);
-            this.dtsJobIds = response.dtsJobIds;
-            this.regionId = response.regionId;
+        private Builder(StopDtsJobsRequest request) {
+            super(request);
+            this.dtsJobIds = request.dtsJobIds;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DtsJobIds.
+         * The ID of the data migration or data synchronization task.
+         * <p>
+         * 
+         * > 
+         * *   Separate multiple task IDs by **,** (commas).
+         * *   You can call the [DescribeDtsJobs](~~209702~~) operation to query task IDs.
          */
         public Builder dtsJobIds(String dtsJobIds) {
             this.putQueryParameter("DtsJobIds", dtsJobIds);
@@ -78,7 +83,7 @@ public class StopDtsJobsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

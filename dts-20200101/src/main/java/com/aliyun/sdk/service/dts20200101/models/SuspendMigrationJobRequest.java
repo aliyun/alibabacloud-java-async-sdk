@@ -101,17 +101,17 @@ public class SuspendMigrationJobRequest extends Request {
             super();
         } 
 
-        private Builder(SuspendMigrationJobRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.clientToken = response.clientToken;
-            this.migrationJobId = response.migrationJobId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(SuspendMigrationJobRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.clientToken = request.clientToken;
+            this.migrationJobId = request.migrationJobId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -120,7 +120,7 @@ public class SuspendMigrationJobRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -129,7 +129,7 @@ public class SuspendMigrationJobRequest extends Request {
         }
 
         /**
-         * MigrationJobId.
+         * The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query all data migration instances.
          */
         public Builder migrationJobId(String migrationJobId) {
             this.putQueryParameter("MigrationJobId", migrationJobId);

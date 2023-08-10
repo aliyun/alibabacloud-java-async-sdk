@@ -122,7 +122,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * ConsumerChannels.
+         * The list of consumer groups.
          */
         public Builder consumerChannels(ConsumerChannels consumerChannels) {
             this.consumerChannels = consumerChannels;
@@ -130,7 +130,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -138,7 +138,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -146,7 +146,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +154,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The maximum number of consumer groups that can be displayed on one page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -162,7 +162,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -178,7 +178,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of consumer groups.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -278,7 +278,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             private Long unconsumedData; 
 
             /**
-             * ConsumerGroupID.
+             * The ID of the consumer group.
              */
             public Builder consumerGroupID(String consumerGroupID) {
                 this.consumerGroupID = consumerGroupID;
@@ -286,7 +286,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerGroupName.
+             * The name of the consumer group.
              */
             public Builder consumerGroupName(String consumerGroupName) {
                 this.consumerGroupName = consumerGroupName;
@@ -294,7 +294,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumerGroupUserName.
+             * The username of the consumer group.
              */
             public Builder consumerGroupUserName(String consumerGroupUserName) {
                 this.consumerGroupUserName = consumerGroupUserName;
@@ -302,7 +302,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumptionCheckpoint.
+             * The consumption checkpoint, which is the time when the latest data record was consumed by the change tracking client. The format is *yyyy-MM-dd*T*HH:mm:ss*Z. The time is displayed in UTC.
              */
             public Builder consumptionCheckpoint(String consumptionCheckpoint) {
                 this.consumptionCheckpoint = consumptionCheckpoint;
@@ -310,7 +310,10 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MessageDelay.
+             * The message delay, which is the current time minus the timestamp of the earliest unconsumed message in the change tracking instance. Unit: seconds.
+             * <p>
+             * 
+             * >  If the return value of this parameter is **-1**, no client is connected to the consumer group.
              */
             public Builder messageDelay(Long messageDelay) {
                 this.messageDelay = messageDelay;
@@ -318,7 +321,10 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UnconsumedData.
+             * The total number of unconsumed messages, which is the number of unconsumed data records plus the number of heartbeat messages.
+             * <p>
+             * 
+             * >  If the return value of this parameter is **-1**, no client is connected to the consumer group.
              */
             public Builder unconsumedData(Long unconsumedData) {
                 this.unconsumedData = unconsumedData;

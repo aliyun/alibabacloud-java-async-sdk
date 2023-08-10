@@ -158,7 +158,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         private Long totalRecordCount; 
 
         /**
-         * DynamicCode.
+         * The dynamic error code. This parameter will be removed soon.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -166,7 +166,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -174,7 +174,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the request fails.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -182,7 +182,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the request fails.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -190,7 +190,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code that is returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -198,7 +198,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -206,7 +206,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of log entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -214,7 +214,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -222,7 +222,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceLogContexts.
+         * The details of the logs.
          */
         public Builder serviceLogContexts(java.util.List < ServiceLogContexts> serviceLogContexts) {
             this.serviceLogContexts = serviceLogContexts;
@@ -230,7 +230,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of logs that meet the query conditions.
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -302,7 +302,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
             private String time; 
 
             /**
-             * Context.
+             * The log content.
              */
             public Builder context(String context) {
                 this.context = context;
@@ -310,7 +310,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The log level.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -318,7 +318,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The time when the logs were collected. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder time(String time) {
                 this.time = time;

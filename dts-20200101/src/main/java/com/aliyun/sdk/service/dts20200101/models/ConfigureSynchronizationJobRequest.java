@@ -12,12 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigureSynchronizationJobRequest</p>
  */
 public class ConfigureSynchronizationJobRequest extends Request {
+    @Query
     @NameInMap("DestinationEndpoint")
     private DestinationEndpoint destinationEndpoint;
 
+    @Query
     @NameInMap("PartitionKey")
     private PartitionKey partitionKey;
 
+    @Query
     @NameInMap("SourceEndpoint")
     private SourceEndpoint sourceEndpoint;
 
@@ -218,28 +221,29 @@ public class ConfigureSynchronizationJobRequest extends Request {
             super();
         } 
 
-        private Builder(ConfigureSynchronizationJobRequest response) {
-            super(response);
-            this.destinationEndpoint = response.destinationEndpoint;
-            this.partitionKey = response.partitionKey;
-            this.sourceEndpoint = response.sourceEndpoint;
-            this.accountId = response.accountId;
-            this.checkpoint = response.checkpoint;
-            this.dataInitialization = response.dataInitialization;
-            this.migrationReserved = response.migrationReserved;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.structureInitialization = response.structureInitialization;
-            this.synchronizationDirection = response.synchronizationDirection;
-            this.synchronizationJobId = response.synchronizationJobId;
-            this.synchronizationJobName = response.synchronizationJobName;
-            this.synchronizationObjects = response.synchronizationObjects;
+        private Builder(ConfigureSynchronizationJobRequest request) {
+            super(request);
+            this.destinationEndpoint = request.destinationEndpoint;
+            this.partitionKey = request.partitionKey;
+            this.sourceEndpoint = request.sourceEndpoint;
+            this.accountId = request.accountId;
+            this.checkpoint = request.checkpoint;
+            this.dataInitialization = request.dataInitialization;
+            this.migrationReserved = request.migrationReserved;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.structureInitialization = request.structureInitialization;
+            this.synchronizationDirection = request.synchronizationDirection;
+            this.synchronizationJobId = request.synchronizationJobId;
+            this.synchronizationJobName = request.synchronizationJobName;
+            this.synchronizationObjects = request.synchronizationObjects;
         } 
 
         /**
          * DestinationEndpoint.
          */
         public Builder destinationEndpoint(DestinationEndpoint destinationEndpoint) {
+            this.putQueryParameter("DestinationEndpoint", destinationEndpoint);
             this.destinationEndpoint = destinationEndpoint;
             return this;
         }
@@ -248,6 +252,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
          * PartitionKey.
          */
         public Builder partitionKey(PartitionKey partitionKey) {
+            this.putQueryParameter("PartitionKey", partitionKey);
             this.partitionKey = partitionKey;
             return this;
         }
@@ -256,12 +261,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
          * SourceEndpoint.
          */
         public Builder sourceEndpoint(SourceEndpoint sourceEndpoint) {
+            this.putQueryParameter("SourceEndpoint", sourceEndpoint);
             this.sourceEndpoint = sourceEndpoint;
             return this;
         }
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -270,7 +276,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * Checkpoint.
+         * The synchronization checkpoint.
          */
         public Builder checkpoint(String checkpoint) {
             this.putQueryParameter("Checkpoint", checkpoint);
@@ -279,7 +285,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * DataInitialization.
+         * Specifies whether to perform initial full data synchronization. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
+         * 
+         * >  Default value: **true**.
          */
         public Builder dataInitialization(Boolean dataInitialization) {
             this.putQueryParameter("DataInitialization", dataInitialization);
@@ -288,7 +300,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * MigrationReserved.
+         * The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
+         * <p>
+         * 
+         * >  This parameter can be used for data synchronization between ApsaraDB for Redis Enterprise Edition instances. For more information, see [Use OpenAPI Explorer to configure one-way or two-way data synchronization between ApsaraDB for Redis Enterprise Edition instances](~~155967~~).
          */
         public Builder migrationReserved(String migrationReserved) {
             this.putQueryParameter("MigrationReserved", migrationReserved);
@@ -315,7 +330,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * StructureInitialization.
+         * Specifies whether to perform initial schema synchronization. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
+         * 
+         * >  Default value: **true**.
          */
         public Builder structureInitialization(Boolean structureInitialization) {
             this.putQueryParameter("StructureInitialization", structureInitialization);
@@ -324,7 +345,15 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * SynchronizationDirection.
+         * The synchronization direction. Valid values:
+         * <p>
+         * 
+         * *   **Forward**
+         * *   **Reverse**
+         * 
+         * > 
+         * *   Default value: **Forward**.
+         * *   The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -333,7 +362,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * SynchronizationJobId.
+         * The ID of the data synchronization instance. You can call the [DescribeSynchronizationJobs](~~49454~~) operation to query the instance ID.
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.putQueryParameter("SynchronizationJobId", synchronizationJobId);
@@ -342,7 +371,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * SynchronizationJobName.
+         * The name of the data synchronization task.
+         * <p>
+         * 
+         * >  We recommend that you specify an informative name for easy identification. You do not need to use a unique task name.
          */
         public Builder synchronizationJobName(String synchronizationJobName) {
             this.putQueryParameter("SynchronizationJobName", synchronizationJobName);
@@ -351,7 +383,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * SynchronizationObjects.
+         * The objects that you want to synchronize. The value is a JSON string and can contain regular expressions. For more information, see [SynchronizationObjects](~~141901~~).
          */
         public Builder synchronizationObjects(String synchronizationObjects) {
             this.putBodyParameter("SynchronizationObjects", synchronizationObjects);
@@ -371,7 +403,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
         private String dataBaseName;
 
         @NameInMap("IP")
-        private String IP;
+        private String ip;
 
         @NameInMap("InstanceId")
         private String instanceId;
@@ -390,7 +422,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
 
         private DestinationEndpoint(Builder builder) {
             this.dataBaseName = builder.dataBaseName;
-            this.IP = builder.IP;
+            this.ip = builder.ip;
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
             this.password = builder.password;
@@ -414,10 +446,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * @return IP
+         * @return ip
          */
-        public String getIP() {
-            return this.IP;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -457,7 +489,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
 
         public static final class Builder {
             private String dataBaseName; 
-            private String IP; 
+            private String ip; 
             private String instanceId; 
             private String instanceType; 
             private String password; 
@@ -465,7 +497,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
             private String userName; 
 
             /**
-             * DataBaseName.
+             * The name of the database to which the synchronization object in the destination instance belongs.
              */
             public Builder dataBaseName(String dataBaseName) {
                 this.dataBaseName = dataBaseName;
@@ -473,15 +505,23 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * IP.
+             * The IP address of the destination database.
+             * <p>
+             * 
+             * >  You must specify this parameter only if the **DestinationEndpoint.InstanceType** parameter is set to **Express**, **dg**, or **cen**.
              */
-            public Builder IP(String IP) {
-                this.IP = IP;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 
             /**
-             * InstanceId.
+             * The ID of the destination instance.
+             * <p>
+             * 
+             * >  If the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute** or **DataHub**, you must specify the name of the MaxCompute project or the DataHub project.
+             * 
+             * If the destination instance is an AnalyticDB for MySQL cluster, specify the ID of the AnalyticDB for MySQL cluster.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -489,7 +529,20 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * InstanceType.
+             * The type of the destination instance. Valid values:
+             * <p>
+             * 
+             * *   **Redis**: ApsaraDB for Redis instance
+             * *   **RDS**: ApsaraDB RDS instance
+             * *   **PolarDB**: PolarDB for MySQL cluster or PolarDB O Edition cluster
+             * *   **ECS**: self-managed database that is hosted on ECS
+             * *   **Express**: self-managed database that is connected over Express Connect
+             * *   **DataHub**: DataHub project
+             * *   **MaxCompute**: MaxCompute project
+             * *   **AnalyticDB**: AnalyticDB for MySQL cluster V3.0 or V2.0
+             * *   **Greenplum**: AnalyticDB for PostgreSQL instance
+             * 
+             * >  The default value is **RDS**.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -497,7 +550,11 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * Password.
+             * The password of the destination database account.
+             * <p>
+             * 
+             * > 
+             * *   If the **DestinationEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**, you must specify the DestinationEndpoint.Password parameter.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -505,7 +562,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * Port.
+             * The service port number of the destination database.
+             * <p>
+             * 
+             * >  You must specify this parameter only if the **DestinationEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -513,7 +573,14 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * UserName.
+             * The database account of the destination database.
+             * <p>
+             * 
+             * > 
+             * *   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](~~140954~~).
+             * *   If the **DestinationEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**, you must specify the DestinationEndpoint.UserName parameter.
+             * *   If the **DestinationEndpoint.InstanceType** parameter is set to RDS and the database version is MySQL 5.5 or MySQL 5.6, you do not need to specify the DestinationEndpoint.UserName and **DestinationEndpoint.Password** parameters.
+             * *   If the **DestinationEndpoint.InstanceType** parameter is set to **Redis**, you do not need to specify the DestinationEndpoint.UserName parameter.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -602,7 +669,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
             private Boolean modifyTimeYear; 
 
             /**
-             * ModifyTime_Day.
+             * Specifies whether the incremental data table contains partitions defined by the modifytime_day field. Valid values: **true** and **false**.
+             * <p>
+             * 
+             * >  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.
              */
             public Builder modifyTimeDay(Boolean modifyTimeDay) {
                 this.modifyTimeDay = modifyTimeDay;
@@ -610,7 +680,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * ModifyTime_Hour.
+             * Specifies whether the incremental data table contains partitions defined by the modifytime_hour field. Valid values: **true** and **false**.
+             * <p>
+             * 
+             * >  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.
              */
             public Builder modifyTimeHour(Boolean modifyTimeHour) {
                 this.modifyTimeHour = modifyTimeHour;
@@ -618,7 +691,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * ModifyTime_Minute.
+             * Specifies whether the incremental data table contains partitions defined by the modifytime_minute field. Valid values: **true** and **false**.
+             * <p>
+             * 
+             * >  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.
              */
             public Builder modifyTimeMinute(Boolean modifyTimeMinute) {
                 this.modifyTimeMinute = modifyTimeMinute;
@@ -626,7 +702,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * ModifyTime_Month.
+             * Specifies whether the incremental data table contains partitions defined by the modifytime_month field. Valid values: **true** and **false**.
+             * <p>
+             * 
+             * >  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.
              */
             public Builder modifyTimeMonth(Boolean modifyTimeMonth) {
                 this.modifyTimeMonth = modifyTimeMonth;
@@ -634,7 +713,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * ModifyTime_Year.
+             * Specifies whether the incremental data table contains partitions defined by the modifytime_year field. Valid values: **true** and **false**.
+             * <p>
+             * 
+             * >  This parameter is available only if the **DestinationEndpoint.InstanceType** parameter is set to **MaxCompute**.
              */
             public Builder modifyTimeYear(Boolean modifyTimeYear) {
                 this.modifyTimeYear = modifyTimeYear;
@@ -653,7 +735,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
         private String databaseName;
 
         @NameInMap("IP")
-        private String IP;
+        private String ip;
 
         @NameInMap("InstanceId")
         private String instanceId;
@@ -678,7 +760,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
 
         private SourceEndpoint(Builder builder) {
             this.databaseName = builder.databaseName;
-            this.IP = builder.IP;
+            this.ip = builder.ip;
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
             this.ownerID = builder.ownerID;
@@ -704,10 +786,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
         }
 
         /**
-         * @return IP
+         * @return ip
          */
-        public String getIP() {
-            return this.IP;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -761,7 +843,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
 
         public static final class Builder {
             private String databaseName; 
-            private String IP; 
+            private String ip; 
             private String instanceId; 
             private String instanceType; 
             private String ownerID; 
@@ -771,7 +853,7 @@ public class ConfigureSynchronizationJobRequest extends Request {
             private String userName; 
 
             /**
-             * DatabaseName.
+             * The name of the database to which the synchronization object in the source instance belongs.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -779,15 +861,18 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * IP.
+             * The IP address of the source database.
+             * <p>
+             * 
+             * >  You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.
              */
-            public Builder IP(String IP) {
-                this.IP = IP;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 
             /**
-             * InstanceId.
+             * The ID of the source instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -795,7 +880,18 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * InstanceType.
+             * The type of the source instance. Valid values:
+             * <p>
+             * 
+             * *   **RDS**: ApsaraDB RDS instance
+             * *   **Redis**: ApsaraDB for Redis instance
+             * *   **PolarDB**: PolarDB for MySQL cluster or PolarDB O Edition cluster
+             * *   **ECS**: self-managed database that is hosted on Elastic Compute Service (ECS)
+             * *   **Express**: self-managed database that is connected over Express Connect
+             * *   **dg**: self-managed database that is connected over Database Gateway
+             * *   **cen**: self-managed database that is connected over Cloud Enterprise Network (CEN)
+             * 
+             * >  The default value is **RDS**.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -803,7 +899,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * OwnerID.
+             * The ID of the Alibaba Cloud account that owns the source RDS instance.
+             * <p>
+             * 
+             * >  You can specify this parameter to synchronize data across different Alibaba Cloud accounts. In this case, you also need to specify the **SourceEndpoint.Role** parameter.
              */
             public Builder ownerID(String ownerID) {
                 this.ownerID = ownerID;
@@ -811,7 +910,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * Password.
+             * The password of the source database account.
+             * <p>
+             * 
+             * >  You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -819,7 +921,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * Port.
+             * The service port number of the source database.
+             * <p>
+             * 
+             * >  You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -827,7 +932,10 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * Role.
+             * The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
+             * <p>
+             * 
+             * >  You must specify this parameter when you synchronize data across different Alibaba Cloud accounts. For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).
              */
             public Builder role(String role) {
                 this.role = role;
@@ -835,7 +943,13 @@ public class ConfigureSynchronizationJobRequest extends Request {
             }
 
             /**
-             * UserName.
+             * The database account of the source database.
+             * <p>
+             * 
+             * > 
+             * *   You must specify this parameter only if the **SourceEndpoint.InstanceType** parameter is set to **ECS**, **Express**, **dg**, or **cen**.
+             * *   If the **SourceEndpoint.InstanceType** parameter is set to **Redis**, you do not need to specify the database account.
+             * *   The permissions that are required for database accounts vary with the synchronization scenario. For more information, see [Overview of data synchronization scenarios](~~140954~~).
              */
             public Builder userName(String userName) {
                 this.userName = userName;

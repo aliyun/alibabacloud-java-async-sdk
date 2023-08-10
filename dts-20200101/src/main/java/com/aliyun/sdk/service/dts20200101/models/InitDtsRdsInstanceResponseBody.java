@@ -110,7 +110,7 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * AdminAccount.
+         * The built-in account that is used by DTS to connect to the node.
          */
         public Builder adminAccount(String adminAccount) {
             this.adminAccount = adminAccount;
@@ -118,7 +118,7 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * AdminPassword.
+         * The password of the built-in account.
          */
         public Builder adminPassword(String adminPassword) {
             this.adminPassword = adminPassword;
@@ -126,7 +126,7 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the request fails.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +134,7 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the request fails.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +142,7 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -150,7 +150,7 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(String success) {
             this.success = success;

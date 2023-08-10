@@ -122,7 +122,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DynamicCode.
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -130,7 +130,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -138,7 +138,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code. This example indicates that the specified ETL task ID is invalid.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -146,7 +146,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message. This example indicates that the specified ETL task ID does not exist. In this case, the ETL task may be deleted.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -154,7 +154,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * EtlRunningLogs.
+         * The logs of ETL tasks.
          */
         public Builder etlRunningLogs(java.util.List < EtlRunningLogs> etlRunningLogs) {
             this.etlRunningLogs = etlRunningLogs;
@@ -162,7 +162,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -170,7 +170,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. If the call failed, false is returned.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -278,7 +278,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * Content.
+             * The state of the ETL task.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -286,7 +286,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ContentKey.
+             * The module for which the logs are generated, such as the conversion module of ETL tasks.
              */
             public Builder contentKey(String contentKey) {
                 this.contentKey = contentKey;
@@ -294,7 +294,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EtlId.
+             * The ID of the ETL task.
              */
             public Builder etlId(String etlId) {
                 this.etlId = etlId;
@@ -302,7 +302,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogDatetime.
+             * The time when the log was generated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder logDatetime(String logDatetime) {
                 this.logDatetime = logDatetime;
@@ -310,7 +310,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The log level. Valid values: ERROR, WARN, INFO, and DEBUG.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -318,7 +318,7 @@ public class DescribeEtlJobLogsResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

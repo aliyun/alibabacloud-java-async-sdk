@@ -62,14 +62,14 @@ public class DescribeEtlJobLogsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEtlJobLogsRequest response) {
-            super(response);
-            this.dtsJobId = response.dtsJobId;
-            this.regionId = response.regionId;
+        private Builder(DescribeEtlJobLogsRequest request) {
+            super(request);
+            this.dtsJobId = request.dtsJobId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DtsJobId.
+         * The ID of the ETL task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -78,7 +78,7 @@ public class DescribeEtlJobLogsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the Data Transmission Service (DTS) instance resides. You can call the [DescribeRegions](~~25609~~) operation to query the available Alibaba Cloud regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

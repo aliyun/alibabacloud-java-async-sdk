@@ -114,18 +114,21 @@ public class DescribeConsumerChannelRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeConsumerChannelRequest response) {
-            super(response);
-            this.dtsInstanceId = response.dtsInstanceId;
-            this.dtsJobId = response.dtsJobId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.parentChannelId = response.parentChannelId;
-            this.regionId = response.regionId;
+        private Builder(DescribeConsumerChannelRequest request) {
+            super(request);
+            this.dtsInstanceId = request.dtsInstanceId;
+            this.dtsJobId = request.dtsJobId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.parentChannelId = request.parentChannelId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DtsInstanceId.
+         * The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
+         * <p>
+         * 
+         * >  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -134,7 +137,10 @@ public class DescribeConsumerChannelRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+         * <p>
+         * 
+         * >  You must specify at least one of the **DtsInstanceId** and **DtsJobId** parameters.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -143,7 +149,7 @@ public class DescribeConsumerChannelRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -152,7 +158,7 @@ public class DescribeConsumerChannelRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -161,7 +167,7 @@ public class DescribeConsumerChannelRequest extends Request {
         }
 
         /**
-         * ParentChannelId.
+         * The parent task ID of the distributed task.
          */
         public Builder parentChannelId(String parentChannelId) {
             this.putQueryParameter("ParentChannelId", parentChannelId);
@@ -170,7 +176,7 @@ public class DescribeConsumerChannelRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

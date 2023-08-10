@@ -117,18 +117,18 @@ public class CreateConsumerChannelRequest extends Request {
             super();
         } 
 
-        private Builder(CreateConsumerChannelRequest response) {
-            super(response);
-            this.consumerGroupName = response.consumerGroupName;
-            this.consumerGroupPassword = response.consumerGroupPassword;
-            this.consumerGroupUserName = response.consumerGroupUserName;
-            this.dtsInstanceId = response.dtsInstanceId;
-            this.dtsJobId = response.dtsJobId;
-            this.regionId = response.regionId;
+        private Builder(CreateConsumerChannelRequest request) {
+            super(request);
+            this.consumerGroupName = request.consumerGroupName;
+            this.consumerGroupPassword = request.consumerGroupPassword;
+            this.consumerGroupUserName = request.consumerGroupUserName;
+            this.dtsInstanceId = request.dtsInstanceId;
+            this.dtsJobId = request.dtsJobId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * ConsumerGroupName.
+         * The name of the consumer group. The name can be up to 128 characters in length. We recommend that you use an informative name for easy identification.
          */
         public Builder consumerGroupName(String consumerGroupName) {
             this.putQueryParameter("ConsumerGroupName", consumerGroupName);
@@ -137,7 +137,11 @@ public class CreateConsumerChannelRequest extends Request {
         }
 
         /**
-         * ConsumerGroupPassword.
+         * The password of the consumer group.
+         * <p>
+         * 
+         * *   A password must contain two or more of the following characters: uppercase letters, lowercase letters, digits, and special characters.
+         * *   A password must be 8 to 32 characters in length.
          */
         public Builder consumerGroupPassword(String consumerGroupPassword) {
             this.putQueryParameter("ConsumerGroupPassword", consumerGroupPassword);
@@ -146,7 +150,11 @@ public class CreateConsumerChannelRequest extends Request {
         }
 
         /**
-         * ConsumerGroupUserName.
+         * The username of the consumer group.
+         * <p>
+         * 
+         * *   A username must contain one or more of the following characters: uppercase letters, lowercase letters, digits, and underscores (\_).
+         * *   A username cannot exceed 16 characters in length.
          */
         public Builder consumerGroupUserName(String consumerGroupUserName) {
             this.putQueryParameter("ConsumerGroupUserName", consumerGroupUserName);
@@ -155,7 +163,10 @@ public class CreateConsumerChannelRequest extends Request {
         }
 
         /**
-         * DtsInstanceId.
+         * The ID of the change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
+         * <p>
+         * 
+         * >  You must specify at least one of the **DtsInstanceId** and **DtsJobId**. parameters.
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -164,7 +175,10 @@ public class CreateConsumerChannelRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
+         * <p>
+         * 
+         * >  You must specify at least one of the **DtsInstanceId** and **DtsJobId**. parameters.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -173,7 +187,7 @@ public class CreateConsumerChannelRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

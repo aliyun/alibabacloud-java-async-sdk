@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ConfigureDtsJobResponse} extends {@link TeaModel}
+ * {@link DescribeDataCheckTableDiffDetailsResponse} extends {@link TeaModel}
  *
- * <p>ConfigureDtsJobResponse</p>
+ * <p>DescribeDataCheckTableDiffDetailsResponse</p>
  */
-public class ConfigureDtsJobResponse extends Response {
+public class DescribeDataCheckTableDiffDetailsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ConfigureDtsJobResponseBody body;
+    private DescribeDataCheckTableDiffDetailsResponseBody body;
 
-    private ConfigureDtsJobResponse(BuilderImpl builder) {
+    private DescribeDataCheckTableDiffDetailsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ConfigureDtsJobResponse create() {
+    public static DescribeDataCheckTableDiffDetailsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ConfigureDtsJobResponse extends Response {
     /**
      * @return body
      */
-    public ConfigureDtsJobResponseBody getBody() {
+    public DescribeDataCheckTableDiffDetailsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ConfigureDtsJobResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeDataCheckTableDiffDetailsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ConfigureDtsJobResponseBody body);
+        Builder body(DescribeDataCheckTableDiffDetailsResponseBody body);
 
         @Override
-        ConfigureDtsJobResponse build();
+        DescribeDataCheckTableDiffDetailsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ConfigureDtsJobResponse, Builder>
+            extends Response.BuilderImpl<DescribeDataCheckTableDiffDetailsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ConfigureDtsJobResponseBody body; 
+        private DescribeDataCheckTableDiffDetailsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ConfigureDtsJobResponse response) {
+        private BuilderImpl(DescribeDataCheckTableDiffDetailsResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ConfigureDtsJobResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ConfigureDtsJobResponseBody body) {
+        public Builder body(DescribeDataCheckTableDiffDetailsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ConfigureDtsJobResponse build() {
-            return new ConfigureDtsJobResponse(this);
+        public DescribeDataCheckTableDiffDetailsResponse build() {
+            return new DescribeDataCheckTableDiffDetailsResponse(this);
         } 
 
     } 

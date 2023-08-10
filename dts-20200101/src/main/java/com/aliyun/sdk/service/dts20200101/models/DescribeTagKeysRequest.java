@@ -114,18 +114,24 @@ public class DescribeTagKeysRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTagKeysRequest response) {
-            super(response);
-            this.category = response.category;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
+        private Builder(DescribeTagKeysRequest request) {
+            super(request);
+            this.category = request.category;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
-         * Category.
+         * The type of the tag. Valid values:
+         * <p>
+         * 
+         * *   **Custom**: The tag is added by a user.
+         * *   **System**: The tag is added by the system.
+         * 
+         * >  By default, if the parameter is left empty, custom tags and system tags are returned.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -134,7 +140,7 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1. This parameter is used together with PageSize.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -143,7 +149,7 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of tags to return on each page if the DTS instance has multiple tags. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -152,7 +158,7 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -161,7 +167,7 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the data migration, data synchronization, or change tracking instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -170,7 +176,7 @@ public class DescribeTagKeysRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Set the value to **ALIYUN::DTS::INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -170,7 +170,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         private String synchronizationJobName; 
 
         /**
-         * DelayAlertPhone.
+         * The mobile phone numbers that receive latency-related alerts.
          */
         public Builder delayAlertPhone(String delayAlertPhone) {
             this.delayAlertPhone = delayAlertPhone;
@@ -178,7 +178,11 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * DelayAlertStatus.
+         * Indicates whether task latency is monitored. Valid values:
+         * <p>
+         * 
+         * *   **enable**: yes
+         * *   **disable**: no
          */
         public Builder delayAlertStatus(String delayAlertStatus) {
             this.delayAlertStatus = delayAlertStatus;
@@ -186,7 +190,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * DelayOverSeconds.
+         * The threshold for triggering latency alerts. Unit: seconds.
          */
         public Builder delayOverSeconds(String delayOverSeconds) {
             this.delayOverSeconds = delayOverSeconds;
@@ -194,7 +198,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -202,7 +206,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -210,7 +214,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorAlertPhone.
+         * The mobile phone numbers that receive status-related alerts.
          */
         public Builder errorAlertPhone(String errorAlertPhone) {
             this.errorAlertPhone = errorAlertPhone;
@@ -218,7 +222,11 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorAlertStatus.
+         * Indicates whether task status is monitored. Valid values:
+         * <p>
+         * 
+         * *   **enable**: yes
+         * *   **disable**: no
          */
         public Builder errorAlertStatus(String errorAlertStatus) {
             this.errorAlertStatus = errorAlertStatus;
@@ -226,7 +234,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -234,7 +242,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -242,7 +250,14 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationDirection.
+         * The synchronization direction. Valid values:
+         * <p>
+         * 
+         * *   **Forward**
+         * 
+         * *   **Reverse**
+         * 
+         * > This parameter is returned only when the topology of data synchronization is two-way synchronization.
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.synchronizationDirection = synchronizationDirection;
@@ -250,7 +265,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationJobId.
+         * The ID of the data synchronization instance.
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.synchronizationJobId = synchronizationJobId;
@@ -258,7 +273,7 @@ public class DescribeSynchronizationJobAlertResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationJobName.
+         * The name of the data synchronization task.
          */
         public Builder synchronizationJobName(String synchronizationJobName) {
             this.synchronizationJobName = synchronizationJobName;

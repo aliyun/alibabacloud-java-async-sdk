@@ -158,7 +158,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ChargeType.
+         * The billing method of the DTS instance. **PREPAY** is returned, which indicates the subscription billing method.
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -166,7 +166,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The error code.
+         * <p>
+         * 
+         * >  This parameter will be removed in the future.
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +177,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the data synchronization or change tracking task.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.dtsJobId = dtsJobId;
@@ -182,7 +185,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -190,7 +196,10 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The time when the DTS instance expires after renewal. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ssZZZ* format. The time is displayed in UTC.
+         * <p>
+         * 
+         * >  **ZZZ** indicates the offset of the time zone, which is displayed in the format of a plus sign (+) or a minus sign (-) followed by hours and minutes, such as **+00:00**.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -198,7 +207,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the request failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -206,7 +215,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -214,7 +223,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -222,7 +231,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the DTS instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -230,7 +239,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +247,11 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

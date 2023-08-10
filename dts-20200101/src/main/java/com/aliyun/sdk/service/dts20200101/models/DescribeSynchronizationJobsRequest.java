@@ -140,20 +140,20 @@ public class DescribeSynchronizationJobsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSynchronizationJobsRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.synchronizationJobName = response.synchronizationJobName;
-            this.tag = response.tag;
+        private Builder(DescribeSynchronizationJobsRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.synchronizationJobName = request.synchronizationJobName;
+            this.tag = request.tag;
         } 
 
         /**
-         * AccountId.
+         * The page number of the returned page.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -162,7 +162,12 @@ public class DescribeSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The tag value. You can call the [ListTagResources](~~191187~~) operation to query the tag value.
+         * <p>
+         * 
+         * > 
+         * *   N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.
+         * *   This parameter can be an empty string.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -180,7 +185,7 @@ public class DescribeSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -189,7 +194,7 @@ public class DescribeSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +203,10 @@ public class DescribeSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The name of the data synchronization task.
+         * <p>
+         * 
+         * >  Fuzzy matching is supported.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -207,7 +215,12 @@ public class DescribeSynchronizationJobsRequest extends Request {
         }
 
         /**
-         * SynchronizationJobName.
+         * The tag key. You can call the [ListTagResources](~~191187~~) operation to query the tag key.
+         * <p>
+         * 
+         * > 
+         * *   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.
+         * *   This parameter cannot be an empty string.
          */
         public Builder synchronizationJobName(String synchronizationJobName) {
             this.putQueryParameter("SynchronizationJobName", synchronizationJobName);
@@ -271,7 +284,7 @@ public class DescribeSynchronizationJobsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The ID of the request.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -279,7 +292,7 @@ public class DescribeSynchronizationJobsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The maximum number of entries that can be displayed on the current page.
              */
             public Builder value(String value) {
                 this.value = value;

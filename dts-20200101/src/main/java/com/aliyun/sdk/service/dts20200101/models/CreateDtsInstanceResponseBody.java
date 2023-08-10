@@ -98,7 +98,7 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * ErrCode.
+         * The error code returned if the request failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -106,7 +106,7 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -114,7 +114,7 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the DTS instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -122,7 +122,7 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * The ID of the task.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -130,7 +130,7 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class CreateDtsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(String success) {
             this.success = success;

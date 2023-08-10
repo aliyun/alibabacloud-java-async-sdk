@@ -102,17 +102,17 @@ public class ModifySubscriptionObjectRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySubscriptionObjectRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.subscriptionInstanceId = response.subscriptionInstanceId;
-            this.subscriptionObject = response.subscriptionObject;
+        private Builder(ModifySubscriptionObjectRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.subscriptionInstanceId = request.subscriptionInstanceId;
+            this.subscriptionObject = request.subscriptionObject;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -139,7 +139,7 @@ public class ModifySubscriptionObjectRequest extends Request {
         }
 
         /**
-         * SubscriptionInstanceId.
+         * The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](~~49442~~) operation to query the instance ID.
          */
         public Builder subscriptionInstanceId(String subscriptionInstanceId) {
             this.putQueryParameter("SubscriptionInstanceId", subscriptionInstanceId);
@@ -148,7 +148,7 @@ public class ModifySubscriptionObjectRequest extends Request {
         }
 
         /**
-         * SubscriptionObject.
+         * The objects from which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see [SubscriptionObjects](~~141902~~).
          */
         public Builder subscriptionObject(String subscriptionObject) {
             this.putQueryParameter("SubscriptionObject", subscriptionObject);

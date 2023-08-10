@@ -115,18 +115,18 @@ public class DescribeConsumerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeConsumerGroupRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.subscriptionInstanceId = response.subscriptionInstanceId;
+        private Builder(DescribeConsumerGroupRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.subscriptionInstanceId = request.subscriptionInstanceId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -144,7 +144,7 @@ public class DescribeConsumerGroupRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -153,7 +153,7 @@ public class DescribeConsumerGroupRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,7 +171,7 @@ public class DescribeConsumerGroupRequest extends Request {
         }
 
         /**
-         * SubscriptionInstanceId.
+         * The ID of the change tracking instance. You can call the DescribeSubscriptionInstances operation to query the instance ID.
          */
         public Builder subscriptionInstanceId(String subscriptionInstanceId) {
             this.putQueryParameter("SubscriptionInstanceId", subscriptionInstanceId);

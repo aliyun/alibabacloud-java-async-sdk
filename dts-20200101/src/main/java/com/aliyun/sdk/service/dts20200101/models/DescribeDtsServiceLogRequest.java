@@ -152,21 +152,21 @@ public class DescribeDtsServiceLogRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDtsServiceLogRequest response) {
-            super(response);
-            this.dtsJobId = response.dtsJobId;
-            this.endTime = response.endTime;
-            this.keyword = response.keyword;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
-            this.status = response.status;
-            this.subJobType = response.subJobType;
+        private Builder(DescribeDtsServiceLogRequest request) {
+            super(request);
+            this.dtsJobId = request.dtsJobId;
+            this.endTime = request.endTime;
+            this.keyword = request.keyword;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
+            this.status = request.status;
+            this.subJobType = request.subJobType;
         } 
 
         /**
-         * DtsJobId.
+         * The ID of the data migration or synchronization task.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -175,7 +175,11 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. You can call the [DescribePreCheckStatus](~~209718~~) operation to query the execution time of the subtasks.
+         * <p>
+         * 
+         * > *   To obtain the logs that are generated for DTS subtasks within a specific period of time, you can call the [DescribePreCheckStatus](~~209718~~) operation to query the execution time of the subtasks.
+         * >*   Specify the time in the 13-digit UNIX timestamp format. Unit: milliseconds. You can use a search engine to obtain a UNIX timestamp converter.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -184,7 +188,10 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword that is passed to specify the query content.
+         * <p>
+         * 
+         * >  Fuzzy match is used and the keyword is case-sensitive.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -193,7 +200,7 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than 0 and less than or equal to the maximum value supported by the integer data type. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -202,7 +209,7 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of log entries to return on each page. Valid values: **20**, **50**, **100**, **500**, and **1000**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -211,7 +218,7 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -220,7 +227,11 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * > *   To obtain the logs that are generated for Data Transmission Service (DTS) subtasks within a specific period of time, you can call the [DescribePreCheckStatus](~~209718~~) operation to query the execution time of the subtasks.
+         * >*   Specify the time in the 13-digit UNIX timestamp format. Unit: milliseconds. You can use a search engine to obtain a UNIX timestamp converter.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -229,7 +240,12 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * Status.
+         * The log level. Separate multiple log levels with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **NORMAL**: displays the logs that are generated when the DTS task runs as expected.
+         * *   **WARN**: displays the logs about severe issues that stop the DTS task from running.
+         * *   **ERROR**: displays the logs about unexpected issues that stop specific processes form running.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -238,7 +254,12 @@ public class DescribeDtsServiceLogRequest extends Request {
         }
 
         /**
-         * SubJobType.
+         * The type of a DTS subtask. Valid values:
+         * <p>
+         * 
+         * *   **DATA_LOAD**: full migration or full synchronization
+         * *   **ONLINE_WRITER**: incremental migration
+         * *   **SYNC_WRITER**: incremental synchronization
          */
         public Builder subJobType(String subJobType) {
             this.putQueryParameter("SubJobType", subJobType);

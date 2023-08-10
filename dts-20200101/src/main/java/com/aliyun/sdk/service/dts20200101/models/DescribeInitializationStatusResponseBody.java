@@ -110,7 +110,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * DataInitializationDetails.
+         * The details of initial full data synchronization.
          */
         public Builder dataInitializationDetails(java.util.List < DataInitializationDetails> dataInitializationDetails) {
             this.dataInitializationDetails = dataInitializationDetails;
@@ -118,7 +118,10 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DataSynchronizationDetails.
+         * The details of incremental data synchronization.
+         * <p>
+         * 
+         * >  This parameter and the parameters it contains will be removed in the future.
          */
         public Builder dataSynchronizationDetails(java.util.List < DataSynchronizationDetails> dataSynchronizationDetails) {
             this.dataSynchronizationDetails = dataSynchronizationDetails;
@@ -126,7 +129,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +137,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +145,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +153,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * StructureInitializationDetails.
+         * The details of initial schema synchronization.
          */
         public Builder structureInitializationDetails(java.util.List < StructureInitializationDetails> structureInitializationDetails) {
             this.structureInitializationDetails = structureInitializationDetails;
@@ -158,7 +161,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -282,7 +285,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             private String usedTime; 
 
             /**
-             * DestinationOwnerDBName.
+             * The name of the database to which the object in the destination instance belongs.
              */
             public Builder destinationOwnerDBName(String destinationOwnerDBName) {
                 this.destinationOwnerDBName = destinationOwnerDBName;
@@ -290,7 +293,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if initial full data synchronization failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -298,7 +301,10 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FinishRowNum.
+             * The total number of rows that are actually synchronized.
+             * <p>
+             * 
+             * >  This parameter indicates the total number of actually synchronized rows. In contrast, the value of the **TotalRowNum** parameter is calculated based on the system tables in the source database. The values of the two parameters may be different due to time difference.
              */
             public Builder finishRowNum(String finishRowNum) {
                 this.finishRowNum = finishRowNum;
@@ -306,7 +312,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SourceOwnerDBName.
+             * The name of the database to which the object in the source instance belongs.
              */
             public Builder sourceOwnerDBName(String sourceOwnerDBName) {
                 this.sourceOwnerDBName = sourceOwnerDBName;
@@ -314,7 +320,13 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of initial full data synchronization. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**
+             * *   **Migrating**
+             * *   **Failed**
+             * *   **Finished**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -322,7 +334,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The table name.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -330,7 +342,10 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRowNum.
+             * The total number of rows that are supposed to be synchronized.
+             * <p>
+             * 
+             * >  The value of this parameter is calculated based on the system tables in the source database. In contrast, the **FinishRowNum** parameter indicates the total number of actually synchronized rows. The values of the two parameters may be different due to time difference.
              */
             public Builder totalRowNum(String totalRowNum) {
                 this.totalRowNum = totalRowNum;
@@ -338,7 +353,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UsedTime.
+             * The time spent on full data synchronization.
              */
             public Builder usedTime(String usedTime) {
                 this.usedTime = usedTime;
@@ -427,7 +442,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * DestinationOwnerDBName.
+             * The name of the database to which the object in the destination instance belongs.
              */
             public Builder destinationOwnerDBName(String destinationOwnerDBName) {
                 this.destinationOwnerDBName = destinationOwnerDBName;
@@ -435,7 +450,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if incremental data synchronization failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -443,7 +458,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SourceOwnerDBName.
+             * The name of the database to which the object in the source instance belongs.
              */
             public Builder sourceOwnerDBName(String sourceOwnerDBName) {
                 this.sourceOwnerDBName = sourceOwnerDBName;
@@ -451,7 +466,13 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of incremental data synchronization. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**
+             * *   **Migrating**
+             * *   **Failed**
+             * *   **Finished**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -459,7 +480,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The table name.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -572,7 +593,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DestinationOwnerDBName.
+             * The name of the database to which the object in the destination instance belongs.
              */
             public Builder destinationOwnerDBName(String destinationOwnerDBName) {
                 this.destinationOwnerDBName = destinationOwnerDBName;
@@ -580,7 +601,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if constraints failed to be created.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -588,7 +609,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectDefinition.
+             * The syntax to create constraints.
              */
             public Builder objectDefinition(String objectDefinition) {
                 this.objectDefinition = objectDefinition;
@@ -596,7 +617,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectName.
+             * The name of the object.
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -604,7 +625,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * The type of the object. Valid value: **Table**.
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -612,7 +633,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SourceOwnerDBName.
+             * The name of the database to which the object in the source instance belongs.
              */
             public Builder sourceOwnerDBName(String sourceOwnerDBName) {
                 this.sourceOwnerDBName = sourceOwnerDBName;
@@ -620,7 +641,13 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of constraint creation. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**
+             * *   **Migrating**
+             * *   **Failed**
+             * *   **Finished**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -745,7 +772,10 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Constraints.
+             * The constraints of the synchronization object, such as indexes and foreign keys.
+             * <p>
+             * 
+             * >  This parameter is returned only if the **ObjectType** parameter is set to **Table** and the synchronization object has constraints.
              */
             public Builder constraints(java.util.List < Constraints> constraints) {
                 this.constraints = constraints;
@@ -753,7 +783,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationOwnerDBName.
+             * The name of the database to which the object in the destination instance belongs.
              */
             public Builder destinationOwnerDBName(String destinationOwnerDBName) {
                 this.destinationOwnerDBName = destinationOwnerDBName;
@@ -761,7 +791,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if initial schema synchronization failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -769,7 +799,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectDefinition.
+             * The schema of the object.
              */
             public Builder objectDefinition(String objectDefinition) {
                 this.objectDefinition = objectDefinition;
@@ -777,7 +807,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectName.
+             * The name of the object.
              */
             public Builder objectName(String objectName) {
                 this.objectName = objectName;
@@ -785,7 +815,10 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * The type of the object. Valid values:
+             * <p>
+             * 
+             * **Table**, **Constraint**, **Index**, **View**, **Materialize View**, **Type**, **Synonym**, **Trigger**, **Function**, **Procedure**, **Package**, **Default**, **Rule**, **PlanGuide**, and **Sequence**.
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -793,7 +826,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SourceOwnerDBName.
+             * The name of the database to which the object in the source instance belongs.
              */
             public Builder sourceOwnerDBName(String sourceOwnerDBName) {
                 this.sourceOwnerDBName = sourceOwnerDBName;
@@ -801,7 +834,13 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of initial schema synchronization. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**
+             * *   **Migrating**
+             * *   **Failed**
+             * *   **Finished**
              */
             public Builder status(String status) {
                 this.status = status;

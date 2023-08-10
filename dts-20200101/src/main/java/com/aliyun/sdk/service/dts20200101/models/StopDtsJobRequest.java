@@ -87,16 +87,16 @@ public class StopDtsJobRequest extends Request {
             super();
         } 
 
-        private Builder(StopDtsJobRequest response) {
-            super(response);
-            this.dtsInstanceId = response.dtsInstanceId;
-            this.dtsJobId = response.dtsJobId;
-            this.regionId = response.regionId;
-            this.synchronizationDirection = response.synchronizationDirection;
+        private Builder(StopDtsJobRequest request) {
+            super(request);
+            this.dtsInstanceId = request.dtsInstanceId;
+            this.dtsJobId = request.dtsJobId;
+            this.regionId = request.regionId;
+            this.synchronizationDirection = request.synchronizationDirection;
         } 
 
         /**
-         * DtsInstanceId.
+         * The ID of the data migration, data synchronization, or change tracking instance.
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -105,7 +105,7 @@ public class StopDtsJobRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the data migration, data synchronization, or change tracking task.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -123,7 +123,15 @@ public class StopDtsJobRequest extends Request {
         }
 
         /**
-         * SynchronizationDirection.
+         * The synchronization direction. Valid values:
+         * <p>
+         * 
+         * *   **Forward**
+         * *   **Reverse**
+         * 
+         * > 
+         * *   Default value: **Forward**.
+         * *   You can set this parameter to **Reverse** to stop the reverse synchronization task only when the topology is two-way synchronization.
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);

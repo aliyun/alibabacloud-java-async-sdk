@@ -122,7 +122,7 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The error code. This parameter will be removed in the future.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the data migration, data synchronization, or change tracking task.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.dtsJobId = dtsJobId;
@@ -138,7 +138,10 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. The value of this parameter is used to replace the **%s** variable in the value of the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  For example, if the specified **DtsJobId** parameter is invalid, **The Value of Input Parameter %s is not valid** is returned for **ErrMessage** and **DtsJobId** is returned for **DynamicMessage**.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -146,7 +149,7 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -154,7 +157,7 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -162,7 +165,7 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -170,7 +173,7 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +181,11 @@ public class CreateJobMonitorRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -154,21 +154,21 @@ public class CountJobByConditionRequest extends Request {
             super();
         } 
 
-        private Builder(CountJobByConditionRequest response) {
-            super(response);
-            this.destDbType = response.destDbType;
-            this.groupId = response.groupId;
-            this.jobType = response.jobType;
-            this.params = response.params;
-            this.region = response.region;
-            this.regionId = response.regionId;
-            this.srcDbType = response.srcDbType;
-            this.status = response.status;
-            this.type = response.type;
+        private Builder(CountJobByConditionRequest request) {
+            super(request);
+            this.destDbType = request.destDbType;
+            this.groupId = request.groupId;
+            this.jobType = request.jobType;
+            this.params = request.params;
+            this.region = request.region;
+            this.regionId = request.regionId;
+            this.srcDbType = request.srcDbType;
+            this.status = request.status;
+            this.type = request.type;
         } 
 
         /**
-         * 目标端数据库类型
+         * The type of the destination database.
          */
         public Builder destDbType(String destDbType) {
             this.putQueryParameter("DestDbType", destDbType);
@@ -177,7 +177,7 @@ public class CountJobByConditionRequest extends Request {
         }
 
         /**
-         * 父任务id
+         * The ID of the DTS task.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -186,7 +186,12 @@ public class CountJobByConditionRequest extends Request {
         }
 
         /**
-         * JobType.
+         * The type of the DTS task. Valid values:
+         * <p>
+         * 
+         * *   **MIGRATION**: data migration task
+         * *   **SYNC**: data synchronization task
+         * *   **SUBSCRIBE**: change tracking task
          */
         public Builder jobType(String jobType) {
             this.putQueryParameter("JobType", jobType);
@@ -195,7 +200,7 @@ public class CountJobByConditionRequest extends Request {
         }
 
         /**
-         * 查询的值，与Type对应
+         * The content of the query condition, which corresponds to the value of the JobType parameter.
          */
         public Builder params(String params) {
             this.putQueryParameter("Params", params);
@@ -204,7 +209,7 @@ public class CountJobByConditionRequest extends Request {
         }
 
         /**
-         * Region.
+         * One of the query conditions. The ID of the region. For more information, see [Supported regions](~~141033~~).
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -213,7 +218,7 @@ public class CountJobByConditionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the DTS instance resides. For more information, see [Supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -222,7 +227,7 @@ public class CountJobByConditionRequest extends Request {
         }
 
         /**
-         * 源端数据库类型
+         * The type of the source database.
          */
         public Builder srcDbType(String srcDbType) {
             this.putQueryParameter("SrcDbType", srcDbType);
@@ -231,7 +236,58 @@ public class CountJobByConditionRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the DTS task.
+         * <p>
+         * 
+         * Valid values for a data migration task:
+         * 
+         * *   **NotStarted**: The task is not started.
+         * *   **Prechecking**: The task is in precheck.
+         * *   **PrecheckFailed**: The task failed to pass the precheck.
+         * *   **PreCheckPass**: The task passed the precheck.
+         * *   **NotConfigured**: The task is not configured.
+         * *   **Migrating**: The task is in progress.
+         * *   **Suspending**: The task is paused.
+         * *   **MigrationFailed**: The task failed to migrate data.
+         * *   **Finished**: The task is complete.
+         * *   **Retrying**: The task is being retried.
+         * *   **Upgrade**: The task is being upgraded.
+         * *   **Locked**: The task is locked.
+         * *   **Downgrade**: The task is being downgraded.
+         * 
+         * Valid values for a data synchronization task:
+         * 
+         * *   **NotStarted**: The task is not started.
+         * *   **Prechecking**: The task is in precheck.
+         * *   **PrecheckFailed**: The task failed to pass the precheck.
+         * *   **PreCheckPass**: The task passed the precheck.
+         * *   **NotConfigured**: The task is not configured.
+         * *   **Initializing**: The task is performing initial synchronization.
+         * *   **InitializeFailed**: Initial synchronization failed.
+         * *   **Synchronizing**: The task is in progress.
+         * *   **Failed**: The task failed to synchronize data.
+         * *   **Suspending**: The task is paused.
+         * *   **Modifying**: The objects in the task are being modified.
+         * *   **Finished**: The task is complete.
+         * *   **Retrying**: The task is being retried.
+         * *   **Upgrade**: The task is being upgraded.
+         * *   **Locked**: The task is locked.
+         * *   **Downgrade**: The task is being downgraded.
+         * 
+         * Valid values for a change tracking task:
+         * 
+         * *   **NotConfigured**: The task is not configured.
+         * *   **NotStarted**: The task is not started.
+         * *   **Prechecking**: The task is in precheck.
+         * *   **PrecheckFailed**: The task failed to pass the precheck.
+         * *   **PreCheckPass**: The task passed the precheck.
+         * *   **Starting**: The task is being started.
+         * *   **Normal**: The task is running as expected.
+         * *   **Retrying**: The task is being retried.
+         * *   **Abnormal**: The task is not running as expected.
+         * *   **Upgrade**: The task is being upgraded.
+         * *   **Locked**: The task is locked.
+         * *   **Downgrade**: The task is being downgraded.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -240,7 +296,15 @@ public class CountJobByConditionRequest extends Request {
         }
 
         /**
-         * 查询类型
+         * The content of the query condition. Valid values:
+         * <p>
+         * 
+         * *   **name**: the name of the task
+         * *   **rds**: the ID of the destination instance
+         * *   **instance**: the ID of the Data Transmission Service (DTS) instance
+         * *   **srcRds**: the ID of the source instance
+         * 
+         * > The value of this parameter corresponds to the value of the **JobType** parameter.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

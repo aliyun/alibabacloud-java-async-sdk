@@ -110,7 +110,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * DynamicCode.
+         * The operation that you want to perform. Set the value to **DeleteDtsJob**.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -118,7 +118,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The operation that you want to perform. Set the value to **DeleteDtsJob**.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -126,7 +126,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error message returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +134,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The ID of the request.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +142,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The ID of the data migration, data synchronization, or change tracking instance.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -150,7 +150,16 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The synchronization direction. Valid values:
+         * <p>
+         * 
+         * *   **Forward**: Data is synchronized from the source database to the destination database.
+         * *   **Reverse**: Data is synchronized from the destination database to the source database.
+         * 
+         * > 
+         * 
+         * *   Default value: **Forward**.
+         * *   You can set this parameter to **Reverse** to delete the reverse synchronization task only if the topology is two-way synchronization.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +167,7 @@ public class DeleteDtsJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The ID of the region in which the data migration or synchronization task resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder success(Boolean success) {
             this.success = success;

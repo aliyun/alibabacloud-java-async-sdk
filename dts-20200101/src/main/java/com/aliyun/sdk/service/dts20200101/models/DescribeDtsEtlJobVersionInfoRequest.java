@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeDtsEtlJobVersionInfoRequest extends Request {
     @Query
     @NameInMap("DtsInstanceId")
+    @Validation(required = true)
     private String dtsInstanceId;
 
     @Query
@@ -101,17 +102,17 @@ public class DescribeDtsEtlJobVersionInfoRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDtsEtlJobVersionInfoRequest response) {
-            super(response);
-            this.dtsInstanceId = response.dtsInstanceId;
-            this.dtsJobId = response.dtsJobId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(DescribeDtsEtlJobVersionInfoRequest request) {
+            super(request);
+            this.dtsInstanceId = request.dtsInstanceId;
+            this.dtsJobId = request.dtsJobId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DtsInstanceId.
+         * The ID of the Data Transmission Service (DTS) instance. You can call the [DescribeDtsJobs](~~209702~~) operation to query the instance ID.
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -120,7 +121,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the ETL task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -129,7 +130,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -138,7 +139,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -147,7 +148,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the DTS instance resides. You can call the [DescribeRegions](~~25609~~) operation to query the available Alibaba Cloud regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

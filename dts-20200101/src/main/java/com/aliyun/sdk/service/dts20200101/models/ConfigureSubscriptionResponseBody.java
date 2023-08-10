@@ -110,7 +110,7 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * DtsInstanceId.
+         * The ID of the change tracking instance.
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.dtsInstanceId = dtsInstanceId;
@@ -118,7 +118,7 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the change tracking task.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.dtsJobId = dtsJobId;
@@ -126,7 +126,7 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the request failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +134,7 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +142,7 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -150,7 +150,7 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class ConfigureSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(String success) {
             this.success = success;

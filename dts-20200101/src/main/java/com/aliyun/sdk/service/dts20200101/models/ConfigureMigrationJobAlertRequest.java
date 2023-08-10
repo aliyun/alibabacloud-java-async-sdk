@@ -153,21 +153,21 @@ public class ConfigureMigrationJobAlertRequest extends Request {
             super();
         } 
 
-        private Builder(ConfigureMigrationJobAlertRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.delayAlertPhone = response.delayAlertPhone;
-            this.delayAlertStatus = response.delayAlertStatus;
-            this.delayOverSeconds = response.delayOverSeconds;
-            this.errorAlertPhone = response.errorAlertPhone;
-            this.errorAlertStatus = response.errorAlertStatus;
-            this.migrationJobId = response.migrationJobId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
+        private Builder(ConfigureMigrationJobAlertRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.delayAlertPhone = request.delayAlertPhone;
+            this.delayAlertStatus = request.delayAlertStatus;
+            this.delayOverSeconds = request.delayOverSeconds;
+            this.errorAlertPhone = request.errorAlertPhone;
+            this.errorAlertStatus = request.errorAlertStatus;
+            this.migrationJobId = request.migrationJobId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -176,7 +176,12 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         }
 
         /**
-         * DelayAlertPhone.
+         * The mobile phone numbers that receive latency-related alerts. Separate mobile phone numbers with commas (,).
+         * <p>
+         * 
+         * > 
+         * *   This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.
+         * *   International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can [set alert rules for DTS tasks in the Cloud Monitor console](~~175876~~).
          */
         public Builder delayAlertPhone(String delayAlertPhone) {
             this.putQueryParameter("DelayAlertPhone", delayAlertPhone);
@@ -185,7 +190,15 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         }
 
         /**
-         * DelayAlertStatus.
+         * Specifies whether to monitor task latency. Valid values:
+         * <p>
+         * 
+         * *   **enable**: yes
+         * *   **disable**: no
+         * 
+         * > 
+         * *   The default value is **enable**.
+         * *   You must specify at least one of the DelayAlertStatus and **ErrorAlertStatus** parameters.
          */
         public Builder delayAlertStatus(String delayAlertStatus) {
             this.putQueryParameter("DelayAlertStatus", delayAlertStatus);
@@ -194,7 +207,10 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         }
 
         /**
-         * DelayOverSeconds.
+         * The threshold for triggering latency alerts. The unit is seconds and the value must be an integer. You can set the threshold based on your business needs. To avoid delay fluctuations caused by network and database loads, we recommend that you set the threshold to more than 10 seconds.
+         * <p>
+         * 
+         * >  If the **DelayAlertStatus** parameter is set to **enable**, this parameter must be specified.
          */
         public Builder delayOverSeconds(String delayOverSeconds) {
             this.putQueryParameter("DelayOverSeconds", delayOverSeconds);
@@ -203,7 +219,12 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         }
 
         /**
-         * ErrorAlertPhone.
+         * The mobile phone numbers that receive status-related alerts. Separate mobile phone numbers with commas (,).
+         * <p>
+         * 
+         * > 
+         * *   This parameter is available only for China site (aliyun.com) users. Only mobile phone numbers in the Chinese mainland are supported. Up to 10 mobile phone numbers can be specified.
+         * *   International site (alibabacloud.com) users cannot receive alerts by using mobile phones, but can [set alert rules for DTS tasks in the Cloud Monitor console](~~175876~~).
          */
         public Builder errorAlertPhone(String errorAlertPhone) {
             this.putQueryParameter("ErrorAlertPhone", errorAlertPhone);
@@ -212,7 +233,16 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         }
 
         /**
-         * ErrorAlertStatus.
+         * Specifies whether to monitor task status. Valid values:
+         * <p>
+         * 
+         * *   **enable**: yes
+         * *   **disable**: no
+         * 
+         * > 
+         * *   The default value is **enable**.
+         * *   You must specify at least one of the **DelayAlertStatus** and ErrorAlertStatus parameters.
+         * *   If the task that you monitor enters an abnormal state, an alert is triggered.
          */
         public Builder errorAlertStatus(String errorAlertStatus) {
             this.putQueryParameter("ErrorAlertStatus", errorAlertStatus);
@@ -221,7 +251,7 @@ public class ConfigureMigrationJobAlertRequest extends Request {
         }
 
         /**
-         * MigrationJobId.
+         * The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query the instance ID.
          */
         public Builder migrationJobId(String migrationJobId) {
             this.putQueryParameter("MigrationJobId", migrationJobId);

@@ -101,17 +101,17 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSynchronizationObjectModifyStatusRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.clientToken = response.clientToken;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.taskId = response.taskId;
+        private Builder(DescribeSynchronizationObjectModifyStatusRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.clientToken = request.clientToken;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -120,7 +120,7 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -138,7 +138,7 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the data synchronization instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +147,7 @@ public class DescribeSynchronizationObjectModifyStatusRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The task ID, which is returned after you call the [ModifySynchronizationObject](~~49451~~) operation to modify the objects to be synchronized.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

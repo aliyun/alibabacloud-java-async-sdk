@@ -141,20 +141,20 @@ public class DescribePreCheckStatusRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePreCheckStatusRequest response) {
-            super(response);
-            this.dtsJobId = response.dtsJobId;
-            this.jobCode = response.jobCode;
-            this.name = response.name;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.structPhase = response.structPhase;
-            this.structType = response.structType;
+        private Builder(DescribePreCheckStatusRequest request) {
+            super(request);
+            this.dtsJobId = request.dtsJobId;
+            this.jobCode = request.jobCode;
+            this.name = request.name;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.structPhase = request.structPhase;
+            this.structType = request.structType;
         } 
 
         /**
-         * DtsJobId.
+         * The ID of the data migration, data synchronization, or change tracking task.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -163,7 +163,13 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * JobCode.
+         * The task code that specifies the type of the DTS subtask. Valid values:
+         * <p>
+         * 
+         * *   **01**: precheck
+         * *   **02**: schema migration or initial schema synchronization
+         * *   **03**: full data migration or initial full data synchronization
+         * *   **04**: incremental data migration or synchronization
          */
         public Builder jobCode(String jobCode) {
             this.putQueryParameter("JobCode", jobCode);
@@ -172,7 +178,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * Name.
+         * The filter item used to filter tables in fuzzy match.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -181,7 +187,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.
          */
         public Builder pageNo(String pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -190,7 +196,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +205,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -208,7 +214,7 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * StructPhase.
+         * The filter item used to filter tables, views, and functions during schema migration.
          */
         public Builder structPhase(String structPhase) {
             this.putQueryParameter("StructPhase", structPhase);
@@ -217,7 +223,11 @@ public class DescribePreCheckStatusRequest extends Request {
         }
 
         /**
-         * StructType.
+         * The type of schema definition. Valid values:
+         * <p>
+         * 
+         * *   **before**: schema migration or initial schema synchronization
+         * *   **after**: DDL operations performed during incremental data migration or synchronization
          */
         public Builder structType(String structType) {
             this.putQueryParameter("StructType", structType);

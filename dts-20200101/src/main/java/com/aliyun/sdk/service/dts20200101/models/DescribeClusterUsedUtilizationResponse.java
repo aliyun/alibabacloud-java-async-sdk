@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyDtsJobResponse} extends {@link TeaModel}
+ * {@link DescribeClusterUsedUtilizationResponse} extends {@link TeaModel}
  *
- * <p>ModifyDtsJobResponse</p>
+ * <p>DescribeClusterUsedUtilizationResponse</p>
  */
-public class ModifyDtsJobResponse extends Response {
+public class DescribeClusterUsedUtilizationResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ModifyDtsJobResponseBody body;
+    private DescribeClusterUsedUtilizationResponseBody body;
 
-    private ModifyDtsJobResponse(BuilderImpl builder) {
+    private DescribeClusterUsedUtilizationResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ModifyDtsJobResponse create() {
+    public static DescribeClusterUsedUtilizationResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ModifyDtsJobResponse extends Response {
     /**
      * @return body
      */
-    public ModifyDtsJobResponseBody getBody() {
+    public DescribeClusterUsedUtilizationResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ModifyDtsJobResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeClusterUsedUtilizationResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ModifyDtsJobResponseBody body);
+        Builder body(DescribeClusterUsedUtilizationResponseBody body);
 
         @Override
-        ModifyDtsJobResponse build();
+        DescribeClusterUsedUtilizationResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ModifyDtsJobResponse, Builder>
+            extends Response.BuilderImpl<DescribeClusterUsedUtilizationResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ModifyDtsJobResponseBody body; 
+        private DescribeClusterUsedUtilizationResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ModifyDtsJobResponse response) {
+        private BuilderImpl(DescribeClusterUsedUtilizationResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ModifyDtsJobResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ModifyDtsJobResponseBody body) {
+        public Builder body(DescribeClusterUsedUtilizationResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ModifyDtsJobResponse build() {
-            return new ModifyDtsJobResponse(this);
+        public DescribeClusterUsedUtilizationResponse build() {
+            return new DescribeClusterUsedUtilizationResponse(this);
         } 
 
     } 

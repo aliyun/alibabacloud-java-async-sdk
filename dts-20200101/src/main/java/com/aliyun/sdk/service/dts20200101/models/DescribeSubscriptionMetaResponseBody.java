@@ -98,7 +98,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * ErrCode.
+         * The error code returned if the request failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -106,7 +106,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -114,7 +114,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         }
 
         /**
-         * SubscriptionMetaList.
+         * The details of the subtasks.
          */
         public Builder subscriptionMetaList(java.util.List < SubscriptionMetaList> subscriptionMetaList) {
             this.subscriptionMetaList = subscriptionMetaList;
@@ -138,7 +138,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -159,7 +159,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         private String DBList;
 
         @NameInMap("DProxyUrl")
-        private String DProxyUrl;
+        private String dProxyUrl;
 
         @NameInMap("Sid")
         private String sid;
@@ -170,7 +170,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         private SubscriptionMetaList(Builder builder) {
             this.checkpoint = builder.checkpoint;
             this.DBList = builder.DBList;
-            this.DProxyUrl = builder.DProxyUrl;
+            this.dProxyUrl = builder.dProxyUrl;
             this.sid = builder.sid;
             this.topic = builder.topic;
         }
@@ -198,10 +198,10 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         }
 
         /**
-         * @return DProxyUrl
+         * @return dProxyUrl
          */
         public String getDProxyUrl() {
-            return this.DProxyUrl;
+            return this.dProxyUrl;
         }
 
         /**
@@ -221,12 +221,15 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         public static final class Builder {
             private Long checkpoint; 
             private String DBList; 
-            private String DProxyUrl; 
+            private String dProxyUrl; 
             private String sid; 
             private String topic; 
 
             /**
-             * Checkpoint.
+             * The consumer offset of the subtask. It is a UNIX timestamp that is generated when the client consumes the first data record. Unit: seconds.
+             * <p>
+             * 
+             * >  You can use a search engine to obtain a UNIX timestamp converter.
              */
             public Builder checkpoint(Long checkpoint) {
                 this.checkpoint = checkpoint;
@@ -234,7 +237,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
             }
 
             /**
-             * DBList.
+             * The objects of the subtask. For more information, see [Objects of DTS tasks](~~209545~~).
              */
             public Builder DBList(String DBList) {
                 this.DBList = DBList;
@@ -242,15 +245,15 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
             }
 
             /**
-             * DProxyUrl.
+             * The endpoint and port number of the change tracking instance.
              */
-            public Builder DProxyUrl(String DProxyUrl) {
-                this.DProxyUrl = DProxyUrl;
+            public Builder dProxyUrl(String dProxyUrl) {
+                this.dProxyUrl = dProxyUrl;
                 return this;
             }
 
             /**
-             * Sid.
+             * The consumer group ID of the subtask.
              */
             public Builder sid(String sid) {
                 this.sid = sid;
@@ -258,7 +261,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The topic of the subtask.
              */
             public Builder topic(String topic) {
                 this.topic = topic;

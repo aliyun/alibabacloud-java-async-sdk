@@ -102,17 +102,17 @@ public class ModifyConsumptionTimestampRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyConsumptionTimestampRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.consumptionTimestamp = response.consumptionTimestamp;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.subscriptionInstanceId = response.subscriptionInstanceId;
+        private Builder(ModifyConsumptionTimestampRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.consumptionTimestamp = request.consumptionTimestamp;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.subscriptionInstanceId = request.subscriptionInstanceId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -121,7 +121,7 @@ public class ModifyConsumptionTimestampRequest extends Request {
         }
 
         /**
-         * ConsumptionTimestamp.
+         * The consumption checkpoint. The format is *yyyy-MM-dd*T*HH:mm:ss*Z. The time is displayed in UTC.
          */
         public Builder consumptionTimestamp(String consumptionTimestamp) {
             this.putQueryParameter("ConsumptionTimestamp", consumptionTimestamp);
@@ -148,7 +148,7 @@ public class ModifyConsumptionTimestampRequest extends Request {
         }
 
         /**
-         * SubscriptionInstanceId.
+         * The ID of the change tracking instance. You can call the **DescribeSubscriptionInstances** operation to query the instance ID.
          */
         public Builder subscriptionInstanceId(String subscriptionInstanceId) {
             this.putQueryParameter("SubscriptionInstanceId", subscriptionInstanceId);

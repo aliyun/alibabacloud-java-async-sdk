@@ -158,7 +158,11 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ChargeType.
+         * The billing method of the DTS instance. Valid values:
+         * <p>
+         * 
+         * *   **POSTPAY**: pay-as-you-go
+         * *   **PREPAY**: subscription
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -166,7 +170,7 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The error code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +178,7 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the data migration or data synchronization task.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.dtsJobId = dtsJobId;
@@ -182,7 +186,10 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. This parameter is used to replace the **%s** variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -190,7 +197,10 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The expiration time of the DTS instance.
+         * <p>
+         * 
+         * >  This parameter is returned only if the ChargeType parameter is set to **PREPAY**.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -198,7 +208,7 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -206,7 +216,7 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -214,7 +224,7 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -222,7 +232,7 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of DTS instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -230,7 +240,7 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +248,11 @@ public class TransferInstanceClassResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The call was successful.
+         * *   **false**:The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

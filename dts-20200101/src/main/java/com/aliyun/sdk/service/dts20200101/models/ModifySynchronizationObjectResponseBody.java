@@ -86,7 +86,7 @@ public class ModifySynchronizationObjectResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -94,7 +94,7 @@ public class ModifySynchronizationObjectResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -102,7 +102,7 @@ public class ModifySynchronizationObjectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ModifySynchronizationObjectResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class ModifySynchronizationObjectResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task that changes the objects. You must specify the task ID when you call the DescribeSynchronizationObjectModifyStatus operation to query the status and progress of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

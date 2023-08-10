@@ -115,18 +115,18 @@ public class CreateMigrationJobRequest extends Request {
             super();
         } 
 
-        private Builder(CreateMigrationJobRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.clientToken = response.clientToken;
-            this.migrationJobClass = response.migrationJobClass;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
-            this.regionId = response.regionId;
+        private Builder(CreateMigrationJobRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.clientToken = request.clientToken;
+            this.migrationJobClass = request.migrationJobClass;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -135,7 +135,7 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** parameter can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -144,7 +144,12 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * MigrationJobClass.
+         * The specification of the data migration instance. Valid values: **small**, **medium**, **large**, **xlarge**, and **2xlarge**.
+         * <p>
+         * 
+         * > 
+         * *   For more information about the test performance of each specification, see [Specifications of data migration instances](~~26606~~).
+         * *   For more information about the pricing of data migration instances, see [Pricing](~~117780~~).
          */
         public Builder migrationJobClass(String migrationJobClass) {
             this.putQueryParameter("MigrationJobClass", migrationJobClass);
@@ -162,7 +167,7 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region where the data migration instance resides. The region ID of the data migration instance is the same as that of the destination database. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -171,7 +176,7 @@ public class CreateMigrationJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the data migration instance resides. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

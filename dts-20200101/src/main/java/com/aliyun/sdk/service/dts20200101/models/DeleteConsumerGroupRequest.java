@@ -102,17 +102,17 @@ public class DeleteConsumerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteConsumerGroupRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.consumerGroupID = response.consumerGroupID;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.subscriptionInstanceId = response.subscriptionInstanceId;
+        private Builder(DeleteConsumerGroupRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.consumerGroupID = request.consumerGroupID;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.subscriptionInstanceId = request.subscriptionInstanceId;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -121,7 +121,7 @@ public class DeleteConsumerGroupRequest extends Request {
         }
 
         /**
-         * ConsumerGroupID.
+         * The ID of the consumer group. You can call the [DescribeConsumerGroup](~~122886~~) operation to query the consumer group ID.
          */
         public Builder consumerGroupID(String consumerGroupID) {
             this.putQueryParameter("ConsumerGroupID", consumerGroupID);
@@ -148,7 +148,7 @@ public class DeleteConsumerGroupRequest extends Request {
         }
 
         /**
-         * SubscriptionInstanceId.
+         * The ID of the change tracking instance. You can call the **DescribeSubscriptionInstances** operation to query the instance ID.
          */
         public Builder subscriptionInstanceId(String subscriptionInstanceId) {
             this.putQueryParameter("SubscriptionInstanceId", subscriptionInstanceId);

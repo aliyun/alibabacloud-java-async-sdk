@@ -12,9 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SwitchSynchronizationEndpointRequest</p>
  */
 public class SwitchSynchronizationEndpointRequest extends Request {
+    @Query
     @NameInMap("Endpoint")
     private Endpoint endpoint;
 
+    @Query
     @NameInMap("SourceEndpoint")
     private SourceEndpoint sourceEndpoint;
 
@@ -125,21 +127,22 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             super();
         } 
 
-        private Builder(SwitchSynchronizationEndpointRequest response) {
-            super(response);
-            this.endpoint = response.endpoint;
-            this.sourceEndpoint = response.sourceEndpoint;
-            this.accountId = response.accountId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.synchronizationDirection = response.synchronizationDirection;
-            this.synchronizationJobId = response.synchronizationJobId;
+        private Builder(SwitchSynchronizationEndpointRequest request) {
+            super(request);
+            this.endpoint = request.endpoint;
+            this.sourceEndpoint = request.sourceEndpoint;
+            this.accountId = request.accountId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.synchronizationDirection = request.synchronizationDirection;
+            this.synchronizationJobId = request.synchronizationJobId;
         } 
 
         /**
          * Endpoint.
          */
         public Builder endpoint(Endpoint endpoint) {
+            this.putQueryParameter("Endpoint", endpoint);
             this.endpoint = endpoint;
             return this;
         }
@@ -148,12 +151,13 @@ public class SwitchSynchronizationEndpointRequest extends Request {
          * SourceEndpoint.
          */
         public Builder sourceEndpoint(SourceEndpoint sourceEndpoint) {
+            this.putQueryParameter("SourceEndpoint", sourceEndpoint);
             this.sourceEndpoint = sourceEndpoint;
             return this;
         }
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -180,7 +184,15 @@ public class SwitchSynchronizationEndpointRequest extends Request {
         }
 
         /**
-         * SynchronizationDirection.
+         * The synchronization direction. Valid values:
+         * <p>
+         * 
+         * *   **Forward**
+         * *   **Reverse**
+         * 
+         * >  Default value: **Forward**.
+         * 
+         * The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);
@@ -189,7 +201,7 @@ public class SwitchSynchronizationEndpointRequest extends Request {
         }
 
         /**
-         * SynchronizationJobId.
+         * The ID of the data synchronization instance. You can call the DescribeSynchronizationJobs operation to query the instance ID.
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.putQueryParameter("SynchronizationJobId", synchronizationJobId);
@@ -206,7 +218,7 @@ public class SwitchSynchronizationEndpointRequest extends Request {
 
     public static class Endpoint extends TeaModel {
         @NameInMap("IP")
-        private String IP;
+        private String ip;
 
         @NameInMap("InstanceId")
         @Validation(required = true)
@@ -225,7 +237,7 @@ public class SwitchSynchronizationEndpointRequest extends Request {
         private String type;
 
         private Endpoint(Builder builder) {
-            this.IP = builder.IP;
+            this.ip = builder.ip;
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
             this.port = builder.port;
@@ -241,10 +253,10 @@ public class SwitchSynchronizationEndpointRequest extends Request {
         }
 
         /**
-         * @return IP
+         * @return ip
          */
-        public String getIP() {
-            return this.IP;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -276,22 +288,30 @@ public class SwitchSynchronizationEndpointRequest extends Request {
         }
 
         public static final class Builder {
-            private String IP; 
+            private String ip; 
             private String instanceId; 
             private String instanceType; 
             private String port; 
             private String type; 
 
             /**
-             * IP.
+             * The IP address of the database.
+             * <p>
+             * 
+             * >  You must specify the IP address only if the **Endpoint.InstanceType** parameter is set to **Express**.
              */
-            public Builder IP(String IP) {
-                this.IP = IP;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 
             /**
-             * InstanceId.
+             * The ID of the ECS instance or the virtual private cloud (VPC).
+             * <p>
+             * 
+             * > 
+             * *   If the **Endpoint.InstanceType** parameter is set to **ECS**, you must specify the ID of the ECS instance.
+             * *   If the **Endpoint.InstanceType** parameter is set to **Express**, you must specify the ID of the VPC.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -299,7 +319,12 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             }
 
             /**
-             * InstanceType.
+             * The instance type of the database. Valid values:
+             * <p>
+             * 
+             * *   **LocalInstance**: self-managed database with a public IP address
+             * *   **ECS**: self-managed database that is hosted on ECS
+             * *   **Express**: self-managed database that is connected over Express Connect
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -307,7 +332,7 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             }
 
             /**
-             * Port.
+             * The service port number of the database.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -315,7 +340,11 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             }
 
             /**
-             * Type.
+             * Specifies whether to update the connection settings of the source instance or the destination instance. Valid values:
+             * <p>
+             * 
+             * *   **Source**
+             * *   **Destination**
              */
             public Builder type(String type) {
                 this.type = type;
@@ -368,7 +397,7 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             private String role; 
 
             /**
-             * OwnerID.
+             * The ID of the Alibaba Cloud account to which the source instance belongs. You must specify this parameter only if the source instance and the destination instance belong to different Alibaba Cloud accounts.
              */
             public Builder ownerID(String ownerID) {
                 this.ownerID = ownerID;
@@ -376,7 +405,10 @@ public class SwitchSynchronizationEndpointRequest extends Request {
             }
 
             /**
-             * Role.
+             * The authorized Resource Access Management (RAM) role of the source instance. You must specify the RAM role only if the source instance and the destination instance belong to different Alibaba Cloud accounts. You can use the RAM role to allow the Alibaba Cloud account that owns the destination instance to access the source instance.
+             * <p>
+             * 
+             * >  For information about the permissions and authorization methods of the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).
              */
             public Builder role(String role) {
                 this.role = role;

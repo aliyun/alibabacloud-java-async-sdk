@@ -62,14 +62,14 @@ public class DescribeJobMonitorRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeJobMonitorRuleRequest response) {
-            super(response);
-            this.dtsJobId = response.dtsJobId;
-            this.regionId = response.regionId;
+        private Builder(DescribeJobMonitorRuleRequest request) {
+            super(request);
+            this.dtsJobId = request.dtsJobId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * DtsJobId.
+         * The ID of the data migration, data synchronization, or change tracking task. You can call the [DescribeDtsJobs](~~209702~~) operation to query the task ID.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -78,7 +78,7 @@ public class DescribeJobMonitorRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the DTS instance. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

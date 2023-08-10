@@ -86,7 +86,7 @@ public class CreateSynchronizationJobResponseBody extends TeaModel {
         private String synchronizationJobId; 
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -94,7 +94,7 @@ public class CreateSynchronizationJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -102,7 +102,7 @@ public class CreateSynchronizationJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class CreateSynchronizationJobResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class CreateSynchronizationJobResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationJobId.
+         * The ID of the data synchronization instance.
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.synchronizationJobId = synchronizationJobId;

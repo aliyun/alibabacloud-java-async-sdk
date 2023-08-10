@@ -18,6 +18,18 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("BeginTimestamp")
     private String beginTimestamp;
 
+    @NameInMap("Binlog")
+    private String binlog;
+
+    @NameInMap("BinlogSite")
+    private String binlogSite;
+
+    @NameInMap("BinlogTime")
+    private String binlogTime;
+
+    @NameInMap("BootTime")
+    private String bootTime;
+
     @NameInMap("Checkpoint")
     private Long checkpoint;
 
@@ -33,11 +45,20 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("CreateTime")
     private String createTime;
 
+    @NameInMap("DataDeliveryChannelInfo")
+    private DataDeliveryChannelInfo dataDeliveryChannelInfo;
+
+    @NameInMap("DataSynchronizationStatus")
+    private DataSynchronizationStatus dataSynchronizationStatus;
+
     @NameInMap("DatabaseCount")
     private Integer databaseCount;
 
     @NameInMap("DbObject")
     private String dbObject;
+
+    @NameInMap("DedicatedClusterId")
+    private String dedicatedClusterId;
 
     @NameInMap("Delay")
     private Long delay;
@@ -50,6 +71,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
 
     @NameInMap("DestinationEndpoint")
     private DestinationEndpoint destinationEndpoint;
+
+    @NameInMap("DtsBisLabel")
+    private String dtsBisLabel;
 
     @NameInMap("DtsInstanceID")
     private String dtsInstanceID;
@@ -99,6 +123,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("JobType")
     private String jobType;
 
+    @NameInMap("LastUpdateTime")
+    private String lastUpdateTime;
+
     @NameInMap("MigrationMode")
     private MigrationMode migrationMode;
 
@@ -110,6 +137,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
 
     @NameInMap("Reserved")
     private String reserved;
+
+    @NameInMap("ResourceGroupDisplayName")
+    private String resourceGroupDisplayName;
+
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @NameInMap("RetryState")
+    private RetryState retryState;
 
     @NameInMap("SourceEndpoint")
     private SourceEndpoint sourceEndpoint;
@@ -144,17 +180,25 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     private DescribeDtsJobDetailResponseBody(Builder builder) {
         this.appName = builder.appName;
         this.beginTimestamp = builder.beginTimestamp;
+        this.binlog = builder.binlog;
+        this.binlogSite = builder.binlogSite;
+        this.binlogTime = builder.binlogTime;
+        this.bootTime = builder.bootTime;
         this.checkpoint = builder.checkpoint;
         this.code = builder.code;
         this.consumptionCheckpoint = builder.consumptionCheckpoint;
         this.consumptionClient = builder.consumptionClient;
         this.createTime = builder.createTime;
+        this.dataDeliveryChannelInfo = builder.dataDeliveryChannelInfo;
+        this.dataSynchronizationStatus = builder.dataSynchronizationStatus;
         this.databaseCount = builder.databaseCount;
         this.dbObject = builder.dbObject;
+        this.dedicatedClusterId = builder.dedicatedClusterId;
         this.delay = builder.delay;
         this.demoJob = builder.demoJob;
         this.destNetType = builder.destNetType;
         this.destinationEndpoint = builder.destinationEndpoint;
+        this.dtsBisLabel = builder.dtsBisLabel;
         this.dtsInstanceID = builder.dtsInstanceID;
         this.dtsJobClass = builder.dtsJobClass;
         this.dtsJobDirection = builder.dtsJobDirection;
@@ -171,10 +215,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         this.groupId = builder.groupId;
         this.httpStatusCode = builder.httpStatusCode;
         this.jobType = builder.jobType;
+        this.lastUpdateTime = builder.lastUpdateTime;
         this.migrationMode = builder.migrationMode;
         this.payType = builder.payType;
         this.requestId = builder.requestId;
         this.reserved = builder.reserved;
+        this.resourceGroupDisplayName = builder.resourceGroupDisplayName;
+        this.resourceGroupId = builder.resourceGroupId;
+        this.retryState = builder.retryState;
         this.sourceEndpoint = builder.sourceEndpoint;
         this.status = builder.status;
         this.subDistributedJob = builder.subDistributedJob;
@@ -207,6 +255,34 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
      */
     public String getBeginTimestamp() {
         return this.beginTimestamp;
+    }
+
+    /**
+     * @return binlog
+     */
+    public String getBinlog() {
+        return this.binlog;
+    }
+
+    /**
+     * @return binlogSite
+     */
+    public String getBinlogSite() {
+        return this.binlogSite;
+    }
+
+    /**
+     * @return binlogTime
+     */
+    public String getBinlogTime() {
+        return this.binlogTime;
+    }
+
+    /**
+     * @return bootTime
+     */
+    public String getBootTime() {
+        return this.bootTime;
     }
 
     /**
@@ -245,6 +321,20 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return dataDeliveryChannelInfo
+     */
+    public DataDeliveryChannelInfo getDataDeliveryChannelInfo() {
+        return this.dataDeliveryChannelInfo;
+    }
+
+    /**
+     * @return dataSynchronizationStatus
+     */
+    public DataSynchronizationStatus getDataSynchronizationStatus() {
+        return this.dataSynchronizationStatus;
+    }
+
+    /**
      * @return databaseCount
      */
     public Integer getDatabaseCount() {
@@ -256,6 +346,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
      */
     public String getDbObject() {
         return this.dbObject;
+    }
+
+    /**
+     * @return dedicatedClusterId
+     */
+    public String getDedicatedClusterId() {
+        return this.dedicatedClusterId;
     }
 
     /**
@@ -284,6 +381,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
      */
     public DestinationEndpoint getDestinationEndpoint() {
         return this.destinationEndpoint;
+    }
+
+    /**
+     * @return dtsBisLabel
+     */
+    public String getDtsBisLabel() {
+        return this.dtsBisLabel;
     }
 
     /**
@@ -399,6 +503,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return lastUpdateTime
+     */
+    public String getLastUpdateTime() {
+        return this.lastUpdateTime;
+    }
+
+    /**
      * @return migrationMode
      */
     public MigrationMode getMigrationMode() {
@@ -424,6 +535,27 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
      */
     public String getReserved() {
         return this.reserved;
+    }
+
+    /**
+     * @return resourceGroupDisplayName
+     */
+    public String getResourceGroupDisplayName() {
+        return this.resourceGroupDisplayName;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
+     * @return retryState
+     */
+    public RetryState getRetryState() {
+        return this.retryState;
     }
 
     /**
@@ -499,17 +631,25 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     public static final class Builder {
         private String appName; 
         private String beginTimestamp; 
+        private String binlog; 
+        private String binlogSite; 
+        private String binlogTime; 
+        private String bootTime; 
         private Long checkpoint; 
         private Integer code; 
         private String consumptionCheckpoint; 
         private String consumptionClient; 
         private String createTime; 
+        private DataDeliveryChannelInfo dataDeliveryChannelInfo; 
+        private DataSynchronizationStatus dataSynchronizationStatus; 
         private Integer databaseCount; 
         private String dbObject; 
+        private String dedicatedClusterId; 
         private Long delay; 
         private Boolean demoJob; 
         private String destNetType; 
         private DestinationEndpoint destinationEndpoint; 
+        private String dtsBisLabel; 
         private String dtsInstanceID; 
         private String dtsJobClass; 
         private String dtsJobDirection; 
@@ -526,10 +666,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         private String groupId; 
         private Integer httpStatusCode; 
         private String jobType; 
+        private String lastUpdateTime; 
         private MigrationMode migrationMode; 
         private String payType; 
         private String requestId; 
         private String reserved; 
+        private String resourceGroupDisplayName; 
+        private String resourceGroupId; 
+        private RetryState retryState; 
         private SourceEndpoint sourceEndpoint; 
         private String status; 
         private java.util.List < SubDistributedJob> subDistributedJob; 
@@ -542,7 +686,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         private String taskType; 
 
         /**
-         * AppName.
+         * The number of ApsaraDB RDS for MySQL instances that are attached to the source PolarDB-X 1.0 instance.
          */
         public Builder appName(String appName) {
             this.appName = appName;
@@ -550,7 +694,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * BeginTimestamp.
+         * The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder beginTimestamp(String beginTimestamp) {
             this.beginTimestamp = beginTimestamp;
@@ -558,7 +702,39 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Checkpoint.
+         * Binlog.
+         */
+        public Builder binlog(String binlog) {
+            this.binlog = binlog;
+            return this;
+        }
+
+        /**
+         * BinlogSite.
+         */
+        public Builder binlogSite(String binlogSite) {
+            this.binlogSite = binlogSite;
+            return this;
+        }
+
+        /**
+         * BinlogTime.
+         */
+        public Builder binlogTime(String binlogTime) {
+            this.binlogTime = binlogTime;
+            return this;
+        }
+
+        /**
+         * BootTime.
+         */
+        public Builder bootTime(String bootTime) {
+            this.bootTime = bootTime;
+            return this;
+        }
+
+        /**
+         * The ID of the data migration, data synchronization, or change tracking instance.
          */
         public Builder checkpoint(Long checkpoint) {
             this.checkpoint = checkpoint;
@@ -566,7 +742,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The topic of the change tracking instance.
+         * <p>
+         * 
+         * >  This parameter is returned only if your change tracking instances are of the new version and you have called the [CreateConsumerGroup](~~122863~~) operation to create a consumer group.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -574,7 +753,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ConsumptionCheckpoint.
+         * The downstream client information in the following format: \<IP address of the downstream client>:\<Random ID generated by DTS>.
          */
         public Builder consumptionCheckpoint(String consumptionCheckpoint) {
             this.consumptionCheckpoint = consumptionCheckpoint;
@@ -582,7 +761,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ConsumptionClient.
+         * The error code returned if the request failed.
          */
         public Builder consumptionClient(String consumptionClient) {
             this.consumptionClient = consumptionClient;
@@ -590,7 +769,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The end time of the task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -598,7 +777,23 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DatabaseCount.
+         * DataDeliveryChannelInfo.
+         */
+        public Builder dataDeliveryChannelInfo(DataDeliveryChannelInfo dataDeliveryChannelInfo) {
+            this.dataDeliveryChannelInfo = dataDeliveryChannelInfo;
+            return this;
+        }
+
+        /**
+         * DataSynchronizationStatus.
+         */
+        public Builder dataSynchronizationStatus(DataSynchronizationStatus dataSynchronizationStatus) {
+            this.dataSynchronizationStatus = dataSynchronizationStatus;
+            return this;
+        }
+
+        /**
+         * The point in time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder databaseCount(Integer databaseCount) {
             this.databaseCount = databaseCount;
@@ -606,7 +801,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DbObject.
+         * Indicates whether the request was successful.
          */
         public Builder dbObject(String dbObject) {
             this.dbObject = dbObject;
@@ -614,7 +809,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Delay.
+         * DedicatedClusterId.
+         */
+        public Builder dedicatedClusterId(String dedicatedClusterId) {
+            this.dedicatedClusterId = dedicatedClusterId;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder delay(Long delay) {
             this.delay = delay;
@@ -630,7 +833,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DestNetType.
+         * The instance class.
+         * <p>
+         * 
+         * >  For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).
          */
         public Builder destNetType(String destNetType) {
             this.destNetType = destNetType;
@@ -638,7 +844,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DestinationEndpoint.
+         * The name of the database that contains the objects to be migrated from the source instance.
          */
         public Builder destinationEndpoint(DestinationEndpoint destinationEndpoint) {
             this.destinationEndpoint = destinationEndpoint;
@@ -646,7 +852,18 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DtsInstanceID.
+         * DtsBisLabel.
+         */
+        public Builder dtsBisLabel(String dtsBisLabel) {
+            this.dtsBisLabel = dtsBisLabel;
+            return this;
+        }
+
+        /**
+         * Indicates whether the new change tracking feature is used.
+         * <p>
+         * 
+         * >  This parameter is returned only for change tracking instances of the new version.
          */
         public Builder dtsInstanceID(String dtsInstanceID) {
             this.dtsInstanceID = dtsInstanceID;
@@ -654,7 +871,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DtsJobClass.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **PrePaid**: subscription
+         * *   **PostPaid**: pay-as-you-go
          */
         public Builder dtsJobClass(String dtsJobClass) {
             this.dtsJobClass = dtsJobClass;
@@ -662,7 +883,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DtsJobDirection.
+         * The beginning of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder dtsJobDirection(String dtsJobDirection) {
             this.dtsJobDirection = dtsJobDirection;
@@ -670,7 +891,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DtsJobId.
+         * API test
          */
         public Builder dtsJobId(String dtsJobId) {
             this.dtsJobId = dtsJobId;
@@ -678,7 +899,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DtsJobName.
+         * The synchronization direction. Valid values:
+         * <p>
+         * 
+         * *   **Forward**: Data is synchronized from the source database to the destination database.
+         * *   **Reverse**: Data is synchronized from the destination database to the source database.
+         * 
+         * > 
+         * *   Default value: **Forward**.
+         * *   The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.
          */
         public Builder dtsJobName(String dtsJobName) {
             this.dtsJobName = dtsJobName;
@@ -686,7 +915,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The error message returned if the request failed.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -694,7 +923,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EndTimestamp.
+         * The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
          */
         public Builder endTimestamp(String endTimestamp) {
             this.endTimestamp = endTimestamp;
@@ -702,7 +931,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The start offset of incremental data migration or synchronization. The value is a UNIX timestamp. Unit: seconds.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -710,7 +939,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The point in time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>
+         * 
+         * >  This parameter is returned only if the return value of the **PayType** parameter is **PrePaid**.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -718,7 +950,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The name of the data migration, data synchronization, or change tracking task.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -726,7 +958,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EtlCalculator.
+         * The objects of the data migration, data synchronization, or change tracking task. For more information, see [Objects of DTS tasks](~~209545~~).
          */
         public Builder etlCalculator(String etlCalculator) {
             this.etlCalculator = etlCalculator;
@@ -734,7 +966,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * The error code. This parameter will be removed in the future.
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -742,7 +974,28 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * FinishTime.
+         * The state of the data migration or data synchronization task.
+         * <p>
+         * 
+         * Valid values for a data migration task:
+         * 
+         * *   **NotStarted**: The migration is not started.
+         * *   **Migrating**: The migration is in progress.
+         * *   **Failed**: The migration failed.
+         * *   **Finished**: The migration is complete.
+         * 
+         * Valid values for a data synchronization task:
+         * 
+         * *   **NotStarted**: The task is not started.
+         * *   **Prechecking**: The task is in precheck.
+         * *   **PrecheckFailed**: The task failed to pass the precheck.
+         * *   **Initializing**: The task is performing initial synchronization.
+         * *   **InitializeFailed**: Initial synchronization failed.
+         * *   **Synchronizing**: The task is in progress.
+         * *   **Failed**: The task failed to synchronize data.
+         * *   **Suspending**: The task is paused.
+         * *   **Modifying**: The objects in the task are being modified.
+         * *   **Finished**: The task is complete.
          */
         public Builder finishTime(String finishTime) {
             this.finishTime = finishTime;
@@ -750,7 +1003,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * GroupId.
+         * The operator information of the extract, transform, and load (ETL) task.
+         * <p>
+         * 
+         * >  This parameter is returned only if you query the details of an ETL task.
          */
         public Builder groupId(String groupId) {
             this.groupId = groupId;
@@ -758,7 +1014,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -774,7 +1033,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * MigrationMode.
+         * LastUpdateTime.
+         */
+        public Builder lastUpdateTime(String lastUpdateTime) {
+            this.lastUpdateTime = lastUpdateTime;
+            return this;
+        }
+
+        /**
+         * The type of the destination instance.
          */
         public Builder migrationMode(MigrationMode migrationMode) {
             this.migrationMode = migrationMode;
@@ -782,7 +1049,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * The error message returned if the task failed.
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -790,7 +1057,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The network type of the consumer client. Valid values:
+         * <p>
+         * 
+         * *   **CLASSIC**: classic network
+         * *   **VPC**: Virtual Private Cloud (VPC)
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -798,7 +1069,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Reserved.
+         * The ID of the data migration, data synchronization, or change tracking task.
          */
         public Builder reserved(String reserved) {
             this.reserved = reserved;
@@ -806,7 +1077,31 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SourceEndpoint.
+         * ResourceGroupDisplayName.
+         */
+        public Builder resourceGroupDisplayName(String resourceGroupDisplayName) {
+            this.resourceGroupDisplayName = resourceGroupDisplayName;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * RetryState.
+         */
+        public Builder retryState(RetryState retryState) {
+            this.retryState = retryState;
+            return this;
+        }
+
+        /**
+         * The ID of the DTS task.
          */
         public Builder sourceEndpoint(SourceEndpoint sourceEndpoint) {
             this.sourceEndpoint = sourceEndpoint;
@@ -814,7 +1109,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The ID of the data migration, data synchronization, or change tracking instance.
          */
         public Builder status(String status) {
             this.status = status;
@@ -838,7 +1133,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SubscribeTopic.
+         * The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder subscribeTopic(String subscribeTopic) {
             this.subscribeTopic = subscribeTopic;
@@ -846,7 +1141,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SubscriptionDataType.
+         * The VPC endpoint of the change tracking instance in the `<Address>:<Port number>` format.
          */
         public Builder subscriptionDataType(SubscriptionDataType subscriptionDataType) {
             this.subscriptionDataType = subscriptionDataType;
@@ -854,7 +1149,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SubscriptionHost.
+         * Indicates whether full data migration or synchronization is performed. Valid values:
+         * <p>
+         * 
+         * *   **true**: Full data migration or synchronization is performed.
+         * *   **false**: Full data migration or synchronization is not performed.
          */
         public Builder subscriptionHost(SubscriptionHost subscriptionHost) {
             this.subscriptionHost = subscriptionHost;
@@ -862,7 +1161,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The latency of incremental data migration or synchronization.
+         * <p>
+         * 
+         * >  If you query data migration tasks, the unit of this parameter is milliseconds. If you query data synchronization tasks, the unit of this parameter is seconds.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -870,7 +1172,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationDirection.
+         * The status code returned.
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.synchronizationDirection = synchronizationDirection;
@@ -891,7 +1193,252 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
 
     } 
 
+    public static class DataDeliveryChannelInfo extends TeaModel {
+        @NameInMap("PartitionNum")
+        private Integer partitionNum;
+
+        @NameInMap("PublicDproxyUrl")
+        private String publicDproxyUrl;
+
+        @NameInMap("Region")
+        private String region;
+
+        @NameInMap("Topic")
+        private String topic;
+
+        @NameInMap("VpcDproxyUrl")
+        private String vpcDproxyUrl;
+
+        private DataDeliveryChannelInfo(Builder builder) {
+            this.partitionNum = builder.partitionNum;
+            this.publicDproxyUrl = builder.publicDproxyUrl;
+            this.region = builder.region;
+            this.topic = builder.topic;
+            this.vpcDproxyUrl = builder.vpcDproxyUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataDeliveryChannelInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return partitionNum
+         */
+        public Integer getPartitionNum() {
+            return this.partitionNum;
+        }
+
+        /**
+         * @return publicDproxyUrl
+         */
+        public String getPublicDproxyUrl() {
+            return this.publicDproxyUrl;
+        }
+
+        /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
+        }
+
+        /**
+         * @return topic
+         */
+        public String getTopic() {
+            return this.topic;
+        }
+
+        /**
+         * @return vpcDproxyUrl
+         */
+        public String getVpcDproxyUrl() {
+            return this.vpcDproxyUrl;
+        }
+
+        public static final class Builder {
+            private Integer partitionNum; 
+            private String publicDproxyUrl; 
+            private String region; 
+            private String topic; 
+            private String vpcDproxyUrl; 
+
+            /**
+             * PartitionNum.
+             */
+            public Builder partitionNum(Integer partitionNum) {
+                this.partitionNum = partitionNum;
+                return this;
+            }
+
+            /**
+             * PublicDproxyUrl.
+             */
+            public Builder publicDproxyUrl(String publicDproxyUrl) {
+                this.publicDproxyUrl = publicDproxyUrl;
+                return this;
+            }
+
+            /**
+             * Region.
+             */
+            public Builder region(String region) {
+                this.region = region;
+                return this;
+            }
+
+            /**
+             * Topic.
+             */
+            public Builder topic(String topic) {
+                this.topic = topic;
+                return this;
+            }
+
+            /**
+             * VpcDproxyUrl.
+             */
+            public Builder vpcDproxyUrl(String vpcDproxyUrl) {
+                this.vpcDproxyUrl = vpcDproxyUrl;
+                return this;
+            }
+
+            public DataDeliveryChannelInfo build() {
+                return new DataDeliveryChannelInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class DataSynchronizationStatus extends TeaModel {
+        @NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @NameInMap("NeedUpgrade")
+        private Boolean needUpgrade;
+
+        @NameInMap("Percent")
+        private String percent;
+
+        @NameInMap("Progress")
+        private String progress;
+
+        @NameInMap("Status")
+        private String status;
+
+        private DataSynchronizationStatus(Builder builder) {
+            this.errorMessage = builder.errorMessage;
+            this.needUpgrade = builder.needUpgrade;
+            this.percent = builder.percent;
+            this.progress = builder.progress;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataSynchronizationStatus create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return needUpgrade
+         */
+        public Boolean getNeedUpgrade() {
+            return this.needUpgrade;
+        }
+
+        /**
+         * @return percent
+         */
+        public String getPercent() {
+            return this.percent;
+        }
+
+        /**
+         * @return progress
+         */
+        public String getProgress() {
+            return this.progress;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String errorMessage; 
+            private Boolean needUpgrade; 
+            private String percent; 
+            private String progress; 
+            private String status; 
+
+            /**
+             * The name of the data migration, data synchronization, or change tracking task.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * NeedUpgrade.
+             */
+            public Builder needUpgrade(Boolean needUpgrade) {
+                this.needUpgrade = needUpgrade;
+                return this;
+            }
+
+            /**
+             * Percent.
+             */
+            public Builder percent(String percent) {
+                this.percent = percent;
+                return this;
+            }
+
+            /**
+             * Progress.
+             */
+            public Builder progress(String progress) {
+                this.progress = progress;
+                return this;
+            }
+
+            /**
+             * The ID of the data migration, data synchronization, or change tracking instance.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public DataSynchronizationStatus build() {
+                return new DataSynchronizationStatus(this);
+            } 
+
+        } 
+
+    }
     public static class DestinationEndpoint extends TeaModel {
+        @NameInMap("CanModifyPassword")
+        private Boolean canModifyPassword;
+
         @NameInMap("DatabaseName")
         private String databaseName;
 
@@ -923,6 +1470,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         private String userName;
 
         private DestinationEndpoint(Builder builder) {
+            this.canModifyPassword = builder.canModifyPassword;
             this.databaseName = builder.databaseName;
             this.engineName = builder.engineName;
             this.instanceID = builder.instanceID;
@@ -941,6 +1489,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
 
         public static DestinationEndpoint create() {
             return builder().build();
+        }
+
+        /**
+         * @return canModifyPassword
+         */
+        public Boolean getCanModifyPassword() {
+            return this.canModifyPassword;
         }
 
         /**
@@ -1014,6 +1569,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean canModifyPassword; 
             private String databaseName; 
             private String engineName; 
             private String instanceID; 
@@ -1026,7 +1582,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * DatabaseName.
+             * CanModifyPassword.
+             */
+            public Builder canModifyPassword(Boolean canModifyPassword) {
+                this.canModifyPassword = canModifyPassword;
+                return this;
+            }
+
+            /**
+             * The connection settings of the destination instance.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -1034,7 +1598,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EngineName.
+             * The database service port of the destination instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -1042,7 +1606,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceID.
+             * The name of the database that contains the migrated objects in the destination instance.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -1050,7 +1614,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The IP address of the destination instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1058,7 +1622,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The SID of the Oracle database.
+             * <p>
+             * 
+             * >  This parameter is returned only if the **EngineName** parameter of the destination instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1066,7 +1633,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OracleSID.
+             * The username of the account that is used to connect to the source database.
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -1074,7 +1641,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The ID of the region in which the destination instance resides. For more information, see [List of supported regions](~~141033~~).
              */
             public Builder port(String port) {
                 this.port = port;
@@ -1082,7 +1649,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * Indicates whether SSL encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   **DISABLE**: SSL encryption is disabled.
+             * *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
+             * *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
+             * *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1090,7 +1663,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SslSolutionEnum.
+             * The ID of the Alibaba Cloud account to which the source ApsaraDB RDS instance belongs.
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -1098,7 +1671,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The ID of the destination instance.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1175,7 +1748,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean structureInitialization; 
 
             /**
-             * DataExtractTransformLoad.
+             * The database account of the destination instance.
              */
             public Builder dataExtractTransformLoad(Boolean dataExtractTransformLoad) {
                 this.dataExtractTransformLoad = dataExtractTransformLoad;
@@ -1183,7 +1756,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataInitialization.
+             * The database engine of the destination instance.
              */
             public Builder dataInitialization(Boolean dataInitialization) {
                 this.dataInitialization = dataInitialization;
@@ -1191,7 +1764,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataSynchronization.
+             * The migration types or synchronization types.
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
@@ -1199,7 +1772,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StructureInitialization.
+             * Indicates whether data transformation is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: Data transformation is performed.
+             * *   **false**: Data transformation is not performed.
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;
@@ -1213,9 +1790,196 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         } 
 
     }
+    public static class RetryState extends TeaModel {
+        @NameInMap("ErrMessage")
+        private String errMessage;
+
+        @NameInMap("JobId")
+        private String jobId;
+
+        @NameInMap("MaxRetryTime")
+        private Integer maxRetryTime;
+
+        @NameInMap("Module")
+        private String module;
+
+        @NameInMap("RetryCount")
+        private Integer retryCount;
+
+        @NameInMap("RetryTarget")
+        private String retryTarget;
+
+        @NameInMap("RetryTime")
+        private Integer retryTime;
+
+        @NameInMap("Retrying")
+        private Boolean retrying;
+
+        private RetryState(Builder builder) {
+            this.errMessage = builder.errMessage;
+            this.jobId = builder.jobId;
+            this.maxRetryTime = builder.maxRetryTime;
+            this.module = builder.module;
+            this.retryCount = builder.retryCount;
+            this.retryTarget = builder.retryTarget;
+            this.retryTime = builder.retryTime;
+            this.retrying = builder.retrying;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RetryState create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errMessage
+         */
+        public String getErrMessage() {
+            return this.errMessage;
+        }
+
+        /**
+         * @return jobId
+         */
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        /**
+         * @return maxRetryTime
+         */
+        public Integer getMaxRetryTime() {
+            return this.maxRetryTime;
+        }
+
+        /**
+         * @return module
+         */
+        public String getModule() {
+            return this.module;
+        }
+
+        /**
+         * @return retryCount
+         */
+        public Integer getRetryCount() {
+            return this.retryCount;
+        }
+
+        /**
+         * @return retryTarget
+         */
+        public String getRetryTarget() {
+            return this.retryTarget;
+        }
+
+        /**
+         * @return retryTime
+         */
+        public Integer getRetryTime() {
+            return this.retryTime;
+        }
+
+        /**
+         * @return retrying
+         */
+        public Boolean getRetrying() {
+            return this.retrying;
+        }
+
+        public static final class Builder {
+            private String errMessage; 
+            private String jobId; 
+            private Integer maxRetryTime; 
+            private String module; 
+            private Integer retryCount; 
+            private String retryTarget; 
+            private Integer retryTime; 
+            private Boolean retrying; 
+
+            /**
+             * The point in time when the instance expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>
+             * 
+             * >  This parameter is returned only if the return value of the **PayType** parameter is **PrePaid**.
+             */
+            public Builder errMessage(String errMessage) {
+                this.errMessage = errMessage;
+                return this;
+            }
+
+            /**
+             * JobId.
+             */
+            public Builder jobId(String jobId) {
+                this.jobId = jobId;
+                return this;
+            }
+
+            /**
+             * MaxRetryTime.
+             */
+            public Builder maxRetryTime(Integer maxRetryTime) {
+                this.maxRetryTime = maxRetryTime;
+                return this;
+            }
+
+            /**
+             * Module.
+             */
+            public Builder module(String module) {
+                this.module = module;
+                return this;
+            }
+
+            /**
+             * RetryCount.
+             */
+            public Builder retryCount(Integer retryCount) {
+                this.retryCount = retryCount;
+                return this;
+            }
+
+            /**
+             * RetryTarget.
+             */
+            public Builder retryTarget(String retryTarget) {
+                this.retryTarget = retryTarget;
+                return this;
+            }
+
+            /**
+             * RetryTime.
+             */
+            public Builder retryTime(Integer retryTime) {
+                this.retryTime = retryTime;
+                return this;
+            }
+
+            /**
+             * Retrying.
+             */
+            public Builder retrying(Boolean retrying) {
+                this.retrying = retrying;
+                return this;
+            }
+
+            public RetryState build() {
+                return new RetryState(this);
+            } 
+
+        } 
+
+    }
     public static class SourceEndpoint extends TeaModel {
         @NameInMap("AliyunUid")
         private String aliyunUid;
+
+        @NameInMap("CanModifyPassword")
+        private Boolean canModifyPassword;
 
         @NameInMap("DatabaseName")
         private String databaseName;
@@ -1252,6 +2016,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
 
         private SourceEndpoint(Builder builder) {
             this.aliyunUid = builder.aliyunUid;
+            this.canModifyPassword = builder.canModifyPassword;
             this.databaseName = builder.databaseName;
             this.engineName = builder.engineName;
             this.instanceID = builder.instanceID;
@@ -1278,6 +2043,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
          */
         public String getAliyunUid() {
             return this.aliyunUid;
+        }
+
+        /**
+         * @return canModifyPassword
+         */
+        public Boolean getCanModifyPassword() {
+            return this.canModifyPassword;
         }
 
         /**
@@ -1359,6 +2131,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliyunUid; 
+            private Boolean canModifyPassword; 
             private String databaseName; 
             private String engineName; 
             private String instanceID; 
@@ -1372,7 +2145,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AliyunUid.
+             * The database engine of the source instance.
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -1380,7 +2153,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * CanModifyPassword.
+             */
+            public Builder canModifyPassword(Boolean canModifyPassword) {
+                this.canModifyPassword = canModifyPassword;
+                return this;
+            }
+
+            /**
+             * The database service port of the source instance.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -1388,7 +2169,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EngineName.
+             * The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -1396,7 +2177,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceID.
+             * The system ID (SID) of the Oracle database.
+             * <p>
+             * 
+             * >  This parameter is returned only if the **EngineName** parameter of the source instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -1404,7 +2188,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The IP address of the source instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1412,7 +2196,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The connection settings of the source instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -1420,7 +2204,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OracleSID.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -1428,7 +2216,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The ID of the source instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -1436,7 +2224,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The type of the source instance.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1444,7 +2232,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * Indicates whether SSL encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   **DISABLE**: SSL encryption is disabled.
+             * *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
+             * *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
+             * *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -1452,7 +2246,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SslSolutionEnum.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
+             * 
+             * >  This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -1460,7 +2260,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The ID of the region in which the source instance resides. For more information, see [List of supported regions](~~141033~~).
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1549,7 +2349,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1557,7 +2357,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -1565,7 +2365,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -1573,7 +2373,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -1581,7 +2381,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1670,7 +2470,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1678,7 +2478,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -1686,7 +2486,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -1694,7 +2494,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -1702,7 +2502,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1716,7 +2516,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         } 
 
     }
-    public static class DataSynchronizationStatus extends TeaModel {
+    public static class SubDistributedJobDataSynchronizationStatus extends TeaModel {
         @NameInMap("ErrorMessage")
         private String errorMessage;
 
@@ -1732,7 +2532,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("Status")
         private String status;
 
-        private DataSynchronizationStatus(Builder builder) {
+        private SubDistributedJobDataSynchronizationStatus(Builder builder) {
             this.errorMessage = builder.errorMessage;
             this.needUpgrade = builder.needUpgrade;
             this.percent = builder.percent;
@@ -1744,7 +2544,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static DataSynchronizationStatus create() {
+        public static SubDistributedJobDataSynchronizationStatus create() {
             return builder().build();
         }
 
@@ -1791,7 +2591,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1799,7 +2599,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -1807,7 +2607,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -1815,7 +2615,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -1823,15 +2623,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
                 return this;
             }
 
-            public DataSynchronizationStatus build() {
-                return new DataSynchronizationStatus(this);
+            public SubDistributedJobDataSynchronizationStatus build() {
+                return new SubDistributedJobDataSynchronizationStatus(this);
             } 
 
         } 
@@ -1996,7 +2796,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AliyunUid.
+             * The database engine of the source instance.
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -2004,7 +2804,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * The database service port of the source instance.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -2012,7 +2812,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EngineName.
+             * The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -2020,7 +2820,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceID.
+             * The system ID (SID) of the Oracle database.
+             * <p>
+             * 
+             * >  This parameter is returned only if the **EngineName** parameter of the source instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -2028,7 +2831,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The IP address of the source instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -2036,7 +2839,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The connection settings of the source instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -2044,7 +2847,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OracleSID.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -2052,7 +2859,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The ID of the source instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -2060,7 +2867,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The type of the source instance.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -2068,7 +2875,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * Indicates whether SSL encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   **DISABLE**: SSL encryption is disabled.
+             * *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
+             * *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
+             * *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -2076,7 +2889,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
+             * 
+             * >  This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -2084,7 +2903,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The ID of the region in which the source instance resides. For more information, see [List of supported regions](~~141033~~).
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -2161,7 +2980,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean structureInitialization; 
 
             /**
-             * DataExtractTransformLoad.
+             * The database account of the destination instance.
              */
             public Builder dataExtractTransformLoad(Boolean dataExtractTransformLoad) {
                 this.dataExtractTransformLoad = dataExtractTransformLoad;
@@ -2169,7 +2988,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataInitialization.
+             * The database engine of the destination instance.
              */
             public Builder dataInitialization(Boolean dataInitialization) {
                 this.dataInitialization = dataInitialization;
@@ -2177,7 +2996,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataSynchronization.
+             * The migration types or synchronization types.
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
@@ -2185,7 +3004,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StructureInitialization.
+             * Indicates whether data transformation is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: Data transformation is performed.
+             * *   **false**: Data transformation is not performed.
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;
@@ -2238,7 +3061,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String rps; 
 
             /**
-             * 每秒同步的流量，单位为：MB/s
+             * Flow.
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -2246,7 +3069,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 每秒同步的记录数
+             * Rps.
              */
             public Builder rps(String rps) {
                 this.rps = rps;
@@ -2335,7 +3158,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String repairMethod; 
 
             /**
-             * 预检查项
+             * CheckItem.
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -2343,7 +3166,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 检查项的描述
+             * CheckItemDescription.
              */
             public Builder checkItemDescription(String checkItemDescription) {
                 this.checkItemDescription = checkItemDescription;
@@ -2351,7 +3174,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 检查结果 (NotStarted: 未启动, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Warning: 警告, Success: 完成)
+             * CheckResult.
              */
             public Builder checkResult(String checkResult) {
                 this.checkResult = checkResult;
@@ -2359,7 +3182,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 错误原因
+             * FailedReason.
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -2367,7 +3190,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 修复方法
+             * RepairMethod.
              */
             public Builder repairMethod(String repairMethod) {
                 this.repairMethod = repairMethod;
@@ -2452,7 +3275,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -2460,7 +3283,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -2468,7 +3291,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2482,7 +3305,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         } 
 
     }
-    public static class RetryState extends TeaModel {
+    public static class SubDistributedJobRetryState extends TeaModel {
         @NameInMap("ErrMsg")
         private String errMsg;
 
@@ -2507,7 +3330,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         @NameInMap("Retrying")
         private Boolean retrying;
 
-        private RetryState(Builder builder) {
+        private SubDistributedJobRetryState(Builder builder) {
             this.errMsg = builder.errMsg;
             this.jobId = builder.jobId;
             this.maxRetryTime = builder.maxRetryTime;
@@ -2522,7 +3345,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static RetryState create() {
+        public static SubDistributedJobRetryState create() {
             return builder().build();
         }
 
@@ -2593,7 +3416,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean retrying; 
 
             /**
-             * 错误信息
+             * ErrMsg.
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -2601,7 +3424,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务ID
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -2609,7 +3432,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 最大重试时间,单位秒
+             * MaxRetryTime.
              */
             public Builder maxRetryTime(Integer maxRetryTime) {
                 this.maxRetryTime = maxRetryTime;
@@ -2617,7 +3440,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 模块名称 reader/store/writer/full/struct
+             * Module.
              */
             public Builder module(String module) {
                 this.module = module;
@@ -2625,7 +3448,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已重试次数
+             * RetryCount.
              */
             public Builder retryCount(Integer retryCount) {
                 this.retryCount = retryCount;
@@ -2641,7 +3464,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已重试时间,单位秒
+             * RetryTime.
              */
             public Builder retryTime(Integer retryTime) {
                 this.retryTime = retryTime;
@@ -2649,15 +3472,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否重试中
+             * Retrying.
              */
             public Builder retrying(Boolean retrying) {
                 this.retrying = retrying;
                 return this;
             }
 
-            public RetryState build() {
-                return new RetryState(this);
+            public SubDistributedJobRetryState build() {
+                return new SubDistributedJobRetryState(this);
             } 
 
         } 
@@ -2738,7 +3561,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -2746,7 +3569,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -2754,7 +3577,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -2762,7 +3585,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -2770,7 +3593,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2859,7 +3682,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -2867,7 +3690,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -2875,7 +3698,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -2883,7 +3706,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -2891,7 +3714,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -2980,7 +3803,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -2988,7 +3811,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -2996,7 +3819,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -3004,7 +3827,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -3012,7 +3835,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -3185,7 +4008,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AliyunUid.
+             * The database engine of the source instance.
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -3193,7 +4016,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * The database service port of the source instance.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -3201,7 +4024,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EngineName.
+             * The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -3209,7 +4032,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceID.
+             * The system ID (SID) of the Oracle database.
+             * <p>
+             * 
+             * >  This parameter is returned only if the **EngineName** parameter of the source instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -3217,7 +4043,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The IP address of the source instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -3225,7 +4051,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The connection settings of the source instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -3233,7 +4059,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OracleSID.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -3241,7 +4071,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The ID of the source instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -3249,7 +4079,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The type of the source instance.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -3257,7 +4087,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * Indicates whether SSL encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   **DISABLE**: SSL encryption is disabled.
+             * *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
+             * *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
+             * *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -3265,7 +4101,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
+             * 
+             * >  This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -3273,7 +4115,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The ID of the region in which the source instance resides. For more information, see [List of supported regions](~~141033~~).
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -3350,7 +4192,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean structureInitialization; 
 
             /**
-             * DataExtractTransformLoad.
+             * The database account of the destination instance.
              */
             public Builder dataExtractTransformLoad(Boolean dataExtractTransformLoad) {
                 this.dataExtractTransformLoad = dataExtractTransformLoad;
@@ -3358,7 +4200,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataInitialization.
+             * The database engine of the destination instance.
              */
             public Builder dataInitialization(Boolean dataInitialization) {
                 this.dataInitialization = dataInitialization;
@@ -3366,7 +4208,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataSynchronization.
+             * The migration types or synchronization types.
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
@@ -3374,7 +4216,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StructureInitialization.
+             * Indicates whether data transformation is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: Data transformation is performed.
+             * *   **false**: Data transformation is not performed.
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;
@@ -3427,7 +4273,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String rps; 
 
             /**
-             * 每秒同步的流量，单位为：MB/s
+             * Flow.
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -3435,7 +4281,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 每秒同步的记录数
+             * Rps.
              */
             public Builder rps(String rps) {
                 this.rps = rps;
@@ -3524,7 +4370,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String repairMethod; 
 
             /**
-             * 预检查项
+             * CheckItem.
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -3532,7 +4378,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 检查项的描述
+             * CheckItemDescription.
              */
             public Builder checkItemDescription(String checkItemDescription) {
                 this.checkItemDescription = checkItemDescription;
@@ -3540,7 +4386,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 检查结果 (NotStarted: 未启动, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Warning: 警告, Success: 完成)
+             * CheckResult.
              */
             public Builder checkResult(String checkResult) {
                 this.checkResult = checkResult;
@@ -3548,7 +4394,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 错误原因
+             * FailedReason.
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -3556,7 +4402,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 修复方法
+             * RepairMethod.
              */
             public Builder repairMethod(String repairMethod) {
                 this.repairMethod = repairMethod;
@@ -3641,7 +4487,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -3649,7 +4495,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -3657,7 +4503,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -3782,7 +4628,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean retrying; 
 
             /**
-             * 错误信息
+             * ErrMsg.
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -3790,7 +4636,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务ID
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -3798,7 +4644,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 最大重试时间,单位秒
+             * MaxRetryTime.
              */
             public Builder maxRetryTime(Integer maxRetryTime) {
                 this.maxRetryTime = maxRetryTime;
@@ -3806,7 +4652,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 模块名称 reader/store/writer/full/struct
+             * Module.
              */
             public Builder module(String module) {
                 this.module = module;
@@ -3814,7 +4660,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已重试次数
+             * RetryCount.
              */
             public Builder retryCount(Integer retryCount) {
                 this.retryCount = retryCount;
@@ -3830,7 +4676,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已重试时间,单位秒
+             * RetryTime.
              */
             public Builder retryTime(Integer retryTime) {
                 this.retryTime = retryTime;
@@ -3838,7 +4684,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否重试中
+             * Retrying.
              */
             public Builder retrying(Boolean retrying) {
                 this.retrying = retrying;
@@ -4011,7 +4857,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AliyunUid.
+             * The database engine of the source instance.
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -4019,7 +4865,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * The database service port of the source instance.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -4027,7 +4873,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EngineName.
+             * The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -4035,7 +4881,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceID.
+             * The system ID (SID) of the Oracle database.
+             * <p>
+             * 
+             * >  This parameter is returned only if the **EngineName** parameter of the source instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -4043,7 +4892,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The IP address of the source instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -4051,7 +4900,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The connection settings of the source instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -4059,7 +4908,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OracleSID.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -4067,7 +4920,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The ID of the source instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -4075,7 +4928,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The type of the source instance.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -4083,7 +4936,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * Indicates whether SSL encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   **DISABLE**: SSL encryption is disabled.
+             * *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
+             * *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
+             * *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -4091,7 +4950,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
+             * 
+             * >  This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -4099,7 +4964,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The ID of the region in which the source instance resides. For more information, see [List of supported regions](~~141033~~).
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -4188,7 +5053,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -4196,7 +5061,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -4204,7 +5069,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -4212,7 +5077,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -4220,7 +5085,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -4547,7 +5412,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * 用户id
+             * AliUid.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -4555,7 +5420,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签操作者
+             * Creator.
              */
             public Builder creator(Long creator) {
                 this.creator = creator;
@@ -4563,7 +5428,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -4571,7 +5436,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -4579,7 +5444,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 主键
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -4603,7 +5468,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -4611,7 +5476,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 0为public，1为private (Public, Private, All)
+             * Scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -4619,7 +5484,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务所在region，注意一般是dts的目标端region
+             * SrcRegion.
              */
             public Builder srcRegion(String srcRegion) {
                 this.srcRegion = srcRegion;
@@ -4627,7 +5492,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签类型：系统标签－System，用户标签－Custom (Custom, System, All)
+             * TagCategory.
              */
             public Builder tagCategory(String tagCategory) {
                 this.tagCategory = tagCategory;
@@ -4635,7 +5500,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签键tagkey
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -4643,7 +5508,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签值tagvalue
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -5200,7 +6065,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * AppName.
+             * The number of ApsaraDB RDS for MySQL instances that are attached to the source PolarDB-X 1.0 instance.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -5208,7 +6073,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BeginTimestamp.
+             * The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder beginTimestamp(String beginTimestamp) {
                 this.beginTimestamp = beginTimestamp;
@@ -5216,7 +6081,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Checkpoint.
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -5224,7 +6089,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumptionCheckpoint.
+             * The downstream client information in the following format: \<IP address of the downstream client>:\<Random ID generated by DTS>.
              */
             public Builder consumptionCheckpoint(String consumptionCheckpoint) {
                 this.consumptionCheckpoint = consumptionCheckpoint;
@@ -5232,7 +6097,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumptionClient.
+             * The error code returned if the request failed.
              */
             public Builder consumptionClient(String consumptionClient) {
                 this.consumptionClient = consumptionClient;
@@ -5240,7 +6105,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The end time of the task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -5272,7 +6137,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseCount.
+             * The point in time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder databaseCount(Integer databaseCount) {
                 this.databaseCount = databaseCount;
@@ -5280,7 +6145,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbObject.
+             * Indicates whether the request was successful.
              */
             public Builder dbObject(String dbObject) {
                 this.dbObject = dbObject;
@@ -5288,7 +6153,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Delay.
+             * The ID of the request.
              */
             public Builder delay(Long delay) {
                 this.delay = delay;
@@ -5296,7 +6161,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DestNetType.
+             * The instance class.
+             * <p>
+             * 
+             * >  For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).
              */
             public Builder destNetType(String destNetType) {
                 this.destNetType = destNetType;
@@ -5304,7 +6172,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationEndpoint.
+             * The name of the database that contains the objects to be migrated from the source instance.
              */
             public Builder destinationEndpoint(ReverseJobDestinationEndpoint destinationEndpoint) {
                 this.destinationEndpoint = destinationEndpoint;
@@ -5312,7 +6180,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsInstanceID.
+             * Indicates whether the new change tracking feature is used.
+             * <p>
+             * 
+             * >  This parameter is returned only for change tracking instances of the new version.
              */
             public Builder dtsInstanceID(String dtsInstanceID) {
                 this.dtsInstanceID = dtsInstanceID;
@@ -5320,7 +6191,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobClass.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   **PrePaid**: subscription
+             * *   **PostPaid**: pay-as-you-go
              */
             public Builder dtsJobClass(String dtsJobClass) {
                 this.dtsJobClass = dtsJobClass;
@@ -5328,7 +6203,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 请使用
+             * The beginning of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder dtsJobDirection(String dtsJobDirection) {
                 this.dtsJobDirection = dtsJobDirection;
@@ -5336,7 +6211,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobId.
+             * API test
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -5344,7 +6219,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobName.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
+             * 
+             * > 
+             * *   Default value: **Forward**.
+             * *   The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.
              */
             public Builder dtsJobName(String dtsJobName) {
                 this.dtsJobName = dtsJobName;
@@ -5352,7 +6235,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimestamp.
+             * The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
              */
             public Builder endTimestamp(String endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -5360,7 +6243,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -5368,7 +6251,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EtlCalculator.
+             * The objects of the data migration, data synchronization, or change tracking task. For more information, see [Objects of DTS tasks](~~209545~~).
              */
             public Builder etlCalculator(String etlCalculator) {
                 this.etlCalculator = etlCalculator;
@@ -5376,7 +6259,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The error code. This parameter will be removed in the future.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -5384,7 +6267,28 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The state of the data migration or data synchronization task.
+             * <p>
+             * 
+             * Valid values for a data migration task:
+             * 
+             * *   **NotStarted**: The migration is not started.
+             * *   **Migrating**: The migration is in progress.
+             * *   **Failed**: The migration failed.
+             * *   **Finished**: The migration is complete.
+             * 
+             * Valid values for a data synchronization task:
+             * 
+             * *   **NotStarted**: The task is not started.
+             * *   **Prechecking**: The task is in precheck.
+             * *   **PrecheckFailed**: The task failed to pass the precheck.
+             * *   **Initializing**: The task is performing initial synchronization.
+             * *   **InitializeFailed**: Initial synchronization failed.
+             * *   **Synchronizing**: The task is in progress.
+             * *   **Failed**: The task failed to synchronize data.
+             * *   **Suspending**: The task is paused.
+             * *   **Modifying**: The objects in the task are being modified.
+             * *   **Finished**: The task is complete.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -5392,7 +6296,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The operator information of the extract, transform, and load (ETL) task.
+             * <p>
+             * 
+             * >  This parameter is returned only if you query the details of an ETL task.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -5408,7 +6315,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 返回结果中新增jobType字段
+             * JobType.
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -5416,7 +6323,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MigrationMode.
+             * The type of the destination instance.
              */
             public Builder migrationMode(ReverseJobMigrationMode migrationMode) {
                 this.migrationMode = migrationMode;
@@ -5424,7 +6331,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务来源 pts任务、dms任务 (PTS, DMS, DTS)
+             * OriginType.
              */
             public Builder originType(String originType) {
                 this.originType = originType;
@@ -5432,7 +6339,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The error message returned if the task failed.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -5456,7 +6363,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Reserved.
+             * The ID of the data migration, data synchronization, or change tracking task.
              */
             public Builder reserved(String reserved) {
                 this.reserved = reserved;
@@ -5480,7 +6387,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpoint.
+             * The ID of the DTS task.
              */
             public Builder sourceEndpoint(ReverseJobSourceEndpoint sourceEndpoint) {
                 this.sourceEndpoint = sourceEndpoint;
@@ -5488,7 +6395,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -5504,7 +6411,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubscribeTopic.
+             * The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder subscribeTopic(String subscribeTopic) {
                 this.subscribeTopic = subscribeTopic;
@@ -5512,7 +6419,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionDataType.
+             * The VPC endpoint of the change tracking instance in the `<Address>:<Port number>` format.
              */
             public Builder subscriptionDataType(ReverseJobSubscriptionDataType subscriptionDataType) {
                 this.subscriptionDataType = subscriptionDataType;
@@ -5520,7 +6427,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionHost.
+             * Indicates whether full data migration or synchronization is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: Full data migration or synchronization is performed.
+             * *   **false**: Full data migration or synchronization is not performed.
              */
             public Builder subscriptionHost(ReverseJobSubscriptionHost subscriptionHost) {
                 this.subscriptionHost = subscriptionHost;
@@ -5528,7 +6439,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SynchronizationDirection.
+             * The status code returned.
              */
             public Builder synchronizationDirection(String synchronizationDirection) {
                 this.synchronizationDirection = synchronizationDirection;
@@ -5717,7 +6628,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AliyunUid.
+             * The database engine of the source instance.
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -5725,7 +6636,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * The database service port of the source instance.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -5733,7 +6644,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EngineName.
+             * The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -5741,7 +6652,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceID.
+             * The system ID (SID) of the Oracle database.
+             * <p>
+             * 
+             * >  This parameter is returned only if the **EngineName** parameter of the source instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -5749,7 +6663,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The IP address of the source instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -5757,7 +6671,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The connection settings of the source instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -5765,7 +6679,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OracleSID.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -5773,7 +6691,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The ID of the source instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -5781,7 +6699,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The type of the source instance.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -5789,7 +6707,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * Indicates whether SSL encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   **DISABLE**: SSL encryption is disabled.
+             * *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
+             * *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
+             * *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -5797,7 +6721,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
+             * 
+             * >  This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -5805,7 +6735,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The ID of the region in which the source instance resides. For more information, see [List of supported regions](~~141033~~).
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -5894,7 +6824,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -5902,7 +6832,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -5910,7 +6840,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -5918,7 +6848,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -5926,7 +6856,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -6253,7 +7183,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * 用户id
+             * AliUid.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -6261,7 +7191,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签操作者
+             * Creator.
              */
             public Builder creator(Long creator) {
                 this.creator = creator;
@@ -6269,7 +7199,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -6277,7 +7207,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -6285,7 +7215,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 主键
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -6309,7 +7239,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -6317,7 +7247,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 0为public，1为private (Public, Private, All)
+             * Scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -6325,7 +7255,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务所在region，注意一般是dts的目标端region
+             * SrcRegion.
              */
             public Builder srcRegion(String srcRegion) {
                 this.srcRegion = srcRegion;
@@ -6333,7 +7263,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签类型：系统标签－System，用户标签－Custom (Custom, System, All)
+             * TagCategory.
              */
             public Builder tagCategory(String tagCategory) {
                 this.tagCategory = tagCategory;
@@ -6341,7 +7271,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签键tagkey
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -6349,7 +7279,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签值tagvalue
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -6389,7 +7319,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         private DataInitializationStatus dataInitializationStatus;
 
         @NameInMap("DataSynchronizationStatus")
-        private DataSynchronizationStatus dataSynchronizationStatus;
+        private SubDistributedJobDataSynchronizationStatus dataSynchronizationStatus;
 
         @NameInMap("DatabaseCount")
         private Integer databaseCount;
@@ -6464,7 +7394,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         private String reserved;
 
         @NameInMap("RetryState")
-        private RetryState retryState;
+        private SubDistributedJobRetryState retryState;
 
         @NameInMap("ReverseJob")
         private ReverseJob reverseJob;
@@ -6614,7 +7544,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         /**
          * @return dataSynchronizationStatus
          */
-        public DataSynchronizationStatus getDataSynchronizationStatus() {
+        public SubDistributedJobDataSynchronizationStatus getDataSynchronizationStatus() {
             return this.dataSynchronizationStatus;
         }
 
@@ -6789,7 +7719,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
         /**
          * @return retryState
          */
-        public RetryState getRetryState() {
+        public SubDistributedJobRetryState getRetryState() {
             return this.retryState;
         }
 
@@ -6879,7 +7809,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String createTime; 
             private DataEtlStatus dataEtlStatus; 
             private DataInitializationStatus dataInitializationStatus; 
-            private DataSynchronizationStatus dataSynchronizationStatus; 
+            private SubDistributedJobDataSynchronizationStatus dataSynchronizationStatus; 
             private Integer databaseCount; 
             private String dbObject; 
             private Long delay; 
@@ -6904,7 +7834,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Performance performance; 
             private PrecheckStatus precheckStatus; 
             private String reserved; 
-            private RetryState retryState; 
+            private SubDistributedJobRetryState retryState; 
             private ReverseJob reverseJob; 
             private SubDistributedJobSourceEndpoint sourceEndpoint; 
             private String status; 
@@ -6918,7 +7848,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * AppName.
+             * The number of ApsaraDB RDS for MySQL instances that are attached to the source PolarDB-X 1.0 instance.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -6926,7 +7856,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BeginTimestamp.
+             * The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder beginTimestamp(String beginTimestamp) {
                 this.beginTimestamp = beginTimestamp;
@@ -6934,7 +7864,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Checkpoint.
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -6942,7 +7872,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumptionCheckpoint.
+             * The downstream client information in the following format: \<IP address of the downstream client>:\<Random ID generated by DTS>.
              */
             public Builder consumptionCheckpoint(String consumptionCheckpoint) {
                 this.consumptionCheckpoint = consumptionCheckpoint;
@@ -6950,7 +7880,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumptionClient.
+             * The error code returned if the request failed.
              */
             public Builder consumptionClient(String consumptionClient) {
                 this.consumptionClient = consumptionClient;
@@ -6958,7 +7888,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The end time of the task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -6984,13 +7914,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             /**
              * DataSynchronizationStatus.
              */
-            public Builder dataSynchronizationStatus(DataSynchronizationStatus dataSynchronizationStatus) {
+            public Builder dataSynchronizationStatus(SubDistributedJobDataSynchronizationStatus dataSynchronizationStatus) {
                 this.dataSynchronizationStatus = dataSynchronizationStatus;
                 return this;
             }
 
             /**
-             * DatabaseCount.
+             * The point in time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder databaseCount(Integer databaseCount) {
                 this.databaseCount = databaseCount;
@@ -6998,7 +7928,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbObject.
+             * Indicates whether the request was successful.
              */
             public Builder dbObject(String dbObject) {
                 this.dbObject = dbObject;
@@ -7006,7 +7936,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Delay.
+             * The ID of the request.
              */
             public Builder delay(Long delay) {
                 this.delay = delay;
@@ -7014,7 +7944,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DestNetType.
+             * The instance class.
+             * <p>
+             * 
+             * >  For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).
              */
             public Builder destNetType(String destNetType) {
                 this.destNetType = destNetType;
@@ -7022,7 +7955,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationEndpoint.
+             * The name of the database that contains the objects to be migrated from the source instance.
              */
             public Builder destinationEndpoint(SubDistributedJobDestinationEndpoint destinationEndpoint) {
                 this.destinationEndpoint = destinationEndpoint;
@@ -7030,7 +7963,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsInstanceID.
+             * Indicates whether the new change tracking feature is used.
+             * <p>
+             * 
+             * >  This parameter is returned only for change tracking instances of the new version.
              */
             public Builder dtsInstanceID(String dtsInstanceID) {
                 this.dtsInstanceID = dtsInstanceID;
@@ -7038,7 +7974,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobClass.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   **PrePaid**: subscription
+             * *   **PostPaid**: pay-as-you-go
              */
             public Builder dtsJobClass(String dtsJobClass) {
                 this.dtsJobClass = dtsJobClass;
@@ -7046,7 +7986,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 请使用
+             * The beginning of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder dtsJobDirection(String dtsJobDirection) {
                 this.dtsJobDirection = dtsJobDirection;
@@ -7054,7 +7994,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobId.
+             * API test
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -7062,7 +8002,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobName.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
+             * 
+             * > 
+             * *   Default value: **Forward**.
+             * *   The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.
              */
             public Builder dtsJobName(String dtsJobName) {
                 this.dtsJobName = dtsJobName;
@@ -7070,7 +8018,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimestamp.
+             * The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
              */
             public Builder endTimestamp(String endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -7078,7 +8026,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -7086,7 +8034,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EtlCalculator.
+             * The objects of the data migration, data synchronization, or change tracking task. For more information, see [Objects of DTS tasks](~~209545~~).
              */
             public Builder etlCalculator(String etlCalculator) {
                 this.etlCalculator = etlCalculator;
@@ -7094,7 +8042,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The error code. This parameter will be removed in the future.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -7102,7 +8050,28 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The state of the data migration or data synchronization task.
+             * <p>
+             * 
+             * Valid values for a data migration task:
+             * 
+             * *   **NotStarted**: The migration is not started.
+             * *   **Migrating**: The migration is in progress.
+             * *   **Failed**: The migration failed.
+             * *   **Finished**: The migration is complete.
+             * 
+             * Valid values for a data synchronization task:
+             * 
+             * *   **NotStarted**: The task is not started.
+             * *   **Prechecking**: The task is in precheck.
+             * *   **PrecheckFailed**: The task failed to pass the precheck.
+             * *   **Initializing**: The task is performing initial synchronization.
+             * *   **InitializeFailed**: Initial synchronization failed.
+             * *   **Synchronizing**: The task is in progress.
+             * *   **Failed**: The task failed to synchronize data.
+             * *   **Suspending**: The task is paused.
+             * *   **Modifying**: The objects in the task are being modified.
+             * *   **Finished**: The task is complete.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -7110,7 +8079,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The operator information of the extract, transform, and load (ETL) task.
+             * <p>
+             * 
+             * >  This parameter is returned only if you query the details of an ETL task.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -7126,7 +8098,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 返回结果中新增jobType字段
+             * JobType.
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -7134,7 +8106,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MigrationMode.
+             * The type of the destination instance.
              */
             public Builder migrationMode(SubDistributedJobMigrationMode migrationMode) {
                 this.migrationMode = migrationMode;
@@ -7142,7 +8114,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务来源 pts任务、dms任务 (PTS, DMS, DTS)
+             * OriginType.
              */
             public Builder originType(String originType) {
                 this.originType = originType;
@@ -7150,7 +8122,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The error message returned if the task failed.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -7174,7 +8146,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Reserved.
+             * The ID of the data migration, data synchronization, or change tracking task.
              */
             public Builder reserved(String reserved) {
                 this.reserved = reserved;
@@ -7184,7 +8156,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             /**
              * RetryState.
              */
-            public Builder retryState(RetryState retryState) {
+            public Builder retryState(SubDistributedJobRetryState retryState) {
                 this.retryState = retryState;
                 return this;
             }
@@ -7198,7 +8170,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpoint.
+             * The ID of the DTS task.
              */
             public Builder sourceEndpoint(SubDistributedJobSourceEndpoint sourceEndpoint) {
                 this.sourceEndpoint = sourceEndpoint;
@@ -7206,7 +8178,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -7230,7 +8202,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubscribeTopic.
+             * The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder subscribeTopic(String subscribeTopic) {
                 this.subscribeTopic = subscribeTopic;
@@ -7238,7 +8210,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionDataType.
+             * The VPC endpoint of the change tracking instance in the `<Address>:<Port number>` format.
              */
             public Builder subscriptionDataType(SubDistributedJobSubscriptionDataType subscriptionDataType) {
                 this.subscriptionDataType = subscriptionDataType;
@@ -7246,7 +8218,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionHost.
+             * Indicates whether full data migration or synchronization is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: Full data migration or synchronization is performed.
+             * *   **false**: Full data migration or synchronization is not performed.
              */
             public Builder subscriptionHost(SubDistributedJobSubscriptionHost subscriptionHost) {
                 this.subscriptionHost = subscriptionHost;
@@ -7254,7 +8230,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SynchronizationDirection.
+             * The status code returned.
              */
             public Builder synchronizationDirection(String synchronizationDirection) {
                 this.synchronizationDirection = synchronizationDirection;
@@ -7359,7 +8335,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -7367,7 +8343,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -7375,7 +8351,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -7383,7 +8359,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -7391,7 +8367,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -7480,7 +8456,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -7488,7 +8464,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -7496,7 +8472,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -7504,7 +8480,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -7512,7 +8488,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -7601,7 +8577,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -7609,7 +8585,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -7617,7 +8593,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -7625,7 +8601,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -7633,7 +8609,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -7806,7 +8782,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AliyunUid.
+             * The database engine of the source instance.
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -7814,7 +8790,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * The database service port of the source instance.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -7822,7 +8798,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EngineName.
+             * The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -7830,7 +8806,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceID.
+             * The system ID (SID) of the Oracle database.
+             * <p>
+             * 
+             * >  This parameter is returned only if the **EngineName** parameter of the source instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -7838,7 +8817,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The IP address of the source instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -7846,7 +8825,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The connection settings of the source instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -7854,7 +8833,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OracleSID.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -7862,7 +8845,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The ID of the source instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -7870,7 +8853,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The type of the source instance.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -7878,7 +8861,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * Indicates whether SSL encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   **DISABLE**: SSL encryption is disabled.
+             * *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
+             * *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
+             * *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -7886,7 +8875,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
+             * 
+             * >  This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -7894,7 +8889,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The ID of the region in which the source instance resides. For more information, see [List of supported regions](~~141033~~).
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -7971,7 +8966,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean structureInitialization; 
 
             /**
-             * DataExtractTransformLoad.
+             * The database account of the destination instance.
              */
             public Builder dataExtractTransformLoad(Boolean dataExtractTransformLoad) {
                 this.dataExtractTransformLoad = dataExtractTransformLoad;
@@ -7979,7 +8974,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataInitialization.
+             * The database engine of the destination instance.
              */
             public Builder dataInitialization(Boolean dataInitialization) {
                 this.dataInitialization = dataInitialization;
@@ -7987,7 +8982,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataSynchronization.
+             * The migration types or synchronization types.
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
@@ -7995,7 +8990,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StructureInitialization.
+             * Indicates whether data transformation is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: Data transformation is performed.
+             * *   **false**: Data transformation is not performed.
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;
@@ -8048,7 +9047,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String rps; 
 
             /**
-             * 每秒同步的流量，单位为：MB/s
+             * Flow.
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -8056,7 +9055,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 每秒同步的记录数
+             * Rps.
              */
             public Builder rps(String rps) {
                 this.rps = rps;
@@ -8145,7 +9144,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String repairMethod; 
 
             /**
-             * 预检查项
+             * CheckItem.
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -8153,7 +9152,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 检查项的描述
+             * CheckItemDescription.
              */
             public Builder checkItemDescription(String checkItemDescription) {
                 this.checkItemDescription = checkItemDescription;
@@ -8161,7 +9160,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 检查结果 (NotStarted: 未启动, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Warning: 警告, Success: 完成)
+             * CheckResult.
              */
             public Builder checkResult(String checkResult) {
                 this.checkResult = checkResult;
@@ -8169,7 +9168,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 错误原因
+             * FailedReason.
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -8177,7 +9176,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 修复方法
+             * RepairMethod.
              */
             public Builder repairMethod(String repairMethod) {
                 this.repairMethod = repairMethod;
@@ -8262,7 +9261,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -8270,7 +9269,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -8278,7 +9277,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -8403,7 +9402,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean retrying; 
 
             /**
-             * 错误信息
+             * ErrMsg.
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -8411,7 +9410,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务ID
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -8419,7 +9418,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 最大重试时间,单位秒
+             * MaxRetryTime.
              */
             public Builder maxRetryTime(Integer maxRetryTime) {
                 this.maxRetryTime = maxRetryTime;
@@ -8427,7 +9426,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 模块名称 reader/store/writer/full/struct
+             * Module.
              */
             public Builder module(String module) {
                 this.module = module;
@@ -8435,7 +9434,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已重试次数
+             * RetryCount.
              */
             public Builder retryCount(Integer retryCount) {
                 this.retryCount = retryCount;
@@ -8451,7 +9450,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已重试时间,单位秒
+             * RetryTime.
              */
             public Builder retryTime(Integer retryTime) {
                 this.retryTime = retryTime;
@@ -8459,7 +9458,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否重试中
+             * Retrying.
              */
             public Builder retrying(Boolean retrying) {
                 this.retrying = retrying;
@@ -8548,7 +9547,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -8556,7 +9555,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -8564,7 +9563,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -8572,7 +9571,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -8580,7 +9579,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -8669,7 +9668,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -8677,7 +9676,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -8685,7 +9684,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -8693,7 +9692,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -8701,7 +9700,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -8790,7 +9789,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -8798,7 +9797,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -8806,7 +9805,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -8814,7 +9813,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -8822,7 +9821,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -8995,7 +9994,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AliyunUid.
+             * The database engine of the source instance.
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -9003,7 +10002,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * The database service port of the source instance.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -9011,7 +10010,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EngineName.
+             * The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -9019,7 +10018,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceID.
+             * The system ID (SID) of the Oracle database.
+             * <p>
+             * 
+             * >  This parameter is returned only if the **EngineName** parameter of the source instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -9027,7 +10029,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The IP address of the source instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -9035,7 +10037,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The connection settings of the source instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -9043,7 +10045,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OracleSID.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -9051,7 +10057,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The ID of the source instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -9059,7 +10065,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The type of the source instance.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -9067,7 +10073,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * Indicates whether SSL encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   **DISABLE**: SSL encryption is disabled.
+             * *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
+             * *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
+             * *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -9075,7 +10087,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
+             * 
+             * >  This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -9083,7 +10101,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The ID of the region in which the source instance resides. For more information, see [List of supported regions](~~141033~~).
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -9160,7 +10178,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean structureInitialization; 
 
             /**
-             * DataExtractTransformLoad.
+             * The database account of the destination instance.
              */
             public Builder dataExtractTransformLoad(Boolean dataExtractTransformLoad) {
                 this.dataExtractTransformLoad = dataExtractTransformLoad;
@@ -9168,7 +10186,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataInitialization.
+             * The database engine of the destination instance.
              */
             public Builder dataInitialization(Boolean dataInitialization) {
                 this.dataInitialization = dataInitialization;
@@ -9176,7 +10194,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DataSynchronization.
+             * The migration types or synchronization types.
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
@@ -9184,7 +10202,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * StructureInitialization.
+             * Indicates whether data transformation is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: Data transformation is performed.
+             * *   **false**: Data transformation is not performed.
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;
@@ -9237,7 +10259,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String rps; 
 
             /**
-             * 每秒同步的流量，单位为：MB/s
+             * Flow.
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -9245,7 +10267,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 每秒同步的记录数
+             * Rps.
              */
             public Builder rps(String rps) {
                 this.rps = rps;
@@ -9334,7 +10356,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String repairMethod; 
 
             /**
-             * 预检查项
+             * CheckItem.
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -9342,7 +10364,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 检查项的描述
+             * CheckItemDescription.
              */
             public Builder checkItemDescription(String checkItemDescription) {
                 this.checkItemDescription = checkItemDescription;
@@ -9350,7 +10372,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 检查结果 (NotStarted: 未启动, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Warning: 警告, Success: 完成)
+             * CheckResult.
              */
             public Builder checkResult(String checkResult) {
                 this.checkResult = checkResult;
@@ -9358,7 +10380,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 错误原因
+             * FailedReason.
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -9366,7 +10388,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 修复方法
+             * RepairMethod.
              */
             public Builder repairMethod(String repairMethod) {
                 this.repairMethod = repairMethod;
@@ -9451,7 +10473,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -9459,7 +10481,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -9467,7 +10489,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -9592,7 +10614,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean retrying; 
 
             /**
-             * 错误信息
+             * ErrMsg.
              */
             public Builder errMsg(String errMsg) {
                 this.errMsg = errMsg;
@@ -9600,7 +10622,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务ID
+             * JobId.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -9608,7 +10630,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 最大重试时间,单位秒
+             * MaxRetryTime.
              */
             public Builder maxRetryTime(Integer maxRetryTime) {
                 this.maxRetryTime = maxRetryTime;
@@ -9616,7 +10638,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 模块名称 reader/store/writer/full/struct
+             * Module.
              */
             public Builder module(String module) {
                 this.module = module;
@@ -9624,7 +10646,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已重试次数
+             * RetryCount.
              */
             public Builder retryCount(Integer retryCount) {
                 this.retryCount = retryCount;
@@ -9640,7 +10662,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已重试时间,单位秒
+             * RetryTime.
              */
             public Builder retryTime(Integer retryTime) {
                 this.retryTime = retryTime;
@@ -9648,7 +10670,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否重试中
+             * Retrying.
              */
             public Builder retrying(Boolean retrying) {
                 this.retrying = retrying;
@@ -9821,7 +10843,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AliyunUid.
+             * The database engine of the source instance.
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -9829,7 +10851,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * The database service port of the source instance.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -9837,7 +10859,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EngineName.
+             * The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -9845,7 +10867,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceID.
+             * The system ID (SID) of the Oracle database.
+             * <p>
+             * 
+             * >  This parameter is returned only if the **EngineName** parameter of the source instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -9853,7 +10878,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The IP address of the source instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -9861,7 +10886,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The connection settings of the source instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -9869,7 +10894,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OracleSID.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -9877,7 +10906,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The ID of the source instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -9885,7 +10914,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The type of the source instance.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -9893,7 +10922,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * Indicates whether SSL encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   **DISABLE**: SSL encryption is disabled.
+             * *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
+             * *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
+             * *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -9901,7 +10936,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
+             * 
+             * >  This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -9909,7 +10950,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The ID of the region in which the source instance resides. For more information, see [List of supported regions](~~141033~~).
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -9998,7 +11039,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -10006,7 +11047,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -10014,7 +11055,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -10022,7 +11063,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -10030,7 +11071,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -10357,7 +11398,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * 用户id
+             * AliUid.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -10365,7 +11406,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签操作者
+             * Creator.
              */
             public Builder creator(Long creator) {
                 this.creator = creator;
@@ -10373,7 +11414,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -10381,7 +11422,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -10389,7 +11430,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 主键
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -10413,7 +11454,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -10421,7 +11462,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 0为public，1为private (Public, Private, All)
+             * Scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -10429,7 +11470,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务所在region，注意一般是dts的目标端region
+             * SrcRegion.
              */
             public Builder srcRegion(String srcRegion) {
                 this.srcRegion = srcRegion;
@@ -10437,7 +11478,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签类型：系统标签－System，用户标签－Custom (Custom, System, All)
+             * TagCategory.
              */
             public Builder tagCategory(String tagCategory) {
                 this.tagCategory = tagCategory;
@@ -10445,7 +11486,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签键tagkey
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -10453,7 +11494,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签值tagvalue
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -11010,7 +12051,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * AppName.
+             * The number of ApsaraDB RDS for MySQL instances that are attached to the source PolarDB-X 1.0 instance.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -11018,7 +12059,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BeginTimestamp.
+             * The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder beginTimestamp(String beginTimestamp) {
                 this.beginTimestamp = beginTimestamp;
@@ -11026,7 +12067,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Checkpoint.
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -11034,7 +12075,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumptionCheckpoint.
+             * The downstream client information in the following format: \<IP address of the downstream client>:\<Random ID generated by DTS>.
              */
             public Builder consumptionCheckpoint(String consumptionCheckpoint) {
                 this.consumptionCheckpoint = consumptionCheckpoint;
@@ -11042,7 +12083,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumptionClient.
+             * The error code returned if the request failed.
              */
             public Builder consumptionClient(String consumptionClient) {
                 this.consumptionClient = consumptionClient;
@@ -11050,7 +12091,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The end time of the task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -11082,7 +12123,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseCount.
+             * The point in time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder databaseCount(Integer databaseCount) {
                 this.databaseCount = databaseCount;
@@ -11090,7 +12131,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbObject.
+             * Indicates whether the request was successful.
              */
             public Builder dbObject(String dbObject) {
                 this.dbObject = dbObject;
@@ -11098,7 +12139,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Delay.
+             * The ID of the request.
              */
             public Builder delay(Long delay) {
                 this.delay = delay;
@@ -11106,7 +12147,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DestNetType.
+             * The instance class.
+             * <p>
+             * 
+             * >  For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).
              */
             public Builder destNetType(String destNetType) {
                 this.destNetType = destNetType;
@@ -11114,7 +12158,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationEndpoint.
+             * The name of the database that contains the objects to be migrated from the source instance.
              */
             public Builder destinationEndpoint(SubSyncJobReverseJobDestinationEndpoint destinationEndpoint) {
                 this.destinationEndpoint = destinationEndpoint;
@@ -11122,7 +12166,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsInstanceID.
+             * Indicates whether the new change tracking feature is used.
+             * <p>
+             * 
+             * >  This parameter is returned only for change tracking instances of the new version.
              */
             public Builder dtsInstanceID(String dtsInstanceID) {
                 this.dtsInstanceID = dtsInstanceID;
@@ -11130,7 +12177,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobClass.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   **PrePaid**: subscription
+             * *   **PostPaid**: pay-as-you-go
              */
             public Builder dtsJobClass(String dtsJobClass) {
                 this.dtsJobClass = dtsJobClass;
@@ -11138,7 +12189,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 请使用
+             * The beginning of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder dtsJobDirection(String dtsJobDirection) {
                 this.dtsJobDirection = dtsJobDirection;
@@ -11146,7 +12197,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobId.
+             * API test
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -11154,7 +12205,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobName.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
+             * 
+             * > 
+             * *   Default value: **Forward**.
+             * *   The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.
              */
             public Builder dtsJobName(String dtsJobName) {
                 this.dtsJobName = dtsJobName;
@@ -11162,7 +12221,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimestamp.
+             * The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
              */
             public Builder endTimestamp(String endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -11170,7 +12229,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -11178,7 +12237,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EtlCalculator.
+             * The objects of the data migration, data synchronization, or change tracking task. For more information, see [Objects of DTS tasks](~~209545~~).
              */
             public Builder etlCalculator(String etlCalculator) {
                 this.etlCalculator = etlCalculator;
@@ -11186,7 +12245,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The error code. This parameter will be removed in the future.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -11194,7 +12253,28 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The state of the data migration or data synchronization task.
+             * <p>
+             * 
+             * Valid values for a data migration task:
+             * 
+             * *   **NotStarted**: The migration is not started.
+             * *   **Migrating**: The migration is in progress.
+             * *   **Failed**: The migration failed.
+             * *   **Finished**: The migration is complete.
+             * 
+             * Valid values for a data synchronization task:
+             * 
+             * *   **NotStarted**: The task is not started.
+             * *   **Prechecking**: The task is in precheck.
+             * *   **PrecheckFailed**: The task failed to pass the precheck.
+             * *   **Initializing**: The task is performing initial synchronization.
+             * *   **InitializeFailed**: Initial synchronization failed.
+             * *   **Synchronizing**: The task is in progress.
+             * *   **Failed**: The task failed to synchronize data.
+             * *   **Suspending**: The task is paused.
+             * *   **Modifying**: The objects in the task are being modified.
+             * *   **Finished**: The task is complete.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -11202,7 +12282,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The operator information of the extract, transform, and load (ETL) task.
+             * <p>
+             * 
+             * >  This parameter is returned only if you query the details of an ETL task.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -11218,7 +12301,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 返回结果中新增jobType字段
+             * JobType.
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -11226,7 +12309,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MigrationMode.
+             * The type of the destination instance.
              */
             public Builder migrationMode(SubSyncJobReverseJobMigrationMode migrationMode) {
                 this.migrationMode = migrationMode;
@@ -11234,7 +12317,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务来源 pts任务、dms任务 (PTS, DMS, DTS)
+             * OriginType.
              */
             public Builder originType(String originType) {
                 this.originType = originType;
@@ -11242,7 +12325,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The error message returned if the task failed.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -11266,7 +12349,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Reserved.
+             * The ID of the data migration, data synchronization, or change tracking task.
              */
             public Builder reserved(String reserved) {
                 this.reserved = reserved;
@@ -11290,7 +12373,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpoint.
+             * The ID of the DTS task.
              */
             public Builder sourceEndpoint(SubSyncJobReverseJobSourceEndpoint sourceEndpoint) {
                 this.sourceEndpoint = sourceEndpoint;
@@ -11298,7 +12381,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -11314,7 +12397,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubscribeTopic.
+             * The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder subscribeTopic(String subscribeTopic) {
                 this.subscribeTopic = subscribeTopic;
@@ -11322,7 +12405,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionDataType.
+             * The VPC endpoint of the change tracking instance in the `<Address>:<Port number>` format.
              */
             public Builder subscriptionDataType(SubSyncJobReverseJobSubscriptionDataType subscriptionDataType) {
                 this.subscriptionDataType = subscriptionDataType;
@@ -11330,7 +12413,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionHost.
+             * Indicates whether full data migration or synchronization is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: Full data migration or synchronization is performed.
+             * *   **false**: Full data migration or synchronization is not performed.
              */
             public Builder subscriptionHost(SubSyncJobReverseJobSubscriptionHost subscriptionHost) {
                 this.subscriptionHost = subscriptionHost;
@@ -11338,7 +12425,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SynchronizationDirection.
+             * The status code returned.
              */
             public Builder synchronizationDirection(String synchronizationDirection) {
                 this.synchronizationDirection = synchronizationDirection;
@@ -11527,7 +12614,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AliyunUid.
+             * The database engine of the source instance.
              */
             public Builder aliyunUid(String aliyunUid) {
                 this.aliyunUid = aliyunUid;
@@ -11535,7 +12622,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * The database service port of the source instance.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -11543,7 +12630,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EngineName.
+             * The name of the RAM role configured for the Alibaba Cloud account that owns the source instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -11551,7 +12638,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceID.
+             * The system ID (SID) of the Oracle database.
+             * <p>
+             * 
+             * >  This parameter is returned only if the **EngineName** parameter of the source instance is set to **Oracle** and the Oracle database is deployed in a non-RAC architecture.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -11559,7 +12649,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The IP address of the source instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -11567,7 +12657,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The connection settings of the source instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -11575,7 +12665,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OracleSID.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -11583,7 +12677,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The ID of the source instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -11591,7 +12685,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The type of the source instance.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -11599,7 +12693,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * Indicates whether SSL encryption is enabled. Valid values:
+             * <p>
+             * 
+             * *   **DISABLE**: SSL encryption is disabled.
+             * *   **ENABLE_WITH_CERTIFICATE**: SSL encryption is enabled, and the CA certificate is uploaded.
+             * *   **ENABLE_ONLY\_4\_MONGODB_ALTAS**: SSL encryption is enabled for the connection to an AWS MongoDB Altas database.
+             * *   **ENABLE_ONLY\_4\_KAFKA_SCRAM_SHA\_256**: SCRAM-SHA-256 is used to encrypt the connection to a Kafka cluster.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -11607,7 +12707,13 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DISABLE: 不使用 SSL, ENABLE_WITH_CERTIFICATE: 使用 SSL, 需要用户上传 CA 证书, ENABLE_ONLY_4_MONGODB_ATLAS: 使用 SSL, 但只适用于 AWS MongoDB Altas, 不需要证书, ENABLE_ONLY_4_KAFKA_SCRAM_SHA_256: Kafka SCRAM-SHA-256 支持, 不需要证书
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
+             * 
+             * >  This parameter is returned only if the topology of the data synchronization instance is two-way synchronization.
              */
             public Builder sslSolutionEnum(String sslSolutionEnum) {
                 this.sslSolutionEnum = sslSolutionEnum;
@@ -11615,7 +12721,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The ID of the region in which the source instance resides. For more information, see [List of supported regions](~~141033~~).
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -11704,7 +12810,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -11712,7 +12818,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 是否显示提升升级规格
+             * NeedUpgrade.
              */
             public Builder needUpgrade(Boolean needUpgrade) {
                 this.needUpgrade = needUpgrade;
@@ -11720,7 +12826,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 迁移进度
+             * Percent.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -11728,7 +12834,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 已经完成迁移的表数量
+             * Progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -11736,7 +12842,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -12063,7 +13169,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * 用户id
+             * AliUid.
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -12071,7 +13177,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签操作者
+             * Creator.
              */
             public Builder creator(Long creator) {
                 this.creator = creator;
@@ -12079,7 +13185,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -12087,7 +13193,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -12095,7 +13201,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 主键
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -12119,7 +13225,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -12127,7 +13233,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 0为public，1为private (Public, Private, All)
+             * Scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -12135,7 +13241,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务所在region，注意一般是dts的目标端region
+             * SrcRegion.
              */
             public Builder srcRegion(String srcRegion) {
                 this.srcRegion = srcRegion;
@@ -12143,7 +13249,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签类型：系统标签－System，用户标签－Custom (Custom, System, All)
+             * TagCategory.
              */
             public Builder tagCategory(String tagCategory) {
                 this.tagCategory = tagCategory;
@@ -12151,7 +13257,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签键tagkey
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -12159,7 +13265,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 标签值tagvalue
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -12728,7 +13834,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * AppName.
+             * The number of ApsaraDB RDS for MySQL instances that are attached to the source PolarDB-X 1.0 instance.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -12736,7 +13842,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * BeginTimestamp.
+             * The consumption checkpoint of the change tracking instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder beginTimestamp(String beginTimestamp) {
                 this.beginTimestamp = beginTimestamp;
@@ -12744,7 +13850,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Checkpoint.
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -12752,7 +13858,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumptionCheckpoint.
+             * The downstream client information in the following format: \<IP address of the downstream client>:\<Random ID generated by DTS>.
              */
             public Builder consumptionCheckpoint(String consumptionCheckpoint) {
                 this.consumptionCheckpoint = consumptionCheckpoint;
@@ -12760,7 +13866,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumptionClient.
+             * The error code returned if the request failed.
              */
             public Builder consumptionClient(String consumptionClient) {
                 this.consumptionClient = consumptionClient;
@@ -12768,7 +13874,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The end time of the task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -12800,7 +13906,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseCount.
+             * The point in time when the task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder databaseCount(Integer databaseCount) {
                 this.databaseCount = databaseCount;
@@ -12808,7 +13914,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DbObject.
+             * Indicates whether the request was successful.
              */
             public Builder dbObject(String dbObject) {
                 this.dbObject = dbObject;
@@ -12816,7 +13922,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Delay.
+             * The ID of the request.
              */
             public Builder delay(Long delay) {
                 this.delay = delay;
@@ -12824,7 +13930,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DestNetType.
+             * The instance class.
+             * <p>
+             * 
+             * >  For more information about the test performance of each instance class, see [Specifications of data migration instances](~~26606~~) and [Specifications of data synchronization instances](~~26605~~).
              */
             public Builder destNetType(String destNetType) {
                 this.destNetType = destNetType;
@@ -12832,7 +13941,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DestinationEndpoint.
+             * The name of the database that contains the objects to be migrated from the source instance.
              */
             public Builder destinationEndpoint(SubSyncJobDestinationEndpoint destinationEndpoint) {
                 this.destinationEndpoint = destinationEndpoint;
@@ -12840,7 +13949,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsInstanceID.
+             * Indicates whether the new change tracking feature is used.
+             * <p>
+             * 
+             * >  This parameter is returned only for change tracking instances of the new version.
              */
             public Builder dtsInstanceID(String dtsInstanceID) {
                 this.dtsInstanceID = dtsInstanceID;
@@ -12848,7 +13960,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobClass.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   **PrePaid**: subscription
+             * *   **PostPaid**: pay-as-you-go
              */
             public Builder dtsJobClass(String dtsJobClass) {
                 this.dtsJobClass = dtsJobClass;
@@ -12856,7 +13972,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 请使用
+             * The beginning of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder dtsJobDirection(String dtsJobDirection) {
                 this.dtsJobDirection = dtsJobDirection;
@@ -12864,7 +13980,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobId.
+             * API test
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -12872,7 +13988,15 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobName.
+             * The synchronization direction. Valid values:
+             * <p>
+             * 
+             * *   **Forward**: Data is synchronized from the source database to the destination database.
+             * *   **Reverse**: Data is synchronized from the destination database to the source database.
+             * 
+             * > 
+             * *   Default value: **Forward**.
+             * *   The value **Reverse** takes effect only if the topology of the data synchronization instance is two-way synchronization.
              */
             public Builder dtsJobName(String dtsJobName) {
                 this.dtsJobName = dtsJobName;
@@ -12880,7 +14004,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EndTimestamp.
+             * The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, for example, whether to automatically start a precheck. For more information, see [MigrationReserved](~~176470~~).
              */
             public Builder endTimestamp(String endTimestamp) {
                 this.endTimestamp = endTimestamp;
@@ -12888,7 +14012,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The name of the data migration, data synchronization, or change tracking task.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -12896,7 +14020,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EtlCalculator.
+             * The objects of the data migration, data synchronization, or change tracking task. For more information, see [Objects of DTS tasks](~~209545~~).
              */
             public Builder etlCalculator(String etlCalculator) {
                 this.etlCalculator = etlCalculator;
@@ -12904,7 +14028,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The error code. This parameter will be removed in the future.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -12912,7 +14036,28 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The state of the data migration or data synchronization task.
+             * <p>
+             * 
+             * Valid values for a data migration task:
+             * 
+             * *   **NotStarted**: The migration is not started.
+             * *   **Migrating**: The migration is in progress.
+             * *   **Failed**: The migration failed.
+             * *   **Finished**: The migration is complete.
+             * 
+             * Valid values for a data synchronization task:
+             * 
+             * *   **NotStarted**: The task is not started.
+             * *   **Prechecking**: The task is in precheck.
+             * *   **PrecheckFailed**: The task failed to pass the precheck.
+             * *   **Initializing**: The task is performing initial synchronization.
+             * *   **InitializeFailed**: Initial synchronization failed.
+             * *   **Synchronizing**: The task is in progress.
+             * *   **Failed**: The task failed to synchronize data.
+             * *   **Suspending**: The task is paused.
+             * *   **Modifying**: The objects in the task are being modified.
+             * *   **Finished**: The task is complete.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -12920,7 +14065,10 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The operator information of the extract, transform, and load (ETL) task.
+             * <p>
+             * 
+             * >  This parameter is returned only if you query the details of an ETL task.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -12936,7 +14084,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 返回结果中新增jobType字段
+             * JobType.
              */
             public Builder jobType(String jobType) {
                 this.jobType = jobType;
@@ -12944,7 +14092,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MigrationMode.
+             * The type of the destination instance.
              */
             public Builder migrationMode(SubSyncJobMigrationMode migrationMode) {
                 this.migrationMode = migrationMode;
@@ -12952,7 +14100,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 任务来源 pts任务、dms任务 (PTS, DMS, DTS)
+             * OriginType.
              */
             public Builder originType(String originType) {
                 this.originType = originType;
@@ -12960,7 +14108,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The error message returned if the task failed.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -12984,7 +14132,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Reserved.
+             * The ID of the data migration, data synchronization, or change tracking task.
              */
             public Builder reserved(String reserved) {
                 this.reserved = reserved;
@@ -13008,7 +14156,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceEndpoint.
+             * The ID of the DTS task.
              */
             public Builder sourceEndpoint(SubSyncJobSourceEndpoint sourceEndpoint) {
                 this.sourceEndpoint = sourceEndpoint;
@@ -13016,7 +14164,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NotStarted: 未启动, Suspending: 暂停中, Checking: 检查中, Migrating: 迁移中, Failed: 失败, Catched: 同步中 ｜ 增量迁移中, Finished: 完成
+             * The ID of the data migration, data synchronization, or change tracking instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -13040,7 +14188,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubscribeTopic.
+             * The end of the time range for change tracking. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder subscribeTopic(String subscribeTopic) {
                 this.subscribeTopic = subscribeTopic;
@@ -13048,7 +14196,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionDataType.
+             * The VPC endpoint of the change tracking instance in the `<Address>:<Port number>` format.
              */
             public Builder subscriptionDataType(SubSyncJobSubscriptionDataType subscriptionDataType) {
                 this.subscriptionDataType = subscriptionDataType;
@@ -13056,7 +14204,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionHost.
+             * Indicates whether full data migration or synchronization is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: Full data migration or synchronization is performed.
+             * *   **false**: Full data migration or synchronization is not performed.
              */
             public Builder subscriptionHost(SubSyncJobSubscriptionHost subscriptionHost) {
                 this.subscriptionHost = subscriptionHost;
@@ -13064,7 +14216,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SynchronizationDirection.
+             * The status code returned.
              */
             public Builder synchronizationDirection(String synchronizationDirection) {
                 this.synchronizationDirection = synchronizationDirection;
@@ -13133,7 +14285,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private Boolean dml; 
 
             /**
-             * Ddl.
+             * The private endpoint of the change tracking instance in the `<Address>:<Port number>` format.
              */
             public Builder ddl(Boolean ddl) {
                 this.ddl = ddl;
@@ -13141,7 +14293,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Dml.
+             * The public endpoint of the change tracking instance in the `<Address>:<Port number>` format.
              */
             public Builder dml(Boolean dml) {
                 this.dml = dml;
@@ -13206,7 +14358,7 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             private String vpcHost; 
 
             /**
-             * PrivateHost.
+             * The endpoint of the change tracking instance.
              */
             public Builder privateHost(String privateHost) {
                 this.privateHost = privateHost;
@@ -13214,7 +14366,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PublicHost.
+             * Indicates whether schema migration or schema synchronization is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: Schema migration or schema synchronization is performed.
+             * *   **false**: Schema migration or schema synchronization is not performed.
              */
             public Builder publicHost(String publicHost) {
                 this.publicHost = publicHost;
@@ -13222,7 +14378,11 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
             }
 
             /**
-             * VpcHost.
+             * Indicates whether incremental data migration or synchronization is performed. Valid values:
+             * <p>
+             * 
+             * *   **true**: Incremental data migration or synchronization is performed.
+             * *   **false**: Incremental data migration or synchronization is not performed.
              */
             public Builder vpcHost(String vpcHost) {
                 this.vpcHost = vpcHost;

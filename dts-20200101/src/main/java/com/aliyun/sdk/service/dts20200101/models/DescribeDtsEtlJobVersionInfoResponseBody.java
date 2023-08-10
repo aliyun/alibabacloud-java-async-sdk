@@ -158,7 +158,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * DtsEtlJobVersionInfos.
+         * The details of ETL tasks.
          */
         public Builder dtsEtlJobVersionInfos(java.util.List < DtsEtlJobVersionInfos> dtsEtlJobVersionInfos) {
             this.dtsEtlJobVersionInfos = dtsEtlJobVersionInfos;
@@ -166,7 +166,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -174,7 +174,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -182,7 +182,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code. This example indicates that the specified ETL task ID is invalid.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -190,7 +190,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message. This example indicates that the specified ETL task ID does not exist. In this case, the ETL task may have been deleted.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -198,7 +198,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -206,7 +206,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -214,7 +214,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of records returned on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -222,7 +222,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful. If the call failed, false is returned.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of records.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -386,7 +386,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             private Integer version; 
 
             /**
-             * CreateTime.
+             * The time when the ETL task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -394,7 +394,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Creator.
+             * The ID of the creator.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -402,7 +402,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorName.
+             * The username of the creator.
              */
             public Builder creatorName(String creatorName) {
                 this.creatorName = creatorName;
@@ -410,7 +410,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DtsInstanceId.
+             * The ID of the DTS instance.
              */
             public Builder dtsInstanceId(String dtsInstanceId) {
                 this.dtsInstanceId = dtsInstanceId;
@@ -418,7 +418,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobId.
+             * The ID of the ETL task.
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -426,7 +426,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobName.
+             * The name of the ETL task.
              */
             public Builder dtsJobName(String dtsJobName) {
                 this.dtsJobName = dtsJobName;
@@ -434,7 +434,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the ETL task was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -442,7 +442,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SafeCheckpoint.
+             * The safe checkpoint of the ETL task.
              */
             public Builder safeCheckpoint(String safeCheckpoint) {
                 this.safeCheckpoint = safeCheckpoint;
@@ -450,7 +450,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The log level. Valid values: ERROR, WARN, INFO, and DEBUG.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -458,7 +458,7 @@ public class DescribeDtsEtlJobVersionInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number of the ETL task.
              */
             public Builder version(Integer version) {
                 this.version = version;

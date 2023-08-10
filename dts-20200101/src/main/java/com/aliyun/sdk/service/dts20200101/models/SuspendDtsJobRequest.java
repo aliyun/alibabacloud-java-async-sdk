@@ -87,16 +87,16 @@ public class SuspendDtsJobRequest extends Request {
             super();
         } 
 
-        private Builder(SuspendDtsJobRequest response) {
-            super(response);
-            this.dtsInstanceId = response.dtsInstanceId;
-            this.dtsJobId = response.dtsJobId;
-            this.regionId = response.regionId;
-            this.synchronizationDirection = response.synchronizationDirection;
+        private Builder(SuspendDtsJobRequest request) {
+            super(request);
+            this.dtsInstanceId = request.dtsInstanceId;
+            this.dtsJobId = request.dtsJobId;
+            this.regionId = request.regionId;
+            this.synchronizationDirection = request.synchronizationDirection;
         } 
 
         /**
-         * DtsInstanceId.
+         * The ID of the data migration, data synchronization, or change tracking instance.
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -105,7 +105,10 @@ public class SuspendDtsJobRequest extends Request {
         }
 
         /**
-         * DtsJobId.
+         * The ID of the data migration, data synchronization, or change tracking task.
+         * <p>
+         * 
+         * >  You can call the [DescribeDtsJobs](~~209702~~) operation to obtain the task ID.
          */
         public Builder dtsJobId(String dtsJobId) {
             this.putQueryParameter("DtsJobId", dtsJobId);
@@ -114,7 +117,7 @@ public class SuspendDtsJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the DTS instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -123,7 +126,15 @@ public class SuspendDtsJobRequest extends Request {
         }
 
         /**
-         * SynchronizationDirection.
+         * The synchronization direction. Valid values:
+         * <p>
+         * 
+         * *   **Forward**: Data is synchronized from the source database to the destination database.
+         * *   **Reverse**: Data is synchronized from the destination database to the source database.
+         * 
+         * > 
+         * *   Default value: **Forward**.
+         * *   You can set this parameter to **Reverse** to pause the reverse synchronization task only if the topology is two-way synchronization.
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.putQueryParameter("SynchronizationDirection", synchronizationDirection);

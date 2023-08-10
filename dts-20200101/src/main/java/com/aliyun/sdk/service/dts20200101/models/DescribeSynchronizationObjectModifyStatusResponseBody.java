@@ -146,7 +146,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         private String success; 
 
         /**
-         * DataInitializationStatus.
+         * The status of full data synchronization.
          */
         public Builder dataInitializationStatus(DataInitializationStatus dataInitializationStatus) {
             this.dataInitializationStatus = dataInitializationStatus;
@@ -154,7 +154,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * DataSynchronizationStatus.
+         * The status of incremental data synchronization.
+         * <p>
+         * 
+         * >  This parameter and its sub-parameters will be removed in the future.
          */
         public Builder dataSynchronizationStatus(DataSynchronizationStatus dataSynchronizationStatus) {
             this.dataSynchronizationStatus = dataSynchronizationStatus;
@@ -162,7 +165,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -170,7 +173,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -178,7 +181,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the task failed to modify the objects to be synchronized.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -186,7 +189,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * PrecheckStatus.
+         * The precheck status.
          */
         public Builder precheckStatus(PrecheckStatus precheckStatus) {
             this.precheckStatus = precheckStatus;
@@ -194,7 +197,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +205,15 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * Status.
+         * The status of the task that changes the objects to be synchronized. Valid values:
+         * <p>
+         * 
+         * *   **NotStarted**: The task is not started.
+         * *   **Prechecking**: The task is being prechecked.
+         * *   **PrecheckFailed**: The task failed to pass the precheck.
+         * *   **Migrating**: The task is running.
+         * *   **Failed**: The task failed.
+         * *   **Finished**: The task is completed.
          */
         public Builder status(String status) {
             this.status = status;
@@ -210,7 +221,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * StructureInitializationStatus.
+         * The status of schema synchronization.
          */
         public Builder structureInitializationStatus(StructureInitializationStatus structureInitializationStatus) {
             this.structureInitializationStatus = structureInitializationStatus;
@@ -218,7 +229,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -294,7 +305,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The error message returned if full data synchronization failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -302,7 +313,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * Percent.
+             * The progress of full data synchronization. Unit: %.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -310,7 +321,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * Progress.
+             * The number of records that have been synchronized during full data synchronization.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -318,7 +329,13 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * Status.
+             * The status of full data synchronization. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**: Full data synchronization is not started.
+             * *   **Migrating**: Full data synchronization is in progress.
+             * *   **Failed**: Full data synchronization failed.
+             * *   **Finished**: Full data synchronization is completed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -395,7 +412,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String status; 
 
             /**
-             * Delay.
+             * The synchronization latency, in seconds.
              */
             public Builder delay(String delay) {
                 this.delay = delay;
@@ -403,7 +420,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if incremental data synchronization failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -411,7 +428,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * Percent.
+             * The progress of incremental data synchronization. Unit: %.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -419,7 +436,13 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * Status.
+             * The status of incremental data synchronization. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**: Incremental data synchronization is not started.
+             * *   **Migrating**: Incremental data synchronization is in progress.
+             * *   **Failed**: Incremental data synchronization failed.
+             * *   **Finished**: Incremental data synchronization is completed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -496,7 +519,11 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String repairMethod; 
 
             /**
-             * CheckStatus.
+             * The precheck result. Valid values:
+             * <p>
+             * 
+             * *   Success: The task passed the precheck.
+             * *   Failed: The task failed to pass the precheck.
              */
             public Builder checkStatus(String checkStatus) {
                 this.checkStatus = checkStatus;
@@ -504,7 +531,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if the task failed to pass the precheck.
+             * <p>
+             * 
+             * >  This parameter is returned only if the return value of the **CheckStatus** parameter is **Failed**.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -512,7 +542,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * ItemName.
+             * The name of the precheck item.
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -520,7 +550,10 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * RepairMethod.
+             * The method to fix the precheck failure.
+             * <p>
+             * 
+             * >  This parameter is returned only if the return value of the **CheckStatus** parameter is Failed.
              */
             public Builder repairMethod(String repairMethod) {
                 this.repairMethod = repairMethod;
@@ -585,7 +618,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String status; 
 
             /**
-             * Detail.
+             * The result of each precheck item.
              */
             public Builder detail(java.util.List < Detail> detail) {
                 this.detail = detail;
@@ -593,7 +626,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * Percent.
+             * The precheck progress. Unit: %.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -601,7 +634,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * Status.
+             * The precheck status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -678,7 +711,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The error message returned if schema synchronization failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -686,7 +719,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * Percent.
+             * The progress of schema synchronization. Unit: %.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -694,7 +727,7 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * Progress.
+             * The number of tables whose schemas have been synchronized.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -702,7 +735,13 @@ public class DescribeSynchronizationObjectModifyStatusResponseBody extends TeaMo
             }
 
             /**
-             * Status.
+             * The status of schema synchronization. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**: Schema synchronization is not started.
+             * *   **Migrating**: Schema synchronization is in progress.
+             * *   **Failed**: Schema synchronization failed.
+             * *   **Finished**: Schema synchronization is completed.
              */
             public Builder status(String status) {
                 this.status = status;

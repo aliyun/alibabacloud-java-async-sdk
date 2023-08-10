@@ -12,6 +12,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMigrationJobDetailRequest</p>
  */
 public class DescribeMigrationJobDetailRequest extends Request {
+    @Query
     @NameInMap("MigrationMode")
     private MigrationMode migrationMode;
 
@@ -140,28 +141,29 @@ public class DescribeMigrationJobDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMigrationJobDetailRequest response) {
-            super(response);
-            this.migrationMode = response.migrationMode;
-            this.accountId = response.accountId;
-            this.clientToken = response.clientToken;
-            this.migrationJobId = response.migrationJobId;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
+        private Builder(DescribeMigrationJobDetailRequest request) {
+            super(request);
+            this.migrationMode = request.migrationMode;
+            this.accountId = request.accountId;
+            this.clientToken = request.clientToken;
+            this.migrationJobId = request.migrationJobId;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**
          * MigrationMode.
          */
         public Builder migrationMode(MigrationMode migrationMode) {
+            this.putQueryParameter("MigrationMode", migrationMode);
             this.migrationMode = migrationMode;
             return this;
         }
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -170,7 +172,7 @@ public class DescribeMigrationJobDetailRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The **ClientToken** value can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -179,7 +181,7 @@ public class DescribeMigrationJobDetailRequest extends Request {
         }
 
         /**
-         * MigrationJobId.
+         * The ID of the data migration instance. You can call the **DescribeMigrationJobs** operation to query the instance ID.
          */
         public Builder migrationJobId(String migrationJobId) {
             this.putQueryParameter("MigrationJobId", migrationJobId);
@@ -197,7 +199,7 @@ public class DescribeMigrationJobDetailRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -206,7 +208,7 @@ public class DescribeMigrationJobDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -215,7 +217,7 @@ public class DescribeMigrationJobDetailRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the data migration instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -281,7 +283,14 @@ public class DescribeMigrationJobDetailRequest extends Request {
             private Boolean structureInitialization; 
 
             /**
-             * DataInitialization.
+             * Specifies whether to query the details of full data migration. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * 
+             * *   **false**: no
+             * 
+             * > Default value: **false**
              */
             public Builder dataInitialization(Boolean dataInitialization) {
                 this.dataInitialization = dataInitialization;
@@ -289,7 +298,14 @@ public class DescribeMigrationJobDetailRequest extends Request {
             }
 
             /**
-             * DataSynchronization.
+             * Specifies whether to query the details of incremental data migration. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * 
+             * *   **false**: no
+             * 
+             * > Default value: **false**
              */
             public Builder dataSynchronization(Boolean dataSynchronization) {
                 this.dataSynchronization = dataSynchronization;
@@ -297,7 +313,14 @@ public class DescribeMigrationJobDetailRequest extends Request {
             }
 
             /**
-             * StructureInitialization.
+             * Specifies whether to query the details of schema migration. Valid values:
+             * <p>
+             * 
+             * *   **true**: yes
+             * 
+             * *   **false**: no
+             * 
+             * > Default value: **false**
              */
             public Builder structureInitialization(Boolean structureInitialization) {
                 this.structureInitialization = structureInitialization;

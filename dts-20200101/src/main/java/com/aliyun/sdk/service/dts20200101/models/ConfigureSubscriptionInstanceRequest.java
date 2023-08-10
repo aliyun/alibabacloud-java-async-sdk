@@ -12,12 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfigureSubscriptionInstanceRequest</p>
  */
 public class ConfigureSubscriptionInstanceRequest extends Request {
+    @Query
     @NameInMap("SourceEndpoint")
     private SourceEndpoint sourceEndpoint;
 
+    @Query
     @NameInMap("SubscriptionDataType")
     private SubscriptionDataType subscriptionDataType;
 
+    @Query
     @NameInMap("SubscriptionInstance")
     private SubscriptionInstance subscriptionInstance;
 
@@ -164,24 +167,25 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ConfigureSubscriptionInstanceRequest response) {
-            super(response);
-            this.sourceEndpoint = response.sourceEndpoint;
-            this.subscriptionDataType = response.subscriptionDataType;
-            this.subscriptionInstance = response.subscriptionInstance;
-            this.accountId = response.accountId;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.subscriptionInstanceId = response.subscriptionInstanceId;
-            this.subscriptionInstanceName = response.subscriptionInstanceName;
-            this.subscriptionInstanceNetworkType = response.subscriptionInstanceNetworkType;
-            this.subscriptionObject = response.subscriptionObject;
+        private Builder(ConfigureSubscriptionInstanceRequest request) {
+            super(request);
+            this.sourceEndpoint = request.sourceEndpoint;
+            this.subscriptionDataType = request.subscriptionDataType;
+            this.subscriptionInstance = request.subscriptionInstance;
+            this.accountId = request.accountId;
+            this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
+            this.subscriptionInstanceId = request.subscriptionInstanceId;
+            this.subscriptionInstanceName = request.subscriptionInstanceName;
+            this.subscriptionInstanceNetworkType = request.subscriptionInstanceNetworkType;
+            this.subscriptionObject = request.subscriptionObject;
         } 
 
         /**
          * SourceEndpoint.
          */
         public Builder sourceEndpoint(SourceEndpoint sourceEndpoint) {
+            this.putQueryParameter("SourceEndpoint", sourceEndpoint);
             this.sourceEndpoint = sourceEndpoint;
             return this;
         }
@@ -190,6 +194,7 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
          * SubscriptionDataType.
          */
         public Builder subscriptionDataType(SubscriptionDataType subscriptionDataType) {
+            this.putQueryParameter("SubscriptionDataType", subscriptionDataType);
             this.subscriptionDataType = subscriptionDataType;
             return this;
         }
@@ -198,12 +203,13 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
          * SubscriptionInstance.
          */
         public Builder subscriptionInstance(SubscriptionInstance subscriptionInstance) {
+            this.putQueryParameter("SubscriptionInstance", subscriptionInstance);
             this.subscriptionInstance = subscriptionInstance;
             return this;
         }
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is discontinued.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -230,7 +236,7 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
         }
 
         /**
-         * SubscriptionInstanceId.
+         * The ID of the region in which the change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder subscriptionInstanceId(String subscriptionInstanceId) {
             this.putQueryParameter("SubscriptionInstanceId", subscriptionInstanceId);
@@ -239,7 +245,7 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
         }
 
         /**
-         * SubscriptionInstanceName.
+         * The ID of the change tracking instance. You can call the [DescribeSubscriptionInstances](~~49442~~) operation to query the instance ID.
          */
         public Builder subscriptionInstanceName(String subscriptionInstanceName) {
             this.putQueryParameter("SubscriptionInstanceName", subscriptionInstanceName);
@@ -248,7 +254,12 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
         }
 
         /**
-         * SubscriptionInstanceNetworkType.
+         * The network type of the change tracking instance. Set the value to **vpc**. A value of vpc indicates the Virtual Private Cloud (VPC) network type.
+         * <p>
+         * 
+         * > 
+         * *   To use the new version of the change tracking feature, you must specify the SubscriptionInstanceNetworkType parameter. You must also specify the **SubscriptionInstance.VPCId** and **SubscriptionInstance.VSwitchID** parameters. If you do not specify the SubscriptionInstanceNetworkType parameter, the previous version of the change tracking feature is used.
+         * *   The previous version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and PolarDB-X 1.0 instances. The new version of the change tracking feature supports self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.
          */
         public Builder subscriptionInstanceNetworkType(String subscriptionInstanceNetworkType) {
             this.putQueryParameter("SubscriptionInstanceNetworkType", subscriptionInstanceNetworkType);
@@ -257,7 +268,7 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
         }
 
         /**
-         * SubscriptionObject.
+         * The objects for which you want to track data changes. The value is a JSON string and can contain regular expressions. For more information, see [SubscriptionObjects](~~141902~~).
          */
         public Builder subscriptionObject(String subscriptionObject) {
             this.putBodyParameter("SubscriptionObject", subscriptionObject);
@@ -277,7 +288,7 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
         private String databaseName;
 
         @NameInMap("IP")
-        private String IP;
+        private String ip;
 
         @NameInMap("InstanceID")
         private String instanceID;
@@ -305,7 +316,7 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
 
         private SourceEndpoint(Builder builder) {
             this.databaseName = builder.databaseName;
-            this.IP = builder.IP;
+            this.ip = builder.ip;
             this.instanceID = builder.instanceID;
             this.instanceType = builder.instanceType;
             this.oracleSID = builder.oracleSID;
@@ -332,10 +343,10 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
         }
 
         /**
-         * @return IP
+         * @return ip
          */
-        public String getIP() {
-            return this.IP;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -396,7 +407,7 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
 
         public static final class Builder {
             private String databaseName; 
-            private String IP; 
+            private String ip; 
             private String instanceID; 
             private String instanceType; 
             private String oracleSID; 
@@ -407,7 +418,7 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             private String userName; 
 
             /**
-             * DatabaseName.
+             * The name of the source database.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -415,15 +426,21 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             }
 
             /**
-             * IP.
+             * The IP address of the source database.
+             * <p>
+             * 
+             * >  This parameter is required only when the source database is a self-managed database.
              */
-            public Builder IP(String IP) {
-                this.IP = IP;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 
             /**
-             * InstanceID.
+             * The ID of the source database.
+             * <p>
+             * 
+             * >  This parameter is required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -431,7 +448,18 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             }
 
             /**
-             * InstanceType.
+             * The type of the source database. Valid values:
+             * <p>
+             * 
+             * *   **RDS**: ApsaraDB RDS for MySQL instance
+             * *   **PolarDB**: PolarDB for MySQL cluster
+             * *   **LocalInstance**: self-managed database with a public IP address
+             * *   **ECS**: self-managed database hosted on an Elastic Compute Service (ECS) instance
+             * *   **Express**: self-managed database connected over Express Connect
+             * *   **CEN**: self-managed database connected over Cloud Enterprise Network (CEN)
+             * *   **dg**: self-managed database connected over Database Gateway
+             * 
+             * >  The engine of a self-managed database can be MySQL or Oracle. You must specify the engine type when you call the [CreateSubscriptionInstance](~~49436~~) operation.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -439,7 +467,10 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             }
 
             /**
-             * OracleSID.
+             * The system ID (SID) of the Oracle database.
+             * <p>
+             * 
+             * >  This parameter is required only when the source database is a self-managed Oracle database and is not deployed in the Real Application Clusters (RAC) architecture.
              */
             public Builder oracleSID(String oracleSID) {
                 this.oracleSID = oracleSID;
@@ -447,7 +478,10 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             }
 
             /**
-             * OwnerID.
+             * The ID of the Alibaba Cloud account to which the source database belongs.
+             * <p>
+             * 
+             * >  This parameter is required only when you track data changes across different Alibaba Cloud accounts.
              */
             public Builder ownerID(String ownerID) {
                 this.ownerID = ownerID;
@@ -455,7 +489,7 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             }
 
             /**
-             * Password.
+             * The password of the account that is used to connect to the source database.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -463,7 +497,10 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             }
 
             /**
-             * Port.
+             * The service port number of the source database.
+             * <p>
+             * 
+             * >  This parameter is required only when the source database is a self-managed database.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -471,7 +508,10 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             }
 
             /**
-             * Role.
+             * The RAM role that is authorized to access the source database. This parameter is required if the source database does not belong to the Alibaba Cloud account that you use to configure the change tracking instance. In this case, you must authorize the Alibaba Cloud account to access the source database by using a RAM role.
+             * <p>
+             * 
+             * >  For more information about the permissions that are required for the RAM role and how to grant permissions to the RAM role, see [Configure RAM authorization for cross-account data migration and synchronization](~~48468~~).
              */
             public Builder role(String role) {
                 this.role = role;
@@ -479,7 +519,10 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             }
 
             /**
-             * UserName.
+             * The username of the account that is used to connect to the source database.
+             * <p>
+             * 
+             * >  The permissions that are required for the database account vary with the change tracking scenario. For more information, see [Overview of change tracking scenarios](~~145715~~).
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -534,7 +577,11 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             private Boolean DML; 
 
             /**
-             * DDL.
+             * Specifies whether to track DDL statements. Default value: true. Valid values:
+             * <p>
+             * 
+             * *   **true**: tracks DDL statements.
+             * *   **false**: does not track DDL statements.
              */
             public Builder DDL(Boolean DDL) {
                 this.DDL = DDL;
@@ -542,7 +589,11 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             }
 
             /**
-             * DML.
+             * Specifies whether to track DML statements. Default value: true. Valid values:
+             * <p>
+             * 
+             * *   **true**: tracks DML statements.
+             * *   **false**: does not tack DML statements.
              */
             public Builder DML(Boolean DML) {
                 this.DML = DML;
@@ -595,7 +646,10 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             private String vSwitchId; 
 
             /**
-             * VPCId.
+             * The ID of the VPC in which the change tracking instance is deployed.
+             * <p>
+             * 
+             * >  This parameter is required only when the **SubscriptionInstanceNetworkType** parameter is set to **vpc**.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -603,7 +657,10 @@ public class ConfigureSubscriptionInstanceRequest extends Request {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch in the specified VPC.
+             * <p>
+             * 
+             * >  This parameter is required only when the **SubscriptionInstanceNetworkType** parameter is set to **vpc**.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

@@ -127,19 +127,19 @@ public class DescribeMigrationJobsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeMigrationJobsRequest response) {
-            super(response);
-            this.accountId = response.accountId;
-            this.migrationJobName = response.migrationJobName;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.tag = response.tag;
+        private Builder(DescribeMigrationJobsRequest request) {
+            super(request);
+            this.accountId = request.accountId;
+            this.migrationJobName = request.migrationJobName;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.tag = request.tag;
         } 
 
         /**
-         * AccountId.
+         * The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter will be removed in the future.
          */
         public Builder accountId(String accountId) {
             this.putQueryParameter("AccountId", accountId);
@@ -148,7 +148,10 @@ public class DescribeMigrationJobsRequest extends Request {
         }
 
         /**
-         * MigrationJobName.
+         * The name of the data migration task.
+         * <p>
+         * 
+         * >  Fuzzy match is supported.
          */
         public Builder migrationJobName(String migrationJobName) {
             this.putQueryParameter("MigrationJobName", migrationJobName);
@@ -166,7 +169,7 @@ public class DescribeMigrationJobsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return. The value must be an integer that is greater than **0** and does not exceed the maximum value of the Integer data type. Default value: **1**.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -175,7 +178,7 @@ public class DescribeMigrationJobsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,7 +187,7 @@ public class DescribeMigrationJobsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the data migration instances reside. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,7 +251,12 @@ public class DescribeMigrationJobsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. You can call the [ListTagResources](~~191187~~) operation to query the tag key.
+             * <p>
+             * 
+             * > 
+             * *   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.
+             * *   This parameter cannot be an empty string.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -256,7 +264,12 @@ public class DescribeMigrationJobsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. You can call the [ListTagResources](~~191187~~) operation to query the tag value.
+             * <p>
+             * 
+             * > 
+             * *   N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.
+             * *   This parameter can be an empty string.
              */
             public Builder value(String value) {
                 this.value = value;

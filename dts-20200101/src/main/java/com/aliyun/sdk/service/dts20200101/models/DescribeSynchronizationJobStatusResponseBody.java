@@ -338,7 +338,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * Checkpoint.
+         * The UNIX timestamp generated when the latest data record was synchronized.
+         * <p>
+         * 
+         * >  You can use a search engine to obtain a UNIX timestamp converter.
          */
         public Builder checkpoint(String checkpoint) {
             this.checkpoint = checkpoint;
@@ -346,7 +349,11 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DataInitialization.
+         * Indicates whether full data synchronization is performed. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder dataInitialization(String dataInitialization) {
             this.dataInitialization = dataInitialization;
@@ -354,7 +361,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DataInitializationStatus.
+         * The status of full data synchronization.
          */
         public Builder dataInitializationStatus(DataInitializationStatus dataInitializationStatus) {
             this.dataInitializationStatus = dataInitializationStatus;
@@ -362,7 +369,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DataSynchronizationStatus.
+         * The status of incremental data synchronization.
          */
         public Builder dataSynchronizationStatus(DataSynchronizationStatus dataSynchronizationStatus) {
             this.dataSynchronizationStatus = dataSynchronizationStatus;
@@ -370,7 +377,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Delay.
+         * The synchronization latency, in seconds.
          */
         public Builder delay(String delay) {
             this.delay = delay;
@@ -378,7 +385,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DelayMillis.
+         * The synchronization delay, in milliseconds.
          */
         public Builder delayMillis(Long delayMillis) {
             this.delayMillis = delayMillis;
@@ -386,7 +393,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * DestinationEndpoint.
+         * The connection settings of the destination instance.
          */
         public Builder destinationEndpoint(DestinationEndpoint destinationEndpoint) {
             this.destinationEndpoint = destinationEndpoint;
@@ -394,7 +401,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -402,7 +409,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -410,7 +417,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if data synchronization failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -418,7 +425,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * The time when the data synchronization instance expires. The time is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format in UTC.
+         * <p>
+         * 
+         * >  This parameter is returned only if the return value of the **PayType** parameter is **PrePaid**.
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -426,7 +436,11 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * The billing method of the data synchronization instance. Valid values:
+         * <p>
+         * 
+         * *   **PrePaid**: subscription
+         * *   **PostPaid**: pay-as-you-go
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -434,7 +448,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Performance.
+         * The performance of the data synchronization instance.
          */
         public Builder performance(Performance performance) {
             this.performance = performance;
@@ -442,7 +456,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PrecheckStatus.
+         * The precheck status.
          */
         public Builder precheckStatus(PrecheckStatus precheckStatus) {
             this.precheckStatus = precheckStatus;
@@ -450,7 +464,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -458,7 +472,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SourceEndpoint.
+         * The connection settings of the source instance.
          */
         public Builder sourceEndpoint(SourceEndpoint sourceEndpoint) {
             this.sourceEndpoint = sourceEndpoint;
@@ -466,7 +480,19 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the data synchronization task. Valid values:
+         * <p>
+         * 
+         * *   **NotStarted**: The task is not started.
+         * *   **Prechecking**: The task is being prechecked.
+         * *   **PrecheckFailed**: The task failed to pass the precheck.
+         * *   **Initializing**: The task is performing initial synchronization.
+         * *   **InitializeFailed**: Initial synchronization failed.
+         * *   **Synchronizing**: The task is synchronizing data.
+         * *   **Failed**: The task failed to synchronize data.
+         * *   **Suspending**: The task is paused.
+         * *   **Modifying**: The objects in the task are being modified.
+         * *   **Finished**: The task is completed.
          */
         public Builder status(String status) {
             this.status = status;
@@ -474,7 +500,11 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * StructureInitialization.
+         * Indicates whether schema synchronization is performed. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no
          */
         public Builder structureInitialization(String structureInitialization) {
             this.structureInitialization = structureInitialization;
@@ -482,7 +512,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * StructureInitializationStatus.
+         * The status of schema synchronization.
          */
         public Builder structureInitializationStatus(StructureInitializationStatus structureInitializationStatus) {
             this.structureInitializationStatus = structureInitializationStatus;
@@ -490,7 +520,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -498,7 +528,11 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationDirection.
+         * The synchronization direction. Valid values:
+         * <p>
+         * 
+         * *   **Forward**
+         * *   **Reverse**
          */
         public Builder synchronizationDirection(String synchronizationDirection) {
             this.synchronizationDirection = synchronizationDirection;
@@ -506,7 +540,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationJobClass.
+         * The specification of the data synchronization instance.
          */
         public Builder synchronizationJobClass(String synchronizationJobClass) {
             this.synchronizationJobClass = synchronizationJobClass;
@@ -514,7 +548,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationJobId.
+         * The ID of the data synchronization instance.
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.synchronizationJobId = synchronizationJobId;
@@ -522,7 +556,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationJobName.
+         * The name of the data synchronization task.
          */
         public Builder synchronizationJobName(String synchronizationJobName) {
             this.synchronizationJobName = synchronizationJobName;
@@ -530,7 +564,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationObjects.
+         * The objects that are synchronized by the task.
          */
         public Builder synchronizationObjects(java.util.List < SynchronizationObjects> synchronizationObjects) {
             this.synchronizationObjects = synchronizationObjects;
@@ -614,7 +648,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The error message returned if full data synchronization failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -622,7 +656,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * The progress of full data synchronization. Unit: %.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -630,7 +664,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The number of records that have been synchronized during full data synchronization.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -638,7 +672,13 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of full data synchronization. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**: Full data synchronization is not started.
+             * *   **Migrating**: Full data synchronization is in progress.
+             * *   **Failed**: Full data synchronization failed.
+             * *   **Finished**: Full data synchronization is completed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -739,7 +779,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Checkpoint.
+             * The UNIX timestamp generated when the latest data record was synchronized.
              */
             public Builder checkpoint(String checkpoint) {
                 this.checkpoint = checkpoint;
@@ -747,7 +787,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Delay.
+             * The synchronization latency, in seconds.
              */
             public Builder delay(String delay) {
                 this.delay = delay;
@@ -755,7 +795,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DelayMillis.
+             * The synchronization latency, in milliseconds.
              */
             public Builder delayMillis(Long delayMillis) {
                 this.delayMillis = delayMillis;
@@ -763,7 +803,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if incremental data synchronization failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -771,7 +811,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * The progress of incremental data synchronization. Unit: %.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -779,7 +819,13 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of incremental data synchronization. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**: Incremental data synchronization is not started.
+             * *   **Migrating**: Incremental data synchronization is in progress.
+             * *   **Failed**: Incremental data synchronization failed.
+             * *   **Finished**: Incremental data synchronization is completed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -798,7 +844,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         private String engineName;
 
         @NameInMap("IP")
-        private String IP;
+        private String ip;
 
         @NameInMap("InstanceId")
         private String instanceId;
@@ -814,7 +860,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
 
         private DestinationEndpoint(Builder builder) {
             this.engineName = builder.engineName;
-            this.IP = builder.IP;
+            this.ip = builder.ip;
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
             this.port = builder.port;
@@ -837,10 +883,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return IP
+         * @return ip
          */
-        public String getIP() {
-            return this.IP;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -873,14 +919,14 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private String engineName; 
-            private String IP; 
+            private String ip; 
             private String instanceId; 
             private String instanceType; 
             private String port; 
             private String userName; 
 
             /**
-             * EngineName.
+             * The database type of the destination instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -888,15 +934,15 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * IP.
+             * The endpoint of the destination instance.
              */
-            public Builder IP(String IP) {
-                this.IP = IP;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 
             /**
-             * InstanceId.
+             * The ID of the destination instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -904,7 +950,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the destination instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -912,7 +958,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The database service port of the destination instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -920,7 +966,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The database account of the destination instance.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -973,7 +1019,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String RPS; 
 
             /**
-             * FLOW.
+             * The data traffic that is synchronized per second. Unit: MB/s.
              */
             public Builder FLOW(String FLOW) {
                 this.FLOW = FLOW;
@@ -981,7 +1027,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RPS.
+             * The number of times SQL statements are synchronized per second, including BEGIN, COMMIT, DML, and DDL statements. DML statements include INSERT, DELETE, and UPDATE.
              */
             public Builder RPS(String RPS) {
                 this.RPS = RPS;
@@ -1058,7 +1104,11 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String repairMethod; 
 
             /**
-             * CheckStatus.
+             * The precheck result. Valid values:
+             * <p>
+             * 
+             * *   **Success**: The task passed the precheck.
+             * *   **Failed**: The task failed to pass the precheck.
              */
             public Builder checkStatus(String checkStatus) {
                 this.checkStatus = checkStatus;
@@ -1066,7 +1116,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if the task failed to pass the precheck.
+             * <p>
+             * 
+             * >  This parameter is returned only if the return value of the **CheckStatus** parameter is **Failed**.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1074,7 +1127,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ItemName.
+             * The name of the precheck item.
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -1082,7 +1135,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RepairMethod.
+             * The method to fix the precheck failure.
+             * <p>
+             * 
+             * >  This parameter is returned only if the return value of the **CheckStatus** parameter is **Failed**.
              */
             public Builder repairMethod(String repairMethod) {
                 this.repairMethod = repairMethod;
@@ -1147,7 +1203,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Detail.
+             * The result of each precheck item.
              */
             public Builder detail(java.util.List < Detail> detail) {
                 this.detail = detail;
@@ -1155,7 +1211,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * The precheck progress. Unit: %.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -1163,7 +1219,11 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The precheck result. Valid values:
+             * <p>
+             * 
+             * *   **Success**: The task passed the precheck.
+             * *   **Failed**: The task failed to pass the precheck.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1182,7 +1242,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         private String engineName;
 
         @NameInMap("IP")
-        private String IP;
+        private String ip;
 
         @NameInMap("InstanceId")
         private String instanceId;
@@ -1198,7 +1258,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
 
         private SourceEndpoint(Builder builder) {
             this.engineName = builder.engineName;
-            this.IP = builder.IP;
+            this.ip = builder.ip;
             this.instanceId = builder.instanceId;
             this.instanceType = builder.instanceType;
             this.port = builder.port;
@@ -1221,10 +1281,10 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return IP
+         * @return ip
          */
-        public String getIP() {
-            return this.IP;
+        public String getIp() {
+            return this.ip;
         }
 
         /**
@@ -1257,14 +1317,14 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private String engineName; 
-            private String IP; 
+            private String ip; 
             private String instanceId; 
             private String instanceType; 
             private String port; 
             private String userName; 
 
             /**
-             * EngineName.
+             * The database type of the source instance.
              */
             public Builder engineName(String engineName) {
                 this.engineName = engineName;
@@ -1272,15 +1332,15 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * IP.
+             * The endpoint of the source instance.
              */
-            public Builder IP(String IP) {
-                this.IP = IP;
+            public Builder ip(String ip) {
+                this.ip = ip;
                 return this;
             }
 
             /**
-             * InstanceId.
+             * The ID of the source instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1288,7 +1348,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the source instance.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1296,7 +1356,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The database service port of the source instance.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -1304,7 +1364,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The database account of the source instance.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -1381,7 +1441,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ErrorMessage.
+             * The error message returned if schema synchronization failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -1389,7 +1449,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * The progress of schema synchronization. Unit: %.
              */
             public Builder percent(String percent) {
                 this.percent = percent;
@@ -1397,7 +1457,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The number of tables whose schemas have been synchronized.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -1405,7 +1465,13 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of schema synchronization. Valid values:
+             * <p>
+             * 
+             * *   **NotStarted**: Schema synchronization is not started.
+             * *   **Migrating**: Schema synchronization is in progress.
+             * *   **Failed**: Schema synchronization failed.
+             * *   **Finished**: Schema synchronization is completed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1446,7 +1512,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * TableName.
+             * The name of the excluded table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1487,7 +1553,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * TableName.
+             * The name of the synchronized table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1564,7 +1630,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             private java.util.List < TableIncludes> tableIncludes; 
 
             /**
-             * NewSchemaName.
+             * The database name that is used in the destination instance.
              */
             public Builder newSchemaName(String newSchemaName) {
                 this.newSchemaName = newSchemaName;
@@ -1572,7 +1638,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the synchronized database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -1580,7 +1646,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TableExcludes.
+             * The source tables that are excluded from the data synchronization task.
              */
             public Builder tableExcludes(java.util.List < TableExcludes> tableExcludes) {
                 this.tableExcludes = tableExcludes;
@@ -1588,7 +1654,7 @@ public class DescribeSynchronizationJobStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TableIncludes.
+             * The tables that are synchronized by the task.
              */
             public Builder tableIncludes(java.util.List < TableIncludes> tableIncludes) {
                 this.tableIncludes = tableIncludes;

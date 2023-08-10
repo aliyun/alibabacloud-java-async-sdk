@@ -98,7 +98,7 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * ErrCode.
+         * The error code returned if the call failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -106,7 +106,7 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the call failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -114,7 +114,7 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * This parameter is no longer available.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -122,7 +122,7 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,14 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * *   **NotStarted**: The task is not started.
+         * *   **Initializing**: The task is being initialized.
+         * *   **Switching**: The task is running.
+         * *   **Failed**: The task failed.
+         * *   **Finished**: The task is completed.
          */
         public Builder status(String status) {
             this.status = status;
@@ -138,7 +145,7 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(String success) {
             this.success = success;

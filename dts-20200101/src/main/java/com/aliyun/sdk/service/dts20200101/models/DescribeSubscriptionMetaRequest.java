@@ -101,17 +101,17 @@ public class DescribeSubscriptionMetaRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSubscriptionMetaRequest response) {
-            super(response);
-            this.dtsInstanceId = response.dtsInstanceId;
-            this.regionId = response.regionId;
-            this.sid = response.sid;
-            this.subMigrationJobIds = response.subMigrationJobIds;
-            this.topics = response.topics;
+        private Builder(DescribeSubscriptionMetaRequest request) {
+            super(request);
+            this.dtsInstanceId = request.dtsInstanceId;
+            this.regionId = request.regionId;
+            this.sid = request.sid;
+            this.subMigrationJobIds = request.subMigrationJobIds;
+            this.topics = request.topics;
         } 
 
         /**
-         * DtsInstanceId.
+         * The ID of the distributed change tracking instance.
          */
         public Builder dtsInstanceId(String dtsInstanceId) {
             this.putQueryParameter("DtsInstanceId", dtsInstanceId);
@@ -120,7 +120,7 @@ public class DescribeSubscriptionMetaRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the change tracking instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -129,7 +129,7 @@ public class DescribeSubscriptionMetaRequest extends Request {
         }
 
         /**
-         * Sid.
+         * The ID of the consumer group.
          */
         public Builder sid(String sid) {
             this.putQueryParameter("Sid", sid);
@@ -138,19 +138,27 @@ public class DescribeSubscriptionMetaRequest extends Request {
         }
 
         /**
-         * SubMigrationJobIds.
+         * The IDs of all subtasks in the distributed change tracking task. Separate multiple subtask IDs with commas (,).
+         * <p>
+         * 
+         * >  You must specify at least one of the SubMigrationJobIds and **Topics** parameters. We recommend that you specify the SubMigrationJobIds parameter.
          */
         public Builder subMigrationJobIds(java.util.Map < String, ? > subMigrationJobIds) {
-            this.putQueryParameter("SubMigrationJobIds", subMigrationJobIds);
+            String subMigrationJobIdsShrink = shrink(subMigrationJobIds, "SubMigrationJobIds", "json");
+            this.putQueryParameter("SubMigrationJobIds", subMigrationJobIdsShrink);
             this.subMigrationJobIds = subMigrationJobIds;
             return this;
         }
 
         /**
-         * Topics.
+         * The topics of all subtasks in the distributed change tracking task. Separate multiple topics with commas (,).
+         * <p>
+         * 
+         * >  You must specify at least one of the **SubMigrationJobIds** and Topics parameters. We recommend that you specify the **SubMigrationJobIds** parameter.
          */
         public Builder topics(java.util.Map < String, ? > topics) {
-            this.putQueryParameter("Topics", topics);
+            String topicsShrink = shrink(topics, "Topics", "json");
+            this.putQueryParameter("Topics", topicsShrink);
             this.topics = topics;
             return this;
         }

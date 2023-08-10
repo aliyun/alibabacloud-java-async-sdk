@@ -24,7 +24,6 @@ public class TagResourcesRequest extends Request {
 
     @Query
     @NameInMap("ResourceType")
-    @Validation(required = true)
     private String resourceType;
 
     @Query
@@ -91,16 +90,16 @@ public class TagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(TagResourcesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
+        private Builder(TagResourcesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
 
         /**
-         * RegionId.
+         * The ID of the region where the data migration, data synchronization, or change tracking instance resides. For more information, see [List of supported regions](~~141033~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -118,7 +117,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Valid value: **ALIYUN::DTS::INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -183,7 +182,12 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * > 
+             * *   N specifies the serial number of the tag. For example, Tag.1.Key specifies the key of the first tag and Tag.2.Key specifies the key of the second tag.
+             * *   This parameter cannot be an empty string.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -191,7 +195,12 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
+             * <p>
+             * 
+             * > 
+             * *   N specifies the serial number of the tag. For example, Tag.1.Value specifies the value of the first tag and Tag.2.Value specifies the value of the second tag.
+             * *   This parameter can be an empty string.
              */
             public Builder value(String value) {
                 this.value = value;
