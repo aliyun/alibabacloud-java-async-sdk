@@ -181,7 +181,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * 基线预警余量
+         * AlertMarginThreshold.
          */
         public Builder alertMarginThreshold(Integer alertMarginThreshold) {
             this.putBodyParameter("AlertMarginThreshold", alertMarginThreshold);
@@ -190,7 +190,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * 基线名
+         * BaselineName.
          */
         public Builder baselineName(String baselineName) {
             this.putBodyParameter("BaselineName", baselineName);
@@ -199,7 +199,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * 基线类型 (DAILY, HOURLY)
+         * BaselineType.
          */
         public Builder baselineType(String baselineType) {
             this.putBodyParameter("BaselineType", baselineType);
@@ -217,7 +217,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * 基线承诺时间
+         * OvertimeSettings.
          */
         public Builder overtimeSettings(java.util.List < OvertimeSettings> overtimeSettings) {
             this.putBodyParameter("OvertimeSettings", overtimeSettings);
@@ -226,7 +226,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * 责任人
+         * Owner.
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -235,7 +235,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * 基线优先级
+         * Priority.
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -244,7 +244,7 @@ public class CreateBaselineRequest extends Request {
         }
 
         /**
-         * 项目id
+         * ProjectId.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -298,7 +298,7 @@ public class CreateBaselineRequest extends Request {
             private String time; 
 
             /**
-             * 周期，取值范围 [1,24]
+             * Cycle.
              */
             public Builder cycle(Integer cycle) {
                 this.cycle = cycle;
@@ -306,7 +306,7 @@ public class CreateBaselineRequest extends Request {
             }
 
             /**
-             * 承诺时间，hh:mm格式，hh的取值范围为[0,47]，mm的取值范围为[0,59]
+             * Time.
              */
             public Builder time(String time) {
                 this.time = time;

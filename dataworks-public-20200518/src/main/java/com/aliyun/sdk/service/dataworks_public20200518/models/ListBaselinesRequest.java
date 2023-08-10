@@ -178,7 +178,7 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * 基线类型
+         * BaselineTypes.
          */
         public Builder baselineTypes(String baselineTypes) {
             this.putBodyParameter("BaselineTypes", baselineTypes);
@@ -187,7 +187,7 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * 是否开启基线
+         * Enable.
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("Enable", enable);
@@ -196,7 +196,7 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * 责任人
+         * Owner.
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -232,7 +232,7 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * 项目空间id
+         * ProjectId.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -241,7 +241,7 @@ public class ListBaselinesRequest extends Request {
         }
 
         /**
-         * 基线名模糊查询
+         * SearchText.
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);

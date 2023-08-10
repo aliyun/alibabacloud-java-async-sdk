@@ -42,6 +42,10 @@ public class CreateFileRequest extends Request {
     private String content;
 
     @Body
+    @NameInMap("CreateFolderIfNotExists")
+    private Boolean createFolderIfNotExists;
+
+    @Body
     @NameInMap("CronExpress")
     private String cronExpress;
 
@@ -148,6 +152,7 @@ public class CreateFileRequest extends Request {
         this.autoRerunTimes = builder.autoRerunTimes;
         this.connectionName = builder.connectionName;
         this.content = builder.content;
+        this.createFolderIfNotExists = builder.createFolderIfNotExists;
         this.cronExpress = builder.cronExpress;
         this.cycleType = builder.cycleType;
         this.dependentNodeIdList = builder.dependentNodeIdList;
@@ -234,6 +239,13 @@ public class CreateFileRequest extends Request {
      */
     public String getContent() {
         return this.content;
+    }
+
+    /**
+     * @return createFolderIfNotExists
+     */
+    public Boolean getCreateFolderIfNotExists() {
+        return this.createFolderIfNotExists;
     }
 
     /**
@@ -412,6 +424,7 @@ public class CreateFileRequest extends Request {
         private Integer autoRerunTimes; 
         private String connectionName; 
         private String content; 
+        private Boolean createFolderIfNotExists; 
         private String cronExpress; 
         private String cycleType; 
         private String dependentNodeIdList; 
@@ -450,6 +463,7 @@ public class CreateFileRequest extends Request {
             this.autoRerunTimes = request.autoRerunTimes;
             this.connectionName = request.connectionName;
             this.content = request.content;
+            this.createFolderIfNotExists = request.createFolderIfNotExists;
             this.cronExpress = request.cronExpress;
             this.cycleType = request.cycleType;
             this.dependentNodeIdList = request.dependentNodeIdList;
@@ -555,6 +569,15 @@ public class CreateFileRequest extends Request {
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
             this.content = content;
+            return this;
+        }
+
+        /**
+         * CreateFolderIfNotExists.
+         */
+        public Builder createFolderIfNotExists(Boolean createFolderIfNotExists) {
+            this.putBodyParameter("CreateFolderIfNotExists", createFolderIfNotExists);
+            this.createFolderIfNotExists = createFolderIfNotExists;
             return this;
         }
 

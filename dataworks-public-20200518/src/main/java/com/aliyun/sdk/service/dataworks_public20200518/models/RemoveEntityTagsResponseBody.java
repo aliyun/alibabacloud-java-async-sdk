@@ -7,13 +7,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetMetaTableProducingTasksResponseBody} extends {@link TeaModel}
+ * {@link RemoveEntityTagsResponseBody} extends {@link TeaModel}
  *
- * <p>GetMetaTableProducingTasksResponseBody</p>
+ * <p>RemoveEntityTagsResponseBody</p>
  */
-public class GetMetaTableProducingTasksResponseBody extends TeaModel {
+public class RemoveEntityTagsResponseBody extends TeaModel {
     @NameInMap("Data")
-    private java.util.List < Data> data;
+    private Boolean data;
 
     @NameInMap("ErrorCode")
     private String errorCode;
@@ -30,7 +30,7 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private GetMetaTableProducingTasksResponseBody(Builder builder) {
+    private RemoveEntityTagsResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
@@ -43,14 +43,14 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetMetaTableProducingTasksResponseBody create() {
+    public static RemoveEntityTagsResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public Boolean getData() {
         return this.data;
     }
 
@@ -90,7 +90,7 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private Boolean data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -100,7 +100,7 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(Boolean data) {
             this.data = data;
             return this;
         }
@@ -145,71 +145,10 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
             return this;
         }
 
-        public GetMetaTableProducingTasksResponseBody build() {
-            return new GetMetaTableProducingTasksResponseBody(this);
+        public RemoveEntityTagsResponseBody build() {
+            return new RemoveEntityTagsResponseBody(this);
         } 
 
     } 
 
-    public static class Data extends TeaModel {
-        @NameInMap("TaskId")
-        private String taskId;
-
-        @NameInMap("TaskName")
-        private String taskName;
-
-        private Data(Builder builder) {
-            this.taskId = builder.taskId;
-            this.taskName = builder.taskName;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return taskId
-         */
-        public String getTaskId() {
-            return this.taskId;
-        }
-
-        /**
-         * @return taskName
-         */
-        public String getTaskName() {
-            return this.taskName;
-        }
-
-        public static final class Builder {
-            private String taskId; 
-            private String taskName; 
-
-            /**
-             * TaskId.
-             */
-            public Builder taskId(String taskId) {
-                this.taskId = taskId;
-                return this;
-            }
-
-            /**
-             * TaskName.
-             */
-            public Builder taskName(String taskName) {
-                this.taskName = taskName;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
-            } 
-
-        } 
-
-    }
 }

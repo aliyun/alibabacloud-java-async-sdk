@@ -156,6 +156,9 @@ public class ListFilesResponseBody extends TeaModel {
     } 
 
     public static class Files extends TeaModel {
+        @NameInMap("AbsoluteFolderPath")
+        private String absoluteFolderPath;
+
         @NameInMap("AutoParsing")
         private Boolean autoParsing;
 
@@ -220,6 +223,7 @@ public class ListFilesResponseBody extends TeaModel {
         private String useType;
 
         private Files(Builder builder) {
+            this.absoluteFolderPath = builder.absoluteFolderPath;
             this.autoParsing = builder.autoParsing;
             this.bizId = builder.bizId;
             this.businessId = builder.businessId;
@@ -249,6 +253,13 @@ public class ListFilesResponseBody extends TeaModel {
 
         public static Files create() {
             return builder().build();
+        }
+
+        /**
+         * @return absoluteFolderPath
+         */
+        public String getAbsoluteFolderPath() {
+            return this.absoluteFolderPath;
         }
 
         /**
@@ -399,6 +410,7 @@ public class ListFilesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String absoluteFolderPath; 
             private Boolean autoParsing; 
             private Long bizId; 
             private Long businessId; 
@@ -420,6 +432,14 @@ public class ListFilesResponseBody extends TeaModel {
             private String owner; 
             private Long parentId; 
             private String useType; 
+
+            /**
+             * AbsoluteFolderPath.
+             */
+            public Builder absoluteFolderPath(String absoluteFolderPath) {
+                this.absoluteFolderPath = absoluteFolderPath;
+                return this;
+            }
 
             /**
              * Specifies whether the automatic parsing feature is enabled for the file. Valid values:

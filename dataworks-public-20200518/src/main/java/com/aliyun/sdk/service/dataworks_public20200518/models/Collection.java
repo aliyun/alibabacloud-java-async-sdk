@@ -134,7 +134,7 @@ public class Collection extends TeaModel {
         private Long updateTime; 
 
         /**
-         * Collection Type
+         * CollectionType.
          */
         public Builder collectionType(String collectionType) {
             this.collectionType = collectionType;
@@ -142,7 +142,7 @@ public class Collection extends TeaModel {
         }
 
         /**
-         * The comment of the collection
+         * Comment.
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -150,7 +150,7 @@ public class Collection extends TeaModel {
         }
 
         /**
-         * The create timestamp of the collection
+         * CreateTime.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -158,7 +158,7 @@ public class Collection extends TeaModel {
         }
 
         /**
-         * The level of the collection
+         * Level.
          */
         public Builder level(Integer level) {
             this.level = level;
@@ -166,7 +166,7 @@ public class Collection extends TeaModel {
         }
 
         /**
-         * The name of the collection
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -174,7 +174,7 @@ public class Collection extends TeaModel {
         }
 
         /**
-         * The ownerId of the collection
+         * OwnerId.
          */
         public Builder ownerId(String ownerId) {
             this.ownerId = ownerId;
@@ -182,7 +182,7 @@ public class Collection extends TeaModel {
         }
 
         /**
-         * The name of the collection owner
+         * OwnerName.
          */
         public Builder ownerName(String ownerName) {
             this.ownerName = ownerName;
@@ -190,7 +190,7 @@ public class Collection extends TeaModel {
         }
 
         /**
-         * Unique identifier of identity
+         * QualifiedName.
          */
         public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = qualifiedName;
@@ -198,7 +198,7 @@ public class Collection extends TeaModel {
         }
 
         /**
-         * The update timestamp of the collection
+         * UpdateTime.
          */
         public Builder updateTime(Long updateTime) {
             this.updateTime = updateTime;

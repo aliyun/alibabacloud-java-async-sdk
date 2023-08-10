@@ -18,8 +18,16 @@ public class ListFilesRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("ExactFileName")
+    private String exactFileName;
+
+    @Body
     @NameInMap("FileFolderPath")
     private String fileFolderPath;
+
+    @Body
+    @NameInMap("FileIdIn")
+    private String fileIdIn;
 
     @Body
     @NameInMap("FileTypes")
@@ -28,6 +36,14 @@ public class ListFilesRequest extends Request {
     @Body
     @NameInMap("Keyword")
     private String keyword;
+
+    @Body
+    @NameInMap("NeedAbsoluteFolderPath")
+    private Boolean needAbsoluteFolderPath;
+
+    @Body
+    @NameInMap("NeedContent")
+    private Boolean needContent;
 
     @Body
     @NameInMap("NodeId")
@@ -61,9 +77,13 @@ public class ListFilesRequest extends Request {
     private ListFilesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.exactFileName = builder.exactFileName;
         this.fileFolderPath = builder.fileFolderPath;
+        this.fileIdIn = builder.fileIdIn;
         this.fileTypes = builder.fileTypes;
         this.keyword = builder.keyword;
+        this.needAbsoluteFolderPath = builder.needAbsoluteFolderPath;
+        this.needContent = builder.needContent;
         this.nodeId = builder.nodeId;
         this.owner = builder.owner;
         this.pageNumber = builder.pageNumber;
@@ -94,10 +114,24 @@ public class ListFilesRequest extends Request {
     }
 
     /**
+     * @return exactFileName
+     */
+    public String getExactFileName() {
+        return this.exactFileName;
+    }
+
+    /**
      * @return fileFolderPath
      */
     public String getFileFolderPath() {
         return this.fileFolderPath;
+    }
+
+    /**
+     * @return fileIdIn
+     */
+    public String getFileIdIn() {
+        return this.fileIdIn;
     }
 
     /**
@@ -112,6 +146,20 @@ public class ListFilesRequest extends Request {
      */
     public String getKeyword() {
         return this.keyword;
+    }
+
+    /**
+     * @return needAbsoluteFolderPath
+     */
+    public Boolean getNeedAbsoluteFolderPath() {
+        return this.needAbsoluteFolderPath;
+    }
+
+    /**
+     * @return needContent
+     */
+    public Boolean getNeedContent() {
+        return this.needContent;
     }
 
     /**
@@ -165,9 +213,13 @@ public class ListFilesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListFilesRequest, Builder> {
         private String regionId; 
+        private String exactFileName; 
         private String fileFolderPath; 
+        private String fileIdIn; 
         private String fileTypes; 
         private String keyword; 
+        private Boolean needAbsoluteFolderPath; 
+        private Boolean needContent; 
         private Long nodeId; 
         private String owner; 
         private Integer pageNumber; 
@@ -183,9 +235,13 @@ public class ListFilesRequest extends Request {
         private Builder(ListFilesRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.exactFileName = request.exactFileName;
             this.fileFolderPath = request.fileFolderPath;
+            this.fileIdIn = request.fileIdIn;
             this.fileTypes = request.fileTypes;
             this.keyword = request.keyword;
+            this.needAbsoluteFolderPath = request.needAbsoluteFolderPath;
+            this.needContent = request.needContent;
             this.nodeId = request.nodeId;
             this.owner = request.owner;
             this.pageNumber = request.pageNumber;
@@ -205,11 +261,29 @@ public class ListFilesRequest extends Request {
         }
 
         /**
+         * ExactFileName.
+         */
+        public Builder exactFileName(String exactFileName) {
+            this.putBodyParameter("ExactFileName", exactFileName);
+            this.exactFileName = exactFileName;
+            return this;
+        }
+
+        /**
          * The path of the files.
          */
         public Builder fileFolderPath(String fileFolderPath) {
             this.putBodyParameter("FileFolderPath", fileFolderPath);
             this.fileFolderPath = fileFolderPath;
+            return this;
+        }
+
+        /**
+         * FileIdIn.
+         */
+        public Builder fileIdIn(String fileIdIn) {
+            this.putBodyParameter("FileIdIn", fileIdIn);
+            this.fileIdIn = fileIdIn;
             return this;
         }
 
@@ -231,6 +305,24 @@ public class ListFilesRequest extends Request {
         public Builder keyword(String keyword) {
             this.putBodyParameter("Keyword", keyword);
             this.keyword = keyword;
+            return this;
+        }
+
+        /**
+         * NeedAbsoluteFolderPath.
+         */
+        public Builder needAbsoluteFolderPath(Boolean needAbsoluteFolderPath) {
+            this.putBodyParameter("NeedAbsoluteFolderPath", needAbsoluteFolderPath);
+            this.needAbsoluteFolderPath = needAbsoluteFolderPath;
+            return this;
+        }
+
+        /**
+         * NeedContent.
+         */
+        public Builder needContent(Boolean needContent) {
+            this.putBodyParameter("NeedContent", needContent);
+            this.needContent = needContent;
             return this;
         }
 

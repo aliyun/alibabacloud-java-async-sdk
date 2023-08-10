@@ -62,7 +62,7 @@ public class Entity extends TeaModel {
         private Long tenantId; 
 
         /**
-         * Attribute map
+         * EntityContent.
          */
         public Builder entityContent(java.util.Map < String, ? > entityContent) {
             this.entityContent = entityContent;
@@ -70,7 +70,7 @@ public class Entity extends TeaModel {
         }
 
         /**
-         * Unique identifier of identity
+         * QualifiedName.
          */
         public Builder qualifiedName(String qualifiedName) {
             this.qualifiedName = qualifiedName;
@@ -78,7 +78,7 @@ public class Entity extends TeaModel {
         }
 
         /**
-         * Identifier of tenant
+         * TenantId.
          */
         public Builder tenantId(Long tenantId) {
             this.tenantId = tenantId;

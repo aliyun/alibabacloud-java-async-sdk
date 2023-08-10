@@ -7,13 +7,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetMetaTableProducingTasksResponseBody} extends {@link TeaModel}
+ * {@link ListEntitiesByTagsResponseBody} extends {@link TeaModel}
  *
- * <p>GetMetaTableProducingTasksResponseBody</p>
+ * <p>ListEntitiesByTagsResponseBody</p>
  */
-public class GetMetaTableProducingTasksResponseBody extends TeaModel {
+public class ListEntitiesByTagsResponseBody extends TeaModel {
     @NameInMap("Data")
-    private java.util.List < Data> data;
+    private Data data;
 
     @NameInMap("ErrorCode")
     private String errorCode;
@@ -30,7 +30,7 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private GetMetaTableProducingTasksResponseBody(Builder builder) {
+    private ListEntitiesByTagsResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
@@ -43,14 +43,14 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetMetaTableProducingTasksResponseBody create() {
+    public static ListEntitiesByTagsResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -90,7 +90,7 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private Data data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
@@ -100,7 +100,7 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         /**
          * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -145,22 +145,22 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
             return this;
         }
 
-        public GetMetaTableProducingTasksResponseBody build() {
-            return new GetMetaTableProducingTasksResponseBody(this);
+        public ListEntitiesByTagsResponseBody build() {
+            return new ListEntitiesByTagsResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("TaskId")
-        private String taskId;
+        @NameInMap("EntityList")
+        private java.util.List < Entity > entityList;
 
-        @NameInMap("TaskName")
-        private String taskName;
+        @NameInMap("NextToken")
+        private String nextToken;
 
         private Data(Builder builder) {
-            this.taskId = builder.taskId;
-            this.taskName = builder.taskName;
+            this.entityList = builder.entityList;
+            this.nextToken = builder.nextToken;
         }
 
         public static Builder builder() {
@@ -172,36 +172,36 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         }
 
         /**
-         * @return taskId
+         * @return entityList
          */
-        public String getTaskId() {
-            return this.taskId;
+        public java.util.List < Entity > getEntityList() {
+            return this.entityList;
         }
 
         /**
-         * @return taskName
+         * @return nextToken
          */
-        public String getTaskName() {
-            return this.taskName;
+        public String getNextToken() {
+            return this.nextToken;
         }
 
         public static final class Builder {
-            private String taskId; 
-            private String taskName; 
+            private java.util.List < Entity > entityList; 
+            private String nextToken; 
 
             /**
-             * TaskId.
+             * EntityList.
              */
-            public Builder taskId(String taskId) {
-                this.taskId = taskId;
+            public Builder entityList(java.util.List < Entity > entityList) {
+                this.entityList = entityList;
                 return this;
             }
 
             /**
-             * TaskName.
+             * NextToken.
              */
-            public Builder taskName(String taskName) {
-                this.taskName = taskName;
+            public Builder nextToken(String nextToken) {
+                this.nextToken = nextToken;
                 return this;
             }
 

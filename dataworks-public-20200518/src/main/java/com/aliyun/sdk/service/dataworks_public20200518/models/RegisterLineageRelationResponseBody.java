@@ -7,14 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetMetaTableProducingTasksResponseBody} extends {@link TeaModel}
+ * {@link RegisterLineageRelationResponseBody} extends {@link TeaModel}
  *
- * <p>GetMetaTableProducingTasksResponseBody</p>
+ * <p>RegisterLineageRelationResponseBody</p>
  */
-public class GetMetaTableProducingTasksResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
-
+public class RegisterLineageRelationResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     private String errorCode;
 
@@ -24,17 +21,20 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
+    @NameInMap("LineageRelation")
+    private LineageRelation lineageRelation;
+
     @NameInMap("RequestId")
     private String requestId;
 
     @NameInMap("Success")
     private Boolean success;
 
-    private GetMetaTableProducingTasksResponseBody(Builder builder) {
-        this.data = builder.data;
+    private RegisterLineageRelationResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.httpStatusCode = builder.httpStatusCode;
+        this.lineageRelation = builder.lineageRelation;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -43,15 +43,8 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetMetaTableProducingTasksResponseBody create() {
+    public static RegisterLineageRelationResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return data
-     */
-    public java.util.List < Data> getData() {
-        return this.data;
     }
 
     /**
@@ -76,6 +69,13 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
     }
 
     /**
+     * @return lineageRelation
+     */
+    public LineageRelation getLineageRelation() {
+        return this.lineageRelation;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -90,20 +90,12 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
+        private LineageRelation lineageRelation; 
         private String requestId; 
         private Boolean success; 
-
-        /**
-         * Data.
-         */
-        public Builder data(java.util.List < Data> data) {
-            this.data = data;
-            return this;
-        }
 
         /**
          * ErrorCode.
@@ -130,6 +122,14 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         }
 
         /**
+         * LineageRelation.
+         */
+        public Builder lineageRelation(LineageRelation lineageRelation) {
+            this.lineageRelation = lineageRelation;
+            return this;
+        }
+
+        /**
          * RequestId.
          */
         public Builder requestId(String requestId) {
@@ -145,68 +145,88 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
             return this;
         }
 
-        public GetMetaTableProducingTasksResponseBody build() {
-            return new GetMetaTableProducingTasksResponseBody(this);
+        public RegisterLineageRelationResponseBody build() {
+            return new RegisterLineageRelationResponseBody(this);
         } 
 
     } 
 
-    public static class Data extends TeaModel {
-        @NameInMap("TaskId")
-        private String taskId;
+    public static class LineageRelation extends TeaModel {
+        @NameInMap("DestEntityQualifiedName")
+        private String destEntityQualifiedName;
 
-        @NameInMap("TaskName")
-        private String taskName;
+        @NameInMap("RelationshipGuid")
+        private String relationshipGuid;
 
-        private Data(Builder builder) {
-            this.taskId = builder.taskId;
-            this.taskName = builder.taskName;
+        @NameInMap("SrcEntityQualifiedName")
+        private String srcEntityQualifiedName;
+
+        private LineageRelation(Builder builder) {
+            this.destEntityQualifiedName = builder.destEntityQualifiedName;
+            this.relationshipGuid = builder.relationshipGuid;
+            this.srcEntityQualifiedName = builder.srcEntityQualifiedName;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Data create() {
+        public static LineageRelation create() {
             return builder().build();
         }
 
         /**
-         * @return taskId
+         * @return destEntityQualifiedName
          */
-        public String getTaskId() {
-            return this.taskId;
+        public String getDestEntityQualifiedName() {
+            return this.destEntityQualifiedName;
         }
 
         /**
-         * @return taskName
+         * @return relationshipGuid
          */
-        public String getTaskName() {
-            return this.taskName;
+        public String getRelationshipGuid() {
+            return this.relationshipGuid;
+        }
+
+        /**
+         * @return srcEntityQualifiedName
+         */
+        public String getSrcEntityQualifiedName() {
+            return this.srcEntityQualifiedName;
         }
 
         public static final class Builder {
-            private String taskId; 
-            private String taskName; 
+            private String destEntityQualifiedName; 
+            private String relationshipGuid; 
+            private String srcEntityQualifiedName; 
 
             /**
-             * TaskId.
+             * DestEntityQualifiedName.
              */
-            public Builder taskId(String taskId) {
-                this.taskId = taskId;
+            public Builder destEntityQualifiedName(String destEntityQualifiedName) {
+                this.destEntityQualifiedName = destEntityQualifiedName;
                 return this;
             }
 
             /**
-             * TaskName.
+             * RelationshipGuid.
              */
-            public Builder taskName(String taskName) {
-                this.taskName = taskName;
+            public Builder relationshipGuid(String relationshipGuid) {
+                this.relationshipGuid = relationshipGuid;
                 return this;
             }
 
-            public Data build() {
-                return new Data(this);
+            /**
+             * SrcEntityQualifiedName.
+             */
+            public Builder srcEntityQualifiedName(String srcEntityQualifiedName) {
+                this.srcEntityQualifiedName = srcEntityQualifiedName;
+                return this;
+            }
+
+            public LineageRelation build() {
+                return new LineageRelation(this);
             } 
 
         } 

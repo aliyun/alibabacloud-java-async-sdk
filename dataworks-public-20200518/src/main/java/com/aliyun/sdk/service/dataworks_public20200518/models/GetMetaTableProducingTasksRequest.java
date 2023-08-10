@@ -139,7 +139,7 @@ public class GetMetaTableProducingTasksRequest extends Request {
         } 
 
         /**
-         * 服务所属Region的标识
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -148,7 +148,7 @@ public class GetMetaTableProducingTasksRequest extends Request {
         }
 
         /**
-         * 集群标识
+         * ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -157,7 +157,7 @@ public class GetMetaTableProducingTasksRequest extends Request {
         }
 
         /**
-         * 表类型
+         * DataSourceType.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -166,7 +166,7 @@ public class GetMetaTableProducingTasksRequest extends Request {
         }
 
         /**
-         * 数据库名称
+         * DbName.
          */
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
@@ -175,7 +175,7 @@ public class GetMetaTableProducingTasksRequest extends Request {
         }
 
         /**
-         * Schema名称
+         * SchemaName.
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
@@ -184,7 +184,7 @@ public class GetMetaTableProducingTasksRequest extends Request {
         }
 
         /**
-         * 表的唯一标识
+         * TableGuid.
          */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
@@ -193,7 +193,7 @@ public class GetMetaTableProducingTasksRequest extends Request {
         }
 
         /**
-         * 表名称
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

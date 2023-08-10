@@ -26,11 +26,17 @@ public class AddMetaCollectionEntityRequest extends Request {
     @Validation(required = true)
     private String entityQualifiedName;
 
+    @Query
+    @NameInMap("Remark")
+    @Validation(maxLength = 50)
+    private String remark;
+
     private AddMetaCollectionEntityRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.collectionQualifiedName = builder.collectionQualifiedName;
         this.entityQualifiedName = builder.entityQualifiedName;
+        this.remark = builder.remark;
     }
 
     public static Builder builder() {
@@ -67,10 +73,18 @@ public class AddMetaCollectionEntityRequest extends Request {
         return this.entityQualifiedName;
     }
 
+    /**
+     * @return remark
+     */
+    public String getRemark() {
+        return this.remark;
+    }
+
     public static final class Builder extends Request.Builder<AddMetaCollectionEntityRequest, Builder> {
         private String regionId; 
         private String collectionQualifiedName; 
         private String entityQualifiedName; 
+        private String remark; 
 
         private Builder() {
             super();
@@ -81,6 +95,7 @@ public class AddMetaCollectionEntityRequest extends Request {
             this.regionId = request.regionId;
             this.collectionQualifiedName = request.collectionQualifiedName;
             this.entityQualifiedName = request.entityQualifiedName;
+            this.remark = request.remark;
         } 
 
         /**
@@ -110,6 +125,15 @@ public class AddMetaCollectionEntityRequest extends Request {
         public Builder entityQualifiedName(String entityQualifiedName) {
             this.putQueryParameter("EntityQualifiedName", entityQualifiedName);
             this.entityQualifiedName = entityQualifiedName;
+            return this;
+        }
+
+        /**
+         * Remark.
+         */
+        public Builder remark(String remark) {
+            this.putQueryParameter("Remark", remark);
+            this.remark = remark;
             return this;
         }
 

@@ -7,14 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetMetaTableProducingTasksResponseBody} extends {@link TeaModel}
+ * {@link DeleteLineageRelationResponseBody} extends {@link TeaModel}
  *
- * <p>GetMetaTableProducingTasksResponseBody</p>
+ * <p>DeleteLineageRelationResponseBody</p>
  */
-public class GetMetaTableProducingTasksResponseBody extends TeaModel {
-    @NameInMap("Data")
-    private java.util.List < Data> data;
-
+public class DeleteLineageRelationResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     private String errorCode;
 
@@ -27,15 +24,18 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Status")
+    private Boolean status;
+
     @NameInMap("Success")
     private Boolean success;
 
-    private GetMetaTableProducingTasksResponseBody(Builder builder) {
-        this.data = builder.data;
+    private DeleteLineageRelationResponseBody(Builder builder) {
         this.errorCode = builder.errorCode;
         this.errorMessage = builder.errorMessage;
         this.httpStatusCode = builder.httpStatusCode;
         this.requestId = builder.requestId;
+        this.status = builder.status;
         this.success = builder.success;
     }
 
@@ -43,15 +43,8 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetMetaTableProducingTasksResponseBody create() {
+    public static DeleteLineageRelationResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return data
-     */
-    public java.util.List < Data> getData() {
-        return this.data;
     }
 
     /**
@@ -83,6 +76,13 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
     }
 
     /**
+     * @return status
+     */
+    public Boolean getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -90,20 +90,12 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
         private String errorCode; 
         private String errorMessage; 
         private Integer httpStatusCode; 
         private String requestId; 
+        private Boolean status; 
         private Boolean success; 
-
-        /**
-         * Data.
-         */
-        public Builder data(java.util.List < Data> data) {
-            this.data = data;
-            return this;
-        }
 
         /**
          * ErrorCode.
@@ -138,6 +130,14 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
         }
 
         /**
+         * Status.
+         */
+        public Builder status(Boolean status) {
+            this.status = status;
+            return this;
+        }
+
+        /**
          * Success.
          */
         public Builder success(Boolean success) {
@@ -145,71 +145,10 @@ public class GetMetaTableProducingTasksResponseBody extends TeaModel {
             return this;
         }
 
-        public GetMetaTableProducingTasksResponseBody build() {
-            return new GetMetaTableProducingTasksResponseBody(this);
+        public DeleteLineageRelationResponseBody build() {
+            return new DeleteLineageRelationResponseBody(this);
         } 
 
     } 
 
-    public static class Data extends TeaModel {
-        @NameInMap("TaskId")
-        private String taskId;
-
-        @NameInMap("TaskName")
-        private String taskName;
-
-        private Data(Builder builder) {
-            this.taskId = builder.taskId;
-            this.taskName = builder.taskName;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Data create() {
-            return builder().build();
-        }
-
-        /**
-         * @return taskId
-         */
-        public String getTaskId() {
-            return this.taskId;
-        }
-
-        /**
-         * @return taskName
-         */
-        public String getTaskName() {
-            return this.taskName;
-        }
-
-        public static final class Builder {
-            private String taskId; 
-            private String taskName; 
-
-            /**
-             * TaskId.
-             */
-            public Builder taskId(String taskId) {
-                this.taskId = taskId;
-                return this;
-            }
-
-            /**
-             * TaskName.
-             */
-            public Builder taskName(String taskName) {
-                this.taskName = taskName;
-                return this;
-            }
-
-            public Data build() {
-                return new Data(this);
-            } 
-
-        } 
-
-    }
 }

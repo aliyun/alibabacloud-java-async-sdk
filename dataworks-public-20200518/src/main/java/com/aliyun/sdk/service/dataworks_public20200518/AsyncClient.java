@@ -145,6 +145,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteFromMetaCategoryResponse> deleteFromMetaCategory(DeleteFromMetaCategoryRequest request);
 
+    CompletableFuture<DeleteLineageRelationResponse> deleteLineageRelation(DeleteLineageRelationRequest request);
+
     CompletableFuture<DeleteMetaCategoryResponse> deleteMetaCategory(DeleteMetaCategoryRequest request);
 
     CompletableFuture<DeleteMetaCollectionResponse> deleteMetaCollection(DeleteMetaCollectionRequest request);
@@ -463,6 +465,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListEnabledExtensionsForProjectResponse> listEnabledExtensionsForProject(ListEnabledExtensionsForProjectRequest request);
 
+    CompletableFuture<ListEntitiesByTagsResponse> listEntitiesByTags(ListEntitiesByTagsRequest request);
+
+    CompletableFuture<ListEntityTagsResponse> listEntityTags(ListEntityTagsRequest request);
+
     CompletableFuture<ListExtensionsResponse> listExtensions(ListExtensionsRequest request);
 
     CompletableFuture<ListFileTypeResponse> listFileType(ListFileTypeRequest request);
@@ -480,6 +486,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstanceHistoryResponse> listInstanceHistory(ListInstanceHistoryRequest request);
 
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    CompletableFuture<ListLineageResponse> listLineage(ListLineageRequest request);
 
     CompletableFuture<ListManualDagInstancesResponse> listManualDagInstances(ListManualDagInstancesRequest request);
 
@@ -571,6 +579,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryPublicModelEngineResponse> queryPublicModelEngine(QueryPublicModelEngineRequest request);
 
+    CompletableFuture<RegisterLineageRelationResponse> registerLineageRelation(RegisterLineageRelationRequest request);
+
+    CompletableFuture<RemoveEntityTagsResponse> removeEntityTags(RemoveEntityTagsRequest request);
+
     CompletableFuture<RemoveProjectMemberFromRoleResponse> removeProjectMemberFromRole(RemoveProjectMemberFromRoleRequest request);
 
     CompletableFuture<RestartInstanceResponse> restartInstance(RestartInstanceRequest request);
@@ -614,6 +626,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<SetDataSourceShareResponse> setDataSourceShare(SetDataSourceShareRequest request);
+
+    CompletableFuture<SetEntityTagsResponse> setEntityTags(SetEntityTagsRequest request);
 
     CompletableFuture<SetSuccessInstanceResponse> setSuccessInstance(SetSuccessInstanceRequest request);
 

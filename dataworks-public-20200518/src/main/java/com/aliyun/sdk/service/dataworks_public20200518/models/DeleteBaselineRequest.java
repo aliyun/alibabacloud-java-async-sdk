@@ -93,7 +93,7 @@ public class DeleteBaselineRequest extends Request {
         }
 
         /**
-         * 基线Id
+         * BaselineId.
          */
         public Builder baselineId(Long baselineId) {
             this.putBodyParameter("BaselineId", baselineId);
@@ -102,7 +102,7 @@ public class DeleteBaselineRequest extends Request {
         }
 
         /**
-         * 项目空间ID
+         * ProjectId.
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);

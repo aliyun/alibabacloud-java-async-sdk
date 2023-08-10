@@ -27,6 +27,10 @@ public class CreateUdfFileRequest extends Request {
     private String cmdDescription;
 
     @Body
+    @NameInMap("CreateFolderIfNotExists")
+    private Boolean createFolderIfNotExists;
+
+    @Body
     @NameInMap("Example")
     private String example;
 
@@ -74,6 +78,7 @@ public class CreateUdfFileRequest extends Request {
         this.regionId = builder.regionId;
         this.className = builder.className;
         this.cmdDescription = builder.cmdDescription;
+        this.createFolderIfNotExists = builder.createFolderIfNotExists;
         this.example = builder.example;
         this.fileFolderPath = builder.fileFolderPath;
         this.fileName = builder.fileName;
@@ -118,6 +123,13 @@ public class CreateUdfFileRequest extends Request {
      */
     public String getCmdDescription() {
         return this.cmdDescription;
+    }
+
+    /**
+     * @return createFolderIfNotExists
+     */
+    public Boolean getCreateFolderIfNotExists() {
+        return this.createFolderIfNotExists;
     }
 
     /**
@@ -194,6 +206,7 @@ public class CreateUdfFileRequest extends Request {
         private String regionId; 
         private String className; 
         private String cmdDescription; 
+        private Boolean createFolderIfNotExists; 
         private String example; 
         private String fileFolderPath; 
         private String fileName; 
@@ -214,6 +227,7 @@ public class CreateUdfFileRequest extends Request {
             this.regionId = request.regionId;
             this.className = request.className;
             this.cmdDescription = request.cmdDescription;
+            this.createFolderIfNotExists = request.createFolderIfNotExists;
             this.example = request.example;
             this.fileFolderPath = request.fileFolderPath;
             this.fileName = request.fileName;
@@ -250,6 +264,15 @@ public class CreateUdfFileRequest extends Request {
         public Builder cmdDescription(String cmdDescription) {
             this.putBodyParameter("CmdDescription", cmdDescription);
             this.cmdDescription = cmdDescription;
+            return this;
+        }
+
+        /**
+         * CreateFolderIfNotExists.
+         */
+        public Builder createFolderIfNotExists(Boolean createFolderIfNotExists) {
+            this.putBodyParameter("CreateFolderIfNotExists", createFolderIfNotExists);
+            this.createFolderIfNotExists = createFolderIfNotExists;
             return this;
         }
 

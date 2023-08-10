@@ -247,7 +247,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * 是否开启告警
+         * AlertEnabled.
          */
         public Builder alertEnabled(Boolean alertEnabled) {
             this.putBodyParameter("AlertEnabled", alertEnabled);
@@ -256,7 +256,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * 基线预警余量
+         * AlertMarginThreshold.
          */
         public Builder alertMarginThreshold(Integer alertMarginThreshold) {
             this.putBodyParameter("AlertMarginThreshold", alertMarginThreshold);
@@ -265,7 +265,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * 告警配置
+         * AlertSettings.
          */
         public Builder alertSettings(java.util.List < AlertSettings> alertSettings) {
             String alertSettingsShrink = shrink(alertSettings, "AlertSettings", "json");
@@ -284,7 +284,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * 基线名
+         * BaselineName.
          */
         public Builder baselineName(String baselineName) {
             this.putBodyParameter("BaselineName", baselineName);
@@ -293,7 +293,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * 基线类型 (DAILY, HOURLY)
+         * BaselineType.
          */
         public Builder baselineType(String baselineType) {
             this.putBodyParameter("BaselineType", baselineType);
@@ -302,7 +302,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * 是否开启基线
+         * Enabled.
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("Enabled", enabled);
@@ -320,7 +320,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * 基线承诺时间
+         * OvertimeSettings.
          */
         public Builder overtimeSettings(java.util.List < OvertimeSettings> overtimeSettings) {
             String overtimeSettingsShrink = shrink(overtimeSettings, "OvertimeSettings", "json");
@@ -330,7 +330,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * 责任人
+         * Owner.
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -339,7 +339,7 @@ public class UpdateBaselineRequest extends Request {
         }
 
         /**
-         * 基线优先级
+         * Priority.
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -594,7 +594,7 @@ public class UpdateBaselineRequest extends Request {
             private java.util.List < String > webhooks; 
 
             /**
-             * 事件告警间隔
+             * AlertInterval.
              */
             public Builder alertInterval(Integer alertInterval) {
                 this.alertInterval = alertInterval;
@@ -602,7 +602,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * 事件告警最大次数
+             * AlertMaximum.
              */
             public Builder alertMaximum(Integer alertMaximum) {
                 this.alertMaximum = alertMaximum;
@@ -610,7 +610,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * 告警方式
+             * AlertMethods.
              */
             public Builder alertMethods(java.util.List < String > alertMethods) {
                 this.alertMethods = alertMethods;
@@ -618,7 +618,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * 告警接收人详情
+             * AlertRecipient.
              */
             public Builder alertRecipient(String alertRecipient) {
                 this.alertRecipient = alertRecipient;
@@ -626,7 +626,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * 告警接收人类型
+             * AlertRecipientType.
              */
             public Builder alertRecipientType(String alertRecipientType) {
                 this.alertRecipientType = alertRecipientType;
@@ -634,7 +634,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * 告警类型，BASELINE / TOPIC
+             * AlertType.
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -642,7 +642,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * 基线告警开关，基线特有配置
+             * BaselineAlertEnabled.
              */
             public Builder baselineAlertEnabled(Boolean baselineAlertEnabled) {
                 this.baselineAlertEnabled = baselineAlertEnabled;
@@ -650,7 +650,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * 钉钉机器人列表
+             * DingRobots.
              */
             public Builder dingRobots(java.util.List < DingRobots> dingRobots) {
                 this.dingRobots = dingRobots;
@@ -658,7 +658,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * 静默结束时间
+             * SilenceEndTime.
              */
             public Builder silenceEndTime(String silenceEndTime) {
                 this.silenceEndTime = silenceEndTime;
@@ -666,7 +666,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * 静默开始时间
+             * SilenceStartTime.
              */
             public Builder silenceStartTime(String silenceStartTime) {
                 this.silenceStartTime = silenceStartTime;
@@ -674,7 +674,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * 事件告警类型，事件特有配置
+             * TopicTypes.
              */
             public Builder topicTypes(java.util.List < String > topicTypes) {
                 this.topicTypes = topicTypes;
@@ -682,7 +682,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * webhook 列表
+             * Webhooks.
              */
             public Builder webhooks(java.util.List < String > webhooks) {
                 this.webhooks = webhooks;
@@ -735,7 +735,7 @@ public class UpdateBaselineRequest extends Request {
             private String time; 
 
             /**
-             * 周期，取值范围 [1,24]
+             * Cycle.
              */
             public Builder cycle(Integer cycle) {
                 this.cycle = cycle;
@@ -743,7 +743,7 @@ public class UpdateBaselineRequest extends Request {
             }
 
             /**
-             * 承诺时间，hh:mm格式，hh的取值范围为[0,47]，mm的取值范围为[0,59]
+             * Time.
              */
             public Builder time(String time) {
                 this.time = time;
