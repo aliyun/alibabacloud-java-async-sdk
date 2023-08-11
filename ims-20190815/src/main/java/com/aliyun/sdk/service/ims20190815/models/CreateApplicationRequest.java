@@ -168,7 +168,12 @@ public class CreateApplicationRequest extends Request {
         } 
 
         /**
-         * AccessTokenValidity.
+         * The validity period of the access token.
+         * <p>
+         * 
+         * Valid values: 900 to 10800. Unit: seconds.
+         * 
+         * Default value: 3600.
          */
         public Builder accessTokenValidity(Integer accessTokenValidity) {
             this.putQueryParameter("AccessTokenValidity", accessTokenValidity);
@@ -177,7 +182,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The name of the application.
+         * <p>
+         * 
+         * The name can be up to 64 characters in length. The name can contain letters, digits, periods (.), underscores (\_), and hyphens (-).
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -186,7 +194,12 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * AppType.
+         * The type of the application. Valid values:
+         * <p>
+         * 
+         * *   WebApp: a web application that interacts with a browser.
+         * *   NativeApp: a native application that runs on an operating system, such as a desktop operating system or a mobile operating system.
+         * *   ServerApp: an application that accesses Alibaba Cloud services without the need of manual user logon. User provisioning is automated based on the System for Cross-Domain Identity Management (SCIM) protocol.
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -195,7 +208,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * The display name of the application.
+         * <p>
+         * 
+         * The name can be up to 24 characters in length.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -204,7 +220,11 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * IsMultiTenant.
+         * Indicates whether the application can be installed by using other Alibaba Cloud accounts. Valid values:
+         * <p>
+         * 
+         * *   true: If you do not set this parameter for applications of the NativeApp and ServerApp types, true is used.
+         * *   false: If you do not set this parameter for applications of the WebApp type, false is used.
          */
         public Builder isMultiTenant(Boolean isMultiTenant) {
             this.putQueryParameter("IsMultiTenant", isMultiTenant);
@@ -213,7 +233,12 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * PredefinedScopes.
+         * The scope of application permissions.
+         * <p>
+         * 
+         * For more information about the application permission scope, see [Open authorization scope](~~93693~~). You can also call the [ListPredefinedScopes](~~187206~~) operation to obtain the permission scopes supported by different types of applications.
+         * 
+         * If you enter multiple permission scopes, separate them with semicolons (;).
          */
         public Builder predefinedScopes(String predefinedScopes) {
             this.putQueryParameter("PredefinedScopes", predefinedScopes);
@@ -222,7 +247,10 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * RedirectUris.
+         * The callback URL.
+         * <p>
+         * 
+         * If you enter multiple callback URLs, separate them with semicolons (;).
          */
         public Builder redirectUris(String redirectUris) {
             this.putQueryParameter("RedirectUris", redirectUris);
@@ -231,7 +259,15 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * RefreshTokenValidity.
+         * The validity period of the refreshed token.
+         * <p>
+         * 
+         * Valid values: 7200 to 31536000. Unit: seconds.
+         * 
+         * Default value:
+         * 
+         * *   For applications of the WebApp and ServerApp types, if this parameter is left empty, the value 2592000 is used. The value 2592000 indicates that the validity period of the refreshed token is 30 days.
+         * *   For applications of the NativeApp type, if this parameter is left empty, the value 7776000 is used. The value 7776000 indicates that the validity period of the refreshed token is 90 days.
          */
         public Builder refreshTokenValidity(Integer refreshTokenValidity) {
             this.putQueryParameter("RefreshTokenValidity", refreshTokenValidity);
@@ -240,7 +276,16 @@ public class CreateApplicationRequest extends Request {
         }
 
         /**
-         * SecretRequired.
+         * Indicates whether a secret is required. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * > 
+         * 
+         * *   For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.
+         * *   For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected. Therefore, we recommend that you do not set this parameter to true unless otherwise specified. For more information, see [Use an application of the NativeApp type to log on to Alibaba Cloud](~~93697~~).
          */
         public Builder secretRequired(Boolean secretRequired) {
             this.putQueryParameter("SecretRequired", secretRequired);

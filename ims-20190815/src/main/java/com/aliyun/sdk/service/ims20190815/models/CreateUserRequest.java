@@ -153,7 +153,7 @@ public class CreateUserRequest extends Request {
          * The email address of the RAM user.
          * <p>
          * 
-         * >  This parameter is valid only on the China site (aliyun.com).
+         * > This parameter is valid only on the China site (aliyun.com).
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -162,12 +162,12 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * The mobile phone number of the RAM user.
+         * The mobile number of the RAM user.
          * <p>
          * 
          * Format: Country code-Mobile phone number.
          * 
-         * >  This parameter is valid only on the China site (aliyun.com).
+         * > This parameter is valid only on the China site (aliyun.com).
          */
         public Builder mobilePhone(String mobilePhone) {
             this.putQueryParameter("MobilePhone", mobilePhone);
@@ -176,7 +176,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * The tag value.
+         * <p>
+         * 
+         * Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be a up to128 characters in length and cannot contain `http://` or `https://`. The tag value cannot start with `acs:`.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -190,7 +193,7 @@ public class CreateUserRequest extends Request {
          * 
          * The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` indicates the name of the RAM user. `<AccountAlias>.onaliyun.com` indicates the default domain name. For more information about how to obtain the default domain name, see [GetDefaultDomain](~~186720~~).
          * 
-         * The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<AccountAlias>.onaliyun.com` must be 1 to 64 characters in length.
+         * The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<username>` must be 1 to 64 characters in length.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

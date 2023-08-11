@@ -70,7 +70,7 @@ public class GetAppSecretRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -79,7 +79,7 @@ public class GetAppSecretRequest extends Request {
         }
 
         /**
-         * AppSecretId.
+         * The ID of the application secret.
          */
         public Builder appSecretId(String appSecretId) {
             this.putQueryParameter("AppSecretId", appSecretId);

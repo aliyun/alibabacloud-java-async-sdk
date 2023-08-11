@@ -96,7 +96,12 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * 资源ID,最多50个子项
+         * The ID of resource N.
+         * <p>
+         * 
+         * Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.
+         * 
+         * > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -105,7 +110,12 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 资源名,最多50个子项
+         * The name of resource N.
+         * <p>
+         * 
+         * Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.
+         * 
+         * > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
          */
         public Builder resourcePrincipalName(java.util.List < String > resourcePrincipalName) {
             this.putQueryParameter("ResourcePrincipalName", resourcePrincipalName);
@@ -126,7 +136,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * The tag value.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

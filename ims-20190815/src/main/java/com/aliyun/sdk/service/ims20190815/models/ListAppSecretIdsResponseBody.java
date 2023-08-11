@@ -50,7 +50,7 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppSecrets.
+         * The details of the application secret.
          */
         public Builder appSecrets(AppSecrets appSecrets) {
             this.appSecrets = appSecrets;
@@ -58,7 +58,7 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
             private String createDate; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -130,7 +130,7 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
             }
 
             /**
-             * AppSecretId.
+             * The ID of the application secret.
              */
             public Builder appSecretId(String appSecretId) {
                 this.appSecretId = appSecretId;
@@ -138,7 +138,7 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The creation time.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;

@@ -77,7 +77,7 @@ public class ListOIDCProvidersRequest extends Request {
         }
 
         /**
-         * The number of entries to return. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be `true`.
+         * The number of entries per page. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be `true`.
          * <p>
          * 
          * Valid values: 1 to 100. Default value: 100.

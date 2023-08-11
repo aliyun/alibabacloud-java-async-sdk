@@ -77,8 +77,8 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
          * Indicates whether the response is truncated. Valid values:
          * <p>
          * 
-         * - true
-         * - false
+         * *   true
+         * *   false
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -86,7 +86,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.
+         * The `marker`. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.``
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -94,7 +94,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the OIDC IdP.
+         * The timestamp when the OIDC IdP was modified.
          */
         public Builder OIDCProviders(OIDCProviders OIDCProviders) {
             this.OIDCProviders = OIDCProviders;
@@ -102,7 +102,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,6 +137,9 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         private String gmtModified;
 
+        @NameInMap("IssuanceLimitTime")
+        private Long issuanceLimitTime;
+
         @NameInMap("IssuerUrl")
         private String issuerUrl;
 
@@ -154,6 +157,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             this.fingerprints = builder.fingerprints;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.issuanceLimitTime = builder.issuanceLimitTime;
             this.issuerUrl = builder.issuerUrl;
             this.OIDCProviderName = builder.OIDCProviderName;
             this.updateDate = builder.updateDate;
@@ -217,6 +221,13 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         }
 
         /**
+         * @return issuanceLimitTime
+         */
+        public Long getIssuanceLimitTime() {
+            return this.issuanceLimitTime;
+        }
+
+        /**
          * @return issuerUrl
          */
         public String getIssuerUrl() {
@@ -245,6 +256,7 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             private String fingerprints; 
             private String gmtCreate; 
             private String gmtModified; 
+            private Long issuanceLimitTime; 
             private String issuerUrl; 
             private String OIDCProviderName; 
             private String updateDate; 
@@ -302,6 +314,14 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * IssuanceLimitTime.
+             */
+            public Builder issuanceLimitTime(Long issuanceLimitTime) {
+                this.issuanceLimitTime = issuanceLimitTime;
                 return this;
             }
 

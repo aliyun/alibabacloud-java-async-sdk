@@ -54,7 +54,14 @@ public class ListPredefinedScopesRequest extends Request {
         } 
 
         /**
-         * AppType.
+         * The type of the application. Valid values:
+         * <p>
+         * 
+         * *   WebApp
+         * *   NativeApp
+         * *   ServerApp
+         * 
+         * If this parameter is empty, the permissions on all types of applications are queried.
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);

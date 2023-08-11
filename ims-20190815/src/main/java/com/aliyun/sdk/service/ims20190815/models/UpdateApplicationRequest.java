@@ -153,7 +153,7 @@ public class UpdateApplicationRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -162,7 +162,10 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * NewAccessTokenValidity.
+         * The validity period of the new access token.
+         * <p>
+         * 
+         * Valid values: 900 to 10800. Unit: seconds.
          */
         public Builder newAccessTokenValidity(Integer newAccessTokenValidity) {
             this.putQueryParameter("NewAccessTokenValidity", newAccessTokenValidity);
@@ -171,7 +174,7 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * NewDisplayName.
+         * The new display name of the application.
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);
@@ -180,7 +183,11 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * NewIsMultiTenant.
+         * Specifies whether the application can be installed by using other Alibaba Cloud accounts. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder newIsMultiTenant(Boolean newIsMultiTenant) {
             this.putQueryParameter("NewIsMultiTenant", newIsMultiTenant);
@@ -189,7 +196,14 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * NewPredefinedScopes.
+         * The new scope of application permissions.
+         * <p>
+         * 
+         * For more information about the application permission scope, see [Open authorization scope](~~93693~~). You can also call the [ListPredefinedScopes](~~187206~~) operation to obtain the permission scopes supported by different types of applications.
+         * 
+         * Separate multiple permission scopes with semicolons (;).
+         * 
+         * If you specify a new permission scope, the new permission scope takes effect. For example, if the original permission scope is `/acs/ccc`, and the new permission scope is `/acs/alidns`, `/acs/alidns` takes effect. If you want to retain the original permission scope, set the new permission scope to `/acs/ccc;/acs/alidns`.
          */
         public Builder newPredefinedScopes(String newPredefinedScopes) {
             this.putQueryParameter("NewPredefinedScopes", newPredefinedScopes);
@@ -198,7 +212,10 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * NewRedirectUris.
+         * The new callback URL.
+         * <p>
+         * 
+         * Separate multiple callback URLs with semicolons (;).
          */
         public Builder newRedirectUris(String newRedirectUris) {
             this.putQueryParameter("NewRedirectUris", newRedirectUris);
@@ -207,7 +224,10 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * NewRefreshTokenValidity.
+         * The validity period of the refreshed token.
+         * <p>
+         * 
+         * Valid values: 7200 to 31536000. Unit: seconds.
          */
         public Builder newRefreshTokenValidity(Integer newRefreshTokenValidity) {
             this.putQueryParameter("NewRefreshTokenValidity", newRefreshTokenValidity);
@@ -216,7 +236,16 @@ public class UpdateApplicationRequest extends Request {
         }
 
         /**
-         * NewSecretRequired.
+         * Specifies whether a secret is required. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * > 
+         * 
+         * *   For applications of the WebApp and ServerApp types, this parameter is automatically set to true and cannot be changed.
+         * *   For applications of the NativeApp type, this parameter can be set to true or false. If you do not set this parameter, false is used. Applications of the NativeApp type run in untrusted environments and the secrets of these applications are not protected. Therefore, we recommend that you do not set this parameter to true unless otherwise specified. For more information, see [Use an application of the NativeApp type to log on to Alibaba Cloud](~~93697~~).
          */
         public Builder newSecretRequired(Boolean newSecretRequired) {
             this.putQueryParameter("NewSecretRequired", newSecretRequired);

@@ -94,7 +94,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +102,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of tags that are added to resources.
+         * The tag key.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;

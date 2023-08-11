@@ -55,7 +55,7 @@ public class DeleteApplicationRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

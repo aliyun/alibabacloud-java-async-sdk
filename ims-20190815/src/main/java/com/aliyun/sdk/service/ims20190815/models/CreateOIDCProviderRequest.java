@@ -25,6 +25,10 @@ public class CreateOIDCProviderRequest extends Request {
     private String fingerprints;
 
     @Query
+    @NameInMap("IssuanceLimitTime")
+    private Long issuanceLimitTime;
+
+    @Query
     @NameInMap("IssuerUrl")
     private String issuerUrl;
 
@@ -37,6 +41,7 @@ public class CreateOIDCProviderRequest extends Request {
         this.clientIds = builder.clientIds;
         this.description = builder.description;
         this.fingerprints = builder.fingerprints;
+        this.issuanceLimitTime = builder.issuanceLimitTime;
         this.issuerUrl = builder.issuerUrl;
         this.OIDCProviderName = builder.OIDCProviderName;
     }
@@ -76,6 +81,13 @@ public class CreateOIDCProviderRequest extends Request {
     }
 
     /**
+     * @return issuanceLimitTime
+     */
+    public Long getIssuanceLimitTime() {
+        return this.issuanceLimitTime;
+    }
+
+    /**
      * @return issuerUrl
      */
     public String getIssuerUrl() {
@@ -93,6 +105,7 @@ public class CreateOIDCProviderRequest extends Request {
         private String clientIds; 
         private String description; 
         private String fingerprints; 
+        private Long issuanceLimitTime; 
         private String issuerUrl; 
         private String OIDCProviderName; 
 
@@ -105,6 +118,7 @@ public class CreateOIDCProviderRequest extends Request {
             this.clientIds = request.clientIds;
             this.description = request.description;
             this.fingerprints = request.fingerprints;
+            this.issuanceLimitTime = request.issuanceLimitTime;
             this.issuerUrl = request.issuerUrl;
             this.OIDCProviderName = request.OIDCProviderName;
         } 
@@ -150,6 +164,15 @@ public class CreateOIDCProviderRequest extends Request {
         }
 
         /**
+         * IssuanceLimitTime.
+         */
+        public Builder issuanceLimitTime(Long issuanceLimitTime) {
+            this.putQueryParameter("IssuanceLimitTime", issuanceLimitTime);
+            this.issuanceLimitTime = issuanceLimitTime;
+            return this;
+        }
+
+        /**
          * The URL of the issuer, which is provided by the external IdP Okta. The URL of the issuer must be unique within an Alibaba Cloud account.
          * <p>
          * 
@@ -167,7 +190,7 @@ public class CreateOIDCProviderRequest extends Request {
          * The name of the OIDC IdP.
          * <p>
          * 
-         * The name can contain letters, digits, and special characters and cannot start or end with the special characters. The special characters are `periods, (.), hyphens (-), and underscores (_)`.
+         * The name can contain letters, digits, and special characters and cannot start or end with the special characters. The special characters are `periods, (.), hyphens (-), and underscores (_)`.``
          * 
          * The name can be up to 128 characters in length.
          */

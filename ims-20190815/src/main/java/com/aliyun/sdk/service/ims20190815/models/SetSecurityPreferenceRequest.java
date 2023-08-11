@@ -183,8 +183,8 @@ public class SetSecurityPreferenceRequest extends Request {
          * Specifies whether RAM users can change their passwords. Valid values:
          * <p>
          * 
-         * *   true: yes. This is the default value.
-         * *   false: no.
+         * *   true (default)
+         * *   false
          */
         public Builder allowUserToChangePassword(Boolean allowUserToChangePassword) {
             this.putQueryParameter("AllowUserToChangePassword", allowUserToChangePassword);
@@ -196,8 +196,8 @@ public class SetSecurityPreferenceRequest extends Request {
          * Specifies whether RAM users can manage their AccessKey pairs. Valid values:
          * <p>
          * 
-         * *   true: yes.
-         * *   false: no. This is the default value.
+         * *   true
+         * *   false (default)
          */
         public Builder allowUserToManageAccessKeys(Boolean allowUserToManageAccessKeys) {
             this.putQueryParameter("AllowUserToManageAccessKeys", allowUserToManageAccessKeys);
@@ -209,8 +209,8 @@ public class SetSecurityPreferenceRequest extends Request {
          * Specifies whether RAM users can manage their MFA devices. Valid values:
          * <p>
          * 
-         * *   true: yes. This is the default value.
-         * *   false: no.
+         * *   true (default)
+         * *   false
          */
         public Builder allowUserToManageMFADevices(Boolean allowUserToManageMFADevices) {
             this.putQueryParameter("AllowUserToManageMFADevices", allowUserToManageMFADevices);
@@ -222,8 +222,8 @@ public class SetSecurityPreferenceRequest extends Request {
          * Specifies whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts. Valid values:
          * <p>
          * 
-         * *   true: yes. This is the default value.
-         * *   false: no.
+         * *   true (default)
+         * *   false
          */
         public Builder allowUserToManagePersonalDingTalk(Boolean allowUserToManagePersonalDingTalk) {
             this.putQueryParameter("AllowUserToManagePersonalDingTalk", allowUserToManagePersonalDingTalk);
@@ -232,11 +232,11 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * Specifies whether to remember the MFA devices for seven days. Valid values:
+         * Specifies whether RAM users can remember the MFA devices for seven days. Valid values:
          * <p>
          * 
-         * *   true: yes.
-         * *   false: no. This is the default value.
+         * *   true
+         * *   false (default)
          */
         public Builder enableSaveMFATicket(Boolean enableSaveMFATicket) {
             this.putQueryParameter("EnableSaveMFATicket", enableSaveMFATicket);
@@ -276,11 +276,11 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * Specifies whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. This parameter is used to replace the EnforceMFAForLogin parameter. The EnforceMFAForLogin parameter is still valid. However, we recommend that you use the MFAOperationForLogin parameter. Valid values:
+         * Specifies whether MFA is required for all RAM users when they log on to the Alibaba Cloud Management Console. This parameter is used to replace EnforceMFAForLogin. EnforceMFAForLogin is still valid. However, we recommend that you use MFAOperationForLogin. Valid values:
          * <p>
          * 
-         * *   mandatory: MFA is required for all RAM users. If you use the EnforceMFAForLogin parameter, set the value to true.
-         * *   independent: User-specific settings are applied. This is the default value. If you use the EnforceMFAForLogin parameter, set the value to false.
+         * *   mandatory: MFA is required for all RAM users. If you use EnforceMFAForLogin, set the value to true.
+         * *   independent (default): User-specific settings are applied. If you use EnforceMFAForLogin, set the value to false.
          * *   adaptive: MFA is required only for RAM users who initiated unusual logons.
          */
         public Builder MFAOperationForLogin(String MFAOperationForLogin) {
@@ -293,8 +293,8 @@ public class SetSecurityPreferenceRequest extends Request {
          * Specifies whether to enable MFA for RAM users who initiated unusual logons. Valid values:
          * <p>
          * 
-         * *   autonomous: yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA. This is the default value.
-         * *   enforceVerify: no.
+         * *   autonomous (default): yes. MFA is prompted for RAM users who initiated unusual logons. However, the RAM users are allowed to skip MFA.
+         * *   enforceVerify: MFA is prompted for RAM users who initiated unusual logons and the RAM users cannot skip MFA.
          */
         public Builder operationForRiskLogin(String operationForRiskLogin) {
             this.putQueryParameter("OperationForRiskLogin", operationForRiskLogin);
@@ -303,7 +303,7 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * VerificationTypes.
+         * The MFA methods.
          */
         public Builder verificationTypes(java.util.List < String > verificationTypes) {
             String verificationTypesShrink = shrink(verificationTypes, "VerificationTypes", "json");

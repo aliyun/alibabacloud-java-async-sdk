@@ -58,7 +58,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -93,6 +93,9 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         private String gmtModified;
 
+        @NameInMap("IssuanceLimitTime")
+        private Long issuanceLimitTime;
+
         @NameInMap("IssuerUrl")
         private String issuerUrl;
 
@@ -110,6 +113,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
             this.fingerprints = builder.fingerprints;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.issuanceLimitTime = builder.issuanceLimitTime;
             this.issuerUrl = builder.issuerUrl;
             this.OIDCProviderName = builder.OIDCProviderName;
             this.updateDate = builder.updateDate;
@@ -173,6 +177,13 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
         }
 
         /**
+         * @return issuanceLimitTime
+         */
+        public Long getIssuanceLimitTime() {
+            return this.issuanceLimitTime;
+        }
+
+        /**
          * @return issuerUrl
          */
         public String getIssuerUrl() {
@@ -201,6 +212,7 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
             private String fingerprints; 
             private String gmtCreate; 
             private String gmtModified; 
+            private Long issuanceLimitTime; 
             private String issuerUrl; 
             private String OIDCProviderName; 
             private String updateDate; 
@@ -258,6 +270,14 @@ public class AddFingerprintToOIDCProviderResponseBody extends TeaModel {
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * IssuanceLimitTime.
+             */
+            public Builder issuanceLimitTime(Long issuanceLimitTime) {
+                this.issuanceLimitTime = issuanceLimitTime;
                 return this;
             }
 

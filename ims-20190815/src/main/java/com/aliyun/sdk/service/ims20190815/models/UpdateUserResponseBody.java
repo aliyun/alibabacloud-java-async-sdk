@@ -50,7 +50,7 @@ public class UpdateUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateUserResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the RAM user.
+         * The information about the RAM user.
          */
         public Builder user(User user) {
             this.user = user;
@@ -206,7 +206,7 @@ public class UpdateUserResponseBody extends TeaModel {
             private String userPrincipalName; 
 
             /**
-             * The description of the RAM user.
+             * The description.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -233,7 +233,7 @@ public class UpdateUserResponseBody extends TeaModel {
              * The email address of the RAM user.
              * <p>
              * 
-             * >  This parameter applies only to the China site (aliyun.com).
+             * > This parameter is valid only on the China site (aliyun.com).
              */
             public Builder email(String email) {
                 this.email = email;
@@ -241,7 +241,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the RAM user logged on to the console.
+             * The last time when the RAM user logged on to the Alibaba Cloud Management Console.
              */
             public Builder lastLoginDate(String lastLoginDate) {
                 this.lastLoginDate = lastLoginDate;
@@ -252,7 +252,7 @@ public class UpdateUserResponseBody extends TeaModel {
              * The mobile phone number of the RAM user.
              * <p>
              * 
-             * >  This parameter applies only to the China site (aliyun.com).
+             * > This parameter is valid only on the China site (aliyun.com).
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -260,7 +260,12 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * ProvisionType.
+             * The source of the RAM user. Valid values:
+             * <p>
+             * 
+             * - Manual: The RAM user is manually created in the RAM console.
+             * - SCIM: The RAM user is mapped by using System for Cross-domain Identity Management (SCIM).
+             * - CloudSSO: The RAM user is mapped from a CloudSSO user.
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -268,7 +273,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information of the RAM user was updated.
+             * The time when the information about the RAM user was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

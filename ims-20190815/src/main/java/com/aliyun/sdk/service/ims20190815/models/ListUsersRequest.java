@@ -103,7 +103,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * The tag value.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);

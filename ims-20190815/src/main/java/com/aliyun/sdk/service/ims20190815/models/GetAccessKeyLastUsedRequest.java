@@ -81,7 +81,7 @@ public class GetAccessKeyLastUsedRequest extends Request {
          * The logon name of the RAM user.
          * <p>
          * 
-         * If this parameter is empty, the AccessKey pair of the current user is queried.
+         * If you do not specify this parameter, the AccessKey pair of the current user is queried.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

@@ -40,6 +40,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ###
       * This topic provides an example on how to add the client ID `598469743454717****` to the OIDC IdP named `TestOIDCProvider`.
       *
      */
@@ -58,6 +59,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ###
       * This topic provides an example on how to add the fingerprint `902ef2deeb3c5b13ea4c3d5193629309e231****` to the OIDC IdP named `TestOIDCProvider`.
       *
      */
@@ -192,13 +194,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to create an IdP named `TestOIDCProvider` to configure a trust relationship between the external IdP Okta and Alibaba Cloud.
-      * ## Prerequisites
+      * ### Prerequisites
       * Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external IdP, such as Google G Suite or Okta.
-      * ## Limits
-      * - You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
-      * - You can add a maximum of 20 client IDs to an OIDC IdP.
-      * - You can add a maximum of five fingerprints to an OIDC IdP.
+      * ### Limits
+      * *   You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.
+      * *   You can add a maximum of 20 client IDs to an OIDC IdP.
+      * *   You can add a maximum of five fingerprints to an OIDC IdP.
+      * ###
+      * ``
       *
      */
     @Override
@@ -336,6 +339,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ###
       * This topic provides an example on how to remove the OIDC IdP named `TestOIDCProvider`.
       *
      */
@@ -493,6 +497,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to query the configurations of an application named `472457090344041****`.
+      *
+     */
     @Override
     public CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request) {
         try {
@@ -564,7 +572,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the information about an OIDC IdP named `TestOIDCProvider`.
+      * ###
+      * This topic provides an example on how to query the information about an OpenID Connect (OIDC) identity provider (IdP) named `TestOIDCProvider`.
       *
      */
     @Override
@@ -697,6 +706,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named `myapp` belongs to the current account.
+      *
+     */
     @Override
     public CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request) {
         try {
@@ -740,7 +753,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query all OIDC IdPs within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
+      * ###
+      * This topic provides an example on how to query all OpenID Connect (OIDC) identity providers (IdPs) within your Alibaba Cloud account. The response shows that your Alibaba Cloud account has only one OIDC IdP named `TestOIDCProvider`.
       *
      */
     @Override
@@ -786,6 +800,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ###
       * You must specify at least one of the following parameters or parameter pairs in a request to determine a query object:
       * *   `ResourceId.N`
       * *   `Tag.N.Key`
@@ -827,6 +842,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ## Description
       * You can call the following API operations to query the information about all RAM users:
       * *   ListUsers: queries the details of all RAM users.
       * *   ListUserBasicInfos: queries the basic information about all RAM users. The basic information includes only the logon names (`UserPrincipalName`), display names (`DisplayName`), and user IDs (`UserId`).
@@ -875,6 +891,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ###
       * This topic provides an example on how to remove the client ID `498469743454717****` from the OIDC IdP named `TestOIDCProvider`.
       *
      */
@@ -893,6 +910,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ###
       * This topic provides an example on how to remove the fingerprint `6938fd4d98bab03faadb97b34396831e3780****` from the OIDC IdP named `TestOIDCProvider`.
       *
      */
@@ -953,6 +971,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ###
       * This topic provides an example on how to enable multi-factor authentication (MFA) only for RAM users who initiated unusual logons.
       *
      */
@@ -1083,6 +1102,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+      * ###
       * This topic provides an example on how to change the description of the OIDC IdP named `TestOIDCProvider` to `This is a new OIDC Provider.`
       *
      */

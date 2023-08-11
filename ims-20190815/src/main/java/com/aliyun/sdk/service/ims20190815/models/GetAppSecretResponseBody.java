@@ -50,7 +50,7 @@ public class GetAppSecretResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AppSecret.
+         * The details of the application secret.
          */
         public Builder appSecret(AppSecret appSecret) {
             this.appSecret = appSecret;
@@ -58,7 +58,7 @@ public class GetAppSecretResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetAppSecretResponseBody extends TeaModel {
             private String createDate; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -142,7 +142,7 @@ public class GetAppSecretResponseBody extends TeaModel {
             }
 
             /**
-             * AppSecretId.
+             * The ID of the application secret.
              */
             public Builder appSecretId(String appSecretId) {
                 this.appSecretId = appSecretId;
@@ -150,7 +150,7 @@ public class GetAppSecretResponseBody extends TeaModel {
             }
 
             /**
-             * AppSecretValue.
+             * The content of the application secret.
              */
             public Builder appSecretValue(String appSecretValue) {
                 this.appSecretValue = appSecretValue;
@@ -158,7 +158,7 @@ public class GetAppSecretResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The creation time.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;

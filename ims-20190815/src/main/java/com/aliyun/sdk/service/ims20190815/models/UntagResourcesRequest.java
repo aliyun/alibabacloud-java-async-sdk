@@ -110,13 +110,13 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the resources. Valid values:
+         * Specifies whether to remove all tags from the resource. Valid values:
          * <p>
          * 
          * *   true: remove all tags from the resources.
-         * *   false: does not remove all tags from the resources. This is the default value.
+         * *   false (default): does not remove all tags from the resources.
          * 
-         * >  This parameter takes effect only when the TagKey.N parameter is not specified in the request.
+         * > This parameter takes effect only when TagKey.N is not set in the request.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -125,7 +125,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 资源ID,最多 50个子项
+         * The IDs of resources.
+         * <p>
+         * 
+         * Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource ID is the ID of the RAM user.
+         * 
+         * > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -134,7 +139,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 资源名,最多50个子项
+         * The names of resources.
+         * <p>
+         * 
+         * Valid values of N: 1 to 50. If the ResourceType parameter is set to user, the resource name is the name of the RAM user.
+         * 
+         * > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
          */
         public Builder resourcePrincipalName(java.util.List < String > resourcePrincipalName) {
             this.putQueryParameter("ResourcePrincipalName", resourcePrincipalName);
@@ -143,7 +153,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
+         * The type of the resource. Valid value:
          * <p>
          * 
          * *   user: a RAM user
@@ -155,7 +165,10 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * 标签键，最多20个子项
+         * The tag keys of resources.
+         * <p>
+         * 
+         * Valid values of N: 1 to 20. N must be consecutive.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

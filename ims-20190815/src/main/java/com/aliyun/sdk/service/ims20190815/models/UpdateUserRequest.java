@@ -165,7 +165,7 @@ public class UpdateUserRequest extends Request {
          * The new email address of the RAM user.
          * <p>
          * 
-         * >  This parameter applies only to the China site (aliyun.com).
+         * > This parameter is valid only on the China site (aliyun.com).
          */
         public Builder newEmail(String newEmail) {
             this.putQueryParameter("NewEmail", newEmail);
@@ -177,9 +177,9 @@ public class UpdateUserRequest extends Request {
          * The new mobile phone number of the RAM user.
          * <p>
          * 
-         * Format: Country calling code-Mobile phone number.
+         * Format: \<Country code>-\<Mobile phone number>.
          * 
-         * >  This parameter applies only to the China site (aliyun.com).
+         * > This parameter is valid only on the China site (aliyun.com).
          */
         public Builder newMobilePhone(String newMobilePhone) {
             this.putQueryParameter("NewMobilePhone", newMobilePhone);
@@ -191,7 +191,7 @@ public class UpdateUserRequest extends Request {
          * The new logon name of the RAM user.
          * <p>
          * 
-         * The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` is the name of the RAM user. `<AccountAlias>.onaliyun.com` is the default domain name.
+         * The name is in the format of `<username>@<AccountAlias>.onaliyun.com`. `<username>` indicates the name of the RAM user. `<AccountAlias>.onaliyun.com` indicates the default domain name.
          * 
          * The value of `UserPrincipalName` must be 1 to 128 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_). The value of `<username>` must be 1 to 64 characters in length.
          */
@@ -205,7 +205,7 @@ public class UpdateUserRequest extends Request {
          * The ID of the RAM user.
          * <p>
          * 
-         * >  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
+         * > You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -217,7 +217,7 @@ public class UpdateUserRequest extends Request {
          * The logon name of the RAM user.
          * <p>
          * 
-         * >  You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
+         * > You must specify only one of the following parameters: `UserPrincipalName` and `UserId`.
          */
         public Builder userPrincipalName(String userPrincipalName) {
             this.putQueryParameter("UserPrincipalName", userPrincipalName);

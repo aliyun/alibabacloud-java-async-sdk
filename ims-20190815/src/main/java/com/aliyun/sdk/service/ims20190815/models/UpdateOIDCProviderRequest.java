@@ -17,6 +17,10 @@ public class UpdateOIDCProviderRequest extends Request {
     private String clientIds;
 
     @Query
+    @NameInMap("IssuanceLimitTime")
+    private Long issuanceLimitTime;
+
+    @Query
     @NameInMap("NewDescription")
     private String newDescription;
 
@@ -27,6 +31,7 @@ public class UpdateOIDCProviderRequest extends Request {
     private UpdateOIDCProviderRequest(Builder builder) {
         super(builder);
         this.clientIds = builder.clientIds;
+        this.issuanceLimitTime = builder.issuanceLimitTime;
         this.newDescription = builder.newDescription;
         this.OIDCProviderName = builder.OIDCProviderName;
     }
@@ -52,6 +57,13 @@ public class UpdateOIDCProviderRequest extends Request {
     }
 
     /**
+     * @return issuanceLimitTime
+     */
+    public Long getIssuanceLimitTime() {
+        return this.issuanceLimitTime;
+    }
+
+    /**
      * @return newDescription
      */
     public String getNewDescription() {
@@ -67,6 +79,7 @@ public class UpdateOIDCProviderRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateOIDCProviderRequest, Builder> {
         private String clientIds; 
+        private Long issuanceLimitTime; 
         private String newDescription; 
         private String OIDCProviderName; 
 
@@ -77,23 +90,33 @@ public class UpdateOIDCProviderRequest extends Request {
         private Builder(UpdateOIDCProviderRequest request) {
             super(request);
             this.clientIds = request.clientIds;
+            this.issuanceLimitTime = request.issuanceLimitTime;
             this.newDescription = request.newDescription;
             this.OIDCProviderName = request.OIDCProviderName;
         } 
 
         /**
-         * The ID of the client. If you want to specify multiple fingerprints, separate the fingerprints with commas (,).
+         * The ID of the client. If you want to specify multiple client IDs, separate the client IDs with commas (,).
          * <p>
          * 
-         * The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are `periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)`.
+         * The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are `periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)`.``
          * 
          * The client ID can be up to 64 characters in length.
          * 
-         * >  If you specify this parameter, all the client IDs of the OIDC IdP are replaced. If you need to only add or remove a client ID, call the AddClientIdToOIDCProvider or RemoveClientIdFromOIDCProvider operation. For more information, see [AddClientIdToOIDCProvider](~~332057~~) or [RemoveClientIdFromOIDCProvider](~~332058~~).
+         * > If you specify this parameter, all the client IDs of the OIDC IdP are replaced. If you need to only add or remove a client ID, call the AddClientIdToOIDCProvider or RemoveClientIdFromOIDCProvider operation. For more information, see [AddClientIdToOIDCProvider](~~332057~~) or [RemoveClientIdFromOIDCProvider](~~332058~~).
          */
         public Builder clientIds(String clientIds) {
             this.putQueryParameter("ClientIds", clientIds);
             this.clientIds = clientIds;
+            return this;
+        }
+
+        /**
+         * IssuanceLimitTime.
+         */
+        public Builder issuanceLimitTime(Long issuanceLimitTime) {
+            this.putQueryParameter("IssuanceLimitTime", issuanceLimitTime);
+            this.issuanceLimitTime = issuanceLimitTime;
             return this;
         }
 

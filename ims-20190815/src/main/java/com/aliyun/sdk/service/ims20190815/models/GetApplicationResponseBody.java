@@ -50,7 +50,7 @@ public class GetApplicationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Application.
+         * The information about the application.
          */
         public Builder application(Application application) {
             this.application = application;
@@ -58,7 +58,7 @@ public class GetApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Description.
+             * The description of the permission.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +118,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the permission.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -200,7 +200,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private PredefinedScopes predefinedScopes; 
 
             /**
-             * PredefinedScopes.
+             * An array consisting of the information about the permissions that are granted on the application.
              */
             public Builder predefinedScopes(PredefinedScopes predefinedScopes) {
                 this.predefinedScopes = predefinedScopes;
@@ -426,7 +426,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * AccessTokenValidity.
+             * The validity period of the access token. Unit: seconds.
              */
             public Builder accessTokenValidity(Integer accessTokenValidity) {
                 this.accessTokenValidity = accessTokenValidity;
@@ -434,7 +434,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * AccountId.
+             * The ID of the Alibaba Cloud account to which the application belongs.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -442,7 +442,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -450,7 +450,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -458,7 +458,12 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * AppType.
+             * The type of the application. Valid values:
+             * <p>
+             * 
+             * *   WebApp: a web application.
+             * *   NativeApp: a native application that runs on an operating system, such as a desktop or mobile operating system.
+             * *   ServerApp: an application that can access Alibaba Cloud services without the need for user logon. Only applications that synchronize user information based on the System for Cross-domain Identity Management (SCIM) protocol are supported.
              */
             public Builder appType(String appType) {
                 this.appType = appType;
@@ -466,7 +471,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The creation time.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -474,7 +479,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * DelegatedScope.
+             * The information about the permissions that are granted on the application.
              */
             public Builder delegatedScope(DelegatedScope delegatedScope) {
                 this.delegatedScope = delegatedScope;
@@ -482,7 +487,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the application.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -490,7 +495,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * IsMultiTenant.
+             * Indicates whether the application can be installed by using other Alibaba Cloud accounts.
              */
             public Builder isMultiTenant(Boolean isMultiTenant) {
                 this.isMultiTenant = isMultiTenant;
@@ -498,7 +503,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * RedirectUris.
+             * The callback URL.
              */
             public Builder redirectUris(RedirectUris redirectUris) {
                 this.redirectUris = redirectUris;
@@ -506,7 +511,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * RefreshTokenValidity.
+             * The validity period of the refresh token. Unit: seconds.
              */
             public Builder refreshTokenValidity(Integer refreshTokenValidity) {
                 this.refreshTokenValidity = refreshTokenValidity;
@@ -514,7 +519,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * SecretRequired.
+             * Indicates whether a secret is required.
              */
             public Builder secretRequired(Boolean secretRequired) {
                 this.secretRequired = secretRequired;
@@ -522,7 +527,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The update time.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

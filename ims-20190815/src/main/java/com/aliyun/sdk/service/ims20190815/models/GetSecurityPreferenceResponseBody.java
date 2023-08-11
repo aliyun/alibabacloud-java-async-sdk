@@ -391,7 +391,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private java.util.List < String > verificationTypes; 
 
             /**
-             * VerificationTypes.
+             * The MFA method.
              */
             public Builder verificationTypes(java.util.List < String > verificationTypes) {
                 this.verificationTypes = verificationTypes;
@@ -512,7 +512,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * VerificationPreference.
+             * The MFA method preference.
              */
             public Builder verificationPreference(VerificationPreference verificationPreference) {
                 this.verificationPreference = verificationPreference;

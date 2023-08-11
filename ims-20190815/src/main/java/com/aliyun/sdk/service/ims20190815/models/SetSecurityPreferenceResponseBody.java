@@ -50,7 +50,7 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         private SecurityPreference securityPreference; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -362,7 +362,7 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             private java.util.List < String > verificationTypes; 
 
             /**
-             * VerificationTypes.
+             * The MFA methods.
              */
             public Builder verificationTypes(java.util.List < String > verificationTypes) {
                 this.verificationTypes = verificationTypes;
@@ -483,7 +483,7 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * VerificationPreference.
+             * The MFA method preference.
              */
             public Builder verificationPreference(VerificationPreference verificationPreference) {
                 this.verificationPreference = verificationPreference;

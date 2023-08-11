@@ -58,7 +58,7 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The Alibaba Cloud service that was last accessed.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

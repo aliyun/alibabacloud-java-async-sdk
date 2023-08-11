@@ -133,10 +133,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The number of entries to return. If a response is truncated because it reaches the value of PageSize, the value of IsTruncated will be true.
-         * <p>
-         * 
-         * Valid values: 1 to 100. Default value: 100.
+         * The number of entries per page. If a response is truncated because it reaches the value of PageSize, the value of IsTruncated will be true. Valid values: 1 to 100. Default value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -145,7 +142,12 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源ID,最多 50个子项
+         * The ID of resource N.
+         * <p>
+         * 
+         * Valid values of N: 1 to 50. If ResourceType is set to user, the resource ID is the ID of the RAM user.
+         * 
+         * > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -154,7 +156,12 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 资源名,最多50个子项
+         * The name of resource N.
+         * <p>
+         * 
+         * Valid values of N: 1 to 50. If ResourceType is set to user, the resource name is the name of the RAM user.
+         * 
+         * > You must specify only one of the following parameters: ResourceId and ResourcePrincipalName.
          */
         public Builder resourcePrincipalName(java.util.List < String > resourcePrincipalName) {
             this.putQueryParameter("ResourcePrincipalName", resourcePrincipalName);
@@ -163,7 +170,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Valid values:
+         * The type of the resource. Valid value:
          * <p>
          * 
          * *   user: a RAM user
@@ -175,7 +182,10 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * The tag value.
+         * <p>
+         * 
+         * Valid values of N: 1 to 20. N must be consecutive.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
