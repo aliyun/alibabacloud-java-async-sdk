@@ -48,6 +48,9 @@ public class DescribeApiGroupResponseBody extends TeaModel {
     @NameInMap("Description")
     private String description;
 
+    @NameInMap("DisableInnerDomain")
+    private Boolean disableInnerDomain;
+
     @NameInMap("GroupId")
     private String groupId;
 
@@ -121,6 +124,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         this.dedicatedInstanceType = builder.dedicatedInstanceType;
         this.defaultDomain = builder.defaultDomain;
         this.description = builder.description;
+        this.disableInnerDomain = builder.disableInnerDomain;
         this.groupId = builder.groupId;
         this.groupName = builder.groupName;
         this.httpsPolicy = builder.httpsPolicy;
@@ -233,6 +237,13 @@ public class DescribeApiGroupResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return disableInnerDomain
+     */
+    public Boolean getDisableInnerDomain() {
+        return this.disableInnerDomain;
     }
 
     /**
@@ -388,6 +399,7 @@ public class DescribeApiGroupResponseBody extends TeaModel {
         private String dedicatedInstanceType; 
         private String defaultDomain; 
         private String description; 
+        private Boolean disableInnerDomain; 
         private String groupId; 
         private String groupName; 
         private String httpsPolicy; 
@@ -506,6 +518,14 @@ public class DescribeApiGroupResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DisableInnerDomain.
+         */
+        public Builder disableInnerDomain(Boolean disableInnerDomain) {
+            this.disableInnerDomain = disableInnerDomain;
             return this;
         }
 
