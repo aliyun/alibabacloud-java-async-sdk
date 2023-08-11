@@ -42,7 +42,6 @@ public class ModifyStrategyRequest extends Request {
 
     @Query
     @NameInMap("RiskCustomParams")
-    @Validation(required = true)
     private String riskCustomParams;
 
     @Query

@@ -785,6 +785,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetCheckSummaryResponse> getCheckSummary(GetCheckSummaryRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
+    CompletableFuture<GetClientInstallationStatisticResponse> getClientInstallationStatistic(GetClientInstallationStatisticRequest request);
+
     CompletableFuture<GetClientRatioStatisticResponse> getClientRatioStatistic(GetClientRatioStatisticRequest request);
 
     CompletableFuture<GetClientUserDefineRuleResponse> getClientUserDefineRule(GetClientUserDefineRuleRequest request);
@@ -884,6 +890,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAvailableHoneypotResponse> listAvailableHoneypot(ListAvailableHoneypotRequest request);
 
     CompletableFuture<ListCheckInstanceResultResponse> listCheckInstanceResult(ListCheckInstanceResultRequest request);
+
+    CompletableFuture<ListCheckItemResponse> listCheckItem(ListCheckItemRequest request);
 
     CompletableFuture<ListCheckItemWarningMachineResponse> listCheckItemWarningMachine(ListCheckItemWarningMachineRequest request);
 

@@ -497,6 +497,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @NameInMap("K8sPodName")
         private String k8sPodName;
 
+        @NameInMap("LargeModel")
+        private Boolean largeModel;
+
         @NameInMap("LastTime")
         private String lastTime;
 
@@ -586,6 +589,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             this.k8sNodeId = builder.k8sNodeId;
             this.k8sNodeName = builder.k8sNodeName;
             this.k8sPodName = builder.k8sPodName;
+            this.largeModel = builder.largeModel;
             this.lastTime = builder.lastTime;
             this.lastTimeStamp = builder.lastTimeStamp;
             this.level = builder.level;
@@ -853,6 +857,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return largeModel
+         */
+        public Boolean getLargeModel() {
+            return this.largeModel;
+        }
+
+        /**
          * @return lastTime
          */
         public String getLastTime() {
@@ -1013,6 +1024,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private String k8sNodeId; 
             private String k8sNodeName; 
             private String k8sPodName; 
+            private Boolean largeModel; 
             private String lastTime; 
             private Long lastTimeStamp; 
             private String level; 
@@ -1326,6 +1338,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              */
             public Builder k8sPodName(String k8sPodName) {
                 this.k8sPodName = k8sPodName;
+                return this;
+            }
+
+            /**
+             * LargeModel.
+             */
+            public Builder largeModel(Boolean largeModel) {
+                this.largeModel = largeModel;
                 return this;
             }
 
