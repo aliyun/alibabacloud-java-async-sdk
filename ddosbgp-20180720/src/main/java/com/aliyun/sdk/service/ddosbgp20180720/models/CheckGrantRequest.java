@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CheckGrantRequest extends Request {
     @Query
+    @NameInMap("IsSlr")
+    private Boolean isSlr;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -22,6 +26,7 @@ public class CheckGrantRequest extends Request {
 
     private CheckGrantRequest(Builder builder) {
         super(builder);
+        this.isSlr = builder.isSlr;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
     }
@@ -40,6 +45,13 @@ public class CheckGrantRequest extends Request {
     }
 
     /**
+     * @return isSlr
+     */
+    public Boolean getIsSlr() {
+        return this.isSlr;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -54,6 +66,7 @@ public class CheckGrantRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CheckGrantRequest, Builder> {
+        private Boolean isSlr; 
         private String regionId; 
         private String resourceGroupId; 
 
@@ -63,9 +76,19 @@ public class CheckGrantRequest extends Request {
 
         private Builder(CheckGrantRequest request) {
             super(request);
+            this.isSlr = request.isSlr;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
         } 
+
+        /**
+         * IsSlr.
+         */
+        public Builder isSlr(Boolean isSlr) {
+            this.putQueryParameter("IsSlr", isSlr);
+            this.isSlr = isSlr;
+            return this;
+        }
 
         /**
          * WB269094

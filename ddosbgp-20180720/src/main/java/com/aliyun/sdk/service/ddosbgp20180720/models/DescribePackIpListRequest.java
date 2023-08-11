@@ -22,6 +22,10 @@ public class DescribePackIpListRequest extends Request {
     private String ip;
 
     @Query
+    @NameInMap("MemberUid")
+    private String memberUid;
+
+    @Query
     @NameInMap("PageNo")
     @Validation(required = true)
     private Integer pageNo;
@@ -47,6 +51,7 @@ public class DescribePackIpListRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.ip = builder.ip;
+        this.memberUid = builder.memberUid;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.productName = builder.productName;
@@ -79,6 +84,13 @@ public class DescribePackIpListRequest extends Request {
      */
     public String getIp() {
         return this.ip;
+    }
+
+    /**
+     * @return memberUid
+     */
+    public String getMemberUid() {
+        return this.memberUid;
     }
 
     /**
@@ -119,6 +131,7 @@ public class DescribePackIpListRequest extends Request {
     public static final class Builder extends Request.Builder<DescribePackIpListRequest, Builder> {
         private String instanceId; 
         private String ip; 
+        private String memberUid; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String productName; 
@@ -133,6 +146,7 @@ public class DescribePackIpListRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.ip = request.ip;
+            this.memberUid = request.memberUid;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.productName = request.productName;
@@ -158,6 +172,15 @@ public class DescribePackIpListRequest extends Request {
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
             this.ip = ip;
+            return this;
+        }
+
+        /**
+         * MemberUid.
+         */
+        public Builder memberUid(String memberUid) {
+            this.putQueryParameter("MemberUid", memberUid);
+            this.memberUid = memberUid;
             return this;
         }
 
