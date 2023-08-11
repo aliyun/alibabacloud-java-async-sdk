@@ -85,7 +85,7 @@ public class DescribeGuestClusterPodsRequest extends Request {
         } 
 
         /**
-         * GuestClusterID.
+         * The ID of the Kubernetes cluster that is added to the ASM instance.
          */
         public Builder guestClusterID(String guestClusterID) {
             this.putBodyParameter("GuestClusterID", guestClusterID);
@@ -94,7 +94,7 @@ public class DescribeGuestClusterPodsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -103,7 +103,7 @@ public class DescribeGuestClusterPodsRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

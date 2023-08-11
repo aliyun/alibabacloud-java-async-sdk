@@ -50,7 +50,7 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Dashboards.
+         * The information of Grafana dashboards.
          */
         public Builder dashboards(java.util.List < Dashboards> dashboards) {
             this.dashboards = dashboards;
@@ -58,7 +58,7 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Title.
+             * The title of the Grafana dashboard.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -118,7 +118,7 @@ public class DescribeClusterGrafanaResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The endpoint of the Grafana dashboard.
              */
             public Builder url(String url) {
                 this.url = url;

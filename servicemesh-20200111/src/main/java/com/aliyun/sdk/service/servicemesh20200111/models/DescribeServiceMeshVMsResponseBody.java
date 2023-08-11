@@ -50,7 +50,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
         private java.util.List < VMs> vMs; 
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
         }
 
         /**
-         * VMs.
+         * The ECS instances that reside in the same VPC as the ASM instance.
          */
         public Builder vMs(java.util.List < VMs> vMs) {
             this.vMs = vMs;
@@ -182,7 +182,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * HasTag.
+             * Indicates whether the ECS instance has labels.
              */
             public Builder hasTag(Boolean hasTag) {
                 this.hasTag = hasTag;
@@ -190,7 +190,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * The hostname of the ECS instance.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -198,7 +198,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the ECS instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -206,7 +206,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * The IP address of the ECS instance.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -214,7 +214,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The ID of the region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -222,7 +222,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIds.
+             * The security group to which the ECS instance belongs.
              */
             public Builder securityGroupIds(String securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -230,7 +230,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceMeshId.
+             * The ID of the ASM instance.
              */
             public Builder serviceMeshId(String serviceMeshId) {
                 this.serviceMeshId = serviceMeshId;
@@ -238,7 +238,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the ECS instance.
              */
             public Builder status(String status) {
                 this.status = status;

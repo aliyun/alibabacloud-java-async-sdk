@@ -83,7 +83,7 @@ public class DescribeServiceMeshUpgradeStatusRequest extends Request {
         } 
 
         /**
-         * AllIstioGatewayFullNames.
+         * The ID of the request.
          */
         public Builder allIstioGatewayFullNames(String allIstioGatewayFullNames) {
             this.putBodyParameter("AllIstioGatewayFullNames", allIstioGatewayFullNames);
@@ -92,7 +92,7 @@ public class DescribeServiceMeshUpgradeStatusRequest extends Request {
         }
 
         /**
-         * GuestClusterIds.
+         * The fully qualified names of ingress gateways in the ASM instance. Separate multiple names with commas (,).
          */
         public Builder guestClusterIds(String guestClusterIds) {
             this.putBodyParameter("GuestClusterIds", guestClusterIds);
@@ -101,7 +101,7 @@ public class DescribeServiceMeshUpgradeStatusRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The IDs of the clusters on the data plane of the ASM instance. Separate multiple clusters with commas (,).
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

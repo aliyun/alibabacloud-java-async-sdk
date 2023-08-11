@@ -125,7 +125,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the routing rule.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -134,7 +134,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
         }
 
         /**
-         * GatewayRoute.
+         * The information about the routing rule to be created for the ASM gateway.
          */
         public Builder gatewayRoute(GatewayRoute gatewayRoute) {
             String gatewayRouteShrink = shrink(gatewayRoute, "GatewayRoute", "json");
@@ -144,7 +144,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
         }
 
         /**
-         * IstioGatewayName.
+         * The name of the ASM gateway.
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -153,7 +153,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.
          */
         public Builder priority(Integer priority) {
             this.putBodyParameter("Priority", priority);
@@ -162,7 +162,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -171,7 +171,12 @@ public class CreateIstioGatewayRoutesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the routing rule. Valid values:
+         * <p>
+         * 
+         * *   `0`: The routing rule is valid.
+         * *   `1`: The routing rule is invalid.
+         * *   `2`: An error occurs during the creation or update of the routing rule.
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -225,7 +230,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private String namespace; 
 
             /**
-             * Name.
+             * The name of the virtual service.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -233,7 +238,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * The namespace to which the virtual service belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -274,7 +279,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private Float value; 
 
             /**
-             * Value.
+             * The percentage of requests that are aborted with the specified error code, which is expressed as a decimal.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -327,7 +332,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private Percentage percentage; 
 
             /**
-             * HttpStatus.
+             * The HTTP status code.
              */
             public Builder httpStatus(Integer httpStatus) {
                 this.httpStatus = httpStatus;
@@ -335,7 +340,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Percentage.
+             * The percentage of requests that are aborted with the specified error code.
              */
             public Builder percentage(Percentage percentage) {
                 this.percentage = percentage;
@@ -376,7 +381,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private Float value; 
 
             /**
-             * Value.
+             * The percentage of requests to which the delay fault is injected, which is expressed as a decimal.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -429,7 +434,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private DelayPercentage percentage; 
 
             /**
-             * FixedDelay.
+             * The fixed duration for request delay.
              */
             public Builder fixedDelay(String fixedDelay) {
                 this.fixedDelay = fixedDelay;
@@ -437,7 +442,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Percentage.
+             * The percentage of requests to which the delay fault is injected.
              */
             public Builder percentage(DelayPercentage percentage) {
                 this.percentage = percentage;
@@ -490,7 +495,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private Delay delay; 
 
             /**
-             * Abort.
+             * The configurations for aborting requests with specified error codes.
              */
             public Builder abort(Abort abort) {
                 this.abort = abort;
@@ -498,7 +503,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Delay.
+             * The duration to delay a request.
              */
             public Builder delay(Delay delay) {
                 this.delay = delay;
@@ -563,7 +568,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private String uri; 
 
             /**
-             * Authority.
+             * The value to be used to overwrite the value of the Authority or Host header during redirection.``
              */
             public Builder authority(String authority) {
                 this.authority = authority;
@@ -571,7 +576,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * RedirectCode.
+             * The HTTP status code to be used to indicate URL redirection. Default value: 301.
              */
             public Builder redirectCode(Integer redirectCode) {
                 this.redirectCode = redirectCode;
@@ -579,7 +584,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Uri.
+             * The value to be used to overwrite the URL path during redirection.
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -632,7 +637,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private String subset; 
 
             /**
-             * Host.
+             * The name of the service defined in the service registry.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -640,7 +645,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Subset.
+             * The name of the service subset.
              */
             public Builder subset(String subset) {
                 this.subset = subset;
@@ -681,7 +686,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private Float value; 
 
             /**
-             * Value.
+             * The percentage of requests that are mirrored to another destination except for the original destination, which is expressed as a decimal.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -722,7 +727,13 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private Boolean value; 
 
             /**
-             * Value.
+             * Specifies whether to allow retries to other localities. Valid values:
+             * <p>
+             * 
+             * *   `true`
+             * *   `false`
+             * 
+             * Default value: `false`.
              */
             public Builder value(Boolean value) {
                 this.value = value;
@@ -799,7 +810,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private RetryRemoteLocalities retryRemoteLocalities; 
 
             /**
-             * Attempts.
+             * The number of retries allowed for a request.
              */
             public Builder attempts(Integer attempts) {
                 this.attempts = attempts;
@@ -807,7 +818,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * PerTryTimeout.
+             * The timeout period for each retry. Example: `5s`.
              */
             public Builder perTryTimeout(String perTryTimeout) {
                 this.perTryTimeout = perTryTimeout;
@@ -815,7 +826,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * RetryOn.
+             * The condition for retries. Example: `connect-failure,refused-stream,503`.
              */
             public Builder retryOn(String retryOn) {
                 this.retryOn = retryOn;
@@ -823,7 +834,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * RetryRemoteLocalities.
+             * Specifies whether to allow retries to other localities.
              */
             public Builder retryRemoteLocalities(RetryRemoteLocalities retryRemoteLocalities) {
                 this.retryRemoteLocalities = retryRemoteLocalities;
@@ -876,7 +887,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private String uri; 
 
             /**
-             * Authority.
+             * The value to be used to overwrite the value of the Authority or Host header.
              */
             public Builder authority(String authority) {
                 this.authority = authority;
@@ -884,7 +895,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Uri.
+             * The value to be used to overwrite the path or prefix of the URI.
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -1009,7 +1020,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private String timeout; 
 
             /**
-             * Delegate.
+             * The virtual service that defines traffic routing.
              */
             public Builder delegate(Delegate delegate) {
                 this.delegate = delegate;
@@ -1017,7 +1028,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Fault.
+             * The configurations of fault injection.
              */
             public Builder fault(Fault fault) {
                 this.fault = fault;
@@ -1025,7 +1036,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * HTTPRedirect.
+             * The HTTP redirect rule.
              */
             public Builder HTTPRedirect(HTTPRedirect HTTPRedirect) {
                 this.HTTPRedirect = HTTPRedirect;
@@ -1033,7 +1044,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Mirror.
+             * The configurations for mirroring HTTP traffic to another destination in addition to forwarding requests to the specified destination.
              */
             public Builder mirror(Mirror mirror) {
                 this.mirror = mirror;
@@ -1041,7 +1052,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * MirrorPercentage.
+             * The percentage of requests that are mirrored to another destination except for the original destination.
              */
             public Builder mirrorPercentage(MirrorPercentage mirrorPercentage) {
                 this.mirrorPercentage = mirrorPercentage;
@@ -1049,7 +1060,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Retries.
+             * The configurations of retries for failed requests.
              */
             public Builder retries(Retries retries) {
                 this.retries = retries;
@@ -1057,7 +1068,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Rewrite.
+             * The configurations for rewriting the virtual service.
              */
             public Builder rewrite(Rewrite rewrite) {
                 this.rewrite = rewrite;
@@ -1065,7 +1076,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Timeout.
+             * The timeout period for requests.
              */
             public Builder timeout(String timeout) {
                 this.timeout = timeout;
@@ -1130,7 +1141,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private String name; 
 
             /**
-             * MatchingContent.
+             * The header value to be matched.
              */
             public Builder matchingContent(String matchingContent) {
                 this.matchingContent = matchingContent;
@@ -1138,7 +1149,12 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * MatchingMode.
+             * The matching mode for the header value. Valid values:
+             * <p>
+             * 
+             * *   `exact`: exact match
+             * *   `prefix`: match by prefix
+             * *   `regex`: match by regular expression
              */
             public Builder matchingMode(String matchingMode) {
                 this.matchingMode = matchingMode;
@@ -1146,7 +1162,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Name.
+             * The header key to be matched.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1199,7 +1215,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private Integer TLSPort; 
 
             /**
-             * SNIHosts.
+             * The Server Name Indication (SNI) values to be matched.
              */
             public Builder SNIHosts(java.util.List < String > SNIHosts) {
                 this.SNIHosts = SNIHosts;
@@ -1207,7 +1223,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * TLSPort.
+             * The TLS port.
              */
             public Builder TLSPort(Integer TLSPort) {
                 this.TLSPort = TLSPort;
@@ -1260,7 +1276,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private String matchingMode; 
 
             /**
-             * MatchingContent.
+             * The content to be matched.
              */
             public Builder matchingContent(String matchingContent) {
                 this.matchingContent = matchingContent;
@@ -1268,7 +1284,12 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * MatchingMode.
+             * The matching mode for the routing rule. Valid values:
+             * <p>
+             * 
+             * *   `exact`: exact match
+             * *   `prefix`: match by prefix
+             * *   `regex`: match by regular expression
              */
             public Builder matchingMode(String matchingMode) {
                 this.matchingMode = matchingMode;
@@ -1345,7 +1366,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private URI URI; 
 
             /**
-             * Headers.
+             * The request headers to be matched.
              */
             public Builder headers(java.util.List < Headers> headers) {
                 this.headers = headers;
@@ -1353,7 +1374,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Ports.
+             * The ports of destination services for Layer 4 weighted routing.
              */
             public Builder ports(java.util.List < Integer > ports) {
                 this.ports = ports;
@@ -1361,7 +1382,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * TLSMatchAttributes.
+             * The matching rule for Transport Layer Security (TLS) traffic.
              */
             public Builder TLSMatchAttributes(java.util.List < TLSMatchAttributes> TLSMatchAttributes) {
                 this.TLSMatchAttributes = TLSMatchAttributes;
@@ -1369,7 +1390,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * URI.
+             * The matching rule for URIs.
              */
             public Builder URI(URI URI) {
                 this.URI = URI;
@@ -1383,15 +1404,60 @@ public class CreateIstioGatewayRoutesRequest extends Request {
         } 
 
     }
+    public static class Port extends TeaModel {
+        @NameInMap("Number")
+        private Integer number;
+
+        private Port(Builder builder) {
+            this.number = builder.number;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Port create() {
+            return builder().build();
+        }
+
+        /**
+         * @return number
+         */
+        public Integer getNumber() {
+            return this.number;
+        }
+
+        public static final class Builder {
+            private Integer number; 
+
+            /**
+             * Number.
+             */
+            public Builder number(Integer number) {
+                this.number = number;
+                return this;
+            }
+
+            public Port build() {
+                return new Port(this);
+            } 
+
+        } 
+
+    }
     public static class Destination extends TeaModel {
         @NameInMap("Host")
         private String host;
+
+        @NameInMap("Port")
+        private Port port;
 
         @NameInMap("Subset")
         private String subset;
 
         private Destination(Builder builder) {
             this.host = builder.host;
+            this.port = builder.port;
             this.subset = builder.subset;
         }
 
@@ -1411,6 +1477,13 @@ public class CreateIstioGatewayRoutesRequest extends Request {
         }
 
         /**
+         * @return port
+         */
+        public Port getPort() {
+            return this.port;
+        }
+
+        /**
          * @return subset
          */
         public String getSubset() {
@@ -1419,10 +1492,11 @@ public class CreateIstioGatewayRoutesRequest extends Request {
 
         public static final class Builder {
             private String host; 
+            private Port port; 
             private String subset; 
 
             /**
-             * Host.
+             * The name of the service defined in the service registry.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1430,7 +1504,15 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Subset.
+             * Port.
+             */
+            public Builder port(Port port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * The name of the service subset.
              */
             public Builder subset(String subset) {
                 this.subset = subset;
@@ -1483,7 +1565,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private Integer weight; 
 
             /**
-             * Destination.
+             * The unique endpoint of the destination service to which the specified requests are sent.
              */
             public Builder destination(Destination destination) {
                 this.destination = destination;
@@ -1491,7 +1573,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Weight.
+             * The weight of the service subset.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -1506,6 +1588,9 @@ public class CreateIstioGatewayRoutesRequest extends Request {
 
     }
     public static class GatewayRoute extends TeaModel {
+        @NameInMap("Domains")
+        private java.util.List < String > domains;
+
         @NameInMap("HTTPAdvancedOptions")
         private HTTPAdvancedOptions HTTPAdvancedOptions;
 
@@ -1514,6 +1599,9 @@ public class CreateIstioGatewayRoutesRequest extends Request {
 
         @NameInMap("Namespace")
         private String namespace;
+
+        @NameInMap("RawVSRoute")
+        private Object rawVSRoute;
 
         @NameInMap("RouteDestinations")
         private java.util.List < RouteDestinations> routeDestinations;
@@ -1525,9 +1613,11 @@ public class CreateIstioGatewayRoutesRequest extends Request {
         private String routeType;
 
         private GatewayRoute(Builder builder) {
+            this.domains = builder.domains;
             this.HTTPAdvancedOptions = builder.HTTPAdvancedOptions;
             this.matchRequest = builder.matchRequest;
             this.namespace = builder.namespace;
+            this.rawVSRoute = builder.rawVSRoute;
             this.routeDestinations = builder.routeDestinations;
             this.routeName = builder.routeName;
             this.routeType = builder.routeType;
@@ -1539,6 +1629,13 @@ public class CreateIstioGatewayRoutesRequest extends Request {
 
         public static GatewayRoute create() {
             return builder().build();
+        }
+
+        /**
+         * @return domains
+         */
+        public java.util.List < String > getDomains() {
+            return this.domains;
         }
 
         /**
@@ -1563,6 +1660,13 @@ public class CreateIstioGatewayRoutesRequest extends Request {
         }
 
         /**
+         * @return rawVSRoute
+         */
+        public Object getRawVSRoute() {
+            return this.rawVSRoute;
+        }
+
+        /**
          * @return routeDestinations
          */
         public java.util.List < RouteDestinations> getRouteDestinations() {
@@ -1584,15 +1688,25 @@ public class CreateIstioGatewayRoutesRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List < String > domains; 
             private HTTPAdvancedOptions HTTPAdvancedOptions; 
             private MatchRequest matchRequest; 
             private String namespace; 
+            private Object rawVSRoute; 
             private java.util.List < RouteDestinations> routeDestinations; 
             private String routeName; 
             private String routeType; 
 
             /**
-             * HTTPAdvancedOptions.
+             * Domains.
+             */
+            public Builder domains(java.util.List < String > domains) {
+                this.domains = domains;
+                return this;
+            }
+
+            /**
+             * The advanced settings for routing HTTP traffic.
              */
             public Builder HTTPAdvancedOptions(HTTPAdvancedOptions HTTPAdvancedOptions) {
                 this.HTTPAdvancedOptions = HTTPAdvancedOptions;
@@ -1600,7 +1714,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * MatchRequest.
+             * The matching rules for traffic routing.
              */
             public Builder matchRequest(MatchRequest matchRequest) {
                 this.matchRequest = matchRequest;
@@ -1608,7 +1722,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * The name of the namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1616,7 +1730,15 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * RouteDestinations.
+             * RawVSRoute.
+             */
+            public Builder rawVSRoute(Object rawVSRoute) {
+                this.rawVSRoute = rawVSRoute;
+                return this;
+            }
+
+            /**
+             * The endpoints of destination services for Layer 4 weighted routing.
              */
             public Builder routeDestinations(java.util.List < RouteDestinations> routeDestinations) {
                 this.routeDestinations = routeDestinations;
@@ -1624,7 +1746,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * RouteName.
+             * The name of the routing rule.
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -1632,7 +1754,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * RouteType.
+             * The type of the traffic to be routed. Valid values: `HTTP`, `TLS`, and `TCP`.
              */
             public Builder routeType(String routeType) {
                 this.routeType = routeType;

@@ -50,7 +50,7 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GatewaySecretDetails.
+         * The detailed information about the secret of the ASM gateway.
          */
         public Builder gatewaySecretDetails(java.util.List < GatewaySecretDetails> gatewaySecretDetails) {
             this.gatewaySecretDetails = gatewaySecretDetails;
@@ -58,7 +58,7 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * ExpiredTime.
+             * The time when the certificate expires.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -178,7 +178,7 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayName.
+             * The name of the gateway.
              */
             public Builder gatewayName(String gatewayName) {
                 this.gatewayName = gatewayName;
@@ -186,7 +186,7 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * IssueTime.
+             * The time when the certificate was issued.
              */
             public Builder issueTime(String issueTime) {
                 this.issueTime = issueTime;
@@ -194,7 +194,9 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * *   An error message is returned if the status of the gateway is abnormal. Examples: `tls.crt not exist`, `tls.key not exist`, and `secret type must be kubernetes.io/tls`.
+             * <p>
+             * *   An empty value is returned if the status of the gateway is normal.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -202,7 +204,7 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SNI.
+             * The Server Name Indication (SNI) value that indicates the hostname of the service.
              */
             public Builder SNI(String SNI) {
                 this.SNI = SNI;
@@ -210,7 +212,7 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * SecretName.
+             * The name of the secret.
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -218,7 +220,11 @@ public class DescribeGatewaySecretDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the certificate. Valid values:
+             * <p>
+             * 
+             * *   `normal`
+             * *   `abnormal`
              */
             public Builder state(String state) {
                 this.state = state;

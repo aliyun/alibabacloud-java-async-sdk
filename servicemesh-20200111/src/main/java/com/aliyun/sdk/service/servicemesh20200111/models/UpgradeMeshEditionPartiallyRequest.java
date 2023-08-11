@@ -17,12 +17,21 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
     private Boolean ASMGatewayContinue;
 
     @Body
+    @NameInMap("ExpectedVersion")
+    private String expectedVersion;
+
+    @Body
+    @NameInMap("PreCheck")
+    private Boolean preCheck;
+
+    @Body
     @NameInMap("ServiceMeshId")
     @Validation(required = true)
     private String serviceMeshId;
 
     @Body
     @NameInMap("SwitchToPro")
+    @Deprecated
     private Boolean switchToPro;
 
     @Body
@@ -32,6 +41,8 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
     private UpgradeMeshEditionPartiallyRequest(Builder builder) {
         super(builder);
         this.ASMGatewayContinue = builder.ASMGatewayContinue;
+        this.expectedVersion = builder.expectedVersion;
+        this.preCheck = builder.preCheck;
         this.serviceMeshId = builder.serviceMeshId;
         this.switchToPro = builder.switchToPro;
         this.upgradeGatewayRecords = builder.upgradeGatewayRecords;
@@ -58,6 +69,20 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
     }
 
     /**
+     * @return expectedVersion
+     */
+    public String getExpectedVersion() {
+        return this.expectedVersion;
+    }
+
+    /**
+     * @return preCheck
+     */
+    public Boolean getPreCheck() {
+        return this.preCheck;
+    }
+
+    /**
      * @return serviceMeshId
      */
     public String getServiceMeshId() {
@@ -80,6 +105,8 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpgradeMeshEditionPartiallyRequest, Builder> {
         private Boolean ASMGatewayContinue; 
+        private String expectedVersion; 
+        private Boolean preCheck; 
         private String serviceMeshId; 
         private Boolean switchToPro; 
         private String upgradeGatewayRecords; 
@@ -91,13 +118,19 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
         private Builder(UpgradeMeshEditionPartiallyRequest request) {
             super(request);
             this.ASMGatewayContinue = request.ASMGatewayContinue;
+            this.expectedVersion = request.expectedVersion;
+            this.preCheck = request.preCheck;
             this.serviceMeshId = request.serviceMeshId;
             this.switchToPro = request.switchToPro;
             this.upgradeGatewayRecords = request.upgradeGatewayRecords;
         } 
 
         /**
-         * ASMGatewayContinue.
+         * Specifies whether to upgrade the ASM gateways for the ASM instance. Valid values:
+         * <p>
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder ASMGatewayContinue(Boolean ASMGatewayContinue) {
             this.putBodyParameter("ASMGatewayContinue", ASMGatewayContinue);
@@ -106,7 +139,25 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * ExpectedVersion.
+         */
+        public Builder expectedVersion(String expectedVersion) {
+            this.putBodyParameter("ExpectedVersion", expectedVersion);
+            this.expectedVersion = expectedVersion;
+            return this;
+        }
+
+        /**
+         * 执行升级检查。如果该值设置为true，则只会执行升级检查，并不会实际升级。
+         */
+        public Builder preCheck(Boolean preCheck) {
+            this.putBodyParameter("PreCheck", preCheck);
+            this.preCheck = preCheck;
+            return this;
+        }
+
+        /**
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -115,7 +166,9 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
         }
 
         /**
-         * SwitchToPro.
+         * *   ``
+         * <p>
+         * *   ``
          */
         public Builder switchToPro(Boolean switchToPro) {
             this.putBodyParameter("SwitchToPro", switchToPro);
@@ -124,7 +177,7 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
         }
 
         /**
-         * UpgradeGatewayRecords.
+         * Specifies the ASM gateways to be upgraded. Separate multiple ASM gateways with commas (,).
          */
         public Builder upgradeGatewayRecords(String upgradeGatewayRecords) {
             this.putBodyParameter("UpgradeGatewayRecords", upgradeGatewayRecords);

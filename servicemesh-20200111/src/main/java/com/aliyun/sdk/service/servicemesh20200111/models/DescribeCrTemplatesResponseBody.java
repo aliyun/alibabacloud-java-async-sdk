@@ -50,7 +50,7 @@ public class DescribeCrTemplatesResponseBody extends TeaModel {
         private java.util.List < Templates> templates; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeCrTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Templates.
+         * The common YAML templates for the specified type of Istio resource.
          */
         public Builder templates(java.util.List < Templates> templates) {
             this.templates = templates;
@@ -122,7 +122,7 @@ public class DescribeCrTemplatesResponseBody extends TeaModel {
             private String yaml; 
 
             /**
-             * ChineseName.
+             * The Chinese name of the YAML template.
              */
             public Builder chineseName(String chineseName) {
                 this.chineseName = chineseName;
@@ -130,7 +130,7 @@ public class DescribeCrTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * EnglishName.
+             * The English name of the YAML template.
              */
             public Builder englishName(String englishName) {
                 this.englishName = englishName;
@@ -138,7 +138,7 @@ public class DescribeCrTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Yaml.
+             * The content in the YAML template.
              */
             public Builder yaml(String yaml) {
                 this.yaml = yaml;

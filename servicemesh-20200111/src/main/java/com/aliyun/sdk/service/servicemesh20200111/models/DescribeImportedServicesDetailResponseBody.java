@@ -50,7 +50,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details.
+         * The IDs of the clusters to which the service belongs.
          */
         public Builder details(java.util.List < Details> details) {
             this.details = details;
@@ -58,7 +58,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The labels of the service.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             private Integer targetPort; 
 
             /**
-             * Name.
+             * The container port.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +170,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The node port.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -279,7 +279,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             private String serviceType; 
 
             /**
-             * ClusterIds.
+             * The name of the port.
              */
             public Builder clusterIds(java.util.List < String > clusterIds) {
                 this.clusterIds = clusterIds;
@@ -287,7 +287,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * The ports declared for the service.
              */
             public Builder labels(java.util.Map < String, String > labels) {
                 this.labels = labels;
@@ -295,7 +295,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * Kubernetes
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -303,7 +303,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * The port number.
              */
             public Builder ports(java.util.List < Ports> ports) {
                 this.ports = ports;
@@ -311,7 +311,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The type of the service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -319,7 +319,7 @@ public class DescribeImportedServicesDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * The protocol of the port.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;

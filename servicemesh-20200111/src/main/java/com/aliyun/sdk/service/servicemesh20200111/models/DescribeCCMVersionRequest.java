@@ -55,7 +55,7 @@ public class DescribeCCMVersionRequest extends Request {
         } 
 
         /**
-         * ServiceMeshId.
+         * The versions of the CCM component in all clusters on the data plane.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

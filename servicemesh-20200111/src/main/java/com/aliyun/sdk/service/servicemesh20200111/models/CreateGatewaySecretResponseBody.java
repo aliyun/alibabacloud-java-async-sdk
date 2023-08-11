@@ -50,7 +50,7 @@ public class CreateGatewaySecretResponseBody extends TeaModel {
         private java.util.Map < String, SecretCreateRecordValue > secretCreateRecord; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateGatewaySecretResponseBody extends TeaModel {
         }
 
         /**
-         * SecretCreateRecord.
+         * The record of creating the secret.
          */
         public Builder secretCreateRecord(java.util.Map < String, SecretCreateRecordValue > secretCreateRecord) {
             this.secretCreateRecord = secretCreateRecord;

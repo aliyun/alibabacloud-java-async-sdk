@@ -70,7 +70,7 @@ public class DescribeVSwitchesRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -79,7 +79,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The VPC ID.
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);

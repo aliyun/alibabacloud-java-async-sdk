@@ -50,7 +50,7 @@ public class CreateServiceMeshResponseBody extends TeaModel {
         private String serviceMeshId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateServiceMeshResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.serviceMeshId = serviceMeshId;

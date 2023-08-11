@@ -55,7 +55,11 @@ public class DescribeUsersWithPermissionsRequest extends Request {
         } 
 
         /**
-         * UserType.
+         * Specifies whether to query the IDs of all RAM users or RAM roles to which an RBAC role is assigned. Valid values:
+         * <p>
+         * 
+         * *   `SubUser`: Query the IDs of all RAM users to which an RBAC role is assigned.
+         * *   `RamRole`: Query the IDs of all RAM roles to which an RBAC role is assigned.
          */
         public Builder userType(String userType) {
             this.putBodyParameter("UserType", userType);

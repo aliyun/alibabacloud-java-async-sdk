@@ -97,7 +97,7 @@ public class DescribeIstioGatewayDomainsRequest extends Request {
         } 
 
         /**
-         * IstioGatewayName.
+         * The name of the ASM gateway.
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -106,7 +106,7 @@ public class DescribeIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The maximum number of ASM gateways to query.
          */
         public Builder limit(String limit) {
             this.putBodyParameter("Limit", limit);
@@ -115,7 +115,7 @@ public class DescribeIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace in which the ASM gateway resides.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -124,7 +124,7 @@ public class DescribeIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

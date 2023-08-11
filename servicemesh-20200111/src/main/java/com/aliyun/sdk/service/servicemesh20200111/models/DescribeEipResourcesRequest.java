@@ -82,7 +82,7 @@ public class DescribeEipResourcesRequest extends Request {
         } 
 
         /**
-         * PageNum.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNum(Integer pageNum) {
             this.putBodyParameter("PageNum", pageNum);
@@ -91,7 +91,7 @@ public class DescribeEipResourcesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -100,7 +100,7 @@ public class DescribeEipResourcesRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

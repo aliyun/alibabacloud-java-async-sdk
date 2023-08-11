@@ -50,7 +50,7 @@ public class GetVmAppMeshInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned information.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetVmAppMeshInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

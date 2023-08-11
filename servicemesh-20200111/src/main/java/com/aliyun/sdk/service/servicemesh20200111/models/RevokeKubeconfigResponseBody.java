@@ -50,7 +50,7 @@ public class RevokeKubeconfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Kubeconfig.
+         * The new kubeconfig file generated.
          */
         public Builder kubeconfig(String kubeconfig) {
             this.kubeconfig = kubeconfig;
@@ -58,7 +58,7 @@ public class RevokeKubeconfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

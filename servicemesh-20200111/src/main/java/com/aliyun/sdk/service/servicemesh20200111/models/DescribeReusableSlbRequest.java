@@ -70,7 +70,7 @@ public class DescribeReusableSlbRequest extends Request {
         } 
 
         /**
-         * K8sClusterId.
+         * The ID of the Kubernetes cluster on the data plane.
          */
         public Builder k8sClusterId(String k8sClusterId) {
             this.putBodyParameter("K8sClusterId", k8sClusterId);
@@ -79,7 +79,11 @@ public class DescribeReusableSlbRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The network type of the SLB instance. Valid values:
+         * <p>
+         * 
+         * *   `intranet`
+         * *   `internet`
          */
         public Builder networkType(String networkType) {
             this.putBodyParameter("NetworkType", networkType);

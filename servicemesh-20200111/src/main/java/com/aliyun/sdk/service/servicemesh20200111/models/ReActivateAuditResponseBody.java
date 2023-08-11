@@ -50,7 +50,7 @@ public class ReActivateAuditResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The name of the project that is used to store audit logs.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ReActivateAuditResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

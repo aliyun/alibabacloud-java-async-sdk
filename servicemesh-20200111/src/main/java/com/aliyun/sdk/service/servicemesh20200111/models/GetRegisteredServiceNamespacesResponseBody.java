@@ -50,7 +50,7 @@ public class GetRegisteredServiceNamespacesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Namespaces.
+         * The names of the queried namespaces.
          */
         public Builder namespaces(java.util.List < String > namespaces) {
             this.namespaces = namespaces;
@@ -58,7 +58,7 @@ public class GetRegisteredServiceNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -69,7 +69,7 @@ public class DescribeServiceMeshKubeconfigRequest extends Request {
         } 
 
         /**
-         * PrivateIpAddress.
+         * Specifies whether to query the kubeconfig file that is used for Internet access or internal network access.
          */
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -78,7 +78,7 @@ public class DescribeServiceMeshKubeconfigRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

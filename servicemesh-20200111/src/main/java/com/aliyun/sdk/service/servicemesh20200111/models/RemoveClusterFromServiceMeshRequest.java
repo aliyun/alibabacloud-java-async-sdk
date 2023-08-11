@@ -18,6 +18,10 @@ public class RemoveClusterFromServiceMeshRequest extends Request {
     private String clusterId;
 
     @Body
+    @NameInMap("ReserveNamespace")
+    private Boolean reserveNamespace;
+
+    @Body
     @NameInMap("ServiceMeshId")
     @Validation(required = true)
     private String serviceMeshId;
@@ -25,6 +29,7 @@ public class RemoveClusterFromServiceMeshRequest extends Request {
     private RemoveClusterFromServiceMeshRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.reserveNamespace = builder.reserveNamespace;
         this.serviceMeshId = builder.serviceMeshId;
     }
 
@@ -49,6 +54,13 @@ public class RemoveClusterFromServiceMeshRequest extends Request {
     }
 
     /**
+     * @return reserveNamespace
+     */
+    public Boolean getReserveNamespace() {
+        return this.reserveNamespace;
+    }
+
+    /**
      * @return serviceMeshId
      */
     public String getServiceMeshId() {
@@ -57,6 +69,7 @@ public class RemoveClusterFromServiceMeshRequest extends Request {
 
     public static final class Builder extends Request.Builder<RemoveClusterFromServiceMeshRequest, Builder> {
         private String clusterId; 
+        private Boolean reserveNamespace; 
         private String serviceMeshId; 
 
         private Builder() {
@@ -66,6 +79,7 @@ public class RemoveClusterFromServiceMeshRequest extends Request {
         private Builder(RemoveClusterFromServiceMeshRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.reserveNamespace = request.reserveNamespace;
             this.serviceMeshId = request.serviceMeshId;
         } 
 
@@ -75,6 +89,15 @@ public class RemoveClusterFromServiceMeshRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * 移除集群时，保留istio-system 命名空间
+         */
+        public Builder reserveNamespace(Boolean reserveNamespace) {
+            this.putBodyParameter("ReserveNamespace", reserveNamespace);
+            this.reserveNamespace = reserveNamespace;
             return this;
         }
 

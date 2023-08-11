@@ -50,7 +50,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         private java.util.List < ServiceMeshes> serviceMeshes; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceMeshes.
+         * The information about the ASM instances.
          */
         public Builder serviceMeshes(java.util.List < ServiceMeshes> serviceMeshes) {
             this.serviceMeshes = serviceMeshes;
@@ -146,7 +146,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             private String reverseTunnelEndpoint; 
 
             /**
-             * IntranetApiServerEndpoint.
+             * The endpoint that is used to access the API server from the internal network.
              */
             public Builder intranetApiServerEndpoint(String intranetApiServerEndpoint) {
                 this.intranetApiServerEndpoint = intranetApiServerEndpoint;
@@ -154,7 +154,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetPilotEndpoint.
+             * The endpoint that is used to access Istio Pilot from the internal network.
              */
             public Builder intranetPilotEndpoint(String intranetPilotEndpoint) {
                 this.intranetPilotEndpoint = intranetPilotEndpoint;
@@ -162,7 +162,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicApiServerEndpoint.
+             * The endpoint that is used to expose the API server to the Internet.
              */
             public Builder publicApiServerEndpoint(String publicApiServerEndpoint) {
                 this.publicApiServerEndpoint = publicApiServerEndpoint;
@@ -170,7 +170,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicPilotEndpoint.
+             * The endpoint that is used to expose Istio Pilot to the Internet.
              */
             public Builder publicPilotEndpoint(String publicPilotEndpoint) {
                 this.publicPilotEndpoint = publicPilotEndpoint;
@@ -178,7 +178,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * ReverseTunnelEndpoint.
+             * The endpoint of the reverse tunnel.
              */
             public Builder reverseTunnelEndpoint(String reverseTunnelEndpoint) {
                 this.reverseTunnelEndpoint = reverseTunnelEndpoint;
@@ -315,7 +315,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * CreationTime.
+             * The point in time when the ASM instance was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -323,7 +323,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message that is returned when the call failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -331,7 +331,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the ASM instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -339,7 +339,11 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * The edition of the ASM instance before ASM is available for commercial use. Valid values:
+             * <p>
+             * 
+             * *   `Pro`: Professional Edition
+             * *   `Default`: Standard Edition
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -347,7 +351,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the ASM instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -355,7 +359,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceMeshId.
+             * The ID of the ASM instance.
              */
             public Builder serviceMeshId(String serviceMeshId) {
                 this.serviceMeshId = serviceMeshId;
@@ -363,7 +367,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the ASM instance.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -371,7 +375,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The point in time when the ASM instance was last modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -379,7 +383,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number of the ASM instance.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -456,7 +460,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             private String pilotPublicLoadbalancerId; 
 
             /**
-             * ApiServerLoadbalancerId.
+             * The ID of the SLB instance that is used when the API server is exposed to the Internet.
              */
             public Builder apiServerLoadbalancerId(String apiServerLoadbalancerId) {
                 this.apiServerLoadbalancerId = apiServerLoadbalancerId;
@@ -464,7 +468,11 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * ApiServerPublicEip.
+             * Indicates whether the API Server is exposed to the Internet. Valid values:
+             * <p>
+             * 
+             * *   `true`: The API server is exposed to the Internet.
+             * *   `false`: The API server is not exposed to the Internet.
              */
             public Builder apiServerPublicEip(Boolean apiServerPublicEip) {
                 this.apiServerPublicEip = apiServerPublicEip;
@@ -472,7 +480,11 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * PilotPublicEip.
+             * Indicates whether Istio Pilot is exposed to the Internet. Valid values:
+             * <p>
+             * 
+             * *   `true`: Istio Pilot is exposed to the Internet.
+             * *   `false`: Istio Pilot is not exposed to the Internet.
              */
             public Builder pilotPublicEip(Boolean pilotPublicEip) {
                 this.pilotPublicEip = pilotPublicEip;
@@ -480,7 +492,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * PilotPublicLoadbalancerId.
+             * The ID of the Server Load Balancer (SLB) instance that is used when Istio Pilot is exposed to the Internet.
              */
             public Builder pilotPublicLoadbalancerId(String pilotPublicLoadbalancerId) {
                 this.pilotPublicLoadbalancerId = pilotPublicLoadbalancerId;
@@ -533,7 +545,11 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             private Float traceSampling; 
 
             /**
-             * Http10Enabled.
+             * Indicates whether the support for HTTP 1.0 is enabled. Valid values:
+             * <p>
+             * 
+             * *   `true`: The support for HTTP 1.0 is enabled.
+             * *   `false`: The support for HTTP 1.0 is disabled.
              */
             public Builder http10Enabled(Boolean http10Enabled) {
                 this.http10Enabled = http10Enabled;
@@ -541,7 +557,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * TraceSampling.
+             * The sampling percentage of tracing.
              */
             public Builder traceSampling(Float traceSampling) {
                 this.traceSampling = traceSampling;
@@ -594,7 +610,11 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             private String excludeNamespaces; 
 
             /**
-             * Enabled.
+             * Indicates whether elevated privileges are required for the istio-init container when you perform traffic redirection for the istio-proxy container. Valid values:
+             * <p>
+             * 
+             * *   `true`: Elevated privileges are required for the istio-init container.
+             * *   `false`: Elevated privileges are not required for the istio-init container.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -602,7 +622,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * ExcludeNamespaces.
+             * The namespace for which sidecar injection is disabled.
              */
             public Builder excludeNamespaces(String excludeNamespaces) {
                 this.excludeNamespaces = excludeNamespaces;
@@ -667,7 +687,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             private InitCNIConfiguration initCNIConfiguration; 
 
             /**
-             * AutoInjectionPolicyEnabled.
+             * Indicates whether automatic sidecar injection is enabled by using annotations.
              */
             public Builder autoInjectionPolicyEnabled(Boolean autoInjectionPolicyEnabled) {
                 this.autoInjectionPolicyEnabled = autoInjectionPolicyEnabled;
@@ -675,7 +695,11 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableNamespacesByDefault.
+             * Indicates whether automatic sidecar injection is enabled for all namespaces. Valid values:
+             * <p>
+             * 
+             * *   `true`: Automatic sidecar injection is enabled for all namespaces.
+             * *   `false`: Automatic sidecar injection is disabled for all namespaces.
              */
             public Builder enableNamespacesByDefault(Boolean enableNamespacesByDefault) {
                 this.enableNamespacesByDefault = enableNamespacesByDefault;
@@ -683,7 +707,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * InitCNIConfiguration.
+             * The initial configurations of Container Network Interface (CNI).
              */
             public Builder initCNIConfiguration(InitCNIConfiguration initCNIConfiguration) {
                 this.initCNIConfiguration = initCNIConfiguration;
@@ -796,7 +820,11 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             private Boolean tracing; 
 
             /**
-             * Mtls.
+             * Indicates whether the feature of routing traffic to the nearest instance is enabled. Valid values:
+             * <p>
+             * 
+             * *   `true`: The feature is enabled.
+             * *   `false`: The feature is disabled.
              */
             public Builder mtls(Boolean mtls) {
                 this.mtls = mtls;
@@ -804,7 +832,11 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * OutboundTrafficPolicy.
+             * The outbound traffic policy. Valid values:
+             * <p>
+             * 
+             * *   `ALLOW_ANY`: Outbound traffic to an external service is allowed.
+             * *   `REGISTRY_ONLY`: Outbound traffic is allowed to only external services that are defined in the service registry of the ASM instance.
              */
             public Builder outboundTrafficPolicy(String outboundTrafficPolicy) {
                 this.outboundTrafficPolicy = outboundTrafficPolicy;
@@ -812,7 +844,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * Pilot.
+             * The configurations of the control plane.
              */
             public Builder pilot(Pilot pilot) {
                 this.pilot = pilot;
@@ -820,7 +852,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * SidecarInjector.
+             * The configurations of sidecar injection.
              */
             public Builder sidecarInjector(SidecarInjector sidecarInjector) {
                 this.sidecarInjector = sidecarInjector;
@@ -828,7 +860,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * StrictMtls.
+             * Indicates whether mutual Transport Layer Security (mTLS) is strictly enforced.
              */
             public Builder strictMtls(Boolean strictMtls) {
                 this.strictMtls = strictMtls;
@@ -836,7 +868,11 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * Telemetry.
+             * Indicates whether Prometheus monitoring is enabled. We recommend that you use Prometheus Service of Application Real-Time Monitoring Service (ARMS). Valid values:
+             * <p>
+             * 
+             * *   `true`: Prometheus monitoring is enabled.
+             * *   `false`: Prometheus monitoring is disabled.
              */
             public Builder telemetry(Boolean telemetry) {
                 this.telemetry = telemetry;
@@ -844,7 +880,11 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * Tracing.
+             * Indicates whether the tracing feature is enabled. This feature can be enabled only after Tracing Analysis is activated. Valid values:
+             * <p>
+             * 
+             * *   `true`: The tracing feature is enabled.
+             * *   `false`: The tracing feature is disabled.
              */
             public Builder tracing(Boolean tracing) {
                 this.tracing = tracing;
@@ -909,7 +949,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -917,7 +957,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitches.
+             * The IDs of vSwitches.
              */
             public Builder vSwitches(java.util.List < String > vSwitches) {
                 this.vSwitches = vSwitches;
@@ -925,7 +965,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -990,7 +1030,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             private Network network; 
 
             /**
-             * LoadBalancer.
+             * The information about load balancing.
              */
             public Builder loadBalancer(LoadBalancer loadBalancer) {
                 this.loadBalancer = loadBalancer;
@@ -998,7 +1038,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * MeshConfig.
+             * The configurations of the ASM instance.
              */
             public Builder meshConfig(MeshConfig meshConfig) {
                 this.meshConfig = meshConfig;
@@ -1006,7 +1046,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * Network.
+             * The network configurations of the ASM instance.
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -1119,7 +1159,12 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             private Spec spec; 
 
             /**
-             * ClusterSpec.
+             * The edition of the ASM instance. Valid values:
+             * <p>
+             * 
+             * - `standard`: Standard Edition
+             * - `enterprise`: Enterprise Edition
+             * - `ultimate`: Ultimate Edition
              */
             public Builder clusterSpec(String clusterSpec) {
                 this.clusterSpec = clusterSpec;
@@ -1127,7 +1172,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * Clusters.
+             * The information about the clusters.
              */
             public Builder clusters(java.util.List < String > clusters) {
                 this.clusters = clusters;
@@ -1135,7 +1180,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * Endpoints.
+             * All endpoints of the ASM instance.
              */
             public Builder endpoints(Endpoints endpoints) {
                 this.endpoints = endpoints;
@@ -1143,7 +1188,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * The ID of the Alibaba Cloud service instance for which the ASM instance is created.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -1151,7 +1196,11 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerType.
+             * The Alibaba Cloud service for which the ASM instance is created. Valid values:
+             * <p>
+             * 
+             * - `ackone`: The ASM instance is created for Alibaba Cloud Distributed Cloud Container Platform (ACK One).
+             * - An empty value indicates that the ASM instance is created by the user.
              */
             public Builder ownerType(String ownerType) {
                 this.ownerType = ownerType;
@@ -1159,7 +1208,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceMeshInfo.
+             * The basic information about the ASM instance.
              */
             public Builder serviceMeshInfo(ServiceMeshInfo serviceMeshInfo) {
                 this.serviceMeshInfo = serviceMeshInfo;
@@ -1167,7 +1216,7 @@ public class DescribeServiceMeshesResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * The specifications of the ASM instance.
              */
             public Builder spec(Spec spec) {
                 this.spec = spec;

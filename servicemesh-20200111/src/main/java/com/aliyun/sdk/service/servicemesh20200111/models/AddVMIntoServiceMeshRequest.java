@@ -70,7 +70,7 @@ public class AddVMIntoServiceMeshRequest extends Request {
         } 
 
         /**
-         * EcsId.
+         * The ID of the VM.
          */
         public Builder ecsId(String ecsId) {
             this.putQueryParameter("EcsId", ecsId);
@@ -79,7 +79,7 @@ public class AddVMIntoServiceMeshRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

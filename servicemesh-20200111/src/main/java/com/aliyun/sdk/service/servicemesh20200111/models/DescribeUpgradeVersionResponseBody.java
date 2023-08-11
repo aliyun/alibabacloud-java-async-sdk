@@ -50,7 +50,7 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
         private Version version; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * The version information.
          */
         public Builder version(Version version) {
             this.version = version;
@@ -122,7 +122,7 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
             private String kubernetesVersion; 
 
             /**
-             * IstioOperatorVersion.
+             * The version of the ASM instance.
              */
             public Builder istioOperatorVersion(String istioOperatorVersion) {
                 this.istioOperatorVersion = istioOperatorVersion;
@@ -130,7 +130,7 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
             }
 
             /**
-             * IstioVersion.
+             * The Istio version.
              */
             public Builder istioVersion(String istioVersion) {
                 this.istioVersion = istioVersion;
@@ -138,7 +138,7 @@ public class DescribeUpgradeVersionResponseBody extends TeaModel {
             }
 
             /**
-             * KubernetesVersion.
+             * The Kubernetes version.
              */
             public Builder kubernetesVersion(String kubernetesVersion) {
                 this.kubernetesVersion = kubernetesVersion;

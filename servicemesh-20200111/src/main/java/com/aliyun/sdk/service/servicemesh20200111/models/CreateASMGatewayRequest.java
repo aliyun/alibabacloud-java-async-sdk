@@ -83,7 +83,7 @@ public class CreateASMGatewayRequest extends Request {
         } 
 
         /**
-         * Body.
+         * The YAML content that is used to create the ASM gateway.
          */
         public Builder body(String body) {
             this.putBodyParameter("Body", body);
@@ -92,7 +92,7 @@ public class CreateASMGatewayRequest extends Request {
         }
 
         /**
-         * IstioGatewayName.
+         * The name of the ASM gateway.
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -101,7 +101,7 @@ public class CreateASMGatewayRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

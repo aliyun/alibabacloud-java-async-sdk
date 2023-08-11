@@ -50,7 +50,7 @@ public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Kubeconfig.
+         * The content of the kubeconfig file of the cluster.
          */
         public Builder kubeconfig(String kubeconfig) {
             this.kubeconfig = kubeconfig;
@@ -58,7 +58,7 @@ public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

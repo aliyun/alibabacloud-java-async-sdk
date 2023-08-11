@@ -62,7 +62,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
         private java.util.List < ServiceEndpoints> serviceEndpoints; 
 
         /**
-         * EndPointSlice.
+         * The name of the registered service.
          */
         public Builder endPointSlice(EndPointSlice endPointSlice) {
             this.endPointSlice = endPointSlice;
@@ -78,7 +78,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceEndpoints.
+         * The IP address of the registered service.
          */
         public Builder serviceEndpoints(java.util.List < ServiceEndpoints> serviceEndpoints) {
             this.serviceEndpoints = serviceEndpoints;
@@ -178,7 +178,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             private Boolean sidecarInjected; 
 
             /**
-             * Address.
+             * The port of the registered service.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -186,7 +186,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * The ID of the region in which the registered service resides.
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -194,7 +194,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * PodName.
+             * The IP address of the registered service.
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -202,7 +202,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * The host name of the registered service.
              */
             public Builder ports(java.util.List < Integer > ports) {
                 this.ports = ports;
@@ -210,7 +210,11 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * Indicates whether sidecar proxies are injected. Valid values:
+             * <p>
+             * 
+             * *   `true`: yes
+             * *   `false`: no
              */
             public Builder region(String region) {
                 this.region = region;
@@ -218,7 +222,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * SidecarInjected.
+             * The ID of the request.
              */
             public Builder sidecarInjected(Boolean sidecarInjected) {
                 this.sidecarInjected = sidecarInjected;
@@ -295,7 +299,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * EndpointsDetails.
+             * The name of the pod.
              */
             public Builder endpointsDetails(java.util.List < EndpointsDetails> endpointsDetails) {
                 this.endpointsDetails = endpointsDetails;
@@ -303,7 +307,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The details of the endpoint of the registered service.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -311,7 +315,11 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The location of the registered service. Valid values:
+             * <p>
+             * 
+             * *   `MESH_INTERNAL`: The service is deployed inside the ASM instance.
+             * *   `MESH_EXTERNAL`: The service is deployed outside the ASM instance.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -319,7 +327,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the namespace.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -372,7 +380,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             private String clusterId; 
 
             /**
-             * Address.
+             * The ID of the cluster on the data plane.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -380,7 +388,7 @@ public class GetRegisteredServiceEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The details of the endpoints of the registered service.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;

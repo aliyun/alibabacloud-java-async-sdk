@@ -50,7 +50,7 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GatewaySecretDetails.
+         * The domain names that are exposed by the ASM gateway.
          */
         public Builder gatewaySecretDetails(java.util.List < GatewaySecretDetails> gatewaySecretDetails) {
             this.gatewaySecretDetails = gatewaySecretDetails;
@@ -58,7 +58,7 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,6 +81,9 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
         @NameInMap("Domains")
         private java.util.List < String > domains;
 
+        @NameInMap("GatewayCRName")
+        private String gatewayCRName;
+
         @NameInMap("Namespace")
         private String namespace;
 
@@ -94,6 +97,7 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
             this.credentialName = builder.credentialName;
             this.detail = builder.detail;
             this.domains = builder.domains;
+            this.gatewayCRName = builder.gatewayCRName;
             this.namespace = builder.namespace;
             this.portName = builder.portName;
             this.protocol = builder.protocol;
@@ -129,6 +133,13 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return gatewayCRName
+         */
+        public String getGatewayCRName() {
+            return this.gatewayCRName;
+        }
+
+        /**
          * @return namespace
          */
         public String getNamespace() {
@@ -153,12 +164,13 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
             private String credentialName; 
             private String detail; 
             private java.util.List < String > domains; 
+            private String gatewayCRName; 
             private String namespace; 
             private String portName; 
             private String protocol; 
 
             /**
-             * CredentialName.
+             * The name of the secret that contains the Transport Layer Security (TLS) certificate and certificate authority (CA) certificate.
              */
             public Builder credentialName(String credentialName) {
                 this.credentialName = credentialName;
@@ -166,7 +178,7 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Detail.
+             * The details of the domain name in the JSON format.
              */
             public Builder detail(String detail) {
                 this.detail = detail;
@@ -174,7 +186,7 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Domains.
+             * The domain name.
              */
             public Builder domains(java.util.List < String > domains) {
                 this.domains = domains;
@@ -182,7 +194,15 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * GatewayCRName.
+             */
+            public Builder gatewayCRName(String gatewayCRName) {
+                this.gatewayCRName = gatewayCRName;
+                return this;
+            }
+
+            /**
+             * The namespace in which the ASM gateway resides.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -190,7 +210,7 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * PortName.
+             * The name of the port.
              */
             public Builder portName(String portName) {
                 this.portName = portName;
@@ -198,7 +218,7 @@ public class DescribeIstioGatewayDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The type of the protocol. Valid values: `HTTP`, `HTTPS`, `GRPC`, `HTTP2`, `MONGO`, `TCP`, and `TLS`.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;

@@ -50,7 +50,7 @@ public class GetCaCertResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * base64 encode format
+         * The Base64-encoded content of the CA certificate.
          */
         public Builder caCert(String caCert) {
             this.caCert = caCert;
@@ -58,7 +58,7 @@ public class GetCaCertResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

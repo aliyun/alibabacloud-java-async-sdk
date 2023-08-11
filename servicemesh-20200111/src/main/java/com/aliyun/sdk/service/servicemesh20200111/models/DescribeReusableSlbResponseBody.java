@@ -50,7 +50,7 @@ public class DescribeReusableSlbResponseBody extends TeaModel {
         private java.util.List < ReusableSlbList> reusableSlbList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeReusableSlbResponseBody extends TeaModel {
         }
 
         /**
-         * ReusableSlbList.
+         * The list of SLB instances that can be reused.
          */
         public Builder reusableSlbList(java.util.List < ReusableSlbList> reusableSlbList) {
             this.reusableSlbList = reusableSlbList;
@@ -110,7 +110,7 @@ public class DescribeReusableSlbResponseBody extends TeaModel {
             private String loadBalancerName; 
 
             /**
-             * LoadBalancerId.
+             * The ID of the SLB instance.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -118,7 +118,7 @@ public class DescribeReusableSlbResponseBody extends TeaModel {
             }
 
             /**
-             * LoadBalancerName.
+             * The name of the SLB instance.
              */
             public Builder loadBalancerName(String loadBalancerName) {
                 this.loadBalancerName = loadBalancerName;

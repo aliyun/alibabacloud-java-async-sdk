@@ -50,7 +50,7 @@ public class DescribeVersionsResponseBody extends TeaModel {
         private java.util.List < VersionInfo> versionInfo; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * VersionInfo.
+         * The available ASM versions.
          */
         public Builder versionInfo(java.util.List < VersionInfo> versionInfo) {
             this.versionInfo = versionInfo;
@@ -110,7 +110,11 @@ public class DescribeVersionsResponseBody extends TeaModel {
             private java.util.List < String > versions; 
 
             /**
-             * Edition.
+             * The edition of the ASM instance. Valid values:
+             * <p>
+             * 
+             * *   `Default`: Standard Edition
+             * *   `Pro`: Professional Edition that is commercially released
              */
             public Builder edition(String edition) {
                 this.edition = edition;
@@ -118,7 +122,7 @@ public class DescribeVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Versions.
+             * The ASM versions available for the ASM instance of the current edition.
              */
             public Builder versions(java.util.List < String > versions) {
                 this.versions = versions;

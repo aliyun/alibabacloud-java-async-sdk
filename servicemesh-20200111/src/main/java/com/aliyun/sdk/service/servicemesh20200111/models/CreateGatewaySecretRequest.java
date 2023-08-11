@@ -111,7 +111,7 @@ public class CreateGatewaySecretRequest extends Request {
         } 
 
         /**
-         * Cert.
+         * The content of the certificate.
          */
         public Builder cert(String cert) {
             this.putBodyParameter("Cert", cert);
@@ -120,7 +120,7 @@ public class CreateGatewaySecretRequest extends Request {
         }
 
         /**
-         * IstioGatewayName.
+         * The name of the ASM gateway.
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -129,7 +129,7 @@ public class CreateGatewaySecretRequest extends Request {
         }
 
         /**
-         * Key.
+         * The private key of the certificate.
          */
         public Builder key(String key) {
             this.putBodyParameter("Key", key);
@@ -138,7 +138,7 @@ public class CreateGatewaySecretRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.putBodyParameter("SecretName", secretName);
@@ -147,7 +147,7 @@ public class CreateGatewaySecretRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

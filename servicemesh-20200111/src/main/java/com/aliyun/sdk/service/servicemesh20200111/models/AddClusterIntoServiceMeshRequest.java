@@ -18,6 +18,10 @@ public class AddClusterIntoServiceMeshRequest extends Request {
     private String clusterId;
 
     @Body
+    @NameInMap("IgnoreNamespaceCheck")
+    private Boolean ignoreNamespaceCheck;
+
+    @Body
     @NameInMap("ServiceMeshId")
     @Validation(required = true)
     private String serviceMeshId;
@@ -25,6 +29,7 @@ public class AddClusterIntoServiceMeshRequest extends Request {
     private AddClusterIntoServiceMeshRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.ignoreNamespaceCheck = builder.ignoreNamespaceCheck;
         this.serviceMeshId = builder.serviceMeshId;
     }
 
@@ -49,6 +54,13 @@ public class AddClusterIntoServiceMeshRequest extends Request {
     }
 
     /**
+     * @return ignoreNamespaceCheck
+     */
+    public Boolean getIgnoreNamespaceCheck() {
+        return this.ignoreNamespaceCheck;
+    }
+
+    /**
      * @return serviceMeshId
      */
     public String getServiceMeshId() {
@@ -57,6 +69,7 @@ public class AddClusterIntoServiceMeshRequest extends Request {
 
     public static final class Builder extends Request.Builder<AddClusterIntoServiceMeshRequest, Builder> {
         private String clusterId; 
+        private Boolean ignoreNamespaceCheck; 
         private String serviceMeshId; 
 
         private Builder() {
@@ -66,6 +79,7 @@ public class AddClusterIntoServiceMeshRequest extends Request {
         private Builder(AddClusterIntoServiceMeshRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.ignoreNamespaceCheck = request.ignoreNamespaceCheck;
             this.serviceMeshId = request.serviceMeshId;
         } 
 
@@ -75,6 +89,15 @@ public class AddClusterIntoServiceMeshRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * 添加集群时不检查目标集群是否存在istio-system namespace，一般用于自建istio 迁移ASM 场景
+         */
+        public Builder ignoreNamespaceCheck(Boolean ignoreNamespaceCheck) {
+            this.putBodyParameter("IgnoreNamespaceCheck", ignoreNamespaceCheck);
+            this.ignoreNamespaceCheck = ignoreNamespaceCheck;
             return this;
         }
 

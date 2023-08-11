@@ -83,7 +83,7 @@ public class DeleteGatewaySecretRequest extends Request {
         } 
 
         /**
-         * IstioGatewayName.
+         * The name of the ASM gateway.
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -92,7 +92,7 @@ public class DeleteGatewaySecretRequest extends Request {
         }
 
         /**
-         * SecretName.
+         * The name of the secret.
          */
         public Builder secretName(String secretName) {
             this.putBodyParameter("SecretName", secretName);
@@ -101,7 +101,7 @@ public class DeleteGatewaySecretRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

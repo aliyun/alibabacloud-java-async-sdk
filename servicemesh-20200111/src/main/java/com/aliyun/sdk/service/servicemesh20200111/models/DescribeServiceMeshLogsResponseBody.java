@@ -50,7 +50,7 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Logs.
+         * The details of the logs.
          */
         public Builder logs(java.util.List < Logs> logs) {
             this.logs = logs;
@@ -58,7 +58,7 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
             private String serviceMeshId; 
 
             /**
-             * CreationTime.
+             * The point in time when the logs were generated.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -130,7 +130,7 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Log.
+             * The content of the logs.
              */
             public Builder log(String log) {
                 this.log = log;
@@ -138,7 +138,7 @@ public class DescribeServiceMeshLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceMeshId.
+             * The ID of the ASM instance.
              */
             public Builder serviceMeshId(String serviceMeshId) {
                 this.serviceMeshId = serviceMeshId;

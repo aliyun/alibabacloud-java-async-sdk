@@ -125,7 +125,7 @@ public class DeleteIstioGatewayDomainsRequest extends Request {
         } 
 
         /**
-         * Hosts.
+         * The domain names of the one or more hosts that are exposed by the ASM gateway. Separate multiple domain names with commas (,).
          */
         public Builder hosts(String hosts) {
             this.putBodyParameter("Hosts", hosts);
@@ -134,7 +134,7 @@ public class DeleteIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * IstioGatewayName.
+         * The name of the ASM gateway.
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -143,7 +143,7 @@ public class DeleteIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The maximum number of ASM gateways to query.
          */
         public Builder limit(String limit) {
             this.putBodyParameter("Limit", limit);
@@ -152,7 +152,7 @@ public class DeleteIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace in which the ASM gateway resides.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -161,7 +161,7 @@ public class DeleteIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * PortName.
+         * The name of the port.
          */
         public Builder portName(String portName) {
             this.putBodyParameter("PortName", portName);
@@ -170,7 +170,7 @@ public class DeleteIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

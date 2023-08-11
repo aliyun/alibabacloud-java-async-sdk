@@ -83,7 +83,7 @@ public class DeleteGatewayRouteRequest extends Request {
         } 
 
         /**
-         * IstioGatewayName.
+         * The name of the ASM gateway.
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -92,7 +92,7 @@ public class DeleteGatewayRouteRequest extends Request {
         }
 
         /**
-         * RouteName.
+         * The name of the routing rule.
          */
         public Builder routeName(String routeName) {
             this.putBodyParameter("RouteName", routeName);
@@ -101,7 +101,7 @@ public class DeleteGatewayRouteRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

@@ -55,7 +55,7 @@ public class DescribeGuestClusterAccessLogDashboardsRequest extends Request {
         } 
 
         /**
-         * K8sClusterId.
+         * The ID of the cluster on the data plane.
          */
         public Builder k8sClusterId(String k8sClusterId) {
             this.putBodyParameter("K8sClusterId", k8sClusterId);

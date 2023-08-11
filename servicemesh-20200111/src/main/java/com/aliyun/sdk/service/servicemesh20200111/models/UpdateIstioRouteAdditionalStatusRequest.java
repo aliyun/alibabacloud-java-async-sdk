@@ -125,7 +125,7 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the routing rule.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -134,7 +134,7 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         }
 
         /**
-         * IstioGatewayName.
+         * The name of the ASM gateway.
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -143,7 +143,7 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -152,7 +152,7 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         }
 
         /**
-         * RouteName.
+         * The name of the routing rule.
          */
         public Builder routeName(String routeName) {
             this.putQueryParameter("RouteName", routeName);
@@ -161,7 +161,7 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -170,7 +170,12 @@ public class UpdateIstioRouteAdditionalStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the routing rule. Valid values:
+         * <p>
+         * 
+         * *   `0`: The routing rule is valid.
+         * *   `1`: The routing rule is invalid.
+         * *   `2`: An error occurs during the creation or update of the routing rule.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

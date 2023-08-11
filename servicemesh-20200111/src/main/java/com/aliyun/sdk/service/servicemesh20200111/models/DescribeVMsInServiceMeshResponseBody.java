@@ -50,7 +50,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
         private java.util.List < VMs> vMs; 
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
         }
 
         /**
-         * VMs.
+         * The VMs that are added to the ASM instance.
          */
         public Builder vMs(java.util.List < VMs> vMs) {
             this.vMs = vMs;
@@ -170,7 +170,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * HasTag.
+             * Indicates whether the VM has labels.
              */
             public Builder hasTag(Boolean hasTag) {
                 this.hasTag = hasTag;
@@ -178,7 +178,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * HostName.
+             * The host name of the VM.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -186,7 +186,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the VM.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -194,7 +194,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * The IP address of the VM.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -202,7 +202,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region ID.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -210,7 +210,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupIds.
+             * The security group to which the VM belongs.
              */
             public Builder securityGroupIds(String securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -218,7 +218,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the VM.
              */
             public Builder status(String status) {
                 this.status = status;

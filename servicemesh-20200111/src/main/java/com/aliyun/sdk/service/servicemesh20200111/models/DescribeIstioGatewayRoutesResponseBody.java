@@ -50,7 +50,7 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ManagementRoutes.
+         * The routing rules.
          */
         public Builder managementRoutes(java.util.List < ManagementRoutes> managementRoutes) {
             this.managementRoutes = managementRoutes;
@@ -58,7 +58,7 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,6 +78,12 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("DestinationHost")
+        private java.util.List < String > destinationHost;
+
+        @NameInMap("DestinationSubSet")
+        private java.util.List < String > destinationSubSet;
+
         @NameInMap("Namespace")
         private String namespace;
 
@@ -96,6 +102,8 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
         private ManagementRoutes(Builder builder) {
             this.ASMGatewayName = builder.ASMGatewayName;
             this.description = builder.description;
+            this.destinationHost = builder.destinationHost;
+            this.destinationSubSet = builder.destinationSubSet;
             this.namespace = builder.namespace;
             this.priority = builder.priority;
             this.routeName = builder.routeName;
@@ -123,6 +131,20 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return destinationHost
+         */
+        public java.util.List < String > getDestinationHost() {
+            return this.destinationHost;
+        }
+
+        /**
+         * @return destinationSubSet
+         */
+        public java.util.List < String > getDestinationSubSet() {
+            return this.destinationSubSet;
         }
 
         /**
@@ -163,6 +185,8 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
         public static final class Builder {
             private String ASMGatewayName; 
             private String description; 
+            private java.util.List < String > destinationHost; 
+            private java.util.List < String > destinationSubSet; 
             private String namespace; 
             private Integer priority; 
             private String routeName; 
@@ -170,7 +194,7 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * ASMGatewayName.
+             * The name of the ASM gateway.
              */
             public Builder ASMGatewayName(String ASMGatewayName) {
                 this.ASMGatewayName = ASMGatewayName;
@@ -178,7 +202,7 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the routing rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -186,7 +210,23 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * DestinationHost.
+             */
+            public Builder destinationHost(java.util.List < String > destinationHost) {
+                this.destinationHost = destinationHost;
+                return this;
+            }
+
+            /**
+             * DestinationSubSet.
+             */
+            public Builder destinationSubSet(java.util.List < String > destinationSubSet) {
+                this.destinationSubSet = destinationSubSet;
+                return this;
+            }
+
+            /**
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -194,7 +234,7 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -202,7 +242,7 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * RouteName.
+             * The name of the routing rule.
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -210,7 +250,7 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * RoutePath.
+             * The path that is used to match request URLs.
              */
             public Builder routePath(String routePath) {
                 this.routePath = routePath;
@@ -218,7 +258,12 @@ public class DescribeIstioGatewayRoutesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the routing rule. Valid values:
+             * <p>
+             * 
+             * *   `0`: The routing rule is valid.
+             * *   `1`: The routing rule is invalid.
+             * *   `2`: An error occurs during the creation or update of the routing rule.
              */
             public Builder status(Integer status) {
                 this.status = status;

@@ -87,7 +87,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         private java.util.List < Vpcs> vpcs; 
 
         /**
-         * MaxResults本次请求所返回的最大记录条数
+         * The maximum number of entries returned on a single page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -95,7 +95,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * 表示当前调用返回读取到的位置，空代表数据已经读取完毕
+         * The token that marks the end of the current returned page. If this parameter is empty, it indicates that you have retrieved all the data.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -103,7 +103,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,7 +111,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+         * The total number of entries returned. By default, this parameter is not returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -119,7 +119,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * Vpcs
+         * The list of VPCs that are available in the specified region.
          */
         public Builder vpcs(java.util.List < Vpcs> vpcs) {
             this.vpcs = vpcs;
@@ -195,7 +195,11 @@ public class DescribeVpcsResponseBody extends TeaModel {
             private String vpcName; 
 
             /**
-             * IsDefault.
+             * Indicates whether the VPC is the default VPC in the specified region. Valid values:
+             * <p>
+             * 
+             * *   `true`: yes
+             * *   `false`: no
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -203,7 +207,11 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the VPC. Valid values:
+             * <p>
+             * 
+             * *   `Pending`: The VPC is being configured.
+             * *   `Available`: The VPC is available for use.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -211,7 +219,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -219,7 +227,7 @@ public class DescribeVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * The name of the VPC.
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;

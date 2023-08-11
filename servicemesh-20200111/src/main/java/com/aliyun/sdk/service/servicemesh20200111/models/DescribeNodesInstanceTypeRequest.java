@@ -55,7 +55,7 @@ public class DescribeNodesInstanceTypeRequest extends Request {
         } 
 
         /**
-         * ServiceMeshId.
+         * The ID of the Alibaba Cloud Service Mesh (ASM) instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

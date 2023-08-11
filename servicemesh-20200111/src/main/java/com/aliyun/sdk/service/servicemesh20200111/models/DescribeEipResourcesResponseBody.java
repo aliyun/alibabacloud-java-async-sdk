@@ -62,7 +62,7 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EipList.
+         * The EIPs.
          */
         public Builder eipList(java.util.List < EipList> eipList) {
             this.eipList = eipList;
@@ -70,7 +70,7 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * PageResult.
+         * The pagination information.
          */
         public Builder pageResult(PageResult pageResult) {
             this.pageResult = pageResult;
@@ -78,7 +78,7 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,7 +154,7 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AllocationId.
+             * The ID of the EIP.
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -162,7 +162,16 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The type of the resource that is associated with the EIP. Valid values:
+             * <p>
+             * 
+             * *   `EcsInstance`: an ECS instance in a VPC
+             * *   `SlbInstance`: a Server Load Balancer (SLB) instance in a VPC
+             * *   `Nat`: a NAT gateway
+             * *   `HaVip`: a high-availability virtual IP address (HAVIP)
+             * *   `NetworkInterface`: a secondary elastic network interface (ENI)
+             * 
+             * Default value: `EcsInstance`.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -170,7 +179,7 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * The IP address of the EIP.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -178,7 +187,13 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the EIP. Valid values:
+             * <p>
+             * 
+             * *   `Associating`: The EIP is being associated with a resource.
+             * *   `Unassociating`: The EIP is being disassociated from a resource.
+             * *   `InUse`: The EIP is associated with a resource.
+             * *   `Available`: The EIP is available.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -243,7 +258,7 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -251,7 +266,7 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -259,7 +274,7 @@ public class DescribeEipResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

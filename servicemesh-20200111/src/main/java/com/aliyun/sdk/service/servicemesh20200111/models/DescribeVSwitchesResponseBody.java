@@ -87,7 +87,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         private java.util.List < VSwitches> vSwitches; 
 
         /**
-         * MaxResults本次请求所返回的最大记录条数
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -95,7 +95,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * 表示当前调用返回读取到的位置，空代表数据已经读取完毕
+         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -103,7 +103,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,7 +111,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount本次请求条件下的数据总量，此参数为可选参数，默认可不返回
+         * The total number of vSwitches that are deployed in the VPC in the region. This parameter is optional and is not returned by default.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -119,7 +119,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * VSwitches
+         * The available vSwitches.
          */
         public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
             this.vSwitches = vSwitches;
@@ -148,12 +148,16 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         @NameInMap("VpcId")
         private String vpcId;
 
+        @NameInMap("ZoneId")
+        private String zoneId;
+
         private VSwitches(Builder builder) {
             this.isDefault = builder.isDefault;
             this.status = builder.status;
             this.vSwitchId = builder.vSwitchId;
             this.vSwitchName = builder.vSwitchName;
             this.vpcId = builder.vpcId;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -199,15 +203,27 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             return this.vpcId;
         }
 
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
             private Boolean isDefault; 
             private String status; 
             private String vSwitchId; 
             private String vSwitchName; 
             private String vpcId; 
+            private String zoneId; 
 
             /**
-             * IsDefault.
+             * Indicates whether the vSwitch is the default vSwitch. Valid values:
+             * <p>
+             * 
+             * *   `true`
+             * *   `false`
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -215,7 +231,11 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the vSwitch. Valid values:
+             * <p>
+             * 
+             * *   `Pending`: The vSwitch is being configured.
+             * *   `Available`: The vSwitch is available.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -223,7 +243,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -231,7 +251,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchName.
+             * The name of the vSwitch.
              */
             public Builder vSwitchName(String vSwitchName) {
                 this.vSwitchName = vSwitchName;
@@ -239,10 +259,18 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the VPC to which the vSwitch belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * 交换机所属的可用区。
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

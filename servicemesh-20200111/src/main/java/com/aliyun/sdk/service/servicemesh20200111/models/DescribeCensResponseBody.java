@@ -50,7 +50,7 @@ public class DescribeCensResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Clusters.
+         * The IDs of the queried Kubernetes clusters.
          */
         public Builder clusters(java.util.List < String > clusters) {
             this.clusters = clusters;
@@ -58,7 +58,7 @@ public class DescribeCensResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

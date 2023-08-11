@@ -186,7 +186,7 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         } 
 
         /**
-         * Credential.
+         * The name of the secret that contains the Transport Layer Security (TLS) certificate and certificate authority (CA) certificate.
          */
         public Builder credential(String credential) {
             this.putBodyParameter("Credential", credential);
@@ -195,7 +195,11 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * ForceHttps.
+         * Specifies whether to forcibly use TLS to protect connection security.
+         * <p>
+         * 
+         * *   `true`: forcibly uses TLS to protect connection security.
+         * *   `false`: does not forcibly use TLS to protect connection security.
          */
         public Builder forceHttps(Boolean forceHttps) {
             this.putBodyParameter("ForceHttps", forceHttps);
@@ -204,7 +208,7 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * Hosts.
+         * The domain names of the one or more hosts that are exposed by the ASM gateway. Separate multiple domain names with commas (,).
          */
         public Builder hosts(String hosts) {
             this.putBodyParameter("Hosts", hosts);
@@ -213,7 +217,7 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * IstioGatewayName.
+         * The name of the ASM gateway.
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -222,7 +226,7 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The maximum number of ASM gateways to query.
          */
         public Builder limit(String limit) {
             this.putBodyParameter("Limit", limit);
@@ -231,7 +235,7 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -240,7 +244,7 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * Number.
+         * The port that is provided by the ASM gateway.
          */
         public Builder number(Integer number) {
             this.putBodyParameter("Number", number);
@@ -249,7 +253,7 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * PortName.
+         * The name of the port.
          */
         public Builder portName(String portName) {
             this.putBodyParameter("PortName", portName);
@@ -258,7 +262,7 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * The type of the protocol. Valid values: `HTTP`, `HTTPS`, `GRPC`, `HTTP2`, `MONGO`, `TCP`, and `TLS`.
          */
         public Builder protocol(String protocol) {
             this.putBodyParameter("Protocol", protocol);
@@ -267,7 +271,7 @@ public class CreateIstioGatewayDomainsRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

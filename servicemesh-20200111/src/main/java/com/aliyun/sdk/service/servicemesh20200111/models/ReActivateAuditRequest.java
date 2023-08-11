@@ -69,7 +69,11 @@ public class ReActivateAuditRequest extends Request {
         } 
 
         /**
-         * EnableAudit.
+         * Specifies whether to recreate a project that is used to store audit logs. Valid values:
+         * <p>
+         * 
+         * *   true: recreates a project.
+         * *   false: does not recreate a project.
          */
         public Builder enableAudit(Boolean enableAudit) {
             this.putBodyParameter("EnableAudit", enableAudit);
@@ -78,7 +82,7 @@ public class ReActivateAuditRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the Alibaba Cloud Service Mesh (ASM) instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

@@ -97,7 +97,7 @@ public class UpdateASMGatewayImportedServicesRequest extends Request {
         } 
 
         /**
-         * ASMGatewayName.
+         * The name of the ASM gateway.
          */
         public Builder ASMGatewayName(String ASMGatewayName) {
             this.putBodyParameter("ASMGatewayName", ASMGatewayName);
@@ -106,7 +106,7 @@ public class UpdateASMGatewayImportedServicesRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -115,7 +115,7 @@ public class UpdateASMGatewayImportedServicesRequest extends Request {
         }
 
         /**
-         * ServiceNames.
+         * The names of the services. Separate multiple service names with commas (,). Example: reviews,sleep.
          */
         public Builder serviceNames(String serviceNames) {
             this.putBodyParameter("ServiceNames", serviceNames);
@@ -124,7 +124,7 @@ public class UpdateASMGatewayImportedServicesRequest extends Request {
         }
 
         /**
-         * ServiceNamespace.
+         * The namespace in which the service resides.
          */
         public Builder serviceNamespace(String serviceNamespace) {
             this.putBodyParameter("ServiceNamespace", serviceNamespace);

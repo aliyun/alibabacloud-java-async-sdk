@@ -82,7 +82,7 @@ public class DescribeClusterPrometheusRequest extends Request {
         } 
 
         /**
-         * K8sClusterId.
+         * The ID of the cluster on the data plane.
          */
         public Builder k8sClusterId(String k8sClusterId) {
             this.putQueryParameter("K8sClusterId", k8sClusterId);
@@ -91,7 +91,7 @@ public class DescribeClusterPrometheusRequest extends Request {
         }
 
         /**
-         * K8sClusterRegionId.
+         * The ID of the region where the cluster on the data plane resides.
          */
         public Builder k8sClusterRegionId(String k8sClusterRegionId) {
             this.putQueryParameter("K8sClusterRegionId", k8sClusterRegionId);
@@ -100,7 +100,7 @@ public class DescribeClusterPrometheusRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGuestClusterNamespacesResponseBody</p>
  */
 public class DescribeGuestClusterNamespacesResponseBody extends TeaModel {
+    @NameInMap("NsLabels")
+    private java.util.Map < String, ? > nsLabels;
+
     @NameInMap("NsList")
     private java.util.List < String > nsList;
 
@@ -19,6 +22,7 @@ public class DescribeGuestClusterNamespacesResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeGuestClusterNamespacesResponseBody(Builder builder) {
+        this.nsLabels = builder.nsLabels;
         this.nsList = builder.nsList;
         this.requestId = builder.requestId;
     }
@@ -29,6 +33,13 @@ public class DescribeGuestClusterNamespacesResponseBody extends TeaModel {
 
     public static DescribeGuestClusterNamespacesResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return nsLabels
+     */
+    public java.util.Map < String, ? > getNsLabels() {
+        return this.nsLabels;
     }
 
     /**
@@ -46,11 +57,20 @@ public class DescribeGuestClusterNamespacesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.Map < String, ? > nsLabels; 
         private java.util.List < String > nsList; 
         private String requestId; 
 
         /**
-         * NsList.
+         * The labels of the namespaces. Labels are returned only when the `ShowNsLabels` parameter is set to `true`.
+         */
+        public Builder nsLabels(java.util.Map < String, ? > nsLabels) {
+            this.nsLabels = nsLabels;
+            return this;
+        }
+
+        /**
+         * The names of the namespaces.
          */
         public Builder nsList(java.util.List < String > nsList) {
             this.nsList = nsList;
@@ -58,7 +78,7 @@ public class DescribeGuestClusterNamespacesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -83,7 +83,7 @@ public class DescribeIstioGatewayRouteDetailRequest extends Request {
         } 
 
         /**
-         * IstioGatewayName.
+         * The name of the ASM gateway.
          */
         public Builder istioGatewayName(String istioGatewayName) {
             this.putBodyParameter("IstioGatewayName", istioGatewayName);
@@ -92,7 +92,7 @@ public class DescribeIstioGatewayRouteDetailRequest extends Request {
         }
 
         /**
-         * RouteName.
+         * The name of the routing rule.
          */
         public Builder routeName(String routeName) {
             this.putBodyParameter("RouteName", routeName);
@@ -101,7 +101,7 @@ public class DescribeIstioGatewayRouteDetailRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

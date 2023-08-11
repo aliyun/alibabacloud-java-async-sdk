@@ -69,7 +69,11 @@ public class RevokeKubeconfigRequest extends Request {
         } 
 
         /**
-         * PrivateIpAddress.
+         * Specifies whether to return the kubeconfig file for private access.
+         * <p>
+         * 
+         * *   `true`: returns the kubeconfig file for private access.
+         * *   `false`: returns the kubeconfig file for public access.
          */
         public Builder privateIpAddress(Boolean privateIpAddress) {
             this.putBodyParameter("PrivateIpAddress", privateIpAddress);
@@ -78,7 +82,7 @@ public class RevokeKubeconfigRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance for which you want to revoke a kubeconfig file.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

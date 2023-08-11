@@ -50,7 +50,7 @@ public class DescribeCCMVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CCMVersions.
+         * The ID of the request.
          */
         public Builder CCMVersions(java.util.Map < String, CCMVersionsValue > CCMVersions) {
             this.CCMVersions = CCMVersions;

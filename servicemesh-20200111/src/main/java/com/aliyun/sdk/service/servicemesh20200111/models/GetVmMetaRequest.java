@@ -97,7 +97,7 @@ public class GetVmMetaRequest extends Request {
         } 
 
         /**
-         * Namespace.
+         * The namespace. This parameter is valid only after you set the Namespace and the ServiceAccount parameters.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -106,7 +106,7 @@ public class GetVmMetaRequest extends Request {
         }
 
         /**
-         * ServiceAccount.
+         * The service account. This parameter is valid only after you set the Namespace and the ServiceAccount parameters.
          */
         public Builder serviceAccount(String serviceAccount) {
             this.putQueryParameter("ServiceAccount", serviceAccount);
@@ -115,7 +115,7 @@ public class GetVmMetaRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);
@@ -124,7 +124,7 @@ public class GetVmMetaRequest extends Request {
         }
 
         /**
-         * TrustDomain.
+         * The trusted domain. Default value: cluster.local. This parameter is valid only after you set the Namespace and the ServiceAccount parameters.
          */
         public Builder trustDomain(String trustDomain) {
             this.putQueryParameter("TrustDomain", trustDomain);

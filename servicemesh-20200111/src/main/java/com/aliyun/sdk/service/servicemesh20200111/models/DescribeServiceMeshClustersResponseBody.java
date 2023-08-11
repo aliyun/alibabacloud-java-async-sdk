@@ -15,11 +15,15 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
     @NameInMap("Clusters")
     private java.util.List < Clusters> clusters;
 
+    @NameInMap("NumberOfClusters")
+    private Long numberOfClusters;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private DescribeServiceMeshClustersResponseBody(Builder builder) {
         this.clusters = builder.clusters;
+        this.numberOfClusters = builder.numberOfClusters;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +43,13 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
     }
 
     /**
+     * @return numberOfClusters
+     */
+    public Long getNumberOfClusters() {
+        return this.numberOfClusters;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,10 +58,11 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < Clusters> clusters; 
+        private Long numberOfClusters; 
         private String requestId; 
 
         /**
-         * Clusters.
+         * The queried clusters.
          */
         public Builder clusters(java.util.List < Clusters> clusters) {
             this.clusters = clusters;
@@ -58,7 +70,15 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * NumberOfClusters.
+         */
+        public Builder numberOfClusters(Long numberOfClusters) {
+            this.numberOfClusters = numberOfClusters;
+            return this;
+        }
+
+        /**
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,6 +109,9 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
 
         @NameInMap("ForbiddenFlag")
         private Long forbiddenFlag;
+
+        @NameInMap("ForbiddenInfo")
+        private String forbiddenInfo;
 
         @NameInMap("Name")
         private String name;
@@ -121,6 +144,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.errorMessage = builder.errorMessage;
             this.forbiddenFlag = builder.forbiddenFlag;
+            this.forbiddenInfo = builder.forbiddenInfo;
             this.name = builder.name;
             this.regionId = builder.regionId;
             this.serviceMeshId = builder.serviceMeshId;
@@ -179,6 +203,13 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
          */
         public Long getForbiddenFlag() {
             return this.forbiddenFlag;
+        }
+
+        /**
+         * @return forbiddenInfo
+         */
+        public String getForbiddenInfo() {
+            return this.forbiddenInfo;
         }
 
         /**
@@ -244,6 +275,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             private String creationTime; 
             private String errorMessage; 
             private Long forbiddenFlag; 
+            private String forbiddenInfo; 
             private String name; 
             private String regionId; 
             private String serviceMeshId; 
@@ -254,7 +286,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ClusterDomain.
+             * The domain name of the cluster.
              */
             public Builder clusterDomain(String clusterDomain) {
                 this.clusterDomain = clusterDomain;
@@ -262,7 +294,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -270,7 +302,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterType.
+             * The cluster type.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -278,7 +310,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the cluster was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -286,7 +318,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message about the cluster.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -294,7 +326,14 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ForbiddenFlag.
+             * Indicates that the cluster is available or the reason why the cluster cannot be added to the ASM instance. Valid values:
+             * <p>
+             * 
+             * *   `0`: The cluster can be added to the ASM instance.
+             * *   `1`: The cluster cannot be added to the ASM instance because you do not have administrator permissions on the cluster.
+             * *   `2`: The cluster cannot be added to the ASM instance because the cluster and the ASM instance reside in different VPCs between which no private connections are built.
+             * *   `3`: The CIDR block of the cluster conflicts with that of the ASM instance.
+             * *   `4`: The cluster has a namespace that is named istio system.
              */
             public Builder forbiddenFlag(Long forbiddenFlag) {
                 this.forbiddenFlag = forbiddenFlag;
@@ -302,7 +341,15 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * ForbiddenInfo.
+             */
+            public Builder forbiddenInfo(String forbiddenInfo) {
+                this.forbiddenInfo = forbiddenInfo;
+                return this;
+            }
+
+            /**
+             * The name of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -310,7 +357,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the cluster resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -318,7 +365,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceMeshId.
+             * The ID of the ASM instance.
              */
             public Builder serviceMeshId(String serviceMeshId) {
                 this.serviceMeshId = serviceMeshId;
@@ -326,7 +373,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * SgId.
+             * The ID of the security group.
              */
             public Builder sgId(String sgId) {
                 this.sgId = sgId;
@@ -334,7 +381,14 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The state of the cluster. Valid values:
+             * <p>
+             * 
+             * *   `running`: The cluster is running.
+             * *   `starting`: The cluster is starting.
+             * *   `stopping`: The cluster is being stopped.
+             * *   `stopped`: The cluster is stopped.
+             * *   `failed`: The cluster fails to be run.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -342,7 +396,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the cluster was last modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -350,7 +404,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number of the cluster.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -358,7 +412,7 @@ public class DescribeServiceMeshClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

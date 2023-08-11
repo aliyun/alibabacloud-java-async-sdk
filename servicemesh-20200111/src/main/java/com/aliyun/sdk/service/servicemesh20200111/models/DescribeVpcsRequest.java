@@ -55,7 +55,7 @@ public class DescribeVpcsRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

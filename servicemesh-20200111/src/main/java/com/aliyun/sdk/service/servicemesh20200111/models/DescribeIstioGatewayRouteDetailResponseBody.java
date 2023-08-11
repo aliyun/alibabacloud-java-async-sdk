@@ -98,7 +98,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         private Integer status; 
 
         /**
-         * Description.
+         * The description of the routing rule.
          */
         public Builder description(String description) {
             this.description = description;
@@ -106,7 +106,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * The namespace.
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -114,7 +114,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Priority.
+         * The priority of the routing rule. The value of this parameter is an integer. A smaller value indicates a higher priority.
          */
         public Builder priority(Integer priority) {
             this.priority = priority;
@@ -122,7 +122,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RouteDetail.
+         * The detailed information about the routing rule.
          */
         public Builder routeDetail(RouteDetail routeDetail) {
             this.routeDetail = routeDetail;
@@ -138,7 +138,12 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the routing rule. Valid values:
+         * <p>
+         * 
+         * *   `0`: The routing rule is valid.
+         * *   `1`: The routing rule is invalid.
+         * *   `2`: An error occurs during the creation or update of the routing rule.
          */
         public Builder status(Integer status) {
             this.status = status;
@@ -190,7 +195,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String namespace; 
 
             /**
-             * Name.
+             * The name of the virtual service.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +203,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace to which the virtual service belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -239,7 +244,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Value.
+             * The percentage of requests that are mirrored to another destination except for the original destination, which is expressed as a decimal.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -292,7 +297,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Percentage percentage; 
 
             /**
-             * HttpStatus.
+             * The HTTP status code.
              */
             public Builder httpStatus(Integer httpStatus) {
                 this.httpStatus = httpStatus;
@@ -300,7 +305,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage.
+             * The percentage of requests that are aborted with the specified error code.
              */
             public Builder percentage(Percentage percentage) {
                 this.percentage = percentage;
@@ -341,7 +346,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Value.
+             * The percentage of requests that are aborted with the specified error code, which is expressed as a decimal.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -406,7 +411,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private DelayPercentage percentage; 
 
             /**
-             * ExponentialDelay.
+             * The duration for request delay is expressed as 2 raised to the power of x. You must specify the value of x.
              */
             public Builder exponentialDelay(String exponentialDelay) {
                 this.exponentialDelay = exponentialDelay;
@@ -414,7 +419,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * FixedDelay.
+             * The fixed duration for request delay.
              */
             public Builder fixedDelay(String fixedDelay) {
                 this.fixedDelay = fixedDelay;
@@ -422,7 +427,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Percentage.
+             * The percentage of requests to which the delay fault is injected.
              */
             public Builder percentage(DelayPercentage percentage) {
                 this.percentage = percentage;
@@ -475,7 +480,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Delay delay; 
 
             /**
-             * Abort.
+             * The configurations for aborting requests with specified error codes.
              */
             public Builder abort(Abort abort) {
                 this.abort = abort;
@@ -483,7 +488,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Delay.
+             * The duration to delay a request.
              */
             public Builder delay(Delay delay) {
                 this.delay = delay;
@@ -548,7 +553,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String uri; 
 
             /**
-             * Authority.
+             * The value to be used to overwrite the value of the Authority or Host header during redirection.
              */
             public Builder authority(String authority) {
                 this.authority = authority;
@@ -556,7 +561,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RedirectCode.
+             * The HTTP status code to be used to indicate URL redirection. Default value: 301.
              */
             public Builder redirectCode(Integer redirectCode) {
                 this.redirectCode = redirectCode;
@@ -564,7 +569,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Uri.
+             * The value to be used to overwrite the URL path during redirection.
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -617,7 +622,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String subset; 
 
             /**
-             * Host.
+             * The name of the service defined in the service registry.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -625,7 +630,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Subset.
+             * The name of the service subset.
              */
             public Builder subset(String subset) {
                 this.subset = subset;
@@ -666,7 +671,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Value.
+             * The percentage of requests that are aborted with the specified error code, which is expressed as a decimal.
              */
             public Builder value(Float value) {
                 this.value = value;
@@ -707,7 +712,13 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Boolean value; 
 
             /**
-             * Value.
+             * Specifies whether to allow retries to other localities. Valid values:
+             * <p>
+             * 
+             * *   `true`
+             * *   `false`
+             * 
+             * Default value: `false`.
              */
             public Builder value(Boolean value) {
                 this.value = value;
@@ -784,7 +795,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private RetryRemoteLocalities retryRemoteLocalities; 
 
             /**
-             * Attempts.
+             * The number of retries that are allowed for a request.
              */
             public Builder attempts(Integer attempts) {
                 this.attempts = attempts;
@@ -792,7 +803,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PerTryTimeout.
+             * The timeout period for each retry.
              */
             public Builder perTryTimeout(String perTryTimeout) {
                 this.perTryTimeout = perTryTimeout;
@@ -800,7 +811,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RetryOn.
+             * The condition for retries. Example: `connect-failure,refused-stream,503`.
              */
             public Builder retryOn(String retryOn) {
                 this.retryOn = retryOn;
@@ -808,7 +819,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RetryRemoteLocalities.
+             * Specifies whether to allow retries to other localities.
              */
             public Builder retryRemoteLocalities(RetryRemoteLocalities retryRemoteLocalities) {
                 this.retryRemoteLocalities = retryRemoteLocalities;
@@ -861,7 +872,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String uri; 
 
             /**
-             * Authority.
+             * The value to be used to overwrite the value of the Authority or Host header.
              */
             public Builder authority(String authority) {
                 this.authority = authority;
@@ -869,7 +880,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Uri.
+             * The value to be used to overwrite the path or prefix of the URI.
              */
             public Builder uri(String uri) {
                 this.uri = uri;
@@ -994,7 +1005,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String timeout; 
 
             /**
-             * Delegate.
+             * The virtual service that defines traffic routing.
              */
             public Builder delegate(Delegate delegate) {
                 this.delegate = delegate;
@@ -1002,7 +1013,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Fault.
+             * The configurations of fault injection.
              */
             public Builder fault(Fault fault) {
                 this.fault = fault;
@@ -1010,7 +1021,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HTTPRedirect.
+             * The HTTP redirection rule.
              */
             public Builder HTTPRedirect(HTTPRedirect HTTPRedirect) {
                 this.HTTPRedirect = HTTPRedirect;
@@ -1018,7 +1029,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Mirror.
+             * The configurations for mirroring HTTP traffic to another destination in addition to forwarding requests to the specified destination.
              */
             public Builder mirror(Mirror mirror) {
                 this.mirror = mirror;
@@ -1026,7 +1037,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MirrorPercentage.
+             * The percentage of requests that are aborted with the specified error code.
              */
             public Builder mirrorPercentage(MirrorPercentage mirrorPercentage) {
                 this.mirrorPercentage = mirrorPercentage;
@@ -1034,7 +1045,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Retries.
+             * The configurations of retries for failed requests.
              */
             public Builder retries(Retries retries) {
                 this.retries = retries;
@@ -1042,7 +1053,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Rewrite.
+             * The configurations for rewriting the virtual service.
              */
             public Builder rewrite(Rewrite rewrite) {
                 this.rewrite = rewrite;
@@ -1050,7 +1061,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * The timeout period for requests.
              */
             public Builder timeout(String timeout) {
                 this.timeout = timeout;
@@ -1115,7 +1126,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * MatchingContent.
+             * The header value to be matched.
              */
             public Builder matchingContent(String matchingContent) {
                 this.matchingContent = matchingContent;
@@ -1123,7 +1134,12 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MatchingMode.
+             * The matching mode for the header value. Valid values:
+             * <p>
+             * 
+             * *   `exact`: exact match
+             * *   `prefix`: match by prefix
+             * *   `regex`: match by regular expression
              */
             public Builder matchingMode(String matchingMode) {
                 this.matchingMode = matchingMode;
@@ -1131,7 +1147,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The header key to be matched.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1184,7 +1200,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Integer TLSPort; 
 
             /**
-             * SNIHosts.
+             * The Server Name Indication (SNI) values to be matched.
              */
             public Builder SNIHosts(java.util.List < String > SNIHosts) {
                 this.SNIHosts = SNIHosts;
@@ -1192,7 +1208,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TLSPort.
+             * The TLS port.
              */
             public Builder TLSPort(Integer TLSPort) {
                 this.TLSPort = TLSPort;
@@ -1245,7 +1261,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String matchingMode; 
 
             /**
-             * MatchingContent.
+             * The content to be matched.
              */
             public Builder matchingContent(String matchingContent) {
                 this.matchingContent = matchingContent;
@@ -1253,7 +1269,12 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MatchingMode.
+             * The matching mode. Valid values:
+             * <p>
+             * 
+             * *   `exact`: exact match
+             * *   `prefix`: match by prefix
+             * *   `regex`: match by regular expression
              */
             public Builder matchingMode(String matchingMode) {
                 this.matchingMode = matchingMode;
@@ -1330,7 +1351,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private URI URI; 
 
             /**
-             * Headers.
+             * The request headers to be matched.
              */
             public Builder headers(java.util.List < Headers> headers) {
                 this.headers = headers;
@@ -1338,7 +1359,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * The ports.
              */
             public Builder ports(java.util.List < Integer > ports) {
                 this.ports = ports;
@@ -1346,7 +1367,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TLSMatchAttributes.
+             * The matching rules for Transport Layer Security (TLS) traffic.
              */
             public Builder TLSMatchAttributes(java.util.List < TLSMatchAttributes> TLSMatchAttributes) {
                 this.TLSMatchAttributes = TLSMatchAttributes;
@@ -1354,7 +1375,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * URI.
+             * The matching rule for URIs.
              */
             public Builder URI(URI URI) {
                 this.URI = URI;
@@ -1395,7 +1416,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Integer number; 
 
             /**
-             * Number.
+             * The ports of the specified hosts to which the traffic is routed.
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -1460,7 +1481,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private String subset; 
 
             /**
-             * Host.
+             * The name of the service defined in the service registry.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1468,7 +1489,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The ports.
              */
             public Builder port(Port port) {
                 this.port = port;
@@ -1476,7 +1497,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Subset.
+             * The name of the service subset.
              */
             public Builder subset(String subset) {
                 this.subset = subset;
@@ -1541,7 +1562,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private java.util.Map < String, String > set; 
 
             /**
-             * Add.
+             * The values to be added to the header key.
              */
             public Builder add(java.util.Map < String, ? > add) {
                 this.add = add;
@@ -1549,7 +1570,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Remove.
+             * The header value to be deleted.
              */
             public Builder remove(java.util.List < String > remove) {
                 this.remove = remove;
@@ -1557,7 +1578,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Set.
+             * The header key to be used to overwrite the original header key.
              */
             public Builder set(java.util.Map < String, String > set) {
                 this.set = set;
@@ -1622,7 +1643,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private java.util.Map < String, ? > set; 
 
             /**
-             * Add.
+             * The values to be added to the header key.
              */
             public Builder add(java.util.Map < String, ? > add) {
                 this.add = add;
@@ -1630,7 +1651,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Remove.
+             * The header value to be deleted.
              */
             public Builder remove(java.util.List < String > remove) {
                 this.remove = remove;
@@ -1638,7 +1659,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Set.
+             * The header key to be used to overwrite the original header key.
              */
             public Builder set(java.util.Map < String, ? > set) {
                 this.set = set;
@@ -1691,7 +1712,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Response response; 
 
             /**
-             * Request.
+             * The request header to be matched.
              */
             public Builder request(Request request) {
                 this.request = request;
@@ -1699,7 +1720,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Response.
+             * The processing of the headers of the response that is to be returned.
              */
             public Builder response(Response response) {
                 this.response = response;
@@ -1764,7 +1785,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * Destination.
+             * The unique endpoint of the destination service to which the specified requests are sent.
              */
             public Builder destination(Destination destination) {
                 this.destination = destination;
@@ -1772,7 +1793,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Headers.
+             * The request headers to be matched.
              */
             public Builder headers(RouteDestinationsHeaders headers) {
                 this.headers = headers;
@@ -1780,7 +1801,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The traffic weight. Valid values: 1 to 100.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -1795,11 +1816,20 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
 
     }
     public static class RouteDetail extends TeaModel {
+        @NameInMap("Domains")
+        private java.util.List < String > domains;
+
         @NameInMap("HTTPAdvancedOptions")
         private HTTPAdvancedOptions HTTPAdvancedOptions;
 
+        @NameInMap("HasUnsafeFeatures")
+        private Boolean hasUnsafeFeatures;
+
         @NameInMap("MatchRequest")
         private MatchRequest matchRequest;
+
+        @NameInMap("RawVSRoute")
+        private String rawVSRoute;
 
         @NameInMap("RouteDestinations")
         private java.util.List < RouteDestinations> routeDestinations;
@@ -1811,8 +1841,11 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         private String routeType;
 
         private RouteDetail(Builder builder) {
+            this.domains = builder.domains;
             this.HTTPAdvancedOptions = builder.HTTPAdvancedOptions;
+            this.hasUnsafeFeatures = builder.hasUnsafeFeatures;
             this.matchRequest = builder.matchRequest;
+            this.rawVSRoute = builder.rawVSRoute;
             this.routeDestinations = builder.routeDestinations;
             this.routeName = builder.routeName;
             this.routeType = builder.routeType;
@@ -1827,6 +1860,13 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return domains
+         */
+        public java.util.List < String > getDomains() {
+            return this.domains;
+        }
+
+        /**
          * @return HTTPAdvancedOptions
          */
         public HTTPAdvancedOptions getHTTPAdvancedOptions() {
@@ -1834,10 +1874,24 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return hasUnsafeFeatures
+         */
+        public Boolean getHasUnsafeFeatures() {
+            return this.hasUnsafeFeatures;
+        }
+
+        /**
          * @return matchRequest
          */
         public MatchRequest getMatchRequest() {
             return this.matchRequest;
+        }
+
+        /**
+         * @return rawVSRoute
+         */
+        public String getRawVSRoute() {
+            return this.rawVSRoute;
         }
 
         /**
@@ -1862,14 +1916,25 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > domains; 
             private HTTPAdvancedOptions HTTPAdvancedOptions; 
+            private Boolean hasUnsafeFeatures; 
             private MatchRequest matchRequest; 
+            private String rawVSRoute; 
             private java.util.List < RouteDestinations> routeDestinations; 
             private String routeName; 
             private String routeType; 
 
             /**
-             * HTTPAdvancedOptions.
+             * Domains.
+             */
+            public Builder domains(java.util.List < String > domains) {
+                this.domains = domains;
+                return this;
+            }
+
+            /**
+             * The advanced settings for routing HTTP traffic.
              */
             public Builder HTTPAdvancedOptions(HTTPAdvancedOptions HTTPAdvancedOptions) {
                 this.HTTPAdvancedOptions = HTTPAdvancedOptions;
@@ -1877,7 +1942,15 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * MatchRequest.
+             * HasUnsafeFeatures.
+             */
+            public Builder hasUnsafeFeatures(Boolean hasUnsafeFeatures) {
+                this.hasUnsafeFeatures = hasUnsafeFeatures;
+                return this;
+            }
+
+            /**
+             * The matching rules for traffic routing.
              */
             public Builder matchRequest(MatchRequest matchRequest) {
                 this.matchRequest = matchRequest;
@@ -1885,7 +1958,15 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RouteDestinations.
+             * RawVSRoute.
+             */
+            public Builder rawVSRoute(String rawVSRoute) {
+                this.rawVSRoute = rawVSRoute;
+                return this;
+            }
+
+            /**
+             * The endpoints of destination services for Layer 4 weighted routing.
              */
             public Builder routeDestinations(java.util.List < RouteDestinations> routeDestinations) {
                 this.routeDestinations = routeDestinations;
@@ -1893,7 +1974,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RouteName.
+             * The name of the routing rule.
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -1901,7 +1982,7 @@ public class DescribeIstioGatewayRouteDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RouteType.
+             * The type of the traffic to be routed. Valid values: `HTTP`, `TLS`, and `TCP`.
              */
             public Builder routeType(String routeType) {
                 this.routeType = routeType;

@@ -55,7 +55,7 @@ public class DescribeServiceMeshVMsRequest extends Request {
         } 
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

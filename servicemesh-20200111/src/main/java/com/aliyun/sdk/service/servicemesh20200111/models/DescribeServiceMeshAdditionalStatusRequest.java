@@ -69,7 +69,11 @@ public class DescribeServiceMeshAdditionalStatusRequest extends Request {
         } 
 
         /**
-         * CheckMode.
+         * The check mode of the ASM instance. Valid values:
+         * <p>
+         * 
+         * *   `normal`: checks the Server Load Balancer (SLB) instances created for exposing the API server and Istio Pilot, audit logs, and installation of Logtail for clusters on the data plane.
+         * *   `full`: checks control plane logs, access logs, security groups, and the elastic IP addresses (EIPs) of the API server in addition to the check items in normal mode.
          */
         public Builder checkMode(String checkMode) {
             this.putBodyParameter("CheckMode", checkMode);
@@ -78,7 +82,7 @@ public class DescribeServiceMeshAdditionalStatusRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

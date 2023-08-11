@@ -22,10 +22,15 @@ public class DescribeGuestClusterNamespacesRequest extends Request {
     @Validation(required = true)
     private String serviceMeshId;
 
+    @Body
+    @NameInMap("ShowNsLabels")
+    private Boolean showNsLabels;
+
     private DescribeGuestClusterNamespacesRequest(Builder builder) {
         super(builder);
         this.guestClusterID = builder.guestClusterID;
         this.serviceMeshId = builder.serviceMeshId;
+        this.showNsLabels = builder.showNsLabels;
     }
 
     public static Builder builder() {
@@ -55,9 +60,17 @@ public class DescribeGuestClusterNamespacesRequest extends Request {
         return this.serviceMeshId;
     }
 
+    /**
+     * @return showNsLabels
+     */
+    public Boolean getShowNsLabels() {
+        return this.showNsLabels;
+    }
+
     public static final class Builder extends Request.Builder<DescribeGuestClusterNamespacesRequest, Builder> {
         private String guestClusterID; 
         private String serviceMeshId; 
+        private Boolean showNsLabels; 
 
         private Builder() {
             super();
@@ -67,10 +80,11 @@ public class DescribeGuestClusterNamespacesRequest extends Request {
             super(request);
             this.guestClusterID = request.guestClusterID;
             this.serviceMeshId = request.serviceMeshId;
+            this.showNsLabels = request.showNsLabels;
         } 
 
         /**
-         * GuestClusterID.
+         * The ID of the Kubernetes cluster that is added to the ASM instance.
          */
         public Builder guestClusterID(String guestClusterID) {
             this.putBodyParameter("GuestClusterID", guestClusterID);
@@ -79,11 +93,20 @@ public class DescribeGuestClusterNamespacesRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
             this.serviceMeshId = serviceMeshId;
+            return this;
+        }
+
+        /**
+         * Specifies whether to return the labels of the namespaces.
+         */
+        public Builder showNsLabels(Boolean showNsLabels) {
+            this.putBodyParameter("ShowNsLabels", showNsLabels);
+            this.showNsLabels = showNsLabels;
             return this;
         }
 

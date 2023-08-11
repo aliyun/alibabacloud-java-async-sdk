@@ -50,7 +50,7 @@ public class DescribeUsersWithPermissionsResponseBody extends TeaModel {
         private java.util.List < String > UIDs; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeUsersWithPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * UIDs.
+         * The IDs of the RAM users or RAM roles to which an RBAC role is assigned.
          */
         public Builder UIDs(java.util.List < String > UIDs) {
             this.UIDs = UIDs;

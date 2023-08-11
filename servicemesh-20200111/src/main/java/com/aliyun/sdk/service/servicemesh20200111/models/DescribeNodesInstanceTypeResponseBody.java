@@ -50,7 +50,7 @@ public class DescribeNodesInstanceTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceTypes.
+         * The instance types of the nodes.
          */
         public Builder instanceTypes(java.util.List < InstanceTypes> instanceTypes) {
             this.instanceTypes = instanceTypes;
@@ -58,7 +58,7 @@ public class DescribeNodesInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,15 +72,23 @@ public class DescribeNodesInstanceTypeResponseBody extends TeaModel {
     } 
 
     public static class InstanceTypes extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
         @NameInMap("MultiBufferEnabled")
         private Boolean multiBufferEnabled;
 
         @NameInMap("NodeType")
         private String nodeType;
 
+        @NameInMap("Value")
+        private String value;
+
         private InstanceTypes(Builder builder) {
+            this.key = builder.key;
             this.multiBufferEnabled = builder.multiBufferEnabled;
             this.nodeType = builder.nodeType;
+            this.value = builder.value;
         }
 
         public static Builder builder() {
@@ -89,6 +97,13 @@ public class DescribeNodesInstanceTypeResponseBody extends TeaModel {
 
         public static InstanceTypes create() {
             return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
         }
 
         /**
@@ -105,12 +120,33 @@ public class DescribeNodesInstanceTypeResponseBody extends TeaModel {
             return this.nodeType;
         }
 
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
         public static final class Builder {
+            private String key; 
             private Boolean multiBufferEnabled; 
             private String nodeType; 
+            private String value; 
 
             /**
-             * MultiBufferEnabled.
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Indicates whether the instance type supports Multi-Buffer acceleration. Valid values:
+             * <p>
+             * 
+             * *   `true`
+             * *   `false`
              */
             public Builder multiBufferEnabled(Boolean multiBufferEnabled) {
                 this.multiBufferEnabled = multiBufferEnabled;
@@ -118,10 +154,18 @@ public class DescribeNodesInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * The instance type of the node.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
                 return this;
             }
 

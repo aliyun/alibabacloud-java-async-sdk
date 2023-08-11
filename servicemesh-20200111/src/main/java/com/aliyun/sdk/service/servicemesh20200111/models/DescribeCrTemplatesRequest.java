@@ -70,7 +70,7 @@ public class DescribeCrTemplatesRequest extends Request {
         } 
 
         /**
-         * IstioVersion.
+         * The Istio version used in ASM.
          */
         public Builder istioVersion(String istioVersion) {
             this.putBodyParameter("IstioVersion", istioVersion);
@@ -79,7 +79,20 @@ public class DescribeCrTemplatesRequest extends Request {
         }
 
         /**
-         * Kind.
+         * The type of Istio resource whose common YAML templates you want to query. Valid values:
+         * <p>
+         * 
+         * *   AuthorizationPolicy
+         * *   RequestAuthentication
+         * *   PeerAuthentication
+         * *   WorkloadGroup
+         * *   WorkloadEntry
+         * *   Sidecar
+         * *   EnvoyFilter
+         * *   ServiceEntry
+         * *   Gateway
+         * *   DestinationRule
+         * *   VirtualService
          */
         public Builder kind(String kind) {
             this.putBodyParameter("Kind", kind);

@@ -70,7 +70,7 @@ public class ModifyServiceMeshNameRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The new name of the ASM instance.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -79,7 +79,7 @@ public class ModifyServiceMeshNameRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

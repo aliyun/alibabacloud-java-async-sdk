@@ -69,7 +69,7 @@ public class DescribeNamespaceScopeSidecarConfigRequest extends Request {
         } 
 
         /**
-         * Namespace.
+         * The namespace.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -78,7 +78,7 @@ public class DescribeNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

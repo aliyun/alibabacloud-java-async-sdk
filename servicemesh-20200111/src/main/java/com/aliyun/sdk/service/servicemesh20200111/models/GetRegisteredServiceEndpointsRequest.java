@@ -111,7 +111,7 @@ public class GetRegisteredServiceEndpointsRequest extends Request {
         } 
 
         /**
-         * ClusterIds.
+         * The name of the registered service.
          */
         public Builder clusterIds(String clusterIds) {
             this.putBodyParameter("ClusterIds", clusterIds);
@@ -120,7 +120,11 @@ public class GetRegisteredServiceEndpointsRequest extends Request {
         }
 
         /**
-         * Name.
+         * The type of the registered service. Valid values:
+         * <p>
+         * 
+         * *   `ServiceEntry`: indicates that the service is registered by creating a service entry.
+         * *   `Kubernetes`: indicates that the service is registered on a Kubernetes cluster on the data plane.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -129,7 +133,7 @@ public class GetRegisteredServiceEndpointsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The IDs of clusters in the ASM instance. Separate multiple cluster IDs with commas (,).
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -138,7 +142,7 @@ public class GetRegisteredServiceEndpointsRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The name of the namespace.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);
@@ -147,7 +151,7 @@ public class GetRegisteredServiceEndpointsRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * The endpoints of the registered service.
          */
         public Builder serviceType(String serviceType) {
             this.putBodyParameter("ServiceType", serviceType);

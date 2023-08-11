@@ -50,7 +50,7 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
         private UpgradeDetail upgradeDetail; 
 
         /**
-         * RequestId.
+         * The upgrade results.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
         }
 
         /**
-         * UpgradeDetail.
+         * The number of ingress gateways that are upgraded.
          */
         public Builder upgradeDetail(UpgradeDetail upgradeDetail) {
             this.upgradeDetail = upgradeDetail;
@@ -134,7 +134,12 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
             private Long totalGatewaysNum; 
 
             /**
-             * FinishedGatewaysNum.
+             * The status of the ASM instance. Valid values:
+             * <p>
+             * 
+             * *   running: The instance is running.
+             * *   `upgrading`: The instance is being upgraded.
+             * *   `upgrading_failed`: The upgrade of the instance fails.
              */
             public Builder finishedGatewaysNum(Long finishedGatewaysNum) {
                 this.finishedGatewaysNum = finishedGatewaysNum;
@@ -150,7 +155,7 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * MeshStatus.
+             * The total number of ingress gateways in the ASM instance.
              */
             public Builder meshStatus(String meshStatus) {
                 this.meshStatus = meshStatus;
@@ -158,7 +163,7 @@ public class DescribeServiceMeshUpgradeStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TotalGatewaysNum.
+             * The information about the status of the ingress gateways.
              */
             public Builder totalGatewaysNum(Long totalGatewaysNum) {
                 this.totalGatewaysNum = totalGatewaysNum;

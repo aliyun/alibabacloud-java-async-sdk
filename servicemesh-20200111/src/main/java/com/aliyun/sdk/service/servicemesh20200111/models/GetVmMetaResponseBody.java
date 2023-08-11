@@ -50,7 +50,7 @@ public class GetVmMetaResponseBody extends TeaModel {
         private VmMetaInfo vmMetaInfo; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetVmMetaResponseBody extends TeaModel {
         }
 
         /**
-         * VmMetaInfo.
+         * The metadata that is required to add a non-containerized application to the ASM instance.
          */
         public Builder vmMetaInfo(VmMetaInfo vmMetaInfo) {
             this.vmMetaInfo = vmMetaInfo;
@@ -122,7 +122,7 @@ public class GetVmMetaResponseBody extends TeaModel {
             private String tokenContent; 
 
             /**
-             * EnvoyEnvContent.
+             * The content of the EnvoyEnv file.
              */
             public Builder envoyEnvContent(String envoyEnvContent) {
                 this.envoyEnvContent = envoyEnvContent;
@@ -130,7 +130,7 @@ public class GetVmMetaResponseBody extends TeaModel {
             }
 
             /**
-             * HostsContent.
+             * The content of the hosts file.
              */
             public Builder hostsContent(String hostsContent) {
                 this.hostsContent = hostsContent;
@@ -138,7 +138,7 @@ public class GetVmMetaResponseBody extends TeaModel {
             }
 
             /**
-             * TokenContent.
+             * The content of the Token file.
              */
             public Builder tokenContent(String tokenContent) {
                 this.tokenContent = tokenContent;

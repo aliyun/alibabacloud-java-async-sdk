@@ -50,7 +50,7 @@ public class DescribeClusterPrometheusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Prometheus.
+         * The public endpoint of the Prometheus service that is used to monitor a cluster in the ASM instance.
          */
         public Builder prometheus(String prometheus) {
             this.prometheus = prometheus;
@@ -58,7 +58,7 @@ public class DescribeClusterPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

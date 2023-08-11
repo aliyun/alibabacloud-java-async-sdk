@@ -50,7 +50,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Clusters.
+         * The clusters in the ASM instance.
          */
         public Builder clusters(java.util.List < Clusters> clusters) {
             this.clusters = clusters;
@@ -58,7 +58,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Title.
+             * The name of the dashboard for access logs.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -118,7 +118,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The URL of the dashboard for access logs.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -315,7 +315,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * AccessLogDashboards.
+             * The configurations of access log collection.
              */
             public Builder accessLogDashboards(java.util.List < AccessLogDashboards> accessLogDashboards) {
                 this.accessLogDashboards = accessLogDashboards;
@@ -323,7 +323,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterDomain.
+             * The domain of the cluster.
              */
             public Builder clusterDomain(String clusterDomain) {
                 this.clusterDomain = clusterDomain;
@@ -331,7 +331,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The ID of the cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -339,7 +339,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterType.
+             * The type of the cluster.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -347,7 +347,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The point in time when the cluster was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -355,7 +355,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message that is returned when the call failed.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -363,7 +363,14 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * LogtailInstalledState.
+             * Indicates whether the Logtail component is installed in the cluster. Valid values:
+             * <p>
+             * 
+             * *   `logtail_installed`: The Logtail component is installed.
+             * 
+             * \-`logtail_uninstalled`: The Logtail component is not installed.
+             * 
+             * *   `logtail_state_get_error`: The Logtail component fails to be installed.
              */
             public Builder logtailInstalledState(String logtailInstalledState) {
                 this.logtailInstalledState = logtailInstalledState;
@@ -371,7 +378,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -379,7 +386,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the cluster resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -387,7 +394,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * SgId.
+             * The ID of the security group.
              */
             public Builder sgId(String sgId) {
                 this.sgId = sgId;
@@ -395,7 +402,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the cluster.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -403,7 +410,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The point in time when the cluster was last modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -411,7 +418,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version number of the cluster.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -419,7 +426,7 @@ public class DescribeClustersInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

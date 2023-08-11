@@ -82,7 +82,7 @@ public class ModifyApiServerEipResourceRequest extends Request {
         } 
 
         /**
-         * ApiServerEipId.
+         * The ID of the EIP.
          */
         public Builder apiServerEipId(String apiServerEipId) {
             this.putBodyParameter("ApiServerEipId", apiServerEipId);
@@ -91,7 +91,11 @@ public class ModifyApiServerEipResourceRequest extends Request {
         }
 
         /**
-         * Operation.
+         * The type of the operation. Valid values:
+         * <p>
+         * 
+         * *   `UnBindEip`: disassociates an EIP from the API server.
+         * *   `BindEip`: associates an EIP with the API server.
          */
         public Builder operation(String operation) {
             this.putBodyParameter("Operation", operation);
@@ -100,7 +104,7 @@ public class ModifyApiServerEipResourceRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the Alibaba Cloud Service Mesh (ASM) instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putBodyParameter("ServiceMeshId", serviceMeshId);

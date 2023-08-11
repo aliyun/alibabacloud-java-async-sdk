@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpgradeMeshVersionRequest extends Request {
     @Query
+    @NameInMap("PreCheck")
+    private Boolean preCheck;
+
+    @Query
     @NameInMap("ServiceMeshId")
     @Validation(required = true)
     private String serviceMeshId;
 
     private UpgradeMeshVersionRequest(Builder builder) {
         super(builder);
+        this.preCheck = builder.preCheck;
         this.serviceMeshId = builder.serviceMeshId;
     }
 
@@ -36,6 +41,13 @@ public class UpgradeMeshVersionRequest extends Request {
     }
 
     /**
+     * @return preCheck
+     */
+    public Boolean getPreCheck() {
+        return this.preCheck;
+    }
+
+    /**
      * @return serviceMeshId
      */
     public String getServiceMeshId() {
@@ -43,6 +55,7 @@ public class UpgradeMeshVersionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpgradeMeshVersionRequest, Builder> {
+        private Boolean preCheck; 
         private String serviceMeshId; 
 
         private Builder() {
@@ -51,11 +64,21 @@ public class UpgradeMeshVersionRequest extends Request {
 
         private Builder(UpgradeMeshVersionRequest request) {
             super(request);
+            this.preCheck = request.preCheck;
             this.serviceMeshId = request.serviceMeshId;
         } 
 
         /**
-         * ServiceMeshId.
+         * PreCheck.
+         */
+        public Builder preCheck(Boolean preCheck) {
+            this.putQueryParameter("PreCheck", preCheck);
+            this.preCheck = preCheck;
+            return this;
+        }
+
+        /**
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

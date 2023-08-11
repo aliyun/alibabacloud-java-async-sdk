@@ -70,7 +70,7 @@ public class DescribeClusterGrafanaRequest extends Request {
         } 
 
         /**
-         * K8sClusterId.
+         * The ID of the cluster on the data plane.
          */
         public Builder k8sClusterId(String k8sClusterId) {
             this.putQueryParameter("K8sClusterId", k8sClusterId);
@@ -79,7 +79,7 @@ public class DescribeClusterGrafanaRequest extends Request {
         }
 
         /**
-         * ServiceMeshId.
+         * The ID of the ASM instance.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);
