@@ -54,6 +54,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateResourceMemberResponse> createResourceMember(CreateResourceMemberRequest request);
 
+    CompletableFuture<CreateServiceAuthResponse> createServiceAuth(CreateServiceAuthRequest request);
+
+    CompletableFuture<CreateServiceConnectionResponse> createServiceConnection(CreateServiceConnectionRequest request);
+
+    CompletableFuture<CreateServiceCredentialResponse> createServiceCredential(CreateServiceCredentialRequest request);
+
     CompletableFuture<CreateSprintResponse> createSprint(CreateSprintRequest request);
 
     CompletableFuture<CreateSshKeyResponse> createSshKey(CreateSshKeyRequest request);
@@ -262,7 +268,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSearchSourceCodeResponse> listSearchSourceCode(ListSearchSourceCodeRequest request);
 
+    CompletableFuture<ListServiceAuthsResponse> listServiceAuths(ListServiceAuthsRequest request);
+
     CompletableFuture<ListServiceConnectionsResponse> listServiceConnections(ListServiceConnectionsRequest request);
+
+    CompletableFuture<ListServiceCredentialsResponse> listServiceCredentials(ListServiceCredentialsRequest request);
 
     CompletableFuture<ListSprintsResponse> listSprints(ListSprintsRequest request);
 
@@ -277,6 +287,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWorkItemAllFieldsResponse> listWorkItemAllFields(ListWorkItemAllFieldsRequest request);
 
     CompletableFuture<ListWorkItemWorkFlowStatusResponse> listWorkItemWorkFlowStatus(ListWorkItemWorkFlowStatusRequest request);
+
+    CompletableFuture<ListWorkitemEstimateResponse> listWorkitemEstimate(ListWorkitemEstimateRequest request);
 
     CompletableFuture<ListWorkitemTimeResponse> listWorkitemTime(ListWorkitemTimeRequest request);
 
@@ -335,6 +347,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePipelineBaseInfoResponse> updatePipelineBaseInfo(UpdatePipelineBaseInfoRequest request);
 
     CompletableFuture<UpdatePipelineGroupResponse> updatePipelineGroup(UpdatePipelineGroupRequest request);
+
+    CompletableFuture<UpdateProjectFieldResponse> updateProjectField(UpdateProjectFieldRequest request);
 
     CompletableFuture<UpdateProjectMemberResponse> updateProjectMember(UpdateProjectMemberRequest request);
 
