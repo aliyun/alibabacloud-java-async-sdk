@@ -22,6 +22,10 @@ public class GetTensorboardRequest extends Request {
     private String jodId;
 
     @Query
+    @NameInMap("Token")
+    private String token;
+
+    @Query
     @NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -29,6 +33,7 @@ public class GetTensorboardRequest extends Request {
         super(builder);
         this.tensorboardId = builder.tensorboardId;
         this.jodId = builder.jodId;
+        this.token = builder.token;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -60,6 +65,13 @@ public class GetTensorboardRequest extends Request {
     }
 
     /**
+     * @return token
+     */
+    public String getToken() {
+        return this.token;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -69,6 +81,7 @@ public class GetTensorboardRequest extends Request {
     public static final class Builder extends Request.Builder<GetTensorboardRequest, Builder> {
         private String tensorboardId; 
         private String jodId; 
+        private String token; 
         private String workspaceId; 
 
         private Builder() {
@@ -79,6 +92,7 @@ public class GetTensorboardRequest extends Request {
             super(request);
             this.tensorboardId = request.tensorboardId;
             this.jodId = request.jodId;
+            this.token = request.token;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -97,6 +111,15 @@ public class GetTensorboardRequest extends Request {
         public Builder jodId(String jodId) {
             this.putQueryParameter("JodId", jodId);
             this.jodId = jodId;
+            return this;
+        }
+
+        /**
+         * Token.
+         */
+        public Builder token(String token) {
+            this.putQueryParameter("Token", token);
+            this.token = token;
             return this;
         }
 

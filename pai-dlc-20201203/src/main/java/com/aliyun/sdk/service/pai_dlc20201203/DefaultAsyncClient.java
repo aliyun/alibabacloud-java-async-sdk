@@ -230,6 +230,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<GetTensorboardSharedUrlResponse> getTensorboardSharedUrl(GetTensorboardSharedUrlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTensorboardSharedUrl").setMethod(HttpMethod.GET).setPathRegex("/api/v1/tensorboards/{TensorboardId}/sharedurl").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTensorboardSharedUrlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTensorboardSharedUrlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request) {
         try {
             this.handler.validateRequestModel(request);
