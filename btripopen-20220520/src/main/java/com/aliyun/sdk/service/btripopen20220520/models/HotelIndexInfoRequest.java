@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class HotelIndexInfoRequest extends Request {
     @Query
     @NameInMap("city_code")
-    @Validation(required = true)
     private String cityCode;
 
     @Query

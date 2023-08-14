@@ -94,7 +94,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<FlightCancelOrderResponse> flightCancelOrder(FlightCancelOrderRequest request);
 
+    CompletableFuture<FlightCancelOrderV2Response> flightCancelOrderV2(FlightCancelOrderV2Request request);
+
     CompletableFuture<FlightCreateOrderResponse> flightCreateOrder(FlightCreateOrderRequest request);
+
+    CompletableFuture<FlightCreateOrderV2Response> flightCreateOrderV2(FlightCreateOrderV2Request request);
 
     CompletableFuture<FlightExceedApplyQueryResponse> flightExceedApplyQuery(FlightExceedApplyQueryRequest request);
 
@@ -105,6 +109,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FlightListingSearchV2Response> flightListingSearchV2(FlightListingSearchV2Request request);
 
     CompletableFuture<FlightOrderDetailInfoResponse> flightOrderDetailInfo(FlightOrderDetailInfoRequest request);
+
+    CompletableFuture<FlightOrderDetailV2Response> flightOrderDetailV2(FlightOrderDetailV2Request request);
 
     CompletableFuture<FlightOrderListQueryResponse> flightOrderListQuery(FlightOrderListQueryRequest request);
 
@@ -117,6 +123,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FlightOtaSearchV2Response> flightOtaSearchV2(FlightOtaSearchV2Request request);
 
     CompletableFuture<FlightPayOrderResponse> flightPayOrder(FlightPayOrderRequest request);
+
+    CompletableFuture<FlightPayOrderV2Response> flightPayOrderV2(FlightPayOrderV2Request request);
 
     CompletableFuture<FlightRefundApplyResponse> flightRefundApply(FlightRefundApplyRequest request);
 
