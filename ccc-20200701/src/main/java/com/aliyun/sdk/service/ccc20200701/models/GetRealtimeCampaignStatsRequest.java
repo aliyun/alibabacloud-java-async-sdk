@@ -70,7 +70,7 @@ public class GetRealtimeCampaignStatsRequest extends Request {
         } 
 
         /**
-         * 实例ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -79,7 +79,7 @@ public class GetRealtimeCampaignStatsRequest extends Request {
         }
 
         /**
-         * 活动ID
+         * QueueId.
          */
         public Builder queueId(String queueId) {
             this.putQueryParameter("QueueId", queueId);

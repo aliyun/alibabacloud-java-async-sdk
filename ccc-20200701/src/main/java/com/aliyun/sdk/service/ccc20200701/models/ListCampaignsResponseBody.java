@@ -398,7 +398,7 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * CampaignId.
              */
             public Builder campaignId(String campaignId) {
                 this.campaignId = campaignId;
@@ -494,7 +494,7 @@ public class ListCampaignsResponseBody extends TeaModel {
             }
 
             /**
-             * state
+             * State.
              */
             public Builder state(String state) {
                 this.state = state;

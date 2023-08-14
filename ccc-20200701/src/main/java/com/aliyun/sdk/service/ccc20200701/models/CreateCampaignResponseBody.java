@@ -86,7 +86,7 @@ public class CreateCampaignResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * campaign id
+         * Data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -110,7 +110,7 @@ public class CreateCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +118,7 @@ public class CreateCampaignResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

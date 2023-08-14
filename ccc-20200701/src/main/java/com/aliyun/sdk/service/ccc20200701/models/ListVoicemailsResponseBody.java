@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListCasesResponseBody} extends {@link TeaModel}
+ * {@link ListVoicemailsResponseBody} extends {@link TeaModel}
  *
- * <p>ListCasesResponseBody</p>
+ * <p>ListVoicemailsResponseBody</p>
  */
-public class ListCasesResponseBody extends TeaModel {
+public class ListVoicemailsResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
@@ -19,7 +19,7 @@ public class ListCasesResponseBody extends TeaModel {
     private Data data;
 
     @NameInMap("HttpStatusCode")
-    private Long httpStatusCode;
+    private Integer httpStatusCode;
 
     @NameInMap("Message")
     private String message;
@@ -27,7 +27,7 @@ public class ListCasesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private ListCasesResponseBody(Builder builder) {
+    private ListVoicemailsResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.httpStatusCode = builder.httpStatusCode;
@@ -39,7 +39,7 @@ public class ListCasesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListCasesResponseBody create() {
+    public static ListVoicemailsResponseBody create() {
         return builder().build();
     }
 
@@ -60,7 +60,7 @@ public class ListCasesResponseBody extends TeaModel {
     /**
      * @return httpStatusCode
      */
-    public Long getHttpStatusCode() {
+    public Integer getHttpStatusCode() {
         return this.httpStatusCode;
     }
 
@@ -81,7 +81,7 @@ public class ListCasesResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Data data; 
-        private Long httpStatusCode; 
+        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
 
@@ -104,7 +104,7 @@ public class ListCasesResponseBody extends TeaModel {
         /**
          * HttpStatusCode.
          */
-        public Builder httpStatusCode(Long httpStatusCode) {
+        public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
             return this;
         }
@@ -125,42 +125,50 @@ public class ListCasesResponseBody extends TeaModel {
             return this;
         }
 
-        public ListCasesResponseBody build() {
-            return new ListCasesResponseBody(this);
+        public ListVoicemailsResponseBody build() {
+            return new ListVoicemailsResponseBody(this);
         } 
 
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("AbandonType")
-        private String abandonType;
+        @NameInMap("Callee")
+        private String callee;
 
-        @NameInMap("AttemptCount")
-        private Long attemptCount;
+        @NameInMap("Caller")
+        private String caller;
 
-        @NameInMap("CaseId")
-        private String caseId;
+        @NameInMap("CdrStartTime")
+        private Long cdrStartTime;
 
-        @NameInMap("CustomVariables")
-        private String customVariables;
+        @NameInMap("ContactId")
+        private String contactId;
 
-        @NameInMap("FailureReason")
-        private String failureReason;
+        @NameInMap("Duration")
+        private Long duration;
 
-        @NameInMap("PhoneNumber")
-        private String phoneNumber;
+        @NameInMap("InstanceId")
+        private String instanceId;
 
-        @NameInMap("State")
-        private String state;
+        @NameInMap("Name")
+        private String name;
+
+        @NameInMap("RecordingDuration")
+        private Long recordingDuration;
+
+        @NameInMap("StartTime")
+        private String startTime;
 
         private List(Builder builder) {
-            this.abandonType = builder.abandonType;
-            this.attemptCount = builder.attemptCount;
-            this.caseId = builder.caseId;
-            this.customVariables = builder.customVariables;
-            this.failureReason = builder.failureReason;
-            this.phoneNumber = builder.phoneNumber;
-            this.state = builder.state;
+            this.callee = builder.callee;
+            this.caller = builder.caller;
+            this.cdrStartTime = builder.cdrStartTime;
+            this.contactId = builder.contactId;
+            this.duration = builder.duration;
+            this.instanceId = builder.instanceId;
+            this.name = builder.name;
+            this.recordingDuration = builder.recordingDuration;
+            this.startTime = builder.startTime;
         }
 
         public static Builder builder() {
@@ -172,116 +180,148 @@ public class ListCasesResponseBody extends TeaModel {
         }
 
         /**
-         * @return abandonType
+         * @return callee
          */
-        public String getAbandonType() {
-            return this.abandonType;
+        public String getCallee() {
+            return this.callee;
         }
 
         /**
-         * @return attemptCount
+         * @return caller
          */
-        public Long getAttemptCount() {
-            return this.attemptCount;
+        public String getCaller() {
+            return this.caller;
         }
 
         /**
-         * @return caseId
+         * @return cdrStartTime
          */
-        public String getCaseId() {
-            return this.caseId;
+        public Long getCdrStartTime() {
+            return this.cdrStartTime;
         }
 
         /**
-         * @return customVariables
+         * @return contactId
          */
-        public String getCustomVariables() {
-            return this.customVariables;
+        public String getContactId() {
+            return this.contactId;
         }
 
         /**
-         * @return failureReason
+         * @return duration
          */
-        public String getFailureReason() {
-            return this.failureReason;
+        public Long getDuration() {
+            return this.duration;
         }
 
         /**
-         * @return phoneNumber
+         * @return instanceId
          */
-        public String getPhoneNumber() {
-            return this.phoneNumber;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         /**
-         * @return state
+         * @return name
          */
-        public String getState() {
-            return this.state;
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return recordingDuration
+         */
+        public Long getRecordingDuration() {
+            return this.recordingDuration;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
         }
 
         public static final class Builder {
-            private String abandonType; 
-            private Long attemptCount; 
-            private String caseId; 
-            private String customVariables; 
-            private String failureReason; 
-            private String phoneNumber; 
-            private String state; 
+            private String callee; 
+            private String caller; 
+            private Long cdrStartTime; 
+            private String contactId; 
+            private Long duration; 
+            private String instanceId; 
+            private String name; 
+            private Long recordingDuration; 
+            private String startTime; 
 
             /**
-             * AbandonType.
+             * Callee.
              */
-            public Builder abandonType(String abandonType) {
-                this.abandonType = abandonType;
+            public Builder callee(String callee) {
+                this.callee = callee;
                 return this;
             }
 
             /**
-             * AttemptCount.
+             * Caller.
              */
-            public Builder attemptCount(Long attemptCount) {
-                this.attemptCount = attemptCount;
+            public Builder caller(String caller) {
+                this.caller = caller;
                 return this;
             }
 
             /**
-             * CaseId.
+             * CdrStartTime.
              */
-            public Builder caseId(String caseId) {
-                this.caseId = caseId;
+            public Builder cdrStartTime(Long cdrStartTime) {
+                this.cdrStartTime = cdrStartTime;
                 return this;
             }
 
             /**
-             * CustomVariables.
+             * ContactId.
              */
-            public Builder customVariables(String customVariables) {
-                this.customVariables = customVariables;
+            public Builder contactId(String contactId) {
+                this.contactId = contactId;
                 return this;
             }
 
             /**
-             * FailureReason.
+             * Duration.
              */
-            public Builder failureReason(String failureReason) {
-                this.failureReason = failureReason;
+            public Builder duration(Long duration) {
+                this.duration = duration;
                 return this;
             }
 
             /**
-             * PhoneNumber.
+             * InstanceId.
              */
-            public Builder phoneNumber(String phoneNumber) {
-                this.phoneNumber = phoneNumber;
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 
             /**
-             * State.
+             * Name.
              */
-            public Builder state(String state) {
-                this.state = state;
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * RecordingDuration.
+             */
+            public Builder recordingDuration(Long recordingDuration) {
+                this.recordingDuration = recordingDuration;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
                 return this;
             }
 
@@ -297,13 +337,13 @@ public class ListCasesResponseBody extends TeaModel {
         private java.util.List < List> list;
 
         @NameInMap("PageNumber")
-        private Long pageNumber;
+        private Integer pageNumber;
 
         @NameInMap("PageSize")
-        private Long pageSize;
+        private Integer pageSize;
 
         @NameInMap("TotalCount")
-        private Long totalCount;
+        private Integer totalCount;
 
         private Data(Builder builder) {
             this.list = builder.list;
@@ -330,29 +370,29 @@ public class ListCasesResponseBody extends TeaModel {
         /**
          * @return pageNumber
          */
-        public Long getPageNumber() {
+        public Integer getPageNumber() {
             return this.pageNumber;
         }
 
         /**
          * @return pageSize
          */
-        public Long getPageSize() {
+        public Integer getPageSize() {
             return this.pageSize;
         }
 
         /**
          * @return totalCount
          */
-        public Long getTotalCount() {
+        public Integer getTotalCount() {
             return this.totalCount;
         }
 
         public static final class Builder {
             private java.util.List < List> list; 
-            private Long pageNumber; 
-            private Long pageSize; 
-            private Long totalCount; 
+            private Integer pageNumber; 
+            private Integer pageSize; 
+            private Integer totalCount; 
 
             /**
              * List.
@@ -365,7 +405,7 @@ public class ListCasesResponseBody extends TeaModel {
             /**
              * PageNumber.
              */
-            public Builder pageNumber(Long pageNumber) {
+            public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
                 return this;
             }
@@ -373,7 +413,7 @@ public class ListCasesResponseBody extends TeaModel {
             /**
              * PageSize.
              */
-            public Builder pageSize(Long pageSize) {
+            public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
                 return this;
             }
@@ -381,7 +421,7 @@ public class ListCasesResponseBody extends TeaModel {
             /**
              * TotalCount.
              */
-            public Builder totalCount(Long totalCount) {
+            public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
                 return this;
             }

@@ -70,7 +70,7 @@ public class GetHistoricalCampaignReportRequest extends Request {
         } 
 
         /**
-         * 活动ID
+         * CampaignId.
          */
         public Builder campaignId(String campaignId) {
             this.putQueryParameter("CampaignId", campaignId);
@@ -79,7 +79,7 @@ public class GetHistoricalCampaignReportRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

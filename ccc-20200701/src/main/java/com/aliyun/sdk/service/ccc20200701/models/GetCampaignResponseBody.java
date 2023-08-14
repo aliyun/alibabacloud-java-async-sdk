@@ -382,7 +382,7 @@ public class GetCampaignResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * CampaignId.
              */
             public Builder campaignId(String campaignId) {
                 this.campaignId = campaignId;

@@ -7,44 +7,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListAttemptsRequest} extends {@link RequestModel}
+ * {@link ListVoicemailsRequest} extends {@link RequestModel}
  *
- * <p>ListAttemptsRequest</p>
+ * <p>ListVoicemailsRequest</p>
  */
-public class ListAttemptsRequest extends Request {
-    @Query
-    @NameInMap("AgentId")
-    private String agentId;
-
-    @Query
-    @NameInMap("AttemptId")
-    private String attemptId;
-
-    @Query
-    @NameInMap("Callee")
-    private String callee;
-
+public class ListVoicemailsRequest extends Request {
     @Query
     @NameInMap("Caller")
     private String caller;
 
     @Query
-    @NameInMap("CampaignId")
-    @Validation(required = true)
-    private String campaignId;
-
-    @Query
-    @NameInMap("CaseId")
-    @Validation(required = true)
-    private String caseId;
-
-    @Query
     @NameInMap("ContactId")
     private String contactId;
-
-    @Query
-    @NameInMap("Criteria")
-    private String criteria;
 
     @Query
     @NameInMap("EndTime")
@@ -54,6 +28,11 @@ public class ListAttemptsRequest extends Request {
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
+
+    @Query
+    @NameInMap("Name")
+    @Deprecated
+    private String name;
 
     @Query
     @NameInMap("PageNumber")
@@ -66,28 +45,18 @@ public class ListAttemptsRequest extends Request {
     private Integer pageSize;
 
     @Query
-    @NameInMap("QueueId")
-    private String queueId;
-
-    @Query
     @NameInMap("StartTime")
     private Long startTime;
 
-    private ListAttemptsRequest(Builder builder) {
+    private ListVoicemailsRequest(Builder builder) {
         super(builder);
-        this.agentId = builder.agentId;
-        this.attemptId = builder.attemptId;
-        this.callee = builder.callee;
         this.caller = builder.caller;
-        this.campaignId = builder.campaignId;
-        this.caseId = builder.caseId;
         this.contactId = builder.contactId;
-        this.criteria = builder.criteria;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
+        this.name = builder.name;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.queueId = builder.queueId;
         this.startTime = builder.startTime;
     }
 
@@ -95,34 +64,13 @@ public class ListAttemptsRequest extends Request {
         return new Builder();
     }
 
-    public static ListAttemptsRequest create() {
+    public static ListVoicemailsRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return agentId
-     */
-    public String getAgentId() {
-        return this.agentId;
-    }
-
-    /**
-     * @return attemptId
-     */
-    public String getAttemptId() {
-        return this.attemptId;
-    }
-
-    /**
-     * @return callee
-     */
-    public String getCallee() {
-        return this.callee;
     }
 
     /**
@@ -133,31 +81,10 @@ public class ListAttemptsRequest extends Request {
     }
 
     /**
-     * @return campaignId
-     */
-    public String getCampaignId() {
-        return this.campaignId;
-    }
-
-    /**
-     * @return caseId
-     */
-    public String getCaseId() {
-        return this.caseId;
-    }
-
-    /**
      * @return contactId
      */
     public String getContactId() {
         return this.contactId;
-    }
-
-    /**
-     * @return criteria
-     */
-    public String getCriteria() {
-        return this.criteria;
     }
 
     /**
@@ -175,6 +102,13 @@ public class ListAttemptsRequest extends Request {
     }
 
     /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -189,83 +123,37 @@ public class ListAttemptsRequest extends Request {
     }
 
     /**
-     * @return queueId
-     */
-    public String getQueueId() {
-        return this.queueId;
-    }
-
-    /**
      * @return startTime
      */
     public Long getStartTime() {
         return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder<ListAttemptsRequest, Builder> {
-        private String agentId; 
-        private String attemptId; 
-        private String callee; 
+    public static final class Builder extends Request.Builder<ListVoicemailsRequest, Builder> {
         private String caller; 
-        private String campaignId; 
-        private String caseId; 
         private String contactId; 
-        private String criteria; 
         private Long endTime; 
         private String instanceId; 
+        private String name; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String queueId; 
         private Long startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListAttemptsRequest request) {
+        private Builder(ListVoicemailsRequest request) {
             super(request);
-            this.agentId = request.agentId;
-            this.attemptId = request.attemptId;
-            this.callee = request.callee;
             this.caller = request.caller;
-            this.campaignId = request.campaignId;
-            this.caseId = request.caseId;
             this.contactId = request.contactId;
-            this.criteria = request.criteria;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
+            this.name = request.name;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.queueId = request.queueId;
             this.startTime = request.startTime;
         } 
-
-        /**
-         * AgentId.
-         */
-        public Builder agentId(String agentId) {
-            this.putQueryParameter("AgentId", agentId);
-            this.agentId = agentId;
-            return this;
-        }
-
-        /**
-         * AttemptId.
-         */
-        public Builder attemptId(String attemptId) {
-            this.putQueryParameter("AttemptId", attemptId);
-            this.attemptId = attemptId;
-            return this;
-        }
-
-        /**
-         * Callee.
-         */
-        public Builder callee(String callee) {
-            this.putQueryParameter("Callee", callee);
-            this.callee = callee;
-            return this;
-        }
 
         /**
          * Caller.
@@ -277,38 +165,11 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
-         * CampaignId.
-         */
-        public Builder campaignId(String campaignId) {
-            this.putQueryParameter("CampaignId", campaignId);
-            this.campaignId = campaignId;
-            return this;
-        }
-
-        /**
-         * CaseId.
-         */
-        public Builder caseId(String caseId) {
-            this.putQueryParameter("CaseId", caseId);
-            this.caseId = caseId;
-            return this;
-        }
-
-        /**
          * ContactId.
          */
         public Builder contactId(String contactId) {
             this.putQueryParameter("ContactId", contactId);
             this.contactId = contactId;
-            return this;
-        }
-
-        /**
-         * Criteria.
-         */
-        public Builder criteria(String criteria) {
-            this.putQueryParameter("Criteria", criteria);
-            this.criteria = criteria;
             return this;
         }
 
@@ -331,6 +192,15 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
          * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
@@ -349,15 +219,6 @@ public class ListAttemptsRequest extends Request {
         }
 
         /**
-         * QueueId.
-         */
-        public Builder queueId(String queueId) {
-            this.putQueryParameter("QueueId", queueId);
-            this.queueId = queueId;
-            return this;
-        }
-
-        /**
          * StartTime.
          */
         public Builder startTime(Long startTime) {
@@ -367,8 +228,8 @@ public class ListAttemptsRequest extends Request {
         }
 
         @Override
-        public ListAttemptsRequest build() {
-            return new ListAttemptsRequest(this);
+        public ListVoicemailsRequest build() {
+            return new ListVoicemailsRequest(this);
         } 
 
     } 

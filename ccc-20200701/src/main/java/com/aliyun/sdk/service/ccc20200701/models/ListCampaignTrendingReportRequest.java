@@ -98,7 +98,7 @@ public class ListCampaignTrendingReportRequest extends Request {
         } 
 
         /**
-         * 活动ID
+         * CampaignId.
          */
         public Builder campaignId(String campaignId) {
             this.putQueryParameter("CampaignId", campaignId);
@@ -107,7 +107,7 @@ public class ListCampaignTrendingReportRequest extends Request {
         }
 
         /**
-         * 结束时间
+         * EndTime.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -116,7 +116,7 @@ public class ListCampaignTrendingReportRequest extends Request {
         }
 
         /**
-         * 实例ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -125,7 +125,7 @@ public class ListCampaignTrendingReportRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * StartTime.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
