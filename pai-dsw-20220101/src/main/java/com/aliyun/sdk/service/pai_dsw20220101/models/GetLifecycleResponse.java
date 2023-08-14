@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListDemoCategoriesResponse} extends {@link TeaModel}
+ * {@link GetLifecycleResponse} extends {@link TeaModel}
  *
- * <p>ListDemoCategoriesResponse</p>
+ * <p>GetLifecycleResponse</p>
  */
-public class ListDemoCategoriesResponse extends Response {
+public class GetLifecycleResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ListDemoCategoriesResponseBody body;
+    private GetLifecycleResponseBody body;
 
-    private ListDemoCategoriesResponse(BuilderImpl builder) {
+    private GetLifecycleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ListDemoCategoriesResponse create() {
+    public static GetLifecycleResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ListDemoCategoriesResponse extends Response {
     /**
      * @return body
      */
-    public ListDemoCategoriesResponseBody getBody() {
+    public GetLifecycleResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListDemoCategoriesResponse, Builder> {
+    public interface Builder extends Response.Builder<GetLifecycleResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ListDemoCategoriesResponseBody body);
+        Builder body(GetLifecycleResponseBody body);
 
         @Override
-        ListDemoCategoriesResponse build();
+        GetLifecycleResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListDemoCategoriesResponse, Builder>
+            extends Response.BuilderImpl<GetLifecycleResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ListDemoCategoriesResponseBody body; 
+        private GetLifecycleResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListDemoCategoriesResponse response) {
+        private BuilderImpl(GetLifecycleResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ListDemoCategoriesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListDemoCategoriesResponseBody body) {
+        public Builder body(GetLifecycleResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListDemoCategoriesResponse build() {
-            return new ListDemoCategoriesResponse(this);
+        public GetLifecycleResponse build() {
+            return new GetLifecycleResponse(this);
         } 
 
     } 

@@ -18,11 +18,15 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<CreateIdleInstanceCullerResponse> createIdleInstanceCuller(CreateIdleInstanceCullerRequest request);
+
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
     CompletableFuture<CreateInstanceShutdownTimerResponse> createInstanceShutdownTimer(CreateInstanceShutdownTimerRequest request);
 
     CompletableFuture<CreateInstanceSnapshotResponse> createInstanceSnapshot(CreateInstanceSnapshotRequest request);
+
+    CompletableFuture<DeleteIdleInstanceCullerResponse> deleteIdleInstanceCuller(DeleteIdleInstanceCullerRequest request);
 
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
 
@@ -30,19 +34,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteInstanceSnapshotResponse> deleteInstanceSnapshot(DeleteInstanceSnapshotRequest request);
 
+    CompletableFuture<GetIdleInstanceCullerResponse> getIdleInstanceCuller(GetIdleInstanceCullerRequest request);
+
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
+
+    CompletableFuture<GetInstanceMetricsResponse> getInstanceMetrics(GetInstanceMetricsRequest request);
 
     CompletableFuture<GetInstanceShutdownTimerResponse> getInstanceShutdownTimer(GetInstanceShutdownTimerRequest request);
 
     CompletableFuture<GetInstanceSnapshotResponse> getInstanceSnapshot(GetInstanceSnapshotRequest request);
 
+    CompletableFuture<GetLifecycleResponse> getLifecycle(GetLifecycleRequest request);
+
+    CompletableFuture<GetResourceGroupStatisticsResponse> getResourceGroupStatistics(GetResourceGroupStatisticsRequest request);
+
     CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request);
 
     CompletableFuture<GetUserConfigResponse> getUserConfig(GetUserConfigRequest request);
-
-    CompletableFuture<ListDemoCategoriesResponse> listDemoCategories(ListDemoCategoriesRequest request);
-
-    CompletableFuture<ListDemosResponse> listDemos(ListDemosRequest request);
 
     CompletableFuture<ListEcsSpecsResponse> listEcsSpecs(ListEcsSpecsRequest request);
 

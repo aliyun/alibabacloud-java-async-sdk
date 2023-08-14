@@ -7,17 +7,17 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StartInstanceRequest} extends {@link RequestModel}
+ * {@link GetIdleInstanceCullerRequest} extends {@link RequestModel}
  *
- * <p>StartInstanceRequest</p>
+ * <p>GetIdleInstanceCullerRequest</p>
  */
-public class StartInstanceRequest extends Request {
+public class GetIdleInstanceCullerRequest extends Request {
     @Path
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
 
-    private StartInstanceRequest(Builder builder) {
+    private GetIdleInstanceCullerRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
     }
@@ -26,7 +26,7 @@ public class StartInstanceRequest extends Request {
         return new Builder();
     }
 
-    public static StartInstanceRequest create() {
+    public static GetIdleInstanceCullerRequest create() {
         return builder().build();
     }
 
@@ -42,14 +42,14 @@ public class StartInstanceRequest extends Request {
         return this.instanceId;
     }
 
-    public static final class Builder extends Request.Builder<StartInstanceRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetIdleInstanceCullerRequest, Builder> {
         private String instanceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(StartInstanceRequest request) {
+        private Builder(GetIdleInstanceCullerRequest request) {
             super(request);
             this.instanceId = request.instanceId;
         } 
@@ -64,8 +64,8 @@ public class StartInstanceRequest extends Request {
         }
 
         @Override
-        public StartInstanceRequest build() {
-            return new StartInstanceRequest(this);
+        public GetIdleInstanceCullerRequest build() {
+            return new GetIdleInstanceCullerRequest(this);
         } 
 
     } 

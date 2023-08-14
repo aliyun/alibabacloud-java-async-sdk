@@ -17,6 +17,10 @@ public class CreateInstanceRequest extends Request {
     private String accessibility;
 
     @Body
+    @NameInMap("CloudDisks")
+    private java.util.List < CloudDisks> cloudDisks;
+
+    @Body
     @NameInMap("Datasets")
     private java.util.List < Datasets> datasets;
 
@@ -41,6 +45,10 @@ public class CreateInstanceRequest extends Request {
     private String instanceName;
 
     @Body
+    @NameInMap("Labels")
+    private java.util.List < Labels> labels;
+
+    @Body
     @NameInMap("Priority")
     private Long priority;
 
@@ -53,6 +61,10 @@ public class CreateInstanceRequest extends Request {
     private String resourceId;
 
     @Body
+    @NameInMap("UserId")
+    private String userId;
+
+    @Body
     @NameInMap("UserVpc")
     private UserVpc userVpc;
 
@@ -60,20 +72,28 @@ public class CreateInstanceRequest extends Request {
     @NameInMap("WorkspaceId")
     private String workspaceId;
 
+    @Body
+    @NameInMap("WorkspaceSource")
+    private String workspaceSource;
+
     private CreateInstanceRequest(Builder builder) {
         super(builder);
         this.accessibility = builder.accessibility;
+        this.cloudDisks = builder.cloudDisks;
         this.datasets = builder.datasets;
         this.ecsSpec = builder.ecsSpec;
         this.environmentVariables = builder.environmentVariables;
         this.imageId = builder.imageId;
         this.imageUrl = builder.imageUrl;
         this.instanceName = builder.instanceName;
+        this.labels = builder.labels;
         this.priority = builder.priority;
         this.requestedResource = builder.requestedResource;
         this.resourceId = builder.resourceId;
+        this.userId = builder.userId;
         this.userVpc = builder.userVpc;
         this.workspaceId = builder.workspaceId;
+        this.workspaceSource = builder.workspaceSource;
     }
 
     public static Builder builder() {
@@ -94,6 +114,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return cloudDisks
+     */
+    public java.util.List < CloudDisks> getCloudDisks() {
+        return this.cloudDisks;
     }
 
     /**
@@ -139,6 +166,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return labels
+     */
+    public java.util.List < Labels> getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return priority
      */
     public Long getPriority() {
@@ -160,6 +194,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
      * @return userVpc
      */
     public UserVpc getUserVpc() {
@@ -173,19 +214,30 @@ public class CreateInstanceRequest extends Request {
         return this.workspaceId;
     }
 
+    /**
+     * @return workspaceSource
+     */
+    public String getWorkspaceSource() {
+        return this.workspaceSource;
+    }
+
     public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
         private String accessibility; 
+        private java.util.List < CloudDisks> cloudDisks; 
         private java.util.List < Datasets> datasets; 
         private String ecsSpec; 
         private java.util.Map < String, String > environmentVariables; 
         private String imageId; 
         private String imageUrl; 
         private String instanceName; 
+        private java.util.List < Labels> labels; 
         private Long priority; 
         private RequestedResource requestedResource; 
         private String resourceId; 
+        private String userId; 
         private UserVpc userVpc; 
         private String workspaceId; 
+        private String workspaceSource; 
 
         private Builder() {
             super();
@@ -194,21 +246,25 @@ public class CreateInstanceRequest extends Request {
         private Builder(CreateInstanceRequest request) {
             super(request);
             this.accessibility = request.accessibility;
+            this.cloudDisks = request.cloudDisks;
             this.datasets = request.datasets;
             this.ecsSpec = request.ecsSpec;
             this.environmentVariables = request.environmentVariables;
             this.imageId = request.imageId;
             this.imageUrl = request.imageUrl;
             this.instanceName = request.instanceName;
+            this.labels = request.labels;
             this.priority = request.priority;
             this.requestedResource = request.requestedResource;
             this.resourceId = request.resourceId;
+            this.userId = request.userId;
             this.userVpc = request.userVpc;
             this.workspaceId = request.workspaceId;
+            this.workspaceSource = request.workspaceSource;
         } 
 
         /**
-         * 工作空间内是否他人可见
+         * Accessibility.
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -217,7 +273,16 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 数据集集合
+         * CloudDisks.
+         */
+        public Builder cloudDisks(java.util.List < CloudDisks> cloudDisks) {
+            this.putBodyParameter("CloudDisks", cloudDisks);
+            this.cloudDisks = cloudDisks;
+            return this;
+        }
+
+        /**
+         * Datasets.
          */
         public Builder datasets(java.util.List < Datasets> datasets) {
             this.putBodyParameter("Datasets", datasets);
@@ -226,7 +291,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 实例对应的Ecs规格
+         * EcsSpec.
          */
         public Builder ecsSpec(String ecsSpec) {
             this.putBodyParameter("EcsSpec", ecsSpec);
@@ -235,7 +300,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 环境变量
+         * EnvironmentVariables.
          */
         public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
             this.putBodyParameter("EnvironmentVariables", environmentVariables);
@@ -244,7 +309,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 镜像Id
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -253,7 +318,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 镜像地址
+         * ImageUrl.
          */
         public Builder imageUrl(String imageUrl) {
             this.putBodyParameter("ImageUrl", imageUrl);
@@ -262,7 +327,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 实例名称
+         * InstanceName.
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -271,7 +336,16 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 优先级，在分配资源给实例时，优先级越高的实例越优先
+         * Labels.
+         */
+        public Builder labels(java.util.List < Labels> labels) {
+            this.putBodyParameter("Labels", labels);
+            this.labels = labels;
+            return this;
+        }
+
+        /**
+         * Priority.
          */
         public Builder priority(Long priority) {
             this.putBodyParameter("Priority", priority);
@@ -280,7 +354,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 资源配置，弹内或者轻量化时使用
+         * RequestedResource.
          */
         public Builder requestedResource(RequestedResource requestedResource) {
             this.putBodyParameter("RequestedResource", requestedResource);
@@ -289,7 +363,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 资源Id,预付费时填写
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
@@ -298,7 +372,16 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * user vpc配置
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.putBodyParameter("UserId", userId);
+            this.userId = userId;
+            return this;
+        }
+
+        /**
+         * UserVpc.
          */
         public Builder userVpc(UserVpc userVpc) {
             this.putBodyParameter("UserVpc", userVpc);
@@ -307,11 +390,20 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * 工作空间Id
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * WorkspaceSource.
+         */
+        public Builder workspaceSource(String workspaceSource) {
+            this.putBodyParameter("WorkspaceSource", workspaceSource);
+            this.workspaceSource = workspaceSource;
             return this;
         }
 
@@ -322,6 +414,107 @@ public class CreateInstanceRequest extends Request {
 
     } 
 
+    public static class CloudDisks extends TeaModel {
+        @NameInMap("Capacity")
+        private String capacity;
+
+        @NameInMap("MountPath")
+        private String mountPath;
+
+        @NameInMap("Path")
+        private String path;
+
+        @NameInMap("SubType")
+        private String subType;
+
+        private CloudDisks(Builder builder) {
+            this.capacity = builder.capacity;
+            this.mountPath = builder.mountPath;
+            this.path = builder.path;
+            this.subType = builder.subType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CloudDisks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return capacity
+         */
+        public String getCapacity() {
+            return this.capacity;
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return subType
+         */
+        public String getSubType() {
+            return this.subType;
+        }
+
+        public static final class Builder {
+            private String capacity; 
+            private String mountPath; 
+            private String path; 
+            private String subType; 
+
+            /**
+             * Capacity.
+             */
+            public Builder capacity(String capacity) {
+                this.capacity = capacity;
+                return this;
+            }
+
+            /**
+             * MountPath.
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * SubType.
+             */
+            public Builder subType(String subType) {
+                this.subType = subType;
+                return this;
+            }
+
+            public CloudDisks build() {
+                return new CloudDisks(this);
+            } 
+
+        } 
+
+    }
     public static class Datasets extends TeaModel {
         @NameInMap("DatasetId")
         private String datasetId;
@@ -361,7 +554,7 @@ public class CreateInstanceRequest extends Request {
             private String mountPath; 
 
             /**
-             * 数据集Id
+             * DatasetId.
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -369,7 +562,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * 容器内挂载路径
+             * MountPath.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -378,6 +571,67 @@ public class CreateInstanceRequest extends Request {
 
             public Datasets build() {
                 return new Datasets(this);
+            } 
+
+        } 
+
+    }
+    public static class Labels extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Labels(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
             } 
 
         } 
@@ -458,7 +712,7 @@ public class CreateInstanceRequest extends Request {
             private String sharedMemory; 
 
             /**
-             * cpu核数
+             * CPU.
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
@@ -466,7 +720,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * gpu数量
+             * GPU.
              */
             public Builder GPU(String GPU) {
                 this.GPU = GPU;
@@ -474,7 +728,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * gpu显卡类型
+             * GPUType.
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -482,7 +736,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * memory大小
+             * Memory.
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -490,7 +744,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * shared memory大小
+             * SharedMemory.
              */
             public Builder sharedMemory(String sharedMemory) {
                 this.sharedMemory = sharedMemory;
@@ -505,6 +759,12 @@ public class CreateInstanceRequest extends Request {
 
     }
     public static class UserVpc extends TeaModel {
+        @NameInMap("DefaultRoute")
+        private String defaultRoute;
+
+        @NameInMap("ExtendedCIDRs")
+        private java.util.List < String > extendedCIDRs;
+
         @NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -515,6 +775,8 @@ public class CreateInstanceRequest extends Request {
         private String vpcId;
 
         private UserVpc(Builder builder) {
+            this.defaultRoute = builder.defaultRoute;
+            this.extendedCIDRs = builder.extendedCIDRs;
             this.securityGroupId = builder.securityGroupId;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -526,6 +788,20 @@ public class CreateInstanceRequest extends Request {
 
         public static UserVpc create() {
             return builder().build();
+        }
+
+        /**
+         * @return defaultRoute
+         */
+        public String getDefaultRoute() {
+            return this.defaultRoute;
+        }
+
+        /**
+         * @return extendedCIDRs
+         */
+        public java.util.List < String > getExtendedCIDRs() {
+            return this.extendedCIDRs;
         }
 
         /**
@@ -550,12 +826,30 @@ public class CreateInstanceRequest extends Request {
         }
 
         public static final class Builder {
+            private String defaultRoute; 
+            private java.util.List < String > extendedCIDRs; 
             private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
 
             /**
-             * Security Group Id
+             * DefaultRoute.
+             */
+            public Builder defaultRoute(String defaultRoute) {
+                this.defaultRoute = defaultRoute;
+                return this;
+            }
+
+            /**
+             * ExtendedCIDRs.
+             */
+            public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
+                this.extendedCIDRs = extendedCIDRs;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -563,7 +857,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * VSwitch Id
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -571,7 +865,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Vpc Id
+             * VpcId.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

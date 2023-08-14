@@ -21,6 +21,10 @@ public class ListInstancesRequest extends Request {
     private String accessibility;
 
     @Query
+    @NameInMap("InstanceId")
+    private String instanceId;
+
+    @Query
     @NameInMap("InstanceName")
     private String instanceName;
 
@@ -60,6 +64,7 @@ public class ListInstancesRequest extends Request {
         super(builder);
         this.acceleratorType = builder.acceleratorType;
         this.accessibility = builder.accessibility;
+        this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
@@ -96,6 +101,13 @@ public class ListInstancesRequest extends Request {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -164,6 +176,7 @@ public class ListInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<ListInstancesRequest, Builder> {
         private String acceleratorType; 
         private String accessibility; 
+        private String instanceId; 
         private String instanceName; 
         private String order; 
         private Long pageNumber; 
@@ -182,6 +195,7 @@ public class ListInstancesRequest extends Request {
             super(request);
             this.acceleratorType = request.acceleratorType;
             this.accessibility = request.accessibility;
+            this.instanceId = request.instanceId;
             this.instanceName = request.instanceName;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
@@ -212,7 +226,16 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 实例名称
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceName.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -221,7 +244,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 排列顺序
+         * Order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -230,7 +253,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 页码
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -239,7 +262,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 分页数量大小
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -266,7 +289,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 排序字段
+         * SortBy.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -275,7 +298,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 实例状态
+         * Status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -284,7 +307,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * 工作空间Id
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

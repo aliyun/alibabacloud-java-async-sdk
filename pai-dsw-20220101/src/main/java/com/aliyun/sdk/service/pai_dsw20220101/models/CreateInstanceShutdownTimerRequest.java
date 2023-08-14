@@ -83,7 +83,7 @@ public class CreateInstanceShutdownTimerRequest extends Request {
         } 
 
         /**
-         * 定时关机任务对应实例的Id
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -92,7 +92,7 @@ public class CreateInstanceShutdownTimerRequest extends Request {
         }
 
         /**
-         * 定时关机设定时间
+         * DueTime.
          */
         public Builder dueTime(String dueTime) {
             this.putBodyParameter("DueTime", dueTime);
@@ -101,7 +101,7 @@ public class CreateInstanceShutdownTimerRequest extends Request {
         }
 
         /**
-         * 距离定时关机时间段
+         * RemainingTimeInMs.
          */
         public Builder remainingTimeInMs(Long remainingTimeInMs) {
             this.putBodyParameter("RemainingTimeInMs", remainingTimeInMs);

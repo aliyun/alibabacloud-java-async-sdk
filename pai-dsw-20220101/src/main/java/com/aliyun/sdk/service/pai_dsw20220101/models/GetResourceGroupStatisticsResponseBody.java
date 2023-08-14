@@ -7,19 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateInstanceResponseBody} extends {@link TeaModel}
+ * {@link GetResourceGroupStatisticsResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateInstanceResponseBody</p>
+ * <p>GetResourceGroupStatisticsResponseBody</p>
  */
-public class UpdateInstanceResponseBody extends TeaModel {
+public class GetResourceGroupStatisticsResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
     @NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
-
-    @NameInMap("InstanceId")
-    private String instanceId;
 
     @NameInMap("Message")
     private String message;
@@ -27,15 +24,18 @@ public class UpdateInstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("Statistics")
+    private java.util.Map < String, java.util.Map<String, ?>> statistics;
+
     @NameInMap("Success")
     private Boolean success;
 
-    private UpdateInstanceResponseBody(Builder builder) {
+    private GetResourceGroupStatisticsResponseBody(Builder builder) {
         this.code = builder.code;
         this.httpStatusCode = builder.httpStatusCode;
-        this.instanceId = builder.instanceId;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.statistics = builder.statistics;
         this.success = builder.success;
     }
 
@@ -43,7 +43,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateInstanceResponseBody create() {
+    public static GetResourceGroupStatisticsResponseBody create() {
         return builder().build();
     }
 
@@ -62,13 +62,6 @@ public class UpdateInstanceResponseBody extends TeaModel {
     }
 
     /**
-     * @return instanceId
-     */
-    public String getInstanceId() {
-        return this.instanceId;
-    }
-
-    /**
      * @return message
      */
     public String getMessage() {
@@ -83,6 +76,13 @@ public class UpdateInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return statistics
+     */
+    public java.util.Map < String, java.util.Map<String, ?>> getStatistics() {
+        return this.statistics;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -92,9 +92,9 @@ public class UpdateInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private Integer httpStatusCode; 
-        private String instanceId; 
         private String message; 
         private String requestId; 
+        private java.util.Map < String, java.util.Map<String, ?>> statistics; 
         private Boolean success; 
 
         /**
@@ -110,14 +110,6 @@ public class UpdateInstanceResponseBody extends TeaModel {
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * InstanceId.
-         */
-        public Builder instanceId(String instanceId) {
-            this.instanceId = instanceId;
             return this;
         }
 
@@ -138,6 +130,14 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * Statistics.
+         */
+        public Builder statistics(java.util.Map < String, java.util.Map<String, ?>> statistics) {
+            this.statistics = statistics;
+            return this;
+        }
+
+        /**
          * Success.
          */
         public Builder success(Boolean success) {
@@ -145,8 +145,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateInstanceResponseBody build() {
-            return new UpdateInstanceResponseBody(this);
+        public GetResourceGroupStatisticsResponseBody build() {
+            return new GetResourceGroupStatisticsResponseBody(this);
         } 
 
     } 

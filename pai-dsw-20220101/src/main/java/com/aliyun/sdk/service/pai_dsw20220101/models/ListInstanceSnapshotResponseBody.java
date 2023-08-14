@@ -110,7 +110,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 状态码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * http状态码
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -126,7 +126,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 说明
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +134,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 本分页中请求的实例镜像列表
+         * Snapshots.
          */
         public Builder snapshots(java.util.List < Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -150,7 +150,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 成功标志
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 实例总数
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -171,6 +171,67 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
 
     } 
 
+    public static class Labels extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Labels(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
     public static class Snapshots extends TeaModel {
         @NameInMap("GmtCreateTime")
         private String gmtCreateTime;
@@ -186,6 +247,9 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
 
         @NameInMap("InstanceId")
         private String instanceId;
+
+        @NameInMap("Labels")
+        private java.util.List < Labels> labels;
 
         @NameInMap("ReasonCode")
         private String reasonCode;
@@ -208,6 +272,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             this.imageId = builder.imageId;
             this.imageUrl = builder.imageUrl;
             this.instanceId = builder.instanceId;
+            this.labels = builder.labels;
             this.reasonCode = builder.reasonCode;
             this.reasonMessage = builder.reasonMessage;
             this.snapshotId = builder.snapshotId;
@@ -259,6 +324,13 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
+         * @return labels
+         */
+        public java.util.List < Labels> getLabels() {
+            return this.labels;
+        }
+
+        /**
          * @return reasonCode
          */
         public String getReasonCode() {
@@ -299,6 +371,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             private String imageId; 
             private String imageUrl; 
             private String instanceId; 
+            private java.util.List < Labels> labels; 
             private String reasonCode; 
             private String reasonMessage; 
             private String snapshotId; 
@@ -306,7 +379,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 实例快照创建时间
+             * GmtCreateTime.
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -314,7 +387,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照修改时间
+             * GmtModifiedTime.
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -322,7 +395,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照的镜像Id
+             * ImageId.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -330,7 +403,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照的镜像地址
+             * ImageUrl.
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -338,7 +411,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * 实例Id
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -346,7 +419,15 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照错误代码
+             * Labels.
+             */
+            public Builder labels(java.util.List < Labels> labels) {
+                this.labels = labels;
+                return this;
+            }
+
+            /**
+             * ReasonCode.
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -354,7 +435,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照错误消息
+             * ReasonMessage.
              */
             public Builder reasonMessage(String reasonMessage) {
                 this.reasonMessage = reasonMessage;
@@ -362,7 +443,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照Id
+             * SnapshotId.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -370,7 +451,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照名称
+             * SnapshotName.
              */
             public Builder snapshotName(String snapshotName) {
                 this.snapshotName = snapshotName;
@@ -378,7 +459,7 @@ public class ListInstanceSnapshotResponseBody extends TeaModel {
             }
 
             /**
-             * 实例快照状态
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

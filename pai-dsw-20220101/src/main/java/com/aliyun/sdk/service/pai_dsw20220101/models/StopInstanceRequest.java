@@ -69,7 +69,7 @@ public class StopInstanceRequest extends Request {
         } 
 
         /**
-         * 实例Id
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -78,7 +78,7 @@ public class StopInstanceRequest extends Request {
         }
 
         /**
-         * 是否保存环境后再关闭实例
+         * SaveImage.
          */
         public Builder saveImage(Boolean saveImage) {
             this.putQueryParameter("SaveImage", saveImage);

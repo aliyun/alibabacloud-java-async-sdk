@@ -146,7 +146,7 @@ public class GetInstanceShutdownTimerResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 状态码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -154,7 +154,7 @@ public class GetInstanceShutdownTimerResponseBody extends TeaModel {
         }
 
         /**
-         * 设定关机时间
+         * DueTime.
          */
         public Builder dueTime(String dueTime) {
             this.dueTime = dueTime;
@@ -162,7 +162,7 @@ public class GetInstanceShutdownTimerResponseBody extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -170,7 +170,7 @@ public class GetInstanceShutdownTimerResponseBody extends TeaModel {
         }
 
         /**
-         * 修改时间
+         * GmtModifiedTime.
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -178,7 +178,7 @@ public class GetInstanceShutdownTimerResponseBody extends TeaModel {
         }
 
         /**
-         * http状态码
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -186,7 +186,7 @@ public class GetInstanceShutdownTimerResponseBody extends TeaModel {
         }
 
         /**
-         * 实例Id
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -194,7 +194,7 @@ public class GetInstanceShutdownTimerResponseBody extends TeaModel {
         }
 
         /**
-         * 说明
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -202,7 +202,7 @@ public class GetInstanceShutdownTimerResponseBody extends TeaModel {
         }
 
         /**
-         * 剩余关机时间（ms）
+         * RemainingTimeInMs.
          */
         public Builder remainingTimeInMs(Long remainingTimeInMs) {
             this.remainingTimeInMs = remainingTimeInMs;
@@ -210,7 +210,7 @@ public class GetInstanceShutdownTimerResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +218,7 @@ public class GetInstanceShutdownTimerResponseBody extends TeaModel {
         }
 
         /**
-         * 成功标志
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

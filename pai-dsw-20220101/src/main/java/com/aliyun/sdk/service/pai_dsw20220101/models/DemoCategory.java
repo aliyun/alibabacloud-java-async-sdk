@@ -74,7 +74,7 @@ public class DemoCategory extends TeaModel {
         private java.util.List < DemoCategory > subCategories; 
 
         /**
-         * 目录码
+         * CategoryCode.
          */
         public Builder categoryCode(String categoryCode) {
             this.categoryCode = categoryCode;
@@ -82,7 +82,7 @@ public class DemoCategory extends TeaModel {
         }
 
         /**
-         * 目录名
+         * CategoryName.
          */
         public Builder categoryName(String categoryName) {
             this.categoryName = categoryName;
@@ -90,7 +90,7 @@ public class DemoCategory extends TeaModel {
         }
 
         /**
-         * 序号
+         * Order.
          */
         public Builder order(Long order) {
             this.order = order;
@@ -98,7 +98,7 @@ public class DemoCategory extends TeaModel {
         }
 
         /**
-         * 目录列表
+         * SubCategories.
          */
         public Builder subCategories(java.util.List < DemoCategory > subCategories) {
             this.subCategories = subCategories;

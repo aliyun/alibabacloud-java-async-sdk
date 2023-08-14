@@ -55,7 +55,7 @@ public class ListInstanceStatisticsRequest extends Request {
         } 
 
         /**
-         * 工作空间列表
+         * WorkspaceIds.
          */
         public Builder workspaceIds(String workspaceIds) {
             this.putQueryParameter("WorkspaceIds", workspaceIds);

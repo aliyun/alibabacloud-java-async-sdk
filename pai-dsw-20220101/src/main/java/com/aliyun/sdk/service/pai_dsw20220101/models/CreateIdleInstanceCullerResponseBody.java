@@ -7,16 +7,13 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateInstanceResponseBody} extends {@link TeaModel}
+ * {@link CreateIdleInstanceCullerResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateInstanceResponseBody</p>
+ * <p>CreateIdleInstanceCullerResponseBody</p>
  */
-public class UpdateInstanceResponseBody extends TeaModel {
+public class CreateIdleInstanceCullerResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
-
-    @NameInMap("HttpStatusCode")
-    private Integer httpStatusCode;
 
     @NameInMap("InstanceId")
     private String instanceId;
@@ -30,9 +27,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private UpdateInstanceResponseBody(Builder builder) {
+    private CreateIdleInstanceCullerResponseBody(Builder builder) {
         this.code = builder.code;
-        this.httpStatusCode = builder.httpStatusCode;
         this.instanceId = builder.instanceId;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -43,7 +39,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateInstanceResponseBody create() {
+    public static CreateIdleInstanceCullerResponseBody create() {
         return builder().build();
     }
 
@@ -52,13 +48,6 @@ public class UpdateInstanceResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
-    }
-
-    /**
-     * @return httpStatusCode
-     */
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     /**
@@ -91,7 +80,6 @@ public class UpdateInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private Integer httpStatusCode; 
         private String instanceId; 
         private String message; 
         private String requestId; 
@@ -102,14 +90,6 @@ public class UpdateInstanceResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
-            return this;
-        }
-
-        /**
-         * HttpStatusCode.
-         */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
             return this;
         }
 
@@ -145,8 +125,8 @@ public class UpdateInstanceResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateInstanceResponseBody build() {
-            return new UpdateInstanceResponseBody(this);
+        public CreateIdleInstanceCullerResponseBody build() {
+            return new CreateIdleInstanceCullerResponseBody(this);
         } 
 
     } 

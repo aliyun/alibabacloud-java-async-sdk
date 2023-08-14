@@ -21,6 +21,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("AccumulatedRunningTimeInMs")
     private Long accumulatedRunningTimeInMs;
 
+    @NameInMap("CloudDisks")
+    private java.util.List < CloudDisks> cloudDisks;
+
     @NameInMap("Code")
     private String code;
 
@@ -42,6 +45,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
+    @NameInMap("IdleInstanceCuller")
+    private IdleInstanceCuller idleInstanceCuller;
+
     @NameInMap("ImageId")
     private String imageId;
 
@@ -60,11 +66,17 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("InstanceShutdownTimer")
     private InstanceShutdownTimer instanceShutdownTimer;
 
+    @NameInMap("InstanceSnapshotList")
+    private java.util.List < InstanceSnapshotList> instanceSnapshotList;
+
     @NameInMap("InstanceUrl")
     private String instanceUrl;
 
     @NameInMap("JupyterlabUrl")
     private String jupyterlabUrl;
+
+    @NameInMap("Labels")
+    private java.util.List < Labels> labels;
 
     @NameInMap("LatestSnapshot")
     private LatestSnapshot latestSnapshot;
@@ -123,10 +135,14 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("WorkspaceName")
     private String workspaceName;
 
+    @NameInMap("WorkspaceSource")
+    private String workspaceSource;
+
     private GetInstanceResponseBody(Builder builder) {
         this.acceleratorType = builder.acceleratorType;
         this.accessibility = builder.accessibility;
         this.accumulatedRunningTimeInMs = builder.accumulatedRunningTimeInMs;
+        this.cloudDisks = builder.cloudDisks;
         this.code = builder.code;
         this.datasets = builder.datasets;
         this.ecsSpec = builder.ecsSpec;
@@ -134,14 +150,17 @@ public class GetInstanceResponseBody extends TeaModel {
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.httpStatusCode = builder.httpStatusCode;
+        this.idleInstanceCuller = builder.idleInstanceCuller;
         this.imageId = builder.imageId;
         this.imageName = builder.imageName;
         this.imageUrl = builder.imageUrl;
         this.instanceId = builder.instanceId;
         this.instanceName = builder.instanceName;
         this.instanceShutdownTimer = builder.instanceShutdownTimer;
+        this.instanceSnapshotList = builder.instanceSnapshotList;
         this.instanceUrl = builder.instanceUrl;
         this.jupyterlabUrl = builder.jupyterlabUrl;
+        this.labels = builder.labels;
         this.latestSnapshot = builder.latestSnapshot;
         this.message = builder.message;
         this.paymentType = builder.paymentType;
@@ -161,6 +180,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.webIDEUrl = builder.webIDEUrl;
         this.workspaceId = builder.workspaceId;
         this.workspaceName = builder.workspaceName;
+        this.workspaceSource = builder.workspaceSource;
     }
 
     public static Builder builder() {
@@ -190,6 +210,13 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     public Long getAccumulatedRunningTimeInMs() {
         return this.accumulatedRunningTimeInMs;
+    }
+
+    /**
+     * @return cloudDisks
+     */
+    public java.util.List < CloudDisks> getCloudDisks() {
+        return this.cloudDisks;
     }
 
     /**
@@ -242,6 +269,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return idleInstanceCuller
+     */
+    public IdleInstanceCuller getIdleInstanceCuller() {
+        return this.idleInstanceCuller;
+    }
+
+    /**
      * @return imageId
      */
     public String getImageId() {
@@ -284,6 +318,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return instanceSnapshotList
+     */
+    public java.util.List < InstanceSnapshotList> getInstanceSnapshotList() {
+        return this.instanceSnapshotList;
+    }
+
+    /**
      * @return instanceUrl
      */
     public String getInstanceUrl() {
@@ -295,6 +336,13 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     public String getJupyterlabUrl() {
         return this.jupyterlabUrl;
+    }
+
+    /**
+     * @return labels
+     */
+    public java.util.List < Labels> getLabels() {
+        return this.labels;
     }
 
     /**
@@ -430,10 +478,18 @@ public class GetInstanceResponseBody extends TeaModel {
         return this.workspaceName;
     }
 
+    /**
+     * @return workspaceSource
+     */
+    public String getWorkspaceSource() {
+        return this.workspaceSource;
+    }
+
     public static final class Builder {
         private String acceleratorType; 
         private String accessibility; 
         private Long accumulatedRunningTimeInMs; 
+        private java.util.List < CloudDisks> cloudDisks; 
         private String code; 
         private java.util.List < Datasets> datasets; 
         private String ecsSpec; 
@@ -441,14 +497,17 @@ public class GetInstanceResponseBody extends TeaModel {
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private Integer httpStatusCode; 
+        private IdleInstanceCuller idleInstanceCuller; 
         private String imageId; 
         private String imageName; 
         private String imageUrl; 
         private String instanceId; 
         private String instanceName; 
         private InstanceShutdownTimer instanceShutdownTimer; 
+        private java.util.List < InstanceSnapshotList> instanceSnapshotList; 
         private String instanceUrl; 
         private String jupyterlabUrl; 
+        private java.util.List < Labels> labels; 
         private LatestSnapshot latestSnapshot; 
         private String message; 
         private String paymentType; 
@@ -468,9 +527,10 @@ public class GetInstanceResponseBody extends TeaModel {
         private String webIDEUrl; 
         private String workspaceId; 
         private String workspaceName; 
+        private String workspaceSource; 
 
         /**
-         * 实例计算类型
+         * AcceleratorType.
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
@@ -478,7 +538,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 工作空间内是否他人可见
+         * Accessibility.
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -486,7 +546,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 累计运行时间（ms）
+         * AccumulatedRunningTimeInMs.
          */
         public Builder accumulatedRunningTimeInMs(Long accumulatedRunningTimeInMs) {
             this.accumulatedRunningTimeInMs = accumulatedRunningTimeInMs;
@@ -494,7 +554,15 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 状态码
+         * CloudDisks.
+         */
+        public Builder cloudDisks(java.util.List < CloudDisks> cloudDisks) {
+            this.cloudDisks = cloudDisks;
+            return this;
+        }
+
+        /**
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -502,7 +570,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 数据集集合
+         * Datasets.
          */
         public Builder datasets(java.util.List < Datasets> datasets) {
             this.datasets = datasets;
@@ -510,7 +578,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 实例对应的Ecs规格
+         * EcsSpec.
          */
         public Builder ecsSpec(String ecsSpec) {
             this.ecsSpec = ecsSpec;
@@ -518,7 +586,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 环境变量
+         * EnvironmentVariables.
          */
         public Builder environmentVariables(java.util.Map < String, String > environmentVariables) {
             this.environmentVariables = environmentVariables;
@@ -526,7 +594,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 实例创建时间
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -534,7 +602,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 实例修改时间
+         * GmtModifiedTime.
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -542,7 +610,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * http状态码
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -550,7 +618,15 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 镜像Id
+         * IdleInstanceCuller.
+         */
+        public Builder idleInstanceCuller(IdleInstanceCuller idleInstanceCuller) {
+            this.idleInstanceCuller = idleInstanceCuller;
+            return this;
+        }
+
+        /**
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -558,7 +634,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 镜像名称
+         * ImageName.
          */
         public Builder imageName(String imageName) {
             this.imageName = imageName;
@@ -566,7 +642,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 镜像地址
+         * ImageUrl.
          */
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
@@ -574,7 +650,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 实例Id
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -582,7 +658,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 实例名称
+         * InstanceName.
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -590,7 +666,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 定时关机任务
+         * InstanceShutdownTimer.
          */
         public Builder instanceShutdownTimer(InstanceShutdownTimer instanceShutdownTimer) {
             this.instanceShutdownTimer = instanceShutdownTimer;
@@ -598,7 +674,15 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 实例Url
+         * InstanceSnapshotList.
+         */
+        public Builder instanceSnapshotList(java.util.List < InstanceSnapshotList> instanceSnapshotList) {
+            this.instanceSnapshotList = instanceSnapshotList;
+            return this;
+        }
+
+        /**
+         * InstanceUrl.
          */
         public Builder instanceUrl(String instanceUrl) {
             this.instanceUrl = instanceUrl;
@@ -606,7 +690,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Jupyterlab Url
+         * Jupyterlab Url。
          */
         public Builder jupyterlabUrl(String jupyterlabUrl) {
             this.jupyterlabUrl = jupyterlabUrl;
@@ -614,7 +698,15 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 最新保存的用户镜像
+         * Labels.
+         */
+        public Builder labels(java.util.List < Labels> labels) {
+            this.labels = labels;
+            return this;
+        }
+
+        /**
+         * LatestSnapshot.
          */
         public Builder latestSnapshot(LatestSnapshot latestSnapshot) {
             this.latestSnapshot = latestSnapshot;
@@ -622,7 +714,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 说明
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -630,7 +722,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 支付类型
+         * PaymentType.
          */
         public Builder paymentType(String paymentType) {
             this.paymentType = paymentType;
@@ -638,7 +730,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 优先级，在分配资源给实例时，优先级越高的实例越优先
+         * Priority.
          */
         public Builder priority(Long priority) {
             this.priority = priority;
@@ -646,7 +738,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 实例错误代码
+         * ReasonCode.
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -654,7 +746,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 实例错误原因
+         * ReasonMessage.
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -662,7 +754,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -670,7 +762,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 资源配置，弹内或者轻量化时使用
+         * RequestedResource.
          */
         public Builder requestedResource(RequestedResource requestedResource) {
             this.requestedResource = requestedResource;
@@ -678,7 +770,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 资源Id,预付费时填写
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -694,7 +786,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 实例状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -702,7 +794,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 成功标志
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -710,7 +802,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 终端url
+         * TerminalUrl.
          */
         public Builder terminalUrl(String terminalUrl) {
             this.terminalUrl = terminalUrl;
@@ -718,7 +810,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 用户Id
+         * UserId.
          */
         public Builder userId(String userId) {
             this.userId = userId;
@@ -726,7 +818,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 用户名称
+         * UserName.
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -734,7 +826,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * user vpc配置
+         * UserVpc.
          */
         public Builder userVpc(UserVpc userVpc) {
             this.userVpc = userVpc;
@@ -742,7 +834,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Web IDE url
+         * Web IDE url。
          */
         public Builder webIDEUrl(String webIDEUrl) {
             this.webIDEUrl = webIDEUrl;
@@ -750,7 +842,7 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 工作空间Id
+         * WorkspaceId.
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -758,10 +850,18 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 工作空间名称
+         * WorkspaceName.
          */
         public Builder workspaceName(String workspaceName) {
             this.workspaceName = workspaceName;
+            return this;
+        }
+
+        /**
+         * WorkspaceSource.
+         */
+        public Builder workspaceSource(String workspaceSource) {
+            this.workspaceSource = workspaceSource;
             return this;
         }
 
@@ -771,6 +871,107 @@ public class GetInstanceResponseBody extends TeaModel {
 
     } 
 
+    public static class CloudDisks extends TeaModel {
+        @NameInMap("Capacity")
+        private String capacity;
+
+        @NameInMap("MountPath")
+        private String mountPath;
+
+        @NameInMap("Path")
+        private String path;
+
+        @NameInMap("SubType")
+        private String subType;
+
+        private CloudDisks(Builder builder) {
+            this.capacity = builder.capacity;
+            this.mountPath = builder.mountPath;
+            this.path = builder.path;
+            this.subType = builder.subType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CloudDisks create() {
+            return builder().build();
+        }
+
+        /**
+         * @return capacity
+         */
+        public String getCapacity() {
+            return this.capacity;
+        }
+
+        /**
+         * @return mountPath
+         */
+        public String getMountPath() {
+            return this.mountPath;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return subType
+         */
+        public String getSubType() {
+            return this.subType;
+        }
+
+        public static final class Builder {
+            private String capacity; 
+            private String mountPath; 
+            private String path; 
+            private String subType; 
+
+            /**
+             * Capacity.
+             */
+            public Builder capacity(String capacity) {
+                this.capacity = capacity;
+                return this;
+            }
+
+            /**
+             * MountPath.
+             */
+            public Builder mountPath(String mountPath) {
+                this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * Path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * SubType.
+             */
+            public Builder subType(String subType) {
+                this.subType = subType;
+                return this;
+            }
+
+            public CloudDisks build() {
+                return new CloudDisks(this);
+            } 
+
+        } 
+
+    }
     public static class Datasets extends TeaModel {
         @NameInMap("DatasetId")
         private String datasetId;
@@ -810,7 +1011,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String mountPath; 
 
             /**
-             * 数据集Id
+             * DatasetId.
              */
             public Builder datasetId(String datasetId) {
                 this.datasetId = datasetId;
@@ -818,7 +1019,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 容器内挂载路径
+             * MountPath.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -827,6 +1028,127 @@ public class GetInstanceResponseBody extends TeaModel {
 
             public Datasets build() {
                 return new Datasets(this);
+            } 
+
+        } 
+
+    }
+    public static class IdleInstanceCuller extends TeaModel {
+        @NameInMap("CpuPercentThreshold")
+        private Integer cpuPercentThreshold;
+
+        @NameInMap("GpuPercentThreshold")
+        private Integer gpuPercentThreshold;
+
+        @NameInMap("IdleTimeInMinutes")
+        private Integer idleTimeInMinutes;
+
+        @NameInMap("InstanceId")
+        private String instanceId;
+
+        @NameInMap("MaxIdleTimeInMinutes")
+        private Integer maxIdleTimeInMinutes;
+
+        private IdleInstanceCuller(Builder builder) {
+            this.cpuPercentThreshold = builder.cpuPercentThreshold;
+            this.gpuPercentThreshold = builder.gpuPercentThreshold;
+            this.idleTimeInMinutes = builder.idleTimeInMinutes;
+            this.instanceId = builder.instanceId;
+            this.maxIdleTimeInMinutes = builder.maxIdleTimeInMinutes;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IdleInstanceCuller create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpuPercentThreshold
+         */
+        public Integer getCpuPercentThreshold() {
+            return this.cpuPercentThreshold;
+        }
+
+        /**
+         * @return gpuPercentThreshold
+         */
+        public Integer getGpuPercentThreshold() {
+            return this.gpuPercentThreshold;
+        }
+
+        /**
+         * @return idleTimeInMinutes
+         */
+        public Integer getIdleTimeInMinutes() {
+            return this.idleTimeInMinutes;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return maxIdleTimeInMinutes
+         */
+        public Integer getMaxIdleTimeInMinutes() {
+            return this.maxIdleTimeInMinutes;
+        }
+
+        public static final class Builder {
+            private Integer cpuPercentThreshold; 
+            private Integer gpuPercentThreshold; 
+            private Integer idleTimeInMinutes; 
+            private String instanceId; 
+            private Integer maxIdleTimeInMinutes; 
+
+            /**
+             * CpuPercentThreshold.
+             */
+            public Builder cpuPercentThreshold(Integer cpuPercentThreshold) {
+                this.cpuPercentThreshold = cpuPercentThreshold;
+                return this;
+            }
+
+            /**
+             * GpuPercentThreshold.
+             */
+            public Builder gpuPercentThreshold(Integer gpuPercentThreshold) {
+                this.gpuPercentThreshold = gpuPercentThreshold;
+                return this;
+            }
+
+            /**
+             * IdleTimeInMinutes.
+             */
+            public Builder idleTimeInMinutes(Integer idleTimeInMinutes) {
+                this.idleTimeInMinutes = idleTimeInMinutes;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * MaxIdleTimeInMinutes.
+             */
+            public Builder maxIdleTimeInMinutes(Integer maxIdleTimeInMinutes) {
+                this.maxIdleTimeInMinutes = maxIdleTimeInMinutes;
+                return this;
+            }
+
+            public IdleInstanceCuller build() {
+                return new IdleInstanceCuller(this);
             } 
 
         } 
@@ -907,7 +1229,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private Long remainingTimeInMs; 
 
             /**
-             * 设定关机时间
+             * DueTime.
              */
             public Builder dueTime(String dueTime) {
                 this.dueTime = dueTime;
@@ -915,7 +1237,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * GmtCreateTime.
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
@@ -923,7 +1245,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * GmtModifiedTime.
              */
             public Builder gmtModifiedTime(String gmtModifiedTime) {
                 this.gmtModifiedTime = gmtModifiedTime;
@@ -931,7 +1253,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 实例Id
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -939,7 +1261,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 剩余关机时间（ms）
+             * RemainingTimeInMs.
              */
             public Builder remainingTimeInMs(Long remainingTimeInMs) {
                 this.remainingTimeInMs = remainingTimeInMs;
@@ -948,6 +1270,268 @@ public class GetInstanceResponseBody extends TeaModel {
 
             public InstanceShutdownTimer build() {
                 return new InstanceShutdownTimer(this);
+            } 
+
+        } 
+
+    }
+    public static class InstanceSnapshotList extends TeaModel {
+        @NameInMap("GmtCreateTime")
+        private String gmtCreateTime;
+
+        @NameInMap("GmtModifiedTime")
+        private String gmtModifiedTime;
+
+        @NameInMap("ImageId")
+        private String imageId;
+
+        @NameInMap("ImageName")
+        private String imageName;
+
+        @NameInMap("ImageUrl")
+        private String imageUrl;
+
+        @NameInMap("ReasonCode")
+        private String reasonCode;
+
+        @NameInMap("ReasonMessage")
+        private String reasonMessage;
+
+        @NameInMap("RepositoryUrl")
+        private String repositoryUrl;
+
+        @NameInMap("Status")
+        private String status;
+
+        private InstanceSnapshotList(Builder builder) {
+            this.gmtCreateTime = builder.gmtCreateTime;
+            this.gmtModifiedTime = builder.gmtModifiedTime;
+            this.imageId = builder.imageId;
+            this.imageName = builder.imageName;
+            this.imageUrl = builder.imageUrl;
+            this.reasonCode = builder.reasonCode;
+            this.reasonMessage = builder.reasonMessage;
+            this.repositoryUrl = builder.repositoryUrl;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceSnapshotList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return gmtCreateTime
+         */
+        public String getGmtCreateTime() {
+            return this.gmtCreateTime;
+        }
+
+        /**
+         * @return gmtModifiedTime
+         */
+        public String getGmtModifiedTime() {
+            return this.gmtModifiedTime;
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
+         * @return imageName
+         */
+        public String getImageName() {
+            return this.imageName;
+        }
+
+        /**
+         * @return imageUrl
+         */
+        public String getImageUrl() {
+            return this.imageUrl;
+        }
+
+        /**
+         * @return reasonCode
+         */
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        /**
+         * @return reasonMessage
+         */
+        public String getReasonMessage() {
+            return this.reasonMessage;
+        }
+
+        /**
+         * @return repositoryUrl
+         */
+        public String getRepositoryUrl() {
+            return this.repositoryUrl;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String gmtCreateTime; 
+            private String gmtModifiedTime; 
+            private String imageId; 
+            private String imageName; 
+            private String imageUrl; 
+            private String reasonCode; 
+            private String reasonMessage; 
+            private String repositoryUrl; 
+            private String status; 
+
+            /**
+             * 快照创建时间
+             */
+            public Builder gmtCreateTime(String gmtCreateTime) {
+                this.gmtCreateTime = gmtCreateTime;
+                return this;
+            }
+
+            /**
+             * 快照修改时间
+             */
+            public Builder gmtModifiedTime(String gmtModifiedTime) {
+                this.gmtModifiedTime = gmtModifiedTime;
+                return this;
+            }
+
+            /**
+             * 镜像Id
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * 镜像名称
+             */
+            public Builder imageName(String imageName) {
+                this.imageName = imageName;
+                return this;
+            }
+
+            /**
+             * 镜像Url
+             */
+            public Builder imageUrl(String imageUrl) {
+                this.imageUrl = imageUrl;
+                return this;
+            }
+
+            /**
+             * 实例快照错误代码
+             */
+            public Builder reasonCode(String reasonCode) {
+                this.reasonCode = reasonCode;
+                return this;
+            }
+
+            /**
+             * 实例快照错误消息
+             */
+            public Builder reasonMessage(String reasonMessage) {
+                this.reasonMessage = reasonMessage;
+                return this;
+            }
+
+            /**
+             * 镜像仓库Url
+             */
+            public Builder repositoryUrl(String repositoryUrl) {
+                this.repositoryUrl = repositoryUrl;
+                return this;
+            }
+
+            /**
+             * 实例快照状态
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public InstanceSnapshotList build() {
+                return new InstanceSnapshotList(this);
+            } 
+
+        } 
+
+    }
+    public static class Labels extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Labels(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
             } 
 
         } 
@@ -969,8 +1553,17 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("ImageUrl")
         private String imageUrl;
 
+        @NameInMap("ReasonCode")
+        private String reasonCode;
+
+        @NameInMap("ReasonMessage")
+        private String reasonMessage;
+
         @NameInMap("RepositoryUrl")
         private String repositoryUrl;
+
+        @NameInMap("Status")
+        private String status;
 
         private LatestSnapshot(Builder builder) {
             this.gmtCreateTime = builder.gmtCreateTime;
@@ -978,7 +1571,10 @@ public class GetInstanceResponseBody extends TeaModel {
             this.imageId = builder.imageId;
             this.imageName = builder.imageName;
             this.imageUrl = builder.imageUrl;
+            this.reasonCode = builder.reasonCode;
+            this.reasonMessage = builder.reasonMessage;
             this.repositoryUrl = builder.repositoryUrl;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -1025,10 +1621,31 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return reasonCode
+         */
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        /**
+         * @return reasonMessage
+         */
+        public String getReasonMessage() {
+            return this.reasonMessage;
+        }
+
+        /**
          * @return repositoryUrl
          */
         public String getRepositoryUrl() {
             return this.repositoryUrl;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
         }
 
         public static final class Builder {
@@ -1037,7 +1654,10 @@ public class GetInstanceResponseBody extends TeaModel {
             private String imageId; 
             private String imageName; 
             private String imageUrl; 
+            private String reasonCode; 
+            private String reasonMessage; 
             private String repositoryUrl; 
+            private String status; 
 
             /**
              * 快照创建时间
@@ -1080,10 +1700,34 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * 实例快照错误代码
+             */
+            public Builder reasonCode(String reasonCode) {
+                this.reasonCode = reasonCode;
+                return this;
+            }
+
+            /**
+             * 实例快照错误消息
+             */
+            public Builder reasonMessage(String reasonMessage) {
+                this.reasonMessage = reasonMessage;
+                return this;
+            }
+
+            /**
              * 镜像仓库Url
              */
             public Builder repositoryUrl(String repositoryUrl) {
                 this.repositoryUrl = repositoryUrl;
+                return this;
+            }
+
+            /**
+             * 实例快照状态
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
@@ -1169,7 +1813,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private String sharedMemory; 
 
             /**
-             * cpu核数
+             * CPU.
              */
             public Builder CPU(String CPU) {
                 this.CPU = CPU;
@@ -1177,7 +1821,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * gpu数量
+             * GPU.
              */
             public Builder GPU(String GPU) {
                 this.GPU = GPU;
@@ -1185,7 +1829,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * gpu显卡类型
+             * GPUType.
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -1193,7 +1837,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * memory大小
+             * Memory.
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -1201,7 +1845,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * shared memory大小
+             * SharedMemory.
              */
             public Builder sharedMemory(String sharedMemory) {
                 this.sharedMemory = sharedMemory;
@@ -1216,6 +1860,12 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class UserVpc extends TeaModel {
+        @NameInMap("DefaultRoute")
+        private String defaultRoute;
+
+        @NameInMap("ExtendedCIDRs")
+        private java.util.List < String > extendedCIDRs;
+
         @NameInMap("SecurityGroupId")
         private String securityGroupId;
 
@@ -1226,6 +1876,8 @@ public class GetInstanceResponseBody extends TeaModel {
         private String vpcId;
 
         private UserVpc(Builder builder) {
+            this.defaultRoute = builder.defaultRoute;
+            this.extendedCIDRs = builder.extendedCIDRs;
             this.securityGroupId = builder.securityGroupId;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -1237,6 +1889,20 @@ public class GetInstanceResponseBody extends TeaModel {
 
         public static UserVpc create() {
             return builder().build();
+        }
+
+        /**
+         * @return defaultRoute
+         */
+        public String getDefaultRoute() {
+            return this.defaultRoute;
+        }
+
+        /**
+         * @return extendedCIDRs
+         */
+        public java.util.List < String > getExtendedCIDRs() {
+            return this.extendedCIDRs;
         }
 
         /**
@@ -1261,12 +1927,30 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String defaultRoute; 
+            private java.util.List < String > extendedCIDRs; 
             private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
 
             /**
-             * Security Group Id
+             * DefaultRoute.
+             */
+            public Builder defaultRoute(String defaultRoute) {
+                this.defaultRoute = defaultRoute;
+                return this;
+            }
+
+            /**
+             * ExtendedCIDRs.
+             */
+            public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
+                this.extendedCIDRs = extendedCIDRs;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1274,7 +1958,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitch Id
+             * VSwitchId.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1282,7 +1966,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Vpc Id
+             * Vpc Id。
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

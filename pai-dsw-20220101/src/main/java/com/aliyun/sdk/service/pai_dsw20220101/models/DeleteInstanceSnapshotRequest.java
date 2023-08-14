@@ -70,7 +70,7 @@ public class DeleteInstanceSnapshotRequest extends Request {
         } 
 
         /**
-         * 实例Id
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);
@@ -79,7 +79,7 @@ public class DeleteInstanceSnapshotRequest extends Request {
         }
 
         /**
-         * 实例快照Id
+         * SnapshotId.
          */
         public Builder snapshotId(String snapshotId) {
             this.putPathParameter("SnapshotId", snapshotId);

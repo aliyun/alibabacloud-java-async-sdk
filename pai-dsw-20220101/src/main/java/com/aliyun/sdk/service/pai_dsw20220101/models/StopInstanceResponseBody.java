@@ -98,7 +98,7 @@ public class StopInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 状态码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class StopInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * http状态码
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -114,7 +114,7 @@ public class StopInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 实例Id
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -122,7 +122,7 @@ public class StopInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 说明
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class StopInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class StopInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 成功标志
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

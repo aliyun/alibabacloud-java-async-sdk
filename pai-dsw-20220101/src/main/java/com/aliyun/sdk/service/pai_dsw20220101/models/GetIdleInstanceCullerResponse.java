@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListDemosResponse} extends {@link TeaModel}
+ * {@link GetIdleInstanceCullerResponse} extends {@link TeaModel}
  *
- * <p>ListDemosResponse</p>
+ * <p>GetIdleInstanceCullerResponse</p>
  */
-public class ListDemosResponse extends Response {
+public class GetIdleInstanceCullerResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private ListDemosResponseBody body;
+    private GetIdleInstanceCullerResponseBody body;
 
-    private ListDemosResponse(BuilderImpl builder) {
+    private GetIdleInstanceCullerResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static ListDemosResponse create() {
+    public static GetIdleInstanceCullerResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class ListDemosResponse extends Response {
     /**
      * @return body
      */
-    public ListDemosResponseBody getBody() {
+    public GetIdleInstanceCullerResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListDemosResponse, Builder> {
+    public interface Builder extends Response.Builder<GetIdleInstanceCullerResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(ListDemosResponseBody body);
+        Builder body(GetIdleInstanceCullerResponseBody body);
 
         @Override
-        ListDemosResponse build();
+        GetIdleInstanceCullerResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListDemosResponse, Builder>
+            extends Response.BuilderImpl<GetIdleInstanceCullerResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private ListDemosResponseBody body; 
+        private GetIdleInstanceCullerResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListDemosResponse response) {
+        private BuilderImpl(GetIdleInstanceCullerResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class ListDemosResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListDemosResponseBody body) {
+        public Builder body(GetIdleInstanceCullerResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListDemosResponse build() {
-            return new ListDemosResponse(this);
+        public GetIdleInstanceCullerResponse build() {
+            return new GetIdleInstanceCullerResponse(this);
         } 
 
     } 

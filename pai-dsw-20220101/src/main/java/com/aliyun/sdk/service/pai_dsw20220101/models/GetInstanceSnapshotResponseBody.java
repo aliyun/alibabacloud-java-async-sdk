@@ -206,7 +206,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 状态码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -214,7 +214,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 实例快照创建时间
+         * GmtCreateTime.
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -222,7 +222,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 实例快照修改时间
+         * GmtModifiedTime.
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -230,7 +230,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * http状态码
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -238,7 +238,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 实例快照的镜像Id
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.imageId = imageId;
@@ -246,7 +246,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 实例快照的镜像地址
+         * ImageUrl.
          */
         public Builder imageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
@@ -254,7 +254,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 实例Id
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -262,7 +262,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 说明
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -270,7 +270,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 实例快照错误代码
+         * ReasonCode.
          */
         public Builder reasonCode(String reasonCode) {
             this.reasonCode = reasonCode;
@@ -278,7 +278,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 实例快照错误消息
+         * ReasonMessage.
          */
         public Builder reasonMessage(String reasonMessage) {
             this.reasonMessage = reasonMessage;
@@ -286,7 +286,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -294,7 +294,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 实例快照Id
+         * SnapshotId.
          */
         public Builder snapshotId(String snapshotId) {
             this.snapshotId = snapshotId;
@@ -302,7 +302,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 实例快照名称
+         * SnapshotName.
          */
         public Builder snapshotName(String snapshotName) {
             this.snapshotName = snapshotName;
@@ -310,7 +310,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 实例快照状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -318,7 +318,7 @@ public class GetInstanceSnapshotResponseBody extends TeaModel {
         }
 
         /**
-         * 成功标志
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -55,7 +55,7 @@ public class GetInstanceShutdownTimerRequest extends Request {
         } 
 
         /**
-         * 实例Id
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("InstanceId", instanceId);

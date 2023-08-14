@@ -110,7 +110,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 状态码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * 本分页中请求的实例列表
+         * EcsSpecs.
          */
         public Builder ecsSpecs(java.util.List < EcsSpecs> ecsSpecs) {
             this.ecsSpecs = ecsSpecs;
@@ -126,7 +126,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * http状态码
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -134,7 +134,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * 说明
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -142,7 +142,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * 成功标志
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
-         * 实例总数
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -171,6 +171,67 @@ public class ListEcsSpecsResponseBody extends TeaModel {
 
     } 
 
+    public static class Labels extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Labels(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Labels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Labels build() {
+                return new Labels(this);
+            } 
+
+        } 
+
+    }
     public static class EcsSpecs extends TeaModel {
         @NameInMap("AcceleratorType")
         private String acceleratorType;
@@ -193,6 +254,12 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         private String instanceType;
 
+        @NameInMap("IsAvailable")
+        private Boolean isAvailable;
+
+        @NameInMap("Labels")
+        private java.util.List < Labels> labels;
+
         @NameInMap("Memory")
         private Float memory;
 
@@ -210,6 +277,8 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             this.GPUType = builder.GPUType;
             this.instanceBandwidthRx = builder.instanceBandwidthRx;
             this.instanceType = builder.instanceType;
+            this.isAvailable = builder.isAvailable;
+            this.labels = builder.labels;
             this.memory = builder.memory;
             this.price = builder.price;
             this.systemDiskCapacity = builder.systemDiskCapacity;
@@ -273,6 +342,20 @@ public class ListEcsSpecsResponseBody extends TeaModel {
         }
 
         /**
+         * @return isAvailable
+         */
+        public Boolean getIsAvailable() {
+            return this.isAvailable;
+        }
+
+        /**
+         * @return labels
+         */
+        public java.util.List < Labels> getLabels() {
+            return this.labels;
+        }
+
+        /**
          * @return memory
          */
         public Float getMemory() {
@@ -301,12 +384,14 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             private String GPUType; 
             private Long instanceBandwidthRx; 
             private String instanceType; 
+            private Boolean isAvailable; 
+            private java.util.List < Labels> labels; 
             private Float memory; 
             private Double price; 
             private Long systemDiskCapacity; 
 
             /**
-             * 资源类型
+             * AcceleratorType.
              */
             public Builder acceleratorType(String acceleratorType) {
                 this.acceleratorType = acceleratorType;
@@ -314,7 +399,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * CPU核数
+             * CPU.
              */
             public Builder CPU(Long CPU) {
                 this.CPU = CPU;
@@ -322,7 +407,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * 货币单位
+             * Currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -330,7 +415,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * GPU卡数
+             * GPU.
              */
             public Builder GPU(Long GPU) {
                 this.GPU = GPU;
@@ -338,7 +423,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * 显卡类型
+             * GPUType.
              */
             public Builder GPUType(String GPUType) {
                 this.GPUType = GPUType;
@@ -346,7 +431,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * 实例接收带宽
+             * InstanceBandwidthRx.
              */
             public Builder instanceBandwidthRx(Long instanceBandwidthRx) {
                 this.instanceBandwidthRx = instanceBandwidthRx;
@@ -354,7 +439,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * 实例规格
+             * InstanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -362,7 +447,23 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * 内存大小(GB)
+             * IsAvailable.
+             */
+            public Builder isAvailable(Boolean isAvailable) {
+                this.isAvailable = isAvailable;
+                return this;
+            }
+
+            /**
+             * Labels.
+             */
+            public Builder labels(java.util.List < Labels> labels) {
+                this.labels = labels;
+                return this;
+            }
+
+            /**
+             * Memory.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -370,7 +471,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * 价格
+             * Price.
              */
             public Builder price(Double price) {
                 this.price = price;
@@ -378,7 +479,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * 系统盘大小(GB)
+             * SystemDiskCapacity.
              */
             public Builder systemDiskCapacity(Long systemDiskCapacity) {
                 this.systemDiskCapacity = systemDiskCapacity;
