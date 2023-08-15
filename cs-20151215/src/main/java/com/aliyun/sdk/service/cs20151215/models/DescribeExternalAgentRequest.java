@@ -18,12 +18,17 @@ public class DescribeExternalAgentRequest extends Request {
     private String clusterId;
 
     @Query
+    @NameInMap("AgentMode")
+    private String agentMode;
+
+    @Query
     @NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
     private DescribeExternalAgentRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.agentMode = builder.agentMode;
         this.privateIpAddress = builder.privateIpAddress;
     }
 
@@ -48,6 +53,13 @@ public class DescribeExternalAgentRequest extends Request {
     }
 
     /**
+     * @return agentMode
+     */
+    public String getAgentMode() {
+        return this.agentMode;
+    }
+
+    /**
      * @return privateIpAddress
      */
     public String getPrivateIpAddress() {
@@ -56,6 +68,7 @@ public class DescribeExternalAgentRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeExternalAgentRequest, Builder> {
         private String clusterId; 
+        private String agentMode; 
         private String privateIpAddress; 
 
         private Builder() {
@@ -65,6 +78,7 @@ public class DescribeExternalAgentRequest extends Request {
         private Builder(DescribeExternalAgentRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.agentMode = request.agentMode;
             this.privateIpAddress = request.privateIpAddress;
         } 
 
@@ -74,6 +88,15 @@ public class DescribeExternalAgentRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * AgentMode.
+         */
+        public Builder agentMode(String agentMode) {
+            this.putQueryParameter("AgentMode", agentMode);
+            this.agentMode = agentMode;
             return this;
         }
 
