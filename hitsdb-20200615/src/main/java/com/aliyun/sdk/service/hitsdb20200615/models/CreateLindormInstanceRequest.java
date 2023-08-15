@@ -13,8 +13,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateLindormInstanceRequest extends Request {
     @Query
+    @NameInMap("ArbiterVSwitchId")
+    private String arbiterVSwitchId;
+
+    @Query
+    @NameInMap("ArbiterZoneId")
+    private String arbiterZoneId;
+
+    @Query
+    @NameInMap("ArchVersion")
+    private String archVersion;
+
+    @Query
     @NameInMap("ColdStorage")
     private Integer coldStorage;
+
+    @Query
+    @NameInMap("CoreSingleStorage")
+    private Integer coreSingleStorage;
 
     @Query
     @NameInMap("CoreSpec")
@@ -54,6 +70,26 @@ public class CreateLindormInstanceRequest extends Request {
     private String lindormSpec;
 
     @Query
+    @NameInMap("LogDiskCategory")
+    private String logDiskCategory;
+
+    @Query
+    @NameInMap("LogNum")
+    private Integer logNum;
+
+    @Query
+    @NameInMap("LogSingleStorage")
+    private Integer logSingleStorage;
+
+    @Query
+    @NameInMap("LogSpec")
+    private String logSpec;
+
+    @Query
+    @NameInMap("MultiZoneCombination")
+    private String multiZoneCombination;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -70,6 +106,14 @@ public class CreateLindormInstanceRequest extends Request {
     @Query
     @NameInMap("PricingCycle")
     private String pricingCycle;
+
+    @Query
+    @NameInMap("PrimaryVSwitchId")
+    private String primaryVSwitchId;
+
+    @Query
+    @NameInMap("PrimaryZoneId")
+    private String primaryZoneId;
 
     @Query
     @NameInMap("RegionId")
@@ -102,6 +146,22 @@ public class CreateLindormInstanceRequest extends Request {
     private String solrSpec;
 
     @Query
+    @NameInMap("StandbyVSwitchId")
+    private String standbyVSwitchId;
+
+    @Query
+    @NameInMap("StandbyZoneId")
+    private String standbyZoneId;
+
+    @Query
+    @NameInMap("StreamNum")
+    private Integer streamNum;
+
+    @Query
+    @NameInMap("StreamSpec")
+    private String streamSpec;
+
+    @Query
     @NameInMap("TsdbNum")
     private Integer tsdbNum;
 
@@ -126,7 +186,11 @@ public class CreateLindormInstanceRequest extends Request {
 
     private CreateLindormInstanceRequest(Builder builder) {
         super(builder);
+        this.arbiterVSwitchId = builder.arbiterVSwitchId;
+        this.arbiterZoneId = builder.arbiterZoneId;
+        this.archVersion = builder.archVersion;
         this.coldStorage = builder.coldStorage;
+        this.coreSingleStorage = builder.coreSingleStorage;
         this.coreSpec = builder.coreSpec;
         this.diskCategory = builder.diskCategory;
         this.duration = builder.duration;
@@ -136,10 +200,17 @@ public class CreateLindormInstanceRequest extends Request {
         this.instanceStorage = builder.instanceStorage;
         this.lindormNum = builder.lindormNum;
         this.lindormSpec = builder.lindormSpec;
+        this.logDiskCategory = builder.logDiskCategory;
+        this.logNum = builder.logNum;
+        this.logSingleStorage = builder.logSingleStorage;
+        this.logSpec = builder.logSpec;
+        this.multiZoneCombination = builder.multiZoneCombination;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.payType = builder.payType;
         this.pricingCycle = builder.pricingCycle;
+        this.primaryVSwitchId = builder.primaryVSwitchId;
+        this.primaryZoneId = builder.primaryZoneId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -147,6 +218,10 @@ public class CreateLindormInstanceRequest extends Request {
         this.securityToken = builder.securityToken;
         this.solrNum = builder.solrNum;
         this.solrSpec = builder.solrSpec;
+        this.standbyVSwitchId = builder.standbyVSwitchId;
+        this.standbyZoneId = builder.standbyZoneId;
+        this.streamNum = builder.streamNum;
+        this.streamSpec = builder.streamSpec;
         this.tsdbNum = builder.tsdbNum;
         this.tsdbSpec = builder.tsdbSpec;
         this.VPCId = builder.VPCId;
@@ -168,10 +243,38 @@ public class CreateLindormInstanceRequest extends Request {
     }
 
     /**
+     * @return arbiterVSwitchId
+     */
+    public String getArbiterVSwitchId() {
+        return this.arbiterVSwitchId;
+    }
+
+    /**
+     * @return arbiterZoneId
+     */
+    public String getArbiterZoneId() {
+        return this.arbiterZoneId;
+    }
+
+    /**
+     * @return archVersion
+     */
+    public String getArchVersion() {
+        return this.archVersion;
+    }
+
+    /**
      * @return coldStorage
      */
     public Integer getColdStorage() {
         return this.coldStorage;
+    }
+
+    /**
+     * @return coreSingleStorage
+     */
+    public Integer getCoreSingleStorage() {
+        return this.coreSingleStorage;
     }
 
     /**
@@ -238,6 +341,41 @@ public class CreateLindormInstanceRequest extends Request {
     }
 
     /**
+     * @return logDiskCategory
+     */
+    public String getLogDiskCategory() {
+        return this.logDiskCategory;
+    }
+
+    /**
+     * @return logNum
+     */
+    public Integer getLogNum() {
+        return this.logNum;
+    }
+
+    /**
+     * @return logSingleStorage
+     */
+    public Integer getLogSingleStorage() {
+        return this.logSingleStorage;
+    }
+
+    /**
+     * @return logSpec
+     */
+    public String getLogSpec() {
+        return this.logSpec;
+    }
+
+    /**
+     * @return multiZoneCombination
+     */
+    public String getMultiZoneCombination() {
+        return this.multiZoneCombination;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -263,6 +401,20 @@ public class CreateLindormInstanceRequest extends Request {
      */
     public String getPricingCycle() {
         return this.pricingCycle;
+    }
+
+    /**
+     * @return primaryVSwitchId
+     */
+    public String getPrimaryVSwitchId() {
+        return this.primaryVSwitchId;
+    }
+
+    /**
+     * @return primaryZoneId
+     */
+    public String getPrimaryZoneId() {
+        return this.primaryZoneId;
     }
 
     /**
@@ -315,6 +467,34 @@ public class CreateLindormInstanceRequest extends Request {
     }
 
     /**
+     * @return standbyVSwitchId
+     */
+    public String getStandbyVSwitchId() {
+        return this.standbyVSwitchId;
+    }
+
+    /**
+     * @return standbyZoneId
+     */
+    public String getStandbyZoneId() {
+        return this.standbyZoneId;
+    }
+
+    /**
+     * @return streamNum
+     */
+    public Integer getStreamNum() {
+        return this.streamNum;
+    }
+
+    /**
+     * @return streamSpec
+     */
+    public String getStreamSpec() {
+        return this.streamSpec;
+    }
+
+    /**
      * @return tsdbNum
      */
     public Integer getTsdbNum() {
@@ -350,7 +530,11 @@ public class CreateLindormInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateLindormInstanceRequest, Builder> {
+        private String arbiterVSwitchId; 
+        private String arbiterZoneId; 
+        private String archVersion; 
         private Integer coldStorage; 
+        private Integer coreSingleStorage; 
         private String coreSpec; 
         private String diskCategory; 
         private String duration; 
@@ -360,10 +544,17 @@ public class CreateLindormInstanceRequest extends Request {
         private String instanceStorage; 
         private Integer lindormNum; 
         private String lindormSpec; 
+        private String logDiskCategory; 
+        private Integer logNum; 
+        private Integer logSingleStorage; 
+        private String logSpec; 
+        private String multiZoneCombination; 
         private String ownerAccount; 
         private Long ownerId; 
         private String payType; 
         private String pricingCycle; 
+        private String primaryVSwitchId; 
+        private String primaryZoneId; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -371,6 +562,10 @@ public class CreateLindormInstanceRequest extends Request {
         private String securityToken; 
         private Integer solrNum; 
         private String solrSpec; 
+        private String standbyVSwitchId; 
+        private String standbyZoneId; 
+        private Integer streamNum; 
+        private String streamSpec; 
         private Integer tsdbNum; 
         private String tsdbSpec; 
         private String VPCId; 
@@ -383,7 +578,11 @@ public class CreateLindormInstanceRequest extends Request {
 
         private Builder(CreateLindormInstanceRequest request) {
             super(request);
+            this.arbiterVSwitchId = request.arbiterVSwitchId;
+            this.arbiterZoneId = request.arbiterZoneId;
+            this.archVersion = request.archVersion;
             this.coldStorage = request.coldStorage;
+            this.coreSingleStorage = request.coreSingleStorage;
             this.coreSpec = request.coreSpec;
             this.diskCategory = request.diskCategory;
             this.duration = request.duration;
@@ -393,10 +592,17 @@ public class CreateLindormInstanceRequest extends Request {
             this.instanceStorage = request.instanceStorage;
             this.lindormNum = request.lindormNum;
             this.lindormSpec = request.lindormSpec;
+            this.logDiskCategory = request.logDiskCategory;
+            this.logNum = request.logNum;
+            this.logSingleStorage = request.logSingleStorage;
+            this.logSpec = request.logSpec;
+            this.multiZoneCombination = request.multiZoneCombination;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.payType = request.payType;
             this.pricingCycle = request.pricingCycle;
+            this.primaryVSwitchId = request.primaryVSwitchId;
+            this.primaryZoneId = request.primaryZoneId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -404,6 +610,10 @@ public class CreateLindormInstanceRequest extends Request {
             this.securityToken = request.securityToken;
             this.solrNum = request.solrNum;
             this.solrSpec = request.solrSpec;
+            this.standbyVSwitchId = request.standbyVSwitchId;
+            this.standbyZoneId = request.standbyZoneId;
+            this.streamNum = request.streamNum;
+            this.streamSpec = request.streamSpec;
             this.tsdbNum = request.tsdbNum;
             this.tsdbSpec = request.tsdbSpec;
             this.VPCId = request.VPCId;
@@ -412,11 +622,47 @@ public class CreateLindormInstanceRequest extends Request {
         } 
 
         /**
+         * ArbiterVSwitchId.
+         */
+        public Builder arbiterVSwitchId(String arbiterVSwitchId) {
+            this.putQueryParameter("ArbiterVSwitchId", arbiterVSwitchId);
+            this.arbiterVSwitchId = arbiterVSwitchId;
+            return this;
+        }
+
+        /**
+         * ArbiterZoneId.
+         */
+        public Builder arbiterZoneId(String arbiterZoneId) {
+            this.putQueryParameter("ArbiterZoneId", arbiterZoneId);
+            this.arbiterZoneId = arbiterZoneId;
+            return this;
+        }
+
+        /**
+         * ArchVersion.
+         */
+        public Builder archVersion(String archVersion) {
+            this.putQueryParameter("ArchVersion", archVersion);
+            this.archVersion = archVersion;
+            return this;
+        }
+
+        /**
          * ColdStorage.
          */
         public Builder coldStorage(Integer coldStorage) {
             this.putQueryParameter("ColdStorage", coldStorage);
             this.coldStorage = coldStorage;
+            return this;
+        }
+
+        /**
+         * CoreSingleStorage.
+         */
+        public Builder coreSingleStorage(Integer coreSingleStorage) {
+            this.putQueryParameter("CoreSingleStorage", coreSingleStorage);
+            this.coreSingleStorage = coreSingleStorage;
             return this;
         }
 
@@ -502,6 +748,51 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
+         * LogDiskCategory.
+         */
+        public Builder logDiskCategory(String logDiskCategory) {
+            this.putQueryParameter("LogDiskCategory", logDiskCategory);
+            this.logDiskCategory = logDiskCategory;
+            return this;
+        }
+
+        /**
+         * LogNum.
+         */
+        public Builder logNum(Integer logNum) {
+            this.putQueryParameter("LogNum", logNum);
+            this.logNum = logNum;
+            return this;
+        }
+
+        /**
+         * LogSingleStorage.
+         */
+        public Builder logSingleStorage(Integer logSingleStorage) {
+            this.putQueryParameter("LogSingleStorage", logSingleStorage);
+            this.logSingleStorage = logSingleStorage;
+            return this;
+        }
+
+        /**
+         * LogSpec.
+         */
+        public Builder logSpec(String logSpec) {
+            this.putQueryParameter("LogSpec", logSpec);
+            this.logSpec = logSpec;
+            return this;
+        }
+
+        /**
+         * MultiZoneCombination.
+         */
+        public Builder multiZoneCombination(String multiZoneCombination) {
+            this.putQueryParameter("MultiZoneCombination", multiZoneCombination);
+            this.multiZoneCombination = multiZoneCombination;
+            return this;
+        }
+
+        /**
          * OwnerAccount.
          */
         public Builder ownerAccount(String ownerAccount) {
@@ -534,6 +825,24 @@ public class CreateLindormInstanceRequest extends Request {
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
             this.pricingCycle = pricingCycle;
+            return this;
+        }
+
+        /**
+         * PrimaryVSwitchId.
+         */
+        public Builder primaryVSwitchId(String primaryVSwitchId) {
+            this.putQueryParameter("PrimaryVSwitchId", primaryVSwitchId);
+            this.primaryVSwitchId = primaryVSwitchId;
+            return this;
+        }
+
+        /**
+         * PrimaryZoneId.
+         */
+        public Builder primaryZoneId(String primaryZoneId) {
+            this.putQueryParameter("PrimaryZoneId", primaryZoneId);
+            this.primaryZoneId = primaryZoneId;
             return this;
         }
 
@@ -597,6 +906,51 @@ public class CreateLindormInstanceRequest extends Request {
         public Builder solrSpec(String solrSpec) {
             this.putQueryParameter("SolrSpec", solrSpec);
             this.solrSpec = solrSpec;
+            return this;
+        }
+
+        /**
+         * StandbyVSwitchId.
+         */
+        public Builder standbyVSwitchId(String standbyVSwitchId) {
+            this.putQueryParameter("StandbyVSwitchId", standbyVSwitchId);
+            this.standbyVSwitchId = standbyVSwitchId;
+            return this;
+        }
+
+        /**
+         * StandbyZoneId.
+         */
+        public Builder standbyZoneId(String standbyZoneId) {
+            this.putQueryParameter("StandbyZoneId", standbyZoneId);
+            this.standbyZoneId = standbyZoneId;
+            return this;
+        }
+
+        /**
+         * 实例的流引擎节点数量，取值：**0**~**60**。
+         */
+        public Builder streamNum(Integer streamNum) {
+            this.putQueryParameter("StreamNum", streamNum);
+            this.streamNum = streamNum;
+            return this;
+        }
+
+        /**
+         * 实例的流引擎节点规格，取值：
+         * <p>
+         * 
+         * - **lindorm.g.xlarge**：表示4核16GB（独享规格）。
+         * - **lindorm.c.2xlarge**：表示8核16GB（独享规格）。
+         * - **lindorm.g.2xlarge**：表示8核32GB（独享规格）。
+         * - **lindorm.c.4xlarge**：表示16核32GB（独享规格）。
+         * - **lindorm.g.4xlarge**：表示16核64GB（独享规格）。
+         * - **lindorm.c.8xlarge**：表示32核64GB（独享规格）。
+         * - **lindorm.g.8xlarge**：表示32核128GB（独享规格）。
+         */
+        public Builder streamSpec(String streamSpec) {
+            this.putQueryParameter("StreamSpec", streamSpec);
+            this.streamSpec = streamSpec;
             return this;
         }
 

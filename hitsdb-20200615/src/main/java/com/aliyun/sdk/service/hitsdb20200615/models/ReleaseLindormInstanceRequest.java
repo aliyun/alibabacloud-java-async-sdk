@@ -12,6 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReleaseLindormInstanceRequest</p>
  */
 public class ReleaseLindormInstanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
+    @NameInMap("Immediately")
+    private Boolean immediately;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -25,10 +33,6 @@ public class ReleaseLindormInstanceRequest extends Request {
     @NameInMap("OwnerId")
     @Validation(minimum = 1)
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -45,10 +49,11 @@ public class ReleaseLindormInstanceRequest extends Request {
 
     private ReleaseLindormInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
+        this.immediately = builder.immediately;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -65,6 +70,20 @@ public class ReleaseLindormInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return immediately
+     */
+    public Boolean getImmediately() {
+        return this.immediately;
     }
 
     /**
@@ -89,13 +108,6 @@ public class ReleaseLindormInstanceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -117,10 +129,11 @@ public class ReleaseLindormInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ReleaseLindormInstanceRequest, Builder> {
+        private String regionId; 
+        private Boolean immediately; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -131,14 +144,33 @@ public class ReleaseLindormInstanceRequest extends Request {
 
         private Builder(ReleaseLindormInstanceRequest request) {
             super(request);
+            this.regionId = request.regionId;
+            this.immediately = request.immediately;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Immediately.
+         */
+        public Builder immediately(Boolean immediately) {
+            this.putQueryParameter("Immediately", immediately);
+            this.immediately = immediately;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -164,15 +196,6 @@ public class ReleaseLindormInstanceRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

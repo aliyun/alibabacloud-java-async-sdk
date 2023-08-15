@@ -7,18 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetInstanceIpWhiteListRequest} extends {@link RequestModel}
+ * {@link RenewLindormInstanceRequest} extends {@link RequestModel}
  *
- * <p>GetInstanceIpWhiteListRequest</p>
+ * <p>RenewLindormInstanceRequest</p>
  */
-public class GetInstanceIpWhiteListRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
+public class RenewLindormInstanceRequest extends Request {
     @Query
-    @NameInMap("GroupName")
-    private String groupName;
+    @NameInMap("Duration")
+    @Validation(required = true, maximum = 9, minimum = 1)
+    private Integer duration;
 
     @Query
     @NameInMap("InstanceId")
@@ -35,6 +32,16 @@ public class GetInstanceIpWhiteListRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PricingCycle")
+    @Validation(required = true)
+    private String pricingCycle;
+
+    @Query
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -47,13 +54,14 @@ public class GetInstanceIpWhiteListRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    private GetInstanceIpWhiteListRequest(Builder builder) {
+    private RenewLindormInstanceRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
-        this.groupName = builder.groupName;
+        this.duration = builder.duration;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.pricingCycle = builder.pricingCycle;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -63,7 +71,7 @@ public class GetInstanceIpWhiteListRequest extends Request {
         return new Builder();
     }
 
-    public static GetInstanceIpWhiteListRequest create() {
+    public static RenewLindormInstanceRequest create() {
         return builder().build();
     }
 
@@ -73,17 +81,10 @@ public class GetInstanceIpWhiteListRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return duration
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return groupName
-     */
-    public String getGroupName() {
-        return this.groupName;
+    public Integer getDuration() {
+        return this.duration;
     }
 
     /**
@@ -108,6 +109,20 @@ public class GetInstanceIpWhiteListRequest extends Request {
     }
 
     /**
+     * @return pricingCycle
+     */
+    public String getPricingCycle() {
+        return this.pricingCycle;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -128,12 +143,13 @@ public class GetInstanceIpWhiteListRequest extends Request {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<GetInstanceIpWhiteListRequest, Builder> {
-        private String regionId; 
-        private String groupName; 
+    public static final class Builder extends Request.Builder<RenewLindormInstanceRequest, Builder> {
+        private Integer duration; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String pricingCycle; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -142,38 +158,30 @@ public class GetInstanceIpWhiteListRequest extends Request {
             super();
         } 
 
-        private Builder(GetInstanceIpWhiteListRequest request) {
+        private Builder(RenewLindormInstanceRequest request) {
             super(request);
-            this.regionId = request.regionId;
-            this.groupName = request.groupName;
+            this.duration = request.duration;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.pricingCycle = request.pricingCycle;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
         } 
 
         /**
-         * RegionId.
+         * Duration.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder duration(Integer duration) {
+            this.putQueryParameter("Duration", duration);
+            this.duration = duration;
             return this;
         }
 
         /**
-         * The name of the group to which the instance belongs. The group name can contain only letters, digits, and underscores (\_).
-         */
-        public Builder groupName(String groupName) {
-            this.putQueryParameter("GroupName", groupName);
-            this.groupName = groupName;
-            return this;
-        }
-
-        /**
-         * The ID of the instance whose whitelist you want to query. You can call the [GetLindormInstanceList](~~426068~~) operation to query the instance ID.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -196,6 +204,24 @@ public class GetInstanceIpWhiteListRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PricingCycle.
+         */
+        public Builder pricingCycle(String pricingCycle) {
+            this.putQueryParameter("PricingCycle", pricingCycle);
+            this.pricingCycle = pricingCycle;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -227,8 +253,8 @@ public class GetInstanceIpWhiteListRequest extends Request {
         }
 
         @Override
-        public GetInstanceIpWhiteListRequest build() {
-            return new GetInstanceIpWhiteListRequest(this);
+        public RenewLindormInstanceRequest build() {
+            return new RenewLindormInstanceRequest(this);
         } 
 
     } 

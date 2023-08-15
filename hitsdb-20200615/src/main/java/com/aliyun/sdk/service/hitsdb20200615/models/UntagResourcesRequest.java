@@ -12,6 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UntagResourcesRequest</p>
  */
 public class UntagResourcesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    @Validation(required = true)
+    private String regionId;
+
     @Query
     @NameInMap("All")
     private Boolean all;
@@ -24,11 +29,6 @@ public class UntagResourcesRequest extends Request {
     @NameInMap("OwnerId")
     @Validation(minimum = 1)
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
 
     @Query
     @NameInMap("ResourceId")
@@ -59,10 +59,10 @@ public class UntagResourcesRequest extends Request {
 
     private UntagResourcesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.all = builder.all;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -85,6 +85,13 @@ public class UntagResourcesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return all
      */
     public Boolean getAll() {
@@ -103,13 +110,6 @@ public class UntagResourcesRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -155,10 +155,10 @@ public class UntagResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
+        private String regionId; 
         private Boolean all; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private java.util.List < String > resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -172,10 +172,10 @@ public class UntagResourcesRequest extends Request {
 
         private Builder(UntagResourcesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.all = request.all;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
             this.resourceId = request.resourceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -185,7 +185,26 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Specifies whether to remove all tags from the instance. Valid values:
+         * <p>
+         * 
+         * *   **true**: Remove all tags from the instances.
+         * *   **false**: Do not remove all tags from the instances.
+         * 
+         * > 
+         * 
+         * *   The default value of this parameter is false.
+         * 
+         * *   If you specify the TagKey parameter together with this parameter, this parameter does not take effect.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -212,16 +231,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * ResourceId.
+         * The IDs of instances.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -248,7 +258,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Set the value to **INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -266,7 +276,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The list of keys of the tags that you want to remove.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

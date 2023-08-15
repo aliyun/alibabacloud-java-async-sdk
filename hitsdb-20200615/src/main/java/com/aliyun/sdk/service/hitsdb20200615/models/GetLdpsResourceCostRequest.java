@@ -7,23 +7,23 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetInstanceIpWhiteListRequest} extends {@link RequestModel}
+ * {@link GetLdpsResourceCostRequest} extends {@link RequestModel}
  *
- * <p>GetInstanceIpWhiteListRequest</p>
+ * <p>GetLdpsResourceCostRequest</p>
  */
-public class GetInstanceIpWhiteListRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
+public class GetLdpsResourceCostRequest extends Request {
     @Query
-    @NameInMap("GroupName")
-    private String groupName;
+    @NameInMap("EndTime")
+    private Long endTime;
 
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
+
+    @Query
+    @NameInMap("JobId")
+    private String jobId;
 
     @Query
     @NameInMap("OwnerAccount")
@@ -33,6 +33,10 @@ public class GetInstanceIpWhiteListRequest extends Request {
     @NameInMap("OwnerId")
     @Validation(minimum = 1)
     private Long ownerId;
+
+    @Query
+    @NameInMap("RegionId")
+    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -47,23 +51,29 @@ public class GetInstanceIpWhiteListRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    private GetInstanceIpWhiteListRequest(Builder builder) {
+    @Query
+    @NameInMap("StartTime")
+    private Long startTime;
+
+    private GetLdpsResourceCostRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
-        this.groupName = builder.groupName;
+        this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
+        this.jobId = builder.jobId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetInstanceIpWhiteListRequest create() {
+    public static GetLdpsResourceCostRequest create() {
         return builder().build();
     }
 
@@ -73,17 +83,10 @@ public class GetInstanceIpWhiteListRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return endTime
      */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return groupName
-     */
-    public String getGroupName() {
-        return this.groupName;
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -91,6 +94,13 @@ public class GetInstanceIpWhiteListRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return jobId
+     */
+    public String getJobId() {
+        return this.jobId;
     }
 
     /**
@@ -105,6 +115,13 @@ public class GetInstanceIpWhiteListRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -128,56 +145,67 @@ public class GetInstanceIpWhiteListRequest extends Request {
         return this.securityToken;
     }
 
-    public static final class Builder extends Request.Builder<GetInstanceIpWhiteListRequest, Builder> {
-        private String regionId; 
-        private String groupName; 
+    /**
+     * @return startTime
+     */
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    public static final class Builder extends Request.Builder<GetLdpsResourceCostRequest, Builder> {
+        private Long endTime; 
         private String instanceId; 
+        private String jobId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
+        private Long startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetInstanceIpWhiteListRequest request) {
+        private Builder(GetLdpsResourceCostRequest request) {
             super(request);
-            this.regionId = request.regionId;
-            this.groupName = request.groupName;
+            this.endTime = request.endTime;
             this.instanceId = request.instanceId;
+            this.jobId = request.jobId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * RegionId.
+         * EndTime.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
             return this;
         }
 
         /**
-         * The name of the group to which the instance belongs. The group name can contain only letters, digits, and underscores (\_).
-         */
-        public Builder groupName(String groupName) {
-            this.putQueryParameter("GroupName", groupName);
-            this.groupName = groupName;
-            return this;
-        }
-
-        /**
-         * The ID of the instance whose whitelist you want to query. You can call the [GetLindormInstanceList](~~426068~~) operation to query the instance ID.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * JobId.
+         */
+        public Builder jobId(String jobId) {
+            this.putQueryParameter("JobId", jobId);
+            this.jobId = jobId;
             return this;
         }
 
@@ -196,6 +224,15 @@ public class GetInstanceIpWhiteListRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -226,9 +263,18 @@ public class GetInstanceIpWhiteListRequest extends Request {
             return this;
         }
 
+        /**
+         * StartTime.
+         */
+        public Builder startTime(Long startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
         @Override
-        public GetInstanceIpWhiteListRequest build() {
-            return new GetInstanceIpWhiteListRequest(this);
+        public GetLdpsResourceCostRequest build() {
+            return new GetLdpsResourceCostRequest(this);
         } 
 
     } 

@@ -30,55 +30,7 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.product = "hitsdb";
         this.version = "2020-06-15";
         this.endpointRule = "regional";
-        this.endpointMap = CommonUtil.buildMap(
-            new TeaPair("cn-qingdao", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-beijing", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "hitsdb.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("us-west-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("us-east-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-finance-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("ap-northeast-2-pop", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-beijing-finance-pop", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-beijing-gov-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-beijing-nu16-b01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-edge-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-fujian", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-haidian-cm12-c01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-bj-b01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-finance", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-prod-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-2", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-internal-test-3", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hangzhou-test-306", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-hongkong-finance-pop", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-huhehaote-nebula-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-qingdao-nebula", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et15-b01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-et2-b01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-inner", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shanghai-internal-test-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-inner", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-st4-d01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-su18-b01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-wuhan", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-wulanchabu", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-yushanfang", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-zhangbei", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-zhangbei-na61-b01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou-na62-a01", "hitsdb.aliyuncs.com"),
-            new TeaPair("cn-zhengzhou-nebula-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("eu-west-1-oxs", "hitsdb.aliyuncs.com"),
-            new TeaPair("me-east-1", "hitsdb.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "hitsdb.aliyuncs.com")
-        );
+        this.endpointMap = new java.util.HashMap<>();
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
 
@@ -124,6 +76,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetInstanceIpWhiteListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<GetLdpsResourceCostResponse> getLdpsResourceCost(GetLdpsResourceCostRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetLdpsResourceCost").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLdpsResourceCostResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLdpsResourceCostResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -185,6 +151,25 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to change the billing method of an instance to subscription or pay-as-you-go.
+      * Before you call this operation, make sure that you fully understand the billing methods and [pricing](https://www.aliyun.com/price/product?spm=openapi-amp.newDocPublishment.0.0.6345281fu63xJ3#/hitsdb/detail/hitsdb_lindormpre_public_cn) of Lindorm.
+      *
+     */
+    @Override
+    public CompletableFuture<ModifyInstancePayTypeResponse> modifyInstancePayType(ModifyInstancePayTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyInstancePayType").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyInstancePayTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyInstancePayTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     @Override
     public CompletableFuture<ReleaseLindormInstanceResponse> releaseLindormInstance(ReleaseLindormInstanceRequest request) {
         try {
@@ -194,6 +179,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ReleaseLindormInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * The ID of the order. You can obtain an order ID on the Orders page in Alibaba Cloud User Center.
+      *
+     */
+    @Override
+    public CompletableFuture<RenewLindormInstanceResponse> renewLindormInstance(RenewLindormInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RenewLindormInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RenewLindormInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RenewLindormInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -227,6 +230,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ***
+      *
+     */
     @Override
     public CompletableFuture<UpdateInstanceIpWhiteListResponse> updateInstanceIpWhiteList(UpdateInstanceIpWhiteListRequest request) {
         try {
@@ -241,6 +248,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Upgrades, scales up, or enable cold storage for a Lindorm instance.
+      *
+     */
     @Override
     public CompletableFuture<UpgradeLindormInstanceResponse> upgradeLindormInstance(UpgradeLindormInstanceRequest request) {
         try {

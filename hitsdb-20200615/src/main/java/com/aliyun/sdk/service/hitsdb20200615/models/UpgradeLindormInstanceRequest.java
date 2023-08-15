@@ -21,12 +21,8 @@ public class UpgradeLindormInstanceRequest extends Request {
     private Integer coldStorage;
 
     @Query
-    @NameInMap("CoreNum")
-    private Integer coreNum;
-
-    @Query
-    @NameInMap("CoreSpec")
-    private String coreSpec;
+    @NameInMap("CoreSingleStorage")
+    private Integer coreSingleStorage;
 
     @Query
     @NameInMap("FilestoreNum")
@@ -48,6 +44,18 @@ public class UpgradeLindormInstanceRequest extends Request {
     @Query
     @NameInMap("LindormSpec")
     private String lindormSpec;
+
+    @Query
+    @NameInMap("LogNum")
+    private Integer logNum;
+
+    @Query
+    @NameInMap("LogSingleStorage")
+    private Integer logSingleStorage;
+
+    @Query
+    @NameInMap("LogSpec")
+    private String logSpec;
 
     @Query
     @NameInMap("LtsCoreNum")
@@ -101,6 +109,14 @@ public class UpgradeLindormInstanceRequest extends Request {
     private String solrSpec;
 
     @Query
+    @NameInMap("StreamNum")
+    private Integer streamNum;
+
+    @Query
+    @NameInMap("StreamSpec")
+    private String streamSpec;
+
+    @Query
     @NameInMap("TsdbNum")
     private Integer tsdbNum;
 
@@ -122,13 +138,15 @@ public class UpgradeLindormInstanceRequest extends Request {
         super(builder);
         this.clusterStorage = builder.clusterStorage;
         this.coldStorage = builder.coldStorage;
-        this.coreNum = builder.coreNum;
-        this.coreSpec = builder.coreSpec;
+        this.coreSingleStorage = builder.coreSingleStorage;
         this.filestoreNum = builder.filestoreNum;
         this.filestoreSpec = builder.filestoreSpec;
         this.instanceId = builder.instanceId;
         this.lindormNum = builder.lindormNum;
         this.lindormSpec = builder.lindormSpec;
+        this.logNum = builder.logNum;
+        this.logSingleStorage = builder.logSingleStorage;
+        this.logSpec = builder.logSpec;
         this.ltsCoreNum = builder.ltsCoreNum;
         this.ltsCoreSpec = builder.ltsCoreSpec;
         this.ownerAccount = builder.ownerAccount;
@@ -141,6 +159,8 @@ public class UpgradeLindormInstanceRequest extends Request {
         this.securityToken = builder.securityToken;
         this.solrNum = builder.solrNum;
         this.solrSpec = builder.solrSpec;
+        this.streamNum = builder.streamNum;
+        this.streamSpec = builder.streamSpec;
         this.tsdbNum = builder.tsdbNum;
         this.tsdbSpec = builder.tsdbSpec;
         this.upgradeType = builder.upgradeType;
@@ -175,17 +195,10 @@ public class UpgradeLindormInstanceRequest extends Request {
     }
 
     /**
-     * @return coreNum
+     * @return coreSingleStorage
      */
-    public Integer getCoreNum() {
-        return this.coreNum;
-    }
-
-    /**
-     * @return coreSpec
-     */
-    public String getCoreSpec() {
-        return this.coreSpec;
+    public Integer getCoreSingleStorage() {
+        return this.coreSingleStorage;
     }
 
     /**
@@ -221,6 +234,27 @@ public class UpgradeLindormInstanceRequest extends Request {
      */
     public String getLindormSpec() {
         return this.lindormSpec;
+    }
+
+    /**
+     * @return logNum
+     */
+    public Integer getLogNum() {
+        return this.logNum;
+    }
+
+    /**
+     * @return logSingleStorage
+     */
+    public Integer getLogSingleStorage() {
+        return this.logSingleStorage;
+    }
+
+    /**
+     * @return logSpec
+     */
+    public String getLogSpec() {
+        return this.logSpec;
     }
 
     /**
@@ -308,6 +342,20 @@ public class UpgradeLindormInstanceRequest extends Request {
     }
 
     /**
+     * @return streamNum
+     */
+    public Integer getStreamNum() {
+        return this.streamNum;
+    }
+
+    /**
+     * @return streamSpec
+     */
+    public String getStreamSpec() {
+        return this.streamSpec;
+    }
+
+    /**
      * @return tsdbNum
      */
     public Integer getTsdbNum() {
@@ -338,13 +386,15 @@ public class UpgradeLindormInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<UpgradeLindormInstanceRequest, Builder> {
         private Integer clusterStorage; 
         private Integer coldStorage; 
-        private Integer coreNum; 
-        private String coreSpec; 
+        private Integer coreSingleStorage; 
         private Integer filestoreNum; 
         private String filestoreSpec; 
         private String instanceId; 
         private Integer lindormNum; 
         private String lindormSpec; 
+        private Integer logNum; 
+        private Integer logSingleStorage; 
+        private String logSpec; 
         private Integer ltsCoreNum; 
         private String ltsCoreSpec; 
         private String ownerAccount; 
@@ -357,6 +407,8 @@ public class UpgradeLindormInstanceRequest extends Request {
         private String securityToken; 
         private Integer solrNum; 
         private String solrSpec; 
+        private Integer streamNum; 
+        private String streamSpec; 
         private Integer tsdbNum; 
         private String tsdbSpec; 
         private String upgradeType; 
@@ -370,13 +422,15 @@ public class UpgradeLindormInstanceRequest extends Request {
             super(request);
             this.clusterStorage = request.clusterStorage;
             this.coldStorage = request.coldStorage;
-            this.coreNum = request.coreNum;
-            this.coreSpec = request.coreSpec;
+            this.coreSingleStorage = request.coreSingleStorage;
             this.filestoreNum = request.filestoreNum;
             this.filestoreSpec = request.filestoreSpec;
             this.instanceId = request.instanceId;
             this.lindormNum = request.lindormNum;
             this.lindormSpec = request.lindormSpec;
+            this.logNum = request.logNum;
+            this.logSingleStorage = request.logSingleStorage;
+            this.logSpec = request.logSpec;
             this.ltsCoreNum = request.ltsCoreNum;
             this.ltsCoreSpec = request.ltsCoreSpec;
             this.ownerAccount = request.ownerAccount;
@@ -389,6 +443,8 @@ public class UpgradeLindormInstanceRequest extends Request {
             this.securityToken = request.securityToken;
             this.solrNum = request.solrNum;
             this.solrSpec = request.solrSpec;
+            this.streamNum = request.streamNum;
+            this.streamSpec = request.streamSpec;
             this.tsdbNum = request.tsdbNum;
             this.tsdbSpec = request.tsdbSpec;
             this.upgradeType = request.upgradeType;
@@ -414,20 +470,11 @@ public class UpgradeLindormInstanceRequest extends Request {
         }
 
         /**
-         * CoreNum.
+         * CoreSingleStorage.
          */
-        public Builder coreNum(Integer coreNum) {
-            this.putQueryParameter("CoreNum", coreNum);
-            this.coreNum = coreNum;
-            return this;
-        }
-
-        /**
-         * CoreSpec.
-         */
-        public Builder coreSpec(String coreSpec) {
-            this.putQueryParameter("CoreSpec", coreSpec);
-            this.coreSpec = coreSpec;
+        public Builder coreSingleStorage(Integer coreSingleStorage) {
+            this.putQueryParameter("CoreSingleStorage", coreSingleStorage);
+            this.coreSingleStorage = coreSingleStorage;
             return this;
         }
 
@@ -473,6 +520,33 @@ public class UpgradeLindormInstanceRequest extends Request {
         public Builder lindormSpec(String lindormSpec) {
             this.putQueryParameter("LindormSpec", lindormSpec);
             this.lindormSpec = lindormSpec;
+            return this;
+        }
+
+        /**
+         * LogNum.
+         */
+        public Builder logNum(Integer logNum) {
+            this.putQueryParameter("LogNum", logNum);
+            this.logNum = logNum;
+            return this;
+        }
+
+        /**
+         * LogSingleStorage.
+         */
+        public Builder logSingleStorage(Integer logSingleStorage) {
+            this.putQueryParameter("LogSingleStorage", logSingleStorage);
+            this.logSingleStorage = logSingleStorage;
+            return this;
+        }
+
+        /**
+         * LogSpec.
+         */
+        public Builder logSpec(String logSpec) {
+            this.putQueryParameter("LogSpec", logSpec);
+            this.logSpec = logSpec;
             return this;
         }
 
@@ -581,6 +655,29 @@ public class UpgradeLindormInstanceRequest extends Request {
         public Builder solrSpec(String solrSpec) {
             this.putQueryParameter("SolrSpec", solrSpec);
             this.solrSpec = solrSpec;
+            return this;
+        }
+
+        /**
+         * 变配后实例的流引擎节点数量，取值：**0**~**90**。
+         */
+        public Builder streamNum(Integer streamNum) {
+            this.putQueryParameter("StreamNum", streamNum);
+            this.streamNum = streamNum;
+            return this;
+        }
+
+        /**
+         * 变配后实例的流引擎节点规格，取值：
+         * <p>
+         * 
+         * - **lindorm.c.2xlarge**：表示8核16GB（独享规格）。
+         * - **lindorm.c.4xlarge**：表示16核32GB（独享规格）。
+         * - **lindorm.c.8xlarge**：表示32核64GB（独享规格）。
+         */
+        public Builder streamSpec(String streamSpec) {
+            this.putQueryParameter("StreamSpec", streamSpec);
+            this.streamSpec = streamSpec;
             return this;
         }
 

@@ -15,11 +15,32 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("AliUid")
     private Long aliUid;
 
+    @NameInMap("ArbiterVSwitchId")
+    private String arbiterVSwitchId;
+
+    @NameInMap("ArbiterZoneId")
+    private String arbiterZoneId;
+
+    @NameInMap("ArchVersion")
+    private String archVersion;
+
     @NameInMap("AutoRenew")
     private Boolean autoRenew;
 
     @NameInMap("ColdStorage")
     private Integer coldStorage;
+
+    @NameInMap("CoreDiskCategory")
+    private String coreDiskCategory;
+
+    @NameInMap("CoreNum")
+    private Integer coreNum;
+
+    @NameInMap("CoreSingleStorage")
+    private Integer coreSingleStorage;
+
+    @NameInMap("CoreSpec")
+    private String coreSpec;
 
     @NameInMap("CreateMilliseconds")
     private Long createMilliseconds;
@@ -39,6 +60,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("DiskUsage")
     private String diskUsage;
 
+    @NameInMap("EnableBlob")
+    private Boolean enableBlob;
+
     @NameInMap("EnableCdc")
     private Boolean enableCdc;
 
@@ -47,6 +71,12 @@ public class GetLindormInstanceResponseBody extends TeaModel {
 
     @NameInMap("EnableKms")
     private Boolean enableKms;
+
+    @NameInMap("EnableLTS")
+    private Boolean enableLTS;
+
+    @NameInMap("EnableMLCtrl")
+    private Boolean enableMLCtrl;
 
     @NameInMap("EnableSSL")
     private Boolean enableSSL;
@@ -81,17 +111,38 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("InstanceStorage")
     private String instanceStorage;
 
+    @NameInMap("LogDiskCategory")
+    private String logDiskCategory;
+
+    @NameInMap("LogNum")
+    private Integer logNum;
+
+    @NameInMap("LogSingleStorage")
+    private Integer logSingleStorage;
+
+    @NameInMap("LogSpec")
+    private String logSpec;
+
     @NameInMap("MaintainEndTime")
     private String maintainEndTime;
 
     @NameInMap("MaintainStartTime")
     private String maintainStartTime;
 
+    @NameInMap("MultiZoneCombination")
+    private String multiZoneCombination;
+
     @NameInMap("NetworkType")
     private String networkType;
 
     @NameInMap("PayType")
     private String payType;
+
+    @NameInMap("PrimaryVSwitchId")
+    private String primaryVSwitchId;
+
+    @NameInMap("PrimaryZoneId")
+    private String primaryZoneId;
 
     @NameInMap("RegionId")
     private String regionId;
@@ -105,6 +156,12 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @NameInMap("ServiceType")
     private String serviceType;
 
+    @NameInMap("StandbyVSwitchId")
+    private String standbyVSwitchId;
+
+    @NameInMap("StandbyZoneId")
+    private String standbyZoneId;
+
     @NameInMap("VpcId")
     private String vpcId;
 
@@ -116,17 +173,27 @@ public class GetLindormInstanceResponseBody extends TeaModel {
 
     private GetLindormInstanceResponseBody(Builder builder) {
         this.aliUid = builder.aliUid;
+        this.arbiterVSwitchId = builder.arbiterVSwitchId;
+        this.arbiterZoneId = builder.arbiterZoneId;
+        this.archVersion = builder.archVersion;
         this.autoRenew = builder.autoRenew;
         this.coldStorage = builder.coldStorage;
+        this.coreDiskCategory = builder.coreDiskCategory;
+        this.coreNum = builder.coreNum;
+        this.coreSingleStorage = builder.coreSingleStorage;
+        this.coreSpec = builder.coreSpec;
         this.createMilliseconds = builder.createMilliseconds;
         this.createTime = builder.createTime;
         this.deletionProtection = builder.deletionProtection;
         this.diskCategory = builder.diskCategory;
         this.diskThreshold = builder.diskThreshold;
         this.diskUsage = builder.diskUsage;
+        this.enableBlob = builder.enableBlob;
         this.enableCdc = builder.enableCdc;
         this.enableCompute = builder.enableCompute;
         this.enableKms = builder.enableKms;
+        this.enableLTS = builder.enableLTS;
+        this.enableMLCtrl = builder.enableMLCtrl;
         this.enableSSL = builder.enableSSL;
         this.enableShs = builder.enableShs;
         this.enableStream = builder.enableStream;
@@ -138,14 +205,23 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         this.instanceId = builder.instanceId;
         this.instanceStatus = builder.instanceStatus;
         this.instanceStorage = builder.instanceStorage;
+        this.logDiskCategory = builder.logDiskCategory;
+        this.logNum = builder.logNum;
+        this.logSingleStorage = builder.logSingleStorage;
+        this.logSpec = builder.logSpec;
         this.maintainEndTime = builder.maintainEndTime;
         this.maintainStartTime = builder.maintainStartTime;
+        this.multiZoneCombination = builder.multiZoneCombination;
         this.networkType = builder.networkType;
         this.payType = builder.payType;
+        this.primaryVSwitchId = builder.primaryVSwitchId;
+        this.primaryZoneId = builder.primaryZoneId;
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
         this.serviceType = builder.serviceType;
+        this.standbyVSwitchId = builder.standbyVSwitchId;
+        this.standbyZoneId = builder.standbyZoneId;
         this.vpcId = builder.vpcId;
         this.vswitchId = builder.vswitchId;
         this.zoneId = builder.zoneId;
@@ -167,6 +243,27 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return arbiterVSwitchId
+     */
+    public String getArbiterVSwitchId() {
+        return this.arbiterVSwitchId;
+    }
+
+    /**
+     * @return arbiterZoneId
+     */
+    public String getArbiterZoneId() {
+        return this.arbiterZoneId;
+    }
+
+    /**
+     * @return archVersion
+     */
+    public String getArchVersion() {
+        return this.archVersion;
+    }
+
+    /**
      * @return autoRenew
      */
     public Boolean getAutoRenew() {
@@ -178,6 +275,34 @@ public class GetLindormInstanceResponseBody extends TeaModel {
      */
     public Integer getColdStorage() {
         return this.coldStorage;
+    }
+
+    /**
+     * @return coreDiskCategory
+     */
+    public String getCoreDiskCategory() {
+        return this.coreDiskCategory;
+    }
+
+    /**
+     * @return coreNum
+     */
+    public Integer getCoreNum() {
+        return this.coreNum;
+    }
+
+    /**
+     * @return coreSingleStorage
+     */
+    public Integer getCoreSingleStorage() {
+        return this.coreSingleStorage;
+    }
+
+    /**
+     * @return coreSpec
+     */
+    public String getCoreSpec() {
+        return this.coreSpec;
     }
 
     /**
@@ -223,6 +348,13 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return enableBlob
+     */
+    public Boolean getEnableBlob() {
+        return this.enableBlob;
+    }
+
+    /**
      * @return enableCdc
      */
     public Boolean getEnableCdc() {
@@ -241,6 +373,20 @@ public class GetLindormInstanceResponseBody extends TeaModel {
      */
     public Boolean getEnableKms() {
         return this.enableKms;
+    }
+
+    /**
+     * @return enableLTS
+     */
+    public Boolean getEnableLTS() {
+        return this.enableLTS;
+    }
+
+    /**
+     * @return enableMLCtrl
+     */
+    public Boolean getEnableMLCtrl() {
+        return this.enableMLCtrl;
     }
 
     /**
@@ -321,6 +467,34 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return logDiskCategory
+     */
+    public String getLogDiskCategory() {
+        return this.logDiskCategory;
+    }
+
+    /**
+     * @return logNum
+     */
+    public Integer getLogNum() {
+        return this.logNum;
+    }
+
+    /**
+     * @return logSingleStorage
+     */
+    public Integer getLogSingleStorage() {
+        return this.logSingleStorage;
+    }
+
+    /**
+     * @return logSpec
+     */
+    public String getLogSpec() {
+        return this.logSpec;
+    }
+
+    /**
      * @return maintainEndTime
      */
     public String getMaintainEndTime() {
@@ -335,6 +509,13 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return multiZoneCombination
+     */
+    public String getMultiZoneCombination() {
+        return this.multiZoneCombination;
+    }
+
+    /**
      * @return networkType
      */
     public String getNetworkType() {
@@ -346,6 +527,20 @@ public class GetLindormInstanceResponseBody extends TeaModel {
      */
     public String getPayType() {
         return this.payType;
+    }
+
+    /**
+     * @return primaryVSwitchId
+     */
+    public String getPrimaryVSwitchId() {
+        return this.primaryVSwitchId;
+    }
+
+    /**
+     * @return primaryZoneId
+     */
+    public String getPrimaryZoneId() {
+        return this.primaryZoneId;
     }
 
     /**
@@ -377,6 +572,20 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return standbyVSwitchId
+     */
+    public String getStandbyVSwitchId() {
+        return this.standbyVSwitchId;
+    }
+
+    /**
+     * @return standbyZoneId
+     */
+    public String getStandbyZoneId() {
+        return this.standbyZoneId;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -399,17 +608,27 @@ public class GetLindormInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private Long aliUid; 
+        private String arbiterVSwitchId; 
+        private String arbiterZoneId; 
+        private String archVersion; 
         private Boolean autoRenew; 
         private Integer coldStorage; 
+        private String coreDiskCategory; 
+        private Integer coreNum; 
+        private Integer coreSingleStorage; 
+        private String coreSpec; 
         private Long createMilliseconds; 
         private String createTime; 
         private String deletionProtection; 
         private String diskCategory; 
         private String diskThreshold; 
         private String diskUsage; 
+        private Boolean enableBlob; 
         private Boolean enableCdc; 
         private Boolean enableCompute; 
         private Boolean enableKms; 
+        private Boolean enableLTS; 
+        private Boolean enableMLCtrl; 
         private Boolean enableSSL; 
         private Boolean enableShs; 
         private Boolean enableStream; 
@@ -421,14 +640,23 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         private String instanceId; 
         private String instanceStatus; 
         private String instanceStorage; 
+        private String logDiskCategory; 
+        private Integer logNum; 
+        private Integer logSingleStorage; 
+        private String logSpec; 
         private String maintainEndTime; 
         private String maintainStartTime; 
+        private String multiZoneCombination; 
         private String networkType; 
         private String payType; 
+        private String primaryVSwitchId; 
+        private String primaryZoneId; 
         private String regionId; 
         private String requestId; 
         private String resourceGroupId; 
         private String serviceType; 
+        private String standbyVSwitchId; 
+        private String standbyZoneId; 
         private String vpcId; 
         private String vswitchId; 
         private String zoneId; 
@@ -438,6 +666,30 @@ public class GetLindormInstanceResponseBody extends TeaModel {
          */
         public Builder aliUid(Long aliUid) {
             this.aliUid = aliUid;
+            return this;
+        }
+
+        /**
+         * ArbiterVSwitchId.
+         */
+        public Builder arbiterVSwitchId(String arbiterVSwitchId) {
+            this.arbiterVSwitchId = arbiterVSwitchId;
+            return this;
+        }
+
+        /**
+         * ArbiterZoneId.
+         */
+        public Builder arbiterZoneId(String arbiterZoneId) {
+            this.arbiterZoneId = arbiterZoneId;
+            return this;
+        }
+
+        /**
+         * ArchVersion.
+         */
+        public Builder archVersion(String archVersion) {
+            this.archVersion = archVersion;
             return this;
         }
 
@@ -458,6 +710,38 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * CoreDiskCategory.
+         */
+        public Builder coreDiskCategory(String coreDiskCategory) {
+            this.coreDiskCategory = coreDiskCategory;
+            return this;
+        }
+
+        /**
+         * CoreNum.
+         */
+        public Builder coreNum(Integer coreNum) {
+            this.coreNum = coreNum;
+            return this;
+        }
+
+        /**
+         * CoreSingleStorage.
+         */
+        public Builder coreSingleStorage(Integer coreSingleStorage) {
+            this.coreSingleStorage = coreSingleStorage;
+            return this;
+        }
+
+        /**
+         * CoreSpec.
+         */
+        public Builder coreSpec(String coreSpec) {
+            this.coreSpec = coreSpec;
+            return this;
+        }
+
+        /**
          * CreateMilliseconds.
          */
         public Builder createMilliseconds(Long createMilliseconds) {
@@ -466,7 +750,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The storage capacity of the disk of a single log node. This parameter is returned only for multi-zone instances.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -506,6 +790,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * EnableBlob.
+         */
+        public Builder enableBlob(Boolean enableBlob) {
+            this.enableBlob = enableBlob;
+            return this;
+        }
+
+        /**
          * EnableCdc.
          */
         public Builder enableCdc(Boolean enableCdc) {
@@ -526,6 +818,22 @@ public class GetLindormInstanceResponseBody extends TeaModel {
          */
         public Builder enableKms(Boolean enableKms) {
             this.enableKms = enableKms;
+            return this;
+        }
+
+        /**
+         * EnableLTS.
+         */
+        public Builder enableLTS(Boolean enableLTS) {
+            this.enableLTS = enableLTS;
+            return this;
+        }
+
+        /**
+         * EnableMLCtrl.
+         */
+        public Builder enableMLCtrl(Boolean enableMLCtrl) {
+            this.enableMLCtrl = enableMLCtrl;
             return this;
         }
 
@@ -618,6 +926,38 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * LogDiskCategory.
+         */
+        public Builder logDiskCategory(String logDiskCategory) {
+            this.logDiskCategory = logDiskCategory;
+            return this;
+        }
+
+        /**
+         * LogNum.
+         */
+        public Builder logNum(Integer logNum) {
+            this.logNum = logNum;
+            return this;
+        }
+
+        /**
+         * LogSingleStorage.
+         */
+        public Builder logSingleStorage(Integer logSingleStorage) {
+            this.logSingleStorage = logSingleStorage;
+            return this;
+        }
+
+        /**
+         * LogSpec.
+         */
+        public Builder logSpec(String logSpec) {
+            this.logSpec = logSpec;
+            return this;
+        }
+
+        /**
          * MaintainEndTime.
          */
         public Builder maintainEndTime(String maintainEndTime) {
@@ -634,6 +974,14 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * MultiZoneCombination.
+         */
+        public Builder multiZoneCombination(String multiZoneCombination) {
+            this.multiZoneCombination = multiZoneCombination;
+            return this;
+        }
+
+        /**
          * NetworkType.
          */
         public Builder networkType(String networkType) {
@@ -642,10 +990,26 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * 400
          */
         public Builder payType(String payType) {
             this.payType = payType;
+            return this;
+        }
+
+        /**
+         * PrimaryVSwitchId.
+         */
+        public Builder primaryVSwitchId(String primaryVSwitchId) {
+            this.primaryVSwitchId = primaryVSwitchId;
+            return this;
+        }
+
+        /**
+         * PrimaryZoneId.
+         */
+        public Builder primaryZoneId(String primaryZoneId) {
+            this.primaryZoneId = primaryZoneId;
             return this;
         }
 
@@ -682,7 +1046,23 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * VpcId.
+         * StandbyVSwitchId.
+         */
+        public Builder standbyVSwitchId(String standbyVSwitchId) {
+            this.standbyVSwitchId = standbyVSwitchId;
+            return this;
+        }
+
+        /**
+         * StandbyZoneId.
+         */
+        public Builder standbyZoneId(String standbyZoneId) {
+            this.standbyZoneId = standbyZoneId;
+            return this;
+        }
+
+        /**
+         * The type of the log nodes. This parameter is returned only for multi-zone instances.
          */
         public Builder vpcId(String vpcId) {
             this.vpcId = vpcId;
@@ -690,7 +1070,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * VswitchId.
+         * The number of the log nodes. This parameter is returned only for multi-zone instances.
          */
         public Builder vswitchId(String vswitchId) {
             this.vswitchId = vswitchId;

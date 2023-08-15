@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLindormInstanceRequest</p>
  */
 public class GetLindormInstanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
@@ -25,10 +29,6 @@ public class GetLindormInstanceRequest extends Request {
     @NameInMap("OwnerId")
     @Validation(minimum = 1)
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -45,10 +45,10 @@ public class GetLindormInstanceRequest extends Request {
 
     private GetLindormInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -65,6 +65,13 @@ public class GetLindormInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -89,13 +96,6 @@ public class GetLindormInstanceRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -117,10 +117,10 @@ public class GetLindormInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetLindormInstanceRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -131,17 +131,30 @@ public class GetLindormInstanceRequest extends Request {
 
         private Builder(GetLindormInstanceRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
         } 
 
         /**
-         * InstanceId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The disk type of the log nodes. This parameter is returned only for multi-zone instances. Valid values:
+         * <p>
+         * 
+         * *   **cloud_efficiency**: The nodes use the Standard type of storage.
+         * *   **cloud_ssd**: The nodes use the Performance type of storage.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -164,15 +177,6 @@ public class GetLindormInstanceRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

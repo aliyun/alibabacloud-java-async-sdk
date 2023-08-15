@@ -12,6 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsRequest</p>
  */
 public class DescribeRegionsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Host
+    @NameInMap("ZoneId")
+    private String zoneId;
+
     @Query
     @NameInMap("AcceptLanguage")
     private String acceptLanguage;
@@ -24,10 +32,6 @@ public class DescribeRegionsRequest extends Request {
     @NameInMap("OwnerId")
     @Validation(minimum = 1)
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -42,20 +46,16 @@ public class DescribeRegionsRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
-    @Host
-    @NameInMap("ZoneId")
-    private String zoneId;
-
     private DescribeRegionsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
+        this.zoneId = builder.zoneId;
         this.acceptLanguage = builder.acceptLanguage;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
-        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -69,6 +69,20 @@ public class DescribeRegionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
     }
 
     /**
@@ -93,13 +107,6 @@ public class DescribeRegionsRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -120,22 +127,15 @@ public class DescribeRegionsRequest extends Request {
         return this.securityToken;
     }
 
-    /**
-     * @return zoneId
-     */
-    public String getZoneId() {
-        return this.zoneId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeRegionsRequest, Builder> {
+        private String regionId; 
+        private String zoneId; 
         private String acceptLanguage; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
-        private String zoneId; 
 
         private Builder() {
             super();
@@ -143,18 +143,36 @@ public class DescribeRegionsRequest extends Request {
 
         private Builder(DescribeRegionsRequest request) {
             super(request);
+            this.regionId = request.regionId;
+            this.zoneId = request.zoneId;
             this.acceptLanguage = request.acceptLanguage;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
-            this.zoneId = request.zoneId;
         } 
 
         /**
-         * AcceptLanguage.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putHostParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
+            return this;
+        }
+
+        /**
+         * The ID of the region.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -177,15 +195,6 @@ public class DescribeRegionsRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
@@ -213,15 +222,6 @@ public class DescribeRegionsRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
-            return this;
-        }
-
-        /**
-         * ZoneId.
-         */
-        public Builder zoneId(String zoneId) {
-            this.putHostParameter("ZoneId", zoneId);
-            this.zoneId = zoneId;
             return this;
         }
 

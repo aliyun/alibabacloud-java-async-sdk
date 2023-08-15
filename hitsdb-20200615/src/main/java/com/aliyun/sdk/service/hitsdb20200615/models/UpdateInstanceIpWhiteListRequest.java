@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateInstanceIpWhiteListRequest</p>
  */
 public class UpdateInstanceIpWhiteListRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("GroupName")
     private String groupName;
@@ -29,10 +33,6 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     @NameInMap("OwnerId")
     @Validation(minimum = 1)
     private Long ownerId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     @Query
     @NameInMap("ResourceOwnerAccount")
@@ -54,11 +54,11 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
 
     private UpdateInstanceIpWhiteListRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.groupName = builder.groupName;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityIpList = builder.securityIpList;
@@ -76,6 +76,13 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -107,13 +114,6 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -142,11 +142,11 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateInstanceIpWhiteListRequest, Builder> {
+        private String regionId; 
         private String groupName; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityIpList; 
@@ -158,11 +158,11 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
 
         private Builder(UpdateInstanceIpWhiteListRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.groupName = request.groupName;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityIpList = request.securityIpList;
@@ -170,7 +170,16 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         } 
 
         /**
-         * GroupName.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The name of the group to which the instance belongs. The group name can contain only letters, digits, and underscores (\_).
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -179,7 +188,7 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance for which you want to configure a whitelist. You can call the [GetLindormInstanceList](~~426069~~) operation to obtain the ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -206,15 +215,6 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -233,7 +233,10 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         /**
-         * SecurityIpList.
+         * The IP addresses that you want to add to the whitelist. For example, if you add 192.168.0.0/24 to the whitelist, you can use all IP addresses within this CIDR block to access the Lindorm instance.
+         * <p>
+         * 
+         * > If you add 127.0.0.1 to the whitelist, all IP addresses cannot be used to access the Lindorm instance. Separate multiple IP addresses or CIDR blocks with commas (,).
          */
         public Builder securityIpList(String securityIpList) {
             this.putQueryParameter("SecurityIpList", securityIpList);

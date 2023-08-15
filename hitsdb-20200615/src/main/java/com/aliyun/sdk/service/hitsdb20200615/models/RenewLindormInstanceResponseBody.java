@@ -7,23 +7,23 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetInstanceIpWhiteListResponseBody} extends {@link TeaModel}
+ * {@link RenewLindormInstanceResponseBody} extends {@link TeaModel}
  *
- * <p>GetInstanceIpWhiteListResponseBody</p>
+ * <p>RenewLindormInstanceResponseBody</p>
  */
-public class GetInstanceIpWhiteListResponseBody extends TeaModel {
+public class RenewLindormInstanceResponseBody extends TeaModel {
     @NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("IpList")
-    private java.util.List < String > ipList;
+    @NameInMap("OrderId")
+    private Long orderId;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    private GetInstanceIpWhiteListResponseBody(Builder builder) {
+    private RenewLindormInstanceResponseBody(Builder builder) {
         this.instanceId = builder.instanceId;
-        this.ipList = builder.ipList;
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
 
@@ -31,7 +31,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetInstanceIpWhiteListResponseBody create() {
+    public static RenewLindormInstanceResponseBody create() {
         return builder().build();
     }
 
@@ -43,10 +43,10 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
     }
 
     /**
-     * @return ipList
+     * @return orderId
      */
-    public java.util.List < String > getIpList() {
-        return this.ipList;
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -58,11 +58,11 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
 
     public static final class Builder {
         private String instanceId; 
-        private java.util.List < String > ipList; 
+        private Long orderId; 
         private String requestId; 
 
         /**
-         * The ID of the Lindorm instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,23 +70,23 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * IpList.
+         * OrderId.
          */
-        public Builder ipList(java.util.List < String > ipList) {
-            this.ipList = ipList;
+        public Builder orderId(Long orderId) {
+            this.orderId = orderId;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public GetInstanceIpWhiteListResponseBody build() {
-            return new GetInstanceIpWhiteListResponseBody(this);
+        public RenewLindormInstanceResponseBody build() {
+            return new RenewLindormInstanceResponseBody(this);
         } 
 
     } 
