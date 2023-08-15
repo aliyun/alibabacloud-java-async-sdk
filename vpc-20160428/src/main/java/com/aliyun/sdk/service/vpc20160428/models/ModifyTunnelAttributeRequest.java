@@ -168,7 +168,10 @@ public class ModifyTunnelAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters. 
+         * <p>
+         * 
+         * > If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -195,7 +198,7 @@ public class ModifyTunnelAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the IPsec connection. You can call the [DescribeRegions](~~36063~~) operation to query the most recent list of regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -222,7 +225,7 @@ public class ModifyTunnelAttributeRequest extends Request {
         }
 
         /**
-         * TunnelId.
+         * The tunnel ID.
          */
         public Builder tunnelId(String tunnelId) {
             this.putQueryParameter("TunnelId", tunnelId);
@@ -231,7 +234,7 @@ public class ModifyTunnelAttributeRequest extends Request {
         }
 
         /**
-         * TunnelOptionsSpecification.
+         * The tunnel configurations.
          */
         public Builder tunnelOptionsSpecification(TunnelOptionsSpecification tunnelOptionsSpecification) {
             this.putQueryParameter("TunnelOptionsSpecification", tunnelOptionsSpecification);
@@ -240,7 +243,7 @@ public class ModifyTunnelAttributeRequest extends Request {
         }
 
         /**
-         * VpnConnectionId.
+         * The ID of the IPsec connection.
          */
         public Builder vpnConnectionId(String vpnConnectionId) {
             this.putQueryParameter("VpnConnectionId", vpnConnectionId);
@@ -306,7 +309,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             private String tunnelCidr; 
 
             /**
-             * LocalAsn.
+             * The local autonomous system number (ASN). Valid values: **1** to **4294967295**.
              */
             public Builder localAsn(Long localAsn) {
                 this.localAsn = localAsn;
@@ -314,7 +317,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * LocalBgpIp.
+             * The BGP IP address of the tunnel. The IP address must fall into the **CIDR block** of the tunnel.
              */
             public Builder localBgpIp(String localBgpIp) {
                 this.localBgpIp = localBgpIp;
@@ -322,7 +325,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * TunnelCidr.
+             * The CIDR block of the tunnel. The CIDR block must fall into 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length.
              */
             public Builder tunnelCidr(String tunnelCidr) {
                 this.tunnelCidr = tunnelCidr;
@@ -459,7 +462,11 @@ public class ModifyTunnelAttributeRequest extends Request {
             private String remoteId; 
 
             /**
-             * IkeAuthAlg.
+             * The authentication algorithm that is used in Phase 1 negotiations. 
+             * <p>
+             * 
+             * - If the IPsec connection is attached to a standard VPN gateway, the valid values are **md5**, **sha1**, **sha256**, **sha384**, and **sha512**. 
+             * - If the IPsec connection is attached to a VPN gateway that uses an SM certificate, set the value to **sm3**.
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -467,7 +474,11 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * IkeEncAlg.
+             * The encryption algorithm that is used in Phase 1 negotiations. 
+             * <p>
+             * 
+             * - If the IPsec connection is attached to a standard VPN gateway, the valid values are **aes**, **aes192**, **sha256**, **des**, and **3des**. 
+             * - If the IPsec connection is attached to a VPN gateway that uses an SM certificate, set the value to **sm4**.
              */
             public Builder ikeEncAlg(String ikeEncAlg) {
                 this.ikeEncAlg = ikeEncAlg;
@@ -475,7 +486,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * IkeLifetime.
+             * The SA lifetime that is determined by Phase 1 negotiations. Unit: seconds. Valid values: **0** to **86400**.
              */
             public Builder ikeLifetime(Long ikeLifetime) {
                 this.ikeLifetime = ikeLifetime;
@@ -483,7 +494,11 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * IkeMode.
+             * The IKE negotiation mode. Valid values:
+             * <p>
+             * 
+             * - **main**: This mode offers higher security during negotiations. 
+             * - **aggressive**: This mode is faster and has a higher success rate.
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -491,7 +506,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * IkePfs.
+             * The Diffie-Hellman key exchange algorithm that is used in Phase 1 negotiations. Valid values: **group1**, **group2**, **group5**, and **group14**.
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -499,7 +514,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * IkeVersion.
+             * The version of the IKE protocol. Valid values: **ikev1** and **ikev2**.
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -507,7 +522,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * LocalId.
+             * The tunnel identifier. The identifier can be up to 100 characters in length, and supports fully qualified domain names (FQDNs) and IP addresses. The default identifier is the tunnel IP address.
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -515,7 +530,14 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * Psk.
+             * The pre-shared key that is used to verify identities between the tunnel and peer. 
+             * <p>
+             * 
+             * 
+             * - The key must be 1 to 100 characters in length, and can contain digits, letters, and the following characters: ```~!`@#$%^&*()_-+={}[]|;:\",.<>/?```
+             * - If you do not specify a pre-shared key, the system generates a random 16-bit string as the pre-shared key. You can call the DescribeVpnConnection operation to query the pre-shared key that is generated by the system. 
+             * 
+             * > The tunnel and the peer must use the same pre-shared key. Otherwise, tunnel communication cannot be established.
              */
             public Builder psk(String psk) {
                 this.psk = psk;
@@ -523,7 +545,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * RemoteId.
+             * The peer identifier. The identifier can be up to 100 characters in length, and supports FQDNs and IP addresses. The default identifier is the IP address of the customer gateway associated with the tunnel.
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -600,7 +622,11 @@ public class ModifyTunnelAttributeRequest extends Request {
             private String ipsecPfs; 
 
             /**
-             * IpsecAuthAlg.
+             * The authentication algorithm that is used in Phase 2 negotiations. 
+             * <p>
+             * 
+             * - If the IPsec connection is attached to a standard VPN gateway, the valid values are **md5**, **sha1**, **sha256**, **sha384,** and **sha512**. 
+             * - If the IPsec connection is attached to a VPN gateway that uses an SM certificate, set the value to **sm3**.
              */
             public Builder ipsecAuthAlg(String ipsecAuthAlg) {
                 this.ipsecAuthAlg = ipsecAuthAlg;
@@ -608,7 +634,11 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * IpsecEncAlg.
+             * The encryption algorithm that is used in Phase 2 negotiations. 
+             * <p>
+             * 
+             * - If the IPsec connection is attached to a standard VPN gateway, the valid values are **aes**, **aes192**, **sha256**, **des**, and **3des**. 
+             * - If the IPsec connection is attached to a VPN gateway that uses an SM certificate, set the value to **sm4**.
              */
             public Builder ipsecEncAlg(String ipsecEncAlg) {
                 this.ipsecEncAlg = ipsecEncAlg;
@@ -616,7 +646,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * IpsecLifetime.
+             * The SA lifetime that is determined by Phase 2 negotiations. Unit: seconds. Valid values: **0** to **86400**.
              */
             public Builder ipsecLifetime(Long ipsecLifetime) {
                 this.ipsecLifetime = ipsecLifetime;
@@ -624,7 +654,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * IpsecPfs.
+             * The Diffie-Hellman key exchange algorithm that is used in Phase 2 negotiations. Valid values: **disabled**, **group1**, **group2**, **group5**, and **group14**.
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;
@@ -725,7 +755,11 @@ public class ModifyTunnelAttributeRequest extends Request {
             private TunnelIpsecConfig tunnelIpsecConfig; 
 
             /**
-             * EnableDpd.
+             * Specifies whether to enable the dead peer detection (DPD) feature. Valid values:
+             * <p>
+             * - **true**: DPD is enabled. The IPsec initiator sends DPD packets to verify the existence and availability of the IPsec peer. If no response is received from the peer within a specified period of time, the IPsec peer is considered disconnected. Then, the ISAKMP SA, IPsec SA, and IPsec tunnel are deleted. 
+             * 
+             * - **false**: DPD is disabled. The IPsec initiator does not send DPD packets.
              */
             public Builder enableDpd(Boolean enableDpd) {
                 this.enableDpd = enableDpd;
@@ -733,7 +767,13 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * EnableNatTraversal.
+             * Specifies whether to enable NAT traversal. Valid values:
+             * <p>
+             * 
+             * - **true** 
+             * 
+             *     After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec tunnel. 
+             * - **false**
              */
             public Builder enableNatTraversal(Boolean enableNatTraversal) {
                 this.enableNatTraversal = enableNatTraversal;
@@ -741,7 +781,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * RemoteCaCertificate.
+             * If you want to attach the IPsec connection to a VPN gateway that uses a ShangMi (SM) certificate, set the value to the peer CA certificate.
              */
             public Builder remoteCaCertificate(String remoteCaCertificate) {
                 this.remoteCaCertificate = remoteCaCertificate;
@@ -749,7 +789,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * TunnelBgpConfig.
+             * The BGP configurations.
              */
             public Builder tunnelBgpConfig(TunnelBgpConfig tunnelBgpConfig) {
                 this.tunnelBgpConfig = tunnelBgpConfig;
@@ -757,7 +797,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * TunnelIkeConfig.
+             * The IKE settings for Phase 1 negotiations.
              */
             public Builder tunnelIkeConfig(TunnelIkeConfig tunnelIkeConfig) {
                 this.tunnelIkeConfig = tunnelIkeConfig;
@@ -765,7 +805,7 @@ public class ModifyTunnelAttributeRequest extends Request {
             }
 
             /**
-             * TunnelIpsecConfig.
+             * The IPsec settings for Phase 2 negotiations.
              */
             public Builder tunnelIpsecConfig(TunnelIpsecConfig tunnelIpsecConfig) {
                 this.tunnelIpsecConfig = tunnelIpsecConfig;

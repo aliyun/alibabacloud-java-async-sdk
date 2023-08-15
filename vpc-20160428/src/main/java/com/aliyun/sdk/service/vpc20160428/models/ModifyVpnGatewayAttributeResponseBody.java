@@ -285,7 +285,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DisasterRecoveryInternetIp.
+         * The second IP address assigned by the system to create an IPsec-VPN connection. This parameter is returned only when the VPN gateway supports the dual-tunnel mode.
          */
         public Builder disasterRecoveryInternetIp(String disasterRecoveryInternetIp) {
             this.disasterRecoveryInternetIp = disasterRecoveryInternetIp;
@@ -293,7 +293,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * DisasterRecoveryVSwitchId.
+         * The ID of the second vSwitch associated with the VPN gateway. This parameter is returned only when the VPN gateway supports the dual-tunnel mode.
          */
         public Builder disasterRecoveryVSwitchId(String disasterRecoveryVSwitchId) {
             this.disasterRecoveryVSwitchId = disasterRecoveryVSwitchId;
@@ -324,7 +324,9 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The public IP address of the VPN gateway.
+         * - If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection. 
+         * <p>
+         * - If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection. If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.
          */
         public Builder internetIp(String internetIp) {
             this.internetIp = internetIp;
@@ -364,7 +366,7 @@ public class ModifyVpnGatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * SslVpnInternetIp.
+         * The IP address of the SSL-VPN connection. This parameter is returned only when the VPN gateway is a public VPN gateway and supports only the single-tunnel mode. In addition, the VPN gateway must have the SSL-VPN feature enabled.
          */
         public Builder sslVpnInternetIp(String sslVpnInternetIp) {
             this.sslVpnInternetIp = sslVpnInternetIp;

@@ -312,7 +312,7 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * TunnelId.
+         * The tunnel ID of the IPsec-VPN connection. You can specify this parameter only for IPsec-VPN connections in dual-tunnel mode.
          */
         public Builder tunnelId(String tunnelId) {
             this.putQueryParameter("TunnelId", tunnelId);

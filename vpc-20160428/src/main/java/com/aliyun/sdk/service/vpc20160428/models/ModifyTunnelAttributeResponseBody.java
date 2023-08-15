@@ -182,7 +182,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         private String zoneNo; 
 
         /**
-         * CustomerGatewayId.
+         * The ID of the customer gateway associated with the customer gateway.
          */
         public Builder customerGatewayId(String customerGatewayId) {
             this.customerGatewayId = customerGatewayId;
@@ -190,7 +190,11 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EnableDpd.
+         * Indicates whether DPD is enabled. Valid values:
+         * <p>
+         * 
+         * - **true** 
+         * - **false**
          */
         public Builder enableDpd(Boolean enableDpd) {
             this.enableDpd = enableDpd;
@@ -198,7 +202,11 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * EnableNatTraversal.
+         * Indicates whether BAT traversal is enabled. Valid values:
+         * <p>
+         * 
+         * - **true** 
+         * - **false**
          */
         public Builder enableNatTraversal(Boolean enableNatTraversal) {
             this.enableNatTraversal = enableNatTraversal;
@@ -206,7 +214,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * InternetIp.
+         * The tunnel IP address.
          */
         public Builder internetIp(String internetIp) {
             this.internetIp = internetIp;
@@ -214,7 +222,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RemoteCaCertificate.
+         * The peer CA certificate when a ShangMi (SM) VPN gateway is associated with the IPsec connection.
          */
         public Builder remoteCaCertificate(String remoteCaCertificate) {
             this.remoteCaCertificate = remoteCaCertificate;
@@ -222,7 +230,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +238,11 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * Role.
+         * The tunnel role. Valid values: 
+         * <p>
+         * 
+         * - **master**
+         * - **slave**
          */
         public Builder role(String role) {
             this.role = role;
@@ -238,7 +250,12 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * State.
+         * The tunnel status. Valid values: 
+         * <p>
+         * 
+         * - **active** 
+         * - **updating** 
+         * - d**eleting**
          */
         public Builder state(String state) {
             this.state = state;
@@ -246,7 +263,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TunnelBgpConfig.
+         * The BGP configurations.
          */
         public Builder tunnelBgpConfig(TunnelBgpConfig tunnelBgpConfig) {
             this.tunnelBgpConfig = tunnelBgpConfig;
@@ -254,7 +271,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TunnelId.
+         * The tunnel ID.
          */
         public Builder tunnelId(String tunnelId) {
             this.tunnelId = tunnelId;
@@ -262,7 +279,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TunnelIkeConfig.
+         * The IKE settings for Phase 1 negotiations.
          */
         public Builder tunnelIkeConfig(TunnelIkeConfig tunnelIkeConfig) {
             this.tunnelIkeConfig = tunnelIkeConfig;
@@ -270,7 +287,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TunnelIpsecConfig.
+         * The IPsec settings for Phase 2 negotiations.
          */
         public Builder tunnelIpsecConfig(TunnelIpsecConfig tunnelIpsecConfig) {
             this.tunnelIpsecConfig = tunnelIpsecConfig;
@@ -278,7 +295,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneNo.
+         * The tunnel zone.
          */
         public Builder zoneNo(String zoneNo) {
             this.zoneNo = zoneNo;
@@ -378,7 +395,11 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             private String tunnelCidr; 
 
             /**
-             * EnableBgp.
+             * Indicates whether BGP is enabled. Valid values: 
+             * <p>
+             * 
+             * - **true** 
+             * - **false**
              */
             public Builder enableBgp(Boolean enableBgp) {
                 this.enableBgp = enableBgp;
@@ -386,7 +407,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LocalAsn.
+             * The local ASN.
              */
             public Builder localAsn(Long localAsn) {
                 this.localAsn = localAsn;
@@ -394,7 +415,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LocalBgpIp.
+             * The BGP IP address of the tunnel.
              */
             public Builder localBgpIp(String localBgpIp) {
                 this.localBgpIp = localBgpIp;
@@ -402,7 +423,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PeerAsn.
+             * The peer ASN.
              */
             public Builder peerAsn(Long peerAsn) {
                 this.peerAsn = peerAsn;
@@ -410,7 +431,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PeerBgpIp.
+             * The BGP IP address of the peer.
              */
             public Builder peerBgpIp(String peerBgpIp) {
                 this.peerBgpIp = peerBgpIp;
@@ -418,7 +439,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TunnelCidr.
+             * The CIDR block to which the tunnel BGP IP address belongs.
              */
             public Builder tunnelCidr(String tunnelCidr) {
                 this.tunnelCidr = tunnelCidr;
@@ -555,7 +576,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             private String remoteId; 
 
             /**
-             * IkeAuthAlg.
+             * The IKE authentication algorithm.
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -563,7 +584,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IkeEncAlg.
+             * The IKE encryption algorithm.
              */
             public Builder ikeEncAlg(String ikeEncAlg) {
                 this.ikeEncAlg = ikeEncAlg;
@@ -571,7 +592,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IkeLifetime.
+             * The IKE lifetime. Unit: seconds.
              */
             public Builder ikeLifetime(Long ikeLifetime) {
                 this.ikeLifetime = ikeLifetime;
@@ -579,7 +600,11 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IkeMode.
+             * The IKE negotiation mode. Valid values: 
+             * <p>
+             * 
+             * - **main**: This mode offers higher security during negotiations. 
+             * - **aggressive**: This mode is faster and has a higher success rate.
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -587,7 +612,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IkePfs.
+             * The Diffie-Hellman group.
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -595,7 +620,13 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IkeVersion.
+             * The version of the IKE protocol. 
+             * <p>
+             * 
+             * - **ikev1**
+             * - **ikev2**
+             * 
+             * Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -603,7 +634,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * LocalId.
+             * The tunnel identifier. The identifier supports FQDNs and IP addresses. The default identifier is the tunnel IP address.
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -611,7 +642,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Psk.
+             * The pre-shared key.
              */
             public Builder psk(String psk) {
                 this.psk = psk;
@@ -619,7 +650,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RemoteId.
+             * The peer identifier. The identifier supports FQDNs and IP addresses. The default identifier is the IP address of the customer gateway associated with the tunnel.
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -696,7 +727,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             private String ipsecPfs; 
 
             /**
-             * IpsecAuthAlg.
+             * The IPsec authentication algorithm.
              */
             public Builder ipsecAuthAlg(String ipsecAuthAlg) {
                 this.ipsecAuthAlg = ipsecAuthAlg;
@@ -704,7 +735,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IpsecEncAlg.
+             * The IPsec encryption algorithm.
              */
             public Builder ipsecEncAlg(String ipsecEncAlg) {
                 this.ipsecEncAlg = ipsecEncAlg;
@@ -712,7 +743,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IpsecLifetime.
+             * The IPsec lifetime. Unit: seconds.
              */
             public Builder ipsecLifetime(Long ipsecLifetime) {
                 this.ipsecLifetime = ipsecLifetime;
@@ -720,7 +751,7 @@ public class ModifyTunnelAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IpsecPfs.
+             * The Diffie-Hellman group.
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;

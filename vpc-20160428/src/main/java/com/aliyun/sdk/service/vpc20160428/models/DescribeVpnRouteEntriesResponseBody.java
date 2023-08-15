@@ -310,7 +310,11 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
             }
 
             /**
-             * NextHopTunnelId.
+             * The ID of the tunnel associated with the next hop. 
+             * <p>
+             * 
+             * 
+             * > This parameter is returned only if the VPN gateway supports the dual-tunnel mode.
              */
             public Builder nextHopTunnelId(String nextHopTunnelId) {
                 this.nextHopTunnelId = nextHopTunnelId;

@@ -422,7 +422,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * EnableTunnelsBgp.
+         * This parameter is supported by dual-tunnel IPsec-VPN connections. Specifies whether to enable BGP for the tunnel. Valid values: **true** and **false**.
          */
         public Builder enableTunnelsBgp(Boolean enableTunnelsBgp) {
             this.putQueryParameter("EnableTunnelsBgp", enableTunnelsBgp);
@@ -601,7 +601,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
         }
 
         /**
-         * TunnelOptionsSpecification.
+         * **TunnelOptionsSpecification** parameters are supported by dual-tunnel IPsec-VPN gateways. You can modify both the active and standby tunnels of the IPsec-VPN connection.
          */
         public Builder tunnelOptionsSpecification(java.util.List < TunnelOptionsSpecification> tunnelOptionsSpecification) {
             this.putBodyParameter("TunnelOptionsSpecification", tunnelOptionsSpecification);
@@ -676,7 +676,12 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             private String tunnelCidr; 
 
             /**
-             * LocalAsn.
+             * The local ASN (Alibaba Cloud side). Valid values: **1 ** to **4294967295**. Default value: **45104**. 
+             * <p>
+             * 
+             * > - You can set or modify this parameter if BGP is enabled for the IPsecVPN connection (**EnableTunnelsBgp** is set to **true**). 
+             * > - Before you configure BGP, we recommend that you learn about how BGP works and its limits. For more information, see [VPN Gateway supports BGP dynamic routing](~~170235~~). 
+             * > - We recommend that you use a private ASN to establish a connection with Alibaba Cloud over BGP. Refer to the relevant documentation for the private ASN range.
              */
             public Builder localAsn(Long localAsn) {
                 this.localAsn = localAsn;
@@ -684,7 +689,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * LocalBgpIp.
+             * The local BGP address (Alibaba Cloud side). The BGP address is an IP address that falls into the BGP CIDR block.
              */
             public Builder localBgpIp(String localBgpIp) {
                 this.localBgpIp = localBgpIp;
@@ -692,7 +697,10 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * TunnelCidr.
+             * The BGP CIDR block. The CIDR block must fall within 169.254.0.0/16. The subnet mask of the CIDR block must be 30 bits in length. 
+             * <p>
+             * 
+             * > The BGP CIDR block of each tunnel on a VPN gateway must be unique.
              */
             public Builder tunnelCidr(String tunnelCidr) {
                 this.tunnelCidr = tunnelCidr;
@@ -829,7 +837,14 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             private String remoteId; 
 
             /**
-             * IkeAuthAlg.
+             * The authentication algorithm that is used in Phase 1 negotiations. 
+             * <p>
+             * 
+             * <props="intl"><ph>Valid values: **md5**,**sha1**,**sha256**,**sha384**,**sha512**.</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为普通型，则取值：**md5**、**sha1**、**sha256**、**sha384**、**sha512**。</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为国密型，则仅取值：**sm3**。</ph></props>
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -837,7 +852,14 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * IkeEncAlg.
+             * The encryption algorithm that is used in Phase 1 negotiations. 
+             * <p>
+             * 
+             * <props="intl"><ph>Valid values: **aes**,**aes192**,**aes256**,**des**或**3des**.</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为普通型，则取值为**aes**、**aes192**、**aes256**、**des**或**3des**。</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为国密型，则仅取值：**sm4**。</ph></props>
              */
             public Builder ikeEncAlg(String ikeEncAlg) {
                 this.ikeEncAlg = ikeEncAlg;
@@ -845,7 +867,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * IkeLifetime.
+             * The SA lifetime that is determined by Phase 1 negotiations. Unit: seconds. Valid values: **0** to **86400**.
              */
             public Builder ikeLifetime(Long ikeLifetime) {
                 this.ikeLifetime = ikeLifetime;
@@ -853,7 +875,13 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * IkeMode.
+             * The IKE negotiation mode. Valid values:
+             * <p>
+             * 
+             * - **main**: This mode offers higher security during negotiations. 
+             * - **aggressive**: This mode is faster and has a higher success rate. 
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为国密型，则协商模式仅支持**main**。</ph></props>
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -861,7 +889,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * IkePfs.
+             * The DH key exchange algorithm that is used in Phase 1 negotiations. Valid values: **group1**, **group2**, **group5**, and **group14**.
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -869,7 +897,10 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * IkeVersion.
+             * The version of the IKE protocol. Valid values: **ikev1** and **ikev2**. Compared with IKEv1, IKEv2 simplifies the SA negotiation process and is more suitable for scenarios in which multiple CIDR blocks are used.
+             * <p>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为国密型，则IKE版本仅支持**ikev1**。</ph></props>
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -877,7 +908,9 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * LocalId.
+             * The local identifier (Alibaba Cloud side) used for Phase 1 negotiation. The identifier cannot exceed 100 characters in length. The default identifier is the tunnel IP address.
+             * <p>
+             *  You can set **LocalId **to a fully qualified domain name (FQDN). In this case, we recommend that you set Negotiation Mode to **aggressive**.
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -885,7 +918,13 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * Psk.
+             * The pre-shared key that is used for authentication between the tunnel and peer. 
+             * <p>
+             * 
+             * - It must be 1 to 100 characters in length, and can contain letters, digits, and the following characters: ```~!\`@#$%^&*()_-+={}[]|;:\",.<>/?```
+             * - If you do not specify a pre-shared key, the system generates a random 16-bit string as the pre-shared key. You can call the [DescribeVpnConnection](~~120374~~) operation to query the pre-shared key that is generated by the system. 
+             * 
+             * > Make sure that the tunnels and peers use the same pre-shared key. Otherwise, tunnel communication cannot be established.
              */
             public Builder psk(String psk) {
                 this.psk = psk;
@@ -893,7 +932,9 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * RemoteId.
+             * The peer identifier used for Phase 1 negotiation. The identifier cannot exceed 100 characters in length. 
+             * <p>
+             * The default identifier is the IP address of the customer gateway. You can set **RemoteId** to an FQDN. In this case, we recommend that you set Negotiation Mode to **aggressive**.
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -970,7 +1011,14 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             private String ipsecPfs; 
 
             /**
-             * IpsecAuthAlg.
+             * The authentication algorithm that was used in Phase 2 negotiations.
+             * <p>
+             * 
+             * <props="intl"><ph>Valid values: **md5**,**sha1**,**sha256**,**sha384**,**sha512**.</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为普通型，则取值：**md5**、**sha1**、**sha256**、**sha384**、**sha512**。</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为国密型，则仅取值：**sm3**。</ph></props>
              */
             public Builder ipsecAuthAlg(String ipsecAuthAlg) {
                 this.ipsecAuthAlg = ipsecAuthAlg;
@@ -978,7 +1026,14 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * IpsecEncAlg.
+             * The encryption algorithm that is used in Phase 2 negotiations. 
+             * <p>
+             * 
+             * <props="intl"><ph>Valid values: **aes**,**aes192**,**aes256**,**des**或**3des**.</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为普通型，则取值为**aes**、**aes192**、**aes256**、**des**或**3des**。</ph></props>
+             * 
+             * <props="china"><ph>如果VPN网关实例类型为国密型，则仅取值：**sm4**。</ph></props>
              */
             public Builder ipsecEncAlg(String ipsecEncAlg) {
                 this.ipsecEncAlg = ipsecEncAlg;
@@ -986,7 +1041,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * IpsecLifetime.
+             * The SA lifetime that is determined by Phase 2 negotiations. Unit: seconds. Valid values: **0** to **86400**.
              */
             public Builder ipsecLifetime(Integer ipsecLifetime) {
                 this.ipsecLifetime = ipsecLifetime;
@@ -994,7 +1049,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * IpsecPfs.
+             * The DH key exchange algorithm that is used in Phase 2 negotiations. Valid values: **disabled**, **group1**, **group2**, **group5**, and **group14**.
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;
@@ -1107,11 +1162,11 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             private TunnelIpsecConfig tunnelIpsecConfig; 
 
             /**
-             * Specifies whether to enable the dead peer detection (DPD) feature. Valid values:
+             * Specifies whether to enable DPD for the tunnel. Valid values:
              * <p>
              * 
-             * *   **true:** enables the DPD feature. The initiator of the IPsec-VPN connection sends DPD packets to verify the peer is active. If no feedback is received from the peer within a specified period of time, the connection fails, and ISAKMP SA, IPsec SA, and security tunnel are deleted.
-             * *   **false:** disables the DPD feature. The initiator of the IPsec-VPN connection does not send DPD packets.
+             * - **true**: enables the DPD feature. The initiator of the IPsec-VPN connection sends DPD packets to verify the existence and availability of the peer. If no feedback is received from the peer within a specified period of time, the connection fails. ISAKMP SA and IPsec SA are deleted. The security tunnel is also deleted. 
+             * - **false**: disables DPD. The IPsec initiator does not send DPD packets.
              */
             public Builder enableDpd(Boolean enableDpd) {
                 this.enableDpd = enableDpd;
@@ -1119,11 +1174,11 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable NAT traversal. Valid values:
+             * Specifies whether to enable NAT traversal for the tunnel. Valid values:
              * <p>
              * 
-             * *   **true:** enables NAT traversal. After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec tunnel.
-             * *   **false:** disables NAT traversal.
+             * - **true**: yes After NAT traversal is enabled, the initiator does not check the UDP ports during IKE negotiations and can automatically discover NAT gateway devices along the IPsec tunnel. 
+             * - **false**: disables NAT traversal.
              */
             public Builder enableNatTraversal(Boolean enableNatTraversal) {
                 this.enableNatTraversal = enableNatTraversal;
@@ -1131,11 +1186,9 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * The peer CA certificate when a ShangMi (SM) VPN gateway is used to establish the IPsec-VPN connection.
+             * If the VPN gateway uses an SM certificate, you can modify the CA certificate used by the IPsec peer.
              * <p>
-             * 
-             * *   This parameter is required when an SM VPN gateway is used to establish the IPsec-VPN connection.
-             * *   You can ignore this parameter when a standard VPN gateway is used to establish the IPsec-VPN connection.
+             * If the VPN gateway does not use an SM certificate, this parameter is not supported.
              */
             public Builder remoteCaCertificate(String remoteCaCertificate) {
                 this.remoteCaCertificate = remoteCaCertificate;
@@ -1143,7 +1196,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * TunnelBgpConfig.
+             * The BGP configurations.
              */
             public Builder tunnelBgpConfig(TunnelBgpConfig tunnelBgpConfig) {
                 this.tunnelBgpConfig = tunnelBgpConfig;
@@ -1151,7 +1204,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * TunnelId.
+             * The tunnel ID.
              */
             public Builder tunnelId(String tunnelId) {
                 this.tunnelId = tunnelId;
@@ -1159,7 +1212,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * TunnelIkeConfig.
+             * The configuration of Phase 1 negotiations.
              */
             public Builder tunnelIkeConfig(TunnelIkeConfig tunnelIkeConfig) {
                 this.tunnelIkeConfig = tunnelIkeConfig;
@@ -1167,7 +1220,7 @@ public class ModifyVpnConnectionAttributeRequest extends Request {
             }
 
             /**
-             * TunnelIpsecConfig.
+             * The configuration of Phase 2 negotiations.
              */
             public Builder tunnelIpsecConfig(TunnelIpsecConfig tunnelIpsecConfig) {
                 this.tunnelIpsecConfig = tunnelIpsecConfig;
