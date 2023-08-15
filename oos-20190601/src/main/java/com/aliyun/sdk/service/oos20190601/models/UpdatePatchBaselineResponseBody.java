@@ -166,6 +166,9 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         @NameInMap("RejectedPatchesAction")
         private String rejectedPatchesAction;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("ShareType")
         private String shareType;
 
@@ -193,6 +196,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             this.operationSystem = builder.operationSystem;
             this.rejectedPatches = builder.rejectedPatches;
             this.rejectedPatchesAction = builder.rejectedPatchesAction;
+            this.resourceGroupId = builder.resourceGroupId;
             this.shareType = builder.shareType;
             this.sources = builder.sources;
             this.tags = builder.tags;
@@ -286,6 +290,13 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return shareType
          */
         public String getShareType() {
@@ -332,6 +343,7 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
             private String operationSystem; 
             private java.util.List < String > rejectedPatches; 
             private String rejectedPatchesAction; 
+            private String resourceGroupId; 
             private String shareType; 
             private java.util.List < String > sources; 
             private java.util.List < Tags> tags; 
@@ -423,6 +435,14 @@ public class UpdatePatchBaselineResponseBody extends TeaModel {
              */
             public Builder rejectedPatchesAction(String rejectedPatchesAction) {
                 this.rejectedPatchesAction = rejectedPatchesAction;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

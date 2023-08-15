@@ -93,6 +93,9 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
         @NameInMap("OperationSystem")
         private String operationSystem;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("ShareType")
         private String shareType;
 
@@ -110,6 +113,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             this.id = builder.id;
             this.name = builder.name;
             this.operationSystem = builder.operationSystem;
+            this.resourceGroupId = builder.resourceGroupId;
             this.shareType = builder.shareType;
             this.updatedBy = builder.updatedBy;
             this.updatedDate = builder.updatedDate;
@@ -173,6 +177,13 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return shareType
          */
         public String getShareType() {
@@ -201,6 +212,7 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String operationSystem; 
+            private String resourceGroupId; 
             private String shareType; 
             private String updatedBy; 
             private String updatedDate; 
@@ -258,6 +270,14 @@ public class RegisterDefaultPatchBaselineResponseBody extends TeaModel {
              */
             public Builder operationSystem(String operationSystem) {
                 this.operationSystem = operationSystem;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

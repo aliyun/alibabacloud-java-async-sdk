@@ -50,6 +50,10 @@ public class UpdatePatchBaselineRequest extends Request {
     private String rejectedPatchesAction;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("Sources")
     private java.util.List < String > sources;
 
@@ -68,6 +72,7 @@ public class UpdatePatchBaselineRequest extends Request {
         this.regionId = builder.regionId;
         this.rejectedPatches = builder.rejectedPatches;
         this.rejectedPatchesAction = builder.rejectedPatchesAction;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sources = builder.sources;
         this.tags = builder.tags;
     }
@@ -149,6 +154,13 @@ public class UpdatePatchBaselineRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sources
      */
     public java.util.List < String > getSources() {
@@ -172,6 +184,7 @@ public class UpdatePatchBaselineRequest extends Request {
         private String regionId; 
         private java.util.List < String > rejectedPatches; 
         private String rejectedPatchesAction; 
+        private String resourceGroupId; 
         private java.util.List < String > sources; 
         private java.util.List < Tags> tags; 
 
@@ -190,6 +203,7 @@ public class UpdatePatchBaselineRequest extends Request {
             this.regionId = request.regionId;
             this.rejectedPatches = request.rejectedPatches;
             this.rejectedPatchesAction = request.rejectedPatchesAction;
+            this.resourceGroupId = request.resourceGroupId;
             this.sources = request.sources;
             this.tags = request.tags;
         } 
@@ -274,6 +288,15 @@ public class UpdatePatchBaselineRequest extends Request {
         public Builder rejectedPatchesAction(String rejectedPatchesAction) {
             this.putQueryParameter("RejectedPatchesAction", rejectedPatchesAction);
             this.rejectedPatchesAction = rejectedPatchesAction;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
