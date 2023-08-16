@@ -1,0 +1,286 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.csas20230120.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateDynamicRouteRequest} extends {@link RequestModel}
+ *
+ * <p>CreateDynamicRouteRequest</p>
+ */
+public class CreateDynamicRouteRequest extends Request {
+    @Body
+    @NameInMap("ApplicationIds")
+    private java.util.List < String > applicationIds;
+
+    @Body
+    @NameInMap("ApplicationType")
+    @Validation(required = true)
+    private String applicationType;
+
+    @Body
+    @NameInMap("Description")
+    private String description;
+
+    @Body
+    @NameInMap("DynamicRouteType")
+    @Validation(required = true)
+    private String dynamicRouteType;
+
+    @Body
+    @NameInMap("Name")
+    @Validation(required = true)
+    private String name;
+
+    @Body
+    @NameInMap("NextHop")
+    @Validation(required = true)
+    private String nextHop;
+
+    @Body
+    @NameInMap("Priority")
+    @Validation(required = true)
+    private Integer priority;
+
+    @Body
+    @NameInMap("RegionIds")
+    @Validation(required = true)
+    private java.util.List < String > regionIds;
+
+    @Body
+    @NameInMap("Status")
+    @Validation(required = true)
+    private String status;
+
+    @Body
+    @NameInMap("TagIds")
+    private java.util.List < String > tagIds;
+
+    private CreateDynamicRouteRequest(Builder builder) {
+        super(builder);
+        this.applicationIds = builder.applicationIds;
+        this.applicationType = builder.applicationType;
+        this.description = builder.description;
+        this.dynamicRouteType = builder.dynamicRouteType;
+        this.name = builder.name;
+        this.nextHop = builder.nextHop;
+        this.priority = builder.priority;
+        this.regionIds = builder.regionIds;
+        this.status = builder.status;
+        this.tagIds = builder.tagIds;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CreateDynamicRouteRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return applicationIds
+     */
+    public java.util.List < String > getApplicationIds() {
+        return this.applicationIds;
+    }
+
+    /**
+     * @return applicationType
+     */
+    public String getApplicationType() {
+        return this.applicationType;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return dynamicRouteType
+     */
+    public String getDynamicRouteType() {
+        return this.dynamicRouteType;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * @return nextHop
+     */
+    public String getNextHop() {
+        return this.nextHop;
+    }
+
+    /**
+     * @return priority
+     */
+    public Integer getPriority() {
+        return this.priority;
+    }
+
+    /**
+     * @return regionIds
+     */
+    public java.util.List < String > getRegionIds() {
+        return this.regionIds;
+    }
+
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * @return tagIds
+     */
+    public java.util.List < String > getTagIds() {
+        return this.tagIds;
+    }
+
+    public static final class Builder extends Request.Builder<CreateDynamicRouteRequest, Builder> {
+        private java.util.List < String > applicationIds; 
+        private String applicationType; 
+        private String description; 
+        private String dynamicRouteType; 
+        private String name; 
+        private String nextHop; 
+        private Integer priority; 
+        private java.util.List < String > regionIds; 
+        private String status; 
+        private java.util.List < String > tagIds; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(CreateDynamicRouteRequest request) {
+            super(request);
+            this.applicationIds = request.applicationIds;
+            this.applicationType = request.applicationType;
+            this.description = request.description;
+            this.dynamicRouteType = request.dynamicRouteType;
+            this.name = request.name;
+            this.nextHop = request.nextHop;
+            this.priority = request.priority;
+            this.regionIds = request.regionIds;
+            this.status = request.status;
+            this.tagIds = request.tagIds;
+        } 
+
+        /**
+         * ApplicationIds.
+         */
+        public Builder applicationIds(java.util.List < String > applicationIds) {
+            this.putBodyParameter("ApplicationIds", applicationIds);
+            this.applicationIds = applicationIds;
+            return this;
+        }
+
+        /**
+         * ApplicationType.
+         */
+        public Builder applicationType(String applicationType) {
+            this.putBodyParameter("ApplicationType", applicationType);
+            this.applicationType = applicationType;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putBodyParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * DynamicRouteType.
+         */
+        public Builder dynamicRouteType(String dynamicRouteType) {
+            this.putBodyParameter("DynamicRouteType", dynamicRouteType);
+            this.dynamicRouteType = dynamicRouteType;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putBodyParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * NextHop.
+         */
+        public Builder nextHop(String nextHop) {
+            this.putBodyParameter("NextHop", nextHop);
+            this.nextHop = nextHop;
+            return this;
+        }
+
+        /**
+         * Priority.
+         */
+        public Builder priority(Integer priority) {
+            this.putBodyParameter("Priority", priority);
+            this.priority = priority;
+            return this;
+        }
+
+        /**
+         * RegionIds.
+         */
+        public Builder regionIds(java.util.List < String > regionIds) {
+            this.putBodyParameter("RegionIds", regionIds);
+            this.regionIds = regionIds;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putBodyParameter("Status", status);
+            this.status = status;
+            return this;
+        }
+
+        /**
+         * TagIds.
+         */
+        public Builder tagIds(java.util.List < String > tagIds) {
+            this.putBodyParameter("TagIds", tagIds);
+            this.tagIds = tagIds;
+            return this;
+        }
+
+        @Override
+        public CreateDynamicRouteRequest build() {
+            return new CreateDynamicRouteRequest(this);
+        } 
+
+    } 
+
+}
