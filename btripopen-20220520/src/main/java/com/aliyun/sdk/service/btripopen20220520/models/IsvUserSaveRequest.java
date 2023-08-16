@@ -93,12 +93,142 @@ public class IsvUserSaveRequest extends Request {
 
     } 
 
+    public static class CertList extends TeaModel {
+        @NameInMap("cert_expired_time")
+        private String certExpiredTime;
+
+        @NameInMap("cert_nation")
+        private String certNation;
+
+        @NameInMap("cert_no")
+        private String certNo;
+
+        @NameInMap("cert_type")
+        private Integer certType;
+
+        @NameInMap("nationality")
+        private String nationality;
+
+        private CertList(Builder builder) {
+            this.certExpiredTime = builder.certExpiredTime;
+            this.certNation = builder.certNation;
+            this.certNo = builder.certNo;
+            this.certType = builder.certType;
+            this.nationality = builder.nationality;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CertList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return certExpiredTime
+         */
+        public String getCertExpiredTime() {
+            return this.certExpiredTime;
+        }
+
+        /**
+         * @return certNation
+         */
+        public String getCertNation() {
+            return this.certNation;
+        }
+
+        /**
+         * @return certNo
+         */
+        public String getCertNo() {
+            return this.certNo;
+        }
+
+        /**
+         * @return certType
+         */
+        public Integer getCertType() {
+            return this.certType;
+        }
+
+        /**
+         * @return nationality
+         */
+        public String getNationality() {
+            return this.nationality;
+        }
+
+        public static final class Builder {
+            private String certExpiredTime; 
+            private String certNation; 
+            private String certNo; 
+            private Integer certType; 
+            private String nationality; 
+
+            /**
+             * cert_expired_time.
+             */
+            public Builder certExpiredTime(String certExpiredTime) {
+                this.certExpiredTime = certExpiredTime;
+                return this;
+            }
+
+            /**
+             * cert_nation.
+             */
+            public Builder certNation(String certNation) {
+                this.certNation = certNation;
+                return this;
+            }
+
+            /**
+             * cert_no.
+             */
+            public Builder certNo(String certNo) {
+                this.certNo = certNo;
+                return this;
+            }
+
+            /**
+             * cert_type.
+             */
+            public Builder certType(Integer certType) {
+                this.certType = certType;
+                return this;
+            }
+
+            /**
+             * nationality.
+             */
+            public Builder nationality(String nationality) {
+                this.nationality = nationality;
+                return this;
+            }
+
+            public CertList build() {
+                return new CertList(this);
+            } 
+
+        } 
+
+    }
     public static class UserList extends TeaModel {
+        @NameInMap("birthday")
+        private String birthday;
+
+        @NameInMap("cert_list")
+        private java.util.List < CertList> certList;
+
         @NameInMap("depart_id")
         private Long departId;
 
         @NameInMap("email")
         private String email;
+
+        @NameInMap("gender")
+        private String gender;
 
         @NameInMap("job_no")
         private String jobNo;
@@ -136,8 +266,11 @@ public class IsvUserSaveRequest extends Request {
         private String userName;
 
         private UserList(Builder builder) {
+            this.birthday = builder.birthday;
+            this.certList = builder.certList;
             this.departId = builder.departId;
             this.email = builder.email;
+            this.gender = builder.gender;
             this.jobNo = builder.jobNo;
             this.leaveStatus = builder.leaveStatus;
             this.managerUserId = builder.managerUserId;
@@ -160,6 +293,20 @@ public class IsvUserSaveRequest extends Request {
         }
 
         /**
+         * @return birthday
+         */
+        public String getBirthday() {
+            return this.birthday;
+        }
+
+        /**
+         * @return certList
+         */
+        public java.util.List < CertList> getCertList() {
+            return this.certList;
+        }
+
+        /**
          * @return departId
          */
         public Long getDepartId() {
@@ -171,6 +318,13 @@ public class IsvUserSaveRequest extends Request {
          */
         public String getEmail() {
             return this.email;
+        }
+
+        /**
+         * @return gender
+         */
+        public String getGender() {
+            return this.gender;
         }
 
         /**
@@ -251,8 +405,11 @@ public class IsvUserSaveRequest extends Request {
         }
 
         public static final class Builder {
+            private String birthday; 
+            private java.util.List < CertList> certList; 
             private Long departId; 
             private String email; 
+            private String gender; 
             private String jobNo; 
             private Integer leaveStatus; 
             private String managerUserId; 
@@ -264,6 +421,22 @@ public class IsvUserSaveRequest extends Request {
             private java.util.List < String > thirdDepartIdList; 
             private String userId; 
             private String userName; 
+
+            /**
+             * birthday.
+             */
+            public Builder birthday(String birthday) {
+                this.birthday = birthday;
+                return this;
+            }
+
+            /**
+             * cert_list.
+             */
+            public Builder certList(java.util.List < CertList> certList) {
+                this.certList = certList;
+                return this;
+            }
 
             /**
              * depart_id.
@@ -278,6 +451,14 @@ public class IsvUserSaveRequest extends Request {
              */
             public Builder email(String email) {
                 this.email = email;
+                return this;
+            }
+
+            /**
+             * gender.
+             */
+            public Builder gender(String gender) {
+                this.gender = gender;
                 return this;
             }
 
