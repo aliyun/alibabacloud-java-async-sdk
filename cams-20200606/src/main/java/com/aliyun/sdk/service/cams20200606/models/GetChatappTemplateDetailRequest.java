@@ -127,7 +127,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         } 
 
         /**
-         * ISV子客户的SpaceId
+         * CustSpaceId.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -136,7 +136,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * ISV客户WabaId, 后续会被弃用，请使用CustSpaceId
+         * CustWabaId.
          */
         public Builder custWabaId(String custWabaId) {
             this.putQueryParameter("CustWabaId", custWabaId);
@@ -145,7 +145,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * Isv校验码，用于校验子帐号是否由ISV授权
+         * IsvCode.
          */
         public Builder isvCode(String isvCode) {
             this.putQueryParameter("IsvCode", isvCode);
@@ -154,7 +154,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * 语言
+         * Language.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -177,7 +177,7 @@ public class GetChatappTemplateDetailRequest extends Request {
         }
 
         /**
-         * 模板的模板类型，取值为WHATSAPP/VIBER， 当未传递此值时，默认值为WHATSAPP
+         * TemplateType.
          */
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);

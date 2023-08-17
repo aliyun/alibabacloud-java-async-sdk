@@ -126,7 +126,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         } 
 
         /**
-         * ISV子客户的SpaceId
+         * CustSpaceId.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -135,7 +135,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * 是否使用Http方式接收回执（Y: 是， N: 否）
+         * HttpFlag.
          */
         public Builder httpFlag(String httpFlag) {
             this.putQueryParameter("HttpFlag", httpFlag);
@@ -144,7 +144,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * 号码
+         * PhoneNumber.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -153,7 +153,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * 是否使用队列方式接收回执（Y: 是， N: 否）
+         * QueueFlag.
          */
         public Builder queueFlag(String queueFlag) {
             this.putQueryParameter("QueueFlag", queueFlag);
@@ -162,7 +162,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * http方式状态报告接口回调地址
+         * StatusCallbackUrl.
          */
         public Builder statusCallbackUrl(String statusCallbackUrl) {
             this.putQueryParameter("StatusCallbackUrl", statusCallbackUrl);
@@ -171,7 +171,7 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
-         * http方式上行消息接口回调地址
+         * UpCallbackUrl.
          */
         public Builder upCallbackUrl(String upCallbackUrl) {
             this.putQueryParameter("UpCallbackUrl", upCallbackUrl);

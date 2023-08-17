@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryChatappPhoneNumbersResponseBody</p>
  */
 public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @NameInMap("Code")
     private String code;
 
@@ -25,6 +28,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     private String requestId;
 
     private QueryChatappPhoneNumbersResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
         this.phoneNumbers = builder.phoneNumbers;
@@ -37,6 +41,13 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
 
     public static QueryChatappPhoneNumbersResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -68,10 +79,19 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private String message; 
         private java.util.List < PhoneNumbers> phoneNumbers; 
         private String requestId; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * The HTTP status code returned.

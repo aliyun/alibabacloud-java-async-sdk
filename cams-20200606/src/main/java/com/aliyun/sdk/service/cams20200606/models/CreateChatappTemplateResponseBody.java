@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateChatappTemplateResponseBody</p>
  */
 public class CreateChatappTemplateResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @NameInMap("Code")
     private String code;
 
@@ -25,6 +28,7 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     private String requestId;
 
     private CreateChatappTemplateResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -37,6 +41,13 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
 
     public static CreateChatappTemplateResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -68,13 +79,22 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
 
         /**
-         * 返回结果 OK 为正常
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +110,7 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * 提示信息，当返回异常时有值
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +118,7 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +170,7 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * 模板Code
+             * TemplateCode.
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -158,7 +178,7 @@ public class CreateChatappTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * 模板名称
+             * TemplateName.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

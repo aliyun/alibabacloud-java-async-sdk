@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyPhoneBusinessProfileResponseBody</p>
  */
 public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @NameInMap("Code")
     private String code;
 
@@ -22,6 +25,7 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
     private String requestId;
 
     private ModifyPhoneBusinessProfileResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -33,6 +37,13 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
 
     public static ModifyPhoneBusinessProfileResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -57,16 +68,21 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private String message; 
         private String requestId; 
 
         /**
-         * The HTTP status code returned.
-         * <p>
-         * 
-         * *   A value of OK indicates that the call is successful.
-         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * The URL of the website.
          */
         public Builder code(String code) {
             this.code = code;
@@ -74,7 +90,7 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The ID of the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -82,7 +98,7 @@ public class ModifyPhoneBusinessProfileResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The websites.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

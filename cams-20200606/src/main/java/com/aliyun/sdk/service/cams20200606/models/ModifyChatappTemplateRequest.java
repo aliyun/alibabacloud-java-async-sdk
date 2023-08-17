@@ -44,6 +44,11 @@ public class ModifyChatappTemplateRequest extends Request {
     private String language;
 
     @Body
+    @NameInMap("MessageSendTtlSeconds")
+    @Validation(maximum = 600, minimum = 60)
+    private Integer messageSendTtlSeconds;
+
+    @Body
     @NameInMap("TemplateCode")
     @Validation(required = true)
     private String templateCode;
@@ -61,6 +66,7 @@ public class ModifyChatappTemplateRequest extends Request {
         this.example = builder.example;
         this.isvCode = builder.isvCode;
         this.language = builder.language;
+        this.messageSendTtlSeconds = builder.messageSendTtlSeconds;
         this.templateCode = builder.templateCode;
         this.templateType = builder.templateType;
     }
@@ -128,6 +134,13 @@ public class ModifyChatappTemplateRequest extends Request {
     }
 
     /**
+     * @return messageSendTtlSeconds
+     */
+    public Integer getMessageSendTtlSeconds() {
+        return this.messageSendTtlSeconds;
+    }
+
+    /**
      * @return templateCode
      */
     public String getTemplateCode() {
@@ -149,6 +162,7 @@ public class ModifyChatappTemplateRequest extends Request {
         private java.util.Map < String, String > example; 
         private String isvCode; 
         private String language; 
+        private Integer messageSendTtlSeconds; 
         private String templateCode; 
         private String templateType; 
 
@@ -165,12 +179,13 @@ public class ModifyChatappTemplateRequest extends Request {
             this.example = request.example;
             this.isvCode = request.isvCode;
             this.language = request.language;
+            this.messageSendTtlSeconds = request.messageSendTtlSeconds;
             this.templateCode = request.templateCode;
             this.templateType = request.templateType;
         } 
 
         /**
-         * Viber修改模板时，可以修改模板Category(Whatsapp修改时此参数无效）
+         * Category.
          */
         public Builder category(String category) {
             this.putBodyParameter("Category", category);
@@ -189,7 +204,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * ISV子客户的SpaceId
+         * CustSpaceId.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putBodyParameter("CustSpaceId", custSpaceId);
@@ -198,7 +213,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * ISV客户WabaId, 后续会被弃用，请使用CustSpaceId
+         * CustWabaId.
          */
         public Builder custWabaId(String custWabaId) {
             this.putBodyParameter("CustWabaId", custWabaId);
@@ -207,7 +222,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * 变量，KEY-VALUE结构
+         * Example.
          */
         public Builder example(java.util.Map < String, String > example) {
             String exampleShrink = shrink(example, "Example", "json");
@@ -217,7 +232,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * Isv校验码，用于校验子帐号是否由ISV授权
+         * IsvCode.
          */
         public Builder isvCode(String isvCode) {
             this.putBodyParameter("IsvCode", isvCode);
@@ -226,7 +241,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * 语言
+         * Language.
          */
         public Builder language(String language) {
             this.putBodyParameter("Language", language);
@@ -235,7 +250,16 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * 消息模板编码
+         * MessageSendTtlSeconds.
+         */
+        public Builder messageSendTtlSeconds(Integer messageSendTtlSeconds) {
+            this.putBodyParameter("MessageSendTtlSeconds", messageSendTtlSeconds);
+            this.messageSendTtlSeconds = messageSendTtlSeconds;
+            return this;
+        }
+
+        /**
+         * TemplateCode.
          */
         public Builder templateCode(String templateCode) {
             this.putBodyParameter("TemplateCode", templateCode);
@@ -244,7 +268,7 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
-         * 修改模板的模板类型，取值为WHATSAPP/VIBER， 当未传递此值时，默认值为WHATSAPP
+         * TemplateType.
          */
         public Builder templateType(String templateType) {
             this.putBodyParameter("TemplateType", templateType);
@@ -383,7 +407,7 @@ public class ModifyChatappTemplateRequest extends Request {
             private String urlType; 
 
             /**
-             * Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，Whatsap Autofill操作的按钮文本
+             * AutofillText.
              */
             public Builder autofillText(String autofillText) {
                 this.autofillText = autofillText;
@@ -391,7 +415,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Whatsapp模板，在Category为Marketing,并且Button type为QUICK_REPLY时有效，表示按钮为营销退订按钮，客户如果点击了此按钮，并且在chatapp平台上配置了发送控制操作，则后续Marketing消息则不会发送到客户
+             * IsOptOut.
              */
             public Builder isOptOut(Boolean isOptOut) {
                 this.isOptOut = isOptOut;
@@ -399,7 +423,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，表示Whatsapp调起应用的包名
+             * PackageName.
              */
             public Builder packageName(String packageName) {
                 this.packageName = packageName;
@@ -407,7 +431,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 号码
+             * PhoneNumber.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -415,7 +439,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Whatsapp模板，Category为Authentication，并且Button Type为ONE_TAP时必填，表示Whatsapp调起应用的签名Hash值
+             * SignatureHash.
              */
             public Builder signatureHash(String signatureHash) {
                 this.signatureHash = signatureHash;
@@ -423,7 +447,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 所发送消息的文本
+             * Text.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -431,9 +455,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 按钮类型
-             * <p>
-             * PHONE_NUMBER（电话）,URL（网页按钮）和QUICK_REPLY（快速回复）
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -441,7 +463,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 点击按钮后将访问的网址
+             * Url.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -449,7 +471,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 网址类型 static-静态dynamic-动态
+             * UrlType.
              */
             public Builder urlType(String urlType) {
                 this.urlType = urlType;
@@ -624,7 +646,7 @@ public class ModifyChatappTemplateRequest extends Request {
             private String url; 
 
             /**
-             * Whatsapp类型模板，Category为Authentication，并且Component Type为Body时有效，表示在Body上面显示不要将验证码信息提供给其它人的提示信息
+             * AddSecretRecommendation.
              */
             public Builder addSecretRecommendation(Boolean addSecretRecommendation) {
                 this.addSecretRecommendation = addSecretRecommendation;
@@ -632,7 +654,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 按钮
+             * Buttons.
              */
             public Builder buttons(java.util.List < Buttons> buttons) {
                 this.buttons = buttons;
@@ -640,7 +662,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 描述，当Type为Header，且Format为IMGAGE/DOCUMENT/VIDEO 可以增加描述
+             * Caption.
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -648,7 +670,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Whatsapp Authentication模板验证码有效期（分钟），只在Whatsapp类型消息，Category为Authentication并且Component Type为Footer时有效（此信息显示在Footer位置）
+             * CodeExpirationMinutes.
              */
             public Builder codeExpirationMinutes(Integer codeExpirationMinutes) {
                 this.codeExpirationMinutes = codeExpirationMinutes;
@@ -656,7 +678,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Viber视频消息的视频时长，取值范围 0 - 600
+             * Duration.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -664,7 +686,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 文件名称，当Type为Header，且Format为DOCUMENT时可以给文件指定名称
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -672,7 +694,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Viber文件消息的文件类型
+             * FileType.
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -680,9 +702,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 格式
-             * <p>
-             * TEXT-文本 IMGAGE-图片 DOCUMENT-文档 VIDEO-视频
+             * Format.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -690,7 +710,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 所发送消息的文本
+             * Text.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -698,7 +718,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * Viber带视频消息的缩略图
+             * ThumbUrl.
              */
             public Builder thumbUrl(String thumbUrl) {
                 this.thumbUrl = thumbUrl;
@@ -706,9 +726,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 组件类型
-             * <p>
-             * 值：BODY、HEADER、FOOTER 和 BUTTONS
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -716,7 +734,7 @@ public class ModifyChatappTemplateRequest extends Request {
             }
 
             /**
-             * 素材路径
+             * Url.
              */
             public Builder url(String url) {
                 this.url = url;

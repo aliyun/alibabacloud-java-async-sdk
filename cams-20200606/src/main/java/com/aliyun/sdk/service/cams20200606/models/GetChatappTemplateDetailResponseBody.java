@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetChatappTemplateDetailResponseBody</p>
  */
 public class GetChatappTemplateDetailResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @NameInMap("Code")
     private String code;
 
@@ -25,6 +28,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     private String requestId;
 
     private GetChatappTemplateDetailResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -37,6 +41,13 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
 
     public static GetChatappTemplateDetailResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -68,13 +79,22 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
 
         /**
-         * 返回结果 OK 为正常
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +102,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateDetail
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -98,7 +118,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -399,7 +419,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 电话号码
+             * PhoneNumber.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -415,7 +435,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 所发送消息的文本
+             * Text.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -423,7 +443,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 按钮类型
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -431,9 +451,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 当按钮类型是
-             * <p>
-             * URL 时有效
+             * Url.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -441,10 +459,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * WEB地址类型
-             * <p>
-             * static-静态
-             * dynamic-动态
+             * UrlType.
              */
             public Builder urlType(String urlType) {
                 this.urlType = urlType;
@@ -674,9 +689,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 仅适用于 BUTTONS 类型。
-             * <p>
-             * 与按钮相关的参数。
+             * Buttons.
              */
             public Builder buttons(java.util.List < Buttons> buttons) {
                 this.buttons = buttons;
@@ -684,7 +697,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 描述，当Type为Header，且Format为IMGAGE/DOCUMENT/VIDEO 可以增加描述
+             * Caption.
              */
             public Builder caption(String caption) {
                 this.caption = caption;
@@ -700,7 +713,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Viber视频消息的视频时长，取值范围 0 - 600
+             * Duration.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -708,7 +721,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 文件名称，当Type为Header，且Format为DOCUMENT时可以给文件指定名称
+             * FileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -716,7 +729,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Viber文件消息的文件类型
+             * FileType.
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;
@@ -724,7 +737,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 格式
+             * Format.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -764,7 +777,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 所发送消息的文本
+             * Text.
              */
             public Builder text(String text) {
                 this.text = text;
@@ -772,7 +785,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Viber带视频消息的缩略图
+             * ThumbUrl.
              */
             public Builder thumbUrl(String thumbUrl) {
                 this.thumbUrl = thumbUrl;
@@ -780,7 +793,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 组件类型
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -788,7 +801,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 素材路径
+             * Url.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -818,8 +831,15 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         @NameInMap("Language")
         private String language;
 
+        @NameInMap("MessageSendTtlSeconds")
+        @Validation(maximum = 600, minimum = 60)
+        private Integer messageSendTtlSeconds;
+
         @NameInMap("Name")
         private String name;
+
+        @NameInMap("QualityScore")
+        private String qualityScore;
 
         @NameInMap("TemplateCode")
         private String templateCode;
@@ -833,7 +853,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             this.components = builder.components;
             this.example = builder.example;
             this.language = builder.language;
+            this.messageSendTtlSeconds = builder.messageSendTtlSeconds;
             this.name = builder.name;
+            this.qualityScore = builder.qualityScore;
             this.templateCode = builder.templateCode;
             this.templateType = builder.templateType;
         }
@@ -882,10 +904,24 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return messageSendTtlSeconds
+         */
+        public Integer getMessageSendTtlSeconds() {
+            return this.messageSendTtlSeconds;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
+        }
+
+        /**
+         * @return qualityScore
+         */
+        public String getQualityScore() {
+            return this.qualityScore;
         }
 
         /**
@@ -908,12 +944,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             private java.util.List < Components> components; 
             private java.util.Map < String, String > example; 
             private String language; 
+            private Integer messageSendTtlSeconds; 
             private String name; 
+            private String qualityScore; 
             private String templateCode; 
             private String templateType; 
 
             /**
-             * 审核状态
+             * AuditStatus.
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -921,7 +959,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 模板分类
+             * Category.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -929,7 +967,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 消息模板组件
+             * Components.
              */
             public Builder components(java.util.List < Components> components) {
                 this.components = components;
@@ -937,7 +975,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 变量例子
+             * Example.
              */
             public Builder example(java.util.Map < String, String > example) {
                 this.example = example;
@@ -945,7 +983,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 语言
+             * Language.
              */
             public Builder language(String language) {
                 this.language = language;
@@ -953,7 +991,15 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 模板名称
+             * MessageSendTtlSeconds.
+             */
+            public Builder messageSendTtlSeconds(Integer messageSendTtlSeconds) {
+                this.messageSendTtlSeconds = messageSendTtlSeconds;
+                return this;
+            }
+
+            /**
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -961,7 +1007,15 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 模板编码
+             * QualityScore.
+             */
+            public Builder qualityScore(String qualityScore) {
+                this.qualityScore = qualityScore;
+                return this;
+            }
+
+            /**
+             * TemplateCode.
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -969,7 +1023,7 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             }
 
             /**
-             * 模板类型，取值为WHATSAPP/VIBER
+             * TemplateType.
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;

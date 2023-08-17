@@ -100,7 +100,7 @@ public class GetMigrationVerifyCodeRequest extends Request {
         } 
 
         /**
-         * ISV子客户的SpaceId
+         * CustSpaceId.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -109,7 +109,7 @@ public class GetMigrationVerifyCodeRequest extends Request {
         }
 
         /**
-         * 语言
+         * Locale.
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -118,7 +118,7 @@ public class GetMigrationVerifyCodeRequest extends Request {
         }
 
         /**
-         * 验证码方式（sms/voice)
+         * Method.
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -127,7 +127,7 @@ public class GetMigrationVerifyCodeRequest extends Request {
         }
 
         /**
-         * 号码
+         * PhoneNumber.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);

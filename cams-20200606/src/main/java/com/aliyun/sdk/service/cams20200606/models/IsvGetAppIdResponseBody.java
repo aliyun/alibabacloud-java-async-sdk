@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IsvGetAppIdResponseBody</p>
  */
 public class IsvGetAppIdResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @NameInMap("AppId")
     private String appId;
 
@@ -25,6 +28,7 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     private String requestId;
 
     private IsvGetAppIdResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.appId = builder.appId;
         this.code = builder.code;
         this.message = builder.message;
@@ -37,6 +41,13 @@ public class IsvGetAppIdResponseBody extends TeaModel {
 
     public static IsvGetAppIdResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -68,13 +79,22 @@ public class IsvGetAppIdResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String appId; 
         private String code; 
         private String message; 
         private String requestId; 
 
         /**
-         * 消息ID
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * The message ID.
          */
         public Builder appId(String appId) {
             this.appId = appId;
@@ -82,7 +102,11 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The HTTP status code returned.
+         * <p>
+         * 
+         * *   A value of OK indicates that the call is successful.
+         * *   Other values indicate that the call fails. For more information, see [Error codes](~~196974~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +114,7 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +122,7 @@ public class IsvGetAppIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

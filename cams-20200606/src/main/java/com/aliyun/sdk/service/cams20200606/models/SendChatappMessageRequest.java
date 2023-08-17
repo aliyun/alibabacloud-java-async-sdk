@@ -73,6 +73,10 @@ public class SendChatappMessageRequest extends Request {
     private java.util.List < String > payload;
 
     @Body
+    @NameInMap("ProductAction")
+    private ProductAction productAction;
+
+    @Body
     @NameInMap("Tag")
     private String tag;
 
@@ -122,6 +126,7 @@ public class SendChatappMessageRequest extends Request {
         this.language = builder.language;
         this.messageType = builder.messageType;
         this.payload = builder.payload;
+        this.productAction = builder.productAction;
         this.tag = builder.tag;
         this.taskId = builder.taskId;
         this.templateCode = builder.templateCode;
@@ -244,6 +249,13 @@ public class SendChatappMessageRequest extends Request {
     }
 
     /**
+     * @return productAction
+     */
+    public ProductAction getProductAction() {
+        return this.productAction;
+    }
+
+    /**
      * @return tag
      */
     public String getTag() {
@@ -314,6 +326,7 @@ public class SendChatappMessageRequest extends Request {
         private String language; 
         private String messageType; 
         private java.util.List < String > payload; 
+        private ProductAction productAction; 
         private String tag; 
         private String taskId; 
         private String templateCode; 
@@ -343,6 +356,7 @@ public class SendChatappMessageRequest extends Request {
             this.language = request.language;
             this.messageType = request.messageType;
             this.payload = request.payload;
+            this.productAction = request.productAction;
             this.tag = request.tag;
             this.taskId = request.taskId;
             this.templateCode = request.templateCode;
@@ -542,6 +556,16 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
+         * ProductAction.
+         */
+        public Builder productAction(ProductAction productAction) {
+            String productActionShrink = shrink(productAction, "ProductAction", "json");
+            this.putBodyParameter("ProductAction", productActionShrink);
+            this.productAction = productAction;
+            return this;
+        }
+
+        /**
          * The tag information of the Viber message.
          */
         public Builder tag(String tag) {
@@ -625,4 +649,167 @@ public class SendChatappMessageRequest extends Request {
 
     } 
 
+    public static class ProductItems extends TeaModel {
+        @NameInMap("ProductRetailerId")
+        private String productRetailerId;
+
+        private ProductItems(Builder builder) {
+            this.productRetailerId = builder.productRetailerId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProductItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return productRetailerId
+         */
+        public String getProductRetailerId() {
+            return this.productRetailerId;
+        }
+
+        public static final class Builder {
+            private String productRetailerId; 
+
+            /**
+             * ProductRetailerId.
+             */
+            public Builder productRetailerId(String productRetailerId) {
+                this.productRetailerId = productRetailerId;
+                return this;
+            }
+
+            public ProductItems build() {
+                return new ProductItems(this);
+            } 
+
+        } 
+
+    }
+    public static class Sections extends TeaModel {
+        @NameInMap("ProductItems")
+        private java.util.List < ProductItems> productItems;
+
+        @NameInMap("Title")
+        private String title;
+
+        private Sections(Builder builder) {
+            this.productItems = builder.productItems;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Sections create() {
+            return builder().build();
+        }
+
+        /**
+         * @return productItems
+         */
+        public java.util.List < ProductItems> getProductItems() {
+            return this.productItems;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private java.util.List < ProductItems> productItems; 
+            private String title; 
+
+            /**
+             * ProductItems.
+             */
+            public Builder productItems(java.util.List < ProductItems> productItems) {
+                this.productItems = productItems;
+                return this;
+            }
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public Sections build() {
+                return new Sections(this);
+            } 
+
+        } 
+
+    }
+    public static class ProductAction extends TeaModel {
+        @NameInMap("Sections")
+        private java.util.List < Sections> sections;
+
+        @NameInMap("ThumbnailProductRetailerId")
+        private String thumbnailProductRetailerId;
+
+        private ProductAction(Builder builder) {
+            this.sections = builder.sections;
+            this.thumbnailProductRetailerId = builder.thumbnailProductRetailerId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProductAction create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sections
+         */
+        public java.util.List < Sections> getSections() {
+            return this.sections;
+        }
+
+        /**
+         * @return thumbnailProductRetailerId
+         */
+        public String getThumbnailProductRetailerId() {
+            return this.thumbnailProductRetailerId;
+        }
+
+        public static final class Builder {
+            private java.util.List < Sections> sections; 
+            private String thumbnailProductRetailerId; 
+
+            /**
+             * Sections.
+             */
+            public Builder sections(java.util.List < Sections> sections) {
+                this.sections = sections;
+                return this;
+            }
+
+            /**
+             * ThumbnailProductRetailerId.
+             */
+            public Builder thumbnailProductRetailerId(String thumbnailProductRetailerId) {
+                this.thumbnailProductRetailerId = thumbnailProductRetailerId;
+                return this;
+            }
+
+            public ProductAction build() {
+                return new ProductAction(this);
+            } 
+
+        } 
+
+    }
 }

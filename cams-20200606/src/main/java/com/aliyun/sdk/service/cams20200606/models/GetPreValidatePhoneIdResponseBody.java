@@ -7,14 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyChatappTemplateResponseBody} extends {@link TeaModel}
+ * {@link GetPreValidatePhoneIdResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyChatappTemplateResponseBody</p>
+ * <p>GetPreValidatePhoneIdResponseBody</p>
  */
-public class ModifyChatappTemplateResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
-    private String accessDeniedDetail;
-
+public class GetPreValidatePhoneIdResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
@@ -27,8 +24,7 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private ModifyChatappTemplateResponseBody(Builder builder) {
-        this.accessDeniedDetail = builder.accessDeniedDetail;
+    private GetPreValidatePhoneIdResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -39,15 +35,8 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyChatappTemplateResponseBody create() {
+    public static GetPreValidatePhoneIdResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return accessDeniedDetail
-     */
-    public String getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
     }
 
     /**
@@ -79,19 +68,10 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
-
-        /**
-         * AccessDeniedDetail.
-         */
-        public Builder accessDeniedDetail(String accessDeniedDetail) {
-            this.accessDeniedDetail = accessDeniedDetail;
-            return this;
-        }
 
         /**
          * Code.
@@ -118,29 +98,29 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ModifyChatappTemplateResponseBody build() {
-            return new ModifyChatappTemplateResponseBody(this);
+        public GetPreValidatePhoneIdResponseBody build() {
+            return new GetPreValidatePhoneIdResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("TemplateCode")
-        private String templateCode;
+        @NameInMap("PhoneNumber")
+        private String phoneNumber;
 
-        @NameInMap("TemplateName")
-        private String templateName;
+        @NameInMap("PhoneNumberId")
+        private String phoneNumberId;
 
         private Data(Builder builder) {
-            this.templateCode = builder.templateCode;
-            this.templateName = builder.templateName;
+            this.phoneNumber = builder.phoneNumber;
+            this.phoneNumberId = builder.phoneNumberId;
         }
 
         public static Builder builder() {
@@ -152,36 +132,36 @@ public class ModifyChatappTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * @return templateCode
+         * @return phoneNumber
          */
-        public String getTemplateCode() {
-            return this.templateCode;
+        public String getPhoneNumber() {
+            return this.phoneNumber;
         }
 
         /**
-         * @return templateName
+         * @return phoneNumberId
          */
-        public String getTemplateName() {
-            return this.templateName;
+        public String getPhoneNumberId() {
+            return this.phoneNumberId;
         }
 
         public static final class Builder {
-            private String templateCode; 
-            private String templateName; 
+            private String phoneNumber; 
+            private String phoneNumberId; 
 
             /**
-             * TemplateCode.
+             * PhoneNumber.
              */
-            public Builder templateCode(String templateCode) {
-                this.templateCode = templateCode;
+            public Builder phoneNumber(String phoneNumber) {
+                this.phoneNumber = phoneNumber;
                 return this;
             }
 
             /**
-             * TemplateName.
+             * PhoneNumberId.
              */
-            public Builder templateName(String templateName) {
-                this.templateName = templateName;
+            public Builder phoneNumberId(String phoneNumberId) {
+                this.phoneNumberId = phoneNumberId;
                 return this;
             }
 

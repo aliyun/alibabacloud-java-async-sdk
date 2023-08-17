@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMigrationVerifyCodeResponseBody</p>
  */
 public class GetMigrationVerifyCodeResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @NameInMap("Code")
     private String code;
 
@@ -25,6 +28,7 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
     private String requestId;
 
     private GetMigrationVerifyCodeResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -37,6 +41,13 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
 
     public static GetMigrationVerifyCodeResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -68,10 +79,19 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * Code.
@@ -150,7 +170,7 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
             private String phoneNumber; 
 
             /**
-             * 号码ID
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -158,7 +178,7 @@ public class GetMigrationVerifyCodeResponseBody extends TeaModel {
             }
 
             /**
-             * 号码
+             * PhoneNumber.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;

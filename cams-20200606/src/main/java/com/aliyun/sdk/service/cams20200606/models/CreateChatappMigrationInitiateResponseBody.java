@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateChatappMigrationInitiateResponseBody</p>
  */
 public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @NameInMap("Code")
     private String code;
 
@@ -25,6 +28,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
     private String requestId;
 
     private CreateChatappMigrationInitiateResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -37,6 +41,13 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
 
     public static CreateChatappMigrationInitiateResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -68,10 +79,19 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * Code.
@@ -162,7 +182,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 号码ID
+             * Id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -170,7 +190,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
             }
 
             /**
-             * 号码
+             * PhoneNumber.
              */
             public Builder phoneNumber(String phoneNumber) {
                 this.phoneNumber = phoneNumber;
@@ -178,7 +198,7 @@ public class CreateChatappMigrationInitiateResponseBody extends TeaModel {
             }
 
             /**
-             * 号码状态
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

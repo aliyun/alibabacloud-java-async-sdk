@@ -154,7 +154,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         } 
 
         /**
-         * The address.
+         * The space ID of the user under the independent software vendor (ISV) account.
          */
         public Builder address(String address) {
             this.putQueryParameter("Address", address);
@@ -163,7 +163,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The space ID of the user under the independent software vendor (ISV) account.
+         * Modifies the business information of the account to which a specified phone number is bound.
          */
         public Builder custSpaceId(String custSpaceId) {
             this.putQueryParameter("CustSpaceId", custSpaceId);
@@ -172,7 +172,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The description.
+         * The address.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -181,7 +181,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The email address.
+         * The description.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -190,7 +190,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The phone number.
+         * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
          */
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
@@ -199,7 +199,10 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The URL of the profile picture.
+         * The industry.
+         * <p>
+         * 
+         * > Enum: {OTHER, AUTO, BEAUTY, APPAREL, EDU, ENTERTAIN, EVENT_PLAN, FINANCE, GROCERY, GOVT, HOTEL, HEALTH, NONPROFIT, PROF_SERVICES, RETAIL, TRAVEL, RESTAURANT}
          */
         public Builder profilePictureUrl(String profilePictureUrl) {
             this.putQueryParameter("ProfilePictureUrl", profilePictureUrl);
@@ -208,7 +211,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The industry.
+         * Sichuan
          */
         public Builder vertical(String vertical) {
             this.putQueryParameter("Vertical", vertical);
@@ -217,7 +220,7 @@ public class ModifyPhoneBusinessProfileRequest extends Request {
         }
 
         /**
-         * The websites.
+         * The email address.
          */
         public Builder websites(java.util.List < String > websites) {
             String websitesShrink = shrink(websites, "Websites", "json");
