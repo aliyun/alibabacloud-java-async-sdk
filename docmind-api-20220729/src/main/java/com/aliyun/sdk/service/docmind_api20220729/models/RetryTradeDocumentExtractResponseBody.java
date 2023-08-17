@@ -7,19 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetSingleDocumentExtractResultResponseBody} extends {@link TeaModel}
+ * {@link RetryTradeDocumentExtractResponseBody} extends {@link TeaModel}
  *
- * <p>GetSingleDocumentExtractResultResponseBody</p>
+ * <p>RetryTradeDocumentExtractResponseBody</p>
  */
-public class GetSingleDocumentExtractResultResponseBody extends TeaModel {
+public class RetryTradeDocumentExtractResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
-    @NameInMap("Completed")
-    private Boolean completed;
-
     @NameInMap("Data")
-    private Object data;
+    private Data data;
 
     @NameInMap("Message")
     private String message;
@@ -27,23 +24,18 @@ public class GetSingleDocumentExtractResultResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
-    private String status;
-
-    private GetSingleDocumentExtractResultResponseBody(Builder builder) {
+    private RetryTradeDocumentExtractResponseBody(Builder builder) {
         this.code = builder.code;
-        this.completed = builder.completed;
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
-        this.status = builder.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetSingleDocumentExtractResultResponseBody create() {
+    public static RetryTradeDocumentExtractResponseBody create() {
         return builder().build();
     }
 
@@ -55,16 +47,9 @@ public class GetSingleDocumentExtractResultResponseBody extends TeaModel {
     }
 
     /**
-     * @return completed
-     */
-    public Boolean getCompleted() {
-        return this.completed;
-    }
-
-    /**
      * @return data
      */
-    public Object getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -82,20 +67,11 @@ public class GetSingleDocumentExtractResultResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    /**
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
-    }
-
     public static final class Builder {
         private String code; 
-        private Boolean completed; 
-        private Object data; 
+        private Data data; 
         private String message; 
         private String requestId; 
-        private String status; 
 
         /**
          * Code.
@@ -106,17 +82,9 @@ public class GetSingleDocumentExtractResultResponseBody extends TeaModel {
         }
 
         /**
-         * Completed.
-         */
-        public Builder completed(Boolean completed) {
-            this.completed = completed;
-            return this;
-        }
-
-        /**
          * Data.
          */
-        public Builder data(Object data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
@@ -137,18 +105,51 @@ public class GetSingleDocumentExtractResultResponseBody extends TeaModel {
             return this;
         }
 
-        /**
-         * Status.
-         */
-        public Builder status(String status) {
-            this.status = status;
-            return this;
-        }
-
-        public GetSingleDocumentExtractResultResponseBody build() {
-            return new GetSingleDocumentExtractResultResponseBody(this);
+        public RetryTradeDocumentExtractResponseBody build() {
+            return new RetryTradeDocumentExtractResponseBody(this);
         } 
 
     } 
 
+    public static class Data extends TeaModel {
+        @NameInMap("Id")
+        private String id;
+
+        private Data(Builder builder) {
+            this.id = builder.id;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        public static final class Builder {
+            private String id; 
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            public Data build() {
+                return new Data(this);
+            } 
+
+        } 
+
+    }
 }

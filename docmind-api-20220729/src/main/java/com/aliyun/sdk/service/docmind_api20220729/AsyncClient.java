@@ -20,4 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetSingleDocumentExtractResultResponse> getSingleDocumentExtractResult(GetSingleDocumentExtractResultRequest request);
 
+    CompletableFuture<ReClassifyTradeDocumentExtractResponse> reClassifyTradeDocumentExtract(ReClassifyTradeDocumentExtractRequest request);
+
+    CompletableFuture<RetryTradeDocumentExtractResponse> retryTradeDocumentExtract(RetryTradeDocumentExtractRequest request);
+
 }
