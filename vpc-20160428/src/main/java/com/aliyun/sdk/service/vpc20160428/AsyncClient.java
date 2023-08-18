@@ -1421,8 +1421,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetNatGatewayAttributeResponse> getNatGatewayAttribute(GetNatGatewayAttributeRequest request);
 
-    CompletableFuture<GetNatGatewayConvertStatusResponse> getNatGatewayConvertStatus(GetNatGatewayConvertStatusRequest request);
-
     /**
       * You can call this API operation to query the status of outbound data transfer billing for the current account. For more information about outbound data transfer billing, see [Outbound data transfer billing](~~274385~~) and [Billing](~~54582~~).
       *
