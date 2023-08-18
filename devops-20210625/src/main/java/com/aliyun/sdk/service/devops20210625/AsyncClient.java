@@ -26,6 +26,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddWebhookResponse> addWebhook(AddWebhookRequest request);
 
+    CompletableFuture<CloseMergeRequestResponse> closeMergeRequest(CloseMergeRequestRequest request);
+
     CompletableFuture<CreateBranchResponse> createBranch(CreateBranchRequest request);
 
     CompletableFuture<CreateDeployKeyResponse> createDeployKey(CreateDeployKeyRequest request);
@@ -37,6 +39,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFlowTagGroupResponse> createFlowTagGroup(CreateFlowTagGroupRequest request);
 
     CompletableFuture<CreateHostGroupResponse> createHostGroup(CreateHostGroupRequest request);
+
+    CompletableFuture<CreateMergeRequestResponse> createMergeRequest(CreateMergeRequestRequest request);
 
     CompletableFuture<CreateOAuthTokenResponse> createOAuthToken(CreateOAuthTokenRequest request);
 
@@ -150,6 +154,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetHostGroupResponse> getHostGroup(GetHostGroupRequest request);
 
+    CompletableFuture<GetMergeRequestResponse> getMergeRequest(GetMergeRequestRequest request);
+
     CompletableFuture<GetOrganizationMemberResponse> getOrganizationMember(GetOrganizationMemberRequest request);
 
     CompletableFuture<GetPipelineResponse> getPipeline(GetPipelineRequest request);
@@ -213,6 +219,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListGroupRepositoriesResponse> listGroupRepositories(ListGroupRepositoriesRequest request);
 
     CompletableFuture<ListHostGroupsResponse> listHostGroups(ListHostGroupsRequest request);
+
+    CompletableFuture<ListMergeRequestsResponse> listMergeRequests(ListMergeRequestsRequest request);
 
     CompletableFuture<ListOrganizationMembersResponse> listOrganizationMembers(ListOrganizationMembersRequest request);
 
@@ -300,11 +308,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<LogVMDeployMachineResponse> logVMDeployMachine(LogVMDeployMachineRequest request);
 
+    CompletableFuture<MergeMergeRequestResponse> mergeMergeRequest(MergeMergeRequestRequest request);
+
     CompletableFuture<PassPipelineValidateResponse> passPipelineValidate(PassPipelineValidateRequest request);
 
     CompletableFuture<RefusePipelineValidateResponse> refusePipelineValidate(RefusePipelineValidateRequest request);
 
     CompletableFuture<ReleaseWorkspaceResponse> releaseWorkspace(ReleaseWorkspaceRequest request);
+
+    CompletableFuture<ReopenMergeRequestResponse> reopenMergeRequest(ReopenMergeRequestRequest request);
 
     CompletableFuture<ResetSshKeyResponse> resetSshKey(ResetSshKeyRequest request);
 
@@ -313,6 +325,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RetryPipelineJobRunResponse> retryPipelineJobRun(RetryPipelineJobRunRequest request);
 
     CompletableFuture<RetryVMDeployMachineResponse> retryVMDeployMachine(RetryVMDeployMachineRequest request);
+
+    CompletableFuture<ReviewMergeRequestResponse> reviewMergeRequest(ReviewMergeRequestRequest request);
 
     CompletableFuture<SkipPipelineJobRunResponse> skipPipelineJobRun(SkipPipelineJobRunRequest request);
 
@@ -341,6 +355,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateGroupMemberResponse> updateGroupMember(UpdateGroupMemberRequest request);
 
     CompletableFuture<UpdateHostGroupResponse> updateHostGroup(UpdateHostGroupRequest request);
+
+    CompletableFuture<UpdateMergeRequestResponse> updateMergeRequest(UpdateMergeRequestRequest request);
+
+    CompletableFuture<UpdateMergeRequestPersonnelResponse> updateMergeRequestPersonnel(UpdateMergeRequestPersonnelRequest request);
 
     CompletableFuture<UpdatePipelineResponse> updatePipeline(UpdatePipelineRequest request);
 
