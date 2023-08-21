@@ -94,6 +94,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteFolderResponse> deleteFolder(DeleteFolderRequest request);
 
+    CompletableFuture<DeleteInvalidCloudAccountRecordResponse> deleteInvalidCloudAccountRecord(DeleteInvalidCloudAccountRecordRequest request);
+
     CompletableFuture<DeleteMessageContactResponse> deleteMessageContact(DeleteMessageContactRequest request);
 
     /**
@@ -210,6 +212,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTrustedServiceStatusResponse> listTrustedServiceStatus(ListTrustedServiceStatusRequest request);
 
     CompletableFuture<MoveAccountResponse> moveAccount(MoveAccountRequest request);
+
+    CompletableFuture<PrecheckForConsolidatedBillingAccountResponse> precheckForConsolidatedBillingAccount(PrecheckForConsolidatedBillingAccountRequest request);
 
     /**
       * The delegated administrator account can be used to access the information of the resource directory and view the structure and members of the resource directory. The delegated administrator account can also be used to perform service-related management operations in the trusted service on behalf of the management account of the resource directory. When you call this operation, you must take note of the following limits:

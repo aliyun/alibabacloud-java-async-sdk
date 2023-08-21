@@ -97,7 +97,7 @@ public class ListTagKeysRequest extends Request {
         } 
 
         /**
-         * KeyFilter.
+         * The tag key for a fuzzy query.
          */
         public Builder keyFilter(String keyFilter) {
             this.putQueryParameter("KeyFilter", keyFilter);
@@ -106,7 +106,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return for a single request.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -115,7 +118,7 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -124,7 +127,10 @@ public class ListTagKeysRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type.
+         * <p>
+         * 
+         * The value Account indicates the members of the resource directory.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

@@ -112,7 +112,10 @@ public class ListTagValuesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return for a single request.
+         * <p>
+         * 
+         * Valid values: 1 to 100. Default value: 10.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -121,7 +124,7 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -130,7 +133,10 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type.
+         * <p>
+         * 
+         * The value Account indicates the members of the resource directory.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -139,7 +145,7 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The tag key. This parameter specifies a filter condition for the query.
          */
         public Builder tagKey(String tagKey) {
             this.putQueryParameter("TagKey", tagKey);
@@ -148,7 +154,7 @@ public class ListTagValuesRequest extends Request {
         }
 
         /**
-         * ValueFilter.
+         * The tag value for a fuzzy query.
          */
         public Builder valueFilter(String valueFilter) {
             this.putQueryParameter("ValueFilter", valueFilter);
