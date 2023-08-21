@@ -7,28 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDomainReportRequest} extends {@link RequestModel}
+ * {@link DescribeFileReportRequest} extends {@link RequestModel}
  *
- * <p>DescribeDomainReportRequest</p>
+ * <p>DescribeFileReportRequest</p>
  */
-public class DescribeDomainReportRequest extends Request {
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
-    private String domain;
-
+public class DescribeFileReportRequest extends Request {
     @Query
     @NameInMap("Field")
     private String field;
 
     @Query
+    @NameInMap("FileHash")
+    @Validation(required = true)
+    private String fileHash;
+
+    @Query
     @NameInMap("ServiceLang")
     private String serviceLang;
 
-    private DescribeDomainReportRequest(Builder builder) {
+    private DescribeFileReportRequest(Builder builder) {
         super(builder);
-        this.domain = builder.domain;
         this.field = builder.field;
+        this.fileHash = builder.fileHash;
         this.serviceLang = builder.serviceLang;
     }
 
@@ -36,20 +36,13 @@ public class DescribeDomainReportRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeDomainReportRequest create() {
+    public static DescribeFileReportRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return domain
-     */
-    public String getDomain() {
-        return this.domain;
     }
 
     /**
@@ -60,36 +53,34 @@ public class DescribeDomainReportRequest extends Request {
     }
 
     /**
+     * @return fileHash
+     */
+    public String getFileHash() {
+        return this.fileHash;
+    }
+
+    /**
      * @return serviceLang
      */
     public String getServiceLang() {
         return this.serviceLang;
     }
 
-    public static final class Builder extends Request.Builder<DescribeDomainReportRequest, Builder> {
-        private String domain; 
+    public static final class Builder extends Request.Builder<DescribeFileReportRequest, Builder> {
         private String field; 
+        private String fileHash; 
         private String serviceLang; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainReportRequest request) {
+        private Builder(DescribeFileReportRequest request) {
             super(request);
-            this.domain = request.domain;
             this.field = request.field;
+            this.fileHash = request.fileHash;
             this.serviceLang = request.serviceLang;
         } 
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
 
         /**
          * Field.
@@ -97,6 +88,15 @@ public class DescribeDomainReportRequest extends Request {
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
             this.field = field;
+            return this;
+        }
+
+        /**
+         * FileHash.
+         */
+        public Builder fileHash(String fileHash) {
+            this.putQueryParameter("FileHash", fileHash);
+            this.fileHash = fileHash;
             return this;
         }
 
@@ -110,8 +110,8 @@ public class DescribeDomainReportRequest extends Request {
         }
 
         @Override
-        public DescribeDomainReportRequest build() {
-            return new DescribeDomainReportRequest(this);
+        public DescribeFileReportRequest build() {
+            return new DescribeFileReportRequest(this);
         } 
 
     } 

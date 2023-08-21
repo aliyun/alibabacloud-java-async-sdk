@@ -7,28 +7,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDomainReportRequest} extends {@link RequestModel}
+ * {@link DescribeIpReportRequest} extends {@link RequestModel}
  *
- * <p>DescribeDomainReportRequest</p>
+ * <p>DescribeIpReportRequest</p>
  */
-public class DescribeDomainReportRequest extends Request {
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
-    private String domain;
-
+public class DescribeIpReportRequest extends Request {
     @Query
     @NameInMap("Field")
     private String field;
 
     @Query
+    @NameInMap("Ip")
+    @Validation(required = true)
+    private String ip;
+
+    @Query
     @NameInMap("ServiceLang")
     private String serviceLang;
 
-    private DescribeDomainReportRequest(Builder builder) {
+    private DescribeIpReportRequest(Builder builder) {
         super(builder);
-        this.domain = builder.domain;
         this.field = builder.field;
+        this.ip = builder.ip;
         this.serviceLang = builder.serviceLang;
     }
 
@@ -36,20 +36,13 @@ public class DescribeDomainReportRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeDomainReportRequest create() {
+    public static DescribeIpReportRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return domain
-     */
-    public String getDomain() {
-        return this.domain;
     }
 
     /**
@@ -60,36 +53,34 @@ public class DescribeDomainReportRequest extends Request {
     }
 
     /**
+     * @return ip
+     */
+    public String getIp() {
+        return this.ip;
+    }
+
+    /**
      * @return serviceLang
      */
     public String getServiceLang() {
         return this.serviceLang;
     }
 
-    public static final class Builder extends Request.Builder<DescribeDomainReportRequest, Builder> {
-        private String domain; 
+    public static final class Builder extends Request.Builder<DescribeIpReportRequest, Builder> {
         private String field; 
+        private String ip; 
         private String serviceLang; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainReportRequest request) {
+        private Builder(DescribeIpReportRequest request) {
             super(request);
-            this.domain = request.domain;
             this.field = request.field;
+            this.ip = request.ip;
             this.serviceLang = request.serviceLang;
         } 
-
-        /**
-         * Domain.
-         */
-        public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
-            this.domain = domain;
-            return this;
-        }
 
         /**
          * Field.
@@ -97,6 +88,15 @@ public class DescribeDomainReportRequest extends Request {
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
             this.field = field;
+            return this;
+        }
+
+        /**
+         * Ip.
+         */
+        public Builder ip(String ip) {
+            this.putQueryParameter("Ip", ip);
+            this.ip = ip;
             return this;
         }
 
@@ -110,8 +110,8 @@ public class DescribeDomainReportRequest extends Request {
         }
 
         @Override
-        public DescribeDomainReportRequest build() {
-            return new DescribeDomainReportRequest(this);
+        public DescribeIpReportRequest build() {
+            return new DescribeIpReportRequest(this);
         } 
 
     } 

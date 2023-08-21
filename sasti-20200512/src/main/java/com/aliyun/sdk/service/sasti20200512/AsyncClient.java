@@ -20,4 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDomainReportResponse> describeDomainReport(DescribeDomainReportRequest request);
 
+    CompletableFuture<DescribeFileReportResponse> describeFileReport(DescribeFileReportRequest request);
+
+    CompletableFuture<DescribeIpReportResponse> describeIpReport(DescribeIpReportRequest request);
+
 }
