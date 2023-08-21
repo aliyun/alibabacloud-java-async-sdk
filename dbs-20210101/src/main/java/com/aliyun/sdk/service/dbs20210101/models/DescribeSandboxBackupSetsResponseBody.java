@@ -110,7 +110,7 @@ public class DescribeSandboxBackupSetsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code.
+         * The error code returned if the request failed.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class DescribeSandboxBackupSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * The returned data. The following parameters are contained:
          * <p>
          * 
          * *   **backupSetTime**: the point in time when the snapshot was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
@@ -132,7 +132,7 @@ public class DescribeSandboxBackupSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The error code returned if the request failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -140,7 +140,7 @@ public class DescribeSandboxBackupSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -148,7 +148,7 @@ public class DescribeSandboxBackupSetsResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -164,7 +164,7 @@ public class DescribeSandboxBackupSetsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(String success) {
             this.success = success;

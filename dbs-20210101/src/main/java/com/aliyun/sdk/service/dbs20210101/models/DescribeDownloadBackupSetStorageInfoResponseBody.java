@@ -110,7 +110,7 @@ public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code.
+         * The error code returned if the request failed.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The error code returned if the request failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +134,7 @@ public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +142,7 @@ public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -161,8 +161,8 @@ public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
          * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   **true**: the request is successful.
-         * *   **false**: the request fails.
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -226,10 +226,10 @@ public class DescribeDownloadBackupSetStorageInfoResponseBody extends TeaModel {
             private String publicUrl; 
 
             /**
-             * The expiration time of the URL.
+             * The validity period of the URL.
              * <p>
              * 
-             * >  The return value is in the timestamp format.
+             * > This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder expirationTime(Long expirationTime) {
                 this.expirationTime = expirationTime;

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SupportDBTableRecoveryRequest</p>
  */
 public class SupportDBTableRecoveryRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceId")
     private String instanceId;
@@ -20,15 +24,11 @@ public class SupportDBTableRecoveryRequest extends Request {
     @NameInMap("RegionCode")
     private String regionCode;
 
-    @Query
-    @NameInMap("RegionId")
-    private String regionId;
-
     private SupportDBTableRecoveryRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.regionCode = builder.regionCode;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -45,6 +45,13 @@ public class SupportDBTableRecoveryRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -58,17 +65,10 @@ public class SupportDBTableRecoveryRequest extends Request {
         return this.regionCode;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<SupportDBTableRecoveryRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String regionCode; 
-        private String regionId; 
 
         private Builder() {
             super();
@@ -76,10 +76,19 @@ public class SupportDBTableRecoveryRequest extends Request {
 
         private Builder(SupportDBTableRecoveryRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.regionCode = request.regionCode;
-            this.regionId = request.regionId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -96,15 +105,6 @@ public class SupportDBTableRecoveryRequest extends Request {
         public Builder regionCode(String regionCode) {
             this.putQueryParameter("RegionCode", regionCode);
             this.regionCode = regionCode;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

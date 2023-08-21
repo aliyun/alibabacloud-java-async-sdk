@@ -110,7 +110,7 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code.
+         * The error code returned if the request fails.
          */
         public Builder code(String code) {
             this.code = code;
@@ -139,7 +139,7 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The error code returned if the request fails.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -147,7 +147,7 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request fails.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -155,7 +155,7 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request fails.
          */
         public Builder message(String message) {
             this.message = message;
@@ -171,7 +171,7 @@ public class DescribeSandboxInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(String success) {
             this.success = success;

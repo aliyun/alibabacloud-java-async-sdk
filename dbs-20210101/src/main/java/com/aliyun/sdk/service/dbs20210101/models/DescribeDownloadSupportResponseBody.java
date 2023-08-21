@@ -110,7 +110,7 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code.
+         * The error code returned if the request failed.
          */
         public Builder code(String code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request fails.
+         * The error code returned if the request failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -138,7 +138,7 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the request fails.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -146,7 +146,7 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -162,11 +162,11 @@ public class DescribeDownloadSupportResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(String success) {
             this.success = success;

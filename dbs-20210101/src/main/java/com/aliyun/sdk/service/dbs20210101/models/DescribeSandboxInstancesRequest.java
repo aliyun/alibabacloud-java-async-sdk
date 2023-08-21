@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSandboxInstancesRequest</p>
  */
 public class DescribeSandboxInstancesRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BackupPlanId")
     @Validation(required = true)
@@ -31,6 +35,7 @@ public class DescribeSandboxInstancesRequest extends Request {
 
     private DescribeSandboxInstancesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
@@ -48,6 +53,13 @@ public class DescribeSandboxInstancesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,6 +91,7 @@ public class DescribeSandboxInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSandboxInstancesRequest, Builder> {
+        private String regionId; 
         private String backupPlanId; 
         private String instanceId; 
         private String pageNumber; 
@@ -90,6 +103,7 @@ public class DescribeSandboxInstancesRequest extends Request {
 
         private Builder(DescribeSandboxInstancesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
@@ -97,10 +111,19 @@ public class DescribeSandboxInstancesRequest extends Request {
         } 
 
         /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to obtain the ID of the backup schedule.
          * <p>
          * 
-         * >  If your instance is an ApsaraDB RDS for MySQL instance, you can configure [automatic access to the instance](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.
+         * > If your instance is an ApsaraDB RDS for MySQL instance, you can [configure automatic access to a data source](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -109,7 +132,7 @@ public class DescribeSandboxInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the sandbox instance. You can call the [CreateSandboxInstance](~~437252~~) parameter to obtain the ID of the sandbox instance.
+         * The ID of the sandbox instance. You can call the [CreateSandboxInstance](~~437252~~) operation to obtain the ID of the sandbox instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,7 +153,7 @@ public class DescribeSandboxInstancesRequest extends Request {
          * The number of entries to return on each page. Valid values:
          * <p>
          * 
-         * *   30 (default value)
+         * *   30\. This is the default value.
          * *   50
          * *   100
          */

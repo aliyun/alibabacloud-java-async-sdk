@@ -110,7 +110,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code.
+         * The error code returned if the request fails.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the download tasks.
+         * The details of the download task.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The error code returned if the request fails.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +134,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request fails.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +142,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request fails.
          */
         public Builder message(String message) {
             this.message = message;
@@ -158,11 +158,11 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -362,7 +362,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the databases.
+             * The databases.
              */
             public Builder dbList(String dbList) {
                 this.dbList = dbList;
@@ -370,15 +370,15 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the download task. Valid values:
+             * The state of the download task. Valid values:
              * <p>
              * 
-             * *   **Initializing**: The download task is being initialized.
-             * *   **queuing**: The download task is queuing.
-             * *   **running**: The download task is running.
-             * *   **failed**: The download task fails.
-             * *   **finished**: The download task is complete.
-             * *   **expired**: The download task expires.
+             * *   **Initializing**: The download task was being initialized.
+             * *   **queuing**: The download task was queuing.
+             * *   **running**: The download task was running.
+             * *   **failed**: The download task failed.
+             * *   **finished**: The download task was complete.
+             * *   **expired**: The download task expired.
              */
             public Builder downloadStatus(String downloadStatus) {
                 this.downloadStatus = downloadStatus;
@@ -601,7 +601,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             private Long totalPages; 
 
             /**
-             * The details of the download tasks.
+             * The details of the download task.
              */
             public Builder content(Content content) {
                 this.content = content;
@@ -609,7 +609,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The extra description of the download task.
+             * The extra description of the download tasks.
              */
             public Builder extra(String extra) {
                 this.extra = extra;
@@ -617,7 +617,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page. The value must be an integer that is greater than 0. Default value: 1.
              */
             public Builder pageNumber(Long pageNumber) {
                 this.pageNumber = pageNumber;
@@ -625,7 +625,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -633,7 +633,7 @@ public class DescribeDownloadTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TotalElements.
+             * The total number of full backup tasks.
              */
             public Builder totalElements(Long totalElements) {
                 this.totalElements = totalElements;

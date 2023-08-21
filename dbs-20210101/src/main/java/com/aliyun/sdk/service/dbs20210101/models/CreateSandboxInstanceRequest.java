@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSandboxInstanceRequest</p>
  */
 public class CreateSandboxInstanceRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BackupPlanId")
     @Validation(required = true)
@@ -53,8 +57,13 @@ public class CreateSandboxInstanceRequest extends Request {
     @NameInMap("VpcSwitchId")
     private String vpcSwitchId;
 
+    @Query
+    @NameInMap("ZoneId")
+    private String zoneId;
+
     private CreateSandboxInstanceRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.backupSetId = builder.backupSetId;
         this.restoreTime = builder.restoreTime;
@@ -65,6 +74,7 @@ public class CreateSandboxInstanceRequest extends Request {
         this.sandboxUser = builder.sandboxUser;
         this.vpcId = builder.vpcId;
         this.vpcSwitchId = builder.vpcSwitchId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -78,6 +88,13 @@ public class CreateSandboxInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -150,7 +167,15 @@ public class CreateSandboxInstanceRequest extends Request {
         return this.vpcSwitchId;
     }
 
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
     public static final class Builder extends Request.Builder<CreateSandboxInstanceRequest, Builder> {
+        private String regionId; 
         private String backupPlanId; 
         private String backupSetId; 
         private String restoreTime; 
@@ -161,6 +186,7 @@ public class CreateSandboxInstanceRequest extends Request {
         private String sandboxUser; 
         private String vpcId; 
         private String vpcSwitchId; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -168,6 +194,7 @@ public class CreateSandboxInstanceRequest extends Request {
 
         private Builder(CreateSandboxInstanceRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.backupSetId = request.backupSetId;
             this.restoreTime = request.restoreTime;
@@ -178,13 +205,23 @@ public class CreateSandboxInstanceRequest extends Request {
             this.sandboxUser = request.sandboxUser;
             this.vpcId = request.vpcId;
             this.vpcSwitchId = request.vpcSwitchId;
+            this.zoneId = request.zoneId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to obtain the ID of the backup schedule.
          * <p>
          * 
-         * >  If your instance is an ApsaraDB RDS for MySQL instance, you can configure [automatic access to the instance](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.
+         * > If your instance is an ApsaraDB RDS for MySQL instance, you can [configure automatic access to a data source](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -196,7 +233,7 @@ public class CreateSandboxInstanceRequest extends Request {
          * The ID of the backup set to be restored, which is the point in time when a snapshot was created. You can call the [DescribeSandboxBackupSets](~~437256~~) operation to obtain the ID.
          * <p>
          * 
-         * >  You need to specify only one of the **BackupSetId** and **RestoreTime** parameters.
+         * > You need to specify only one of the **BackupSetId** and **RestoreTime** parameters.
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -214,7 +251,7 @@ public class CreateSandboxInstanceRequest extends Request {
         }
 
         /**
-         * The name of the sandbox instance.
+         * The custom name of the sandbox instance.
          */
         public Builder sandboxInstanceName(String sandboxInstanceName) {
             this.putQueryParameter("SandboxInstanceName", sandboxInstanceName);
@@ -244,7 +281,7 @@ public class CreateSandboxInstanceRequest extends Request {
          * *   **MYSQL\_8C\_16M_SD**: 8 CPU cores and 16 GB of memory.
          * *   **MYSQL\_8C\_32M_SD**: 8 CPU cores and 32 GB of memory.
          * 
-         * >  Different specifications have little impact on the recovery speed. High-specification instances provide better performance after restoration. For more information, see [Sandbox instance fees](~~201466~~).
+         * > Different specifications have little impact on the recovery speed. High-specification instances provide better performance after restoration. For more information, see [DBS sandbox fees](~~201466~~).
          */
         public Builder sandboxSpecification(String sandboxSpecification) {
             this.putQueryParameter("SandboxSpecification", sandboxSpecification);
@@ -265,7 +302,7 @@ public class CreateSandboxInstanceRequest extends Request {
          * The privileged account created in the sandbox instance.
          * <p>
          * 
-         * *   After you specify this parameter, the system creates a privileged account in the sandbox instance. The account has the permissions on all databases in the instance.
+         * *   After you specify this parameter, the system creates a privileged account in the sandbox instance. The account is granted the permissions on all databases in the instance.
          * 
          * The account of the source database is retained in the sandbox instance.
          * 
@@ -281,7 +318,7 @@ public class CreateSandboxInstanceRequest extends Request {
          * The ID of the virtual private cloud (VPC) that is used to connect to the sandbox instance. If you want to connect to the sandbox instance by using Elastic Compute Service (ECS) instances, you must set this parameter to the VPC in which the ECS instances reside.
          * <p>
          * 
-         * >  You can set this parameter if you want to use it in a recovery drill scenario.
+         * > You can set this parameter if you want to use it in a recovery drill scenario.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -295,6 +332,15 @@ public class CreateSandboxInstanceRequest extends Request {
         public Builder vpcSwitchId(String vpcSwitchId) {
             this.putQueryParameter("VpcSwitchId", vpcSwitchId);
             this.vpcSwitchId = vpcSwitchId;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 

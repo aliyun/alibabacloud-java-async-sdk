@@ -110,7 +110,7 @@ public class CreateDownloadResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class CreateDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -126,7 +126,7 @@ public class CreateDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The error code returned if the request failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +134,7 @@ public class CreateDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +142,7 @@ public class CreateDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -158,11 +158,11 @@ public class CreateDownloadResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   **true**: The request is successful.
-         * *   **false**: The request fails.
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -346,7 +346,7 @@ public class CreateDownloadResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The point in time of the backup set if the task is used to download a backup set at a specific point in time. The value is a timestamp.
+             * The point in time of the backup set if the task is used to download a backup set at a specific point in time. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder backupSetTime(Long backupSetTime) {
                 this.backupSetTime = backupSetTime;
@@ -362,7 +362,7 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The database and table information that is returned if the download task is a database and table filtering task.
+             * The database and table information that is returned if databases and tables are filtered by the download task.
              */
             public Builder dbList(String dbList) {
                 this.dbList = dbList;
@@ -370,17 +370,17 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the download task. Valid values:
+             * The state of the download task. Valid values:
              * <p>
              * 
-             * *   Initializing: The download task is being initialized.
-             * *   queuing: The download task is queuing.
-             * *   running: The download task is running.
-             * *   failed: The download task fails.
-             * *   finished: The download task is complete.
-             * *   expired: The download task expires.
+             * *   initializing: The download task was being initialized.
+             * *   queuing: The download task was queuing.
+             * *   running: The download task was running.
+             * *   failed: The download task failed.
+             * *   finished: The download task was complete.
+             * *   expired: The download task expired.
              * 
-             * >  The download task expires in three days after the task is complete if the TargetType parameter is set to URL.
+             * > If the TargetType parameter is set to URL, the download task expires in three days after the task is complete.
              */
             public Builder downloadStatus(String downloadStatus) {
                 this.downloadStatus = downloadStatus;
@@ -388,7 +388,7 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of output data. Unit: bytes.
+             * The size of the downloaded data. Unit: bytes.
              */
             public Builder exportDataSize(Long exportDataSize) {
                 this.exportDataSize = exportDataSize;
@@ -404,7 +404,7 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the download task was created. The value is a timestamp.
+             * The time when the download task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -412,7 +412,7 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of data that is processed. Unit: bytes.
+             * The size of the processed data. Unit: bytes.
              */
             public Builder importDataSize(Long importDataSize) {
                 this.importDataSize = importDataSize;
@@ -423,7 +423,7 @@ public class CreateDownloadResponseBody extends TeaModel {
              * The number of tables that have been downloaded and the total number of tables to be downloaded.
              * <p>
              * 
-             * >  If the task is in the preparation stage, 0/0 is returned.
+             * > If the task is in the preparation stage, 0/0 is returned.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -439,10 +439,10 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The destination path of the downloaded data.
+             * The destination path to which the backup set is downloaded.
              * <p>
              * 
-             * >  This parameter is returned if the TargetType parameter is set to OSS.
+             * > This parameter is returned if the TargetType parameter is set to OSS.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -450,7 +450,7 @@ public class CreateDownloadResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the method in which the backup set is downloaded.
+             * The type of the destination to which the backup set is downloaded.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

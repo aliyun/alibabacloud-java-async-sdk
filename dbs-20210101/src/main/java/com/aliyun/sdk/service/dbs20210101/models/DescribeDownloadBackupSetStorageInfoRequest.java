@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDownloadBackupSetStorageInfoRequest</p>
  */
 public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BackupSetId")
     private String backupSetId;
@@ -36,6 +40,7 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
 
     private DescribeDownloadBackupSetStorageInfoRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupSetId = builder.backupSetId;
         this.duration = builder.duration;
         this.instanceName = builder.instanceName;
@@ -54,6 +59,13 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -92,6 +104,7 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDownloadBackupSetStorageInfoRequest, Builder> {
+        private String regionId; 
         private String backupSetId; 
         private String duration; 
         private String instanceName; 
@@ -104,12 +117,22 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
 
         private Builder(DescribeDownloadBackupSetStorageInfoRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupSetId = request.backupSetId;
             this.duration = request.duration;
             this.instanceName = request.instanceName;
             this.regionCode = request.regionCode;
             this.taskId = request.taskId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * The ID of the backup set.
@@ -121,12 +144,12 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
         }
 
         /**
-         * Set this parameter if the Download Destination parameter is set to URL.
+         * The validity period of the URL that is used as the download destination. Take note of the following items:
          * <p>
          * 
-         * *   By default, a URL is valid for 2 hours, which is equal to 7,200 seconds.
-         * *   The valid duration is 5 minutes (300 seconds) to 1 day (86,400 seconds).
-         * *   Before you set this parameter, convert the time to seconds. For example, if you want to set the validity period of the link to 5 minutes, enter 300.
+         * *   Default value: 7200. This means that the URL is valid for 2 hours by default.
+         * *   Valid values: 300 to 86400. Unit: seconds. This means that you can specify a validity period in the range of 5 minutes to 1 day.
+         * *   Before you specify this parameter, convert the validity period to seconds. For example, if you want to set the validity period of the URL to 5 minutes, enter 300.
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -138,7 +161,7 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
          * The ID of the instance.
          * <p>
          * 
-         * >  The **BackupSetId** parameter is required if you specify the **InstanceName** parameter.
+         * > The **BackupSetId** parameter is required if you specify the **InstanceName** parameter.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -147,7 +170,7 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.
+         * The ID of the region in which the instance resides. You can call the [DescribeDBInstanceAttribute](~~26231~~) operation to query the region ID of the instance.
          */
         public Builder regionCode(String regionCode) {
             this.putQueryParameter("RegionCode", regionCode);
@@ -160,7 +183,7 @@ public class DescribeDownloadBackupSetStorageInfoRequest extends Request {
          * <p>
          * 
          * *   The **BackupSetId** and **InstanceName** parameters are required if you do not specify the **TaskId** parameter.
-         * *   You can find the instance and click **Backup and Restoration**. On the **Backup Download** tab, view the **task ID**.
+         * *   You can go to the instance details page in the Alibaba Cloud Management Console and click **Backup and Restoration** in the left-side navigation pane. On the **Backup Download** tab, view the task ID.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

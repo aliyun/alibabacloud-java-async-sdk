@@ -110,7 +110,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +118,11 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether the resource was successfully moved. Valid values:
+         * <p>
+         * 
+         * *   **true**: The resource was successfully moved.
+         * *   **false**: The resource failed to be moved.
          */
         public Builder data(String data) {
             this.data = data;
@@ -126,7 +130,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrCode.
+         * The error code returned if the request failed.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +138,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ErrMessage.
+         * The error message returned if the request failed.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +146,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The additional information.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +154,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +162,11 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The request was successful.
+         * *   **false**: The request failed.
          */
         public Builder success(String success) {
             this.success = success;

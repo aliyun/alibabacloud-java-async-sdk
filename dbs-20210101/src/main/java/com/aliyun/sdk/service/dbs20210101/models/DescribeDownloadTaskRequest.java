@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDownloadTaskRequest</p>
  */
 public class DescribeDownloadTaskRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BackupSetId")
     private String backupSetId;
@@ -63,6 +67,7 @@ public class DescribeDownloadTaskRequest extends Request {
 
     private DescribeDownloadTaskRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupSetId = builder.backupSetId;
         this.currentPage = builder.currentPage;
         this.datasourceId = builder.datasourceId;
@@ -88,6 +93,13 @@ public class DescribeDownloadTaskRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -175,6 +187,7 @@ public class DescribeDownloadTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDownloadTaskRequest, Builder> {
+        private String regionId; 
         private String backupSetId; 
         private String currentPage; 
         private String datasourceId; 
@@ -194,6 +207,7 @@ public class DescribeDownloadTaskRequest extends Request {
 
         private Builder(DescribeDownloadTaskRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupSetId = request.backupSetId;
             this.currentPage = request.currentPage;
             this.datasourceId = request.datasourceId;
@@ -209,7 +223,16 @@ public class DescribeDownloadTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set generated when you create the download task. You can call the [DescribeBackups](~~26273~~) operation to query the backup set ID. Unit: bytes.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the backup set generated when you create a download task. You can call the [DescribeBackups](~~26273~~) operation to query the ID.
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -246,6 +269,9 @@ public class DescribeDownloadTaskRequest extends Request {
 
         /**
          * The ID of the instance.
+         * <p>
+         * 
+         * > This parameter is required.
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -254,7 +280,7 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The column based on which the entries are sorted. By default, the entries are sorted by the creation time. Set the value to **gmt_create**.
+         * The column based on which the entries are sorted. By default, the entries are sorted by the time when the download task was created. Set the value to **gmt_create**.
          */
         public Builder orderColumn(String orderColumn) {
             this.putQueryParameter("OrderColumn", orderColumn);
@@ -266,8 +292,8 @@ public class DescribeDownloadTaskRequest extends Request {
          * The order in which you want to sort the entries. Valid values:
          * <p>
          * 
-         * *   **asc**: sorts the retrieved entries by time in ascending order.
-         * *   **desc**: sorts the retrieved entries by time in descending order. This is the default value.
+         * *   **asc**: the ascending order.
+         * *   **desc**: the descending order. This is the default value.
          */
         public Builder orderDirect(String orderDirect) {
             this.putQueryParameter("OrderDirect", orderDirect);
@@ -303,7 +329,7 @@ public class DescribeDownloadTaskRequest extends Request {
         }
 
         /**
-         * The status of the download task. Valid values:
+         * The state of the download task. Valid values:
          * <p>
          * 
          * *   **Initializing**: The download task is being initialized.
@@ -311,6 +337,7 @@ public class DescribeDownloadTaskRequest extends Request {
          * *   **running**: The download task is running.
          * *   **failed**: The download task fails.
          * *   **finished**: The download task is complete.
+         * *   **expired**: The download task expires.
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

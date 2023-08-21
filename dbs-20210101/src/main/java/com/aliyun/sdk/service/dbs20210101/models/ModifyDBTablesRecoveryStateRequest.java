@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBTablesRecoveryStateRequest</p>
  */
 public class ModifyDBTablesRecoveryStateRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("Category")
     private String category;
@@ -25,19 +29,15 @@ public class ModifyDBTablesRecoveryStateRequest extends Request {
     private String regionCode;
 
     @Query
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
     @NameInMap("Retention")
     private String retention;
 
     private ModifyDBTablesRecoveryStateRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.category = builder.category;
         this.instanceId = builder.instanceId;
         this.regionCode = builder.regionCode;
-        this.regionId = builder.regionId;
         this.retention = builder.retention;
     }
 
@@ -52,6 +52,13 @@ public class ModifyDBTablesRecoveryStateRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -76,13 +83,6 @@ public class ModifyDBTablesRecoveryStateRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return retention
      */
     public String getRetention() {
@@ -90,10 +90,10 @@ public class ModifyDBTablesRecoveryStateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDBTablesRecoveryStateRequest, Builder> {
+        private String regionId; 
         private String category; 
         private String instanceId; 
         private String regionCode; 
-        private String regionId; 
         private String retention; 
 
         private Builder() {
@@ -102,12 +102,21 @@ public class ModifyDBTablesRecoveryStateRequest extends Request {
 
         private Builder(ModifyDBTablesRecoveryStateRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.category = request.category;
             this.instanceId = request.instanceId;
             this.regionCode = request.regionCode;
-            this.regionId = request.regionId;
             this.retention = request.retention;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Category.
@@ -133,15 +142,6 @@ public class ModifyDBTablesRecoveryStateRequest extends Request {
         public Builder regionCode(String regionCode) {
             this.putQueryParameter("RegionCode", regionCode);
             this.regionCode = regionCode;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSandboxBackupSetsRequest</p>
  */
 public class DescribeSandboxBackupSetsRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BackupPlanId")
     @Validation(required = true)
@@ -31,6 +35,7 @@ public class DescribeSandboxBackupSetsRequest extends Request {
 
     private DescribeSandboxBackupSetsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.backupPlanId = builder.backupPlanId;
         this.backupSetId = builder.backupSetId;
         this.pageNumber = builder.pageNumber;
@@ -48,6 +53,13 @@ public class DescribeSandboxBackupSetsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,6 +91,7 @@ public class DescribeSandboxBackupSetsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeSandboxBackupSetsRequest, Builder> {
+        private String regionId; 
         private String backupPlanId; 
         private String backupSetId; 
         private String pageNumber; 
@@ -90,6 +103,7 @@ public class DescribeSandboxBackupSetsRequest extends Request {
 
         private Builder(DescribeSandboxBackupSetsRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.backupPlanId = request.backupPlanId;
             this.backupSetId = request.backupSetId;
             this.pageNumber = request.pageNumber;
@@ -97,10 +111,19 @@ public class DescribeSandboxBackupSetsRequest extends Request {
         } 
 
         /**
-         * The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to obtain the ID of the backup schedule.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the backup schedule. You can call the [DescribeBackupPlanList](~~437215~~) operation to query the ID of the backup schedule.
          * <p>
          * 
-         * >  If your instance is an ApsaraDB RDS for MySQL instance, you can configure [automatic access to the instance](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.
+         * > If your instance is an ApsaraDB RDS for MySQL instance, you can [configure automatic access to a data source](~~193091~~) to automatically add the instance to DBS and obtain the ID of the backup schedule.
          */
         public Builder backupPlanId(String backupPlanId) {
             this.putQueryParameter("BackupPlanId", backupPlanId);
@@ -109,7 +132,7 @@ public class DescribeSandboxBackupSetsRequest extends Request {
         }
 
         /**
-         * The ID of the backup set. If this parameter is specified, only the snapshot of the backup set is returned. If this parameter is not specified, all the snapshots of the backup schedule are returned.
+         * The ID of the backup set. If this parameter is specified, only the snapshot of the specified backup set is returned. If this parameter is not specified, all the snapshots of the backup schedule are returned.
          */
         public Builder backupSetId(String backupSetId) {
             this.putQueryParameter("BackupSetId", backupSetId);
@@ -118,7 +141,7 @@ public class DescribeSandboxBackupSetsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -130,9 +153,9 @@ public class DescribeSandboxBackupSetsRequest extends Request {
          * The number of entries to return on each page. Valid values:
          * <p>
          * 
-         * *   30 (default value)
-         * *   50
-         * *   100
+         * *   30: This is the default value.
+         * *   50\.
+         * *   100\.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

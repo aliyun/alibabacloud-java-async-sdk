@@ -110,7 +110,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The error code.
+         * The error code returned if the request fails.
          */
         public Builder code(String code) {
             this.code = code;
@@ -126,7 +126,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error code.
+         * The error code returned if the request fails.
          */
         public Builder errCode(String errCode) {
             this.errCode = errCode;
@@ -134,7 +134,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request fails.
          */
         public Builder errMessage(String errMessage) {
             this.errMessage = errMessage;
@@ -142,7 +142,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message.
+         * The error message returned if the request fails.
          */
         public Builder message(String message) {
             this.message = message;
@@ -158,7 +158,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(String success) {
             this.success = success;
@@ -210,7 +210,7 @@ public class CreateSandboxInstanceResponseBody extends TeaModel {
             private String instanceId; 
 
             /**
-             * The ID of the backup schedule.
+             * The ID of the backup plan.
              */
             public Builder backupPlanId(String backupPlanId) {
                 this.backupPlanId = backupPlanId;

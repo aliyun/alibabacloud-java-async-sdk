@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDownloadSupportRequest</p>
  */
 public class DescribeDownloadSupportRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("InstanceName")
     @Validation(required = true)
@@ -24,6 +28,7 @@ public class DescribeDownloadSupportRequest extends Request {
 
     private DescribeDownloadSupportRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceName = builder.instanceName;
         this.regionCode = builder.regionCode;
     }
@@ -42,6 +47,13 @@ public class DescribeDownloadSupportRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return instanceName
      */
     public String getInstanceName() {
@@ -56,6 +68,7 @@ public class DescribeDownloadSupportRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDownloadSupportRequest, Builder> {
+        private String regionId; 
         private String instanceName; 
         private String regionCode; 
 
@@ -65,9 +78,19 @@ public class DescribeDownloadSupportRequest extends Request {
 
         private Builder(DescribeDownloadSupportRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceName = request.instanceName;
             this.regionCode = request.regionCode;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * The ID of the instance.

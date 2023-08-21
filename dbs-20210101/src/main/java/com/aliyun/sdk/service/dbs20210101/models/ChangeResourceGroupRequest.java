@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeResourceGroupRequest</p>
  */
 public class ChangeResourceGroupRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
@@ -33,6 +37,7 @@ public class ChangeResourceGroupRequest extends Request {
 
     private ChangeResourceGroupRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.clientToken = builder.clientToken;
         this.newResourceGroupId = builder.newResourceGroupId;
         this.resourceId = builder.resourceId;
@@ -50,6 +55,13 @@ public class ChangeResourceGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -81,6 +93,7 @@ public class ChangeResourceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ChangeResourceGroupRequest, Builder> {
+        private String regionId; 
         private String clientToken; 
         private String newResourceGroupId; 
         private String resourceId; 
@@ -92,6 +105,7 @@ public class ChangeResourceGroupRequest extends Request {
 
         private Builder(ChangeResourceGroupRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.clientToken = request.clientToken;
             this.newResourceGroupId = request.newResourceGroupId;
             this.resourceId = request.resourceId;
@@ -99,7 +113,16 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -108,7 +131,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * NewResourceGroupId.
+         * The ID of the resource group to which you want to move the resource.
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -117,7 +140,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -126,7 +149,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to backupplan.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

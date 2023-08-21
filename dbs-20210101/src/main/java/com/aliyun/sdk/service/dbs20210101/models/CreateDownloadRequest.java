@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDownloadRequest</p>
  */
 public class CreateDownloadRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
     @Query
     @NameInMap("BakSetId")
     private String bakSetId;
@@ -60,6 +64,7 @@ public class CreateDownloadRequest extends Request {
 
     private CreateDownloadRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.bakSetId = builder.bakSetId;
         this.bakSetSize = builder.bakSetSize;
         this.bakSetType = builder.bakSetType;
@@ -84,6 +89,13 @@ public class CreateDownloadRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -164,6 +176,7 @@ public class CreateDownloadRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDownloadRequest, Builder> {
+        private String regionId; 
         private String bakSetId; 
         private String bakSetSize; 
         private String bakSetType; 
@@ -182,6 +195,7 @@ public class CreateDownloadRequest extends Request {
 
         private Builder(CreateDownloadRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.bakSetId = request.bakSetId;
             this.bakSetSize = request.bakSetSize;
             this.bakSetType = request.bakSetType;
@@ -196,10 +210,19 @@ public class CreateDownloadRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to obtain the ID of the backup set.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The ID of the backup set. You can call the [DescribeBackups](~~26273~~) operation to query the ID of the backup set.
          * <p>
          * 
-         * >  This parameter is required if the BakSetType parameter is set to full.
+         * > This parameter is required if the BakSetType parameter is set to full.
          */
         public Builder bakSetId(String bakSetId) {
             this.putQueryParameter("BakSetId", bakSetId);
@@ -208,7 +231,7 @@ public class CreateDownloadRequest extends Request {
         }
 
         /**
-         * The size of the full backup set. You can call the [DescribeBackups](~~26273~~) operation to query the size of the full backup set. Unit: bytes.
+         * The size of the full backup set. Unit: bytes. You can call the [DescribeBackups](~~26273~~) operation to query the size of the full backup set.
          */
         public Builder bakSetSize(String bakSetSize) {
             this.putQueryParameter("BakSetSize", bakSetSize);
@@ -230,10 +253,10 @@ public class CreateDownloadRequest extends Request {
         }
 
         /**
-         * The point in time at which the backup set is downloaded. The UNIX timestamp of the LONG type. Unit: milliseconds.
+         * The point in time at which the backup set is downloaded. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          * <p>
          * 
-         * >  This parameter is required if the BakSetType parameter is set to pitr.
+         * > This parameter is required if the BakSetType parameter is set to pitr.
          */
         public Builder downloadPointInTime(String downloadPointInTime) {
             this.putQueryParameter("DownloadPointInTime", downloadPointInTime);
@@ -242,12 +265,14 @@ public class CreateDownloadRequest extends Request {
         }
 
         /**
-         * The destination format to which the downloaded backup set is converted. Valid values:
+         * The format to which the downloaded backup set is converted. Valid values:
          * <p>
          * 
-         * *   **csv**
+         * *   **CSV**
          * *   **SQL**
          * *   **Parquet**
+         * 
+         * > This parameter is required.
          */
         public Builder formatType(String formatType) {
             this.putQueryParameter("FormatType", formatType);
@@ -278,7 +303,7 @@ public class CreateDownloadRequest extends Request {
          * <p>
          * 
          * *   This parameter is required if the TargetType parameter is set to OSS.
-         * *   Make sure that your account has the **AliyunDBSDefaultRole** permission. For more information, see [Use RAM for resource authorization](~~26307~~). You can also grant permissions based on the operation instructions in the RAM console.
+         * *   Make sure that your account is granted the **AliyunDBSDefaultRole** permission. For more information, see [Use RAM for resource authorization](~~26307~~). You can also grant permissions based on the operation instructions in the Resource Access Management (RAM) console.
          */
         public Builder targetBucket(String targetBucket) {
             this.putQueryParameter("TargetBucket", targetBucket);
@@ -290,7 +315,7 @@ public class CreateDownloadRequest extends Request {
          * The region in which the OSS bucket resides.
          * <p>
          * 
-         * >  This parameter is required if the TargetType parameter is set to OSS.
+         * > This parameter is required if the TargetType parameter is set to OSS.
          */
         public Builder targetOssRegion(String targetOssRegion) {
             this.putQueryParameter("TargetOssRegion", targetOssRegion);
@@ -299,10 +324,10 @@ public class CreateDownloadRequest extends Request {
         }
 
         /**
-         * The destination path of the downloaded data.
+         * The destination path to which the backup set is downloaded.
          * <p>
          * 
-         * >  This parameter is required if the TargetType parameter is set to OSS.
+         * > This parameter is required if the TargetType parameter is set to OSS.
          */
         public Builder targetPath(String targetPath) {
             this.putQueryParameter("TargetPath", targetPath);
@@ -311,7 +336,7 @@ public class CreateDownloadRequest extends Request {
         }
 
         /**
-         * The type of the method in which the backup set is downloaded. Valid values:
+         * The type of the destination to which the backup set is downloaded. Valid values:
          * <p>
          * 
          * *   **OSS**
