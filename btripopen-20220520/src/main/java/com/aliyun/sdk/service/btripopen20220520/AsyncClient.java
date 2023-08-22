@@ -108,6 +108,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<FlightListingSearchV2Response> flightListingSearchV2(FlightListingSearchV2Request request);
 
+    CompletableFuture<FlightModifyApplyV2Response> flightModifyApplyV2(FlightModifyApplyV2Request request);
+
+    CompletableFuture<FlightModifyCancelV2Response> flightModifyCancelV2(FlightModifyCancelV2Request request);
+
+    CompletableFuture<FlightModifyListingSearchV2Response> flightModifyListingSearchV2(FlightModifyListingSearchV2Request request);
+
+    CompletableFuture<FlightModifyOrderDetailV2Response> flightModifyOrderDetailV2(FlightModifyOrderDetailV2Request request);
+
+    CompletableFuture<FlightModifyOtaSearchV2Response> flightModifyOtaSearchV2(FlightModifyOtaSearchV2Request request);
+
+    CompletableFuture<FlightModifyPayV2Response> flightModifyPayV2(FlightModifyPayV2Request request);
+
     CompletableFuture<FlightOrderDetailInfoResponse> flightOrderDetailInfo(FlightOrderDetailInfoRequest request);
 
     CompletableFuture<FlightOrderDetailV2Response> flightOrderDetailV2(FlightOrderDetailV2Request request);
@@ -128,9 +140,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<FlightRefundApplyResponse> flightRefundApply(FlightRefundApplyRequest request);
 
+    CompletableFuture<FlightRefundApplyV2Response> flightRefundApplyV2(FlightRefundApplyV2Request request);
+
     CompletableFuture<FlightRefundDetailResponse> flightRefundDetail(FlightRefundDetailRequest request);
 
+    CompletableFuture<FlightRefundDetailV2Response> flightRefundDetailV2(FlightRefundDetailV2Request request);
+
     CompletableFuture<FlightRefundPreCalResponse> flightRefundPreCal(FlightRefundPreCalRequest request);
+
+    CompletableFuture<FlightRefundPreCalV2Response> flightRefundPreCalV2(FlightRefundPreCalV2Request request);
 
     CompletableFuture<FlightSearchListResponse> flightSearchList(FlightSearchListRequest request);
 

@@ -774,6 +774,9 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
         @NameInMap("gmt_modified")
         private String gmtModified;
 
+        @NameInMap("is_deleted")
+        private String isDeleted;
+
         @NameInMap("itineraries")
         private java.util.List < Itineraries> itineraries;
 
@@ -811,6 +814,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             this.expenses = builder.expenses;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.isDeleted = builder.isDeleted;
             this.itineraries = builder.itineraries;
             this.paymentInfos = builder.paymentInfos;
             this.personalAmount = builder.personalAmount;
@@ -871,6 +875,13 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
          */
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        /**
+         * @return isDeleted
+         */
+        public String getIsDeleted() {
+            return this.isDeleted;
         }
 
         /**
@@ -950,6 +961,7 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
             private java.util.List < Expenses> expenses; 
             private String gmtCreate; 
             private String gmtModified; 
+            private String isDeleted; 
             private java.util.List < Itineraries> itineraries; 
             private java.util.List < PaymentInfos> paymentInfos; 
             private String personalAmount; 
@@ -1006,6 +1018,14 @@ public class QueryReimbursementOrderResponseBody extends TeaModel {
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * is_deleted.
+             */
+            public Builder isDeleted(String isDeleted) {
+                this.isDeleted = isDeleted;
                 return this;
             }
 

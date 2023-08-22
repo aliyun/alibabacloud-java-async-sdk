@@ -209,6 +209,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("change_fee")
         private Double changeFee;
 
+        @NameInMap("coach_no")
+        private String coachNo;
+
         @NameInMap("cost_center")
         private String costCenter;
 
@@ -293,6 +296,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("settlement_type")
         private String settlementType;
 
+        @NameInMap("short_ticket_no")
+        private String shortTicketNo;
+
         @NameInMap("status")
         private Integer status;
 
@@ -346,6 +352,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.capitalDirection = builder.capitalDirection;
             this.cascadeDepartment = builder.cascadeDepartment;
             this.changeFee = builder.changeFee;
+            this.coachNo = builder.coachNo;
             this.costCenter = builder.costCenter;
             this.costCenterNumber = builder.costCenterNumber;
             this.coupon = builder.coupon;
@@ -374,6 +381,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.settlementGrantFee = builder.settlementGrantFee;
             this.settlementTime = builder.settlementTime;
             this.settlementType = builder.settlementType;
+            this.shortTicketNo = builder.shortTicketNo;
             this.status = builder.status;
             this.taxRate = builder.taxRate;
             this.thirdItineraryId = builder.thirdItineraryId;
@@ -526,6 +534,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
          */
         public Double getChangeFee() {
             return this.changeFee;
+        }
+
+        /**
+         * @return coachNo
+         */
+        public String getCoachNo() {
+            return this.coachNo;
         }
 
         /**
@@ -725,6 +740,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return shortTicketNo
+         */
+        public String getShortTicketNo() {
+            return this.shortTicketNo;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -821,6 +843,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String capitalDirection; 
             private String cascadeDepartment; 
             private Double changeFee; 
+            private String coachNo; 
             private String costCenter; 
             private String costCenterNumber; 
             private Double coupon; 
@@ -849,6 +872,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private Double settlementGrantFee; 
             private String settlementTime; 
             private String settlementType; 
+            private String shortTicketNo; 
             private Integer status; 
             private String taxRate; 
             private String thirdItineraryId; 
@@ -1010,6 +1034,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder changeFee(Double changeFee) {
                 this.changeFee = changeFee;
+                return this;
+            }
+
+            /**
+             * coach_no.
+             */
+            public Builder coachNo(String coachNo) {
+                this.coachNo = coachNo;
                 return this;
             }
 
@@ -1234,6 +1266,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder settlementType(String settlementType) {
                 this.settlementType = settlementType;
+                return this;
+            }
+
+            /**
+             * short_ticket_no.
+             */
+            public Builder shortTicketNo(String shortTicketNo) {
+                this.shortTicketNo = shortTicketNo;
                 return this;
             }
 

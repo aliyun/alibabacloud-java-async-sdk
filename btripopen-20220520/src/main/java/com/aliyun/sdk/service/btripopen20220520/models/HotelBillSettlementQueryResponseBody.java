@@ -173,6 +173,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("apply_id")
         private String applyId;
 
+        @NameInMap("average_nights")
+        private String averageNights;
+
         @NameInMap("bill_record_time")
         private String billRecordTime;
 
@@ -284,6 +287,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("remark")
         private String remark;
 
+        @NameInMap("reserve_rule")
+        private String reserveRule;
+
+        @NameInMap("room_no")
+        private String roomNo;
+
         @NameInMap("room_number")
         private Integer roomNumber;
 
@@ -340,6 +349,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.applyDepCityName = builder.applyDepCityName;
             this.applyExtendField = builder.applyExtendField;
             this.applyId = builder.applyId;
+            this.averageNights = builder.averageNights;
             this.billRecordTime = builder.billRecordTime;
             this.bookTime = builder.bookTime;
             this.bookerId = builder.bookerId;
@@ -377,6 +387,8 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.projectName = builder.projectName;
             this.promotionFee = builder.promotionFee;
             this.remark = builder.remark;
+            this.reserveRule = builder.reserveRule;
+            this.roomNo = builder.roomNo;
             this.roomNumber = builder.roomNumber;
             this.roomPrice = builder.roomPrice;
             this.roomType = builder.roomType;
@@ -450,6 +462,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getApplyId() {
             return this.applyId;
+        }
+
+        /**
+         * @return averageNights
+         */
+        public String getAverageNights() {
+            return this.averageNights;
         }
 
         /**
@@ -712,6 +731,20 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return reserveRule
+         */
+        public String getReserveRule() {
+            return this.reserveRule;
+        }
+
+        /**
+         * @return roomNo
+         */
+        public String getRoomNo() {
+            return this.roomNo;
+        }
+
+        /**
          * @return roomNumber
          */
         public Integer getRoomNumber() {
@@ -831,6 +864,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String applyDepCityName; 
             private String applyExtendField; 
             private String applyId; 
+            private String averageNights; 
             private String billRecordTime; 
             private String bookTime; 
             private String bookerId; 
@@ -868,6 +902,8 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String projectName; 
             private Double promotionFee; 
             private String remark; 
+            private String reserveRule; 
+            private String roomNo; 
             private Integer roomNumber; 
             private Double roomPrice; 
             private String roomType; 
@@ -938,6 +974,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder applyId(String applyId) {
                 this.applyId = applyId;
+                return this;
+            }
+
+            /**
+             * average_nights.
+             */
+            public Builder averageNights(String averageNights) {
+                this.averageNights = averageNights;
                 return this;
             }
 
@@ -1234,6 +1278,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder remark(String remark) {
                 this.remark = remark;
+                return this;
+            }
+
+            /**
+             * reserve_rule.
+             */
+            public Builder reserveRule(String reserveRule) {
+                this.reserveRule = reserveRule;
+                return this;
+            }
+
+            /**
+             * room_no.
+             */
+            public Builder roomNo(String roomNo) {
+                this.roomNo = roomNo;
                 return this;
             }
 

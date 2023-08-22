@@ -191,6 +191,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("bill_record_time")
         private String billRecordTime;
 
+        @NameInMap("book_model")
+        private String bookModel;
+
         @NameInMap("book_time")
         private String bookTime;
 
@@ -335,6 +338,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("third_itinerary_id")
         private String thirdItineraryId;
 
+        @NameInMap("time_type")
+        private String timeType;
+
         @NameInMap("traveler_id")
         private String travelerId;
 
@@ -364,6 +370,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             this.arrLocation = builder.arrLocation;
             this.arrTime = builder.arrTime;
             this.billRecordTime = builder.billRecordTime;
+            this.bookModel = builder.bookModel;
             this.bookTime = builder.bookTime;
             this.bookerId = builder.bookerId;
             this.bookerJobNo = builder.bookerJobNo;
@@ -412,6 +419,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             this.subOrderId = builder.subOrderId;
             this.taxRate = builder.taxRate;
             this.thirdItineraryId = builder.thirdItineraryId;
+            this.timeType = builder.timeType;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
             this.travelerName = builder.travelerName;
@@ -516,6 +524,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getBillRecordTime() {
             return this.billRecordTime;
+        }
+
+        /**
+         * @return bookModel
+         */
+        public String getBookModel() {
+            return this.bookModel;
         }
 
         /**
@@ -855,6 +870,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return timeType
+         */
+        public String getTimeType() {
+            return this.timeType;
+        }
+
+        /**
          * @return travelerId
          */
         public String getTravelerId() {
@@ -903,6 +925,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private String arrLocation; 
             private String arrTime; 
             private String billRecordTime; 
+            private String bookModel; 
             private String bookTime; 
             private String bookerId; 
             private String bookerJobNo; 
@@ -951,6 +974,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private String subOrderId; 
             private String taxRate; 
             private String thirdItineraryId; 
+            private String timeType; 
             private String travelerId; 
             private String travelerJobNo; 
             private String travelerName; 
@@ -1058,6 +1082,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder billRecordTime(String billRecordTime) {
                 this.billRecordTime = billRecordTime;
+                return this;
+            }
+
+            /**
+             * book_model.
+             */
+            public Builder bookModel(String bookModel) {
+                this.bookModel = bookModel;
                 return this;
             }
 
@@ -1442,6 +1474,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder thirdItineraryId(String thirdItineraryId) {
                 this.thirdItineraryId = thirdItineraryId;
+                return this;
+            }
+
+            /**
+             * time_type.
+             */
+            public Builder timeType(String timeType) {
+                this.timeType = timeType;
                 return this;
             }
 
