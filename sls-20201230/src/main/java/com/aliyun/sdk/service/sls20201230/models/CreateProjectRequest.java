@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.sls.models.*;
  */
 public class CreateProjectRequest extends Request {
     @Body
+    @NameInMap("dataRedundancyType")
+    private String dataRedundancyType;
+
+    @Body
     @NameInMap("description")
     @Validation(required = true)
     private String description;
@@ -28,6 +32,7 @@ public class CreateProjectRequest extends Request {
 
     private CreateProjectRequest(Builder builder) {
         super(builder);
+        this.dataRedundancyType = builder.dataRedundancyType;
         this.description = builder.description;
         this.projectName = builder.projectName;
         this.resourceGroupId = builder.resourceGroupId;
@@ -44,6 +49,13 @@ public class CreateProjectRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dataRedundancyType
+     */
+    public String getDataRedundancyType() {
+        return this.dataRedundancyType;
     }
 
     /**
@@ -68,6 +80,7 @@ public class CreateProjectRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateProjectRequest, Builder> {
+        private String dataRedundancyType; 
         private String description; 
         private String projectName; 
         private String resourceGroupId; 
@@ -78,10 +91,20 @@ public class CreateProjectRequest extends Request {
 
         private Builder(CreateProjectRequest request) {
             super(request);
+            this.dataRedundancyType = request.dataRedundancyType;
             this.description = request.description;
             this.projectName = request.projectName;
             this.resourceGroupId = request.resourceGroupId;
         } 
+
+        /**
+         * dataRedundancyType.
+         */
+        public Builder dataRedundancyType(String dataRedundancyType) {
+            this.putBodyParameter("dataRedundancyType", dataRedundancyType);
+            this.dataRedundancyType = dataRedundancyType;
+            return this;
+        }
 
         /**
          * description.
