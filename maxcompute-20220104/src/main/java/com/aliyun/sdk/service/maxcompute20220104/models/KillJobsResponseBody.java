@@ -1,0 +1,94 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.maxcompute20220104.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link KillJobsResponseBody} extends {@link TeaModel}
+ *
+ * <p>KillJobsResponseBody</p>
+ */
+public class KillJobsResponseBody extends TeaModel {
+    @NameInMap("data")
+    private String data;
+
+    @NameInMap("httpCode")
+    private Integer httpCode;
+
+    @NameInMap("requestId")
+    private String requestId;
+
+    private KillJobsResponseBody(Builder builder) {
+        this.data = builder.data;
+        this.httpCode = builder.httpCode;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static KillJobsResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return data
+     */
+    public String getData() {
+        return this.data;
+    }
+
+    /**
+     * @return httpCode
+     */
+    public Integer getHttpCode() {
+        return this.httpCode;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private String data; 
+        private Integer httpCode; 
+        private String requestId; 
+
+        /**
+         * data.
+         */
+        public Builder data(String data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * httpCode.
+         */
+        public Builder httpCode(Integer httpCode) {
+            this.httpCode = httpCode;
+            return this;
+        }
+
+        /**
+         * requestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public KillJobsResponseBody build() {
+            return new KillJobsResponseBody(this);
+        } 
+
+    } 
+
+}
