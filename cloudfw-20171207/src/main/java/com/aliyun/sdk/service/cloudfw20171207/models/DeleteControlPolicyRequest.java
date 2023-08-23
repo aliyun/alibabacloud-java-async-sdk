@@ -1,0 +1,159 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cloudfw20171207.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteControlPolicyRequest} extends {@link RequestModel}
+ *
+ * <p>DeleteControlPolicyRequest</p>
+ */
+public class DeleteControlPolicyRequest extends Request {
+    @Query
+    @NameInMap("AclUuid")
+    @Validation(required = true)
+    private String aclUuid;
+
+    @Query
+    @NameInMap("Direction")
+    @Validation(required = true)
+    private String direction;
+
+    @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
+    @NameInMap("SourceIp")
+    @Deprecated
+    private String sourceIp;
+
+    private DeleteControlPolicyRequest(Builder builder) {
+        super(builder);
+        this.aclUuid = builder.aclUuid;
+        this.direction = builder.direction;
+        this.lang = builder.lang;
+        this.sourceIp = builder.sourceIp;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DeleteControlPolicyRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return aclUuid
+     */
+    public String getAclUuid() {
+        return this.aclUuid;
+    }
+
+    /**
+     * @return direction
+     */
+    public String getDirection() {
+        return this.direction;
+    }
+
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
+     * @return sourceIp
+     */
+    public String getSourceIp() {
+        return this.sourceIp;
+    }
+
+    public static final class Builder extends Request.Builder<DeleteControlPolicyRequest, Builder> {
+        private String aclUuid; 
+        private String direction; 
+        private String lang; 
+        private String sourceIp; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DeleteControlPolicyRequest request) {
+            super(request);
+            this.aclUuid = request.aclUuid;
+            this.direction = request.direction;
+            this.lang = request.lang;
+            this.sourceIp = request.sourceIp;
+        } 
+
+        /**
+         * The ID of the access control policy.
+         * <p>
+         * 
+         * To delete an access control policy, you must provide the ID of the policy. You can call the [DescribeControlPolicy](~~138866~~) operation to query the ID.
+         */
+        public Builder aclUuid(String aclUuid) {
+            this.putQueryParameter("AclUuid", aclUuid);
+            this.aclUuid = aclUuid;
+            return this;
+        }
+
+        /**
+         * The direction of the traffic to which the access control policy applies.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **in**: inbound traffic
+         * *   **out**: outbound traffic
+         */
+        public Builder direction(String direction) {
+            this.putQueryParameter("Direction", direction);
+            this.direction = direction;
+            return this;
+        }
+
+        /**
+         * The natural language of the request and response.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **zh**: Chinese (default)
+         * *   **en**: English
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * The source IP address of the traffic.
+         */
+        public Builder sourceIp(String sourceIp) {
+            this.putQueryParameter("SourceIp", sourceIp);
+            this.sourceIp = sourceIp;
+            return this;
+        }
+
+        @Override
+        public DeleteControlPolicyRequest build() {
+            return new DeleteControlPolicyRequest(this);
+        } 
+
+    } 
+
+}
