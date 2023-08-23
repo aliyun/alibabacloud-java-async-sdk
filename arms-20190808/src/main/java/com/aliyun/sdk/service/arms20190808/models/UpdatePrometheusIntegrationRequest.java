@@ -114,7 +114,7 @@ public class UpdatePrometheusIntegrationRequest extends Request {
         } 
 
         /**
-         * arms-hz-central
+         * The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -123,7 +123,7 @@ public class UpdatePrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The exporter ID.
          */
         public Builder instanceId(Long instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -132,7 +132,7 @@ public class UpdatePrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * IntegrationType.
+         * The type of the integration.
          */
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);
@@ -141,7 +141,7 @@ public class UpdatePrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * Param.
+         * The configurations of the exporter. The value is a JSON string.
          */
         public Builder param(String param) {
             this.putQueryParameter("Param", param);
@@ -150,7 +150,7 @@ public class UpdatePrometheusIntegrationRequest extends Request {
         }
 
         /**
-         * success=false
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

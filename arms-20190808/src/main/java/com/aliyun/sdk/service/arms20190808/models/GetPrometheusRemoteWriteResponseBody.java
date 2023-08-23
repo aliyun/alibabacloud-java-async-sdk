@@ -86,7 +86,7 @@ public class GetPrometheusRemoteWriteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code 200 indicates that the request was successful.
+         * The status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetPrometheusRemoteWriteResponseBody extends TeaModel {
         }
 
         /**
-         * The queried remote write configuration.
+         * The details of the remote write configuration item.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -194,7 +194,7 @@ public class GetPrometheusRemoteWriteResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the remote write configuration.
+             * The name of the remote write configuration item.
              */
             public Builder remoteWriteName(String remoteWriteName) {
                 this.remoteWriteName = remoteWriteName;
@@ -202,7 +202,7 @@ public class GetPrometheusRemoteWriteResponseBody extends TeaModel {
             }
 
             /**
-             * The remote write configuration. The configuration is displayed in the YAML format.
+             * The details of the remote write configuration item. The value is in the YAML format.
              */
             public Builder remoteWriteYaml(String remoteWriteYaml) {
                 this.remoteWriteYaml = remoteWriteYaml;

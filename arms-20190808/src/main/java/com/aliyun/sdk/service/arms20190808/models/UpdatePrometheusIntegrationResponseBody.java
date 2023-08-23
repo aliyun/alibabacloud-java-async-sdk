@@ -74,7 +74,7 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The status code or error code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The struct returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
             private String instanceName; 
 
             /**
-             * InstanceId.
+             * The exporter ID.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -158,7 +158,7 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The exporter name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

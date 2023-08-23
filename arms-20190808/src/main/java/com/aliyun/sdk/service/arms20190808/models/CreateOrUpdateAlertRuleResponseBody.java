@@ -1134,7 +1134,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
              * *   STOPPED
              * *   PAUSED
              * 
-             * > The **PAUSED** status indicates that the alert rule was abnormal and was paused by the system. The alert rule might be paused because it was not unique or the associated cluster was deleted.
+             * > The PAUSED status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.
              */
             public Builder alertStatus(String alertStatus) {
                 this.alertStatus = alertStatus;
@@ -1142,12 +1142,12 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert rule.
+             * The type of the alert rule. Valid values:
              * <p>
              * 
-             * *   APPLICATION_MONITORING_ALERT_RULE: an alert rule of Application Monitoring
-             * *   BROWSER_MONITORING_ALERT_RULE: an alert rule of Browser Monitoring
-             * *   PROMETHEUS_MONITORING_ALERT_RULE: an alert rule of Prometheus Service
+             * *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
+             * *   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring
+             * *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Prometheus Service
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -1166,8 +1166,8 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
              * Indicates whether the alert rule was applied to new applications that were created in Application Monitoring or Browser Monitoring. Valid values:
              * <p>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * *   `true`: enables the health check feature.
+             * *   `false`: disables the automatic backup feature.
              */
             public Builder autoAddNewApplication(Boolean autoAddNewApplication) {
                 this.autoAddNewApplication = autoAddNewApplication;
@@ -1175,7 +1175,7 @@ public class CreateOrUpdateAlertRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster ID of the Prometheus alert rule.
+             * The ID of the monitored cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;

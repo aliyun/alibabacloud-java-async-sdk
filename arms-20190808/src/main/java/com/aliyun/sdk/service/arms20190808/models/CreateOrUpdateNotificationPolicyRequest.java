@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateOrUpdateNotificationPolicyRequest extends Request {
     @Body
+    @NameInMap("DirectedMode")
+    private Boolean directedMode;
+
+    @Body
     @NameInMap("EscalationPolicyId")
     private Long escalationPolicyId;
 
@@ -64,6 +68,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
 
     private CreateOrUpdateNotificationPolicyRequest(Builder builder) {
         super(builder);
+        this.directedMode = builder.directedMode;
         this.escalationPolicyId = builder.escalationPolicyId;
         this.groupRule = builder.groupRule;
         this.id = builder.id;
@@ -89,6 +94,13 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return directedMode
+     */
+    public Boolean getDirectedMode() {
+        return this.directedMode;
     }
 
     /**
@@ -176,6 +188,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateOrUpdateNotificationPolicyRequest, Builder> {
+        private Boolean directedMode; 
         private Long escalationPolicyId; 
         private String groupRule; 
         private Long id; 
@@ -195,6 +208,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
 
         private Builder(CreateOrUpdateNotificationPolicyRequest request) {
             super(request);
+            this.directedMode = request.directedMode;
             this.escalationPolicyId = request.escalationPolicyId;
             this.groupRule = request.groupRule;
             this.id = request.id;
@@ -208,6 +222,15 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
             this.repeatInterval = request.repeatInterval;
             this.sendRecoverMessage = request.sendRecoverMessage;
         } 
+
+        /**
+         * DirectedMode.
+         */
+        public Builder directedMode(Boolean directedMode) {
+            this.putBodyParameter("DirectedMode", directedMode);
+            this.directedMode = directedMode;
+            return this;
+        }
 
         /**
          * The ID of the escalation policy.

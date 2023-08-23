@@ -86,7 +86,7 @@ public class UpdatePrometheusRemoteWriteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code returned. The status code 200 indicates that the request was successful.
+         * The status code. A value of 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class UpdatePrometheusRemoteWriteResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the remote write configuration item or the exception information.
+         * The name of the remote write configuration that was modified, or the exception information.
          */
         public Builder data(String data) {
             this.data = data;
@@ -118,11 +118,11 @@ public class UpdatePrometheusRemoteWriteResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call was successful. Valid values:
+         * Indicates whether the request is successful. Valid values:
          * <p>
          * 
-         * *   `true`: The call was successful.
-         * *   `false`: The call failed.
+         * *   `true`
+         * *   `false`
          */
         public Builder success(Boolean success) {
             this.success = success;

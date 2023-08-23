@@ -113,7 +113,7 @@ public class GetManagedPrometheusStatusRequest extends Request {
         } 
 
         /**
-         * __null__
+         * The ID of the ASK cluster. This parameter is required if the ClusterType parameter is set to ask.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -122,7 +122,7 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * ClusterType.
+         * The type of the monitoring object. Valid values: ask and ecs.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -131,7 +131,7 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * code!=200
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -140,7 +140,7 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the Prometheus instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -149,7 +149,7 @@ public class GetManagedPrometheusStatusRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * This parameter is required if the ClusterType parameter is set to ecs.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

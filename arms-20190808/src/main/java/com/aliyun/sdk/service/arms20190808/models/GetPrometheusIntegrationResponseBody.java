@@ -82,7 +82,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * The struct returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -338,7 +338,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the exporter can be edited.
+             * Indicates whether the exporter can be modified.
              */
             public Builder canEditor(Boolean canEditor) {
                 this.canEditor = canEditor;
@@ -354,7 +354,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the container.
+             * The container name.
              */
             public Builder containerName(String containerName) {
                 this.containerName = containerName;
@@ -394,7 +394,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The integration type.
+             * The type of the integration.
              */
             public Builder integrationType(String integrationType) {
                 this.integrationType = integrationType;
@@ -458,7 +458,7 @@ public class GetPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * The version information.
              */
             public Builder version(String version) {
                 this.version = version;

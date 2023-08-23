@@ -70,7 +70,7 @@ public class OpenArmsServiceSecondVersionRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -79,7 +79,14 @@ public class OpenArmsServiceSecondVersionRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the service. Valid values:
+         * <p>
+         * 
+         * *   `arms`: ARMS
+         * *   `arms_app`: Application Monitoring
+         * *   `arms_web`: Browser Monitoring
+         * *   `prometheus_monitor`: Managed Service for Prometheus
+         * *   `synthetic_post`: Synthetic Monitoring
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

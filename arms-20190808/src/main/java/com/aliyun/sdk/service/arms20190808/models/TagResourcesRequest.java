@@ -109,7 +109,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Schema of Response
+         * The resource IDs. You can specify a maximum of 50 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -118,15 +118,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The resource type.
-         * <p>
-         * 
-         * WEB-front-end monitoring
-         * APPLICATION-Application Monitoring
-         * PROMETHEUS-PROM monitoring
-         * SYNTHETICTASK-Cloud dial test
-         * ALERTRULE - Application Monitoring Similar
-         * PROMETHEUSALERTRULE - Prometheus monitoring
+         * The type of the ARMS resources for which you want to modify tags. Valid values: WEB: Browser Monitoring APPLICATION: Application Monitoring PROMETHEUS: Managed Service for Prometheus SYNTHETICTASK: Synthetic Monitoring ALERTRULE: Application Monitoring alert rules PROMETHEUSALERTRULE: Prometheus alert rules
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -135,7 +127,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The returned result.
+         * The tags to add to the resource. You can specify a maximum of 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -189,7 +181,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * http://arms.${regionId}.aliyun-inc.com:8099/tag/TagResources.json
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -197,7 +189,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

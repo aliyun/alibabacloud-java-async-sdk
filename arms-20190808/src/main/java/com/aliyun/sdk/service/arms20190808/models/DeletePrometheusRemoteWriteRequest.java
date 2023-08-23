@@ -85,7 +85,7 @@ public class DeletePrometheusRemoteWriteRequest extends Request {
         } 
 
         /**
-         * The ID of the Prometheus instance.
+         * The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

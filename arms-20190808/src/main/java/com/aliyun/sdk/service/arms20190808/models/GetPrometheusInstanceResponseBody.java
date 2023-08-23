@@ -74,7 +74,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code returned. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
+         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -150,7 +150,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The tag key.
+             * The tag key of the instance.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -158,7 +158,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The tag value of the instance.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -363,7 +363,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The name of the monitoring object.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -371,7 +371,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type. Valid values: remote-write (Prometheus instance for Remote Write), ecs (Prometheus instance for ECS), cloud-monitor (Prometheus instance for Alibaba Cloud services in China), cloud-product (Prometheus instance for Alibaba Cloud services outside China), global-view (Prometheus instance for GlobalView), aliyun-cs (Prometheus instance for Container Service).
+             * *   remote-write: Prometheus instance for Remote Write
+             * <p>
+             * *   ecs: Prometheus instances for ECS
+             * *   cloud-monitor: Prometheus instance for cloud services (Chinese mainland)
+             * *   cloud-monitor: Prometheus instance for cloud services (regions outside the Chinese mainland)
+             * *   global-view: Prometheus instance for GlobalView
+             * *   aliyun-cs: Prometheus instance for Container Service
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -387,7 +393,11 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The billing method. Valid values: PREPAY (subscription) and POSTPAY (pay-as-you-go).
+             * The billing method. Valid values:
+             * <p>
+             * 
+             * *   PREPAY: subscription
+             * *   POSTPAY: pay-as-you-go
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -411,7 +421,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. Valid value: PROMETHEUS.
+             * The type of the resource. Set the value to PROMETHEUS.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -427,7 +437,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The child instances of the global aggregation instance. The value is a JSON string.
+             * The child instances of the Prometheus instance for GlobalView. The value is a JSON string.
              */
             public Builder subClustersJson(String subClustersJson) {
                 this.subClustersJson = subClustersJson;
@@ -435,7 +445,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The tags that are bound to the instance.
+             * The tags of the instance.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -451,7 +461,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VSwitch.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -459,7 +469,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) in which the instance resides.
+             * The virtual private cloud (VPC) where the monitoring object resides.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

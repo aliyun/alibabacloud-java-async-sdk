@@ -141,10 +141,7 @@ public class CreatePrometheusMonitoringRequest extends Request {
         }
 
         /**
-         * The status of the monitoring configuration. Valid values: run and stop. 
-         * <p>
-         * When not transmitted, the default value: run.
-         * Probe does not support status, this field set empty.
+         * The status of the monitoring configuration. Valid values: run and stop. Default value: run. This parameter is not available if the Type parameter is set to Probe.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

@@ -177,7 +177,7 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The ID of the region in which the Prometheus instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -195,7 +195,7 @@ public class UpdatePrometheusGlobalViewRequest extends Request {
         }
 
         /**
-         * The data sources of the global aggregation instance.
+         * The data sources of the Prometheus instance for GlobalView.
          */
         public Builder subClustersJson(String subClustersJson) {
             this.putQueryParameter("SubClustersJson", subClustersJson);

@@ -118,7 +118,7 @@ public class UpdatePrometheusRemoteWriteRequest extends Request {
         }
 
         /**
-         * The name of the remote write configuration.
+         * The name of the remote write configuration item.
          */
         public Builder remoteWriteName(String remoteWriteName) {
             this.putQueryParameter("RemoteWriteName", remoteWriteName);

@@ -94,7 +94,7 @@ public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
         }
 
         /**
-         * The queried remote write configurations.
+         * The remote write configuration items returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +190,7 @@ public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the remote write configuration.
+             * The name of the remote write configuration item.
              */
             public Builder remoteWriteName(String remoteWriteName) {
                 this.remoteWriteName = remoteWriteName;
@@ -198,7 +198,7 @@ public class ListPrometheusRemoteWritesResponseBody extends TeaModel {
             }
 
             /**
-             * The remote write configuration. The configuration is displayed in the YAML format.
+             * The information about the queried remote write configuration item of the Prometheus instance. The information is displayed in the YAML format.
              */
             public Builder remoteWriteYaml(String remoteWriteYaml) {
                 this.remoteWriteYaml = remoteWriteYaml;

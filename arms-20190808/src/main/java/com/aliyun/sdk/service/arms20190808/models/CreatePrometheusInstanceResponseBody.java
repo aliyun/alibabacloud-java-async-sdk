@@ -74,13 +74,13 @@ public class CreatePrometheusInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The HTTP status code returned for the request. Valid values:
+         * The status code that is returned. Valid values:
          * <p>
          * 
-         * *   `2XX`: The request is successful.
-         * *   `3XX`: A redirection message is returned.
-         * *   `4XX`: The request is invalid.
-         * *   `5XX`: A server error occurs.
+         * *   `2XX: The request is successful.`
+         * *   `3XX: A redirection message is returned.`
+         * *   `4XX: The request is invalid.`
+         * *   `5XX: A server error occurred.`
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -96,7 +96,7 @@ public class CreatePrometheusInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the call fails.
+         * The error message that is returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;

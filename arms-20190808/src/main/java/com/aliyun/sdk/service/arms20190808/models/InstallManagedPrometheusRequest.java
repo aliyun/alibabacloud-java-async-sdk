@@ -184,7 +184,7 @@ public class InstallManagedPrometheusRequest extends Request {
         } 
 
         /**
-         * The response object.
+         * The ID of the ACK cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -193,7 +193,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The request ID.
+         * The name of the ECS instance. If you set the ClusterType parameter to ecs, you must configure this parameter.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -202,7 +202,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The response content. In most cases, the installation status of the Prometheus agent is returned.
+         * The type of the monitoring object. Valid values: ask and ecs.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -211,7 +211,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * success=false
+         * The ID of the Grafana workspace used by the ASK cluster or ECS instance. If you set the value to free or leave the parameter empty, a shared Grafana workspace is used.
          */
         public Builder grafanaInstanceId(String grafanaInstanceId) {
             this.putQueryParameter("GrafanaInstanceId", grafanaInstanceId);
@@ -220,7 +220,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * __null__
+         * This parameter is not supported.
          */
         public Builder kubeConfig(String kubeConfig) {
             this.putQueryParameter("KubeConfig", kubeConfig);
@@ -229,7 +229,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The parameter is not supported.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -238,7 +238,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * Prometheus实例的资源组ID。
+         * The ID of the resource group to which the Prometheus instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -247,7 +247,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+         * The security group of the ASK cluster or ECS instance.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -256,7 +256,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * The error message returned if the Prometheus agent failed to be installed.
+         * The vSwitch used by the ASK cluster or ECS instance.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -265,7 +265,7 @@ public class InstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * Indicates whether the Prometheus agent was installed.
+         * The virtual private cloud (VPC) where the ASK cluster or ECS instance resides.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

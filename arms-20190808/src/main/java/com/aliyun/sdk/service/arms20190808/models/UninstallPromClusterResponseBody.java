@@ -74,7 +74,7 @@ public class UninstallPromClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code returned. The status code 200 indicates that the request was successful.
+         * The status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class UninstallPromClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class UninstallPromClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to query logs and troubleshoot issues.
+         * The request ID. You can use the ID to find logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -692,6 +692,9 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
     }
     public static class NotificationPolicies extends TeaModel {
+        @NameInMap("DirectedMode")
+        private Boolean directedMode;
+
         @NameInMap("EscalationPolicyId")
         private Long escalationPolicyId;
 
@@ -726,6 +729,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         private Boolean sendRecoverMessage;
 
         private NotificationPolicies(Builder builder) {
+            this.directedMode = builder.directedMode;
             this.escalationPolicyId = builder.escalationPolicyId;
             this.groupRule = builder.groupRule;
             this.id = builder.id;
@@ -745,6 +749,13 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
 
         public static NotificationPolicies create() {
             return builder().build();
+        }
+
+        /**
+         * @return directedMode
+         */
+        public Boolean getDirectedMode() {
+            return this.directedMode;
         }
 
         /**
@@ -825,6 +836,7 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean directedMode; 
             private Long escalationPolicyId; 
             private GroupRule groupRule; 
             private Long id; 
@@ -836,6 +848,14 @@ public class ListNotificationPoliciesResponseBody extends TeaModel {
             private Boolean repeat; 
             private Long repeatInterval; 
             private Boolean sendRecoverMessage; 
+
+            /**
+             * DirectedMode.
+             */
+            public Builder directedMode(Boolean directedMode) {
+                this.directedMode = directedMode;
+                return this;
+            }
 
             /**
              * The ID of the escalation rule.

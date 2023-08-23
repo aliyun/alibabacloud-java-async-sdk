@@ -74,7 +74,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         private String requestId; 
 
         /**
-         * Code.
+         * The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         }
 
         /**
-         * Data.
+         * The struct returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         }
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The key of the tag.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -158,7 +158,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * TagValue.
+             * The value of the tag.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -355,7 +355,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             private String vpcId; 
 
             /**
-             * ClusterId.
+             * The ID of the Prometheus instance.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -363,7 +363,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * ClusterName.
+             * The name of the Prometheus instance.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -371,7 +371,14 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * ClusterType.
+             * The type of the cluster. Valid values: remote-write: Prometheus instance for remote write.
+             * <p>
+             * 
+             * *   ecs: Prometheus instances for ECS.
+             * *   cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland.
+             * *   cloud-product: Prometheus instance for Alibaba Cloud services outside China.
+             * *   global-view: Prometheus instance for GlobalView.
+             * *   aliyun-cs: Prometheus instance for Container Service.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -379,7 +386,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * GrafanaInstanceId.
+             * The ID of the Grafana workspace.
              */
             public Builder grafanaInstanceId(String grafanaInstanceId) {
                 this.grafanaInstanceId = grafanaInstanceId;
@@ -387,7 +394,11 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * PaymentType.
+             * The billing method. Valid values:
+             * <p>
+             * 
+             * *   PREPAY: subscription.
+             * *   POSTPAY: pay-as-you-go.
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -395,7 +406,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * RegionId.
+             * The region ID of the Prometheus instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -403,7 +414,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the Prometheus instance belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -419,7 +430,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -427,7 +438,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * SubClustersJson.
+             * The child instances of the Prometheus instance for GlobalView instance. The value is a JSON string.
              */
             public Builder subClustersJson(String subClustersJson) {
                 this.subClustersJson = subClustersJson;
@@ -435,7 +446,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -443,7 +454,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -451,7 +462,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -459,7 +470,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -500,7 +511,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             private java.util.List < PrometheusInstances> prometheusInstances; 
 
             /**
-             * PrometheusInstances.
+             * The queried Prometheus instances.
              */
             public Builder prometheusInstances(java.util.List < PrometheusInstances> prometheusInstances) {
                 this.prometheusInstances = prometheusInstances;

@@ -50,7 +50,7 @@ public class GetPrometheusApiTokenResponseBody extends TeaModel {
         private String token; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetPrometheusApiTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Token.
+         * The token required for integrating Prometheus Service.
          */
         public Builder token(String token) {
             this.token = token;

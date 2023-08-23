@@ -74,7 +74,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful.
+         * The response code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -98,7 +98,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -462,7 +462,7 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the exporter.
+             * The state of the exporter.
              */
             public Builder status(String status) {
                 this.status = status;

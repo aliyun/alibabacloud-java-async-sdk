@@ -50,7 +50,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageBean.
+         * The pages returned.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,13 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Aggregate.
+             * The aggregation method of the alert condition. Valid values:
+             * <p>
+             * 
+             * *   AVG: calculates the average value
+             * *   SUM: calculates the total value
+             * *   MAX: selects the maximum value
+             * *   MIN: selects the minimum value
              */
             public Builder aggregate(String aggregate) {
                 this.aggregate = aggregate;
@@ -154,7 +160,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MetricKey.
+             * The metric of the alert condition.
              */
             public Builder metricKey(String metricKey) {
                 this.metricKey = metricKey;
@@ -162,7 +168,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * N.
+             * Indicates the last N minutes.
              */
             public Builder n(Float n) {
                 this.n = n;
@@ -170,7 +176,17 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The comparison operator that was used to compare the metric value with the threshold. Valid values:
+             * <p>
+             * 
+             * *   CURRENT_GTE: greater than or equal to
+             * *   CURRENT_LTE: less than or equal to
+             * *   PREVIOUS_UP: the increase percentage compared with the last period
+             * *   PREVIOUS_DOWN: the decrease percentage compared with the last period
+             * *   HOH_UP: the increase percentage compared with the last hour
+             * *   HOH_DOWN: the decrease percentage compared with the last hour
+             * *   DOD_UP: the increase percentage compared with the last day
+             * *   DOD_DOWN: the decrease percentage compared with the last day
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -178,7 +194,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The threshold of the alert condition.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -231,7 +247,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String condition; 
 
             /**
-             * AlertRuleItems.
+             * The trigger conditions of the Application Monitoring or Browser Monitoring alert rule.
              */
             public Builder alertRuleItems(java.util.List < AlertRuleItems> alertRuleItems) {
                 this.alertRuleItems = alertRuleItems;
@@ -239,7 +255,11 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Condition.
+             * The relationship between multiple alert conditions specified for the Application Monitoring or Browser Monitoring alert rule. Valid values:
+             * <p>
+             * 
+             * *   OR: meets any of the specified conditions.
+             * *   AND: meets all the specified conditions.
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -292,7 +312,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The key of the annotation.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +320,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the annotation.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -389,7 +409,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the filter condition.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -397,7 +417,11 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Opt.
+             * The logical operator of the filter condition. Valid values:
+             * <p>
+             * 
+             * *   \=: equal to
+             * *   not: not equal to
              */
             public Builder opt(String opt) {
                 this.opt = opt;
@@ -405,7 +429,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Show.
+             * Indicates whether this filter condition was displayed on the frontend.
              */
             public Builder show(Boolean show) {
                 this.show = show;
@@ -413,7 +437,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * T.
+             * Indicates the log type of Browser Monitoring. This field was not included in other filter conditions.
              */
             public Builder t(String t) {
                 this.t = t;
@@ -421,7 +445,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the filter condition.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -486,7 +510,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private java.util.List < String > filterValues; 
 
             /**
-             * FilterKey.
+             * The key of the filter condition.
              */
             public Builder filterKey(String filterKey) {
                 this.filterKey = filterKey;
@@ -494,7 +518,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * FilterOpt.
+             * The logical operator of the filter condition.
              */
             public Builder filterOpt(String filterOpt) {
                 this.filterOpt = filterOpt;
@@ -502,7 +526,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * FilterValues.
+             * The details of the filter condition.
              */
             public Builder filterValues(java.util.List < String > filterValues) {
                 this.filterValues = filterValues;
@@ -579,7 +603,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private java.util.List < DimFilters> dimFilters; 
 
             /**
-             * CustomSLSFilters.
+             * The custom filter condition of the Browser Monitoring alert rule.
              */
             public Builder customSLSFilters(java.util.List < CustomSLSFilters> customSLSFilters) {
                 this.customSLSFilters = customSLSFilters;
@@ -587,7 +611,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomSLSGroupByDimensions.
+             * The information of the aggregation dimension.
              */
             public Builder customSLSGroupByDimensions(java.util.List < String > customSLSGroupByDimensions) {
                 this.customSLSGroupByDimensions = customSLSGroupByDimensions;
@@ -595,7 +619,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CustomSLSWheres.
+             * The details of the custom filter condition.
              */
             public Builder customSLSWheres(java.util.List < String > customSLSWheres) {
                 this.customSLSWheres = customSLSWheres;
@@ -603,7 +627,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * DimFilters.
+             * The information about each filter condition of the Application Monitoring or Browser Monitoring alert rule.
              */
             public Builder dimFilters(java.util.List < DimFilters> dimFilters) {
                 this.dimFilters = dimFilters;
@@ -656,7 +680,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The tag key.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -664,7 +688,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -717,7 +741,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the filter condition.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -725,7 +749,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1054,7 +1078,11 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * AlertCheckType.
+             * The alert check type of the Prometheus alert rule. Valid values:
+             * <p>
+             * 
+             * *   STATIC: static threshold value
+             * *   CUSTOM: custom PromQL statement
              */
             public Builder alertCheckType(String alertCheckType) {
                 this.alertCheckType = alertCheckType;
@@ -1062,7 +1090,12 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertGroup.
+             * The ID of the alert contact group to which the alert rule belongs. Valid values:
+             * <p>
+             * 
+             * *   \-1: custom PromQL
+             * *   1: Kubernetes load
+             * *   15: Kubernetes node
              */
             public Builder alertGroup(Long alertGroup) {
                 this.alertGroup = alertGroup;
@@ -1070,7 +1103,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertId.
+             * The ID of the alert rule.
              */
             public Builder alertId(Float alertId) {
                 this.alertId = alertId;
@@ -1078,7 +1111,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertName.
+             * The name of the alert rule.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -1086,7 +1119,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertRuleContent.
+             * The content of the Application Monitoring or Browser Monitoring alert rule.
              */
             public Builder alertRuleContent(AlertRuleContent alertRuleContent) {
                 this.alertRuleContent = alertRuleContent;
@@ -1094,7 +1127,14 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertStatus.
+             * The status of the alert rule. Valid values:
+             * <p>
+             * 
+             * *   RUNNING
+             * *   STOPPED
+             * *   PAUSED
+             * 
+             * > The **PAUSED** status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.
              */
             public Builder alertStatus(String alertStatus) {
                 this.alertStatus = alertStatus;
@@ -1102,7 +1142,12 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AlertType.
+             * The type of the alert rule.
+             * <p>
+             * 
+             * *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
+             * *   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring
+             * *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -1110,7 +1155,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Annotations.
+             * The annotations of the Prometheus alert rule.
              */
             public Builder annotations(java.util.List < Annotations> annotations) {
                 this.annotations = annotations;
@@ -1118,7 +1163,11 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * AutoAddNewApplication.
+             * Indicates whether the alert rule was applied to new applications that were created in Application Monitoring or Browser Monitoring. Valid values:
+             * <p>
+             * 
+             * *   `true`
+             * *   `false`
              */
             public Builder autoAddNewApplication(Boolean autoAddNewApplication) {
                 this.autoAddNewApplication = autoAddNewApplication;
@@ -1126,7 +1175,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterId.
+             * The cluster ID of the Prometheus alert rule.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -1134,7 +1183,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the alert rule was created. The value is a timestamp. Unit: milliseconds.
              */
             public Builder createdTime(Long createdTime) {
                 this.createdTime = createdTime;
@@ -1142,7 +1191,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the Prometheus alert rule.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1150,7 +1199,10 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Extend.
+             * The extended fields.
+             * <p>
+             * 
+             * > For existing Application Monitoring alert rules, the fields contained information such as contacts, alert template, and notification content.
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -1158,7 +1210,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Filters.
+             * The filter conditions of the Application Monitoring or Browser Monitoring alert rule.
              */
             public Builder filters(Filters filters) {
                 this.filters = filters;
@@ -1166,7 +1218,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * The tags of the Prometheus alert rule.
              */
             public Builder labels(java.util.List < Labels> labels) {
                 this.labels = labels;
@@ -1174,7 +1226,14 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The severity level of the Prometheus alert rule.
+             * <p>
+             * 
+             * *   P1: Alert notifications are sent for major issues that affect the availability of core business, have a huge impact, and may lead to serious consequences.
+             * *   P2: Alert notifications are sent for service errors that affect the system availability with relatively limited impact.
+             * *   P3: Alert notifications are sent for issues that may cause service errors or negative effects, or alert notifications for services that are relatively less important.
+             * *   P4: Alert notifications are sent for low-priority issues that do not affect your business.
+             * *   Default: Alert notifications are sent regardless of alert levels.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1182,7 +1241,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The alert message of the Prometheus alert rule.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1190,7 +1249,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * MetricsType.
+             * The metric type of the Application Monitoring or Browser Monitoring alert rule.
              */
             public Builder metricsType(String metricsType) {
                 this.metricsType = metricsType;
@@ -1198,7 +1257,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyStrategy.
+             * The name of the notification policy.
              */
             public Builder notifyStrategy(String notifyStrategy) {
                 this.notifyStrategy = notifyStrategy;
@@ -1206,7 +1265,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Pids.
+             * The process ID (PID) that was associated with the Application Monitoring or Browser Monitoring alert rule.
              */
             public Builder pids(java.util.List < String > pids) {
                 this.pids = pids;
@@ -1214,7 +1273,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * PromQL.
+             * The PromQL statement of the Prometheus alert rule.
              */
             public Builder promQL(String promQL) {
                 this.promQL = promQL;
@@ -1222,7 +1281,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1238,7 +1297,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdatedTime.
+             * The time when the alert rule was updated. The value is a timestamp. Unit: milliseconds.
              */
             public Builder updatedTime(Long updatedTime) {
                 this.updatedTime = updatedTime;
@@ -1246,7 +1305,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the Alibaba Cloud account to which the resource belongs.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -1323,7 +1382,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * AlertRules.
+             * The list of alert rules.
              */
             public Builder alertRules(java.util.List < AlertRules> alertRules) {
                 this.alertRules = alertRules;
@@ -1331,7 +1390,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The number of pages returned.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -1339,7 +1398,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The number of alert rules returned per page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -1347,7 +1406,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of queried alert rules.
              */
             public Builder total(Long total) {
                 this.total = total;

@@ -210,7 +210,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         } 
 
         /**
-         * AllSubClustersSuccess.
+         * 创建GlobalView时，是否要求所有子实例都校验成功时，才创建GlobalView实例。默认是false，即可以部分成功。
          */
         public Builder allSubClustersSuccess(Boolean allSubClustersSuccess) {
             this.putQueryParameter("AllSubClustersSuccess", allSubClustersSuccess);
@@ -219,7 +219,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The cluster ID. This parameter is required if you set the ClusterType parameter to aliyun-cs��.
+         * The ID of the cluster. This parameter is required if you set ClusterType to aliyun-cs��.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -228,7 +228,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The name of the cluster. This parameter is required if you set the ClusterType parameter to remote-write, ecs, or global-view.
+         * The name of the cluster. This parameter is required if you set ClusterType to remote-write, ecs, or global-view.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -237,7 +237,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The type of the Prometheus instance. The following types are provided: remote-write (Prometheus instance for Remote Write) ecs (Prometheus instance for ECS) cloud-monitor� (Prometheus instance for Alibaba Cloud services in China) cloud-product (Prometheus instance for Alibaba Cloud services outside China) global-view (Prometheus instance for GlobalView) aliyun-cs�� (Prometheus instances for Container Service)
+         * The type of the Prometheus instance. Valid values: remote-write: Prometheus instance for remote write. ecs: Prometheus instance for ECS. cloud-monitor�: Prometheus instance for cloud services in China. cloud-product: Prometheus instance for Alibaba Cloud services outside China. global-view: Prometheus instance for GlobalView. aliyun-cs��: Prometheus instance for Container Service.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -246,7 +246,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the Grafana dedicated instance. This parameter is available if you set the ClusterType parameter to ecs.
+         * The ID of the Grafana dedicated instance. This parameter is available if you set ClusterType to ecs.
          */
         public Builder grafanaInstanceId(String grafanaInstanceId) {
             this.putQueryParameter("GrafanaInstanceId", grafanaInstanceId);
@@ -255,7 +255,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The region ID. If you create a Prometheus instance for cloud services in China, set the value to cn-shanghai.
+         * The region ID. If you create a Prometheus instance for a cloud service in China, set this parameter to cn-shanghai.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,7 +264,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the custom resource group. You can configure this parameter to bind the instance to the resource group.
+         * The ID of the custom resource group. You can specify this parameter to bind the instance to the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -273,7 +273,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The security group. This parameter is required if you set the clusterType parameter to ecs or create an ASK managed cluster.
+         * The ID of the security group. This parameter is required if you set ClusterType to ecs or create an ASK managed cluster.
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
@@ -282,7 +282,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The child instances of the global aggregation instance. The value is a JSON string.
+         * The child instances of the Prometheus instance for GlobalView. The value is a JSON string.
          */
         public Builder subClustersJson(String subClustersJson) {
             this.putQueryParameter("SubClustersJson", subClustersJson);
@@ -291,7 +291,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The tags of the instance. You can configure this parameter to manage tags for the instance.
+         * The tags of the instance. You can specify this parameter to manage tags for the instance.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -300,7 +300,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The vSwitch. This parameter is required if you set the clusterType parameter to ecs or create an ASK managed cluster.
+         * The ID of the vSwitch. This parameter is required if you set ClusterType to ecs or create an ASK managed cluster.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -309,7 +309,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC). This parameter is required if you set the clusterType parameter to ecs or create a serverless Kubernetes (ASK) managed cluster.
+         * The ID of the virtual private cloud (VPC). This parameter is required if you set ClusterType to ecs or create a serverless Kubernetes (ASK) managed cluster.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

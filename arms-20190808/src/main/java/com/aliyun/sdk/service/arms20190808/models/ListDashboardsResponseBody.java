@@ -739,7 +739,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the Grafana dashboards.
+             * The information about the Grafana dashboard.
              */
             public Builder i18nChild(I18nChild i18nChild) {
                 this.i18nChild = i18nChild;
@@ -807,7 +807,7 @@ public class ListDashboardsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the Grafana dashboard was created. Unit: seconds
+             * The timestamp when the Grafana dashboard was created. Unit: seconds.
              */
             public Builder time(String time) {
                 this.time = time;

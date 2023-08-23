@@ -74,7 +74,7 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful.
+         * The response code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,7 +90,7 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned if the Prometheus agent failed to be installed.
+         * The error message that is returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +98,7 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID. You can use the ID to query logs and troubleshoot issues.
+         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,12 +190,7 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
-             * 
-             * *   AlibabaPrometheus
-             * *   MetricStore
-             * *   CustomPrometheus
+             * The type of the data source. AlibabaPrometheus MetricStore CustomPrometheus
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -256,7 +251,7 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The Prometheus instances or data sources that failed to be updated.
+             * The data sources that failed to be updated.
              */
             public Builder failedInstances(java.util.List < FailedInstances> failedInstances) {
                 this.failedInstances = failedInstances;

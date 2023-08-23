@@ -78,7 +78,7 @@ public class CheckServiceStatusRequest extends Request {
         }
 
         /**
-         * The service code of an Alibaba Cloud service. The service code of Prometheus Service is prometheus.
+         * The service code of an Alibaba Cloud service. The service code of Managed Service for Prometheus is prometheus.
          */
         public Builder svcCode(String svcCode) {
             this.putQueryParameter("SvcCode", svcCode);

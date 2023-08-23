@@ -113,7 +113,7 @@ public class UninstallManagedPrometheusRequest extends Request {
         } 
 
         /**
-         * __null__
+         * The ID of the ASK cluster. This parameter is required if the ClusterType parameter is set to ask.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -122,7 +122,7 @@ public class UninstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * ClusterType.
+         * The type of the monitoring object. Valid values: ask and ecs.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -131,7 +131,7 @@ public class UninstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * code!=200
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -140,7 +140,7 @@ public class UninstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the Prometheus instance belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -149,7 +149,7 @@ public class UninstallManagedPrometheusRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The virtual private cloud (VPC) where the ASK cluster or ECS instance resides.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

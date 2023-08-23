@@ -83,7 +83,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends Reques
         } 
 
         /**
-         * code!=200
+         * The region ID of the Prometheus instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -92,7 +92,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends Reques
         }
 
         /**
-         * http://arms.${regionId}.aliyun-inc.com:8099/prometheus/ListPrometheusInstanceByTagAndResourceGroupId.json
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -101,7 +101,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends Reques
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -155,7 +155,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends Reques
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -163,7 +163,7 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdRequest extends Reques
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

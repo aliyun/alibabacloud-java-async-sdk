@@ -85,7 +85,7 @@ public class AddPrometheusRemoteWriteRequest extends Request {
         } 
 
         /**
-         * The ID of the Prometheus instance. Only aliyun-cs and ecs instances are supported.
+         * The ID of the Prometheus instance. Only a Prometheus instance for Container Service or a Prometheus instance for ECS is supported.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -103,7 +103,7 @@ public class AddPrometheusRemoteWriteRequest extends Request {
         }
 
         /**
-         * The remote write configuration. Specify the value in the YAML format.
+         * The details of the remote write configuration item. Specify the value in the YAML format.
          */
         public Builder remoteWriteYaml(String remoteWriteYaml) {
             this.putBodyParameter("RemoteWriteYaml", remoteWriteYaml);

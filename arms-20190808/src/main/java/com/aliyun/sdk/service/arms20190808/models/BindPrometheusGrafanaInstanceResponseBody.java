@@ -82,7 +82,7 @@ public class BindPrometheusGrafanaInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * Indicates whether the request was successful.
          * <p>
          * 
          * *   true
@@ -94,7 +94,7 @@ public class BindPrometheusGrafanaInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;

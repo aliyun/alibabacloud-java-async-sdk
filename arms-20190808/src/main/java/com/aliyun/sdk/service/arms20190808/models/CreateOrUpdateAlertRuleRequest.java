@@ -439,12 +439,12 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The type of the alert rule.
+         * The type of the alert rule. Valid values:
          * <p>
          * 
-         * *   APPLICATION_MONITORING_ALERT_RULE: an alert rule of Application Monitoring
-         * *   BROWSER_MONITORING_ALERT_RULE: an alert rule of Browser Monitoring
-         * *   PROMETHEUS_MONITORING_ALERT_RULE: an alert rule of Prometheus Service
+         * *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
+         * *   BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring
+         * *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Prometheus Service
          * 
          * Valid values:
          * 
@@ -474,8 +474,8 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
          * Specifies whether to apply the alert rule to new applications that are created in Application Monitoring or Browser Monitoring. Valid values:
          * <p>
          * 
-         * *   `true`: yes
-         * *   `false`: no
+         * *   `true`: enables the health check feature.
+         * *   `false`: disables the automatic backup feature.
          */
         public Builder autoAddNewApplication(Boolean autoAddNewApplication) {
             this.putBodyParameter("AutoAddNewApplication", autoAddNewApplication);
@@ -484,7 +484,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The cluster ID of the Prometheus alert rule.
+         * The ID of the monitored cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -502,7 +502,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * The filter conditions of the Application Monitoring or Browser Monitoring alert rule. The name must meet the following format requirements:
+         * The filter conditions of the Application Monitoring or Browser Monitoring alert rule. The following code shows the format of matching rules:
          * <p>
          * 
          *     "DimFilters": [ 
@@ -584,7 +584,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
          * The notification policy.
          * <p>
          * 
-         * *   If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify the name of the alert rule as the match condition. If the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.
+         * *   If you set this parameter to null, no notification policy is specified. After you create an alert rule, you can create a notification policy and specify match rules and match conditions. For example, you can specify the name of the alert rule as the match condition. When the alert rule is triggered, an alert event is generated and an alert notification is sent to the contacts or contact groups that are specified in the notification policy.
          * *   To specify a notification policy, set this parameter to the ID of the notification policy. Application Real-Time Monitoring Service (ARMS) automatically adds a match rule to the notification policy and specifies the ID of the alert rule as the match condition. The name of the alert rule is also displayed. This way, the alert events that are generated based on the alert rule can be matched by the specified notification policy.
          */
         public Builder notifyStrategy(String notifyStrategy) {

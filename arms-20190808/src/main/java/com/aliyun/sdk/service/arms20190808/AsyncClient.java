@@ -90,6 +90,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSyntheticTaskResponse> createSyntheticTask(CreateSyntheticTaskRequest request);
 
+    CompletableFuture<CreateTimingSyntheticTaskResponse> createTimingSyntheticTask(CreateTimingSyntheticTaskRequest request);
+
     CompletableFuture<CreateWebhookResponse> createWebhook(CreateWebhookRequest request);
 
     CompletableFuture<DelAuthTokenResponse> delAuthToken(DelAuthTokenRequest request);
@@ -142,6 +144,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteSyntheticTaskResponse> deleteSyntheticTask(DeleteSyntheticTaskRequest request);
 
+    CompletableFuture<DeleteTimingSyntheticTaskResponse> deleteTimingSyntheticTask(DeleteTimingSyntheticTaskRequest request);
+
     CompletableFuture<DeleteTraceAppResponse> deleteTraceApp(DeleteTraceAppRequest request);
 
     CompletableFuture<DeleteWebhookContactResponse> deleteWebhookContact(DeleteWebhookContactRequest request);
@@ -185,7 +189,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetOnCallSchedulesDetailResponse> getOnCallSchedulesDetail(GetOnCallSchedulesDetailRequest request);
 
     /**
-      * The ID of the request.
+      * None.
       *
      */
     CompletableFuture<GetPrometheusApiTokenResponse> getPrometheusApiToken(GetPrometheusApiTokenRequest request);
@@ -214,11 +218,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetStackResponse> getStack(GetStackRequest request);
 
+    CompletableFuture<GetSyntheticMonitorsResponse> getSyntheticMonitors(GetSyntheticMonitorsRequest request);
+
     CompletableFuture<GetSyntheticTaskDetailResponse> getSyntheticTaskDetail(GetSyntheticTaskDetailRequest request);
 
     CompletableFuture<GetSyntheticTaskListResponse> getSyntheticTaskList(GetSyntheticTaskListRequest request);
 
     CompletableFuture<GetSyntheticTaskMonitorsResponse> getSyntheticTaskMonitors(GetSyntheticTaskMonitorsRequest request);
+
+    CompletableFuture<GetTimingSyntheticTaskResponse> getTimingSyntheticTask(GetTimingSyntheticTaskRequest request);
 
     /**
       * > You must use Application Real-Time Monitoring Service (ARMS) SDK for Java V2.7.24.
@@ -237,7 +245,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InstallCmsExporterResponse> installCmsExporter(InstallCmsExporterRequest request);
 
     /**
-      * $.parameters[5].schema.example
+      * If you call the operation to monitor an ASK cluster or an ECS instance, a Prometheus agent is installed in the ASK cluster or ECS instance. Make sure that the ASK cluster or ECS instance has no Prometheus agent installed in advance.
       *
      */
     CompletableFuture<InstallManagedPrometheusResponse> installManagedPrometheus(InstallManagedPrometheusRequest request);
@@ -300,6 +308,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSilencePoliciesResponse> listSilencePolicies(ListSilencePoliciesRequest request);
 
+    CompletableFuture<ListTimingSyntheticTasksResponse> listTimingSyntheticTasks(ListTimingSyntheticTasksRequest request);
+
     CompletableFuture<ListTraceAppsResponse> listTraceApps(ListTraceAppsRequest request);
 
     CompletableFuture<ManageGetRecordingRuleResponse> manageGetRecordingRule(ManageGetRecordingRuleRequest request);
@@ -308,6 +318,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<OpenArmsDefaultSLRResponse> openArmsDefaultSLR(OpenArmsDefaultSLRRequest request);
 
+    /**
+      * The **OpenArmsServiceSecondVersion** operation supports the following sub-service editions:
+      * *   Application Monitoring: Basic Edition
+      * *   Browser Monitoring: Basic Edition
+      * *   Synthetic Monitoring: Pro Edition (pay-as-you-go)
+      * *   Prometheus Service: Pro Edition
+      *
+     */
     CompletableFuture<OpenArmsServiceSecondVersionResponse> openArmsServiceSecondVersion(OpenArmsServiceSecondVersionRequest request);
 
     CompletableFuture<OpenVClusterResponse> openVCluster(OpenVClusterRequest request);
@@ -384,7 +402,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StartAlertResponse> startAlert(StartAlertRequest request);
 
+    CompletableFuture<StartTimingSyntheticTaskResponse> startTimingSyntheticTask(StartTimingSyntheticTaskRequest request);
+
     CompletableFuture<StopAlertResponse> stopAlert(StopAlertRequest request);
+
+    CompletableFuture<StopTimingSyntheticTaskResponse> stopTimingSyntheticTask(StopTimingSyntheticTaskRequest request);
 
     CompletableFuture<SwitchSyntheticTaskStatusResponse> switchSyntheticTaskStatus(SwitchSyntheticTaskStatusRequest request);
 
@@ -393,7 +415,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**
-      * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+      * Make sure that the ASK cluster or ECS instance is monitored in Managed Service for Prometheus.
       *
      */
     CompletableFuture<UninstallManagedPrometheusResponse> uninstallManagedPrometheus(UninstallManagedPrometheusRequest request);
@@ -427,6 +449,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePrometheusMonitoringStatusResponse> updatePrometheusMonitoringStatus(UpdatePrometheusMonitoringStatusRequest request);
 
     CompletableFuture<UpdatePrometheusRemoteWriteResponse> updatePrometheusRemoteWrite(UpdatePrometheusRemoteWriteRequest request);
+
+    CompletableFuture<UpdateTimingSyntheticTaskResponse> updateTimingSyntheticTask(UpdateTimingSyntheticTaskRequest request);
 
     /**
       * The ID of the request.

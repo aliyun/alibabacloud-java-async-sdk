@@ -50,7 +50,7 @@ public class OpenArmsServiceSecondVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * OrderId.
+         * The service ID that is returned if the service is activated.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -58,7 +58,7 @@ public class OpenArmsServiceSecondVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -86,7 +86,7 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response content. The status of the Prometheus instance is returned.
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the Prometheus instance fails to be created.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class InstallManagedPrometheusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the Prometheus instance was created.
          */
         public Builder success(Boolean success) {
             this.success = success;

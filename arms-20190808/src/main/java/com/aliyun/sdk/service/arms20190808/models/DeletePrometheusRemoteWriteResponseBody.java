@@ -94,7 +94,7 @@ public class DeletePrometheusRemoteWriteResponseBody extends TeaModel {
         }
 
         /**
-         * The number of remote write configuration items that are deleted, or an error message.
+         * The remote write configuration items. If the request fails, an error message is returned.
          */
         public Builder data(String data) {
             this.data = data;

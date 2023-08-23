@@ -82,7 +82,7 @@ public class AddPrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned struct.
+         * The struct returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class AddPrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +150,7 @@ public class AddPrometheusIntegrationResponseBody extends TeaModel {
             private String instanceName; 
 
             /**
-             * The exporter ID.
+             * The ID of the exporter.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -158,7 +158,7 @@ public class AddPrometheusIntegrationResponseBody extends TeaModel {
             }
 
             /**
-             * The exporter name.
+             * The name of the exporter.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

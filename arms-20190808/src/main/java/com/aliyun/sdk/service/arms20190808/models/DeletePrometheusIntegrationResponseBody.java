@@ -82,7 +82,7 @@ public class DeletePrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The success or failure information.
+         * success or an error message.
          */
         public Builder data(String data) {
             this.data = data;
@@ -90,7 +90,7 @@ public class DeletePrometheusIntegrationResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;

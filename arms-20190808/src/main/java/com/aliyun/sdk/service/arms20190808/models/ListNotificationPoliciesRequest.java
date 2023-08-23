@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListNotificationPoliciesRequest extends Request {
     @Query
+    @NameInMap("DirectedMode")
+    private Boolean directedMode;
+
+    @Query
     @NameInMap("Ids")
     private String ids;
 
@@ -40,6 +44,7 @@ public class ListNotificationPoliciesRequest extends Request {
 
     private ListNotificationPoliciesRequest(Builder builder) {
         super(builder);
+        this.directedMode = builder.directedMode;
         this.ids = builder.ids;
         this.isDetail = builder.isDetail;
         this.name = builder.name;
@@ -59,6 +64,13 @@ public class ListNotificationPoliciesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return directedMode
+     */
+    public Boolean getDirectedMode() {
+        return this.directedMode;
     }
 
     /**
@@ -104,6 +116,7 @@ public class ListNotificationPoliciesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListNotificationPoliciesRequest, Builder> {
+        private Boolean directedMode; 
         private String ids; 
         private Boolean isDetail; 
         private String name; 
@@ -117,6 +130,7 @@ public class ListNotificationPoliciesRequest extends Request {
 
         private Builder(ListNotificationPoliciesRequest request) {
             super(request);
+            this.directedMode = request.directedMode;
             this.ids = request.ids;
             this.isDetail = request.isDetail;
             this.name = request.name;
@@ -124,6 +138,15 @@ public class ListNotificationPoliciesRequest extends Request {
             this.regionId = request.regionId;
             this.size = request.size;
         } 
+
+        /**
+         * DirectedMode.
+         */
+        public Builder directedMode(Boolean directedMode) {
+            this.putQueryParameter("DirectedMode", directedMode);
+            this.directedMode = directedMode;
+            return this;
+        }
 
         /**
          * The ID of the notification policy.

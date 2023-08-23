@@ -184,7 +184,13 @@ public class GetAlertRulesRequest extends Request {
         } 
 
         /**
-         * AlertIds.
+         * The unique IDs of alert rules.
+         * <p>
+         * 
+         * *   If you do not specify this parameter, the API operation does not filter alert rules based on their IDs.
+         * *   If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.
+         * 
+         * > When you call the GetAlertRules operation, you can specify other request parameters to obtain the AlertIds parameter from the response. Then, you can specify the AlertIds parameter to query the specified alert rules.
          */
         public Builder alertIds(String alertIds) {
             this.putQueryParameter("AlertIds", alertIds);
@@ -193,7 +199,11 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * AlertNames.
+         * The names of alert rules. When you create alert rules of the new version, you cannot specify duplicate names. However, existing alert rules may have duplicate names. Therefore, the **AlertName** parameter does not uniquely identify an alert rule.
+         * <p>
+         * 
+         * *   If you do not specify this parameter, the API operation does not filter alert rules based on their names.
+         * *   If you specify this parameter, the API operation returns only the information of the specified alert rules. Other filter conditions also take effect.
          */
         public Builder alertNames(String alertNames) {
             this.putQueryParameter("AlertNames", alertNames);
@@ -202,7 +212,14 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * AlertStatus.
+         * The status of the alert rule. Valid values:
+         * <p>
+         * 
+         * *   RUNNING
+         * *   STOPPED
+         * *   PAUSED
+         * 
+         * > The **PAUSED** status indicates that the alert rule is abnormal and is actively paused by the system. The alert rule may be paused because that it is not unique or the associated cluster has been deleted.
          */
         public Builder alertStatus(String alertStatus) {
             this.putQueryParameter("AlertStatus", alertStatus);
@@ -211,7 +228,12 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * AlertType.
+         * The type of the alert rule.
+         * <p>
+         * 
+         * *   APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring
+         * *   BROWSER_MONITORING_ALERT_RULE: an alert rule for Browser Monitoring.
+         * *   PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus.
          */
         public Builder alertType(String alertType) {
             this.putQueryParameter("AlertType", alertType);
@@ -220,7 +242,7 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the monitored cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -229,7 +251,7 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * Page.
+         * The number of the page to return.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -238,7 +260,7 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * You do not need to configure this parameter.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -247,7 +269,7 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -256,7 +278,7 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * Size.
+         * The number of alert rules to return on each page.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);

@@ -82,7 +82,7 @@ public class CreatePrometheusMonitoringResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the remote write configuration that was added, or the exception information.
+         * The name of the monitoring configuration that was added, or the exception information.
          */
         public Builder data(String data) {
             this.data = data;
