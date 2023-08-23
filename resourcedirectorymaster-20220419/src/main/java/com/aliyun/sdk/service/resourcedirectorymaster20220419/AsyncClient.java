@@ -94,8 +94,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteFolderResponse> deleteFolder(DeleteFolderRequest request);
 
-    CompletableFuture<DeleteInvalidCloudAccountRecordResponse> deleteInvalidCloudAccountRecord(DeleteInvalidCloudAccountRecordRequest request);
-
     CompletableFuture<DeleteMessageContactResponse> deleteMessageContact(DeleteMessageContactRequest request);
 
     /**
