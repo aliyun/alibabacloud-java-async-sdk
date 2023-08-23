@@ -41,6 +41,10 @@ public class ListPatchBaselinesRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupld")
+    private String resourceGroupld;
+
+    @Query
     @NameInMap("ShareType")
     private String shareType;
 
@@ -61,6 +65,7 @@ public class ListPatchBaselinesRequest extends Request {
         this.nextToken = builder.nextToken;
         this.operationSystem = builder.operationSystem;
         this.regionId = builder.regionId;
+        this.resourceGroupld = builder.resourceGroupld;
         this.shareType = builder.shareType;
         this.sources = builder.sources;
         this.tags = builder.tags;
@@ -129,6 +134,13 @@ public class ListPatchBaselinesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupld
+     */
+    public String getResourceGroupld() {
+        return this.resourceGroupld;
+    }
+
+    /**
      * @return shareType
      */
     public String getShareType() {
@@ -157,6 +169,7 @@ public class ListPatchBaselinesRequest extends Request {
         private String nextToken; 
         private String operationSystem; 
         private String regionId; 
+        private String resourceGroupld; 
         private String shareType; 
         private java.util.List < String > sources; 
         private java.util.List < Tags> tags; 
@@ -174,6 +187,7 @@ public class ListPatchBaselinesRequest extends Request {
             this.nextToken = request.nextToken;
             this.operationSystem = request.operationSystem;
             this.regionId = request.regionId;
+            this.resourceGroupld = request.resourceGroupld;
             this.shareType = request.shareType;
             this.sources = request.sources;
             this.tags = request.tags;
@@ -249,6 +263,15 @@ public class ListPatchBaselinesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupld.
+         */
+        public Builder resourceGroupld(String resourceGroupld) {
+            this.putQueryParameter("ResourceGroupld", resourceGroupld);
+            this.resourceGroupld = resourceGroupld;
             return this;
         }
 

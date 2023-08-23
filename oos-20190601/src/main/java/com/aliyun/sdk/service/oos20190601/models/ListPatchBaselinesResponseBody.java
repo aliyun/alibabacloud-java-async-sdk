@@ -200,6 +200,9 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         @NameInMap("OperationSystem")
         private String operationSystem;
 
+        @NameInMap("ResourceGroupld")
+        private String resourceGroupld;
+
         @NameInMap("ShareType")
         private String shareType;
 
@@ -225,6 +228,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             this.isDefault = builder.isDefault;
             this.name = builder.name;
             this.operationSystem = builder.operationSystem;
+            this.resourceGroupld = builder.resourceGroupld;
             this.shareType = builder.shareType;
             this.sources = builder.sources;
             this.tags = builder.tags;
@@ -304,6 +308,13 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupld
+         */
+        public String getResourceGroupld() {
+            return this.resourceGroupld;
+        }
+
+        /**
          * @return shareType
          */
         public String getShareType() {
@@ -348,6 +359,7 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
             private Boolean isDefault; 
             private String name; 
             private String operationSystem; 
+            private String resourceGroupld; 
             private String shareType; 
             private java.util.List < String > sources; 
             private java.util.List < Tags> tags; 
@@ -423,6 +435,14 @@ public class ListPatchBaselinesResponseBody extends TeaModel {
              */
             public Builder operationSystem(String operationSystem) {
                 this.operationSystem = operationSystem;
+                return this;
+            }
+
+            /**
+             * ResourceGroupld.
+             */
+            public Builder resourceGroupld(String resourceGroupld) {
+                this.resourceGroupld = resourceGroupld;
                 return this;
             }
 
