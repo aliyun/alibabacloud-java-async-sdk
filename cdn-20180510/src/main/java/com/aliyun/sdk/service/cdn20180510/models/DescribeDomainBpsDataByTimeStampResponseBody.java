@@ -74,7 +74,7 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
         private String timeStamp; 
 
         /**
-         * BpsDataList.
+         * A list of bandwidth values by ISP and region.
          */
         public Builder bpsDataList(BpsDataList bpsDataList) {
             this.bpsDataList = bpsDataList;
@@ -82,7 +82,7 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -90,7 +90,7 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
         }
 
         /**
-         * TimeStamp.
+         * The point in time.
          */
         public Builder timeStamp(String timeStamp) {
             this.timeStamp = timeStamp;
@@ -174,7 +174,7 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Bps.
+             * The bandwidth value.
              */
             public Builder bps(Long bps) {
                 this.bps = bps;
@@ -182,7 +182,7 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
             }
 
             /**
-             * IspName.
+             * The name of the ISP.
              */
             public Builder ispName(String ispName) {
                 this.ispName = ispName;
@@ -190,7 +190,7 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
             }
 
             /**
-             * LocationName.
+             * The name of the region.
              */
             public Builder locationName(String locationName) {
                 this.locationName = locationName;
@@ -198,7 +198,7 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

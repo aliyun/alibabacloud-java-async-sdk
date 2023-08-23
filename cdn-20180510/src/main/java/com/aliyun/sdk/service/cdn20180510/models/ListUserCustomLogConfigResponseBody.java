@@ -50,7 +50,7 @@ public class ListUserCustomLogConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConfigIds.
+         * The list of log configuration IDs.
          */
         public Builder configIds(ConfigIds configIds) {
             this.configIds = configIds;
@@ -58,7 +58,7 @@ public class ListUserCustomLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

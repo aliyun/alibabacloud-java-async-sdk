@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCdnReportResponseBody extends TeaModel {
     @NameInMap("Content")
-    private String content;
+    private java.util.Map < String, ? > content;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -34,7 +34,7 @@ public class DescribeCdnReportResponseBody extends TeaModel {
     /**
      * @return content
      */
-    public String getContent() {
+    public java.util.Map < String, ? > getContent() {
         return this.content;
     }
 
@@ -46,19 +46,19 @@ public class DescribeCdnReportResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String content; 
+        private java.util.Map < String, ? > content; 
         private String requestId; 
 
         /**
-         * Content.
+         * The content of the operations report.
          */
-        public Builder content(String content) {
+        public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
             return this;
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

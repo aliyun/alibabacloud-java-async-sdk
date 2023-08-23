@@ -75,15 +75,15 @@ public class BatchStopCdnDomainRequest extends Request {
             super();
         } 
 
-        private Builder(BatchStopCdnDomainRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(BatchStopCdnDomainRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * DomainNames.
+         * The names of the accelerated domain names. You can specify one or more domain names in each request. Separate multiple domain names with commas (,).
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);

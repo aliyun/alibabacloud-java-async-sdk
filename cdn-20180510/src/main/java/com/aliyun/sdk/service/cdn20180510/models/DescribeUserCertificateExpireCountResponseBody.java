@@ -62,7 +62,7 @@ public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ExpireWithin30DaysCount.
+         * The number of domain names whose SSL certificates are about to expires within 30 days.
          */
         public Builder expireWithin30DaysCount(Integer expireWithin30DaysCount) {
             this.expireWithin30DaysCount = expireWithin30DaysCount;
@@ -70,7 +70,7 @@ public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredCount.
+         * The number of domain names whose SSL certificates have already expired.
          */
         public Builder expiredCount(Integer expiredCount) {
             this.expiredCount = expiredCount;
@@ -78,7 +78,7 @@ public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

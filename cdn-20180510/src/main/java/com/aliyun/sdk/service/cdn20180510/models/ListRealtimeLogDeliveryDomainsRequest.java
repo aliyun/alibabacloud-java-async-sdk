@@ -18,10 +18,6 @@ public class ListRealtimeLogDeliveryDomainsRequest extends Request {
     private String logstore;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("Project")
     @Validation(required = true)
     private String project;
@@ -34,7 +30,6 @@ public class ListRealtimeLogDeliveryDomainsRequest extends Request {
     private ListRealtimeLogDeliveryDomainsRequest(Builder builder) {
         super(builder);
         this.logstore = builder.logstore;
-        this.ownerId = builder.ownerId;
         this.project = builder.project;
         this.region = builder.region;
     }
@@ -60,13 +55,6 @@ public class ListRealtimeLogDeliveryDomainsRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return project
      */
     public String getProject() {
@@ -82,7 +70,6 @@ public class ListRealtimeLogDeliveryDomainsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListRealtimeLogDeliveryDomainsRequest, Builder> {
         private String logstore; 
-        private Long ownerId; 
         private String project; 
         private String region; 
 
@@ -90,16 +77,15 @@ public class ListRealtimeLogDeliveryDomainsRequest extends Request {
             super();
         } 
 
-        private Builder(ListRealtimeLogDeliveryDomainsRequest response) {
-            super(response);
-            this.logstore = response.logstore;
-            this.ownerId = response.ownerId;
-            this.project = response.project;
-            this.region = response.region;
+        private Builder(ListRealtimeLogDeliveryDomainsRequest request) {
+            super(request);
+            this.logstore = request.logstore;
+            this.project = request.project;
+            this.region = request.region;
         } 
 
         /**
-         * Logstore.
+         * The name of the Logstore that collects log data from Alibaba Cloud CDN in real time. You can specify multiple Logstore names and separate them with commas (,).
          */
         public Builder logstore(String logstore) {
             this.putQueryParameter("Logstore", logstore);
@@ -108,16 +94,7 @@ public class ListRealtimeLogDeliveryDomainsRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * Project.
+         * The name of the Log Service project that is used for real-time log delivery. You can specify multiple project names and separate them with commas (,).
          */
         public Builder project(String project) {
             this.putQueryParameter("Project", project);
@@ -126,7 +103,10 @@ public class ListRealtimeLogDeliveryDomainsRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region where the Log Service project is deployed. You can specify multiple region IDs and separate them with commas (,).
+         * <p>
+         * 
+         * For more information about regions, see [Regions that support real-time log delivery](~~144883~~).
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

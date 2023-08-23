@@ -33,10 +33,6 @@ public class SetWaitingRoomConfigRequest extends Request {
     private Integer maxTimeWait;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("WaitUri")
     @Validation(required = true)
     private String waitUri;
@@ -52,7 +48,6 @@ public class SetWaitingRoomConfigRequest extends Request {
         this.domainName = builder.domainName;
         this.gapTime = builder.gapTime;
         this.maxTimeWait = builder.maxTimeWait;
-        this.ownerId = builder.ownerId;
         this.waitUri = builder.waitUri;
         this.waitUrl = builder.waitUrl;
     }
@@ -99,13 +94,6 @@ public class SetWaitingRoomConfigRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return waitUri
      */
     public String getWaitUri() {
@@ -124,7 +112,6 @@ public class SetWaitingRoomConfigRequest extends Request {
         private String domainName; 
         private Integer gapTime; 
         private Integer maxTimeWait; 
-        private Long ownerId; 
         private String waitUri; 
         private String waitUrl; 
 
@@ -132,19 +119,18 @@ public class SetWaitingRoomConfigRequest extends Request {
             super();
         } 
 
-        private Builder(SetWaitingRoomConfigRequest response) {
-            super(response);
-            this.allowPct = response.allowPct;
-            this.domainName = response.domainName;
-            this.gapTime = response.gapTime;
-            this.maxTimeWait = response.maxTimeWait;
-            this.ownerId = response.ownerId;
-            this.waitUri = response.waitUri;
-            this.waitUrl = response.waitUrl;
+        private Builder(SetWaitingRoomConfigRequest request) {
+            super(request);
+            this.allowPct = request.allowPct;
+            this.domainName = request.domainName;
+            this.gapTime = request.gapTime;
+            this.maxTimeWait = request.maxTimeWait;
+            this.waitUri = request.waitUri;
+            this.waitUrl = request.waitUrl;
         } 
 
         /**
-         * AllowPct.
+         * The percentage of requests that are allowed to be redirected to the origin server. Valid values: **0** to **100**.
          */
         public Builder allowPct(Integer allowPct) {
             this.putQueryParameter("AllowPct", allowPct);
@@ -153,7 +139,7 @@ public class SetWaitingRoomConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -162,7 +148,7 @@ public class SetWaitingRoomConfigRequest extends Request {
         }
 
         /**
-         * GapTime.
+         * The length of waiting time to skip after an exit from the queue. Unit: seconds.
          */
         public Builder gapTime(Integer gapTime) {
             this.putQueryParameter("GapTime", gapTime);
@@ -171,7 +157,7 @@ public class SetWaitingRoomConfigRequest extends Request {
         }
 
         /**
-         * MaxTimeWait.
+         * The maximum length of waiting time in the queue. Unit: seconds.
          */
         public Builder maxTimeWait(Integer maxTimeWait) {
             this.putQueryParameter("MaxTimeWait", maxTimeWait);
@@ -180,16 +166,7 @@ public class SetWaitingRoomConfigRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * WaitUri.
+         * The regular expression that is used to match URI strings for which the virtual waiting room feature is enabled.
          */
         public Builder waitUri(String waitUri) {
             this.putQueryParameter("WaitUri", waitUri);
@@ -198,7 +175,7 @@ public class SetWaitingRoomConfigRequest extends Request {
         }
 
         /**
-         * WaitUrl.
+         * The URL of the waiting page.
          */
         public Builder waitUrl(String waitUrl) {
             this.putQueryParameter("WaitUrl", waitUrl);

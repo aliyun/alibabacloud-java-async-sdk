@@ -18,10 +18,6 @@ public class SetCdnDomainCSRCertificateRequest extends Request {
     private String domainName;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("ServerCertificate")
     @Validation(required = true)
     private String serverCertificate;
@@ -29,7 +25,6 @@ public class SetCdnDomainCSRCertificateRequest extends Request {
     private SetCdnDomainCSRCertificateRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
-        this.ownerId = builder.ownerId;
         this.serverCertificate = builder.serverCertificate;
     }
 
@@ -54,13 +49,6 @@ public class SetCdnDomainCSRCertificateRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return serverCertificate
      */
     public String getServerCertificate() {
@@ -69,22 +57,20 @@ public class SetCdnDomainCSRCertificateRequest extends Request {
 
     public static final class Builder extends Request.Builder<SetCdnDomainCSRCertificateRequest, Builder> {
         private String domainName; 
-        private Long ownerId; 
         private String serverCertificate; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SetCdnDomainCSRCertificateRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.serverCertificate = response.serverCertificate;
+        private Builder(SetCdnDomainCSRCertificateRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.serverCertificate = request.serverCertificate;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name for which you want to configure an SSL certificate. The domain name must have HTTPS secure acceleration enabled.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,16 +79,7 @@ public class SetCdnDomainCSRCertificateRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ServerCertificate.
+         * The content of the certificate. The certificate must match the certificate signing request (CSR) created by calling the [CreateCdnCertificateSigningRequest](~~144478~~) operation. Make sure that the content of the certificate is encoded in Base64 and then encoded by encodeURIComponent.
          */
         public Builder serverCertificate(String serverCertificate) {
             this.putQueryParameter("ServerCertificate", serverCertificate);

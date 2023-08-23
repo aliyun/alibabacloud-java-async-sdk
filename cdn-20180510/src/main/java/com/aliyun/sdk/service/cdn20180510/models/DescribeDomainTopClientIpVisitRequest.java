@@ -29,10 +29,6 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
     private String locationNameEn;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("SortBy")
     private String sortBy;
 
@@ -46,7 +42,6 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
         this.endTime = builder.endTime;
         this.limit = builder.limit;
         this.locationNameEn = builder.locationNameEn;
-        this.ownerId = builder.ownerId;
         this.sortBy = builder.sortBy;
         this.startTime = builder.startTime;
     }
@@ -93,13 +88,6 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -118,7 +106,6 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
         private String endTime; 
         private String limit; 
         private String locationNameEn; 
-        private Long ownerId; 
         private String sortBy; 
         private String startTime; 
 
@@ -126,19 +113,21 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainTopClientIpVisitRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.limit = response.limit;
-            this.locationNameEn = response.locationNameEn;
-            this.ownerId = response.ownerId;
-            this.sortBy = response.sortBy;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainTopClientIpVisitRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.limit = request.limit;
+            this.locationNameEn = request.locationNameEn;
+            this.sortBy = request.sortBy;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+         * <p>
+         * 
+         * By default, this operation queries client IP addresses for all accelerated domain names.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -147,7 +136,12 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -156,7 +150,10 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The maximum number of entries to return. Maximum value: 100.
+         * <p>
+         * 
+         * Default value: 20. The default value specifies that the top 20 IP addresses are returned.
          */
         public Builder limit(String limit) {
             this.putQueryParameter("Limit", limit);
@@ -165,7 +162,10 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region. Separate multiple region names with commas (,).
+         * <p>
+         * 
+         * You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -174,16 +174,11 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * SortBy.
+         * The criterion by which you want to sort client IP addresses. Valid values:
+         * <p>
+         * 
+         * *   **traf**: by network traffic. This is the default value.
+         * *   **acc**: by the number of requests.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -192,7 +187,10 @@ public class DescribeDomainTopClientIpVisitRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -13,17 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRefreshTaskByIdRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("TaskId")
     @Validation(required = true)
     private String taskId;
 
     private DescribeRefreshTaskByIdRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.taskId = builder.taskId;
     }
 
@@ -41,13 +36,6 @@ public class DescribeRefreshTaskByIdRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -55,30 +43,24 @@ public class DescribeRefreshTaskByIdRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeRefreshTaskByIdRequest, Builder> {
-        private Long ownerId; 
         private String taskId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeRefreshTaskByIdRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.taskId = response.taskId;
+        private Builder(DescribeRefreshTaskByIdRequest request) {
+            super(request);
+            this.taskId = request.taskId;
         } 
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * TaskId.
+         * The ID of the task that you want to query.
+         * <p>
+         * 
+         * You can call the [RefreshObjectCaches](~~91164~~) operation to query task IDs. Then, you can use the task IDs to query task status.
+         * 
+         * You can specify up to 10 task IDs. Separate task IDs with commas (,).
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

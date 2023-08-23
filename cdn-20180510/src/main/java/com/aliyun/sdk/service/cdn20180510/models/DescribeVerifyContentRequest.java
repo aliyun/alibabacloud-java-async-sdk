@@ -17,14 +17,9 @@ public class DescribeVerifyContentRequest extends Request {
     @Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DescribeVerifyContentRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -47,42 +42,24 @@ public class DescribeVerifyContentRequest extends Request {
         return this.domainName;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeVerifyContentRequest, Builder> {
         private String domainName; 
-        private Long ownerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeVerifyContentRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeVerifyContentRequest request) {
+            super(request);
+            this.domainName = request.domainName;
         } 
 
         /**
-         * DomainName.
+         * The domain name of which the ownership was verified. You can specify only one domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

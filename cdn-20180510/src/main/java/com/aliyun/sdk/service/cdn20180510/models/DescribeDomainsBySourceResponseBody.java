@@ -62,7 +62,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         private String sources; 
 
         /**
-         * DomainsList.
+         * The domain names corresponding to each origin server.
          */
         public Builder domainsList(DomainsList domainsList) {
             this.domainsList = domainsList;
@@ -70,7 +70,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         }
 
         /**
-         * Sources.
+         * The origin servers.
          */
         public Builder sources(String sources) {
             this.sources = sources;
@@ -178,7 +178,12 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CdnType.
+             * The workload type of the accelerated domain name. Valid values:
+             * <p>
+             * 
+             * *   **web**: images and small files
+             * *   **download**: large files
+             * *   **video**: on-demand video and audio streaming
              */
             public Builder cdnType(String cdnType) {
                 this.cdnType = cdnType;
@@ -186,7 +191,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The creation time.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -194,7 +199,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * DomainCname.
+             * The CNAME record assigned to the domain name.
              */
             public Builder domainCname(String domainCname) {
                 this.domainCname = domainCname;
@@ -202,7 +207,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -210,7 +215,15 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the domain name. Valid values:
+             * <p>
+             * 
+             * *   **applying**: The domain name is under review.
+             * *   **configuring**: The domain name is being configured.
+             * *   **online**: The domain name is working as expected.
+             * *   **stopping**: The domain name is being stopped.
+             * *   **offline**: The domain name is disabled.
+             * *   **disabling**: The domain name is being removed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -218,7 +231,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The update time.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -365,7 +378,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * DomainInfos.
+             * Information about the domain name.
              */
             public Builder domainInfos(DomainInfos domainInfos) {
                 this.domainInfos = domainInfos;
@@ -373,7 +386,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * Domains.
+             * The domain names that correspond to each origin server.
              */
             public Builder domains(Domains domains) {
                 this.domains = domains;
@@ -381,7 +394,7 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The origin server.
              */
             public Builder source(String source) {
                 this.source = source;

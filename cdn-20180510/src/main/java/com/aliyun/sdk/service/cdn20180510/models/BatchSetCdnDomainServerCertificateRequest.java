@@ -167,22 +167,22 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(BatchSetCdnDomainServerCertificateRequest response) {
-            super(response);
-            this.certName = response.certName;
-            this.certType = response.certType;
-            this.domainName = response.domainName;
-            this.forceSet = response.forceSet;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
-            this.SSLPri = response.SSLPri;
-            this.SSLProtocol = response.SSLProtocol;
-            this.SSLPub = response.SSLPub;
-            this.securityToken = response.securityToken;
+        private Builder(BatchSetCdnDomainServerCertificateRequest request) {
+            super(request);
+            this.certName = request.certName;
+            this.certType = request.certType;
+            this.domainName = request.domainName;
+            this.forceSet = request.forceSet;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
+            this.SSLPri = request.SSLPri;
+            this.SSLProtocol = request.SSLProtocol;
+            this.SSLPub = request.SSLPub;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * CertName.
+         * The name of the certificate.
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -191,7 +191,11 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * CertType.
+         * The type of the certificate. Valid values:
+         * <p>
+         * 
+         * *   **upload**: a user-uploaded SSL certificate.
+         * *   **cas**: a certificate that is acquired through Certificate Management Service.
          */
         public Builder certType(String certType) {
             this.putQueryParameter("CertType", certType);
@@ -200,7 +204,10 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name to which the SSL certificate belongs. The type of request supported by the accelerated domain name must be HTTPS. You can specify multiple accelerated domain names and separate them with commas (,).
+         * <p>
+         * 
+         * >You can configure up to 10 domain names at a time.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -209,7 +216,7 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * ForceSet.
+         * Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.
          */
         public Builder forceSet(String forceSet) {
             this.putQueryParameter("ForceSet", forceSet);
@@ -227,7 +234,7 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -236,7 +243,7 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * SSLPri.
+         * The private key. Specify the private key only if you want to enable the SSL certificate.
          */
         public Builder SSLPri(String SSLPri) {
             this.putQueryParameter("SSLPri", SSLPri);
@@ -245,7 +252,11 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * SSLProtocol.
+         * Specifies whether to enable the SSL certificate. Default value: off. Valid values:
+         * <p>
+         * 
+         * *   **on** ：enables the SSL certificate.
+         * *   **off**：disables the SSL certificate
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);
@@ -254,7 +265,7 @@ public class BatchSetCdnDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * SSLPub.
+         * The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate.
          */
         public Builder SSLPub(String SSLPub) {
             this.putQueryParameter("SSLPub", SSLPub);

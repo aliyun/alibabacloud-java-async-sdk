@@ -50,7 +50,7 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FCTrigger.
+         * The Function Compute trigger that you want to query.
          */
         public Builder FCTrigger(FCTrigger FCTrigger) {
             this.FCTrigger = FCTrigger;
@@ -58,7 +58,7 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
             private String triggerARN; 
 
             /**
-             * EventMetaName.
+             * The name of the event.
              */
             public Builder eventMetaName(String eventMetaName) {
                 this.eventMetaName = eventMetaName;
@@ -166,7 +166,7 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * EventMetaVersion.
+             * The version of the event.
              */
             public Builder eventMetaVersion(String eventMetaVersion) {
                 this.eventMetaVersion = eventMetaVersion;
@@ -174,7 +174,7 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * Notes.
+             * The remarks of the Function Compute trigger.
              */
             public Builder notes(String notes) {
                 this.notes = notes;
@@ -182,7 +182,7 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * RoleARN.
+             * The assigned Resource Access Management (RAM) role.
              */
             public Builder roleARN(String roleARN) {
                 this.roleARN = roleARN;
@@ -190,7 +190,7 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * SourceArn.
+             * The resources and filters for event listening.
              */
             public Builder sourceArn(String sourceArn) {
                 this.sourceArn = sourceArn;
@@ -198,7 +198,7 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerARN.
+             * The trigger that corresponds to the Function Compute service.
              */
             public Builder triggerARN(String triggerARN) {
                 this.triggerARN = triggerARN;

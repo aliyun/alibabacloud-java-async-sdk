@@ -74,7 +74,7 @@ public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * EndTime.
+         * The end of the time range for which the data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -82,7 +82,7 @@ public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range for which the data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -98,7 +98,7 @@ public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -25,16 +25,11 @@ public class DeleteCdnDomainRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private DeleteCdnDomainRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -71,33 +66,24 @@ public class DeleteCdnDomainRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<DeleteCdnDomainRequest, Builder> {
         private String domainName; 
         private String ownerAccount; 
         private Long ownerId; 
-        private String securityToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteCdnDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteCdnDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name that you want to remove. You can specify only one domain name in each call.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -120,15 +106,6 @@ public class DeleteCdnDomainRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

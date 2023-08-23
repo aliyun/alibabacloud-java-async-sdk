@@ -50,7 +50,7 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainConfigs.
+         * The configurations of the domain name.
          */
         public Builder domainConfigs(DomainConfigs domainConfigs) {
             this.domainConfigs = domainConfigs;
@@ -58,7 +58,7 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             private String argValue; 
 
             /**
-             * ArgName.
+             * The parameter name, which is the configuration item of **functionName**. You can configure multiple configuration items.
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -118,7 +118,7 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ArgValue.
+             * The parameter value, which is the value of the configuration item of **functionName**.
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -183,6 +183,9 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
         @NameInMap("FunctionName")
         private String functionName;
 
+        @NameInMap("ParentId")
+        private String parentId;
+
         @NameInMap("Status")
         private String status;
 
@@ -190,6 +193,7 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             this.configId = builder.configId;
             this.functionArgs = builder.functionArgs;
             this.functionName = builder.functionName;
+            this.parentId = builder.parentId;
             this.status = builder.status;
         }
 
@@ -223,6 +227,13 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return parentId
+         */
+        public String getParentId() {
+            return this.parentId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -233,10 +244,11 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             private String configId; 
             private FunctionArgs functionArgs; 
             private String functionName; 
+            private String parentId; 
             private String status; 
 
             /**
-             * ConfigId.
+             * The ID of the configuration.
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -244,7 +256,7 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionArgs.
+             * The configuration of each feature.
              */
             public Builder functionArgs(FunctionArgs functionArgs) {
                 this.functionArgs = functionArgs;
@@ -252,7 +264,7 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * The name of the feature.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -260,7 +272,26 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The ID of the rule condition. This parameter is optional.
+             * <p>
+             * 
+             * To create a rule condition, you can configure the **condition** feature that is described in the [Parameters for configuring features for domain names](~~388460~~) topic. A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. Each rule condition has a [ConfigId](~~388994~~). You can use ConfigId as ParentId that is referenced by other features. This way, you can combine rule conditions and features for flexible configurations.
+             * 
+             * For more information, see [BatchSetCdnDomainConfig](~~90915~~) or ParentId configuration example in this topic.
+             */
+            public Builder parentId(String parentId) {
+                this.parentId = parentId;
+                return this;
+            }
+
+            /**
+             * The status of the configuration. Valid values:
+             * <p>
+             * 
+             * *   **success**
+             * *   **testing**
+             * *   **failed**
+             * *   **configuring**
              */
             public Builder status(String status) {
                 this.status = status;

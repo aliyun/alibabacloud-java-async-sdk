@@ -17,14 +17,9 @@ public class DescribeDomainRealtimeLogDeliveryRequest extends Request {
     @Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DescribeDomainRealtimeLogDeliveryRequest(Builder builder) {
         super(builder);
         this.domain = builder.domain;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -47,42 +42,24 @@ public class DescribeDomainRealtimeLogDeliveryRequest extends Request {
         return this.domain;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDomainRealtimeLogDeliveryRequest, Builder> {
         private String domain; 
-        private Long ownerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainRealtimeLogDeliveryRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeDomainRealtimeLogDeliveryRequest request) {
+            super(request);
+            this.domain = request.domain;
         } 
 
         /**
-         * Domain.
+         * The accelerated domain name for which real-time log delivery is enabled. You can specify only one domain name.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
             this.domain = domain;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

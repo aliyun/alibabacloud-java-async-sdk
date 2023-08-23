@@ -50,7 +50,7 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ReatTimeDeliveryAccData.
+         * The statistics about real-time log deliveries.
          */
         public Builder reatTimeDeliveryAccData(ReatTimeDeliveryAccData reatTimeDeliveryAccData) {
             this.reatTimeDeliveryAccData = reatTimeDeliveryAccData;
@@ -58,7 +58,7 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * FailedNum.
+             * The number of failed attempts to deliver log data to Log Service.
              */
             public Builder failedNum(Integer failedNum) {
                 this.failedNum = failedNum;
@@ -130,7 +130,7 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessNum.
+             * The number of successful deliveries of log data to Log Service.
              */
             public Builder successNum(Integer successNum) {
                 this.successNum = successNum;
@@ -138,7 +138,7 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

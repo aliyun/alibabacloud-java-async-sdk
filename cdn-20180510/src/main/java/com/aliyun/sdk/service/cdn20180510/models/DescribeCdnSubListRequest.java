@@ -12,13 +12,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCdnSubListRequest</p>
  */
 public class DescribeCdnSubListRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DescribeCdnSubListRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -34,33 +29,15 @@ public class DescribeCdnSubListRequest extends Request {
         return new Builder(this);
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeCdnSubListRequest, Builder> {
-        private Long ownerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeCdnSubListRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(DescribeCdnSubListRequest request) {
+            super(request);
         } 
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
 
         @Override
         public DescribeCdnSubListRequest build() {

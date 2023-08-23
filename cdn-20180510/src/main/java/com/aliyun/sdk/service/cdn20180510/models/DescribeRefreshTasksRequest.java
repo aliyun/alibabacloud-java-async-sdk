@@ -193,24 +193,24 @@ public class DescribeRefreshTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRefreshTasksRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.objectPath = response.objectPath;
-            this.objectType = response.objectType;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
-            this.securityToken = response.securityToken;
-            this.startTime = response.startTime;
-            this.status = response.status;
-            this.taskId = response.taskId;
+        private Builder(DescribeRefreshTasksRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.objectPath = request.objectPath;
+            this.objectType = request.objectType;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.securityToken = request.securityToken;
+            this.startTime = request.startTime;
+            this.status = request.status;
+            this.taskId = request.taskId;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one accelerated domain name in each call. By default, this operation queries the status of tasks for all accelerated domain names.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -219,7 +219,10 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -228,7 +231,7 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * ObjectPath.
+         * The path of the object. The path is used as a condition for exact matching.
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -237,7 +240,15 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * ObjectType.
+         * The type of the task. Valid values:
+         * <p>
+         * 
+         * *   **file**: refreshes one or more files.
+         * *   **directory**: refreshes files in specific directories.
+         * *   **regex**: refreshes content based on a regular expression.
+         * *   **preload**: prefetches one or more files.
+         * 
+         * > If you set the **DomainName** or **Status** parameter, you must also set the **ObjectType** parameter.
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -255,7 +266,7 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: **1** to **100000**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -264,7 +275,7 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**. Maximum value: **100**. Valid values: **1** to **100**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -273,7 +284,7 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -291,7 +302,7 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -300,7 +311,12 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * *   **Complete**: The task is complete.
+         * *   **Refreshing**: The task is in progress.
+         * *   **Failed**: The task failed.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -309,7 +325,7 @@ public class DescribeRefreshTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the task that you want to query.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

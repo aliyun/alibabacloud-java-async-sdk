@@ -103,17 +103,17 @@ public class SetCdnDomainSMCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(SetCdnDomainSMCertificateRequest response) {
-            super(response);
-            this.certIdentifier = response.certIdentifier;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.SSLProtocol = response.SSLProtocol;
-            this.securityToken = response.securityToken;
+        private Builder(SetCdnDomainSMCertificateRequest request) {
+            super(request);
+            this.certIdentifier = request.certIdentifier;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.SSLProtocol = request.SSLProtocol;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * CertIdentifier.
+         * The ID of the SM certificate that you want to configure. The identifier of the certificate. The value is Certificate ID-cn-hangzhou. For example, if the certificate ID is 123, set the value of this parameter to 123-cn-hangzhou.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
@@ -122,7 +122,10 @@ public class SetCdnDomainSMCertificateRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name for which you want to configure the SM certificate.
+         * <p>
+         * 
+         * > The domain name must use HTTPS acceleration.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -140,7 +143,11 @@ public class SetCdnDomainSMCertificateRequest extends Request {
         }
 
         /**
-         * SSLProtocol.
+         * Specifies whether to enable the SSL certificate. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);

@@ -50,7 +50,7 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Contents.
+         * The content of the script.
          */
         public Builder contents(java.util.List < Contents> contents) {
             this.contents = contents;
@@ -58,7 +58,7 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
             private java.util.List < String > points; 
 
             /**
-             * Columns.
+             * The time and column names in the table that shows the status of the script.
              */
             public Builder columns(java.util.List < String > columns) {
                 this.columns = columns;
@@ -130,7 +130,7 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the table that shows the status of the script.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -138,7 +138,7 @@ public class DescribeEsExecuteDataResponseBody extends TeaModel {
             }
 
             /**
-             * Points.
+             * The list of timestamps and values in the corresponding columns of the table that shows the status of the script.
              */
             public Builder points(java.util.List < String > points) {
                 this.points = points;

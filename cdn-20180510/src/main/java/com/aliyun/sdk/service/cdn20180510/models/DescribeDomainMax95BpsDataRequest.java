@@ -25,10 +25,6 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
     private String endTime;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -41,7 +37,6 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
         this.cycle = builder.cycle;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
         this.timePoint = builder.timePoint;
     }
@@ -81,13 +76,6 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -105,7 +93,6 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
         private String cycle; 
         private String domainName; 
         private String endTime; 
-        private Long ownerId; 
         private String startTime; 
         private String timePoint; 
 
@@ -113,18 +100,21 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainMax95BpsDataRequest response) {
-            super(response);
-            this.cycle = response.cycle;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
-            this.timePoint = response.timePoint;
+        private Builder(DescribeDomainMax95BpsDataRequest request) {
+            super(request);
+            this.cycle = request.cycle;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.startTime = request.startTime;
+            this.timePoint = request.timePoint;
         } 
 
         /**
-         * Cycle.
+         * The cycle to query the 95th percentile bandwidth data. Default value: **day**. Valid values:
+         * <p>
+         * 
+         * *   **day**: queries the 95th percentile bandwidth data by day.
+         * *   **month**: queries the 95th percentile bandwidth data by month.
          */
         public Builder cycle(String cycle) {
             this.putQueryParameter("Cycle", cycle);
@@ -133,7 +123,10 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name. If you do not specify this parameter, data of all accelerated domain names under your account is queried.
+         * <p>
+         * 
+         * > You cannot specify multiple domain names at a time.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -142,7 +135,12 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -151,16 +149,10 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -169,7 +161,10 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
         }
 
         /**
-         * TimePoint.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder timePoint(String timePoint) {
             this.putQueryParameter("TimePoint", timePoint);

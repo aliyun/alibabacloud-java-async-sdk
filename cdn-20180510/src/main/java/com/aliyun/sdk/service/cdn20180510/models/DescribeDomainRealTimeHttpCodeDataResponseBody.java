@@ -98,7 +98,10 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
+         * <p>
+         * 
+         * Depending on the maximum time range per query, the value is 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see the "Time granularity" section in Usage notes.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +109,7 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +117,7 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +125,7 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * RealTimeHttpCodeData.
+         * The proportions of HTTP status codes at each time interval.
          */
         public Builder realTimeHttpCodeData(RealTimeHttpCodeData realTimeHttpCodeData) {
             this.realTimeHttpCodeData = realTimeHttpCodeData;
@@ -130,7 +133,7 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +141,7 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -202,7 +205,7 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
             private String proportion; 
 
             /**
-             * Code.
+             * The HTTP status code returned.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -210,7 +213,7 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The total number of entries.
              */
             public Builder count(String count) {
                 this.count = count;
@@ -218,7 +221,7 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion.
+             * The proportion of the HTTP status code.
              */
             public Builder proportion(String proportion) {
                 this.proportion = proportion;
@@ -312,7 +315,7 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
             private Value value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -320,7 +323,7 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The proportions of the HTTP status codes.
              */
             public Builder value(Value value) {
                 this.value = value;

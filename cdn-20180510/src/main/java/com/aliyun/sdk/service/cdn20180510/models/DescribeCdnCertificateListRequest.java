@@ -74,15 +74,18 @@ public class DescribeCdnCertificateListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCdnCertificateListRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeCdnCertificateListRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+         * <p>
+         * 
+         * If you do not specify an accelerated domain name, SSL certificates of all your accelerated domain names are queried.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

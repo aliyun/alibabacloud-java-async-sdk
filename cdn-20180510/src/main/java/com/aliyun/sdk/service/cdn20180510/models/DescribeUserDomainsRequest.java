@@ -231,27 +231,34 @@ public class DescribeUserDomainsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserDomainsRequest response) {
-            super(response);
-            this.cdnType = response.cdnType;
-            this.changeEndTime = response.changeEndTime;
-            this.changeStartTime = response.changeStartTime;
-            this.checkDomainShow = response.checkDomainShow;
-            this.coverage = response.coverage;
-            this.domainName = response.domainName;
-            this.domainSearchType = response.domainSearchType;
-            this.domainStatus = response.domainStatus;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
-            this.securityToken = response.securityToken;
-            this.source = response.source;
-            this.tag = response.tag;
+        private Builder(DescribeUserDomainsRequest request) {
+            super(request);
+            this.cdnType = request.cdnType;
+            this.changeEndTime = request.changeEndTime;
+            this.changeStartTime = request.changeStartTime;
+            this.checkDomainShow = request.checkDomainShow;
+            this.coverage = request.coverage;
+            this.domainName = request.domainName;
+            this.domainSearchType = request.domainSearchType;
+            this.domainStatus = request.domainStatus;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
+            this.securityToken = request.securityToken;
+            this.source = request.source;
+            this.tag = request.tag;
         } 
 
         /**
-         * CdnType.
+         * The type of workload accelerated by Alibaba Cloud CDN. Separate types with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **web**: images and small files
+         * *   **download**: large files
+         * *   **video**: on-demand video and audio streaming
+         * 
+         * If you do not set this parameter, all service types are queried.
          */
         public Builder cdnType(String cdnType) {
             this.putQueryParameter("CdnType", cdnType);
@@ -260,7 +267,10 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * ChangeEndTime.
+         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder changeEndTime(String changeEndTime) {
             this.putQueryParameter("ChangeEndTime", changeEndTime);
@@ -269,7 +279,7 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * ChangeStartTime.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder changeStartTime(String changeStartTime) {
             this.putQueryParameter("ChangeStartTime", changeStartTime);
@@ -278,7 +288,11 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * CheckDomainShow.
+         * Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder checkDomainShow(Boolean checkDomainShow) {
             this.putQueryParameter("CheckDomainShow", checkDomainShow);
@@ -287,7 +301,12 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * Coverage.
+         * The acceleration region. By default, all acceleration regions are queried. Valid values:
+         * <p>
+         * 
+         * *   **domestic**: Chinese mainland
+         * *   **global**: global
+         * *   **overseas**: outside the Chinese mainland
          */
         public Builder coverage(String coverage) {
             this.putQueryParameter("Coverage", coverage);
@@ -296,7 +315,7 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain. If you do not set this parameter, all domain names that match the conditions are returned.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -305,7 +324,15 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * DomainSearchType.
+         * The search mode. Valid values:
+         * <p>
+         * 
+         * *   **fuzzy_match**: fuzzy match
+         * *   **pre_match**: prefix match
+         * *   **suf_match**: suffix match
+         * *   **full_match** (default): exact match
+         * 
+         * > If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.
          */
         public Builder domainSearchType(String domainSearchType) {
             this.putQueryParameter("DomainSearchType", domainSearchType);
@@ -314,7 +341,19 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * DomainStatus.
+         * The status of the domain name. Valid values:
+         * <p>
+         * 
+         * *   **online**
+         * *   **offline**
+         * *   **configuring**
+         * *   **configure_failed**
+         * *   **checking**
+         * *   **check_failed**
+         * *   **stopping**
+         * *   **deleting**
+         * 
+         * If you do not set this parameter, domain names in all states are queried.
          */
         public Builder domainStatus(String domainStatus) {
             this.putQueryParameter("DomainStatus", domainStatus);
@@ -332,7 +371,7 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: **1** to **100000**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -341,7 +380,7 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1 to 50**. Default value: **20**. Maximum value: **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -350,7 +389,7 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. By default, all IDs are queried.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -368,7 +407,7 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * Source.
+         * The information about the origin server.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -377,7 +416,7 @@ public class DescribeUserDomainsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of tags. Maximum number of elements in the list: 20
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -431,7 +470,10 @@ public class DescribeUserDomainsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of a tag.
+             * <p>
+             * 
+             * By default, all tag keys are queried.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -439,7 +481,10 @@ public class DescribeUserDomainsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
+             * <p>
+             * 
+             * By default, all tag values are queried.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -74,11 +74,11 @@ public class DescribeCdnUserResourcePackageRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCdnUserResourcePackageRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.status = response.status;
+        private Builder(DescribeCdnUserResourcePackageRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.status = request.status;
         } 
 
         /**
@@ -100,7 +100,11 @@ public class DescribeCdnUserResourcePackageRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the resource plan that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **valid**: valid
+         * *   **closed**: expired
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

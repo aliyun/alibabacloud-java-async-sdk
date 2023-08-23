@@ -14,16 +14,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateCdnSubTaskRequest extends Request {
     @Body
     @NameInMap("DomainName")
-    @Validation(maxLength = 7000)
     private String domainName;
 
     @Body
     @NameInMap("EndTime")
     private String endTime;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
 
     @Body
     @NameInMap("ReportIds")
@@ -37,7 +32,6 @@ public class UpdateCdnSubTaskRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
-        this.ownerId = builder.ownerId;
         this.reportIds = builder.reportIds;
         this.startTime = builder.startTime;
     }
@@ -70,13 +64,6 @@ public class UpdateCdnSubTaskRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return reportIds
      */
     public String getReportIds() {
@@ -93,7 +80,6 @@ public class UpdateCdnSubTaskRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateCdnSubTaskRequest, Builder> {
         private String domainName; 
         private String endTime; 
-        private Long ownerId; 
         private String reportIds; 
         private String startTime; 
 
@@ -101,17 +87,16 @@ public class UpdateCdnSubTaskRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateCdnSubTaskRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.reportIds = response.reportIds;
-            this.startTime = response.startTime;
+        private Builder(UpdateCdnSubTaskRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.reportIds = request.reportIds;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The domain name that you want to track. You can specify up to 500 domain names in each request. If you specify multiple domain names, separate them with commas (,). If you do not specify a domain name, operations reports are updated for all domain names in your Alibaba Cloud account.
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -120,7 +105,7 @@ public class UpdateCdnSubTaskRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -129,16 +114,7 @@ public class UpdateCdnSubTaskRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ReportIds.
+         * The IDs of operations reports that you want to update. Separate IDs with commas (,).
          */
         public Builder reportIds(String reportIds) {
             this.putBodyParameter("ReportIds", reportIds);
@@ -147,7 +123,7 @@ public class UpdateCdnSubTaskRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

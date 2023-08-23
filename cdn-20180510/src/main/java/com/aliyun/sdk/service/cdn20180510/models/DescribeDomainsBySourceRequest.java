@@ -75,11 +75,11 @@ public class DescribeDomainsBySourceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainsBySourceRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.sources = response.sources;
+        private Builder(DescribeDomainsBySourceRequest request) {
+            super(request);
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.sources = request.sources;
         } 
 
         /**
@@ -101,7 +101,7 @@ public class DescribeDomainsBySourceRequest extends Request {
         }
 
         /**
-         * Sources.
+         * The origin servers. Separate multiple origin servers with commas (,). Fuzzy match is not supported.
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);

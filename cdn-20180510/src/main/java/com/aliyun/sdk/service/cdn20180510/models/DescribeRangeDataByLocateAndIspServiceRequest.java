@@ -31,10 +31,6 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
     private String locationNames;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     @Validation(required = true)
     private String startTime;
@@ -45,7 +41,6 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
         this.endTime = builder.endTime;
         this.ispNames = builder.ispNames;
         this.locationNames = builder.locationNames;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -91,13 +86,6 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -109,25 +97,23 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
         private String endTime; 
         private String ispNames; 
         private String locationNames; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeRangeDataByLocateAndIspServiceRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.endTime = response.endTime;
-            this.ispNames = response.ispNames;
-            this.locationNames = response.locationNames;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeRangeDataByLocateAndIspServiceRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.endTime = request.endTime;
+            this.ispNames = request.ispNames;
+            this.locationNames = request.locationNames;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DomainNames.
+         * The accelerated domain name.
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -136,7 +122,12 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * > The end time must be later than the start time. The maximum time range that can be specified is 1 hour.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -145,7 +136,10 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * IspNames.
+         * The name of the ISP. You can specify only one ISP name in each call.
+         * <p>
+         * 
+         * You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs.
          */
         public Builder ispNames(String ispNames) {
             this.putQueryParameter("IspNames", ispNames);
@@ -154,7 +148,10 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * LocationNames.
+         * The names of the regions. Separate multiple region names with commas (,).
+         * <p>
+         * 
+         * You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list.
          */
         public Builder locationNames(String locationNames) {
             this.putQueryParameter("LocationNames", locationNames);
@@ -163,16 +160,10 @@ public class DescribeRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

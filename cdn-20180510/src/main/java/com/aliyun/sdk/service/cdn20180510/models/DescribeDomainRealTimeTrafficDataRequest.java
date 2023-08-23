@@ -30,10 +30,6 @@ public class DescribeDomainRealTimeTrafficDataRequest extends Request {
     private String locationNameEn;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -43,7 +39,6 @@ public class DescribeDomainRealTimeTrafficDataRequest extends Request {
         this.endTime = builder.endTime;
         this.ispNameEn = builder.ispNameEn;
         this.locationNameEn = builder.locationNameEn;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -89,13 +84,6 @@ public class DescribeDomainRealTimeTrafficDataRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -107,25 +95,23 @@ public class DescribeDomainRealTimeTrafficDataRequest extends Request {
         private String endTime; 
         private String ispNameEn; 
         private String locationNameEn; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainRealTimeTrafficDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ispNameEn = response.ispNameEn;
-            this.locationNameEn = response.locationNameEn;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainRealTimeTrafficDataRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ispNameEn = request.ispNameEn;
+            this.locationNameEn = request.locationNameEn;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify up to 100 domain names in each call. Separate multiple domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -134,7 +120,12 @@ public class DescribeDomainRealTimeTrafficDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -143,7 +134,10 @@ public class DescribeDomainRealTimeTrafficDataRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The name of the Internet service provider (ISP).
+         * <p>
+         * 
+         * You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list. If you do not set this parameter, all regions are queried.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -152,7 +146,10 @@ public class DescribeDomainRealTimeTrafficDataRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region.
+         * <p>
+         * 
+         * You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list. If you do not set this parameter, all regions are queried.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -161,16 +158,10 @@ public class DescribeDomainRealTimeTrafficDataRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

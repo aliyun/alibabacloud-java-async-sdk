@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeUserUsageDetailDataExportTaskRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("PageNumber")
     private String pageNumber;
 
@@ -26,7 +22,6 @@ public class DescribeUserUsageDetailDataExportTaskRequest extends Request {
 
     private DescribeUserUsageDetailDataExportTaskRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -45,13 +40,6 @@ public class DescribeUserUsageDetailDataExportTaskRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return pageNumber
      */
     public String getPageNumber() {
@@ -66,7 +54,6 @@ public class DescribeUserUsageDetailDataExportTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeUserUsageDetailDataExportTaskRequest, Builder> {
-        private Long ownerId; 
         private String pageNumber; 
         private String pageSize; 
 
@@ -74,24 +61,14 @@ public class DescribeUserUsageDetailDataExportTaskRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserUsageDetailDataExportTaskRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeUserUsageDetailDataExportTaskRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * PageNumber.
+         * The number of the page to return. Valid values: **1** to **100000**.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -100,7 +77,10 @@ public class DescribeUserUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**. Maximum value: **50**.
+         * <p>
+         * 
+         * Valid values: an integer from **1** to **50**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

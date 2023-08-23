@@ -75,15 +75,15 @@ public class OpenCdnServiceRequest extends Request {
             super();
         } 
 
-        private Builder(OpenCdnServiceRequest response) {
-            super(response);
-            this.internetChargeType = response.internetChargeType;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(OpenCdnServiceRequest request) {
+            super(request);
+            this.internetChargeType = request.internetChargeType;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * InternetChargeType.
+         * The metering method of Alibaba Cloud CDN. A value of **PayByTraffic** indicates that the metering method is pay-by-data-transfer.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);

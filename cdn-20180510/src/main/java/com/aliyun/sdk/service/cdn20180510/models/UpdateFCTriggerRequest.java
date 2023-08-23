@@ -20,10 +20,6 @@ public class UpdateFCTriggerRequest extends Request {
     @NameInMap("Notes")
     private String notes;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Body
     @NameInMap("RoleARN")
     private String roleARN;
@@ -41,7 +37,6 @@ public class UpdateFCTriggerRequest extends Request {
         super(builder);
         this.functionARN = builder.functionARN;
         this.notes = builder.notes;
-        this.ownerId = builder.ownerId;
         this.roleARN = builder.roleARN;
         this.sourceARN = builder.sourceARN;
         this.triggerARN = builder.triggerARN;
@@ -75,13 +70,6 @@ public class UpdateFCTriggerRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return roleARN
      */
     public String getRoleARN() {
@@ -105,7 +93,6 @@ public class UpdateFCTriggerRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateFCTriggerRequest, Builder> {
         private String functionARN; 
         private String notes; 
-        private Long ownerId; 
         private String roleARN; 
         private String sourceARN; 
         private String triggerARN; 
@@ -114,18 +101,17 @@ public class UpdateFCTriggerRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateFCTriggerRequest response) {
-            super(response);
-            this.functionARN = response.functionARN;
-            this.notes = response.notes;
-            this.ownerId = response.ownerId;
-            this.roleARN = response.roleARN;
-            this.sourceARN = response.sourceARN;
-            this.triggerARN = response.triggerARN;
+        private Builder(UpdateFCTriggerRequest request) {
+            super(request);
+            this.functionARN = request.functionARN;
+            this.notes = request.notes;
+            this.roleARN = request.roleARN;
+            this.sourceARN = request.sourceARN;
+            this.triggerARN = request.triggerARN;
         } 
 
         /**
-         * FunctionARN.
+         * The feature trigger.
          */
         public Builder functionARN(String functionARN) {
             this.putBodyParameter("FunctionARN", functionARN);
@@ -134,7 +120,7 @@ public class UpdateFCTriggerRequest extends Request {
         }
 
         /**
-         * Notes.
+         * The remarks.
          */
         public Builder notes(String notes) {
             this.putBodyParameter("Notes", notes);
@@ -143,16 +129,7 @@ public class UpdateFCTriggerRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RoleARN.
+         * The assigned RAM role.
          */
         public Builder roleARN(String roleARN) {
             this.putBodyParameter("RoleARN", roleARN);
@@ -161,7 +138,7 @@ public class UpdateFCTriggerRequest extends Request {
         }
 
         /**
-         * SourceARN.
+         * The resources and filters for event listening.
          */
         public Builder sourceARN(String sourceARN) {
             this.putBodyParameter("SourceARN", sourceARN);
@@ -170,7 +147,7 @@ public class UpdateFCTriggerRequest extends Request {
         }
 
         /**
-         * TriggerARN.
+         * The trigger that corresponds to the Function Compute service.
          */
         public Builder triggerARN(String triggerARN) {
             this.putQueryParameter("TriggerARN", triggerARN);

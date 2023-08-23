@@ -75,15 +75,15 @@ public class BatchStartCdnDomainRequest extends Request {
             super();
         } 
 
-        private Builder(BatchStartCdnDomainRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(BatchStartCdnDomainRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * DomainNames.
+         * The accelerated domain names. You can specify one or more domain names. Separate multiple domain names with commas (,).
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);

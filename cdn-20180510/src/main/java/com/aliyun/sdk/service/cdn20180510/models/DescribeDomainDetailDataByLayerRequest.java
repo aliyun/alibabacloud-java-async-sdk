@@ -40,10 +40,6 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
     private String locationNameEn;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     @Validation(required = true)
     private String startTime;
@@ -56,7 +52,6 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         this.ispNameEn = builder.ispNameEn;
         this.layer = builder.layer;
         this.locationNameEn = builder.locationNameEn;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -116,13 +111,6 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -136,27 +124,28 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         private String ispNameEn; 
         private String layer; 
         private String locationNameEn; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainDetailDataByLayerRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.field = response.field;
-            this.ispNameEn = response.ispNameEn;
-            this.layer = response.layer;
-            this.locationNameEn = response.locationNameEn;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainDetailDataByLayerRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.field = request.field;
+            this.ispNameEn = request.ispNameEn;
+            this.layer = request.layer;
+            this.locationNameEn = request.locationNameEn;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The name of the Internet service provider (ISP) for your Alibaba Cloud CDN service. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISP names.
+         * <p>
+         * 
+         * If you do not specify an ISP, data of all ISPs is queried.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -165,7 +154,10 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The protocol by which you want to query data. Valid values: **http**, **https**, **quic**, and **all**.
+         * <p>
+         * 
+         * The default value is **all**.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -174,7 +166,10 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         }
 
         /**
-         * Field.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time.
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -183,7 +178,7 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The ID of the request.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -192,7 +187,7 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         }
 
         /**
-         * Layer.
+         * The amount of network traffic. Unit: bytes.
          */
         public Builder layer(String layer) {
             this.putQueryParameter("Layer", layer);
@@ -201,7 +196,7 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The detailed data of the accelerated domain names.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -210,16 +205,10 @@ public class DescribeDomainDetailDataByLayerRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
+         * <p>
+         * 
+         * If you do not specify a region, data in all regions is queried.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

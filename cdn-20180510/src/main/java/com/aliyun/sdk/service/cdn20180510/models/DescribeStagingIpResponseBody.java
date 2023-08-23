@@ -50,7 +50,7 @@ public class DescribeStagingIpResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IPV4s.
+         * IPv4 addresses.
          */
         public Builder IPV4s(IPV4s IPV4s) {
             this.IPV4s = IPV4s;
@@ -58,7 +58,7 @@ public class DescribeStagingIpResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

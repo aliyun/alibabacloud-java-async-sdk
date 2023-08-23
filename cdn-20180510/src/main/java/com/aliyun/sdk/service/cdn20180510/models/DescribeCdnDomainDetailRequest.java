@@ -75,15 +75,15 @@ public class DescribeCdnDomainDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCdnDomainDetailRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeCdnDomainDetailRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

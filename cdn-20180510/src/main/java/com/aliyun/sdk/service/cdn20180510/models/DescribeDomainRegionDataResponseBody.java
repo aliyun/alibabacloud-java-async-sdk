@@ -98,7 +98,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         private Value value; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range for which the data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range for which the data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +138,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
         }
 
         /**
-         * Value.
+         * The proportions of requests initiated from each region.
          */
         public Builder value(Value value) {
             this.value = value;
@@ -310,7 +310,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             private String totalQuery; 
 
             /**
-             * AvgObjectSize.
+             * The average response size. Unit: bytes.
              */
             public Builder avgObjectSize(String avgObjectSize) {
                 this.avgObjectSize = avgObjectSize;
@@ -318,7 +318,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * AvgResponseRate.
+             * The average response speed. Unit: bit/s.
              */
             public Builder avgResponseRate(String avgResponseRate) {
                 this.avgResponseRate = avgResponseRate;
@@ -326,7 +326,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * AvgResponseTime.
+             * The average response time. Unit: milliseconds.
              */
             public Builder avgResponseTime(String avgResponseTime) {
                 this.avgResponseTime = avgResponseTime;
@@ -334,7 +334,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * Bps.
+             * The bandwidth.
              */
             public Builder bps(String bps) {
                 this.bps = bps;
@@ -342,7 +342,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * BytesProportion.
+             * The proportion of traffic from the region. For example, a value of 90 indicates that 90% of the traffic is from the region.
              */
             public Builder bytesProportion(String bytesProportion) {
                 this.bytesProportion = bytesProportion;
@@ -350,7 +350,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion.
+             * The proportion of visits from the region. For example, a value of 90 indicates that 90% of the visits are from the region.
              */
             public Builder proportion(String proportion) {
                 this.proportion = proportion;
@@ -358,7 +358,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * Qps.
+             * The number of queries per second.
              */
             public Builder qps(String qps) {
                 this.qps = qps;
@@ -366,7 +366,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The information about the region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -374,7 +374,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * RegionEname.
+             * The name of the region.
              */
             public Builder regionEname(String regionEname) {
                 this.regionEname = regionEname;
@@ -382,7 +382,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * ReqErrRate.
+             * The request error rate. A value of 90 indicates that 90% of the requests encountered errors.
              */
             public Builder reqErrRate(String reqErrRate) {
                 this.reqErrRate = reqErrRate;
@@ -390,7 +390,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBytes.
+             * The total traffic. Unit: bytes.
              */
             public Builder totalBytes(String totalBytes) {
                 this.totalBytes = totalBytes;
@@ -398,7 +398,7 @@ public class DescribeDomainRegionDataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuery.
+             * The total number of requests.
              */
             public Builder totalQuery(String totalQuery) {
                 this.totalQuery = totalQuery;

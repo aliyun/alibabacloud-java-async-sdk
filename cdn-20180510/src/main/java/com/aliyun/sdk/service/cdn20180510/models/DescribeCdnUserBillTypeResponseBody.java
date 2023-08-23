@@ -50,7 +50,7 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BillTypeData.
+         * Details about the metering methods returned.
          */
         public Builder billTypeData(BillTypeData billTypeData) {
             this.billTypeData = billTypeData;
@@ -58,7 +58,7 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,25 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * BillType.
+             * The metering method.
+             * <p>
+             * 
+             * > If the metering method is suffixed with \*\*\_overseas\*\*, the billable region is outside the Chinese mainland. For example, "BillType": "month_avg_day_bandwidth_overseas" indicates that the metering method is pay by average daily peak bandwidth per month in a billable region outside the Chinese mainland.
+             * 
+             * Valid values:
+             * 
+             * *   hour_flow: pay by hourly data transfer
+             * *   day_bandwidth: pay by daily bandwidth
+             * *   month\_95: pay by monthly 95th percentile bandwidth
+             * *   month_avg_day_bandwidth: pay by average daily peak bandwidth per month
+             * *   month\_4th_day_bandwidth: pay by monthly 4th peak bandwidth
+             * *   month_avg_day\_95: pay by average daily 95th percentile bandwidth per month
+             * *   month\_95\_night_half: pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00
+             * *   hour_vas: pay by value-added services per hour
+             * *   quic_hour_count: pay by hourly QUIC requests
+             * *   day_count: pay by daily requests
+             * *   hour_count: pay by hourly requests
+             * *   day\_95: pay by daily 95th percentile bandwidth
              */
             public Builder billType(String billType) {
                 this.billType = billType;
@@ -166,7 +184,7 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * BillingCycle.
+             * The billing cycle.
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -174,7 +192,15 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Dimension.
+             * The dimension. Valid values:
+             * <p>
+             * 
+             * *   flow: traffic and bandwidth
+             * *   vas: value-added services (HTTPS and requests for dynamic content)
+             * *   quic: the number of QUIC requests
+             * *   websocket: the WebSocket communications protocol
+             * *   rtlog2sls: log entries delivered to Log Service in real time
+             * *   stationflow: traffic over the internal network
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -182,7 +208,7 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the metering method ended.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -190,7 +216,7 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * The name of the product.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -198,7 +224,7 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the metering method started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

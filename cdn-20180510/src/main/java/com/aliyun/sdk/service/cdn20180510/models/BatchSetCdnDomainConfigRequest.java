@@ -102,17 +102,17 @@ public class BatchSetCdnDomainConfigRequest extends Request {
             super();
         } 
 
-        private Builder(BatchSetCdnDomainConfigRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.functions = response.functions;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(BatchSetCdnDomainConfigRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.functions = request.functions;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * DomainNames.
+         * The accelerated domain names. You can specify multiple accelerated domain names and separate them with commas (,).
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -121,7 +121,91 @@ public class BatchSetCdnDomainConfigRequest extends Request {
         }
 
         /**
-         * Functions.
+         * The features that you want to configure. Format:
+         * <p>
+         * 
+         * *   **functionName**: the name of the feature. This parameter is required. Separate multiple values with commas (,). For more information, see [Parameters for configuring features for domain names](~~388460~~).
+         * *   **argName**: the feature parameter for **functionName**. This parameter is required. You can specify multiple feature parameters.
+         * *   **argValue**: the parameter value that is specified for **functionName**. This parameter is required.
+         * *   **parentid**: the rule condition ID. This parameter is optional. You can use the **condition** rule engine to create a rule condition. For information, see [Parameters for configuring features for domain names](~~388460~~). A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. After you create a rule condition, a [configid](~~388994~~) is generated. A configid can be used as parentId that is referenced by other features. This way, you can combine rule conditions and features for flexible configurations.
+         * 
+         * If the **ParentId** parameter is \*\*-1\*\*, the existing rule conditions in the configurations are deleted.
+         * 
+         * ```[{
+         *    "functionArgs": [{
+         *      "argName": "Parameter A", 
+         *      "argValue": "Value of parameter A"
+         *     }, 
+         *   {
+         *     "argName": "Parameter B", 
+         *     "argValue": "Value of parameter B"
+         *      }], 
+         *  "functionName": "Feature name"
+         *  "parentId": Optional. parentId corresponds to configid of the referenced rule condition
+         * }]
+         * ```
+         * 
+         * The following code provides a sample configuration if **parentId** is not used. In this example, the **origin_request_header** feature is used to add back-to-origin HTTP headers, and the rule condition whose configuration ID is **configid=222728944812032** is referenced.
+         * 
+         * ```[{
+         *         "functionArgs": [{
+         *             "argName": "header_operation_type",
+         *             "argValue": "add"
+         *         }, {
+         *             "argName": "header_name",
+         *             "argValue": "Accept-Encoding"
+         *         }, {
+         *             "argName": "header_value",
+         *             "argValue": "gzip"
+         *         }, {
+         *             "argName": "duplicate",
+         *             "argValue": "off"
+         *         }],
+         *         "functionName": "origin_request_header"
+         * }]
+         * ```
+         * 
+         * The following code shows a sample configuration if **parentId** is used. In this example, the **origin_request_header** feature is used to add back-to-origin HTTP headers, and the rule condition whose configuration ID is **222728944812032** is referenced.
+         * 
+         * ```[{
+         *         "functionArgs": [{
+         *             "argName": "header_operation_type",
+         *             "argValue": "add"
+         *         }, {
+         *             "argName": "header_name",
+         *             "argValue": "Accept-Encoding"
+         *         }, {
+         *             "argName": "header_value",
+         *             "argValue": "gzip"
+         *         }, {
+         *             "argName": "duplicate",
+         *             "argValue": "off"
+         *         }],
+         *         "functionName": "origin_request_header",
+         *         "parentId": 222728944812032
+         * }]
+         * ```
+         * 
+         * The following code provides a sample configuration that deletes the reference to **parentId** for a feature that uses **parentId**. This example shows how to delete the rule condition that has a configuration ID of **222728944812032** and is referenced when **origin_request_header** feature is used to add back-to-origin HTTP headers.
+         * 
+         * ```[{
+         *         "functionArgs": [{
+         *             "argName": "header_operation_type",
+         *             "argValue": "add"
+         *         }, {
+         *             "argName": "header_name",
+         *             "argValue": "Accept-Encoding"
+         *         }, {
+         *             "argName": "header_value",
+         *             "argValue": "gzip"
+         *         }, {
+         *             "argName": "duplicate",
+         *             "argValue": "off"
+         *         }],
+         *         "functionName": "origin_request_header",
+         *         "parentId": -1
+         * }]
+         * ```
          */
         public Builder functions(String functions) {
             this.putQueryParameter("Functions", functions);

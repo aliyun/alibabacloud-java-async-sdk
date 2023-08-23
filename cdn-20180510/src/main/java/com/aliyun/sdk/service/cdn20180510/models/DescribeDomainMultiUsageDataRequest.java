@@ -21,10 +21,6 @@ public class DescribeDomainMultiUsageDataRequest extends Request {
     private String endTime;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -32,7 +28,6 @@ public class DescribeDomainMultiUsageDataRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -64,13 +59,6 @@ public class DescribeDomainMultiUsageDataRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -80,23 +68,25 @@ public class DescribeDomainMultiUsageDataRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDomainMultiUsageDataRequest, Builder> {
         private String domainName; 
         private String endTime; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainMultiUsageDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainMultiUsageDataRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+         * <p>
+         * 
+         * > *   You can specify a maximum of 30 domain names at a time.
+         * >*   If this parameter is not set, data of all your accelerated domain names is queried.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -105,7 +95,10 @@ public class DescribeDomainMultiUsageDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -114,16 +107,7 @@ public class DescribeDomainMultiUsageDataRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

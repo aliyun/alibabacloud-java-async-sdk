@@ -50,7 +50,7 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Configs.
+         * The user configurations.
          */
         public Builder configs(java.util.List < Configs> configs) {
             this.configs = configs;
@@ -58,7 +58,7 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,10 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
             private String functionName; 
 
             /**
-             * ArgName.
+             * The name of the configuration.
+             * <p>
+             * 
+             * The configuration is specified by enterprise users and public service sectors.
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -130,7 +133,16 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ArgValue.
+             * The value of the configuration. Valid values:
+             * <p>
+             * 
+             * *   **cc_rule**: HTTP flood protection rules
+             * *   **ddos_dispatch**: integration with Anti-DDoS
+             * *   **edge_safe**: application security settings on POPs
+             * *   **blocked_regions**: blocked regions
+             * *   **http_acl_policy**: access control list (ACL) rules
+             * *   **bot_manager**: bot traffic management
+             * *   **ip_reputation**: IP reputation library
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -138,7 +150,7 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * The name of the feature.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;

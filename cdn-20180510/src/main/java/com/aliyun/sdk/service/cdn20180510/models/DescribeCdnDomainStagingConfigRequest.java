@@ -19,18 +19,12 @@ public class DescribeCdnDomainStagingConfigRequest extends Request {
 
     @Query
     @NameInMap("FunctionNames")
-    @Validation(required = true)
     private String functionNames;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
 
     private DescribeCdnDomainStagingConfigRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
         this.functionNames = builder.functionNames;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -60,31 +54,22 @@ public class DescribeCdnDomainStagingConfigRequest extends Request {
         return this.functionNames;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeCdnDomainStagingConfigRequest, Builder> {
         private String domainName; 
         private String functionNames; 
-        private Long ownerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeCdnDomainStagingConfigRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.functionNames = response.functionNames;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeCdnDomainStagingConfigRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.functionNames = request.functionNames;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,20 +78,11 @@ public class DescribeCdnDomainStagingConfigRequest extends Request {
         }
 
         /**
-         * FunctionNames.
+         * The list of feature names. Separate multiple values with commas (,). For more information, see [A list of features](~~388460~~).
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);
             this.functionNames = functionNames;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

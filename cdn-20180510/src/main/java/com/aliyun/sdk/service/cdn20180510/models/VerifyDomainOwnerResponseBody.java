@@ -50,7 +50,10 @@ public class VerifyDomainOwnerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The verification result.
+         * <p>
+         * 
+         * > This parameter is returned only if the operation fails.
          */
         public Builder content(String content) {
             this.content = content;
@@ -58,7 +61,7 @@ public class VerifyDomainOwnerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

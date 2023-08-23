@@ -13,17 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteUsageDetailDataExportTaskRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("TaskId")
     @Validation(required = true)
     private String taskId;
 
     private DeleteUsageDetailDataExportTaskRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.taskId = builder.taskId;
     }
 
@@ -41,13 +36,6 @@ public class DeleteUsageDetailDataExportTaskRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -55,30 +43,19 @@ public class DeleteUsageDetailDataExportTaskRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteUsageDetailDataExportTaskRequest, Builder> {
-        private Long ownerId; 
         private String taskId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteUsageDetailDataExportTaskRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.taskId = response.taskId;
+        private Builder(DeleteUsageDetailDataExportTaskRequest request) {
+            super(request);
+            this.taskId = request.taskId;
         } 
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * TaskId.
+         * The ID of the task. You can call the [DescribeUserUsageDataExportTask](~~91062~~) operation to query tasks.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

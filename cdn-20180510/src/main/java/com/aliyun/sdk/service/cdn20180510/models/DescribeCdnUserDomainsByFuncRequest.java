@@ -18,10 +18,6 @@ public class DescribeCdnUserDomainsByFuncRequest extends Request {
     private Integer funcId;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -37,7 +33,6 @@ public class DescribeCdnUserDomainsByFuncRequest extends Request {
     private DescribeCdnUserDomainsByFuncRequest(Builder builder) {
         super(builder);
         this.funcId = builder.funcId;
-        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
@@ -64,13 +59,6 @@ public class DescribeCdnUserDomainsByFuncRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -93,7 +81,6 @@ public class DescribeCdnUserDomainsByFuncRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCdnUserDomainsByFuncRequest, Builder> {
         private Integer funcId; 
-        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
@@ -102,17 +89,19 @@ public class DescribeCdnUserDomainsByFuncRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCdnUserDomainsByFuncRequest response) {
-            super(response);
-            this.funcId = response.funcId;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeCdnUserDomainsByFuncRequest request) {
+            super(request);
+            this.funcId = request.funcId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * FuncId.
+         * The ID of the feature.
+         * <p>
+         * 
+         * For example, the ID of the origin host feature (set_req_host_header) is 18.
          */
         public Builder funcId(Integer funcId) {
             this.putQueryParameter("FuncId", funcId);
@@ -121,16 +110,10 @@ public class DescribeCdnUserDomainsByFuncRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**.
+         * <p>
+         * 
+         * Valid values: **1** to **100000**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -139,7 +122,10 @@ public class DescribeCdnUserDomainsByFuncRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of domain names to return on each page. Default value: **20**.
+         * <p>
+         * 
+         * Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -148,7 +134,7 @@ public class DescribeCdnUserDomainsByFuncRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

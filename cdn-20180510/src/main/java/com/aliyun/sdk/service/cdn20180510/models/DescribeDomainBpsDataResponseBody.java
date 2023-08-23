@@ -122,7 +122,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * BpsDataPerInterval.
+         * The list of bandwidth data entries returned at each interval.
          */
         public Builder bpsDataPerInterval(BpsDataPerInterval bpsDataPerInterval) {
             this.bpsDataPerInterval = bpsDataPerInterval;
@@ -130,7 +130,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -138,7 +138,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -146,7 +146,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -154,7 +154,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * IspNameEn.
+         * The name of the ISP.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.ispNameEn = ispNameEn;
@@ -162,7 +162,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.locationNameEn = locationNameEn;
@@ -170,7 +170,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +178,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -290,7 +290,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * DomesticValue.
+             * The bandwidth value in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.
              */
             public Builder domesticValue(String domesticValue) {
                 this.domesticValue = domesticValue;
@@ -298,7 +298,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsDomesticValue.
+             * The bandwidth data for HTTPS requests in the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.
              */
             public Builder httpsDomesticValue(String httpsDomesticValue) {
                 this.httpsDomesticValue = httpsDomesticValue;
@@ -306,7 +306,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsOverseasValue.
+             * The bandwidth data for HTTPS requests in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.
              */
             public Builder httpsOverseasValue(String httpsOverseasValue) {
                 this.httpsOverseasValue = httpsOverseasValue;
@@ -314,7 +314,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsValue.
+             * The bandwidth value for HTTPS requests. Unit: bit/s.
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -322,7 +322,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * OverseasValue.
+             * The bandwidth data in regions outside the Chinese mainland. When the bandwidth data is queried by ISP, this parameter is empty.
              */
             public Builder overseasValue(String overseasValue) {
                 this.overseasValue = overseasValue;
@@ -330,7 +330,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -338,7 +338,7 @@ public class DescribeDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The bandwidth. Unit: bit/s.
              */
             public Builder value(String value) {
                 this.value = value;

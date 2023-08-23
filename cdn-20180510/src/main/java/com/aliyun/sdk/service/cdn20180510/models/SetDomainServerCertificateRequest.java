@@ -154,21 +154,21 @@ public class SetDomainServerCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(SetDomainServerCertificateRequest response) {
-            super(response);
-            this.certName = response.certName;
-            this.certType = response.certType;
-            this.domainName = response.domainName;
-            this.forceSet = response.forceSet;
-            this.ownerId = response.ownerId;
-            this.privateKey = response.privateKey;
-            this.securityToken = response.securityToken;
-            this.serverCertificate = response.serverCertificate;
-            this.serverCertificateStatus = response.serverCertificateStatus;
+        private Builder(SetDomainServerCertificateRequest request) {
+            super(request);
+            this.certName = request.certName;
+            this.certType = request.certType;
+            this.domainName = request.domainName;
+            this.forceSet = request.forceSet;
+            this.ownerId = request.ownerId;
+            this.privateKey = request.privateKey;
+            this.securityToken = request.securityToken;
+            this.serverCertificate = request.serverCertificate;
+            this.serverCertificateStatus = request.serverCertificateStatus;
         } 
 
         /**
-         * CertName.
+         * The name of the SSL certificate. You can specify only one name.
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -177,7 +177,13 @@ public class SetDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * CertType.
+         * The type of the certificate. Valid values:
+         * <p>
+         * 
+         * *   **upload**: a user-uploaded SSL certificate.
+         * *   **cas**: a certificate that is purchased from Alibaba Cloud SSL Certificates Service.
+         * 
+         * > If this parameter is set to **cas**, the **PrivateKey** parameter is optional.
          */
         public Builder certType(String certType) {
             this.putQueryParameter("CertType", certType);
@@ -186,7 +192,10 @@ public class SetDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name for which you want to configure the SSL certificate. The type of request supported by the domain name must be HTTPS.
+         * <p>
+         * 
+         * You can specify one domain name in each call.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -195,7 +204,7 @@ public class SetDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * ForceSet.
+         * Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.
          */
         public Builder forceSet(String forceSet) {
             this.putQueryParameter("ForceSet", forceSet);
@@ -213,7 +222,7 @@ public class SetDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * PrivateKey.
+         * The private key. Specify the private key only if you want to enable the SSL certificate.
          */
         public Builder privateKey(String privateKey) {
             this.putQueryParameter("PrivateKey", privateKey);
@@ -231,7 +240,11 @@ public class SetDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * ServerCertificate.
+         * The content of the SSL certificate. Specify the content of the SSL certificate only if you want to enable the SSL certificate. You can use one of the following methods to obtain the content of the SSL certificate:
+         * <p>
+         * 
+         * *   Method 1: Call the [DescribeDomainCertificateInfo](~~91182~~) API operation to query the information about the SSL certificate corresponding to the accelerated domain name and obtain the public key of the ServerCertificate certificate from the returned data.
+         * *   Method 2: Call the [DescribeCdnCertificateList](~~91181~~) API operation to query the SSL certificate list corresponding to the accelerated domain name, and obtain the value of CertName from the returned data. Then, Call the [DescribeCdnCertificateDetail](~~131905~~) API operation with CertName as a parameter to obtain the details about the certificate, and obtain the public key of the Cert certificate from the returned data.
          */
         public Builder serverCertificate(String serverCertificate) {
             this.putQueryParameter("ServerCertificate", serverCertificate);
@@ -240,7 +253,11 @@ public class SetDomainServerCertificateRequest extends Request {
         }
 
         /**
-         * ServerCertificateStatus.
+         * Specifies whether to enable the SSL certificate. Default value: off. Valid values:
+         * <p>
+         * 
+         * *   **on** ：enables the SSL certificate.
+         * *   **off**：disables the SSL certificate.
          */
         public Builder serverCertificateStatus(String serverCertificateStatus) {
             this.putQueryParameter("ServerCertificateStatus", serverCertificateStatus);

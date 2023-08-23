@@ -50,7 +50,7 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
             private String timeStamp; 
 
             /**
-             * ByteHitRate.
+             * The byte hit ratio. The byte hit ratio is measured in percentage.
              */
             public Builder byteHitRate(Float byteHitRate) {
                 this.byteHitRate = byteHitRate;
@@ -118,7 +118,7 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

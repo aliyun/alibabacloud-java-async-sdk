@@ -12,10 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCdnDeliverTaskResponseBody</p>
  */
 public class CreateCdnDeliverTaskResponseBody extends TeaModel {
+    @NameInMap("DeliverId")
+    private String deliverId;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private CreateCdnDeliverTaskResponseBody(Builder builder) {
+        this.deliverId = builder.deliverId;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +32,13 @@ public class CreateCdnDeliverTaskResponseBody extends TeaModel {
     }
 
     /**
+     * @return deliverId
+     */
+    public String getDeliverId() {
+        return this.deliverId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,10 +46,19 @@ public class CreateCdnDeliverTaskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String deliverId; 
         private String requestId; 
 
         /**
-         * RequestId.
+         * The ID of the tracking task.
+         */
+        public Builder deliverId(String deliverId) {
+            this.deliverId = deliverId;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

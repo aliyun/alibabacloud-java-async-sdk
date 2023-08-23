@@ -17,10 +17,6 @@ public class DescribeCdnHttpsDomainListRequest extends Request {
     private String keyword;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -31,7 +27,6 @@ public class DescribeCdnHttpsDomainListRequest extends Request {
     private DescribeCdnHttpsDomainListRequest(Builder builder) {
         super(builder);
         this.keyword = builder.keyword;
-        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -57,13 +52,6 @@ public class DescribeCdnHttpsDomainListRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -79,7 +67,6 @@ public class DescribeCdnHttpsDomainListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCdnHttpsDomainListRequest, Builder> {
         private String keyword; 
-        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -87,16 +74,15 @@ public class DescribeCdnHttpsDomainListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCdnHttpsDomainListRequest response) {
-            super(response);
-            this.keyword = response.keyword;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeCdnHttpsDomainListRequest request) {
+            super(request);
+            this.keyword = request.keyword;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * Keyword.
+         * The keyword that is used to search for certificates.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -105,16 +91,7 @@ public class DescribeCdnHttpsDomainListRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * PageNumber.
+         * The number of the page to return. Valid values: **1** to **100000**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +100,7 @@ public class DescribeCdnHttpsDomainListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

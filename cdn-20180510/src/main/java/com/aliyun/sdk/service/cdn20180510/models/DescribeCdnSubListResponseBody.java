@@ -50,7 +50,7 @@ public class DescribeCdnSubListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The information about the custom report task.
          */
         public Builder content(String content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class DescribeCdnSubListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

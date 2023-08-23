@@ -62,7 +62,7 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * CertInfos.
+         * The information about the certificate.
          */
         public Builder certInfos(CertInfos certInfos) {
             this.certInfos = certInfos;
@@ -70,7 +70,7 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -202,7 +202,7 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             private String domainName; 
 
             /**
-             * CertCommonName.
+             * The returned primary domain name of the certificate.
              */
             public Builder certCommonName(String certCommonName) {
                 this.certCommonName = certCommonName;
@@ -210,7 +210,7 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * CertExpireTime.
+             * The time at which the certificate expires.
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -218,7 +218,7 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * CertName.
+             * The name of the certificate.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -226,7 +226,7 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * CertStartTime.
+             * The time at which the certificate became effective.
              */
             public Builder certStartTime(String certStartTime) {
                 this.certStartTime = certStartTime;
@@ -234,7 +234,13 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * CertStatus.
+             * The status of the certificate.
+             * <p>
+             * 
+             * *   **ok**: The certificate is working as expected.
+             * *   **mismatch**: The certificate does not match the specified domain name.
+             * *   **expired**: The certificate has expired.
+             * *   **expire_soon**: The certificate will expire soon.
              */
             public Builder certStatus(String certStatus) {
                 this.certStatus = certStatus;
@@ -242,7 +248,12 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * CertType.
+             * The type of the certificate.
+             * <p>
+             * 
+             * *   **free**: a free certificate.
+             * *   **cas**: a certificate that is purchased from Alibaba Cloud SSL Certificates Service.
+             * *   **upload**: a certificate that is uploaded by the user.
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -250,7 +261,7 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * CertUpdateTime.
+             * The time at which the certificate was updated.
              */
             public Builder certUpdateTime(String certUpdateTime) {
                 this.certUpdateTime = certUpdateTime;
@@ -258,7 +269,7 @@ public class DescribeCdnHttpsDomainListResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The accelerated domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;

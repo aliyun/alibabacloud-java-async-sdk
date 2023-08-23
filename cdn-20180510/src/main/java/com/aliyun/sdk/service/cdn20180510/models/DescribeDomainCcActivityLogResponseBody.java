@@ -86,7 +86,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         private Long total; 
 
         /**
-         * ActivityLog.
+         * The list of rate limiting logs.
          */
         public Builder activityLog(java.util.List < ActivityLog> activityLog) {
             this.activityLog = activityLog;
@@ -94,7 +94,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         }
 
         /**
-         * PageIndex.
+         * The page number of the returned page.
          */
         public Builder pageIndex(Long pageIndex) {
             this.pageIndex = pageIndex;
@@ -102,7 +102,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of entries returned.
          */
         public Builder total(Long total) {
             this.total = total;
@@ -230,7 +230,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Action.
+             * The action that was triggered.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -238,7 +238,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The accelerated domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -246,7 +246,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the rule based on which rate limiting was triggered.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -254,7 +254,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -262,7 +262,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerObject.
+             * The trigger of rate limiting.
              */
             public Builder triggerObject(String triggerObject) {
                 this.triggerObject = triggerObject;
@@ -270,7 +270,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * The period of time during which rate limiting remains effective.
              */
             public Builder ttl(Long ttl) {
                 this.ttl = ttl;
@@ -278,7 +278,7 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the trigger for rate limiting.
              */
             public Builder value(String value) {
                 this.value = value;

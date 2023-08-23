@@ -110,7 +110,7 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ChangingAffectTime.
+         * The time when the metering method for the next cycle takes effect. The time is displayed in GMT.
          */
         public Builder changingAffectTime(String changingAffectTime) {
             this.changingAffectTime = changingAffectTime;
@@ -118,7 +118,11 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChangingChargeType.
+         * The metering method for the next cycle. Valid values:
+         * <p>
+         * 
+         * *   **PayByTraffic**: pay-by-data-transfer
+         * *   **PayByBandwidth**: pay-by-bandwidth
          */
         public Builder changingChargeType(String changingChargeType) {
             this.changingChargeType = changingChargeType;
@@ -126,7 +130,7 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -134,7 +138,11 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * InternetChargeType.
+         * The current metering method. Valid values:
+         * <p>
+         * 
+         * *   **PayByTraffic**: pay-by-data-transfer
+         * *   **PayByBandwidth**: pay-by-bandwidth
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -142,7 +150,7 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * OpeningTime.
+         * The time when the service was activated. The time follows the ISO 8601 standard.
          */
         public Builder openingTime(String openingTime) {
             this.openingTime = openingTime;
@@ -150,7 +158,7 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * OperationLocks.
+         * The lock status.
          */
         public Builder operationLocks(OperationLocks operationLocks) {
             this.operationLocks = operationLocks;
@@ -158,7 +166,7 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +206,7 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * LockReason.
+             * The reason why the service is locked. A value of financial indicates that the service is locked due to overdue payments.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -239,7 +247,7 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
             private java.util.List < LockReason> lockReason; 
 
             /**
-             * LockReason.
+             * The reason why the service is locked. A value of financial indicates that the service is locked due to overdue payments.
              */
             public Builder lockReason(java.util.List < LockReason> lockReason) {
                 this.lockReason = lockReason;

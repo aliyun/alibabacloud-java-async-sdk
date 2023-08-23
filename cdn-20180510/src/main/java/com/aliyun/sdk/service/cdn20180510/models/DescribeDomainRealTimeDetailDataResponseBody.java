@@ -50,7 +50,7 @@ public class DescribeDomainRealTimeDetailDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The monitoring data of each ISP in each region.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeDomainRealTimeDetailDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

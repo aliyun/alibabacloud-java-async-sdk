@@ -21,15 +21,12 @@ public class DescribeDomainCcActivityLogRequest extends Request {
     private String endTime;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("PageNumber")
     private Long pageNumber;
 
     @Query
     @NameInMap("PageSize")
+    @Validation(maximum = 100)
     private Long pageSize;
 
     @Query
@@ -52,7 +49,6 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
-        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.ruleName = builder.ruleName;
@@ -86,13 +82,6 @@ public class DescribeDomainCcActivityLogRequest extends Request {
      */
     public String getEndTime() {
         return this.endTime;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     /**
@@ -140,7 +129,6 @@ public class DescribeDomainCcActivityLogRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDomainCcActivityLogRequest, Builder> {
         private String domainName; 
         private String endTime; 
-        private Long ownerId; 
         private Long pageNumber; 
         private Long pageSize; 
         private String ruleName; 
@@ -152,21 +140,23 @@ public class DescribeDomainCcActivityLogRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainCcActivityLogRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.ruleName = response.ruleName;
-            this.startTime = response.startTime;
-            this.triggerObject = response.triggerObject;
-            this.value = response.value;
+        private Builder(DescribeDomainCcActivityLogRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.ruleName = request.ruleName;
+            this.startTime = request.startTime;
+            this.triggerObject = request.triggerObject;
+            this.value = request.value;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify multiple domain names and separate them with commas (,).
+         * <p>
+         * 
+         * If you do not specify this parameter, data of all accelerated domain names under your account is queried.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -175,7 +165,10 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -184,16 +177,7 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * PageNumber.
+         * The page number of the page to return. Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -202,7 +186,7 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **30**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -211,7 +195,13 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * A custom rule name. Valid values:
+         * <p>
+         * 
+         * *   default_normal: rule for the normal mode
+         * *   default_attack: rule for the emergency mode
+         * 
+         * If you leave this parameter empty, events that triggered rate limiting based on all rules are queried.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -220,7 +210,12 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * The minimum time granularity of data collection is 5 minutes.
+         * 
+         * If you leave this parameter empty, the data collected over the last 24 hours is queried.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -229,7 +224,10 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * TriggerObject.
+         * The trigger of rate limiting by which you want to query data.
+         * <p>
+         * 
+         * If you leave this parameter empty, all events that triggered rate limiting are queried.
          */
         public Builder triggerObject(String triggerObject) {
             this.putQueryParameter("TriggerObject", triggerObject);
@@ -238,7 +236,10 @@ public class DescribeDomainCcActivityLogRequest extends Request {
         }
 
         /**
-         * Value.
+         * The value of the trigger.
+         * <p>
+         * 
+         * If you leave this parameter empty, all events recorded for the trigger are queried.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

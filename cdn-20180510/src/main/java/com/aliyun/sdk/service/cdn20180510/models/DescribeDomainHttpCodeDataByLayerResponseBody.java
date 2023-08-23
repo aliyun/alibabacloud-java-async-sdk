@@ -62,7 +62,7 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -70,7 +70,7 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCodeDataInterval.
+         * The statistics of HTTP status codes returned at each time interval.
          */
         public Builder httpCodeDataInterval(HttpCodeDataInterval httpCodeDataInterval) {
             this.httpCodeDataInterval = httpCodeDataInterval;
@@ -78,7 +78,7 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -150,7 +150,7 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * TotalValue.
+             * The total number of times that HTTP status codes were returned.
              */
             public Builder totalValue(String totalValue) {
                 this.totalValue = totalValue;
@@ -158,7 +158,7 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The number of times that the HTTP status code was returned.
              */
             public Builder value(String value) {
                 this.value = value;

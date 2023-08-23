@@ -50,7 +50,7 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CertificateListModel.
+         * The type of the certificate information.
          */
         public Builder certificateListModel(CertificateListModel certificateListModel) {
             this.certificateListModel = certificateListModel;
@@ -58,7 +58,7 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
             private String issuer; 
 
             /**
-             * CertIdentifier.
+             * The ID of the certificate.
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -142,7 +142,7 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * CertName.
+             * The name of the certificate.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -150,7 +150,7 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Common.
+             * The common name of the certificate.
              */
             public Builder common(String common) {
                 this.common = common;
@@ -158,7 +158,7 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * The certificate authority (CA) that issued the certificate.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -252,7 +252,7 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * CertList.
+             * The list of certificates.
              */
             public Builder certList(CertList certList) {
                 this.certList = certList;
@@ -260,7 +260,7 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of certificates that are returned.
              */
             public Builder count(Integer count) {
                 this.count = count;

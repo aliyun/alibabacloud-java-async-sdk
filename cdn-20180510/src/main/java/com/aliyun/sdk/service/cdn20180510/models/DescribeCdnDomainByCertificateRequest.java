@@ -13,18 +13,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCdnDomainByCertificateRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
+    @NameInMap("Exact")
+    private Boolean exact;
 
     @Query
     @NameInMap("SSLPub")
     @Validation(required = true)
     private String SSLPub;
 
+    @Query
+    @NameInMap("SSLStatus")
+    private Boolean SSLStatus;
+
     private DescribeCdnDomainByCertificateRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
+        this.exact = builder.exact;
         this.SSLPub = builder.SSLPub;
+        this.SSLStatus = builder.SSLStatus;
     }
 
     public static Builder builder() {
@@ -41,10 +46,10 @@ public class DescribeCdnDomainByCertificateRequest extends Request {
     }
 
     /**
-     * @return ownerId
+     * @return exact
      */
-    public Long getOwnerId() {
-        return this.ownerId;
+    public Boolean getExact() {
+        return this.exact;
     }
 
     /**
@@ -54,35 +59,60 @@ public class DescribeCdnDomainByCertificateRequest extends Request {
         return this.SSLPub;
     }
 
+    /**
+     * @return SSLStatus
+     */
+    public Boolean getSSLStatus() {
+        return this.SSLStatus;
+    }
+
     public static final class Builder extends Request.Builder<DescribeCdnDomainByCertificateRequest, Builder> {
-        private Long ownerId; 
+        private Boolean exact; 
         private String SSLPub; 
+        private Boolean SSLStatus; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeCdnDomainByCertificateRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.SSLPub = response.SSLPub;
+        private Builder(DescribeCdnDomainByCertificateRequest request) {
+            super(request);
+            this.exact = request.exact;
+            this.SSLPub = request.SSLPub;
+            this.SSLStatus = request.SSLStatus;
         } 
 
         /**
-         * OwnerId.
+         * Exact.
          */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
+        public Builder exact(Boolean exact) {
+            this.putQueryParameter("Exact", exact);
+            this.exact = exact;
             return this;
         }
 
         /**
-         * SSLPub.
+         * The public key of the SSL certificate. You must encode the public key in Base64 before you invoke the encodeURIComponent function to encode a URI component.
+         * <p>
+         * 
+         * A public key in the Privacy Enhanced Mail (PEM) format is supported.
          */
         public Builder SSLPub(String SSLPub) {
             this.putQueryParameter("SSLPub", SSLPub);
             this.SSLPub = SSLPub;
+            return this;
+        }
+
+        /**
+         * Specifies whether to return only domain names with HTTPS enabled or disabled.
+         * <p>
+         * 
+         * *   true: returns only domain names with HTTPS enabled.
+         * *   false: returns only domain names with HTTPS disabled.
+         */
+        public Builder SSLStatus(Boolean SSLStatus) {
+            this.putQueryParameter("SSLStatus", SSLStatus);
+            this.SSLStatus = SSLStatus;
             return this;
         }
 

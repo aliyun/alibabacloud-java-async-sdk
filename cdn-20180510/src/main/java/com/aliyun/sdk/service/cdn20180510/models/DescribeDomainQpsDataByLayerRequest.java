@@ -37,10 +37,6 @@ public class DescribeDomainQpsDataByLayerRequest extends Request {
     private String locationNameEn;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -52,7 +48,6 @@ public class DescribeDomainQpsDataByLayerRequest extends Request {
         this.ispNameEn = builder.ispNameEn;
         this.layer = builder.layer;
         this.locationNameEn = builder.locationNameEn;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -112,13 +107,6 @@ public class DescribeDomainQpsDataByLayerRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -132,27 +120,28 @@ public class DescribeDomainQpsDataByLayerRequest extends Request {
         private String ispNameEn; 
         private String layer; 
         private String locationNameEn; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainQpsDataByLayerRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.interval = response.interval;
-            this.ispNameEn = response.ispNameEn;
-            this.layer = response.layer;
-            this.locationNameEn = response.locationNameEn;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainQpsDataByLayerRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.interval = request.interval;
+            this.ispNameEn = request.ispNameEn;
+            this.layer = request.layer;
+            this.locationNameEn = request.locationNameEn;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,).
+         * <p>
+         * 
+         * By default, this operation queries the QPS of all accelerated domain names that belong to your Alibaba Cloud account.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -161,7 +150,10 @@ public class DescribeDomainQpsDataByLayerRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format in the ISO 8601 standard. The time is displayed in UTC.
+         * <p>
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -170,7 +162,10 @@ public class DescribeDomainQpsDataByLayerRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The time interval between the data entries to return. Unit: seconds.
+         * <p>
+         * 
+         * The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Description**.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -179,7 +174,7 @@ public class DescribeDomainQpsDataByLayerRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The name of the Internet service provider (ISP) for your Alibaba Cloud CDN service. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. If you do not set this parameter, all ISPs are queried.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -188,7 +183,12 @@ public class DescribeDomainQpsDataByLayerRequest extends Request {
         }
 
         /**
-         * Layer.
+         * The layers at which you want to query the number of queries per second. Valid values:
+         * <p>
+         * 
+         * *   **Network layer**: **IPv4**and **IPv6**.
+         * *   **Application layer**: **http**, **https**, and **quic**.
+         * *   **all**: The default value. Both the network and application layers are included.
          */
         public Builder layer(String layer) {
             this.putQueryParameter("Layer", layer);
@@ -197,7 +197,7 @@ public class DescribeDomainQpsDataByLayerRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query the most recent region list. If you do not set this parameter, all regions are queried.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -206,16 +206,7 @@ public class DescribeDomainQpsDataByLayerRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format in the ISO 8601 standard. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

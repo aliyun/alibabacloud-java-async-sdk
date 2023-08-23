@@ -17,10 +17,6 @@ public class UntagResourcesRequest extends Request {
     private Boolean all;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("ResourceId")
     @Validation(required = true)
     private java.util.List < String > resourceId;
@@ -37,7 +33,6 @@ public class UntagResourcesRequest extends Request {
     private UntagResourcesRequest(Builder builder) {
         super(builder);
         this.all = builder.all;
-        this.ownerId = builder.ownerId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tagKey = builder.tagKey;
@@ -64,13 +59,6 @@ public class UntagResourcesRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return resourceId
      */
     public java.util.List < String > getResourceId() {
@@ -93,7 +81,6 @@ public class UntagResourcesRequest extends Request {
 
     public static final class Builder extends Request.Builder<UntagResourcesRequest, Builder> {
         private Boolean all; 
-        private Long ownerId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
         private java.util.List < String > tagKey; 
@@ -102,17 +89,22 @@ public class UntagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(UntagResourcesRequest response) {
-            super(response);
-            this.all = response.all;
-            this.ownerId = response.ownerId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tagKey = response.tagKey;
+        private Builder(UntagResourcesRequest request) {
+            super(request);
+            this.all = request.all;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tagKey = request.tagKey;
         } 
 
         /**
-         * All.
+         * Specifies whether to remove all tags. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes.
+         * *   **false**: no.
+         * 
+         * Default value: **false**.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -121,16 +113,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ResourceId.
+         * The list of resource IDs. You can specify up to 50 resource IDs in the list.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -139,7 +122,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resources from which you want to remove tags. Set this parameter to **DOMAIN**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -148,7 +131,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The list of tag keys. You can specify up to 20 tag keys in the list.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

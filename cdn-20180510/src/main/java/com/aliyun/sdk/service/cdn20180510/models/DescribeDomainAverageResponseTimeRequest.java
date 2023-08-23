@@ -37,10 +37,6 @@ public class DescribeDomainAverageResponseTimeRequest extends Request {
     private String locationNameEn;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -56,7 +52,6 @@ public class DescribeDomainAverageResponseTimeRequest extends Request {
         this.interval = builder.interval;
         this.ispNameEn = builder.ispNameEn;
         this.locationNameEn = builder.locationNameEn;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
         this.timeMerge = builder.timeMerge;
     }
@@ -117,13 +112,6 @@ public class DescribeDomainAverageResponseTimeRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -144,7 +132,6 @@ public class DescribeDomainAverageResponseTimeRequest extends Request {
         private String interval; 
         private String ispNameEn; 
         private String locationNameEn; 
-        private Long ownerId; 
         private String startTime; 
         private String timeMerge; 
 
@@ -152,21 +139,23 @@ public class DescribeDomainAverageResponseTimeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainAverageResponseTimeRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.domainType = response.domainType;
-            this.endTime = response.endTime;
-            this.interval = response.interval;
-            this.ispNameEn = response.ispNameEn;
-            this.locationNameEn = response.locationNameEn;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
-            this.timeMerge = response.timeMerge;
+        private Builder(DescribeDomainAverageResponseTimeRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.domainType = request.domainType;
+            this.endTime = request.endTime;
+            this.interval = request.interval;
+            this.ispNameEn = request.ispNameEn;
+            this.locationNameEn = request.locationNameEn;
+            this.startTime = request.startTime;
+            this.timeMerge = request.timeMerge;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+         * <p>
+         * 
+         * By default, this operation queries the geographic distribution of users for all accelerated domain names.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -175,7 +164,7 @@ public class DescribeDomainAverageResponseTimeRequest extends Request {
         }
 
         /**
-         * DomainType.
+         * The type of the query condition. When you set the value to dynamic, this operation queries the average response time of dynamic resources and static resources. If you do not set this parameter, this operation queries the average response time of only static resources.
          */
         public Builder domainType(String domainType) {
             this.putQueryParameter("DomainType", domainType);
@@ -184,7 +173,10 @@ public class DescribeDomainAverageResponseTimeRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -193,7 +185,12 @@ public class DescribeDomainAverageResponseTimeRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The time interval between the data entries. Unit: seconds. The value varies based on the values of the **StartTime** and **EndTime** parameters. Valid values:
+         * <p>
+         * 
+         * *   If the time span between StartTime and EndTime is less than 3 days, valid values are **300**, **3600**, and **86400**. Default value: **300**.
+         * *   If the time span between StartTime and EndTime is greater than or equal to 3 days and less than 31 days, valid values are **3600** and **86400**. Default value: **3600**.
+         * *   If the time range between StartTime and EndTime is 31 days or longer, the valid value is **86400**. Default value: **86400**.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -202,7 +199,7 @@ public class DescribeDomainAverageResponseTimeRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The name of the Internet service provider (ISP) for your Alibaba Cloud CDN service. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. If you do not set this parameter, data of all ISPs is queried.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -211,7 +208,7 @@ public class DescribeDomainAverageResponseTimeRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions. If you do not set this parameter, data in all regions is queried.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -220,16 +217,7 @@ public class DescribeDomainAverageResponseTimeRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -238,7 +226,7 @@ public class DescribeDomainAverageResponseTimeRequest extends Request {
         }
 
         /**
-         * TimeMerge.
+         * Specifies whether to automatically set the interval. If you set the value to 1, the value of the Interval parameter is automatically assigned based on the StartTime and EndTime parameters. You can set this parameter or the Interval parameter.
          */
         public Builder timeMerge(String timeMerge) {
             this.putQueryParameter("TimeMerge", timeMerge);

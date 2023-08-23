@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCdnDeletedDomainsRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("PageNumber")
     @Validation(maximum = 100000, minimum = 1)
     private Integer pageNumber;
@@ -28,7 +24,6 @@ public class DescribeCdnDeletedDomainsRequest extends Request {
 
     private DescribeCdnDeletedDomainsRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -47,13 +42,6 @@ public class DescribeCdnDeletedDomainsRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -68,7 +56,6 @@ public class DescribeCdnDeletedDomainsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCdnDeletedDomainsRequest, Builder> {
-        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -76,24 +63,14 @@ public class DescribeCdnDeletedDomainsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCdnDeletedDomainsRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(DescribeCdnDeletedDomainsRequest request) {
+            super(request);
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * PageNumber.
+         * The number of the page to return. Valid values: **1** to **100000**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -102,7 +79,7 @@ public class DescribeCdnDeletedDomainsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of domain names to return per page. Valid values: an integer between **1** and **500**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -22,10 +22,6 @@ public class DescribeDomainPathDataRequest extends Request {
     private String endTime;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -46,7 +42,6 @@ public class DescribeDomainPathDataRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
-        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.path = builder.path;
@@ -81,13 +76,6 @@ public class DescribeDomainPathDataRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -118,7 +106,6 @@ public class DescribeDomainPathDataRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDomainPathDataRequest, Builder> {
         private String domainName; 
         private String endTime; 
-        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String path; 
@@ -128,19 +115,21 @@ public class DescribeDomainPathDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainPathDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.path = response.path;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainPathDataRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.path = request.path;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name.
+         * <p>
+         * 
+         * > You can specify only one domain name in each call.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -149,7 +138,7 @@ public class DescribeDomainPathDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The interval between the start time and end time must be less than 30 days. Example: 2016-10-21T04:00:00Z.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -158,16 +147,7 @@ public class DescribeDomainPathDataRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -176,7 +156,7 @@ public class DescribeDomainPathDataRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: integers from **1** to **1000**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -185,7 +165,10 @@ public class DescribeDomainPathDataRequest extends Request {
         }
 
         /**
-         * Path.
+         * The paths that you want to query. Separate paths with forward slashes (/). If you do not set this parameter, all paths are queried. If you set the value to a directory, it must end with a forward slash (/).
+         * <p>
+         * 
+         * > Fuzzy match is not supported. If you want data to be collected based on a directory, you can specify a specific directory, for example, directory/path/. In this case, bandwidth data is collected based on directory/path/.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -194,7 +177,7 @@ public class DescribeDomainPathDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-10-20T04:00:00Z.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

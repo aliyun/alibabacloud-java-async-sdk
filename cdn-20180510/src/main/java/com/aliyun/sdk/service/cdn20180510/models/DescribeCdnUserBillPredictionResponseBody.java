@@ -86,7 +86,7 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * BillPredictionData.
+         * The estimated bill data.
          */
         public Builder billPredictionData(BillPredictionData billPredictionData) {
             this.billPredictionData = billPredictionData;
@@ -94,7 +94,22 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
         }
 
         /**
-         * BillType.
+         * The metering method.
+         * <p>
+         * 
+         * > If the metering method ends with \_overseas, the billable region is outside the Chinese mainland. For example, BillType": "month_avg_day_bandwidth_overseas specifies a billable region outside the Chinese mainland and that the metering method is pay by daily peak bandwidth per month.
+         * 
+         * Valid values:
+         * 
+         * *   hour_flow: pay by hourly data transfer
+         * *   day_bandwidth: pay by daily bandwidth
+         * *   month\_95: pay by monthly 95th percentile bandwidth.
+         * *   month_avg_day_bandwidth: pay by average daily peak bandwidth per month
+         * *   month\_4th_day_bandwidth: pay by monthly 4th peak bandwidth
+         * *   month_avg_day\_95: pay by average daily 95th percentile bandwidth per month
+         * *   month\_95\_night_half: pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00.
+         * *   hour_vas: pay by value-added services per hour
+         * *   day_count: pay by daily requests
          */
         public Builder billType(String billType) {
             this.billType = billType;
@@ -102,7 +117,7 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end time of the estimation.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -110,7 +125,7 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +133,7 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start time of the estimation.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -182,7 +197,7 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
             private Float value; 
 
             /**
-             * Area.
+             * The billable region.
              */
             public Builder area(String area) {
                 this.area = area;
@@ -190,7 +205,7 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStp.
+             * The time when the value used as the estimated value is generated. This parameter is returned only if the metering method is pay by 95th percentile, pay by 95th percentile bandwidth with 50% off from 00:00 to 08:00, or pay by 4th peak bandwidth per month.
              */
             public Builder timeStp(String timeStp) {
                 this.timeStp = timeStp;
@@ -198,7 +213,7 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The estimated value.
              */
             public Builder value(Float value) {
                 this.value = value;

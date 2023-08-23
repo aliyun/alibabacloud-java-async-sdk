@@ -25,10 +25,6 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
     private String logStore;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("Project")
     private String project;
 
@@ -41,7 +37,6 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
         this.endTime = builder.endTime;
         this.interval = builder.interval;
         this.logStore = builder.logStore;
-        this.ownerId = builder.ownerId;
         this.project = builder.project;
         this.startTime = builder.startTime;
     }
@@ -81,13 +76,6 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return project
      */
     public String getProject() {
@@ -105,7 +93,6 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
         private String endTime; 
         private String interval; 
         private String logStore; 
-        private Long ownerId; 
         private String project; 
         private String startTime; 
 
@@ -113,18 +100,20 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRealtimeDeliveryAccRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.interval = response.interval;
-            this.logStore = response.logStore;
-            this.ownerId = response.ownerId;
-            this.project = response.project;
-            this.startTime = response.startTime;
+        private Builder(DescribeRealtimeDeliveryAccRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.interval = request.interval;
+            this.logStore = request.logStore;
+            this.project = request.project;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -133,7 +122,12 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The time granularity of the data entries. Unit: seconds. The value varies based on the values of the **StartTime** and **EndTime** parameters. Valid values:
+         * <p>
+         * 
+         * *   If the time span between StartTime and EndTime is less than 3 days, valid values are **300**, **3600**, and **86400**. Default value: **300**.
+         * *   If the time span between StartTime and EndTime is greater than or equal to 3 days and less than 31 days, valid values are **3600** and **86400**. Default value: **3600**.
+         * *   If the time span between StartTime and EndTime is 31 days or longer, the valid value is **86400**. Default value: **86400**.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -142,7 +136,7 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
         }
 
         /**
-         * LogStore.
+         * The name of the Logstore that stores log data. If you do leave this parameter empty, real-time log deliveries of all Logstores are queried.
          */
         public Builder logStore(String logStore) {
             this.putQueryParameter("LogStore", logStore);
@@ -151,16 +145,7 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * Project.
+         * The name of the Log Service project that is used for real-time log delivery. If you do leave this parameter empty, real-time log deliveries of all projects are queried.
          */
         public Builder project(String project) {
             this.putQueryParameter("Project", project);
@@ -169,7 +154,7 @@ public class DescribeRealtimeDeliveryAccRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

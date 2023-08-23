@@ -22,15 +22,10 @@ public class ListFCTriggerRequest extends Request {
     @Validation(required = true)
     private String eventMetaVersion;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private ListFCTriggerRequest(Builder builder) {
         super(builder);
         this.eventMetaName = builder.eventMetaName;
         this.eventMetaVersion = builder.eventMetaVersion;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -60,31 +55,22 @@ public class ListFCTriggerRequest extends Request {
         return this.eventMetaVersion;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<ListFCTriggerRequest, Builder> {
         private String eventMetaName; 
         private String eventMetaVersion; 
-        private Long ownerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListFCTriggerRequest response) {
-            super(response);
-            this.eventMetaName = response.eventMetaName;
-            this.eventMetaVersion = response.eventMetaVersion;
-            this.ownerId = response.ownerId;
+        private Builder(ListFCTriggerRequest request) {
+            super(request);
+            this.eventMetaName = request.eventMetaName;
+            this.eventMetaVersion = request.eventMetaVersion;
         } 
 
         /**
-         * EventMetaName.
+         * The name of the event. You can specify only one name.
          */
         public Builder eventMetaName(String eventMetaName) {
             this.putQueryParameter("EventMetaName", eventMetaName);
@@ -93,20 +79,11 @@ public class ListFCTriggerRequest extends Request {
         }
 
         /**
-         * EventMetaVersion.
+         * The version number of the event. You can specify only one version number.
          */
         public Builder eventMetaVersion(String eventMetaVersion) {
             this.putQueryParameter("EventMetaVersion", eventMetaVersion);
             this.eventMetaVersion = eventMetaVersion;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

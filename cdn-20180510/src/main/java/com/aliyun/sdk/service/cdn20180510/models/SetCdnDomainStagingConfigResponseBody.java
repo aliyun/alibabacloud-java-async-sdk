@@ -12,10 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetCdnDomainStagingConfigResponseBody</p>
  */
 public class SetCdnDomainStagingConfigResponseBody extends TeaModel {
+    @NameInMap("DomainConfigList")
+    private java.util.List < DomainConfigList> domainConfigList;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private SetCdnDomainStagingConfigResponseBody(Builder builder) {
+        this.domainConfigList = builder.domainConfigList;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +32,13 @@ public class SetCdnDomainStagingConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return domainConfigList
+     */
+    public java.util.List < DomainConfigList> getDomainConfigList() {
+        return this.domainConfigList;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,10 +46,19 @@ public class SetCdnDomainStagingConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < DomainConfigList> domainConfigList; 
         private String requestId; 
 
         /**
-         * RequestId.
+         * The list of domain configurations.
+         */
+        public Builder domainConfigList(java.util.List < DomainConfigList> domainConfigList) {
+            this.domainConfigList = domainConfigList;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -51,4 +71,85 @@ public class SetCdnDomainStagingConfigResponseBody extends TeaModel {
 
     } 
 
+    public static class DomainConfigList extends TeaModel {
+        @NameInMap("ConfigId")
+        private Long configId;
+
+        @NameInMap("DomainName")
+        private String domainName;
+
+        @NameInMap("FunctionName")
+        private String functionName;
+
+        private DomainConfigList(Builder builder) {
+            this.configId = builder.configId;
+            this.domainName = builder.domainName;
+            this.functionName = builder.functionName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DomainConfigList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return configId
+         */
+        public Long getConfigId() {
+            return this.configId;
+        }
+
+        /**
+         * @return domainName
+         */
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        /**
+         * @return functionName
+         */
+        public String getFunctionName() {
+            return this.functionName;
+        }
+
+        public static final class Builder {
+            private Long configId; 
+            private String domainName; 
+            private String functionName; 
+
+            /**
+             * The ID of the configuration.
+             */
+            public Builder configId(Long configId) {
+                this.configId = configId;
+                return this;
+            }
+
+            /**
+             * The domain name.
+             */
+            public Builder domainName(String domainName) {
+                this.domainName = domainName;
+                return this;
+            }
+
+            /**
+             * The name of the feature.
+             */
+            public Builder functionName(String functionName) {
+                this.functionName = functionName;
+                return this;
+            }
+
+            public DomainConfigList build() {
+                return new DomainConfigList(this);
+            } 
+
+        } 
+
+    }
 }

@@ -50,7 +50,7 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The information about real-time log delivery.
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * Logstore.
+             * The name of the Logstore that collects log data from Alibaba Cloud CDN in real time.
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -130,7 +130,7 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * The name of the Log Service project that is used for real-time log delivery.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -138,7 +138,7 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The ID of the region where the Log Service project is deployed. For more information, see [Regions that support real-time log delivery](~~144883~~).
              */
             public Builder region(String region) {
                 this.region = region;

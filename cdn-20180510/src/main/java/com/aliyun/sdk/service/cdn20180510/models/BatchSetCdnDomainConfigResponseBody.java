@@ -50,7 +50,7 @@ public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainConfigList.
+         * The list of domain configurations.
          */
         public Builder domainConfigList(DomainConfigList domainConfigList) {
             this.domainConfigList = domainConfigList;
@@ -58,7 +58,7 @@ public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
             private String functionName; 
 
             /**
-             * ConfigId.
+             * The ID of the configuration.
              */
             public Builder configId(Long configId) {
                 this.configId = configId;
@@ -130,7 +130,7 @@ public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -138,7 +138,7 @@ public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * The name of the feature.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;

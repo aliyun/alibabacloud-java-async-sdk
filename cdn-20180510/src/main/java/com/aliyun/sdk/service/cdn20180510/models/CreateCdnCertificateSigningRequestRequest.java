@@ -38,10 +38,6 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
     private String organizationUnit;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("SANs")
     private String SANs;
 
@@ -57,7 +53,6 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         this.email = builder.email;
         this.organization = builder.organization;
         this.organizationUnit = builder.organizationUnit;
-        this.ownerId = builder.ownerId;
         this.SANs = builder.SANs;
         this.state = builder.state;
     }
@@ -118,13 +113,6 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return SANs
      */
     public String getSANs() {
@@ -145,7 +133,6 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         private String email; 
         private String organization; 
         private String organizationUnit; 
-        private Long ownerId; 
         private String SANs; 
         private String state; 
 
@@ -153,21 +140,20 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
             super();
         } 
 
-        private Builder(CreateCdnCertificateSigningRequestRequest response) {
-            super(response);
-            this.city = response.city;
-            this.commonName = response.commonName;
-            this.country = response.country;
-            this.email = response.email;
-            this.organization = response.organization;
-            this.organizationUnit = response.organizationUnit;
-            this.ownerId = response.ownerId;
-            this.SANs = response.SANs;
-            this.state = response.state;
+        private Builder(CreateCdnCertificateSigningRequestRequest request) {
+            super(request);
+            this.city = request.city;
+            this.commonName = request.commonName;
+            this.country = request.country;
+            this.email = request.email;
+            this.organization = request.organization;
+            this.organizationUnit = request.organizationUnit;
+            this.SANs = request.SANs;
+            this.state = request.state;
         } 
 
         /**
-         * City.
+         * The city. Default value: Hangzhou.
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -176,7 +162,7 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * CommonName.
+         * The Common Name of the certificate.
          */
         public Builder commonName(String commonName) {
             this.putQueryParameter("CommonName", commonName);
@@ -185,7 +171,7 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * Country.
+         * The country or region in which the organization is located. Default value: CN.
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -194,7 +180,7 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * Email.
+         * The email address.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -203,7 +189,7 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * Organization.
+         * The name of the organization. Default value: Alibaba Inc.
          */
         public Builder organization(String organization) {
             this.putQueryParameter("Organization", organization);
@@ -212,7 +198,7 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * OrganizationUnit.
+         * The name of the department. Default value: Aliyun CDN.
          */
         public Builder organizationUnit(String organizationUnit) {
             this.putQueryParameter("OrganizationUnit", organizationUnit);
@@ -221,16 +207,7 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * SANs.
+         * The Subject Alternative Name (SAN) extension of the SSL certificate. This extension is used to add domain names to the certificate. Separate multiple domain names with commas (,).
          */
         public Builder SANs(String SANs) {
             this.putQueryParameter("SANs", SANs);
@@ -239,7 +216,7 @@ public class CreateCdnCertificateSigningRequestRequest extends Request {
         }
 
         /**
-         * State.
+         * The provincial district. Default value: Zhejiang.
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

@@ -98,7 +98,10 @@ public class DescribeDomainRealTimeSrcTrafficDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
+         * <p>
+         * 
+         * Depending on the maximum time range per query, the value is 60 (1 minute), 300 (5 minutes), or 3600 (1 hour). For more information, see the "Time granularity" section in Usage notes.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +109,7 @@ public class DescribeDomainRealTimeSrcTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +117,7 @@ public class DescribeDomainRealTimeSrcTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range for which the data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +125,7 @@ public class DescribeDomainRealTimeSrcTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * RealTimeSrcTrafficDataPerInterval.
+         * The amount of back-to-origin traffic returned at each interval.
          */
         public Builder realTimeSrcTrafficDataPerInterval(RealTimeSrcTrafficDataPerInterval realTimeSrcTrafficDataPerInterval) {
             this.realTimeSrcTrafficDataPerInterval = realTimeSrcTrafficDataPerInterval;
@@ -130,7 +133,7 @@ public class DescribeDomainRealTimeSrcTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +141,7 @@ public class DescribeDomainRealTimeSrcTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range for which the data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -190,7 +193,7 @@ public class DescribeDomainRealTimeSrcTrafficDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +201,7 @@ public class DescribeDomainRealTimeSrcTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The amount of traffic.
              */
             public Builder value(String value) {
                 this.value = value;

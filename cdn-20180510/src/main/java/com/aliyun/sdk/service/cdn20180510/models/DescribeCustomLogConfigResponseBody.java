@@ -74,7 +74,7 @@ public class DescribeCustomLogConfigResponseBody extends TeaModel {
         private String tag; 
 
         /**
-         * Remark.
+         * The format of the log configuration.
          */
         public Builder remark(String remark) {
             this.remark = remark;
@@ -82,7 +82,7 @@ public class DescribeCustomLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class DescribeCustomLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Sample.
+         * The sample.
          */
         public Builder sample(String sample) {
             this.sample = sample;
@@ -98,7 +98,7 @@ public class DescribeCustomLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Tag.
+         * The tag information about the log configuration.
          */
         public Builder tag(String tag) {
             this.tag = tag;

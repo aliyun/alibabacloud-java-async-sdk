@@ -22,14 +22,6 @@ public class DescribeDomainTopReferVisitRequest extends Request {
     private String endTime;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("Percent")
-    private String percent;
-
-    @Query
     @NameInMap("SortBy")
     private String sortBy;
 
@@ -41,8 +33,6 @@ public class DescribeDomainTopReferVisitRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
-        this.ownerId = builder.ownerId;
-        this.percent = builder.percent;
         this.sortBy = builder.sortBy;
         this.startTime = builder.startTime;
     }
@@ -75,20 +65,6 @@ public class DescribeDomainTopReferVisitRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return percent
-     */
-    public String getPercent() {
-        return this.percent;
-    }
-
-    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -105,8 +81,6 @@ public class DescribeDomainTopReferVisitRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDomainTopReferVisitRequest, Builder> {
         private String domainName; 
         private String endTime; 
-        private Long ownerId; 
-        private String percent; 
         private String sortBy; 
         private String startTime; 
 
@@ -114,18 +88,16 @@ public class DescribeDomainTopReferVisitRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainTopReferVisitRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.percent = response.percent;
-            this.sortBy = response.sortBy;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainTopReferVisitRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.sortBy = request.sortBy;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -134,7 +106,12 @@ public class DescribeDomainTopReferVisitRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -143,25 +120,11 @@ public class DescribeDomainTopReferVisitRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * Percent.
-         */
-        public Builder percent(String percent) {
-            this.putQueryParameter("Percent", percent);
-            this.percent = percent;
-            return this;
-        }
-
-        /**
-         * SortBy.
+         * The order in which you want to sort the queried information. Valid values:
+         * <p>
+         * 
+         * *   **traf**: by network traffic.
+         * *   **pv**: by the number of page views. This is the default value.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -170,7 +133,10 @@ public class DescribeDomainTopReferVisitRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

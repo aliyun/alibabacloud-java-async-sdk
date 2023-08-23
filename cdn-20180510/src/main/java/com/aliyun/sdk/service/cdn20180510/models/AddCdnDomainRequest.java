@@ -52,6 +52,10 @@ public class AddCdnDomainRequest extends Request {
     private String sources;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("TopLevelDomain")
     private String topLevelDomain;
 
@@ -66,6 +70,7 @@ public class AddCdnDomainRequest extends Request {
         this.scope = builder.scope;
         this.securityToken = builder.securityToken;
         this.sources = builder.sources;
+        this.tag = builder.tag;
         this.topLevelDomain = builder.topLevelDomain;
     }
 
@@ -146,6 +151,13 @@ public class AddCdnDomainRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return topLevelDomain
      */
     public String getTopLevelDomain() {
@@ -162,28 +174,35 @@ public class AddCdnDomainRequest extends Request {
         private String scope; 
         private String securityToken; 
         private String sources; 
+        private java.util.List < Tag> tag; 
         private String topLevelDomain; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AddCdnDomainRequest response) {
-            super(response);
-            this.cdnType = response.cdnType;
-            this.checkUrl = response.checkUrl;
-            this.domainName = response.domainName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.scope = response.scope;
-            this.securityToken = response.securityToken;
-            this.sources = response.sources;
-            this.topLevelDomain = response.topLevelDomain;
+        private Builder(AddCdnDomainRequest request) {
+            super(request);
+            this.cdnType = request.cdnType;
+            this.checkUrl = request.checkUrl;
+            this.domainName = request.domainName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.scope = request.scope;
+            this.securityToken = request.securityToken;
+            this.sources = request.sources;
+            this.tag = request.tag;
+            this.topLevelDomain = request.topLevelDomain;
         } 
 
         /**
-         * CdnType.
+         * The workload type of the accelerated domain name. Valid values:
+         * <p>
+         * 
+         * *   **web**: images and small files
+         * *   **download**: large files
+         * *   **video**: on-demand video and audio streaming
          */
         public Builder cdnType(String cdnType) {
             this.putQueryParameter("CdnType", cdnType);
@@ -192,7 +211,7 @@ public class AddCdnDomainRequest extends Request {
         }
 
         /**
-         * CheckUrl.
+         * The URL that is used to check the accessibility of the origin server.
          */
         public Builder checkUrl(String checkUrl) {
             this.putQueryParameter("CheckUrl", checkUrl);
@@ -201,7 +220,10 @@ public class AddCdnDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name that you want to add to Alibaba Cloud CDN.
+         * <p>
+         * 
+         * A wildcard domain that starts with a period (.) is supported, such as .example.com.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -228,7 +250,10 @@ public class AddCdnDomainRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
+         * <p>
+         * 
+         * If you do not set this parameter, the system uses the ID of the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -237,7 +262,12 @@ public class AddCdnDomainRequest extends Request {
         }
 
         /**
-         * Scope.
+         * The acceleration region. Default value: domestic. Valid values:
+         * <p>
+         * 
+         * *   **domestic**: Chinese mainland
+         * *   **overseas**: global (excluding the Chinese mainland)
+         * *   **global**: global
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -255,7 +285,7 @@ public class AddCdnDomainRequest extends Request {
         }
 
         /**
-         * Sources.
+         * The information about the addresses of origin servers.
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -264,7 +294,16 @@ public class AddCdnDomainRequest extends Request {
         }
 
         /**
-         * TopLevelDomain.
+         * Details about the tags. You can specify up to 20 tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The top-level domain.
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);
@@ -279,4 +318,65 @@ public class AddCdnDomainRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of the tag. Valid values of N: **1 to 20**.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of the tag. Valid values of N: **1 to 20**.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

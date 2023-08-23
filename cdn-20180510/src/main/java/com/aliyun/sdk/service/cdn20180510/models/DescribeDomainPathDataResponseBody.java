@@ -122,7 +122,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DataInterval.
+         * The time interval. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -130,7 +130,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -138,7 +138,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -146,7 +146,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page. Pages start from page **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +154,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +162,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * PathDataPerInterval.
+         * A list of bandwidth values collected at each time interval.
          */
         public Builder pathDataPerInterval(PathDataPerInterval pathDataPerInterval) {
             this.pathDataPerInterval = pathDataPerInterval;
@@ -170,7 +170,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -178,7 +178,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
             private Integer traffic; 
 
             /**
-             * Acc.
+             * The number of visits to the URL.
              */
             public Builder acc(Integer acc) {
                 this.acc = acc;
@@ -262,7 +262,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -270,7 +270,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The point in time.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -278,7 +278,7 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
             }
 
             /**
-             * Traffic.
+             * The amount of network traffic. Unit: bytes.
              */
             public Builder traffic(Integer traffic) {
                 this.traffic = traffic;

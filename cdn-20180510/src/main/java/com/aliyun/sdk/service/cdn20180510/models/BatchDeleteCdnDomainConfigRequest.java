@@ -102,17 +102,17 @@ public class BatchDeleteCdnDomainConfigRequest extends Request {
             super();
         } 
 
-        private Builder(BatchDeleteCdnDomainConfigRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.functionNames = response.functionNames;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(BatchDeleteCdnDomainConfigRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.functionNames = request.functionNames;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * DomainNames.
+         * The accelerated domain names whose configurations you want to delete. Separate multiple accelerated domain names with commas (,).
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -121,7 +121,7 @@ public class BatchDeleteCdnDomainConfigRequest extends Request {
         }
 
         /**
-         * FunctionNames.
+         * The names of the features that you want to delete. Separate multiple feature names with commas (,). For more information about feature names, see [Parameters for configuring features for domain names](~~388460~~).
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

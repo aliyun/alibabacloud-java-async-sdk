@@ -50,7 +50,7 @@ public class ListFCTriggerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FCTriggers.
+         * The Function Compute triggers that are set for Alibaba Cloud CDN events.
          */
         public Builder FCTriggers(java.util.List < FCTriggers> FCTriggers) {
             this.FCTriggers = FCTriggers;
@@ -58,7 +58,7 @@ public class ListFCTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class ListFCTriggerResponseBody extends TeaModel {
             private String triggerARN; 
 
             /**
-             * EventMetaName.
+             * The name of the event.
              */
             public Builder eventMetaName(String eventMetaName) {
                 this.eventMetaName = eventMetaName;
@@ -166,7 +166,7 @@ public class ListFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * EventMetaVersion.
+             * The version of the event.
              */
             public Builder eventMetaVersion(String eventMetaVersion) {
                 this.eventMetaVersion = eventMetaVersion;
@@ -174,7 +174,7 @@ public class ListFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * Notes.
+             * The remarks.
              */
             public Builder notes(String notes) {
                 this.notes = notes;
@@ -182,7 +182,7 @@ public class ListFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * RoleARN.
+             * The Resource Access Management (RAM) role.
              */
             public Builder roleARN(String roleARN) {
                 this.roleARN = roleARN;
@@ -190,7 +190,7 @@ public class ListFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * SourceArn.
+             * The resources and filters for event listening.
              */
             public Builder sourceArn(String sourceArn) {
                 this.sourceArn = sourceArn;
@@ -198,7 +198,7 @@ public class ListFCTriggerResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerARN.
+             * The trigger that corresponds to the Function Compute service.
              */
             public Builder triggerARN(String triggerARN) {
                 this.triggerARN = triggerARN;

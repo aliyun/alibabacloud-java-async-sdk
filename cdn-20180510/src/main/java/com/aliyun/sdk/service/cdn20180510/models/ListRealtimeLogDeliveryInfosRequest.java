@@ -12,13 +12,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRealtimeLogDeliveryInfosRequest</p>
  */
 public class ListRealtimeLogDeliveryInfosRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private ListRealtimeLogDeliveryInfosRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -34,33 +29,15 @@ public class ListRealtimeLogDeliveryInfosRequest extends Request {
         return new Builder(this);
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<ListRealtimeLogDeliveryInfosRequest, Builder> {
-        private Long ownerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListRealtimeLogDeliveryInfosRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
+        private Builder(ListRealtimeLogDeliveryInfosRequest request) {
+            super(request);
         } 
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
 
         @Override
         public ListRealtimeLogDeliveryInfosRequest build() {

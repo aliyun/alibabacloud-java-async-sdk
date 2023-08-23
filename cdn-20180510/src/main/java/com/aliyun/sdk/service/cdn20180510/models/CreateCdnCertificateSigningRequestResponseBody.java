@@ -74,7 +74,7 @@ public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CommonName.
+         * The Common Name of the certificate.
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -82,7 +82,7 @@ public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
         }
 
         /**
-         * Csr.
+         * The content of the CSR file.
          */
         public Builder csr(String csr) {
             this.csr = csr;
@@ -90,7 +90,7 @@ public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
         }
 
         /**
-         * PubMd5.
+         * The MD5 hash value of the certificate public key.
          */
         public Builder pubMd5(String pubMd5) {
             this.pubMd5 = pubMd5;
@@ -98,7 +98,7 @@ public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

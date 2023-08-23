@@ -114,18 +114,18 @@ public class BatchUpdateCdnDomainRequest extends Request {
             super();
         } 
 
-        private Builder(BatchUpdateCdnDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.securityToken = response.securityToken;
-            this.sources = response.sources;
-            this.topLevelDomain = response.topLevelDomain;
+        private Builder(BatchUpdateCdnDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.securityToken = request.securityToken;
+            this.sources = request.sources;
+            this.topLevelDomain = request.topLevelDomain;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain names. You can specify one or more accelerated domain names. Separate domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -143,7 +143,7 @@ public class BatchUpdateCdnDomainRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -161,7 +161,10 @@ public class BatchUpdateCdnDomainRequest extends Request {
         }
 
         /**
-         * Sources.
+         * The information about the addresses of origin servers.
+         * <p>
+         * 
+         * > Do not set **Sources** and **TopLevelDomain** at the same time. If you set **Sources** and **TopLevelDomain** at the same time, **TopLevelDomain** does not take effect.
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -170,7 +173,10 @@ public class BatchUpdateCdnDomainRequest extends Request {
         }
 
         /**
-         * TopLevelDomain.
+         * The root domain.
+         * <p>
+         * 
+         * > Do not set **Sources** and **TopLevelDomain** at the same time. If you set **Sources** and **TopLevelDomain** at the same time, **TopLevelDomain** does not take effect.
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

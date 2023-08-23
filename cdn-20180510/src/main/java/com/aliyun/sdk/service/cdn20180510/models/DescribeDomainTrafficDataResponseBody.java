@@ -98,7 +98,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         private TrafficDataPerInterval trafficDataPerInterval; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +138,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficDataPerInterval.
+         * The amount of network traffic at each time interval. Unit: bytes.
          */
         public Builder trafficDataPerInterval(TrafficDataPerInterval trafficDataPerInterval) {
             this.trafficDataPerInterval = trafficDataPerInterval;
@@ -250,7 +250,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * DomesticValue.
+             * The amount of network traffic in the Chinese mainland.
              */
             public Builder domesticValue(String domesticValue) {
                 this.domesticValue = domesticValue;
@@ -258,7 +258,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsDomesticValue.
+             * The amount of HTTPS traffic on points of presence (POPs) in the Chinese mainland.
              */
             public Builder httpsDomesticValue(String httpsDomesticValue) {
                 this.httpsDomesticValue = httpsDomesticValue;
@@ -266,7 +266,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsOverseasValue.
+             * The amount of HTTPS traffic on POPs outside the Chinese mainland.
              */
             public Builder httpsOverseasValue(String httpsOverseasValue) {
                 this.httpsOverseasValue = httpsOverseasValue;
@@ -274,7 +274,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsValue.
+             * The total amount of HTTPS traffic on POPs.
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -282,7 +282,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * OverseasValue.
+             * The amount of network traffic outside the Chinese mainland.
              */
             public Builder overseasValue(String overseasValue) {
                 this.overseasValue = overseasValue;
@@ -290,7 +290,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -298,7 +298,7 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The total volume of traffic.
              */
             public Builder value(String value) {
                 this.value = value;

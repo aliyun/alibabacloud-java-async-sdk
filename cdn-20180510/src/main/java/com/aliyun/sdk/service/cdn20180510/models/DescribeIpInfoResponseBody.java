@@ -98,7 +98,10 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CdnIp.
+         * Indicates whether the IP address belongs to an Alibaba Cloud CDN POP.
+         * <p>
+         * *   **True**:Yes.
+         * *   **False**:No.
          */
         public Builder cdnIp(String cdnIp) {
             this.cdnIp = cdnIp;
@@ -106,7 +109,7 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ISP.
+         * The name of the ISP in Chinese.
          */
         public Builder ISP(String ISP) {
             this.ISP = ISP;
@@ -114,7 +117,7 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * IspEname.
+         * The name of the ISP.
          */
         public Builder ispEname(String ispEname) {
             this.ispEname = ispEname;
@@ -122,7 +125,7 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Region.
+         * The name of the region in Chinese.
          */
         public Builder region(String region) {
             this.region = region;
@@ -130,7 +133,7 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RegionEname.
+         * The name of the region.
          */
         public Builder regionEname(String regionEname) {
             this.regionEname = regionEname;
@@ -138,7 +141,7 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

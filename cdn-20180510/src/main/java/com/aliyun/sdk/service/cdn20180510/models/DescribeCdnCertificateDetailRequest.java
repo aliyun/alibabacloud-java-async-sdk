@@ -75,15 +75,15 @@ public class DescribeCdnCertificateDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCdnCertificateDetailRequest response) {
-            super(response);
-            this.certName = response.certName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeCdnCertificateDetailRequest request) {
+            super(request);
+            this.certName = request.certName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * CertName.
+         * The ID of the SSL certificate. You can query only one certificate at a time.
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);

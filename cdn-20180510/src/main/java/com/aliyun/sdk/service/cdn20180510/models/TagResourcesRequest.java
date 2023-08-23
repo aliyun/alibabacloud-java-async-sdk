@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TagResourcesRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("ResourceId")
     @Validation(required = true)
     private java.util.List < String > resourceId;
@@ -33,7 +29,6 @@ public class TagResourcesRequest extends Request {
 
     private TagResourcesRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
@@ -50,13 +45,6 @@ public class TagResourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     /**
@@ -81,7 +69,6 @@ public class TagResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
-        private Long ownerId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
         private java.util.List < Tag> tag; 
@@ -90,25 +77,15 @@ public class TagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(TagResourcesRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
+        private Builder(TagResourcesRequest request) {
+            super(request);
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ResourceId.
+         * The list of resource IDs. Maximum number of list elements: 50.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -117,7 +94,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set this value to **DOMAIN**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -126,7 +103,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags. Maximum number of list elements: 20.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -181,7 +158,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of a tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -189,7 +166,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of a tag.
              */
             public Builder value(String value) {
                 this.value = value;

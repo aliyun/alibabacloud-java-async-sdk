@@ -62,7 +62,7 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * Details about tasks.
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -78,7 +78,7 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of tasks.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -190,7 +190,7 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * CreationTime.
+             * The time when the task was created. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -198,7 +198,12 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The error returned when the refresh or prefetch task failed. Valid values:
+             * <p>
+             * 
+             * *   **Internal Error**
+             * *   **Origin Timeout**
+             * *   **Origin Return StatusCode 5XX**
              */
             public Builder description(String description) {
                 this.description = description;
@@ -206,7 +211,7 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectPath.
+             * The path of the object refreshed by the refresh task.
              */
             public Builder objectPath(String objectPath) {
                 this.objectPath = objectPath;
@@ -214,7 +219,13 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   **file**: refreshes an individual file.
+             * *   **directory**: refreshes files in the specified directory.
+             * *   **preload**: prefetches an individual file.
+             * *   **regex**: refreshes content based on a regular expression.
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -222,7 +233,7 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * The progress of the task, in percentage.
              */
             public Builder process(String process) {
                 this.process = process;
@@ -230,7 +241,13 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **Complete**
+             * *   **Pending**
+             * *   **Refreshing**
+             * *   **Failed**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +255,7 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

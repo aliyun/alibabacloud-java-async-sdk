@@ -17,10 +17,6 @@ public class DescribeCdnWafDomainRequest extends Request {
     private String domainName;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -32,7 +28,6 @@ public class DescribeCdnWafDomainRequest extends Request {
     private DescribeCdnWafDomainRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
-        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
     }
@@ -58,13 +53,6 @@ public class DescribeCdnWafDomainRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -80,7 +68,6 @@ public class DescribeCdnWafDomainRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCdnWafDomainRequest, Builder> {
         private String domainName; 
-        private Long ownerId; 
         private String regionId; 
         private String resourceGroupId; 
 
@@ -88,16 +75,22 @@ public class DescribeCdnWafDomainRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCdnWafDomainRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeCdnWafDomainRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * DomainName.
+         * The domain name that you want to query.
+         * <p>
+         * 
+         * You can specify only one domain name in each request. You have three options to configure this parameter:
+         * 
+         * *   Specify an exact domain name. For example, if you set this parameter to example.com, configuration information of example.com is queried.
+         * *   Specify a keyword. For example, if you set this parameter to example, configuration information about all domain names that contain example is queried.
+         * *   Leave this parameter empty. If this parameter is left empty, all accelerated domain names for which WAF is configured are queried.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -106,16 +99,13 @@ public class DescribeCdnWafDomainRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * The region where WAF is enabled. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: inside the Chinese mainland
+         * *   **ap-southeast-1**: outside the Chinese mainland
+         * 
+         * > ap-southeast-1 includes Hong Kong (China), Macao (China), Taiwan (China), and other countries and regions.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +114,7 @@ public class DescribeCdnWafDomainRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

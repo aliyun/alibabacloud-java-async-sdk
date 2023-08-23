@@ -31,10 +31,6 @@ public class AddFCTriggerRequest extends Request {
     @Validation(required = true)
     private String notes;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Body
     @NameInMap("RoleARN")
     @Validation(required = true)
@@ -56,7 +52,6 @@ public class AddFCTriggerRequest extends Request {
         this.eventMetaVersion = builder.eventMetaVersion;
         this.functionARN = builder.functionARN;
         this.notes = builder.notes;
-        this.ownerId = builder.ownerId;
         this.roleARN = builder.roleARN;
         this.sourceARN = builder.sourceARN;
         this.triggerARN = builder.triggerARN;
@@ -104,13 +99,6 @@ public class AddFCTriggerRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return roleARN
      */
     public String getRoleARN() {
@@ -136,7 +124,6 @@ public class AddFCTriggerRequest extends Request {
         private String eventMetaVersion; 
         private String functionARN; 
         private String notes; 
-        private Long ownerId; 
         private String roleARN; 
         private String sourceARN; 
         private String triggerARN; 
@@ -145,20 +132,19 @@ public class AddFCTriggerRequest extends Request {
             super();
         } 
 
-        private Builder(AddFCTriggerRequest response) {
-            super(response);
-            this.eventMetaName = response.eventMetaName;
-            this.eventMetaVersion = response.eventMetaVersion;
-            this.functionARN = response.functionARN;
-            this.notes = response.notes;
-            this.ownerId = response.ownerId;
-            this.roleARN = response.roleARN;
-            this.sourceARN = response.sourceARN;
-            this.triggerARN = response.triggerARN;
+        private Builder(AddFCTriggerRequest request) {
+            super(request);
+            this.eventMetaName = request.eventMetaName;
+            this.eventMetaVersion = request.eventMetaVersion;
+            this.functionARN = request.functionARN;
+            this.notes = request.notes;
+            this.roleARN = request.roleARN;
+            this.sourceARN = request.sourceARN;
+            this.triggerARN = request.triggerARN;
         } 
 
         /**
-         * EventMetaName.
+         * The name of the event.
          */
         public Builder eventMetaName(String eventMetaName) {
             this.putBodyParameter("EventMetaName", eventMetaName);
@@ -167,7 +153,7 @@ public class AddFCTriggerRequest extends Request {
         }
 
         /**
-         * EventMetaVersion.
+         * The version of the event.
          */
         public Builder eventMetaVersion(String eventMetaVersion) {
             this.putBodyParameter("EventMetaVersion", eventMetaVersion);
@@ -176,7 +162,7 @@ public class AddFCTriggerRequest extends Request {
         }
 
         /**
-         * FunctionARN.
+         * The feature trigger.
          */
         public Builder functionARN(String functionARN) {
             this.putBodyParameter("FunctionARN", functionARN);
@@ -185,7 +171,7 @@ public class AddFCTriggerRequest extends Request {
         }
 
         /**
-         * Notes.
+         * The remarks.
          */
         public Builder notes(String notes) {
             this.putBodyParameter("Notes", notes);
@@ -194,16 +180,7 @@ public class AddFCTriggerRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RoleARN.
+         * The assigned Resource Access Management (RAM) role.
          */
         public Builder roleARN(String roleARN) {
             this.putBodyParameter("RoleARN", roleARN);
@@ -212,7 +189,7 @@ public class AddFCTriggerRequest extends Request {
         }
 
         /**
-         * SourceARN.
+         * The resources and filters for event listening.
          */
         public Builder sourceARN(String sourceARN) {
             this.putBodyParameter("SourceARN", sourceARN);
@@ -221,7 +198,7 @@ public class AddFCTriggerRequest extends Request {
         }
 
         /**
-         * TriggerARN.
+         * The trigger that corresponds to the Function Compute service.
          */
         public Builder triggerARN(String triggerARN) {
             this.putQueryParameter("TriggerARN", triggerARN);

@@ -122,7 +122,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
         private Url500List url500List; 
 
         /**
-         * AllUrlList.
+         * A list of frequently requested URLs.
          */
         public Builder allUrlList(AllUrlList allUrlList) {
             this.allUrlList = allUrlList;
@@ -130,7 +130,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -138,7 +138,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -154,7 +154,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * Url200List.
+         * A list of URLs for which 2xx status codes were returned.
          */
         public Builder url200List(Url200List url200List) {
             this.url200List = url200List;
@@ -162,7 +162,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * Url300List.
+         * A list of URLs for which 3xx status codes were returned.
          */
         public Builder url300List(Url300List url300List) {
             this.url300List = url300List;
@@ -170,7 +170,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * Url400List.
+         * A list of URLs for which 4xx status codes were returned.
          */
         public Builder url400List(Url400List url400List) {
             this.url400List = url400List;
@@ -178,7 +178,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
         }
 
         /**
-         * Url500List.
+         * A list of URLs for which 5xx status codes were returned.
          */
         public Builder url500List(Url500List url500List) {
             this.url500List = url500List;
@@ -266,7 +266,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             private Float visitProportion; 
 
             /**
-             * Flow.
+             * The amount of network traffic. Unit: bytes.
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -274,7 +274,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * FlowProportion.
+             * The proportion of network traffic consumed to access the URL.
              */
             public Builder flowProportion(Float flowProportion) {
                 this.flowProportion = flowProportion;
@@ -282,7 +282,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * UrlDetail.
+             * The complete URL.
              */
             public Builder urlDetail(String urlDetail) {
                 this.urlDetail = urlDetail;
@@ -290,7 +290,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * VisitData.
+             * The number of visits to the URL.
              */
             public Builder visitData(String visitData) {
                 this.visitData = visitData;
@@ -298,7 +298,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * VisitProportion.
+             * The proportion of visits to the URL.
              */
             public Builder visitProportion(Float visitProportion) {
                 this.visitProportion = visitProportion;
@@ -428,7 +428,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             private Float visitProportion; 
 
             /**
-             * Flow.
+             * The amount of network traffic. Unit: bytes.
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -436,7 +436,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * FlowProportion.
+             * The proportion of network traffic consumed to access the URL.
              */
             public Builder flowProportion(Float flowProportion) {
                 this.flowProportion = flowProportion;
@@ -444,7 +444,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * UrlDetail.
+             * The complete URL.
              */
             public Builder urlDetail(String urlDetail) {
                 this.urlDetail = urlDetail;
@@ -452,7 +452,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * VisitData.
+             * The number of visits to the URL.
              */
             public Builder visitData(String visitData) {
                 this.visitData = visitData;
@@ -460,7 +460,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * VisitProportion.
+             * The proportion of visits to the URL.
              */
             public Builder visitProportion(Float visitProportion) {
                 this.visitProportion = visitProportion;
@@ -590,7 +590,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             private Float visitProportion; 
 
             /**
-             * Flow.
+             * The amount of network traffic. Unit: bytes.
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -598,7 +598,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * FlowProportion.
+             * The proportion of network traffic consumed to access the URL.
              */
             public Builder flowProportion(Float flowProportion) {
                 this.flowProportion = flowProportion;
@@ -606,7 +606,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * UrlDetail.
+             * The complete URL.
              */
             public Builder urlDetail(String urlDetail) {
                 this.urlDetail = urlDetail;
@@ -614,7 +614,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * VisitData.
+             * The number of visits to the URL.
              */
             public Builder visitData(String visitData) {
                 this.visitData = visitData;
@@ -622,7 +622,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * VisitProportion.
+             * The proportion of visits to the URL.
              */
             public Builder visitProportion(Float visitProportion) {
                 this.visitProportion = visitProportion;
@@ -752,7 +752,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             private Float visitProportion; 
 
             /**
-             * Flow.
+             * The amount of network traffic. Unit: bytes.
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -760,7 +760,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * FlowProportion.
+             * The proportion of network traffic consumed to access the URL.
              */
             public Builder flowProportion(Float flowProportion) {
                 this.flowProportion = flowProportion;
@@ -768,7 +768,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * UrlDetail.
+             * The complete URL.
              */
             public Builder urlDetail(String urlDetail) {
                 this.urlDetail = urlDetail;
@@ -776,7 +776,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * VisitData.
+             * The number of visits to the URL.
              */
             public Builder visitData(String visitData) {
                 this.visitData = visitData;
@@ -784,7 +784,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * VisitProportion.
+             * The proportion of visits to the URL.
              */
             public Builder visitProportion(Float visitProportion) {
                 this.visitProportion = visitProportion;
@@ -914,7 +914,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             private Float visitProportion; 
 
             /**
-             * Flow.
+             * The amount of network traffic. Unit: bytes.
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -922,7 +922,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * FlowProportion.
+             * The proportion of network traffic consumed to access the URL.
              */
             public Builder flowProportion(Float flowProportion) {
                 this.flowProportion = flowProportion;
@@ -930,7 +930,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * UrlDetail.
+             * The complete URL.
              */
             public Builder urlDetail(String urlDetail) {
                 this.urlDetail = urlDetail;
@@ -938,7 +938,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * VisitData.
+             * The number of visits to the URL.
              */
             public Builder visitData(String visitData) {
                 this.visitData = visitData;
@@ -946,7 +946,7 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             }
 
             /**
-             * VisitProportion.
+             * The proportion of visits to the URL.
              */
             public Builder visitProportion(Float visitProportion) {
                 this.visitProportion = visitProportion;

@@ -50,7 +50,7 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CertInfos.
+         * The information about the certificate.
          */
         public Builder certInfos(CertInfos certInfos) {
             this.certInfos = certInfos;
@@ -58,7 +58,7 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
             private String httpsCrt; 
 
             /**
-             * CertExpireTime.
+             * The time at which the certificate expires.
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -178,7 +178,7 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
             }
 
             /**
-             * CertId.
+             * The ID of the certificate.
              */
             public Builder certId(String certId) {
                 this.certId = certId;
@@ -186,7 +186,7 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
             }
 
             /**
-             * CertName.
+             * The name of the certificate.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -194,7 +194,12 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
             }
 
             /**
-             * CertType.
+             * The type of the certificate.
+             * <p>
+             * 
+             * *   free: a free certificate
+             * *   cas: a certificate purchased by using Certificate Management Service
+             * *   upload: a user-uploaded certificate
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -202,7 +207,7 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the certificate became effective.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -210,7 +215,7 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
             }
 
             /**
-             * DomainList.
+             * The domain names that use the certificate.
              */
             public Builder domainList(String domainList) {
                 this.domainList = domainList;
@@ -218,7 +223,7 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsCrt.
+             * The content of the certificate.
              */
             public Builder httpsCrt(String httpsCrt) {
                 this.httpsCrt = httpsCrt;

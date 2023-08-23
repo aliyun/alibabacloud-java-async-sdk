@@ -17,14 +17,9 @@ public class DescribeCertificateInfoByIDRequest extends Request {
     @Validation(required = true)
     private String certId;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DescribeCertificateInfoByIDRequest(Builder builder) {
         super(builder);
         this.certId = builder.certId;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -47,42 +42,24 @@ public class DescribeCertificateInfoByIDRequest extends Request {
         return this.certId;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeCertificateInfoByIDRequest, Builder> {
         private String certId; 
-        private Long ownerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeCertificateInfoByIDRequest response) {
-            super(response);
-            this.certId = response.certId;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeCertificateInfoByIDRequest request) {
+            super(request);
+            this.certId = request.certId;
         } 
 
         /**
-         * CertId.
+         * The ID of the certificate. You can query only one certificate in each call.
          */
         public Builder certId(String certId) {
             this.putQueryParameter("CertId", certId);
             this.certId = certId;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

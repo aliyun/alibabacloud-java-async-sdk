@@ -44,10 +44,6 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
     private String mergeLocIsp;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     @Validation(required = true)
     private String startTime;
@@ -61,7 +57,6 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         this.locationNameEn = builder.locationNameEn;
         this.merge = builder.merge;
         this.mergeLocIsp = builder.mergeLocIsp;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -128,13 +123,6 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -149,28 +137,26 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         private String locationNameEn; 
         private String merge; 
         private String mergeLocIsp; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainRealTimeDetailDataRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.field = response.field;
-            this.ispNameEn = response.ispNameEn;
-            this.locationNameEn = response.locationNameEn;
-            this.merge = response.merge;
-            this.mergeLocIsp = response.mergeLocIsp;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainRealTimeDetailDataRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.field = request.field;
+            this.ispNameEn = request.ispNameEn;
+            this.locationNameEn = request.locationNameEn;
+            this.merge = request.merge;
+            this.mergeLocIsp = request.mergeLocIsp;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name that you want to query.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -179,7 +165,12 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:40:00Z.
+         * 
+         * > The end time must be later than the start time. The difference between the end time and the start time cannot exceed 10 minutes.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -188,7 +179,12 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * Field.
+         * The type of data that you want to query. You can specify multiple data types and separate them with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **qps**: queries per second (QPS)
+         * *   **bps**: bandwidth
+         * *   **http_code**: HTTP status code
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -197,7 +193,7 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISPs. If you do not specify an ISP, data of all ISPs is queried.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -206,7 +202,7 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region. If you do not specify a region, data in all regions is queried. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -215,7 +211,13 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * Merge.
+         * Specifies whether to return a summary value based on ISPs and regions. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * Default value: **false**.
          */
         public Builder merge(String merge) {
             this.putQueryParameter("Merge", merge);
@@ -224,7 +226,13 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * MergeLocIsp.
+         * Specifies whether to return a summary value based on ISPs and regions. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * Default value: **false**.
          */
         public Builder mergeLocIsp(String mergeLocIsp) {
             this.putQueryParameter("MergeLocIsp", mergeLocIsp);
@@ -233,16 +241,10 @@ public class DescribeDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:33:00Z.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

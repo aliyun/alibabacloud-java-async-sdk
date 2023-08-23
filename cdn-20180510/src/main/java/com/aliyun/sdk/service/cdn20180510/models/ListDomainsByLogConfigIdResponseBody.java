@@ -50,7 +50,7 @@ public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Domains.
+         * The domain names.
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -58,7 +58,7 @@ public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

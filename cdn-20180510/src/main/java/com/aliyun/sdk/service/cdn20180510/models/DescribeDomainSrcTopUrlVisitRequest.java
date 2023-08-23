@@ -22,10 +22,6 @@ public class DescribeDomainSrcTopUrlVisitRequest extends Request {
     private String endTime;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("SortBy")
     private String sortBy;
 
@@ -37,7 +33,6 @@ public class DescribeDomainSrcTopUrlVisitRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
-        this.ownerId = builder.ownerId;
         this.sortBy = builder.sortBy;
         this.startTime = builder.startTime;
     }
@@ -70,13 +65,6 @@ public class DescribeDomainSrcTopUrlVisitRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -93,7 +81,6 @@ public class DescribeDomainSrcTopUrlVisitRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDomainSrcTopUrlVisitRequest, Builder> {
         private String domainName; 
         private String endTime; 
-        private Long ownerId; 
         private String sortBy; 
         private String startTime; 
 
@@ -101,17 +88,16 @@ public class DescribeDomainSrcTopUrlVisitRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainSrcTopUrlVisitRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.sortBy = response.sortBy;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainSrcTopUrlVisitRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.sortBy = request.sortBy;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -120,7 +106,12 @@ public class DescribeDomainSrcTopUrlVisitRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * > The end time must be later than the start time. The duration between the end time and the start time cannot exceed seven days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -129,16 +120,11 @@ public class DescribeDomainSrcTopUrlVisitRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * SortBy.
+         * The method that is used to sort the returned URLs. Default value: **pv**. Valid values:
+         * <p>
+         * 
+         * *   **traf**: by network traffic
+         * *   **pv**: by the number of visits
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -147,7 +133,12 @@ public class DescribeDomainSrcTopUrlVisitRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * > If you leave this parameter empty, data within the previous day is queried.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

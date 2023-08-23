@@ -37,10 +37,6 @@ public class DescribeDomainHttpCodeDataByLayerRequest extends Request {
     private String locationNameEn;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -52,7 +48,6 @@ public class DescribeDomainHttpCodeDataByLayerRequest extends Request {
         this.ispNameEn = builder.ispNameEn;
         this.layer = builder.layer;
         this.locationNameEn = builder.locationNameEn;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -112,13 +107,6 @@ public class DescribeDomainHttpCodeDataByLayerRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -132,27 +120,28 @@ public class DescribeDomainHttpCodeDataByLayerRequest extends Request {
         private String ispNameEn; 
         private String layer; 
         private String locationNameEn; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainHttpCodeDataByLayerRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.interval = response.interval;
-            this.ispNameEn = response.ispNameEn;
-            this.layer = response.layer;
-            this.locationNameEn = response.locationNameEn;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainHttpCodeDataByLayerRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.interval = request.interval;
+            this.ispNameEn = request.ispNameEn;
+            this.layer = request.layer;
+            this.locationNameEn = request.locationNameEn;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify up to 500 domain names in each request. Separate multiple domain names with commas (,).
+         * <p>
+         * 
+         * If you do not specify this parameter, data of all accelerated domain names under your account is queried.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -161,7 +150,10 @@ public class DescribeDomainHttpCodeDataByLayerRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -170,7 +162,10 @@ public class DescribeDomainHttpCodeDataByLayerRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The time granularity of the data entries. Unit: seconds.
+         * <p>
+         * 
+         * The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -179,7 +174,10 @@ public class DescribeDomainHttpCodeDataByLayerRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The name of the Internet service provider (ISP). You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query ISP names.
+         * <p>
+         * 
+         * If you do not specify an ISP, data of all ISPs is queried.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -188,7 +186,10 @@ public class DescribeDomainHttpCodeDataByLayerRequest extends Request {
         }
 
         /**
-         * Layer.
+         * The protocol by which you want to query HTTP status codes. The network layer supports **IPv4** and **IPv6**. The application layer supports **http**, **https**, and **quic**. You can also set the value to **all**.
+         * <p>
+         * 
+         * Default value: **all**
          */
         public Builder layer(String layer) {
             this.putQueryParameter("Layer", layer);
@@ -197,7 +198,10 @@ public class DescribeDomainHttpCodeDataByLayerRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region. You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
+         * <p>
+         * 
+         * If you do not specify a region, data in all regions is queried.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -206,16 +210,7 @@ public class DescribeDomainHttpCodeDataByLayerRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -50,7 +50,7 @@ public class DescribeCdnDeliverListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The information about the tracking task.
          */
         public Builder content(String content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class DescribeCdnDeliverListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

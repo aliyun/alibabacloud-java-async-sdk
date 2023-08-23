@@ -98,7 +98,7 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * SrcQpsDataPerInterval.
+         * The back-to-origin bandwidth information at each interval.
          */
         public Builder srcQpsDataPerInterval(SrcQpsDataPerInterval srcQpsDataPerInterval) {
             this.srcQpsDataPerInterval = srcQpsDataPerInterval;
@@ -138,7 +138,7 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -190,7 +190,7 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +198,7 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The QPS value.
              */
             public Builder value(String value) {
                 this.value = value;

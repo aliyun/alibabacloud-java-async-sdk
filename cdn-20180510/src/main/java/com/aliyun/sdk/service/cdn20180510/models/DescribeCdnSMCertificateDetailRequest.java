@@ -75,15 +75,15 @@ public class DescribeCdnSMCertificateDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCdnSMCertificateDetailRequest response) {
-            super(response);
-            this.certIdentifier = response.certIdentifier;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeCdnSMCertificateDetailRequest request) {
+            super(request);
+            this.certIdentifier = request.certIdentifier;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * CertIdentifier.
+         * The ID of the certificate.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);

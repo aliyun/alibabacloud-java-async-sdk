@@ -18,10 +18,6 @@ public class DescribeEsExceptionDataRequest extends Request {
     private String endTime;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("RuleId")
     @Validation(required = true)
     private String ruleId;
@@ -34,7 +30,6 @@ public class DescribeEsExceptionDataRequest extends Request {
     private DescribeEsExceptionDataRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
-        this.ownerId = builder.ownerId;
         this.ruleId = builder.ruleId;
         this.startTime = builder.startTime;
     }
@@ -60,13 +55,6 @@ public class DescribeEsExceptionDataRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return ruleId
      */
     public String getRuleId() {
@@ -82,7 +70,6 @@ public class DescribeEsExceptionDataRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeEsExceptionDataRequest, Builder> {
         private String endTime; 
-        private Long ownerId; 
         private String ruleId; 
         private String startTime; 
 
@@ -90,16 +77,20 @@ public class DescribeEsExceptionDataRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEsExceptionDataRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.ruleId = response.ruleId;
-            this.startTime = response.startTime;
+        private Builder(DescribeEsExceptionDataRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.ruleId = request.ruleId;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -108,16 +99,7 @@ public class DescribeEsExceptionDataRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RuleId.
+         * The script ID. You can call the [DescribeCdnDomainConfigs](~~90924~~) operation to query script IDs.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -126,7 +108,10 @@ public class DescribeEsExceptionDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

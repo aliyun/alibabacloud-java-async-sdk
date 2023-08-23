@@ -22,10 +22,6 @@ public class DescribeTopDomainsByFlowRequest extends Request {
     private Long limit;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -33,7 +29,6 @@ public class DescribeTopDomainsByFlowRequest extends Request {
         super(builder);
         this.endTime = builder.endTime;
         this.limit = builder.limit;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -65,13 +60,6 @@ public class DescribeTopDomainsByFlowRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -81,23 +69,24 @@ public class DescribeTopDomainsByFlowRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeTopDomainsByFlowRequest, Builder> {
         private String endTime; 
         private Long limit; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeTopDomainsByFlowRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.limit = response.limit;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeTopDomainsByFlowRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.limit = request.limit;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -106,7 +95,7 @@ public class DescribeTopDomainsByFlowRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The maximum number of domain names to query. Valid values: **1** to **100**. Default value: **20**.
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
@@ -115,16 +104,10 @@ public class DescribeTopDomainsByFlowRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > The value of StartTime must be in UTC. For example, if the local time is 00:00 on June 1, 2021, set StartTime to 2021-05-31T16:00:00Z.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

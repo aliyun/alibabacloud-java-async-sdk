@@ -15,21 +15,11 @@ public class DescribeIpInfoRequest extends Request {
     @Query
     @NameInMap("IP")
     @Validation(required = true)
-    private String IP;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
+    private String ip;
 
     private DescribeIpInfoRequest(Builder builder) {
         super(builder);
-        this.IP = builder.IP;
-        this.ownerId = builder.ownerId;
-        this.securityToken = builder.securityToken;
+        this.ip = builder.ip;
     }
 
     public static Builder builder() {
@@ -46,66 +36,30 @@ public class DescribeIpInfoRequest extends Request {
     }
 
     /**
-     * @return IP
+     * @return ip
      */
-    public String getIP() {
-        return this.IP;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
+    public String getIp() {
+        return this.ip;
     }
 
     public static final class Builder extends Request.Builder<DescribeIpInfoRequest, Builder> {
-        private String IP; 
-        private Long ownerId; 
-        private String securityToken; 
+        private String ip; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeIpInfoRequest response) {
-            super(response);
-            this.IP = response.IP;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeIpInfoRequest request) {
+            super(request);
+            this.ip = request.ip;
         } 
 
         /**
-         * IP.
+         * The IP address. You can specify only one IP address.
          */
-        public Builder IP(String IP) {
-            this.putQueryParameter("IP", IP);
-            this.IP = IP;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
+        public Builder ip(String ip) {
+            this.putQueryParameter("IP", ip);
+            this.ip = ip;
             return this;
         }
 

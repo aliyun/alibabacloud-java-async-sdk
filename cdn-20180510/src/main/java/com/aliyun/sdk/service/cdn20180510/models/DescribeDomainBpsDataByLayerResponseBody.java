@@ -62,7 +62,7 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BpsDataInterval.
+         * The data returned at each time interval.
          */
         public Builder bpsDataInterval(BpsDataInterval bpsDataInterval) {
             this.bpsDataInterval = bpsDataInterval;
@@ -70,7 +70,7 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * DataInterval.
+         * The time interval between the data entries. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -78,7 +78,7 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -150,7 +150,7 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficValue.
+             * The total amount of network traffic. Unit: bytes.
              */
             public Builder trafficValue(String trafficValue) {
                 this.trafficValue = trafficValue;
@@ -158,7 +158,7 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The peak bandwidth value. Unit: bit/s.
              */
             public Builder value(String value) {
                 this.value = value;

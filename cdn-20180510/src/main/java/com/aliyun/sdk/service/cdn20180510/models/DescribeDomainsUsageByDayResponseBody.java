@@ -110,7 +110,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         private UsageTotal usageTotal; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -118,7 +118,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -126,7 +126,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -134,7 +134,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +142,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -150,7 +150,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         }
 
         /**
-         * UsageByDays.
+         * The monitoring data collected at each time interval.
          */
         public Builder usageByDays(UsageByDays usageByDays) {
             this.usageByDays = usageByDays;
@@ -158,7 +158,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         }
 
         /**
-         * UsageTotal.
+         * The summarized monitoring data.
          */
         public Builder usageTotal(UsageTotal usageTotal) {
             this.usageTotal = usageTotal;
@@ -306,7 +306,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             private String totalTraffic; 
 
             /**
-             * BytesHitRate.
+             * The byte hit ratio. The byte hit ratio is measured in percentage.
              */
             public Builder bytesHitRate(String bytesHitRate) {
                 this.bytesHitRate = bytesHitRate;
@@ -314,7 +314,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * MaxBps.
+             * The peak bandwidth value. Unit: bit/s.
              */
             public Builder maxBps(String maxBps) {
                 this.maxBps = maxBps;
@@ -322,7 +322,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * MaxBpsTime.
+             * The time when the bandwidth reached the peak value.
              */
             public Builder maxBpsTime(String maxBpsTime) {
                 this.maxBpsTime = maxBpsTime;
@@ -330,7 +330,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSrcBps.
+             * The peak bandwidth value during back-to-origin routing. Unit: bit/s.
              */
             public Builder maxSrcBps(String maxSrcBps) {
                 this.maxSrcBps = maxSrcBps;
@@ -338,7 +338,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSrcBpsTime.
+             * The time when the bandwidth during back-to-origin routing reached the peak value.
              */
             public Builder maxSrcBpsTime(String maxSrcBpsTime) {
                 this.maxSrcBpsTime = maxSrcBpsTime;
@@ -346,7 +346,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * Qps.
+             * The number of queries per second (QPS).
              */
             public Builder qps(String qps) {
                 this.qps = qps;
@@ -354,7 +354,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * RequestHitRate.
+             * The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.
              */
             public Builder requestHitRate(String requestHitRate) {
                 this.requestHitRate = requestHitRate;
@@ -362,7 +362,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -370,7 +370,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAccess.
+             * The total amount of requests.
              */
             public Builder totalAccess(String totalAccess) {
                 this.totalAccess = totalAccess;
@@ -378,7 +378,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTraffic.
+             * The total amount of network traffic. Unit: bytes.
              */
             public Builder totalTraffic(String totalTraffic) {
                 this.totalTraffic = totalTraffic;
@@ -544,7 +544,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             private String totalTraffic; 
 
             /**
-             * BytesHitRate.
+             * The byte hit ratio. The byte hit ratio is measured in percentage.
              */
             public Builder bytesHitRate(String bytesHitRate) {
                 this.bytesHitRate = bytesHitRate;
@@ -552,7 +552,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * MaxBps.
+             * The peak bandwidth value. Unit: bit/s.
              */
             public Builder maxBps(String maxBps) {
                 this.maxBps = maxBps;
@@ -560,7 +560,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * MaxBpsTime.
+             * The time when the bandwidth reached the peak value.
              */
             public Builder maxBpsTime(String maxBpsTime) {
                 this.maxBpsTime = maxBpsTime;
@@ -568,7 +568,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSrcBps.
+             * The peak bandwidth value during back-to-origin routing. Unit: bit/s.
              */
             public Builder maxSrcBps(String maxSrcBps) {
                 this.maxSrcBps = maxSrcBps;
@@ -576,7 +576,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSrcBpsTime.
+             * The time when the bandwidth during back-to-origin routing reached the peak value.
              */
             public Builder maxSrcBpsTime(String maxSrcBpsTime) {
                 this.maxSrcBpsTime = maxSrcBpsTime;
@@ -584,7 +584,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * RequestHitRate.
+             * The cache hit ratio that is calculated based on requests. The cache hit ratio is measured in percentage.
              */
             public Builder requestHitRate(String requestHitRate) {
                 this.requestHitRate = requestHitRate;
@@ -592,7 +592,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAccess.
+             * The total amount of requests.
              */
             public Builder totalAccess(String totalAccess) {
                 this.totalAccess = totalAccess;
@@ -600,7 +600,7 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTraffic.
+             * The total amount of network traffic. Unit: bytes.
              */
             public Builder totalTraffic(String totalTraffic) {
                 this.totalTraffic = totalTraffic;

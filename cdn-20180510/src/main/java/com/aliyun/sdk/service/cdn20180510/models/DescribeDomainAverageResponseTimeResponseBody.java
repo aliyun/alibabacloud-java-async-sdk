@@ -98,7 +98,7 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * AvgRTPerInterval.
+         * The average response time data for time intervals.
          */
         public Builder avgRTPerInterval(AvgRTPerInterval avgRTPerInterval) {
             this.avgRTPerInterval = avgRTPerInterval;
@@ -106,7 +106,7 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         }
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -114,7 +114,7 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -122,7 +122,7 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -130,7 +130,7 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -190,7 +190,7 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +198,7 @@ public class DescribeDomainAverageResponseTimeResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The average response time.
              */
             public Builder value(String value) {
                 this.value = value;

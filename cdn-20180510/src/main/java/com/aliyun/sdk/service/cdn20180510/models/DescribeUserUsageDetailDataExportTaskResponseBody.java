@@ -50,7 +50,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
         private UsageDataPerPage usageDataPerPage; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
         }
 
         /**
-         * UsageDataPerPage.
+         * The usage details returned per page.
          */
         public Builder usageDataPerPage(UsageDataPerPage usageDataPerPage) {
             this.usageDataPerPage = usageDataPerPage;
@@ -110,7 +110,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             private String startTime; 
 
             /**
-             * EndTime.
+             * The end of the time range during which data was queried.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -118,7 +118,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * StartTime.
+             * The start of the time range during which data was queried.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -231,7 +231,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the task was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -239,7 +239,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * DownloadUrl.
+             * The download URL.
              */
             public Builder downloadUrl(String downloadUrl) {
                 this.downloadUrl = downloadUrl;
@@ -247,7 +247,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * Status.
+             * The status of the task.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -255,7 +255,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * TaskConfig.
+             * The configurations of the task.
              */
             public Builder taskConfig(TaskConfig taskConfig) {
                 this.taskConfig = taskConfig;
@@ -263,7 +263,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -271,7 +271,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * TaskName.
+             * The name of the task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -279,7 +279,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * UpdateTime.
+             * The time when the task was last modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -397,7 +397,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             private Integer totalCount; 
 
             /**
-             * Data.
+             * The information about the task.
              */
             public Builder data(Data data) {
                 this.data = data;
@@ -405,7 +405,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -413,7 +413,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -421,7 +421,7 @@ public class DescribeUserUsageDetailDataExportTaskResponseBody extends TeaModel 
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

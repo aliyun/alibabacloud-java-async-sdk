@@ -86,7 +86,7 @@ public class DescribeCdnCertificateDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Cert.
+         * The certificate.
          */
         public Builder cert(String cert) {
             this.cert = cert;
@@ -94,7 +94,7 @@ public class DescribeCdnCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertId.
+         * The ID of the certificate.
          */
         public Builder certId(Long certId) {
             this.certId = certId;
@@ -102,7 +102,7 @@ public class DescribeCdnCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertName.
+         * The name of the certificate.
          */
         public Builder certName(String certName) {
             this.certName = certName;
@@ -110,7 +110,7 @@ public class DescribeCdnCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Key.
+         * The key of the SSL certificate.
          */
         public Builder key(String key) {
             this.key = key;
@@ -118,7 +118,7 @@ public class DescribeCdnCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

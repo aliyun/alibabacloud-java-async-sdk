@@ -50,7 +50,7 @@ public class DescribeRangeDataByLocateAndIspServiceResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * JsonResult.
+         * The response parameters in the JSON format. These parameters indicate the following information in sequence: UNIX time, region, ISP, distribution of HTTP status codes, response time, bandwidth (bit/s), average response rate, page views, cache hit ratio, and request hit ratio.
          */
         public Builder jsonResult(String jsonResult) {
             this.jsonResult = jsonResult;
@@ -58,7 +58,7 @@ public class DescribeRangeDataByLocateAndIspServiceResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

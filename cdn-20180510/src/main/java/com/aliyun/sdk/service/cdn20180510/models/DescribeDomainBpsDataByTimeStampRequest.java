@@ -28,10 +28,6 @@ public class DescribeDomainBpsDataByTimeStampRequest extends Request {
     private String locationNames;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("TimePoint")
     @Validation(required = true)
     private String timePoint;
@@ -41,7 +37,6 @@ public class DescribeDomainBpsDataByTimeStampRequest extends Request {
         this.domainName = builder.domainName;
         this.ispNames = builder.ispNames;
         this.locationNames = builder.locationNames;
-        this.ownerId = builder.ownerId;
         this.timePoint = builder.timePoint;
     }
 
@@ -80,13 +75,6 @@ public class DescribeDomainBpsDataByTimeStampRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return timePoint
      */
     public String getTimePoint() {
@@ -97,24 +85,22 @@ public class DescribeDomainBpsDataByTimeStampRequest extends Request {
         private String domainName; 
         private String ispNames; 
         private String locationNames; 
-        private Long ownerId; 
         private String timePoint; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDomainBpsDataByTimeStampRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ispNames = response.ispNames;
-            this.locationNames = response.locationNames;
-            this.ownerId = response.ownerId;
-            this.timePoint = response.timePoint;
+        private Builder(DescribeDomainBpsDataByTimeStampRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.ispNames = request.ispNames;
+            this.locationNames = request.locationNames;
+            this.timePoint = request.timePoint;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -123,7 +109,10 @@ public class DescribeDomainBpsDataByTimeStampRequest extends Request {
         }
 
         /**
-         * IspNames.
+         * The names of the Internet service providers (ISPs). Separate multiple ISPs with commas (,).
+         * <p>
+         * 
+         * You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
          */
         public Builder ispNames(String ispNames) {
             this.putQueryParameter("IspNames", ispNames);
@@ -132,7 +121,10 @@ public class DescribeDomainBpsDataByTimeStampRequest extends Request {
         }
 
         /**
-         * LocationNames.
+         * The regions. Separate multiple regions with commas (,).
+         * <p>
+         * 
+         * You can call the [DescribeCdnRegionAndIsp](~~91077~~) operation to query regions.
          */
         public Builder locationNames(String locationNames) {
             this.putQueryParameter("LocationNames", locationNames);
@@ -141,16 +133,10 @@ public class DescribeDomainBpsDataByTimeStampRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * TimePoint.
+         * The point in time to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > The data is collected every 5 minutes.
          */
         public Builder timePoint(String timePoint) {
             this.putQueryParameter("TimePoint", timePoint);

@@ -89,16 +89,16 @@ public class DeleteSpecificStagingConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSpecificStagingConfigRequest response) {
-            super(response);
-            this.configId = response.configId;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DeleteSpecificStagingConfigRequest request) {
+            super(request);
+            this.configId = request.configId;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * ConfigId.
+         * The configuration IDs. Separate configuration IDs with commas (,). For more information about ConfigId, see [Usage notes on ConfigId](~~388994~~).
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -107,7 +107,7 @@ public class DeleteSpecificStagingConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify up to 50 domain names in each request. Separate multiple domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

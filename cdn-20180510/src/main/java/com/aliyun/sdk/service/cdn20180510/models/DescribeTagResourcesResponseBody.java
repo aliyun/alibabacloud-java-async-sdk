@@ -50,7 +50,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         private java.util.List < TagResources> tagResources; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * The tags that are attached to the specified resource.
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -110,7 +110,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +118,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -171,7 +171,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             private java.util.List < Tag> tag; 
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -179,7 +179,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The key-value pair of the tag.
              */
             public Builder tag(java.util.List < Tag> tag) {
                 this.tag = tag;

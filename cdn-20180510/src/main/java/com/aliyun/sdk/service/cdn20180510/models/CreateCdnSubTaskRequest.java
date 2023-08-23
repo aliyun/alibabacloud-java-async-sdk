@@ -14,12 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateCdnSubTaskRequest extends Request {
     @Body
     @NameInMap("DomainName")
-    @Validation(maxLength = 7000)
     private String domainName;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
 
     @Body
     @NameInMap("ReportIds")
@@ -29,7 +24,6 @@ public class CreateCdnSubTaskRequest extends Request {
     private CreateCdnSubTaskRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
-        this.ownerId = builder.ownerId;
         this.reportIds = builder.reportIds;
     }
 
@@ -54,13 +48,6 @@ public class CreateCdnSubTaskRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return reportIds
      */
     public String getReportIds() {
@@ -69,22 +56,23 @@ public class CreateCdnSubTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCdnSubTaskRequest, Builder> {
         private String domainName; 
-        private Long ownerId; 
         private String reportIds; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateCdnSubTaskRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.reportIds = response.reportIds;
+        private Builder(CreateCdnSubTaskRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.reportIds = request.reportIds;
         } 
 
         /**
-         * DomainName.
+         * The domain names to be tracked. Separate multiple domain names with commas (,). You can specify up to 500 domain names. If you want to specify more than 500 domain names, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex).
+         * <p>
+         * 
+         * > If you do not specify a domain name, the custom operations report is created for all domain names that belong to your Alibaba Cloud account.
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -93,16 +81,21 @@ public class CreateCdnSubTaskRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ReportIds.
+         * The IDs of the metrics that you want to include in the report. Separate multiple IDs with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **1**: frequently requested URLs (ranked by the number of requests)
+         * *   **3**: frequently requested URLs (ranked by the amount of network traffic)
+         * *   **5**: frequently used Referer headers (ranked by the number of requests)
+         * *   **7**: frequently used Referer headers (ranked by the amount of network traffic)
+         * *   **9**: frequently requested URLs that are redirected to the origin (ranked by the number of requests)
+         * *   **11**: frequently requested URLs that are redirected to the origin (ranked by the amount of network traffic)
+         * *   **13**: top client IP addresses (ranked by the number of requests)
+         * *   **15**: top client IP addresses (ranked by the amount of network traffic)
+         * *   **17**: domain names ranked by the amount of network traffic
+         * *   **19**: page views and unique visitors
+         * *   **21**: regions from which requests are initiated
+         * *   **23**: Internet service providers (ISPs)
          */
         public Builder reportIds(String reportIds) {
             this.putBodyParameter("ReportIds", reportIds);

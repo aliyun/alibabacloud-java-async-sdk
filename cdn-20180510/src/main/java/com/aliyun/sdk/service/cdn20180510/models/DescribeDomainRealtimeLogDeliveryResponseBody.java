@@ -86,7 +86,7 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Logstore.
+         * The name of the Logstore where log entries are stored.
          */
         public Builder logstore(String logstore) {
             this.logstore = logstore;
@@ -94,7 +94,7 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * Project.
+         * The name of the Log Service project that is used for real-time log delivery.
          */
         public Builder project(String project) {
             this.project = project;
@@ -102,7 +102,7 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * Region.
+         * The ID of the region where the Log Service project is deployed.
          */
         public Builder region(String region) {
             this.region = region;
@@ -110,7 +110,7 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of real-time log delivery. Valid values:
+         * <p>
+         * 
+         * *   **online**
+         * *   **offline**
          */
         public Builder status(String status) {
             this.status = status;

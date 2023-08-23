@@ -86,7 +86,7 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * Details about tasks.
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -118,7 +118,7 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * CreationTime.
+             * The time when the task was created. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -238,7 +238,12 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The type of the error returned when the refresh or prefetch task failed. Valid values:
+             * <p>
+             * 
+             * *   **InternalError**: An internal error occurred.
+             * *   **OriginTimeout**: The response from the origin server timed out.
+             * *   **OriginReturnStatusCode 5XX**: The origin server returned a 5XX error.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +251,7 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectPath.
+             * The URL of the object refreshed.
              */
             public Builder objectPath(String objectPath) {
                 this.objectPath = objectPath;
@@ -254,7 +259,13 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * The type of the task.
+             * <p>
+             * 
+             * *   **file**: refreshes one or more files.
+             * *   **directory**: refreshes files in the specified directories.
+             * *   **regex**: refreshes content based on a regular expression.
+             * *   **preload**: prefetches one or more files.
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -262,7 +273,7 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * The progress of the task, in percentage.
              */
             public Builder process(String process) {
                 this.process = process;
@@ -270,7 +281,12 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   **Complete**: The task has completed.
+             * *   **Refreshing**: The task is in progress.
+             * *   **Failed**: The task failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -278,7 +294,7 @@ public class DescribeRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

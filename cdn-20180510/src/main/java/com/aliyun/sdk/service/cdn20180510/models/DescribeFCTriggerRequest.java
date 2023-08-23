@@ -13,17 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeFCTriggerRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("TriggerARN")
     @Validation(required = true)
     private String triggerARN;
 
     private DescribeFCTriggerRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.triggerARN = builder.triggerARN;
     }
 
@@ -41,13 +36,6 @@ public class DescribeFCTriggerRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return triggerARN
      */
     public String getTriggerARN() {
@@ -55,30 +43,19 @@ public class DescribeFCTriggerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeFCTriggerRequest, Builder> {
-        private Long ownerId; 
         private String triggerARN; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeFCTriggerRequest response) {
-            super(response);
-            this.ownerId = response.ownerId;
-            this.triggerARN = response.triggerARN;
+        private Builder(DescribeFCTriggerRequest request) {
+            super(request);
+            this.triggerARN = request.triggerARN;
         } 
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * TriggerARN.
+         * The trigger that corresponds to the Function Compute service.
          */
         public Builder triggerARN(String triggerARN) {
             this.putQueryParameter("TriggerARN", triggerARN);

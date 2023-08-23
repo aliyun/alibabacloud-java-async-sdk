@@ -15,11 +15,15 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
     @NameInMap("DomainConfigs")
     private java.util.List < DomainConfigs> domainConfigs;
 
+    @NameInMap("DomainName")
+    private String domainName;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private DescribeCdnDomainStagingConfigResponseBody(Builder builder) {
         this.domainConfigs = builder.domainConfigs;
+        this.domainName = builder.domainName;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +43,13 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return domainName
+     */
+    public String getDomainName() {
+        return this.domainName;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,10 +58,11 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < DomainConfigs> domainConfigs; 
+        private String domainName; 
         private String requestId; 
 
         /**
-         * DomainConfigs.
+         * The domain name configurations.
          */
         public Builder domainConfigs(java.util.List < DomainConfigs> domainConfigs) {
             this.domainConfigs = domainConfigs;
@@ -58,7 +70,15 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The accelerated domain name.
+         */
+        public Builder domainName(String domainName) {
+            this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +130,7 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
             private String argValue; 
 
             /**
-             * ArgName.
+             * The configuration name.
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -118,7 +138,7 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ArgValue.
+             * The configuration value.
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -142,6 +162,9 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
         @NameInMap("FunctionName")
         private String functionName;
 
+        @NameInMap("ParentId")
+        private String parentId;
+
         @NameInMap("Status")
         private String status;
 
@@ -149,6 +172,7 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
             this.configId = builder.configId;
             this.functionArgs = builder.functionArgs;
             this.functionName = builder.functionName;
+            this.parentId = builder.parentId;
             this.status = builder.status;
         }
 
@@ -182,6 +206,13 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return parentId
+         */
+        public String getParentId() {
+            return this.parentId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -192,10 +223,11 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
             private String configId; 
             private java.util.List < FunctionArgs> functionArgs; 
             private String functionName; 
+            private String parentId; 
             private String status; 
 
             /**
-             * ConfigId.
+             * The configuration ID.
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -203,7 +235,7 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionArgs.
+             * The description of each feature.
              */
             public Builder functionArgs(java.util.List < FunctionArgs> functionArgs) {
                 this.functionArgs = functionArgs;
@@ -211,7 +243,7 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * The feature name.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -219,7 +251,21 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The rule condition ID. This parameter is optional. To create a rule condition, you can configure the **condition** feature that is described in the [Parameters for configuring features for domain names](~~388460~~) topic. A rule condition can identify parameters that are included in requests and filter requests based on the identified parameters. Each rule condition has a [ConfigId](~~388994~~). You can reference ConfigId instead of ParentId in other features. This way, you can combine rule conditions and features for flexible configurations. For more information, see [BatchSetCdnDomainConfig](~~90915~~) or ParentId configuration example in this topic.
+             */
+            public Builder parentId(String parentId) {
+                this.parentId = parentId;
+                return this;
+            }
+
+            /**
+             * The configuration status. Valid values:
+             * <p>
+             * 
+             * *   **testing**
+             * *   **configuring**
+             * *   **success**
+             * *   **failed**
              */
             public Builder status(String status) {
                 this.status = status;

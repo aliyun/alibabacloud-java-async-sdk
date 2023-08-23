@@ -62,7 +62,7 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * OutPutDomains.
+         * The information about the accelerated domain name.
          */
         public Builder outPutDomains(java.util.List < OutPutDomains> outPutDomains) {
             this.outPutDomains = outPutDomains;
@@ -70,7 +70,7 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of accelerated domain names.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -166,7 +166,11 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
             private String wafStatus; 
 
             /**
-             * AclStatus.
+             * The status of the access control list (ACL) feature. Valid values:
+             * <p>
+             * 
+             * *   **0**: disabled
+             * *   **1**: enabled
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -174,7 +178,11 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
             }
 
             /**
-             * CcStatus.
+             * The status of protection against HTTP flood attacks. Valid values:
+             * <p>
+             * 
+             * *   **0**: disabled
+             * *   **1**: enabled
              */
             public Builder ccStatus(String ccStatus) {
                 this.ccStatus = ccStatus;
@@ -182,7 +190,7 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The accelerated domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -190,7 +198,12 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The WAF status of the domain name. Valid values:
+             * <p>
+             * 
+             * *   **1**: The domain name is added to WAF or valid.
+             * *   **10**: The domain name is being added to WAF.
+             * *   **11**: The domain name failed to be added to WAF.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -198,7 +211,11 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
             }
 
             /**
-             * WafStatus.
+             * The status of WAF. Valid values:
+             * <p>
+             * 
+             * *   **0**: disabled
+             * *   **1**: enabled
              */
             public Builder wafStatus(String wafStatus) {
                 this.wafStatus = wafStatus;

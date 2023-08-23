@@ -168,22 +168,27 @@ public class BatchAddCdnDomainRequest extends Request {
             super();
         } 
 
-        private Builder(BatchAddCdnDomainRequest response) {
-            super(response);
-            this.cdnType = response.cdnType;
-            this.checkUrl = response.checkUrl;
-            this.domainName = response.domainName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.scope = response.scope;
-            this.securityToken = response.securityToken;
-            this.sources = response.sources;
-            this.topLevelDomain = response.topLevelDomain;
+        private Builder(BatchAddCdnDomainRequest request) {
+            super(request);
+            this.cdnType = request.cdnType;
+            this.checkUrl = request.checkUrl;
+            this.domainName = request.domainName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.scope = request.scope;
+            this.securityToken = request.securityToken;
+            this.sources = request.sources;
+            this.topLevelDomain = request.topLevelDomain;
         } 
 
         /**
-         * CdnType.
+         * The workload type of the domain name to accelerate. Valid values:
+         * <p>
+         * 
+         * *   **web**: images and small files
+         * *   **download**: large files
+         * *   **video**: on-demand video and audio streaming
          */
         public Builder cdnType(String cdnType) {
             this.putQueryParameter("CdnType", cdnType);
@@ -192,7 +197,7 @@ public class BatchAddCdnDomainRequest extends Request {
         }
 
         /**
-         * CheckUrl.
+         * The URL that is used for health checks.
          */
         public Builder checkUrl(String checkUrl) {
             this.putQueryParameter("CheckUrl", checkUrl);
@@ -201,7 +206,7 @@ public class BatchAddCdnDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain names that you want to add to Alibaba Cloud CDN. Separate domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -228,7 +233,7 @@ public class BatchAddCdnDomainRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. If you do not specify a value for this parameter, the system uses the ID of the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -237,7 +242,12 @@ public class BatchAddCdnDomainRequest extends Request {
         }
 
         /**
-         * Scope.
+         * The acceleration region. Default value: domestic. Valid values:
+         * <p>
+         * 
+         * *   **domestic**: Chinese mainland
+         * *   **overseas**: global (excluding the Chinese mainland)
+         * *   **global**: global
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -255,7 +265,7 @@ public class BatchAddCdnDomainRequest extends Request {
         }
 
         /**
-         * Sources.
+         * The information about the addresses of origin servers.
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -264,7 +274,7 @@ public class BatchAddCdnDomainRequest extends Request {
         }
 
         /**
-         * TopLevelDomain.
+         * The top-level domain.
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

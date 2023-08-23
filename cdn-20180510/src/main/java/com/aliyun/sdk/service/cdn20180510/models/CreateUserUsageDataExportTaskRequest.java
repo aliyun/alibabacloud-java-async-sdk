@@ -22,10 +22,6 @@ public class CreateUserUsageDataExportTaskRequest extends Request {
     private String language;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     @Validation(required = true)
     private String startTime;
@@ -38,7 +34,6 @@ public class CreateUserUsageDataExportTaskRequest extends Request {
         super(builder);
         this.endTime = builder.endTime;
         this.language = builder.language;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
         this.taskName = builder.taskName;
     }
@@ -71,13 +66,6 @@ public class CreateUserUsageDataExportTaskRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -94,7 +82,6 @@ public class CreateUserUsageDataExportTaskRequest extends Request {
     public static final class Builder extends Request.Builder<CreateUserUsageDataExportTaskRequest, Builder> {
         private String endTime; 
         private String language; 
-        private Long ownerId; 
         private String startTime; 
         private String taskName; 
 
@@ -102,17 +89,19 @@ public class CreateUserUsageDataExportTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateUserUsageDataExportTaskRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.language = response.language;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
-            this.taskName = response.taskName;
+        private Builder(CreateUserUsageDataExportTaskRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.language = request.language;
+            this.startTime = request.startTime;
+            this.taskName = request.taskName;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -121,7 +110,11 @@ public class CreateUserUsageDataExportTaskRequest extends Request {
         }
 
         /**
-         * Language.
+         * The language in which you want to export the file. Default value: zh-cn. Valid values:
+         * <p>
+         * 
+         * *   **zh-cn**: Chinese
+         * *   **en-us**: English
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -130,16 +123,10 @@ public class CreateUserUsageDataExportTaskRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The start of the time range to query. The data is collected every 5 minutes.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -148,7 +135,7 @@ public class CreateUserUsageDataExportTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the task.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);

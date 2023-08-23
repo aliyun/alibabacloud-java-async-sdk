@@ -101,17 +101,17 @@ public class DescribeCdnDomainConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCdnDomainConfigsRequest response) {
-            super(response);
-            this.configId = response.configId;
-            this.domainName = response.domainName;
-            this.functionNames = response.functionNames;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeCdnDomainConfigsRequest request) {
+            super(request);
+            this.configId = request.configId;
+            this.domainName = request.domainName;
+            this.functionNames = request.functionNames;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * ConfigId.
+         * The ID of the configuration. For more information about ConfigId, see [Usage notes on ConfigId](~~388994~~).
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -120,7 +120,7 @@ public class DescribeCdnDomainConfigsRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -129,7 +129,7 @@ public class DescribeCdnDomainConfigsRequest extends Request {
         }
 
         /**
-         * FunctionNames.
+         * The names of the features. Separate multiple feature names with commas (,). For more information, see [Parameters for configuring features for domain names](~~388460~~).
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

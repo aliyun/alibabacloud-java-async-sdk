@@ -62,7 +62,7 @@ public class DescribeL2VipsByDomainResponseBody extends TeaModel {
         private Vips vips; 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -70,7 +70,7 @@ public class DescribeL2VipsByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeL2VipsByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Vips.
+         * The list of VIPs.
          */
         public Builder vips(Vips vips) {
             this.vips = vips;

@@ -86,7 +86,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Domains.
+         * The configurations of the accelerated domain name.
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -94,7 +94,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * Content.
+             * The address of the origin server.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -214,7 +214,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port of the origin server.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -222,7 +222,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the configuration item.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -230,7 +230,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the origin server.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -238,7 +238,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the origin server if multiple origin servers have been specified.
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -428,7 +428,13 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             private String sslProtocol; 
 
             /**
-             * CdnType.
+             * The type of workload accelerated by Alibaba Cloud CDN. Valid values:
+             * <p>
+             * 
+             * *   **web**: image and small file distribution
+             * *   **download**: large file distribution
+             * *   **video**: on-demand video and audio streaming
+             * *   **liveStream**: live streaming
              */
             public Builder cdnType(String cdnType) {
                 this.cdnType = cdnType;
@@ -436,7 +442,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             }
 
             /**
-             * Cname.
+             * The CNAME assigned to the accelerated domain name.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -444,7 +450,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the status.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -452,7 +458,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The accelerated domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -460,7 +466,17 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             }
 
             /**
-             * DomainStatus.
+             * The status of the accelerated domain name. Valid values:
+             * <p>
+             * 
+             * *   **online**: The domain name is enabled.
+             * *   **offline**: The domain is disabled.
+             * *   **configuring**: The endpoint group is being configured.
+             * *   **configure_failed**: The domain failed to be configured.
+             * *   **checking**: The domain name is under review.
+             * *   **check_failed**: The domain name failed the review.
+             * *   **stopping**: The domain name is be disabled.
+             * *   **deleting**: being deleted
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -468,7 +484,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * The time when the accelerated domain name was added to Alibaba Cloud CDN.
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -476,7 +492,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The last time when the accelerated domain was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -484,7 +500,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -492,7 +508,7 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             }
 
             /**
-             * Sources.
+             * The information about the origin server.
              */
             public Builder sources(Sources sources) {
                 this.sources = sources;
@@ -500,7 +516,11 @@ public class DescribeCdnUserDomainsByFuncResponseBody extends TeaModel {
             }
 
             /**
-             * SslProtocol.
+             * Indicates whether HTTPS is enabled. Valid values:
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
              */
             public Builder sslProtocol(String sslProtocol) {
                 this.sslProtocol = sslProtocol;

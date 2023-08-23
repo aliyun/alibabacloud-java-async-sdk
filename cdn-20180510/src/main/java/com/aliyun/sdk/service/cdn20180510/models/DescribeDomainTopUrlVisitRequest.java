@@ -22,10 +22,6 @@ public class DescribeDomainTopUrlVisitRequest extends Request {
     private String endTime;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("SortBy")
     private String sortBy;
 
@@ -37,7 +33,6 @@ public class DescribeDomainTopUrlVisitRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
-        this.ownerId = builder.ownerId;
         this.sortBy = builder.sortBy;
         this.startTime = builder.startTime;
     }
@@ -70,13 +65,6 @@ public class DescribeDomainTopUrlVisitRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -93,7 +81,6 @@ public class DescribeDomainTopUrlVisitRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDomainTopUrlVisitRequest, Builder> {
         private String domainName; 
         private String endTime; 
-        private Long ownerId; 
         private String sortBy; 
         private String startTime; 
 
@@ -101,17 +88,16 @@ public class DescribeDomainTopUrlVisitRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDomainTopUrlVisitRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.sortBy = response.sortBy;
-            this.startTime = response.startTime;
+        private Builder(DescribeDomainTopUrlVisitRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.sortBy = request.sortBy;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name that you want to query.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -120,7 +106,12 @@ public class DescribeDomainTopUrlVisitRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * > The end time must be later than the start time. The maximum time range that can be specified is seven days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -129,16 +120,11 @@ public class DescribeDomainTopUrlVisitRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * SortBy.
+         * The method that is used to sort the returned URLs. Default value: **pv**. Valid values:
+         * <p>
+         * 
+         * *   **traf**: by network traffic
+         * *   **pv**: by the number of page views
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -147,7 +133,12 @@ public class DescribeDomainTopUrlVisitRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * If you want to query data of a specific day, we recommend that you set the value in the yyyy-MM-ddT16:00:00Z format.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

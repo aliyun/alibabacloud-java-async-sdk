@@ -30,10 +30,6 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
     private String language;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     @Validation(required = true)
     private String startTime;
@@ -53,7 +49,6 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         this.endTime = builder.endTime;
         this.group = builder.group;
         this.language = builder.language;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
         this.taskName = builder.taskName;
         this.type = builder.type;
@@ -101,13 +96,6 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -133,7 +121,6 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         private String endTime; 
         private String group; 
         private String language; 
-        private Long ownerId; 
         private String startTime; 
         private String taskName; 
         private String type; 
@@ -142,20 +129,22 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
             super();
         } 
 
-        private Builder(CreateUsageDetailDataExportTaskRequest response) {
-            super(response);
-            this.domainNames = response.domainNames;
-            this.endTime = response.endTime;
-            this.group = response.group;
-            this.language = response.language;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
-            this.taskName = response.taskName;
-            this.type = response.type;
+        private Builder(CreateUsageDetailDataExportTaskRequest request) {
+            super(request);
+            this.domainNames = request.domainNames;
+            this.endTime = request.endTime;
+            this.group = request.group;
+            this.language = request.language;
+            this.startTime = request.startTime;
+            this.taskName = request.taskName;
+            this.type = request.type;
         } 
 
         /**
-         * DomainNames.
+         * The domain names. If you do not specify the Group parameter, resource usage details of these domain names are exported.
+         * <p>
+         * 
+         * If you do not specify this parameter, resource usage details are exported based on accounts.
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -164,7 +153,12 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -173,7 +167,7 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * Group.
+         * The domain name group. If you specify this parameter, the **DomainNames** parameter is ignored.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -182,7 +176,11 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * Language.
+         * The language in which you want to export the file. Valid values:
+         * <p>
+         * 
+         * *   **zh-cn**: Chinese. This is the default value.
+         * *   **en-us**: English
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -191,16 +189,10 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -209,7 +201,7 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the task.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -218,7 +210,11 @@ public class CreateUsageDetailDataExportTaskRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of resource usage data to query. Valid values:
+         * <p>
+         * 
+         * *   **flow**: traffic and bandwidth
+         * *   **vas**: requests
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

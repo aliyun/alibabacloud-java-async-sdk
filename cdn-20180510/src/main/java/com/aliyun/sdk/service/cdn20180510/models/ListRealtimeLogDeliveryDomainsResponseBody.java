@@ -50,7 +50,7 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The information about the accelerated domain names.
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -118,7 +118,11 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status. Valid values:
+             * <p>
+             * 
+             * *   **online**: enabled
+             * *   **offline**: disabled
              */
             public Builder status(String status) {
                 this.status = status;

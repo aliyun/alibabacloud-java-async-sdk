@@ -50,7 +50,7 @@ public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data entries returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Qps.
+             * The number of queries per second.
              */
             public Builder qps(Float qps) {
                 this.qps = qps;
@@ -118,7 +118,7 @@ public class DescribeDomainRealTimeQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned. The time follows the yyyy-MM-ddTHH:mm:ssZ format in the ISO 8601 standard and is in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

@@ -110,7 +110,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -118,7 +118,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -126,7 +126,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -134,7 +134,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * Layer.
+         * The layer at which the data was collected.
          */
         public Builder layer(String layer) {
             this.layer = layer;
@@ -142,7 +142,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * QpsDataInterval.
+         * The number of queries per second at each interval.
          */
         public Builder qpsDataInterval(QpsDataInterval qpsDataInterval) {
             this.qpsDataInterval = qpsDataInterval;
@@ -150,7 +150,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -270,7 +270,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * AccDomesticValue.
+             * The number of requests in the Chinese mainland.
              */
             public Builder accDomesticValue(String accDomesticValue) {
                 this.accDomesticValue = accDomesticValue;
@@ -278,7 +278,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * AccOverseasValue.
+             * The number of requests outside the Chinese mainland.
              */
             public Builder accOverseasValue(String accOverseasValue) {
                 this.accOverseasValue = accOverseasValue;
@@ -286,7 +286,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * AccValue.
+             * The total number of requests.
              */
             public Builder accValue(String accValue) {
                 this.accValue = accValue;
@@ -294,7 +294,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * DomesticValue.
+             * The number of queries per second in the Chinese mainland.
              */
             public Builder domesticValue(String domesticValue) {
                 this.domesticValue = domesticValue;
@@ -302,7 +302,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * OverseasValue.
+             * The number of queries per second outside the Chinese mainland.
              */
             public Builder overseasValue(String overseasValue) {
                 this.overseasValue = overseasValue;
@@ -310,7 +310,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -318,7 +318,7 @@ public class DescribeDomainQpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The total number of queries per second.
              */
             public Builder value(String value) {
                 this.value = value;

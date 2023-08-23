@@ -50,7 +50,7 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Configs.
+         * The configurations of the specified feature.
          */
         public Builder configs(Configs configs) {
             this.configs = configs;
@@ -58,7 +58,7 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
             private String prefix; 
 
             /**
-             * Bucket.
+             * The name of the bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -130,7 +130,7 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the OSS bucket is enabled.
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -138,7 +138,7 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Prefix.
+             * The prefix.
              */
             public Builder prefix(String prefix) {
                 this.prefix = prefix;
@@ -179,7 +179,7 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
             private String enable; 
 
             /**
-             * Enable.
+             * Indicates whether WAF is enabled.
              */
             public Builder enable(String enable) {
                 this.enable = enable;
@@ -232,7 +232,7 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
             private WafConfig wafConfig; 
 
             /**
-             * OssLogConfig.
+             * The configurations of Object Storage Service (OSS).
              */
             public Builder ossLogConfig(OssLogConfig ossLogConfig) {
                 this.ossLogConfig = ossLogConfig;
@@ -240,7 +240,7 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * WafConfig.
+             * The configurations of Web Application Firewall (WAF).
              */
             public Builder wafConfig(WafConfig wafConfig) {
                 this.wafConfig = wafConfig;

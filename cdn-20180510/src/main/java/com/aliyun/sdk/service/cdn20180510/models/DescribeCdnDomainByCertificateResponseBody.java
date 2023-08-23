@@ -50,7 +50,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CertInfos.
+         * The certificate information.
          */
         public Builder certInfos(CertInfos certInfos) {
             this.certInfos = certInfos;
@@ -58,7 +58,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,11 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             private String issuer; 
 
             /**
-             * CertCaIsLegacy.
+             * Indicates whether the SSL certificate is obsolete. Valid values:
+             * <p>
+             * 
+             * *   **yes**
+             * *   **no**
              */
             public Builder certCaIsLegacy(String certCaIsLegacy) {
                 this.certCaIsLegacy = certCaIsLegacy;
@@ -202,7 +206,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertExpireTime.
+             * The expiration time of the certificate.
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -210,7 +214,11 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertExpired.
+             * Indicates whether the SSL certificate is expired. Valid values:
+             * <p>
+             * 
+             * *   **yes**
+             * *   **no**
              */
             public Builder certExpired(String certExpired) {
                 this.certExpired = certExpired;
@@ -218,7 +226,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertStartTime.
+             * The effective time of the certificate.
              */
             public Builder certStartTime(String certStartTime) {
                 this.certStartTime = certStartTime;
@@ -226,7 +234,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertSubjectCommonName.
+             * The name of the SSL certificate owner.
              */
             public Builder certSubjectCommonName(String certSubjectCommonName) {
                 this.certSubjectCommonName = certSubjectCommonName;
@@ -234,7 +242,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertType.
+             * The type of the certificate. Valid values: **RSA**, **DSA**, and **ECDSA**.
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -242,7 +250,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * DomainList.
+             * The list of domain names. If a value is returned, the value matches the SSL certificate. Multiple domain names are separated by commas (,).
              */
             public Builder domainList(String domainList) {
                 this.domainList = domainList;
@@ -250,7 +258,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * DomainNames.
+             * The domain names (DNS fields) that match the SSL certificate. Multiple domain names are separated by commas (,).
              */
             public Builder domainNames(String domainNames) {
                 this.domainNames = domainNames;
@@ -258,7 +266,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * The certificate authority (CA) that issued the certificate.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;

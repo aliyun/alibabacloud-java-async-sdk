@@ -17,14 +17,9 @@ public class DisableRealtimeLogDeliveryRequest extends Request {
     @Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DisableRealtimeLogDeliveryRequest(Builder builder) {
         super(builder);
         this.domain = builder.domain;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -47,42 +42,24 @@ public class DisableRealtimeLogDeliveryRequest extends Request {
         return this.domain;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DisableRealtimeLogDeliveryRequest, Builder> {
         private String domain; 
-        private Long ownerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DisableRealtimeLogDeliveryRequest response) {
-            super(response);
-            this.domain = response.domain;
-            this.ownerId = response.ownerId;
+        private Builder(DisableRealtimeLogDeliveryRequest request) {
+            super(request);
+            this.domain = request.domain;
         } 
 
         /**
-         * Domain.
+         * The accelerated domain name for which you want to disable real-time log delivery. You can specify multiple domain names and separate them with commas (,).
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
             this.domain = domain;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

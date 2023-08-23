@@ -50,7 +50,7 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClientIpList.
+         * A list of client IP addresses.
          */
         public Builder clientIpList(java.util.List < ClientIpList> clientIpList) {
             this.clientIpList = clientIpList;
@@ -58,7 +58,7 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
             private Long traffic; 
 
             /**
-             * Acc.
+             * The total number of requests.
              */
             public Builder acc(Long acc) {
                 this.acc = acc;
@@ -142,7 +142,7 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * The client IP address returned. Only IPv4 addressed are supported.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -150,7 +150,7 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
             }
 
             /**
-             * Rank.
+             * The ranking of the client IP address returned.
              */
             public Builder rank(Integer rank) {
                 this.rank = rank;
@@ -158,7 +158,7 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
             }
 
             /**
-             * Traffic.
+             * The total amount of network traffic consumed. Unit: bytes.
              */
             public Builder traffic(Long traffic) {
                 this.traffic = traffic;

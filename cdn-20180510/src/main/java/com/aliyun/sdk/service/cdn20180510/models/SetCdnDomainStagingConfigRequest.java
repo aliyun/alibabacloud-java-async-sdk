@@ -22,15 +22,10 @@ public class SetCdnDomainStagingConfigRequest extends Request {
     @Validation(required = true)
     private String functions;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private SetCdnDomainStagingConfigRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
         this.functions = builder.functions;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -60,31 +55,22 @@ public class SetCdnDomainStagingConfigRequest extends Request {
         return this.functions;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<SetCdnDomainStagingConfigRequest, Builder> {
         private String domainName; 
         private String functions; 
-        private Long ownerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(SetCdnDomainStagingConfigRequest response) {
-            super(response);
-            this.domainName = response.domainName;
-            this.functions = response.functions;
-            this.ownerId = response.ownerId;
+        private Builder(SetCdnDomainStagingConfigRequest request) {
+            super(request);
+            this.domainName = request.domainName;
+            this.functions = request.functions;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,20 +79,32 @@ public class SetCdnDomainStagingConfigRequest extends Request {
         }
 
         /**
-         * Functions.
+         * The features that you want to configure. Format:
+         * <p>
+         * 
+         * > *   **functionName**: The name of the feature. Separate multiple values with commas (,). For more information, see [A list of features](~~388460~~).
+         * >*   **argName**: The feature parameters for **functionName**.
+         * >*   **argValue**: The parameter values set for **functionName**.
+         * 
+         *         [
+         *          {
+         *            "functionArgs": [
+         *             {
+         *              "argName": "Parameter A", 
+         *              "argValue": "Value of Parameter A"
+         *             }, 
+         *           {
+         *             "argName": "Parameter B", 
+         *             "argValue": "Value of Parameter B"
+         *              }
+         *          ], 
+         *          "functionName": "Feature name"
+         *             }
+         *         ]
          */
         public Builder functions(String functions) {
             this.putQueryParameter("Functions", functions);
             this.functions = functions;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

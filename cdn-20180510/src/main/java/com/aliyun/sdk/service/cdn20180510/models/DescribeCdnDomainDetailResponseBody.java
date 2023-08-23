@@ -50,7 +50,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GetDomainDetailModel.
+         * The details about the accelerated domain name.
          */
         public Builder getDomainDetailModel(GetDomainDetailModel getDomainDetailModel) {
             this.getDomainDetailModel = getDomainDetailModel;
@@ -58,7 +58,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * Content.
+             * The address of the origin server.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -166,7 +166,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Enabled.
+             * The status.
              */
             public Builder enabled(String enabled) {
                 this.enabled = enabled;
@@ -174,7 +174,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port over which requests are redirected to the origin server. Ports 443 and 80 are supported.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -182,7 +182,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -190,7 +190,13 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the origin server. Valid values:
+             * <p>
+             * 
+             * *   **ipaddr**: an origin IP address
+             * *   **domain**: an origin domain name
+             * *   **oss**: the domain name of an Object Storage Service (OSS) bucket
+             * *   **fc_domain:** a Function Compute domain name
              */
             public Builder type(String type) {
                 this.type = type;
@@ -198,7 +204,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the origin server if multiple origin servers have been specified.
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -412,7 +418,12 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             private SourceModels sourceModels; 
 
             /**
-             * CdnType.
+             * The workload type of the accelerated domain name. Valid values:
+             * <p>
+             * 
+             * *   **web**: images and small files
+             * *   **download**: large files
+             * *   **video**: on-demand video and audio streaming
              */
             public Builder cdnType(String cdnType) {
                 this.cdnType = cdnType;
@@ -420,7 +431,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Cname.
+             * The CNAME that is assigned to the accelerated domain name. You must add the CNAME record in the system of your DNS service provider to map the accelerated domain name to the CNAME.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -428,7 +439,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the domain name.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -436,7 +447,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The accelerated domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -444,7 +455,17 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DomainStatus.
+             * The status of the accelerated domain name. Valid values:
+             * <p>
+             * 
+             * *   **online**
+             * *   **offline**
+             * *   **configuring**
+             * *   **configure_failed**
+             * *   **checking**
+             * *   **check_failed**
+             * *   **stopping**
+             * *   **deleting**
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -452,7 +473,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * The time when the domain name was created.
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -460,7 +481,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the domain name was last modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -468,7 +489,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsCname.
+             * The CNAME for which HTTPS is enabled.
              */
             public Builder httpsCname(String httpsCname) {
                 this.httpsCname = httpsCname;
@@ -476,7 +497,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -484,7 +505,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Scope.
+             * The acceleration region.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -492,7 +513,11 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ServerCertificateStatus.
+             * Indicates whether the SSL certificate is enabled. Valid values:
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
              */
             public Builder serverCertificateStatus(String serverCertificateStatus) {
                 this.serverCertificateStatus = serverCertificateStatus;
@@ -500,7 +525,7 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SourceModels.
+             * The information about the origin server.
              */
             public Builder sourceModels(SourceModels sourceModels) {
                 this.sourceModels = sourceModels;

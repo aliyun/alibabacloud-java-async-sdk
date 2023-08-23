@@ -98,7 +98,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * QpsDataInterval.
+         * The list of QPS records at each interval.
          */
         public Builder qpsDataInterval(QpsDataInterval qpsDataInterval) {
             this.qpsDataInterval = qpsDataInterval;
@@ -130,7 +130,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -322,7 +322,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * AccDomesticValue.
+             * The number of requests in the Chinese mainland.
              */
             public Builder accDomesticValue(String accDomesticValue) {
                 this.accDomesticValue = accDomesticValue;
@@ -330,7 +330,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * AccOverseasValue.
+             * The number of requests outside the Chinese mainland.
              */
             public Builder accOverseasValue(String accOverseasValue) {
                 this.accOverseasValue = accOverseasValue;
@@ -338,7 +338,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * AccValue.
+             * The total number of requests.
              */
             public Builder accValue(String accValue) {
                 this.accValue = accValue;
@@ -346,7 +346,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * DomesticValue.
+             * The number of queries per second in the Chinese mainland.
              */
             public Builder domesticValue(String domesticValue) {
                 this.domesticValue = domesticValue;
@@ -354,7 +354,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsAccDomesticValue.
+             * The number of HTTPS requests sent to POPs in the Chinese mainland.
              */
             public Builder httpsAccDomesticValue(String httpsAccDomesticValue) {
                 this.httpsAccDomesticValue = httpsAccDomesticValue;
@@ -362,7 +362,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsAccOverseasValue.
+             * The number of HTTPS requests sent to POPs outside the Chinese mainland.
              */
             public Builder httpsAccOverseasValue(String httpsAccOverseasValue) {
                 this.httpsAccOverseasValue = httpsAccOverseasValue;
@@ -370,7 +370,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsAccValue.
+             * The number of HTTPS requests sent to POPs.
              */
             public Builder httpsAccValue(String httpsAccValue) {
                 this.httpsAccValue = httpsAccValue;
@@ -378,7 +378,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsDomesticValue.
+             * The number of queries per second that is calculated based on the HTTPS requests sent to POPs in the Chinese mainland.
              */
             public Builder httpsDomesticValue(String httpsDomesticValue) {
                 this.httpsDomesticValue = httpsDomesticValue;
@@ -386,7 +386,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsOverseasValue.
+             * The number of queries per second that is calculated based on the HTTPS requests sent to POPs outside the Chinese mainland.
              */
             public Builder httpsOverseasValue(String httpsOverseasValue) {
                 this.httpsOverseasValue = httpsOverseasValue;
@@ -394,7 +394,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsValue.
+             * The number of queries per second that is calculated based on the HTTPS requests sent to points of presence (POPs).
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -402,7 +402,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * OverseasValue.
+             * The number of queries per second outside the Chinese mainland.
              */
             public Builder overseasValue(String overseasValue) {
                 this.overseasValue = overseasValue;
@@ -410,7 +410,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -418,7 +418,7 @@ public class DescribeDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The total QPS.
              */
             public Builder value(String value) {
                 this.value = value;

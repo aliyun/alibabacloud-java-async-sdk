@@ -116,18 +116,18 @@ public class SetReqHeaderConfigRequest extends Request {
             super();
         } 
 
-        private Builder(SetReqHeaderConfigRequest response) {
-            super(response);
-            this.configId = response.configId;
-            this.domainName = response.domainName;
-            this.key = response.key;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
-            this.value = response.value;
+        private Builder(SetReqHeaderConfigRequest request) {
+            super(request);
+            this.configId = request.configId;
+            this.domainName = request.domainName;
+            this.key = request.key;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
+            this.value = request.value;
         } 
 
         /**
-         * ConfigId.
+         * The ID of the configuration.
          */
         public Builder configId(Long configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -136,7 +136,7 @@ public class SetReqHeaderConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate multiple domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -145,7 +145,7 @@ public class SetReqHeaderConfigRequest extends Request {
         }
 
         /**
-         * Key.
+         * The name of the custom header.
          */
         public Builder key(String key) {
             this.putQueryParameter("Key", key);
@@ -172,7 +172,7 @@ public class SetReqHeaderConfigRequest extends Request {
         }
 
         /**
-         * Value.
+         * The value of the custom header.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

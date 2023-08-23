@@ -75,15 +75,15 @@ public class DescribeUserConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserConfigsRequest response) {
-            super(response);
-            this.config = response.config;
-            this.ownerId = response.ownerId;
-            this.securityToken = response.securityToken;
+        private Builder(DescribeUserConfigsRequest request) {
+            super(request);
+            this.config = request.config;
+            this.ownerId = request.ownerId;
+            this.securityToken = request.securityToken;
         } 
 
         /**
-         * Config.
+         * The feature whose configurations you want to query. You can specify only one feature in each request. Valid values: oss, green_manager, waf, cc_rule, ddos_dispatch, edge_safe, blocked_regions, http_acl_policy, bot_manager, and ip_reputation.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);

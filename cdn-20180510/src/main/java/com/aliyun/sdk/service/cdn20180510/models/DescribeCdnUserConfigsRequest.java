@@ -17,14 +17,9 @@ public class DescribeCdnUserConfigsRequest extends Request {
     @Validation(required = true)
     private String functionName;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DescribeCdnUserConfigsRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -47,42 +42,28 @@ public class DescribeCdnUserConfigsRequest extends Request {
         return this.functionName;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeCdnUserConfigsRequest, Builder> {
         private String functionName; 
-        private Long ownerId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeCdnUserConfigsRequest response) {
-            super(response);
-            this.functionName = response.functionName;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeCdnUserConfigsRequest request) {
+            super(request);
+            this.functionName = request.functionName;
         } 
 
         /**
-         * FunctionName.
+         * The configuration that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **domain_business_control**: user configurations
+         * *   **waf**: Web Application Firewall (WAF) configurations
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("FunctionName", functionName);
             this.functionName = functionName;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

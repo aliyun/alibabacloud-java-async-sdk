@@ -86,7 +86,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Domains.
+         * The list of the accelerated domain names returned.
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -94,7 +94,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * Content.
+             * The address of the origin server.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -214,7 +214,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port of the origin server.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -222,7 +222,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -230,7 +230,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the origin server.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -238,7 +238,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the origin server if multiple origin servers have been specified.
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -306,6 +306,9 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("DomainId")
+        private Long domainId;
+
         @NameInMap("DomainName")
         private String domainName;
 
@@ -335,6 +338,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             this.cname = builder.cname;
             this.coverage = builder.coverage;
             this.description = builder.description;
+            this.domainId = builder.domainId;
             this.domainName = builder.domainName;
             this.domainStatus = builder.domainStatus;
             this.gmtCreated = builder.gmtCreated;
@@ -379,6 +383,13 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return domainId
+         */
+        public Long getDomainId() {
+            return this.domainId;
         }
 
         /**
@@ -442,6 +453,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             private String cname; 
             private String coverage; 
             private String description; 
+            private Long domainId; 
             private String domainName; 
             private String domainStatus; 
             private String gmtCreated; 
@@ -452,7 +464,12 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             private String sslProtocol; 
 
             /**
-             * CdnType.
+             * The type of the workload accelerated by Alibaba Cloud CDN. Valid values:
+             * <p>
+             * 
+             * *   **web**: images and small files
+             * *   **download**: large files
+             * *   **video**: on-demand video and audio streaming
              */
             public Builder cdnType(String cdnType) {
                 this.cdnType = cdnType;
@@ -460,7 +477,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Cname.
+             * The CNAME assigned to the accelerated domain name.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -468,7 +485,12 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Coverage.
+             * The acceleration region. Valid values:
+             * <p>
+             * 
+             * *   **domestic**: Chinese mainland
+             * *   **global**: global
+             * *   **overseas**: outside the Chinese mainland
              */
             public Builder coverage(String coverage) {
                 this.coverage = coverage;
@@ -476,7 +498,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The information about Internet Content Provider (ICP) filing.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -484,7 +506,15 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The ID of the accelerated domain name.
+             */
+            public Builder domainId(Long domainId) {
+                this.domainId = domainId;
+                return this;
+            }
+
+            /**
+             * The accelerated domain.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -492,7 +522,17 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainStatus.
+             * The status of the accelerated domain name. Valid values:
+             * <p>
+             * 
+             * *   **online**
+             * *   **offline**
+             * *   **configuring**
+             * *   **configure_failed**
+             * *   **checking**
+             * *   **check_failed**
+             * *   **stopping**
+             * *   **deleting**
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -500,7 +540,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * The time when the accelerated domain name was added.
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -508,7 +548,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the accelerated domain name was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -516,7 +556,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -524,7 +564,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Sandbox.
+             * Indicates whether the accelerated domain name is in a sandbox.
              */
             public Builder sandbox(String sandbox) {
                 this.sandbox = sandbox;
@@ -532,7 +572,7 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Sources.
+             * The information about the origin server.
              */
             public Builder sources(Sources sources) {
                 this.sources = sources;
@@ -540,7 +580,11 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * SslProtocol.
+             * Indicates whether HTTPS is enabled. Valid values:
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
              */
             public Builder sslProtocol(String sslProtocol) {
                 this.sslProtocol = sslProtocol;
