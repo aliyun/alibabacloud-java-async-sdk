@@ -26,6 +26,10 @@ public class IgnoreCheckItemsRequest extends Request {
     private String reason;
 
     @Query
+    @NameInMap("Source")
+    private String source;
+
+    @Query
     @NameInMap("Type")
     @Validation(required = true)
     private Integer type;
@@ -39,6 +43,7 @@ public class IgnoreCheckItemsRequest extends Request {
         this.checkAndRiskTypeList = builder.checkAndRiskTypeList;
         this.lang = builder.lang;
         this.reason = builder.reason;
+        this.source = builder.source;
         this.type = builder.type;
         this.uuidList = builder.uuidList;
     }
@@ -78,6 +83,13 @@ public class IgnoreCheckItemsRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return type
      */
     public Integer getType() {
@@ -95,6 +107,7 @@ public class IgnoreCheckItemsRequest extends Request {
         private java.util.List < CheckAndRiskTypeList> checkAndRiskTypeList; 
         private String lang; 
         private String reason; 
+        private String source; 
         private Integer type; 
         private java.util.List < String > uuidList; 
 
@@ -107,6 +120,7 @@ public class IgnoreCheckItemsRequest extends Request {
             this.checkAndRiskTypeList = request.checkAndRiskTypeList;
             this.lang = request.lang;
             this.reason = request.reason;
+            this.source = request.source;
             this.type = request.type;
             this.uuidList = request.uuidList;
         } 
@@ -139,6 +153,15 @@ public class IgnoreCheckItemsRequest extends Request {
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
             this.reason = reason;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

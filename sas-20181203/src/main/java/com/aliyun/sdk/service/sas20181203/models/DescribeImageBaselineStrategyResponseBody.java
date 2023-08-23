@@ -153,6 +153,9 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
 
     }
     public static class Strategy extends TeaModel {
+        @NameInMap("BaselineItem")
+        private String baselineItem;
+
         @NameInMap("BaselineItemList")
         private java.util.List < BaselineItemList> baselineItemList;
 
@@ -172,6 +175,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         private String type;
 
         private Strategy(Builder builder) {
+            this.baselineItem = builder.baselineItem;
             this.baselineItemList = builder.baselineItemList;
             this.selectedItemCount = builder.selectedItemCount;
             this.strategyId = builder.strategyId;
@@ -186,6 +190,13 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
 
         public static Strategy create() {
             return builder().build();
+        }
+
+        /**
+         * @return baselineItem
+         */
+        public String getBaselineItem() {
+            return this.baselineItem;
         }
 
         /**
@@ -231,12 +242,21 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String baselineItem; 
             private java.util.List < BaselineItemList> baselineItemList; 
             private Integer selectedItemCount; 
             private Long strategyId; 
             private String strategyName; 
             private Integer totalItemCount; 
             private String type; 
+
+            /**
+             * BaselineItem.
+             */
+            public Builder baselineItem(String baselineItem) {
+                this.baselineItem = baselineItem;
+                return this;
+            }
 
             /**
              * An array that contains the baselines.

@@ -294,10 +294,11 @@ public class DescribeImageGroupedVulListResponseBody extends TeaModel {
             }
 
             /**
-             * 是否可支持修复。取值：
+             * Indicates whether the vulnerability can be fixed in the Security Center console. Valid values:
              * <p>
-             * - **yes**：支持修复
-             * - **no**： 不支持修复
+             * 
+             * *   **yes**
+             * *   **no**
              */
             public Builder canFix(String canFix) {
                 this.canFix = canFix;

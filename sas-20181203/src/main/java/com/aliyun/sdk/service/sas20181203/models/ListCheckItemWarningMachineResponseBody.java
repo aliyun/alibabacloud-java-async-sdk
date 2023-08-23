@@ -241,6 +241,9 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         @NameInMap("IntranetIp")
         private String intranetIp;
 
+        @NameInMap("LastScanTime")
+        private Long lastScanTime;
+
         @NameInMap("PortOpen")
         private Boolean portOpen;
 
@@ -252,6 +255,15 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
 
         @NameInMap("Status")
         private Integer status;
+
+        @NameInMap("TargetId")
+        private String targetId;
+
+        @NameInMap("TargetName")
+        private String targetName;
+
+        @NameInMap("TargetType")
+        private String targetType;
 
         @NameInMap("Uuid")
         private String uuid;
@@ -269,10 +281,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.internetIp = builder.internetIp;
             this.intranetIp = builder.intranetIp;
+            this.lastScanTime = builder.lastScanTime;
             this.portOpen = builder.portOpen;
             this.prompt = builder.prompt;
             this.regionId = builder.regionId;
             this.status = builder.status;
+            this.targetId = builder.targetId;
+            this.targetName = builder.targetName;
+            this.targetType = builder.targetType;
             this.uuid = builder.uuid;
             this.warningRiskList = builder.warningRiskList;
         }
@@ -349,6 +365,13 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastScanTime
+         */
+        public Long getLastScanTime() {
+            return this.lastScanTime;
+        }
+
+        /**
          * @return portOpen
          */
         public Boolean getPortOpen() {
@@ -377,6 +400,27 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
         }
 
         /**
+         * @return targetId
+         */
+        public String getTargetId() {
+            return this.targetId;
+        }
+
+        /**
+         * @return targetName
+         */
+        public String getTargetName() {
+            return this.targetName;
+        }
+
+        /**
+         * @return targetType
+         */
+        public String getTargetType() {
+            return this.targetType;
+        }
+
+        /**
          * @return uuid
          */
         public String getUuid() {
@@ -400,10 +444,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private String instanceName; 
             private String internetIp; 
             private String intranetIp; 
+            private Long lastScanTime; 
             private Boolean portOpen; 
             private String prompt; 
             private String regionId; 
             private Integer status; 
+            private String targetId; 
+            private String targetName; 
+            private String targetType; 
             private String uuid; 
             private java.util.List < WarningRiskList> warningRiskList; 
 
@@ -492,6 +540,14 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
+             * LastScanTime.
+             */
+            public Builder lastScanTime(Long lastScanTime) {
+                this.lastScanTime = lastScanTime;
+                return this;
+            }
+
+            /**
              * Indicates whether a port on the server is accessible over the Internet. Valid values:
              * <p>
              * 
@@ -535,6 +591,30 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TargetId.
+             */
+            public Builder targetId(String targetId) {
+                this.targetId = targetId;
+                return this;
+            }
+
+            /**
+             * TargetName.
+             */
+            public Builder targetName(String targetName) {
+                this.targetName = targetName;
+                return this;
+            }
+
+            /**
+             * TargetType.
+             */
+            public Builder targetType(String targetType) {
+                this.targetType = targetType;
                 return this;
             }
 

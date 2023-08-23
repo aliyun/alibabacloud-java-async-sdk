@@ -55,7 +55,11 @@ public class GetAssetSelectionConfigRequest extends Request {
         } 
 
         /**
-         * BusinessType.
+         * The business type that you want to select for the asset. Valid values:
+         * <p>
+         * 
+         * *   **VIRUS_SCAN_CYCLE_CONFIG**: virus detection configuration
+         * *   **VIRUS_SCAN_ONCE_TASK**: one-time scan for virus detection
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);

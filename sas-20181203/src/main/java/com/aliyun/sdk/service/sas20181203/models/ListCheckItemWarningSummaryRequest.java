@@ -56,6 +56,10 @@ public class ListCheckItemWarningSummaryRequest extends Request {
     @NameInMap("RiskType")
     private String riskType;
 
+    @Query
+    @NameInMap("Source")
+    private String source;
+
     private ListCheckItemWarningSummaryRequest(Builder builder) {
         super(builder);
         this.checkItemFuzzy = builder.checkItemFuzzy;
@@ -69,6 +73,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
         this.riskType = builder.riskType;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -161,6 +166,13 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         return this.riskType;
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<ListCheckItemWarningSummaryRequest, Builder> {
         private String checkItemFuzzy; 
         private String checkLevel; 
@@ -173,6 +185,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         private String lang; 
         private Integer pageSize; 
         private String riskType; 
+        private String source; 
 
         private Builder() {
             super();
@@ -191,6 +204,7 @@ public class ListCheckItemWarningSummaryRequest extends Request {
             this.lang = request.lang;
             this.pageSize = request.pageSize;
             this.riskType = request.riskType;
+            this.source = request.source;
         } 
 
         /**
@@ -306,6 +320,15 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         public Builder riskType(String riskType) {
             this.putQueryParameter("RiskType", riskType);
             this.riskType = riskType;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

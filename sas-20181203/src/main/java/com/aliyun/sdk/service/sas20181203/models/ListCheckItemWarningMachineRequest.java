@@ -51,6 +51,10 @@ public class ListCheckItemWarningMachineRequest extends Request {
     private String riskType;
 
     @Query
+    @NameInMap("Source")
+    private String source;
+
+    @Query
     @NameInMap("Status")
     private Integer status;
 
@@ -65,6 +69,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
         this.riskType = builder.riskType;
+        this.source = builder.source;
         this.status = builder.status;
     }
 
@@ -145,6 +150,13 @@ public class ListCheckItemWarningMachineRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return status
      */
     public Integer getStatus() {
@@ -161,6 +173,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
         private Integer pageSize; 
         private String remark; 
         private String riskType; 
+        private String source; 
         private Integer status; 
 
         private Builder() {
@@ -178,6 +191,7 @@ public class ListCheckItemWarningMachineRequest extends Request {
             this.pageSize = request.pageSize;
             this.remark = request.remark;
             this.riskType = request.riskType;
+            this.source = request.source;
             this.status = request.status;
         } 
 
@@ -269,6 +283,15 @@ public class ListCheckItemWarningMachineRequest extends Request {
         public Builder riskType(String riskType) {
             this.putQueryParameter("RiskType", riskType);
             this.riskType = riskType;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

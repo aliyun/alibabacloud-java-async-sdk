@@ -96,7 +96,9 @@ public class DescribeAssetDetailByUuidsRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * 资源目录成员账号主账号ID。
+         * <p>
+         * >调用[DescribeMonitorAccounts](~~DescribeMonitorAccounts~~)接口可以获取该参数。
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

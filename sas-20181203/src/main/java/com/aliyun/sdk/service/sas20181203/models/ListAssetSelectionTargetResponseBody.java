@@ -62,7 +62,7 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -70,7 +70,7 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
             private String targetName; 
 
             /**
-             * TargetId.
+             * The ID of the asset.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -138,7 +138,7 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the asset.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -203,7 +203,7 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -211,7 +211,7 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -219,7 +219,7 @@ public class ListAssetSelectionTargetResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

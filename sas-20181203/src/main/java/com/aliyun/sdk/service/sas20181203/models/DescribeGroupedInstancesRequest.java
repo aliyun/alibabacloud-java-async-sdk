@@ -257,7 +257,14 @@ public class DescribeGroupedInstancesRequest extends Request {
         }
 
         /**
-         * SaleVersionCheckCode.
+         * The edition of Security Center that protects the asset. Valid values:
+         * <p>
+         * 
+         * * **sas_gte_advanced**: the Advanced edition or higher
+         * * **sas_gte_enterprise**: the Enterprise edition or higher
+         * * **sas_gt_basic:** a paid edition
+         * * **sas_eq_advanced:** the Advanced edition
+         * * **sas_gt_anti_virus:** an edition higher than the Anti-virus edition
          */
         public Builder saleVersionCheckCode(String saleVersionCheckCode) {
             this.putQueryParameter("SaleVersionCheckCode", saleVersionCheckCode);

@@ -50,7 +50,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * Returns the response body.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             private String timeUnit; 
 
             /**
-             * AuthCount.
+             * The total number of authorizations.
              */
             public Builder authCount(Long authCount) {
                 this.authCount = authCount;
@@ -166,7 +166,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Expire.
+             * The timestamp of the expiration date of the authorization number.
              */
             public Builder expire(Long expire) {
                 this.expire = expire;
@@ -174,7 +174,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FlowRate.
+             * The frequency of calls.
              */
             public Builder flowRate(Integer flowRate) {
                 this.flowRate = flowRate;
@@ -182,7 +182,7 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RemainAuthCount.
+             * The number of remaining authorizations.
              */
             public Builder remainAuthCount(Long remainAuthCount) {
                 this.remainAuthCount = remainAuthCount;
@@ -190,7 +190,11 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SaleVersion.
+             * The Authorized Version. Valid values include:
+             * <p>
+             * 
+             * * **1:** trial version
+             * * **2:** Enterprise Edition
              */
             public Builder saleVersion(Integer saleVersion) {
                 this.saleVersion = saleVersion;
@@ -198,7 +202,11 @@ public class GetFileDetectApiInvokeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TimeUnit.
+             * The time unit of the frequency limit. Value:
+             * <p>
+             * 
+             * * **SECONDS**
+             * * **MINUTES**
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;

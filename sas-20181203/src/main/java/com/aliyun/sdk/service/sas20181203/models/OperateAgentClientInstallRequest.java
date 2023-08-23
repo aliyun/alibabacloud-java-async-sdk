@@ -113,7 +113,7 @@ public class OperateAgentClientInstallRequest extends Request {
          * The IDs of the servers on which you want to install the Security Center agent. Separate multiple IDs with commas (,).
          * <p>
          * 
-         * > You must specify at least one of the **InstanceIds** and **Uuids** parameters before you can call this operation.
+         * > : You must specify at least one of **InstanceIds** and **Uuids**. If you specify **InstanceIds**, you must also specify **Region** and **Os**.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -135,7 +135,11 @@ public class OperateAgentClientInstallRequest extends Request {
         }
 
         /**
-         * Os.
+         * The operating system of the servers. Valid values:
+         * <p>
+         * 
+         * *   **linux**
+         * *   **windows**
          */
         public Builder os(String os) {
             this.putQueryParameter("Os", os);
@@ -144,7 +148,14 @@ public class OperateAgentClientInstallRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region where the servers reside. Valid values include the following regions:
+         * <p>
+         * 
+         * *   cn-hangzhou: China (Hangzhou)
+         * *   cn-beijing: China (Beijing)
+         * *   cn-shanghai: China (Shanghai)
+         * *   cn-zhangjiakou: China (Zhangjiakou)
+         * *   cn-shenzhen: China (Shenzhen)
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

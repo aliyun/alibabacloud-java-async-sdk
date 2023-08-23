@@ -3254,7 +3254,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the ListCheckResult operation.
+      * This operation is phased out. You can use the [ListCheckResult](~~ListCheckResult~~) operation.
       *
      */
     @Override
@@ -6942,6 +6942,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PublicSyncAndCreateImageScanTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<QueryAttackCountResponse> queryAttackCount(QueryAttackCountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryAttackCount").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryAttackCountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryAttackCountResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

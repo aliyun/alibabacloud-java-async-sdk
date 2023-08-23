@@ -491,7 +491,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The difficulty level of exploiting the vulnerability. Valid values:
+             * The difficulty level of exploiting the vulnerability. Valid value:
              * <p>
              * 
              * *   **LOW**
@@ -539,7 +539,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
              * The instance name of the server.
              * <p>
              * 
-             * > This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
+             * >  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -550,7 +550,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
              * The public IP address of the server.
              * <p>
              * 
-             * > This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
+             * >  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -561,7 +561,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
              * The private IP address of the server.
              * <p>
              * 
-             * > This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
+             * >  This parameter is deprecated. You can call the [DescribeVulList](~~DescribeVulList~~) operation to query the instances that are affected by vulnerabilities.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -569,7 +569,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * OtherId.
+             * The ID of the vulnerability.
              */
             public Builder otherId(String otherId) {
                 this.otherId = otherId;
@@ -641,7 +641,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the asset on which the vulnerability is detected.
+             * The ID of the asset on which the malicious image sample is detected.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -649,7 +649,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset on which the vulnerability is detected.
+             * The name of the asset on which the malicious image sample is detected.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -673,7 +673,7 @@ public class DescribeVulDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity of the vulnerability. Valid values:
+             * The severity of the vulnerability. Valid value:
              * <p>
              * 
              * *   **serious**

@@ -28,12 +28,17 @@ public class DescribeImageVulWhiteListRequest extends Request {
     @NameInMap("PageSize")
     private Integer pageSize;
 
+    @Query
+    @NameInMap("Source")
+    private String source;
+
     private DescribeImageVulWhiteListRequest(Builder builder) {
         super(builder);
         this.aliasName = builder.aliasName;
         this.currentPage = builder.currentPage;
         this.lang = builder.lang;
         this.pageSize = builder.pageSize;
+        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -77,11 +82,19 @@ public class DescribeImageVulWhiteListRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
     public static final class Builder extends Request.Builder<DescribeImageVulWhiteListRequest, Builder> {
         private String aliasName; 
         private Integer currentPage; 
         private String lang; 
         private Integer pageSize; 
+        private String source; 
 
         private Builder() {
             super();
@@ -93,6 +106,7 @@ public class DescribeImageVulWhiteListRequest extends Request {
             this.currentPage = request.currentPage;
             this.lang = request.lang;
             this.pageSize = request.pageSize;
+            this.source = request.source;
         } 
 
         /**
@@ -128,6 +142,15 @@ public class DescribeImageVulWhiteListRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

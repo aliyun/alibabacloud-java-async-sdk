@@ -70,7 +70,11 @@ public class CreateAssetSelectionConfigRequest extends Request {
         } 
 
         /**
-         * BusinessType.
+         * The business type that you want to select for the asset. Valid values:
+         * <p>
+         * 
+         * *   **VIRUS_SCAN_CYCLE_CONFIG**: virus detection configuration
+         * *   **VIRUS_SCAN_ONCE_TASK**: one-time scan for virus detection
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -79,7 +83,12 @@ public class CreateAssetSelectionConfigRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The dimension based on which you want to select the asset. Valid values:
+         * <p>
+         * 
+         * *   **instance**: selects the asset by server.
+         * *   **group**: selects the asset by group.
+         * *   **vpc**: selects the asset by virtual private cloud (VPC).
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

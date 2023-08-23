@@ -50,7 +50,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BruteForceSummary.
+         * The statistics of IP address blocking policies.
          */
         public Builder bruteForceSummary(BruteForceSummary bruteForceSummary) {
             this.bruteForceSummary = bruteForceSummary;
@@ -58,7 +58,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             private String systemRecordCount; 
 
             /**
-             * AllStrategyCount.
+             * The number of anti-brute force IP blocking policies.
              */
             public Builder allStrategyCount(Integer allStrategyCount) {
                 this.allStrategyCount = allStrategyCount;
@@ -178,7 +178,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * AntiBruteForceRuleCount.
+             * The number of defense policies.
              */
             public Builder antiBruteForceRuleCount(String antiBruteForceRuleCount) {
                 this.antiBruteForceRuleCount = antiBruteForceRuleCount;
@@ -186,7 +186,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * CustomEffectiveCount.
+             * The number of custom blocking rules that are in effect.
              */
             public Builder customEffectiveCount(String customEffectiveCount) {
                 this.customEffectiveCount = customEffectiveCount;
@@ -194,7 +194,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * CustomRecordCount.
+             * The number of custom blocking rules.
              */
             public Builder customRecordCount(String customRecordCount) {
                 this.customRecordCount = customRecordCount;
@@ -202,7 +202,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveCount.
+             * The number of anti-brute force IP blocking policies enabled.
              */
             public Builder effectiveCount(Integer effectiveCount) {
                 this.effectiveCount = effectiveCount;
@@ -210,7 +210,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * SystemEffectiveCount.
+             * The number of system blocking rules that are in effect.
              */
             public Builder systemEffectiveCount(String systemEffectiveCount) {
                 this.systemEffectiveCount = systemEffectiveCount;
@@ -218,7 +218,7 @@ public class DescribeBruteForceSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * SystemRecordCount.
+             * The number of system blocking rules.
              */
             public Builder systemRecordCount(String systemRecordCount) {
                 this.systemRecordCount = systemRecordCount;

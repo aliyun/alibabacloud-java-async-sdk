@@ -98,7 +98,9 @@ public class GetClientRatioStatisticRequest extends Request {
         } 
 
         /**
-         * ResourceDirectoryAccountId.
+         * The ID of the primary account of the Resource Directory member account.
+         * <p>
+         * > call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) interface to obtain this parameter.
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
@@ -107,7 +109,7 @@ public class GetClientRatioStatisticRequest extends Request {
         }
 
         /**
-         * StatisticTypes.
+         * An array that consists of the details of a statistical type.
          */
         public Builder statisticTypes(java.util.List < String > statisticTypes) {
             this.putQueryParameter("StatisticTypes", statisticTypes);
@@ -116,7 +118,7 @@ public class GetClientRatioStatisticRequest extends Request {
         }
 
         /**
-         * TimeEnd.
+         * The timestamp that specifies the end of the time range to collect statistics. Unit: milliseconds.
          */
         public Builder timeEnd(Long timeEnd) {
             this.putQueryParameter("TimeEnd", timeEnd);
@@ -125,7 +127,7 @@ public class GetClientRatioStatisticRequest extends Request {
         }
 
         /**
-         * TimeStart.
+         * The timestamp that specifies the beginning of the time range to collect statistics. Unit: milliseconds.
          */
         public Builder timeStart(Long timeStart) {
             this.putQueryParameter("TimeStart", timeStart);

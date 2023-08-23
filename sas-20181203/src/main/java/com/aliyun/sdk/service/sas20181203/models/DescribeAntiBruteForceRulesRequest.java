@@ -124,7 +124,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -145,7 +145,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the rule.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -154,7 +154,7 @@ public class DescribeAntiBruteForceRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

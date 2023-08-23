@@ -535,7 +535,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * @deprecated
-      * This operation is phased out. You can use the ListCheckResult operation.
+      * This operation is phased out. You can use the [ListCheckResult](~~ListCheckResult~~) operation.
       *
      */
     CompletableFuture<DescribeRiskCheckResultResponse> describeRiskCheckResult(DescribeRiskCheckResultRequest request);
@@ -1143,6 +1143,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PublicPreCheckImageScanTaskResponse> publicPreCheckImageScanTask(PublicPreCheckImageScanTaskRequest request);
 
     CompletableFuture<PublicSyncAndCreateImageScanTaskResponse> publicSyncAndCreateImageScanTask(PublicSyncAndCreateImageScanTaskRequest request);
+
+    CompletableFuture<QueryAttackCountResponse> queryAttackCount(QueryAttackCountRequest request);
 
     CompletableFuture<QueryDiscoverDatabaseResponse> queryDiscoverDatabase(QueryDiscoverDatabaseRequest request);
 

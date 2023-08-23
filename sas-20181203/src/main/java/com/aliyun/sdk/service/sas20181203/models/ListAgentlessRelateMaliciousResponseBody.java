@@ -62,7 +62,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * List.
+         * The list of hosts that are associated with the risk.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * FilePath.
+             * The file path.
              */
             public Builder filePath(String filePath) {
                 this.filePath = filePath;
@@ -198,7 +198,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * FirstScanTimestamp.
+             * The timestamp when the first scan was performed. Unit: milliseconds.
              */
             public Builder firstScanTimestamp(Long firstScanTimestamp) {
                 this.firstScanTimestamp = firstScanTimestamp;
@@ -206,7 +206,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the asset.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -214,7 +214,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -222,7 +222,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -230,7 +230,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * LatestScanTimestamp.
+             * The timestamp when the last scan was performed. Unit: milliseconds.
              */
             public Builder latestScanTimestamp(Long latestScanTimestamp) {
                 this.latestScanTimestamp = latestScanTimestamp;
@@ -238,7 +238,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -315,7 +315,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * Count.
+             * The number of entries returned on the current page.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -323,7 +323,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -331,7 +331,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -339,7 +339,7 @@ public class ListAgentlessRelateMaliciousResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

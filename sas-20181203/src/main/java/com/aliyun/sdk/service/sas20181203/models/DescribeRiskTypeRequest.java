@@ -17,12 +17,17 @@ public class DescribeRiskTypeRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("Source")
+    private String source;
+
+    @Query
     @NameInMap("SourceIp")
     private String sourceIp;
 
     private DescribeRiskTypeRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
+        this.source = builder.source;
         this.sourceIp = builder.sourceIp;
     }
 
@@ -47,6 +52,13 @@ public class DescribeRiskTypeRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -55,6 +67,7 @@ public class DescribeRiskTypeRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeRiskTypeRequest, Builder> {
         private String lang; 
+        private String source; 
         private String sourceIp; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class DescribeRiskTypeRequest extends Request {
         private Builder(DescribeRiskTypeRequest request) {
             super(request);
             this.lang = request.lang;
+            this.source = request.source;
             this.sourceIp = request.sourceIp;
         } 
 
@@ -77,6 +91,15 @@ public class DescribeRiskTypeRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

@@ -62,7 +62,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * List.
+         * The tasks.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -262,7 +262,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * EndTime.
+             * The end timestamp of the task. Unit: milliseconds.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -270,7 +270,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the asset.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -278,7 +278,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -286,7 +286,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -294,7 +294,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the task.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -302,7 +302,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The result of the detection.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -310,7 +310,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start timestamp of the task. Unit: milliseconds.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -318,7 +318,13 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the detection task.
+             * <p>
+             * 
+             * *   **1**: The detection task is in progress.
+             * *   **2**: The detection task is complete.
+             * *   **3**: The detection task fails.
+             * *   **4**: The detection task times out.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -326,7 +332,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the asset that is detected.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -334,7 +340,11 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the asset that is detected. Valid values:
+             * <p>
+             * 
+             * *   **1**: snapshot
+             * *   **2**: image
              */
             public Builder targetType(Integer targetType) {
                 this.targetType = targetType;
@@ -342,7 +352,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -350,7 +360,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskName.
+             * The name of the detection task.
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -358,7 +368,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the asset.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -423,7 +433,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -431,7 +441,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -439,7 +449,7 @@ public class ListAgentlessTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

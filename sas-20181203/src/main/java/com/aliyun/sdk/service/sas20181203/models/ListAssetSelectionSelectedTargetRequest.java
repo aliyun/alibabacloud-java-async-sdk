@@ -69,7 +69,7 @@ public class ListAssetSelectionSelectedTargetRequest extends Request {
         } 
 
         /**
-         * SelectionKey.
+         * The unique ID of the asset.
          */
         public Builder selectionKey(String selectionKey) {
             this.putQueryParameter("SelectionKey", selectionKey);
@@ -78,7 +78,7 @@ public class ListAssetSelectionSelectedTargetRequest extends Request {
         }
 
         /**
-         * TargetList.
+         * The details of queries.
          */
         public Builder targetList(java.util.List < String > targetList) {
             this.putQueryParameter("TargetList", targetList);

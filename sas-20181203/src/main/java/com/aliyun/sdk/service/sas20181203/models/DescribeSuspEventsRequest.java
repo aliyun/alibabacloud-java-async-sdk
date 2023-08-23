@@ -491,7 +491,7 @@ public class DescribeSuspEventsRequest extends Request {
          * The ID of the alert event.
          * <p>
          * 
-         * >  To query the details about the exceptions of an alert event, you must specify the ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the IDs of alert events.
+         * > To query the details of an alert event, you must specify the ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the IDs of alert events.
          */
         public Builder alarmUniqueInfo(String alarmUniqueInfo) {
             this.putQueryParameter("AlarmUniqueInfo", alarmUniqueInfo);
@@ -500,7 +500,7 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * The types of assets.
+         * The types of the assets.
          */
         public Builder assetsTypeList(java.util.List < String > assetsTypeList) {
             this.putQueryParameter("AssetsTypeList", assetsTypeList);
@@ -671,7 +671,7 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: **20**.
+         * The number of entries to return on each page. Default value: **20**. Maximum value: 100.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -726,7 +726,10 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * The Alibaba Cloud account ID of the member in the resource directory.
+         * <p>
+         * 
+         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

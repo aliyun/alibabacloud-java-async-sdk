@@ -57,6 +57,10 @@ public class DescribeVulListRequest extends Request {
     private Long resourceDirectoryAccountId;
 
     @Query
+    @NameInMap("StatusList")
+    private String statusList;
+
+    @Query
     @NameInMap("Type")
     @Validation(required = true)
     private String type;
@@ -82,6 +86,7 @@ public class DescribeVulListRequest extends Request {
         this.pageSize = builder.pageSize;
         this.remark = builder.remark;
         this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
+        this.statusList = builder.statusList;
         this.type = builder.type;
         this.uuids = builder.uuids;
         this.vpcInstanceIds = builder.vpcInstanceIds;
@@ -178,6 +183,13 @@ public class DescribeVulListRequest extends Request {
     }
 
     /**
+     * @return statusList
+     */
+    public String getStatusList() {
+        return this.statusList;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -210,6 +222,7 @@ public class DescribeVulListRequest extends Request {
         private Integer pageSize; 
         private String remark; 
         private Long resourceDirectoryAccountId; 
+        private String statusList; 
         private String type; 
         private String uuids; 
         private String vpcInstanceIds; 
@@ -231,6 +244,7 @@ public class DescribeVulListRequest extends Request {
             this.pageSize = request.pageSize;
             this.remark = request.remark;
             this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
+            this.statusList = request.statusList;
             this.type = request.type;
             this.uuids = request.uuids;
             this.vpcInstanceIds = request.vpcInstanceIds;
@@ -351,6 +365,15 @@ public class DescribeVulListRequest extends Request {
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
             this.resourceDirectoryAccountId = resourceDirectoryAccountId;
+            return this;
+        }
+
+        /**
+         * StatusList.
+         */
+        public Builder statusList(String statusList) {
+            this.putQueryParameter("StatusList", statusList);
+            this.statusList = statusList;
             return this;
         }
 

@@ -62,7 +62,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * List.
+         * The information about the hosts.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;
@@ -70,7 +70,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         }
 
         /**
-         * PageInfo.
+         * The pagination information.
          */
         public Builder pageInfo(PageInfo pageInfo) {
             this.pageInfo = pageInfo;
@@ -78,7 +78,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -226,7 +226,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             private Integer vulCount; 
 
             /**
-             * BaselineCount.
+             * The number of baseline risks.
              */
             public Builder baselineCount(Integer baselineCount) {
                 this.baselineCount = baselineCount;
@@ -234,7 +234,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The instance name of the asset.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -242,7 +242,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * The public IP address of the server.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -250,7 +250,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -258,7 +258,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * MaliciousCount.
+             * The number of malicious samples.
              */
             public Builder maliciousCount(Integer maliciousCount) {
                 this.maliciousCount = maliciousCount;
@@ -266,7 +266,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * ScanTime.
+             * The timestamp of the detection. Unit: milliseconds.
              */
             public Builder scanTime(Long scanTime) {
                 this.scanTime = scanTime;
@@ -274,7 +274,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the asset that is detected.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -282,7 +282,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the asset that is detected.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -290,7 +290,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The UUID of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -298,7 +298,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * VulCount.
+             * The number of detected vulnerabilities.
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;
@@ -363,7 +363,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CurrentPage.
+             * The page number of the returned page.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -371,7 +371,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -379,7 +379,7 @@ public class ListAgentlessRiskUuidResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

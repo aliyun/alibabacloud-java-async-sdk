@@ -50,7 +50,7 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
             private String targetName; 
 
             /**
-             * TargetId.
+             * The ID of the asset.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -118,7 +118,7 @@ public class ListAssetSelectionSelectedTargetResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the asset.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;

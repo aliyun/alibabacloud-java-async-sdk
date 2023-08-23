@@ -97,7 +97,10 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         } 
 
         /**
-         * Criteria.
+         * The search conditions that are used to query assets. The value of this parameter is in the JSON format and is case-sensitive.
+         * <p>
+         * 
+         * > A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the [DescribeCriteria](~~DescribeCriteria~~) operation to query the supported search conditions.
          */
         public Builder criteria(String criteria) {
             this.putQueryParameter("Criteria", criteria);
@@ -106,7 +109,11 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         }
 
         /**
-         * CriteriaOperation.
+         * The type of the operation on search conditions. Valid values:
+         * <p>
+         * 
+         * *   **add**: adds assets.
+         * *   **del**: deletes assets.
          */
         public Builder criteriaOperation(String criteriaOperation) {
             this.putQueryParameter("CriteriaOperation", criteriaOperation);
@@ -115,7 +122,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         }
 
         /**
-         * SelectionKey.
+         * The unique ID of the asset.
          */
         public Builder selectionKey(String selectionKey) {
             this.putQueryParameter("SelectionKey", selectionKey);
@@ -124,7 +131,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
         }
 
         /**
-         * TargetOperationList.
+         * The list of assets.
          */
         public Builder targetOperationList(java.util.List < TargetOperationList> targetOperationList) {
             this.putQueryParameter("TargetOperationList", targetOperationList);
@@ -178,7 +185,11 @@ public class AddAssetSelectionCriteriaRequest extends Request {
             private String target; 
 
             /**
-             * Operation.
+             * The type of the operation. Valid values:
+             * <p>
+             * 
+             * *   **add**
+             * *   **del**
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -186,7 +197,7 @@ public class AddAssetSelectionCriteriaRequest extends Request {
             }
 
             /**
-             * Target.
+             * The ID of the asset.
              */
             public Builder target(String target) {
                 this.target = target;

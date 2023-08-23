@@ -210,7 +210,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * AuthVersionCheckCount.
+             * The number of assets that are protected by the specified edition.
              */
             public Builder authVersionCheckCount(Integer authVersionCheckCount) {
                 this.authVersionCheckCount = authVersionCheckCount;
@@ -249,7 +249,13 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Os.
+             * The operating system type of the asset. Valid values:
+             * <p>
+             * 
+             * * **windows**
+             * * **linux**
+             * 
+             * > This parameter is returned only when Lang is set to zh.
              */
             public Builder os(String os) {
                 this.os = os;

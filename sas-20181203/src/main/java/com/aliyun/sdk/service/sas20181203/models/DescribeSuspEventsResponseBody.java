@@ -130,7 +130,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the information about the alert event.
+         * The information about the alert event.
          */
         public Builder suspEvents(java.util.List < SuspEvents> suspEvents) {
             this.suspEvents = suspEvents;
@@ -1254,7 +1254,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUuid.
+             * The UUID of the image.
              */
             public Builder imageUuid(String imageUuid) {
                 this.imageUuid = imageUuid;
@@ -1342,7 +1342,11 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             }
 
             /**
-             * LargeModel.
+             * Indicates whether the alert event can be detected by the cloud sandbox feature. Valid values:
+             * <p>
+             * 
+             * * **true**
+             * * **false**
              */
             public Builder largeModel(Boolean largeModel) {
                 this.largeModel = largeModel;

@@ -50,7 +50,7 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RegionList.
+         * The information about the regions.
          */
         public Builder regionList(java.util.List < String > regionList) {
             this.regionList = regionList;
@@ -58,7 +58,7 @@ public class ListAgentlessRegionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

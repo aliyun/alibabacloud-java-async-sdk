@@ -50,7 +50,7 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * SelectionKey.
+             * The ID of the current asset selection. It can be used to query and modify the asset that is selected.
              */
             public Builder selectionKey(String selectionKey) {
                 this.selectionKey = selectionKey;
@@ -118,7 +118,12 @@ public class GetAssetSelectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The dimension based on which the asset is selected. Valid values:
+             * <p>
+             * 
+             * *   **instance**: The asset is selected by server.
+             * *   **group**: The asset is selected by group.
+             * *   **vpc**: The asset is selected by VPC.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

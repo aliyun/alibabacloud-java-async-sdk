@@ -126,7 +126,7 @@ public class DescribeRiskCheckResultResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the check items.
+         * The check items.
          */
         public Builder list(java.util.List < List> list) {
             this.list = list;

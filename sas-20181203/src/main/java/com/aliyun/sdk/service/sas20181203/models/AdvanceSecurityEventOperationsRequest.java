@@ -96,7 +96,7 @@ public class AdvanceSecurityEventOperationsRequest extends Request {
         } 
 
         /**
-         * EventName.
+         * The alert name.
          */
         public Builder eventName(String eventName) {
             this.putQueryParameter("EventName", eventName);
@@ -105,7 +105,34 @@ public class AdvanceSecurityEventOperationsRequest extends Request {
         }
 
         /**
-         * EventType.
+         * The alert event type. Valid values:
+         * <p>
+         * 
+         * *   Suspicious process
+         * *   Webshell
+         * *   Unusual logon
+         * *   Exception
+         * *   Sensitive file tampering
+         * *   Malicious process (cloud threat detection)
+         * *   Unusual network connection
+         * *   Abnormal account
+         * *   Application intrusion event
+         * *   Cloud threat detection
+         * *   Precision defense
+         * *   Application whitelist
+         * *   Persistent webshell
+         * *   Web application threat detection
+         * *   Malicious script
+         * *   Threat intelligence
+         * *   Malicious network activity
+         * *   Cluster exception
+         * *   Webshell (on-premises threat detection)
+         * *   Vulnerability exploitation
+         * *   Malicious process (on-premises threat detection)
+         * *   Trusted exception
+         * *   Others
+         * 
+         * For more information about alert types, see [Alerts](~~68388~~).
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -123,7 +150,7 @@ public class AdvanceSecurityEventOperationsRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The rule ID.
          */
         public Builder ruleId(Integer ruleId) {
             this.putQueryParameter("RuleId", ruleId);

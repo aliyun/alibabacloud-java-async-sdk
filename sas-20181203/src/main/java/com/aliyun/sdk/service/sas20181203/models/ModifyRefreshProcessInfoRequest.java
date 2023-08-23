@@ -54,7 +54,10 @@ public class ModifyRefreshProcessInfoRequest extends Request {
         } 
 
         /**
-         * Uuid.
+         * The UUID of the server.
+         * <p>
+         * 
+         * > You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of servers.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

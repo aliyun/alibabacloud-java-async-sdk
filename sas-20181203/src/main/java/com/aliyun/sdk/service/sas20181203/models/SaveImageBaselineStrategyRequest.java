@@ -22,6 +22,10 @@ public class SaveImageBaselineStrategyRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("Source")
+    private String source;
+
+    @Query
     @NameInMap("StrategyId")
     private Long strategyId;
 
@@ -33,6 +37,7 @@ public class SaveImageBaselineStrategyRequest extends Request {
         super(builder);
         this.baselineItemList = builder.baselineItemList;
         this.lang = builder.lang;
+        this.source = builder.source;
         this.strategyId = builder.strategyId;
         this.strategyName = builder.strategyName;
     }
@@ -65,6 +70,13 @@ public class SaveImageBaselineStrategyRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return strategyId
      */
     public Long getStrategyId() {
@@ -81,6 +93,7 @@ public class SaveImageBaselineStrategyRequest extends Request {
     public static final class Builder extends Request.Builder<SaveImageBaselineStrategyRequest, Builder> {
         private String baselineItemList; 
         private String lang; 
+        private String source; 
         private Long strategyId; 
         private String strategyName; 
 
@@ -92,6 +105,7 @@ public class SaveImageBaselineStrategyRequest extends Request {
             super(request);
             this.baselineItemList = request.baselineItemList;
             this.lang = request.lang;
+            this.source = request.source;
             this.strategyId = request.strategyId;
             this.strategyName = request.strategyName;
         } 
@@ -118,6 +132,15 @@ public class SaveImageBaselineStrategyRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

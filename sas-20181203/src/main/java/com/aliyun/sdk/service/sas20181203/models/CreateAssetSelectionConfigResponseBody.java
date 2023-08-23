@@ -50,7 +50,7 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,11 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * BusinessType.
+             * The business type that is selected for the asset. Valid values:
+             * <p>
+             * 
+             * *   **VIRUS_SCAN_CYCLE_CONFIG**: virus detection configuration
+             * *   **VIRUS_SCAN_ONCE_TASK**: one-time scan for virus detection
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -130,7 +134,7 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SelectionKey.
+             * The ID of the current asset selection. It can be used to query and modify the asset that is selected.
              */
             public Builder selectionKey(Long selectionKey) {
                 this.selectionKey = selectionKey;
@@ -138,7 +142,12 @@ public class CreateAssetSelectionConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The dimension based on which the asset is selected. Valid values:
+             * <p>
+             * 
+             * *   **group**: The asset is selected by server.
+             * *   **group**: The asset is selected by group.
+             * *   **vpc**: The asset is selected by VPC.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

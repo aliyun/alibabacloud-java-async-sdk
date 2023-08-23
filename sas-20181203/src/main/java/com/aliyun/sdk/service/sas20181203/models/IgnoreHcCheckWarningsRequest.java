@@ -26,8 +26,11 @@ public class IgnoreHcCheckWarningsRequest extends Request {
 
     @Query
     @NameInMap("RiskId")
-    @Validation(required = true)
     private String riskId;
+
+    @Query
+    @NameInMap("Source")
+    private String source;
 
     @Query
     @NameInMap("SourceIp")
@@ -44,6 +47,7 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         this.checkWarningIds = builder.checkWarningIds;
         this.reason = builder.reason;
         this.riskId = builder.riskId;
+        this.source = builder.source;
         this.sourceIp = builder.sourceIp;
         this.type = builder.type;
     }
@@ -90,6 +94,13 @@ public class IgnoreHcCheckWarningsRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return sourceIp
      */
     public String getSourceIp() {
@@ -108,6 +119,7 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         private String checkWarningIds; 
         private String reason; 
         private String riskId; 
+        private String source; 
         private String sourceIp; 
         private Long type; 
 
@@ -121,6 +133,7 @@ public class IgnoreHcCheckWarningsRequest extends Request {
             this.checkWarningIds = request.checkWarningIds;
             this.reason = request.reason;
             this.riskId = request.riskId;
+            this.source = request.source;
             this.sourceIp = request.sourceIp;
             this.type = request.type;
         } 
@@ -158,6 +171,15 @@ public class IgnoreHcCheckWarningsRequest extends Request {
         public Builder riskId(String riskId) {
             this.putQueryParameter("RiskId", riskId);
             this.riskId = riskId;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

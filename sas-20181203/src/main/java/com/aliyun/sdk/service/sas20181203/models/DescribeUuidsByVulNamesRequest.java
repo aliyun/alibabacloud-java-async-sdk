@@ -252,10 +252,11 @@ public class DescribeUuidsByVulNamesRequest extends Request {
         } 
 
         /**
-         * Specifies whether the vulnerability is handled. Valid values:
+         * Specifies whether the vulnerability is fixed. Valid values:
          * <p>
          * 
-         * **y**: The vulnerability is handled. **n**: The vulnerability is not handled.
+         * *   **y**: the vulnerability is fixed.
+         * *   **n**: the vulnerability is not fixed.
          */
         public Builder dealed(String dealed) {
             this.putQueryParameter("Dealed", dealed);

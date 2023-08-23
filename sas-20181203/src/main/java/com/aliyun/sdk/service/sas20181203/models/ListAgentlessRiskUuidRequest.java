@@ -138,7 +138,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -147,7 +147,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * InternetIp.
+         * The public IP address of the asset that you want to query.
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);
@@ -156,7 +156,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * IntranetIp.
+         * The private IP address of the asset that you want to query.
          */
         public Builder intranetIp(String intranetIp) {
             this.putQueryParameter("IntranetIp", intranetIp);
@@ -165,7 +165,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * MachineName.
+         * The name of the instance.
          */
         public Builder machineName(String machineName) {
             this.putQueryParameter("MachineName", machineName);
@@ -174,7 +174,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -183,7 +183,11 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * Risk.
+         * Specifies whether risks exist. Valid values:
+         * <p>
+         * 
+         * *   **true**: Risks exist.
+         * *   **false**: Risks do not exist.
          */
         public Builder risk(Boolean risk) {
             this.putQueryParameter("Risk", risk);
@@ -192,7 +196,7 @@ public class ListAgentlessRiskUuidRequest extends Request {
         }
 
         /**
-         * TargetName.
+         * The name of the detection object.
          */
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);

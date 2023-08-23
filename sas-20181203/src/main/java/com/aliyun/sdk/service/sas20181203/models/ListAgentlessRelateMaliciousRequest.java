@@ -84,7 +84,7 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -93,7 +93,7 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         }
 
         /**
-         * EventId.
+         * The ID of the event.
          */
         public Builder eventId(Long eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -102,7 +102,7 @@ public class ListAgentlessRelateMaliciousRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

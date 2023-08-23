@@ -250,7 +250,7 @@ public class ListAgentlessTaskRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * The number of the page to return.
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -259,7 +259,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end timestamp of the task.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -268,7 +268,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * InternetIp.
+         * The public IP address of the asset that you want to query.
          */
         public Builder internetIp(String internetIp) {
             this.putQueryParameter("InternetIp", internetIp);
@@ -277,7 +277,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * IntranetIp.
+         * The private IP address of the asset that you want to query.
          */
         public Builder intranetIp(String intranetIp) {
             this.putQueryParameter("IntranetIp", intranetIp);
@@ -286,7 +286,11 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language type. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -295,7 +299,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * MachineName.
+         * The name of the instance.
          */
         public Builder machineName(String machineName) {
             this.putQueryParameter("MachineName", machineName);
@@ -304,7 +308,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -313,7 +317,11 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * RootTask.
+         * Specifies whether to query main tasks. Valid values:
+         * <p>
+         * 
+         * *   **true**: queries main tasks.
+         * *   **false**: queries subtasks.
          */
         public Builder rootTask(Boolean rootTask) {
             this.putQueryParameter("RootTask", rootTask);
@@ -322,7 +330,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * RootTaskId.
+         * The ID of the main task.
          */
         public Builder rootTaskId(String rootTaskId) {
             this.putQueryParameter("RootTaskId", rootTaskId);
@@ -331,7 +339,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start timestamp of the task.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -340,7 +348,13 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the detection task.
+         * <p>
+         * 
+         * *   **1**: The detection task is in progress.
+         * *   **2**: The detection task is complete.
+         * *   **3**: The detection task fails.
+         * *   **4**: The detection task times out.
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
@@ -349,7 +363,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * TargetName.
+         * The name of the asset that you want to detect.
          */
         public Builder targetName(String targetName) {
             this.putQueryParameter("TargetName", targetName);
@@ -358,7 +372,11 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The type of the asset that you want to detect. Valid values:
+         * <p>
+         * 
+         * *   **1**: snapshot
+         * *   **2**: image
          */
         public Builder targetType(Integer targetType) {
             this.putQueryParameter("TargetType", targetType);
@@ -367,7 +385,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the main task. If you want to query subtasks of a main task, you must specify this parameter.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);
@@ -376,7 +394,7 @@ public class ListAgentlessTaskRequest extends Request {
         }
 
         /**
-         * Uuid.
+         * The UUID of the server.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);

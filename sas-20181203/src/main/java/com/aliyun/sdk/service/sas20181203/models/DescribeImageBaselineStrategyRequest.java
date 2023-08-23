@@ -17,12 +17,17 @@ public class DescribeImageBaselineStrategyRequest extends Request {
     private String lang;
 
     @Query
+    @NameInMap("Source")
+    private String source;
+
+    @Query
     @NameInMap("StrategyId")
     private Long strategyId;
 
     private DescribeImageBaselineStrategyRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
+        this.source = builder.source;
         this.strategyId = builder.strategyId;
     }
 
@@ -47,6 +52,13 @@ public class DescribeImageBaselineStrategyRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return strategyId
      */
     public Long getStrategyId() {
@@ -55,6 +67,7 @@ public class DescribeImageBaselineStrategyRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeImageBaselineStrategyRequest, Builder> {
         private String lang; 
+        private String source; 
         private Long strategyId; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class DescribeImageBaselineStrategyRequest extends Request {
         private Builder(DescribeImageBaselineStrategyRequest request) {
             super(request);
             this.lang = request.lang;
+            this.source = request.source;
             this.strategyId = request.strategyId;
         } 
 
@@ -77,6 +91,15 @@ public class DescribeImageBaselineStrategyRequest extends Request {
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

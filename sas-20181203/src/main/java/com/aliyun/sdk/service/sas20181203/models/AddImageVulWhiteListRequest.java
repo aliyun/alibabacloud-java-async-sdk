@@ -21,6 +21,10 @@ public class AddImageVulWhiteListRequest extends Request {
     private String reason;
 
     @Query
+    @NameInMap("Source")
+    private String source;
+
+    @Query
     @NameInMap("Target")
     private String target;
 
@@ -36,6 +40,7 @@ public class AddImageVulWhiteListRequest extends Request {
         super(builder);
         this.lang = builder.lang;
         this.reason = builder.reason;
+        this.source = builder.source;
         this.target = builder.target;
         this.type = builder.type;
         this.whitelist = builder.whitelist;
@@ -69,6 +74,13 @@ public class AddImageVulWhiteListRequest extends Request {
     }
 
     /**
+     * @return source
+     */
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * @return target
      */
     public String getTarget() {
@@ -92,6 +104,7 @@ public class AddImageVulWhiteListRequest extends Request {
     public static final class Builder extends Request.Builder<AddImageVulWhiteListRequest, Builder> {
         private String lang; 
         private String reason; 
+        private String source; 
         private String target; 
         private String type; 
         private String whitelist; 
@@ -104,6 +117,7 @@ public class AddImageVulWhiteListRequest extends Request {
             super(request);
             this.lang = request.lang;
             this.reason = request.reason;
+            this.source = request.source;
             this.target = request.target;
             this.type = request.type;
             this.whitelist = request.whitelist;
@@ -124,6 +138,15 @@ public class AddImageVulWhiteListRequest extends Request {
         public Builder reason(String reason) {
             this.putQueryParameter("Reason", reason);
             this.reason = reason;
+            return this;
+        }
+
+        /**
+         * Source.
+         */
+        public Builder source(String source) {
+            this.putQueryParameter("Source", source);
+            this.source = source;
             return this;
         }
 

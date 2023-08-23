@@ -55,7 +55,7 @@ public class DescribeAccessKeyLeakDetailRequest extends Request {
         } 
 
         /**
-         * Id.
+         * The ID of the AccessKey pair leak.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

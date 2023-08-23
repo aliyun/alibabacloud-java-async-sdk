@@ -78,7 +78,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         }
 
         /**
-         * VulCount.
+         * The total number of vulnerabilities on the server.
          */
         public Builder vulCount(Integer vulCount) {
             this.vulCount = vulCount;
@@ -178,7 +178,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The ID of the server.
+             * The instance ID.
              */
             public Builder machineInstanceId(String machineInstanceId) {
                 this.machineInstanceId = machineInstanceId;
@@ -202,7 +202,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the operating system that the server runs.
+             * The operating system that the server runs.
              */
             public Builder os(String os) {
                 this.os = os;

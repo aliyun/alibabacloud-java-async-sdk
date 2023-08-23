@@ -55,7 +55,10 @@ public class DeleteSuspEventNodeRequest extends Request {
         } 
 
         /**
-         * NoteId.
+         * The ID of the description.
+         * <p>
+         * 
+         * > You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the ID of the description by using the EventNotes field.
          */
         public Builder noteId(Long noteId) {
             this.putQueryParameter("NoteId", noteId);

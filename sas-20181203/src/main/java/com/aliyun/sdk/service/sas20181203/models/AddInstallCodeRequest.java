@@ -136,10 +136,10 @@ public class AddInstallCodeRequest extends Request {
         }
 
         /**
-         * The ID of the asset group to which the you want to add the asset.
+         * The ID of the asset group to which you want to add the asset.
          * <p>
          * 
-         * >  You can call the [DescribeAllGroups](~~describeallgroups~~) operation to query the IDs of asset groups.
+         * > You can call the [DescribeAllGroups](~~DescribeAllGroups~~) operation to query the IDs of asset groups.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -175,7 +175,7 @@ public class AddInstallCodeRequest extends Request {
         }
 
         /**
-         * ProxyCluster.
+         * The name of the proxy cluster.
          */
         public Builder proxyCluster(String proxyCluster) {
             this.putQueryParameter("ProxyCluster", proxyCluster);

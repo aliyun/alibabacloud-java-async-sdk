@@ -62,7 +62,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the IP addresses.
+         * The IP addresses.
          */
         public Builder machineList(java.util.List < MachineList> machineList) {
             this.machineList = machineList;
@@ -274,7 +274,11 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * AliNetOnline.
+             * The status of the host network extension. Valid values:
+             * <p>
+             * 
+             * *   **true**: online
+             * *   **false**: offline
              */
             public Builder aliNetOnline(Boolean aliNetOnline) {
                 this.aliNetOnline = aliNetOnline;
@@ -290,7 +294,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The blocked IP address.
+             * The IP address that is blocked.
              */
             public Builder blockIp(String blockIp) {
                 this.blockIp = blockIp;
@@ -298,7 +302,11 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * BlockType.
+             * The blocking type. Valid values:
+             * <p>
+             * 
+             * *   **group**: security group
+             * *   **alinet**: host network extension
              */
             public Builder blockType(String blockType) {
                 this.blockType = blockType;
@@ -314,7 +322,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary key in the table of records on the blocked IP address.
+             * The ID of the primary key that is recorded in the defense rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -322,7 +330,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server.
+             * The instance name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -387,7 +395,7 @@ public class DescribeBruteForceRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server on which access from the IP address is blocked.
+             * The UUID of the server on which the defense rule takes effect.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
