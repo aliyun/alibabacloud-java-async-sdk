@@ -575,7 +575,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<FlightCancelOrderV2Response> flightCancelOrderV2(FlightCancelOrderV2Request request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FlightCancelOrderV2").setMethod(HttpMethod.DELETE).setPathRegex("/dtb-flight/v2/order/action/cancel").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FlightCancelOrderV2").setMethod(HttpMethod.DELETE).setPathRegex("/dtb-flight/v2/order/action/cancel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FlightCancelOrderV2Response.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -687,7 +687,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<FlightModifyCancelV2Response> flightModifyCancelV2(FlightModifyCancelV2Request request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FlightModifyCancelV2").setMethod(HttpMethod.DELETE).setPathRegex("/dtb-flight/v2/modify/action/cancel").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("FlightModifyCancelV2").setMethod(HttpMethod.DELETE).setPathRegex("/dtb-flight/v2/modify/action/cancel").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FlightModifyCancelV2Response.create());
             return this.handler.execute(params);
         } catch (Exception e) {

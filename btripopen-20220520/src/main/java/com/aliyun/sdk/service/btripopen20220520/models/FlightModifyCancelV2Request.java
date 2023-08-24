@@ -12,23 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FlightModifyCancelV2Request</p>
  */
 public class FlightModifyCancelV2Request extends Request {
-    @Body
+    @Query
     @NameInMap("isv_name")
     private String isvName;
 
-    @Body
+    @Query
     @NameInMap("order_id")
     private Long orderId;
 
-    @Body
+    @Query
     @NameInMap("out_order_id")
     private String outOrderId;
 
-    @Body
+    @Query
     @NameInMap("out_sub_order_id")
     private String outSubOrderId;
 
-    @Body
+    @Query
     @NameInMap("sub_order_id")
     private Long subOrderId;
 
@@ -127,7 +127,7 @@ public class FlightModifyCancelV2Request extends Request {
          * isv_name.
          */
         public Builder isvName(String isvName) {
-            this.putBodyParameter("isv_name", isvName);
+            this.putQueryParameter("isv_name", isvName);
             this.isvName = isvName;
             return this;
         }
@@ -136,7 +136,7 @@ public class FlightModifyCancelV2Request extends Request {
          * order_id.
          */
         public Builder orderId(Long orderId) {
-            this.putBodyParameter("order_id", orderId);
+            this.putQueryParameter("order_id", orderId);
             this.orderId = orderId;
             return this;
         }
@@ -145,7 +145,7 @@ public class FlightModifyCancelV2Request extends Request {
          * out_order_id.
          */
         public Builder outOrderId(String outOrderId) {
-            this.putBodyParameter("out_order_id", outOrderId);
+            this.putQueryParameter("out_order_id", outOrderId);
             this.outOrderId = outOrderId;
             return this;
         }
@@ -154,7 +154,7 @@ public class FlightModifyCancelV2Request extends Request {
          * out_sub_order_id.
          */
         public Builder outSubOrderId(String outSubOrderId) {
-            this.putBodyParameter("out_sub_order_id", outSubOrderId);
+            this.putQueryParameter("out_sub_order_id", outSubOrderId);
             this.outSubOrderId = outSubOrderId;
             return this;
         }
@@ -163,7 +163,7 @@ public class FlightModifyCancelV2Request extends Request {
          * sub_order_id.
          */
         public Builder subOrderId(Long subOrderId) {
-            this.putBodyParameter("sub_order_id", subOrderId);
+            this.putQueryParameter("sub_order_id", subOrderId);
             this.subOrderId = subOrderId;
             return this;
         }
