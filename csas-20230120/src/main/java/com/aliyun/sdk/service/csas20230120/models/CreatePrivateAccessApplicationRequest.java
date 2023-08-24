@@ -146,8 +146,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
          * Addresses.
          */
         public Builder addresses(java.util.List < String > addresses) {
-            String addressesShrink = shrink(addresses, "Addresses", "json");
-            this.putBodyParameter("Addresses", addressesShrink);
+            this.putBodyParameter("Addresses", addresses);
             this.addresses = addresses;
             return this;
         }
@@ -174,8 +173,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
          * PortRanges.
          */
         public Builder portRanges(java.util.List < PortRanges> portRanges) {
-            String portRangesShrink = shrink(portRanges, "PortRanges", "json");
-            this.putBodyParameter("PortRanges", portRangesShrink);
+            this.putBodyParameter("PortRanges", portRanges);
             this.portRanges = portRanges;
             return this;
         }
@@ -202,8 +200,7 @@ public class CreatePrivateAccessApplicationRequest extends Request {
          * TagIds.
          */
         public Builder tagIds(java.util.List < String > tagIds) {
-            String tagIdsShrink = shrink(tagIds, "TagIds", "json");
-            this.putBodyParameter("TagIds", tagIdsShrink);
+            this.putBodyParameter("TagIds", tagIds);
             this.tagIds = tagIds;
             return this;
         }

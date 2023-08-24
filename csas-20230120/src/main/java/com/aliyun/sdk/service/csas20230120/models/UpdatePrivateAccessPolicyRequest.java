@@ -212,8 +212,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
          * ApplicationIds.
          */
         public Builder applicationIds(java.util.List < String > applicationIds) {
-            String applicationIdsShrink = shrink(applicationIds, "ApplicationIds", "json");
-            this.putBodyParameter("ApplicationIds", applicationIdsShrink);
+            this.putBodyParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
             return this;
         }
@@ -231,8 +230,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
          * CustomUserAttributes.
          */
         public Builder customUserAttributes(java.util.List < CustomUserAttributes> customUserAttributes) {
-            String customUserAttributesShrink = shrink(customUserAttributes, "CustomUserAttributes", "json");
-            this.putBodyParameter("CustomUserAttributes", customUserAttributesShrink);
+            this.putBodyParameter("CustomUserAttributes", customUserAttributes);
             this.customUserAttributes = customUserAttributes;
             return this;
         }
@@ -295,8 +293,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
          * 内网访问标签ID集合。一条策略最多支持100个内网访问标签ID。
          */
         public Builder tagIds(java.util.List < String > tagIds) {
-            String tagIdsShrink = shrink(tagIds, "TagIds", "json");
-            this.putBodyParameter("TagIds", tagIdsShrink);
+            this.putBodyParameter("TagIds", tagIds);
             this.tagIds = tagIds;
             return this;
         }
@@ -305,8 +302,7 @@ public class UpdatePrivateAccessPolicyRequest extends Request {
          * UserGroupIds.
          */
         public Builder userGroupIds(java.util.List < String > userGroupIds) {
-            String userGroupIdsShrink = shrink(userGroupIds, "UserGroupIds", "json");
-            this.putBodyParameter("UserGroupIds", userGroupIdsShrink);
+            this.putBodyParameter("UserGroupIds", userGroupIds);
             this.userGroupIds = userGroupIds;
             return this;
         }
