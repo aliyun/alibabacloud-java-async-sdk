@@ -178,7 +178,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * GrantAccountPrivilege
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -196,7 +196,7 @@ public class GrantAccountPrivilegeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * Modifies the permissions of an account for an ApsaraDB for Redis instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

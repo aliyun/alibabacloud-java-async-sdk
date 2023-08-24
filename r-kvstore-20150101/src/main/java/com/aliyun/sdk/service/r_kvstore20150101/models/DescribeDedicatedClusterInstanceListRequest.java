@@ -265,7 +265,10 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the dedicated cluster. You can view the dedicated cluster ID on the Dedicated Clusters page in the ApsaraDB for MyBase console.
+         * <p>
+         * 
+         * > Separate multiple IDs with commas (,).
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -274,7 +277,10 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * DedicatedHostName.
+         * The ID of the host in the dedicated cluster. You can call the [DescribeDedicatedHosts](~~200944~~) operation to query the host ID.
+         * <p>
+         * 
+         * > Separate multiple IDs with commas (,).
          */
         public Builder dedicatedHostName(String dedicatedHostName) {
             this.putQueryParameter("DedicatedHostName", dedicatedHostName);
@@ -283,7 +289,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The database engine of the instance. Set the value to **Redis**.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -292,7 +298,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance. Set the value to **5.0**.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -301,7 +307,10 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > The instance must be created by using a dedicated cluster. For more information, see [What is ApsaraDB for MyBase?](~~141455~~)
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -310,7 +319,12 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * InstanceNetType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **0**: Internet
+         * *   **1**: classic network
+         * *   **2**: Virtual Private Cloud (VPC)
          */
         public Builder instanceNetType(String instanceNetType) {
             this.putQueryParameter("InstanceNetType", instanceNetType);
@@ -319,7 +333,17 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * InstanceStatus.
+         * The state of the instance. Valid values:
+         * <p>
+         * 
+         * *   **0**: The instance is being created.
+         * *   **1**: The instance is running.
+         * *   **3**: The instance is being deleted.
+         * *   **5**: The configurations of the instance are being changed.
+         * *   **6**: The instance is being migrated.
+         * *   **7**: The instance is being restored from a backup.
+         * *   **8**: A master-replica switchover is in progress.
+         * *   **9**: Expired data of the instance is being deleted.
          */
         public Builder instanceStatus(Integer instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -346,7 +370,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -355,7 +379,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -364,7 +388,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -400,7 +424,7 @@ public class DescribeDedicatedClusterInstanceListRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance. You can call the [DescribeZones](~~94527~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -207,7 +207,7 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * IsHistory.
+         * The time when the O\&M task was created. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.
          */
         public Builder isHistory(Integer isHistory) {
             this.putQueryParameter("IsHistory", isHistory);
@@ -234,7 +234,7 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The deadline before which the time to execute the O\&M task can be modified. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -243,7 +243,7 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The operation that you want to perform. Set the value to **DescribeActiveOperationTask**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -252,7 +252,7 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the O\&M task.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -288,7 +288,7 @@ public class DescribeActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The ID of the region.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

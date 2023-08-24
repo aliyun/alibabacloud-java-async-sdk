@@ -206,7 +206,11 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * CharacterType.
+         * Indicates whether the parameter can be reconfigured. Valid values:
+         * <p>
+         * 
+         * *   **true**: The parameter can be reconfigured.
+         * *   **false**: The parameter cannot be reconfigured.
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -215,7 +219,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The operation that you want to perform. Set the value to **DescribeParameterTemplates**.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -224,7 +228,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine that is run on the instance. The value **Redis** is returned for this parameter.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -233,7 +237,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * r-bp1zxszhcgatnx****
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -260,7 +264,7 @@ public class DescribeParameterTemplatesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the IDs of instances.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

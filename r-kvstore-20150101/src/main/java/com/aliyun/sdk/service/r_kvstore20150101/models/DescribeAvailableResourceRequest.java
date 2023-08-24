@@ -29,6 +29,10 @@ public class DescribeAvailableResourceRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("InstanceScene")
+    private String instanceScene;
+
+    @Query
     @NameInMap("NodeId")
     private String nodeId;
 
@@ -79,6 +83,7 @@ public class DescribeAvailableResourceRequest extends Request {
         this.engine = builder.engine;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceId = builder.instanceId;
+        this.instanceScene = builder.instanceScene;
         this.nodeId = builder.nodeId;
         this.orderType = builder.orderType;
         this.ownerAccount = builder.ownerAccount;
@@ -131,6 +136,13 @@ public class DescribeAvailableResourceRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return instanceScene
+     */
+    public String getInstanceScene() {
+        return this.instanceScene;
     }
 
     /**
@@ -215,6 +227,7 @@ public class DescribeAvailableResourceRequest extends Request {
         private String engine; 
         private String instanceChargeType; 
         private String instanceId; 
+        private String instanceScene; 
         private String nodeId; 
         private String orderType; 
         private String ownerAccount; 
@@ -237,6 +250,7 @@ public class DescribeAvailableResourceRequest extends Request {
             this.engine = request.engine;
             this.instanceChargeType = request.instanceChargeType;
             this.instanceId = request.instanceId;
+            this.instanceScene = request.instanceScene;
             this.nodeId = request.nodeId;
             this.orderType = request.orderType;
             this.ownerAccount = request.ownerAccount;
@@ -251,7 +265,11 @@ public class DescribeAvailableResourceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The display language of the response. Default value: zh-CN. Valid values:
+         * <p>
+         * 
+         * *   **zh-CN**: Chinese
+         * *   **en-US**: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -260,7 +278,11 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The category of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Redis**
+         * *   **Memcache**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -269,7 +291,13 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **PrePaid**: subscription
+         * *   **PostPaid**: pay-as-you-go
+         * 
+         * > The default value is **PrePaid**.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -278,7 +306,10 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > This parameter is available and required only if the **OrderType** parameter is set to **UPGRADE** or **DOWNGRADE**.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -287,7 +318,19 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * InstanceScene.
+         */
+        public Builder instanceScene(String instanceScene) {
+            this.putQueryParameter("InstanceScene", instanceScene);
+            this.instanceScene = instanceScene;
+            return this;
+        }
+
+        /**
+         * The ID of the data node for which you want to query available resources that can be created. You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query the ID of the data node. Remove the number sign (`#`) and the content that follows the number sign. For example, retain only r-bp10noxlhcoim2\*\*\*\*-db-0.
+         * <p>
+         * 
+         * > Before you specify this parameter, you must set the **InstanceId** parameter to the ID of an instance that uses the cluster or read/write splitting architecture.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -296,7 +339,12 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The type of the order. Default value: BUY. Valid values:
+         * <p>
+         * 
+         * *   **BUY**: orders that are newly created
+         * *   **UPGRADE**: orders that are used to upgrade instances
+         * *   **DOWNGRADE**: orders that are used to downgrade instances
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -323,7 +371,14 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The instance series. Valid values:
+         * <p>
+         * 
+         * *   **Local**: ApsaraDB for Redis Community Edition instance that uses local disks or ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses local disks
+         * *   **Tair_rdb**: ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses cloud disks
+         * *   **Tair_scm**: ApsaraDB for Redis Enhanced Edition (Tair) persistent memory-optimized instance
+         * *   **Tair_essd**: ApsaraDB for Redis Enhanced Edition (Tair) ESSD-based instance
+         * *   **OnECS**: ApsaraDB for Redis Community Edition instance that uses cloud disks
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -332,7 +387,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -341,7 +396,10 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.
+         * <p>
+         * 
+         * > You can also query the IDs of resource groups in the Resource Management console. For more information, see [View basic information about a resource group](~~151181~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -377,7 +435,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance. You can call the [DescribeZones](~~94527~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

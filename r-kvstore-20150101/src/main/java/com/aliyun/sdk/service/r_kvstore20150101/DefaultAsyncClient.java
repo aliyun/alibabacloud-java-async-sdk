@@ -85,6 +85,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+      * This operation is available only for cluster instances that use cloud disks.
+      *
+     */
     @Override
     public CompletableFuture<AddShardingNodeResponse> addShardingNode(AddShardingNodeRequest request) {
         try {
@@ -99,6 +103,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The ID of the instance.
+      *
+     */
     @Override
     public CompletableFuture<AllocateDirectConnectionResponse> allocateDirectConnection(AllocateDirectConnectionRequest request) {
         try {
@@ -113,6 +121,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * r-bp1zxszhcgatnx****
+      *
+     */
     @Override
     public CompletableFuture<AllocateInstancePublicConnectionResponse> allocateInstancePublicConnection(AllocateInstancePublicConnectionRequest request) {
         try {
@@ -127,6 +139,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The operation that you want to perform. Set the value to **CheckCloudResourceAuthorized**.
+      *
+     */
     @Override
     public CompletableFuture<CheckCloudResourceAuthorizedResponse> checkCloudResourceAuthorized(CheckCloudResourceAuthorizedRequest request) {
         try {
@@ -141,6 +157,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The name of the account.
+      *
+     */
     @Override
     public CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request) {
         try {
@@ -155,6 +175,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The ID of the backup job.
+      *
+     */
     @Override
     public CompletableFuture<CreateBackupResponse> createBackup(CreateBackupRequest request) {
         try {
@@ -169,6 +193,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The operation that you want to perform. Set the value to **CreateCacheAnalysisTask**.
+      *
+     */
     @Override
     public CompletableFuture<CreateCacheAnalysisTaskResponse> createCacheAnalysisTask(CreateCacheAnalysisTaskRequest request) {
         try {
@@ -183,6 +211,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You cannot directly create a distributed instance. If you require a distributed instance, you must call this operation to convert an existing instance to the first child instance of the distributed instance. After the instance is converted, the distributed instance is created. Before you call this operation, make sure that the following requirements are met:
+      * *   A [DRAM-based instance](~~126164~~) of Enhanced Edition is used.
+      * *   If the existing instance is a cluster instance, the direct connection mode must be disabled for the instance. For more information, see [Release a private endpoint](~~150047~~).
+      * > You can also call the [CreateInstance](~~60873~~) operation to create an instance that is specified as the first child instance of a distributed instance. After the child instance is created, the distributed instance to which the child instance belongs is created.
+      *
+     */
     @Override
     public CompletableFuture<CreateGlobalDistributeCacheResponse> createGlobalDistributeCache(CreateGlobalDistributeCacheRequest request) {
         try {
@@ -198,6 +233,26 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<CreateGlobalSecurityIPGroupResponse> createGlobalSecurityIPGroup(CreateGlobalSecurityIPGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateGlobalSecurityIPGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateGlobalSecurityIPGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateGlobalSecurityIPGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+      * You can call this operation to create an ApsaraDB for Redis instance that uses local or cloud disks or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance that uses local disks. To create a Tair instance that uses cloud disks, call the [CreateTairInstance](~~208271~~) operation.
+      * > You can also create an instance in the ApsaraDB for Redis console. For more information, see [Create an instance](~~26351~~).
+      *
+     */
+    @Override
     public CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -211,6 +266,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+      * >  For more information about how to create an instance that meets your requirements in the ApsaraDB for Redis console, see [Step 1: Create an ApsaraDB for Redis instance](~~26351~~).
+      * To create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks, call [CreateTairInstance](~~208271~~).
+      *
+     */
     @Override
     public CompletableFuture<CreateInstancesResponse> createInstances(CreateInstancesRequest request) {
         try {
@@ -225,6 +286,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For more information about instance selection, see [Select an ApsaraDB for Redis instance](~~223808~~).
+      * Before you call this operation, make sure that you are familiar with the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+      * > 
+      * *   For more information about how to create an ApsaraDB for Redis Enhanced Edition (Tair) instance that uses cloud disks in the ApsaraDB for Redis console, see [Create an ApsaraDB for Redis instance](~~443863~~).
+      * *   To create an instance of another edition or series such as a Community Edition instance or Tair [DRAM-based instance](~~126164~~) that uses local disks, call [CreateInstance](~~60873~~).
+      *
+     */
     @Override
     public CompletableFuture<CreateTairInstanceResponse> createTairInstance(CreateTairInstanceRequest request) {
         try {
@@ -239,6 +308,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   This operation is supported only for ApsaraDB for Redis instances that run Redis 4.0.
+      * *   The ApsaraDB for Redis instance must be in the Running state.
+      *
+     */
     @Override
     public CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request) {
         try {
@@ -253,6 +327,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For more information about how to perform the corresponding operation in the console, see [Release an instance](~~43882~~).
+      * Before you call this operation, make sure that the following requirements are met:
+      * *   The instance is in the running state.
+      * *   The instance is charged on a pay-as-you-go basis.
+      * >  You cannot call this operation to release a subscription instance, which is automatically released when it expires. To release a subscription instance before it expires, submit a ticket.
+      *
+     */
     @Override
     public CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request) {
         try {
@@ -267,6 +349,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can also remove data shards from an instance in the ApsaraDB for Redis console. For more information, see [Adjust the number of shards for an ApsaraDB for Redis instance with cloud disks](~~198082~~).\\
+      * Before you call this operation, make sure that the instance meets the following requirements:
+      * *   The instance is a persistent memory-optimized instance in the cluster architecture. For more information about persistent memory-optimized instances, see [Persistent memory-optimized instances](~~183956~~).
+      * *   The instance has more than one data shard.
+      *
+     */
     @Override
     public CompletableFuture<DeleteShardingNodeResponse> deleteShardingNode(DeleteShardingNodeRequest request) {
         try {
@@ -281,6 +370,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Details about returned accounts of the instance.
+      *
+     */
     @Override
     public CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request) {
         try {
@@ -295,6 +388,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Specifies whether to return the historical tasks. Valid values:
+      * *   **0**: returns the current task. This is the default value.
+      * *   **1**: returns the historical tasks.
+      *
+     */
     @Override
     public CompletableFuture<DescribeActiveOperationTaskResponse> describeActiveOperationTask(DescribeActiveOperationTaskRequest request) {
         try {
@@ -309,6 +408,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance. For more information, see [Enable the new audit log feature](~~102015~~).
+      * Before you call this API operation, make sure that the ApsaraDB for Redis instance meets the following requirements:
+      * *   The instance is an instance of the ApsaraDB for Redis Community Edition or a performance-enhanced instance of the ApsaraDB for Redis Enhanced Edition (Tair). For more information, see [Performance-enhanced instances](~~126164~~).
+      * *   The engine version of the instance is Redis 4.0 or later, and the latest minor version is used. You can call the [DescribeEngineVersion](~~95268~~) operation to check whether the instance uses the latest major version and minor version.
+      * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
+      *
+     */
     @Override
     public CompletableFuture<DescribeAuditLogConfigResponse> describeAuditLogConfig(DescribeAuditLogConfigRequest request) {
         try {
@@ -323,6 +430,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation can be called up to 100 times per minute. You can also query audit logs in the ApsaraDB for Redis console. For more information, see [Query audit logs of an instance](~~101937~~).
+      * Before you call this operation, make sure that the instance meets the following requirements:
+      * *   The instance is an ApsaraDB for Redis Community Edition instance or an ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based instance.
+      * *   The engine version of the instance is Redis 4.0 or later.
+      * *   The audit log feature is enabled for the instance. For more information, see [ModifyAuditLogConfig](~~130206~~).
+      *
+     */
     @Override
     public CompletableFuture<DescribeAuditRecordsResponse> describeAuditRecords(DescribeAuditRecordsRequest request) {
         try {
@@ -393,6 +508,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The number of entries returned on the current page.
+      *
+     */
     @Override
     public CompletableFuture<DescribeCacheAnalysisReportResponse> describeCacheAnalysisReport(DescribeCacheAnalysisReportRequest request) {
         try {
@@ -407,6 +526,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The operation that you want to perform. Set the value to **DescribeCacheAnalysisReportList**.
+      *
+     */
     @Override
     public CompletableFuture<DescribeCacheAnalysisReportListResponse> describeCacheAnalysisReportList(DescribeCacheAnalysisReportListRequest request) {
         try {
@@ -421,6 +544,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > This API operation is applicable only to ApsaraDB for Redis instances that use [cloud disks](~~188068~~) and the [cluster architecture](~~52228~~).
+      *
+     */
     @Override
     public CompletableFuture<DescribeClusterMemberInfoResponse> describeClusterMemberInfo(DescribeClusterMemberInfoRequest request) {
         try {
@@ -449,6 +576,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > If you want to query the information about ApsaraDB for Redis instances that are not deployed in a dedicated cluster, call the [DescribeInstanceAttribute](~~60996~~) operation.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDedicatedClusterInstanceListResponse> describeDedicatedClusterInstanceList(DescribeDedicatedClusterInstanceListRequest request) {
         try {
@@ -463,6 +594,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, TDE must be enabled for the ApsaraDB for Redis instance by using a custom key. For more information, see [ModifyInstanceTDE](~~302337~~).
+      * > For more information about TDE, see [Enable TDE](~~265913~~).
+      *
+     */
     @Override
     public CompletableFuture<DescribeEncryptionKeyResponse> describeEncryptionKey(DescribeEncryptionKeyRequest request) {
         try {
@@ -477,6 +613,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The ID of the request.
+      *
+     */
     @Override
     public CompletableFuture<DescribeEncryptionKeyListResponse> describeEncryptionKeyList(DescribeEncryptionKeyListRequest request) {
         try {
@@ -520,6 +660,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DescribeGlobalSecurityIPGroupResponse> describeGlobalSecurityIPGroup(DescribeGlobalSecurityIPGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeGlobalSecurityIPGroup").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeGlobalSecurityIPGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeGlobalSecurityIPGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see [Metrics](~~43887~~).
+      *
+     */
+    @Override
     public CompletableFuture<DescribeHistoryMonitorValuesResponse> describeHistoryMonitorValues(DescribeHistoryMonitorValuesRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -528,6 +686,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeHistoryMonitorValuesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeHistoryTasksResponse> describeHistoryTasks(DescribeHistoryTasksRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHistoryTasks").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHistoryTasksResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHistoryTasksResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -561,6 +733,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is available only for instances that use cloud disks.
+      * > You can call the [DescribeParameters](~~473847~~) operation to query the parameter settings of instances that use local disks.
+      *
+     */
     @Override
     public CompletableFuture<DescribeInstanceConfigResponse> describeInstanceConfig(DescribeInstanceConfigRequest request) {
         try {
@@ -575,6 +752,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * SSL encryption is supported for ApsaraDB for Redis 2.8 standard master-replica instances, ApsaraDB for Redis 2.8 master-replica cluster instances, and ApsaraDB for Redis 4.0 master-replica cluster instances. You can enable SSL encryption to enhance data transmission security.
+      * You can use one of the following methods to enable or disable SSL encryption or update the SSL certificate for an ApsaraDB for Redis instance:
+      * *   Call the [ModifyInstanceSSL](~~96194~~) operation.
+      * *   Enable or disable SSL encryption or update the SSL certificate in the ApsaraDB for Redis console. For more information, see [Configure SSL encryption](~~84898~~).
+      * > After SSL encryption is enabled, the instance may respond slower.
+      *
+     */
     @Override
     public CompletableFuture<DescribeInstanceSSLResponse> describeInstanceSSL(DescribeInstanceSSLRequest request) {
         try {
@@ -589,6 +774,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * r-bp1zxszhcgatnx****
+      *
+     */
     @Override
     public CompletableFuture<DescribeInstanceTDEStatusResponse> describeInstanceTDEStatus(DescribeInstanceTDEStatusRequest request) {
         try {
@@ -617,6 +806,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If you do not specify the InstanceIds parameter when you call this operation, the overview information of all instances is returned.
+      * > This operation returns non-paged results.
+      *
+     */
     @Override
     public CompletableFuture<DescribeInstancesOverviewResponse> describeInstancesOverview(DescribeInstancesOverviewRequest request) {
         try {
@@ -631,6 +825,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call the [EnableAdditionalBandwidth](~~206173~~) operation to increase the internal bandwidth of an instance.
+      *
+     */
     @Override
     public CompletableFuture<DescribeIntranetAttributeResponse> describeIntranetAttribute(DescribeIntranetAttributeRequest request) {
         try {
@@ -645,6 +843,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The maximum number of connections.
+      *
+     */
     @Override
     public CompletableFuture<DescribeLogicInstanceTopologyResponse> describeLogicInstanceTopology(DescribeLogicInstanceTopologyRequest request) {
         try {
@@ -659,6 +861,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see [The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out](~~189893~~).
+      * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the [DescribeHistoryMonitorValues](~~61107~~) operation to query monitoring history of the instance.
+      *
+     */
     @Override
     public CompletableFuture<DescribeMonitorItemsResponse> describeMonitorItems(DescribeMonitorItemsRequest request) {
         try {
@@ -687,6 +894,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * An array that consists of the details about the parameters returned.
+      *
+     */
     @Override
     public CompletableFuture<DescribeParameterTemplatesResponse> describeParameterTemplates(DescribeParameterTemplatesRequest request) {
         try {
@@ -701,6 +912,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is available only for instances that use local disks.
+      * > You can call the [DescribeInstanceConfig](~~473846~~) operation to query the parameter settings of instances that use cloud disks.
+      *
+     */
     @Override
     public CompletableFuture<DescribeParametersResponse> describeParameters(DescribeParametersRequest request) {
         try {
@@ -757,6 +973,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For more information about how to view the operational logs of an instance in the ApsaraDB for Redis console, see [View active logs](~~101713~~).
+      * This operation can be called up to 100 times per minute.
+      *
+     */
     @Override
     public CompletableFuture<DescribeRunningLogRecordsResponse> describeRunningLogRecords(DescribeRunningLogRecordsRequest request) {
         try {
@@ -799,6 +1020,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can also query slow logs in the ApsaraDB for Redis console. For more information, see [Query slow logs of an instance](~~95874~~). This operation can be called up to 100 times per minute.
+      *
+     */
     @Override
     public CompletableFuture<DescribeSlowLogRecordsResponse> describeSlowLogRecords(DescribeSlowLogRecordsRequest request) {
         try {
@@ -813,6 +1038,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The progress of the task. Unit: %.
+      *
+     */
     @Override
     public CompletableFuture<DescribeTasksResponse> describeTasks(DescribeTasksRequest request) {
         try {
@@ -841,6 +1070,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For more information about the fees, limits, and answers to some frequently asked questions about bandwidth adjustments, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~).
+      * >  Before you call this operation, you can call the [DescribeRoleZoneInfo](~~190794~~) operation to query the bandwidth of each data shard in the instance.
+      *
+     */
     @Override
     public CompletableFuture<EnableAdditionalBandwidthResponse> enableAdditionalBandwidth(EnableAdditionalBandwidthRequest request) {
         try {
@@ -855,6 +1089,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The time when the minor version is upgraded. Valid values:
+      * *   **Immediately**: immediately deletes expired keys.
+      * *   **MaintainTime:**deletes expired key in the maintenance window.
+      * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
+      *
+     */
     @Override
     public CompletableFuture<FlushExpireKeysResponse> flushExpireKeys(FlushExpireKeysRequest request) {
         try {
@@ -869,6 +1110,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The ID of the instance.
+      *
+     */
     @Override
     public CompletableFuture<FlushInstanceResponse> flushInstance(FlushInstanceRequest request) {
         try {
@@ -884,6 +1129,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<FlushInstanceForDBResponse> flushInstanceForDB(FlushInstanceForDBRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("FlushInstanceForDB").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(FlushInstanceForDBResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<FlushInstanceForDBResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.
+      *
+     */
+    @Override
     public CompletableFuture<GrantAccountPrivilegeResponse> grantAccountPrivilege(GrantAccountPrivilegeRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -897,6 +1160,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The ID of the request.
+      *
+     */
     @Override
     public CompletableFuture<InitializeKvstorePermissionResponse> initializeKvstorePermission(InitializeKvstorePermissionRequest request) {
         try {
@@ -911,6 +1178,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can also query the relationships between instances and tags in the ApsaraDB for Redis console. For more information, see [Filter ApsaraDB for Redis instances by tag](~~119160~~) and [View tags bound to an instance](~~134038~~).
+      *
+     */
     @Override
     public CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request) {
         try {
@@ -925,6 +1196,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The ID of the request.
+      *
+     */
     @Override
     public CompletableFuture<MigrateToOtherZoneResponse> migrateToOtherZone(MigrateToOtherZoneRequest request) {
         try {
@@ -939,6 +1214,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > This operation is supported only for instances that run Redis 4.0 or later.
+      *
+     */
     @Override
     public CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request) {
         try {
@@ -967,6 +1246,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * 11111,22222
+      *
+     */
     @Override
     public CompletableFuture<ModifyActiveOperationTaskResponse> modifyActiveOperationTask(ModifyActiveOperationTaskRequest request) {
         try {
@@ -981,6 +1264,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Specifies whether to enable the audit log feature. Default value: true. Valid values:
+      * *   **true**: enables the audit log feature.
+      * *   **false**: disables the audit log feature.
+      * > If the instance uses the [cluster architecture](~~52228~~) or [read/write splitting architecture](~~62870~~), the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.
+      *
+     */
     @Override
     public CompletableFuture<ModifyAuditLogConfigResponse> modifyAuditLogConfig(ModifyAuditLogConfigRequest request) {
         try {
@@ -1009,6 +1299,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can also modify the endpoint or port number of an instance in the ApsaraDB for Redis console. For more information, see [Change the endpoint or port number of an instance](~~85683~~).
+      *
+     */
     @Override
     public CompletableFuture<ModifyDBInstanceConnectionStringResponse> modifyDBInstanceConnectionString(ModifyDBInstanceConnectionStringRequest request) {
         try {
@@ -1023,6 +1317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * uW8+nsrp
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceAttributeResponse> modifyInstanceAttribute(ModifyInstanceAttributeRequest request) {
         try {
@@ -1037,6 +1335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > Auto-renewal is triggered seven days before the expiration date of the instance.
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceAutoRenewalAttributeResponse> modifyInstanceAutoRenewalAttribute(ModifyInstanceAutoRenewalAttributeRequest request) {
         try {
@@ -1079,6 +1381,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * r-bp1zxszhcgatnx****
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceMajorVersionResponse> modifyInstanceMajorVersion(ModifyInstanceMajorVersionRequest request) {
         try {
@@ -1093,6 +1399,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The ID of the instance.
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceMinorVersionResponse> modifyInstanceMinorVersion(ModifyInstanceMinorVersionRequest request) {
         try {
@@ -1107,6 +1417,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can also perform this operation in the ApsaraDB for Redis console. For more information, see [Change the expiration time for the endpoint of the classic network](~~60062~~).
+      * > For more information about how to switch the network type of an ApsaraDB for Redis instance from classic network to VPC, see [SwitchNetwork](~~61005~~).
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceNetExpireTimeResponse> modifyInstanceNetExpireTime(ModifyInstanceNetExpireTimeRequest request) {
         try {
@@ -1122,6 +1437,27 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ModifyInstanceParameterResponse> modifyInstanceParameter(ModifyInstanceParameterRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyInstanceParameter").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyInstanceParameterResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyInstanceParameterResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * Modifies SSL encryption configurations. Valid values:
+      * *   **Disable**: The SSL encryption is disabled.
+      * *   **Enable**: The SSL encryption is enabled.
+      * *   **Update**: The SSL certificate is updated.
+      *
+     */
+    @Override
     public CompletableFuture<ModifyInstanceSSLResponse> modifyInstanceSSL(ModifyInstanceSSLRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1135,6 +1471,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The ID of the promotional event or business information.
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceSpecResponse> modifyInstanceSpec(ModifyInstanceSpecRequest request) {
         try {
@@ -1149,6 +1489,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > For more information about TDE and the impact of TDE, see [Enable TDE](~~265913~~).
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceTDEResponse> modifyInstanceTDE(ModifyInstanceTDERequest request) {
         try {
@@ -1163,6 +1507,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The ID of the request.
+      *
+     */
     @Override
     public CompletableFuture<ModifyInstanceVpcAuthModeResponse> modifyInstanceVpcAuthMode(ModifyInstanceVpcAuthModeRequest request) {
         try {
@@ -1177,6 +1525,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   This operation is applicable only to an ApsaraDB for Redis instance that is deployed in a dedicated cluster. To adjust the bandwidth of a standard ApsaraDB for Redis instance, call the [EnableAdditionalBandwidth](~~206173~~) operation.
+      *
+     */
     @Override
     public CompletableFuture<ModifyIntranetAttributeResponse> modifyIntranetAttribute(ModifyIntranetAttributeRequest request) {
         try {
@@ -1191,6 +1544,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Resource groups allow you to sort resources owned by your Alibaba Cloud account into groups. This simplifies resource and permission management within your Alibaba Cloud account. For more information, see [What is Resource Management?](~~94475~~)
+      * > For more information about resource group API operations, see [Resource Management API overview](~~160024~~).
+      *
+     */
     @Override
     public CompletableFuture<ModifyResourceGroupResponse> modifyResourceGroup(ModifyResourceGroupRequest request) {
         try {
@@ -1205,6 +1563,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The ID of the request.
+      *
+     */
     @Override
     public CompletableFuture<ModifySecurityGroupConfigurationResponse> modifySecurityGroupConfiguration(ModifySecurityGroupConfigurationRequest request) {
         try {
@@ -1219,6 +1581,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The IP addresses in the whitelist group. Up to 1,000 IP addresses can be specified in each whitelist. Separate multiple IP addresses with a comma (,). You can add 0.0.0.0/0, IP addresses such as 10.23.12.24, and Classless Inter-Domain Routing (CIDR) blocks such as 10.23.12.24/24 to the whitelist group. In CIDR block 10.23.12.24/24, /24 specifies the length of the prefix in the IP addresses. The prefix length ranges from 1 to 32.
+      *
+     */
     @Override
     public CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request) {
         try {
@@ -1233,6 +1599,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * In direct connection mode, clients can bypass proxy nodes and use private endpoints to connect to ApsaraDB for Redis instances. This is similar to the connection to a native Redis cluster. The direct connection mode can reduce communication overheads and the response time of ApsaraDB for Redis. For more information, see [Enable the direct connection mode](~~146901~~).
+      *
+     */
     @Override
     public CompletableFuture<ReleaseDirectConnectionResponse> releaseDirectConnection(ReleaseDirectConnectionRequest request) {
         try {
@@ -1247,6 +1617,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The ID of the request.
+      *
+     */
     @Override
     public CompletableFuture<ReleaseInstancePublicConnectionResponse> releaseInstancePublicConnection(ReleaseInstancePublicConnectionRequest request) {
         try {
@@ -1261,6 +1635,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The operation that you want to perform. Set the value to **RemoveSubInstance**.
+      *
+     */
     @Override
     public CompletableFuture<RemoveSubInstanceResponse> removeSubInstance(RemoveSubInstanceRequest request) {
         try {
@@ -1275,6 +1653,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, make sure that you understand the billing methods and [pricing](~~54532~~) of ApsaraDB for Redis.
+      * You can adjust the bandwidth of an instance in the ApsaraDB for Redis console. For more information, see [Adjust the bandwidth of an ApsaraDB for Redis instance](~~102588~~). You can also call the [EnableAdditionalBandwidth](~~206173~~) operation to adjust the bandwidth of an instance. If you want to continue using the bandwidth that you purchase after the validity period of the bandwidth, you must call the RenewAdditionalBandwidth operation to renew the bandwidth before the bandwidth expires.
+      * > Before you call this operation, you can call the [DescribeIntranetAttribute](~~128715~~) operation, which returns the expiration time of the purchased bandwidth in the **BandwidthExpireTime** parameter.
+      *
+     */
     @Override
     public CompletableFuture<RenewAdditionalBandwidthResponse> renewAdditionalBandwidth(RenewAdditionalBandwidthRequest request) {
         try {
@@ -1289,6 +1673,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This operation is applicable only to subscription instances.
+      *
+     */
     @Override
     public CompletableFuture<RenewInstanceResponse> renewInstance(RenewInstanceRequest request) {
         try {
@@ -1303,6 +1691,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * r-bp1zxszhcgatnx****
+      *
+     */
     @Override
     public CompletableFuture<ResetAccountPasswordResponse> resetAccountPassword(ResetAccountPasswordRequest request) {
         try {
@@ -1331,6 +1723,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If your instance is a [persistent memory-optimized instance](~~443828~~) or [DRAM-based instance](~~443827~~) that is compatible with Redis 5.0 and the [data flashback](~~443784~~) feature is enabled, you can call this operation to restore the data of a specified key to a specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
+      * *   For other instance series, this operation overwrites the existing data of your instance with the backup data. Proceed with caution. We recommend that you call the [CreateInstance](~~60873~~) operation to create an instance. Then, you can restore data to the new instance.
+      *
+     */
     @Override
     public CompletableFuture<RestoreInstanceResponse> restoreInstance(RestoreInstanceRequest request) {
         try {
@@ -1345,6 +1742,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > For more information about nearby access to applications that are deployed across zones, see [Switch node roles](~~164222~~).
+      * The instance must be an ApsaraDB for Redis Community Edition instance or Enhanced Edition (Tair) [DRAM-based](~~126164~~) instance that uses local disks.
+      * A call to this operation has the following impacts on your instance:
+      * *   The data shards in the instance may change to the read-only state and experience transient connections within seconds. Make sure that your application is configured to automatically reconnect to the instance.
+      * *   If the instance enters the switching state, you cannot manage this instance. For example, you cannot modify the instance configurations or migrate the instance to another zone.
+      *
+     */
     @Override
     public CompletableFuture<SwitchInstanceHAResponse> switchInstanceHA(SwitchInstanceHARequest request) {
         try {
@@ -1359,6 +1764,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For more information about the proxy mode, see [Features of proxy nodes](~~142959~~). Before you call this operation, make sure that the following requirements are met:
+      * *   Your ApsaraDB for Redis instance is created by using a dedicated cluster. For more information, see [What is ApsaraDB MyBase?](~~141455~~)
+      * *   The instance uses the cluster architecture. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).
+      * > Before you call the SwitchInstanceProxy operation, you must call the [DescribeDedicatedClusterInstanceList](~~229522~~) operation and view the value of the **ProxyCount** response parameter to check whether the proxy mode is enabled. A value of 0 indicates that the proxy mode is disabled. A value that is greater than 0 indicates that the proxy mode is enabled.
+      *
+     */
     @Override
     public CompletableFuture<SwitchInstanceProxyResponse> switchInstanceProxy(SwitchInstanceProxyRequest request) {
         try {
@@ -1401,6 +1813,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If you have a large number of instances, you can create multiple tags and add these tags to the instances. Then, you can filter instances by tag.
+      * *   A tag consists of a key and a value. Each key must be unique in a region for an Alibaba Cloud account. Different keys can be mapped to the same value.
+      * *   If the tag that you specify does not exist, this tag is automatically created and added to the specified instance.
+      * *   If the key of the specified tag is the same as that of an existing tag, the specified tag overwrites the existing tag.
+      * *   You can add up to 20 tags to each instance.
+      * *   You can add tags to up to 50 instances in each request.
+      * You can also add tags to instances in the ApsaraDB for Redis console. For more information, see [Create a tag](~~118779~~).
+      *
+     */
     @Override
     public CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request) {
         try {
@@ -1415,6 +1837,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * 1
+      *
+     */
     @Override
     public CompletableFuture<TransformInstanceChargeTypeResponse> transformInstanceChargeType(TransformInstanceChargeTypeRequest request) {
         try {
@@ -1429,6 +1855,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
+      *
+     */
     @Override
     public CompletableFuture<TransformToPrePaidResponse> transformToPrePaid(TransformToPrePaidRequest request) {
         try {
@@ -1443,6 +1873,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   You can remove up to 20 tags at a time.
+      * *   If a tag is removed from an instance and is not added to other instances, the tag is deleted.
+      * You can also remove tags from instances in the ApsaraDB for Redis console. For more information, see [Remove a tag](~~119157~~).
+      *
+     */
     @Override
     public CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request) {
         try {

@@ -50,7 +50,7 @@ public class DescribeEncryptionKeyListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * KeyIds.
+         * DescribeEncryptionKeyList
          */
         public Builder keyIds(KeyIds keyIds) {
             this.keyIds = keyIds;
@@ -58,7 +58,7 @@ public class DescribeEncryptionKeyListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Queries the custom keys that are available for an ApsaraDB for Redis instance to use transparent data encryption (TDE).
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -221,7 +221,14 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   You can query the monitoring data of the last month. The maximum time range that you can specify for a query is seven days.
+         * 
+         * *   If the number of data nodes in the instance is greater than 32, the time range to query for the Data Node Aggregation and Proxy Node Aggregation metrics cannot exceed 1 hour.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -230,7 +237,7 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -239,7 +246,7 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
         }
 
         /**
-         * IntervalForHistory.
+         * The interval at which to collect monitoring data. Unit: minutes. Set the value to `01m`.
          */
         public Builder intervalForHistory(String intervalForHistory) {
             this.putQueryParameter("IntervalForHistory", intervalForHistory);
@@ -248,7 +255,14 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
         }
 
         /**
-         * MonitorKeys.
+         * The monitoring metrics. Separate multiple metrics with commas (,).
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter is empty by default, which indicates that the UsedMemory and quotaMemory metrics are returned. For more information about supported monitoring metrics and their descriptions, see [MonitorKeys](~~189831~~).
+         * 
+         * *   To ensure query efficiency, we recommend that you specify no more than five metrics for a single node at a time, and specify only a single metric when you query aggregate metrics.
          */
         public Builder monitorKeys(String monitorKeys) {
             this.putQueryParameter("MonitorKeys", monitorKeys);
@@ -257,7 +271,14 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node in the instance. You can set this parameter to query the data of a specified node.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter is available only for read/write splitting or cluster instances of ApsaraDB for Redis.
+         * 
+         * *   You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query node IDs.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -311,7 +332,7 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

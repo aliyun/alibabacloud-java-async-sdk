@@ -176,7 +176,7 @@ public class AllocateDirectConnectionRequest extends Request {
         }
 
         /**
-         * ConnectionString.
+         * The prefix of the private endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -185,7 +185,7 @@ public class AllocateDirectConnectionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

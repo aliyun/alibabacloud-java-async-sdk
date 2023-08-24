@@ -177,7 +177,7 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * true
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -186,7 +186,7 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * r-bp1zxszhcgatnx****
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -213,7 +213,7 @@ public class TransformToPrePaidRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration of the instance. Unit: months. Valid values: **1** to **9**, **12**, **24**, and **36**.
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);

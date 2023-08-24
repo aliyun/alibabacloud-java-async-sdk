@@ -50,7 +50,7 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MonitorItems.
+         * The unit of the metric.
          */
         public Builder monitorItems(MonitorItems monitorItems) {
             this.monitorItems = monitorItems;
@@ -58,7 +58,7 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The operation that you want to perform. Set the value to **DescribeMonitorItems**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * MonitorKey.
+             * DescribeMonitorItems
              */
             public Builder monitorKey(String monitorKey) {
                 this.monitorKey = monitorKey;
@@ -118,7 +118,7 @@ public class DescribeMonitorItemsResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * Queries the metrics of an ApsaraDB for Redis instance.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

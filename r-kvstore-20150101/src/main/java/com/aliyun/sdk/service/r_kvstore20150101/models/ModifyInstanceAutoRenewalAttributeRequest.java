@@ -176,7 +176,13 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables auto-renewal.
+         * *   **false**: disables auto-renewal.
+         * 
+         * > The default value is **false**.
          */
         public Builder autoRenew(String autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -185,7 +191,10 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. Separate multiple instance IDs with commas (,).
+         * <p>
+         * 
+         * > You can specify up to 30 instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -194,7 +203,10 @@ public class ModifyInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The auto-renewal period. Valid values: **1** to **12**. Unit: months. When the instance is about to expire, the instance is automatically renewed based on the number of months specified by this parameter.
+         * <p>
+         * 
+         * > This parameter is available and required only if the **AutoRenew** parameter is set to **true**.
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);

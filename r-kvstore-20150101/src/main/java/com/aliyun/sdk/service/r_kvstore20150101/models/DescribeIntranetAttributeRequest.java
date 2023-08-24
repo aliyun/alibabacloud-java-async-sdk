@@ -162,7 +162,7 @@ public class DescribeIntranetAttributeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -189,7 +189,7 @@ public class DescribeIntranetAttributeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -169,7 +169,13 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to remove all tags from the instance. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**: removes all tags from the instance.
+         * *   **false**: does not remove all tags from the instance.
+         * 
+         * > If you specify both this parameter and the **TagKey.N** parameter, this parameter does not take effect.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -196,7 +202,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -205,7 +211,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The IDs of the instances.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -232,7 +238,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Set the value to **INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -241,7 +247,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The list of tag keys.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

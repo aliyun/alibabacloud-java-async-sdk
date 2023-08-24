@@ -50,7 +50,11 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Items.
+         * The network type of the security group. Valid values:
+         * <p>
+         * 
+         * *   **classic**: the classic network.
+         * *   **vpc**: the virtual private cloud (VPC).
          */
         public Builder items(Items items) {
             this.items = items;
@@ -58,7 +62,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the security group.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +134,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * Queries the security groups that are included in the whitelist of an ApsaraDB for Redis instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -138,7 +142,7 @@ public class DescribeSecurityGroupConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The operation that you want to perform. Set the value to **DescribeSecurityGroupConfiguration**.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;

@@ -122,7 +122,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * EndTime.
+         * The end time of the query.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -130,7 +130,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * The name of the instance.
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -138,7 +138,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * The collection of returned audit log entries.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -146,7 +146,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -154,7 +154,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The maximum number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -162,7 +162,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start time of the query.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -178,7 +178,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of returned entries.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -314,7 +314,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             private String totalExecutionTimes; 
 
             /**
-             * AccountName.
+             * The username of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -322,7 +322,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DatabaseName.
+             * The database name.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -330,7 +330,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * The time when the command was run.
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -338,7 +338,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAddress.
+             * The IP address of the client.
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -346,7 +346,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * The IP address of the instance.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -354,7 +354,10 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the node.
+             * <p>
+             * 
+             * > A specific node ID is returned only if the instance uses the cluster or read/write splitting architecture.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -362,7 +365,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLText.
+             * The command that was run.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -370,7 +373,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLType.
+             * The type of the command.
              */
             public Builder SQLType(String SQLType) {
                 this.SQLType = SQLType;
@@ -378,7 +381,7 @@ public class DescribeAuditRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalExecutionTimes.
+             * The amount of time consumed to run the command.
              */
             public Builder totalExecutionTimes(String totalExecutionTimes) {
                 this.totalExecutionTimes = totalExecutionTimes;

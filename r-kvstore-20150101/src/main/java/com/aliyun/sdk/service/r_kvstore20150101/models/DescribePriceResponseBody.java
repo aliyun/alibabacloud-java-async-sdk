@@ -86,7 +86,10 @@ public class DescribePriceResponseBody extends TeaModel {
         private SubOrders subOrders; 
 
         /**
-         * Order.
+         * The number of instances that you want to purchase. Valid values: **1** to **30**.
+         * <p>
+         * 
+         * >  Default value: **1**.
          */
         public Builder order(Order order) {
             this.order = order;
@@ -94,7 +97,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderParams.
+         * Details about coupons.
          */
         public Builder orderParams(String orderParams) {
             this.orderParams = orderParams;
@@ -102,7 +105,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * A JSON string that contains multiple instances. For more information, see [Description of the Instances parameter in the DescribePrice API operation](~~161811~~).
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -413,7 +416,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String tradeAmount; 
 
             /**
-             * Coupons.
+             * Queries the fees that you must pay when you create, upgrade, or renew an ApsaraDB for Redis instance.
              */
             public Builder coupons(Coupons coupons) {
                 this.coupons = coupons;
@@ -421,7 +424,13 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * The order type. Valid values:
+             * <p>
+             * 
+             * *   **BUY**
+             * *   **UPGRADE**
+             * *   **RENEW**
+             * *   **CONVERT**
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -429,7 +438,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountAmount.
+             * The order information.
              */
             public Builder discountAmount(String discountAmount) {
                 this.discountAmount = discountAmount;
@@ -437,7 +446,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * HandlingFeeAmount.
+             * The name of the coupon.
              */
             public Builder handlingFeeAmount(String handlingFeeAmount) {
                 this.handlingFeeAmount = handlingFeeAmount;
@@ -445,7 +454,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * The coupon number.
              */
             public Builder originalAmount(String originalAmount) {
                 this.originalAmount = originalAmount;
@@ -461,7 +470,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * The ID of the request.
              */
             public Builder tradeAmount(String tradeAmount) {
                 this.tradeAmount = tradeAmount;
@@ -713,7 +722,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String tradeAmount; 
 
             /**
-             * DiscountAmount.
+             * The order information.
              */
             public Builder discountAmount(String discountAmount) {
                 this.discountAmount = discountAmount;
@@ -729,7 +738,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalAmount.
+             * The coupon number.
              */
             public Builder originalAmount(String originalAmount) {
                 this.originalAmount = originalAmount;
@@ -745,7 +754,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradeAmount.
+             * The ID of the request.
              */
             public Builder tradeAmount(String tradeAmount) {
                 this.tradeAmount = tradeAmount;

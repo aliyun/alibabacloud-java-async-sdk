@@ -189,7 +189,7 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * GlobalInstanceId.
+         * Details of the child instances.
          */
         public Builder globalInstanceId(String globalInstanceId) {
             this.putQueryParameter("GlobalInstanceId", globalInstanceId);
@@ -216,7 +216,7 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The total number of entries returned.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -225,7 +225,7 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The ID of the region.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -261,7 +261,7 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * SubInstanceId.
+         * The ID of the distributed instance.
          */
         public Builder subInstanceId(String subInstanceId) {
             this.putQueryParameter("SubInstanceId", subInstanceId);

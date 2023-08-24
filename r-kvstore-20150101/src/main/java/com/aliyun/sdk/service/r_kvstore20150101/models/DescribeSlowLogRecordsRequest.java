@@ -291,7 +291,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -300,7 +300,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you set the time range to 1 hour. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -309,7 +309,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -318,7 +318,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node in the instance. You can specify this parameter to query the slow logs of a specified node.
+         * <p>
+         * 
+         * > This parameter is available only if the instance uses the read/write splitting or cluster architecture.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -327,7 +330,11 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The dimension by which to sort the results. Default value: execution_time. Valid values:
+         * <p>
+         * 
+         * *   **execution_time**: sorts the results by query start time.
+         * *   **latency**: sorts the results by query latency.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -336,7 +343,11 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The sorting order of the results to return. Default value: DESC. Valid values:
+         * <p>
+         * 
+         * *   **ASC**: ascending order
+         * *   **DESC**: descending order
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -363,7 +374,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -372,7 +383,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -381,7 +392,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * QueryKeyword.
+         * The keyword based on which slow logs are queried. You can set this parameter to a value of the string type.
          */
         public Builder queryKeyword(String queryKeyword) {
             this.putQueryParameter("QueryKeyword", queryKeyword);
@@ -417,7 +428,11 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * SlowLogRecordType.
+         * The type of the slow logs. Default value: db. Valid values:
+         * <p>
+         * 
+         * *   **proxy**: slow logs of proxy nodes
+         * *   **db**: slow logs of data nodes
          */
         public Builder slowLogRecordType(String slowLogRecordType) {
             this.putQueryParameter("SlowLogRecordType", slowLogRecordType);
@@ -426,7 +441,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

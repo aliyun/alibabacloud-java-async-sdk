@@ -205,7 +205,14 @@ public class ModifyInstanceTDERequest extends Request {
         }
 
         /**
-         * EncryptionKey.
+         * The ID of the custom key. You can call the [DescribeEncryptionKeyList](~~302339~~) operation to query the key ID.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If you do not specify this parameter, [Key Management Service (KMS)](~~28935~~) automatically generates a key.
+         * 
+         * *   To create a custom key, you can call the [CreateKey](~~28947~~) operation of the KMS API.
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -214,7 +221,10 @@ public class ModifyInstanceTDERequest extends Request {
         }
 
         /**
-         * EncryptionName.
+         * The encryption algorithm. Default value: AES-CTR-256.
+         * <p>
+         * 
+         * > This parameter is available only if the **TDEStatus** parameter is set to **Enabled**.
          */
         public Builder encryptionName(String encryptionName) {
             this.putQueryParameter("EncryptionName", encryptionName);
@@ -223,7 +233,7 @@ public class ModifyInstanceTDERequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -268,7 +278,14 @@ public class ModifyInstanceTDERequest extends Request {
         }
 
         /**
-         * RoleArn.
+         * The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that you want to attach to your ApsaraDB for Redis instance. The ARN must be in the format of `acs:ram::$accountID:role/$roleName`. After the role is attached, your ApsaraDB for Redis instance can use KMS.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   `$accountID`: the ID of the Alibaba Cloud account. To view the account ID, log on to the Alibaba Cloud console, move the pointer over your profile picture in the upper-right corner of the page, and then click **Security Settings**.
+         * 
+         * *   `$roleName`: the name of the RAM role. Replace $roleName with **AliyunRdsInstanceEncryptionDefaultRole**.
          */
         public Builder roleArn(String roleArn) {
             this.putQueryParameter("RoleArn", roleArn);
@@ -286,7 +303,10 @@ public class ModifyInstanceTDERequest extends Request {
         }
 
         /**
-         * TDEStatus.
+         * Specifies whether to enable TDE. Set the value to **Enabled**.
+         * <p>
+         * 
+         * > TDE cannot be disabled after it is enabled. Before you enable it, evaluate whether this feature affects your business. For more information, see [Enable TDE](~~265913~~).
          */
         public Builder TDEStatus(String TDEStatus) {
             this.putQueryParameter("TDEStatus", TDEStatus);

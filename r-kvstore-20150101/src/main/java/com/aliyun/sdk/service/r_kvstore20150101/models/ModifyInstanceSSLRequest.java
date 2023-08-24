@@ -163,7 +163,7 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the task.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -208,7 +208,7 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * SSLEnabled.
+         * The ID of the request.
          */
         public Builder SSLEnabled(String SSLEnabled) {
             this.putQueryParameter("SSLEnabled", SSLEnabled);

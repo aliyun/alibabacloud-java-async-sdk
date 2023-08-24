@@ -58,7 +58,7 @@ public class DescribeInstanceTDEStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TDEStatus.
+         * The operation that you want to perform. Set the value to **DescribeInstanceTDEStatus**.
          */
         public Builder TDEStatus(String TDEStatus) {
             this.TDEStatus = TDEStatus;

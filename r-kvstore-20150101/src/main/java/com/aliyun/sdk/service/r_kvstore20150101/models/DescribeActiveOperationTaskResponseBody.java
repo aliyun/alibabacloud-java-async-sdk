@@ -86,7 +86,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * The time when the system performs the switchover operation. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. It must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The total number of entries.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The time when the O\&M task was executed. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,10 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The ID of the region to which pending events belong. You can call the [DescribeRegions](~~61012~~) operation to query the region IDs.
+         * <p>
+         * 
+         * >  A value of **all** indicates all region IDs.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -298,7 +301,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * Queries the information about operations and maintenance (O&M) tasks for an ApsaraDB for Redis instance.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -306,7 +309,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Deadline.
+             * The time when the O\&M task was modified. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.
              */
             public Builder deadline(String deadline) {
                 this.deadline = deadline;
@@ -322,7 +325,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InsName.
+             * The ID of the request.
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -330,7 +333,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The maximum number of entries that were returned per page.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -338,7 +341,13 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PrepareInterval.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   **rds_apsaradb_ha**: switchover between a master node and a replica node.
+             * *   **rds_apsaradb_transfer**: instance migration task.
+             * *   **rds_apsaradb_upgrade**: minor version upgrade.
+             * *   **all**: all task types.
              */
             public Builder prepareInterval(String prepareInterval) {
                 this.prepareInterval = prepareInterval;
@@ -354,7 +363,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The page number of the returned page.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -362,7 +371,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The required preparation period between the task start time and the switchover time. The time is displayed in the *HH:mm:ss* format.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -378,7 +387,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The number of entries to return on each page. Specify a value greater than **10**. Default value: **30**.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

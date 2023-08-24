@@ -148,7 +148,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * r-bp1zxszhcgatnx****
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

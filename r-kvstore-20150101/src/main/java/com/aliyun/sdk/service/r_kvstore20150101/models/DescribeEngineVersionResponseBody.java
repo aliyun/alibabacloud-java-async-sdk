@@ -182,7 +182,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBVersionRelease.
+         * The release notes for the minor version of the instance, including the release date, minor version number, release type such as new feature, and description.
          */
         public Builder DBVersionRelease(String DBVersionRelease) {
             this.DBVersionRelease = DBVersionRelease;
@@ -190,7 +190,13 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * EnableUpgradeMajorVersion.
+         * Indicates whether the instance major version can be upgraded. Valid values:
+         * <p>
+         * 
+         * *   **true**: The major version can be upgraded.
+         * *   **false**: The major version is the latest version and cannot be upgraded.
+         * 
+         * > To upgrade the major version, call the [ModifyInstanceMajorVersion](~~95259~~) operation.
          */
         public Builder enableUpgradeMajorVersion(Boolean enableUpgradeMajorVersion) {
             this.enableUpgradeMajorVersion = enableUpgradeMajorVersion;
@@ -198,7 +204,13 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * EnableUpgradeMinorVersion.
+         * Indicates whether the instance minor version can be updated. Valid values:
+         * <p>
+         * 
+         * *   **true**: The minor version can be updated.
+         * *   **false**: The minor version is the latest version and cannot be updated.
+         * 
+         * > To update the minor version, call the [ModifyInstanceMinorVersion](~~129381~~) operation.
          */
         public Builder enableUpgradeMinorVersion(Boolean enableUpgradeMinorVersion) {
             this.enableUpgradeMinorVersion = enableUpgradeMinorVersion;
@@ -206,7 +218,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * The database engine of the instance. Valid values: **redis** and **memcache**.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -214,7 +226,11 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * IsLatestVersion.
+         * Indicates whether the instance uses the latest minor version. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder isLatestVersion(Boolean isLatestVersion) {
             this.isLatestVersion = isLatestVersion;
@@ -222,7 +238,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * IsNewSSLMode.
+         * Indicates whether the instance supports the new SSL encryption feature.
          */
         public Builder isNewSSLMode(String isNewSSLMode) {
             this.isNewSSLMode = isNewSSLMode;
@@ -230,7 +246,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * IsRedisCompatibleVersion.
+         * Indicates whether the instance runs a Redis version.
          */
         public Builder isRedisCompatibleVersion(String isRedisCompatibleVersion) {
             this.isRedisCompatibleVersion = isRedisCompatibleVersion;
@@ -238,7 +254,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * IsSSLEnable.
+         * Indicate whether the instance has the SSL encryption feature enabled.
          */
         public Builder isSSLEnable(String isSSLEnable) {
             this.isSSLEnable = isSSLEnable;
@@ -246,7 +262,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * MajorVersion.
+         * The major version of the instance.
          */
         public Builder majorVersion(String majorVersion) {
             this.majorVersion = majorVersion;
@@ -254,7 +270,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * MinorVersion.
+         * The minor version of the instance.
          */
         public Builder minorVersion(String minorVersion) {
             this.minorVersion = minorVersion;
@@ -262,7 +278,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyMinorVersion.
+         * The minor version of proxy nodes.
+         * <p>
+         * 
+         * > This parameter is returned only for cluster and read/write splitting instances.
          */
         public Builder proxyMinorVersion(String proxyMinorVersion) {
             this.proxyMinorVersion = proxyMinorVersion;
@@ -270,7 +289,10 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * ProxyVersionRelease.
+         * The release notes for the minor version of proxy nodes. The release notes include the release date, minor version number, release type such as new feature, and description.
+         * <p>
+         * 
+         * > This parameter is returned only for cluster and read/write splitting instances.
          */
         public Builder proxyVersionRelease(String proxyVersionRelease) {
             this.proxyVersionRelease = proxyVersionRelease;
@@ -278,7 +300,7 @@ public class DescribeEngineVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -62,7 +62,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DailyTasks.
+         * 30
          */
         public Builder dailyTasks(DailyTasks dailyTasks) {
             this.dailyTasks = dailyTasks;
@@ -70,7 +70,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The date when the offline key analysis task was performed.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -78,7 +78,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the task.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The ID of the child node in the cluster instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -272,7 +272,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             private Tasks tasks; 
 
             /**
-             * Date.
+             * The number of the page to return.
              */
             public Builder date(String date) {
                 this.date = date;
@@ -280,7 +280,7 @@ public class DescribeCacheAnalysisReportListResponseBody extends TeaModel {
             }
 
             /**
-             * Tasks.
+             * Details about the offline key analysis tasks.
              */
             public Builder tasks(Tasks tasks) {
                 this.tasks = tasks;

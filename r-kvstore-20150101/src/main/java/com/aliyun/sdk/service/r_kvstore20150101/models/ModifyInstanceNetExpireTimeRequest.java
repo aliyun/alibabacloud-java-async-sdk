@@ -178,7 +178,7 @@ public class ModifyInstanceNetExpireTimeRequest extends Request {
         }
 
         /**
-         * ClassicExpiredDays.
+         * The extension period to retain the classic network endpoint of the instance. Unit: days. Valid values: **14**, **30**, **60**, and **120**.
          */
         public Builder classicExpiredDays(Integer classicExpiredDays) {
             this.putQueryParameter("ClassicExpiredDays", classicExpiredDays);
@@ -187,7 +187,7 @@ public class ModifyInstanceNetExpireTimeRequest extends Request {
         }
 
         /**
-         * ConnectionString.
+         * The endpoint of the classic network.
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -196,7 +196,7 @@ public class ModifyInstanceNetExpireTimeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

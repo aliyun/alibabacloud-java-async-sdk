@@ -38,7 +38,7 @@ public class SyncDtsStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The region ID of the instance.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

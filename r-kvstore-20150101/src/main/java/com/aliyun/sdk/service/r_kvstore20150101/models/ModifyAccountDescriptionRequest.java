@@ -178,7 +178,12 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * AccountDescription.
+         * The description of the account.
+         * <p>
+         * 
+         * *   The description must start with a letter and cannot start with `http://` or `https://`.
+         * *   The description can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   The description must be 2 to 256 characters in length.
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -187,7 +192,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The username of the account. You can call the [DescribeAccounts](~~95802~~) operation to query the username of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -196,7 +201,7 @@ public class ModifyAccountDescriptionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

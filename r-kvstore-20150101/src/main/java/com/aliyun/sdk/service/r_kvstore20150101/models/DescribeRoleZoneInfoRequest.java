@@ -190,7 +190,7 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -217,7 +217,7 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The minor version of the node.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -226,7 +226,7 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The operation that you want to perform. Set the value to **DescribeRoleZoneInfo**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,7 +235,12 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.
+         * <p>
+         * 
+         * > 
+         * *   You can call the [EnableAdditionalBandwidth](~~206173~~) operation to specify the increased bandwidth.
+         * *   You can also use this parameter to calculate the increased bandwidth. For example, if the default bandwidth of the node is 96 MB/s and the returned value of this parameter is 100, the increased bandwidth is 4 MB/s.
          */
         public Builder queryType(Integer queryType) {
             this.putQueryParameter("QueryType", queryType);

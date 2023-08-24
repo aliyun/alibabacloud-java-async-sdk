@@ -148,7 +148,7 @@ public class DescribeLogicInstanceTopologyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The storage capacity of the node. Unit: MB.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

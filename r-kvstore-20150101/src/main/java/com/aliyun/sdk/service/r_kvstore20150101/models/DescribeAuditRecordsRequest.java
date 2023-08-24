@@ -276,7 +276,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The username of the account. If you do not specify this parameter, this call applies to all accounts of the instance.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -285,7 +285,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * DatabaseName.
+         * The name of the database in the instance. If you do not specify this parameter, all databases are queried. Valid values: 0 to 255. 0 specifies the database 0.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -294,7 +294,10 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * > We recommend that you specify a time range of 10 minutes or less because audit logs contain a great number of entries. Do not specify a time range that is longer than one day.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -303,7 +306,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * HostAddress.
+         * The IP address of the client. If you do not specify this parameter, this call applies to all clients.
          */
         public Builder hostAddress(String hostAddress) {
             this.putQueryParameter("HostAddress", hostAddress);
@@ -312,7 +315,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -321,7 +324,14 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node in the instance. You can set this parameter to query the data of a specified node.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter is available only for read/write splitting or cluster instances of ApsaraDB for Redis.
+         * 
+         * *   You can call the [DescribeLogicInstanceTopology](~~94665~~) operation to query node IDs.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -348,7 +358,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -357,7 +367,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -366,7 +376,10 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * QueryKeywords.
+         * The keyword based on which the audit logs are queried. You can specify a command as a keyword to query logs. By default, all commands are queried.
+         * <p>
+         * 
+         * > You can specify only a single keyword in each call.
          */
         public Builder queryKeywords(String queryKeywords) {
             this.putQueryParameter("QueryKeywords", queryKeywords);
@@ -402,7 +415,7 @@ public class DescribeAuditRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -206,7 +206,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * CurrentConnectionString.
+         * The current endpoint of the instance.
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -215,7 +215,7 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -224,7 +224,11 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * IPType.
+         * The network type of the endpoint. Valid values:
+         * <p>
+         * 
+         * *   **Private**: internal network
+         * *   **Public**: Internet
          */
         public Builder IPType(String IPType) {
             this.putQueryParameter("IPType", IPType);
@@ -233,7 +237,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * NewConnectionString.
+         * The prefix of the new endpoint. Specify the endpoint in the `<prefix>.redis.rds.aliyuncs.com` format. The prefix can contain lowercase letters and digits, and must start with a lowercase letter. The prefix can be 8 to 40 characters in length.
+         * <p>
+         * 
+         * > You must specify one of the **NewConnectionString** and **Port** parameters.
          */
         public Builder newConnectionString(String newConnectionString) {
             this.putQueryParameter("NewConnectionString", newConnectionString);
@@ -260,7 +267,10 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port number that is used to connect to the instance. Valid values: **1024** to **65535**.
+         * <p>
+         * 
+         * > You must specify one of the **NewConnectionString** and **Port** parameters.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

@@ -62,7 +62,7 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
         private String retention; 
 
         /**
-         * DbAudit.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
          */
         public Builder dbAudit(String dbAudit) {
             this.dbAudit = dbAudit;
@@ -70,7 +70,7 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,13 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Retention.
+         * Indicates whether the audit log feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **true**: The audit log feature is enabled.
+         * *   **false**: The audit log feature is disabled.
+         * 
+         * >  You can call the [ModifyAuditLogConfig](~~130206~~) operation to enable or disable the audit log feature for an ApsaraDB for Redis instance.
          */
         public Builder retention(String retention) {
             this.retention = retention;

@@ -62,7 +62,7 @@ public class AddShardingNodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NodeIds.
+         * The IDs of the data shards.
          */
         public Builder nodeIds(java.util.List < String > nodeIds) {
             this.nodeIds = nodeIds;
@@ -70,7 +70,7 @@ public class AddShardingNodeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class AddShardingNodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -148,7 +148,7 @@ public class DeleteInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the distributed instance to which the instance belongs. This parameter is applicable to only China site (aliyun.com).
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

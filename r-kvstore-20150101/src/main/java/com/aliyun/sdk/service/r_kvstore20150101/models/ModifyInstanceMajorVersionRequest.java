@@ -177,7 +177,7 @@ public class ModifyInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * The major version to which you want to upgrade the instance. Valid values: **4.0** and **5.0**.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -186,7 +186,7 @@ public class ModifyInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -195,7 +195,7 @@ public class ModifyInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * MajorVersion.
+         * The operation that you want to perform. Set the value to **ModifyInstanceMajorVersion**.
          */
         public Builder majorVersion(String majorVersion) {
             this.putQueryParameter("MajorVersion", majorVersion);

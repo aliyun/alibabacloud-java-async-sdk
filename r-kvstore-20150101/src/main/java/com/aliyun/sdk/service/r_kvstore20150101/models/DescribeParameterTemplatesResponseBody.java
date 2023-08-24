@@ -86,7 +86,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Engine.
+         * The valid values of the parameter.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -94,7 +94,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * EngineVersion.
+         * The default value of the parameter.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -102,7 +102,11 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * ParameterCount.
+         * The architecture of the instance. For more information, see [Overview](~~86132~~). Valid values:
+         * <p>
+         * 
+         * *   **logic**: The instance is a cluster master-replica instance or a read/write splitting instance.
+         * *   **normal**: The instance is a standard master-replica instance.
          */
         public Builder parameterCount(String parameterCount) {
             this.parameterCount = parameterCount;
@@ -110,7 +114,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * Redis
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -118,7 +122,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The name of the parameter. For more information about the parameters and the parameter settings, see [Parameters](~~259681~~).
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +222,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * CheckingCode.
+             * The number of parameters that are supported by the instance.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -226,7 +230,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ForceModify.
+             * DescribeParameterTemplates
              */
             public Builder forceModify(Boolean forceModify) {
                 this.forceModify = forceModify;
@@ -234,7 +238,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ForceRestart.
+             * Queries the parameters and default values of an ApsaraDB for Redis instance that runs a specific major version in a specific architecture.
              */
             public Builder forceRestart(Boolean forceRestart) {
                 this.forceRestart = forceRestart;
@@ -250,7 +254,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * 5.0
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -258,7 +262,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterValue.
+             * The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.
+             * <p>
+             * 
+             * >  You can also query the ID of a resource group in the Resource Management console. For more information, see [View the basic information of a resource group](~~151181~~).
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

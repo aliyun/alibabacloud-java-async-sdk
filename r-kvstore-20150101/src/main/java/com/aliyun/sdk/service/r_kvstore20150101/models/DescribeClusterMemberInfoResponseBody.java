@@ -50,7 +50,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterChildren.
+         * Details of nodes in the cluster instance.
          */
         public Builder clusterChildren(java.util.List < ClusterChildren> clusterChildren) {
             this.clusterChildren = clusterChildren;
@@ -58,7 +58,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -266,7 +266,10 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * BandWidth.
+             * The maximum bandwidth of the node. Unit: MB/s.
+             * <p>
+             * 
+             * > This parameter is returned only if the return value of **Service** is **redis**, which indicates a data node.
              */
             public Builder bandWidth(Long bandWidth) {
                 this.bandWidth = bandWidth;
@@ -274,7 +277,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BinlogRetentionDays.
+             * The retention period of binlogs.
              */
             public Builder binlogRetentionDays(Integer binlogRetentionDays) {
                 this.binlogRetentionDays = binlogRetentionDays;
@@ -282,7 +285,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * BizType.
+             * The type of workload. The return value is **ALIYUN**.
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -290,7 +293,10 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Capacity.
+             * The maximum memory capacity per data node. Unit: MB.
+             * <p>
+             * 
+             * > This parameter is returned only if the return value of **Service** is **redis**, which indicates a data node.
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -298,7 +304,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ClassCode.
+             * The specifications of the data node. For more information, see [Community Edition instances that use cloud disks](~~164477~~).
              */
             public Builder classCode(String classCode) {
                 this.classCode = classCode;
@@ -306,7 +312,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Connections.
+             * The maximum number of connections supported by the data node.
              */
             public Builder connections(Long connections) {
                 this.connections = connections;
@@ -314,7 +320,10 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentBandWidth.
+             * The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.
+             * <p>
+             * 
+             * > This parameter is returned only if the instance is created in a dedicated cluster.
              */
             public Builder currentBandWidth(Long currentBandWidth) {
                 this.currentBandWidth = currentBandWidth;
@@ -322,7 +331,10 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSizeMB.
+             * The storage capacity of the [enhanced SSD (ESSD)](~~122389~~) that is used by the data node. Unit: MB.
+             * <p>
+             * 
+             * > The ESSD is used only to store system operating data, such as Persistent Memory (PMEM). It is not used as a medium to write and read data.
              */
             public Builder diskSizeMB(Integer diskSizeMB) {
                 this.diskSizeMB = diskSizeMB;
@@ -330,7 +342,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the replica set in the node.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -338,7 +350,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the data node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -346,7 +358,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaSize.
+             * The number of replica nodes.
              */
             public Builder replicaSize(Integer replicaSize) {
                 this.replicaSize = replicaSize;
@@ -354,7 +366,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupName.
+             * The name of the resource group to which the node belongs.
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;
@@ -362,7 +374,11 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Service.
+             * The node type. Valid values:
+             * <p>
+             * 
+             * *   **redis**: data node
+             * *   **redis_cs**: config server
              */
             public Builder service(String service) {
                 this.service = service;
@@ -370,7 +386,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceVersion.
+             * The major version of the node.
              */
             public Builder serviceVersion(String serviceVersion) {
                 this.serviceVersion = serviceVersion;
@@ -378,7 +394,7 @@ public class DescribeClusterMemberInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

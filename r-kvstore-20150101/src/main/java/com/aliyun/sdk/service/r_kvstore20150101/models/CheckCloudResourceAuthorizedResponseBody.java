@@ -50,7 +50,7 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AuthorizationState.
+         * CheckCloudResourceAuthorized
          */
         public Builder authorizationState(Integer authorizationState) {
             this.authorizationState = authorizationState;

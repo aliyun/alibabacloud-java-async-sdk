@@ -153,7 +153,7 @@ public class DescribeParametersRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -162,7 +162,10 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node.
+         * <p>
+         * 
+         * > You can set this parameter to query the parameter settings of the specified node in a cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -189,7 +192,7 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

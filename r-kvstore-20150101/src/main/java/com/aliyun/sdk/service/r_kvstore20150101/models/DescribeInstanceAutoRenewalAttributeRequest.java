@@ -169,7 +169,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +178,10 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
+         * <p>
+         * 
+         * > By default, the system checks whether auto-renewal is enabled for all instances.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -205,7 +208,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer greater than **0**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -214,7 +217,10 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
+         * <p>
+         * 
+         * > The default value is **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -223,7 +229,7 @@ public class DescribeInstanceAutoRenewalAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -33,6 +33,10 @@ public class ModifyInstanceSpecRequest extends Request {
     private String effectiveTime;
 
     @Query
+    @NameInMap("ForceTrans")
+    private Boolean forceTrans;
+
+    @Query
     @NameInMap("ForceUpgrade")
     private Boolean forceUpgrade;
 
@@ -98,6 +102,7 @@ public class ModifyInstanceSpecRequest extends Request {
         this.clientToken = builder.clientToken;
         this.couponNo = builder.couponNo;
         this.effectiveTime = builder.effectiveTime;
+        this.forceTrans = builder.forceTrans;
         this.forceUpgrade = builder.forceUpgrade;
         this.instanceClass = builder.instanceClass;
         this.instanceId = builder.instanceId;
@@ -160,6 +165,13 @@ public class ModifyInstanceSpecRequest extends Request {
      */
     public String getEffectiveTime() {
         return this.effectiveTime;
+    }
+
+    /**
+     * @return forceTrans
+     */
+    public Boolean getForceTrans() {
+        return this.forceTrans;
     }
 
     /**
@@ -266,6 +278,7 @@ public class ModifyInstanceSpecRequest extends Request {
         private String clientToken; 
         private String couponNo; 
         private String effectiveTime; 
+        private Boolean forceTrans; 
         private Boolean forceUpgrade; 
         private String instanceClass; 
         private String instanceId; 
@@ -292,6 +305,7 @@ public class ModifyInstanceSpecRequest extends Request {
             this.clientToken = request.clientToken;
             this.couponNo = request.couponNo;
             this.effectiveTime = request.effectiveTime;
+            this.forceTrans = request.forceTrans;
             this.forceUpgrade = request.forceUpgrade;
             this.instanceClass = request.instanceClass;
             this.instanceId = request.instanceId;
@@ -354,6 +368,15 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
+         * ForceTrans.
+         */
+        public Builder forceTrans(Boolean forceTrans) {
+            this.putQueryParameter("ForceTrans", forceTrans);
+            this.forceTrans = forceTrans;
+            return this;
+        }
+
+        /**
          * ForceUpgrade.
          */
         public Builder forceUpgrade(Boolean forceUpgrade) {
@@ -372,7 +395,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * ModifyInstanceSpec
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -426,7 +449,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * Changes the configurations of an ApsaraDB for Redis instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

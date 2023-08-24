@@ -38,7 +38,7 @@ public class ModifyInstanceAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * Modifies the attributes of an ApsaraDB for Redis instance, such as the name, password, and state of release protection.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

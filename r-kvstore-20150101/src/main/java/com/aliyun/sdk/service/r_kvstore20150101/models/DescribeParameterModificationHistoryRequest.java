@@ -206,7 +206,7 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -215,7 +215,7 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -224,7 +224,10 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node.
+         * <p>
+         * 
+         * > You can set this parameter to query the parameter settings of the specified node in a cluster instance.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -251,7 +254,7 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * ParameterName.
+         * The name of the parameter.
          */
         public Builder parameterName(String parameterName) {
             this.putQueryParameter("ParameterName", parameterName);
@@ -287,7 +290,7 @@ public class DescribeParameterModificationHistoryRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

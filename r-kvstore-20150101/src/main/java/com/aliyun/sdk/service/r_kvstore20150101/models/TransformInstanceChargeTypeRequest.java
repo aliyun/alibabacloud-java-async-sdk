@@ -191,7 +191,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * true
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -200,7 +200,11 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * Specifies whether to enable automatic payment. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   **true**: Automatic payment is enabled.
+         * *   **false**: Automatic payment is disabled. If automatic payment is disabled, you must perform the following steps to complete the payment: In the top navigation bar of the ApsaraDB for Redis console, choose **Expenses** > **Renewal Management**. In the left-side navigation pane of the Billing Management console, click **Orders**. On the **Orders** page, find the order and complete the payment.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -209,7 +213,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * r-bp1zxszhcgatnx****
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -236,7 +240,10 @@ public class TransformInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration. Unit: months. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, **36**.
+         * <p>
+         * 
+         * >  This parameter is valid and required only if you set the **ChargeType** parameter to **PrePaid**.
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);

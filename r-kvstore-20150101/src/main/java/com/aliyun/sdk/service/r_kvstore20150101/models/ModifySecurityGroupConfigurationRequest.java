@@ -163,7 +163,7 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The operation that you want to perform. Set the value to **ModifySecurityGroupConfiguration**.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -208,7 +208,7 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * The ID of the security group that you want to manage. You can specify up to 10 security groups. Separate multiple security group IDs with commas (,).
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);

@@ -148,7 +148,7 @@ public class DescribeEngineVersionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -27,6 +27,9 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     @NameInMap("EncryptionKeyStatus")
     private String encryptionKeyStatus;
 
+    @NameInMap("EncryptionName")
+    private String encryptionName;
+
     @NameInMap("KeyUsage")
     private String keyUsage;
 
@@ -39,16 +42,21 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("RoleArn")
+    private String roleArn;
+
     private DescribeEncryptionKeyResponseBody(Builder builder) {
         this.creator = builder.creator;
         this.deleteDate = builder.deleteDate;
         this.description = builder.description;
         this.encryptionKey = builder.encryptionKey;
         this.encryptionKeyStatus = builder.encryptionKeyStatus;
+        this.encryptionName = builder.encryptionName;
         this.keyUsage = builder.keyUsage;
         this.materialExpireTime = builder.materialExpireTime;
         this.origin = builder.origin;
         this.requestId = builder.requestId;
+        this.roleArn = builder.roleArn;
     }
 
     public static Builder builder() {
@@ -95,6 +103,13 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
     }
 
     /**
+     * @return encryptionName
+     */
+    public String getEncryptionName() {
+        return this.encryptionName;
+    }
+
+    /**
      * @return keyUsage
      */
     public String getKeyUsage() {
@@ -122,19 +137,28 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return roleArn
+     */
+    public String getRoleArn() {
+        return this.roleArn;
+    }
+
     public static final class Builder {
         private String creator; 
         private String deleteDate; 
         private String description; 
         private String encryptionKey; 
         private String encryptionKeyStatus; 
+        private String encryptionName; 
         private String keyUsage; 
         private String materialExpireTime; 
         private String origin; 
         private String requestId; 
+        private String roleArn; 
 
         /**
-         * Creator.
+         * The ID of the Alibaba Cloud account that is used to create the custom key.
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -142,7 +166,10 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * DeleteDate.
+         * The time when the custom key is expected to be deleted. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>
+         * 
+         * > If the return value is an empty string, the custom key cannot be automatically deleted.
          */
         public Builder deleteDate(String deleteDate) {
             this.deleteDate = deleteDate;
@@ -150,7 +177,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the custom key. By default, an empty string is returned.
          */
         public Builder description(String description) {
             this.description = description;
@@ -158,7 +185,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptionKey.
+         * The ID of the custom key.
          */
         public Builder encryptionKey(String encryptionKey) {
             this.encryptionKey = encryptionKey;
@@ -166,7 +193,11 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptionKeyStatus.
+         * The state of the custom key. Valid values:
+         * <p>
+         * 
+         * *   **Enabled**: The custom key is available.
+         * *   **Disabled**: The custom key is unavailable.
          */
         public Builder encryptionKeyStatus(String encryptionKeyStatus) {
             this.encryptionKeyStatus = encryptionKeyStatus;
@@ -174,7 +205,15 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * KeyUsage.
+         * The encryption algorithm.
+         */
+        public Builder encryptionName(String encryptionName) {
+            this.encryptionName = encryptionName;
+            return this;
+        }
+
+        /**
+         * The purpose of the custom key. A value of `ENCRYPT/DECRYPT` indicates encryption and decryption.
          */
         public Builder keyUsage(String keyUsage) {
             this.keyUsage = keyUsage;
@@ -182,7 +221,10 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * MaterialExpireTime.
+         * The time when the custom key expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>
+         * 
+         * > If the return value is an empty string, the custom key does not expire.
          */
         public Builder materialExpireTime(String materialExpireTime) {
             this.materialExpireTime = materialExpireTime;
@@ -190,7 +232,7 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Origin.
+         * The source of the custom key. A value of **Aliyun_KMS** indicates [Key Management Service (KMS)](~~28935~~) of Alibaba Cloud.
          */
         public Builder origin(String origin) {
             this.origin = origin;
@@ -198,10 +240,18 @@ public class DescribeEncryptionKeyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role to which you want to grant permissions.
+         */
+        public Builder roleArn(String roleArn) {
+            this.roleArn = roleArn;
             return this;
         }
 

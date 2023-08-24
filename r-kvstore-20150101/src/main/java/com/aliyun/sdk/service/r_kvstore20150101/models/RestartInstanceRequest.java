@@ -176,7 +176,7 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * The ID of the instance.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -185,7 +185,7 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The operation that you want to perform. Set the value to **RestartInstance**.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -50,7 +50,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Instances.
+         * Details of the instances.
          */
         public Builder instances(Instances instances) {
             this.instances = instances;
@@ -58,7 +58,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +118,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -243,8 +243,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         private String instanceType;
 
+        @NameInMap("IsOrderCompleted")
+        private Boolean isOrderCompleted;
+
         @NameInMap("IsRds")
         private Boolean isRds;
+
+        @NameInMap("IsSupportTDE")
+        private Boolean isSupportTDE;
 
         @NameInMap("MaintainEndTime")
         private String maintainEndTime;
@@ -342,7 +348,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             this.instanceReleaseProtection = builder.instanceReleaseProtection;
             this.instanceStatus = builder.instanceStatus;
             this.instanceType = builder.instanceType;
+            this.isOrderCompleted = builder.isOrderCompleted;
             this.isRds = builder.isRds;
+            this.isSupportTDE = builder.isSupportTDE;
             this.maintainEndTime = builder.maintainEndTime;
             this.maintainStartTime = builder.maintainStartTime;
             this.networkType = builder.networkType;
@@ -539,10 +547,24 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return isOrderCompleted
+         */
+        public Boolean getIsOrderCompleted() {
+            return this.isOrderCompleted;
+        }
+
+        /**
          * @return isRds
          */
         public Boolean getIsRds() {
             return this.isRds;
+        }
+
+        /**
+         * @return isSupportTDE
+         */
+        public Boolean getIsSupportTDE() {
+            return this.isSupportTDE;
         }
 
         /**
@@ -737,7 +759,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private Boolean instanceReleaseProtection; 
             private String instanceStatus; 
             private String instanceType; 
+            private Boolean isOrderCompleted; 
             private Boolean isRds; 
+            private Boolean isSupportTDE; 
             private String maintainEndTime; 
             private String maintainStartTime; 
             private String networkType; 
@@ -764,7 +788,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             private String zoneType; 
 
             /**
-             * ArchitectureType.
+             * The architecture of the instance. Valid values:
+             * <p>
+             * 
+             * *   **cluster**: cluster architecture
+             * *   **standard**: standard architecture
+             * *   **rwsplit**: read/write splitting architecture
              */
             public Builder architectureType(String architectureType) {
                 this.architectureType = architectureType;
@@ -772,7 +801,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AuditLogRetention.
+             * The retention period of audit logs. Unit: days. A value of 0 indicates that the audit log feature is disabled. For more information about how to enable the audit log feature, see [Enable the new audit log feature](~~102015~~).
              */
             public Builder auditLogRetention(String auditLogRetention) {
                 this.auditLogRetention = auditLogRetention;
@@ -780,7 +809,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AvailabilityValue.
+             * The availability metric of the current month.
              */
             public Builder availabilityValue(String availabilityValue) {
                 this.availabilityValue = availabilityValue;
@@ -788,7 +817,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * BackupLogStartTime.
+             * The earliest point in time to which you can restore data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * <p>
+             * 
+             * > 
+             * 
+             * *   This parameter is returned only when the data flashback feature is enabled for the instance. For more information, see [Use data flashback to restore data by point in time](~~148479~~).
+             * 
+             * *   When you call the [RestoreInstance](~~61083~~) operation to implement data flashback, you can obtain the earliest point in time for data flashback from the return value of this parameter and set the **RestoreTime** parameter to this point in time.
              */
             public Builder backupLogStartTime(String backupLogStartTime) {
                 this.backupLogStartTime = backupLogStartTime;
@@ -796,7 +832,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * The bandwidth of the instance. Unit: Mbit/s.
              */
             public Builder bandwidth(Long bandwidth) {
                 this.bandwidth = bandwidth;
@@ -804,7 +840,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Capacity.
+             * The storage capacity of the instance. Unit: MB.
              */
             public Builder capacity(Long capacity) {
                 this.capacity = capacity;
@@ -812,7 +848,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The billing method of the instance. Valid values:
+             * <p>
+             * 
+             * *   **PrePaid**: subscription
+             * *   **PostPaid**: pay-as-you-go
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -820,7 +860,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * CloudType.
+             * This parameter is returned only when the instance is in a cloud box.
              */
             public Builder cloudType(String cloudType) {
                 this.cloudType = cloudType;
@@ -828,7 +868,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * The parameter settings of the instance in the JSON format. For more information, see [Modify the parameters of an ApsaraDB for Redis instance](~~43885~~).
              */
             public Builder config(String config) {
                 this.config = config;
@@ -836,7 +876,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionDomain.
+             * The internal endpoint of the instance.
              */
             public Builder connectionDomain(String connectionDomain) {
                 this.connectionDomain = connectionDomain;
@@ -844,7 +884,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Connections.
+             * The maximum number of connections supported by the instance.
              */
             public Builder connections(Long connections) {
                 this.connections = connections;
@@ -852,7 +892,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the instance was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -860,7 +900,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the subscription instance expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -868,7 +908,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The database engine of the instance. The return value is **Redis**.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -876,7 +916,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The database engine version of the instance. Valid values: **2.8**, **4.0**, **5.0**, and **6.0**.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -884,7 +924,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalInstanceId.
+             * The ID of the distributed instance to which the instance belongs.
+             * <p>
+             * 
+             * > This parameter is returned only when the instance is a child instance of a distributed instance.
              */
             public Builder globalInstanceId(String globalInstanceId) {
                 this.globalInstanceId = globalInstanceId;
@@ -892,7 +935,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * HasRenewChangeOrder.
+             * Indicates whether your Alibaba Cloud account has pending orders for renewal and configuration change. Valid values:
+             * <p>
+             * 
+             * *   **true**: Your Alibaba Cloud account has pending orders.
+             * *   **false**: Your Alibaba Cloud account does not have pending orders.
              */
             public Builder hasRenewChangeOrder(String hasRenewChangeOrder) {
                 this.hasRenewChangeOrder = hasRenewChangeOrder;
@@ -900,7 +947,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceClass.
+             * The instance type of the instance. For more information, see [Instance types](~~107984~~).
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -908,7 +955,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -916,7 +963,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -924,7 +971,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceReleaseProtection.
+             * Indicates whether the release protection feature is enabled for the instance. Valid values:
+             * <p>
+             * 
+             * *   **true**: Release protection is enabled.
+             * *   **false**: Release protection is disabled.
              */
             public Builder instanceReleaseProtection(Boolean instanceReleaseProtection) {
                 this.instanceReleaseProtection = instanceReleaseProtection;
@@ -932,7 +983,26 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceStatus.
+             * The state of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: The instance is normal.
+             * *   **Creating**: The instance is being created.
+             * *   **Changing**: The configurations of the instance are being changed.
+             * *   **Inactive**: The instance is disabled.
+             * *   **Flushing**: The instance is being released.
+             * *   **Released**: The instance is released.
+             * *   **Transforming**: The billing method of the instance is being changed.
+             * *   **Unavailable**: The instance is suspended.
+             * *   **Error**: The instance failed to be created.
+             * *   **Migrating**: The instance is being migrated.
+             * *   **BackupRecovering**: The instance is being restored from a backup.
+             * *   **MinorVersionUpgrading**: The minor version of the instance is being updated.
+             * *   **NetworkModifying**: The network type of the instance is being changed.
+             * *   **SSLModifying**: The SSL certificate of the instance is being changed.
+             * *   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.
+             * 
+             * > For more information about instance states, see [Instance states and impacts](~~200740~~).
              */
             public Builder instanceStatus(String instanceStatus) {
                 this.instanceStatus = instanceStatus;
@@ -940,7 +1010,12 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The database engine of the instance. Valid values:
+             * <p>
+             * 
+             * *   **Tair**
+             * *   **Redis**
+             * *   **Memcache**
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -948,7 +1023,24 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IsRds.
+             * Whether the instance order has been completed is used to determine whether the modify instance specifications order has reached its final state. The return value is:
+             * <p>
+             * 
+             * * **true**: The modify instance specifications operation has been completed or has not been made.
+             * 
+             * * **false**: Changing specifications, the order is not yet completed.
+             */
+            public Builder isOrderCompleted(Boolean isOrderCompleted) {
+                this.isOrderCompleted = isOrderCompleted;
+                return this;
+            }
+
+            /**
+             * Indicates whether the instance is managed by ApsaraDB RDS. Valid values:
+             * <p>
+             * 
+             * *   **true**: The instance is managed by ApsaraDB RDS.
+             * *   **false**: The instance is not managed by ApsaraDB RDS.
              */
             public Builder isRds(Boolean isRds) {
                 this.isRds = isRds;
@@ -956,7 +1048,19 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainEndTime.
+             * Does the instance support enabling transparent data encryption (TDE) function? Return value:
+             * <p>
+             * 
+             * * **true**: Supported, only supported for local disk, memory type Tair instance version. 
+             * * **false**: Not Supported.
+             */
+            public Builder isSupportTDE(Boolean isSupportTDE) {
+                this.isSupportTDE = isSupportTDE;
+                return this;
+            }
+
+            /**
+             * The end time of the maintenance window. The time is in the *HH:mmZ* format. The time is displayed in UTC.
              */
             public Builder maintainEndTime(String maintainEndTime) {
                 this.maintainEndTime = maintainEndTime;
@@ -964,7 +1068,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * MaintainStartTime.
+             * The start time of the maintenance window. The time is in the *HH:mmZ* format. The time is displayed in UTC.
              */
             public Builder maintainStartTime(String maintainStartTime) {
                 this.maintainStartTime = maintainStartTime;
@@ -972,7 +1076,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkType.
+             * The network type of the instance. Valid values:
+             * <p>
+             * 
+             * *   **CLASSIC**: classic network
+             * *   **VPC**: VPC
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -980,7 +1088,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * The node type. Valid values:
+             * <p>
+             * 
+             * *   **double**: The instance contains a master node and a replica node.
+             * *   **single**: The instance contains only a master node. This node type is phrased out.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -988,7 +1100,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PackageType.
+             * The plan type of the instance. Valid values:
+             * <p>
+             * 
+             * *   **standard**: standard plan.
+             * *   **customized**: custom plan. This plan type is phased out.
              */
             public Builder packageType(String packageType) {
                 this.packageType = packageType;
@@ -996,7 +1112,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number of the instance.
              */
             public Builder port(Long port) {
                 this.port = port;
@@ -1004,7 +1120,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIp.
+             * The private IP address of the instance.
+             * <p>
+             * 
+             * > This parameter is not returned when the instance is deployed in the classic network.
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -1012,7 +1131,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * QPS.
+             * The expected maximum queries per second (QPS).
              */
             public Builder QPS(Long QPS) {
                 this.QPS = QPS;
@@ -1020,7 +1139,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyCount.
+             * The number of read-only nodes. This parameter is available only for read/write splitting instances that use cloud disks.
              */
             public Builder readOnlyCount(Integer readOnlyCount) {
                 this.readOnlyCount = readOnlyCount;
@@ -1028,7 +1147,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RealInstanceClass.
+             * If the instance is a cluster instance that uses cloud disks, this parameter indicates the instance type of each shard. In this case, the InstanceClass parameter indicates a virtual instance type.
+             * <p>
+             * 
+             * > To query the costs of this instance type, specify the returned instance type for this parameter for the [DescribePrice](~~95612~~) operation and call the operation.
              */
             public Builder realInstanceClass(String realInstanceClass) {
                 this.realInstanceClass = realInstanceClass;
@@ -1036,7 +1158,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -1044,7 +1166,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicaId.
+             * The ID of the node.
              */
             public Builder replicaId(String replicaId) {
                 this.replicaId = replicaId;
@@ -1052,7 +1174,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationMode.
+             * The architecture of the instance. Valid values:
+             * <p>
+             * 
+             * *   **master-slave**: standard master-replica architecture.
+             * *   **cluster**: cluster architecture, which includes read/write splitting instances and cluster instances.
              */
             public Builder replicationMode(String replicationMode) {
                 this.replicationMode = replicationMode;
@@ -1060,7 +1186,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the instance belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1068,7 +1194,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecondaryZoneId.
+             * The ID of the secondary zone.
+             * <p>
+             * 
+             * > This parameter is returned only when the instance has a secondary zone ID.
              */
             public Builder secondaryZoneId(String secondaryZoneId) {
                 this.secondaryZoneId = secondaryZoneId;
@@ -1076,7 +1205,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIPList.
+             * The IP addresses contained in a whitelist of the instance.
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -1084,7 +1213,10 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ShardCount.
+             * The number of shards. This parameter is available only for instances that are purchased on the China site (aliyun.com).
+             * <p>
+             * 
+             * This parameter is returned only when the instance is a [cluster instance](~~52228~~) that uses cloud disks.
              */
             public Builder shardCount(Integer shardCount) {
                 this.shardCount = shardCount;
@@ -1092,7 +1224,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * Details of the tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -1100,7 +1232,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1108,7 +1240,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcAuthMode.
+             * The VPC authentication mode. Valid values:
+             * <p>
+             * 
+             * *   **Open**: enables password authentication.
+             * *   **Close**: disables password authentication and enables password-free access. For more information, see [Enable password-free access](~~85168~~).
              */
             public Builder vpcAuthMode(String vpcAuthMode) {
                 this.vpcAuthMode = vpcAuthMode;
@@ -1116,7 +1252,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcCloudInstanceId.
+             * The ID of the VPC.
              */
             public Builder vpcCloudInstanceId(String vpcCloudInstanceId) {
                 this.vpcCloudInstanceId = vpcCloudInstanceId;
@@ -1124,7 +1260,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1132,7 +1268,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the instance.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1140,7 +1276,11 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneType.
+             * The deployment type of the instance. Valid values:
+             * <p>
+             * 
+             * *   **singlezone**: The instance is deployed in a single zone.
+             * *   **doublezone**: The instance is deployed in two zones of the same region.
              */
             public Builder zoneType(String zoneType) {
                 this.zoneType = zoneType;

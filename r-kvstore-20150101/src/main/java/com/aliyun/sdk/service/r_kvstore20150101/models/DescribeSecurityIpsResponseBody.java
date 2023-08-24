@@ -50,7 +50,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         private SecurityIpGroups securityIpGroups; 
 
         /**
-         * RequestId.
+         * The name of the whitelist.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityIpGroups.
+         * The ID of the request.
          */
         public Builder securityIpGroups(SecurityIpGroups securityIpGroups) {
             this.securityIpGroups = securityIpGroups;
@@ -122,7 +122,7 @@ public class DescribeSecurityIpsResponseBody extends TeaModel {
             private String securityIpList; 
 
             /**
-             * SecurityIpGroupAttribute.
+             * The operation that you want to perform. Set the value to **DescribeSecurityIps**.
              */
             public Builder securityIpGroupAttribute(String securityIpGroupAttribute) {
                 this.securityIpGroupAttribute = securityIpGroupAttribute;

@@ -62,7 +62,11 @@ public class TransformToPrePaidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EndTime.
+         * Specifies whether to enable auto-renewal. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   **true**: yes
+         * *   **false**: no. In this case, you can renew your instance in the ApsaraDB for Redis console. For more information, see [Manually renew an instance](~~26352~~).
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -70,7 +74,7 @@ public class TransformToPrePaidResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The operation that you want to perform. Set the value to **TransformToPrePaid**.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +82,7 @@ public class TransformToPrePaidResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

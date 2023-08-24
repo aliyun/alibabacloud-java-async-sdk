@@ -86,7 +86,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * GlobalDistributeCaches.
+         * Details of the distributed instance.
          */
         public Builder globalDistributeCaches(java.util.List < GlobalDistributeCaches> globalDistributeCaches) {
             this.globalDistributeCaches = globalDistributeCaches;
@@ -94,7 +94,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,12 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The instance type of the child instance. For more information, see the following topics:
+         * <p>
+         * 
+         * *   [Standard DRAM-based instances](~~145228~~)
+         * *   [Cluster DRAM-based instances](~~150458~~)
+         * *   [Read/write splitting DRAM-based instances](~~150459~~)
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +115,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the child instance that is attached to the distributed instance.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +123,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The number of entries returned per page.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -303,7 +308,12 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             private java.util.List < SubInstances> subInstances; 
 
             /**
-             * GlobalInstanceId.
+             * The state of the distributed instance. Valid values:
+             * <p>
+             * 
+             * *   **Normal**: The instance is normal.
+             * *   **Changing**: The configurations of the instance are being changed.
+             * *   **Creating**: The instance is being created.
              */
             public Builder globalInstanceId(String globalInstanceId) {
                 this.globalInstanceId = globalInstanceId;
@@ -311,7 +321,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The ID of the distributed instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -319,7 +329,7 @@ public class DescribeGlobalDistributeCacheResponseBody extends TeaModel {
             }
 
             /**
-             * SubInstances.
+             * The ID of the request.
              */
             public Builder subInstances(java.util.List < SubInstances> subInstances) {
                 this.subInstances = subInstances;

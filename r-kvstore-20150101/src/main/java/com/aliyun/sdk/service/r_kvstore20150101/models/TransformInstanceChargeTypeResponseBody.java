@@ -62,7 +62,11 @@ public class TransformInstanceChargeTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EndTime.
+         * The new billing method. Valid values:
+         * <p>
+         * 
+         * *   **PrePaid**: subscription. If you set this parameter to PrePaid, you must also set the **Period** parameter.
+         * *   **PostPaid**: pay-as-you-go.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -70,7 +74,7 @@ public class TransformInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The operation that you want to perform. Set the value to **TransformInstanceChargeType**.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +82,7 @@ public class TransformInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

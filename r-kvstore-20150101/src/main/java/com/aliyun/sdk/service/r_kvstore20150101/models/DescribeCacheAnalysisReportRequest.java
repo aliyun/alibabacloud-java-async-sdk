@@ -221,7 +221,7 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * AnalysisType.
+         * The maximum number of entries returned per page.
          */
         public Builder analysisType(String analysisType) {
             this.putQueryParameter("AnalysisType", analysisType);
@@ -230,7 +230,7 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * Date.
+         * The page number of the returned page.
          */
         public Builder date(String date) {
             this.putQueryParameter("Date", date);
@@ -239,7 +239,10 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
+         * <p>
+         * 
+         * >  Default value: **30**.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -284,7 +287,7 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The ID of the request.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

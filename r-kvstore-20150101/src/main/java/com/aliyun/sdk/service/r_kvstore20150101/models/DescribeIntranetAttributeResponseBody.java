@@ -18,8 +18,14 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     @NameInMap("BandwidthExpireTime")
     private String bandwidthExpireTime;
 
+    @NameInMap("BandwidthPrePaid")
+    private String bandwidthPrePaid;
+
     @NameInMap("ExpireTime")
     private String expireTime;
+
+    @NameInMap("HasPrePaidBandWidthOrderRunning")
+    private Boolean hasPrePaidBandWidthOrderRunning;
 
     @NameInMap("IntranetBandwidth")
     private Integer intranetBandwidth;
@@ -30,7 +36,9 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     private DescribeIntranetAttributeResponseBody(Builder builder) {
         this.autoRenewal = builder.autoRenewal;
         this.bandwidthExpireTime = builder.bandwidthExpireTime;
+        this.bandwidthPrePaid = builder.bandwidthPrePaid;
         this.expireTime = builder.expireTime;
+        this.hasPrePaidBandWidthOrderRunning = builder.hasPrePaidBandWidthOrderRunning;
         this.intranetBandwidth = builder.intranetBandwidth;
         this.requestId = builder.requestId;
     }
@@ -58,10 +66,24 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return bandwidthPrePaid
+     */
+    public String getBandwidthPrePaid() {
+        return this.bandwidthPrePaid;
+    }
+
+    /**
      * @return expireTime
      */
     public String getExpireTime() {
         return this.expireTime;
+    }
+
+    /**
+     * @return hasPrePaidBandWidthOrderRunning
+     */
+    public Boolean getHasPrePaidBandWidthOrderRunning() {
+        return this.hasPrePaidBandWidthOrderRunning;
     }
 
     /**
@@ -81,12 +103,20 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean autoRenewal; 
         private String bandwidthExpireTime; 
+        private String bandwidthPrePaid; 
         private String expireTime; 
+        private Boolean hasPrePaidBandWidthOrderRunning; 
         private Integer intranetBandwidth; 
         private String requestId; 
 
         /**
-         * AutoRenewal.
+         * Indicates whether auto-renewal is enabled for the extra internal bandwidth that you purchased. Valid values:
+         * <p>
+         * 
+         * *   **true**: Auto-renewal is enabled.
+         * *   **false**: Auto-renewal is disabled.
+         * 
+         * > If no extra internal bandwidth is purchased, this parameter is not returned.
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.autoRenewal = autoRenewal;
@@ -94,7 +124,10 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * BandwidthExpireTime.
+         * The time when the extra internal bandwidth that you purchased expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>
+         * 
+         * > If no extra internal bandwidth is purchased, this parameter is not returned.
          */
         public Builder bandwidthExpireTime(String bandwidthExpireTime) {
             this.bandwidthExpireTime = bandwidthExpireTime;
@@ -102,7 +135,18 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireTime.
+         * BandwidthPrePaid.
+         */
+        public Builder bandwidthPrePaid(String bandwidthPrePaid) {
+            this.bandwidthPrePaid = bandwidthPrePaid;
+            return this;
+        }
+
+        /**
+         * The time when the extra internal bandwidth that you purchased for temporary use expires. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * <p>
+         * 
+         * > If no extra internal bandwidth for temporary use is purchased or the extra internal bandwidth that you purchased for temporary use has expired, **0** is returned for this parameter.
          */
         public Builder expireTime(String expireTime) {
             this.expireTime = expireTime;
@@ -110,7 +154,18 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * IntranetBandwidth.
+         * Does the instance have unexpired prepaid bandwidth package, value:
+         * <p>
+         * - true
+         * - false
+         */
+        public Builder hasPrePaidBandWidthOrderRunning(Boolean hasPrePaidBandWidthOrderRunning) {
+            this.hasPrePaidBandWidthOrderRunning = hasPrePaidBandWidthOrderRunning;
+            return this;
+        }
+
+        /**
+         * The current internal bandwidth of the instance. Unit: Mbit/s.
          */
         public Builder intranetBandwidth(Integer intranetBandwidth) {
             this.intranetBandwidth = intranetBandwidth;
@@ -118,7 +173,7 @@ public class DescribeIntranetAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

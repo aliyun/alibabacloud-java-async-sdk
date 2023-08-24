@@ -193,7 +193,7 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The username of the account for which you want to change the password. You can call the [DescribeAccounts](~~95802~~) operation to query the username of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -202,7 +202,7 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -211,7 +211,7 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * NewAccountPassword.
+         * The new password to be set for the account. The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`
          */
         public Builder newAccountPassword(String newAccountPassword) {
             this.putQueryParameter("NewAccountPassword", newAccountPassword);
@@ -220,7 +220,10 @@ public class ModifyAccountPasswordRequest extends Request {
         }
 
         /**
-         * OldAccountPassword.
+         * The current password of the account.
+         * <p>
+         * 
+         * > If you forget your password, you can call the [ResetAccountPassword](~~95941~~) operation to reset your password.
          */
         public Builder oldAccountPassword(String oldAccountPassword) {
             this.putQueryParameter("OldAccountPassword", oldAccountPassword);

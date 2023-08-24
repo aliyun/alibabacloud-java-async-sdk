@@ -62,7 +62,7 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +70,7 @@ public class ModifyInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The operation that you want to perform. Set the value to **ModifyInstanceSSL**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

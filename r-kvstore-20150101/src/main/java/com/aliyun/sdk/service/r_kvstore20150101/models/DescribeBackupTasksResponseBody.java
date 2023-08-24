@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupTasksResponseBody</p>
  */
 public class DescribeBackupTasksResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    private AccessDeniedDetail accessDeniedDetail;
+
     @NameInMap("BackupJobs")
     private java.util.List < BackupJobs> backupJobs;
 
@@ -22,6 +25,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeBackupTasksResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.backupJobs = builder.backupJobs;
         this.instanceId = builder.instanceId;
         this.requestId = builder.requestId;
@@ -33,6 +37,13 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
 
     public static DescribeBackupTasksResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public AccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -57,12 +68,21 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AccessDeniedDetail accessDeniedDetail; 
         private java.util.List < BackupJobs> backupJobs; 
         private String instanceId; 
         private String requestId; 
 
         /**
-         * BackupJobs.
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
          */
         public Builder backupJobs(java.util.List < BackupJobs> backupJobs) {
             this.backupJobs = backupJobs;
@@ -70,7 +90,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -78,7 +98,15 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The status of the backup task. Valid values:
+         * <p>
+         * 
+         * *   **NoStart**: The backup task is not started.
+         * *   **Preparing**: The backup task is being prepared.
+         * *   **Waiting**: The backup task is pending.
+         * *   **Uploading:** The system is uploading the backup file.
+         * *   **Checking:** The system is checking the uploaded backup file.
+         * *   **Finished**: The backup task is complete.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,6 +119,167 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
 
     } 
 
+    public static class AccessDeniedDetail extends TeaModel {
+        @NameInMap("AuthAction")
+        private String authAction;
+
+        @NameInMap("AuthPrincipalDisplayName")
+        private String authPrincipalDisplayName;
+
+        @NameInMap("AuthPrincipalOwnerId")
+        private String authPrincipalOwnerId;
+
+        @NameInMap("AuthPrincipalType")
+        private String authPrincipalType;
+
+        @NameInMap("EncodedDiagnosticMessage")
+        private String encodedDiagnosticMessage;
+
+        @NameInMap("NoPermissionType")
+        private String noPermissionType;
+
+        @NameInMap("PolicyType")
+        private String policyType;
+
+        private AccessDeniedDetail(Builder builder) {
+            this.authAction = builder.authAction;
+            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
+            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
+            this.authPrincipalType = builder.authPrincipalType;
+            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
+            this.noPermissionType = builder.noPermissionType;
+            this.policyType = builder.policyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessDeniedDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authAction
+         */
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        /**
+         * @return authPrincipalDisplayName
+         */
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        /**
+         * @return authPrincipalOwnerId
+         */
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        /**
+         * @return authPrincipalType
+         */
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        /**
+         * @return encodedDiagnosticMessage
+         */
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        /**
+         * @return noPermissionType
+         */
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+        public static final class Builder {
+            private String authAction; 
+            private String authPrincipalDisplayName; 
+            private String authPrincipalOwnerId; 
+            private String authPrincipalType; 
+            private String encodedDiagnosticMessage; 
+            private String noPermissionType; 
+            private String policyType; 
+
+            /**
+             * AuthAction.
+             */
+            public Builder authAction(String authAction) {
+                this.authAction = authAction;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalDisplayName.
+             */
+            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
+                this.authPrincipalDisplayName = authPrincipalDisplayName;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalOwnerId.
+             */
+            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
+                this.authPrincipalOwnerId = authPrincipalOwnerId;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalType.
+             */
+            public Builder authPrincipalType(String authPrincipalType) {
+                this.authPrincipalType = authPrincipalType;
+                return this;
+            }
+
+            /**
+             * EncodedDiagnosticMessage.
+             */
+            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
+                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+                return this;
+            }
+
+            /**
+             * NoPermissionType.
+             */
+            public Builder noPermissionType(String noPermissionType) {
+                this.noPermissionType = noPermissionType;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
+                return this;
+            }
+
+            public AccessDeniedDetail build() {
+                return new AccessDeniedDetail(this);
+            } 
+
+        } 
+
+    }
     public static class BackupJobs extends TeaModel {
         @NameInMap("BackupJobID")
         private Integer backupJobID;
@@ -190,7 +379,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             private String taskAction; 
 
             /**
-             * BackupJobID.
+             * The ID of the backup task.
              */
             public Builder backupJobID(Integer backupJobID) {
                 this.backupJobID = backupJobID;
@@ -198,7 +387,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * BackupProgressStatus.
+             * The beginning time when the backup task started. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.
              */
             public Builder backupProgressStatus(String backupProgressStatus) {
                 this.backupProgressStatus = backupProgressStatus;
@@ -206,7 +395,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * JobMode.
+             * Manual
              */
             public Builder jobMode(String jobMode) {
                 this.jobMode = jobMode;
@@ -214,7 +403,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the request.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -222,7 +411,11 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * The backup mode. Valid values:
+             * <p>
+             * 
+             * *   **Automated**: automatic backup
+             * *   **Manual**: manual backup
              */
             public Builder process(String process) {
                 this.process = process;
@@ -230,7 +423,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * 1162****
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

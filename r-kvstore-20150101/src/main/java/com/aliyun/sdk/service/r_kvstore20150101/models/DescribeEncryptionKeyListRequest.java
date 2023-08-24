@@ -148,7 +148,7 @@ public class DescribeEncryptionKeyListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The operation that you want to perform. Set the value to **DescribeEncryptionKeyList**.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -186,7 +186,7 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -162,7 +162,7 @@ public class FlushExpireKeysRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * The ID of the request.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -171,7 +171,7 @@ public class FlushExpireKeysRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the task.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

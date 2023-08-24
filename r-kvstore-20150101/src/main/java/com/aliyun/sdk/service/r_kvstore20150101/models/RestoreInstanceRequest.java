@@ -57,6 +57,10 @@ public class RestoreInstanceRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
+    @Query
+    @NameInMap("TimeShift")
+    private String timeShift;
+
     private RestoreInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -70,6 +74,7 @@ public class RestoreInstanceRequest extends Request {
         this.restoreTime = builder.restoreTime;
         this.restoreType = builder.restoreType;
         this.securityToken = builder.securityToken;
+        this.timeShift = builder.timeShift;
     }
 
     public static Builder builder() {
@@ -162,6 +167,13 @@ public class RestoreInstanceRequest extends Request {
         return this.securityToken;
     }
 
+    /**
+     * @return timeShift
+     */
+    public String getTimeShift() {
+        return this.timeShift;
+    }
+
     public static final class Builder extends Request.Builder<RestoreInstanceRequest, Builder> {
         private String regionId; 
         private String backupId; 
@@ -174,6 +186,7 @@ public class RestoreInstanceRequest extends Request {
         private String restoreTime; 
         private String restoreType; 
         private String securityToken; 
+        private String timeShift; 
 
         private Builder() {
             super();
@@ -192,6 +205,7 @@ public class RestoreInstanceRequest extends Request {
             this.restoreTime = request.restoreTime;
             this.restoreType = request.restoreType;
             this.securityToken = request.securityToken;
+            this.timeShift = request.timeShift;
         } 
 
         /**
@@ -204,7 +218,7 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * BackupId.
+         * The ID of the backup file. You can call the [DescribeBackups](~~61081~~) operation to query the IDs of backup files.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -213,7 +227,14 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * FilterKey.
+         * The key that you want to restore. You can specify multiple keys. Separate multiple keys with commas (,). Regular expressions are supported.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   In a regular expression, an asterisk (`*`) matches zero or more occurrences of a subexpression that occurs before. For example, if you set this parameter to `h.*llo`, strings such as `hllo` and `heeeello` are matched.
+         * 
+         * *   This parameter is available only if you set the **RestoreType** parameter to **1**.
          */
         public Builder filterKey(String filterKey) {
             this.putQueryParameter("FilterKey", filterKey);
@@ -222,7 +243,7 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -267,7 +288,14 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * The point in time to which you want to restore data. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If the [data flashback](~~148479~~) feature is enabled for the instance, you can specify this parameter and the **FilterKey** parameter to restore the data of the specified key to the specified point in time that is accurate to the second. Other keys are not affected. This way, you can achieve more fine-grained data restoration.
+         * 
+         * *   This parameter is available only if you set the **RestoreType** parameter to **1**.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -276,7 +304,11 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * RestoreType.
+         * The restoration mode. Default value: 0. Valid values:
+         * <p>
+         * 
+         * *   **0**: restores data from the specified backup set.
+         * *   **1**: restores data to a specified point in time. This parameter is available only if the [data flashback](~~148479~~) feature is enabled for the instance. If you specify this value, you must also specify the **RestoreTime** parameter.
          */
         public Builder restoreType(String restoreType) {
             this.putQueryParameter("RestoreType", restoreType);
@@ -290,6 +322,18 @@ public class RestoreInstanceRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * The expiration offset time point of a key. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The key expires after the remaining validity period of the key elapses based on the expiration offset time point.
+         * <p>
+         * 
+         * > This time point must be between the specified flashback time point and the submission time of the data restoration task.
+         */
+        public Builder timeShift(String timeShift) {
+            this.putQueryParameter("TimeShift", timeShift);
+            this.timeShift = timeShift;
             return this;
         }
 

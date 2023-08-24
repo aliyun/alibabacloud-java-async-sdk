@@ -305,7 +305,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * CharacterType.
+         * The number of the page to return. The value must be an integer that is greater than **0** and less than or equal to the maximum value supported by the integer data type. Default value: **1**.
          */
         public Builder characterType(String characterType) {
             this.putQueryParameter("CharacterType", characterType);
@@ -314,7 +314,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -323,7 +323,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The operation that you want to perform. Set the value to **DescribeRunningLogRecords**.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -332,7 +332,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The time when the log was generated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -341,7 +341,14 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The shard type of the cluster instance. Valid values:
+         * <p>
+         * 
+         * *   **proxy**: proxy node
+         * *   **db**: data node
+         * *   **cs**: config server node
+         * 
+         * >  If you set this parameter, you must also set the **NodeId** parameter.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -350,7 +357,12 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The ID of the node in the instance. You can set this parameter to query the operational logs of a specified node.
+         * <p>
+         * 
+         * > 
+         * *   This parameter is available only for read/write splitting and cluster instances of ApsaraDB for Redis.
+         * *   If you set this parameter, you must also set the **CharacterType** parameter.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -377,7 +389,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The ID of the instance.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -386,7 +398,11 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The role of the data shard. Default value: master. Valid values:
+         * <p>
+         * 
+         * *   **master**: master node
+         * *   **slave**: replica node
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -395,7 +411,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * QueryKeyword.
+         * The content of the log.
          */
         public Builder queryKeyword(String queryKeyword) {
             this.putQueryParameter("QueryKeyword", queryKeyword);
@@ -404,7 +420,11 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The method that is used to sort the returned log entries. Valid values:
+         * <p>
+         * 
+         * *   **asc**: ascending order
+         * *   **desc**: descending order
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -431,7 +451,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * The total number of entries returned.
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);
@@ -449,7 +469,7 @@ public class DescribeRunningLogRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * Details about the log entries.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

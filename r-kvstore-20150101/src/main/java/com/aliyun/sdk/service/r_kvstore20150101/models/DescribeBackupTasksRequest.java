@@ -176,7 +176,7 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * BackupJobId.
+         * The progress of the backup task in percentage.
          */
         public Builder backupJobId(String backupJobId) {
             this.putQueryParameter("BackupJobId", backupJobId);
@@ -185,7 +185,7 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The details of the backup tasks.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -194,7 +194,7 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * JobMode.
+         * The operation that you want to perform. The operation that you want to perform. Set the value to **DescribeBackupTasks**.
          */
         public Builder jobMode(String jobMode) {
             this.putQueryParameter("JobMode", jobMode);

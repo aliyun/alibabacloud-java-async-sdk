@@ -176,7 +176,13 @@ public class ModifyIntranetAttributeRequest extends Request {
         }
 
         /**
-         * BandWidth.
+         * The amount of bandwidth that you want to add. Unit: Mbit/s. The value must be an integer greater than or equal to 0. In most cases, the maximum bandwidth that can be added can be two times the default maximum bandwidth of the current instance type. For more information about the bandwidth specifications supported by different instance types, see [Overview](~~26350~~). The bandwidth is also subject to the following limits:
+         * <p>
+         * 
+         * *   The bandwidth of an individual instance cannot exceed 75% of the bandwidth of the host. For more information about the host specifications and bandwidth, see [Instance types of hosts](~~206343~~).
+         * *   The total bandwidth of all of the instances on the host cannot exceed 150% of the bandwidth of the host. You can configure resource overcommitment to handle traffic spikes. For more information, see [Configure resource overcommitment to reduce costs](~~183798~~).
+         * 
+         * > If you do not specify this parameter for a standard instance, the bandwidth of the instance is set to two times that of the current bandwidth.
          */
         public Builder bandWidth(Long bandWidth) {
             this.putQueryParameter("BandWidth", bandWidth);
@@ -185,7 +191,7 @@ public class ModifyIntranetAttributeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -194,7 +200,10 @@ public class ModifyIntranetAttributeRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the data node. You can call the [DescribeClusterMemberInfo](~~193462~~) operation to query the node ID. Separate multiple IDs with commas (,).
+         * <p>
+         * 
+         * > This parameter is available and required only when the instance uses the [cluster architecture](~~52228~~).
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

@@ -221,7 +221,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * 2020-11-26T01:00Z
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -230,7 +230,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The identifier of the task.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -257,7 +257,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The ID of the task.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -266,7 +266,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The operation that you want to perform. Set the value to **DescribeTasks**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -302,7 +302,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -311,7 +311,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * The total number of entries.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

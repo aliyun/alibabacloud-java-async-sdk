@@ -162,7 +162,7 @@ public class DescribeEncryptionKeyRequest extends Request {
         }
 
         /**
-         * EncryptionKey.
+         * The ID of the custom key. You can call the [DescribeEncryptionKeyList](~~302339~~) operation to query the ID of the key.
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -171,7 +171,7 @@ public class DescribeEncryptionKeyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

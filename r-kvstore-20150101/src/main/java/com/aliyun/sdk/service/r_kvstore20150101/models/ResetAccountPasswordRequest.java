@@ -178,7 +178,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The operation that you want to perform. Set the value to **ResetAccountPassword**.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -187,7 +187,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The name of the account. You can call the [DescribeAccounts](~~95802~~) operation to obtain the name of the account.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -196,7 +196,7 @@ public class ResetAccountPasswordRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -50,7 +50,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RegionIds.
+         * The value of the **RegionIds** parameter is in the array format. Each element in the array contains the **RegionId** and **ZoneIds** parameters.
          */
         public Builder regionIds(RegionIds regionIds) {
             this.regionIds = regionIds;
@@ -58,7 +58,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -187,7 +187,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String zoneIds; 
 
             /**
-             * LocalName.
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -195,7 +195,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionEndpoint.
+             * The endpoint of the region.
              */
             public Builder regionEndpoint(String regionEndpoint) {
                 this.regionEndpoint = regionEndpoint;
@@ -203,7 +203,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -211,7 +211,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneIdList.
+             * The list of zone IDs.
              */
             public Builder zoneIdList(ZoneIdList zoneIdList) {
                 this.zoneIdList = zoneIdList;
@@ -219,7 +219,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneIds.
+             * The zone ID of the instance.
              */
             public Builder zoneIds(String zoneIds) {
                 this.zoneIds = zoneIds;

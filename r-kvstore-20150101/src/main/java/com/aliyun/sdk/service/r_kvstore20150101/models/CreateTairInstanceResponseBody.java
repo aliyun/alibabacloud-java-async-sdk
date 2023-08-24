@@ -206,7 +206,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the instance. Unit: MB/s.
          */
         public Builder bandwidth(Long bandwidth) {
             this.bandwidth = bandwidth;
@@ -214,7 +214,11 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ChargeType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **PrePaid**: subscription
+         * *   **PostPaid**: pay-as-you-go
          */
         public Builder chargeType(String chargeType) {
             this.chargeType = chargeType;
@@ -222,7 +226,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Config.
+         * The detailed configurations of the instance. The value is a JSON string. For more information about the parameter description, see [Modify the parameters of an ApsaraDB for Redis instance](~~43885~~).
          */
         public Builder config(String config) {
             this.config = config;
@@ -230,7 +234,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ConnectionDomain.
+         * The internal endpoint of the instance.
          */
         public Builder connectionDomain(String connectionDomain) {
             this.connectionDomain = connectionDomain;
@@ -238,7 +242,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Connections.
+         * The maximum number of connections supported by the instance.
          */
         public Builder connections(Long connections) {
             this.connections = connections;
@@ -246,7 +250,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -254,7 +258,12 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * The name of the instance.
+         * <p>
+         * 
+         * **
+         * 
+         * This parameter is returned only if the **InstanceName** parameter is specified in the request.
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -262,7 +271,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceStatus.
+         * The state of the instance. The return value is **Creating**.
          */
         public Builder instanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
@@ -270,7 +279,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -278,7 +287,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Port.
+         * The port number that is used to connect to the instance.
          */
         public Builder port(Integer port) {
             this.port = port;
@@ -286,7 +295,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * QPS.
+         * The maximum number of read and write operations that can be processed by the instance per second. The value is a theoretical value.
          */
         public Builder QPS(Long QPS) {
             this.QPS = QPS;
@@ -294,7 +303,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -302,7 +311,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -310,7 +319,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
@@ -318,7 +327,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;

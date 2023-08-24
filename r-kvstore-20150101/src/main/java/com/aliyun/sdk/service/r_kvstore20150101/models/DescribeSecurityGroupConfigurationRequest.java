@@ -148,7 +148,7 @@ public class DescribeSecurityGroupConfigurationRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The list of security groups.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

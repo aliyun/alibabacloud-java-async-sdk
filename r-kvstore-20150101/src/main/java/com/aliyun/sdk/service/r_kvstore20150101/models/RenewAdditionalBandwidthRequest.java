@@ -205,7 +205,11 @@ public class RenewAdditionalBandwidthRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables automatic payment.
+         * *   **false**: disables automatic payment. If automatic payment is disabled, you must perform the following steps to complete the payment in the ApsaraDB for Redis console: In the top navigation bar, choose **Expenses** > **Renewal Management**. In the left-side navigation pane, click **Orders**. On the **Orders** page, find the order and complete the payment.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -214,7 +218,7 @@ public class RenewAdditionalBandwidthRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * The ID of the coupon.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -223,7 +227,7 @@ public class RenewAdditionalBandwidthRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -232,7 +236,7 @@ public class RenewAdditionalBandwidthRequest extends Request {
         }
 
         /**
-         * OrderTimeLength.
+         * The validity period of the bandwidth that you purchase. Unit: days. Valid values: **1**, **2**, **3**, **7**, **14**, **30**, **60**, **90**, **180**, **365**, **730**, **1095**, and **1825**.
          */
         public Builder orderTimeLength(String orderTimeLength) {
             this.putQueryParameter("OrderTimeLength", orderTimeLength);
@@ -286,7 +290,7 @@ public class RenewAdditionalBandwidthRequest extends Request {
         }
 
         /**
-         * SourceBiz.
+         * The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.
          */
         public Builder sourceBiz(String sourceBiz) {
             this.putQueryParameter("SourceBiz", sourceBiz);

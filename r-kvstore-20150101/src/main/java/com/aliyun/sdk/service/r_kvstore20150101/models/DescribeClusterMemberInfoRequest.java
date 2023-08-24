@@ -30,6 +30,16 @@ public class DescribeClusterMemberInfoRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("PageNumber")
+    @Validation(maximum = 1000, minimum = 1)
+    private Integer pageNumber;
+
+    @Query
+    @NameInMap("PageSize")
+    @Validation(maximum = 1000, minimum = 1)
+    private Integer pageSize;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -47,6 +57,8 @@ public class DescribeClusterMemberInfoRequest extends Request {
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -94,6 +106,20 @@ public class DescribeClusterMemberInfoRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -119,6 +145,8 @@ public class DescribeClusterMemberInfoRequest extends Request {
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -133,6 +161,8 @@ public class DescribeClusterMemberInfoRequest extends Request {
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
@@ -148,7 +178,7 @@ public class DescribeClusterMemberInfoRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -171,6 +201,27 @@ public class DescribeClusterMemberInfoRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
+         * <p>
+         * 
+         * >  Default value: **30**.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

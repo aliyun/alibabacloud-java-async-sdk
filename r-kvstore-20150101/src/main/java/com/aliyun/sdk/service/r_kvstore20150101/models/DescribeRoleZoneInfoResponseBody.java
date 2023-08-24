@@ -86,7 +86,11 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Node.
+         * The role of the node. Valid values:
+         * <p>
+         * 
+         * *   **master**: master node
+         * *   **slave**: replica node
          */
         public Builder node(Node node) {
             this.node = node;
@@ -94,7 +98,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +106,11 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * Indicates whether the bandwidth of the node is increased. Valid values:
+         * <p>
+         * 
+         * *   **true**: The bandwidth of the node is not increased.
+         * *   **false**: The bandwidth of the node is increased.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +118,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * This parameter is used only for internal maintenance of ApsaraDB for Redis instances.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +126,10 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * Indicates whether the node is a read replica. If the node is a read replica, **3** is returned.
+         * <p>
+         * 
+         * >  If the node is not a read replica, no value is returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -290,7 +301,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * CurrentBandWidth.
+             * The number of the returned page.
              */
             public Builder currentBandWidth(Long currentBandWidth) {
                 this.currentBandWidth = currentBandWidth;
@@ -298,7 +309,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentMinorVersion.
+             * The number of entries to return on each page. Valid values: **10**, **20**, and **50**. Default value: **10**.
              */
             public Builder currentMinorVersion(String currentMinorVersion) {
                 this.currentMinorVersion = currentMinorVersion;
@@ -314,7 +325,12 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultBandWidth.
+             * The node type. Valid values:
+             * <p>
+             * 
+             * *   **db**: data node.
+             * *   **proxy**: proxy node.
+             * *   **normal**: regular node. This value is returned when the instance runs in the standard architecture.
              */
             public Builder defaultBandWidth(Long defaultBandWidth) {
                 this.defaultBandWidth = defaultBandWidth;
@@ -322,7 +338,13 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InsName.
+             * Indicates whether the minor version is the latest version. Valid values:
+             * <p>
+             * 
+             * *   **0**: The minor version is not the latest version.
+             * *   **1**: The minor version is the latest version.
+             * 
+             * >  To update the minor version, call the [ModifyInstanceMinorVersion](~~129381~~) operation.
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -330,7 +352,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InsType.
+             * Details about each node in an ApsaraDB for Redis instance.
              */
             public Builder insType(Integer insType) {
                 this.insType = insType;
@@ -338,7 +360,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsLatestVersion.
+             * The number of entries returned per page.
              */
             public Builder isLatestVersion(Integer isLatestVersion) {
                 this.isLatestVersion = isLatestVersion;
@@ -346,7 +368,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsOpenBandWidthService.
+             * DescribeRoleZoneInfo
              */
             public Builder isOpenBandWidthService(Boolean isOpenBandWidthService) {
                 this.isOpenBandWidthService = isOpenBandWidthService;
@@ -362,7 +384,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * The ID of the request.
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -378,7 +400,7 @@ public class DescribeRoleZoneInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * Queries information about the type, minor version, and bandwidth of specific nodes in an ApsaraDB for Redis instance, and zones where the nodes are deployed.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

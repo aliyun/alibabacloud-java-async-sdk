@@ -334,7 +334,12 @@ public class DescribeInstancesOverviewRequest extends Request {
         } 
 
         /**
-         * ArchitectureType.
+         * The architecture of the instance. Valid values:
+         * <p>
+         * 
+         * *   **cluster**: cluster architecture
+         * *   **standard**: standard architecture
+         * *   **rwsplit**: read/write splitting architecture
          */
         public Builder architectureType(String architectureType) {
             this.putQueryParameter("ArchitectureType", architectureType);
@@ -343,7 +348,11 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **PrePaid**: subscription
+         * *   **PostPaid**: pay-as-you-go
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -352,7 +361,11 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * EditionType.
+         * The edition of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Community**: Community Edition
+         * *   **Enterprise**: Enhanced Edition (Tair)
          */
         public Builder editionType(String editionType) {
             this.putQueryParameter("EditionType", editionType);
@@ -361,7 +374,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance. Valid values: **2.8**, **4.0**, and **5.0**.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -370,7 +383,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * InstanceClass.
+         * The instance type of the instance. For more information, see [Instance types](~~107984~~).
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -379,7 +392,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of instances.
+         * <p>
+         * 
+         * > By default, all instances that belong to this account are queried. If you specify multiple instance IDs, separate the instance IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -388,7 +404,26 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * InstanceStatus.
+         * The state of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Normal**: The instance is normal.
+         * *   **Creating**: The instance is being created.
+         * *   **Changing**: The configurations of the instance are being changed.
+         * *   **Inactive**: The instance is disabled.
+         * *   **Flushing**: The instance is being released.
+         * *   **Released**: The instance is released.
+         * *   **Transforming**: The billing method of the instance is being changed.
+         * *   **Unavailable**: The instance is unavailable.
+         * *   **Error**: The instance failed to be created.
+         * *   **Migrating**: The instance is being migrated.
+         * *   **BackupRecovering**: The instance is being restored from a backup.
+         * *   **MinorVersionUpgrading**: The minor version of the instance is being updated.
+         * *   **NetworkModifying**: The network type of the instance is being changed.
+         * *   **SSLModifying**: The SSL certificate of the instance is being changed.
+         * *   **MajorVersionUpgrading**: The major version of the instance is being upgraded. The instance remains accessible during the upgrade.
+         * 
+         * > For more information about instance states, see [Instance states and impacts](~~200740~~).
          */
         public Builder instanceStatus(String instanceStatus) {
             this.putQueryParameter("InstanceStatus", instanceStatus);
@@ -397,7 +432,12 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The category of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Tair**
+         * *   **Redis**
+         * *   **Memcache**
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -406,7 +446,11 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * NetworkType.
+         * The network type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **CLASSIC**: classic network
+         * *   **VPC**: Virtual Private Cloud (VPC)
          */
         public Builder networkType(String networkType) {
             this.putQueryParameter("NetworkType", networkType);
@@ -433,7 +477,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * PrivateIp.
+         * The private IP address of the instance.
          */
         public Builder privateIp(String privateIp) {
             this.putQueryParameter("PrivateIp", privateIp);
@@ -442,7 +486,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region in which the instances you want to query reside. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -451,7 +495,10 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instances you want to query belong.
+         * <p>
+         * 
+         * > You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -478,7 +525,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * SearchKey.
+         * The keyword used for fuzzy search. The keyword can be based on an instance ID or an instance description.
          */
         public Builder searchKey(String searchKey) {
             this.putQueryParameter("SearchKey", searchKey);
@@ -496,7 +543,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the vSwitch.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -505,7 +552,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -514,7 +561,7 @@ public class DescribeInstancesOverviewRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the instance.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

@@ -147,7 +147,13 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * AcceptLanguage.
+         * The diaplay language of the **LocalName** parameter value. Valid values:
+         * <p>
+         * 
+         * *   **zh-CN**: Chinese
+         * *   **en-US**: English
+         * 
+         * > The default value is **zh-CN**.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

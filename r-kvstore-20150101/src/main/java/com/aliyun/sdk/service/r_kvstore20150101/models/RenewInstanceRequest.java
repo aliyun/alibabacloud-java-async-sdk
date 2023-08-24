@@ -261,7 +261,13 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables automatic payment.
+         * *   **false**: disables automatic payment.
+         * 
+         * If you select false, you must choose **Expenses** > **Renewal Management** in the top navigation bar. In the left-side navigation pane, click **Orders**. Find the specified order and pay for it.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -270,7 +276,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * BusinessInfo.
+         * The ID of the promotional event or business information.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -279,7 +285,10 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * Capacity.
+         * The storage capacity of the instance. Unit: MB. When you renew the instance, you can specify this parameter to change specifications of the instance.
+         * <p>
+         * 
+         * > To change the specifications when you renew the instance, you must specify at least one of the `Capacity` and `InstanceClass` parameters.
          */
         public Builder capacity(String capacity) {
             this.putQueryParameter("Capacity", capacity);
@@ -288,7 +297,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token is case-sensitive. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -297,7 +306,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -306,7 +315,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * FromApp.
+         * The source of the request. The default value is **OpenAPI** and cannot be changed.
          */
         public Builder fromApp(String fromApp) {
             this.putQueryParameter("FromApp", fromApp);
@@ -315,7 +324,10 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * InstanceClass.
+         * The instance type code. For more information, see [Instance specifications overview](~~26350~~). When you renew the instance, you can specify this parameter to change specifications of the instance.
+         * <p>
+         * 
+         * > To change the specifications when you renew the instance, you must specify at least one of the `Capacity` and `InstanceClass` parameters.
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -324,7 +336,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -351,7 +363,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * The renewal period. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, and **36**. Unit: months.
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);

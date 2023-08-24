@@ -25,6 +25,10 @@ public class CreateGlobalDistributeCacheRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -46,6 +50,7 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         this.regionId = builder.regionId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -87,6 +92,13 @@ public class CreateGlobalDistributeCacheRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -118,6 +130,7 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         private String regionId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -132,6 +145,7 @@ public class CreateGlobalDistributeCacheRequest extends Request {
             this.regionId = request.regionId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
@@ -166,6 +180,15 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -193,7 +216,7 @@ public class CreateGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * SeedSubInstanceId.
+         * The ID of the existing instance.
          */
         public Builder seedSubInstanceId(String seedSubInstanceId) {
             this.putQueryParameter("SeedSubInstanceId", seedSubInstanceId);

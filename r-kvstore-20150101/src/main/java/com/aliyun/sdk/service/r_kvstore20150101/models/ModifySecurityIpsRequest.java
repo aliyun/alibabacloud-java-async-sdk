@@ -182,7 +182,7 @@ public class ModifySecurityIpsRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -245,7 +245,12 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * SecurityIpGroupName.
+         * The method of modification. Valid values:
+         * <p>
+         * 
+         * *   **Cover**: overwrites the whitelist.
+         * *   **Append**: appends data to the whitelist.
+         * *   **Delete**: deletes the whitelist.
          */
         public Builder securityIpGroupName(String securityIpGroupName) {
             this.putQueryParameter("SecurityIpGroupName", securityIpGroupName);
@@ -254,7 +259,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * SecurityIps.
+         * The operation that you want to perform. Set the value to **ModifySecurityIps**.
          */
         public Builder securityIps(String securityIps) {
             this.putQueryParameter("SecurityIps", securityIps);

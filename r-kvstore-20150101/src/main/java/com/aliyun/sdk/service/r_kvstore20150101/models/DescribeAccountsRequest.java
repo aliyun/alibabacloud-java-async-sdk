@@ -162,7 +162,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * r-bp1zxszhcgatnx****
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -171,7 +171,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The name of the account.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

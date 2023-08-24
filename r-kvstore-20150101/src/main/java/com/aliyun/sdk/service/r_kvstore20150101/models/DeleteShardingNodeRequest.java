@@ -17,6 +17,10 @@ public class DeleteShardingNodeRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ForceTrans")
+    private Boolean forceTrans;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -54,6 +58,7 @@ public class DeleteShardingNodeRequest extends Request {
     private DeleteShardingNodeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.forceTrans = builder.forceTrans;
         this.instanceId = builder.instanceId;
         this.nodeId = builder.nodeId;
         this.ownerAccount = builder.ownerAccount;
@@ -82,6 +87,13 @@ public class DeleteShardingNodeRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return forceTrans
+     */
+    public Boolean getForceTrans() {
+        return this.forceTrans;
     }
 
     /**
@@ -142,6 +154,7 @@ public class DeleteShardingNodeRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteShardingNodeRequest, Builder> {
         private String regionId; 
+        private Boolean forceTrans; 
         private String instanceId; 
         private String nodeId; 
         private String ownerAccount; 
@@ -158,6 +171,7 @@ public class DeleteShardingNodeRequest extends Request {
         private Builder(DeleteShardingNodeRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.forceTrans = request.forceTrans;
             this.instanceId = request.instanceId;
             this.nodeId = request.nodeId;
             this.ownerAccount = request.ownerAccount;
@@ -178,7 +192,16 @@ public class DeleteShardingNodeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * ForceTrans.
+         */
+        public Builder forceTrans(Boolean forceTrans) {
+            this.putQueryParameter("ForceTrans", forceTrans);
+            this.forceTrans = forceTrans;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -187,7 +210,10 @@ public class DeleteShardingNodeRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the data shard that you want to remove. You can specify multiple IDs at a time. Separate multiple IDs with commas (,).
+         * <p>
+         * 
+         * > If you specify both the NodeId and ShardCount parameters, the system prioritizes the NodeId parameter.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -241,7 +267,10 @@ public class DeleteShardingNodeRequest extends Request {
         }
 
         /**
-         * ShardCount.
+         * The number of data shards that you want to remove. Shard removal starts from the end of the shard list.
+         * <p>
+         * 
+         * > For example, the instance has the following data shards: db-0, db-1, db-2, db-3, and db-4. In this case, if you set this parameter to 2, db-3 and db-4 are removed.
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("ShardCount", shardCount);

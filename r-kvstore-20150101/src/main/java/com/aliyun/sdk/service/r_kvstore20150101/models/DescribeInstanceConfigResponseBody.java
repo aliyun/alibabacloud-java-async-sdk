@@ -50,7 +50,7 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Config.
+         * The parameter settings of the instance. For more information, see [Parameter overview and configuration guide](~~43885~~).
          */
         public Builder config(String config) {
             this.config = config;
@@ -58,7 +58,7 @@ public class DescribeInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

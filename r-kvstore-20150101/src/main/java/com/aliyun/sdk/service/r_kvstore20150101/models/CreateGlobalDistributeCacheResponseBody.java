@@ -12,14 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGlobalDistributeCacheResponseBody</p>
  */
 public class CreateGlobalDistributeCacheResponseBody extends TeaModel {
-    @NameInMap("GlobalInstanceId")
-    private String globalInstanceId;
-
     @NameInMap("RequestId")
     private String requestId;
 
     private CreateGlobalDistributeCacheResponseBody(Builder builder) {
-        this.globalInstanceId = builder.globalInstanceId;
         this.requestId = builder.requestId;
     }
 
@@ -32,13 +28,6 @@ public class CreateGlobalDistributeCacheResponseBody extends TeaModel {
     }
 
     /**
-     * @return globalInstanceId
-     */
-    public String getGlobalInstanceId() {
-        return this.globalInstanceId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -46,19 +35,10 @@ public class CreateGlobalDistributeCacheResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String globalInstanceId; 
         private String requestId; 
 
         /**
-         * GlobalInstanceId.
-         */
-        public Builder globalInstanceId(String globalInstanceId) {
-            this.globalInstanceId = globalInstanceId;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

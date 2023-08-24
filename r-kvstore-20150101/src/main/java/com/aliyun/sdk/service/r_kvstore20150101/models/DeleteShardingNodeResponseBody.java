@@ -12,10 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteShardingNodeResponseBody</p>
  */
 public class DeleteShardingNodeResponseBody extends TeaModel {
+    @NameInMap("OrderId")
+    private String orderId;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private DeleteShardingNodeResponseBody(Builder builder) {
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +32,13 @@ public class DeleteShardingNodeResponseBody extends TeaModel {
     }
 
     /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,10 +46,19 @@ public class DeleteShardingNodeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String orderId; 
         private String requestId; 
 
         /**
-         * RequestId.
+         * The ID of the order. On the Orders page in the Billing Management console, you can obtain the details of the order based on the order ID.
+         */
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

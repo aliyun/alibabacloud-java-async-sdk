@@ -142,7 +142,7 @@ public class InitializeKvstorePermissionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The operation that you want to perform. Set the value to **InitializeKvstorePermission**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

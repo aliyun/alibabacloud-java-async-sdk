@@ -62,7 +62,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +70,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * NetInfoItems.
+         * Details of the extension period for which the classic network endpoint of the instance is retained.
          */
         public Builder netInfoItems(NetInfoItems netInfoItems) {
             this.netInfoItems = netInfoItems;
@@ -78,7 +78,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +166,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
             private String port; 
 
             /**
-             * ConnectionString.
+             * The endpoint of the classic network.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -174,7 +174,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceNetType.
+             * The network type of the instance. The returned value is **Classic**.
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -182,7 +182,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiredTime.
+             * The expiration time of the classic network endpoint.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -190,7 +190,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * The IP address of the instance in the classic network.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -198,7 +198,7 @@ public class ModifyInstanceNetExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number that is used to connect to the instance.
              */
             public Builder port(String port) {
                 this.port = port;

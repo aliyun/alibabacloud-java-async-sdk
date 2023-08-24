@@ -148,7 +148,7 @@ public class DescribeSecurityIpsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The IP addresses in the whitelist. A maximum of 1,000 IP addresses can be specified in a whitelist.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

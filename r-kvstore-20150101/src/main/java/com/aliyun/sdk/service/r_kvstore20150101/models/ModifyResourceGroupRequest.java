@@ -155,7 +155,7 @@ public class ModifyResourceGroupRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the generated token is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -164,7 +164,7 @@ public class ModifyResourceGroupRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -191,7 +191,7 @@ public class ModifyResourceGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -200,7 +200,14 @@ public class ModifyResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which you want to move the instance.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   You can query resource group IDs by using the ApsaraDB for Redis console or by calling the [ListResourceGroups](~~158855~~) operation. For more information, see [View basic information of a resource group](~~151181~~).
+         * 
+         * *   Before you modify the resource group to which an instance belongs, you can call the [ListResources](~~158866~~) operation to view the resource group of the instance.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -163,7 +163,7 @@ public class ModifyActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * Ids.
+         * The ID of the request.
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -217,7 +217,7 @@ public class ModifyActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * SwitchTime.
+         * The operation that you want to perform. Set the value to: **ModifyActiveOperationTask**.
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);

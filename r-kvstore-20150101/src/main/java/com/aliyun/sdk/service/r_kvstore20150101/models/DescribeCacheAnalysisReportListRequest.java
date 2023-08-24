@@ -205,7 +205,10 @@ public class DescribeCacheAnalysisReportListRequest extends Request {
         }
 
         /**
-         * Days.
+         * The ID of the child node in the cluster instance.
+         * <p>
+         * 
+         * >  If this parameter is not specified, the analysis results of all child nodes in the instance are returned.
          */
         public Builder days(Integer days) {
             this.putQueryParameter("Days", days);
@@ -214,7 +217,7 @@ public class DescribeCacheAnalysisReportListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -223,7 +226,7 @@ public class DescribeCacheAnalysisReportListRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * 7
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -250,7 +253,7 @@ public class DescribeCacheAnalysisReportListRequest extends Request {
         }
 
         /**
-         * PageNumbers.
+         * The ID of the instance.
          */
         public Builder pageNumbers(Integer pageNumbers) {
             this.putQueryParameter("PageNumbers", pageNumbers);
@@ -259,7 +262,7 @@ public class DescribeCacheAnalysisReportListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * r-bp1zxszhcgatnx****-db-0
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

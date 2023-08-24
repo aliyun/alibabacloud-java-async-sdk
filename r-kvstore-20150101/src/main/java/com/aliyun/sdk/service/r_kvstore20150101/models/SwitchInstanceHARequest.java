@@ -190,7 +190,7 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -199,7 +199,10 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the data shard. You can call the [DescribeRoleZoneInfo](~~190794~~) operation to obtain the value of the CustinsId parameter. Separate multiple data shard IDs with commas (,). `all` indicates that all data shards are specified.
+         * <p>
+         * 
+         * > This parameter is available and required only for read/write splitting and cluster instances.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -253,7 +256,13 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * SwitchMode.
+         * The time when to perform the switchover. Default value: 0. Valid values:
+         * <p>
+         * 
+         * *   **0**: immediately performs the switchover.
+         * *   **1**: performs the switchover during the maintenance window.
+         * 
+         * > You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
          */
         public Builder switchMode(Integer switchMode) {
             this.putQueryParameter("SwitchMode", switchMode);
@@ -262,7 +271,13 @@ public class SwitchInstanceHARequest extends Request {
         }
 
         /**
-         * SwitchType.
+         * The switching mode. Valid values:
+         * <p>
+         * 
+         * *   **AvailablePriority**: prioritizes the availability and performs a switchover immediately without considering the latency of data synchronization between the master and replica nodes. This may cause data loss.
+         * *   **ReliabilityPriority**: prioritizes the reliability and performs a switchover after no latency of data synchronization between the master and replica nodes exists. This ensures data integrity. This mode may cause a switchover failure in scenarios that involve a large volume of data writes and persistent latency of data synchronization.
+         * 
+         * > You must evaluate the requirements for data and services based on your business scenarios and then select a switching mode.
          */
         public Builder switchType(String switchType) {
             this.putQueryParameter("SwitchType", switchType);

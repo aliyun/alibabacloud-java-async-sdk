@@ -29,6 +29,10 @@ public class AddShardingNodeRequest extends Request {
     private String couponNo;
 
     @Query
+    @NameInMap("ForceTrans")
+    private Boolean forceTrans;
+
+    @Query
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -68,6 +72,7 @@ public class AddShardingNodeRequest extends Request {
         this.autoPay = builder.autoPay;
         this.businessInfo = builder.businessInfo;
         this.couponNo = builder.couponNo;
+        this.forceTrans = builder.forceTrans;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -117,6 +122,13 @@ public class AddShardingNodeRequest extends Request {
      */
     public String getCouponNo() {
         return this.couponNo;
+    }
+
+    /**
+     * @return forceTrans
+     */
+    public Boolean getForceTrans() {
+        return this.forceTrans;
     }
 
     /**
@@ -180,6 +192,7 @@ public class AddShardingNodeRequest extends Request {
         private Boolean autoPay; 
         private String businessInfo; 
         private String couponNo; 
+        private Boolean forceTrans; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -199,6 +212,7 @@ public class AddShardingNodeRequest extends Request {
             this.autoPay = request.autoPay;
             this.businessInfo = request.businessInfo;
             this.couponNo = request.couponNo;
+            this.forceTrans = request.forceTrans;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -219,7 +233,13 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * AutoPay.
+         * Specifies whether to enable automatic payment. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
+         * *   **false**: disables automatic payment. In this case, you must manually renew the instance in the console before the instance expires. For more information, see [Renewal](~~26352~~).
+         * 
+         * > The default value is **true**.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -228,7 +248,7 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * BusinessInfo.
+         * The business information. This is an additional parameter.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -237,7 +257,7 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * The ID of the coupon.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -246,7 +266,16 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * ForceTrans.
+         */
+        public Builder forceTrans(Boolean forceTrans) {
+            this.putQueryParameter("ForceTrans", forceTrans);
+            this.forceTrans = forceTrans;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -300,7 +329,12 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * ShardCount.
+         * The number of data shards that you want to add. Default value: **1**.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   A cluster instance must contain 2 to 256 data shards. You can add a maximum of 64 data shards at a time.
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("ShardCount", shardCount);
@@ -309,7 +343,7 @@ public class AddShardingNodeRequest extends Request {
         }
 
         /**
-         * SourceBiz.
+         * The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.
          */
         public Builder sourceBiz(String sourceBiz) {
             this.putQueryParameter("SourceBiz", sourceBiz);

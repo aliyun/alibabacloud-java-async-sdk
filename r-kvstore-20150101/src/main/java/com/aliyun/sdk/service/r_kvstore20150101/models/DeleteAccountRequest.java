@@ -163,7 +163,7 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The username of the account. You can call the [DescribeAccounts](~~95802~~) operation to query the username of the account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -172,7 +172,7 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

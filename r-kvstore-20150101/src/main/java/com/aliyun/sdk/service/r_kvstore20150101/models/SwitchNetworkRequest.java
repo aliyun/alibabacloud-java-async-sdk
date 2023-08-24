@@ -218,7 +218,7 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * ClassicExpiredDays.
+         * The operation that you want to perform. Set the value to **SwitchNetwork**.
          */
         public Builder classicExpiredDays(String classicExpiredDays) {
             this.putQueryParameter("ClassicExpiredDays", classicExpiredDays);
@@ -227,7 +227,7 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the task.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -272,7 +272,7 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * RetainClassic.
+         * The ID of the request.
          */
         public Builder retainClassic(String retainClassic) {
             this.putQueryParameter("RetainClassic", retainClassic);
@@ -290,7 +290,12 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * TargetNetworkType.
+         * The ID of the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query VPC IDs.
+         * <p>
+         * 
+         * > 
+         * *   The VPC and the ApsaraDB for Redis instance must be deployed in the same region.
+         * *   After you set this parameter, you must also set the **VSwitchId** parameter.
          */
         public Builder targetNetworkType(String targetNetworkType) {
             this.putQueryParameter("TargetNetworkType", targetNetworkType);
@@ -299,7 +304,7 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -308,7 +313,10 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The ID of the vSwitch that belongs to the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query vSwitch IDs.
+         * <p>
+         * 
+         * >  The vSwitch and the ApsaraDB for Redis instance must belong to the same zone.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

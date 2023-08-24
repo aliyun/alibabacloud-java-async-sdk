@@ -62,7 +62,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * EndTime.
+         * The end time of the order.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -70,7 +70,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class RenewInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

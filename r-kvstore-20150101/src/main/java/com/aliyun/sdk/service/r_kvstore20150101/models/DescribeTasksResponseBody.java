@@ -86,7 +86,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * The estimated remaining duration of the task. Unit: seconds.
+         * <p>
+         * 
+         * >  If the task is not running, this parameter is not returned or the returned value is **0**.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +97,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +105,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * 30
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +113,15 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The status of the task. Separate multiple values with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **0**: The task is pending.
+         * *   **1**: The task is running.
+         * *   **2**: The task is complete.
+         * *   **4**: The task is closed.
+         * *   **7**: The task is paused.
+         * *   **8**: The task is interrupted.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +129,10 @@ public class DescribeTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The information about the subtask in the JSON format. This includes the expected remaining duration (**remain**), the name of the subtask (**name**), and the task progress (**progress**).
+         * <p>
+         * 
+         * >  If the subtask does not exist, this parameter is not returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -266,7 +280,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * BeginTime.
+             * The beginning time of the task. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -274,7 +288,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * CurrentStepName.
+             * The ID of the request.
              */
             public Builder currentStepName(String currentStepName) {
                 this.currentStepName = currentStepName;
@@ -282,7 +296,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -290,7 +304,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The number of entries returned on each page.
              */
             public Builder progress(Float progress) {
                 this.progress = progress;
@@ -298,7 +312,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Remain.
+             * 2
              */
             public Builder remain(Integer remain) {
                 this.remain = remain;
@@ -306,7 +320,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * 1
              */
             public Builder status(String status) {
                 this.status = status;
@@ -314,7 +328,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StepProgressInfo.
+             * The end time of the task. The time follows the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder stepProgressInfo(String stepProgressInfo) {
                 this.stepProgressInfo = stepProgressInfo;
@@ -322,7 +336,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StepsInfo.
+             * The page number of the returned page.
              */
             public Builder stepsInfo(String stepsInfo) {
                 this.stepsInfo = stepsInfo;
@@ -338,7 +352,7 @@ public class DescribeTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The name of the subtask.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

@@ -176,7 +176,7 @@ public class ModifyInstanceMinorVersionRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * The minor version to which you want to update. Default value: **latest_version**.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -185,7 +185,7 @@ public class ModifyInstanceMinorVersionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -194,7 +194,7 @@ public class ModifyInstanceMinorVersionRequest extends Request {
         }
 
         /**
-         * Minorversion.
+         * The operation that you want to perform. Set the value to **ModifyInstanceMinorVersion**.
          */
         public Builder minorversion(String minorversion) {
             this.putQueryParameter("Minorversion", minorversion);

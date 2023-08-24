@@ -168,7 +168,11 @@ public class SyncDtsStatusRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * Disables configuration change for the instance. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes. If you attempt to modify the configurations of the instance, the system sends a prompt about the restriction.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -195,7 +199,7 @@ public class SyncDtsStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -231,7 +235,7 @@ public class SyncDtsStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * cn-hangzhou
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -240,7 +244,7 @@ public class SyncDtsStatusRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * Disables the configuration change of an ApsaraDB for Redis instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to the configuration change.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

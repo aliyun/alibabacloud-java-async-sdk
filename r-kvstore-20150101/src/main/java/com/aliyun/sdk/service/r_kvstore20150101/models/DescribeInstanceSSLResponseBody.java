@@ -15,6 +15,9 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     @NameInMap("CertCommonName")
     private String certCommonName;
 
+    @NameInMap("CertDownloadURL")
+    private String certDownloadURL;
+
     @NameInMap("InstanceId")
     private String instanceId;
 
@@ -29,6 +32,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
 
     private DescribeInstanceSSLResponseBody(Builder builder) {
         this.certCommonName = builder.certCommonName;
+        this.certDownloadURL = builder.certDownloadURL;
         this.instanceId = builder.instanceId;
         this.requestId = builder.requestId;
         this.SSLEnabled = builder.SSLEnabled;
@@ -48,6 +52,13 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
      */
     public String getCertCommonName() {
         return this.certCommonName;
+    }
+
+    /**
+     * @return certDownloadURL
+     */
+    public String getCertDownloadURL() {
+        return this.certDownloadURL;
     }
 
     /**
@@ -80,13 +91,14 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
 
     public static final class Builder {
         private String certCommonName; 
+        private String certDownloadURL; 
         private String instanceId; 
         private String requestId; 
         private String SSLEnabled; 
         private String SSLExpiredTime; 
 
         /**
-         * CertCommonName.
+         * The common name of the SSL certificate, which is the domain name for which you want to apply for the SSL certificate. The default value is the internal endpoint of the instance.
          */
         public Builder certCommonName(String certCommonName) {
             this.certCommonName = certCommonName;
@@ -94,7 +106,15 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * Download URL for CA certificate.
+         */
+        public Builder certDownloadURL(String certDownloadURL) {
+            this.certDownloadURL = certDownloadURL;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -102,7 +122,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +130,11 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLEnabled.
+         * Indicates whether SSL encryption is enabled. Valid values:
+         * <p>
+         * 
+         * *   **Enable**: SSL encryption is enabled.
+         * *   **Disable**: SSL encryption is disabled.
          */
         public Builder SSLEnabled(String SSLEnabled) {
             this.SSLEnabled = SSLEnabled;
@@ -118,7 +142,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * SSLExpiredTime.
+         * The expiration time of the SSL certificate.
          */
         public Builder SSLExpiredTime(String SSLExpiredTime) {
             this.SSLExpiredTime = SSLExpiredTime;

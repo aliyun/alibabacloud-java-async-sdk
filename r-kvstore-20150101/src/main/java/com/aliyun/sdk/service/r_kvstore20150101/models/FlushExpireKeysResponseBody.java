@@ -62,7 +62,7 @@ public class FlushExpireKeysResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -70,7 +70,7 @@ public class FlushExpireKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The operation that you want to perform. Set the value to **FlushExpireKeys**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

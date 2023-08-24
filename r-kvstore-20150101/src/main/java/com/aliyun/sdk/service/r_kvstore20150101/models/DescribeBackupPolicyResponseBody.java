@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupPolicyResponseBody</p>
  */
 public class DescribeBackupPolicyResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    private AccessDeniedDetail accessDeniedDetail;
+
     @NameInMap("BackupRetentionPeriod")
     private String backupRetentionPeriod;
 
@@ -31,6 +34,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeBackupPolicyResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.enableBackupLog = builder.enableBackupLog;
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
@@ -45,6 +49,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     public static DescribeBackupPolicyResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public AccessDeniedDetail getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -90,6 +101,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AccessDeniedDetail accessDeniedDetail; 
         private String backupRetentionPeriod; 
         private Integer enableBackupLog; 
         private String preferredBackupPeriod; 
@@ -98,7 +110,15 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BackupRetentionPeriod.
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(AccessDeniedDetail accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * The retention period of the backup data. Unit: days.
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
@@ -106,7 +126,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * EnableBackupLog.
+         * Indicates whether incremental data backup is enabled. Valid values:
+         * <p>
+         * 
+         * *   **1**: Incremental data backup is enabled.
+         * *   **0**: Incremental data backup is disabled.
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.enableBackupLog = enableBackupLog;
@@ -114,7 +138,16 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * The backup cycle. Valid values:
+         * <p>
+         * 
+         * *   **Monday**
+         * *   **Tuesday**
+         * *   **Wednesday**
+         * *   **Thursday**
+         * *   **Friday**
+         * *   **Saturday**
+         * *   **Sunday**
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.preferredBackupPeriod = preferredBackupPeriod;
@@ -122,7 +155,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredBackupTime.
+         * The time range during which the backup was created. The time follows the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time is displayed in UTC.
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.preferredBackupTime = preferredBackupTime;
@@ -130,7 +163,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * PreferredNextBackupTime.
+         * The next backup time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
          */
         public Builder preferredNextBackupTime(String preferredNextBackupTime) {
             this.preferredNextBackupTime = preferredNextBackupTime;
@@ -138,7 +171,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -151,4 +184,165 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
 
     } 
 
+    public static class AccessDeniedDetail extends TeaModel {
+        @NameInMap("AuthAction")
+        private String authAction;
+
+        @NameInMap("AuthPrincipalDisplayName")
+        private String authPrincipalDisplayName;
+
+        @NameInMap("AuthPrincipalOwnerId")
+        private String authPrincipalOwnerId;
+
+        @NameInMap("AuthPrincipalType")
+        private String authPrincipalType;
+
+        @NameInMap("EncodedDiagnosticMessage")
+        private String encodedDiagnosticMessage;
+
+        @NameInMap("NoPermissionType")
+        private String noPermissionType;
+
+        @NameInMap("PolicyType")
+        private String policyType;
+
+        private AccessDeniedDetail(Builder builder) {
+            this.authAction = builder.authAction;
+            this.authPrincipalDisplayName = builder.authPrincipalDisplayName;
+            this.authPrincipalOwnerId = builder.authPrincipalOwnerId;
+            this.authPrincipalType = builder.authPrincipalType;
+            this.encodedDiagnosticMessage = builder.encodedDiagnosticMessage;
+            this.noPermissionType = builder.noPermissionType;
+            this.policyType = builder.policyType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AccessDeniedDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return authAction
+         */
+        public String getAuthAction() {
+            return this.authAction;
+        }
+
+        /**
+         * @return authPrincipalDisplayName
+         */
+        public String getAuthPrincipalDisplayName() {
+            return this.authPrincipalDisplayName;
+        }
+
+        /**
+         * @return authPrincipalOwnerId
+         */
+        public String getAuthPrincipalOwnerId() {
+            return this.authPrincipalOwnerId;
+        }
+
+        /**
+         * @return authPrincipalType
+         */
+        public String getAuthPrincipalType() {
+            return this.authPrincipalType;
+        }
+
+        /**
+         * @return encodedDiagnosticMessage
+         */
+        public String getEncodedDiagnosticMessage() {
+            return this.encodedDiagnosticMessage;
+        }
+
+        /**
+         * @return noPermissionType
+         */
+        public String getNoPermissionType() {
+            return this.noPermissionType;
+        }
+
+        /**
+         * @return policyType
+         */
+        public String getPolicyType() {
+            return this.policyType;
+        }
+
+        public static final class Builder {
+            private String authAction; 
+            private String authPrincipalDisplayName; 
+            private String authPrincipalOwnerId; 
+            private String authPrincipalType; 
+            private String encodedDiagnosticMessage; 
+            private String noPermissionType; 
+            private String policyType; 
+
+            /**
+             * AuthAction.
+             */
+            public Builder authAction(String authAction) {
+                this.authAction = authAction;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalDisplayName.
+             */
+            public Builder authPrincipalDisplayName(String authPrincipalDisplayName) {
+                this.authPrincipalDisplayName = authPrincipalDisplayName;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalOwnerId.
+             */
+            public Builder authPrincipalOwnerId(String authPrincipalOwnerId) {
+                this.authPrincipalOwnerId = authPrincipalOwnerId;
+                return this;
+            }
+
+            /**
+             * AuthPrincipalType.
+             */
+            public Builder authPrincipalType(String authPrincipalType) {
+                this.authPrincipalType = authPrincipalType;
+                return this;
+            }
+
+            /**
+             * EncodedDiagnosticMessage.
+             */
+            public Builder encodedDiagnosticMessage(String encodedDiagnosticMessage) {
+                this.encodedDiagnosticMessage = encodedDiagnosticMessage;
+                return this;
+            }
+
+            /**
+             * NoPermissionType.
+             */
+            public Builder noPermissionType(String noPermissionType) {
+                this.noPermissionType = noPermissionType;
+                return this;
+            }
+
+            /**
+             * PolicyType.
+             */
+            public Builder policyType(String policyType) {
+                this.policyType = policyType;
+                return this;
+            }
+
+            public AccessDeniedDetail build() {
+                return new AccessDeniedDetail(this);
+            } 
+
+        } 
+
+    }
 }

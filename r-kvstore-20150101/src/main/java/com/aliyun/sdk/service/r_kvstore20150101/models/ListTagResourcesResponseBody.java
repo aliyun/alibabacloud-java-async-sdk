@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * NextToken.
+         * The token required to obtain more results. If a query does not return all results, in the next query, you can provide the token returned by the previous query to obtain more results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * Details of the instances and tags.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -154,7 +154,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * ResourceId.
+             * The resource ID, which is also the ID of the instance.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -162,7 +162,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The resource type. The return value is **ALIYUN::KVSTORE::INSTANCE**. This value indicates an ApsaraDB for Redis instance.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -170,7 +170,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The keys of the tags.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +178,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The values of the tags.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -174,7 +174,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,7 +183,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the instance.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -210,7 +210,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Set the value to **INSTANCE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -219,7 +219,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags of the instance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -275,7 +275,11 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag associated with the instance.
+             * <p>
+             * 
+             * > * **N** specifies the serial number of the tag. For example, **Tag.1.Key** specifies the key of the first tag and **Tag.2.Key** specifies the key of the second tag.
+             * > * If the key of the tag does not exist, the key is automatically created.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -283,7 +287,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag associated with the instance.
+             * <p>
+             * 
+             * > **N** specifies the serial number of the tag. For example, **Tag.1.Value** specifies the value of the first tag and **Tag.2.Value** specifies the value of the second tag.
              */
             public Builder value(String value) {
                 this.value = value;
