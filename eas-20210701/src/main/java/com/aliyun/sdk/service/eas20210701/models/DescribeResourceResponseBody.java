@@ -51,6 +51,9 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("ResourceName")
     private String resourceName;
 
+    @NameInMap("ResourceType")
+    private String resourceType;
+
     @NameInMap("Status")
     private String status;
 
@@ -71,6 +74,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceId = builder.resourceId;
         this.resourceName = builder.resourceName;
+        this.resourceType = builder.resourceType;
         this.status = builder.status;
         this.updateTime = builder.updateTime;
     }
@@ -175,6 +179,13 @@ public class DescribeResourceResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -202,6 +213,7 @@ public class DescribeResourceResponseBody extends TeaModel {
         private String requestId; 
         private String resourceId; 
         private String resourceName; 
+        private String resourceType; 
         private String status; 
         private String updateTime; 
 
@@ -306,6 +318,14 @@ public class DescribeResourceResponseBody extends TeaModel {
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.resourceType = resourceType;
             return this;
         }
 

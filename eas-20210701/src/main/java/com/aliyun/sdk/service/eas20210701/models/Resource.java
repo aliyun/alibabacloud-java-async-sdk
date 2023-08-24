@@ -45,6 +45,9 @@ public class Resource extends TeaModel {
     @NameInMap("ResourceName")
     private String resourceName;
 
+    @NameInMap("ResourceType")
+    private String resourceType;
+
     @NameInMap("Status")
     private String status;
 
@@ -63,6 +66,7 @@ public class Resource extends TeaModel {
         this.prePaidInstanceCount = builder.prePaidInstanceCount;
         this.resourceId = builder.resourceId;
         this.resourceName = builder.resourceName;
+        this.resourceType = builder.resourceType;
         this.status = builder.status;
         this.updateTime = builder.updateTime;
     }
@@ -153,6 +157,13 @@ public class Resource extends TeaModel {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -178,6 +189,7 @@ public class Resource extends TeaModel {
         private Integer prePaidInstanceCount; 
         private String resourceId; 
         private String resourceName; 
+        private String resourceType; 
         private String status; 
         private String updateTime; 
 
@@ -266,6 +278,14 @@ public class Resource extends TeaModel {
          */
         public Builder resourceName(String resourceName) {
             this.resourceName = resourceName;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.resourceType = resourceType;
             return this;
         }
 

@@ -28,12 +28,17 @@ public class ListResourcesRequest extends Request {
     @NameInMap("ResourceName")
     private String resourceName;
 
+    @Query
+    @NameInMap("ResourceType")
+    private String resourceType;
+
     private ListResourcesRequest(Builder builder) {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceId = builder.resourceId;
         this.resourceName = builder.resourceName;
+        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -77,11 +82,19 @@ public class ListResourcesRequest extends Request {
         return this.resourceName;
     }
 
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
     public static final class Builder extends Request.Builder<ListResourcesRequest, Builder> {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceId; 
         private String resourceName; 
+        private String resourceType; 
 
         private Builder() {
             super();
@@ -93,6 +106,7 @@ public class ListResourcesRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceId = request.resourceId;
             this.resourceName = request.resourceName;
+            this.resourceType = request.resourceType;
         } 
 
         /**
@@ -128,6 +142,15 @@ public class ListResourcesRequest extends Request {
         public Builder resourceName(String resourceName) {
             this.putQueryParameter("ResourceName", resourceName);
             this.resourceName = resourceName;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 
