@@ -17,12 +17,17 @@ public class DeleteTimingSyntheticTaskRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("TaskId")
     private String taskId;
 
     private DeleteTimingSyntheticTaskRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.taskId = builder.taskId;
     }
 
@@ -47,6 +52,13 @@ public class DeleteTimingSyntheticTaskRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -55,6 +67,7 @@ public class DeleteTimingSyntheticTaskRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteTimingSyntheticTaskRequest, Builder> {
         private String regionId; 
+        private String resourceGroupId; 
         private String taskId; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class DeleteTimingSyntheticTaskRequest extends Request {
         private Builder(DeleteTimingSyntheticTaskRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.taskId = request.taskId;
         } 
 
@@ -73,6 +87,15 @@ public class DeleteTimingSyntheticTaskRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

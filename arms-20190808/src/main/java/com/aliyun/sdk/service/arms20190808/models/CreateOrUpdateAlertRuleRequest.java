@@ -71,6 +71,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     private String level;
 
     @Body
+    @NameInMap("MarkTags")
+    private java.util.List < MarkTags> markTags;
+
+    @Body
     @NameInMap("Message")
     private String message;
 
@@ -119,6 +123,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         this.filters = builder.filters;
         this.labels = builder.labels;
         this.level = builder.level;
+        this.markTags = builder.markTags;
         this.message = builder.message;
         this.metricsKey = builder.metricsKey;
         this.metricsType = builder.metricsType;
@@ -241,6 +246,13 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
     }
 
     /**
+     * @return markTags
+     */
+    public java.util.List < MarkTags> getMarkTags() {
+        return this.markTags;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -311,6 +323,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         private String filters; 
         private String labels; 
         private String level; 
+        private java.util.List < MarkTags> markTags; 
         private String message; 
         private String metricsKey; 
         private String metricsType; 
@@ -340,6 +353,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             this.filters = request.filters;
             this.labels = request.labels;
             this.level = request.level;
+            this.markTags = request.markTags;
             this.message = request.message;
             this.metricsKey = request.metricsKey;
             this.metricsType = request.metricsType;
@@ -551,6 +565,15 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
+         * MarkTags.
+         */
+        public Builder markTags(java.util.List < MarkTags> markTags) {
+            this.putBodyParameter("MarkTags", markTags);
+            this.markTags = markTags;
+            return this;
+        }
+
+        /**
          * The alert message of the Prometheus alert rule.
          */
         public Builder message(String message) {
@@ -636,6 +659,67 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
 
     } 
 
+    public static class MarkTags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private MarkTags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MarkTags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public MarkTags build() {
+                return new MarkTags(this);
+            } 
+
+        } 
+
+    }
     public static class Tags extends TeaModel {
         @NameInMap("Key")
         private String key;
