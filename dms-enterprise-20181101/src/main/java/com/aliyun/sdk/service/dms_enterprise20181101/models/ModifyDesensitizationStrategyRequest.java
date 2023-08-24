@@ -27,6 +27,10 @@ public class ModifyDesensitizationStrategyRequest extends Request {
     private Integer dbId;
 
     @Query
+    @NameInMap("IsDefault")
+    private Boolean isDefault;
+
+    @Query
     @NameInMap("IsLogic")
     @Validation(required = true)
     private Boolean isLogic;
@@ -59,6 +63,7 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         this.regionId = builder.regionId;
         this.columnName = builder.columnName;
         this.dbId = builder.dbId;
+        this.isDefault = builder.isDefault;
         this.isLogic = builder.isLogic;
         this.isReset = builder.isReset;
         this.ruleId = builder.ruleId;
@@ -99,6 +104,13 @@ public class ModifyDesensitizationStrategyRequest extends Request {
      */
     public Integer getDbId() {
         return this.dbId;
+    }
+
+    /**
+     * @return isDefault
+     */
+    public Boolean getIsDefault() {
+        return this.isDefault;
     }
 
     /**
@@ -147,6 +159,7 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         private String regionId; 
         private String columnName; 
         private Integer dbId; 
+        private Boolean isDefault; 
         private Boolean isLogic; 
         private Boolean isReset; 
         private Integer ruleId; 
@@ -163,6 +176,7 @@ public class ModifyDesensitizationStrategyRequest extends Request {
             this.regionId = request.regionId;
             this.columnName = request.columnName;
             this.dbId = request.dbId;
+            this.isDefault = request.isDefault;
             this.isLogic = request.isLogic;
             this.isReset = request.isReset;
             this.ruleId = request.ruleId;
@@ -198,6 +212,15 @@ public class ModifyDesensitizationStrategyRequest extends Request {
         public Builder dbId(Integer dbId) {
             this.putQueryParameter("DbId", dbId);
             this.dbId = dbId;
+            return this;
+        }
+
+        /**
+         * IsDefault.
+         */
+        public Builder isDefault(Boolean isDefault) {
+            this.putQueryParameter("IsDefault", isDefault);
+            this.isDefault = isDefault;
             return this;
         }
 
