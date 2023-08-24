@@ -105,6 +105,10 @@ public class CreateDBInstanceRequest extends Request {
     private Integer period;
 
     @Query
+    @NameInMap("ProvisionedIops")
+    private Long provisionedIops;
+
+    @Query
     @NameInMap("ReadonlyReplicas")
     private String readonlyReplicas;
 
@@ -197,6 +201,7 @@ public class CreateDBInstanceRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.period = builder.period;
+        this.provisionedIops = builder.provisionedIops;
         this.readonlyReplicas = builder.readonlyReplicas;
         this.regionId = builder.regionId;
         this.replicationFactor = builder.replicationFactor;
@@ -384,6 +389,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return provisionedIops
+     */
+    public Long getProvisionedIops() {
+        return this.provisionedIops;
+    }
+
+    /**
      * @return readonlyReplicas
      */
     public String getReadonlyReplicas() {
@@ -525,6 +537,7 @@ public class CreateDBInstanceRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private Integer period; 
+        private Long provisionedIops; 
         private String readonlyReplicas; 
         private String regionId; 
         private String replicationFactor; 
@@ -571,6 +584,7 @@ public class CreateDBInstanceRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.period = request.period;
+            this.provisionedIops = request.provisionedIops;
             this.readonlyReplicas = request.readonlyReplicas;
             this.regionId = request.regionId;
             this.replicationFactor = request.replicationFactor;
@@ -843,6 +857,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
             this.period = period;
+            return this;
+        }
+
+        /**
+         * ProvisionedIops.
+         */
+        public Builder provisionedIops(Long provisionedIops) {
+            this.putQueryParameter("ProvisionedIops", provisionedIops);
+            this.provisionedIops = provisionedIops;
             return this;
         }
 

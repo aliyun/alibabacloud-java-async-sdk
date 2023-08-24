@@ -89,6 +89,10 @@ public class CreateShardingDBInstanceRequest extends Request {
     private String protocolType;
 
     @Query
+    @NameInMap("ProvisionedIops")
+    private Long provisionedIops;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -174,6 +178,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         this.ownerId = builder.ownerId;
         this.period = builder.period;
         this.protocolType = builder.protocolType;
+        this.provisionedIops = builder.provisionedIops;
         this.regionId = builder.regionId;
         this.replicaSet = builder.replicaSet;
         this.resourceGroupId = builder.resourceGroupId;
@@ -332,6 +337,13 @@ public class CreateShardingDBInstanceRequest extends Request {
     }
 
     /**
+     * @return provisionedIops
+     */
+    public Long getProvisionedIops() {
+        return this.provisionedIops;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -462,6 +474,7 @@ public class CreateShardingDBInstanceRequest extends Request {
         private Long ownerId; 
         private Integer period; 
         private String protocolType; 
+        private Long provisionedIops; 
         private String regionId; 
         private java.util.List < ReplicaSet> replicaSet; 
         private String resourceGroupId; 
@@ -503,6 +516,7 @@ public class CreateShardingDBInstanceRequest extends Request {
             this.ownerId = request.ownerId;
             this.period = request.period;
             this.protocolType = request.protocolType;
+            this.provisionedIops = request.provisionedIops;
             this.regionId = request.regionId;
             this.replicaSet = request.replicaSet;
             this.resourceGroupId = request.resourceGroupId;
@@ -762,6 +776,15 @@ public class CreateShardingDBInstanceRequest extends Request {
         public Builder protocolType(String protocolType) {
             this.putQueryParameter("ProtocolType", protocolType);
             this.protocolType = protocolType;
+            return this;
+        }
+
+        /**
+         * ProvisionedIops.
+         */
+        public Builder provisionedIops(Long provisionedIops) {
+            this.putQueryParameter("ProvisionedIops", provisionedIops);
+            this.provisionedIops = provisionedIops;
             return this;
         }
 

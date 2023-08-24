@@ -97,7 +97,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteNodeResponse> deleteNode(DeleteNodeRequest request);
 
     /**
-      * >  This operation can query only the information of the root account.
+      * >  You can call this operation to query only the information of the root account.
       *
      */
     CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request);
@@ -107,9 +107,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeActiveOperationTaskTypeResponse> describeActiveOperationTaskType(DescribeActiveOperationTaskTypeRequest request);
 
     /**
-      * The role of the node in the instance. Valid values:
-      * *   **primary**
-      * *   **secondary**
+      * *   The instance must be in the running state when you call this operation.
+      * *   This operation is applicable only to **general-purpose local-disk** and **dedicated local-disk** instances.
+      * *   You can call this operation up to 30 times per minute. To call this operation at a higher frequency, use a Logstore. For more information, see [Manage a Logstore](~~48990~~).
       *
      */
     CompletableFuture<DescribeAuditLogFilterResponse> describeAuditLogFilter(DescribeAuditLogFilterRequest request);
@@ -351,10 +351,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyDBInstanceMaintainTimeResponse> modifyDBInstanceMaintainTime(ModifyDBInstanceMaintainTimeRequest request);
 
     /**
-      * >  operation is currently unavailable.
+      * >  This operation is applicable only to the ApsaraDB for MongoDB console of the previous version due to the change in the frequency at which the monitoring data of an ApsaraDB for MongoDB instance is collected.
       * Before you call this operation, make sure that the following requirements are met:
-      * *   A replica set or sharded cluster instance is used.
-      * *   MongoDB 3.4 (the latest minor version) or 4.0 must be selected.
+      * *   The instance is a replica set or sharded cluster instance.
+      * *   The instance runs MongoDB 3.4 (the latest minor version) or 4.0.
       *
      */
     CompletableFuture<ModifyDBInstanceMonitorResponse> modifyDBInstanceMonitor(ModifyDBInstanceMonitorRequest request);

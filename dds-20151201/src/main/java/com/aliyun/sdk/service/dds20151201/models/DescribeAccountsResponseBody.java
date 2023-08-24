@@ -50,7 +50,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details about the accounts.
+         * The username of the account.
          */
         public Builder accounts(Accounts accounts) {
             this.accounts = accounts;
@@ -58,7 +58,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -147,6 +147,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
 
             /**
              * The description of the account.
+             * <p>
+             * 
+             * > This parameter is returned only after you configure the description of the account by calling the [ModifyAccountDescription](~~468391~~) operation.
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -165,8 +168,8 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * The status of the account.
              * <p>
              * 
-             * *   Unavailable
-             * *   Available
+             * *   **Unavailable**
+             * *   **Available**
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -177,11 +180,11 @@ public class DescribeAccountsResponseBody extends TeaModel {
              * The role of the account. Valid values:
              * <p>
              * 
-             * *   db: shard
-             * *   cs: Configserver
-             * *   mongos: mongos
-             * *   logic: sharded cluster instance
-             * *   normal: replica set instance
+             * *   **db**: shard
+             * *   **cs**: Configserver
+             * *   **mongos**: mongos
+             * *   **logic:** sharded cluster instance
+             * *   **normal:** replica set instance
              */
             public Builder characterType(String characterType) {
                 this.characterType = characterType;

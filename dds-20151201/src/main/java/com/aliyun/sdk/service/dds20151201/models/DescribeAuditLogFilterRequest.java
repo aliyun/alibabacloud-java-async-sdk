@@ -162,7 +162,7 @@ public class DescribeAuditLogFilterRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -207,7 +207,12 @@ public class DescribeAuditLogFilterRequest extends Request {
         }
 
         /**
-         * RoleType.
+         * The role of the node in the instance. Valid values:
+         * <p>
+         * 
+         * * **mongos**: mongos node.
+         * * **db** : shard node.
+         * * **logic** : logical instance.
          */
         public Builder roleType(String roleType) {
             this.putQueryParameter("RoleType", roleType);

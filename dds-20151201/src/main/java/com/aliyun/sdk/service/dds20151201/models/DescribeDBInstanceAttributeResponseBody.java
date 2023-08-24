@@ -1203,6 +1203,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class DBInstance extends TeaModel {
+        @NameInMap("BurstingEnabled")
+        private Boolean burstingEnabled;
+
         @NameInMap("CapacityUnit")
         private String capacityUnit;
 
@@ -1293,6 +1296,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ProtocolType")
         private String protocolType;
 
+        @NameInMap("ProvisionedIops")
+        private Long provisionedIops;
+
         @NameInMap("ReadonlyReplicas")
         private String readonlyReplicas;
 
@@ -1348,6 +1354,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String zoneId;
 
         private DBInstance(Builder builder) {
+            this.burstingEnabled = builder.burstingEnabled;
             this.capacityUnit = builder.capacityUnit;
             this.chargeType = builder.chargeType;
             this.configserverList = builder.configserverList;
@@ -1378,6 +1385,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.mongosList = builder.mongosList;
             this.networkType = builder.networkType;
             this.protocolType = builder.protocolType;
+            this.provisionedIops = builder.provisionedIops;
             this.readonlyReplicas = builder.readonlyReplicas;
             this.regionId = builder.regionId;
             this.replacateId = builder.replacateId;
@@ -1404,6 +1412,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static DBInstance create() {
             return builder().build();
+        }
+
+        /**
+         * @return burstingEnabled
+         */
+        public Boolean getBurstingEnabled() {
+            return this.burstingEnabled;
         }
 
         /**
@@ -1617,6 +1632,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return provisionedIops
+         */
+        public Long getProvisionedIops() {
+            return this.provisionedIops;
+        }
+
+        /**
          * @return readonlyReplicas
          */
         public String getReadonlyReplicas() {
@@ -1743,6 +1765,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean burstingEnabled; 
             private String capacityUnit; 
             private String chargeType; 
             private ConfigserverList configserverList; 
@@ -1773,6 +1796,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private MongosList mongosList; 
             private String networkType; 
             private String protocolType; 
+            private Long provisionedIops; 
             private String readonlyReplicas; 
             private String regionId; 
             private String replacateId; 
@@ -1791,6 +1815,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcAuthMode; 
             private String zoneId; 
+
+            /**
+             * BurstingEnabled.
+             */
+            public Builder burstingEnabled(Boolean burstingEnabled) {
+                this.burstingEnabled = burstingEnabled;
+                return this;
+            }
 
             /**
              * The storage type of the instance. Valid values:
@@ -2116,6 +2148,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
+                return this;
+            }
+
+            /**
+             * ProvisionedIops.
+             */
+            public Builder provisionedIops(Long provisionedIops) {
+                this.provisionedIops = provisionedIops;
                 return this;
             }
 
