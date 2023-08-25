@@ -38,7 +38,7 @@ public class UnassociateAnycastEipAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 私网IP地址
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

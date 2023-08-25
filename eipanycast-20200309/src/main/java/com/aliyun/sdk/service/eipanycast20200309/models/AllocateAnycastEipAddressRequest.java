@@ -37,6 +37,10 @@ public class AllocateAnycastEipAddressRequest extends Request {
     private String name;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ServiceLocation")
     @Validation(required = true)
     private String serviceLocation;
@@ -49,6 +53,7 @@ public class AllocateAnycastEipAddressRequest extends Request {
         this.instanceChargeType = builder.instanceChargeType;
         this.internetChargeType = builder.internetChargeType;
         this.name = builder.name;
+        this.resourceGroupId = builder.resourceGroupId;
         this.serviceLocation = builder.serviceLocation;
     }
 
@@ -108,6 +113,13 @@ public class AllocateAnycastEipAddressRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return serviceLocation
      */
     public String getServiceLocation() {
@@ -121,6 +133,7 @@ public class AllocateAnycastEipAddressRequest extends Request {
         private String instanceChargeType; 
         private String internetChargeType; 
         private String name; 
+        private String resourceGroupId; 
         private String serviceLocation; 
 
         private Builder() {
@@ -135,11 +148,19 @@ public class AllocateAnycastEipAddressRequest extends Request {
             this.instanceChargeType = request.instanceChargeType;
             this.internetChargeType = request.internetChargeType;
             this.name = request.name;
+            this.resourceGroupId = request.resourceGroupId;
             this.serviceLocation = request.serviceLocation;
         } 
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.
+         * <p>
+         * 
+         * Valid values: **200** to **1000**.
+         * 
+         * Default value: **1000**.
+         * 
+         * >  The maximum bandwidth value is not a guaranteed value. It indicates the upper limit of bandwidth and is for reference only.
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
@@ -148,7 +169,12 @@ public class AllocateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * >  If you do not set this parameter, **ClientToken** is set to the value of **ClientToken**. The value of **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -157,7 +183,10 @@ public class AllocateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the Anycast EIP.
+         * <p>
+         * 
+         * The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -166,7 +195,10 @@ public class AllocateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the Anycast EIP.
+         * <p>
+         * 
+         * Set the value to **PostPaid**, which specifies the pay-as-you-go billing method.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -175,7 +207,10 @@ public class AllocateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * InternetChargeType.
+         * The metering method of the Anycast EIP.
+         * <p>
+         * 
+         * Set the value to **PayByTraffic**, which specifies the pay-by-data-transfer metering method.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.putQueryParameter("InternetChargeType", internetChargeType);
@@ -184,7 +219,10 @@ public class AllocateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the Anycast EIP.
+         * <p>
+         * 
+         * The name must be 0 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -193,7 +231,19 @@ public class AllocateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * ServiceLocation.
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The access area of the Anycast EIP.
+         * <p>
+         * 
+         * Set the value to **international**, which specifies the regions outside the Chinese mainland.
          */
         public Builder serviceLocation(String serviceLocation) {
             this.putQueryParameter("ServiceLocation", serviceLocation);

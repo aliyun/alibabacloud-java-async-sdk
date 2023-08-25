@@ -170,7 +170,7 @@ public class AssociateAnycastEipAddressRequest extends Request {
         } 
 
         /**
-         * AnycastId.
+         * The ID of the Anycast EIP.
          */
         public Builder anycastId(String anycastId) {
             this.putQueryParameter("AnycastId", anycastId);
@@ -179,7 +179,16 @@ public class AssociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * 关联模式，默认模式、普通模式Default/Normal
+         * The association mode. Valid values:
+         * <p>
+         * 
+         * *   **Default**: the default mode. In this mode, cloud resources to be associated are set as default origin servers.
+         * *   **Normal**: the standard mode. In this mode, cloud resources to be associated are set as standard origin servers.
+         * 
+         * > You can associate an Anycast EIP with cloud resources in multiple regions. However, you can set only one cloud resource as the default origin server. Other cloud resources are set as standard origin servers. If you do not specify or add an access point, requests are forwarded to the default origin server.
+         * 
+         * *   If this is your first time to associate an Anycast EIP with a cloud resource, set the value to **Default**.
+         * *   If not, you can also set the value to **Default**, which specifies a new default origin server. In this case, the previous origin server functions as a standard origin server.
          */
         public Builder associationMode(String associationMode) {
             this.putQueryParameter("AssociationMode", associationMode);
@@ -188,7 +197,7 @@ public class AssociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * BindInstanceId.
+         * The ID of the cloud resource with which you want to associate the Anycast EIP.
          */
         public Builder bindInstanceId(String bindInstanceId) {
             this.putQueryParameter("BindInstanceId", bindInstanceId);
@@ -197,7 +206,10 @@ public class AssociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * BindInstanceRegionId.
+         * The ID of the region where the cloud resource is deployed.
+         * <p>
+         * 
+         * You can associate Anycast EIPs only with cloud resources in specific regions. You can call the [DescribeAnycastServerRegions](~~171939~~) operation to query the region IDs.
          */
         public Builder bindInstanceRegionId(String bindInstanceRegionId) {
             this.putQueryParameter("BindInstanceRegionId", bindInstanceRegionId);
@@ -206,7 +218,11 @@ public class AssociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * BindInstanceType.
+         * The type of cloud resource with which you want to associate the Anycast EIP. Valid values:
+         * <p>
+         * 
+         * *   **SlbInstance**: an internal-facing Server Load Balancer (SLB) instance that is deployed in a virtual private cloud (VPC)
+         * *   **NetworkInterface**: an elastic network interface (ENI)
          */
         public Builder bindInstanceType(String bindInstanceType) {
             this.putQueryParameter("BindInstanceType", bindInstanceType);
@@ -215,7 +231,12 @@ public class AssociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -224,7 +245,11 @@ public class AssociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to only precheck the request. Valid values:
+         * <p>
+         * 
+         * *   **true**: prechecks the request. After the request passes the precheck, the Anycast EIP is not associated with the instance. The system checks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the API request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -233,7 +258,12 @@ public class AssociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * 绑定时关联的pop location，如果是绑定的第一个实例，该参数会忽略，会下发到全部pop点
+         * The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.
+         * <p>
+         * 
+         * If this is your first time to associate an Anycast EIP with a cloud resource, ignore this parameter. The system automatically associates all access areas.
+         * 
+         * You can call the [DescribeAnycastPopLocations](~~171938~~) operation to query information about access points in supported access areas.
          */
         public Builder popLocations(java.util.List < PopLocations> popLocations) {
             this.putQueryParameter("PopLocations", popLocations);
@@ -242,7 +272,10 @@ public class AssociateAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * 私网ip地址
+         * The secondary private IP address of the ENI with which you want to associate the Anycast EIP.
+         * <p>
+         * 
+         * This parameter is valid only when you set **BindInstanceType** to **NetworkInterface**. If you do not set this parameter, the primary private IP address of the ENI is used.
          */
         public Builder privateIpAddress(String privateIpAddress) {
             this.putQueryParameter("PrivateIpAddress", privateIpAddress);
@@ -284,7 +317,12 @@ public class AssociateAnycastEipAddressRequest extends Request {
             private String popLocation; 
 
             /**
-             * pop location
+             * The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.
+             * <p>
+             * 
+             * If this is your first time to associate an Anycast EIP with a cloud resource, ignore this parameter. The system automatically associates all access areas.
+             * 
+             * You can call the [DescribeAnycastPopLocations](~~171938~~) operation to query information about access points in supported access areas.
              */
             public Builder popLocation(String popLocation) {
                 this.popLocation = popLocation;

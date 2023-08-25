@@ -51,11 +51,17 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     @NameInMap("ServiceLocation")
     private String serviceLocation;
 
     @NameInMap("Status")
     private String status;
+
+    @NameInMap("Tags")
+    private java.util.List < Tags> tags;
 
     private DescribeAnycastEipAddressResponseBody(Builder builder) {
         this.aliUid = builder.aliUid;
@@ -71,8 +77,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         this.ipAddress = builder.ipAddress;
         this.name = builder.name;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.serviceLocation = builder.serviceLocation;
         this.status = builder.status;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -175,6 +183,13 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return serviceLocation
      */
     public String getServiceLocation() {
@@ -186,6 +201,13 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
      */
     public String getStatus() {
         return this.status;
+    }
+
+    /**
+     * @return tags
+     */
+    public java.util.List < Tags> getTags() {
+        return this.tags;
     }
 
     public static final class Builder {
@@ -202,11 +224,13 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         private String ipAddress; 
         private String name; 
         private String requestId; 
+        private String resourceGroupId; 
         private String serviceLocation; 
         private String status; 
+        private java.util.List < Tags> tags; 
 
         /**
-         * AliUid.
+         * The ID of the account to which the Anycast EIP belongs.
          */
         public Builder aliUid(Long aliUid) {
             this.aliUid = aliUid;
@@ -214,7 +238,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * AnycastEipBindInfoList.
+         * The information about the cloud resource with which the Anycast EIP is associated.
          */
         public Builder anycastEipBindInfoList(java.util.List < AnycastEipBindInfoList> anycastEipBindInfoList) {
             this.anycastEipBindInfoList = anycastEipBindInfoList;
@@ -222,7 +246,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * AnycastId.
+         * The ID of the Anycast EIP.
          */
         public Builder anycastId(String anycastId) {
             this.anycastId = anycastId;
@@ -230,7 +254,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.
          */
         public Builder bandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
@@ -238,7 +262,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Bid.
+         * The BID of the account to which the Anycast EIP belongs.
          */
         public Builder bid(String bid) {
             this.bid = bid;
@@ -246,7 +270,11 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * BusinessStatus.
+         * The service status of the Anycast EIP. Valid values:
+         * <p>
+         * 
+         * *   **Normal**
+         * *   **FinancialLocked**
          */
         public Builder businessStatus(String businessStatus) {
             this.businessStatus = businessStatus;
@@ -254,7 +282,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the Anycast EIP was created.
+         * <p>
+         * 
+         * The time follows the ISO8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -262,7 +293,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the Anycast EIP.
          */
         public Builder description(String description) {
             this.description = description;
@@ -270,7 +301,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceChargeType.
+         * The billing method of the Anycast EIP.
+         * <p>
+         * 
+         * Only **PostPaid** may be returned, which indicates the pay-as-you-go billing method.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.instanceChargeType = instanceChargeType;
@@ -278,7 +312,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * InternetChargeType.
+         * The metering method of the Anycast EIP.
+         * <p>
+         * 
+         * Only **PayByTraffic** may be returned, which indicates the pay-by-data-transfer metering method.
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -286,7 +323,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * IpAddress.
+         * The IP address of the Anycast EIP.
          */
         public Builder ipAddress(String ipAddress) {
             this.ipAddress = ipAddress;
@@ -294,7 +331,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the Anycast EIP.
          */
         public Builder name(String name) {
             this.name = name;
@@ -302,7 +339,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -310,7 +347,18 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceLocation.
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * The area from which you can use the Anycast EIP to access the backend server over the Internet.
+         * <p>
+         * 
+         * Only **international** may be returned, which indicates the areas outside the Chinese mainland.
          */
         public Builder serviceLocation(String serviceLocation) {
             this.serviceLocation = serviceLocation;
@@ -318,10 +366,27 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the Anycast EIP. Valid values:
+         * <p>
+         * 
+         * *   **Associating**
+         * *   **Unassociating**
+         * *   **Allocated**
+         * *   **Associated**
+         * *   **Modifying**
+         * *   **Releasing**
+         * *   **Released**
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * The tag information.
+         */
+        public Builder tags(java.util.List < Tags> tags) {
+            this.tags = tags;
             return this;
         }
 
@@ -358,7 +423,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             private String popLocation; 
 
             /**
-             * PopLocation
+             * The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.
+             * <p>
+             * 
+             * If this is your first time associating an Anycast EIP with a cloud resource, the system returns information about access points in all access areas.
              */
             public Builder popLocation(String popLocation) {
                 this.popLocation = popLocation;
@@ -483,7 +551,11 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 绑定模式 Normal、Default
+             * The association mode. Valid values:
+             * <p>
+             * 
+             * *   **Default**: the default mode. In this mode, associated cloud resources are set as default origin servers.
+             * *   **Normal**: the standard mode. In this mode, associated cloud resources are set as standard origin servers.
              */
             public Builder associationMode(String associationMode) {
                 this.associationMode = associationMode;
@@ -491,7 +563,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * BindInstanceId.
+             * The ID of the cloud resource with which the Anycast EIP is associated.
              */
             public Builder bindInstanceId(String bindInstanceId) {
                 this.bindInstanceId = bindInstanceId;
@@ -499,7 +571,7 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * BindInstanceRegionId.
+             * The ID of the region in which the cloud resource is deployed.
              */
             public Builder bindInstanceRegionId(String bindInstanceRegionId) {
                 this.bindInstanceRegionId = bindInstanceRegionId;
@@ -507,7 +579,11 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * BindInstanceType.
+             * The type of cloud resource with which the Anycast EIP is associated. Valid values:
+             * <p>
+             * 
+             * *   **SlbInstance**: an internal-facing Server Load Balancer (SLB) instance that is deployed in a virtual private cloud (VPC)
+             * *   **NetworkInterface**: an elastic network interface (ENI)
              */
             public Builder bindInstanceType(String bindInstanceType) {
                 this.bindInstanceType = bindInstanceType;
@@ -515,7 +591,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * BindTime.
+             * The time when the Anycast EIP was associated.
+             * <p>
+             * 
+             * The time follows the ISO8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder bindTime(String bindTime) {
                 this.bindTime = bindTime;
@@ -523,7 +602,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * 关联的pop点
+             * The information about the access points in associated access areas when you associate an Anycast EIP with a cloud resource.
+             * <p>
+             * 
+             * If this is your first time associating an Anycast EIP with a cloud resource, the system returns information about access points in all access areas.
              */
             public Builder popLocations(java.util.List < PopLocations> popLocations) {
                 this.popLocations = popLocations;
@@ -531,7 +613,10 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * ip地址
+             * The secondary private IP address of the associated ENI.
+             * <p>
+             * 
+             * This parameter is valid only when **BindInstanceType** is set to **NetworkInterface**.
              */
             public Builder privateIpAddress(String privateIpAddress) {
                 this.privateIpAddress = privateIpAddress;
@@ -539,7 +624,14 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the cloud resource. Valid values:
+             * <p>
+             * 
+             * *   **BINDING**
+             * *   **BINDED**
+             * *   **UNBINDING**
+             * *   **DELETED**
+             * *   **MODIFYING**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -548,6 +640,67 @@ public class DescribeAnycastEipAddressResponseBody extends TeaModel {
 
             public AnycastEipBindInfoList build() {
                 return new AnycastEipBindInfoList(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The tag key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The tag value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 

@@ -54,7 +54,10 @@ public class DescribeAnycastPopLocationsRequest extends Request {
         } 
 
         /**
-         * ServiceLocation.
+         * The access area of the Anycast elastic IP address (EIP).
+         * <p>
+         * 
+         * Set the value to **international**, which specifies the regions outside the Chinese mainland.
          */
         public Builder serviceLocation(String serviceLocation) {
             this.putQueryParameter("ServiceLocation", serviceLocation);

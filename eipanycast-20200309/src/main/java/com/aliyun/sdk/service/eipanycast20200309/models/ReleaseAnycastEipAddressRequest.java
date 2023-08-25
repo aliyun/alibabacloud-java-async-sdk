@@ -69,7 +69,7 @@ public class ReleaseAnycastEipAddressRequest extends Request {
         } 
 
         /**
-         * AnycastId.
+         * The ID of the Anycast EIP to be released.
          */
         public Builder anycastId(String anycastId) {
             this.putQueryParameter("AnycastId", anycastId);
@@ -78,7 +78,10 @@ public class ReleaseAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value. Make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);

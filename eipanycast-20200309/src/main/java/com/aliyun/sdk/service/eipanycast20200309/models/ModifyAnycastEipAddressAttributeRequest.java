@@ -83,7 +83,7 @@ public class ModifyAnycastEipAddressAttributeRequest extends Request {
         } 
 
         /**
-         * AnycastId.
+         * The ID of the Anycast EIP.
          */
         public Builder anycastId(String anycastId) {
             this.putQueryParameter("AnycastId", anycastId);
@@ -92,7 +92,10 @@ public class ModifyAnycastEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the Anycast EIP.
+         * <p>
+         * 
+         * The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -101,7 +104,10 @@ public class ModifyAnycastEipAddressAttributeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the Anycast EIP.
+         * <p>
+         * 
+         * The name must be 0 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

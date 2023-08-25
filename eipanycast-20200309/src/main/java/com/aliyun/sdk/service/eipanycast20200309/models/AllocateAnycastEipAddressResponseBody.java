@@ -62,7 +62,7 @@ public class AllocateAnycastEipAddressResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AnycastId.
+         * The ID of the Anycast EIP.
          */
         public Builder anycastId(String anycastId) {
             this.anycastId = anycastId;
@@ -70,7 +70,7 @@ public class AllocateAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class AllocateAnycastEipAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

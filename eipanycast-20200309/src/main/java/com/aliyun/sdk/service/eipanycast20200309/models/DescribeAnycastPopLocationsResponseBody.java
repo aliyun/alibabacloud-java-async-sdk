@@ -62,7 +62,7 @@ public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AnycastPopLocationList.
+         * The list of access points in the specified access area.
          */
         public Builder anycastPopLocationList(java.util.List < AnycastPopLocationList> anycastPopLocationList) {
             this.anycastPopLocationList = anycastPopLocationList;
@@ -70,7 +70,7 @@ public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * The number of access points.
          */
         public Builder count(String count) {
             this.count = count;
@@ -78,7 +78,7 @@ public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
             private String regionName; 
 
             /**
-             * RegionId.
+             * The ID of the region where the access point is deployed.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -138,7 +138,7 @@ public class DescribeAnycastPopLocationsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * The name of the region where the access point is deployed.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

@@ -62,7 +62,7 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AnycastServerRegionList.
+         * The list of regions where you can associate Anycast EIPs with backend servers.
          */
         public Builder anycastServerRegionList(java.util.List < AnycastServerRegionList> anycastServerRegionList) {
             this.anycastServerRegionList = anycastServerRegionList;
@@ -70,7 +70,7 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Count.
+         * The total number of entries returned.
          */
         public Builder count(String count) {
             this.count = count;
@@ -78,7 +78,7 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
             private String regionName; 
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -138,7 +138,7 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * The name of the region.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;

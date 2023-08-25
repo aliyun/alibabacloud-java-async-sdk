@@ -82,7 +82,10 @@ public class DescribeAnycastEipAddressRequest extends Request {
         } 
 
         /**
-         * AnycastId.
+         * The ID of the Anycast EIP.
+         * <p>
+         * 
+         * >  You must specify at least one of **Ip** and **AnycastId**.
          */
         public Builder anycastId(String anycastId) {
             this.putQueryParameter("AnycastId", anycastId);
@@ -91,7 +94,7 @@ public class DescribeAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * BindInstanceId.
+         * The ID of the cloud resource with which the Anycast EIP is associated.
          */
         public Builder bindInstanceId(String bindInstanceId) {
             this.putQueryParameter("BindInstanceId", bindInstanceId);
@@ -100,7 +103,10 @@ public class DescribeAnycastEipAddressRequest extends Request {
         }
 
         /**
-         * Ip.
+         * The IP address of the Anycast EIP.
+         * <p>
+         * 
+         * >  You must specify at least one of **Ip** and **AnycastId**.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);

@@ -140,7 +140,7 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         } 
 
         /**
-         * AnycastId.
+         * The ID of the Anycast EIP.
          */
         public Builder anycastId(String anycastId) {
             this.putQueryParameter("AnycastId", anycastId);
@@ -149,7 +149,11 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         }
 
         /**
-         * 关联模式，默认模式、普通模式Default/Normal
+         * The association mode. Valid values:
+         * <p>
+         * 
+         * *   **Default**: the default mode. In this mode, cloud resources to be associated are set as default origin servers.
+         * *   **Normal**: the standard mode. In this mode, cloud resources to be associated are set as standard origin servers.
          */
         public Builder associationMode(String associationMode) {
             this.putQueryParameter("AssociationMode", associationMode);
@@ -158,7 +162,7 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         }
 
         /**
-         * BindInstanceId.
+         * The ID of the cloud resource with which you want to associate the Anycast EIP.
          */
         public Builder bindInstanceId(String bindInstanceId) {
             this.putQueryParameter("BindInstanceId", bindInstanceId);
@@ -167,7 +171,12 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * 
+         * >  If you do not set this parameter, the system automatically uses **RequestId** as **ClientToken**. **RequestId** may be different for each API request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -176,7 +185,11 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to only precheck the request. Valid values:
+         * <p>
+         * 
+         * *   **true**: prechecks the request without updating the association information. The system checks the required parameters, request syntax, and limits. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the `DryRunOperation` error code is returned.
+         * *   **false** (default): sends the API request. If the request passes the precheck, a 2xx HTTP status code is returned and the operation is performed.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -185,7 +198,7 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         }
 
         /**
-         * 新增关联的pop location
+         * The access areas and access points to be added.
          */
         public Builder popLocationAddList(java.util.List < PopLocationAddList> popLocationAddList) {
             this.putQueryParameter("PopLocationAddList", popLocationAddList);
@@ -194,7 +207,7 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
         }
 
         /**
-         * 待删除的关联pop location
+         * The access areas and access points to be deleted.
          */
         public Builder popLocationDeleteList(java.util.List < PopLocationDeleteList> popLocationDeleteList) {
             this.putQueryParameter("PopLocationDeleteList", popLocationDeleteList);
@@ -236,7 +249,10 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
             private String popLocation; 
 
             /**
-             * pop location
+             * The access points in the access areas to be added.
+             * <p>
+             * 
+             * You can call the [DescribeAnycastPopLocations](~~171938~~) operation to query the access points in supported access areas.
              */
             public Builder popLocation(String popLocation) {
                 this.popLocation = popLocation;
@@ -277,7 +293,10 @@ public class UpdateAnycastEipAddressAssociationsRequest extends Request {
             private String popLocation; 
 
             /**
-             * pop location
+             * The access points in the access areas to be deleted.
+             * <p>
+             * 
+             * >  If the access point in the access area is associated with a default origin server, you cannot delete the access point in the access area.
              */
             public Builder popLocation(String popLocation) {
                 this.popLocation = popLocation;

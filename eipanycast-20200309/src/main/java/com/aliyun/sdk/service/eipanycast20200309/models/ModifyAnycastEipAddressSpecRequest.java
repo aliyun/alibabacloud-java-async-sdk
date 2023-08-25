@@ -70,7 +70,7 @@ public class ModifyAnycastEipAddressSpecRequest extends Request {
         } 
 
         /**
-         * AnycastId.
+         * The ID of the Anycast EIP.
          */
         public Builder anycastId(String anycastId) {
             this.putQueryParameter("AnycastId", anycastId);
@@ -79,7 +79,10 @@ public class ModifyAnycastEipAddressSpecRequest extends Request {
         }
 
         /**
-         * Bandwidth.
+         * The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.
+         * <p>
+         * 
+         * Valid values: **200** to **1000**.
          */
         public Builder bandwidth(String bandwidth) {
             this.putQueryParameter("Bandwidth", bandwidth);
