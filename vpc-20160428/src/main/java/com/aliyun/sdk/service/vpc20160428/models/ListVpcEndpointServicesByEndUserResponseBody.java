@@ -24,11 +24,15 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     @NameInMap("Services")
     private java.util.List < Services> services;
 
+    @NameInMap("TotalCount")
+    private String totalCount;
+
     private ListVpcEndpointServicesByEndUserResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.services = builder.services;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -67,11 +71,19 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         return this.services;
     }
 
+    /**
+     * @return totalCount
+     */
+    public String getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private Long maxResults; 
         private String nextToken; 
         private String requestId; 
         private java.util.List < Services> services; 
+        private String totalCount; 
 
         /**
          * The number of entries returned per page.
@@ -106,6 +118,14 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
          */
         public Builder services(java.util.List < Services> services) {
             this.services = services;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(String totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 

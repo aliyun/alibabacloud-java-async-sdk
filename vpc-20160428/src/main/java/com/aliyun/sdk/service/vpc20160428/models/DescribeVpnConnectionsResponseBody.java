@@ -632,11 +632,11 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             private String tunnelCidr; 
 
             /**
-             * BGP的协商状态。
+             * The negotiation status of BGP. Valid values: 
              * <p>
              * 
-             * - **success**：正常。
-             * - **false**：异常。
+             * - **success**
+             * - **false**
              */
             public Builder bgpStatus(String bgpStatus) {
                 this.bgpStatus = bgpStatus;
@@ -644,7 +644,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道本端（阿里云侧）的自治系统号。
+             * The ASN on the Alibaba Cloud side.
              */
             public Builder localAsn(String localAsn) {
                 this.localAsn = localAsn;
@@ -652,7 +652,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道本端（阿里云侧）的BGP地址。
+             * The BGP IP address on the Alibaba Cloud side.
              */
             public Builder localBgpIp(String localBgpIp) {
                 this.localBgpIp = localBgpIp;
@@ -660,7 +660,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道对端的自治系统号。
+             * The peer ASN.
              */
             public Builder peerAsn(String peerAsn) {
                 this.peerAsn = peerAsn;
@@ -668,7 +668,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道对端的BGP地址。
+             * The peer BGP IP address.
              */
             public Builder peerBgpIp(String peerBgpIp) {
                 this.peerBgpIp = peerBgpIp;
@@ -676,7 +676,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道的BGP网段。
+             * The BGP CIDR block of the tunnel.
              */
             public Builder tunnelCidr(String tunnelCidr) {
                 this.tunnelCidr = tunnelCidr;
@@ -813,7 +813,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             private String remoteId; 
 
             /**
-             * IKE阶段认证算法。
+             * The authentication algorithm in the IKE phase.
              */
             public Builder ikeAuthAlg(String ikeAuthAlg) {
                 this.ikeAuthAlg = ikeAuthAlg;
@@ -821,7 +821,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * IKE阶段加密算法。
+             * The encryption algorithm in the IKE phase.
              */
             public Builder ikeEncAlg(String ikeEncAlg) {
                 this.ikeEncAlg = ikeEncAlg;
@@ -829,7 +829,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * IKE阶段生存时间。单位：秒。
+             * The lifetime in the IKE phase. Unit: seconds.
              */
             public Builder ikeLifetime(String ikeLifetime) {
                 this.ikeLifetime = ikeLifetime;
@@ -837,11 +837,11 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * IKE协商模式。
+             * The IKE negotiation mode. 
              * <p>
              * 
-             * - **main**：主模式，协商过程安全性高。
-             * - **aggressive**：野蛮模式，协商快速且协商成功率高。
+             * - **main**: This mode offers higher security during negotiations. 
+             * - **aggressive**: This mode is faster and has a higher success rate.
              */
             public Builder ikeMode(String ikeMode) {
                 this.ikeMode = ikeMode;
@@ -849,7 +849,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * IKE阶段DH分组。
+             * The DH group in the IKE phase.
              */
             public Builder ikePfs(String ikePfs) {
                 this.ikePfs = ikePfs;
@@ -857,7 +857,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * IKE协议版本。
+             * The IKE version.
              */
             public Builder ikeVersion(String ikeVersion) {
                 this.ikeVersion = ikeVersion;
@@ -865,7 +865,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道本端（阿里云侧）的标识。
+             * The identifier on the Alibaba Cloud side.
              */
             public Builder localId(String localId) {
                 this.localId = localId;
@@ -873,7 +873,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 预共享密钥。
+             * The pre-shared key.
              */
             public Builder psk(String psk) {
                 this.psk = psk;
@@ -881,7 +881,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道对端的标识。
+             * The peer identifier.
              */
             public Builder remoteId(String remoteId) {
                 this.remoteId = remoteId;
@@ -958,7 +958,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             private String ipsecPfs; 
 
             /**
-             * IPsec阶段认证算法。
+             * The authentication algorithm in the IPsec phase.
              */
             public Builder ipsecAuthAlg(String ipsecAuthAlg) {
                 this.ipsecAuthAlg = ipsecAuthAlg;
@@ -966,7 +966,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * IPsec阶段加密算法。
+             * The encryption algorithm in the IPsec phase.
              */
             public Builder ipsecEncAlg(String ipsecEncAlg) {
                 this.ipsecEncAlg = ipsecEncAlg;
@@ -974,7 +974,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * IPsec阶段生存时间。单位：秒。
+             * The lifetime in the IPsec phase. Unit: seconds.
              */
             public Builder ipsecLifetime(String ipsecLifetime) {
                 this.ipsecLifetime = ipsecLifetime;
@@ -982,7 +982,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * IPsec阶段DH分组。
+             * The DH group in the IPsec phase.
              */
             public Builder ipsecPfs(String ipsecPfs) {
                 this.ipsecPfs = ipsecPfs;
@@ -1167,7 +1167,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             private String zoneNo; 
 
             /**
-             * 隧道关联的用户网关ID。
+             * The ID of the customer gateway associated with the tunnel.
              */
             public Builder customerGatewayId(String customerGatewayId) {
                 this.customerGatewayId = customerGatewayId;
@@ -1175,10 +1175,11 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道是否已开启DPD（对等体存活检测）功能。
+             * Indicates whether DPD is enabled for the tunnel. Valid values: 
              * <p>
-             * - **false**：未开启。
-             * - **true**：已开启。
+             * 
+             * - **false** 
+             * - **true**
              */
             public Builder enableDpd(String enableDpd) {
                 this.enableDpd = enableDpd;
@@ -1186,11 +1187,11 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道是否已开启NAT穿越功能。
+             * Indicates whether NAT traversal is enabled for the tunnel. Valid values: 
              * <p>
              * 
-             * - **false**：未开启。
-             * - **true**：已开启。
+             * - **false** 
+             * - **true**
              */
             public Builder enableNatTraversal(String enableNatTraversal) {
                 this.enableNatTraversal = enableNatTraversal;
@@ -1198,7 +1199,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道的IP地址。
+             * The tunnel IP address.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -1206,10 +1207,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道对端的CA证书。
+             * The CA certificate of the tunnel peer. 
              * <p>
              * 
-             * 仅VPN网关实例的类型为国密型时才会返回当前参数。
+             * This parameter is returned only if the VPN gateway is of the ShangMi (SM) type.
              */
             public Builder remoteCaCertificate(String remoteCaCertificate) {
                 this.remoteCaCertificate = remoteCaCertificate;
@@ -1217,11 +1218,11 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道的角色。
+             * The tunnel role. Valid values: 
              * <p>
              * 
-             * - **master**：表示当前隧道为主隧道。
-             * - **slave**：表示当前隧道为备隧道。
+             * - **master**
+             * - **slave**
              */
             public Builder role(String role) {
                 this.role = role;
@@ -1229,19 +1230,11 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * IPsec连接与转发路由器实例的绑定状态。
+             * The tunnel status. Valid values: 
              * <p>
-             * 
-             * - **active**：IPsec连接已与VPN网关实例绑定，状态正常。
-             * - **init**：IPsec连接未绑定任何资源，IPsec连接初始化。
-             * - **attaching**：IPsec连接与转发路由器实例绑定中。
-             * - **attached**：IPsec连接已与转发路由器实例绑定。
-             * - **detaching**：IPsec连接与转发路由器实例解绑中。
-             * - **financialLocked**：欠费锁定。
-             * - **provisioning**：资源准备中。
-             * - **updating**：更新中。
-             * - **upgrading**：升级中。
-             * - **deleted**：已删除。
+             * - **active** 
+             * - **updating** 
+             * - **deleting**
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1249,16 +1242,13 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * IPsec连接的状态。
+             * The status of the IPsec-VPN connection. Valid values:
              * <p>
              * 
-             * - **ike_sa_not_established**：第一阶段协商失败。
-             * 
-             * - **ike_sa_established**：第一阶段协商成功。
-             * 
-             * - **ipsec_sa_not_established**：第二阶段协商失败。
-             * 
-             * - **ipsec_sa_established**：第二阶段协商成功。
+             * *   **ike_sa_not_established**: Phase 1 negotiations failed.
+             * *   **ike_sa_established**: Phase 1 negotiations were successful.
+             * *   **ipsec_sa_not_established**: Phase 2 negotiations failed.
+             * *   **ipsec_sa_established**: Phase 2 negotiations were successful.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1266,7 +1256,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道的BGP配置信息。
+             * The BGP configuration.
              */
             public Builder tunnelBgpConfig(TunnelBgpConfig tunnelBgpConfig) {
                 this.tunnelBgpConfig = tunnelBgpConfig;
@@ -1274,7 +1264,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道ID。
+             * The tunnel ID.
              */
             public Builder tunnelId(String tunnelId) {
                 this.tunnelId = tunnelId;
@@ -1282,7 +1272,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 第一阶段协商的配置。
+             * The configuration of Phase 1 negotiations.
              */
             public Builder tunnelIkeConfig(TunnelIkeConfig tunnelIkeConfig) {
                 this.tunnelIkeConfig = tunnelIkeConfig;
@@ -1290,7 +1280,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 第二阶段协商的配置。
+             * The configuration of Phase 2 negotiations.
              */
             public Builder tunnelIpsecConfig(TunnelIpsecConfig tunnelIpsecConfig) {
                 this.tunnelIpsecConfig = tunnelIpsecConfig;
@@ -1298,7 +1288,7 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * 隧道部署的可用区。
+             * The zone of the tunnel.
              */
             public Builder zoneNo(String zoneNo) {
                 this.zoneNo = zoneNo;
@@ -2136,7 +2126,11 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableTunnelsBgp.
+             * The BGP status of the tunnel. Valid values:
+             * <p>
+             * 
+             * - **false** 
+             * - **true**
              */
             public Builder enableTunnelsBgp(Boolean enableTunnelsBgp) {
                 this.enableTunnelsBgp = enableTunnelsBgp;
@@ -2287,10 +2281,10 @@ public class DescribeVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * IPsec连接的隧道配置信息。
+             * The tunnel configuration of the IPsec-VPN connection. 
              * <p>
              * 
-             * 仅查询双隧道模式的IPsec连接会返回**TunnelOptionsSpecification**数组下的参数。
+             * Parameters in **TunnelOptionsSpecification** are returned only if you query IPsec-VPN connections in dual-tunnel mode.
              */
             public Builder tunnelOptionsSpecification(TunnelOptionsSpecification tunnelOptionsSpecification) {
                 this.tunnelOptionsSpecification = tunnelOptionsSpecification;

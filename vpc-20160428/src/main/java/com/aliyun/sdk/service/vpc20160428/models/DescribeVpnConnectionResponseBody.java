@@ -1781,8 +1781,8 @@ public class DescribeVpnConnectionResponseBody extends TeaModel {
              * The tunnel role. Valid values:
              * <p>
              * 
-             * - **false** 
-             * - **true**
+             * - **master** 
+             * - **slave**
              */
             public Builder role(String role) {
                 this.role = role;

@@ -786,10 +786,10 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * 系统为VPN网关实例分配的用于创建IPsec-VPN连接的第二个IP地址。
+             * The second IP address assigned by the system to create an IPsec-VPN connection. 
              * <p>
              * 
-             * 仅支持创建双隧道模式IPsec-VPN连接的VPN网关实例会返回当前参数。
+             * This parameter is returned only when the VPN gateway supports the dual-tunnel mode.
              */
             public Builder disasterRecoveryInternetIp(String disasterRecoveryInternetIp) {
                 this.disasterRecoveryInternetIp = disasterRecoveryInternetIp;
@@ -797,10 +797,10 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * VPN网关实例关联的第二个交换机ID。
+             * The ID of the second vSwitch associated with the VPN gateway. 
              * <p>
              * 
-             * 仅支持创建双隧道模式IPsec-VPN连接的VPN网关实例会返回当前参数。
+             * This parameter is returned only when the VPN gateway supports the dual-tunnel mode.
              */
             public Builder disasterRecoveryVSwitchId(String disasterRecoveryVSwitchId) {
                 this.disasterRecoveryVSwitchId = disasterRecoveryVSwitchId;
@@ -831,7 +831,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the VPN gateway.
+             * - If the VPN gateway supports IPsec-VPN connections in single-tunnel mode, the address is the IP address of the VPN gateway and can be used to create an IPsec-VPN connection or an SSL-VPN connection. 
+             * <p>
+             * - If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the address is the first IP address used to create an IPsec-VPN connection. The address cannot be used to create an SSL-VPN connection. 
+             * 
+             * If the VPN gateway supports IPsec-VPN connections in dual-tunnel mode, the system assigns two IP addresses to the VPN gateway to create two encrypted tunnels.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -910,10 +914,10 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * SSL-VPN连接的IP地址。
+             * The IP address of the SSL-VPN connection. 
              * <p>
              * 
-             * 仅支持创建双隧道模式IPsec-VPN连接的公网网络类型的VPN网关实例开启SSL-VPN功能后，才会返回当前参数。
+             * This parameter is returned only when the VPN gateway is a public VPN gateway and supports only the single-tunnel mode. In addition, the VPN gateway must have the SSL-VPN feature enabled.
              */
             public Builder sslVpnInternetIp(String sslVpnInternetIp) {
                 this.sslVpnInternetIp = sslVpnInternetIp;
