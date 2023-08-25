@@ -55,6 +55,10 @@ public class TransformInstanceChargeTypeRequest extends Request {
     private Long period;
 
     @Query
+    @NameInMap("PricingCycle")
+    private String pricingCycle;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -78,6 +82,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.period = builder.period;
+        this.pricingCycle = builder.pricingCycle;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
@@ -167,6 +172,13 @@ public class TransformInstanceChargeTypeRequest extends Request {
     }
 
     /**
+     * @return pricingCycle
+     */
+    public String getPricingCycle() {
+        return this.pricingCycle;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -198,6 +210,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private Long period; 
+        private String pricingCycle; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
@@ -218,6 +231,7 @@ public class TransformInstanceChargeTypeRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.period = request.period;
+            this.pricingCycle = request.pricingCycle;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
@@ -326,6 +340,15 @@ public class TransformInstanceChargeTypeRequest extends Request {
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
             this.period = period;
+            return this;
+        }
+
+        /**
+         * PricingCycle.
+         */
+        public Builder pricingCycle(String pricingCycle) {
+            this.putQueryParameter("PricingCycle", pricingCycle);
+            this.pricingCycle = pricingCycle;
             return this;
         }
 
