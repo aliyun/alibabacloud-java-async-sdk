@@ -158,7 +158,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The suggestions (old).
+         * Indicates whether the project is paused.
          */
         public Builder advice(String advice) {
             this.advice = advice;
@@ -166,7 +166,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The error code (old).
+         * The page size, which takes effect in a pagination query.
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +174,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The time spent in processing the request, in seconds.
+         * Cost.
          */
         public Builder cost(String cost) {
             this.cost = cost;
@@ -182,7 +182,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the project is paused.
+         * Data.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -190,7 +190,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The error details.
+         * A system error occurred.
          */
         public Builder errorDetail(ErrorDetail errorDetail) {
             this.errorDetail = errorDetail;
@@ -198,7 +198,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The error description (old).
+         * The page size, which takes effect in a pagination query.
          */
         public Builder message(String message) {
             this.message = message;
@@ -206,7 +206,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The page number, which takes effect in a pagination query.
+         * Pause a data synchronization project
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -214,7 +214,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The page size, which takes effect in a pagination query.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -222,7 +222,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * A system error occurred.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The total count, which takes effect in a pagination query.
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -314,7 +314,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
             private String proposal; 
 
             /**
-             * The error code (new).
+             * The time spent in processing the request, in seconds.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -322,7 +322,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The error level. Valid values: CRITICAL, ERROR, and WARN.
+             * The error code (old).
              */
             public Builder level(String level) {
                 this.level = level;
@@ -330,7 +330,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The error description (new).
+             * The project ID.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -338,7 +338,7 @@ public class StopOmsOpenAPIProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestions (new).
+             * The error description (new).
              */
             public Builder proposal(String proposal) {
                 this.proposal = proposal;

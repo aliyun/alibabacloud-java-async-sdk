@@ -50,7 +50,7 @@ public class DescribeInstanceTenantModesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of tenants.
+         * InstanceModes.
          */
         public Builder instanceModes(java.util.List < String > instanceModes) {
             this.instanceModes = instanceModes;
@@ -58,7 +58,7 @@ public class DescribeInstanceTenantModesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

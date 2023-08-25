@@ -62,7 +62,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The request ID.
+         * The ID of the tenant.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * The information of tenants.
+         * The ID of the OceanBase cluster.
          */
         public Builder tenants(java.util.List < Tenants> tenants) {
             this.tenants = tenants;
@@ -78,7 +78,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of tenants in the specified OceanBase cluster.
+         * The total memory size of the tenant, in GB.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -322,7 +322,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * 字符集
+             * Charset.
              */
             public Builder charset(String charset) {
                 this.charset = charset;
@@ -330,7 +330,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * 字符序
+             * Collation.
              */
             public Builder collation(String collation) {
                 this.collation = collation;
@@ -346,7 +346,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the tenant was created.
+             * The number of CPU cores in each resource unit of the tenant.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -354,13 +354,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The data replica distribution mode of the tenant.   
-             * <p>
-             * 
-             * - For the high availability version, N-N-N indicates the three-zone mode, and N-N indicates the dual-zone or single-zone mode.
-             * - For the basic version, N indicates the single-zone mode. 
-             * 
-             * > <br>N represents the number of nodes in a single zone.
+             * The search keyword.
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -368,11 +362,9 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment type of the tenant. <br>
+             * The name of the tenant.   
              * <p>
-             * - multiple: multi-IDC deployment
-             * - single: single-IDC deployment
-             * - dual: dual-IDC deployment
+             * It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -380,7 +372,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the tenant.
+             * Example 1
              */
             public Builder description(String description) {
                 this.description = description;
@@ -388,7 +380,10 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The total memory size of the tenant, in GB.
+             * The number of the page to return.   
+             * <p>
+             * Start value: 1
+             * - Default value: 1
              */
             public Builder mem(Integer mem) {
                 this.mem = mem;
@@ -396,7 +391,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The primary zone of the tenant.
+             * The return result of the request.
              */
             public Builder primaryZone(String primaryZone) {
                 this.primaryZone = primaryZone;
@@ -422,7 +417,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * You can call this operation to query the tenants in an OceanBase cluster.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -430,11 +425,31 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant mode.   
+             * {
              * <p>
-             * Valid values:   
-             * Oracle
-             * MySQL
+             *     "TotalCount": 1,
+             *     "RequestId": "EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C",
+             *     "Tenants": [
+             *         {
+             *             "VpcId": "vpc-bp1d2q3mhg9i23ofi****",
+             *             "Status": "ONLINE",
+             *             "PrimaryZone": "cn-hangzhou-i",
+             *             "DeployType": "multiple",
+             *             "DeployMode": "1-1-1",
+             *             "CreateTime": "2021-09-17 15:52:17.0",
+             *             "TenantName": "pay_online",
+             *             "Mem": 20,
+             *             "Cpu": 10,
+             *             "Description": "PayCore business database",
+             *             "TenantMode": "Oracle",
+             *             "TenantId": "t33h8y08k****",
+             *             "UnitCpu": 5,
+             *             "UnitMem": 10,
+             *             "UnitNum": 2,
+             *             "UsedDiskSize": 10
+             *         }
+             *     ]
+             * }
              */
             public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;
@@ -442,7 +457,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tenant.
+             * The information of tenants.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -450,7 +465,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores in each resource unit of the tenant.
+             * UnitCpu.
              */
             public Builder unitCpu(Integer unitCpu) {
                 this.unitCpu = unitCpu;
@@ -458,7 +473,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of each resource unit of the tenant, in GB.
+             * UnitMem.
              */
             public Builder unitMem(Integer unitMem) {
                 this.unitMem = unitMem;
@@ -466,7 +481,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resource units in the tenant.
+             * UnitNum.
              */
             public Builder unitNum(Integer unitNum) {
                 this.unitNum = unitNum;
@@ -474,7 +489,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of used disks of the tenant.
+             * UsedDiskSize.
              */
             public Builder usedDiskSize(Double usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -482,7 +497,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.   <br>If no suitable VPC is available, create a VPC as prompted. For more information, see "What is a VPC".
+             * The time when the tenant was created.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

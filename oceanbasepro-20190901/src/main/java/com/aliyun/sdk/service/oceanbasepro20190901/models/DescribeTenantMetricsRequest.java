@@ -186,7 +186,7 @@ public class DescribeTenantMetricsRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -195,9 +195,7 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * The end time of the time range for querying monitoring data.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -206,7 +204,7 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * 2021-06-13T15:40:43Z
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -215,9 +213,7 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * The monitoring metrics.   
-         * <p>
-         * For more information about supported metrics, see [View tenant statistics](~~212125~~).
+         * {"name":"DescribeTenantMetrics","product":"OceanBasePro","version":"2019-09-01","path":"/","deprecated":0,"method":"POST|GET","protocol":"HTTP|HTTPS","hidden":0,"timeout":10000,"parameter_type":"Single","params":"[{\"name\":\"Action\",\"position\":\"Query\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"description\":\"\",\"example\":\"DescribeTenantMetrics\"},{\"name\":\"InstanceId\",\"position\":\"Body\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"ob317v4uif****\"},{\"name\":\"PageSize\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Integer\",\"title\":\"\",\"description\":\"\",\"example\":\"10\"},{\"name\":\"PageNumber\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Integer\",\"title\":\"\",\"description\":\"\",\"example\":\"1\"},{\"name\":\"TenantName\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":true,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"pay_online\"},{\"name\":\"StartTime\",\"position\":\"Body\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"2021-06-13T15:40:43Z\"},{\"name\":\"EndTime\",\"position\":\"Body\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"2021-06-13T15:45:43Z\"},{\"name\":\"Metrics\",\"position\":\"Body\",\"required\":true,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"tps\"},{\"name\":\"TenantId\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":true,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"tfafd34fs****\"},{\"name\":\"TenantIdList\",\"position\":\"Body\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"[tdak3nac****,tdakc42df****]\"}]","response_headers":"[]","response":"{\"type\":\"Object\",\"children\":[{\"name\":\"TotalCount\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"Integer\",\"title\":\"\",\"description\":\"\",\"example\":\"9\"},{\"name\":\"RequestId\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C\"},{\"name\":\"TenantMetrics\",\"required\":false,\"checkBlank\":false,\"visibility\":\"Public\",\"deprecated\":false,\"type\":\"String\",\"title\":\"\",\"description\":\"\",\"example\":\"\\\"Metrics\\\":[ {\\\"request_queue_rt\\\":0.0,\\\"TimeStamp\\\":\\\"2022-02-23T01:58:00Z\\\"}]\"}],\"title\":\"\",\"description\":\"\"}","errors":"{}"}
          */
         public Builder metrics(String metrics) {
             this.putBodyParameter("Metrics", metrics);
@@ -226,10 +222,7 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.    
-         * <p>
-         * - Start value: 1 
-         * - Default value: 1
+         * The ID of the OceanBase cluster.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -238,10 +231,7 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * The number of rows to return on each page.   
-         * <p>
-         * - Maximum value: 100   
-         * - Default value: 10
+         * tfafd34fs****
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -250,9 +240,7 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * The start time of the time range for querying monitoring data.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * Example 1
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -261,9 +249,7 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.   
-         * <p>
-         * > <br>This parameter will be deprecated. We recommend that you use the TenantIdList parameter instead.
+         * TenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -272,7 +258,7 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * The list of tenant IDs.
+         * TenantIdList.
          */
         public Builder tenantIdList(String tenantIdList) {
             this.putBodyParameter("TenantIdList", tenantIdList);
@@ -281,10 +267,7 @@ public class DescribeTenantMetricsRequest extends Request {
         }
 
         /**
-         * The name of the tenant.    
-         * <p>
-         * It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.   
-         * > <br>This parameter will be deprecated. We recommend that you use the TenantIdList parameter instead.
+         * 2021-06-13T15:45:43Z
          */
         public Builder tenantName(String tenantName) {
             this.putBodyParameter("TenantName", tenantName);

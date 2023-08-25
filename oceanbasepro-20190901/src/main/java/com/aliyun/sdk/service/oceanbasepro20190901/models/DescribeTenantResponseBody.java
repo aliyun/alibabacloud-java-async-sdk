@@ -50,7 +50,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         private Tenant tenant; 
 
         /**
-         * The request ID.
+         * The zone information of the tenant.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the tenant.
+         * The ID of the zone.
          */
         public Builder tenant(Tenant tenant) {
             this.tenant = tenant;
@@ -75,11 +75,11 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("AddressType")
         private String addressType;
 
-        @NameInMap("ConnectionRole")
-        private String connectionRole;
-
         @NameInMap("ConnectionZones")
         private java.util.List < String > connectionZones;
+
+        @NameInMap("EnableTransactionSplit")
+        private Boolean enableTransactionSplit;
 
         @NameInMap("InternetAddress")
         private String internetAddress;
@@ -105,6 +105,12 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("IntranetPort")
         private Integer intranetPort;
 
+        @NameInMap("ParallelQueryDegree")
+        private Long parallelQueryDegree;
+
+        @NameInMap("TenantEndpointId")
+        private String tenantEndpointId;
+
         @NameInMap("TransactionSplit")
         private Boolean transactionSplit;
 
@@ -116,8 +122,8 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         private TenantConnections(Builder builder) {
             this.addressType = builder.addressType;
-            this.connectionRole = builder.connectionRole;
             this.connectionZones = builder.connectionZones;
+            this.enableTransactionSplit = builder.enableTransactionSplit;
             this.internetAddress = builder.internetAddress;
             this.internetAddressStatus = builder.internetAddressStatus;
             this.internetPort = builder.internetPort;
@@ -126,6 +132,8 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.intranetAddressSlaveZoneId = builder.intranetAddressSlaveZoneId;
             this.intranetAddressStatus = builder.intranetAddressStatus;
             this.intranetPort = builder.intranetPort;
+            this.parallelQueryDegree = builder.parallelQueryDegree;
+            this.tenantEndpointId = builder.tenantEndpointId;
             this.transactionSplit = builder.transactionSplit;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -147,17 +155,17 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
-         * @return connectionRole
-         */
-        public String getConnectionRole() {
-            return this.connectionRole;
-        }
-
-        /**
          * @return connectionZones
          */
         public java.util.List < String > getConnectionZones() {
             return this.connectionZones;
+        }
+
+        /**
+         * @return enableTransactionSplit
+         */
+        public Boolean getEnableTransactionSplit() {
+            return this.enableTransactionSplit;
         }
 
         /**
@@ -217,6 +225,20 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return parallelQueryDegree
+         */
+        public Long getParallelQueryDegree() {
+            return this.parallelQueryDegree;
+        }
+
+        /**
+         * @return tenantEndpointId
+         */
+        public String getTenantEndpointId() {
+            return this.tenantEndpointId;
+        }
+
+        /**
          * @return transactionSplit
          */
         public Boolean getTransactionSplit() {
@@ -239,8 +261,8 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         public static final class Builder {
             private String addressType; 
-            private String connectionRole; 
             private java.util.List < String > connectionZones; 
+            private Boolean enableTransactionSplit; 
             private String internetAddress; 
             private String internetAddressStatus; 
             private Integer internetPort; 
@@ -249,12 +271,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String intranetAddressSlaveZoneId; 
             private String intranetAddressStatus; 
             private Integer intranetPort; 
+            private Long parallelQueryDegree; 
+            private String tenantEndpointId; 
             private Boolean transactionSplit; 
             private String vSwitchId; 
             private String vpcId; 
 
             /**
-             * The type of the address.
+             * The primary zone of the tenant.
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -262,19 +286,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The service mode of the connection address. Valid values:  
-             * <p>
-             * - ReadWrite: provides strong-consistency read and write services.   
-             * - ReadOnly: provides the read-only service to ensure ultimate consistency of data.   
-             * - Clog: provides transaction log services.
-             */
-            public Builder connectionRole(String connectionRole) {
-                this.connectionRole = connectionRole;
-                return this;
-            }
-
-            /**
-             * The list of zones corresponding to the tenant connection.
+             * The Internet address for accessing the tenant.
              */
             public Builder connectionZones(java.util.List < String > connectionZones) {
                 this.connectionZones = connectionZones;
@@ -282,7 +294,15 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet address for accessing the tenant.
+             * EnableTransactionSplit.
+             */
+            public Builder enableTransactionSplit(Boolean enableTransactionSplit) {
+                this.enableTransactionSplit = enableTransactionSplit;
+                return this;
+            }
+
+            /**
+             * The ID of the VPC.
              */
             public Builder internetAddress(String internetAddress) {
                 this.internetAddress = internetAddress;
@@ -290,12 +310,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Internet address for accessing the tenant. Valid values:   
-             * <p>
-             * - CLOSED: The address is disabled.   
-             * - ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   
-             * - PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   
-             * - ONLINE: The address is in service.
+             * 实例系列
              */
             public Builder internetAddressStatus(String internetAddressStatus) {
                 this.internetAddressStatus = internetAddressStatus;
@@ -303,7 +318,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet port for accessing the tenant.
+             * 实例类型
              */
             public Builder internetPort(Integer internetPort) {
                 this.internetPort = internetPort;
@@ -311,7 +326,11 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The intranet address for accessing the tenant.
+             * The deployment type of the cluster. Valid values:  
+             * <p>
+             * - multiple: multi-IDC deployment   
+             * - single: single-IDC deployment   
+             * - dual: dual-IDC deployment
              */
             public Builder intranetAddress(String intranetAddress) {
                 this.intranetAddress = intranetAddress;
@@ -319,7 +338,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The primary zone corresponding to the address for accessing the tenant.
+             * PayCore business database
              */
             public Builder intranetAddressMasterZoneId(String intranetAddressMasterZoneId) {
                 this.intranetAddressMasterZoneId = intranetAddressMasterZoneId;
@@ -327,7 +346,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The standby zone corresponding to the address for accessing the tenant.
+             * The total number of CPU cores of the tenant.
              */
             public Builder intranetAddressSlaveZoneId(String intranetAddressSlaveZoneId) {
                 this.intranetAddressSlaveZoneId = intranetAddressSlaveZoneId;
@@ -335,9 +354,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the intranet address for accessing the tenant.  
-             * <p>
-             * The value ONLINE indicates that the address is in service.
+             * 付费类型
              */
             public Builder intranetAddressStatus(String intranetAddressStatus) {
                 this.intranetAddressStatus = intranetAddressStatus;
@@ -345,7 +362,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The intranet port for accessing the tenant.
+             * The ID of the tenant.
              */
             public Builder intranetPort(Integer intranetPort) {
                 this.intranetPort = intranetPort;
@@ -353,7 +370,23 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable transaction splitting.
+             * ParallelQueryDegree.
+             */
+            public Builder parallelQueryDegree(Long parallelQueryDegree) {
+                this.parallelQueryDegree = parallelQueryDegree;
+                return this;
+            }
+
+            /**
+             * TenantEndpointId.
+             */
+            public Builder tenantEndpointId(String tenantEndpointId) {
+                this.tenantEndpointId = tenantEndpointId;
+                return this;
+            }
+
+            /**
+             * The primary zone corresponding to the address for accessing the tenant.
              */
             public Builder transactionSplit(Boolean transactionSplit) {
                 this.transactionSplit = transactionSplit;
@@ -361,7 +394,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The connection access information of the tenant.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -369,7 +402,11 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The service mode of the connection address. Valid values:  
+             * <p>
+             * ReadWrite: provides strong-consistency read and write services.   
+             * ReadOnly: provides the read-only service to ensure ultimate consistency of data.   
+             * Clog: provides transaction log services.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -378,6 +415,87 @@ public class DescribeTenantResponseBody extends TeaModel {
 
             public TenantConnections build() {
                 return new TenantConnections(this);
+            } 
+
+        } 
+
+    }
+    public static class CapacityUnit extends TeaModel {
+        @NameInMap("MaxCapacityUnit")
+        private Integer maxCapacityUnit;
+
+        @NameInMap("MinCapacityUnit")
+        private Integer minCapacityUnit;
+
+        @NameInMap("UsedCapacit")
+        private Integer usedCapacit;
+
+        private CapacityUnit(Builder builder) {
+            this.maxCapacityUnit = builder.maxCapacityUnit;
+            this.minCapacityUnit = builder.minCapacityUnit;
+            this.usedCapacit = builder.usedCapacit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CapacityUnit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxCapacityUnit
+         */
+        public Integer getMaxCapacityUnit() {
+            return this.maxCapacityUnit;
+        }
+
+        /**
+         * @return minCapacityUnit
+         */
+        public Integer getMinCapacityUnit() {
+            return this.minCapacityUnit;
+        }
+
+        /**
+         * @return usedCapacit
+         */
+        public Integer getUsedCapacit() {
+            return this.usedCapacit;
+        }
+
+        public static final class Builder {
+            private Integer maxCapacityUnit; 
+            private Integer minCapacityUnit; 
+            private Integer usedCapacit; 
+
+            /**
+             * MaxCapacityUnit.
+             */
+            public Builder maxCapacityUnit(Integer maxCapacityUnit) {
+                this.maxCapacityUnit = maxCapacityUnit;
+                return this;
+            }
+
+            /**
+             * MinCapacityUnit.
+             */
+            public Builder minCapacityUnit(Integer minCapacityUnit) {
+                this.minCapacityUnit = minCapacityUnit;
+                return this;
+            }
+
+            /**
+             * UsedCapacit.
+             */
+            public Builder usedCapacit(Integer usedCapacit) {
+                this.usedCapacit = usedCapacit;
+                return this;
+            }
+
+            public CapacityUnit build() {
+                return new CapacityUnit(this);
             } 
 
         } 
@@ -434,7 +552,13 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float usedCpu; 
 
             /**
-             * The total number of CPU cores of the tenant.
+             * The data replica distribution mode of the tenant.    
+             * <p>
+             * 
+             * - For the high availability version, N-N-N indicates the three-zone mode, and N-N indicates the dual-zone or single-zone mode.
+             * - For the basic version, N indicates the single-zone mode. 
+             * 
+             * > <br>N represents the number of nodes in a single zone.
              */
             public Builder totalCpu(Float totalCpu) {
                 this.totalCpu = totalCpu;
@@ -442,7 +566,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores in each resource unit of the tenant.
+             * The zone corresponding to the tenant connection.
              */
             public Builder unitCpu(Float unitCpu) {
                 this.unitCpu = unitCpu;
@@ -450,7 +574,11 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The number of used CPU cores of the tenant.
+             * The tenant mode.   
+             * <p>
+             * Valid values: 
+             * Oracle   
+             * MySQL
              */
             public Builder usedCpu(Float usedCpu) {
                 this.usedCpu = usedCpu;
@@ -491,7 +619,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float usedDiskSize; 
 
             /**
-             * The size of used disk space of the tenant, in GB.
+             * The total memory size of the tenant, in GB.
              */
             public Builder usedDiskSize(Float usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -556,7 +684,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Float usedMemory; 
 
             /**
-             * The total memory size of the tenant, in GB.
+             * The information about the memory resources of the tenant.
              */
             public Builder totalMemory(Float totalMemory) {
                 this.totalMemory = totalMemory;
@@ -564,7 +692,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of each resource unit of the tenant, in GB.
+             * The time when the tenant was created.
              */
             public Builder unitMemory(Float unitMemory) {
                 this.unitMemory = unitMemory;
@@ -572,7 +700,12 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The size of used memory of the tenant, in GB.
+             * The status of the Internet address for accessing the tenant. Valid values:   
+             * <p>
+             * Closed: The address is disabled.   
+             * - ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   
+             * - PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   
+             * - ONLINE: The address is in service.
              */
             public Builder usedMemory(Float usedMemory) {
                 this.usedMemory = usedMemory;
@@ -587,6 +720,9 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class TenantResource extends TeaModel {
+        @NameInMap("CapacityUnit")
+        private CapacityUnit capacityUnit;
+
         @NameInMap("Cpu")
         private Cpu cpu;
 
@@ -600,6 +736,7 @@ public class DescribeTenantResponseBody extends TeaModel {
         private Integer unitNum;
 
         private TenantResource(Builder builder) {
+            this.capacityUnit = builder.capacityUnit;
             this.cpu = builder.cpu;
             this.diskSize = builder.diskSize;
             this.memory = builder.memory;
@@ -612,6 +749,13 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         public static TenantResource create() {
             return builder().build();
+        }
+
+        /**
+         * @return capacityUnit
+         */
+        public CapacityUnit getCapacityUnit() {
+            return this.capacityUnit;
         }
 
         /**
@@ -643,13 +787,25 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private CapacityUnit capacityUnit; 
             private Cpu cpu; 
             private DiskSize diskSize; 
             private Memory memory; 
             private Integer unitNum; 
 
             /**
-             * The information about the CPU resources of the tenant.
+             * CapacityUnit.
+             */
+            public Builder capacityUnit(CapacityUnit capacityUnit) {
+                this.capacityUnit = capacityUnit;
+                return this;
+            }
+
+            /**
+             * The enabling status of the Clog service.  
+             * <p>
+             * CLOSED: The Clog service is disabled.  
+             * - ONLINE: The Clog service is running.
              */
             public Builder cpu(Cpu cpu) {
                 this.cpu = cpu;
@@ -657,7 +813,9 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the disk resources of the tenant.
+             * The status of the intranet address for accessing the tenant.  
+             * <p>
+             * The value ONLINE indicates that the address is in service.
              */
             public Builder diskSize(DiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -665,7 +823,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the memory resources of the tenant.
+             * The description of the tenant.
              */
             public Builder memory(Memory memory) {
                 this.memory = memory;
@@ -673,7 +831,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resource units in the tenant.
+             * Alibaba Cloud CLI
              */
             public Builder unitNum(Integer unitNum) {
                 this.unitNum = unitNum;
@@ -738,7 +896,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String tenantZoneRole; 
 
             /**
-             * The region where the zone of the tenant resides.
+             * 是否允许开启读写分离地址
              */
             public Builder region(String region) {
                 this.region = region;
@@ -746,7 +904,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The intranet port for accessing the tenant.
              */
             public Builder tenantZoneId(String tenantZoneId) {
                 this.tenantZoneId = tenantZoneId;
@@ -754,7 +912,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the zone of the tenant.
+             * The character set.
              */
             public Builder tenantZoneRole(String tenantZoneRole) {
                 this.tenantZoneRole = tenantZoneRole;
@@ -796,11 +954,17 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("DiskType")
         private String diskType;
 
+        @NameInMap("EnableBinlogService")
+        private Boolean enableBinlogService;
+
         @NameInMap("EnableClogService")
         private Boolean enableClogService;
 
         @NameInMap("EnableInternetAddressService")
         private Boolean enableInternetAddressService;
+
+        @NameInMap("EnableParallelQuery")
+        private Boolean enableParallelQuery;
 
         @NameInMap("EnableReadWriteSplit")
         private Boolean enableReadWriteSplit;
@@ -810,6 +974,9 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         @NameInMap("MasterIntranetAddressZone")
         private String masterIntranetAddressZone;
+
+        @NameInMap("MaxParallelQueryDegree")
+        private Long maxParallelQueryDegree;
 
         @NameInMap("PayType")
         private String payType;
@@ -844,6 +1011,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("TenantZones")
         private java.util.List < TenantZones> tenantZones;
 
+        @NameInMap("TimeZone")
+        private String timeZone;
+
         @NameInMap("VpcId")
         private String vpcId;
 
@@ -857,11 +1027,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.deployType = builder.deployType;
             this.description = builder.description;
             this.diskType = builder.diskType;
+            this.enableBinlogService = builder.enableBinlogService;
             this.enableClogService = builder.enableClogService;
             this.enableInternetAddressService = builder.enableInternetAddressService;
+            this.enableParallelQuery = builder.enableParallelQuery;
             this.enableReadWriteSplit = builder.enableReadWriteSplit;
             this.instanceType = builder.instanceType;
             this.masterIntranetAddressZone = builder.masterIntranetAddressZone;
+            this.maxParallelQueryDegree = builder.maxParallelQueryDegree;
             this.payType = builder.payType;
             this.primaryZone = builder.primaryZone;
             this.primaryZoneDeployType = builder.primaryZoneDeployType;
@@ -873,6 +1046,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.tenantName = builder.tenantName;
             this.tenantResource = builder.tenantResource;
             this.tenantZones = builder.tenantZones;
+            this.timeZone = builder.timeZone;
             this.vpcId = builder.vpcId;
         }
 
@@ -948,6 +1122,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableBinlogService
+         */
+        public Boolean getEnableBinlogService() {
+            return this.enableBinlogService;
+        }
+
+        /**
          * @return enableClogService
          */
         public Boolean getEnableClogService() {
@@ -959,6 +1140,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public Boolean getEnableInternetAddressService() {
             return this.enableInternetAddressService;
+        }
+
+        /**
+         * @return enableParallelQuery
+         */
+        public Boolean getEnableParallelQuery() {
+            return this.enableParallelQuery;
         }
 
         /**
@@ -980,6 +1168,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public String getMasterIntranetAddressZone() {
             return this.masterIntranetAddressZone;
+        }
+
+        /**
+         * @return maxParallelQueryDegree
+         */
+        public Long getMaxParallelQueryDegree() {
+            return this.maxParallelQueryDegree;
         }
 
         /**
@@ -1060,6 +1255,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return timeZone
+         */
+        public String getTimeZone() {
+            return this.timeZone;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -1076,11 +1278,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String deployType; 
             private String description; 
             private String diskType; 
+            private Boolean enableBinlogService; 
             private Boolean enableClogService; 
             private Boolean enableInternetAddressService; 
+            private Boolean enableParallelQuery; 
             private Boolean enableReadWriteSplit; 
             private String instanceType; 
             private String masterIntranetAddressZone; 
+            private Long maxParallelQueryDegree; 
             private String payType; 
             private String primaryZone; 
             private String primaryZoneDeployType; 
@@ -1092,10 +1297,11 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String tenantName; 
             private TenantResource tenantResource; 
             private java.util.List < TenantZones> tenantZones; 
+            private String timeZone; 
             private String vpcId; 
 
             /**
-             * The list of zones.
+             * DescribeTenant
              */
             public Builder availableZones(java.util.List < String > availableZones) {
                 this.availableZones = availableZones;
@@ -1103,7 +1309,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The character set.
+             * The number of CPU cores in each resource unit of the tenant.
              */
             public Builder charset(String charset) {
                 this.charset = charset;
@@ -1111,10 +1317,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The enabling status of the clog service.  
-             * <p>
-             * - CLOSED: The clog service is disabled.  
-             * - ONLINE: The clog service is running.
+             * 地址类型
              */
             public Builder clogServiceStatus(String clogServiceStatus) {
                 this.clogServiceStatus = clogServiceStatus;
@@ -1122,7 +1325,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The collation.
+             * The request ID.
              */
             public Builder collation(String collation) {
                 this.collation = collation;
@@ -1130,7 +1333,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the tenant was created.
+             * You can call this operation to create a single tenant in a specific cluster.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1138,13 +1341,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The data replica distribution mode of the tenant.    
-             * <p>
-             * 
-             * - For the high availability version, N-N-N indicates the three-zone mode, and N-N indicates the dual-zone or single-zone mode.
-             * - For the basic version, N indicates the single-zone mode. 
-             * 
-             * > <br>N represents the number of nodes in a single zone.
+             * The list of zones.
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -1152,11 +1349,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment type of the cluster. Valid values:  
-             * <p>
-             * - multiple: multi-IDC deployment   
-             * - single: single-IDC deployment   
-             * - dual: dual-IDC deployment
+             * The series of the instance.
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -1164,7 +1357,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the tenant.
+             * Indicates whether to enable read/write splitting endpoint.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1172,7 +1365,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the disk.
+             * You can call this operation to query the information of a specific tenant in a specific cluster.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -1180,7 +1373,15 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the clog service is available. To enable the clog service, submit a ticket.
+             * 是否可以申请Binlog服务
+             */
+            public Builder enableBinlogService(Boolean enableBinlogService) {
+                this.enableBinlogService = enableBinlogService;
+                return this;
+            }
+
+            /**
+             * The intranet address for accessing the tenant.
              */
             public Builder enableClogService(Boolean enableClogService) {
                 this.enableClogService = enableClogService;
@@ -1188,7 +1389,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Internet address can be enabled for the tenant.
+             * The deployment type of the primary zone.
              */
             public Builder enableInternetAddressService(Boolean enableInternetAddressService) {
                 this.enableInternetAddressService = enableInternetAddressService;
@@ -1196,7 +1397,15 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether to enable read/write splitting endpoint.
+             * EnableParallelQuery.
+             */
+            public Builder enableParallelQuery(Boolean enableParallelQuery) {
+                this.enableParallelQuery = enableParallelQuery;
+                return this;
+            }
+
+            /**
+             * EnableReadWriteSplit.
              */
             public Builder enableReadWriteSplit(Boolean enableReadWriteSplit) {
                 this.enableReadWriteSplit = enableReadWriteSplit;
@@ -1204,7 +1413,64 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance.
+             * {
+             * <p>
+             *     "RequestId": "EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C",
+             *     "Tenant": {
+             *         "TenantId": "t33h8y08k****",
+             *         "TenantName": "pay_online",
+             *         "TenantMode": "Oracle",
+             *         "VpcId": "vpc-bp1d2q3mhg9i23ofi****",
+             *         "Status": "ONLINE",
+             *         "PrimaryZone": "cn-hangzhou-i",
+             *         "DeployType": "multiple",
+             *         "DeployMode": "1-1-1",
+             *         "Description": "PayCore business database",
+             *         "CreateTime": "2021-09-17 15:52:17",
+             *         "TenantResource": {
+             *             "UnitNum": 1,
+             *             "Cpu": {
+             *                 "UsedCpu": 8,
+             *                 "TotalCpu": 10,
+             *                 "UnitCpu": 8
+             *             },
+             *             "Memory": {
+             *                 "UsedMemory": 30,
+             *                 "TotalMemory": 64,
+             *                 "UnitMemory": 32
+             *             },
+             *             "DiskSize": {
+             *                 "UsedDiskSize": 86
+             *             }
+             *         },
+             *         "TenantConnections": [
+             *             {
+             *                 "ConnectionRole": "ReadWrite",
+             *                 "IntranetAddress": "t32a7ru5u****.oceanbase.aliyuncs.com",
+             *                 "IntranetPort": 3306,
+             *                 "InternetAddress": "t32a7ru5u****mo.oceanbase.aliyuncs.com",
+             *                 "InternetPort": 3306,
+             *                 "VpcId": "vpc-bp1qiail1asmfe23t****",
+             *                 "VSwitchId": "vsw-bp11k1aypnzu1l3whi****",
+             *                 "IntranetAddressMasterZoneId": "cn-hangzhou-i",
+             *                 "IntranetAddressSlaveZoneId": "cn-hangzhou-j",
+             *                 "IntranetAddressStatus": "ONLINE",
+             *                 "ConnectionZones": [
+             *                     "cn-hangzhou-i"
+             *                 ],
+             *                 "InternetAddressStatus": "CLOSED"
+             *             }
+             *         ],
+             *         "TenantZones": [
+             *             {
+             *                 "TenantZoneId": "cn-hangzhou-i",
+             *                 "Region": "cn-hangzhou",
+             *                 "TenantZoneRole": "ReadOnly"
+             *             }
+             *         ],
+             *         "ClogServiceStatus": "CLOSED"
+             *     }
+             * }
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -1212,7 +1478,13 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The zone where the primary node is located.
+             * ```
+             * <p>
+             * http(s)://[Endpoint]/?Action=DescribeTenant
+             * &InstanceId=ob317v4uif****
+             * &TenantId=ob2mr3oae0****
+             * &Common request parameters
+             * ```
              */
             public Builder masterIntranetAddressZone(String masterIntranetAddressZone) {
                 this.masterIntranetAddressZone = masterIntranetAddressZone;
@@ -1220,7 +1492,15 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the payment.
+             * MaxParallelQueryDegree.
+             */
+            public Builder maxParallelQueryDegree(Long maxParallelQueryDegree) {
+                this.maxParallelQueryDegree = maxParallelQueryDegree;
+                return this;
+            }
+
+            /**
+             * PayType.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -1228,7 +1508,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The primary zone of the tenant.
+             * The type of the payment.
              */
             public Builder primaryZone(String primaryZone) {
                 this.primaryZone = primaryZone;
@@ -1236,7 +1516,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment type of the primary zone.
+             * Example 1
              */
             public Builder primaryZoneDeployType(String primaryZoneDeployType) {
                 this.primaryZoneDeployType = primaryZoneDeployType;
@@ -1244,10 +1524,69 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The series of the instance.
+             * <DescribeTenantResponse>
+             * <p>
+             *     <RequestId>EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C</RequestId>
+             *     <Tenant>
+             *         <TenantId>t33h8y08k****</TenantId>
+             *         <TenantName>pay_online</TenantName>
+             *         <TenantMode>Oracle</TenantMode>
+             *         <VpcId>vpc-bp1d2q3mhg9i23ofi****</VpcId>
+             *         <Status>ONLINE</Status>
+             *         <PrimaryZone>cn-hangzhou-i</PrimaryZone>
+             *         <DeployType>multiple</DeployType>
+             *         <DeployMode>1-1-1</DeployMode>
+             *         <Description>PayCore business database</Description>
+             *         <CreateTime>2021-09-17 15:52:17</CreateTime>
+             *         <TenantResource>
+             *             <UnitNum>1</UnitNum>
+             *             <Cpu>
+             *                 <UsedCpu>8</UsedCpu>
+             *                 <TotalCpu>10</TotalCpu>
+             *                 <UnitCpu>8</UnitCpu>
+             *             </Cpu>
+             *             <Memory>
+             *                 <UsedMemory>30</UsedMemory>
+             *                 <TotalMemory>64</TotalMemory>
+             *                 <UnitMemory>32</UnitMemory>
+             *             </Memory>
+             *             <DiskSize>
+             *                 <UsedDiskSize>86</UsedDiskSize>
+             *             </DiskSize>
+             *         </TenantResource>
+             *         <TenantConnections>
+             *             <ConnectionRole>ReadWrite</ConnectionRole>
+             *             <IntranetAddress>t32a7ru5u****.oceanbase.aliyuncs.com</IntranetAddress>
+             *             <IntranetPort>3306</IntranetPort>
+             *             <InternetAddress>t32a7ru5u****mo.oceanbase.aliyuncs.com</InternetAddress>
+             *             <InternetPort>3306</InternetPort>
+             *             <VpcId>vpc-bp1qiail1asmfe23t****</VpcId>
+             *             <VSwitchId>vsw-bp11k1aypnzu1l3whi****</VSwitchId>
+             *             <IntranetAddressMasterZoneId>cn-hangzhou-i</IntranetAddressMasterZoneId>
+             *             <IntranetAddressSlaveZoneId>cn-hangzhou-j</IntranetAddressSlaveZoneId>
+             *             <IntranetAddressStatus>ONLINE</IntranetAddressStatus>
+             *             <ConnectionZones>cn-hangzhou-i</ConnectionZones>
+             *             <InternetAddressStatus>CLOSED</InternetAddressStatus>
+             *         </TenantConnections>
+             *         <TenantZones>
+             *             <TenantZoneId>cn-hangzhou-i</TenantZoneId>
+             *             <Region>cn-hangzhou</Region>
+             *             <TenantZoneRole>ReadOnly</TenantZoneRole>
+             *         </TenantZones>
+             *         <ClogServiceStatus>CLOSED</ClogServiceStatus>
+             *     </Tenant>
+             * </DescribeTenantResponse>
              */
             public Builder series(String series) {
                 this.series = series;
+                return this;
+            }
+
+            /**
+             * The character set.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
@@ -1264,21 +1603,13 @@ public class DescribeTenantResponseBody extends TeaModel {
              * - PARAMETER_MODIFYING: Parameters are being modified.   
              * - WHITE_LIST_MODIFYING: The whitelist is being modified.
              */
-            public Builder status(String status) {
-                this.status = status;
-                return this;
-            }
-
-            /**
-             * The connection information of the tenant.
-             */
             public Builder tenantConnections(java.util.List < TenantConnections> tenantConnections) {
                 this.tenantConnections = tenantConnections;
                 return this;
             }
 
             /**
-             * The ID of the tenant.
+             * The region where the zone of the tenant resides.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -1286,11 +1617,10 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant mode.   
+             * The enabling status of the clog service.  
              * <p>
-             * Valid values:
-             * - Oracle   
-             * - MySQL
+             * - CLOSED: The clog service is disabled.  
+             * - ONLINE: The clog service is running.
              */
             public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;
@@ -1298,7 +1628,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tenant.
+             * The request type of the zone of the tenant.  ReadWrite: The zone supports data reads and writes. ReadOnly: The zone supports only data reads. For a high availability cluster with multiple IDCs, the primary zone provides ReadWrite services, and the standby zone provides ReadOnly services. For a high availability cluster with a single IDC, all zones provide ReadWrite services.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -1306,7 +1636,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The resource information of the tenant.
+             * It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.
              */
             public Builder tenantResource(TenantResource tenantResource) {
                 this.tenantResource = tenantResource;
@@ -1314,7 +1644,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The zone information of the tenant.
+             * The standby zone corresponding to the address for accessing the tenant.
              */
             public Builder tenantZones(java.util.List < TenantZones> tenantZones) {
                 this.tenantZones = tenantZones;
@@ -1322,9 +1652,15 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.    
-             * <p>
-             * If no suitable VPC is available, create a VPC as prompted. For more information, see "What is a VPC".
+             * TimeZone.
+             */
+            public Builder timeZone(String timeZone) {
+                this.timeZone = timeZone;
+                return this;
+            }
+
+            /**
+             * Indicates whether the clog service is available. To enable the clog service, submit a ticket.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

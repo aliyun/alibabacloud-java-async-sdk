@@ -119,7 +119,7 @@ public class ResetOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The page number, which takes effect in a pagination query.
+         * The total count, which takes effect in a pagination query.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -128,7 +128,7 @@ public class ResetOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The page size, which takes effect in a pagination query.
+         * Contact the administrator.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -137,7 +137,7 @@ public class ResetOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The project ID.
+         * The error level. Valid values: CRITICAL, ERROR, and WARN.
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -146,7 +146,7 @@ public class ResetOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.
+         * Indicates whether the call is successful.
          */
         public Builder workerGradeId(String workerGradeId) {
             this.putBodyParameter("WorkerGradeId", workerGradeId);

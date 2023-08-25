@@ -98,7 +98,7 @@ public class DescribeAvailableCpuResourceRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +107,7 @@ public class DescribeAvailableCpuResourceRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The CPU resources available.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -116,12 +116,14 @@ public class DescribeAvailableCpuResourceRequest extends Request {
         }
 
         /**
-         * The type of the privilege modification operation.   
+         * ```
          * <p>
-         *  Valid values:  
-         * update: updates all privileges. This is the default value.  
-         * add: adds a privilege.   
-         * delete: deletes a privilege.
+         * http(s)://[Endpoint]/?Action=DescribeAvailableCpuResource
+         * &InstanceId=ob317v4uif****
+         * &TenantId=ob2mr3oae0****
+         * &ModifyType=update
+         * &Common request parameters
+         * ```
          */
         public Builder modifyType(String modifyType) {
             this.putBodyParameter("ModifyType", modifyType);
@@ -130,7 +132,9 @@ public class DescribeAvailableCpuResourceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The operation that you want to perform.   
+         * <p>
+         * Set the value to **DescribeAvailableCpuResource**.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

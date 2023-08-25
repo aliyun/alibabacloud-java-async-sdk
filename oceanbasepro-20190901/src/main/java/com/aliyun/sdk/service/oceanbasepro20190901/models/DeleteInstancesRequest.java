@@ -92,13 +92,7 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * The backup retention strategy for cluster deletion. Valid values:  
-         * <p>
-         * - receive_all: retains all backup sets.   
-         * - delete_all: deletes all backup sets.   
-         * - receive_last: retains the last backup set.    
-         * 
-         * > <br>Default value: delete_all.
+         * BackupRetainMode.
          */
         public Builder backupRetainMode(String backupRetainMode) {
             this.putBodyParameter("BackupRetainMode", backupRetainMode);
@@ -107,9 +101,7 @@ public class DeleteInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the cluster to be deleted.   
-         * <p>
-         * The value is a string in the JSON format.
+         * InstanceIds.
          */
         public Builder instanceIds(String instanceIds) {
             this.putBodyParameter("InstanceIds", instanceIds);

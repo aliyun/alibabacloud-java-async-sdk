@@ -70,7 +70,7 @@ public class DescribeInstanceTopologyRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -79,7 +79,7 @@ public class DescribeInstanceTopologyRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The status of the node.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

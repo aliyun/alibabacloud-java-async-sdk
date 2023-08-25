@@ -98,7 +98,7 @@ public class DescribeTenantTagsRequest extends Request {
         } 
 
         /**
-         * 地域ID
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +107,7 @@ public class DescribeTenantTagsRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -116,7 +116,7 @@ public class DescribeTenantTagsRequest extends Request {
         }
 
         /**
-         * 标签值
+         * The tags.
          */
         public Builder tags(String tags) {
             this.putBodyParameter("Tags", tags);
@@ -125,7 +125,7 @@ public class DescribeTenantTagsRequest extends Request {
         }
 
         /**
-         * 租户id的json串
+         * The JSON string of the tenant ID.
          */
         public Builder tenantIds(String tenantIds) {
             this.putBodyParameter("TenantIds", tenantIds);

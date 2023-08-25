@@ -27,6 +27,15 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
     private String tenantId;
 
     @Body
+    @NameInMap("VSwitchId")
+    @Validation(required = true)
+    private String vSwitchId;
+
+    @Body
+    @NameInMap("VpcId")
+    private String vpcId;
+
+    @Body
     @NameInMap("ZoneId")
     @Validation(required = true)
     private String zoneId;
@@ -36,6 +45,8 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.tenantId = builder.tenantId;
+        this.vSwitchId = builder.vSwitchId;
+        this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
     }
 
@@ -74,6 +85,20 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
     }
 
     /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -84,6 +109,8 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
         private String regionId; 
         private String instanceId; 
         private String tenantId; 
+        private String vSwitchId; 
+        private String vpcId; 
         private String zoneId; 
 
         private Builder() {
@@ -95,11 +122,13 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.tenantId = request.tenantId;
+            this.vSwitchId = request.vSwitchId;
+            this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -108,7 +137,7 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -117,7 +146,7 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * TenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -126,10 +155,25 @@ public class CreateTenantReadOnlyConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the zone.  
-         * <p>
-         * 
-         * For more information, see AvailableZones in DescribeInstance.
+         * VSwitchId.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.putBodyParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putBodyParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
+            return this;
+        }
+
+        /**
+         * ZoneId.
          */
         public Builder zoneId(String zoneId) {
             this.putBodyParameter("ZoneId", zoneId);

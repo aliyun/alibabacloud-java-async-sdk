@@ -50,7 +50,7 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
         private java.util.List < TenantZones> tenantZones; 
 
         /**
-         * The request ID.
+         * Indicates whether a read-only connection needs to be created for the zone.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
         }
 
         /**
-         * The zone information of the tenant.
+         * The request ID.
          */
         public Builder tenantZones(java.util.List < TenantZones> tenantZones) {
             this.tenantZones = tenantZones;
@@ -78,9 +78,6 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
         @NameInMap("IsPrimary")
         private Boolean isPrimary;
 
-        @NameInMap("IsReadOnlyAddressMaster")
-        private Boolean isReadOnlyAddressMaster;
-
         @NameInMap("IsReadable")
         private String isReadable;
 
@@ -90,7 +87,6 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
         private TenantZones(Builder builder) {
             this.isElectable = builder.isElectable;
             this.isPrimary = builder.isPrimary;
-            this.isReadOnlyAddressMaster = builder.isReadOnlyAddressMaster;
             this.isReadable = builder.isReadable;
             this.zone = builder.zone;
         }
@@ -118,13 +114,6 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
         }
 
         /**
-         * @return isReadOnlyAddressMaster
-         */
-        public Boolean getIsReadOnlyAddressMaster() {
-            return this.isReadOnlyAddressMaster;
-        }
-
-        /**
          * @return isReadable
          */
         public String getIsReadable() {
@@ -141,12 +130,11 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean isElectable; 
             private Boolean isPrimary; 
-            private Boolean isReadOnlyAddressMaster; 
             private String isReadable; 
             private String zone; 
 
             /**
-             * Indicates whether the zone can be set as the primary zone.
+             * Example 1
              */
             public Builder isElectable(Boolean isElectable) {
                 this.isElectable = isElectable;
@@ -154,7 +142,7 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the zone is the primary zone.
+             * IsPrimary.
              */
             public Builder isPrimary(Boolean isPrimary) {
                 this.isPrimary = isPrimary;
@@ -162,15 +150,7 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a read-only connection has been created.
-             */
-            public Builder isReadOnlyAddressMaster(Boolean isReadOnlyAddressMaster) {
-                this.isReadOnlyAddressMaster = isReadOnlyAddressMaster;
-                return this;
-            }
-
-            /**
-             * Indicates whether a read-only connection needs to be created for the zone.
+             * IsReadable.
              */
             public Builder isReadable(String isReadable) {
                 this.isReadable = isReadable;
@@ -178,7 +158,7 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * Zone.
              */
             public Builder zone(String zone) {
                 this.zone = zone;

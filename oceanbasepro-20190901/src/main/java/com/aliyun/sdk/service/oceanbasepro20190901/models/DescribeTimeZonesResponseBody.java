@@ -50,7 +50,7 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
         private TimeZones timeZones; 
 
         /**
-         * The request ID.
+         * DescribeTimeZones
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The time zones supported by the tenant.
+         * The description of the time zone.
          */
         public Builder timeZones(TimeZones timeZones) {
             this.timeZones = timeZones;
@@ -110,7 +110,7 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
             private String timeZone; 
 
             /**
-             * The description of the time zone.
+             * Example 1
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +118,9 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the time zone.
+             * The operation that you want to perform.   
+             * <p>
+             * Set the value to **DescribeTimeZones**.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -171,7 +173,7 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
             private java.util.List < List> list; 
 
             /**
-             * The default time zone.
+             * Default.
              */
             public Builder _default(String _default) {
                 this._default = _default;

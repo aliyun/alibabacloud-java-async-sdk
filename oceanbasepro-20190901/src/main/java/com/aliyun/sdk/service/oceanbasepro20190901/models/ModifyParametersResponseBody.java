@@ -50,7 +50,9 @@ public class ModifyParametersResponseBody extends TeaModel {
         private Results results; 
 
         /**
-         * The request ID.
+         * The operation that you want to perform.   
+         * <p>
+         * Set the value to **ModifyParameters**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +60,7 @@ public class ModifyParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The modification results.
+         * Example 1
          */
         public Builder results(Results results) {
             this.results = results;
@@ -110,7 +112,7 @@ public class ModifyParametersResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * The cause of the modification failure.
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -118,10 +120,7 @@ public class ModifyParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the parameter has been modified. Valid values:   
-             * <p>
-             * true: The modification is successful. 
-             * false: The modification failed.
+             * Success.
              */
             public Builder success(Boolean success) {
                 this.success = success;

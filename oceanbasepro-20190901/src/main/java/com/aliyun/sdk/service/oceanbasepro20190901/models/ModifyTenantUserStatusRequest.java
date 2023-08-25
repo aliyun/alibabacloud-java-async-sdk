@@ -115,7 +115,7 @@ public class ModifyTenantUserStatusRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -124,7 +124,9 @@ public class ModifyTenantUserStatusRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The operation that you want to perform.   
+         * <p>
+         * Set the value to **ModifyTenantUserStatus**.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -142,9 +144,7 @@ public class ModifyTenantUserStatusRequest extends Request {
         }
 
         /**
-         * The name of the database account.    
-         * <p>
-         * You cannot use reserved keywords, such as SYS and root.
+         * The list of database accounts in the tenant.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

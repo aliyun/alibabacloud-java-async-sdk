@@ -58,7 +58,10 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The tenant mode.   Valid values:  
+         * <p>
+         * Oracle   
+         * MySQL
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,11 +125,7 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
             private String tenantMode; 
 
             /**
-             * The index recommended for the SQL statement after calculation by the diagnostic system.   
-             * <p>
-             * - If the recommended index is the primary key, PRIMARY is returned.  
-             * - If an index created by the user is recommended, the index name is returned.   
-             * The system recommends only one index for an SQL statement. You can call the DescribeIndexes operation to view the indexes of a table.
+             * Example 1
              */
             public Builder suggestIndex(String suggestIndex) {
                 this.suggestIndex = suggestIndex;
@@ -134,9 +133,7 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The tables.   
-             * <p>
-             * The data tables involved in the SQL statement corresponding to the SQL ID are returned. For a single-table query, the data table accessed is returned. For a join query, all data tables accessed by the SQL statement are returned and separated with vertical bars (|), for example, "Table1|Table2".
+             * TableList.
              */
             public Builder tableList(String tableList) {
                 this.tableList = tableList;
@@ -144,10 +141,7 @@ public class DescribeRecommendIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant mode.   Valid values:  
-             * <p>
-             * Oracle   
-             * MySQL
+             * TenantMode.
              */
             public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;

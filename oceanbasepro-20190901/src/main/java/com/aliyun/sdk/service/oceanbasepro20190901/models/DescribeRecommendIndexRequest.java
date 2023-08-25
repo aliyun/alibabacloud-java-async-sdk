@@ -100,7 +100,7 @@ public class DescribeRecommendIndexRequest extends Request {
         } 
 
         /**
-         * 地域ID
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -109,7 +109,7 @@ public class DescribeRecommendIndexRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The return result of the request.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -118,7 +118,7 @@ public class DescribeRecommendIndexRequest extends Request {
         }
 
         /**
-         * You can obtain the SQL ID from the return value of the DescribeSlowSQLList or DescribeTopSQLList operation.
+         * The ID of the OceanBase cluster.
          */
         public Builder SQLId(String SQLId) {
             this.putBodyParameter("SQLId", SQLId);
@@ -127,7 +127,11 @@ public class DescribeRecommendIndexRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The index recommended for the SQL statement after calculation by the diagnostic system.   
+         * <p>
+         * - If the recommended index is the primary key, PRIMARY is returned.  
+         * - If an index created by the user is recommended, the index name is returned.   
+         * The system recommends only one index for an SQL statement. You can call the DescribeIndexes operation to view the indexes of a table.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

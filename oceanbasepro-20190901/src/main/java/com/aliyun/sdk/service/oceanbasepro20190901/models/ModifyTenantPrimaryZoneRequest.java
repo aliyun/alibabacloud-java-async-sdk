@@ -27,16 +27,12 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
     private String masterIntranetAddressZone;
 
     @Body
-    @NameInMap("ModifyType")
-    private String modifyType;
-
-    @Body
     @NameInMap("PrimaryZone")
     private String primaryZone;
 
     @Body
-    @NameInMap("PrimaryZoneDeployType")
-    private String primaryZoneDeployType;
+    @NameInMap("TenantEndpointId")
+    private String tenantEndpointId;
 
     @Body
     @NameInMap("TenantId")
@@ -52,9 +48,8 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.masterIntranetAddressZone = builder.masterIntranetAddressZone;
-        this.modifyType = builder.modifyType;
         this.primaryZone = builder.primaryZone;
-        this.primaryZoneDeployType = builder.primaryZoneDeployType;
+        this.tenantEndpointId = builder.tenantEndpointId;
         this.tenantId = builder.tenantId;
         this.userVSwitchId = builder.userVSwitchId;
     }
@@ -94,13 +89,6 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
     }
 
     /**
-     * @return modifyType
-     */
-    public String getModifyType() {
-        return this.modifyType;
-    }
-
-    /**
      * @return primaryZone
      */
     public String getPrimaryZone() {
@@ -108,10 +96,10 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
     }
 
     /**
-     * @return primaryZoneDeployType
+     * @return tenantEndpointId
      */
-    public String getPrimaryZoneDeployType() {
-        return this.primaryZoneDeployType;
+    public String getTenantEndpointId() {
+        return this.tenantEndpointId;
     }
 
     /**
@@ -132,9 +120,8 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         private String regionId; 
         private String instanceId; 
         private String masterIntranetAddressZone; 
-        private String modifyType; 
         private String primaryZone; 
-        private String primaryZoneDeployType; 
+        private String tenantEndpointId; 
         private String tenantId; 
         private String userVSwitchId; 
 
@@ -147,15 +134,14 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.masterIntranetAddressZone = request.masterIntranetAddressZone;
-            this.modifyType = request.modifyType;
             this.primaryZone = request.primaryZone;
-            this.primaryZoneDeployType = request.primaryZoneDeployType;
+            this.tenantEndpointId = request.tenantEndpointId;
             this.tenantId = request.tenantId;
             this.userVSwitchId = request.userVSwitchId;
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -164,7 +150,9 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The primary zone of the tenant.    
+         * <p>
+         * It is one of the zones in which the cluster is deployed.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -173,7 +161,14 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * The availability zone where the primary node is located.
+         * ```
+         * <p>
+         * http(s)://[Endpoint]/?Action=ModifyTenantPrimaryZone
+         * &TenantId=ob2mr3oae0****
+         * &InstanceId=ob317v4uif****
+         * &PrimaryZone=cn-hangzhou-h
+         * &Common request parameters
+         * ```
          */
         public Builder masterIntranetAddressZone(String masterIntranetAddressZone) {
             this.putBodyParameter("MasterIntranetAddressZone", masterIntranetAddressZone);
@@ -182,18 +177,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * The switching mode.
-         */
-        public Builder modifyType(String modifyType) {
-            this.putBodyParameter("ModifyType", modifyType);
-            this.modifyType = modifyType;
-            return this;
-        }
-
-        /**
-         * The primary zone of the tenant.    
-         * <p>
-         * It is one of the zones in which the cluster is deployed.
+         * The ID of the vSwitch.
          */
         public Builder primaryZone(String primaryZone) {
             this.putBodyParameter("PrimaryZone", primaryZone);
@@ -202,16 +186,16 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * The deployment type of the primary zone.
+         * TenantEndpointId.
          */
-        public Builder primaryZoneDeployType(String primaryZoneDeployType) {
-            this.putBodyParameter("PrimaryZoneDeployType", primaryZoneDeployType);
-            this.primaryZoneDeployType = primaryZoneDeployType;
+        public Builder tenantEndpointId(String tenantEndpointId) {
+            this.putBodyParameter("TenantEndpointId", tenantEndpointId);
+            this.tenantEndpointId = tenantEndpointId;
             return this;
         }
 
         /**
-         * The ID of the tenant.
+         * The return result of the request.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -220,7 +204,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * The request ID.
          */
         public Builder userVSwitchId(String userVSwitchId) {
             this.putBodyParameter("UserVSwitchId", userVSwitchId);

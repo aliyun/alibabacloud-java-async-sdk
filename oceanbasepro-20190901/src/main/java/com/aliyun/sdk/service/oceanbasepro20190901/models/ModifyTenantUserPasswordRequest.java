@@ -17,6 +17,10 @@ public class ModifyTenantUserPasswordRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("EncryptionType")
+    private String encryptionType;
+
+    @Body
     @NameInMap("InstanceId")
     @Validation(required = true)
     private String instanceId;
@@ -39,6 +43,7 @@ public class ModifyTenantUserPasswordRequest extends Request {
     private ModifyTenantUserPasswordRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.encryptionType = builder.encryptionType;
         this.instanceId = builder.instanceId;
         this.tenantId = builder.tenantId;
         this.userName = builder.userName;
@@ -63,6 +68,13 @@ public class ModifyTenantUserPasswordRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return encryptionType
+     */
+    public String getEncryptionType() {
+        return this.encryptionType;
     }
 
     /**
@@ -95,6 +107,7 @@ public class ModifyTenantUserPasswordRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyTenantUserPasswordRequest, Builder> {
         private String regionId; 
+        private String encryptionType; 
         private String instanceId; 
         private String tenantId; 
         private String userName; 
@@ -107,6 +120,7 @@ public class ModifyTenantUserPasswordRequest extends Request {
         private Builder(ModifyTenantUserPasswordRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.encryptionType = request.encryptionType;
             this.instanceId = request.instanceId;
             this.tenantId = request.tenantId;
             this.userName = request.userName;
@@ -114,7 +128,7 @@ public class ModifyTenantUserPasswordRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -123,7 +137,16 @@ public class ModifyTenantUserPasswordRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * 加密方式。
+         */
+        public Builder encryptionType(String encryptionType) {
+            this.putBodyParameter("EncryptionType", encryptionType);
+            this.encryptionType = encryptionType;
+            return this;
+        }
+
+        /**
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -132,7 +155,15 @@ public class ModifyTenantUserPasswordRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * ```
+         * <p>
+         * http(s)://[Endpoint]/?Action=ModifyTenantUserPassword
+         * &UserName=pay_test
+         * &TenantId=ob2mr3oae0****
+         * &UserPassword=!Aliyun4Oceanbase
+         * &InstanceId=ob317v4uif****
+         * &Common request parameters
+         * ```
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -141,9 +172,7 @@ public class ModifyTenantUserPasswordRequest extends Request {
         }
 
         /**
-         * The name of the database account.    
-         * <p>
-         * You cannot use reserved keywords, such as SYS and root.
+         * The ID of the OceanBase cluster.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -152,9 +181,7 @@ public class ModifyTenantUserPasswordRequest extends Request {
         }
 
         /**
-         * The password of the database account.    
-         * <p>
-         * It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % \ ^ \ & \ * ( ) _ + - =
+         * You can call this operation to change the logon password of a specified account in a tenant.
          */
         public Builder userPassword(String userPassword) {
             this.putBodyParameter("UserPassword", userPassword);

@@ -143,7 +143,7 @@ public class DescribeSlowSQLHistoryListRequest extends Request {
         } 
 
         /**
-         * 地域ID
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);

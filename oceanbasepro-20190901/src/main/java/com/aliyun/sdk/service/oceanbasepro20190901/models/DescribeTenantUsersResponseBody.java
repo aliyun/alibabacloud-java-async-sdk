@@ -62,7 +62,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The request ID.
+         * The name of the database account.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,10 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The list of database accounts in the tenant.
+         * The type of the database account. Valid values:    
+         * <p>
+         * - Admin: the super administrator account.   
+         * - NORMAL: a general account.
          */
         public Builder tenantUsers(java.util.List < TenantUsers> tenantUsers) {
             this.tenantUsers = tenantUsers;
@@ -78,7 +81,18 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of database accounts in the tenant.
+         * The role of the account.   
+         * <p>
+         * In Oracle mode, a role is a schema-level role. Valid values:  
+         * - ReadWrite: a role that has the read and write privileges, including: CREATE TABLE, CREATE VIEW, CREATE PROCEDURE, CREATE SYNONYM, CREATE SEQUENCE, CREATE TRIGGER, CREATE TYPE, CREATE SESSION, EXECUTE ANY PROCEDURE, CREATE ANY OUTLINE, ALTER ANY OUTLINE, DROP ANY OUTLINE, CREATE ANY PROCEDURE, ALTER ANY PROCEDURE, DROP ANY PROCEDURE, CREATE ANY SEQUENCE, ALTER ANY SEQUENCE, DROP ANY SEQUENCE, CREATE ANY TYPE, ALTER ANY TYPE, DROP ANY TYPE, SYSKM, CREATE ANY TRIGGER, ALTER ANY TRIGGER, DROP ANY TRIGGER, CREATE PROFILE, ALTER PROFILE, and DROP PROFILE.  
+         * - ReadOnly: a role that has only the read-only privilege SELECT.
+         * In MySQL mode, a role is a database-level role. Valid values: 
+         * - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.   
+         * - ReadOnly: a role that has only the read-only privilege SELECT.   
+         * - DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   
+         * - DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.   
+         * 
+         * > <br>By default, an Oracle account has the read and write privileges on its own schema, which are not listed here.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -95,6 +109,9 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         @NameInMap("Database")
         private String database;
 
+        @NameInMap("Privileges")
+        private String privileges;
+
         @NameInMap("Role")
         private String role;
 
@@ -103,6 +120,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
 
         private Databases(Builder builder) {
             this.database = builder.database;
+            this.privileges = builder.privileges;
             this.role = builder.role;
             this.table = builder.table;
         }
@@ -123,6 +141,13 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return privileges
+         */
+        public String getPrivileges() {
+            return this.privileges;
+        }
+
+        /**
          * @return role
          */
         public String getRole() {
@@ -138,11 +163,12 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private String database; 
+            private String privileges; 
             private String role; 
             private String table; 
 
             /**
-             * The name of the database (MySQL mode) or schema (Oracle mode).
+             * Database.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -150,18 +176,15 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the account.   
-             * <p>
-             * In Oracle mode, a role is a schema-level role. Valid values:  
-             * - ReadWrite: a role that has the read and write privileges, including: CREATE TABLE, CREATE VIEW, CREATE PROCEDURE, CREATE SYNONYM, CREATE SEQUENCE, CREATE TRIGGER, CREATE TYPE, CREATE SESSION, EXECUTE ANY PROCEDURE, CREATE ANY OUTLINE, ALTER ANY OUTLINE, DROP ANY OUTLINE, CREATE ANY PROCEDURE, ALTER ANY PROCEDURE, DROP ANY PROCEDURE, CREATE ANY SEQUENCE, ALTER ANY SEQUENCE, DROP ANY SEQUENCE, CREATE ANY TYPE, ALTER ANY TYPE, DROP ANY TYPE, SYSKM, CREATE ANY TRIGGER, ALTER ANY TRIGGER, DROP ANY TRIGGER, CREATE PROFILE, ALTER PROFILE, and DROP PROFILE.  
-             * - ReadOnly: a role that has only the read-only privilege SELECT.
-             * In MySQL mode, a role is a database-level role. Valid values: 
-             * - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.   
-             * - ReadOnly: a role that has only the read-only privilege SELECT.   
-             * - DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   
-             * - DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.   
-             * 
-             * > <br>By default, an Oracle account has the read and write privileges on its own schema, which are not listed here.
+             * Privileges.
+             */
+            public Builder privileges(String privileges) {
+                this.privileges = privileges;
+                return this;
+            }
+
+            /**
+             * Role.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -169,7 +192,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * Table.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -282,7 +305,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             private String userType; 
 
             /**
-             * The database privileges of the account.
+             * Databases.
              */
             public Builder databases(java.util.List < Databases> databases) {
                 this.databases = databases;
@@ -290,7 +313,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the database account.
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -314,7 +337,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database account.
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -322,10 +345,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the database account. Valid values:   
-             * <p>
-             *  - LOCKED: The account is locked.   
-             * - NORMAL: The account is unlocked.
+             * UserStatus.
              */
             public Builder userStatus(String userStatus) {
                 this.userStatus = userStatus;
@@ -333,10 +353,7 @@ public class DescribeTenantUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the database account. Valid values:    
-             * <p>
-             * - Admin: the super administrator account.   
-             * - NORMAL: a general account.
+             * UserType.
              */
             public Builder userType(String userType) {
                 this.userType = userType;

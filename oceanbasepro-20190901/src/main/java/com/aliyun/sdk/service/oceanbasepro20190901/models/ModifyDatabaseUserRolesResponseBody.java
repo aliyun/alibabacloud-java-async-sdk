@@ -50,7 +50,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
         private TenantUser tenantUser; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * The account information.
+         * The name of the database.
          */
         public Builder tenantUser(TenantUser tenantUser) {
             this.tenantUser = tenantUser;
@@ -110,13 +110,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The role of the account.   
-             * <p>
-             * In MySQL mode, a role is a database-level role. Valid values:
-             * - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.
-             * - ReadOnly: a role that has only the read-only privilege SELECT. 
-             * - DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW. 
-             * - DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
+             * Role.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -124,7 +118,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -189,7 +183,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
             private java.util.List < Users> users; 
 
             /**
-             * The name of the database.
+             * Example 1
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -197,7 +191,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * TenantId.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -205,7 +199,7 @@ public class ModifyDatabaseUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The accounts that have privileges on the database.
+             * Users.
              */
             public Builder users(java.util.List < Users> users) {
                 this.users = users;

@@ -97,7 +97,7 @@ public class ModifySecurityIpsRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -115,9 +115,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The name of the IP address whitelist group.   
-         * <p>
-         * It must be 2 to 32 characters in length, start with a lowercase letter, end with a lowercase letter or digit, and contain only lowercase letters, digits, and underscores (_).
+         * The information of the IP address whitelist group.
          */
         public Builder securityIpGroupName(String securityIpGroupName) {
             this.putBodyParameter("SecurityIpGroupName", securityIpGroupName);

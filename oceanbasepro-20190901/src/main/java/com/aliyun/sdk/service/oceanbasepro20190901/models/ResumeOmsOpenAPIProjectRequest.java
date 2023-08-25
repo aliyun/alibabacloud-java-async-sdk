@@ -119,7 +119,7 @@ public class ResumeOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The page number, which takes effect in a pagination query.
+         * Contact the administrator.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -128,7 +128,7 @@ public class ResumeOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The page size, which takes effect in a pagination query.
+         * Indicates whether the call is successful.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -137,7 +137,7 @@ public class ResumeOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The project ID.
+         * Contact the administrator.
          */
         public Builder projectId(String projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -146,7 +146,7 @@ public class ResumeOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.
+         * The suggestions (old).
          */
         public Builder workerGradeId(String workerGradeId) {
             this.putBodyParameter("WorkerGradeId", workerGradeId);

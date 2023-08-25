@@ -50,7 +50,13 @@ public class DescribeZonesResponseBody extends TeaModel {
         private java.util.List < Zones> zones; 
 
         /**
-         * The request ID.
+         * ```
+         * <p>
+         * http(s)://[Endpoint]/?Action=DescribeZones
+         * &Series=normal
+         * &DeployType=single
+         * &Common request parameters
+         * ```
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +64,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of zones.
+         * You can call this operation to learn of zones where a cluster can be created in an Alibaba Cloud region.
          */
         public Builder zones(java.util.List < Zones> zones) {
             this.zones = zones;
@@ -134,7 +140,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * The deployment mode.
+             * DeployType.
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -142,9 +148,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The series of the OceanBase cluster. Valid values:   
-             * <p>
-             * NORMAL: the high availability version. This is the default value.
+             * Series.
              */
             public Builder series(String series) {
                 this.series = series;
@@ -152,9 +156,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of zone IDs.   
-             * <p>
-             * For a cluster with multiple zones, separate the zone names with commas (,).
+             * ZoneId.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -162,7 +164,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the zone.
+             * ZoneName.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;

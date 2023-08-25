@@ -139,7 +139,7 @@ public class DescribeTenantsRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -148,7 +148,7 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The number of used disks of the tenant.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -157,10 +157,7 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.   
-         * <p>
-         * Start value: 1
-         * - Default value: 1
+         * It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -169,10 +166,7 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * The number of rows to return on each page.   
-         * <p>
-         * - Maximum value: 100.
-         * - Default value: 10
+         * You can call this operation to query the tenants in an OceanBase cluster.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -181,7 +175,7 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * The search keyword.
+         * The primary zone of the tenant.
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);
@@ -190,7 +184,7 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * Alibaba Cloud CLI
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -199,9 +193,7 @@ public class DescribeTenantsRequest extends Request {
         }
 
         /**
-         * The name of the tenant.   
-         * <p>
-         * It must start with a letter or an underscore (_), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (_).  It cannot be set to sys.
+         * The information of tenants.
          */
         public Builder tenantName(String tenantName) {
             this.putBodyParameter("TenantName", tenantName);

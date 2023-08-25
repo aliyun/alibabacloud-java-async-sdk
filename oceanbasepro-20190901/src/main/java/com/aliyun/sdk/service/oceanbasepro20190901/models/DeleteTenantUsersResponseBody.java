@@ -38,7 +38,7 @@ public class DeleteTenantUsersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * DeleteTenantUsers
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

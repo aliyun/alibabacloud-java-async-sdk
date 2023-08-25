@@ -50,7 +50,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * 实例ID
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * Response parameters
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class CreateInstanceResponseBody extends TeaModel {
             private String resourceGroupId; 
 
             /**
-             * 实例ID
+             * 订单ID。该参数只有创建包年包月ECS实例（请求参数InstanceChargeType=PrePaid）时有返回值。
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -130,7 +130,7 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 订单ID。该参数只有创建包年包月ECS实例（请求参数InstanceChargeType=PrePaid）时有返回值。
+             * 资源组ID
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -138,7 +138,7 @@ public class CreateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组ID
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

@@ -50,7 +50,12 @@ public class DescribeCharsetResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of character sets.
+         * ```
+         * <p>
+         * http(s)://[Endpoint]/?Action=DescribeCharset
+         * &TenantMode=Oracle
+         * &Common request parameters
+         * ```
          */
         public Builder charset(java.util.List < Charset> charset) {
             this.charset = charset;
@@ -58,7 +63,9 @@ public class DescribeCharsetResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The operation that you want to perform.   
+         * <p>
+         * Set the value to **DescribeCharset**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +117,7 @@ public class DescribeCharsetResponseBody extends TeaModel {
             private java.util.List < String > collations; 
 
             /**
-             * The character set name.
+             * DescribeCharset
              */
             public Builder charset(String charset) {
                 this.charset = charset;
@@ -118,7 +125,7 @@ public class DescribeCharsetResponseBody extends TeaModel {
             }
 
             /**
-             * The collation set.
+             * Collations.
              */
             public Builder collations(java.util.List < String > collations) {
                 this.collations = collations;

@@ -38,7 +38,7 @@ public class ModifyTenantUserDescriptionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * You can call this operation to modify the description of a specified account in a tenant.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

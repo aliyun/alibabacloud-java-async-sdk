@@ -84,7 +84,7 @@ public class ModifyInstanceNameRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -93,7 +93,7 @@ public class ModifyInstanceNameRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * It is an Alibaba Cloud asset management and configuration tool, with which you can manage multiple Alibaba Cloud products and services by using commands. It is easy to use and a good helper in migration to cloud.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -102,9 +102,7 @@ public class ModifyInstanceNameRequest extends Request {
         }
 
         /**
-         * The name of the OceanBase cluster.   
-         * <p>
-         * It must be 1 to 20 characters in length.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);

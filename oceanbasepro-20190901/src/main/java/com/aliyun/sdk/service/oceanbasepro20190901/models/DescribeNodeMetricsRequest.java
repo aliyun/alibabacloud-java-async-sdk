@@ -184,7 +184,7 @@ public class DescribeNodeMetricsRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -193,9 +193,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * The end time of the time range for querying monitoring data.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * $.parameters[7].schema.description
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -204,7 +202,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The list of nodes.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -213,9 +211,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * The monitoring metrics.     
-         * <p>
-         * For more information about supported metrics, see [Node statistics](~~212099~~).
+         * $.parameters[7].schema.enumValueTitles
          */
         public Builder metrics(String metrics) {
             this.putBodyParameter("Metrics", metrics);
@@ -224,7 +220,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * The list of nodes.
+         * $.parameters[10].schema.description
          */
         public Builder nodeIdList(String nodeIdList) {
             this.putBodyParameter("NodeIdList", nodeIdList);
@@ -233,7 +229,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * The name of the node.
+         * $.parameters[8].schema.example
          */
         public Builder nodeName(String nodeName) {
             this.putBodyParameter("NodeName", nodeName);
@@ -242,10 +238,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.   
-         * <p>
-         * - Start value: 1   
-         * - Default value: 1
+         * $.parameters[6].schema.description
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -254,10 +247,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * The number of rows to return on each page.   
-         * <p>
-         * - Maximum value: 100   
-         * - Default value: 10
+         * The ID of the tenant.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -266,9 +256,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * The start time of the time range for querying monitoring data.   
-         * <p>
-         * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
+         * $.parameters[9].schema.example
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -277,7 +265,7 @@ public class DescribeNodeMetricsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * $.parameters[6].schema.enumValueTitles
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

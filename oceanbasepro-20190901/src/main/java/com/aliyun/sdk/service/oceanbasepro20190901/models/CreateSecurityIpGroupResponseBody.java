@@ -50,7 +50,9 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
         private SecurityIpGroup securityIpGroup; 
 
         /**
-         * The request ID.
+         * The IP addresses or CIDR blocks in the IP address whitelist group.   
+         * <p>
+         * The return values of SecurityIps are strings that are separated with commas (,).
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +60,9 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the whitelist group.
+         * The operation that you want to perform.   
+         * <p>
+         * Set the value to **CreateSecurityIpGroup**.
          */
         public Builder securityIpGroup(SecurityIpGroup securityIpGroup) {
             this.securityIpGroup = securityIpGroup;
@@ -122,7 +126,14 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
             private String securityIps; 
 
             /**
-             * The ID of the OceanBase cluster.
+             * ```
+             * <p>
+             * http(s)://[Endpoint]/?Action=CreateSecurityIpGroup
+             * &InstanceId=ob317v4uif****
+             * &SecurityIps=192.168.1.1,192.168.0.0.1/8
+             * &SecurityIpGroupName=pay_online
+             * &Common request parameters
+             * ```
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -130,7 +141,7 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the whitelist group.
+             * You can call this operation to create an IP address whitelist group.
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -138,9 +149,7 @@ public class CreateSecurityIpGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses or CIDR blocks in the IP address whitelist group.   
-             * <p>
-             * The return values of SecurityIps are strings that are separated with commas (,).
+             * SecurityIps.
              */
             public Builder securityIps(String securityIps) {
                 this.securityIps = securityIps;

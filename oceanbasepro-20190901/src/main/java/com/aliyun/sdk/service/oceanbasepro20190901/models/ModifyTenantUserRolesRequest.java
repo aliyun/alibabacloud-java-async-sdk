@@ -128,20 +128,11 @@ public class ModifyTenantUserRolesRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The ID of the OceanBase cluster.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putBodyParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
             return this;
         }
 
@@ -153,6 +144,15 @@ public class ModifyTenantUserRolesRequest extends Request {
          * add: adds a privilege.  
          * delete: deletes a privilege.
          */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The name of the table.
+         */
         public Builder modifyType(String modifyType) {
             this.putBodyParameter("ModifyType", modifyType);
             this.modifyType = modifyType;
@@ -160,7 +160,9 @@ public class ModifyTenantUserRolesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The operation that you want to perform.   
+         * <p>
+         * Set the value to **ModifyTenantUserRoles**.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -169,9 +171,7 @@ public class ModifyTenantUserRolesRequest extends Request {
         }
 
         /**
-         * The name of the database account.   
-         * <p>
-         * You cannot use reserved keywords, such as SYS and root.
+         * The role of the database account.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -180,7 +180,10 @@ public class ModifyTenantUserRolesRequest extends Request {
         }
 
         /**
-         * The role of the database account.
+         * The type of the account. Valid values:   
+         * <p>
+         * - Admin: the super administrator account.   
+         * - Normal: a general account.
          */
         public Builder userRole(String userRole) {
             this.putBodyParameter("UserRole", userRole);

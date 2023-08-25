@@ -85,7 +85,7 @@ public class DescribeSQLDetailsRequest extends Request {
         } 
 
         /**
-         * 地域ID
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +94,7 @@ public class DescribeSQLDetailsRequest extends Request {
         }
 
         /**
-         * SQLID.
+         * The SQL text.
          */
         public Builder SQLId(String SQLId) {
             this.putBodyParameter("SQLId", SQLId);
@@ -103,7 +103,7 @@ public class DescribeSQLDetailsRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * SQLID.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

@@ -70,7 +70,7 @@ public class DescribeInstanceTenantModesRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -79,7 +79,9 @@ public class DescribeInstanceTenantModesRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The operation that you want to perform.   
+         * <p>
+         * Set the value to **DescribeInstanceTenantModes**.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

@@ -50,7 +50,7 @@ public class DeleteTenantsResponseBody extends TeaModel {
         private java.util.List < String > tenantIds; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteTenantsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of tenant IDs.
+         * TenantIds.
          */
         public Builder tenantIds(java.util.List < String > tenantIds) {
             this.tenantIds = tenantIds;

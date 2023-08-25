@@ -115,7 +115,7 @@ public class ModifyTenantResourceRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -124,7 +124,7 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * The information about the CPU resources of the tenant.
+         * The memory size of the tenant, in GB.
          */
         public Builder cpu(Integer cpu) {
             this.putBodyParameter("Cpu", cpu);
@@ -133,7 +133,9 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The operation that you want to perform.   
+         * <p>
+         * Set the value to **ModifyTenantResource**.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -142,7 +144,7 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * The memory size of the tenant, in GB.
+         * The ID of the tenant.
          */
         public Builder memory(Integer memory) {
             this.putBodyParameter("Memory", memory);
@@ -151,7 +153,7 @@ public class ModifyTenantResourceRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The information about the CPU resources of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

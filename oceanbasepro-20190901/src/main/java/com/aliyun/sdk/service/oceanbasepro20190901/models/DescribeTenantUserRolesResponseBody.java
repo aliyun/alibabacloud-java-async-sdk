@@ -50,7 +50,7 @@ public class DescribeTenantUserRolesResponseBody extends TeaModel {
         private java.util.List < String > role; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,14 +58,7 @@ public class DescribeTenantUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of roles of the user.   
-         * <p>
-         * Valid values: 
-         * 
-         * ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.
-         * ReadOnly: a role that has only the read-only privilege SELECT.
-         * DDL: a role that has DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.
-         * DML: a role that has DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
+         * Role.
          */
         public Builder role(java.util.List < String > role) {
             this.role = role;

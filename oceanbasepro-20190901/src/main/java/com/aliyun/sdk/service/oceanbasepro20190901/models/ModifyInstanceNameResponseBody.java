@@ -12,14 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceNameResponseBody</p>
  */
 public class ModifyInstanceNameResponseBody extends TeaModel {
-    @NameInMap("InstanceName")
-    private String instanceName;
-
     @NameInMap("RequestId")
     private String requestId;
 
     private ModifyInstanceNameResponseBody(Builder builder) {
-        this.instanceName = builder.instanceName;
         this.requestId = builder.requestId;
     }
 
@@ -32,13 +28,6 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
     }
 
     /**
-     * @return instanceName
-     */
-    public String getInstanceName() {
-        return this.instanceName;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -46,19 +35,12 @@ public class ModifyInstanceNameResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String instanceName; 
         private String requestId; 
 
         /**
-         * The name of the OceanBase cluster.
-         */
-        public Builder instanceName(String instanceName) {
-            this.instanceName = instanceName;
-            return this;
-        }
-
-        /**
-         * The request ID.
+         * The operation that you want to perform.   
+         * <p>
+         * Set the value to **ModifyInstanceName**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

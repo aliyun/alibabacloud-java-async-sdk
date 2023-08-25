@@ -114,7 +114,7 @@ public class ModifyTenantUserDescriptionRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -123,7 +123,9 @@ public class ModifyTenantUserDescriptionRequest extends Request {
         }
 
         /**
-         * The description of the database.
+         * The operation that you want to perform.   
+         * <p>
+         * Set the value to **ModifyTenantUserDescription**.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -150,9 +152,7 @@ public class ModifyTenantUserDescriptionRequest extends Request {
         }
 
         /**
-         * The name of the database account.   
-         * <p>
-         * You cannot use reserved keywords, such as SYS and root.
+         * The description of the database.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

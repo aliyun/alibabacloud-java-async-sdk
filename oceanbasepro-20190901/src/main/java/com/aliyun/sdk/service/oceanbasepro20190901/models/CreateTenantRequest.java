@@ -233,7 +233,7 @@ public class CreateTenantRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -329,7 +329,7 @@ public class CreateTenantRequest extends Request {
         }
 
         /**
-         * The time zone of the tenant. For more information, see [DescribeTimeZones](~~410361~~).
+         * The time zone of the tenant. For more information, see [DescribeTimeZones](https://www.alibabacloud.com/help/en/apsaradb-for-oceanbase/latest/api-oceanbasepro-2019-09-01-describetimezones).
          */
         public Builder timeZone(String timeZone) {
             this.putBodyParameter("TimeZone", timeZone);

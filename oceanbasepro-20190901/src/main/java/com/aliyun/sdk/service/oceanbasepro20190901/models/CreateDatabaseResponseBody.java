@@ -50,7 +50,7 @@ public class CreateDatabaseResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the database.
+         * CreateDatabase
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -58,7 +58,7 @@ public class CreateDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

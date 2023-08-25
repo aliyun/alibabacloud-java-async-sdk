@@ -58,7 +58,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             private String riskDescription; 
 
             /**
-             * 检测项名称
+             * ConfigDescription.
              */
             public Builder configDescription(String configDescription) {
                 this.configDescription = configDescription;
@@ -154,7 +154,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 风险分组
+             * ConfigGroup.
              */
             public Builder configGroup(String configGroup) {
                 this.configGroup = configGroup;
@@ -162,7 +162,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 风险项目名称
+             * ConfigName.
              */
             public Builder configName(String configName) {
                 this.configName = configName;
@@ -170,7 +170,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否有风险
+             * Risk.
              */
             public Builder risk(Boolean risk) {
                 this.risk = risk;
@@ -178,7 +178,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 风险描述
+             * RiskDescription.
              */
             public Builder riskDescription(String riskDescription) {
                 this.riskDescription = riskDescription;
@@ -255,7 +255,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             private String tenantName; 
 
             /**
-             * 租户的风险条目
+             * RiskCount.
              */
             public Builder riskCount(Integer riskCount) {
                 this.riskCount = riskCount;
@@ -263,7 +263,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 风险列表
+             * SecurityConfigs.
              */
             public Builder securityConfigs(java.util.List < SecurityConfigs> securityConfigs) {
                 this.securityConfigs = securityConfigs;
@@ -271,7 +271,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 租户Id
+             * TenantId.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -279,7 +279,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 租户名称
+             * TenantName.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -344,7 +344,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             private Integer totalRiskCount; 
 
             /**
-             * 检测结果
+             * TenantSecurityConfigs.
              */
             public Builder tenantSecurityConfigs(java.util.List < TenantSecurityConfigs> tenantSecurityConfigs) {
                 this.tenantSecurityConfigs = tenantSecurityConfigs;
@@ -352,7 +352,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 安全配置总体检测项目
+             * TotalCheckCount.
              */
             public Builder totalCheckCount(Integer totalCheckCount) {
                 this.totalCheckCount = totalCheckCount;
@@ -360,7 +360,7 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 检测出来的总体风险项目
+             * TotalRiskCount.
              */
             public Builder totalRiskCount(Integer totalRiskCount) {
                 this.totalRiskCount = totalRiskCount;

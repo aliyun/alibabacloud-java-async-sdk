@@ -17,6 +17,14 @@ public class DescribeCharsetRequest extends Request {
     private String regionId;
 
     @Body
+    @NameInMap("InstanceId")
+    private String instanceId;
+
+    @Body
+    @NameInMap("Series")
+    private String series;
+
+    @Body
     @NameInMap("TenantMode")
     @Validation(required = true)
     private String tenantMode;
@@ -24,6 +32,8 @@ public class DescribeCharsetRequest extends Request {
     private DescribeCharsetRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.instanceId = builder.instanceId;
+        this.series = builder.series;
         this.tenantMode = builder.tenantMode;
     }
 
@@ -48,6 +58,20 @@ public class DescribeCharsetRequest extends Request {
     }
 
     /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
+     * @return series
+     */
+    public String getSeries() {
+        return this.series;
+    }
+
+    /**
      * @return tenantMode
      */
     public String getTenantMode() {
@@ -56,6 +80,8 @@ public class DescribeCharsetRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCharsetRequest, Builder> {
         private String regionId; 
+        private String instanceId; 
+        private String series; 
         private String tenantMode; 
 
         private Builder() {
@@ -65,11 +91,13 @@ public class DescribeCharsetRequest extends Request {
         private Builder(DescribeCharsetRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.instanceId = request.instanceId;
+            this.series = request.series;
             this.tenantMode = request.tenantMode;
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -78,10 +106,25 @@ public class DescribeCharsetRequest extends Request {
         }
 
         /**
-         * The tenant mode.    
-         * <p>
-         * Valid values: Oracle and MySQL.   
-         * For more information, see [DescribeInstanceTenantModes](~~410354~~).
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * 实例的系列  - normal（默认）：标准集群版（云盘）  - normal_ssd：标准集群版（本地盘） - history：历史库集群版。
+         */
+        public Builder series(String series) {
+            this.putBodyParameter("Series", series);
+            this.series = series;
+            return this;
+        }
+
+        /**
+         * The return result of the request.
          */
         public Builder tenantMode(String tenantMode) {
             this.putBodyParameter("TenantMode", tenantMode);

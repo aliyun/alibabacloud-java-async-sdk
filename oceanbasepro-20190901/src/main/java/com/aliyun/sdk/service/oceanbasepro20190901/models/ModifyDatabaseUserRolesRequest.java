@@ -113,7 +113,7 @@ public class ModifyDatabaseUserRolesRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,9 +122,7 @@ public class ModifyDatabaseUserRolesRequest extends Request {
         }
 
         /**
-         * The name of the database.    
-         * <p>
-         * You cannot use reserved keywords, such as test and mysql.
+         * The ID of the tenant.
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -133,7 +131,7 @@ public class ModifyDatabaseUserRolesRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The account information.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -142,7 +140,7 @@ public class ModifyDatabaseUserRolesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * A list of usernames and their respective roles.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -151,7 +149,7 @@ public class ModifyDatabaseUserRolesRequest extends Request {
         }
 
         /**
-         * A list of usernames and their respective roles.
+         * The ID of the OceanBase cluster.
          */
         public Builder users(String users) {
             this.putBodyParameter("Users", users);

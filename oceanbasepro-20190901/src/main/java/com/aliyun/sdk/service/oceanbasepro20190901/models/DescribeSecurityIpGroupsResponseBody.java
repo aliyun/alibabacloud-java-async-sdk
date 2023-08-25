@@ -70,7 +70,7 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the IP address whitelist group.
+         * SecurityIpGroups.
          */
         public Builder securityIpGroups(java.util.List < SecurityIpGroups> securityIpGroups) {
             this.securityIpGroups = securityIpGroups;
@@ -78,7 +78,7 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of whitelist groups returned.
+         * Example 1
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,7 +130,7 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
             private String securityIps; 
 
             /**
-             * The name of the security group.
+             * SecurityIpGroupName.
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -138,9 +138,7 @@ public class DescribeSecurityIpGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of IP addresses and CIDR blocks in the whitelist.   
-             * <p>
-             * It is a JSON array. Each object in the array is an IP address or CIDR block.
+             * SecurityIps.
              */
             public Builder securityIps(String securityIps) {
                 this.securityIps = securityIps;

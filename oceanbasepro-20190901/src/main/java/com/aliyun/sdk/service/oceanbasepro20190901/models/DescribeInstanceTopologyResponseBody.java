@@ -50,7 +50,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The topology of the cluster.
+         * The number of CPU cores used by the node.
          */
         public Builder instanceTopology(InstanceTopology instanceTopology) {
             this.instanceTopology = instanceTopology;
@@ -58,7 +58,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The information about the CPU resources of the node.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,7 +204,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether migration can be performed.
+             * The return result of the request.
              */
             public Builder enableMigrateUnit(Boolean enableMigrateUnit) {
                 this.enableMigrateUnit = enableMigrateUnit;
@@ -212,7 +212,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the migration is manually performed.
+             * The return result of the request.
              */
             public Builder manualMigrate(Boolean manualMigrate) {
                 this.manualMigrate = manualMigrate;
@@ -220,7 +220,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the OBServer where the resource unit resides.
+             * It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -228,7 +228,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores of the resource unit.
+             * Alibaba Cloud CLI
              */
             public Builder unitCpu(Float unitCpu) {
                 this.unitCpu = unitCpu;
@@ -236,7 +236,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The data size of the unit.
+             * The operation that you want to perform.   
+             * <p>
+             * Set the value to **DescribeInstanceTopology**.
              */
             public Builder unitDataSize(Long unitDataSize) {
                 this.unitDataSize = unitDataSize;
@@ -244,7 +246,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource unit.
+             * The topology of the cluster.
              */
             public Builder unitId(String unitId) {
                 this.unitId = unitId;
@@ -252,7 +254,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the resource unit, in GB.
+             * The ID of the tenant.
              */
             public Builder unitMemory(Float unitMemory) {
                 this.unitMemory = unitMemory;
@@ -260,15 +262,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource unit. Valid values:    
-             * <p>
-             * 
-             * - ONLINE: The resource unit is running.
-             * - IMMIGRATING: The resource unit is being immigrated.
-             * - EMIGRATING: The resource unit is being emigrated.
-             * - CANCEL_EMIGRATING: Resource node immigration is being canceled.
-             * - CANCEL_EMIGRATING: Resource node emigration is being canceled.
-             * - DELETING: The resource unit is being deleted.
+             * You can call this operation to query the topology of an OceanBase cluster.
              */
             public Builder unitStatus(String unitStatus) {
                 this.unitStatus = unitStatus;
@@ -345,7 +339,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private java.util.List < Units> units; 
 
             /**
-             * Indicates whether the zone is the primary zone.
+             * The maximum disk usage, in percentage.
              */
             public Builder isPrimaryTenantZone(String isPrimaryTenantZone) {
                 this.isPrimaryTenantZone = isPrimaryTenantZone;
@@ -353,7 +347,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The server with the highest disk usage.
              */
             public Builder tenantZoneId(String tenantZoneId) {
                 this.tenantZoneId = tenantZoneId;
@@ -361,10 +355,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The role to access the zone. Valid values:   
-             * <p>
-             *  - ReadWrite: a role that has the read and write privileges.
-             *  - ReadOnly: a role that has only the read-only privilege.
+             * The information of zones.
              */
             public Builder tenantZoneRole(String tenantZoneRole) {
                 this.tenantZoneRole = tenantZoneRole;
@@ -372,7 +363,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information about resource units.
+             * The information about the storage resources.
              */
             public Builder units(java.util.List < Units> units) {
                 this.units = units;
@@ -521,7 +512,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private java.util.List < TenantZones> tenantZones; 
 
             /**
-             * The deployment type of the primary zone.
+             * The server with the highest disk usage.
              */
             public Builder primaryZoneDeployType(String primaryZoneDeployType) {
                 this.primaryZoneDeployType = primaryZoneDeployType;
@@ -529,7 +520,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores of the tenant.
+             * The information about the memory resources of the node.
              */
             public Builder tenantCpu(Float tenantCpu) {
                 this.tenantCpu = tenantCpu;
@@ -537,11 +528,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment type of the tenant.   
-             * <p>
-             * - multiple: multi-IDC deployment   
-             * - single: single-IDC deployment   
-             * - dual: dual-IDC deployment
+             * The name of the tenant.
              */
             public Builder tenantDeployType(String tenantDeployType) {
                 this.tenantDeployType = tenantDeployType;
@@ -549,7 +536,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * The size of used memory of the node, in GB.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -557,7 +544,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the tenant, in GB.
+             * The total storage space of the node, in GB.
              */
             public Builder tenantMemory(Float tenantMemory) {
                 this.tenantMemory = tenantMemory;
@@ -565,10 +552,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The tenant mode. Valid values:   
-             * <p>
-             * - Oracle   
-             * - MySQL
+             * The size of used storage space of the node, in GB.
              */
             public Builder tenantMode(String tenantMode) {
                 this.tenantMode = tenantMode;
@@ -576,7 +560,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the tenant.
+             * The total memory size of the node, in GB.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -584,17 +568,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the tenant.   
-             * <p>
-             * - PENDING_CREATE: The tenant is being created.   
-             * - RESTORE: The tenant is being recovered.   
-             * - ONLINE: The tenant is running.   
-             * - SPEC_MODIFYING: The specification of the tenant is being modified.   
-             * - ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.   
-             * - PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.   
-             * - PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.   
-             * - PARAMETER_MODIFYING: Parameters are being modified.   
-             * - WHITE_LIST_MODIFYING: The whitelist is being modified.
+             * The size of used memory of the node, in GB.
              */
             public Builder tenantStatus(String tenantStatus) {
                 this.tenantStatus = tenantStatus;
@@ -602,7 +576,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resource units in the tenant.
+             * The number of CPU cores of the tenant.
              */
             public Builder tenantUnitNum(Integer tenantUnitNum) {
                 this.tenantUnitNum = tenantUnitNum;
@@ -610,7 +584,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The zone information of the tenant.
+             * The information about the storage resources of the node.
              */
             public Builder tenantZones(java.util.List < TenantZones> tenantZones) {
                 this.tenantZones = tenantZones;
@@ -663,7 +637,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Float usedCpu; 
 
             /**
-             * The total number of CPU cores for the node.
+             * The size of used storage space of the node, in GB.
              */
             public Builder totalCpu(Integer totalCpu) {
                 this.totalCpu = totalCpu;
@@ -671,7 +645,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores used by the node.
+             * Indicates whether migration can be performed.
              */
             public Builder usedCpu(Float usedCpu) {
                 this.usedCpu = usedCpu;
@@ -724,7 +698,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Double usedDiskSize; 
 
             /**
-             * The total storage space of the node, in GB.
+             * The deployment type of the primary zone.
              */
             public Builder totalDiskSize(Double totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -732,7 +706,17 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The size of used storage space of the node, in GB.
+             * The status of the tenant.   
+             * <p>
+             * - PENDING_CREATE: The tenant is being created.   
+             * - RESTORE: The tenant is being recovered.   
+             * - ONLINE: The tenant is running.   
+             * - SPEC_MODIFYING: The specification of the tenant is being modified.   
+             * - ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.   
+             * - PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.   
+             * - PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.   
+             * - PARAMETER_MODIFYING: Parameters are being modified.   
+             * - WHITE_LIST_MODIFYING: The whitelist is being modified.
              */
             public Builder usedDiskSize(Double usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -785,7 +769,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Float usedMemory; 
 
             /**
-             * The total memory size of the node, in GB.
+             * The ID of the replica node.
              */
             public Builder totalMemory(Long totalMemory) {
                 this.totalMemory = totalMemory;
@@ -793,7 +777,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The size of used memory of the node, in GB.
+             * The information of node resources.
              */
             public Builder usedMemory(Float usedMemory) {
                 this.usedMemory = usedMemory;
@@ -858,7 +842,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Memory memory; 
 
             /**
-             * The information about the CPU resources of the node.
+             * The memory size of the tenant, in GB.
              */
             public Builder cpu(Cpu cpu) {
                 this.cpu = cpu;
@@ -866,7 +850,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the storage resources of the node.
+             * The information about the CPU resources of the node.
              */
             public Builder diskSize(DiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -874,7 +858,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the memory resources of the node.
+             * The role to access the zone. Valid values:   
+             * <p>
+             *  - ReadWrite: a role that has the read and write privileges.
+             *  - ReadOnly: a role that has only the read-only privilege.
              */
             public Builder memory(Memory memory) {
                 this.memory = memory;
@@ -951,7 +938,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String nodeStatus; 
 
             /**
-             * The ID of the replica node.
+             * The information of zones.
              */
             public Builder nodeCopyId(Long nodeCopyId) {
                 this.nodeCopyId = nodeCopyId;
@@ -959,7 +946,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The ID of the resource unit.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -967,7 +954,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information of node resources.
+             * The ID of the node.
              */
             public Builder nodeResource(java.util.List < NodeResource> nodeResource) {
                 this.nodeResource = nodeResource;
@@ -975,7 +962,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the node.
+             * The ID of the OBServer where the resource unit resides.
              */
             public Builder nodeStatus(String nodeStatus) {
                 this.nodeStatus = nodeStatus;
@@ -1028,7 +1015,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Double maxDiskUsedPercent; 
 
             /**
-             * The server with the highest disk usage.
+             * MaxDiskUsedObServer.
              */
             public Builder maxDiskUsedObServer(java.util.List < String > maxDiskUsedObServer) {
                 this.maxDiskUsedObServer = maxDiskUsedObServer;
@@ -1036,7 +1023,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum disk usage, in percentage.
+             * DescribeInstanceTopology
              */
             public Builder maxDiskUsedPercent(Double maxDiskUsedPercent) {
                 this.maxDiskUsedPercent = maxDiskUsedPercent;
@@ -1077,7 +1064,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private ZoneResourceDiskSize diskSize; 
 
             /**
-             * The information about the storage resources of the node.
+             * The information about the CPU resources of the node.
              */
             public Builder diskSize(ZoneResourceDiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -1166,7 +1153,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private ZoneResource zoneResource; 
 
             /**
-             * The information of the nodes.
+             * The ID of the region.
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;
@@ -1174,7 +1161,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The zone information of the cluster.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -1182,7 +1169,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The storage capacity of the zone.
+             * The information about the memory resources of the node.
              */
             public Builder zoneDisk(String zoneDisk) {
                 this.zoneDisk = zoneDisk;
@@ -1190,7 +1177,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * The information of the tenant.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -1198,7 +1185,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information of zones.
+             * Example 1
              */
             public Builder zoneResource(ZoneResource zoneResource) {
                 this.zoneResource = zoneResource;
@@ -1251,7 +1238,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private java.util.List < Zones> zones; 
 
             /**
-             * The information of the tenant.
+             * The total number of CPU cores for the node.
              */
             public Builder tenants(java.util.List < Tenants> tenants) {
                 this.tenants = tenants;
@@ -1259,7 +1246,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The zone information of the cluster.
+             * The information about resource units.
              */
             public Builder zones(java.util.List < Zones> zones) {
                 this.zones = zones;

@@ -213,7 +213,7 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         } 
 
         /**
-         * 实例所属的地域ID。您可以调用DescribeRegions查看最新的阿里云地域列表。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -224,6 +224,7 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         /**
          * The description of the data source.   
          * <p>
+         * 
          * It must be 2 to 256 characters in length. The default value is null.
          */
         public Builder description(String description) {
@@ -248,7 +249,7 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
          * The ID of the ECS instance of the data source.   
          * <p>
          * 
-         * > <br>If Type is set to RDS, POLARDB, or DG, this parameter is required.
+         * > <br>If Type is set to RDS, PolarDB, or DG, this parameter is required.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -319,7 +320,7 @@ public class CreateOmsMysqlDataSourceRequest extends Request {
         /**
          * The type of the MySQL data source.   
          * <p>
-         * Valid values: INTERNET, VPC, RDS, POLARDB, and DG.
+         * Valid values: INTERNET, VPC, RDS, PolarDB, and DG.
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

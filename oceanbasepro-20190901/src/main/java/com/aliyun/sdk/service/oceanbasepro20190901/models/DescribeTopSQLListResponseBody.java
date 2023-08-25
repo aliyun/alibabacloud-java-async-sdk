@@ -62,7 +62,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The request ID.
+         * Alibaba Cloud CLI
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
         }
 
         /**
-         * The list of top SQL statements.
+         * The I/O wait time, in ms.
          */
         public Builder topSQLList(java.util.List < TopSQLList> topSQLList) {
             this.topSQLList = topSQLList;
@@ -78,7 +78,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
         }
 
         /**
-         * The total count.
+         * It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -586,7 +586,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The number of rows affected.
+             * The internal wait time, in ms.
              */
             public Builder affectedRows(Long affectedRows) {
                 this.affectedRows = affectedRows;
@@ -594,7 +594,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The wait time of the client, in ms.
+             * The wait time in concurrent execution, in ms.
              */
             public Builder appWaitTime(Float appWaitTime) {
                 this.appWaitTime = appWaitTime;
@@ -602,7 +602,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of block cache hits.
+             * The average CPU time, in ms.
              */
             public Builder blockCacheHit(Long blockCacheHit) {
                 this.blockCacheHit = blockCacheHit;
@@ -610,7 +610,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of block index cache hits.
+             * $.parameters[16].schema.example
              */
             public Builder blockIndexCacheHit(Long blockIndexCacheHit) {
                 this.blockIndexCacheHit = blockIndexCacheHit;
@@ -618,7 +618,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of Bloom filter cache hits.
+             * $.parameters[14].schema.enumValueTitles
              */
             public Builder bloomFilterCacheHit(Long bloomFilterCacheHit) {
                 this.bloomFilterCacheHit = bloomFilterCacheHit;
@@ -626,7 +626,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client.
+             * $.parameters[14].schema.description
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -634,7 +634,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The wait time in concurrent execution, in ms.
+             * The number of rows returned.
              */
             public Builder concurrencyWaitTime(Float concurrencyWaitTime) {
                 this.concurrencyWaitTime = concurrencyWaitTime;
@@ -642,7 +642,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The average CPU time, in ms.
+             * The maximum CPU time, in ms.
              */
             public Builder cpuTime(Float cpuTime) {
                 this.cpuTime = cpuTime;
@@ -650,7 +650,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * The number of remote plans.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -658,7 +658,10 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The time to wait for decoding, in ms.
+             * The number of rows to return on each page.   
+             * <p>
+             * - Maximum value: 100   
+             * - Default value: 10
              */
             public Builder decodeTime(Float decodeTime) {
                 this.decodeTime = decodeTime;
@@ -666,7 +669,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical reads.
+             * The IP address of the client.
              */
             public Builder diskRead(Long diskRead) {
                 this.diskRead = diskRead;
@@ -674,7 +677,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The average response time, in ms.
+             * The sorting rule.
              */
             public Builder elapsedTime(Float elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -682,7 +685,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The wait event.
+             * The number of rows read from the disk.
              */
             public Builder event(String event) {
                 this.event = event;
@@ -690,7 +693,9 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of executions per second.
+             * The operation that you want to perform.   
+             * <p>
+             * Set the value to **DescribeTopSQLList**.
              */
             public Builder execPerSecond(Float execPerSecond) {
                 this.execPerSecond = execPerSecond;
@@ -698,7 +703,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The internal execution time, in ms.
+             * The number of rows read from the memory.
              */
             public Builder executeTime(Float executeTime) {
                 this.executeTime = executeTime;
@@ -706,7 +711,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of executions.
+             * The number of executions per second.
              */
             public Builder executions(Long executions) {
                 this.executions = executions;
@@ -714,7 +719,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of failures.
+             * $.parameters[12].schema.description
              */
             public Builder failTimes(Long failTimes) {
                 this.failTimes = failTimes;
@@ -722,7 +727,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The time spent in hard parsing, in ms.
+             * The queuing time, in ms.
              */
             public Builder getPlanTime(Float getPlanTime) {
                 this.getPlanTime = getPlanTime;
@@ -730,7 +735,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The I/O wait time, in ms.
+             * $.parameters[15].schema.example
              */
             public Builder IOWaitTime(Float IOWaitTime) {
                 this.IOWaitTime = IOWaitTime;
@@ -738,7 +743,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the returned SQL statement.
+             * The name of the database.
              */
             public Builder key(Long key) {
                 this.key = key;
@@ -746,11 +751,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The average number of logical reads of the SQL statement during the specified period of time.   
-             * <p>
-             * The value covers the numbers of reads of different caches and the number of disk I/Os. It is an important metric for measuring the SQL filtering performance.   
-             * 
-             * > <br> A higher ratio of the number of logical reads to the number of returned rows indicates poorer filtering performance. General causes include non-standard content written by SQL statements, non-standard table indexes created, and non-standard SQL execution plans.
+             * You can call this operation to query SQL execution performance data collected by the diagnostic system.
              */
             public Builder logicalRead(Long logicalRead) {
                 this.logicalRead = logicalRead;
@@ -758,7 +759,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum CPU time, in ms.
+             * SQLID.
              */
             public Builder maxCpuTime(Float maxCpuTime) {
                 this.maxCpuTime = maxCpuTime;
@@ -766,7 +767,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum response time, in ms.
+             * The sequence number of the returned SQL statement.
              */
             public Builder maxElapsedTime(Float maxElapsedTime) {
                 this.maxElapsedTime = maxElapsedTime;
@@ -774,7 +775,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows read from the memory.
+             * The name of the database.
              */
             public Builder memstoreReadRowCount(Long memstoreReadRowCount) {
                 this.memstoreReadRowCount = memstoreReadRowCount;
@@ -782,7 +783,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of plan misses.
+             * The total count.
              */
             public Builder missPlans(Long missPlans) {
                 this.missPlans = missPlans;
@@ -790,7 +791,9 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The network latency, in ms.
+             * The end time of the time range for querying TOP SQL statements.   
+             * <p>
+             * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
              */
             public Builder netWaitTime(Float netWaitTime) {
                 this.netWaitTime = netWaitTime;
@@ -798,7 +801,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the node.
+             * The username.
              */
             public Builder nodeIp(String nodeIp) {
                 this.nodeIp = nodeIp;
@@ -806,7 +809,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The queuing time, in ms.
+             * $.parameters[12].schema.enumValueTitles
              */
             public Builder queueTime(Float queueTime) {
                 this.queueTime = queueTime;
@@ -814,7 +817,9 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of RPCs.
+             * The start time of the time range for querying TOP SQL statements.   
+             * <p>
+             * The value must be UTC time in the format of YYYY-MM-DDThh:mm:ssZ.
              */
             public Builder RPCCount(Long RPCCount) {
                 this.RPCCount = RPCCount;
@@ -822,7 +827,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of remote plans.
+             * The return result of the request.
              */
             public Builder remotePlans(Long remotePlans) {
                 this.remotePlans = remotePlans;
@@ -830,7 +835,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of retries.
+             * $.parameters[13].schema.description
              */
             public Builder retryCount(Long retryCount) {
                 this.retryCount = retryCount;
@@ -838,7 +843,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows returned.
+             * The wait event.
              */
             public Builder returnRows(Long returnRows) {
                 this.returnRows = returnRows;
@@ -846,7 +851,25 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of row cache hits.
+             * ```
+             * <p>
+             * http(s)://[Endpoint]/?Action=DescribeTopSQLList
+             * &TenantId=t2mr3oae0****
+             * &StartTime=2021-06-13 15:40:43
+             * &EndTime=2021-09-13 15:40:43
+             * &DbName=testdb
+             * &SearchKeyWord=update
+             * &SearchParameter=cputime
+             * &SearchRule=>
+             * &SearchValue=0.01
+             * &SQLId=8D6E84****0B8FB1823D199E2CA1****
+             * &NodeIp=i-bp19y05uq6xpacyqnlrc
+             * &PageNumber=1
+             * &PageSize=10
+             * &SortColumn=cputime
+             * &SortOrder=desc
+             * &Common request parameters
+             * ```
              */
             public Builder rowCacheHit(Long rowCacheHit) {
                 this.rowCacheHit = rowCacheHit;
@@ -854,7 +877,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * SQLID.
+             * $.parameters[13].schema.example
              */
             public Builder SQLId(String SQLId) {
                 this.SQLId = SQLId;
@@ -862,7 +885,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL text.
+             * The list of top SQL statements.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -870,7 +893,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The SQL type.
+             * The request ID.
              */
             public Builder SQLType(Long SQLType) {
                 this.SQLType = SQLType;
@@ -878,7 +901,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling duration, in ms.
+             * The search keyword.
              */
             public Builder scheduleTime(Float scheduleTime) {
                 this.scheduleTime = scheduleTime;
@@ -886,7 +909,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows read from the disk.
+             * SsstoreReadRowCount.
              */
             public Builder ssstoreReadRowCount(Long ssstoreReadRowCount) {
                 this.ssstoreReadRowCount = ssstoreReadRowCount;
@@ -894,7 +917,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The internal wait time, in ms.
+             * -
              */
             public Builder totalWaitTime(Float totalWaitTime) {
                 this.totalWaitTime = totalWaitTime;
@@ -902,7 +925,7 @@ public class DescribeTopSQLListResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * The number of Bloom filter cache hits.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

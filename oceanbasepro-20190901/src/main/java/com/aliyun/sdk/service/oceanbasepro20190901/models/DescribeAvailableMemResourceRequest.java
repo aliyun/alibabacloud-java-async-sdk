@@ -114,7 +114,7 @@ public class DescribeAvailableMemResourceRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -123,7 +123,7 @@ public class DescribeAvailableMemResourceRequest extends Request {
         }
 
         /**
-         * The number of CPU cores.
+         * The available memory size.
          */
         public Builder cpuNum(Long cpuNum) {
             this.putBodyParameter("CpuNum", cpuNum);
@@ -132,7 +132,7 @@ public class DescribeAvailableMemResourceRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The ID of the region.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -150,9 +150,7 @@ public class DescribeAvailableMemResourceRequest extends Request {
         }
 
         /**
-         * The number of resource distribution nodes in the tenant.   
-         * <p>
-         * The number is determined by the deployment mode of the cluster. If the cluster is deployed in 2-2-2 mode, the maximum number of resource distribution nodes is 2.
+         * The number of resource units in the tenant.
          */
         public Builder unitNum(Long unitNum) {
             this.putBodyParameter("UnitNum", unitNum);

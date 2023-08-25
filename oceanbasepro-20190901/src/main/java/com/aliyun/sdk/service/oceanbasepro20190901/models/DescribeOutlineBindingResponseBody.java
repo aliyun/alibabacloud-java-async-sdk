@@ -84,11 +84,15 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
         @NameInMap("OutlineId")
         private Long outlineId;
 
+        @NameInMap("TableName")
+        private String tableName;
+
         private OutlineBinding(Builder builder) {
             this.bindIndex = builder.bindIndex;
             this.bindPlan = builder.bindPlan;
             this.maxConcurrent = builder.maxConcurrent;
             this.outlineId = builder.outlineId;
+            this.tableName = builder.tableName;
         }
 
         public static Builder builder() {
@@ -127,11 +131,19 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
             return this.outlineId;
         }
 
+        /**
+         * @return tableName
+         */
+        public String getTableName() {
+            return this.tableName;
+        }
+
         public static final class Builder {
             private String bindIndex; 
             private String bindPlan; 
             private Integer maxConcurrent; 
             private Long outlineId; 
+            private String tableName; 
 
             /**
              * The bound index.
@@ -162,6 +174,14 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
              */
             public Builder outlineId(Long outlineId) {
                 this.outlineId = outlineId;
+                return this;
+            }
+
+            /**
+             * 表名称
+             */
+            public Builder tableName(String tableName) {
+                this.tableName = tableName;
                 return this;
             }
 

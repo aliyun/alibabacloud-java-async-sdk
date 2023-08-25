@@ -138,7 +138,7 @@ public class DescribeInstancesRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -147,7 +147,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The number of CPU cores used in the cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -156,10 +156,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The name of the OceanBase cluster.    
-         * <p>
-         * It must be 1 to 20 characters in length.   
-         * If this parameter is not specified, the value is the instance ID of the cluster by default.
+         * The size of used memory in the cluster, in GB.
          */
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
@@ -168,11 +165,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.    
-         * <p>
-         * 
-         * - Start value: 1 
-         * - Default value: 1
+         * The total memory size of the cluster, in GB.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -181,10 +174,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of rows to return on each page.    
-         * <p>
-         * - Maximum value: 100   
-         * - Default value: 10
+         * The information about the memory resources of the cluster.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -193,7 +183,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The number of CPU cores of each replica node in the cluster.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -202,7 +192,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The search keyword.
+         * The memory size of each replica node in the cluster, in GB.
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);

@@ -84,7 +84,7 @@ public class DeleteSecurityIpGroupRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -93,7 +93,9 @@ public class DeleteSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The name of the IP address whitelist group.    
+         * <p>
+         * It must be 2 to 32 characters in length, start with a lowercase letter, end with a lowercase letter or digit, and contain only lowercase letters, digits, and underscores (_).
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -102,9 +104,7 @@ public class DeleteSecurityIpGroupRequest extends Request {
         }
 
         /**
-         * The name of the IP address whitelist group.    
-         * <p>
-         * It must be 2 to 32 characters in length, start with a lowercase letter, end with a lowercase letter or digit, and contain only lowercase letters, digits, and underscores (_).
+         * The information of the deleted IP whitelist group.
          */
         public Builder securityIpGroupName(String securityIpGroupName) {
             this.putBodyParameter("SecurityIpGroupName", securityIpGroupName);

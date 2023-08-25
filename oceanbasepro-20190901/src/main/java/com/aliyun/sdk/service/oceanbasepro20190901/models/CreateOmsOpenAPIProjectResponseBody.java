@@ -158,7 +158,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The suggestions (old).
+         * Advice.
          */
         public Builder advice(String advice) {
             this.advice = advice;
@@ -166,7 +166,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The error code (old).
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +174,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The time spent in processing the request, in seconds.
+         * Cost.
          */
         public Builder cost(String cost) {
             this.cost = cost;
@@ -182,7 +182,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The project creation details.
+         * Data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -190,7 +190,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The error details.
+         * ErrorDetail.
          */
         public Builder errorDetail(ErrorDetail errorDetail) {
             this.errorDetail = errorDetail;
@@ -198,7 +198,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The error description (old).
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -206,7 +206,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The page number, which takes effect in a pagination query.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -214,7 +214,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The page size, which takes effect in a pagination query.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -222,7 +222,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The total count, which takes effect in a pagination query.
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -314,7 +314,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
             private String proposal; 
 
             /**
-             * The error code (new).
+             * Code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -322,7 +322,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Valid values: CRITICAL, ERROR, and WARN.
+             * Level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -330,7 +330,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The error description (new).
+             * Message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -338,7 +338,7 @@ public class CreateOmsOpenAPIProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestions (new).
+             * Proposal.
              */
             public Builder proposal(String proposal) {
                 this.proposal = proposal;

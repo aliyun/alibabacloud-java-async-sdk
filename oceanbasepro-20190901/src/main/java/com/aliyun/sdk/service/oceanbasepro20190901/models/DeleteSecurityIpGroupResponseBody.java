@@ -50,7 +50,7 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
         private SecurityIpGroup securityIpGroup; 
 
         /**
-         * The request ID.
+         * Example 1
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the deleted IP whitelist group.
+         * SecurityIpGroup.
          */
         public Builder securityIpGroup(SecurityIpGroup securityIpGroup) {
             this.securityIpGroup = securityIpGroup;
@@ -110,7 +110,7 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
             private String securityIpGroupName; 
 
             /**
-             * The ID of the OceanBase cluster.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -118,7 +118,7 @@ public class DeleteSecurityIpGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the deleted IP address whitelist group.
+             * SecurityIpGroupName.
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;

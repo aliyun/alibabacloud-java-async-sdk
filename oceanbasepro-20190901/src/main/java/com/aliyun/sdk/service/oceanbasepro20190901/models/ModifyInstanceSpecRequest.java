@@ -98,7 +98,7 @@ public class ModifyInstanceSpecRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,7 +107,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * 存储空间大小，单位GB。 存储空间的限制根据集群规格不同而不同，具体如下： - 8C32G：100GB~10TB - 14C70G：200GB~10TB - 30C180G：400GB~10TB - 62C400G：800GB-10TB。 各套餐的存储空间默认值为其最小值。
+         * DiskSize.
          */
         public Builder diskSize(Long diskSize) {
             this.putBodyParameter("DiskSize", diskSize);
@@ -116,7 +116,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * 集群规格信息。 当前支持四种套餐： - 8C32GB：8核 32GB - 14C70GB（默认）：14核 70GB - 30C180GB：30核 180GB - 62C400GB：62核 400GB。
+         * InstanceClass.
          */
         public Builder instanceClass(String instanceClass) {
             this.putBodyParameter("InstanceClass", instanceClass);
@@ -125,7 +125,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Oceanbase集群的ID。
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

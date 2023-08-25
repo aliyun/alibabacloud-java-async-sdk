@@ -16,9 +16,14 @@ public class DescribeTenantUserRolesRequest extends Request {
     @NameInMap("RegionId")
     private String regionId;
 
+    @Body
+    @NameInMap("TenantId")
+    private String tenantId;
+
     private DescribeTenantUserRolesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.tenantId = builder.tenantId;
     }
 
     public static Builder builder() {
@@ -41,8 +46,16 @@ public class DescribeTenantUserRolesRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return tenantId
+     */
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeTenantUserRolesRequest, Builder> {
         private String regionId; 
+        private String tenantId; 
 
         private Builder() {
             super();
@@ -51,14 +64,24 @@ public class DescribeTenantUserRolesRequest extends Request {
         private Builder(DescribeTenantUserRolesRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.tenantId = request.tenantId;
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * TenantId.
+         */
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
             return this;
         }
 

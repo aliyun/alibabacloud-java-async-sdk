@@ -83,7 +83,7 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * 地域ID
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,11 +92,9 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The deployment type of the cluster. Valid values:   
+         * The operation that you want to perform.   
          * <p>
-         * - multiple: multi-IDC deployment   
-         * - single: single-IDC deployment   
-         * - dual: dual-IDC deployment
+         * Set the value to **DescribeZones**.
          */
         public Builder deployType(String deployType) {
             this.putBodyParameter("DeployType", deployType);
@@ -105,9 +103,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * The series of the OceanBase cluster. Valid values:   
-         * <p>
-         * NORMAL: the high availability version. This is the default value.
+         * The deployment mode.
          */
         public Builder series(String series) {
             this.putBodyParameter("Series", series);

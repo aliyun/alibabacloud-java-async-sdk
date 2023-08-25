@@ -50,7 +50,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
         private TenantUser tenantUser; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * The list of database accounts in the tenant.
+         * The ID of the tenant.
          */
         public Builder tenantUser(TenantUser tenantUser) {
             this.tenantUser = tenantUser;
@@ -134,7 +134,16 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * The name of the database (MySQL mode) or schema (Oracle mode).
+             * ```
+             * <p>
+             * http(s)://[Endpoint]/?Action=ModifyTenantUserRoles
+             * &UserName=pay_test
+             * &TenantId=ob2mr3oae0****
+             * &UserRole=[{"Database":"20210824160559","Role":"readwrite"}]
+             * &InstanceId=ob317v4uif****
+             * &ModifyType=update
+             * &Common request parameters
+             * ```
              */
             public Builder database(String database) {
                 this.database = database;
@@ -142,7 +151,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the privilege was granted to the role.
+             * IsSuccess.
              */
             public Builder isSuccess(Boolean isSuccess) {
                 this.isSuccess = isSuccess;
@@ -150,7 +159,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the account.
+             * You can call this operation to modify the database privileges of a specified account in a tenant.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -158,7 +167,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the table.
+             * Table.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -223,7 +232,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             private java.util.List < UserRole> userRole; 
 
             /**
-             * The ID of the tenant.
+             * TenantId.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -231,7 +240,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -239,10 +248,7 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account. Valid values:   
-             * <p>
-             * - Admin: the super administrator account.   
-             * - Normal: a general account.
+             * The name of the database (MySQL mode) or schema (Oracle mode).
              */
             public Builder userRole(java.util.List < UserRole> userRole) {
                 this.userRole = userRole;

@@ -69,7 +69,7 @@ public class DescribeInstanceCreatableZoneRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -78,7 +78,7 @@ public class DescribeInstanceCreatableZoneRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The ID of the zone.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

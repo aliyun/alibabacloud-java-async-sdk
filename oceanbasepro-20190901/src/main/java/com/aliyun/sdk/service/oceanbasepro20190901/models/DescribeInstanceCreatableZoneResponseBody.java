@@ -50,7 +50,7 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
         private java.util.List < ZoneList> zoneList; 
 
         /**
-         * The request ID.
+         * Indicates whether the cluster is deployed in the zone.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,9 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
         }
 
         /**
-         * The list of zones.
+         * The operation that you want to perform.   
+         * <p>
+         * Set the value to **DescribeInstanceCreatableZone**.
          */
         public Builder zoneList(java.util.List < ZoneList> zoneList) {
             this.zoneList = zoneList;
@@ -110,7 +112,7 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * Indicates whether the cluster is deployed in the zone.
+             * IsInCluster.
              */
             public Builder isInCluster(Boolean isInCluster) {
                 this.isInCluster = isInCluster;
@@ -118,7 +120,7 @@ public class DescribeInstanceCreatableZoneResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the zone.
+             * DescribeInstanceCreatableZone
              */
             public Builder zone(String zone) {
                 this.zone = zone;

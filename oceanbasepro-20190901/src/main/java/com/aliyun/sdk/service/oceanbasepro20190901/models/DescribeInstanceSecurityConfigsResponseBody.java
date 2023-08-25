@@ -58,7 +58,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             private String riskDescription; 
 
             /**
-             * 检测项名称
+             * ConfigDescription.
              */
             public Builder configDescription(String configDescription) {
                 this.configDescription = configDescription;
@@ -154,7 +154,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 检测分组
+             * ConfigGroup.
              */
             public Builder configGroup(String configGroup) {
                 this.configGroup = configGroup;
@@ -162,7 +162,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 具体检测项名称
+             * ConfigName.
              */
             public Builder configName(String configName) {
                 this.configName = configName;
@@ -170,7 +170,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否存在风险
+             * Risk.
              */
             public Builder risk(Boolean risk) {
                 this.risk = risk;
@@ -178,7 +178,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 安全建议
+             * RiskDescription.
              */
             public Builder riskDescription(String riskDescription) {
                 this.riskDescription = riskDescription;
@@ -243,7 +243,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             private Integer totalRiskCount; 
 
             /**
-             * 检测项目列表
+             * SecurityConfigs.
              */
             public Builder securityConfigs(java.util.List < SecurityConfigs> securityConfigs) {
                 this.securityConfigs = securityConfigs;
@@ -251,7 +251,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 集群安全项检测总数
+             * TotalCheckCount.
              */
             public Builder totalCheckCount(Integer totalCheckCount) {
                 this.totalCheckCount = totalCheckCount;
@@ -259,7 +259,7 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 集群安全项风险总数
+             * TotalRiskCount.
              */
             public Builder totalRiskCount(Integer totalRiskCount) {
                 this.totalRiskCount = totalRiskCount;

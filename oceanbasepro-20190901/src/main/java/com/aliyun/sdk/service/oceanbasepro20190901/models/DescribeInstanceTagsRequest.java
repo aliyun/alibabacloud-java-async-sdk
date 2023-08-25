@@ -83,7 +83,7 @@ public class DescribeInstanceTagsRequest extends Request {
         } 
 
         /**
-         * 地域ID
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -92,7 +92,7 @@ public class DescribeInstanceTagsRequest extends Request {
         }
 
         /**
-         * The list of cluster IDs.
+         * The list of tags.
          */
         public Builder instanceIds(String instanceIds) {
             this.putBodyParameter("InstanceIds", instanceIds);
@@ -101,7 +101,7 @@ public class DescribeInstanceTagsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * The returned response.
          */
         public Builder tags(String tags) {
             this.putBodyParameter("Tags", tags);

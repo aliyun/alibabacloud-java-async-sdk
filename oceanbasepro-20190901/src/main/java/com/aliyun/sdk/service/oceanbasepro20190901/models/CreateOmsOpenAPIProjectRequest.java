@@ -203,7 +203,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The business system identifier, which is optional and is a specific field of the Post message.
+         * BusinessName.
          */
         public Builder businessName(String businessName) {
             this.putBodyParameter("BusinessName", businessName);
@@ -212,7 +212,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The settings of the destination data source.
+         * DestConfig.
          */
         public Builder destConfig(DestConfig destConfig) {
             String destConfigShrink = shrink(destConfig, "DestConfig", "json");
@@ -222,7 +222,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * A collection of label IDs.
+         * LabelIds.
          */
         public Builder labelIds(java.util.List < String > labelIds) {
             String labelIdsShrink = shrink(labelIds, "LabelIds", "json");
@@ -232,7 +232,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The page number, which takes effect in a pagination query.
+         * 页序号，分页查询时生效
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -241,7 +241,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The page size, which takes effect in a pagination query.
+         * 页大小，分页查询时生效
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -250,7 +250,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The name of the project.
+         * ProjectName.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -259,7 +259,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The settings of the source data source.
+         * SourceConfig.
          */
         public Builder sourceConfig(SourceConfig sourceConfig) {
             String sourceConfigShrink = shrink(sourceConfig, "SourceConfig", "json");
@@ -269,7 +269,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The mappings for the synchronization objects.
+         * TransferMapping.
          */
         public Builder transferMapping(TransferMapping transferMapping) {
             String transferMappingShrink = shrink(transferMapping, "TransferMapping", "json");
@@ -279,7 +279,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The settings of synchronization steps.
+         * TransferStepConfig.
          */
         public Builder transferStepConfig(TransferStepConfig transferStepConfig) {
             String transferStepConfigShrink = shrink(transferStepConfig, "TransferStepConfig", "json");
@@ -289,7 +289,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
         }
 
         /**
-         * The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.
+         * 实例规格 ID，创建项目时生效
          */
         public Builder workerGradeId(String workerGradeId) {
             this.putBodyParameter("WorkerGradeId", workerGradeId);
@@ -463,7 +463,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private String topicType; 
 
             /**
-             * Specifies whether to enable message tracing when the destination data source is RocketMQ.
+             * EnableMsgTrace.
              */
             public Builder enableMsgTrace(Boolean enableMsgTrace) {
                 this.enableMsgTrace = enableMsgTrace;
@@ -471,7 +471,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The ID of the data source.
+             * EndpointId.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -479,7 +479,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The type of the data source. Valid values: `MYSQL`, `MARIADB`, `OB_MYSQL`, `OB_MYSQL_CE`, `OB_ORACLE`, `ORACLE`, `DB2_LUW`, `KAFKA`, `ROCKETMQ`, `DATAHUB`, `SYBASE`, `LOGPROXY`, `ADB`, `DBP_OP_ROUTE`, `DMS`, `IDB`, and `TIDB`.
+             * EndpointType.
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -487,7 +487,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The tag of the Post message when the destination data source is RocketMQ.
+             * MsgTags.
              */
             public Builder msgTags(String msgTags) {
                 this.msgTags = msgTags;
@@ -495,7 +495,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The partitioned index, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ, and the partitioning mode is set to ONE.
+             * Partition.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -503,7 +503,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The partitioning mode, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: ONE, HASH, and TABLE.
+             * PartitionMode.
              */
             public Builder partitionMode(String partitionMode) {
                 this.partitionMode = partitionMode;
@@ -511,7 +511,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The producer group of the Post message when the destination data source is RocketMQ.
+             * ProducerGroup.
              */
             public Builder producerGroup(String producerGroup) {
                 this.producerGroup = producerGroup;
@@ -519,7 +519,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The timeout period for a single Post message when the destination data source is RocketMQ.
+             * SendMsgTimeout.
              */
             public Builder sendMsgTimeout(Long sendMsgTimeout) {
                 this.sendMsgTimeout = sendMsgTimeout;
@@ -527,7 +527,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable message sequencing when the destination data source is DataHub.
+             * SequenceEnable.
              */
             public Builder sequenceEnable(Boolean sequenceEnable) {
                 this.sequenceEnable = sequenceEnable;
@@ -535,7 +535,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The start time of the sequence, which must be specified if the destination data source is DataHub and message sequencing is enabled. The value is a timestamp in seconds.
+             * SequenceStartTimestamp.
              */
             public Builder sequenceStartTimestamp(Long sequenceStartTimestamp) {
                 this.sequenceStartTimestamp = sequenceStartTimestamp;
@@ -543,7 +543,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The text serialization type, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: Default, Canal, Dataworks, SharePlex, and DefaultExtendColumnType.
+             * SerializerType.
              */
             public Builder serializerType(String serializerType) {
                 this.serializerType = serializerType;
@@ -551,7 +551,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The type of the topic to which the Post message belongs when the destination data source is DataHub. Valid values: Tuple and Blob.
+             * TopicType.
              */
             public Builder topicType(String topicType) {
                 this.topicType = topicType;
@@ -724,7 +724,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private String topicType; 
 
             /**
-             * Specifies whether to enable message tracing when the destination data source is RocketMQ.
+             * EnableMsgTrace.
              */
             public Builder enableMsgTrace(Boolean enableMsgTrace) {
                 this.enableMsgTrace = enableMsgTrace;
@@ -732,7 +732,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The ID of the data source.
+             * EndpointId.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -740,7 +740,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The type of the data source. Valid values: `MYSQL`, `MARIADB`, `OB_MYSQL`, `OB_MYSQL_CE`, `OB_ORACLE`, `ORACLE`, `DB2_LUW`, `KAFKA`, `ROCKETMQ`, `DATAHUB`, `SYBASE`, `LOGPROXY`, `ADB`, `DBP_OP_ROUTE`, `DMS`, `IDB`, and `TIDB`.
+             * EndpointType.
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -748,7 +748,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The tag of the Post message when the destination data source is RocketMQ.
+             * MsgTags.
              */
             public Builder msgTags(String msgTags) {
                 this.msgTags = msgTags;
@@ -756,7 +756,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The partitioned index, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ, and the partitioning mode is set to ONE.
+             * Partition.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -764,7 +764,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The partitioning mode, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: ONE, HASH, and TABLE.
+             * PartitionMode.
              */
             public Builder partitionMode(String partitionMode) {
                 this.partitionMode = partitionMode;
@@ -772,7 +772,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The producer group of the Post message when the destination data source is RocketMQ.
+             * ProducerGroup.
              */
             public Builder producerGroup(String producerGroup) {
                 this.producerGroup = producerGroup;
@@ -780,7 +780,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The timeout period for a single Post message when the destination data source is RocketMQ.
+             * SendMsgTimeout.
              */
             public Builder sendMsgTimeout(Long sendMsgTimeout) {
                 this.sendMsgTimeout = sendMsgTimeout;
@@ -788,7 +788,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable message sequencing when the destination data source is DataHub.
+             * SequenceEnable.
              */
             public Builder sequenceEnable(Boolean sequenceEnable) {
                 this.sequenceEnable = sequenceEnable;
@@ -796,7 +796,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The start time of the sequence, which must be specified if the destination data source is DataHub and message sequencing is enabled. The value is a timestamp in seconds.
+             * SequenceStartTimestamp.
              */
             public Builder sequenceStartTimestamp(Long sequenceStartTimestamp) {
                 this.sequenceStartTimestamp = sequenceStartTimestamp;
@@ -804,7 +804,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The text serialization type, which must be specified if the destination data source is a message queue system, such as Kafka, DataHub, or RocketMQ. Valid values: Default, Canal, Dataworks, SharePlex, and DefaultExtendColumnType.
+             * SerializerType.
              */
             public Builder serializerType(String serializerType) {
                 this.serializerType = serializerType;
@@ -812,7 +812,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The type of the topic to which the Post message belongs when the destination data source is DataHub. Valid values: Tuple and Blob.
+             * TopicType.
              */
             public Builder topicType(String topicType) {
                 this.topicType = topicType;
@@ -889,7 +889,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private java.util.List < String > primaryKeys; 
 
             /**
-             * The list of distribution key columns.
+             * DistributedKeys.
              */
             public Builder distributedKeys(java.util.List < String > distributedKeys) {
                 this.distributedKeys = distributedKeys;
@@ -897,7 +897,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The lifecycle of the table.
+             * PartitionLifeCycle.
              */
             public Builder partitionLifeCycle(Integer partitionLifeCycle) {
                 this.partitionLifeCycle = partitionLifeCycle;
@@ -905,7 +905,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The partitioning expression.
+             * PartitionStatement.
              */
             public Builder partitionStatement(String partitionStatement) {
                 this.partitionStatement = partitionStatement;
@@ -913,7 +913,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The list of primary key columns.
+             * PrimaryKeys.
              */
             public Builder primaryKeys(java.util.List < String > primaryKeys) {
                 this.primaryKeys = primaryKeys;
@@ -1038,7 +1038,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private String whereClause; 
 
             /**
-             * The schema of the ADB table. If the destination data source is ADB, you need to configure additional information for schema synchronization.
+             * AdbTableSchema.
              */
             public Builder adbTableSchema(AdbTableSchema adbTableSchema) {
                 this.adbTableSchema = adbTableSchema;
@@ -1046,7 +1046,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The list of filter columns, which are the columns to be synchronized.
+             * FilterColumns.
              */
             public Builder filterColumns(java.util.List < String > filterColumns) {
                 this.filterColumns = filterColumns;
@@ -1054,7 +1054,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The name of the mapped-to table or topic. If the destination data source is a database, this parameter specifies the name of the mapped-to table. If the destination data source is a message queue system, this parameter specifies the name of the mapped-to topic.
+             * MappedName.
              */
             public Builder mappedName(String mappedName) {
                 this.mappedName = mappedName;
@@ -1062,7 +1062,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The list of sharding key columns. This parameter applies to scenarios where the destination data source is a message queue system.
+             * ShardColumns.
              */
             public Builder shardColumns(java.util.List < String > shardColumns) {
                 this.shardColumns = shardColumns;
@@ -1070,7 +1070,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The ID of the table. This parameter takes effect when the source data source is IDB.
+             * TableId.
              */
             public Builder tableId(String tableId) {
                 this.tableId = tableId;
@@ -1078,7 +1078,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The name of the table.
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -1086,7 +1086,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * Valid values: DATABASE and TABLE.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1094,7 +1094,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The row filter conditions.
+             * WhereClause.
              */
             public Builder whereClause(String whereClause) {
                 this.whereClause = whereClause;
@@ -1195,7 +1195,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private String type; 
 
             /**
-             * The ID of the database. This parameter takes effect when the source data source is IDB.
+             * DatabaseId.
              */
             public Builder databaseId(String databaseId) {
                 this.databaseId = databaseId;
@@ -1203,7 +1203,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The name of the database.
+             * DatabaseName.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -1211,7 +1211,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The mapped-to database. This parameter takes effect when the destination data source is a database.
+             * MappedName.
              */
             public Builder mappedName(String mappedName) {
                 this.mappedName = mappedName;
@@ -1219,7 +1219,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The settings for the target table objects in the current database.
+             * Tables.
              */
             public Builder tables(java.util.List < Tables> tables) {
                 this.tables = tables;
@@ -1227,7 +1227,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The mapped-to tenant. This parameter takes effect when the source data source is OceanBase Database.
+             * TenantName.
              */
             public Builder tenantName(String tenantName) {
                 this.tenantName = tenantName;
@@ -1235,7 +1235,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * Valid values: DATABASE and TABLE.
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1288,7 +1288,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private String mode; 
 
             /**
-             * The table mapping in the source data source, which is a conventional mapping scheme and takes effect only when Mode is set to NORMAL.
+             * Databases.
              */
             public Builder databases(java.util.List < Databases> databases) {
                 this.databases = databases;
@@ -1296,7 +1296,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The mapping type. Valid values: \"NORMAL\" and \"WHITE_AND_BLACK_LIST\".
+             * Mode.
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -1385,7 +1385,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private String transferStepType; 
 
             /**
-             * The list of data types of incremental data synchronized in incremental synchronization.
+             * RecordTypeList.
              */
             public Builder recordTypeList(java.util.List < String > recordTypeList) {
                 this.recordTypeList = recordTypeList;
@@ -1393,7 +1393,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The start time for incremental synchronization. The value is a timestamp in seconds.
+             * StartTimestamp.
              */
             public Builder startTimestamp(Long startTimestamp) {
                 this.startTimestamp = startTimestamp;
@@ -1401,7 +1401,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The retention time of logs when incremental synchronization is enabled and the incremental log pull component is Store.
+             * StoreLogKeptHour.
              */
             public Builder storeLogKeptHour(Long storeLogKeptHour) {
                 this.storeLogKeptHour = storeLogKeptHour;
@@ -1409,7 +1409,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable intra-transaction sequencing when incremental synchronization is enabled and the incremental log pull component is Store.
+             * StoreTransactionEnabled.
              */
             public Builder storeTransactionEnabled(Boolean storeTransactionEnabled) {
                 this.storeTransactionEnabled = storeTransactionEnabled;
@@ -1417,7 +1417,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * Valid values: STRUCT, FULL, and INCR.
+             * TransferStepType.
              */
             public Builder transferStepType(String transferStepType) {
                 this.transferStepType = transferStepType;
@@ -1494,7 +1494,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             private IncrSyncStepTransferConfig incrSyncStepTransferConfig; 
 
             /**
-             * Specifies whether to enable full migration.
+             * EnableFullSync.
              */
             public Builder enableFullSync(Boolean enableFullSync) {
                 this.enableFullSync = enableFullSync;
@@ -1502,7 +1502,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable incremental synchronization.
+             * EnableIncrSync.
              */
             public Builder enableIncrSync(Boolean enableIncrSync) {
                 this.enableIncrSync = enableIncrSync;
@@ -1510,7 +1510,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable schema synchronization.
+             * EnableStructSync.
              */
             public Builder enableStructSync(Boolean enableStructSync) {
                 this.enableStructSync = enableStructSync;
@@ -1518,7 +1518,7 @@ public class CreateOmsOpenAPIProjectRequest extends Request {
             }
 
             /**
-             * The settings of incremental synchronization steps.
+             * IncrSyncStepTransferConfig.
              */
             public Builder incrSyncStepTransferConfig(IncrSyncStepTransferConfig incrSyncStepTransferConfig) {
                 this.incrSyncStepTransferConfig = incrSyncStepTransferConfig;

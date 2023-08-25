@@ -158,7 +158,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The suggestions (old).
+         * The ID of the migration instance. Generally, if you want to create a project on a public cloud, you must first purchase a migration instance.
          */
         public Builder advice(String advice) {
             this.advice = advice;
@@ -166,7 +166,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The error code (old).
+         * The business data returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +174,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The time spent in processing the request, in seconds.
+         * The request ID.
          */
         public Builder cost(String cost) {
             this.cost = cost;
@@ -182,7 +182,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The business data returned.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -190,7 +190,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The error details.
+         * A system error occurred.
          */
         public Builder errorDetail(ErrorDetail errorDetail) {
             this.errorDetail = errorDetail;
@@ -198,7 +198,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The error description (old).
+         * The suggestions (old).
          */
         public Builder message(String message) {
             this.message = message;
@@ -206,7 +206,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The page number, which takes effect in a pagination query.
+         * The error code (new).
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -214,7 +214,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The page size, which takes effect in a pagination query.
+         * The page number, which takes effect in a pagination query.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -222,7 +222,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The time spent in processing the request, in seconds.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * The total count, which takes effect in a pagination query.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The total count, which takes effect in a pagination query.
+         * The error details.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -290,7 +290,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
             private Double value; 
 
             /**
-             * A millisecond-level timestamp.
+             * Timestamp.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -298,7 +298,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The value corresponding to the time.
+             * Value.
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -371,7 +371,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the metric.
+             * Metric.
              */
             public Builder metric(String metric) {
                 this.metric = metric;
@@ -456,7 +456,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
             private String proposal; 
 
             /**
-             * The error code (new).
+             * The information about the object.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -464,7 +464,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The error level. Valid values: CRITICAL, ERROR, and WARN.
+             * The error code (old).
              */
             public Builder level(String level) {
                 this.level = level;
@@ -472,7 +472,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The error description (new).
+             * The ID of the project to query.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -480,7 +480,7 @@ public class SearchOmsOpenAPIMonitorMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestions (new).
+             * The error description (new).
              */
             public Builder proposal(String proposal) {
                 this.proposal = proposal;

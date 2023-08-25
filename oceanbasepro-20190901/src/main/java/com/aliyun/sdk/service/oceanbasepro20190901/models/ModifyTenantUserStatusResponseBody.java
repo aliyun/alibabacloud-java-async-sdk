@@ -50,7 +50,7 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
         private java.util.List < TenantUser> tenantUser; 
 
         /**
-         * The request ID.
+         * Example 1
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The list of database accounts in the tenant.
+         * TenantUser.
          */
         public Builder tenantUser(java.util.List < TenantUser> tenantUser) {
             this.tenantUser = tenantUser;
@@ -122,7 +122,7 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
             private String userStatus; 
 
             /**
-             * The ID of the tenant.
+             * TenantId.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -130,7 +130,7 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * UserName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -138,10 +138,7 @@ public class ModifyTenantUserStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the database account. Valid values:   
-             * <p>
-             * - LOCKED: The account is locked. 
-             * - ONLINE: The account is unlocked.
+             * UserStatus.
              */
             public Builder userStatus(String userStatus) {
                 this.userStatus = userStatus;

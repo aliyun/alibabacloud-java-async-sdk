@@ -85,7 +85,7 @@ public class DescribeTenantZonesReadRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +94,7 @@ public class DescribeTenantZonesReadRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The zone information of the tenant.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -103,7 +103,7 @@ public class DescribeTenantZonesReadRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The return result of the request.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

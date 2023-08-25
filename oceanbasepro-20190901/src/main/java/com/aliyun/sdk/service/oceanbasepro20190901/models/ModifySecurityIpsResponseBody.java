@@ -58,7 +58,7 @@ public class ModifySecurityIpsResponseBody extends TeaModel {
         }
 
         /**
-         * The information of the IP address whitelist group.
+         * Example 1
          */
         public Builder securityIpGroup(SecurityIpGroup securityIpGroup) {
             this.securityIpGroup = securityIpGroup;
@@ -122,7 +122,7 @@ public class ModifySecurityIpsResponseBody extends TeaModel {
             private String securityIps; 
 
             /**
-             * The ID of the OceanBase cluster.
+             * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -130,7 +130,7 @@ public class ModifySecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the security group.
+             * SecurityIpGroupName.
              */
             public Builder securityIpGroupName(String securityIpGroupName) {
                 this.securityIpGroupName = securityIpGroupName;
@@ -138,9 +138,7 @@ public class ModifySecurityIpsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of IP addresses and CIDR blocks in the whitelist.   
-             * <p>
-             * The return values of SecurityIps are strings that are separated with commas (,).
+             * SecurityIps.
              */
             public Builder securityIps(String securityIps) {
                 this.securityIps = securityIps;

@@ -114,7 +114,7 @@ public class ModifyDatabaseDescriptionRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -123,9 +123,7 @@ public class ModifyDatabaseDescriptionRequest extends Request {
         }
 
         /**
-         * The name of the database.    
-         * <p>
-         * You cannot use reserved keywords, such as test and mysql.
+         * Example 1
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -134,7 +132,7 @@ public class ModifyDatabaseDescriptionRequest extends Request {
         }
 
         /**
-         * The description of the database.
+         * Description.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -143,7 +141,7 @@ public class ModifyDatabaseDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The description of the database.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -152,7 +150,9 @@ public class ModifyDatabaseDescriptionRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The operation that you want to perform.   
+         * <p>
+         * Set the value to **ModifyDatabaseDescription**.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

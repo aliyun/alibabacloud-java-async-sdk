@@ -98,7 +98,7 @@ public class DescribeParametersRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,9 +107,7 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * The type of the parameter.    
-         * <p>
-         * Valid values: CLUSTER and TENANT.
+         * It is an online CLI tool that allows you to quickly retrieve and debug APIs. It can dynamically generate executable SDK code samples.
          */
         public Builder dimension(String dimension) {
             this.putBodyParameter("Dimension", dimension);
@@ -118,9 +116,7 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * The resource ID of the parameter type.   
-         * <p>
-         * You can leave this parameter unspecified when you call this operation to query cluster parameters. In the case of tenant parameters, pass the tenant ID.
+         * Alibaba Cloud CLI
          */
         public Builder dimensionValue(String dimensionValue) {
             this.putBodyParameter("DimensionValue", dimensionValue);
@@ -129,7 +125,7 @@ public class DescribeParametersRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * 498529
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

@@ -62,7 +62,7 @@ public class DescribeTenantMetricsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeTenantMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * The metrics of the tenant.
+         * TenantMetrics.
          */
         public Builder tenantMetrics(String tenantMetrics) {
             this.tenantMetrics = tenantMetrics;
@@ -78,7 +78,7 @@ public class DescribeTenantMetricsResponseBody extends TeaModel {
         }
 
         /**
-         * The total count.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

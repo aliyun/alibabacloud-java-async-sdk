@@ -62,7 +62,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The information of the OceanBase cluster.
+         * The total storage space of the cluster, in GB.
          */
         public Builder instances(java.util.List < Instances> instances) {
             this.instances = instances;
@@ -70,7 +70,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of OceanBase clusters queried.
+         * TotalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -91,7 +91,252 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     } 
 
+    public static class DataDiskAutoScaleConfig extends TeaModel {
+        @NameInMap("AutoScale")
+        private Boolean autoScale;
+
+        @NameInMap("MaxDiskSize")
+        private Long maxDiskSize;
+
+        @NameInMap("ScaleStepInMerge")
+        private Long scaleStepInMerge;
+
+        @NameInMap("ScaleStepInNormal")
+        private Long scaleStepInNormal;
+
+        @NameInMap("UpperMergeThreshold")
+        private Long upperMergeThreshold;
+
+        @NameInMap("UpperThreshold")
+        private Long upperThreshold;
+
+        @NameInMap("Upperbound")
+        private Long upperbound;
+
+        private DataDiskAutoScaleConfig(Builder builder) {
+            this.autoScale = builder.autoScale;
+            this.maxDiskSize = builder.maxDiskSize;
+            this.scaleStepInMerge = builder.scaleStepInMerge;
+            this.scaleStepInNormal = builder.scaleStepInNormal;
+            this.upperMergeThreshold = builder.upperMergeThreshold;
+            this.upperThreshold = builder.upperThreshold;
+            this.upperbound = builder.upperbound;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DataDiskAutoScaleConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return autoScale
+         */
+        public Boolean getAutoScale() {
+            return this.autoScale;
+        }
+
+        /**
+         * @return maxDiskSize
+         */
+        public Long getMaxDiskSize() {
+            return this.maxDiskSize;
+        }
+
+        /**
+         * @return scaleStepInMerge
+         */
+        public Long getScaleStepInMerge() {
+            return this.scaleStepInMerge;
+        }
+
+        /**
+         * @return scaleStepInNormal
+         */
+        public Long getScaleStepInNormal() {
+            return this.scaleStepInNormal;
+        }
+
+        /**
+         * @return upperMergeThreshold
+         */
+        public Long getUpperMergeThreshold() {
+            return this.upperMergeThreshold;
+        }
+
+        /**
+         * @return upperThreshold
+         */
+        public Long getUpperThreshold() {
+            return this.upperThreshold;
+        }
+
+        /**
+         * @return upperbound
+         */
+        public Long getUpperbound() {
+            return this.upperbound;
+        }
+
+        public static final class Builder {
+            private Boolean autoScale; 
+            private Long maxDiskSize; 
+            private Long scaleStepInMerge; 
+            private Long scaleStepInNormal; 
+            private Long upperMergeThreshold; 
+            private Long upperThreshold; 
+            private Long upperbound; 
+
+            /**
+             * AutoScale.
+             */
+            public Builder autoScale(Boolean autoScale) {
+                this.autoScale = autoScale;
+                return this;
+            }
+
+            /**
+             * MaxDiskSize.
+             */
+            public Builder maxDiskSize(Long maxDiskSize) {
+                this.maxDiskSize = maxDiskSize;
+                return this;
+            }
+
+            /**
+             * ScaleStepInMerge.
+             */
+            public Builder scaleStepInMerge(Long scaleStepInMerge) {
+                this.scaleStepInMerge = scaleStepInMerge;
+                return this;
+            }
+
+            /**
+             * ScaleStepInNormal.
+             */
+            public Builder scaleStepInNormal(Long scaleStepInNormal) {
+                this.scaleStepInNormal = scaleStepInNormal;
+                return this;
+            }
+
+            /**
+             * UpperMergeThreshold.
+             */
+            public Builder upperMergeThreshold(Long upperMergeThreshold) {
+                this.upperMergeThreshold = upperMergeThreshold;
+                return this;
+            }
+
+            /**
+             * UpperThreshold.
+             */
+            public Builder upperThreshold(Long upperThreshold) {
+                this.upperThreshold = upperThreshold;
+                return this;
+            }
+
+            /**
+             * Upperbound.
+             */
+            public Builder upperbound(Long upperbound) {
+                this.upperbound = upperbound;
+                return this;
+            }
+
+            public DataDiskAutoScaleConfig build() {
+                return new DataDiskAutoScaleConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class CapacityUnit extends TeaModel {
+        @NameInMap("MaxCapacityUnit")
+        private Integer maxCapacityUnit;
+
+        @NameInMap("MinCapacityUnit")
+        private Integer minCapacityUnit;
+
+        @NameInMap("UsedCapacityUnit")
+        private Integer usedCapacityUnit;
+
+        private CapacityUnit(Builder builder) {
+            this.maxCapacityUnit = builder.maxCapacityUnit;
+            this.minCapacityUnit = builder.minCapacityUnit;
+            this.usedCapacityUnit = builder.usedCapacityUnit;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CapacityUnit create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxCapacityUnit
+         */
+        public Integer getMaxCapacityUnit() {
+            return this.maxCapacityUnit;
+        }
+
+        /**
+         * @return minCapacityUnit
+         */
+        public Integer getMinCapacityUnit() {
+            return this.minCapacityUnit;
+        }
+
+        /**
+         * @return usedCapacityUnit
+         */
+        public Integer getUsedCapacityUnit() {
+            return this.usedCapacityUnit;
+        }
+
+        public static final class Builder {
+            private Integer maxCapacityUnit; 
+            private Integer minCapacityUnit; 
+            private Integer usedCapacityUnit; 
+
+            /**
+             * MaxCapacityUnit.
+             */
+            public Builder maxCapacityUnit(Integer maxCapacityUnit) {
+                this.maxCapacityUnit = maxCapacityUnit;
+                return this;
+            }
+
+            /**
+             * MinCapacityUnit.
+             */
+            public Builder minCapacityUnit(Integer minCapacityUnit) {
+                this.minCapacityUnit = minCapacityUnit;
+                return this;
+            }
+
+            /**
+             * UsedCapacityUnit.
+             */
+            public Builder usedCapacityUnit(Integer usedCapacityUnit) {
+                this.usedCapacityUnit = usedCapacityUnit;
+                return this;
+            }
+
+            public CapacityUnit build() {
+                return new CapacityUnit(this);
+            } 
+
+        } 
+
+    }
     public static class Cpu extends TeaModel {
+        @NameInMap("OriginalTotalCpu")
+        private Long originalTotalCpu;
+
         @NameInMap("TotalCpu")
         private Long totalCpu;
 
@@ -102,6 +347,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Long usedCpu;
 
         private Cpu(Builder builder) {
+            this.originalTotalCpu = builder.originalTotalCpu;
             this.totalCpu = builder.totalCpu;
             this.unitCpu = builder.unitCpu;
             this.usedCpu = builder.usedCpu;
@@ -113,6 +359,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static Cpu create() {
             return builder().build();
+        }
+
+        /**
+         * @return originalTotalCpu
+         */
+        public Long getOriginalTotalCpu() {
+            return this.originalTotalCpu;
         }
 
         /**
@@ -137,12 +390,24 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long originalTotalCpu; 
             private Long totalCpu; 
             private Long unitCpu; 
             private Long usedCpu; 
 
             /**
-             * The total number of CPU cores of the cluster.
+             * OriginalTotalCpu.
+             */
+            public Builder originalTotalCpu(Long originalTotalCpu) {
+                this.originalTotalCpu = originalTotalCpu;
+                return this;
+            }
+
+            /**
+             * The name of the OceanBase cluster.    
+             * <p>
+             * It must be 1 to 20 characters in length.   
+             * If this parameter is not specified, the value is the instance ID of the cluster by default.
              */
             public Builder totalCpu(Long totalCpu) {
                 this.totalCpu = totalCpu;
@@ -150,7 +415,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores of each replica node in the cluster.
+             * The data replica distribution mode of the cluster. Valid values:    
+             * <p>
+             * 
+             * - n: indicates the single-IDC mode.  
+             * - n-n: indicates the dual-IDC mode.  
+             * - n-n-n: indicates the multi-IDC mode. The integer n represents the number of OBServer nodes in each IDC.
              */
             public Builder unitCpu(Long unitCpu) {
                 this.unitCpu = unitCpu;
@@ -158,7 +428,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of CPU cores used in the cluster.
+             * The search keyword.
              */
             public Builder usedCpu(Long usedCpu) {
                 this.usedCpu = usedCpu;
@@ -173,6 +443,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class DiskSize extends TeaModel {
+        @NameInMap("OriginalTotalDiskSize")
+        private Long originalTotalDiskSize;
+
         @NameInMap("TotalDiskSize")
         private Long totalDiskSize;
 
@@ -183,6 +456,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Long usedDiskSize;
 
         private DiskSize(Builder builder) {
+            this.originalTotalDiskSize = builder.originalTotalDiskSize;
             this.totalDiskSize = builder.totalDiskSize;
             this.unitDiskSize = builder.unitDiskSize;
             this.usedDiskSize = builder.usedDiskSize;
@@ -194,6 +468,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static DiskSize create() {
             return builder().build();
+        }
+
+        /**
+         * @return originalTotalDiskSize
+         */
+        public Long getOriginalTotalDiskSize() {
+            return this.originalTotalDiskSize;
         }
 
         /**
@@ -218,12 +499,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long originalTotalDiskSize; 
             private Long totalDiskSize; 
             private Long unitDiskSize; 
             private Long usedDiskSize; 
 
             /**
-             * The total storage space of the cluster, in GB.
+             * OriginalTotalDiskSize.
+             */
+            public Builder originalTotalDiskSize(Long originalTotalDiskSize) {
+                this.originalTotalDiskSize = originalTotalDiskSize;
+                return this;
+            }
+
+            /**
+             * The request ID.
              */
             public Builder totalDiskSize(Long totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -231,7 +521,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The storage space of each replica node in the cluster, in GB.
+             * Example 1
              */
             public Builder unitDiskSize(Long unitDiskSize) {
                 this.unitDiskSize = unitDiskSize;
@@ -239,7 +529,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of used storage space of the cluster, in GB.
+             * $.parameters[7].schema.example
              */
             public Builder usedDiskSize(Long usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -254,6 +544,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Memory extends TeaModel {
+        @NameInMap("OriginalTotalMemory")
+        private Long originalTotalMemory;
+
         @NameInMap("TotalMemory")
         private Long totalMemory;
 
@@ -264,6 +557,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Long usedMemory;
 
         private Memory(Builder builder) {
+            this.originalTotalMemory = builder.originalTotalMemory;
             this.totalMemory = builder.totalMemory;
             this.unitMemory = builder.unitMemory;
             this.usedMemory = builder.usedMemory;
@@ -275,6 +569,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static Memory create() {
             return builder().build();
+        }
+
+        /**
+         * @return originalTotalMemory
+         */
+        public Long getOriginalTotalMemory() {
+            return this.originalTotalMemory;
         }
 
         /**
@@ -299,12 +600,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long originalTotalMemory; 
             private Long totalMemory; 
             private Long unitMemory; 
             private Long usedMemory; 
 
             /**
-             * The total memory size of the cluster, in GB.
+             * OriginalTotalMemory.
+             */
+            public Builder originalTotalMemory(Long originalTotalMemory) {
+                this.originalTotalMemory = originalTotalMemory;
+                return this;
+            }
+
+            /**
+             * The number of CPU cores of the cluster.
              */
             public Builder totalMemory(Long totalMemory) {
                 this.totalMemory = totalMemory;
@@ -312,7 +622,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of each replica node in the cluster, in GB.
+             * The size of used storage space of the cluster, in GB.
              */
             public Builder unitMemory(Long unitMemory) {
                 this.unitMemory = unitMemory;
@@ -335,6 +645,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Resource extends TeaModel {
+        @NameInMap("CapacityUnit")
+        private CapacityUnit capacityUnit;
+
         @NameInMap("Cpu")
         private Cpu cpu;
 
@@ -348,6 +661,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Long unitCount;
 
         private Resource(Builder builder) {
+            this.capacityUnit = builder.capacityUnit;
             this.cpu = builder.cpu;
             this.diskSize = builder.diskSize;
             this.memory = builder.memory;
@@ -360,6 +674,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static Resource create() {
             return builder().build();
+        }
+
+        /**
+         * @return capacityUnit
+         */
+        public CapacityUnit getCapacityUnit() {
+            return this.capacityUnit;
         }
 
         /**
@@ -391,13 +712,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private CapacityUnit capacityUnit; 
             private Cpu cpu; 
             private DiskSize diskSize; 
             private Memory memory; 
             private Long unitCount; 
 
             /**
-             * The information about the CPU resources of the cluster.
+             * CapacityUnit.
+             */
+            public Builder capacityUnit(CapacityUnit capacityUnit) {
+                this.capacityUnit = capacityUnit;
+                return this;
+            }
+
+            /**
+             * Indicates whether new nodes can be added.
              */
             public Builder cpu(Cpu cpu) {
                 this.cpu = cpu;
@@ -405,7 +735,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the storage resources of the cluster.
+             * The time elapsed since the expiration of the cluster, in seconds.
              */
             public Builder diskSize(DiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -413,7 +743,23 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the memory resources of the cluster.
+             * The status of the cluster. Valid values:   
+             * <p>
+             * - PENDING_CREATE: The cluster is being created.  
+             * - ONLINE: The cluster is running.  
+             * - TENANT_CREATING: The tenant is being created.  
+             * - TENANT_SPEC_MODIFYING: The tenant specifications are being modified.  
+             * - EXPANDING: Nodes are being added to the cluster to increase its capacity.  
+             * - REDUCING: Nodes are being removed from the cluster to reduce its capacity.  
+             * - SPEC_UPGRADING: The service plan is being upgraded.  
+             * - DISK_UPGRADING: The storage space is being expanded.  
+             * - WHITE_LIST_MODIFYING: The whitelist is being modified.  
+             * - PARAMETER_MODIFYING: Parameters are being modified.  
+             * - SSL_MODIFYING: The SSL certificate is being changed.  
+             * - PREPAID_EXPIRE_CLOSED: The payment is overdue. This parameter is valid for a cluster whose billing method is set to PREPAY.  
+             * - ARREARS_CLOSED: The payment is overdue. This parameter is valid for a cluster whose billing method is set to POSTPAY.  
+             * - PENDING_DELETE: The cluster is being deleted.   
+             * Generally, the cluster is in the ONLINE state.
              */
             public Builder memory(Memory memory) {
                 this.memory = memory;
@@ -421,7 +767,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resource units in the cluster.
+             * UnitCount.
              */
             public Builder unitCount(Long unitCount) {
                 this.unitCount = unitCount;
@@ -448,6 +794,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         private String createTime;
 
+        @NameInMap("DataDiskAutoScaleConfig")
+        private DataDiskAutoScaleConfig dataDiskAutoScaleConfig;
+
         @NameInMap("DeployMode")
         private String deployMode;
 
@@ -468,6 +817,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         @NameInMap("ExpireTime")
         private String expireTime;
+
+        @NameInMap("InTempCapacityStatus")
+        private Boolean inTempCapacityStatus;
 
         @NameInMap("InstanceClass")
         private String instanceClass;
@@ -499,9 +851,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityIps")
-        private java.util.List < String > securityIps;
-
         @NameInMap("Series")
         private String series;
 
@@ -522,6 +871,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.commodityCode = builder.commodityCode;
             this.cpu = builder.cpu;
             this.createTime = builder.createTime;
+            this.dataDiskAutoScaleConfig = builder.dataDiskAutoScaleConfig;
             this.deployMode = builder.deployMode;
             this.deployType = builder.deployType;
             this.diskSize = builder.diskSize;
@@ -529,6 +879,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.enableUpgradeNodes = builder.enableUpgradeNodes;
             this.expireSeconds = builder.expireSeconds;
             this.expireTime = builder.expireTime;
+            this.inTempCapacityStatus = builder.inTempCapacityStatus;
             this.instanceClass = builder.instanceClass;
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
@@ -539,7 +890,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.payType = builder.payType;
             this.resource = builder.resource;
             this.resourceGroupId = builder.resourceGroupId;
-            this.securityIps = builder.securityIps;
             this.series = builder.series;
             this.state = builder.state;
             this.usedDiskSize = builder.usedDiskSize;
@@ -581,6 +931,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return dataDiskAutoScaleConfig
+         */
+        public DataDiskAutoScaleConfig getDataDiskAutoScaleConfig() {
+            return this.dataDiskAutoScaleConfig;
         }
 
         /**
@@ -630,6 +987,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        /**
+         * @return inTempCapacityStatus
+         */
+        public Boolean getInTempCapacityStatus() {
+            return this.inTempCapacityStatus;
         }
 
         /**
@@ -703,13 +1067,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return securityIps
-         */
-        public java.util.List < String > getSecurityIps() {
-            return this.securityIps;
-        }
-
-        /**
          * @return series
          */
         public String getSeries() {
@@ -749,6 +1106,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String commodityCode; 
             private Integer cpu; 
             private String createTime; 
+            private DataDiskAutoScaleConfig dataDiskAutoScaleConfig; 
             private String deployMode; 
             private String deployType; 
             private String diskSize; 
@@ -756,6 +1114,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Boolean enableUpgradeNodes; 
             private Integer expireSeconds; 
             private String expireTime; 
+            private Boolean inTempCapacityStatus; 
             private String instanceClass; 
             private String instanceId; 
             private String instanceName; 
@@ -766,7 +1125,6 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String payType; 
             private Resource resource; 
             private String resourceGroupId; 
-            private java.util.List < String > securityIps; 
             private String series; 
             private String state; 
             private Long usedDiskSize; 
@@ -774,10 +1132,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The information about the zone in which the cluster is deployed.
+             * The time in UTC when the cluster expires.
              */
             public Builder availableZones(java.util.List < String > availableZones) {
                 this.availableZones = availableZones;
+                return this;
+            }
+
+            /**
+             * The storage space of each replica node in the cluster, in GB.
+             */
+            public Builder commodityCode(String commodityCode) {
+                this.commodityCode = commodityCode;
                 return this;
             }
 
@@ -788,21 +1154,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * - oceanbase_oceanbasepost_public_cn: indicates an OceanBase cluster that is billed based on the pay-as-you-go plan and that is deployed in a China site.  
              * - oceanbase_obpre_public_intl: indicates an OceanBase cluster that is billed based on the subscription plan and that is deployed in an international site.
              */
-            public Builder commodityCode(String commodityCode) {
-                this.commodityCode = commodityCode;
-                return this;
-            }
-
-            /**
-             * The number of CPU cores of the cluster.
-             */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
                 return this;
             }
 
             /**
-             * The time in UTC when the cluster was created.
+             * The number of OceanBase clusters queried.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -810,12 +1168,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The data replica distribution mode of the cluster. Valid values:    
-             * <p>
-             * 
-             * - n: indicates the single-IDC mode.  
-             * - n-n: indicates the dual-IDC mode.  
-             * - n-n-n: indicates the multi-IDC mode. The integer n represents the number of OBServer nodes in each IDC.
+             * DataDiskAutoScaleConfig.
+             */
+            public Builder dataDiskAutoScaleConfig(DataDiskAutoScaleConfig dataDiskAutoScaleConfig) {
+                this.dataDiskAutoScaleConfig = dataDiskAutoScaleConfig;
+                return this;
+            }
+
+            /**
+             * The request ID.
              */
             public Builder deployMode(String deployMode) {
                 this.deployMode = deployMode;
@@ -823,11 +1184,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The deployment type of the cluster. Valid values:   
-             * <p>
-             * - multiple: multi-IDC deployment  
-             * - single: single-IDC deployment  
-             * - dual: dual-IDC deployment
+             * Alibaba Cloud provides SDKs in different languages to help you quickly integrate Alibaba Cloud products and services by using APIs. We recommend that you use an SDK to call APIs. In this way, you do not need to sign for verification.
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -835,7 +1192,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the storage space, in GB.
+             * The information about the memory resources of the cluster.
              */
             public Builder diskSize(String diskSize) {
                 this.diskSize = diskSize;
@@ -843,9 +1200,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the storage disk where the cluster is deployed.   
-             * <p>
-             * The default value is cloud_essd_pl1, which indicates an ESSD cloud disk.
+             * The number of CPU cores used in the cluster.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -853,7 +1208,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether new nodes can be added.
+             * The ID of the OceanBase cluster.
              */
             public Builder enableUpgradeNodes(Boolean enableUpgradeNodes) {
                 this.enableUpgradeNodes = enableUpgradeNodes;
@@ -861,7 +1216,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time elapsed since the expiration of the cluster, in seconds.
+             * The whitelist information of the cluster.
              */
             public Builder expireSeconds(Integer expireSeconds) {
                 this.expireSeconds = expireSeconds;
@@ -869,7 +1224,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time in UTC when the cluster expires.
+             * The information about the storage resources of the cluster.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -877,12 +1232,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the cluster.  You can specify one of the following four plans:  
-             * <p>
-             * - 8C32G: indicates 8 CPU cores and 32 GB of memory.  
-             * - 14C70G: indicates 14 CPU cores and 70 GB of memory.  
-             * - 30C180G: indicates 30 CPU cores and 180 GB of memory.  
-             * - 62C400G: indicates 62 CPU cores and 400 GB of memory.
+             * InTempCapacityStatus.
+             */
+            public Builder inTempCapacityStatus(Boolean inTempCapacityStatus) {
+                this.inTempCapacityStatus = inTempCapacityStatus;
+                return this;
+            }
+
+            /**
+             * The instance type.
              */
             public Builder instanceClass(String instanceClass) {
                 this.instanceClass = instanceClass;
@@ -890,7 +1248,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the OceanBase cluster.
+             * The total storage space of the cluster, in GB.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -898,7 +1256,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the OceanBase cluster.
+             * The return result of the request.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -914,7 +1272,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type.
+             * You can call this operation to obtain the list of OceanBase clusters.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -922,7 +1280,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time period in UTC for the daily routine maintenance of the cluster.
+             * The return result of the request.
              */
             public Builder maintainTime(String maintainTime) {
                 this.maintainTime = maintainTime;
@@ -930,10 +1288,36 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the instance, in GB.
+             * The information about the CPU resources of the cluster.
              */
             public Builder mem(Long mem) {
                 this.mem = mem;
+                return this;
+            }
+
+            /**
+             * It is an Alibaba Cloud asset management and configuration tool, with which you can manage multiple Alibaba Cloud products and services by using commands. It is easy to use and a good helper in migration to cloud.
+             */
+            public Builder payType(String payType) {
+                this.payType = payType;
+                return this;
+            }
+
+            /**
+             * The type of the storage disk where the cluster is deployed.   
+             * <p>
+             * The default value is cloud_essd_pl1, which indicates an ESSD cloud disk.
+             */
+            public Builder resource(Resource resource) {
+                this.resource = resource;
+                return this;
+            }
+
+            /**
+             * The number of OceanBase clusters queried.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
@@ -943,64 +1327,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * - PREPAY: the subscription billing method.  
              * - POSTPAY: the pay-as-you-go billing method.
              */
-            public Builder payType(String payType) {
-                this.payType = payType;
-                return this;
-            }
-
-            /**
-             * The information about cluster resources.
-             */
-            public Builder resource(Resource resource) {
-                this.resource = resource;
-                return this;
-            }
-
-            /**
-             * The ID of the resource group.
-             */
-            public Builder resourceGroupId(String resourceGroupId) {
-                this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * The whitelist information of the cluster.
-             */
-            public Builder securityIps(java.util.List < String > securityIps) {
-                this.securityIps = securityIps;
-                return this;
-            }
-
-            /**
-             * The series of the OceanBase cluster. Valid values:   
-             * <p>
-             * - NORMAL: the high availability edition.   
-             * - BASIC: the basic edition.
-             */
             public Builder series(String series) {
                 this.series = series;
                 return this;
             }
 
             /**
-             * The status of the cluster. Valid values:   
-             * <p>
-             * - PENDING_CREATE: The cluster is being created.  
-             * - ONLINE: The cluster is running.  
-             * - TENANT_CREATING: The tenant is being created.  
-             * - TENANT_SPEC_MODIFYING: The tenant specifications are being modified.  
-             * - EXPANDING: Nodes are being added to the cluster to increase its capacity.  
-             * - REDUCING: Nodes are being removed from the cluster to reduce its capacity.  
-             * - SPEC_UPGRADING: The service plan is being upgraded.  
-             * - DISK_UPGRADING: The storage space is being expanded.  
-             * - WHITE_LIST_MODIFYING: The whitelist is being modified.  
-             * - PARAMETER_MODIFYING: Parameters are being modified.  
-             * - SSL_MODIFYING: The SSL certificate is being changed.  
-             * - PREPAID_EXPIRE_CLOSED: The payment is overdue. This parameter is valid for a cluster whose billing method is set to PREPAY.  
-             * - ARREARS_CLOSED: The payment is overdue. This parameter is valid for a cluster whose billing method is set to POSTPAY.  
-             * - PENDING_DELETE: The cluster is being deleted.   
-             * Generally, the cluster is in the ONLINE state.
+             * The number of resource units in the cluster.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1008,7 +1341,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of used storage space of the cluster, in GB.
+             * The number of resource units in the cluster.
              */
             public Builder usedDiskSize(Long usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -1016,7 +1349,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The OBServer version.
+             * The total number of CPU cores of the cluster.
              */
             public Builder version(String version) {
                 this.version = version;

@@ -50,7 +50,15 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The available memory size.
+         * ```
+         * <p>
+         * http(s)://[Endpoint]/?Action=DescribeAvailableMemResource
+         * &InstanceId=ob317v4uif****
+         * &TenantId=ob2mr3oae0****
+         * &UnitNum=2
+         * &CpuNum=14
+         * &Common request parameters
+         * ```
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +66,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The number of CPU cores.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +130,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             private Long usedMem; 
 
             /**
-             * The maximum memory size for each resource unit, in GB.
+             * MaxMem.
              */
             public Builder maxMem(Long maxMem) {
                 this.maxMem = maxMem;
@@ -130,7 +138,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum memory size required for each resource unit, in GB.
+             * You can call this operation to query the available memory resource of an OceanBase Database tenant.
              */
             public Builder minMem(Long minMem) {
                 this.minMem = minMem;
@@ -138,7 +146,7 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resource units in the tenant.
+             * UsedMem.
              */
             public Builder usedMem(Long usedMem) {
                 this.usedMem = usedMem;

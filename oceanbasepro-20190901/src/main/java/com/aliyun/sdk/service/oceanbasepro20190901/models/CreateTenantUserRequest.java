@@ -171,7 +171,7 @@ public class CreateTenantUserRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -207,19 +207,7 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * The role of the user account.   
-         * <p>
-         * 
-         * - In Oracle mode, this parameter is left unspecified.    
-         * - In MySQL mode, the super administrator account has ALL PRIVILEGES, and you can leave this parameter unspecified.   
-         *  
-         * You need to specify the account information for a general user account. By default, the account information is a JSON array that contains the information of the role and the schema (Oracle mode) or database (MySQL mode). Valid values:  
-         * 
-         * - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.    
-         * - ReadOnly: a role that has only the read-only privilege SELECT.   
-         * - DDL: a role that has DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   
-         *    
-         * - DML: a role that has DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
+         * The role of the user account.  In Oracle mode, this parameter unspecified is left unspecified.  In MySQL mode, the super administrator account has ALL PRIVILEGES, and you can leave this parameter unspecified.  You need to specify the account information for a general user account. By default, the account information is a JSON array that contains the information of the role and the schema (Oracle mode) or database (MySQL mode).  Valid values: ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES. ReadOnly: a role that has only the read-only privilege SELECT. DDL: a role that has DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW. DML: a role that has DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
          */
         public Builder roles(String roles) {
             this.putBodyParameter("Roles", roles);
@@ -237,9 +225,7 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * The name of the database account.   
-         * <p>
-         * You cannot use reserved keywords, such as SYS and root.
+         * The name of the database account.  You cannot use reserved keywords, such as SYS and root.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);
@@ -248,10 +234,7 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * The password of the database account. 
-         * <p>
-         * 
-         * > <br>It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % ^ & \ * ( ) _ + - =
+         * The password of the database account.  It must be 10 to 32 characters in length and contain three types of the following characters: uppercase letters, lowercase letters, digits, and special characters. The special characters are ! @ # $ % \ ^ \ & \ * ( ) _ + - =
          */
         public Builder userPassword(String userPassword) {
             this.putBodyParameter("UserPassword", userPassword);
@@ -260,11 +243,7 @@ public class CreateTenantUserRequest extends Request {
         }
 
         /**
-         * The type of the database account. Valid values:   
-         * <p>
-         * 
-         * - Admin: the super administrator account.   
-         * - Normal: a general account.
+         * The type of the database account. Valid values: Admin: the super administrator account. Normal: a general account.
          */
         public Builder userType(String userType) {
             this.putBodyParameter("UserType", userType);

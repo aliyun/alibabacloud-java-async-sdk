@@ -84,7 +84,7 @@ public class DescribeTenantSecurityConfigsRequest extends Request {
         } 
 
         /**
-         * 地域ID
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -93,7 +93,7 @@ public class DescribeTenantSecurityConfigsRequest extends Request {
         }
 
         /**
-         * Oceanbase集群ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -102,7 +102,7 @@ public class DescribeTenantSecurityConfigsRequest extends Request {
         }
 
         /**
-         * 租户Id
+         * TenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

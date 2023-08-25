@@ -50,7 +50,7 @@ public class ModifyInstanceNodeNumResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 请求返回的信息。
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ModifyInstanceNodeNumResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ModifyInstanceNodeNumResponseBody extends TeaModel {
             private String orderId; 
 
             /**
-             * 订单号。
+             * OrderId.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;

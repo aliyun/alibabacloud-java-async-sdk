@@ -85,7 +85,7 @@ public class ModifyInstanceNodeNumRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +94,7 @@ public class ModifyInstanceNodeNumRequest extends Request {
         }
 
         /**
-         * Oceanbase集群的ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -103,7 +103,7 @@ public class ModifyInstanceNodeNumRequest extends Request {
         }
 
         /**
-         * 集群节点个数信息。 如果部署模式为n-n-n，则节点个数为n * 3
+         * NodeNum.
          */
         public Builder nodeNum(String nodeNum) {
             this.putBodyParameter("NodeNum", nodeNum);

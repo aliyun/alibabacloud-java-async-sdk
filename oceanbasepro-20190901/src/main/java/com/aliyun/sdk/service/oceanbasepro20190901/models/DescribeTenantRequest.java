@@ -85,7 +85,7 @@ public class DescribeTenantRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +94,12 @@ public class DescribeTenantRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The status of the Internet address for accessing the tenant. Valid values:   
+         * <p>
+         * - CLOSED: The address is disabled.   
+         * - ALLOCATING_INTERNET_ADDRESS: An address is being applied for.   
+         * - PENDING_OFFLINE_INTERNET_ADDRESS: The address is being disabled.   
+         * - ONLINE: The address is in service.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -103,7 +108,7 @@ public class DescribeTenantRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * Indicates whether to enable transaction splitting.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

@@ -98,7 +98,7 @@ public class DeleteDatabasesRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -107,9 +107,7 @@ public class DeleteDatabasesRequest extends Request {
         }
 
         /**
-         * The list of database names.    
-         * <p>
-         * It is a JSON array. Each object in the array is a database name string.
+         * DatabaseNames.
          */
         public Builder databaseNames(String databaseNames) {
             this.putBodyParameter("DatabaseNames", databaseNames);
@@ -118,7 +116,7 @@ public class DeleteDatabasesRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -127,7 +125,7 @@ public class DeleteDatabasesRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * TenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

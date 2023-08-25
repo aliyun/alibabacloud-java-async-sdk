@@ -62,7 +62,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of databases in the tenant.
+         * The ID of the tenant.
          */
         public Builder databases(java.util.List < Databases> databases) {
             this.databases = databases;
@@ -70,7 +70,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of databases in the tenant.
+         * The search keyword.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +118,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The name of the database table.
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -133,6 +133,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
     }
     public static class Users extends TeaModel {
+        @NameInMap("Privileges")
+        private String privileges;
+
         @NameInMap("Role")
         private String role;
 
@@ -143,6 +146,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private String userType;
 
         private Users(Builder builder) {
+            this.privileges = builder.privileges;
             this.role = builder.role;
             this.userName = builder.userName;
             this.userType = builder.userType;
@@ -154,6 +158,13 @@ public class DescribeDatabasesResponseBody extends TeaModel {
 
         public static Users create() {
             return builder().build();
+        }
+
+        /**
+         * @return privileges
+         */
+        public String getPrivileges() {
+            return this.privileges;
         }
 
         /**
@@ -178,18 +189,21 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String privileges; 
             private String role; 
             private String userName; 
             private String userType; 
 
             /**
-             * The role of the account.    
-             * <p>
-             * In MySQL mode, a role is a database-level role. Valid values:  
-             * - ReadWrite: a role that has the read and write privileges, namely ALL PRIVILEGES.  
-             * - ReadOnly: a role that has only the read-only privilege SELECT.   
-             * - DDL: a role that has the DDL privileges such as CREATE, DROP, ALTER, SHOW VIEW, and CREATE VIEW.   
-             * - DML: a role that has the DML privileges such as SELECT, INSERT, UPDATE, DELETE, and SHOW VIEW.
+             * Privileges.
+             */
+            public Builder privileges(String privileges) {
+                this.privileges = privileges;
+                return this;
+            }
+
+            /**
+             * The request ID.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -197,7 +211,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the account.
+             * Example 1
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -390,7 +404,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             private java.util.List < Users> users; 
 
             /**
-             * 字符序
+             * Collation.
              */
             public Builder collation(String collation) {
                 this.collation = collation;
@@ -398,7 +412,9 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the database was created.
+             * Specifies whether to return the information of tables in the database.   
+             * <p>
+             * Default value: false.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -406,7 +422,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The actual data size, in GB.
+             * DataSize.
              */
             public Builder dataSize(Double dataSize) {
                 this.dataSize = dataSize;
@@ -414,7 +430,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * The number of the page to return.   
+             * <p>
+             * - Start value: 1   
+             * - Default value: 1
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -422,7 +441,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The database type.
+             * The return result of the request.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -430,34 +449,10 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the database.
+             * The name of the database.
              */
             public Builder description(String description) {
                 this.description = description;
-                return this;
-            }
-
-            /**
-             * The encoding standard of the database. Encoding standards such as utf8mb4 and GBK are supported.
-             */
-            public Builder encoding(String encoding) {
-                this.encoding = encoding;
-                return this;
-            }
-
-            /**
-             * 所属集群Id
-             */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
-                return this;
-            }
-
-            /**
-             * The storage space required, in GB.
-             */
-            public Builder requiredSize(Double requiredSize) {
-                this.requiredSize = requiredSize;
                 return this;
             }
 
@@ -467,13 +462,37 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              * - ONLINE: The database is running.  
              * - DELETING: The database is being deleted.
              */
+            public Builder encoding(String encoding) {
+                this.encoding = encoding;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * RequiredSize.
+             */
+            public Builder requiredSize(Double requiredSize) {
+                this.requiredSize = requiredSize;
+                return this;
+            }
+
+            /**
+             * The list of databases in the tenant.
+             */
             public Builder status(String status) {
                 this.status = status;
                 return this;
             }
 
             /**
-             * The information about the database tables.
+             * Tables.
              */
             public Builder tables(java.util.List < Tables> tables) {
                 this.tables = tables;
@@ -481,7 +500,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the tenant.
+             * TenantId.
              */
             public Builder tenantId(String tenantId) {
                 this.tenantId = tenantId;
@@ -489,7 +508,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The accounts that have privileges on the database.
+             * The name of the database table.
              */
             public Builder users(java.util.List < Users> users) {
                 this.users = users;

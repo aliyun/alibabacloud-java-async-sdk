@@ -50,7 +50,7 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The CPU resources available.
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
             private Long unitNum; 
 
             /**
-             * The maximum number of CPU cores per resource unit.
+             * MaxCpu.
              */
             public Builder maxCpu(Long maxCpu) {
                 this.maxCpu = maxCpu;
@@ -130,7 +130,7 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of CPU cores per resource unit.
+             * MinCpu.
              */
             public Builder minCpu(Long minCpu) {
                 this.minCpu = minCpu;
@@ -138,7 +138,7 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of resource units in the tenant.
+             * UnitNum.
              */
             public Builder unitNum(Long unitNum) {
                 this.unitNum = unitNum;

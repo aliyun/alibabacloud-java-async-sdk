@@ -158,7 +158,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The suggestions (old).
+         * The request ID.
          */
         public Builder advice(String advice) {
             this.advice = advice;
@@ -166,7 +166,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The error code (old).
+         * The page number, which takes effect in a pagination query.
          */
         public Builder code(String code) {
             this.code = code;
@@ -174,7 +174,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The time spent, in seconds.
+         * Cost.
          */
         public Builder cost(String cost) {
             this.cost = cost;
@@ -182,7 +182,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the project is resumed.
+         * Data.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -190,7 +190,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The error details.
+         * The page number, which takes effect in a pagination query.
          */
         public Builder errorDetail(ErrorDetail errorDetail) {
             this.errorDetail = errorDetail;
@@ -198,7 +198,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The error description (old).
+         * The error details.
          */
         public Builder message(String message) {
             this.message = message;
@@ -206,7 +206,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The page number, which takes effect in a pagination query.
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -214,7 +214,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The page size, which takes effect in a pagination query.
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -222,7 +222,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * Example 1
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the call is successful.
+         * The error level. Valid values: CRITICAL, ERROR, and WARN.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +238,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
         }
 
         /**
-         * The total count, which takes effect in a pagination query.
+         * TotalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -314,7 +314,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
             private String proposal; 
 
             /**
-             * The error code (new).
+             * The suggestions (new).
              */
             public Builder code(String code) {
                 this.code = code;
@@ -322,7 +322,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The error level. Valid values: CRITICAL, ERROR, and WARN.
+             * The operation that you want to perform. Set the value to **ResumeOmsOpenAPIProject**.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -330,7 +330,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The error description (new).
+             * The error description (old).
              */
             public Builder message(String message) {
                 this.message = message;
@@ -338,7 +338,7 @@ public class ResumeOmsOpenAPIProjectResponseBody extends TeaModel {
             }
 
             /**
-             * The suggestions (new).
+             * The error code (new).
              */
             public Builder proposal(String proposal) {
                 this.proposal = proposal;

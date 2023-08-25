@@ -126,7 +126,7 @@ public class DescribeTenantUsersRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -135,9 +135,7 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * The number of the page to return.    
-         * <p>
-         * Start value: 1. Default value: 1.
+         * The database privileges of the account.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -146,9 +144,7 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * The number of rows to return on each page.    
-         * <p>
-         * Maximum value: 100. Default value: 10.
+         * The return result of the request.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -157,7 +153,7 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * The search keyword.
+         * The return result of the request.
          */
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);
@@ -166,7 +162,7 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * The return result of the request.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -175,9 +171,9 @@ public class DescribeTenantUsersRequest extends Request {
         }
 
         /**
-         * The name of the database account.    
+         * The operation that you want to perform.   
          * <p>
-         * You cannot use reserved keywords, such as SYS and root.
+         * Set the value to **DescribeTenantUsers**.
          */
         public Builder userName(String userName) {
             this.putBodyParameter("UserName", userName);

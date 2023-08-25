@@ -18,22 +18,18 @@ public class DescribeInstanceRequest extends Request {
 
     @Body
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Body
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
-    private Integer pageSize;
-
     private DescribeInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
-        this.pageSize = builder.pageSize;
     }
 
     public static Builder builder() {
@@ -70,18 +66,10 @@ public class DescribeInstanceRequest extends Request {
         return this.pageNumber;
     }
 
-    /**
-     * @return pageSize
-     */
-    public Integer getPageSize() {
-        return this.pageSize;
-    }
-
     public static final class Builder extends Request.Builder<DescribeInstanceRequest, Builder> {
         private String regionId; 
         private String instanceId; 
         private Integer pageNumber; 
-        private Integer pageSize; 
 
         private Builder() {
             super();
@@ -92,11 +80,10 @@ public class DescribeInstanceRequest extends Request {
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
-            this.pageSize = request.pageSize;
         } 
 
         /**
-         * 地域 ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -105,7 +92,7 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The size of the data disk, in GB.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -114,26 +101,11 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * The number of the page to return. 
-         * <p>
-         * - Start value: 1  
-         * - Default value: 1
+         * The information about the storage resources of the cluster.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The number of rows to return on each page.   
-         * <p>
-         * - Maximum value: 100   
-         * - Default value: 10
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putBodyParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
             return this;
         }
 

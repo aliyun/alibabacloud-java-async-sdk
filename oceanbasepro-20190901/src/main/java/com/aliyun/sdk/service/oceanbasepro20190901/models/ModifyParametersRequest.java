@@ -113,7 +113,7 @@ public class ModifyParametersRequest extends Request {
         } 
 
         /**
-         * 地域ID。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -122,9 +122,7 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The type of the parameter.   
-         * <p>
-         * Valid values: CLUSTER and TENANT.
+         * The ID of the OceanBase cluster.
          */
         public Builder dimension(String dimension) {
             this.putBodyParameter("Dimension", dimension);
@@ -133,9 +131,7 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The resource ID of the parameter type.    
-         * <p>
-         * You can leave this parameter unspecified when you call this operation to modify cluster parameters. In the case of tenant parameters, pass the tenant ID.
+         * The cause of the modification failure.
          */
         public Builder dimensionValue(String dimensionValue) {
             this.putBodyParameter("DimensionValue", dimensionValue);
@@ -144,7 +140,7 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * Alibaba Cloud CLI
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -153,11 +149,9 @@ public class ModifyParametersRequest extends Request {
         }
 
         /**
-         * The parameters.   
+         * The resource ID of the parameter type.    
          * <p>
-         * It is a JSON array. Each object in the array has two elements: Name and Value. 
-         * 
-         * > <br>The names and values of cluster parameters that can be modified are different from those of tenant parameters. For more information, see DescribeParameters.
+         * You can leave this parameter unspecified when you call this operation to modify cluster parameters. In the case of tenant parameters, pass the tenant ID.
          */
         public Builder parameters(String parameters) {
             this.putBodyParameter("Parameters", parameters);

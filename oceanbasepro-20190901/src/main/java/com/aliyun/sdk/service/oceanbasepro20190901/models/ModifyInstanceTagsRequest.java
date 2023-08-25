@@ -85,7 +85,7 @@ public class ModifyInstanceTagsRequest extends Request {
         } 
 
         /**
-         * 地域ID
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -94,7 +94,7 @@ public class ModifyInstanceTagsRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * The tags.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -103,7 +103,7 @@ public class ModifyInstanceTagsRequest extends Request {
         }
 
         /**
-         * The tags.
+         * You can call this operation to modify the value of the cluster tags.
          */
         public Builder tags(String tags) {
             this.putBodyParameter("Tags", tags);

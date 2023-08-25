@@ -50,7 +50,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information of parameters.
+         * Indicates whether a restart is required for changes to the parameter to take effect. Valid values:   
+         * <p>
+         * - true: A restart is required.   
+         * - false: A restart is not required.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.parameters = parameters;
@@ -58,7 +61,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The return result of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,8 +93,14 @@ public class DescribeParametersResponseBody extends TeaModel {
         @NameInMap("NeedReboot")
         private Boolean needReboot;
 
+        @NameInMap("Readonly")
+        private Boolean readonly;
+
         @NameInMap("RejectedValue")
         private java.util.List < String > rejectedValue;
+
+        @NameInMap("Unit")
+        private String unit;
 
         @NameInMap("ValueType")
         private String valueType;
@@ -103,7 +112,9 @@ public class DescribeParametersResponseBody extends TeaModel {
             this.description = builder.description;
             this.name = builder.name;
             this.needReboot = builder.needReboot;
+            this.readonly = builder.readonly;
             this.rejectedValue = builder.rejectedValue;
+            this.unit = builder.unit;
             this.valueType = builder.valueType;
         }
 
@@ -158,10 +169,24 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
+         * @return readonly
+         */
+        public Boolean getReadonly() {
+            return this.readonly;
+        }
+
+        /**
          * @return rejectedValue
          */
         public java.util.List < String > getRejectedValue() {
             return this.rejectedValue;
+        }
+
+        /**
+         * @return unit
+         */
+        public String getUnit() {
+            return this.unit;
         }
 
         /**
@@ -178,11 +203,13 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String description; 
             private String name; 
             private Boolean needReboot; 
+            private Boolean readonly; 
             private java.util.List < String > rejectedValue; 
+            private String unit; 
             private String valueType; 
 
             /**
-             * The valid value range of the parameter.  It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.
+             * DescribeParameters
              */
             public Builder acceptableValue(java.util.List < String > acceptableValue) {
                 this.acceptableValue = acceptableValue;
@@ -190,7 +217,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The current value of the parameter.
+             * The ID of the OceanBase cluster.
              */
             public Builder currentValue(String currentValue) {
                 this.currentValue = currentValue;
@@ -198,7 +225,14 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the parameter.
+             * ```
+             * <p>
+             * http(s)://[Endpoint]/?Action=DescribeParameters
+             * &InstanceId=ob317v4uif****
+             * &Dimension=TENANT
+             * &DimensionValue=ob2mr3oae0****
+             * &Common request parameters
+             * ```
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -214,7 +248,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * The request ID.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -222,10 +256,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a restart is required for changes to the parameter to take effect. Valid values:   
-             * <p>
-             * - true: A restart is required.   
-             * - false: A restart is not required.
+             * The name of the parameter.
              */
             public Builder needReboot(Boolean needReboot) {
                 this.needReboot = needReboot;
@@ -233,9 +264,34 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The invalid value range of the parameter.    
+             * 参数是否只读
+             */
+            public Builder readonly(Boolean readonly) {
+                this.readonly = readonly;
+                return this;
+            }
+
+            /**
+             * {
              * <p>
-             * It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.
+             *     "RequestId": "EE205C00-30E4-XXXX-XXXX-87E3A8A2AA0C",
+             *     "Parameters": [
+             *         {
+             *             "Description": "The maximum delay allowed in weak-consistency reads.",
+             *             "ValueType": "CAPACITY",
+             *             "CurrentValue": "600",
+             *             "NeedReboot": false,
+             *             "Name": "connect_timeout",
+             *             "DefaultValue": "600s",
+             *             "RejectedValue": [
+             *                 "1s"
+             *             ],
+             *             "AcceptableValue": [
+             *                 "1s"
+             *             ]
+             *         }
+             *     ]
+             * }
              */
             public Builder rejectedValue(java.util.List < String > rejectedValue) {
                 this.rejectedValue = rejectedValue;
@@ -243,12 +299,17 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the parameter value.    Valid values:   
+             * Unit.
+             */
+            public Builder unit(String unit) {
+                this.unit = unit;
+                return this;
+            }
+
+            /**
+             * The invalid value range of the parameter.    
              * <p>
-             * - ENUM: an enumeration value.   
-             * - RANGE: a value range.   
-             * - TIME: a time value.   
-             * - CAPACITY: a storage capacity, in KB, MB, or GB.
+             * It is an array with two string elements, which represents a range. The first element represents the minimum value and the second element represents the maximum value.
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;

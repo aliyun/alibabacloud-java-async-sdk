@@ -1,0 +1,239 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.oceanbasepro20190901.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeProjectStepMetricRequest} extends {@link RequestModel}
+ *
+ * <p>DescribeProjectStepMetricRequest</p>
+ */
+public class DescribeProjectStepMetricRequest extends Request {
+    @Host
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Body
+    @NameInMap("Aggregator")
+    @Validation(required = true)
+    private String aggregator;
+
+    @Body
+    @NameInMap("BeginTimestamp")
+    @Validation(required = true)
+    private Long beginTimestamp;
+
+    @Body
+    @NameInMap("EndTimestamp")
+    @Validation(required = true)
+    private Long endTimestamp;
+
+    @Body
+    @NameInMap("MaxPointNum")
+    private Integer maxPointNum;
+
+    @Body
+    @NameInMap("MetricType")
+    @Validation(required = true)
+    private String metricType;
+
+    @Body
+    @NameInMap("ProjectId")
+    @Validation(required = true)
+    private String projectId;
+
+    @Body
+    @NameInMap("StepName")
+    @Validation(required = true)
+    private String stepName;
+
+    private DescribeProjectStepMetricRequest(Builder builder) {
+        super(builder);
+        this.regionId = builder.regionId;
+        this.aggregator = builder.aggregator;
+        this.beginTimestamp = builder.beginTimestamp;
+        this.endTimestamp = builder.endTimestamp;
+        this.maxPointNum = builder.maxPointNum;
+        this.metricType = builder.metricType;
+        this.projectId = builder.projectId;
+        this.stepName = builder.stepName;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeProjectStepMetricRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return aggregator
+     */
+    public String getAggregator() {
+        return this.aggregator;
+    }
+
+    /**
+     * @return beginTimestamp
+     */
+    public Long getBeginTimestamp() {
+        return this.beginTimestamp;
+    }
+
+    /**
+     * @return endTimestamp
+     */
+    public Long getEndTimestamp() {
+        return this.endTimestamp;
+    }
+
+    /**
+     * @return maxPointNum
+     */
+    public Integer getMaxPointNum() {
+        return this.maxPointNum;
+    }
+
+    /**
+     * @return metricType
+     */
+    public String getMetricType() {
+        return this.metricType;
+    }
+
+    /**
+     * @return projectId
+     */
+    public String getProjectId() {
+        return this.projectId;
+    }
+
+    /**
+     * @return stepName
+     */
+    public String getStepName() {
+        return this.stepName;
+    }
+
+    public static final class Builder extends Request.Builder<DescribeProjectStepMetricRequest, Builder> {
+        private String regionId; 
+        private String aggregator; 
+        private Long beginTimestamp; 
+        private Long endTimestamp; 
+        private Integer maxPointNum; 
+        private String metricType; 
+        private String projectId; 
+        private String stepName; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(DescribeProjectStepMetricRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.aggregator = request.aggregator;
+            this.beginTimestamp = request.beginTimestamp;
+            this.endTimestamp = request.endTimestamp;
+            this.maxPointNum = request.maxPointNum;
+            this.metricType = request.metricType;
+            this.projectId = request.projectId;
+            this.stepName = request.stepName;
+        } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Aggregator.
+         */
+        public Builder aggregator(String aggregator) {
+            this.putBodyParameter("Aggregator", aggregator);
+            this.aggregator = aggregator;
+            return this;
+        }
+
+        /**
+         * BeginTimestamp.
+         */
+        public Builder beginTimestamp(Long beginTimestamp) {
+            this.putBodyParameter("BeginTimestamp", beginTimestamp);
+            this.beginTimestamp = beginTimestamp;
+            return this;
+        }
+
+        /**
+         * EndTimestamp.
+         */
+        public Builder endTimestamp(Long endTimestamp) {
+            this.putBodyParameter("EndTimestamp", endTimestamp);
+            this.endTimestamp = endTimestamp;
+            return this;
+        }
+
+        /**
+         * MaxPointNum.
+         */
+        public Builder maxPointNum(Integer maxPointNum) {
+            this.putBodyParameter("MaxPointNum", maxPointNum);
+            this.maxPointNum = maxPointNum;
+            return this;
+        }
+
+        /**
+         * MetricType.
+         */
+        public Builder metricType(String metricType) {
+            this.putBodyParameter("MetricType", metricType);
+            this.metricType = metricType;
+            return this;
+        }
+
+        /**
+         * ProjectId.
+         */
+        public Builder projectId(String projectId) {
+            this.putBodyParameter("ProjectId", projectId);
+            this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * StepName.
+         */
+        public Builder stepName(String stepName) {
+            this.putBodyParameter("StepName", stepName);
+            this.stepName = stepName;
+            return this;
+        }
+
+        @Override
+        public DescribeProjectStepMetricRequest build() {
+            return new DescribeProjectStepMetricRequest(this);
+        } 
+
+    } 
+
+}

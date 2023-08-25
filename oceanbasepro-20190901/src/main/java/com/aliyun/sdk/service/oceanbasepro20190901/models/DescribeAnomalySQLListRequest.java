@@ -35,6 +35,11 @@ public class DescribeAnomalySQLListRequest extends Request {
     private java.util.Map < String, ? > filterCondition;
 
     @Body
+    @NameInMap("InstanceId")
+    @Validation(required = true)
+    private String instanceId;
+
+    @Body
     @NameInMap("NodeIp")
     private String nodeIp;
 
@@ -91,6 +96,7 @@ public class DescribeAnomalySQLListRequest extends Request {
         this.dbName = builder.dbName;
         this.endTime = builder.endTime;
         this.filterCondition = builder.filterCondition;
+        this.instanceId = builder.instanceId;
         this.nodeIp = builder.nodeIp;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -151,6 +157,13 @@ public class DescribeAnomalySQLListRequest extends Request {
      */
     public java.util.Map < String, ? > getFilterCondition() {
         return this.filterCondition;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -243,6 +256,7 @@ public class DescribeAnomalySQLListRequest extends Request {
         private String dbName; 
         private String endTime; 
         private java.util.Map < String, ? > filterCondition; 
+        private String instanceId; 
         private String nodeIp; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -267,6 +281,7 @@ public class DescribeAnomalySQLListRequest extends Request {
             this.dbName = request.dbName;
             this.endTime = request.endTime;
             this.filterCondition = request.filterCondition;
+            this.instanceId = request.instanceId;
             this.nodeIp = request.nodeIp;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -282,7 +297,7 @@ public class DescribeAnomalySQLListRequest extends Request {
         } 
 
         /**
-         * 地域ID
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -330,6 +345,15 @@ public class DescribeAnomalySQLListRequest extends Request {
             String filterConditionShrink = shrink(filterCondition, "FilterCondition", "json");
             this.putBodyParameter("FilterCondition", filterConditionShrink);
             this.filterCondition = filterCondition;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putBodyParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
