@@ -101,7 +101,7 @@ public class ModifyAccountDescriptionRequest extends Request {
          * The name of the database account.
          * <p>
          * 
-         * > You can call the [DescribeAccounts](~~~) operation to query the information about database accounts in a cluster, including the database account name.
+         * > You can call the [DescribeAccounts](~~612430~~) operation to query the information about database accounts in a cluster, including the database account name.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);

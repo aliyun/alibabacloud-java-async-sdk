@@ -73,7 +73,7 @@ public class UnbindAccountRequest extends Request {
          * The name of the database account.
          * <p>
          * 
-         * > You can call the [DescribeAccounts](~~~~) operation to view the information about a database account in a cluster, including the name of the database account.
+         * > You can call the [DescribeAccounts](~~612430~~) operation to view the information about a database account in a cluster, including the name of the database account.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);

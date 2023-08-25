@@ -50,7 +50,7 @@ public class GetSparkDefinitionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The common definitions of Spark applications.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetSparkDefinitionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

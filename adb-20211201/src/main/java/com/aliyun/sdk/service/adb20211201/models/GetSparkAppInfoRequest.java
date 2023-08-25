@@ -55,7 +55,10 @@ public class GetSparkAppInfoRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. 
+         * <p>
+         * 
+         * >  You can call the [ListSparkApps](/help/en/analyticdb-for-mysql/latest/listsparkapps) operation to query the Spark application ID.
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);

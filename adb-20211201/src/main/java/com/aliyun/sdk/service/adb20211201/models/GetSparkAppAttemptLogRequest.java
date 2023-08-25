@@ -73,7 +73,7 @@ public class GetSparkAppAttemptLogRequest extends Request {
          * The ID of the log.
          * <p>
          * 
-         * >  You can call the [ListSparkAppAttempts](~~455887~~) operation to query the retry history of an application, including the log ID of a retry attempt.
+         * > You can call the [ListSparkAppAttempts](~~455887~~) operation to query the information about the retry attempts of a Spark application, including the retry log IDs.
          */
         public Builder attemptId(String attemptId) {
             this.putBodyParameter("AttemptId", attemptId);
@@ -82,7 +82,7 @@ public class GetSparkAppAttemptLogRequest extends Request {
         }
 
         /**
-         * The number of rows to return in the log. Valid values: 1 to 500. Default value: 300.
+         * The number of log entries to return. Valid values: 1 to 500. Default value: 300.
          */
         public Builder logLength(Long logLength) {
             this.putBodyParameter("LogLength", logLength);

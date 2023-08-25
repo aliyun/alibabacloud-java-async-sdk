@@ -7,32 +7,32 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteDBResourceGroupRequest} extends {@link RequestModel}
+ * {@link DescribeSchemasRequest} extends {@link RequestModel}
  *
- * <p>DeleteDBResourceGroupRequest</p>
+ * <p>DescribeSchemasRequest</p>
  */
-public class DeleteDBResourceGroupRequest extends Request {
+public class DescribeSchemasRequest extends Request {
     @Query
     @NameInMap("DBClusterId")
     @Validation(required = true)
     private String DBClusterId;
 
     @Query
-    @NameInMap("GroupName")
+    @NameInMap("RegionId")
     @Validation(required = true)
-    private String groupName;
+    private String regionId;
 
-    private DeleteDBResourceGroupRequest(Builder builder) {
+    private DescribeSchemasRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
-        this.groupName = builder.groupName;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteDBResourceGroupRequest create() {
+    public static DescribeSchemasRequest create() {
         return builder().build();
     }
 
@@ -49,28 +49,28 @@ public class DeleteDBResourceGroupRequest extends Request {
     }
 
     /**
-     * @return groupName
+     * @return regionId
      */
-    public String getGroupName() {
-        return this.groupName;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteDBResourceGroupRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeSchemasRequest, Builder> {
         private String DBClusterId; 
-        private String groupName; 
+        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteDBResourceGroupRequest request) {
+        private Builder(DescribeSchemasRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
-            this.groupName = request.groupName;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * DBClusterId.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -79,20 +79,17 @@ public class DeleteDBResourceGroupRequest extends Request {
         }
 
         /**
-         * The name of the resource group.
-         * <p>
-         * 
-         * > You can call the [DescribeDBResourceGroup](~~612410~~) operation to query the resource group information of a cluster, including the resource group name.
+         * RegionId.
          */
-        public Builder groupName(String groupName) {
-            this.putQueryParameter("GroupName", groupName);
-            this.groupName = groupName;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
         @Override
-        public DeleteDBResourceGroupRequest build() {
-            return new DeleteDBResourceGroupRequest(this);
+        public DescribeSchemasRequest build() {
+            return new DescribeSchemasRequest(this);
         } 
 
     } 

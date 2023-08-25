@@ -69,6 +69,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAdbMySqlTablesResponse> describeAdbMySqlTables(DescribeAdbMySqlTablesRequest request);
 
+    CompletableFuture<DescribeAllDataSourceResponse> describeAllDataSource(DescribeAllDataSourceRequest request);
+
     CompletableFuture<DescribeApsActionLogsResponse> describeApsActionLogs(DescribeApsActionLogsRequest request);
 
     CompletableFuture<DescribeApsResourceGroupsResponse> describeApsResourceGroups(DescribeApsResourceGroupsRequest request);
@@ -78,6 +80,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeClusterAccessWhiteListResponse> describeClusterAccessWhiteList(DescribeClusterAccessWhiteListRequest request);
 
     CompletableFuture<DescribeClusterNetInfoResponse> describeClusterNetInfo(DescribeClusterNetInfoRequest request);
+
+    CompletableFuture<DescribeColumnsResponse> describeColumns(DescribeColumnsRequest request);
 
     CompletableFuture<DescribeDBClusterAttributeResponse> describeDBClusterAttribute(DescribeDBClusterAttributeRequest request);
 
@@ -113,6 +117,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSQLPatternsResponse> describeSQLPatterns(DescribeSQLPatternsRequest request);
 
+    CompletableFuture<DescribeSchemasResponse> describeSchemas(DescribeSchemasRequest request);
+
     CompletableFuture<DescribeSparkCodeLogResponse> describeSparkCodeLog(DescribeSparkCodeLogRequest request);
 
     CompletableFuture<DescribeSparkCodeOutputResponse> describeSparkCodeOutput(DescribeSparkCodeOutputRequest request);
@@ -122,6 +128,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSqlPatternResponse> describeSqlPattern(DescribeSqlPatternRequest request);
 
     CompletableFuture<DescribeTableAccessCountResponse> describeTableAccessCount(DescribeTableAccessCountRequest request);
+
+    CompletableFuture<DescribeTablesResponse> describeTables(DescribeTablesRequest request);
 
     CompletableFuture<DisableElasticPlanResponse> disableElasticPlan(DisableElasticPlanRequest request);
 
