@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetVideoTaskInfoResponseBody} extends {@link TeaModel}
+ * {@link QueryVideoTaskInfoResponseBody} extends {@link TeaModel}
  *
- * <p>GetVideoTaskInfoResponseBody</p>
+ * <p>QueryVideoTaskInfoResponseBody</p>
  */
-public class GetVideoTaskInfoResponseBody extends TeaModel {
+public class QueryVideoTaskInfoResponseBody extends TeaModel {
     @NameInMap("Code")
     private String code;
 
@@ -27,7 +27,7 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private GetVideoTaskInfoResponseBody(Builder builder) {
+    private QueryVideoTaskInfoResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -39,7 +39,7 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetVideoTaskInfoResponseBody create() {
+    public static QueryVideoTaskInfoResponseBody create() {
         return builder().build();
     }
 
@@ -110,7 +110,7 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -125,8 +125,8 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
             return this;
         }
 
-        public GetVideoTaskInfoResponseBody build() {
-            return new GetVideoTaskInfoResponseBody(this);
+        public QueryVideoTaskInfoResponseBody build() {
+            return new QueryVideoTaskInfoResponseBody(this);
         } 
 
     } 
@@ -298,7 +298,7 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * 字粒度的时间戳文件，特定任务支持
+             * WordSubtitlesUrl.
              */
             public Builder wordSubtitlesUrl(String wordSubtitlesUrl) {
                 this.wordSubtitlesUrl = wordSubtitlesUrl;
@@ -312,12 +312,9 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         } 
 
     }
-    public static class Data extends TeaModel {
-        @NameInMap("Process")
-        private String process;
-
+    public static class List extends TeaModel {
         @NameInMap("Status")
-        private String status;
+        private Integer status;
 
         @NameInMap("TaskResult")
         private TaskResult taskResult;
@@ -325,14 +322,17 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         @NameInMap("TaskUuid")
         private String taskUuid;
 
-        @NameInMap("Type")
-        private String type;
+        @NameInMap("Title")
+        private String title;
 
-        private Data(Builder builder) {
-            this.process = builder.process;
+        @NameInMap("Type")
+        private Integer type;
+
+        private List(Builder builder) {
             this.status = builder.status;
             this.taskResult = builder.taskResult;
             this.taskUuid = builder.taskUuid;
+            this.title = builder.title;
             this.type = builder.type;
         }
 
@@ -340,21 +340,14 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Data create() {
+        public static List create() {
             return builder().build();
-        }
-
-        /**
-         * @return process
-         */
-        public String getProcess() {
-            return this.process;
         }
 
         /**
          * @return status
          */
-        public String getStatus() {
+        public Integer getStatus() {
             return this.status;
         }
 
@@ -373,31 +366,30 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        /**
          * @return type
          */
-        public String getType() {
+        public Integer getType() {
             return this.type;
         }
 
         public static final class Builder {
-            private String process; 
-            private String status; 
+            private Integer status; 
             private TaskResult taskResult; 
             private String taskUuid; 
-            private String type; 
-
-            /**
-             * Process.
-             */
-            public Builder process(String process) {
-                this.process = process;
-                return this;
-            }
+            private String title; 
+            private Integer type; 
 
             /**
              * Status.
              */
-            public Builder status(String status) {
+            public Builder status(Integer status) {
                 this.status = status;
                 return this;
             }
@@ -419,10 +411,119 @@ public class GetVideoTaskInfoResponseBody extends TeaModel {
             }
 
             /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            /**
              * Type.
              */
-            public Builder type(String type) {
+            public Builder type(Integer type) {
                 this.type = type;
+                return this;
+            }
+
+            public List build() {
+                return new List(this);
+            } 
+
+        } 
+
+    }
+    public static class Data extends TeaModel {
+        @NameInMap("List")
+        private java.util.List < List> list;
+
+        @NameInMap("PageNo")
+        private Integer pageNo;
+
+        @NameInMap("PageSize")
+        private Integer pageSize;
+
+        @NameInMap("TotalCount")
+        private Long totalCount;
+
+        private Data(Builder builder) {
+            this.list = builder.list;
+            this.pageNo = builder.pageNo;
+            this.pageSize = builder.pageSize;
+            this.totalCount = builder.totalCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Data create() {
+            return builder().build();
+        }
+
+        /**
+         * @return list
+         */
+        public java.util.List < List> getList() {
+            return this.list;
+        }
+
+        /**
+         * @return pageNo
+         */
+        public Integer getPageNo() {
+            return this.pageNo;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
+        public static final class Builder {
+            private java.util.List < List> list; 
+            private Integer pageNo; 
+            private Integer pageSize; 
+            private Long totalCount; 
+
+            /**
+             * List.
+             */
+            public Builder list(java.util.List < List> list) {
+                this.list = list;
+                return this;
+            }
+
+            /**
+             * PageNo.
+             */
+            public Builder pageNo(Integer pageNo) {
+                this.pageNo = pageNo;
+                return this;
+            }
+
+            /**
+             * PageSize.
+             */
+            public Builder pageSize(Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Long totalCount) {
+                this.totalCount = totalCount;
                 return this;
             }
 

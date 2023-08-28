@@ -40,6 +40,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryTimedResetOperateStatusResponse> queryTimedResetOperateStatus(QueryTimedResetOperateStatusRequest request);
 
+    CompletableFuture<QueryVideoTaskInfoResponse> queryVideoTaskInfo(QueryVideoTaskInfoRequest request);
+
     CompletableFuture<SendCommandResponse> sendCommand(SendCommandRequest request);
 
     CompletableFuture<SendMessageResponse> sendMessage(SendMessageRequest request);

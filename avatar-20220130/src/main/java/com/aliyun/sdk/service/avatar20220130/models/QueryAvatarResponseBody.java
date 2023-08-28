@@ -355,6 +355,9 @@ public class QueryAvatarResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("AllLocateImages")
+        private java.util.Map < String, ? > allLocateImages;
+
         @NameInMap("AvatarType")
         private String avatarType;
 
@@ -366,6 +369,9 @@ public class QueryAvatarResponseBody extends TeaModel {
 
         @NameInMap("MakeFailReason")
         private String makeFailReason;
+
+        @NameInMap("MakeStage")
+        private String makeStage;
 
         @NameInMap("MakeStatus")
         private String makeStatus;
@@ -383,10 +389,12 @@ public class QueryAvatarResponseBody extends TeaModel {
         private SupportedResolutions supportedResolutions;
 
         private Data(Builder builder) {
+            this.allLocateImages = builder.allLocateImages;
             this.avatarType = builder.avatarType;
             this.description = builder.description;
             this.image = builder.image;
             this.makeFailReason = builder.makeFailReason;
+            this.makeStage = builder.makeStage;
             this.makeStatus = builder.makeStatus;
             this.modelType = builder.modelType;
             this.name = builder.name;
@@ -400,6 +408,13 @@ public class QueryAvatarResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return allLocateImages
+         */
+        public java.util.Map < String, ? > getAllLocateImages() {
+            return this.allLocateImages;
         }
 
         /**
@@ -428,6 +443,13 @@ public class QueryAvatarResponseBody extends TeaModel {
          */
         public String getMakeFailReason() {
             return this.makeFailReason;
+        }
+
+        /**
+         * @return makeStage
+         */
+        public String getMakeStage() {
+            return this.makeStage;
         }
 
         /**
@@ -466,15 +488,25 @@ public class QueryAvatarResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map < String, ? > allLocateImages; 
             private String avatarType; 
             private String description; 
             private String image; 
             private String makeFailReason; 
+            private String makeStage; 
             private String makeStatus; 
             private String modelType; 
             private String name; 
             private String portrait; 
             private SupportedResolutions supportedResolutions; 
+
+            /**
+             * AllLocateImages.
+             */
+            public Builder allLocateImages(java.util.Map < String, ? > allLocateImages) {
+                this.allLocateImages = allLocateImages;
+                return this;
+            }
 
             /**
              * AvatarType.
@@ -505,6 +537,14 @@ public class QueryAvatarResponseBody extends TeaModel {
              */
             public Builder makeFailReason(String makeFailReason) {
                 this.makeFailReason = makeFailReason;
+                return this;
+            }
+
+            /**
+             * MakeStage.
+             */
+            public Builder makeStage(String makeStage) {
+                this.makeStage = makeStage;
                 return this;
             }
 

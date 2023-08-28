@@ -370,6 +370,9 @@ public class QueryAvatarListResponseBody extends TeaModel {
         @NameInMap("MakeFailReason")
         private String makeFailReason;
 
+        @NameInMap("MakeStage")
+        private String makeStage;
+
         @NameInMap("MakeStatus")
         private String makeStatus;
 
@@ -391,6 +394,7 @@ public class QueryAvatarListResponseBody extends TeaModel {
             this.description = builder.description;
             this.image = builder.image;
             this.makeFailReason = builder.makeFailReason;
+            this.makeStage = builder.makeStage;
             this.makeStatus = builder.makeStatus;
             this.modelType = builder.modelType;
             this.name = builder.name;
@@ -442,6 +446,13 @@ public class QueryAvatarListResponseBody extends TeaModel {
         }
 
         /**
+         * @return makeStage
+         */
+        public String getMakeStage() {
+            return this.makeStage;
+        }
+
+        /**
          * @return makeStatus
          */
         public String getMakeStatus() {
@@ -482,6 +493,7 @@ public class QueryAvatarListResponseBody extends TeaModel {
             private String description; 
             private String image; 
             private String makeFailReason; 
+            private String makeStage; 
             private String makeStatus; 
             private String modelType; 
             private String name; 
@@ -525,6 +537,14 @@ public class QueryAvatarListResponseBody extends TeaModel {
              */
             public Builder makeFailReason(String makeFailReason) {
                 this.makeFailReason = makeFailReason;
+                return this;
+            }
+
+            /**
+             * MakeStage.
+             */
+            public Builder makeStage(String makeStage) {
+                this.makeStage = makeStage;
                 return this;
             }
 
