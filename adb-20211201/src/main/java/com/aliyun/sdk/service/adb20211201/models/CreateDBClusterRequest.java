@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateDBClusterRequest extends Request {
     @Query
+    @NameInMap("BackupSetId")
+    private String backupSetId;
+
+    @Query
     @NameInMap("ComputeResource")
     @Validation(required = true)
     private String computeResource;
@@ -53,6 +57,18 @@ public class CreateDBClusterRequest extends Request {
     private String resourceGroupId;
 
     @Query
+    @NameInMap("RestoreToTime")
+    private String restoreToTime;
+
+    @Query
+    @NameInMap("RestoreType")
+    private String restoreType;
+
+    @Query
+    @NameInMap("SourceDbClusterId")
+    private String sourceDbClusterId;
+
+    @Query
     @NameInMap("StorageResource")
     @Validation(required = true)
     private String storageResource;
@@ -82,6 +98,7 @@ public class CreateDBClusterRequest extends Request {
 
     private CreateDBClusterRequest(Builder builder) {
         super(builder);
+        this.backupSetId = builder.backupSetId;
         this.computeResource = builder.computeResource;
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterNetworkType = builder.DBClusterNetworkType;
@@ -91,6 +108,9 @@ public class CreateDBClusterRequest extends Request {
         this.period = builder.period;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.restoreToTime = builder.restoreToTime;
+        this.restoreType = builder.restoreType;
+        this.sourceDbClusterId = builder.sourceDbClusterId;
         this.storageResource = builder.storageResource;
         this.tag = builder.tag;
         this.usedTime = builder.usedTime;
@@ -110,6 +130,13 @@ public class CreateDBClusterRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return backupSetId
+     */
+    public String getBackupSetId() {
+        return this.backupSetId;
     }
 
     /**
@@ -176,6 +203,27 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return restoreToTime
+     */
+    public String getRestoreToTime() {
+        return this.restoreToTime;
+    }
+
+    /**
+     * @return restoreType
+     */
+    public String getRestoreType() {
+        return this.restoreType;
+    }
+
+    /**
+     * @return sourceDbClusterId
+     */
+    public String getSourceDbClusterId() {
+        return this.sourceDbClusterId;
+    }
+
+    /**
      * @return storageResource
      */
     public String getStorageResource() {
@@ -218,6 +266,7 @@ public class CreateDBClusterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateDBClusterRequest, Builder> {
+        private String backupSetId; 
         private String computeResource; 
         private String DBClusterDescription; 
         private String DBClusterNetworkType; 
@@ -227,6 +276,9 @@ public class CreateDBClusterRequest extends Request {
         private String period; 
         private String regionId; 
         private String resourceGroupId; 
+        private String restoreToTime; 
+        private String restoreType; 
+        private String sourceDbClusterId; 
         private String storageResource; 
         private java.util.List < Tag> tag; 
         private String usedTime; 
@@ -240,6 +292,7 @@ public class CreateDBClusterRequest extends Request {
 
         private Builder(CreateDBClusterRequest request) {
             super(request);
+            this.backupSetId = request.backupSetId;
             this.computeResource = request.computeResource;
             this.DBClusterDescription = request.DBClusterDescription;
             this.DBClusterNetworkType = request.DBClusterNetworkType;
@@ -249,6 +302,9 @@ public class CreateDBClusterRequest extends Request {
             this.period = request.period;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.restoreToTime = request.restoreToTime;
+            this.restoreType = request.restoreType;
+            this.sourceDbClusterId = request.sourceDbClusterId;
             this.storageResource = request.storageResource;
             this.tag = request.tag;
             this.usedTime = request.usedTime;
@@ -256,6 +312,15 @@ public class CreateDBClusterRequest extends Request {
             this.vSwitchId = request.vSwitchId;
             this.zoneId = request.zoneId;
         } 
+
+        /**
+         * BackupSetId.
+         */
+        public Builder backupSetId(String backupSetId) {
+            this.putQueryParameter("BackupSetId", backupSetId);
+            this.backupSetId = backupSetId;
+            return this;
+        }
 
         /**
          * The reserved computing resources. Unit: ACUs. Valid values: 0 to 4096. The value must be in increments of 16 ACUs. Each ACU is equivalent to 1 core and 4 GB memory.
@@ -359,6 +424,33 @@ public class CreateDBClusterRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * RestoreToTime.
+         */
+        public Builder restoreToTime(String restoreToTime) {
+            this.putQueryParameter("RestoreToTime", restoreToTime);
+            this.restoreToTime = restoreToTime;
+            return this;
+        }
+
+        /**
+         * RestoreType.
+         */
+        public Builder restoreType(String restoreType) {
+            this.putQueryParameter("RestoreType", restoreType);
+            this.restoreType = restoreType;
+            return this;
+        }
+
+        /**
+         * SourceDbClusterId.
+         */
+        public Builder sourceDbClusterId(String sourceDbClusterId) {
+            this.putQueryParameter("SourceDbClusterId", sourceDbClusterId);
+            this.sourceDbClusterId = sourceDbClusterId;
             return this;
         }
 

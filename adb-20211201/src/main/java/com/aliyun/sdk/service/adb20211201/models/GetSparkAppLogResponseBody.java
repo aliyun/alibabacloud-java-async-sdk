@@ -50,7 +50,7 @@ public class GetSparkAppLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The content of the log.
+         * The queried log.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetSparkAppLogResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the logs.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class GetSparkAppLogResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * DBClusterId.
+             * The ID of the Data Lakehouse Edition (V3.0) cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -130,7 +130,7 @@ public class GetSparkAppLogResponseBody extends TeaModel {
             }
 
             /**
-             * The alert message returned for the operation, such as task execution failure or insufficient resources. Null is returned if no alert occurs.
+             * The content of the log.
              */
             public Builder logContent(String logContent) {
                 this.logContent = logContent;
@@ -138,7 +138,7 @@ public class GetSparkAppLogResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The alert message returned for the request, such as task execution failure or insufficient resources. If no alert occurs, null is returned.
              */
             public Builder message(String message) {
                 this.message = message;

@@ -70,7 +70,10 @@ public class GetSparkAppLogRequest extends Request {
         } 
 
         /**
-         * The number of log entries to return. Valid values: 1 to 500. Default value: 300.
+         * The Spark application ID.
+         * <p>
+         * 
+         * > You can call the [ListSparkApps](~~~~) operation to query the Spark application ID.
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -79,7 +82,7 @@ public class GetSparkAppLogRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The number of log entries to return. Valid values: 1 to 500. Default value: 300.
          */
         public Builder logLength(Long logLength) {
             this.putBodyParameter("LogLength", logLength);
