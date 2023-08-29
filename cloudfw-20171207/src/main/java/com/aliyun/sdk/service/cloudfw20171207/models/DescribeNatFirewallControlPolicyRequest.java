@@ -43,6 +43,7 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
 
     @Query
     @NameInMap("NatGatewayId")
+    @Validation(required = true)
     private String natGatewayId;
 
     @Query

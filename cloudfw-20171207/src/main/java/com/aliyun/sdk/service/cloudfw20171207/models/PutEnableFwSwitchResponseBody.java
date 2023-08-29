@@ -12,10 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutEnableFwSwitchResponseBody</p>
  */
 public class PutEnableFwSwitchResponseBody extends TeaModel {
+    @NameInMap("AbnormalResourceStatusList")
+    private java.util.List < AbnormalResourceStatusList> abnormalResourceStatusList;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private PutEnableFwSwitchResponseBody(Builder builder) {
+        this.abnormalResourceStatusList = builder.abnormalResourceStatusList;
         this.requestId = builder.requestId;
     }
 
@@ -28,6 +32,13 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
     }
 
     /**
+     * @return abnormalResourceStatusList
+     */
+    public java.util.List < AbnormalResourceStatusList> getAbnormalResourceStatusList() {
+        return this.abnormalResourceStatusList;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -35,7 +46,16 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List < AbnormalResourceStatusList> abnormalResourceStatusList; 
         private String requestId; 
+
+        /**
+         * AbnormalResourceStatusList.
+         */
+        public Builder abnormalResourceStatusList(java.util.List < AbnormalResourceStatusList> abnormalResourceStatusList) {
+            this.abnormalResourceStatusList = abnormalResourceStatusList;
+            return this;
+        }
 
         /**
          * The ID of the request.
@@ -51,4 +71,85 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
 
     } 
 
+    public static class AbnormalResourceStatusList extends TeaModel {
+        @NameInMap("Msg")
+        private String msg;
+
+        @NameInMap("Resource")
+        private String resource;
+
+        @NameInMap("Status")
+        private String status;
+
+        private AbnormalResourceStatusList(Builder builder) {
+            this.msg = builder.msg;
+            this.resource = builder.resource;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AbnormalResourceStatusList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return msg
+         */
+        public String getMsg() {
+            return this.msg;
+        }
+
+        /**
+         * @return resource
+         */
+        public String getResource() {
+            return this.resource;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String msg; 
+            private String resource; 
+            private String status; 
+
+            /**
+             * Msg.
+             */
+            public Builder msg(String msg) {
+                this.msg = msg;
+                return this;
+            }
+
+            /**
+             * Resource.
+             */
+            public Builder resource(String resource) {
+                this.resource = resource;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public AbnormalResourceStatusList build() {
+                return new AbnormalResourceStatusList(this);
+            } 
+
+        } 
+
+    }
 }
