@@ -50,7 +50,7 @@ public class EditRoutineConfResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The description of the execution errors and the version number of the latest environment configurations.
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class EditRoutineConfResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

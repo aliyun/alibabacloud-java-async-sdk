@@ -98,7 +98,7 @@ public class DescribeDcdnIpaDomainConfigsRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate multiple domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -107,7 +107,7 @@ public class DescribeDcdnIpaDomainConfigsRequest extends Request {
         }
 
         /**
-         * FunctionNames.
+         * The name of the feature. Set the value to protogw, which indicates IP Application Accelerator (IPA).
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

@@ -50,7 +50,7 @@ public class UploadRoutineCodeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The content returned, such as the code version number and information about the code upload.
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class UploadRoutineCodeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

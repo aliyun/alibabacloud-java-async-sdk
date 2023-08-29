@@ -14,16 +14,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class UpdateDcdnSubTaskRequest extends Request {
     @Body
     @NameInMap("DomainName")
-    @Validation(maxLength = 7000)
     private String domainName;
 
     @Body
     @NameInMap("EndTime")
     private String endTime;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
 
     @Body
     @NameInMap("ReportIds")
@@ -37,7 +32,6 @@ public class UpdateDcdnSubTaskRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
-        this.ownerId = builder.ownerId;
         this.reportIds = builder.reportIds;
         this.startTime = builder.startTime;
     }
@@ -70,13 +64,6 @@ public class UpdateDcdnSubTaskRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return reportIds
      */
     public String getReportIds() {
@@ -93,7 +80,6 @@ public class UpdateDcdnSubTaskRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateDcdnSubTaskRequest, Builder> {
         private String domainName; 
         private String endTime; 
-        private Long ownerId; 
         private String reportIds; 
         private String startTime; 
 
@@ -105,13 +91,12 @@ public class UpdateDcdnSubTaskRequest extends Request {
             super(request);
             this.domainName = request.domainName;
             this.endTime = request.endTime;
-            this.ownerId = request.ownerId;
             this.reportIds = request.reportIds;
             this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The domain names that you want to include in the operations report. If you do not specify a domain name, all domain names that belong to your Alibaba Cloud account are included.
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -120,7 +105,7 @@ public class UpdateDcdnSubTaskRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -129,16 +114,7 @@ public class UpdateDcdnSubTaskRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ReportIds.
+         * The IDs of the metrics that you want to update. Separate IDs with commas (,). You can call the [DescribeDcdnSubList](~~270075~~) operation to query the IDs.
          */
         public Builder reportIds(String reportIds) {
             this.putBodyParameter("ReportIds", reportIds);
@@ -147,7 +123,7 @@ public class UpdateDcdnSubTaskRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the operations report. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

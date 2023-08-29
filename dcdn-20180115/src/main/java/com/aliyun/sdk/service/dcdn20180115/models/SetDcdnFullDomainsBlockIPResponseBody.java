@@ -62,7 +62,7 @@ public class SetDcdnFullDomainsBlockIPResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class SetDcdnFullDomainsBlockIPResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The status code that indicates the result.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +78,7 @@ public class SetDcdnFullDomainsBlockIPResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -37,10 +37,6 @@ public class DescribeDcdnDomainQpsDataByLayerRequest extends Request {
     private String locationNameEn;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -52,7 +48,6 @@ public class DescribeDcdnDomainQpsDataByLayerRequest extends Request {
         this.ispNameEn = builder.ispNameEn;
         this.layer = builder.layer;
         this.locationNameEn = builder.locationNameEn;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -112,13 +107,6 @@ public class DescribeDcdnDomainQpsDataByLayerRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -132,7 +120,6 @@ public class DescribeDcdnDomainQpsDataByLayerRequest extends Request {
         private String ispNameEn; 
         private String layer; 
         private String locationNameEn; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
@@ -147,12 +134,11 @@ public class DescribeDcdnDomainQpsDataByLayerRequest extends Request {
             this.ispNameEn = request.ispNameEn;
             this.layer = request.layer;
             this.locationNameEn = request.locationNameEn;
-            this.ownerId = request.ownerId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The QPS returned at each time interval.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -161,7 +147,7 @@ public class DescribeDcdnDomainQpsDataByLayerRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The number of queries per second outside the Chinese mainland.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -170,7 +156,7 @@ public class DescribeDcdnDomainQpsDataByLayerRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The layer at which the data was collected.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -179,7 +165,12 @@ public class DescribeDcdnDomainQpsDataByLayerRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * The minimum data granularity is 5 minutes.
+         * 
+         * If you do not set this parameter, data in the last 24 hours is queried.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -188,7 +179,10 @@ public class DescribeDcdnDomainQpsDataByLayerRequest extends Request {
         }
 
         /**
-         * Layer.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time.
          */
         public Builder layer(String layer) {
             this.putQueryParameter("Layer", layer);
@@ -197,7 +191,7 @@ public class DescribeDcdnDomainQpsDataByLayerRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The accelerated domain name.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -206,16 +200,7 @@ public class DescribeDcdnDomainQpsDataByLayerRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The number of requests in the Chinese mainland.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

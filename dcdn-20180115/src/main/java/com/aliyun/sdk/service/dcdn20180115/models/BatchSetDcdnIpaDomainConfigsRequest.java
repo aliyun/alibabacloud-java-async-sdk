@@ -112,7 +112,7 @@ public class BatchSetDcdnIpaDomainConfigsRequest extends Request {
         } 
 
         /**
-         * DomainNames.
+         * The domain names accelerated by IPA. Separate multiple domain names with commas (,).
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -121,7 +121,7 @@ public class BatchSetDcdnIpaDomainConfigsRequest extends Request {
         }
 
         /**
-         * Functions.
+         * The list of features. `[{"functionArgs":[{"argName":"parameter name","argValue":"parameter value"}],"functionName":"feature name"}]`
          */
         public Builder functions(String functions) {
             this.putQueryParameter("Functions", functions);

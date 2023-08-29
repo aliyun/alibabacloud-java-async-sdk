@@ -98,7 +98,7 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
         private UvDataInterval uvDataInterval; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range that was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range that was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +138,7 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * UvDataInterval.
+         * The number of UVs at each interval.
          */
         public Builder uvDataInterval(UvDataInterval uvDataInterval) {
             this.uvDataInterval = uvDataInterval;
@@ -190,7 +190,7 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +198,7 @@ public class DescribeDcdnDomainUvDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The number of UVs.
              */
             public Builder value(String value) {
                 this.value = value;

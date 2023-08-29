@@ -50,7 +50,7 @@ public class DescribeDcdnIpaDomainConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainConfigs.
+         * The configurations of the domain name.
          */
         public Builder domainConfigs(DomainConfigs domainConfigs) {
             this.domainConfigs = domainConfigs;
@@ -58,7 +58,7 @@ public class DescribeDcdnIpaDomainConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDcdnIpaDomainConfigsResponseBody extends TeaModel {
             private String argValue; 
 
             /**
-             * ArgName.
+             * The name of the configuration.
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -118,7 +118,7 @@ public class DescribeDcdnIpaDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ArgValue.
+             * The value of the configuration.
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -236,7 +236,7 @@ public class DescribeDcdnIpaDomainConfigsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ConfigId.
+             * The ID of the configuration.
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -244,7 +244,7 @@ public class DescribeDcdnIpaDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionArgs.
+             * The list of features.
              */
             public Builder functionArgs(FunctionArgs functionArgs) {
                 this.functionArgs = functionArgs;
@@ -252,7 +252,7 @@ public class DescribeDcdnIpaDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * The name of the feature.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -260,7 +260,13 @@ public class DescribeDcdnIpaDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The configuration status of the feature. Valid values:
+             * <p>
+             * 
+             * *   **success**
+             * *   **testing**
+             * *   **failed**
+             * *   **configuring**
              */
             public Builder status(String status) {
                 this.status = status;

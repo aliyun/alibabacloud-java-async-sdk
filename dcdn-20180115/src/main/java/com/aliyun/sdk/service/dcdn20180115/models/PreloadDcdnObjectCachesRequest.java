@@ -33,6 +33,10 @@ public class PreloadDcdnObjectCachesRequest extends Request {
     @NameInMap("SecurityToken")
     private String securityToken;
 
+    @Query
+    @NameInMap("WithHeader")
+    private String withHeader;
+
     private PreloadDcdnObjectCachesRequest(Builder builder) {
         super(builder);
         this.area = builder.area;
@@ -40,6 +44,7 @@ public class PreloadDcdnObjectCachesRequest extends Request {
         this.objectPath = builder.objectPath;
         this.ownerId = builder.ownerId;
         this.securityToken = builder.securityToken;
+        this.withHeader = builder.withHeader;
     }
 
     public static Builder builder() {
@@ -90,12 +95,20 @@ public class PreloadDcdnObjectCachesRequest extends Request {
         return this.securityToken;
     }
 
+    /**
+     * @return withHeader
+     */
+    public String getWithHeader() {
+        return this.withHeader;
+    }
+
     public static final class Builder extends Request.Builder<PreloadDcdnObjectCachesRequest, Builder> {
         private String area; 
         private Boolean l2Preload; 
         private String objectPath; 
         private Long ownerId; 
         private String securityToken; 
+        private String withHeader; 
 
         private Builder() {
             super();
@@ -108,10 +121,15 @@ public class PreloadDcdnObjectCachesRequest extends Request {
             this.objectPath = request.objectPath;
             this.ownerId = request.ownerId;
             this.securityToken = request.securityToken;
+            this.withHeader = request.withHeader;
         } 
 
         /**
-         * Area.
+         * The acceleration region in which you want to prefetch content. If you do not specify a region, the value overseas is used.
+         * <p>
+         * 
+         * *   **domestic**: Chinese mainland
+         * *   **overseas**: outside the Chinese mainland
          */
         public Builder area(String area) {
             this.putQueryParameter("Area", area);
@@ -120,7 +138,11 @@ public class PreloadDcdnObjectCachesRequest extends Request {
         }
 
         /**
-         * L2Preload.
+         * Specifies whether to prefetch content to POPs. Valid values:
+         * <p>
+         * 
+         * *   **true**: prefetches content to nodes that include L2 DCDN nodes.
+         * *   **false**: prefetches content to L2 POPs or L3 POPs.
          */
         public Builder l2Preload(Boolean l2Preload) {
             this.putQueryParameter("L2Preload", l2Preload);
@@ -129,7 +151,7 @@ public class PreloadDcdnObjectCachesRequest extends Request {
         }
 
         /**
-         * ObjectPath.
+         * The path of the content that you want to prefetch. Separate multiple URLs with line feed characters (\n) or a pair of carriage return and line feed characters (\r\n).
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -152,6 +174,15 @@ public class PreloadDcdnObjectCachesRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * The custom header for prefetch in the JSON format.
+         */
+        public Builder withHeader(String withHeader) {
+            this.putQueryParameter("WithHeader", withHeader);
+            this.withHeader = withHeader;
             return this;
         }
 

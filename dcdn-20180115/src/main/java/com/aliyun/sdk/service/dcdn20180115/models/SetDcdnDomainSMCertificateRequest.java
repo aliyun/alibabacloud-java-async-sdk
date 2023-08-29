@@ -113,7 +113,7 @@ public class SetDcdnDomainSMCertificateRequest extends Request {
         } 
 
         /**
-         * CertIdentifier.
+         * The identifier of the certificate. The value is Certificate ID-cn-hangzhou. If the ID of the certificate is 123, CertIdentifier is set to 123-cn-hangzhou.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);
@@ -122,7 +122,10 @@ public class SetDcdnDomainSMCertificateRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name for which the SM certificate is configured.
+         * <p>
+         * 
+         * > The domain name must have HTTPS secure acceleration enabled.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -140,7 +143,11 @@ public class SetDcdnDomainSMCertificateRequest extends Request {
         }
 
         /**
-         * SSLProtocol.
+         * Specifies whether to enable the SSL certificate. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);

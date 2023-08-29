@@ -83,7 +83,7 @@ public class StopDcdnDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name that you want to disable. You can specify only one domain name in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

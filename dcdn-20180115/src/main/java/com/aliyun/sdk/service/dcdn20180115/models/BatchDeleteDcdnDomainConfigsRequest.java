@@ -112,7 +112,7 @@ public class BatchDeleteDcdnDomainConfigsRequest extends Request {
         } 
 
         /**
-         * DomainNames.
+         * The accelerated domain names whose configurations you want to delete. Separate multiple accelerated domain names with commas (,).
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -121,7 +121,7 @@ public class BatchDeleteDcdnDomainConfigsRequest extends Request {
         }
 
         /**
-         * FunctionNames.
+         * The names of the features that you want to delete. Separate multiple feature names with commas (,). For more information about feature names, see [Feature settings for a domain name](~~410622~~).
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

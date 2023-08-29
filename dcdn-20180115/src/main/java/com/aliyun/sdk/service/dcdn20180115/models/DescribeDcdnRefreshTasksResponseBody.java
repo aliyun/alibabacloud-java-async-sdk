@@ -86,7 +86,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * The tasks.
          */
         public Builder tasks(Tasks tasks) {
             this.tasks = tasks;
@@ -118,7 +118,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of tasks.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * CreationTime.
+             * The time when the task was created. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -238,7 +238,12 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The type of error returned when the refresh or prefetch task has failed.
+             * <p>
+             * 
+             * *   **InternalError**: An internal error occurred.
+             * *   **OriginTimeout**: The response from the origin server timed out.
+             * *   **OriginReturn StatusCode 5XX**: The origin server returned a 5XX error.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +251,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectPath.
+             * The URL of the object refreshed.
              */
             public Builder objectPath(String objectPath) {
                 this.objectPath = objectPath;
@@ -254,7 +259,13 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   **file**: URL-based refresh
+             * *   **path**: directory-based refresh
+             * *   **regex**: regular expression-based refresh
+             * *   **preload**: URL-based prefetch
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -262,7 +273,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * The progress of the task in percentage.
              */
             public Builder process(String process) {
                 this.process = process;
@@ -270,7 +281,12 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the auxiliary media asset.
+             * <p>
+             * 
+             * *   **Complete**: The task is complete.
+             * *   **Refreshing**: The task is in progress.
+             * *   **Failed**: The task failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -278,7 +294,7 @@ public class DescribeDcdnRefreshTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

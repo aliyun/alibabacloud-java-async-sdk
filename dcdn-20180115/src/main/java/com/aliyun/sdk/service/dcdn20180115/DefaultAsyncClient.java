@@ -94,6 +94,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+      * > 
+      * *   Dynamic Content Delivery Network (DCDN) is activated.
+      * *   Internet content provider (ICP) filing is complete for the accelerated domain name.
+      * *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<AddDcdnDomainResponse> addDcdnDomain(AddDcdnDomainRequest request) {
         try {
@@ -108,6 +116,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   Make sure that the IPA service is activated before you add a domain name to accelerate.
+      * *   Make sure that the Internet content provider (ICP) filling is complete for the domain name to accelerate.
+      * *   If the content on the origin server is not stored on Alibaba Cloud, the content must be reviewed. The review is complete by the end of the next business day after you submit the request.
+      * *   You can call this operation up to 10 times per second per user.
+      *
+     */
     @Override
     public CompletableFuture<AddDcdnIpaDomainResponse> addDcdnIpaDomain(AddDcdnIpaDomainRequest request) {
         try {
@@ -122,6 +138,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * **Prerequisites**:
+      * *   The [DCDN service is activated](~~64926~~).
+      * *   Internet content provider (ICP) filing is complete for the accelerated domain names.
+      * > *   If the content of the origin server is not stored on Alibaba Cloud, the content must be reviewed. After you submit the request, the review is complete by the end of the following business day.
+      * >*   You can specify up to 50 domain names in each request.
+      * >*   You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<BatchAddDcdnDomainResponse> batchAddDcdnDomain(BatchAddDcdnDomainRequest request) {
         try {
@@ -136,6 +161,29 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The ID of the request.
+      *
+     */
+    @Override
+    public CompletableFuture<BatchCreateDcdnWafRulesResponse> batchCreateDcdnWafRules(BatchCreateDcdnWafRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchCreateDcdnWafRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchCreateDcdnWafRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchCreateDcdnWafRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > - You can specify up to 50 domain names in each request.
+      * > - You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<BatchDeleteDcdnDomainConfigsResponse> batchDeleteDcdnDomainConfigs(BatchDeleteDcdnDomainConfigsRequest request) {
         try {
@@ -150,6 +198,62 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * # Usage notes
+      * *   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
+      *
+     */
+    @Override
+    public CompletableFuture<BatchDeleteDcdnWafRulesResponse> batchDeleteDcdnWafRules(BatchDeleteDcdnWafRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchDeleteDcdnWafRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchDeleteDcdnWafRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchDeleteDcdnWafRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * You can call this operation up to 20 times per second per account.
+      *
+     */
+    @Override
+    public CompletableFuture<BatchModifyDcdnWafRulesResponse> batchModifyDcdnWafRules(BatchModifyDcdnWafRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchModifyDcdnWafRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchModifyDcdnWafRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchModifyDcdnWafRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<BatchPutDcdnKvResponse> batchPutDcdnKv(BatchPutDcdnKvRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchPutDcdnKv").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchPutDcdnKvResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchPutDcdnKvResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > You can call this operation up to 10 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<BatchSetDcdnDomainCertificateResponse> batchSetDcdnDomainCertificate(BatchSetDcdnDomainCertificateRequest request) {
         try {
@@ -164,6 +268,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   You can specify up to 50 domain names in each request.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<BatchSetDcdnDomainConfigsResponse> batchSetDcdnDomainConfigs(BatchSetDcdnDomainConfigsRequest request) {
         try {
@@ -178,6 +288,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 20 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<BatchSetDcdnIpaDomainConfigsResponse> batchSetDcdnIpaDomainConfigs(BatchSetDcdnIpaDomainConfigsRequest request) {
         try {
@@ -192,6 +306,33 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * #
+      * *   You can call this operation up to 20 times per second.
+      * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
+      *
+     */
+    @Override
+    public CompletableFuture<BatchSetDcdnWafDomainConfigsResponse> batchSetDcdnWafDomainConfigs(BatchSetDcdnWafDomainConfigsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("BatchSetDcdnWafDomainConfigs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BatchSetDcdnWafDomainConfigsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BatchSetDcdnWafDomainConfigsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > 
+      * *   If an accelerated domain name is in an invalid state or your account has an overdue payment, the accelerated domain name cannot be enabled.
+      * *   You can specify up to 50 domain names in each request.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<BatchStartDcdnDomainResponse> batchStartDcdnDomain(BatchStartDcdnDomainRequest request) {
         try {
@@ -206,6 +347,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > *   After an accelerated domain name is disabled, Dynamic Content Delivery Network (DCDN) retains the domain name information. The system automatically reroutes all requests that are destined for the accelerated domain name to the origin.
+      * >*   You can specify up to 50 domain names in each request.
+      * >*   You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<BatchStopDcdnDomainResponse> batchStopDcdnDomain(BatchStopDcdnDomainRequest request) {
         try {
@@ -220,6 +367,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<CheckDcdnProjectExistResponse> checkDcdnProjectExist(CheckDcdnProjectExistRequest request) {
         try {
@@ -234,6 +385,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  The call frequency of the API is no more than 100 queries per second.
+      *
+     */
     @Override
     public CompletableFuture<CommitStagingRoutineCodeResponse> commitStagingRoutineCode(CommitStagingRoutineCodeRequest request) {
         try {
@@ -248,20 +403,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<CreateDcdnCertificateSigningRequestResponse> createDcdnCertificateSigningRequest(CreateDcdnCertificateSigningRequestRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDcdnCertificateSigningRequest").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDcdnCertificateSigningRequestResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateDcdnCertificateSigningRequestResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+      * > You can call this operation up to three times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<CreateDcdnDeliverTaskResponse> createDcdnDeliverTask(CreateDcdnDeliverTaskRequest request) {
         try {
@@ -276,6 +421,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<CreateDcdnSLSRealTimeLogDeliveryResponse> createDcdnSLSRealTimeLogDelivery(CreateDcdnSLSRealTimeLogDeliveryRequest request) {
         try {
@@ -290,6 +439,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   This operation allows you to customize an operations report for a specific domain name. You can view the statistics about the domain name in the report.
+      * *   You can call this operation up to three times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<CreateDcdnSubTaskResponse> createDcdnSubTask(CreateDcdnSubTaskRequest request) {
         try {
@@ -305,6 +460,46 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<CreateDcdnWafGroupResponse> createDcdnWafGroup(CreateDcdnWafGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDcdnWafGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDcdnWafGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDcdnWafGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * *   You can call this operation up to 20 times per second per user.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+     */
+    @Override
+    public CompletableFuture<CreateDcdnWafPolicyResponse> createDcdnWafPolicy(CreateDcdnWafPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateDcdnWafPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateDcdnWafPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateDcdnWafPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > 
+      * *   The parameters must comply with the rules of EnvConf. The description of a routine cannot exceed 50 characters in length.
+      * *   You can only specify the production and staging environments when you call this operation.
+      * *   You can call this operation up to 100 times per second.
+      *
+     */
+    @Override
     public CompletableFuture<CreateRoutineResponse> createRoutine(CreateRoutineRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -318,6 +513,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<CreateSlrAndSlsProjectResponse> createSlrAndSlsProject(CreateSlrAndSlsProjectRequest request) {
         try {
@@ -332,6 +531,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 3.
+      *
+     */
     @Override
     public CompletableFuture<DeleteDcdnDeliverTaskResponse> deleteDcdnDeliverTask(DeleteDcdnDeliverTaskRequest request) {
         try {
@@ -346,6 +549,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > *   Before you delete your domain name, you need to request the Domain Name System (DNS) provider to restore the A record of the domain name. Otherwise, the domain name may become inaccessible after you delete it.
+      * > *   If you call the **DeleteDcdnDomain** operation, all the information about the accelerated domain name is deleted. If you want to disable an accelerated domain name, call the [StopDcdnDomain](~~130622~~) operation.
+      * > *   You can call this operation up to 10 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DeleteDcdnDomainResponse> deleteDcdnDomain(DeleteDcdnDomainRequest request) {
         try {
@@ -360,6 +569,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   Before you delete your domain name, we recommend that you request the Domain Name System (DNS) provider to restore the A record of the domain name. Otherwise, the domain name may become inaccessible after you delete it.
+      * *   This operation deletes all records of the specified accelerated domain name. If you want to temporarily disable an accelerated domain name, call the **StopDcdnIpaDomain** operation.****
+      * *   You can call this operation up to 10 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DeleteDcdnIpaDomainResponse> deleteDcdnIpaDomain(DeleteDcdnIpaDomainRequest request) {
         try {
@@ -374,6 +590,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 10 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DeleteDcdnIpaSpecificConfigResponse> deleteDcdnIpaSpecificConfig(DeleteDcdnIpaSpecificConfigRequest request) {
         try {
@@ -389,6 +609,38 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DeleteDcdnKvResponse> deleteDcdnKv(DeleteDcdnKvRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDcdnKv").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDcdnKvResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDcdnKvResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DeleteDcdnKvNamespaceResponse> deleteDcdnKvNamespace(DeleteDcdnKvNamespaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDcdnKvNamespace").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDcdnKvNamespaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDcdnKvNamespaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+     */
+    @Override
     public CompletableFuture<DeleteDcdnRealTimeLogProjectResponse> deleteDcdnRealTimeLogProject(DeleteDcdnRealTimeLogProjectRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -402,6 +654,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DeleteDcdnSpecificConfigResponse> deleteDcdnSpecificConfig(DeleteDcdnSpecificConfigRequest request) {
         try {
@@ -416,6 +672,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 20 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DeleteDcdnSpecificStagingConfigResponse> deleteDcdnSpecificStagingConfig(DeleteDcdnSpecificStagingConfigRequest request) {
         try {
@@ -430,6 +690,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 3 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DeleteDcdnSubTaskResponse> deleteDcdnSubTask(DeleteDcdnSubTaskRequest request) {
         try {
@@ -445,6 +709,43 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DeleteDcdnWafGroupResponse> deleteDcdnWafGroup(DeleteDcdnWafGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDcdnWafGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDcdnWafGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDcdnWafGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * *   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
+      *
+     */
+    @Override
+    public CompletableFuture<DeleteDcdnWafPolicyResponse> deleteDcdnWafPolicy(DeleteDcdnWafPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDcdnWafPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDcdnWafPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDcdnWafPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
+    @Override
     public CompletableFuture<DeleteRoutineResponse> deleteRoutine(DeleteRoutineRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -458,6 +759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DeleteRoutineCodeRevisionResponse> deleteRoutineCodeRevision(DeleteRoutineCodeRevisionRequest request) {
         try {
@@ -472,6 +777,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   This operation deletes only custom preset canary release environments. You cannot delete production or staging environments.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DeleteRoutineConfEnvsResponse> deleteRoutineConfEnvs(DeleteRoutineConfEnvsRequest request) {
         try {
@@ -486,6 +797,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to three times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnAclFieldsResponse> describeDcdnAclFields(DescribeDcdnAclFieldsRequest request) {
         try {
@@ -500,6 +815,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both of them empty.
+      * *   If you specify multiple Internet service providers (ISPs), the data for the ISPs is aggregated.
+      * *   You can query data in the last 90 days.
+      * *   The maximum time range from the start time to the end time is 31 days. The start time is specified by the StartTime parameter and the end time is specified by the EndTime parameter.
+      * *   If the time range from the start time to the end time is 72 hours or shorter, you can specify the interval as 5 minutes. If the time range is longer than 72 hours, you must specify the interval as 1 hour.
+      * *   You can call this operation up to five times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnBgpBpsDataResponse> describeDcdnBgpBpsData(DescribeDcdnBgpBpsDataRequest request) {
         try {
@@ -514,6 +838,15 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range. You must set both parameters or leave both parameters empty.
+      * *   If you specify multiple Internet service providers (ISPs), the data for the ISPs is aggregated.
+      * *   You can query data in the last 90 days.
+      * *   The maximum time range that you can specify is 31 days. StartTime specifies the start time and EndTime specifies the end time of the time range.
+      * *   If the time range from the start time to the end time is 72 hours or shorter, you can specify the interval as 5 minutes. If the time range is longer than 72 hours, you must specify the interval as 1 hour.
+      * *   You can call this operation up to five times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnBgpTrafficDataResponse> describeDcdnBgpTrafficData(DescribeDcdnBgpTrafficDataRequest request) {
         try {
@@ -528,6 +861,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 50 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnBlockedRegionsResponse> describeDcdnBlockedRegions(DescribeDcdnBlockedRegionsRequest request) {
         try {
@@ -542,6 +879,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnCertificateDetailResponse> describeDcdnCertificateDetail(DescribeDcdnCertificateDetailRequest request) {
         try {
@@ -556,6 +897,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnCertificateListResponse> describeDcdnCertificateList(DescribeDcdnCertificateListRequest request) {
         try {
@@ -571,33 +916,37 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
-    public CompletableFuture<DescribeDcdnConfigGroupDetailResponse> describeDcdnConfigGroupDetail(DescribeDcdnConfigGroupDetailRequest request) {
+    public CompletableFuture<DescribeDcdnDdosServiceResponse> describeDcdnDdosService(DescribeDcdnDdosServiceRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnConfigGroupDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnConfigGroupDetailResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnDdosService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnDdosServiceResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<DescribeDcdnConfigGroupDetailResponse> future = new CompletableFuture<>();
+            CompletableFuture<DescribeDcdnDdosServiceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
     @Override
-    public CompletableFuture<DescribeDcdnConfigOfVersionResponse> describeDcdnConfigOfVersion(DescribeDcdnConfigOfVersionRequest request) {
+    public CompletableFuture<DescribeDcdnDdosSpecInfoResponse> describeDcdnDdosSpecInfo(DescribeDcdnDdosSpecInfoRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnConfigOfVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnConfigOfVersionResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnDdosSpecInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnDdosSpecInfoResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<DescribeDcdnConfigOfVersionResponse> future = new CompletableFuture<>();
+            CompletableFuture<DescribeDcdnDdosSpecInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+      * > You can call this operation up to 10 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDeletedDomainsResponse> describeDcdnDeletedDomains(DescribeDcdnDeletedDomainsRequest request) {
         try {
@@ -612,6 +961,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * **
+      * **You can call this operation up to three times per second.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDeliverListResponse> describeDcdnDeliverList(DescribeDcdnDeliverListRequest request) {
         try {
@@ -626,6 +980,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainBpsDataResponse> describeDcdnDomainBpsData(DescribeDcdnDomainBpsDataRequest request) {
         try {
@@ -640,6 +1006,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 20 times per second per account.
+      * * If you do not set **StartTime** or **EndTime**, the request returns the data collected in the last 24 hours. If you set both **StartTime** and **EndTime**, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainBpsDataByLayerResponse> describeDcdnDomainBpsDataByLayer(DescribeDcdnDomainBpsDataByLayerRequest request) {
         try {
@@ -654,6 +1032,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainByCertificateResponse> describeDcdnDomainByCertificate(DescribeDcdnDomainByCertificateRequest request) {
         try {
@@ -668,6 +1050,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   If you do not configure the StartTime or EndTime parameter, data collected over the last 24 hours is queried. If you configure both the StartTime and EndTime parameters, data collected within the specified time range is queried.
+      * *   You can query data collected over the last 30 days.
+      * *   You can call the RefreshObjectCaches operation up to 50 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainCcActivityLogResponse> describeDcdnDomainCcActivityLog(DescribeDcdnDomainCcActivityLogRequest request) {
         try {
@@ -682,6 +1071,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainCertificateInfoResponse> describeDcdnDomainCertificateInfo(DescribeDcdnDomainCertificateInfoRequest request) {
         try {
@@ -696,6 +1089,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 80 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainCnameResponse> describeDcdnDomainCname(DescribeDcdnDomainCnameRequest request) {
         try {
@@ -710,6 +1107,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   You can query the configurations of one or more features in a request.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainConfigsResponse> describeDcdnDomainConfigs(DescribeDcdnDomainConfigsRequest request) {
         try {
@@ -724,6 +1127,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainDetailResponse> describeDcdnDomainDetail(DescribeDcdnDomainDetailRequest request) {
         try {
@@ -738,6 +1145,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * #
+      * *   You can call this operation up to 100 times per second per account.
+      * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity** The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table. |Time granularity |Maximum time range per query |Historical data available |Data delay | -------------- | -------------- | ------ |5 minutes |3 days |93 days |15 minutes |1 hour |31 days |186 days |4 hours |1 day |366 days |366 days |04:00 on the next day
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainHitRateDataResponse> describeDcdnDomainHitRateData(DescribeDcdnDomainHitRateDataRequest request) {
         try {
@@ -752,6 +1166,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * * You can call this operation up to 100 times per second per account.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainHttpCodeDataResponse> describeDcdnDomainHttpCodeData(DescribeDcdnDomainHttpCodeDataRequest request) {
         try {
@@ -766,6 +1192,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 20 times per second per account.
+      * * You cannot query the distribution of HTTP status codes by IP protocol.
+      * * If you do not specify the **StartTime** or **EndTime** parameter, the data that is collected within the last 24 hours is collected. If you specify both the **StartTime** and **EndTime** parameters, the data that is collected within the time range that you specify is collected.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainHttpCodeDataByLayerResponse> describeDcdnDomainHttpCodeDataByLayer(DescribeDcdnDomainHttpCodeDataByLayerRequest request) {
         try {
@@ -780,6 +1219,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   The bandwidth is measured in bit/s.
+      * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainIpaBpsDataResponse> describeDcdnDomainIpaBpsData(DescribeDcdnDomainIpaBpsDataRequest request) {
         try {
@@ -794,6 +1240,33 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   You can call this operation up to 10 times per second per user.
+      * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * *   The minimum time granularity at which the data is queried is 5 minutes. The maximum time range for a single query is 31 days. The period within which historical data is available is 366 days. The data latency is no more than 10 minutes.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnDomainIpaConnDataResponse> describeDcdnDomainIpaConnData(DescribeDcdnDomainIpaConnDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnDomainIpaConnData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnDomainIpaConnDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnDomainIpaConnDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > 
+      * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * *   Unit: bytes.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainIpaTrafficDataResponse> describeDcdnDomainIpaTrafficData(DescribeDcdnDomainIpaTrafficDataRequest request) {
         try {
@@ -808,6 +1281,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   You can call this operation up to 100 times per second per account.
+      * *   If **StartTime** is set but **EndTime** is not set, the data within the hour that starts from **StartTime** is queried.
+      * *   If **EndTime** is set but **StartTime** is not set, the data within the last hour that precedes **EndTime** is queried.
+      * *   You can query data of a domain name or all domain names that belong to your account.
+      * *   You can view data that is collected over the last seven days. The interval at which data is queried is based on the time range specified by **StartTime** and **EndTime**.
+      *     *   **If the time range is shorter than or equal to one hour**, data is queried every minute.
+      *     *   **If the time range is longer than 1 hour but shorter than or equal to three days**, data is queried every five minutes.
+      *     *   **If the time range is longer than three days but shorter than or equal to seven days**, data is queried every hour.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainIspDataResponse> describeDcdnDomainIspData(DescribeDcdnDomainIspDataRequest request) {
         try {
@@ -822,6 +1307,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.********
+      * *   You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainLogResponse> describeDcdnDomainLog(DescribeDcdnDomainLogRequest request) {
         try {
@@ -836,6 +1327,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If you do not set the StartTime or EndTime parameter, data within the last 10 minutes is queried. You can set both the StartTime and EndTime parameters to specify a time range.
+      * *   You can specify one or more accelerated domain names. Separate domain names with commas (,).
+      * *   You can query data within the last 90 days.
+      * *   The time range cannot exceed 1 hour.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainMultiUsageDataResponse> describeDcdnDomainMultiUsageData(DescribeDcdnDomainMultiUsageDataRequest request) {
         try {
@@ -850,6 +1348,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainOriginBpsDataResponse> describeDcdnDomainOriginBpsData(DescribeDcdnDomainOriginBpsDataRequest request) {
         try {
@@ -864,6 +1374,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * - You can call this operation up to 100 times per second per account.
+      * - If you do not set the **StartTime** or **EndTime** parameters, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter varies with the maximum time range per query. The following table describes the time period within which historical data is available and the data delay. 
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * | ---------------- | ---------------------------- | ------------------------- | ---------- |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      * | 1 day | 366 days | 366 days | 04:00 on the next day |
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainOriginTrafficDataResponse> describeDcdnDomainOriginTrafficData(DescribeDcdnDomainOriginTrafficDataRequest request) {
         try {
@@ -878,6 +1400,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 10 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainPropertyResponse> describeDcdnDomainProperty(DescribeDcdnDomainPropertyRequest request) {
         try {
@@ -906,6 +1432,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainQpsDataResponse> describeDcdnDomainQpsData(DescribeDcdnDomainQpsDataRequest request) {
         try {
@@ -920,6 +1458,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 20 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainQpsDataByLayerResponse> describeDcdnDomainQpsDataByLayer(DescribeDcdnDomainQpsDataByLayerRequest request) {
         try {
@@ -948,6 +1498,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 10 times per second per account.
+      * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay |
+      * |----|------|-----|--------|
+      * | 1 minute | 1 hour | 7 days | 5 minutes |
+      * | 5 minutes | 3 days | 93 days | 15 minutes |
+      * | 1 hour | 31 days | 186 days | 4 hours |
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainRealTimeByteHitRateDataResponse> describeDcdnDomainRealTimeByteHitRateData(DescribeDcdnDomainRealTimeByteHitRateDataRequest request) {
         try {
@@ -962,6 +1525,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 10 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainRealTimeDetailDataResponse> describeDcdnDomainRealTimeDetailData(DescribeDcdnDomainRealTimeDetailDataRequest request) {
         try {
@@ -976,6 +1543,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainRealTimeHttpCodeDataResponse> describeDcdnDomainRealTimeHttpCodeData(DescribeDcdnDomainRealTimeHttpCodeDataRequest request) {
         try {
@@ -990,6 +1569,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainRealTimeQpsDataResponse> describeDcdnDomainRealTimeQpsData(DescribeDcdnDomainRealTimeQpsDataRequest request) {
         try {
@@ -1004,6 +1595,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 10 times per second per user.
+      * * The network traffic destined for different domain names may be redirected to the same origin server. Therefore, the byte hit ratios may be inaccurate. The accuracy of query results is based on the actual configurations.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last hour. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity** The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainRealTimeReqHitRateDataResponse> describeDcdnDomainRealTimeReqHitRateData(DescribeDcdnDomainRealTimeReqHitRateDataRequest request) {
         try {
@@ -1018,6 +1621,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   You can call this operation up to 10 times per second per account.
+      * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * | Time granularity | Maximum time range per query | Historical data available | Data delay | 
+      * |-----|-----|-----|--------| 
+      * | 1 minute | 1 hour | 7 days | 5 minutes | 
+      * | 5 minutes | 3 days | 93 days | 15 minutes | | 1 hour | 31 days | 186 days | 4 hours |
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainRealTimeSrcBpsDataResponse> describeDcdnDomainRealTimeSrcBpsData(DescribeDcdnDomainRealTimeSrcBpsDataRequest request) {
         try {
@@ -1032,6 +1646,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 10 times per second per account.
+      * * If you do not specify the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you specify both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainRealTimeSrcHttpCodeDataResponse> describeDcdnDomainRealTimeSrcHttpCodeData(DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest request) {
         try {
@@ -1046,6 +1672,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last hour. If you set both the StartTime and EndTime parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainRealTimeSrcTrafficDataResponse> describeDcdnDomainRealTimeSrcTrafficData(DescribeDcdnDomainRealTimeSrcTrafficDataRequest request) {
         try {
@@ -1060,6 +1697,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation up to 50 times per second per user.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the StartTime and EndTime parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|1 hour|7 days|5 minutes|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainRealTimeTrafficDataResponse> describeDcdnDomainRealTimeTrafficData(DescribeDcdnDomainRealTimeTrafficDataRequest request) {
         try {
@@ -1074,6 +1722,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   If you do not specify the StartTime and EndTime parameters, the data within the last 24 hours is queried. If you specify the StartTime and EndTime parameters, the data within the specified time range is queried.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainRegionDataResponse> describeDcdnDomainRegionData(DescribeDcdnDomainRegionDataRequest request) {
         try {
@@ -1088,6 +1742,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The name of the accelerated domain.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainStagingConfigResponse> describeDcdnDomainStagingConfig(DescribeDcdnDomainStagingConfigRequest request) {
         try {
@@ -1102,6 +1760,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If you do not set the StartTime parameter, the data on the previous day is queried.
+      * *   You can specify only one domain name.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainTopReferVisitResponse> describeDcdnDomainTopReferVisit(DescribeDcdnDomainTopReferVisitRequest request) {
         try {
@@ -1116,6 +1779,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can query data in the last seven days.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainTopUrlVisitResponse> describeDcdnDomainTopUrlVisit(DescribeDcdnDomainTopUrlVisitRequest request) {
         try {
@@ -1130,6 +1797,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * * You can call this operation up to 100 times per second per account.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainTrafficDataResponse> describeDcdnDomainTrafficData(DescribeDcdnDomainTrafficDataRequest request) {
         try {
@@ -1144,6 +1823,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 10 times per second per account.
+      * * Usage data includes traffic (measured in bytes), bandwidth values (measured in bit/s), and the number of requests.
+      * **Time granularity**:
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainUsageDataResponse> describeDcdnDomainUsageData(DescribeDcdnDomainUsageDataRequest request) {
         try {
@@ -1158,6 +1849,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+      * *   You can specify only one accelerated domain name or all the accelerated domain names that belong to your Alibaba Cloud account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainUvDataResponse> describeDcdnDomainUvData(DescribeDcdnDomainUvDataRequest request) {
         try {
@@ -1172,6 +1868,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainWebsocketBpsDataResponse> describeDcdnDomainWebsocketBpsData(DescribeDcdnDomainWebsocketBpsDataRequest request) {
         try {
@@ -1186,6 +1894,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation up to 100 times per second per account.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the time range to query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainWebsocketHttpCodeDataResponse> describeDcdnDomainWebsocketHttpCodeData(DescribeDcdnDomainWebsocketHttpCodeDataRequest request) {
         try {
@@ -1200,6 +1919,18 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the **StartTime** or **EndTime** parameter, the request returns the data collected in the last 24 hours. If you set both the **StartTime** and **EndTime** parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity supported by the Interval parameter, the maximum time period within which historical data is available, and the data delay vary with the maximum time range per query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|4 hours|
+      * |1 day|366 days|366 days|04:00 on the next day|
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnDomainWebsocketTrafficDataResponse> describeDcdnDomainWebsocketTrafficData(DescribeDcdnDomainWebsocketTrafficDataRequest request) {
         try {
@@ -1214,34 +1945,70 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   You can call this operation up to 10 times per second per account.
+      * *   The minimum time granularity for a query is 1 hour. The maximum time span for a query is 24 hours. The time period within which historical data is available for a query is 366 days.
+      *
+     */
     @Override
-    public CompletableFuture<DescribeDcdnEsExceptionDataResponse> describeDcdnEsExceptionData(DescribeDcdnEsExceptionDataRequest request) {
+    public CompletableFuture<DescribeDcdnErUsageDataResponse> describeDcdnErUsageData(DescribeDcdnErUsageDataRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnEsExceptionData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnEsExceptionDataResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnErUsageData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnErUsageDataResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<DescribeDcdnEsExceptionDataResponse> future = new CompletableFuture<>();
+            CompletableFuture<DescribeDcdnErUsageDataResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+      * *   If you specify IP addresses or CIDR blocks, IP addresses that are effective and corresponding expiration time are returned. If you do not specify IP addresses or CIDR blocks, all effective IP addresses and the corresponding expiration time are returned.
+      * *   The results are written to OSS and returned as OSS URLs. The OSS objects are in the format of `IP address-Corresponding expiration time`. The expiration time is in the yyyy-MM-dd HH:mm:ss format.
+      * *   You can share URLs of OSS objects with others. The shared URLs are valid for three days.
+      *
+     */
     @Override
-    public CompletableFuture<DescribeDcdnEsExecuteDataResponse> describeDcdnEsExecuteData(DescribeDcdnEsExecuteDataRequest request) {
+    public CompletableFuture<DescribeDcdnFullDomainsBlockIPConfigResponse> describeDcdnFullDomainsBlockIPConfig(DescribeDcdnFullDomainsBlockIPConfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnEsExecuteData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnEsExecuteDataResponse.create());
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnFullDomainsBlockIPConfig").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnFullDomainsBlockIPConfigResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
-            CompletableFuture<DescribeDcdnEsExecuteDataResponse> future = new CompletableFuture<>();
+            CompletableFuture<DescribeDcdnFullDomainsBlockIPConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
     }
 
+    /**
+      * *   For a specified IP addresses and time range, the time when the IP address was delivered to the edge and the corresponding result are returned.
+      * *   If a specified IP address or CIDR block has multiple blocking records in a specified time range, the records are sorted by delivery time in descending order.
+      * *   The maximum time range to query is 90 days.
+      * *   If no blocking record exists or delivery fails for the given IP address and time range, the delivery time is empty.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnFullDomainsBlockIPHistoryResponse> describeDcdnFullDomainsBlockIPHistory(DescribeDcdnFullDomainsBlockIPHistoryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnFullDomainsBlockIPHistory").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnFullDomainsBlockIPHistoryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnFullDomainsBlockIPHistoryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 100.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnHttpsDomainListResponse> describeDcdnHttpsDomainList(DescribeDcdnHttpsDomainListRequest request) {
         try {
@@ -1256,6 +2023,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 50 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnIpInfoResponse> describeDcdnIpInfo(DescribeDcdnIpInfoRequest request) {
         try {
@@ -1270,6 +2041,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 20 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnIpaDomainConfigsResponse> describeDcdnIpaDomainConfigs(DescribeDcdnIpaDomainConfigsRequest request) {
         try {
@@ -1284,6 +2059,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnIpaDomainDetailResponse> describeDcdnIpaDomainDetail(DescribeDcdnIpaDomainDetailRequest request) {
         try {
@@ -1298,6 +2077,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * **
+      * **The maximum number of times that each user can call this operation per second is 20.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnIpaServiceResponse> describeDcdnIpaService(DescribeDcdnIpaServiceRequest request) {
         try {
@@ -1312,6 +2096,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnIpaUserDomainsResponse> describeDcdnIpaUserDomains(DescribeDcdnIpaUserDomainsRequest request) {
         try {
@@ -1327,6 +2115,80 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DescribeDcdnKvAccountResponse> describeDcdnKvAccount(DescribeDcdnKvAccountRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnKvAccount").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnKvAccountResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnKvAccountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeDcdnKvAccountStatusResponse> describeDcdnKvAccountStatus(DescribeDcdnKvAccountStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnKvAccountStatus").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnKvAccountStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnKvAccountStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeDcdnKvNamespaceResponse> describeDcdnKvNamespace(DescribeDcdnKvNamespaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnKvNamespace").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnKvNamespaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnKvNamespaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeDcdnL2IpsResponse> describeDcdnL2Ips(DescribeDcdnL2IpsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnL2Ips").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnL2IpsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnL2IpsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeDcdnL2VipsResponse> describeDcdnL2Vips(DescribeDcdnL2VipsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnL2Vips").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnL2VipsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnL2VipsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * >  You can call this API operation up to 100 times per second per account.
+      *
+     */
+    @Override
     public CompletableFuture<DescribeDcdnRealTimeDeliveryFieldResponse> describeDcdnRealTimeDeliveryField(DescribeDcdnRealTimeDeliveryFieldRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1340,6 +2202,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   You can call the **RefreshDcdnObjectCaches** operation to refresh content and call the **PreloadDcdnObjectCaches** operation to prefetch content.
+      * *   You can call this operation up to 20 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnRefreshQuotaResponse> describeDcdnRefreshQuota(DescribeDcdnRefreshQuotaRequest request) {
         try {
@@ -1354,6 +2222,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   You can query data within the last three days.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnRefreshTaskByIdResponse> describeDcdnRefreshTaskById(DescribeDcdnRefreshTaskByIdRequest request) {
         try {
@@ -1368,6 +2242,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   You can query the refresh or prefetch tasks by ID or URL.
+      * *   You can set both **TaskId** and **ObjectPath** in a request. If you do not set **TaskId** or **ObjectPath**, the data in the last 3 days on the first page is returned. By default, a maximum of 20 entries can be displayed on each page.
+      * *   If you specify **DomainName** or **Status**, you must also specify **ObjectType**.
+      * *   You can call this operation up to 10 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnRefreshTasksResponse> describeDcdnRefreshTasks(DescribeDcdnRefreshTasksRequest request) {
         try {
@@ -1382,6 +2264,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnRegionAndIspResponse> describeDcdnRegionAndIsp(DescribeDcdnRegionAndIspRequest request) {
         try {
@@ -1396,6 +2282,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to three times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnReportResponse> describeDcdnReport(DescribeDcdnReportRequest request) {
         try {
@@ -1410,6 +2300,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > * This operation queries the metadata of all operations reports. The statistics in the reports are not returned.
+      * > * You can call this operation up to three times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnReportListResponse> describeDcdnReportList(DescribeDcdnReportListRequest request) {
         try {
@@ -1425,6 +2320,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DescribeDcdnSLSRealTimeLogTypeResponse> describeDcdnSLSRealTimeLogType(DescribeDcdnSLSRealTimeLogTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnSLSRealTimeLogType").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnSLSRealTimeLogTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnSLSRealTimeLogTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
+    @Override
     public CompletableFuture<DescribeDcdnSLSRealtimeLogDeliveryResponse> describeDcdnSLSRealtimeLogDelivery(DescribeDcdnSLSRealtimeLogDeliveryRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1438,6 +2351,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnSMCertificateDetailResponse> describeDcdnSMCertificateDetail(DescribeDcdnSMCertificateDetailRequest request) {
         try {
@@ -1452,6 +2369,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnSMCertificateListResponse> describeDcdnSMCertificateList(DescribeDcdnSMCertificateListRequest request) {
         try {
@@ -1466,6 +2387,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 50 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnSecFuncInfoResponse> describeDcdnSecFuncInfo(DescribeDcdnSecFuncInfoRequest request) {
         try {
@@ -1480,6 +2405,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 50 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnSecSpecInfoResponse> describeDcdnSecSpecInfo(DescribeDcdnSecSpecInfoRequest request) {
         try {
@@ -1494,6 +2423,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnServiceResponse> describeDcdnService(DescribeDcdnServiceRequest request) {
         try {
@@ -1508,6 +2441,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnStagingIpResponse> describeDcdnStagingIp(DescribeDcdnStagingIpRequest request) {
         try {
@@ -1522,6 +2459,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   By default, this operation queries all custom operations reports. However, only one operations report can be displayed. Therefore, only one operations report is returned.
+      * *   You can call this API operation up to three times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnSubListResponse> describeDcdnSubList(DescribeDcdnSubListRequest request) {
         try {
@@ -1536,6 +2479,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 10 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnTagResourcesResponse> describeDcdnTagResources(DescribeDcdnTagResourcesRequest request) {
         try {
@@ -1550,6 +2497,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * If you do not specify the StartTime and EndTime parameters, the data within the current month is queried. If you specify the StartTime and EndTime parameters, the data within the specified time range is queried.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnTopDomainsByFlowResponse> describeDcdnTopDomainsByFlow(DescribeDcdnTopDomainsByFlowRequest request) {
         try {
@@ -1564,6 +2515,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnUserBillHistoryResponse> describeDcdnUserBillHistory(DescribeDcdnUserBillHistoryRequest request) {
         try {
@@ -1592,6 +2547,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnUserCertificateExpireCountResponse> describeDcdnUserCertificateExpireCount(DescribeDcdnUserCertificateExpireCountRequest request) {
         try {
@@ -1606,6 +2565,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnUserConfigsResponse> describeDcdnUserConfigs(DescribeDcdnUserConfigsRequest request) {
         try {
@@ -1620,6 +2583,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 80 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnUserDomainsResponse> describeDcdnUserDomains(DescribeDcdnUserDomainsRequest request) {
         try {
@@ -1634,6 +2601,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnUserDomainsByFuncResponse> describeDcdnUserDomainsByFunc(DescribeDcdnUserDomainsByFuncRequest request) {
         try {
@@ -1648,6 +2619,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  The maximum number of times that each user can call this operation per second is 30.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnUserQuotaResponse> describeDcdnUserQuota(DescribeDcdnUserQuotaRequest request) {
         try {
@@ -1662,6 +2637,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnUserRealTimeDeliveryFieldResponse> describeDcdnUserRealTimeDeliveryField(DescribeDcdnUserRealTimeDeliveryFieldRequest request) {
         try {
@@ -1676,6 +2655,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * **
+      * **The maximum number of times that each user can call this operation per second is 30.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnUserResourcePackageResponse> describeDcdnUserResourcePackage(DescribeDcdnUserResourcePackageRequest request) {
         try {
@@ -1690,6 +2674,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 50 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnUserSecDropResponse> describeDcdnUserSecDrop(DescribeDcdnUserSecDropRequest request) {
         try {
@@ -1704,6 +2692,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 50 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnUserSecDropByMinuteResponse> describeDcdnUserSecDropByMinute(DescribeDcdnUserSecDropByMinuteRequest request) {
         try {
@@ -1718,6 +2710,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnUserTagsResponse> describeDcdnUserTags(DescribeDcdnUserTagsRequest request) {
         try {
@@ -1732,6 +2728,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnVerifyContentResponse> describeDcdnVerifyContent(DescribeDcdnVerifyContentRequest request) {
         try {
@@ -1747,6 +2747,38 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DescribeDcdnWafBotAppKeyResponse> describeDcdnWafBotAppKey(DescribeDcdnWafBotAppKeyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafBotAppKey").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafBotAppKeyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafBotAppKeyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeDcdnWafDefaultRulesResponse> describeDcdnWafDefaultRules(DescribeDcdnWafDefaultRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafDefaultRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafDefaultRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafDefaultRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > You can call this operation up to 50 times per second per account.
+      *
+     */
+    @Override
     public CompletableFuture<DescribeDcdnWafDomainResponse> describeDcdnWafDomain(DescribeDcdnWafDomainRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1760,6 +2792,314 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation up to 20 times per second per account.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafDomainDetailResponse> describeDcdnWafDomainDetail(DescribeDcdnWafDomainDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafDomainDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafDomainDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafDomainDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * You can call this operation up to 20 times per second per account.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafDomainsResponse> describeDcdnWafDomains(DescribeDcdnWafDomainsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafDomains").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafDomainsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafDomainsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * You can call this operation up to 20 times per second per account.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafFilterInfoResponse> describeDcdnWafFilterInfo(DescribeDcdnWafFilterInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafFilterInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafFilterInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafFilterInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > You can call this operation up to 20 times per second per account.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafGeoInfoResponse> describeDcdnWafGeoInfo(DescribeDcdnWafGeoInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafGeoInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafGeoInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafGeoInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeDcdnWafGroupResponse> describeDcdnWafGroup(DescribeDcdnWafGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeDcdnWafGroupsResponse> describeDcdnWafGroups(DescribeDcdnWafGroupsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafGroups").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafGroupsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafGroupsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > 
+      * *   If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+      * *   The log data is collected every hour.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafLogsResponse> describeDcdnWafLogs(DescribeDcdnWafLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafLogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * You can call this operation up to 20 times per second per account.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafPoliciesResponse> describeDcdnWafPolicies(DescribeDcdnWafPoliciesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafPolicies").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafPoliciesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafPoliciesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > You can call this operation up to 20 times per second per account.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafPolicyResponse> describeDcdnWafPolicy(DescribeDcdnWafPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * You can call this operation up to 20 times per second per user.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafPolicyDomainsResponse> describeDcdnWafPolicyDomains(DescribeDcdnWafPolicyDomainsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafPolicyDomains").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafPolicyDomainsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafPolicyDomainsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * You can call this operation up to 20 times per second per account.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafPolicyValidDomainsResponse> describeDcdnWafPolicyValidDomains(DescribeDcdnWafPolicyValidDomainsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafPolicyValidDomains").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafPolicyValidDomainsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafPolicyValidDomainsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * #
+      * You can call this operation up to 20 times per second per account.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafRuleResponse> describeDcdnWafRule(DescribeDcdnWafRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * You can call this operation up to 20 times per second per account.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafRulesResponse> describeDcdnWafRules(DescribeDcdnWafRulesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafRules").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafRulesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafRulesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * You can call this operation up to 20 times per second per user.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafScenesResponse> describeDcdnWafScenes(DescribeDcdnWafScenesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafScenes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafScenesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafScenesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * # Usage notes
+      * You can call this operation up to 20 times per second per account.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafServiceResponse> describeDcdnWafService(DescribeDcdnWafServiceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafService").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafServiceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafServiceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * You can call this operation up to 20 times per second per account.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafSpecInfoResponse> describeDcdnWafSpecInfo(DescribeDcdnWafSpecInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafSpecInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafSpecInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafSpecInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * *   You can call this operation up to 10 times per second per account.
+      * *   The minimum time granularity for a query is 5 minutes. The maximum time span for a query is 31 days. The time period within which historical data is available for a query is 90 days.
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeDcdnWafUsageDataResponse> describeDcdnWafUsageData(DescribeDcdnWafUsageDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDcdnWafUsageData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDcdnWafUsageDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDcdnWafUsageDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > You can call this operation up to 20 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeDcdnsecServiceResponse> describeDcdnsecService(DescribeDcdnsecServiceRequest request) {
         try {
@@ -1775,6 +3115,90 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DescribeDdosAllEventListResponse> describeDdosAllEventList(DescribeDdosAllEventListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeDdosAllEventList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeDdosAllEventListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeDdosAllEventListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeEncryptRoutineUidResponse> describeEncryptRoutineUid(DescribeEncryptRoutineUidRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeEncryptRoutineUid").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeEncryptRoutineUidResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeEncryptRoutineUidResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeHighlightInfoResponse> describeHighlightInfo(DescribeHighlightInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHighlightInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHighlightInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHighlightInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<DescribeRDDomainConfigResponse> describeRDDomainConfig(DescribeRDDomainConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRDDomainConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRDDomainConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRDDomainConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * A domain name can be in one of the following states:
+      * *   online
+      * *   offline
+      * *   configuring
+      * *   configure_failed
+      * *   checking
+      * *   check_failed
+      *
+     */
+    @Override
+    public CompletableFuture<DescribeRDDomainsResponse> describeRDDomains(DescribeRDDomainsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRDDomains").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRDDomainsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRDDomainsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
+    @Override
     public CompletableFuture<DescribeRoutineResponse> describeRoutine(DescribeRoutineRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1788,6 +3212,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeRoutineCanaryEnvsResponse> describeRoutineCanaryEnvs(DescribeRoutineCanaryEnvsRequest request) {
         try {
@@ -1802,6 +3230,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeRoutineCodeRevisionResponse> describeRoutineCodeRevision(DescribeRoutineCodeRevisionRequest request) {
         try {
@@ -1817,6 +3249,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DescribeRoutineRelatedDomainsResponse> describeRoutineRelatedDomains(DescribeRoutineRelatedDomainsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeRoutineRelatedDomains").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeRoutineRelatedDomainsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeRoutineRelatedDomainsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
+    @Override
     public CompletableFuture<DescribeRoutineSpecResponse> describeRoutineSpec(DescribeRoutineSpecRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1830,6 +3280,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeRoutineUserInfoResponse> describeRoutineUserInfo(DescribeRoutineUserInfoRequest request) {
         try {
@@ -1844,6 +3298,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * **
+      * **The maximum number of times that each user can call this operation per second is 20.
+      *
+     */
     @Override
     public CompletableFuture<DescribeUserDcdnIpaStatusResponse> describeUserDcdnIpaStatus(DescribeUserDcdnIpaStatusRequest request) {
         try {
@@ -1858,6 +3317,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeUserDcdnStatusResponse> describeUserDcdnStatus(DescribeUserDcdnStatusRequest request) {
         try {
@@ -1872,6 +3335,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeUserErStatusResponse> describeUserErStatus(DescribeUserErStatusRequest request) {
         try {
@@ -1886,6 +3353,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 20 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<DescribeUserLogserviceStatusResponse> describeUserLogserviceStatus(DescribeUserLogserviceStatusRequest request) {
         try {
@@ -1900,6 +3371,17 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   This operation modifies only the specified configurations. Other configurations remain unchanged.
+      * *   If you want to delete a setting, delete the parameter value.
+      * *   This operation can add canary release environments. Make sure that the environment names comply with the naming rules. Otherwise, you will fail to add the environments.
+      * *   Dynamic Route for CDN (DCDN) provides 35 canary release environments. Among these environments, 34 are deployed in China and 1 is deployed outside China. The canary release environments are:
+      *     *   Outside China: presetCanaryOverseas.
+      *     *   In China: The 34 canary release environments are named in the format of presetCanaryXX. For example, presetCanaryBeijing represents the canary release environment in Beijing. A canary release environment is in each of the following regions: Anhui, Beijing, Chongqing, Fujian, Gansu, Guangdong, Guangxi, Guizhou, Hainan, Hebei, Heilongjiang, Henan, Hong Kong, Hubei, Hunan, Jiangsu, Jiangxi, Jilin, Liaoning, Macao, Neimenggu, Ningxia, Qinghai, Shaanxi, Shandong, Shanghai, Shanxi, Sichuan, Taiwan, Tianjin, Xinjiang, Xizang, Yunan, and Zhejiang.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<EditRoutineConfResponse> editRoutineConf(EditRoutineConfRequest request) {
         try {
@@ -1915,6 +3397,38 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<GetDcdnKvResponse> getDcdnKv(GetDcdnKvRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDcdnKv").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDcdnKvResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDcdnKvResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ListDcdnKvResponse> listDcdnKv(ListDcdnKvRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListDcdnKv").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDcdnKvResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDcdnKvResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
+    @Override
     public CompletableFuture<ListDcdnRealTimeDeliveryProjectResponse> listDcdnRealTimeDeliveryProject(ListDcdnRealTimeDeliveryProjectRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1928,6 +3442,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<ModifyDCdnDomainSchdmByPropertyResponse> modifyDCdnDomainSchdmByProperty(ModifyDCdnDomainSchdmByPropertyRequest request) {
         try {
@@ -1943,6 +3461,85 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<ModifyDcdnWafGroupResponse> modifyDcdnWafGroup(ModifyDcdnWafGroupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDcdnWafGroup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDcdnWafGroupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDcdnWafGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * *   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
+      *
+     */
+    @Override
+    public CompletableFuture<ModifyDcdnWafPolicyResponse> modifyDcdnWafPolicy(ModifyDcdnWafPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDcdnWafPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDcdnWafPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDcdnWafPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * # Usage notes
+      * *   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Route for CDN (DCDN) supports POST requests.
+      *
+     */
+    @Override
+    public CompletableFuture<ModifyDcdnWafPolicyDomainsResponse> modifyDcdnWafPolicyDomains(ModifyDcdnWafPolicyDomainsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDcdnWafPolicyDomains").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDcdnWafPolicyDomainsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDcdnWafPolicyDomainsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * *   You can call this operation up to 20 times per second per account.
+      * *   Alibaba Cloud Dynamic Content Delivery Network (DCDN) supports POST requests.
+      * *   You must configure at least one of the **RuleStatus**, **RuleName** and **RuleConfig** parameters.
+      *
+     */
+    @Override
+    public CompletableFuture<ModifyDcdnWafRuleResponse> modifyDcdnWafRule(ModifyDcdnWafRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDcdnWafRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDcdnWafRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDcdnWafRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > 
+      * *   DCDN can be activated only once per Alibaba Cloud account. The Alibaba Cloud account must pass real-name verification.
+      * *   You can call this operation up to five times per second per user.
+      *
+     */
+    @Override
     public CompletableFuture<OpenDcdnServiceResponse> openDcdnService(OpenDcdnServiceRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1956,6 +3553,19 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   You can call the [RefreshDcdnObjectCaches](~~130620~~) operation to refresh content and call the [PreloadDcdnObjectCaches](~~130636~~) operation to prefetch content.
+      * *   Dynamic Content Delivery Network (DCDN) supports POST requests in which parameters are sent as a form.
+      * *   By default, each Alibaba Cloud account can submit up to 1,000 URLs per day. If the daily peak bandwidth value of your workloads exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to increase your daily quota. Alibaba Cloud reviews your application and then increases the quota accordingly.
+      * *   You can specify up to 100 URLs to prefetch.
+      * *   The prefetch queue of each Alibaba Cloud account can contain up to 100,000 URLs. DCDN executes prefetch tasks based on the time at which you submit the URLs.
+      * *   You can call this operation up to 15 times per second per account.
+      * ## Description
+      * *   After a refresh task is submitted and completed, the POPs immediately start to retrieve resources from the origin server. Therefore, a large number of refresh tasks cause a large number of concurrent download tasks. This increases the number of requests that are redirected to the origin server. The back-to-origin routing process consumes more bandwidth resources and the origin server may be overwhelmed.
+      * *   The time required for a prefetch task to complete is proportional to the size of the prefetched file. In actual practice, most prefetch tasks require 5 to 30 minutes to complete. A task with a smaller average file size requires less time.
+      * *   To allow RAM users to perform this operation, you need to first grant them the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~445051~~).
+      *
+     */
     @Override
     public CompletableFuture<PreloadDcdnObjectCachesResponse> preloadDcdnObjectCaches(PreloadDcdnObjectCachesRequest request) {
         try {
@@ -1970,6 +3580,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<PublishDcdnStagingConfigToProductionResponse> publishDcdnStagingConfigToProduction(PublishDcdnStagingConfigToProductionRequest request) {
         try {
@@ -1984,6 +3598,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<PublishRoutineCodeRevisionResponse> publishRoutineCodeRevision(PublishRoutineCodeRevisionRequest request) {
         try {
@@ -1999,6 +3617,48 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<PutDcdnKvResponse> putDcdnKv(PutDcdnKvRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PutDcdnKv").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutDcdnKvResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PutDcdnKvResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<PutDcdnKvNamespaceResponse> putDcdnKvNamespace(PutDcdnKvNamespaceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PutDcdnKvNamespace").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutDcdnKvNamespaceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PutDcdnKvNamespaceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * #
+      * *   DCDN supports POST requests in which parameters are sent as a form.
+      * *   You can call the [RefreshDcdnObjectCaches](~~130620~~) operation to refresh content and call the [PreloadDcdnObjectCaches](~~130636~~) operation to prefetch content.
+      * *   By default, each Alibaba Cloud account can refresh content from a maximum of 10,000 URLs and 100 directories per day, including subdirectories. If the daily peak bandwidth value exceeds 200 Mbit/s, you can [submit a ticket](https://account.alibabacloud.com/login/login.htm?oauth_callback=https%3A//ticket-intl.console.aliyun.com/%23/ticket/createIndex) to request a quota increase. DCDN evaluates your application based on your workloads.
+      * *   You can specify up to 1,000 URLs or 100 directories that you want to refresh in each request.
+      * *   You can refresh up to 1,000 URLs per minute for each domain name.
+      * *   You can call this operation up to 30 times per second per account.
+      * # Precautions
+      * *   After a refresh task is submitted and completed, your resources that are stored on DCDN POPs are removed. When a POP receives a request to your resources, the request is redirected to the origin server to retrieve the resources. Then, the resources are returned to the client and cached on the POP. If you frequently run refresh tasks, more requests will be redirected back to the origin server for resources, which result in high bandwidth costs and undue pressure on the origin server.
+      * *   A refresh task takes effect 5 to 6 minutes after being submitted. This means that if the resource you want to refresh has a TTL of less than five minutes, you wait for it to expire instead of manually running a refresh task.
+      * *   If you want to use RAM users to refresh or prefetch resources, you need to obtain the required permissions. For more information, see [Authorize a RAM user to prefetch and refresh resources](~~445051~~).
+      *
+     */
+    @Override
     public CompletableFuture<RefreshDcdnObjectCachesResponse> refreshDcdnObjectCaches(RefreshDcdnObjectCachesRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -2012,6 +3672,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<RollbackDcdnStagingConfigResponse> rollbackDcdnStagingConfig(RollbackDcdnStagingConfigRequest request) {
         try {
@@ -2026,34 +3690,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    @Override
-    public CompletableFuture<SetDcdnConfigOfVersionResponse> setDcdnConfigOfVersion(SetDcdnConfigOfVersionRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetDcdnConfigOfVersion").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetDcdnConfigOfVersionResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SetDcdnConfigOfVersionResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    @Override
-    public CompletableFuture<SetDcdnDomainCSRCertificateResponse> setDcdnDomainCSRCertificate(SetDcdnDomainCSRCertificateRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetDcdnDomainCSRCertificate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetDcdnDomainCSRCertificateResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<SetDcdnDomainCSRCertificateResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
+    /**
+      * @deprecated
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<SetDcdnDomainCertificateResponse> setDcdnDomainCertificate(SetDcdnDomainCertificateRequest request) {
         try {
@@ -2068,6 +3709,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<SetDcdnDomainSMCertificateResponse> setDcdnDomainSMCertificate(SetDcdnDomainSMCertificateRequest request) {
         try {
@@ -2083,6 +3728,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<SetDcdnDomainSSLCertificateResponse> setDcdnDomainSSLCertificate(SetDcdnDomainSSLCertificateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SetDcdnDomainSSLCertificate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SetDcdnDomainSSLCertificateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SetDcdnDomainSSLCertificateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
+    @Override
     public CompletableFuture<SetDcdnDomainStagingConfigResponse> setDcdnDomainStagingConfig(SetDcdnDomainStagingConfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -2096,6 +3759,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 10 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<SetDcdnFullDomainsBlockIPResponse> setDcdnFullDomainsBlockIP(SetDcdnFullDomainsBlockIPRequest request) {
         try {
@@ -2110,6 +3777,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<SetDcdnUserConfigResponse> setDcdnUserConfig(SetDcdnUserConfigRequest request) {
         try {
@@ -2124,6 +3795,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   Each subdomain is globally unique. Resource Access Management (RAM) users cannot create duplicate subdomains.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<SetRoutineSubdomainResponse> setRoutineSubdomain(SetRoutineSubdomainRequest request) {
         try {
@@ -2138,6 +3815,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   If an accelerated domain name is in invalid state or your account has an overdue payment, the accelerated domain name cannot be enabled.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<StartDcdnDomainResponse> startDcdnDomain(StartDcdnDomainRequest request) {
         try {
@@ -2152,6 +3835,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * *   If an accelerated domain name is in invalid state or your account has an overdue payment, the accelerated domain name cannot be enabled.
+      * *   You can call this operation up to 20 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<StartDcdnIpaDomainResponse> startDcdnIpaDomain(StartDcdnIpaDomainRequest request) {
         try {
@@ -2166,6 +3854,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   After an accelerated domain is disabled, Dynamic Content Delivery Network (DCDN) retains its information and routes all the requests that are destined for the accelerated domain to the origin server.
+      * *   You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<StopDcdnDomainResponse> stopDcdnDomain(StopDcdnDomainRequest request) {
         try {
@@ -2180,6 +3874,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   If you disable an accelerated domain, the configurations of the accelerated domain are still retained. The system automatically forwards all the requests that are destined for this domain to the origin.
+      * *   You can call this operation up to 20 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<StopDcdnIpaDomainResponse> stopDcdnIpaDomain(StopDcdnIpaDomainRequest request) {
         try {
@@ -2194,6 +3894,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<TagDcdnResourcesResponse> tagDcdnResources(TagDcdnResourcesRequest request) {
         try {
@@ -2208,6 +3912,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<UntagDcdnResourcesResponse> untagDcdnResources(UntagDcdnResourcesRequest request) {
         try {
@@ -2222,6 +3930,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.
+      *
+     */
     @Override
     public CompletableFuture<UpdateDcdnDeliverTaskResponse> updateDcdnDeliverTask(UpdateDcdnDeliverTaskRequest request) {
         try {
@@ -2236,6 +3948,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation up to 30 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<UpdateDcdnDomainResponse> updateDcdnDomain(UpdateDcdnDomainRequest request) {
         try {
@@ -2250,6 +3966,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  You can call this operation up to 20 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<UpdateDcdnIpaDomainResponse> updateDcdnIpaDomain(UpdateDcdnIpaDomainRequest request) {
         try {
@@ -2264,6 +3984,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<UpdateDcdnSLSRealtimeLogDeliveryResponse> updateDcdnSLSRealtimeLogDelivery(UpdateDcdnSLSRealtimeLogDeliveryRequest request) {
         try {
@@ -2278,6 +4002,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to three times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<UpdateDcdnSubTaskResponse> updateDcdnSubTask(UpdateDcdnSubTaskRequest request) {
         try {
@@ -2292,6 +4020,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<UpdateDcdnUserRealTimeDeliveryFieldResponse> updateDcdnUserRealTimeDeliveryField(UpdateDcdnUserRealTimeDeliveryFieldRequest request) {
         try {
@@ -2306,6 +4038,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   Each time you submit code, a version of the code is generated. You can manage and publish code by version.
+      * *   Each routine can retain at most 10 versions. If the upper limit is reached, you must call the DeleteRoutineCodeRevision operation to manually delete versions that are no longer needed before new versions can be saved.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<UploadRoutineCodeResponse> uploadRoutineCode(UploadRoutineCodeRequest request) {
         try {
@@ -2320,6 +4059,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > 
+      * *   Each time you upload code to a routine, a version is generated. The number of versions is counted by CodeRev. The uploaded code is used only for testing.
+      * *   The code is automatically published to a staging environment.
+      * *   Each routine can retain at most 10 versions. If the upper limit is reached, you need to call the DeleteRoutineCodeRevision operation to manually delete versions that are no longer needed before new versions can be saved.
+      * *   You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<UploadStagingRoutineCodeResponse> uploadStagingRoutineCode(UploadStagingRoutineCodeRequest request) {
         try {
@@ -2334,6 +4081,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation up to 100 times per second per account.
+      *
+     */
     @Override
     public CompletableFuture<VerifyDcdnDomainOwnerResponse> verifyDcdnDomainOwner(VerifyDcdnDomainOwnerRequest request) {
         try {

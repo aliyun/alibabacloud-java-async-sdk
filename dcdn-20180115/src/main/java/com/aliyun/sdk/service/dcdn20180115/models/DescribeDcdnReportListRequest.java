@@ -13,16 +13,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnReportListRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("ReportId")
     private Long reportId;
 
     private DescribeDcdnReportListRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.reportId = builder.reportId;
     }
 
@@ -40,13 +35,6 @@ public class DescribeDcdnReportListRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return reportId
      */
     public Long getReportId() {
@@ -54,7 +42,6 @@ public class DescribeDcdnReportListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDcdnReportListRequest, Builder> {
-        private Long ownerId; 
         private Long reportId; 
 
         private Builder() {
@@ -63,21 +50,11 @@ public class DescribeDcdnReportListRequest extends Request {
 
         private Builder(DescribeDcdnReportListRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
             this.reportId = request.reportId;
         } 
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ReportId.
+         * The ID of the operations report that you want to query. If you do not specify an ID, all operations reports are queried.
          */
         public Builder reportId(Long reportId) {
             this.putQueryParameter("ReportId", reportId);

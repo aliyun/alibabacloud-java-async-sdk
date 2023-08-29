@@ -83,7 +83,7 @@ public class DescribeDcdnSMCertificateListRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name whose SM certificates you want to query.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

@@ -50,7 +50,7 @@ public class DescribeDcdnAclFieldsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The details about the rules.
          */
         public Builder content(java.util.List < Content> content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class DescribeDcdnAclFieldsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeDcdnAclFieldsResponseBody extends TeaModel {
             private String fields; 
 
             /**
-             * Fields.
+             * The rules and policies that were configured. The JSON string is decoded.
              */
             public Builder fields(String fields) {
                 this.fields = fields;

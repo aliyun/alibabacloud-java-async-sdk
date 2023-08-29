@@ -50,7 +50,13 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainConfigs.
+         * The status of the feature. Valid values:
+         * <p>
+         * 
+         * *   success
+         * *   testing
+         * *   failed
+         * *   configuring
          */
         public Builder domainConfigs(java.util.List < DomainConfigs> domainConfigs) {
             this.domainConfigs = domainConfigs;
@@ -58,7 +64,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The configurations of accelerated domain names returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +116,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             private String argValue; 
 
             /**
-             * ArgName.
+             * The value of the configuration.
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -195,7 +201,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ConfigId.
+             * The name of the feature.
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -203,7 +209,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionArgs.
+             * The name of the configuration.
              */
             public Builder functionArgs(java.util.List < FunctionArgs> functionArgs) {
                 this.functionArgs = functionArgs;
@@ -211,7 +217,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * The descriptions of a feature.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -219,7 +225,7 @@ public class DescribeDcdnDomainStagingConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The ID of the configuration.
              */
             public Builder status(String status) {
                 this.status = status;

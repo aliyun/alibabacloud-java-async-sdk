@@ -86,7 +86,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Domains.
+         * The array that consists of multiple PageData parameters. The details about each accelerated domain name are included in a separate PageData parameter.
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -94,7 +94,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * Content.
+             * The address of the origin server.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -214,7 +214,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port of the origin server.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -222,7 +222,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -230,7 +230,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the origin server.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -238,7 +238,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight.
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -300,11 +300,17 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("DomainId")
+        private Long domainId;
+
         @NameInMap("DomainName")
         private String domainName;
 
         @NameInMap("DomainStatus")
         private String domainStatus;
+
+        @NameInMap("FunctionType")
+        private String functionType;
 
         @NameInMap("GmtCreated")
         private String gmtCreated;
@@ -321,19 +327,25 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         @NameInMap("Sandbox")
         private String sandbox;
 
+        @NameInMap("Scene")
+        private String scene;
+
         @NameInMap("Sources")
         private Sources sources;
 
         private PageData(Builder builder) {
             this.cname = builder.cname;
             this.description = builder.description;
+            this.domainId = builder.domainId;
             this.domainName = builder.domainName;
             this.domainStatus = builder.domainStatus;
+            this.functionType = builder.functionType;
             this.gmtCreated = builder.gmtCreated;
             this.gmtModified = builder.gmtModified;
             this.resourceGroupId = builder.resourceGroupId;
             this.SSLProtocol = builder.SSLProtocol;
             this.sandbox = builder.sandbox;
+            this.scene = builder.scene;
             this.sources = builder.sources;
         }
 
@@ -360,6 +372,13 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return domainId
+         */
+        public Long getDomainId() {
+            return this.domainId;
+        }
+
+        /**
          * @return domainName
          */
         public String getDomainName() {
@@ -371,6 +390,13 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
          */
         public String getDomainStatus() {
             return this.domainStatus;
+        }
+
+        /**
+         * @return functionType
+         */
+        public String getFunctionType() {
+            return this.functionType;
         }
 
         /**
@@ -409,6 +435,13 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return scene
+         */
+        public String getScene() {
+            return this.scene;
+        }
+
+        /**
          * @return sources
          */
         public Sources getSources() {
@@ -418,17 +451,20 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
         public static final class Builder {
             private String cname; 
             private String description; 
+            private Long domainId; 
             private String domainName; 
             private String domainStatus; 
+            private String functionType; 
             private String gmtCreated; 
             private String gmtModified; 
             private String resourceGroupId; 
             private String SSLProtocol; 
             private String sandbox; 
+            private String scene; 
             private Sources sources; 
 
             /**
-             * Cname.
+             * The CNAME assigned to the accelerated domain name.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -436,7 +472,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The reason why the accelerated domain name failed the review.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -444,7 +480,15 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The ID of the accelerated domain name.
+             */
+            public Builder domainId(Long domainId) {
+                this.domainId = domainId;
+                return this;
+            }
+
+            /**
+             * The information about the accelerated domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -452,7 +496,15 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainStatus.
+             * The status of the accelerated domain name.
+             * <p>
+             * 
+             * *   **online**: enabled
+             * *   **offline**: disabled
+             * *   **configuring**: configuring
+             * *   **configure_failed**: configuration failed
+             * *   **checking**: reviewing
+             * *   **check_failed:** review failed
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -460,7 +512,15 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * FunctionType.
+             */
+            public Builder functionType(String functionType) {
+                this.functionType = functionType;
+                return this;
+            }
+
+            /**
+             * The time when the accelerated domain name was added to Dynamic Content Delivery Network (DCDN).
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -468,7 +528,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the accelerated domain name was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -476,7 +536,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -484,7 +544,11 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * SSLProtocol.
+             * The status of HTTPS.
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
              */
             public Builder SSLProtocol(String SSLProtocol) {
                 this.SSLProtocol = SSLProtocol;
@@ -492,7 +556,7 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Sandbox.
+             * Indicates whether the accelerated domain name was in a sandbox.
              */
             public Builder sandbox(String sandbox) {
                 this.sandbox = sandbox;
@@ -500,7 +564,20 @@ public class DescribeDcdnUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Sources.
+             * 场景。支持：
+             * <p>
+             * - **apiscene**：API加速。
+             * - **webservicescene**：网站业务加速。
+             * - **staticscene**：视频、图文类加速。
+             * - **（空）**：没有场景。
+             */
+            public Builder scene(String scene) {
+                this.scene = scene;
+                return this;
+            }
+
+            /**
+             * The information about the origin server.
              */
             public Builder sources(Sources sources) {
                 this.sources = sources;

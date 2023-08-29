@@ -22,15 +22,10 @@ public class DeleteRoutineConfEnvsRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DeleteRoutineConfEnvsRequest(Builder builder) {
         super(builder);
         this.envs = builder.envs;
         this.name = builder.name;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -60,17 +55,9 @@ public class DeleteRoutineConfEnvsRequest extends Request {
         return this.name;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteRoutineConfEnvsRequest, Builder> {
         private java.util.Map < String, ? > envs; 
         private String name; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -80,33 +67,24 @@ public class DeleteRoutineConfEnvsRequest extends Request {
             super(request);
             this.envs = request.envs;
             this.name = request.name;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * Envs.
+         * The custom canary release environments that you want to delete.
          */
         public Builder envs(java.util.Map < String, ? > envs) {
-            this.putBodyParameter("Envs", envs);
+            String envsShrink = shrink(envs, "Envs", "json");
+            this.putBodyParameter("Envs", envsShrink);
             this.envs = envs;
             return this;
         }
 
         /**
-         * Name.
+         * The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

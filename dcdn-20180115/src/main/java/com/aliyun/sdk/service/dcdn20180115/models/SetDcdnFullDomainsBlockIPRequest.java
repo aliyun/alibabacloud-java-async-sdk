@@ -26,16 +26,16 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
     @Validation(required = true)
     private String operationType;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
+    @Body
+    @NameInMap("UpdateType")
+    private String updateType;
 
     private SetDcdnFullDomainsBlockIPRequest(Builder builder) {
         super(builder);
         this.blockInterval = builder.blockInterval;
         this.IPList = builder.IPList;
         this.operationType = builder.operationType;
-        this.ownerId = builder.ownerId;
+        this.updateType = builder.updateType;
     }
 
     public static Builder builder() {
@@ -73,17 +73,17 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
     }
 
     /**
-     * @return ownerId
+     * @return updateType
      */
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getUpdateType() {
+        return this.updateType;
     }
 
     public static final class Builder extends Request.Builder<SetDcdnFullDomainsBlockIPRequest, Builder> {
         private Integer blockInterval; 
         private String IPList; 
         private String operationType; 
-        private Long ownerId; 
+        private String updateType; 
 
         private Builder() {
             super();
@@ -94,11 +94,14 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
             this.blockInterval = request.blockInterval;
             this.IPList = request.IPList;
             this.operationType = request.operationType;
-            this.ownerId = request.ownerId;
+            this.updateType = request.updateType;
         } 
 
         /**
-         * BlockInterval.
+         * The blocking period. Unit: seconds.
+         * <p>
+         * 
+         * > If you set the **OperationType** parameter to **unblock**, you do not need to set this parameter.
          */
         public Builder blockInterval(Integer blockInterval) {
             this.putBodyParameter("BlockInterval", blockInterval);
@@ -107,7 +110,7 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
         }
 
         /**
-         * IPList.
+         * The IP addresses that are blocked or unblocked. Separate multiple IP addresses with commas (,). You can specify up to 1,000 IP addresses.
          */
         public Builder IPList(String IPList) {
             this.putBodyParameter("IPList", IPList);
@@ -116,7 +119,11 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
         }
 
         /**
-         * OperationType.
+         * The action. Valid values:
+         * <p>
+         * 
+         * *   **block**
+         * *   **unblock**
          */
         public Builder operationType(String operationType) {
             this.putBodyParameter("OperationType", operationType);
@@ -125,11 +132,11 @@ public class SetDcdnFullDomainsBlockIPRequest extends Request {
         }
 
         /**
-         * OwnerId.
+         * UpdateType.
          */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
+        public Builder updateType(String updateType) {
+            this.putBodyParameter("UpdateType", updateType);
+            this.updateType = updateType;
             return this;
         }
 

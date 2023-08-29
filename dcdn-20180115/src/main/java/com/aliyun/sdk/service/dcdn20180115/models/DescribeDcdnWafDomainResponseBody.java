@@ -62,7 +62,7 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * OutPutDomains.
+         * The accelerated domain name.
          */
         public Builder outPutDomains(java.util.List < OutPutDomains> outPutDomains) {
             this.outPutDomains = outPutDomains;
@@ -70,7 +70,7 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of accelerated domain names returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -166,7 +166,11 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
             private Integer wafStatus; 
 
             /**
-             * AclStatus.
+             * The status of the ACL. Valid values:
+             * <p>
+             * 
+             * *   0: disabled
+             * *   1: enabled
              */
             public Builder aclStatus(Integer aclStatus) {
                 this.aclStatus = aclStatus;
@@ -174,7 +178,11 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
             }
 
             /**
-             * CcStatus.
+             * The status of protection against HTTP flood attacks. Valid values:
+             * <p>
+             * 
+             * *   0: disabled
+             * *   1: enabled
              */
             public Builder ccStatus(Integer ccStatus) {
                 this.ccStatus = ccStatus;
@@ -182,7 +190,7 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name that has WAF enabled.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -190,7 +198,12 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the domain name. Valid values:
+             * <p>
+             * 
+             * *   1: The domain name is added to WAF, or the domain name is valid.
+             * *   10: The domain name is being added to WAF.
+             * *   11: The domain name failed to be added to WAF.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -198,7 +211,11 @@ public class DescribeDcdnWafDomainResponseBody extends TeaModel {
             }
 
             /**
-             * WafStatus.
+             * The status of WAF. Valid values:
+             * <p>
+             * 
+             * *   0: disabled
+             * *   1: enabled
              */
             public Builder wafStatus(Integer wafStatus) {
                 this.wafStatus = wafStatus;

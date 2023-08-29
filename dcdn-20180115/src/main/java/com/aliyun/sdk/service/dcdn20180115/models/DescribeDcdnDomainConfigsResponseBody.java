@@ -50,7 +50,7 @@ public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainConfigs.
+         * The configurations of the domain name.
          */
         public Builder domainConfigs(DomainConfigs domainConfigs) {
             this.domainConfigs = domainConfigs;
@@ -58,7 +58,7 @@ public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
             private String argValue; 
 
             /**
-             * ArgName.
+             * The name of the configuration.
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -118,7 +118,7 @@ public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ArgValue.
+             * The value of the configuration.
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -183,6 +183,9 @@ public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
         @NameInMap("FunctionName")
         private String functionName;
 
+        @NameInMap("ParentId")
+        private String parentId;
+
         @NameInMap("Status")
         private String status;
 
@@ -190,6 +193,7 @@ public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
             this.configId = builder.configId;
             this.functionArgs = builder.functionArgs;
             this.functionName = builder.functionName;
+            this.parentId = builder.parentId;
             this.status = builder.status;
         }
 
@@ -223,6 +227,13 @@ public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return parentId
+         */
+        public String getParentId() {
+            return this.parentId;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -233,10 +244,11 @@ public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
             private String configId; 
             private FunctionArgs functionArgs; 
             private String functionName; 
+            private String parentId; 
             private String status; 
 
             /**
-             * ConfigId.
+             * The ID of the configuration.
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -244,7 +256,7 @@ public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionArgs.
+             * The configurations of the features.
              */
             public Builder functionArgs(FunctionArgs functionArgs) {
                 this.functionArgs = functionArgs;
@@ -252,7 +264,7 @@ public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * The feature name.
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -260,7 +272,21 @@ public class DescribeDcdnDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The ID of the advanced condition configuration.
+             */
+            public Builder parentId(String parentId) {
+                this.parentId = parentId;
+                return this;
+            }
+
+            /**
+             * The status of the configuration. Valid values:
+             * <p>
+             * 
+             * *   **success**: successful
+             * *   **testing**: testing
+             * *   **failed**: The configuration failed.
+             * *   **configuring**: The configuration is in progress.
              */
             public Builder status(String status) {
                 this.status = status;

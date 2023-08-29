@@ -62,7 +62,7 @@ public class DescribeDcdnDomainPropertyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -70,7 +70,11 @@ public class DescribeDcdnDomainPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * Protocol.
+         * The protocol. Valid values:
+         * <p>
+         * 
+         * *   **udp**
+         * *   **tcp**
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;
@@ -78,7 +82,7 @@ public class DescribeDcdnDomainPropertyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

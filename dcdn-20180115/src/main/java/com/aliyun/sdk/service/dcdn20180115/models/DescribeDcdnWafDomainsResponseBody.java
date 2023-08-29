@@ -1,0 +1,215 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dcdn20180115.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeDcdnWafDomainsResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeDcdnWafDomainsResponseBody</p>
+ */
+public class DescribeDcdnWafDomainsResponseBody extends TeaModel {
+    @NameInMap("Domains")
+    private java.util.List < Domains> domains;
+
+    @NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @NameInMap("PageSize")
+    private Integer pageSize;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("TotalCount")
+    private Integer totalCount;
+
+    private DescribeDcdnWafDomainsResponseBody(Builder builder) {
+        this.domains = builder.domains;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
+        this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeDcdnWafDomainsResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return domains
+     */
+    public java.util.List < Domains> getDomains() {
+        return this.domains;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static final class Builder {
+        private java.util.List < Domains> domains; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private String requestId; 
+        private Integer totalCount; 
+
+        /**
+         * The protected domain name.
+         */
+        public Builder domains(java.util.List < Domains> domains) {
+            this.domains = domains;
+            return this;
+        }
+
+        /**
+         * The page number of the returned page, which is the same as the PageNumber parameter in request parameters.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of domain names returned per page, which is the same as the PageSize parameter in request parameters.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * The total number of protected domain names.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
+        public DescribeDcdnWafDomainsResponseBody build() {
+            return new DescribeDcdnWafDomainsResponseBody(this);
+        } 
+
+    } 
+
+    public static class Domains extends TeaModel {
+        @NameInMap("ClientIpTag")
+        private String clientIpTag;
+
+        @NameInMap("DomainName")
+        private String domainName;
+
+        @NameInMap("PolicyCount")
+        private Integer policyCount;
+
+        private Domains(Builder builder) {
+            this.clientIpTag = builder.clientIpTag;
+            this.domainName = builder.domainName;
+            this.policyCount = builder.policyCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Domains create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clientIpTag
+         */
+        public String getClientIpTag() {
+            return this.clientIpTag;
+        }
+
+        /**
+         * @return domainName
+         */
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        /**
+         * @return policyCount
+         */
+        public Integer getPolicyCount() {
+            return this.policyCount;
+        }
+
+        public static final class Builder {
+            private String clientIpTag; 
+            private String domainName; 
+            private Integer policyCount; 
+
+            /**
+             * The header of IP address of the client that is connected to the point of presence (POP).
+             */
+            public Builder clientIpTag(String clientIpTag) {
+                this.clientIpTag = clientIpTag;
+                return this;
+            }
+
+            /**
+             * The protected domain name.
+             */
+            public Builder domainName(String domainName) {
+                this.domainName = domainName;
+                return this;
+            }
+
+            /**
+             * The number of protection policies that were configured for the protected domain name.
+             */
+            public Builder policyCount(Integer policyCount) {
+                this.policyCount = policyCount;
+                return this;
+            }
+
+            public Domains build() {
+                return new Domains(this);
+            } 
+
+        } 
+
+    }
+}

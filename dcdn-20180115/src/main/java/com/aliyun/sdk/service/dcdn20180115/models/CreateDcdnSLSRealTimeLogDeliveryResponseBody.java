@@ -50,7 +50,7 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The configuration results of the domain name.
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Desc.
+             * The description of the returned result.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -142,7 +142,7 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name from which real-time logs were collected.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -150,7 +150,7 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region to which real-time logs were delivered.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -158,7 +158,7 @@ public class CreateDcdnSLSRealTimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of real-time logs.
              */
             public Builder status(String status) {
                 this.status = status;

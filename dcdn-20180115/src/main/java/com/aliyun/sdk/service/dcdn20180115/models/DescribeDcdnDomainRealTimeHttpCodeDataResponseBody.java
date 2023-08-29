@@ -98,7 +98,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
         }
 
         /**
-         * RealTimeHttpCodeData.
+         * The proportions of the HTTP status codes.
          */
         public Builder realTimeHttpCodeData(RealTimeHttpCodeData realTimeHttpCodeData) {
             this.realTimeHttpCodeData = realTimeHttpCodeData;
@@ -130,7 +130,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -202,7 +202,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
             private String proportion; 
 
             /**
-             * Code.
+             * The HTTP status code returned.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -210,7 +210,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
             }
 
             /**
-             * Count.
+             * The count of each HTTP status code.
              */
             public Builder count(String count) {
                 this.count = count;
@@ -218,7 +218,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
             }
 
             /**
-             * Proportion.
+             * The proportion of the HTTP status code.
              */
             public Builder proportion(String proportion) {
                 this.proportion = proportion;
@@ -312,7 +312,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
             private Value value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -320,7 +320,7 @@ public class DescribeDcdnDomainRealTimeHttpCodeDataResponseBody extends TeaModel
             }
 
             /**
-             * Value.
+             * The information about the HTTP status code returned.
              */
             public Builder value(Value value) {
                 this.value = value;

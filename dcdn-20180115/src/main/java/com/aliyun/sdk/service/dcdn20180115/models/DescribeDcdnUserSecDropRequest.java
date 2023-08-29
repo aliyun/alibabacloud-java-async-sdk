@@ -23,10 +23,6 @@ public class DescribeDcdnUserSecDropRequest extends Request {
     private String metric;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("SecFunc")
     @Validation(required = true)
     private String secFunc;
@@ -35,7 +31,6 @@ public class DescribeDcdnUserSecDropRequest extends Request {
         super(builder);
         this.data = builder.data;
         this.metric = builder.metric;
-        this.ownerId = builder.ownerId;
         this.secFunc = builder.secFunc;
     }
 
@@ -67,13 +62,6 @@ public class DescribeDcdnUserSecDropRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return secFunc
      */
     public String getSecFunc() {
@@ -83,7 +71,6 @@ public class DescribeDcdnUserSecDropRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDcdnUserSecDropRequest, Builder> {
         private String data; 
         private String metric; 
-        private Long ownerId; 
         private String secFunc; 
 
         private Builder() {
@@ -94,12 +81,15 @@ public class DescribeDcdnUserSecDropRequest extends Request {
             super(request);
             this.data = request.data;
             this.metric = request.metric;
-            this.ownerId = request.ownerId;
             this.secFunc = request.secFunc;
         } 
 
         /**
-         * Data.
+         * The date or month that you want to query.
+         * <p>
+         * 
+         * *   If data is collected every day, set Data in the format of yyyymmdd, such as 20201203.
+         * *   If data is collected every month, set Data in the format of yyyymm, such as 202012.
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
@@ -108,7 +98,11 @@ public class DescribeDcdnUserSecDropRequest extends Request {
         }
 
         /**
-         * Metric.
+         * The time interval at which data is collected.
+         * <p>
+         * 
+         * *   If data is collected every day, the number of blocked packets on the specified day is calculated.
+         * *   If data is collected every month, the number of blocked packets in the specified month is calculated.
          */
         public Builder metric(String metric) {
             this.putQueryParameter("Metric", metric);
@@ -117,16 +111,13 @@ public class DescribeDcdnUserSecDropRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * SecFunc.
+         * The security feature. Valid values:
+         * <p>
+         * 
+         * *   waf: WAF
+         * *   tmd: rate limiting
+         * *   robot: bot traffic recognition
+         * *   l4\_dm_drop: domain name blocking at Layer 4
          */
         public Builder secFunc(String secFunc) {
             this.putQueryParameter("SecFunc", secFunc);

@@ -17,14 +17,9 @@ public class DescribeDcdnDomainPropertyRequest extends Request {
     @Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DescribeDcdnDomainPropertyRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class DescribeDcdnDomainPropertyRequest extends Request {
         return this.domainName;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDcdnDomainPropertyRequest, Builder> {
         private String domainName; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -65,24 +52,14 @@ public class DescribeDcdnDomainPropertyRequest extends Request {
         private Builder(DescribeDcdnDomainPropertyRequest request) {
             super(request);
             this.domainName = request.domainName;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name that you want to query. You can specify only one domain name in each call.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

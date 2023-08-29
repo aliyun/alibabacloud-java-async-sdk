@@ -38,7 +38,7 @@ public class UpdateDcdnDomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The information about the addresses of origin servers.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -50,7 +50,7 @@ public class PublishRoutineCodeRevisionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The version of the routine code that is published to the specified environment.
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class PublishRoutineCodeRevisionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

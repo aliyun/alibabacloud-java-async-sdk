@@ -65,6 +65,10 @@ public class DescribeDcdnUserDomainsRequest extends Request {
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
+    @Query
+    @NameInMap("WebSiteType")
+    private String webSiteType;
+
     private DescribeDcdnUserDomainsRequest(Builder builder) {
         super(builder);
         this.changeEndTime = builder.changeEndTime;
@@ -80,6 +84,7 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.securityToken = builder.securityToken;
         this.tag = builder.tag;
+        this.webSiteType = builder.webSiteType;
     }
 
     public static Builder builder() {
@@ -186,6 +191,13 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return webSiteType
+     */
+    public String getWebSiteType() {
+        return this.webSiteType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDcdnUserDomainsRequest, Builder> {
         private String changeEndTime; 
         private String changeStartTime; 
@@ -200,6 +212,7 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         private String resourceGroupId; 
         private String securityToken; 
         private java.util.List < Tag> tag; 
+        private String webSiteType; 
 
         private Builder() {
             super();
@@ -220,10 +233,14 @@ public class DescribeDcdnUserDomainsRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.securityToken = request.securityToken;
             this.tag = request.tag;
+            this.webSiteType = request.webSiteType;
         } 
 
         /**
-         * ChangeEndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
+         * <p>
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder changeEndTime(String changeEndTime) {
             this.putQueryParameter("ChangeEndTime", changeEndTime);
@@ -232,7 +249,7 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * ChangeStartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.
          */
         public Builder changeStartTime(String changeStartTime) {
             this.putQueryParameter("ChangeStartTime", changeStartTime);
@@ -241,7 +258,11 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * CheckDomainShow.
+         * Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:
+         * <p>
+         * 
+         * *   true: displays domain names.
+         * *   false: does not display detailed information.
          */
         public Builder checkDomainShow(Boolean checkDomainShow) {
             this.putQueryParameter("CheckDomainShow", checkDomainShow);
@@ -250,7 +271,12 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * Coverage.
+         * The acceleration region. By default, all acceleration regions are queried.
+         * <p>
+         * 
+         * *   **domestic**: Chinese mainland
+         * *   **overseas**: outside the Chinese mainland
+         * *   **global**: global
          */
         public Builder coverage(String coverage) {
             this.putQueryParameter("Coverage", coverage);
@@ -259,7 +285,7 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain names. If you do not set this parameter, configurations of all domain names that match the conditions are returned.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -268,7 +294,15 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * DomainSearchType.
+         * The search method. Default value: full_match. Valid values:
+         * <p>
+         * 
+         * *   **fuzzy_match**: fuzzy match
+         * *   **pre_match**: prefix match
+         * *   **suf_match**: suffix match
+         * *   **full_match** (default): exact match
+         * 
+         * > If you specify the domain names to query but do not set the DomainSearchType parameter, the exact match mode is used.
          */
         public Builder domainSearchType(String domainSearchType) {
             this.putQueryParameter("DomainSearchType", domainSearchType);
@@ -277,7 +311,15 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * DomainStatus.
+         * The status of the domain name. Valid values:
+         * <p>
+         * 
+         * *   **online**: enabled
+         * *   **offline**: disabled
+         * *   **configuring**: configuring
+         * *   **configure_failed**: configuration failed
+         * *   **checking**: reviewing
+         * *   **check_failed:** review failed
          */
         public Builder domainStatus(String domainStatus) {
             this.putQueryParameter("DomainStatus", domainStatus);
@@ -295,7 +337,7 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of returned pages. Valid values: **1** to **100000**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -304,7 +346,7 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**. Valid values: **1** to **500**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -313,7 +355,7 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -331,11 +373,20 @@ public class DescribeDcdnUserDomainsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The list of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * WebSiteType.
+         */
+        public Builder webSiteType(String webSiteType) {
+            this.putQueryParameter("WebSiteType", webSiteType);
+            this.webSiteType = webSiteType;
             return this;
         }
 
@@ -385,7 +436,7 @@ public class DescribeDcdnUserDomainsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. Valid values of N: **1** to **20**. You can call the TagDcdnResources operation to set a tag for a domain name.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -393,7 +444,7 @@ public class DescribeDcdnUserDomainsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. Valid values of N: **1** to **20**.
              */
             public Builder value(String value) {
                 this.value = value;

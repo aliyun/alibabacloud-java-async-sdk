@@ -83,7 +83,7 @@ public class StartDcdnIpaDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The name of the accelerated domain to be enabled. You can specify only one accelerated domain name at a time.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

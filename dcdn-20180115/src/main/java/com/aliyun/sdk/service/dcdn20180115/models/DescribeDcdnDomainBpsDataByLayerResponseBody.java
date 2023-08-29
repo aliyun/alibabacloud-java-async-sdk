@@ -62,7 +62,7 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BpsDataInterval.
+         * The bandwidth returned at each time interval.
          */
         public Builder bpsDataInterval(BpsDataInterval bpsDataInterval) {
             this.bpsDataInterval = bpsDataInterval;
@@ -70,7 +70,7 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -78,7 +78,7 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,6 +92,18 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
+        @NameInMap("DynamicTrafficValue")
+        private String dynamicTrafficValue;
+
+        @NameInMap("DynamicValue")
+        private String dynamicValue;
+
+        @NameInMap("StaticTrafficValue")
+        private String staticTrafficValue;
+
+        @NameInMap("StaticValue")
+        private String staticValue;
+
         @NameInMap("TimeStamp")
         private String timeStamp;
 
@@ -102,6 +114,10 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
         private String value;
 
         private DataModule(Builder builder) {
+            this.dynamicTrafficValue = builder.dynamicTrafficValue;
+            this.dynamicValue = builder.dynamicValue;
+            this.staticTrafficValue = builder.staticTrafficValue;
+            this.staticValue = builder.staticValue;
             this.timeStamp = builder.timeStamp;
             this.trafficValue = builder.trafficValue;
             this.value = builder.value;
@@ -113,6 +129,34 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
 
         public static DataModule create() {
             return builder().build();
+        }
+
+        /**
+         * @return dynamicTrafficValue
+         */
+        public String getDynamicTrafficValue() {
+            return this.dynamicTrafficValue;
+        }
+
+        /**
+         * @return dynamicValue
+         */
+        public String getDynamicValue() {
+            return this.dynamicValue;
+        }
+
+        /**
+         * @return staticTrafficValue
+         */
+        public String getStaticTrafficValue() {
+            return this.staticTrafficValue;
+        }
+
+        /**
+         * @return staticValue
+         */
+        public String getStaticValue() {
+            return this.staticValue;
         }
 
         /**
@@ -137,12 +181,48 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String dynamicTrafficValue; 
+            private String dynamicValue; 
+            private String staticTrafficValue; 
+            private String staticValue; 
             private String timeStamp; 
             private String trafficValue; 
             private String value; 
 
             /**
-             * TimeStamp.
+             * The traffic that is used to deliver dynamic content. Unit: bytes.
+             */
+            public Builder dynamicTrafficValue(String dynamicTrafficValue) {
+                this.dynamicTrafficValue = dynamicTrafficValue;
+                return this;
+            }
+
+            /**
+             * The bandwidth that is used to deliver dynamic content. Unit: bit/s.
+             */
+            public Builder dynamicValue(String dynamicValue) {
+                this.dynamicValue = dynamicValue;
+                return this;
+            }
+
+            /**
+             * The traffic that is used to deliver static content. Unit: bytes.
+             */
+            public Builder staticTrafficValue(String staticTrafficValue) {
+                this.staticTrafficValue = staticTrafficValue;
+                return this;
+            }
+
+            /**
+             * The bandwidth that is used to deliver static content. Unit: bit/s.
+             */
+            public Builder staticValue(String staticValue) {
+                this.staticValue = staticValue;
+                return this;
+            }
+
+            /**
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -150,7 +230,7 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficValue.
+             * The total traffic. Unit: bytes.
              */
             public Builder trafficValue(String trafficValue) {
                 this.trafficValue = trafficValue;
@@ -158,7 +238,7 @@ public class DescribeDcdnDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The total bandwidth. Unit: bit/s.
              */
             public Builder value(String value) {
                 this.value = value;

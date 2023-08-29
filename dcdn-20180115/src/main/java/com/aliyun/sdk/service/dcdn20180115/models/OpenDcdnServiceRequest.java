@@ -98,7 +98,11 @@ public class OpenDcdnServiceRequest extends Request {
         } 
 
         /**
-         * BillType.
+         * The metering method of DCDN. Valid values:
+         * <p>
+         * 
+         * *   **PayByTraffic**: pay-by-traffic
+         * *   **PayByBandwidth**: pay-by-bandwidth
          */
         public Builder billType(String billType) {
             this.putQueryParameter("BillType", billType);
@@ -125,7 +129,11 @@ public class OpenDcdnServiceRequest extends Request {
         }
 
         /**
-         * WebsocketBillType.
+         * The metering method of WebSocket. Valid values:
+         * <p>
+         * 
+         * *   **websockettraffic**: pay-by-data-transfer
+         * *   **websocketbps**: pay-by-bandwidth
          */
         public Builder websocketBillType(String websocketBillType) {
             this.putQueryParameter("WebsocketBillType", websocketBillType);

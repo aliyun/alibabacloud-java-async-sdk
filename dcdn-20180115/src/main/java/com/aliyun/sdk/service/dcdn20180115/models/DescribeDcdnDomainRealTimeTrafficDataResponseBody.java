@@ -98,7 +98,10 @@ public class DescribeDcdnDomainRealTimeTrafficDataResponseBody extends TeaModel 
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries. Unit: seconds.
+         * <p>
+         * 
+         * The time granularity varies with the maximum time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600(1 hour). For more information, see **Usage notes**.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +109,7 @@ public class DescribeDcdnDomainRealTimeTrafficDataResponseBody extends TeaModel 
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +117,7 @@ public class DescribeDcdnDomainRealTimeTrafficDataResponseBody extends TeaModel 
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +125,7 @@ public class DescribeDcdnDomainRealTimeTrafficDataResponseBody extends TeaModel 
         }
 
         /**
-         * RealTimeTrafficDataPerInterval.
+         * The amount of back-to-origin traffic returned at each interval.
          */
         public Builder realTimeTrafficDataPerInterval(RealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval) {
             this.realTimeTrafficDataPerInterval = realTimeTrafficDataPerInterval;
@@ -130,7 +133,7 @@ public class DescribeDcdnDomainRealTimeTrafficDataResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +141,7 @@ public class DescribeDcdnDomainRealTimeTrafficDataResponseBody extends TeaModel 
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -190,7 +193,7 @@ public class DescribeDcdnDomainRealTimeTrafficDataResponseBody extends TeaModel 
             private String value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +201,10 @@ public class DescribeDcdnDomainRealTimeTrafficDataResponseBody extends TeaModel 
             }
 
             /**
-             * Value.
+             * The traffic value at each time interval.
+             * <p>
+             * 
+             * > The network traffic is measured in bytes.
              */
             public Builder value(String value) {
                 this.value = value;

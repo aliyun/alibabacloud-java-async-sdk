@@ -17,10 +17,6 @@ public class DescribeRoutineCodeRevisionRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Body
     @NameInMap("SelectCodeRevision")
     @Validation(required = true)
@@ -29,7 +25,6 @@ public class DescribeRoutineCodeRevisionRequest extends Request {
     private DescribeRoutineCodeRevisionRequest(Builder builder) {
         super(builder);
         this.name = builder.name;
-        this.ownerId = builder.ownerId;
         this.selectCodeRevision = builder.selectCodeRevision;
     }
 
@@ -54,13 +49,6 @@ public class DescribeRoutineCodeRevisionRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return selectCodeRevision
      */
     public String getSelectCodeRevision() {
@@ -69,7 +57,6 @@ public class DescribeRoutineCodeRevisionRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeRoutineCodeRevisionRequest, Builder> {
         private String name; 
-        private Long ownerId; 
         private String selectCodeRevision; 
 
         private Builder() {
@@ -79,12 +66,11 @@ public class DescribeRoutineCodeRevisionRequest extends Request {
         private Builder(DescribeRoutineCodeRevisionRequest request) {
             super(request);
             this.name = request.name;
-            this.ownerId = request.ownerId;
             this.selectCodeRevision = request.selectCodeRevision;
         } 
 
         /**
-         * Name.
+         * The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -93,16 +79,7 @@ public class DescribeRoutineCodeRevisionRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * SelectCodeRevision.
+         * The version of the JavaScript code that you want to query.
          */
         public Builder selectCodeRevision(String selectCodeRevision) {
             this.putBodyParameter("SelectCodeRevision", selectCodeRevision);

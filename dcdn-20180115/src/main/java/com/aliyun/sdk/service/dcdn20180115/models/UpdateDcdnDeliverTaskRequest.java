@@ -29,10 +29,6 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
     @NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Body
     @NameInMap("Reports")
     private String reports;
@@ -47,7 +43,6 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
         this.deliverId = builder.deliverId;
         this.domainName = builder.domainName;
         this.name = builder.name;
-        this.ownerId = builder.ownerId;
         this.reports = builder.reports;
         this.schedule = builder.schedule;
     }
@@ -94,13 +89,6 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return reports
      */
     public String getReports() {
@@ -119,7 +107,6 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
         private Long deliverId; 
         private String domainName; 
         private String name; 
-        private Long ownerId; 
         private String reports; 
         private String schedule; 
 
@@ -133,13 +120,12 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
             this.deliverId = request.deliverId;
             this.domainName = request.domainName;
             this.name = request.name;
-            this.ownerId = request.ownerId;
             this.reports = request.reports;
             this.schedule = request.schedule;
         } 
 
         /**
-         * Deliver.
+         * The ID of the request.
          */
         public Builder deliver(String deliver) {
             this.putBodyParameter("Deliver", deliver);
@@ -148,7 +134,7 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * DeliverId.
+         * Domain Subscription
          */
         public Builder deliverId(Long deliverId) {
             this.putBodyParameter("DeliverId", deliverId);
@@ -157,7 +143,7 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * {"schedName":"subscription task name","description":"description","crontab":"000**?","frequency":"d","status":"enable","effectiveFrom": "2020-09-17T00:00:00Z","effectiveEnd":"2020-11-17T00:00:00Z"}
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -166,7 +152,7 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the tracking task.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -175,16 +161,7 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * Reports.
+         * The operations reports that are tracked by the task. The data must be escaped in JSON.
          */
         public Builder reports(String reports) {
             this.putBodyParameter("Reports", reports);
@@ -193,7 +170,7 @@ public class UpdateDcdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * Schedule.
+         * The method that is used to send operations reports. Operations reports are sent to you only by email. The settings must be escaped in JSON.
          */
         public Builder schedule(String schedule) {
             this.putBodyParameter("Schedule", schedule);

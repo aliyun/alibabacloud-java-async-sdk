@@ -146,7 +146,7 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         private String websocketType; 
 
         /**
-         * ChangingAffectTime.
+         * The time when the renewed secure DCDN takes effect. The time is displayed in UTC.
          */
         public Builder changingAffectTime(String changingAffectTime) {
             this.changingAffectTime = changingAffectTime;
@@ -154,7 +154,16 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChangingChargeType.
+         * The new metering method for the renewed secure DCDN. Valid values:
+         * <p>
+         * 
+         * *   **PayByTraffic**: pay by data transfer
+         * *   **PayByBandwidth**: pay by bandwidth
+         * *   **PayByBandwidth95**: pay by 95th percentile bandwidth
+         * *   **PayByBandwidth_monthavg**: pay by monthly average bandwidth
+         * *   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month
+         * *   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth
+         * *   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)
          */
         public Builder changingChargeType(String changingChargeType) {
             this.changingChargeType = changingChargeType;
@@ -162,7 +171,7 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -170,7 +179,16 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * InternetChargeType.
+         * The current metering method. Valid values:
+         * <p>
+         * 
+         * *   **PayByTraffic**: pay by data transfer
+         * *   **PayByBandwidth**: pay by bandwidth
+         * *   **PayByBandwidth95**: pay by 95th percentile bandwidth
+         * *   **PayByBandwidth_monthavg**: pay by monthly average bandwidth
+         * *   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month
+         * *   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth
+         * *   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -178,7 +196,7 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * OpeningTime.
+         * The time when the DCDN service was activated. The time follows the ISO 8601 standard.
          */
         public Builder openingTime(String openingTime) {
             this.openingTime = openingTime;
@@ -186,7 +204,7 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * OperationLocks.
+         * The lock status of DCDN.
          */
         public Builder operationLocks(OperationLocks operationLocks) {
             this.operationLocks = operationLocks;
@@ -194,7 +212,7 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -202,7 +220,7 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * WebsocketChangingTime.
+         * The time when the changes of the WebSocket configuration take effect. The value is the same as that of the ChangingAffectTime parameter. This parameter can be displayed in the console only if the specified time is later than the current time.
          */
         public Builder websocketChangingTime(String websocketChangingTime) {
             this.websocketChangingTime = websocketChangingTime;
@@ -210,7 +228,7 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * WebsocketChangingType.
+         * The next effective billing method of WebSocket. Valid values: **websockettraffic** and **websocketbps**. A value of websockettraffic indicates that you are billed based on the traffic volume. A value of websocketbps indicates that you are billed based on the bandwidth.
          */
         public Builder websocketChangingType(String websocketChangingType) {
             this.websocketChangingType = websocketChangingType;
@@ -218,7 +236,7 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
         }
 
         /**
-         * WebsocketType.
+         * The current billing method of WebSocket. Valid values: **websockettraffic** and **websocketbps**. A value of websockettraffic indicates that you are billed based on the traffic volume. A value of websocketbps indicates that you are billed based on the bandwidth.
          */
         public Builder websocketType(String websocketType) {
             this.websocketType = websocketType;
@@ -258,7 +276,7 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * LockReason.
+             * The reason why secure DCDN was locked. For example, a value of financial indicates that an overdue payment exists.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -299,7 +317,7 @@ public class DescribeDcdnServiceResponseBody extends TeaModel {
             private java.util.List < LockReason> lockReason; 
 
             /**
-             * LockReason.
+             * The reason why secure DCDN was locked. For example, a value of financial indicates that an overdue payment exists.
              */
             public Builder lockReason(java.util.List < LockReason> lockReason) {
                 this.lockReason = lockReason;

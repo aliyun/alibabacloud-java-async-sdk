@@ -34,10 +34,6 @@ public class DescribeDcdnDomainHttpCodeDataRequest extends Request {
     private String locationNameEn;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -48,7 +44,6 @@ public class DescribeDcdnDomainHttpCodeDataRequest extends Request {
         this.interval = builder.interval;
         this.ispNameEn = builder.ispNameEn;
         this.locationNameEn = builder.locationNameEn;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -101,13 +96,6 @@ public class DescribeDcdnDomainHttpCodeDataRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -120,7 +108,6 @@ public class DescribeDcdnDomainHttpCodeDataRequest extends Request {
         private String interval; 
         private String ispNameEn; 
         private String locationNameEn; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
@@ -134,12 +121,11 @@ public class DescribeDcdnDomainHttpCodeDataRequest extends Request {
             this.interval = request.interval;
             this.ispNameEn = request.ispNameEn;
             this.locationNameEn = request.locationNameEn;
-            this.ownerId = request.ownerId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -148,7 +134,12 @@ public class DescribeDcdnDomainHttpCodeDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -157,7 +148,10 @@ public class DescribeDcdnDomainHttpCodeDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The time granularity of the data entries. Unit: seconds.
+         * <p>
+         * 
+         * The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -166,7 +160,10 @@ public class DescribeDcdnDomainHttpCodeDataRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The name of the Internet service provider (ISP).
+         * <p>
+         * 
+         * You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query ISPs.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -175,7 +172,10 @@ public class DescribeDcdnDomainHttpCodeDataRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region.
+         * <p>
+         * 
+         * You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -184,16 +184,10 @@ public class DescribeDcdnDomainHttpCodeDataRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -110,7 +110,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Description.
+         * The description of HTTP responses.
          */
         public Builder description(String description) {
             this.description = description;
@@ -118,7 +118,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * Len.
+         * The total number of entries returned.
          */
         public Builder len(Integer len) {
             this.len = len;
@@ -126,7 +126,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +134,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +142,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +150,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * Rows.
+         * An array.
          */
         public Builder rows(java.util.List < Rows> rows) {
             this.rows = rows;
@@ -158,7 +158,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -258,7 +258,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             private String tmStr; 
 
             /**
-             * Domain.
+             * The domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -266,7 +266,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             }
 
             /**
-             * Drops.
+             * The number of packets blocked within 5 minutes.
              */
             public Builder drops(Integer drops) {
                 this.drops = drops;
@@ -274,7 +274,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * The object that triggered rate limiting.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -282,7 +282,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The rule that was triggered.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -290,7 +290,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             }
 
             /**
-             * SecFunc.
+             * The security feature that blocked the packets.
              */
             public Builder secFunc(String secFunc) {
                 this.secFunc = secFunc;
@@ -298,7 +298,7 @@ public class DescribeDcdnUserSecDropByMinuteResponseBody extends TeaModel {
             }
 
             /**
-             * TmStr.
+             * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
              */
             public Builder tmStr(String tmStr) {
                 this.tmStr = tmStr;

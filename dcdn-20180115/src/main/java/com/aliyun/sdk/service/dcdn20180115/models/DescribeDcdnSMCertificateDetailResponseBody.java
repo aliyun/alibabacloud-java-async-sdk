@@ -134,7 +134,7 @@ public class DescribeDcdnSMCertificateDetailResponseBody extends TeaModel {
         private String signCertificate; 
 
         /**
-         * CertExpireTime.
+         * The time when the certificate expires. The time is displayed in UTC.
          */
         public Builder certExpireTime(String certExpireTime) {
             this.certExpireTime = certExpireTime;
@@ -142,7 +142,7 @@ public class DescribeDcdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertIdentifier.
+         * The ID of the certificate.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -150,7 +150,7 @@ public class DescribeDcdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertName.
+         * The name of the certificate.
          */
         public Builder certName(String certName) {
             this.certName = certName;
@@ -158,7 +158,7 @@ public class DescribeDcdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertOrg.
+         * The certificate authority (CA) that issued the certificate.
          */
         public Builder certOrg(String certOrg) {
             this.certOrg = certOrg;
@@ -166,7 +166,7 @@ public class DescribeDcdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CommonName.
+         * The top-level domain name.
          */
         public Builder commonName(String commonName) {
             this.commonName = commonName;
@@ -174,7 +174,7 @@ public class DescribeDcdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * EncryptCertificate.
+         * The content of the encryption certificate.
          */
         public Builder encryptCertificate(String encryptCertificate) {
             this.encryptCertificate = encryptCertificate;
@@ -182,7 +182,7 @@ public class DescribeDcdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeDcdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Sans.
+         * The domain name on the additional certificate.
          */
         public Builder sans(String sans) {
             this.sans = sans;
@@ -198,7 +198,7 @@ public class DescribeDcdnSMCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SignCertificate.
+         * The content of the signature certificate.
          */
         public Builder signCertificate(String signCertificate) {
             this.signCertificate = signCertificate;

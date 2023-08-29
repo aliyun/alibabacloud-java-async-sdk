@@ -17,14 +17,9 @@ public class DeleteDcdnDeliverTaskRequest extends Request {
     @Validation(required = true)
     private Long deliverId;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DeleteDcdnDeliverTaskRequest(Builder builder) {
         super(builder);
         this.deliverId = builder.deliverId;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class DeleteDcdnDeliverTaskRequest extends Request {
         return this.deliverId;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteDcdnDeliverTaskRequest, Builder> {
         private Long deliverId; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -65,24 +52,14 @@ public class DeleteDcdnDeliverTaskRequest extends Request {
         private Builder(DeleteDcdnDeliverTaskRequest request) {
             super(request);
             this.deliverId = request.deliverId;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * DeliverId.
+         * The IDs of the tracking tasks that you want to delete. You can call the [DescribeCdnDeliverList](~~270043~~) operation to query task IDs.
          */
         public Builder deliverId(Long deliverId) {
             this.putQueryParameter("DeliverId", deliverId);
             this.deliverId = deliverId;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

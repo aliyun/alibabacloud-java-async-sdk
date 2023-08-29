@@ -83,7 +83,7 @@ public class StopDcdnIpaDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The name of the accelerated domain that you want to disable. You can specify only one domain name at a time.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

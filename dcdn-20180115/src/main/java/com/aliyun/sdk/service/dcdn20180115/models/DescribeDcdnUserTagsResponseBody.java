@@ -50,7 +50,7 @@ public class DescribeDcdnUserTagsResponseBody extends TeaModel {
         private java.util.List < Tags> tags; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDcdnUserTagsResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The tag.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -110,7 +110,7 @@ public class DescribeDcdnUserTagsResponseBody extends TeaModel {
             private java.util.List < String > value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +118,7 @@ public class DescribeDcdnUserTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag that you want to query.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

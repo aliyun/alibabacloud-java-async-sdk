@@ -26,10 +26,6 @@ public class CreateDcdnDeliverTaskRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Body
     @NameInMap("Reports")
     @Validation(required = true)
@@ -45,7 +41,6 @@ public class CreateDcdnDeliverTaskRequest extends Request {
         this.deliver = builder.deliver;
         this.domainName = builder.domainName;
         this.name = builder.name;
-        this.ownerId = builder.ownerId;
         this.reports = builder.reports;
         this.schedule = builder.schedule;
     }
@@ -85,13 +80,6 @@ public class CreateDcdnDeliverTaskRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return reports
      */
     public String getReports() {
@@ -109,7 +97,6 @@ public class CreateDcdnDeliverTaskRequest extends Request {
         private String deliver; 
         private String domainName; 
         private String name; 
-        private Long ownerId; 
         private String reports; 
         private String schedule; 
 
@@ -122,13 +109,12 @@ public class CreateDcdnDeliverTaskRequest extends Request {
             this.deliver = request.deliver;
             this.domainName = request.domainName;
             this.name = request.name;
-            this.ownerId = request.ownerId;
             this.reports = request.reports;
             this.schedule = request.schedule;
         } 
 
         /**
-         * Deliver.
+         * The method that is used to send operations reports. Operations reports are sent to you only by email. The settings must be escaped in JSON.
          */
         public Builder deliver(String deliver) {
             this.putBodyParameter("Deliver", deliver);
@@ -137,7 +123,10 @@ public class CreateDcdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain names to be tracked. Separate multiple domain names with commas (,). You can specify up to 500 domain names. If you want to specify more than 500 domain names, [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.2020520001.aliyun_topbar.18.dbd44bd3e4f845#/ticket/createIndex).
+         * <p>
+         * 
+         * > If you do not specify a domain name, the tracking task is created for all domain names that belong to your Alibaba Cloud account.
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -146,7 +135,7 @@ public class CreateDcdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the tracking task.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -155,16 +144,7 @@ public class CreateDcdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * Reports.
+         * The operations reports that are tracked by the task. The data must be escaped in JSON.
          */
         public Builder reports(String reports) {
             this.putBodyParameter("Reports", reports);
@@ -173,7 +153,7 @@ public class CreateDcdnDeliverTaskRequest extends Request {
         }
 
         /**
-         * Schedule.
+         * The parameters that specify the time interval at which the tracking task sends operations reports. The settings must be escaped in JSON.
          */
         public Builder schedule(String schedule) {
             this.putBodyParameter("Schedule", schedule);

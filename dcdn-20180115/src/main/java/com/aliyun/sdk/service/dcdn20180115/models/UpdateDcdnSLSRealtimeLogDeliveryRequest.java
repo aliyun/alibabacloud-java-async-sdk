@@ -22,10 +22,6 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
     @Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Body
     @NameInMap("ProjectName")
     @Validation(required = true)
@@ -54,7 +50,6 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         super(builder);
         this.dataCenter = builder.dataCenter;
         this.domainName = builder.domainName;
-        this.ownerId = builder.ownerId;
         this.projectName = builder.projectName;
         this.SLSLogStore = builder.SLSLogStore;
         this.SLSProject = builder.SLSProject;
@@ -87,13 +82,6 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
      */
     public String getDomainName() {
         return this.domainName;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     /**
@@ -134,7 +122,6 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateDcdnSLSRealtimeLogDeliveryRequest, Builder> {
         private String dataCenter; 
         private String domainName; 
-        private Long ownerId; 
         private String projectName; 
         private String SLSLogStore; 
         private String SLSProject; 
@@ -149,7 +136,6 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
             super(request);
             this.dataCenter = request.dataCenter;
             this.domainName = request.domainName;
-            this.ownerId = request.ownerId;
             this.projectName = request.projectName;
             this.SLSLogStore = request.SLSLogStore;
             this.SLSProject = request.SLSProject;
@@ -158,7 +144,14 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         } 
 
         /**
-         * DataCenter.
+         * The region from which logs are collected.
+         * <p>
+         * 
+         * *   **cn**: Chinese mainland
+         * *   **sg**: Singapore
+         * *   **in**: India
+         * *   **eu**: Europe
+         * *   **us**: United States
          */
         public Builder dataCenter(String dataCenter) {
             this.putBodyParameter("DataCenter", dataCenter);
@@ -167,7 +160,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -176,16 +169,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ProjectName.
+         * The name of the project.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -194,7 +178,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * SLSLogStore.
+         * The name of the Logstore.
          */
         public Builder SLSLogStore(String SLSLogStore) {
             this.putBodyParameter("SLSLogStore", SLSLogStore);
@@ -203,7 +187,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * SLSProject.
+         * The name of the log file.
          */
         public Builder SLSProject(String SLSProject) {
             this.putBodyParameter("SLSProject", SLSProject);
@@ -212,7 +196,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * SLSRegion.
+         * The region to which logs were delivered.
          */
         public Builder SLSRegion(String SLSRegion) {
             this.putBodyParameter("SLSRegion", SLSRegion);
@@ -221,7 +205,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * SamplingRate.
+         * The sampling rate.
          */
         public Builder samplingRate(String samplingRate) {
             this.putBodyParameter("SamplingRate", samplingRate);

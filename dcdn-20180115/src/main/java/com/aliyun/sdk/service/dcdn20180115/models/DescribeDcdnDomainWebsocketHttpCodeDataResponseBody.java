@@ -98,7 +98,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         }
 
         /**
-         * HttpCodeDataPerInterval.
+         * The HTTP status code.
          */
         public Builder httpCodeDataPerInterval(HttpCodeDataPerInterval httpCodeDataPerInterval) {
             this.httpCodeDataPerInterval = httpCodeDataPerInterval;
@@ -130,7 +130,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -202,7 +202,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
             private Float proportion; 
 
             /**
-             * Code.
+             * The HTTP status code returned.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -210,7 +210,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
             }
 
             /**
-             * Count.
+             * The total number of entries returned.
              */
             public Builder count(Float count) {
                 this.count = count;
@@ -218,7 +218,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
             }
 
             /**
-             * Proportion.
+             * The proportion of the HTTP status code.
              */
             public Builder proportion(Float proportion) {
                 this.proportion = proportion;
@@ -312,7 +312,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
             private WebsocketHttpCode websocketHttpCode; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -320,7 +320,7 @@ public class DescribeDcdnDomainWebsocketHttpCodeDataResponseBody extends TeaMode
             }
 
             /**
-             * WebsocketHttpCode.
+             * The proportions of the HTTP status codes.
              */
             public Builder websocketHttpCode(WebsocketHttpCode websocketHttpCode) {
                 this.websocketHttpCode = websocketHttpCode;

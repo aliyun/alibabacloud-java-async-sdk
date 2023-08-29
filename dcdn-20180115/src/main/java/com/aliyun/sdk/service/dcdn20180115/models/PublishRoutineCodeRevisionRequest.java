@@ -22,10 +22,6 @@ public class PublishRoutineCodeRevisionRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Body
     @NameInMap("SelectCodeRevision")
     @Validation(required = true)
@@ -35,7 +31,6 @@ public class PublishRoutineCodeRevisionRequest extends Request {
         super(builder);
         this.envs = builder.envs;
         this.name = builder.name;
-        this.ownerId = builder.ownerId;
         this.selectCodeRevision = builder.selectCodeRevision;
     }
 
@@ -67,13 +62,6 @@ public class PublishRoutineCodeRevisionRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return selectCodeRevision
      */
     public String getSelectCodeRevision() {
@@ -83,7 +71,6 @@ public class PublishRoutineCodeRevisionRequest extends Request {
     public static final class Builder extends Request.Builder<PublishRoutineCodeRevisionRequest, Builder> {
         private java.util.Map < String, ? > envs; 
         private String name; 
-        private Long ownerId; 
         private String selectCodeRevision; 
 
         private Builder() {
@@ -94,21 +81,28 @@ public class PublishRoutineCodeRevisionRequest extends Request {
             super(request);
             this.envs = request.envs;
             this.name = request.name;
-            this.ownerId = request.ownerId;
             this.selectCodeRevision = request.selectCodeRevision;
         } 
 
         /**
-         * Envs.
+         * The environment to which you want to publish the code.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   production: the name of the environment, including the environment name (SpecName) and the domain name whitelist (AllowedHosts).
+         * 
+         * *   presetCanary: You can add canary release environments based on your business requirements. This parameter is optional.
          */
         public Builder envs(java.util.Map < String, ? > envs) {
-            this.putBodyParameter("Envs", envs);
+            String envsShrink = shrink(envs, "Envs", "json");
+            this.putBodyParameter("Envs", envsShrink);
             this.envs = envs;
             return this;
         }
 
         /**
-         * Name.
+         * The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -117,16 +111,7 @@ public class PublishRoutineCodeRevisionRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * SelectCodeRevision.
+         * The version of the routine code that you want to publish.
          */
         public Builder selectCodeRevision(String selectCodeRevision) {
             this.putBodyParameter("SelectCodeRevision", selectCodeRevision);

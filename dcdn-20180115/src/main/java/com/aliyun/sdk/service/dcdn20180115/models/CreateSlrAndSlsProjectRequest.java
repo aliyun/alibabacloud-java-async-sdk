@@ -12,9 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSlrAndSlsProjectRequest</p>
  */
 public class CreateSlrAndSlsProjectRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
+    @Body
+    @NameInMap("BusinessType")
+    private String businessType;
 
     @Body
     @NameInMap("Region")
@@ -23,7 +23,7 @@ public class CreateSlrAndSlsProjectRequest extends Request {
 
     private CreateSlrAndSlsProjectRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
+        this.businessType = builder.businessType;
         this.region = builder.region;
     }
 
@@ -41,10 +41,10 @@ public class CreateSlrAndSlsProjectRequest extends Request {
     }
 
     /**
-     * @return ownerId
+     * @return businessType
      */
-    public Long getOwnerId() {
-        return this.ownerId;
+    public String getBusinessType() {
+        return this.businessType;
     }
 
     /**
@@ -55,7 +55,7 @@ public class CreateSlrAndSlsProjectRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateSlrAndSlsProjectRequest, Builder> {
-        private Long ownerId; 
+        private String businessType; 
         private String region; 
 
         private Builder() {
@@ -64,21 +64,38 @@ public class CreateSlrAndSlsProjectRequest extends Request {
 
         private Builder(CreateSlrAndSlsProjectRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
+            this.businessType = request.businessType;
             this.region = request.region;
         } 
 
         /**
-         * OwnerId.
+         * The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
+         * <p>
+         * 
+         * *   **cdn_log_access_l1**: access logs of L1 Dynamic Route for CDN (DCDN) points of presence (POPs)
+         * *   **cdn_log_origin**: back-to-origin logs
+         * *   **cdn_log_er**: EdgeRoutine logs
          */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
+        public Builder businessType(String businessType) {
+            this.putBodyParameter("BusinessType", businessType);
+            this.businessType = businessType;
             return this;
         }
 
         /**
-         * Region.
+         * The region where Log Service resides. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**
+         * *   **cn-shanghai**
+         * *   **cn-qingdao**
+         * *   **cn-beijing**
+         * *   **cn-zhangjiakou**
+         * *   **cn-shenzhen**
+         * *   **eu-central-1**
+         * *   **us-west-1**
+         * *   **ap-south-1**
+         * *   **ap-southeast-1**
          */
         public Builder region(String region) {
             this.putBodyParameter("Region", region);

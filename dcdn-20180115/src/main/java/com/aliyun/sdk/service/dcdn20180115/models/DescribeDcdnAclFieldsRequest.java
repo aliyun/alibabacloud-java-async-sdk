@@ -17,14 +17,9 @@ public class DescribeDcdnAclFieldsRequest extends Request {
     @Validation(required = true)
     private String lang;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DescribeDcdnAclFieldsRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class DescribeDcdnAclFieldsRequest extends Request {
         return this.lang;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDcdnAclFieldsRequest, Builder> {
         private String lang; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -65,24 +52,18 @@ public class DescribeDcdnAclFieldsRequest extends Request {
         private Builder(DescribeDcdnAclFieldsRequest request) {
             super(request);
             this.lang = request.lang;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * Lang.
+         * The access language. Default value: en. Valid values:
+         * <p>
+         * 
+         * *   **en**: English
+         * *   **zh**: Chinese
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
             this.lang = lang;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

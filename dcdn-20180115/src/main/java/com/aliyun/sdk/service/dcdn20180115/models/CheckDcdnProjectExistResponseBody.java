@@ -50,7 +50,7 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The returned results.
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,11 @@ public class CheckDcdnProjectExistResponseBody extends TeaModel {
             private String exist; 
 
             /**
-             * Exist.
+             * Indicates whether the real-time log delivery project exists. Valid values:
+             * <p>
+             * 
+             * *   **false**
+             * *   **true**
              */
             public Builder exist(String exist) {
                 this.exist = exist;

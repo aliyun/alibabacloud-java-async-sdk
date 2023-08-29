@@ -74,7 +74,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         private TopReferList topReferList; 
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -82,7 +82,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -90,7 +90,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -98,7 +98,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
         }
 
         /**
-         * TopReferList.
+         * The list of frequently referenced URLs returned.
          */
         public Builder topReferList(TopReferList topReferList) {
             this.topReferList = topReferList;
@@ -186,7 +186,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
             private Float visitProportion; 
 
             /**
-             * Flow.
+             * The amount of network traffic. (Unit: bytes)
              */
             public Builder flow(String flow) {
                 this.flow = flow;
@@ -194,7 +194,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
             }
 
             /**
-             * FlowProportion.
+             * The proportion of network traffic consumed to access the URL.
              */
             public Builder flowProportion(Float flowProportion) {
                 this.flowProportion = flowProportion;
@@ -202,7 +202,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
             }
 
             /**
-             * ReferDetail.
+             * The complete referenced URL.
              */
             public Builder referDetail(String referDetail) {
                 this.referDetail = referDetail;
@@ -210,7 +210,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
             }
 
             /**
-             * VisitData.
+             * The number of visits.
              */
             public Builder visitData(String visitData) {
                 this.visitData = visitData;
@@ -218,7 +218,7 @@ public class DescribeDcdnDomainTopReferVisitResponseBody extends TeaModel {
             }
 
             /**
-             * VisitProportion.
+             * The proportion of visits to the URL.
              */
             public Builder visitProportion(Float visitProportion) {
                 this.visitProportion = visitProportion;

@@ -50,7 +50,7 @@ public class DescribeRoutineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The metadata of the routine. The following table describes the fields.
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class DescribeRoutineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

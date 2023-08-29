@@ -50,7 +50,7 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InfoList.
+         * The information about the country or region.
          */
         public Builder infoList(InfoList infoList) {
             this.infoList = infoList;
@@ -58,7 +58,7 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
             private String countriesAndRegionsName; 
 
             /**
-             * Continent.
+             * The larger region to which the country or region belongs.
              */
             public Builder continent(String continent) {
                 this.continent = continent;
@@ -130,7 +130,7 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * CountriesAndRegions.
+             * The abbreviation of the name of the country or region.
              */
             public Builder countriesAndRegions(String countriesAndRegions) {
                 this.countriesAndRegions = countriesAndRegions;
@@ -138,7 +138,7 @@ public class DescribeDcdnBlockedRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * CountriesAndRegionsName.
+             * The name of the country or region.
              */
             public Builder countriesAndRegionsName(String countriesAndRegionsName) {
                 this.countriesAndRegionsName = countriesAndRegionsName;

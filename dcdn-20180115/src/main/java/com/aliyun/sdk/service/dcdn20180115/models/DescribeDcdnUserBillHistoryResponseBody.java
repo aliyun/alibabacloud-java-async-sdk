@@ -50,7 +50,7 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BillHistoryData.
+         * The billing history returned.
          */
         public Builder billHistoryData(BillHistoryData billHistoryData) {
             this.billHistoryData = billHistoryData;
@@ -58,7 +58,7 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
             private Float flow; 
 
             /**
-             * Bandwidth.
+             * The bandwidth. Unit: bit/s.
              */
             public Builder bandwidth(Float bandwidth) {
                 this.bandwidth = bandwidth;
@@ -154,7 +154,7 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * CdnRegion.
+             * The region for which the billing records are generated. Valid values: **CN**, **OverSeas**, **AP1**, **AP2**, **AP3**, **NA**, **SA**, **EU**, and **MEAA**.
              */
             public Builder cdnRegion(String cdnRegion) {
                 this.cdnRegion = cdnRegion;
@@ -162,7 +162,7 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The billing method of the disk. Valid values: Valid values: **StaticHttp**, **DynamicHttp**, and **DynamicHttps**.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -170,7 +170,7 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of billing entries.
              */
             public Builder count(Float count) {
                 this.count = count;
@@ -178,7 +178,7 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Flow.
+             * The amount of network traffic. Unit: bytes.
              */
             public Builder flow(Float flow) {
                 this.flow = flow;
@@ -296,7 +296,7 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
             private String dimension; 
 
             /**
-             * BillTime.
+             * The beginning of the time range that was queried.
              */
             public Builder billTime(String billTime) {
                 this.billTime = billTime;
@@ -304,7 +304,7 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * BillType.
+             * The metering method.
              */
             public Builder billType(String billType) {
                 this.billType = billType;
@@ -312,7 +312,7 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * BillingData.
+             * The billable items.
              */
             public Builder billingData(BillingData billingData) {
                 this.billingData = billingData;
@@ -320,7 +320,7 @@ public class DescribeDcdnUserBillHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * Dimension.
+             * The dimension.
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;

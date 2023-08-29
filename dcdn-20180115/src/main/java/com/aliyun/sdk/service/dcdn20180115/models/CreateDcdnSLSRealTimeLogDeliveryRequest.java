@@ -26,10 +26,6 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
     @Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Body
     @NameInMap("ProjectName")
     @Validation(required = true)
@@ -59,7 +55,6 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         this.businessType = builder.businessType;
         this.dataCenter = builder.dataCenter;
         this.domainName = builder.domainName;
-        this.ownerId = builder.ownerId;
         this.projectName = builder.projectName;
         this.SLSLogStore = builder.SLSLogStore;
         this.SLSProject = builder.SLSProject;
@@ -102,13 +97,6 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -147,7 +135,6 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         private String businessType; 
         private String dataCenter; 
         private String domainName; 
-        private Long ownerId; 
         private String projectName; 
         private String SLSLogStore; 
         private String SLSProject; 
@@ -163,7 +150,6 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
             this.businessType = request.businessType;
             this.dataCenter = request.dataCenter;
             this.domainName = request.domainName;
-            this.ownerId = request.ownerId;
             this.projectName = request.projectName;
             this.SLSLogStore = request.SLSLogStore;
             this.SLSProject = request.SLSProject;
@@ -172,7 +158,12 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         } 
 
         /**
-         * BusinessType.
+         * The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
+         * <p>
+         * 
+         * *   **cdn_log_access_l1**: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)
+         * *   **cdn_log_origin**: back-to-origin logs
+         * *   **cdn_log_er**: EdgeRoutine logs
          */
         public Builder businessType(String businessType) {
             this.putBodyParameter("BusinessType", businessType);
@@ -181,7 +172,14 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * DataCenter.
+         * The data center. Valid values:
+         * <p>
+         * 
+         * *   cn: China
+         * *   sg: Singapore
+         * *   in: India
+         * *   eu: Europe
+         * *   us: United States
          */
         public Builder dataCenter(String dataCenter) {
             this.putBodyParameter("DataCenter", dataCenter);
@@ -190,7 +188,7 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("DomainName", domainName);
@@ -199,16 +197,7 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ProjectName.
+         * The name of a real-time log delivery project.
          */
         public Builder projectName(String projectName) {
             this.putBodyParameter("ProjectName", projectName);
@@ -217,7 +206,7 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * SLSLogStore.
+         * The name of the Log Service Logstore.
          */
         public Builder SLSLogStore(String SLSLogStore) {
             this.putBodyParameter("SLSLogStore", SLSLogStore);
@@ -226,7 +215,7 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * SLSProject.
+         * The name of the Log Service project.
          */
         public Builder SLSProject(String SLSProject) {
             this.putBodyParameter("SLSProject", SLSProject);
@@ -235,7 +224,7 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * SLSRegion.
+         * The region to which real-time logs are delivered.
          */
         public Builder SLSRegion(String SLSRegion) {
             this.putBodyParameter("SLSRegion", SLSRegion);
@@ -244,7 +233,7 @@ public class CreateDcdnSLSRealTimeLogDeliveryRequest extends Request {
         }
 
         /**
-         * SamplingRate.
+         * The sampling rate.
          */
         public Builder samplingRate(String samplingRate) {
             this.putBodyParameter("SamplingRate", samplingRate);

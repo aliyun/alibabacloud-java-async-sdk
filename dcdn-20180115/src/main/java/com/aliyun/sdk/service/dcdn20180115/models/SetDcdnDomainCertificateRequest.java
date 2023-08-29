@@ -182,7 +182,7 @@ public class SetDcdnDomainCertificateRequest extends Request {
         } 
 
         /**
-         * CertName.
+         * The certificate name.
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -191,7 +191,13 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * CertType.
+         * The certificate type.
+         * <p>
+         * 
+         * *   **upload**: a user-uploaded SSL certificate.
+         * *   **cas**: a certificate that is acquired through Certificate Management Service.
+         * 
+         * > If the value of the CertType parameter is **cas**, the **SSLPri** parameter is not required.
          */
         public Builder certType(String certType) {
             this.putQueryParameter("CertType", certType);
@@ -200,7 +206,10 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name.
+         * <p>
+         * 
+         * HTTPS acceleration must be enabled for the accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -209,7 +218,7 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * ForceSet.
+         * Specifies whether to check the certificate name for duplicates. If you set the value to 1, the system does not perform the check and overwrites the information about the existing certificate that uses the same name.
          */
         public Builder forceSet(String forceSet) {
             this.putQueryParameter("ForceSet", forceSet);
@@ -227,7 +236,7 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region. Default value: ch-hangzhou.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -236,7 +245,7 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * SSLPri.
+         * The private key. This parameter is required only if you enable the SSL certificate.
          */
         public Builder SSLPri(String SSLPri) {
             this.putQueryParameter("SSLPri", SSLPri);
@@ -245,7 +254,11 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * SSLProtocol.
+         * Specifies whether to enable the SSL certificate.
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);
@@ -254,7 +267,7 @@ public class SetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * SSLPub.
+         * The certificate content. This parameter is required only if you enable the SSL certificate.
          */
         public Builder SSLPub(String SSLPub) {
             this.putQueryParameter("SSLPub", SSLPub);

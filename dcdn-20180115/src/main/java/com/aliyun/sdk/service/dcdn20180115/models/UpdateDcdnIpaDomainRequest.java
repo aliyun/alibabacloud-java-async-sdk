@@ -125,7 +125,7 @@ public class UpdateDcdnIpaDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name that you want to modify. You can specify only one domain name in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -143,7 +143,7 @@ public class UpdateDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -161,7 +161,7 @@ public class UpdateDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * Sources.
+         * The information about the addresses of the origin server.
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -170,7 +170,7 @@ public class UpdateDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * TopLevelDomain.
+         * The top-level domain name.
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

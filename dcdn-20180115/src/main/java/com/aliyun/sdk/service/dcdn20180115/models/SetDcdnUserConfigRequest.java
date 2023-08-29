@@ -112,7 +112,7 @@ public class SetDcdnUserConfigRequest extends Request {
         } 
 
         /**
-         * Configs.
+         * The configuration parameters of the feature.
          */
         public Builder configs(String configs) {
             this.putQueryParameter("Configs", configs);
@@ -121,7 +121,7 @@ public class SetDcdnUserConfigRequest extends Request {
         }
 
         /**
-         * FunctionId.
+         * The ID of the feature.
          */
         public Builder functionId(Integer functionId) {
             this.putQueryParameter("FunctionId", functionId);

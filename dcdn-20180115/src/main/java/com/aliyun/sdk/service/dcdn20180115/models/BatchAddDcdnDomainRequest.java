@@ -168,7 +168,7 @@ public class BatchAddDcdnDomainRequest extends Request {
         } 
 
         /**
-         * CheckUrl.
+         * The URL that is used for health checks.
          */
         public Builder checkUrl(String checkUrl) {
             this.putQueryParameter("CheckUrl", checkUrl);
@@ -177,7 +177,7 @@ public class BatchAddDcdnDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * You can add up to 20 domain names to DCDN for each of your Alibaba Cloud account. If you specify multiple domain names, separate them with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -204,7 +204,7 @@ public class BatchAddDcdnDomainRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. If you do not specify a value for this parameter, the system uses the ID of the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -213,7 +213,12 @@ public class BatchAddDcdnDomainRequest extends Request {
         }
 
         /**
-         * Scope.
+         * The acceleration region. Default value: domestic. Valid values:
+         * <p>
+         * 
+         * *   domestic: Chinese mainland
+         * *   overseas: global (excluding the Chinese mainland)
+         * *   global: global
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -231,7 +236,7 @@ public class BatchAddDcdnDomainRequest extends Request {
         }
 
         /**
-         * Sources.
+         * The information about the addresses of origin servers.
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -240,7 +245,7 @@ public class BatchAddDcdnDomainRequest extends Request {
         }
 
         /**
-         * TopLevelDomain.
+         * The top-level domain.
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

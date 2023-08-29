@@ -22,15 +22,10 @@ public class DescribeDcdnDomainStagingConfigRequest extends Request {
     @Validation(required = true)
     private String functionNames;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DescribeDcdnDomainStagingConfigRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
         this.functionNames = builder.functionNames;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -60,17 +55,9 @@ public class DescribeDcdnDomainStagingConfigRequest extends Request {
         return this.functionNames;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDcdnDomainStagingConfigRequest, Builder> {
         private String domainName; 
         private String functionNames; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -80,11 +67,10 @@ public class DescribeDcdnDomainStagingConfigRequest extends Request {
             super(request);
             this.domainName = request.domainName;
             this.functionNames = request.functionNames;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * DomainName.
+         * The names of the features to query. You can specify multiple features and separate them with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,20 +79,11 @@ public class DescribeDcdnDomainStagingConfigRequest extends Request {
         }
 
         /**
-         * FunctionNames.
+         * The ID of the request.
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);
             this.functionNames = functionNames;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

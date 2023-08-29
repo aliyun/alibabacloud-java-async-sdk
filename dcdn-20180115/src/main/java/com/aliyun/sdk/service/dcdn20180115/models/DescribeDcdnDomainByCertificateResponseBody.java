@@ -50,7 +50,7 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CertInfos.
+         * The information about the certificate.
          */
         public Builder certInfos(CertInfos certInfos) {
             this.certInfos = certInfos;
@@ -58,7 +58,7 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -194,7 +194,11 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
             private String issuer; 
 
             /**
-             * CertCaIsLegacy.
+             * Indicates whether the SSL certificate is obsolete. Valid values:
+             * <p>
+             * 
+             * *   **yes**: The SSL certificate is obsolete.
+             * *   **no**: The SSL certificate is working as expected.
              */
             public Builder certCaIsLegacy(String certCaIsLegacy) {
                 this.certCaIsLegacy = certCaIsLegacy;
@@ -202,7 +206,7 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertExpireTime.
+             * The time at which the certificate expires.
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -210,7 +214,11 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertExpired.
+             * Indicates whether the SSL certificate is expired. Valid values:
+             * <p>
+             * 
+             * *   **yes**: The SSL certificate is expired.
+             * *   **no**: The SSL certificate is not expired.
              */
             public Builder certExpired(String certExpired) {
                 this.certExpired = certExpired;
@@ -218,7 +226,7 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertStartTime.
+             * The time at which the certificate became effective.
              */
             public Builder certStartTime(String certStartTime) {
                 this.certStartTime = certStartTime;
@@ -226,7 +234,7 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertSubjectCommonName.
+             * The name of the SSL certificate owner.
              */
             public Builder certSubjectCommonName(String certSubjectCommonName) {
                 this.certSubjectCommonName = certSubjectCommonName;
@@ -234,7 +242,7 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * CertType.
+             * The type of the certificate. **RSA**, **DSA**, and **ECDSA**.
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -242,7 +250,10 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * DomainList.
+             * The list of domain names that use the certificate.
+             * <p>
+             * 
+             * If one or more domain names are returned, the domain names are matched with the specified certificate. Multiple domain names are separated with commas (,).
              */
             public Builder domainList(String domainList) {
                 this.domainList = domainList;
@@ -250,7 +261,7 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * DomainNames.
+             * The domain names (DNS fields) that match the certificate. Multiple domain names are separated with commas (,).
              */
             public Builder domainNames(String domainNames) {
                 this.domainNames = domainNames;
@@ -258,7 +269,7 @@ public class DescribeDcdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * The certificate authority (CA) that issued the certificate.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;

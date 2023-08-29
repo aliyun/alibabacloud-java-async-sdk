@@ -13,22 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnSLSRealtimeLogDeliveryRequest extends Request {
     @Query
-    @NameInMap("BusinessType")
-    private String businessType;
-
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("ProjectName")
     @Validation(required = true)
     private String projectName;
 
     private DescribeDcdnSLSRealtimeLogDeliveryRequest(Builder builder) {
         super(builder);
-        this.businessType = builder.businessType;
-        this.ownerId = builder.ownerId;
         this.projectName = builder.projectName;
     }
 
@@ -46,20 +36,6 @@ public class DescribeDcdnSLSRealtimeLogDeliveryRequest extends Request {
     }
 
     /**
-     * @return businessType
-     */
-    public String getBusinessType() {
-        return this.businessType;
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -67,8 +43,6 @@ public class DescribeDcdnSLSRealtimeLogDeliveryRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDcdnSLSRealtimeLogDeliveryRequest, Builder> {
-        private String businessType; 
-        private Long ownerId; 
         private String projectName; 
 
         private Builder() {
@@ -77,31 +51,11 @@ public class DescribeDcdnSLSRealtimeLogDeliveryRequest extends Request {
 
         private Builder(DescribeDcdnSLSRealtimeLogDeliveryRequest request) {
             super(request);
-            this.businessType = request.businessType;
-            this.ownerId = request.ownerId;
             this.projectName = request.projectName;
         } 
 
         /**
-         * BusinessType.
-         */
-        public Builder businessType(String businessType) {
-            this.putQueryParameter("BusinessType", businessType);
-            this.businessType = businessType;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ProjectName.
+         * The name of a real-time log delivery project.
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

@@ -98,7 +98,7 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,10 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
+         * <p>
+         * 
+         * The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +125,7 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
         }
 
         /**
-         * RealTimeSrcHttpCodeData.
+         * The proportions of HTTP status codes at each time interval.
          */
         public Builder realTimeSrcHttpCodeData(RealTimeSrcHttpCodeData realTimeSrcHttpCodeData) {
             this.realTimeSrcHttpCodeData = realTimeSrcHttpCodeData;
@@ -130,7 +133,7 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +141,10 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range during which data was queried.
+         * <p>
+         * 
+         * The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -202,7 +208,7 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
             private String proportion; 
 
             /**
-             * Code.
+             * The HTTP status code returned.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -210,7 +216,7 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
             }
 
             /**
-             * Count.
+             * The number of HTTP status codes.
              */
             public Builder count(String count) {
                 this.count = count;
@@ -218,7 +224,7 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
             }
 
             /**
-             * Proportion.
+             * The proportion of the HTTP status code.
              */
             public Builder proportion(String proportion) {
                 this.proportion = proportion;
@@ -312,7 +318,7 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
             private Value value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -320,7 +326,7 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataResponseBody extends TeaMo
             }
 
             /**
-             * Value.
+             * The proportions of the HTTP status codes.
              */
             public Builder value(Value value) {
                 this.value = value;

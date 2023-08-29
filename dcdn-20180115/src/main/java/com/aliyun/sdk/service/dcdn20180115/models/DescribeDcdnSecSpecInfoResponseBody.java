@@ -62,7 +62,7 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SpecInfos.
+         * The code and configurations of the security rules.
          */
         public Builder specInfos(java.util.List < SpecInfos> specInfos) {
             this.specInfos = specInfos;
@@ -78,7 +78,7 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * The version of secure DCDN.
          */
         public Builder version(String version) {
             this.version = version;
@@ -142,7 +142,7 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Code.
+             * The configuration code of the security rule.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -150,7 +150,7 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Expr.
+             * The configuration expression of the security rule.
              */
             public Builder expr(String expr) {
                 this.expr = expr;
@@ -158,7 +158,7 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the configuration expression of the security rule.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -211,7 +211,7 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
             private java.util.List < RuleConfigs> ruleConfigs; 
 
             /**
-             * RuleCode.
+             * The code of the security rule.
              */
             public Builder ruleCode(String ruleCode) {
                 this.ruleCode = ruleCode;
@@ -219,7 +219,7 @@ public class DescribeDcdnSecSpecInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RuleConfigs.
+             * The configurations of the security rule.
              */
             public Builder ruleConfigs(java.util.List < RuleConfigs> ruleConfigs) {
                 this.ruleConfigs = ruleConfigs;

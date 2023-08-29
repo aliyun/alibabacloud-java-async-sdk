@@ -17,14 +17,9 @@ public class DescribeDcdnDomainCnameRequest extends Request {
     @Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DescribeDcdnDomainCnameRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class DescribeDcdnDomainCnameRequest extends Request {
         return this.domainName;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDcdnDomainCnameRequest, Builder> {
         private String domainName; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -65,24 +52,14 @@ public class DescribeDcdnDomainCnameRequest extends Request {
         private Builder(DescribeDcdnDomainCnameRequest request) {
             super(request);
             this.domainName = request.domainName;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate multiple domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

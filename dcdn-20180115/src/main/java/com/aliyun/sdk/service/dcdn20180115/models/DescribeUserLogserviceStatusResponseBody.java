@@ -86,7 +86,11 @@ public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Enabled.
+         * Indicates whether Log Service is activated.
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -94,7 +98,11 @@ public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InDebt.
+         * Indicates whether your Log Service has overdue payments.
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder inDebt(Boolean inDebt) {
             this.inDebt = inDebt;
@@ -102,7 +110,11 @@ public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InDebtOverdue.
+         * Indicates whether an overdue payment of your Log Service has passed the grace period.
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder inDebtOverdue(Boolean inDebtOverdue) {
             this.inDebtOverdue = inDebtOverdue;
@@ -110,7 +122,11 @@ public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * OnService.
+         * Indicates whether Log Service is available.
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder onService(Boolean onService) {
             this.onService = onService;
@@ -118,7 +134,7 @@ public class DescribeUserLogserviceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

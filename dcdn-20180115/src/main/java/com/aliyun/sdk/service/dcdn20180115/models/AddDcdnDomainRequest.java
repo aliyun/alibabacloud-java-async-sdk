@@ -22,6 +22,10 @@ public class AddDcdnDomainRequest extends Request {
     private String domainName;
 
     @Query
+    @NameInMap("FunctionType")
+    private String functionType;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -34,6 +38,10 @@ public class AddDcdnDomainRequest extends Request {
     private String resourceGroupId;
 
     @Query
+    @NameInMap("Scene")
+    private String scene;
+
+    @Query
     @NameInMap("Scope")
     private String scope;
 
@@ -43,8 +51,11 @@ public class AddDcdnDomainRequest extends Request {
 
     @Query
     @NameInMap("Sources")
-    @Validation(required = true)
     private String sources;
+
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
 
     @Query
     @NameInMap("TopLevelDomain")
@@ -54,12 +65,15 @@ public class AddDcdnDomainRequest extends Request {
         super(builder);
         this.checkUrl = builder.checkUrl;
         this.domainName = builder.domainName;
+        this.functionType = builder.functionType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.scene = builder.scene;
         this.scope = builder.scope;
         this.securityToken = builder.securityToken;
         this.sources = builder.sources;
+        this.tag = builder.tag;
         this.topLevelDomain = builder.topLevelDomain;
     }
 
@@ -91,6 +105,13 @@ public class AddDcdnDomainRequest extends Request {
     }
 
     /**
+     * @return functionType
+     */
+    public String getFunctionType() {
+        return this.functionType;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -109,6 +130,13 @@ public class AddDcdnDomainRequest extends Request {
      */
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    /**
+     * @return scene
+     */
+    public String getScene() {
+        return this.scene;
     }
 
     /**
@@ -133,6 +161,13 @@ public class AddDcdnDomainRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return topLevelDomain
      */
     public String getTopLevelDomain() {
@@ -142,12 +177,15 @@ public class AddDcdnDomainRequest extends Request {
     public static final class Builder extends Request.Builder<AddDcdnDomainRequest, Builder> {
         private String checkUrl; 
         private String domainName; 
+        private String functionType; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceGroupId; 
+        private String scene; 
         private String scope; 
         private String securityToken; 
         private String sources; 
+        private java.util.List < Tag> tag; 
         private String topLevelDomain; 
 
         private Builder() {
@@ -158,17 +196,20 @@ public class AddDcdnDomainRequest extends Request {
             super(request);
             this.checkUrl = request.checkUrl;
             this.domainName = request.domainName;
+            this.functionType = request.functionType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceGroupId = request.resourceGroupId;
+            this.scene = request.scene;
             this.scope = request.scope;
             this.securityToken = request.securityToken;
             this.sources = request.sources;
+            this.tag = request.tag;
             this.topLevelDomain = request.topLevelDomain;
         } 
 
         /**
-         * CheckUrl.
+         * The URL that is used for health checks.
          */
         public Builder checkUrl(String checkUrl) {
             this.putQueryParameter("CheckUrl", checkUrl);
@@ -177,11 +218,23 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name that you want to add. You can specify only one domain name in each request.
+         * <p>
+         * 
+         * Wildcard domain names are supported. A wildcard domain name must start with a period (.), such as .example.com.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
             this.domainName = domainName;
+            return this;
+        }
+
+        /**
+         * FunctionType.
+         */
+        public Builder functionType(String functionType) {
+            this.putQueryParameter("FunctionType", functionType);
+            this.functionType = functionType;
             return this;
         }
 
@@ -204,7 +257,7 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. If you do not specify a value for this parameter, the system automatically assigns the ID of the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -213,7 +266,23 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * Scope.
+         * Scene.
+         */
+        public Builder scene(String scene) {
+            this.putQueryParameter("Scene", scene);
+            this.scene = scene;
+            return this;
+        }
+
+        /**
+         * The acceleration region. Valid values:
+         * <p>
+         * 
+         * *   **domestic**: Chinese mainland
+         * *   **overseas**: outside the Chinese mainland
+         * *   **global**: global
+         * 
+         * Default value: **domestic**.
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -231,7 +300,7 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * Sources.
+         * The information about the addresses of origin servers.
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -240,7 +309,16 @@ public class AddDcdnDomainRequest extends Request {
         }
 
         /**
-         * TopLevelDomain.
+         * The information about the tags.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The top-level domain.
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);
@@ -255,4 +333,65 @@ public class AddDcdnDomainRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of a tag. Valid values of N: **1 to 20**.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of a tag. Valid values of N: **1 to 20**.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

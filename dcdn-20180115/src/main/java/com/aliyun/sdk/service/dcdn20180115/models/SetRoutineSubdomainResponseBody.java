@@ -50,7 +50,7 @@ public class SetRoutineSubdomainResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The message returned, such as ""Status": "OK"".
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class SetRoutineSubdomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

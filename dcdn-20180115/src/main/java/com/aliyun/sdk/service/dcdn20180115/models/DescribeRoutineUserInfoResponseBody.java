@@ -50,7 +50,7 @@ public class DescribeRoutineUserInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The ID of the request.
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class DescribeRoutineUserInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The operation that you want to perform. Set the value to **DescribeRoutineUserInfo**.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

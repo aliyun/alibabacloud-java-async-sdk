@@ -98,7 +98,11 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DcdnIp.
+         * Indicates whether the specified IP address is assigned to an Alibaba Cloud DCDN POP.
+         * <p>
+         * 
+         * *   True
+         * *   False
          */
         public Builder dcdnIp(String dcdnIp) {
             this.dcdnIp = dcdnIp;
@@ -106,7 +110,7 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ISP.
+         * The ISP to which the specified IP address belongs.
          */
         public Builder ISP(String ISP) {
             this.ISP = ISP;
@@ -114,7 +118,7 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * IspEname.
+         * The name of the Internet service provider (ISP).
          */
         public Builder ispEname(String ispEname) {
             this.ispEname = ispEname;
@@ -122,7 +126,7 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Region.
+         * The Chinese name of the region.
          */
         public Builder region(String region) {
             this.region = region;
@@ -130,7 +134,7 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RegionEname.
+         * The English name of the region.
          */
         public Builder regionEname(String regionEname) {
             this.regionEname = regionEname;
@@ -138,7 +142,7 @@ public class DescribeDcdnIpInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -98,7 +98,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         private TopDomains topDomains; 
 
         /**
-         * DomainCount.
+         * The total number of accelerated domains under your account.
          */
         public Builder domainCount(Long domainCount) {
             this.domainCount = domainCount;
@@ -106,7 +106,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * DomainOnlineCount.
+         * The total number of accelerated domains that are in the **Enabled** state under your account.
          */
         public Builder domainOnlineCount(Long domainOnlineCount) {
             this.domainOnlineCount = domainOnlineCount;
@@ -114,7 +114,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the reporting period.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the reporting period.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +138,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * TopDomains.
+         * The top N domain names ranked by network traffic.
          */
         public Builder topDomains(TopDomains topDomains) {
             this.topDomains = topDomains;
@@ -250,7 +250,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             private String trafficPercent; 
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -258,7 +258,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * MaxBps.
+             * The peak bandwidth value.
              */
             public Builder maxBps(Long maxBps) {
                 this.maxBps = maxBps;
@@ -266,7 +266,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * MaxBpsTime.
+             * The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder maxBpsTime(String maxBpsTime) {
                 this.maxBpsTime = maxBpsTime;
@@ -274,7 +274,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Rank.
+             * The ranking of the accelerated domain name.
              */
             public Builder rank(Long rank) {
                 this.rank = rank;
@@ -282,7 +282,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAccess.
+             * The number of visits.
              */
             public Builder totalAccess(Long totalAccess) {
                 this.totalAccess = totalAccess;
@@ -290,7 +290,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTraffic.
+             * The total amount of network traffic.
              */
             public Builder totalTraffic(String totalTraffic) {
                 this.totalTraffic = totalTraffic;
@@ -298,7 +298,7 @@ public class DescribeDcdnTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficPercent.
+             * The proportion of network traffic consumed to access the URL.
              */
             public Builder trafficPercent(String trafficPercent) {
                 this.trafficPercent = trafficPercent;

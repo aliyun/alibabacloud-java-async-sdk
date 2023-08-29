@@ -86,7 +86,7 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
         private String retCode; 
 
         /**
-         * Content.
+         * The parameters required by the code.
          */
         public Builder content(java.util.List < Content> content) {
             this.content = content;
@@ -94,7 +94,7 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of HTTP responses.
          */
         public Builder description(String description) {
             this.description = description;
@@ -102,7 +102,7 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatus.
+         * The HTTP status code.
          */
         public Builder httpStatus(String httpStatus) {
             this.httpStatus = httpStatus;
@@ -110,7 +110,7 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RetCode.
+         * The return value for HTTP requests. Valid values:
+         * <p>
+         * 
+         * *   0: OK.
+         * *   Values other than 0: an error.
          */
         public Builder retCode(String retCode) {
             this.retCode = retCode;
@@ -170,7 +174,7 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Label.
+             * The language (Chinese or English).
              */
             public Builder label(String label) {
                 this.label = label;
@@ -178,7 +182,7 @@ public class DescribeDcdnSecFuncInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The options in the drop-down list.
              */
             public Builder value(String value) {
                 this.value = value;

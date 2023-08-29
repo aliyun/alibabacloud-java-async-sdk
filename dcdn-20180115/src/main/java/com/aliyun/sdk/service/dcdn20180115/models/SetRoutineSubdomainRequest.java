@@ -12,10 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetRoutineSubdomainRequest</p>
  */
 public class SetRoutineSubdomainRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     @Body
     @NameInMap("Subdomains")
     @Validation(required = true)
@@ -23,7 +19,6 @@ public class SetRoutineSubdomainRequest extends Request {
 
     private SetRoutineSubdomainRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.subdomains = builder.subdomains;
     }
 
@@ -41,13 +36,6 @@ public class SetRoutineSubdomainRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return subdomains
      */
     public java.util.Map < String, ? > getSubdomains() {
@@ -55,7 +43,6 @@ public class SetRoutineSubdomainRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetRoutineSubdomainRequest, Builder> {
-        private Long ownerId; 
         private java.util.Map < String, ? > subdomains; 
 
         private Builder() {
@@ -64,24 +51,22 @@ public class SetRoutineSubdomainRequest extends Request {
 
         private Builder(SetRoutineSubdomainRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
             this.subdomains = request.subdomains;
         } 
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * Subdomains.
+         * The parameters of the subdomain.
+         * <p>
+         * 
+         * The parameters are in the following format:
+         * 
+         *     Subdomains: [
+         *         "subdomain-test"
+         *     ]
          */
         public Builder subdomains(java.util.Map < String, ? > subdomains) {
-            this.putBodyParameter("Subdomains", subdomains);
+            String subdomainsShrink = shrink(subdomains, "Subdomains", "json");
+            this.putBodyParameter("Subdomains", subdomainsShrink);
             this.subdomains = subdomains;
             return this;
         }

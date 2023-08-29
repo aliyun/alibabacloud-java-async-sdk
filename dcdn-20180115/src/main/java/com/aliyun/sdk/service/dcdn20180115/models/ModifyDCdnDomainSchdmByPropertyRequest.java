@@ -18,10 +18,6 @@ public class ModifyDCdnDomainSchdmByPropertyRequest extends Request {
     private String domainName;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("Property")
     @Validation(required = true)
     private String property;
@@ -29,7 +25,6 @@ public class ModifyDCdnDomainSchdmByPropertyRequest extends Request {
     private ModifyDCdnDomainSchdmByPropertyRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
-        this.ownerId = builder.ownerId;
         this.property = builder.property;
     }
 
@@ -54,13 +49,6 @@ public class ModifyDCdnDomainSchdmByPropertyRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return property
      */
     public String getProperty() {
@@ -69,7 +57,6 @@ public class ModifyDCdnDomainSchdmByPropertyRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDCdnDomainSchdmByPropertyRequest, Builder> {
         private String domainName; 
-        private Long ownerId; 
         private String property; 
 
         private Builder() {
@@ -79,12 +66,11 @@ public class ModifyDCdnDomainSchdmByPropertyRequest extends Request {
         private Builder(ModifyDCdnDomainSchdmByPropertyRequest request) {
             super(request);
             this.domainName = request.domainName;
-            this.ownerId = request.ownerId;
             this.property = request.property;
         } 
 
         /**
-         * DomainName.
+         * The name of the accelerated domain for which you want to change the acceleration region. You can specify only one domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,16 +79,12 @@ public class ModifyDCdnDomainSchdmByPropertyRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * Property.
+         * The region where the acceleration service is deployed. Valid values:
+         * <p>
+         * 
+         * *   **domestic**: Chinese mainland
+         * *   **overseas**: global (excluding mainland China)
+         * *   **global**: global
          */
         public Builder property(String property) {
             this.putQueryParameter("Property", property);

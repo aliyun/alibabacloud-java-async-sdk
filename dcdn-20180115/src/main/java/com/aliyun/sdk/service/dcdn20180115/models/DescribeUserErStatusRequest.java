@@ -16,14 +16,9 @@ public class DescribeUserErStatusRequest extends Request {
     @NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private DescribeUserErStatusRequest(Builder builder) {
         super(builder);
         this.ownerId = builder.ownerId;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -46,16 +41,8 @@ public class DescribeUserErStatusRequest extends Request {
         return this.ownerId;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<DescribeUserErStatusRequest, Builder> {
         private Long ownerId; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -64,7 +51,6 @@ public class DescribeUserErStatusRequest extends Request {
         private Builder(DescribeUserErStatusRequest request) {
             super(request);
             this.ownerId = request.ownerId;
-            this.securityToken = request.securityToken;
         } 
 
         /**
@@ -73,15 +59,6 @@ public class DescribeUserErStatusRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

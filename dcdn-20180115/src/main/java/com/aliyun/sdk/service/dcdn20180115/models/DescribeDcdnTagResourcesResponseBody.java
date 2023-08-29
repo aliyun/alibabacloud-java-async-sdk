@@ -50,7 +50,7 @@ public class DescribeDcdnTagResourcesResponseBody extends TeaModel {
         private java.util.List < TagResources> tagResources; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDcdnTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * The tag of the instance.
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -110,7 +110,7 @@ public class DescribeDcdnTagResourcesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +118,7 @@ public class DescribeDcdnTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -171,7 +171,7 @@ public class DescribeDcdnTagResourcesResponseBody extends TeaModel {
             private java.util.List < Tag> tag; 
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -179,7 +179,7 @@ public class DescribeDcdnTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tags of the snapshot.
              */
             public Builder tag(java.util.List < Tag> tag) {
                 this.tag = tag;

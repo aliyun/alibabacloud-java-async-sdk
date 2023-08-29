@@ -50,7 +50,7 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
         private String requestId; 
 
         /**
-         * Data.
+         * The list of byte hit ratios.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
             private String timeStamp; 
 
             /**
-             * ReqHitRate.
+             * The request hit ratio.
              */
             public Builder reqHitRate(Float reqHitRate) {
                 this.reqHitRate = reqHitRate;
@@ -118,7 +118,7 @@ public class DescribeDcdnDomainRealTimeReqHitRateDataResponseBody extends TeaMod
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

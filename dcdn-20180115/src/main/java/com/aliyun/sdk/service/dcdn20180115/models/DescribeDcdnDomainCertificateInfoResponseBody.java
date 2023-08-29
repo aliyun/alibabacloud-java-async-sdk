@@ -50,7 +50,7 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CertInfos.
+         * The information about the certificate.
          */
         public Builder certInfos(CertInfos certInfos) {
             this.certInfos = certInfos;
@@ -58,7 +58,7 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,6 +78,9 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
         @NameInMap("CertExpireTime")
         private String certExpireTime;
 
+        @NameInMap("CertId")
+        private String certId;
+
         @NameInMap("CertLife")
         private String certLife;
 
@@ -86,6 +89,9 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
 
         @NameInMap("CertOrg")
         private String certOrg;
+
+        @NameInMap("CertRegion")
+        private String certRegion;
 
         @NameInMap("CertType")
         private String certType;
@@ -105,9 +111,11 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
         private CertInfo(Builder builder) {
             this.certDomainName = builder.certDomainName;
             this.certExpireTime = builder.certExpireTime;
+            this.certId = builder.certId;
             this.certLife = builder.certLife;
             this.certName = builder.certName;
             this.certOrg = builder.certOrg;
+            this.certRegion = builder.certRegion;
             this.certType = builder.certType;
             this.domainName = builder.domainName;
             this.SSLProtocol = builder.SSLProtocol;
@@ -138,6 +146,13 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return certId
+         */
+        public String getCertId() {
+            return this.certId;
+        }
+
+        /**
          * @return certLife
          */
         public String getCertLife() {
@@ -156,6 +171,13 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
          */
         public String getCertOrg() {
             return this.certOrg;
+        }
+
+        /**
+         * @return certRegion
+         */
+        public String getCertRegion() {
+            return this.certRegion;
         }
 
         /**
@@ -196,9 +218,11 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String certDomainName; 
             private String certExpireTime; 
+            private String certId; 
             private String certLife; 
             private String certName; 
             private String certOrg; 
+            private String certRegion; 
             private String certType; 
             private String domainName; 
             private String SSLProtocol; 
@@ -206,7 +230,7 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CertDomainName.
+             * The domain name that matches the certificate.
              */
             public Builder certDomainName(String certDomainName) {
                 this.certDomainName = certDomainName;
@@ -214,7 +238,7 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CertExpireTime.
+             * The time at which the certificate expires.
              */
             public Builder certExpireTime(String certExpireTime) {
                 this.certExpireTime = certExpireTime;
@@ -222,7 +246,15 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CertLife.
+             * The ID of the certificate.
+             */
+            public Builder certId(String certId) {
+                this.certId = certId;
+                return this;
+            }
+
+            /**
+             * The validity period of the certificate. Unit: **months** or **years**.
              */
             public Builder certLife(String certLife) {
                 this.certLife = certLife;
@@ -230,7 +262,7 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CertName.
+             * The name of the certificate.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -238,7 +270,7 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CertOrg.
+             * The certificate authority (CA) that issued the certificate.
              */
             public Builder certOrg(String certOrg) {
                 this.certOrg = certOrg;
@@ -246,7 +278,19 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CertType.
+             * The region where the certificate is used.
+             */
+            public Builder certRegion(String certRegion) {
+                this.certRegion = certRegion;
+                return this;
+            }
+
+            /**
+             * The type of the certificate.
+             * <p>
+             * 
+             * *   **cas**: a certificate that is purchased by using Certificates Management Service
+             * *   **upload**: a custom certificate that you upload
              */
             public Builder certType(String certType) {
                 this.certType = certType;
@@ -254,7 +298,7 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The accelerated domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -262,7 +306,11 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SSLProtocol.
+             * The status of HTTPS. Valid values:
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
              */
             public Builder SSLProtocol(String SSLProtocol) {
                 this.SSLProtocol = SSLProtocol;
@@ -270,7 +318,7 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SSLPub.
+             * The public key of the certificate.
              */
             public Builder SSLPub(String SSLPub) {
                 this.SSLPub = SSLPub;
@@ -278,7 +326,19 @@ public class DescribeDcdnDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the certificate. Valid values:
+             * <p>
+             * 
+             * *   **success**: The certificate has taken effect.
+             * *   **checking**: The system is checking whether the domain name is using Dynamic Route for CDN (DCDN).
+             * *   **cname_error**: The domain name is not using DCDN.
+             * *   **domain_invalid**: The domain name contains invalid characters.
+             * *   **unsupport_wildcard**: The wildcard domain name is not supported.
+             * *   **applying**: Certificate application is in progress.
+             * *   **get_token_timeout**: The certificate application request has timed out.
+             * *   **check_token_timeout**: The verification has timed out.
+             * *   **get_cert_timeout**: The request to obtain the certificate has timed out.
+             * *   **failed**: The certificate application request failed.
              */
             public Builder status(String status) {
                 this.status = status;

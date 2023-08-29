@@ -50,7 +50,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The configuration results of the domain name.
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Desc.
+             * The description of the returned result.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -142,7 +142,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -150,7 +150,7 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The name of the region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -158,7 +158,11 @@ public class UpdateDcdnSLSRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the real-time log delivery project was successfully updated. Valid values:
+             * <p>
+             * 
+             * *   **success**
+             * *   **fail**
              */
             public Builder status(String status) {
                 this.status = status;

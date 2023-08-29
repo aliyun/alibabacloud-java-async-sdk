@@ -98,7 +98,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
         private Value value; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +138,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
         }
 
         /**
-         * Value.
+         * The access statistics by ISP.
          */
         public Builder value(Value value) {
             this.value = value;
@@ -298,7 +298,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
             private String totalQuery; 
 
             /**
-             * AvgObjectSize.
+             * The average response size. Unit: bytes.
              */
             public Builder avgObjectSize(String avgObjectSize) {
                 this.avgObjectSize = avgObjectSize;
@@ -306,7 +306,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
             }
 
             /**
-             * AvgResponseRate.
+             * The average response speed. Unit: byte/ms.
              */
             public Builder avgResponseRate(String avgResponseRate) {
                 this.avgResponseRate = avgResponseRate;
@@ -314,7 +314,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
             }
 
             /**
-             * AvgResponseTime.
+             * The average response time. Unit: milliseconds.
              */
             public Builder avgResponseTime(String avgResponseTime) {
                 this.avgResponseTime = avgResponseTime;
@@ -322,7 +322,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
             }
 
             /**
-             * Bps.
+             * The bandwidth.
              */
             public Builder bps(String bps) {
                 this.bps = bps;
@@ -330,7 +330,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
             }
 
             /**
-             * BytesProportion.
+             * The proportion of network traffic. For example, a value of 90 indicates that 90% of network traffic was coming from the specified ISP.
              */
             public Builder bytesProportion(String bytesProportion) {
                 this.bytesProportion = bytesProportion;
@@ -338,7 +338,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * The information about the ISP.
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -346,7 +346,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
             }
 
             /**
-             * IspEname.
+             * The name of the ISP.
              */
             public Builder ispEname(String ispEname) {
                 this.ispEname = ispEname;
@@ -354,7 +354,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
             }
 
             /**
-             * Proportion.
+             * The proportion of the HTTP status code.
              */
             public Builder proportion(String proportion) {
                 this.proportion = proportion;
@@ -362,7 +362,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
             }
 
             /**
-             * Qps.
+             * The number of queries per second (QPS).
              */
             public Builder qps(String qps) {
                 this.qps = qps;
@@ -370,7 +370,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalBytes.
+             * The total volume of traffic.
              */
             public Builder totalBytes(String totalBytes) {
                 this.totalBytes = totalBytes;
@@ -378,7 +378,7 @@ public class DescribeDcdnDomainIspDataResponseBody extends TeaModel {
             }
 
             /**
-             * TotalQuery.
+             * The total number of requests that are destined for your website.
              */
             public Builder totalQuery(String totalQuery) {
                 this.totalQuery = totalQuery;

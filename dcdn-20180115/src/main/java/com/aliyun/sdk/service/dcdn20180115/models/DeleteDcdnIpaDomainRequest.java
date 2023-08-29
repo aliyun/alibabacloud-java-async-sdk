@@ -97,7 +97,7 @@ public class DeleteDcdnIpaDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name that you want to delete. You can specify only one accelerated domain name in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

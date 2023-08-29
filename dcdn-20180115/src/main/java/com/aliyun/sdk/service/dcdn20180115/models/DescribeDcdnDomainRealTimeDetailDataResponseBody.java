@@ -50,7 +50,10 @@ public class DescribeDcdnDomainRealTimeDetailDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The information returned.
+         * <p>
+         * 
+         * > The value of this parameter is a JSON string. The following table describes the fields in Data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +61,7 @@ public class DescribeDcdnDomainRealTimeDetailDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

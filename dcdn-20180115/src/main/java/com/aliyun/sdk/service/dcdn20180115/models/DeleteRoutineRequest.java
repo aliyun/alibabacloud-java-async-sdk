@@ -17,14 +17,9 @@ public class DeleteRoutineRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DeleteRoutineRequest(Builder builder) {
         super(builder);
         this.name = builder.name;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class DeleteRoutineRequest extends Request {
         return this.name;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DeleteRoutineRequest, Builder> {
         private String name; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -65,24 +52,14 @@ public class DeleteRoutineRequest extends Request {
         private Builder(DeleteRoutineRequest request) {
             super(request);
             this.name = request.name;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * Name.
+         * The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

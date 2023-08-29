@@ -50,7 +50,7 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The returned results.
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
             private String fieldName; 
 
             /**
-             * Description.
+             * The description of the field.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -118,7 +118,7 @@ public class DescribeDcdnRealTimeDeliveryFieldResponseBody extends TeaModel {
             }
 
             /**
-             * FieldName.
+             * The name of the field. For more information about fields in real-time log entries, see [Fields in a real-time log](~~324199~~).
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;

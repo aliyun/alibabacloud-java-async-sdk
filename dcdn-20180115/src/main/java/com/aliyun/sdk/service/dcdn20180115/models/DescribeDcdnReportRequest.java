@@ -34,10 +34,6 @@ public class DescribeDcdnReportRequest extends Request {
     private String isOverseas;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("ReportId")
     @Validation(required = true)
     private Long reportId;
@@ -54,7 +50,6 @@ public class DescribeDcdnReportRequest extends Request {
         this.endTime = builder.endTime;
         this.httpCode = builder.httpCode;
         this.isOverseas = builder.isOverseas;
-        this.ownerId = builder.ownerId;
         this.reportId = builder.reportId;
         this.startTime = builder.startTime;
     }
@@ -108,13 +103,6 @@ public class DescribeDcdnReportRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return reportId
      */
     public Long getReportId() {
@@ -134,7 +122,6 @@ public class DescribeDcdnReportRequest extends Request {
         private String endTime; 
         private String httpCode; 
         private String isOverseas; 
-        private Long ownerId; 
         private Long reportId; 
         private String startTime; 
 
@@ -149,13 +136,16 @@ public class DescribeDcdnReportRequest extends Request {
             this.endTime = request.endTime;
             this.httpCode = request.httpCode;
             this.isOverseas = request.isOverseas;
-            this.ownerId = request.ownerId;
             this.reportId = request.reportId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * Area.
+         * The region. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.
+         * <p>
+         * 
+         * *   If you do not specify a region, data in all regions is queried.
+         * *   If you specify a region, data in the specified region is returned. You can specify one or more regions. Separate regions with commas (,).
          */
         public Builder area(String area) {
             this.putQueryParameter("Area", area);
@@ -164,7 +154,7 @@ public class DescribeDcdnReportRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain names that you want to query. Separate domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -173,7 +163,7 @@ public class DescribeDcdnReportRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -182,7 +172,15 @@ public class DescribeDcdnReportRequest extends Request {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code. Valid values:
+         * <p>
+         * 
+         * *   **2xx**: HTTP 2xx status codes
+         * *   **3xx**: HTTP 3xx status codes
+         * *   **4xx**: HTTP 4xx status codes
+         * *   **5xx**: HTTP 5xx status codes
+         * 
+         * If you do not specify an HTTP status code, data for all preceding HTTP status codes is queried.
          */
         public Builder httpCode(String httpCode) {
             this.putQueryParameter("HttpCode", httpCode);
@@ -191,7 +189,11 @@ public class DescribeDcdnReportRequest extends Request {
         }
 
         /**
-         * IsOverseas.
+         * Specify whether the region is outside the Chinese mainland. Valid values:
+         * <p>
+         * 
+         * *   **1**: outside the Chinese mainland
+         * *   **0**: inside the Chinese mainland
          */
         public Builder isOverseas(String isOverseas) {
             this.putQueryParameter("IsOverseas", isOverseas);
@@ -200,16 +202,7 @@ public class DescribeDcdnReportRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ReportId.
+         * The ID of the operations report that you want to query. You can enter only one ID in each call. You can call the [DescribeDcdnSubList](~~270075~~) operation to query report IDs.
          */
         public Builder reportId(Long reportId) {
             this.putQueryParameter("ReportId", reportId);
@@ -218,7 +211,7 @@ public class DescribeDcdnReportRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

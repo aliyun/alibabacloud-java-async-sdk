@@ -83,7 +83,7 @@ public class BatchStartDcdnDomainRequest extends Request {
         } 
 
         /**
-         * DomainNames.
+         * The accelerated domain name. You can specify multiple accelerated domain names and separate them with commas (,).
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);

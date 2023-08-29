@@ -62,7 +62,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * A list of prefetch or refresh tasks.
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -78,7 +78,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of tasks.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -190,7 +190,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * CreationTime.
+             * The time when the task was created. The time follows the ISO8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -198,7 +198,12 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The error returned when the refresh or prefetch task failed. Valid values:
+             * <p>
+             * 
+             * *   **Internal Error**: An internal error occurred.
+             * *   **Origin Timeout**: The response from the origin server timed out.
+             * *   **Origin Return StatusCode 5XX**: The origin server returned a 5XX error.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -206,7 +211,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectPath.
+             * The path of the refresh or prefetch object.
              */
             public Builder objectPath(String objectPath) {
                 this.objectPath = objectPath;
@@ -214,7 +219,12 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * ObjectType.
+             * The type of the refresh or prefetch task. Valid values:
+             * <p>
+             * 
+             * *   **file**: refreshes an individual file.
+             * *   **directory**: refreshes files under the specified directory.
+             * *   **preload**: prefetches an individual file.
              */
             public Builder objectType(String objectType) {
                 this.objectType = objectType;
@@ -222,7 +232,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * The progress of the task, in percentage.
              */
             public Builder process(String process) {
                 this.process = process;
@@ -230,7 +240,13 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The task status. Valid values:
+             * <p>
+             * 
+             * *   **Complete**: The task is complete.
+             * *   **Pending**: The task is pending.
+             * *   **Refreshing**: The task is running.
+             * *   **Failed**: The task failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -238,7 +254,7 @@ public class DescribeDcdnRefreshTaskByIdResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

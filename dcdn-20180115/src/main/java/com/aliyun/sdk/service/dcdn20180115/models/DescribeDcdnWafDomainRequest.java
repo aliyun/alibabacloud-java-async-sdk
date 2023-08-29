@@ -17,10 +17,6 @@ public class DescribeDcdnWafDomainRequest extends Request {
     private String domainName;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -32,7 +28,6 @@ public class DescribeDcdnWafDomainRequest extends Request {
     private DescribeDcdnWafDomainRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
-        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
     }
@@ -58,13 +53,6 @@ public class DescribeDcdnWafDomainRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -80,7 +68,6 @@ public class DescribeDcdnWafDomainRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDcdnWafDomainRequest, Builder> {
         private String domainName; 
-        private Long ownerId; 
         private String regionId; 
         private String resourceGroupId; 
 
@@ -91,13 +78,12 @@ public class DescribeDcdnWafDomainRequest extends Request {
         private Builder(DescribeDcdnWafDomainRequest request) {
             super(request);
             this.domainName = request.domainName;
-            this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. If you do not specify an accelerated domain name, all accelerated domain names are queried.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -106,16 +92,7 @@ public class DescribeDcdnWafDomainRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * RegionId.
+         * The region where WAF is enabled.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -124,7 +101,7 @@ public class DescribeDcdnWafDomainRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. If you leave this parameter empty, the default resource group is used.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

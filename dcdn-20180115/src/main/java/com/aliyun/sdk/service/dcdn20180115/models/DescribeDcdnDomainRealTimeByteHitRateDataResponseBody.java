@@ -50,7 +50,7 @@ public class DescribeDcdnDomainRealTimeByteHitRateDataResponseBody extends TeaMo
         private String requestId; 
 
         /**
-         * Data.
+         * The list of byte hit ratios.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeDcdnDomainRealTimeByteHitRateDataResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDcdnDomainRealTimeByteHitRateDataResponseBody extends TeaMo
             private String timeStamp; 
 
             /**
-             * ByteHitRate.
+             * The byte hit ratio.
              */
             public Builder byteHitRate(Float byteHitRate) {
                 this.byteHitRate = byteHitRate;
@@ -118,7 +118,7 @@ public class DescribeDcdnDomainRealTimeByteHitRateDataResponseBody extends TeaMo
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

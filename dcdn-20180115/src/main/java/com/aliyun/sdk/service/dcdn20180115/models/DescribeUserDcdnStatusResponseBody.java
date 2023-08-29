@@ -86,7 +86,7 @@ public class DescribeUserDcdnStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Enabled.
+         * Indicates whether the DCDN service is activated.
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -94,7 +94,7 @@ public class DescribeUserDcdnStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InDebt.
+         * Indicates whether your account has overdue payments.
          */
         public Builder inDebt(Boolean inDebt) {
             this.inDebt = inDebt;
@@ -102,7 +102,7 @@ public class DescribeUserDcdnStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InDebtOverdue.
+         * Indicates whether the grace period for your overdue payments expired.
          */
         public Builder inDebtOverdue(Boolean inDebtOverdue) {
             this.inDebtOverdue = inDebtOverdue;
@@ -110,7 +110,7 @@ public class DescribeUserDcdnStatusResponseBody extends TeaModel {
         }
 
         /**
-         * OnService.
+         * Indicates whether the service is available.
          */
         public Builder onService(Boolean onService) {
             this.onService = onService;
@@ -118,7 +118,7 @@ public class DescribeUserDcdnStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -22,15 +22,10 @@ public class CommitStagingRoutineCodeRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private CommitStagingRoutineCodeRequest(Builder builder) {
         super(builder);
         this.codeDescription = builder.codeDescription;
         this.name = builder.name;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -60,17 +55,9 @@ public class CommitStagingRoutineCodeRequest extends Request {
         return this.name;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<CommitStagingRoutineCodeRequest, Builder> {
         private String codeDescription; 
         private String name; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -80,11 +67,10 @@ public class CommitStagingRoutineCodeRequest extends Request {
             super(request);
             this.codeDescription = request.codeDescription;
             this.name = request.name;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * CodeDescription.
+         * The description of the code version.
          */
         public Builder codeDescription(String codeDescription) {
             this.putBodyParameter("CodeDescription", codeDescription);
@@ -93,20 +79,11 @@ public class CommitStagingRoutineCodeRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

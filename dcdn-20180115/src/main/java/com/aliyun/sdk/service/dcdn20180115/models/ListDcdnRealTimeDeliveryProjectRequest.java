@@ -21,10 +21,6 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends Request {
     private String domainName;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -36,7 +32,6 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends Request {
         super(builder);
         this.businessType = builder.businessType;
         this.domainName = builder.domainName;
-        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -69,13 +64,6 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -92,7 +80,6 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends Request {
     public static final class Builder extends Request.Builder<ListDcdnRealTimeDeliveryProjectRequest, Builder> {
         private String businessType; 
         private String domainName; 
-        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -104,13 +91,18 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends Request {
             super(request);
             this.businessType = request.businessType;
             this.domainName = request.domainName;
-            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
 
         /**
-         * BusinessType.
+         * The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
+         * <p>
+         * 
+         * *   **cdn_log_access_l1**: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)
+         * *   **cdn_log_origin**: back-to-origin logs
+         * *   **cdn_log_er**: EdgeRoutine logs
+         * *   By default, this parameter is left empty, and all logs are returned.
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -119,7 +111,7 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name. You can specify only one domain name in each request. If this parameter is not specified, all domain names are queried.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -128,16 +120,7 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * PageNumber.
+         * The number of the page to return. Valid values: **1** to **100000**. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -146,7 +129,7 @@ public class ListDcdnRealTimeDeliveryProjectRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. The default value is 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

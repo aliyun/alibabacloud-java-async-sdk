@@ -50,7 +50,7 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BillTypeData.
+         * The information about the metering method.
          */
         public Builder billTypeData(BillTypeData billTypeData) {
             this.billTypeData = billTypeData;
@@ -58,7 +58,7 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,20 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * BillType.
+             * The metering method. Valid values:
+             * <p>
+             * 
+             * *   **hour_flow**: pay by hourly traffic
+             * *   **day_bandwidth**: pay by daily bandwidth
+             * *   **month\_95**: pay by monthly 95th percentile
+             * *   **month_avg_day_bandwidth**: pay by average daily peak bandwidth per month
+             * *   **month\_4th_day_bandwidth**: pay by 4th peak bandwidth per month
+             * *   **month_avg_day\_95**: pay by average daily 95th percentile per month
+             * *   **month\_95\_night_half**: pay by 95th percentile (50% off during nighttime)
+             * *   **hour_vas**: pay by value-added service per month
+             * *   **quic_hour_count**: pay by QUIC request per hour
+             * *   **hour_count**: pay by request per hour
+             * *   **rtlog_count_day**: pay by the number of real-time logs per day
              */
             public Builder billType(String billType) {
                 this.billType = billType;
@@ -166,7 +179,7 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * BillingCycle.
+             * The metering cycle.
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -174,7 +187,14 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Dimension.
+             * The dimension. Valid values:
+             * <p>
+             * 
+             * *   **flow**: network traffic and bandwidth
+             * *   **vas**: value-added services (HTTPS and requests for dynamic content)
+             * *   **websocket**: WebSocket
+             * *   **quic**: QUIC requests
+             * *   **rtlog2sls**: log entries delivered to Log Service in real time
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -182,7 +202,7 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the metering method ends.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -190,7 +210,7 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * Product.
+             * The name of the service.
              */
             public Builder product(String product) {
                 this.product = product;
@@ -198,7 +218,7 @@ public class DescribeDcdnUserBillTypeResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the metering method takes effect.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

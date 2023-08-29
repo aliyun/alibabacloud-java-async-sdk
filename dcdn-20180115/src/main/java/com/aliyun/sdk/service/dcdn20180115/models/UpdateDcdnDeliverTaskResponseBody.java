@@ -38,7 +38,7 @@ public class UpdateDcdnDeliverTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * Updates a tracking task by task ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

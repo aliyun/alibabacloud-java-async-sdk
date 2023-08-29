@@ -110,7 +110,7 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ChangingAffectTime.
+         * The time when the change of the billing method starts to take effect. The time is in GMT. This time appears on the frontend only when it is later than the current time.
          */
         public Builder changingAffectTime(String changingAffectTime) {
             this.changingAffectTime = changingAffectTime;
@@ -118,7 +118,16 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChangingChargeType.
+         * The new billing method to take effect. Valid values:
+         * <p>
+         * 
+         * *   **PayByTraffic**: pay-by-data-transfer
+         * *   **PayByBandwidth**: pay-by-bandwidth
+         * *   **PayByBandwidth95**: pay-by-95th percentile bandwidth
+         * *   **PayByBandwidth_monthavg**: pay-by-monthly average bandwidth
+         * *   **PayByBandwidth_month4th**: pay-by-fourth peak bandwidth per month
+         * *   **PayByBandwidth_monthday95avg**: pay-by-monthly average 95th percentile bandwidth
+         * *   **PayByBandwidth_nighthalf95**: pay-by-95th percentile bandwidth (50% off during nighttime)
          */
         public Builder changingChargeType(String changingChargeType) {
             this.changingChargeType = changingChargeType;
@@ -126,7 +135,7 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -134,7 +143,16 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         }
 
         /**
-         * InternetChargeType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **PayByTraffic**: pay-by-data-transfer
+         * *   **PayByBandwidth**: pay-by-bandwidth
+         * *   **PayByBandwidth95**: pay-by-95th percentile bandwidth
+         * *   **PayByBandwidth_monthavg**: pay-by-monthly average bandwidth
+         * *   **PayByBandwidth_month4th**: pay-by-fourth peak bandwidth per month
+         * *   **PayByBandwidth_monthday95avg**: pay-by-monthly average 95th percentile bandwidth
+         * *   **PayByBandwidth_nighthalf95**: pay-by-95th percentile bandwidth (50% off during nighttime)
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -142,7 +160,7 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         }
 
         /**
-         * OpeningTime.
+         * The time when the DCDN service was activated. The time follows the ISO 8601 standard.
          */
         public Builder openingTime(String openingTime) {
             this.openingTime = openingTime;
@@ -150,7 +168,7 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         }
 
         /**
-         * OperationLocks.
+         * The lock status of secure DCDN.
          */
         public Builder operationLocks(OperationLocks operationLocks) {
             this.operationLocks = operationLocks;
@@ -158,7 +176,7 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +216,7 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * LockReason.
+             * The reason why the instance is locked. For example, a value of **financial** indicates that an overdue payment exists.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -239,7 +257,7 @@ public class DescribeDcdnIpaServiceResponseBody extends TeaModel {
             private java.util.List < LockReason> lockReason; 
 
             /**
-             * LockReason.
+             * The reason why the instance is locked. For example, a value of **financial** indicates that an overdue payment exists.
              */
             public Builder lockReason(java.util.List < LockReason> lockReason) {
                 this.lockReason = lockReason;

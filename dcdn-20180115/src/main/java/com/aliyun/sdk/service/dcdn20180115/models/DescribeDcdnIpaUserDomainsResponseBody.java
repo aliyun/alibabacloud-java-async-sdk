@@ -86,7 +86,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Domains.
+         * The array that consists of multiple PageData parameters. The details about each accelerated domain name are included in a separate PageData parameter.
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -94,7 +94,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of domain names returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of domain names returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             private String weight; 
 
             /**
-             * Content.
+             * The address of the origin server.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -214,7 +214,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port of the origin server.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -222,7 +222,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -230,7 +230,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the origin server.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -238,7 +238,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Weight.
+             * The weight of the origin server if multiple origin servers have been specified.
              */
             public Builder weight(String weight) {
                 this.weight = weight;
@@ -428,7 +428,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             private Sources sources; 
 
             /**
-             * Cname.
+             * The CNAME assigned to the accelerated domain name.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -436,7 +436,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The reason why the accelerated domain name failed the review.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -444,7 +444,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The accelerated domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -452,7 +452,15 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainStatus.
+             * The status of the accelerated domain name. Valid values:
+             * <p>
+             * 
+             * *   **online**: enabled
+             * *   **offline**: disabled
+             * *   **configuring**: configuring
+             * *   **configure_failed**: configuration failed
+             * *   **checking**: reviewing
+             * *   **check_failed:** review failed
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -460,7 +468,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreated.
+             * The time when the accelerated domain name was added to Alibaba Cloud CDN.
              */
             public Builder gmtCreated(String gmtCreated) {
                 this.gmtCreated = gmtCreated;
@@ -468,7 +476,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the accelerated domain name was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -476,7 +484,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -484,7 +492,11 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * SSLProtocol.
+             * The status of HTTPS.
+             * <p>
+             * 
+             * *   **on**
+             * *   **off**
              */
             public Builder SSLProtocol(String SSLProtocol) {
                 this.SSLProtocol = SSLProtocol;
@@ -492,7 +504,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Sandbox.
+             * Indicates whether the accelerated domain name was in a sandbox.
              */
             public Builder sandbox(String sandbox) {
                 this.sandbox = sandbox;
@@ -500,7 +512,7 @@ public class DescribeDcdnIpaUserDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * Sources.
+             * The information about the origin server.
              */
             public Builder sources(Sources sources) {
                 this.sources = sources;

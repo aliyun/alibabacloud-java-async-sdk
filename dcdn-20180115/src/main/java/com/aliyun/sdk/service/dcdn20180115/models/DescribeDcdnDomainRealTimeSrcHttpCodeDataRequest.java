@@ -30,10 +30,6 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest extends Request {
     private String locationNameEn;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -43,7 +39,6 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest extends Request {
         this.endTime = builder.endTime;
         this.ispNameEn = builder.ispNameEn;
         this.locationNameEn = builder.locationNameEn;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -89,13 +84,6 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -107,7 +95,6 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest extends Request {
         private String endTime; 
         private String ispNameEn; 
         private String locationNameEn; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
@@ -120,12 +107,11 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest extends Request {
             this.endTime = request.endTime;
             this.ispNameEn = request.ispNameEn;
             this.locationNameEn = request.locationNameEn;
-            this.ownerId = request.ownerId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -134,7 +120,10 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -143,7 +132,10 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The name of the Internet service provider (ISP).
+         * <p>
+         * 
+         * You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query ISPs.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -152,7 +144,10 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region.
+         * <p>
+         * 
+         * You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -161,16 +156,10 @@ public class DescribeDcdnDomainRealTimeSrcHttpCodeDataRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

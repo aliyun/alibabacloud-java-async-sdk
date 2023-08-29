@@ -86,7 +86,7 @@ public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Enabled.
+         * Indicates whether the IPA service is activated.
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -94,7 +94,7 @@ public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InDebt.
+         * Indicates whether you have overdue payments.
          */
         public Builder inDebt(Boolean inDebt) {
             this.inDebt = inDebt;
@@ -102,7 +102,7 @@ public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InDebtOverdue.
+         * Indicates whether the grace period for your overdue payments expired.
          */
         public Builder inDebtOverdue(Boolean inDebtOverdue) {
             this.inDebtOverdue = inDebtOverdue;
@@ -110,7 +110,7 @@ public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
         }
 
         /**
-         * OnService.
+         * Indicates whether the IPA service is available. The IPA service is available when no payment is overdue.
          */
         public Builder onService(Boolean onService) {
             this.onService = onService;
@@ -118,7 +118,7 @@ public class DescribeUserDcdnIpaStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

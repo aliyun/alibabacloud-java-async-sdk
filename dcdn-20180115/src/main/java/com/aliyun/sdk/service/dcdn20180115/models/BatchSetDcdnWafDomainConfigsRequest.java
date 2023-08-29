@@ -1,0 +1,124 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.dcdn20180115.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link BatchSetDcdnWafDomainConfigsRequest} extends {@link RequestModel}
+ *
+ * <p>BatchSetDcdnWafDomainConfigsRequest</p>
+ */
+public class BatchSetDcdnWafDomainConfigsRequest extends Request {
+    @Body
+    @NameInMap("ClientIpTag")
+    private String clientIpTag;
+
+    @Body
+    @NameInMap("DefenseStatus")
+    private String defenseStatus;
+
+    @Body
+    @NameInMap("DomainNames")
+    @Validation(required = true)
+    private String domainNames;
+
+    private BatchSetDcdnWafDomainConfigsRequest(Builder builder) {
+        super(builder);
+        this.clientIpTag = builder.clientIpTag;
+        this.defenseStatus = builder.defenseStatus;
+        this.domainNames = builder.domainNames;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static BatchSetDcdnWafDomainConfigsRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return clientIpTag
+     */
+    public String getClientIpTag() {
+        return this.clientIpTag;
+    }
+
+    /**
+     * @return defenseStatus
+     */
+    public String getDefenseStatus() {
+        return this.defenseStatus;
+    }
+
+    /**
+     * @return domainNames
+     */
+    public String getDomainNames() {
+        return this.domainNames;
+    }
+
+    public static final class Builder extends Request.Builder<BatchSetDcdnWafDomainConfigsRequest, Builder> {
+        private String clientIpTag; 
+        private String defenseStatus; 
+        private String domainNames; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(BatchSetDcdnWafDomainConfigsRequest request) {
+            super(request);
+            this.clientIpTag = request.clientIpTag;
+            this.defenseStatus = request.defenseStatus;
+            this.domainNames = request.domainNames;
+        } 
+
+        /**
+         * Specifies the header that records the IP address to be obtained. If the default header is selected, the value of this parameter is empty. If a custom header is selected, the value of this parameter is the value specified by the user. Separate multiple values with commas (,). You can specify a maximum of five values.
+         */
+        public Builder clientIpTag(String clientIpTag) {
+            this.putBodyParameter("ClientIpTag", clientIpTag);
+            this.clientIpTag = clientIpTag;
+            return this;
+        }
+
+        /**
+         * The protection status of the domain name. Valid values: on, off, and empty string.
+         * <p>
+         * 
+         * *   When you add a domain name, the value of this parameter is **on**, and the value of ClientIpTag takes effect, which is empty if the default header is selected and is the value specified by the user if a custom header is selected.
+         * *   When you delete a domain name, the value of this parameter is **off**, and the value of ClientIpTag does not take effect.
+         * *   When you only modify the value of ClientIpTag, the value of DefenseStatus is an empty string.
+         */
+        public Builder defenseStatus(String defenseStatus) {
+            this.putBodyParameter("DefenseStatus", defenseStatus);
+            this.defenseStatus = defenseStatus;
+            return this;
+        }
+
+        /**
+         * The protected domain names for which you want to change the protection status. You can specify up to 50 domain names. Separate multiple domain names with commas (,).
+         */
+        public Builder domainNames(String domainNames) {
+            this.putBodyParameter("DomainNames", domainNames);
+            this.domainNames = domainNames;
+            return this;
+        }
+
+        @Override
+        public BatchSetDcdnWafDomainConfigsRequest build() {
+            return new BatchSetDcdnWafDomainConfigsRequest(this);
+        } 
+
+    } 
+
+}

@@ -18,10 +18,6 @@ public class VerifyDcdnDomainOwnerRequest extends Request {
     private String domainName;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("VerifyType")
     @Validation(required = true)
     private String verifyType;
@@ -29,7 +25,6 @@ public class VerifyDcdnDomainOwnerRequest extends Request {
     private VerifyDcdnDomainOwnerRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
-        this.ownerId = builder.ownerId;
         this.verifyType = builder.verifyType;
     }
 
@@ -54,13 +49,6 @@ public class VerifyDcdnDomainOwnerRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return verifyType
      */
     public String getVerifyType() {
@@ -69,7 +57,6 @@ public class VerifyDcdnDomainOwnerRequest extends Request {
 
     public static final class Builder extends Request.Builder<VerifyDcdnDomainOwnerRequest, Builder> {
         private String domainName; 
-        private Long ownerId; 
         private String verifyType; 
 
         private Builder() {
@@ -79,12 +66,11 @@ public class VerifyDcdnDomainOwnerRequest extends Request {
         private Builder(VerifyDcdnDomainOwnerRequest request) {
             super(request);
             this.domainName = request.domainName;
-            this.ownerId = request.ownerId;
             this.verifyType = request.verifyType;
         } 
 
         /**
-         * DomainName.
+         * The domain name of which you want to verify the ownership. You can specify only one domain name in each call.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,16 +79,11 @@ public class VerifyDcdnDomainOwnerRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * VerifyType.
+         * The verification method. Valid values:
+         * <p>
+         * 
+         * *   **dnsCheck**: by DNS record
+         * *   **fileCheck**: by verification file
          */
         public Builder verifyType(String verifyType) {
             this.putQueryParameter("VerifyType", verifyType);

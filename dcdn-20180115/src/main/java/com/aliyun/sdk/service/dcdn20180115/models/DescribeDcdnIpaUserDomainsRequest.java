@@ -54,10 +54,6 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
     private String resourceGroupId;
 
     @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
-    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -73,7 +69,6 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
-        this.securityToken = builder.securityToken;
         this.tag = builder.tag;
     }
 
@@ -161,13 +156,6 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
     }
 
     /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -185,7 +173,6 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
-        private String securityToken; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -204,12 +191,15 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
-            this.securityToken = request.securityToken;
             this.tag = request.tag;
         } 
 
         /**
-         * CheckDomainShow.
+         * Specifies whether to display domain names that are under review, failed the review, or failed to be configured. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder checkDomainShow(Boolean checkDomainShow) {
             this.putQueryParameter("CheckDomainShow", checkDomainShow);
@@ -218,7 +208,7 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name that is used as a keyword to filter domain names. Fuzzy match is supported.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -227,7 +217,13 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * DomainSearchType.
+         * The search method. Default value: full_match. Valid values:
+         * <p>
+         * 
+         * *   **fuzzy_match**: fuzzy match
+         * *   **pre_match**: prefix match
+         * *   **suf_match**: suffix match
+         * *   **full_match**: exact match
          */
         public Builder domainSearchType(String domainSearchType) {
             this.putQueryParameter("DomainSearchType", domainSearchType);
@@ -236,7 +232,15 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * DomainStatus.
+         * The status of the domain name. Valid values:
+         * <p>
+         * 
+         * *   **online**: enabled
+         * *   **offline**: disabled
+         * *   **configuring**: configuring
+         * *   **configure_failed**: configuration failed
+         * *   **checking**: reviewing
+         * *   **check_failed:** review failed
          */
         public Builder domainStatus(String domainStatus) {
             this.putQueryParameter("DomainStatus", domainStatus);
@@ -245,7 +249,11 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * FuncFilter.
+         * The status of the feature.
+         * <p>
+         * 
+         * *   config: The feature is enabled.
+         * *   unconfig: The feature is not enabled.
          */
         public Builder funcFilter(String funcFilter) {
             this.putQueryParameter("FuncFilter", funcFilter);
@@ -254,7 +262,7 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * FuncId.
+         * The ID of the feature. For example, a value of 7 specifies the feature of configuring an expiration rule for a specific directory. For more information about feature IDs, see [Parameters for configuring features for domain names](~~410622~~).
          */
         public Builder funcId(String funcId) {
             this.putQueryParameter("FuncId", funcId);
@@ -272,7 +280,7 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page. Valid values: **1** to **100000**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -281,7 +289,7 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of domain names to return on each page. Default value: **20**. Maximum value: **500**. Valid values: an integer between **1** and **500**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -290,7 +298,7 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -299,16 +307,7 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
         }
 
         /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
-            return this;
-        }
-
-        /**
-         * Tag.
+         * The tags of the command.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -362,7 +361,7 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. Valid values of N: 1 to 20. You can call the TagDcdnResources operation to set a tag for a domain name.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +369,7 @@ public class DescribeDcdnIpaUserDomainsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

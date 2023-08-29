@@ -22,15 +22,12 @@ public class DescribeDcdnDomainLogRequest extends Request {
     private String endTime;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("PageNumber")
     private Long pageNumber;
 
     @Query
     @NameInMap("PageSize")
+    @Validation(maximum = 1000)
     private Long pageSize;
 
     @Query
@@ -41,7 +38,6 @@ public class DescribeDcdnDomainLogRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
-        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
@@ -75,13 +71,6 @@ public class DescribeDcdnDomainLogRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -105,7 +94,6 @@ public class DescribeDcdnDomainLogRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDcdnDomainLogRequest, Builder> {
         private String domainName; 
         private String endTime; 
-        private Long ownerId; 
         private Long pageNumber; 
         private Long pageSize; 
         private String startTime; 
@@ -118,14 +106,13 @@ public class DescribeDcdnDomainLogRequest extends Request {
             super(request);
             this.domainName = request.domainName;
             this.endTime = request.endTime;
-            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name that you want to query. You can specify only one domain name in each call.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -134,7 +121,12 @@ public class DescribeDcdnDomainLogRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -143,16 +135,10 @@ public class DescribeDcdnDomainLogRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page **1**.
+         * <p>
+         * 
+         * Default value: **1**.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -161,7 +147,10 @@ public class DescribeDcdnDomainLogRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
+         * <p>
+         * 
+         * Valid values: **1** to **1000**. Default value: **300**. Maximum value: **1000**.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -170,7 +159,10 @@ public class DescribeDcdnDomainLogRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -98,7 +98,7 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * BpsDataPerInterval.
+         * The bandwidth data returned at each interval.
          */
         public Builder bpsDataPerInterval(BpsDataPerInterval bpsDataPerInterval) {
             this.bpsDataPerInterval = bpsDataPerInterval;
@@ -106,7 +106,7 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -114,7 +114,7 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -122,7 +122,7 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -130,7 +130,7 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -238,7 +238,7 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Bps.
+             * The bandwidth value. Unit: bit/s.
              */
             public Builder bps(Float bps) {
                 this.bps = bps;
@@ -246,7 +246,7 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicHttpBps.
+             * The bandwidth that was consumed to deliver dynamic content over HTTP. Unit: bit/s.
              */
             public Builder dynamicHttpBps(Float dynamicHttpBps) {
                 this.dynamicHttpBps = dynamicHttpBps;
@@ -254,7 +254,7 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicHttpsBps.
+             * The bandwidth that was consumed to deliver dynamic content over HTTPS. Unit: bit/s.
              */
             public Builder dynamicHttpsBps(Float dynamicHttpsBps) {
                 this.dynamicHttpsBps = dynamicHttpsBps;
@@ -262,7 +262,7 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * StaticHttpBps.
+             * The bandwidth that was consumed to deliver static content over HTTP. Unit: bit/s.
              */
             public Builder staticHttpBps(Float staticHttpBps) {
                 this.staticHttpBps = staticHttpBps;
@@ -270,7 +270,7 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * StaticHttpsBps.
+             * The bandwidth that was consumed to deliver static content over HTTPS. Unit: bit/s.
              */
             public Builder staticHttpsBps(Float staticHttpsBps) {
                 this.staticHttpsBps = staticHttpsBps;
@@ -278,7 +278,7 @@ public class DescribeDcdnDomainBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

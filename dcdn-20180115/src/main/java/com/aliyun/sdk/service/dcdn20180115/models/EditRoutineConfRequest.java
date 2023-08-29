@@ -25,16 +25,11 @@ public class EditRoutineConfRequest extends Request {
     @Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private EditRoutineConfRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
         this.envConf = builder.envConf;
         this.name = builder.name;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -71,18 +66,10 @@ public class EditRoutineConfRequest extends Request {
         return this.name;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<EditRoutineConfRequest, Builder> {
         private String description; 
         private java.util.Map < String, ? > envConf; 
         private String name; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -93,11 +80,10 @@ public class EditRoutineConfRequest extends Request {
             this.description = request.description;
             this.envConf = request.envConf;
             this.name = request.name;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * Description.
+         * The description of the routine.
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -106,29 +92,21 @@ public class EditRoutineConfRequest extends Request {
         }
 
         /**
-         * EnvConf.
+         * The configurations of the specified environment.
          */
         public Builder envConf(java.util.Map < String, ? > envConf) {
-            this.putBodyParameter("EnvConf", envConf);
+            String envConfShrink = shrink(envConf, "EnvConf", "json");
+            this.putBodyParameter("EnvConf", envConfShrink);
             this.envConf = envConf;
             return this;
         }
 
         /**
-         * Name.
+         * The name of the routine. The name must be unique among the routines that belong to the same Alibaba Cloud account.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

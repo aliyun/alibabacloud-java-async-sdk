@@ -16,14 +16,9 @@ public class DescribeDcdnDeliverListRequest extends Request {
     @NameInMap("DeliverId")
     private Long deliverId;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DescribeDcdnDeliverListRequest(Builder builder) {
         super(builder);
         this.deliverId = builder.deliverId;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -46,16 +41,8 @@ public class DescribeDcdnDeliverListRequest extends Request {
         return this.deliverId;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDcdnDeliverListRequest, Builder> {
         private Long deliverId; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -64,24 +51,14 @@ public class DescribeDcdnDeliverListRequest extends Request {
         private Builder(DescribeDcdnDeliverListRequest request) {
             super(request);
             this.deliverId = request.deliverId;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * DeliverId.
+         * The ID of the tracking task that you want to query. If you do not specify an ID, all tracking tasks are queried.
          */
         public Builder deliverId(Long deliverId) {
             this.putQueryParameter("DeliverId", deliverId);
             this.deliverId = deliverId;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

@@ -83,7 +83,7 @@ public class DescribeDcdnIpaDomainDetailRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain names for which you want to query basic information. You can specify only one domain name in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

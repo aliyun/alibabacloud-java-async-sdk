@@ -86,7 +86,7 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Domains.
+         * The information about the accelerated domain name.
          */
         public Builder domains(Domains domains) {
             this.domains = domains;
@@ -94,7 +94,7 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page, which is the same as the **PageNumber** parameter in request parameters.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of domain names returned per page, which is the same as the **PageSize** parameter in request parameters.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of domain names returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,7 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
             private String gmtModified; 
 
             /**
-             * DomainName.
+             * The accelerated domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -178,7 +178,7 @@ public class DescribeDcdnDeletedDomainsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the accelerated domain name was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;

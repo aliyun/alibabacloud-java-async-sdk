@@ -125,7 +125,7 @@ public class UpdateDcdnDomainRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The top-level domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -143,7 +143,7 @@ public class UpdateDcdnDomainRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the request.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -161,7 +161,7 @@ public class UpdateDcdnDomainRequest extends Request {
         }
 
         /**
-         * Sources.
+         * The accelerated domain name. You can specify only one domain name in each call.
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -170,7 +170,7 @@ public class UpdateDcdnDomainRequest extends Request {
         }
 
         /**
-         * TopLevelDomain.
+         * The operation that you want to perform. Set the value to **UpdateDcdnDomain**.
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

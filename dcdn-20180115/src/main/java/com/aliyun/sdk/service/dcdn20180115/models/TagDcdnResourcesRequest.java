@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TagDcdnResourcesRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("ResourceId")
     @Validation(required = true)
     private java.util.List < String > resourceId;
@@ -33,7 +29,6 @@ public class TagDcdnResourcesRequest extends Request {
 
     private TagDcdnResourcesRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
@@ -50,13 +45,6 @@ public class TagDcdnResourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     /**
@@ -81,7 +69,6 @@ public class TagDcdnResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TagDcdnResourcesRequest, Builder> {
-        private Long ownerId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
         private java.util.List < Tag> tag; 
@@ -92,23 +79,13 @@ public class TagDcdnResourcesRequest extends Request {
 
         private Builder(TagDcdnResourcesRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
             this.tag = request.tag;
         } 
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ResourceId.
+         * The ID of the resource. Valid values of N: **1** to **50**.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -117,7 +94,7 @@ public class TagDcdnResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **DOMAIN**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -126,7 +103,7 @@ public class TagDcdnResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -181,7 +158,7 @@ public class TagDcdnResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. Valid values of N: **1** to **20**.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -189,7 +166,7 @@ public class TagDcdnResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of a tag. Valid values of N: **1** to **20**.
              */
             public Builder value(String value) {
                 this.value = value;

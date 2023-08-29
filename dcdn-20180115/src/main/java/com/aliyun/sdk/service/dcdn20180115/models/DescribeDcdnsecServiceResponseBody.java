@@ -170,7 +170,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * ChangingAffectTime.
+         * The time when the renewed service takes effect. The time is displayed in UTC.
          */
         public Builder changingAffectTime(String changingAffectTime) {
             this.changingAffectTime = changingAffectTime;
@@ -178,7 +178,16 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ChangingChargeType.
+         * The new metering method for the renewed DCDN. Valid values:
+         * <p>
+         * 
+         * *   **PayByTraffic**: pay by data transfer
+         * *   **PayByBandwidth**: pay by bandwidth
+         * *   **PayByBandwidth95**: pay by 95th percentile bandwidth
+         * *   **PayByBandwidth_monthavg**: pay by monthly average bandwidth
+         * *   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month
+         * *   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth
+         * *   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)
          */
         public Builder changingChargeType(String changingChargeType) {
             this.changingChargeType = changingChargeType;
@@ -186,7 +195,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * DomainNum.
+         * The number of accelerated domain names that use DCDN.
          */
         public Builder domainNum(String domainNum) {
             this.domainNum = domainNum;
@@ -194,7 +203,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The service expiration time.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -202,7 +211,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * FlowType.
+         * The metering method for traffic.
          */
         public Builder flowType(String flowType) {
             this.flowType = flowType;
@@ -210,7 +219,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -218,7 +227,16 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * InternetChargeType.
+         * The current metering method. Valid values:
+         * <p>
+         * 
+         * *   **PayByTraffic**: pay by data transfer
+         * *   **PayByBandwidth**: pay by bandwidth
+         * *   **PayByBandwidth95**: pay by 95th percentile bandwidth
+         * *   **PayByBandwidth_monthavg**: pay by monthly average bandwidth
+         * *   **PayByBandwidth_month4th**: pay by fourth peak bandwidth per month
+         * *   **PayByBandwidth_monthday95avg**: pay by monthly average 95th percentile bandwidth
+         * *   **PayByBandwidth_nighthalf95**: pay by 95th percentile bandwidth (50% off during nighttime)
          */
         public Builder internetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
@@ -226,7 +244,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * OperationLocks.
+         * The lock status of DCDN.
          */
         public Builder operationLocks(OperationLocks operationLocks) {
             this.operationLocks = operationLocks;
@@ -234,7 +252,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -242,7 +260,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestType.
+         * The metering method for requests.
          */
         public Builder requestType(String requestType) {
             this.requestType = requestType;
@@ -250,7 +268,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The service activation time.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -258,7 +276,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * The version number.
          */
         public Builder version(String version) {
             this.version = version;
@@ -298,7 +316,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
             private String lockReason; 
 
             /**
-             * LockReason.
+             * The reason why the instance was locked.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -339,7 +357,7 @@ public class DescribeDcdnsecServiceResponseBody extends TeaModel {
             private java.util.List < LockReason> lockReason; 
 
             /**
-             * LockReason.
+             * The reason why the instance was locked.
              */
             public Builder lockReason(java.util.List < LockReason> lockReason) {
                 this.lockReason = lockReason;

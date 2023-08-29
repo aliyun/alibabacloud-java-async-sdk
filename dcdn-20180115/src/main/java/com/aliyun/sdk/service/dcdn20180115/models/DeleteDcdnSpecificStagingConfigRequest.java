@@ -98,7 +98,10 @@ public class DeleteDcdnSpecificStagingConfigRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * The ID of the configuration to be deleted. You can specify multiple configuration IDs and separate them with commas (,).
+         * <p>
+         * 
+         * You can call the DescribeDcdnDomainStagingConfig operation to query the environment configuration.
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -107,7 +110,7 @@ public class DeleteDcdnSpecificStagingConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name in each call.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

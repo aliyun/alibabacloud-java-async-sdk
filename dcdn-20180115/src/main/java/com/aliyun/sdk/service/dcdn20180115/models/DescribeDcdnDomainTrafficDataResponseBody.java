@@ -98,7 +98,7 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         private TrafficDataPerInterval trafficDataPerInterval; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +138,7 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficDataPerInterval.
+         * The network traffic returned at each time interval. Unit: bytes.
          */
         public Builder trafficDataPerInterval(TrafficDataPerInterval trafficDataPerInterval) {
             this.trafficDataPerInterval = trafficDataPerInterval;
@@ -238,7 +238,7 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
             private Float traffic; 
 
             /**
-             * DynamicHttpTraffic.
+             * The network traffic that was consumed to deliver dynamic content over HTTP.
              */
             public Builder dynamicHttpTraffic(Float dynamicHttpTraffic) {
                 this.dynamicHttpTraffic = dynamicHttpTraffic;
@@ -246,7 +246,7 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicHttpsTraffic.
+             * The network traffic that was consumed to deliver dynamic content over HTTPS.
              */
             public Builder dynamicHttpsTraffic(Float dynamicHttpsTraffic) {
                 this.dynamicHttpsTraffic = dynamicHttpsTraffic;
@@ -254,7 +254,7 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * StaticHttpTraffic.
+             * The network traffic that was consumed to deliver static content over HTTP.
              */
             public Builder staticHttpTraffic(Float staticHttpTraffic) {
                 this.staticHttpTraffic = staticHttpTraffic;
@@ -262,7 +262,7 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * StaticHttpsTraffic.
+             * The network traffic that was consumed to deliver static content over HTTPS.
              */
             public Builder staticHttpsTraffic(Float staticHttpsTraffic) {
                 this.staticHttpsTraffic = staticHttpsTraffic;
@@ -270,7 +270,7 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -278,7 +278,7 @@ public class DescribeDcdnDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * Traffic.
+             * The total amount of network traffic.
              */
             public Builder traffic(Float traffic) {
                 this.traffic = traffic;

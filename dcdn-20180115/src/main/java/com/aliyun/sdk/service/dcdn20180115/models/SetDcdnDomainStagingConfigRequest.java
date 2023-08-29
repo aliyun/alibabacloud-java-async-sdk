@@ -22,15 +22,10 @@ public class SetDcdnDomainStagingConfigRequest extends Request {
     @Validation(required = true)
     private String functions;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private SetDcdnDomainStagingConfigRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
         this.functions = builder.functions;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -60,17 +55,9 @@ public class SetDcdnDomainStagingConfigRequest extends Request {
         return this.functions;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<SetDcdnDomainStagingConfigRequest, Builder> {
         private String domainName; 
         private String functions; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -80,11 +67,10 @@ public class SetDcdnDomainStagingConfigRequest extends Request {
             super(request);
             this.domainName = request.domainName;
             this.functions = request.functions;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -93,20 +79,14 @@ public class SetDcdnDomainStagingConfigRequest extends Request {
         }
 
         /**
-         * Functions.
+         * The list of features. Format: `[{"functionArgs":[{"argName":"parameter key","argValue":"parameter value"},{"argName":"xx","argValue":"xx"}],"functionName": feature name"}]`
+         * <p>
+         * 
+         * > Separate multiple parameters with commas (,).
          */
         public Builder functions(String functions) {
             this.putQueryParameter("Functions", functions);
             this.functions = functions;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

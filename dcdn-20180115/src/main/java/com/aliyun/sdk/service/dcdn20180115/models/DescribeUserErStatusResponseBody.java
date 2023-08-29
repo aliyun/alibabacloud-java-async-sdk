@@ -86,7 +86,11 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Enabled.
+         * Indicates whether ER is activated.
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -94,7 +98,11 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InDebt.
+         * Indicates whether ER has an overdue payment.
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder inDebt(Boolean inDebt) {
             this.inDebt = inDebt;
@@ -102,7 +110,11 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
         }
 
         /**
-         * InDebtOverdue.
+         * Indicates whether an overdue payment of ER has passed the grace period.
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder inDebtOverdue(Boolean inDebtOverdue) {
             this.inDebtOverdue = inDebtOverdue;
@@ -110,7 +122,11 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
         }
 
         /**
-         * OnService.
+         * Indicates whether ER is available.
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder onService(Boolean onService) {
             this.onService = onService;
@@ -118,7 +134,7 @@ public class DescribeUserErStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

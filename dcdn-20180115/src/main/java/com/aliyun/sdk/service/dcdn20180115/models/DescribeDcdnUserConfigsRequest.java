@@ -17,14 +17,9 @@ public class DescribeDcdnUserConfigsRequest extends Request {
     @Validation(required = true)
     private String functionName;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DescribeDcdnUserConfigsRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class DescribeDcdnUserConfigsRequest extends Request {
         return this.functionName;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDcdnUserConfigsRequest, Builder> {
         private String functionName; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -65,24 +52,19 @@ public class DescribeDcdnUserConfigsRequest extends Request {
         private Builder(DescribeDcdnUserConfigsRequest request) {
             super(request);
             this.functionName = request.functionName;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * FunctionName.
+         * The configuration that you want to query. Valid values:
+         * <p>
+         * 
+         * *   domain_business_control: user configurations
+         * *   bot_basic: the basic edition of bot traffic management, which supports authorized crawlers and provides threat intelligence
+         * *   bot_Advance: the advanced edition of bot traffic management, which supports authorized crawlers and AI intelligent protection and provides threat intelligence
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("FunctionName", functionName);
             this.functionName = functionName;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

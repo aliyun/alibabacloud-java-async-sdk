@@ -24,6 +24,12 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
     @NameInMap("DirRemain")
     private String dirRemain;
 
+    @NameInMap("IgnoreParamsQuota")
+    private String ignoreParamsQuota;
+
+    @NameInMap("IgnoreParamsRemain")
+    private String ignoreParamsRemain;
+
     @NameInMap("PreloadQuota")
     private String preloadQuota;
 
@@ -50,6 +56,8 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         this.blockRemain = builder.blockRemain;
         this.dirQuota = builder.dirQuota;
         this.dirRemain = builder.dirRemain;
+        this.ignoreParamsQuota = builder.ignoreParamsQuota;
+        this.ignoreParamsRemain = builder.ignoreParamsRemain;
         this.preloadQuota = builder.preloadQuota;
         this.preloadRemain = builder.preloadRemain;
         this.regexQuota = builder.regexQuota;
@@ -93,6 +101,20 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
      */
     public String getDirRemain() {
         return this.dirRemain;
+    }
+
+    /**
+     * @return ignoreParamsQuota
+     */
+    public String getIgnoreParamsQuota() {
+        return this.ignoreParamsQuota;
+    }
+
+    /**
+     * @return ignoreParamsRemain
+     */
+    public String getIgnoreParamsRemain() {
+        return this.ignoreParamsRemain;
     }
 
     /**
@@ -149,6 +171,8 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         private String blockRemain; 
         private String dirQuota; 
         private String dirRemain; 
+        private String ignoreParamsQuota; 
+        private String ignoreParamsRemain; 
         private String preloadQuota; 
         private String preloadRemain; 
         private String regexQuota; 
@@ -158,7 +182,7 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         private String urlRemain; 
 
         /**
-         * BlockQuota.
+         * The maximum number of URLs that can be blocked.
          */
         public Builder blockQuota(String blockQuota) {
             this.blockQuota = blockQuota;
@@ -166,7 +190,7 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * BlockRemain.
+         * The remaining number of URLs that can be blocked on the current day.
          */
         public Builder blockRemain(String blockRemain) {
             this.blockRemain = blockRemain;
@@ -174,7 +198,7 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * DirQuota.
+         * The maximum number of directories that can be refreshed on the current day.
          */
         public Builder dirQuota(String dirQuota) {
             this.dirQuota = dirQuota;
@@ -182,7 +206,7 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * DirRemain.
+         * The remaining number of directories that can be refreshed on the current day.
          */
         public Builder dirRemain(String dirRemain) {
             this.dirRemain = dirRemain;
@@ -190,7 +214,23 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * PreloadQuota.
+         * The maximum number of URLs or directories with parameters ignored that can be refreshed on the current day.
+         */
+        public Builder ignoreParamsQuota(String ignoreParamsQuota) {
+            this.ignoreParamsQuota = ignoreParamsQuota;
+            return this;
+        }
+
+        /**
+         * The number of remaining URLs or directories that can be refreshed with parameters ignored on the current day.
+         */
+        public Builder ignoreParamsRemain(String ignoreParamsRemain) {
+            this.ignoreParamsRemain = ignoreParamsRemain;
+            return this;
+        }
+
+        /**
+         * The maximum number of URLs that can be prefetched on the current day.
          */
         public Builder preloadQuota(String preloadQuota) {
             this.preloadQuota = preloadQuota;
@@ -198,7 +238,7 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * PreloadRemain.
+         * The remaining number of URLs that can be prefetched on the current day.
          */
         public Builder preloadRemain(String preloadRemain) {
             this.preloadRemain = preloadRemain;
@@ -206,7 +246,7 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RegexQuota.
+         * The maximum number of URLs or directories that can be refreshed by using regular expressions on the current day.
          */
         public Builder regexQuota(String regexQuota) {
             this.regexQuota = regexQuota;
@@ -214,7 +254,7 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RegexRemain.
+         * The remaining number of URLs or directories that can be refreshed by using regular expressions on the current day.
          */
         public Builder regexRemain(String regexRemain) {
             this.regexRemain = regexRemain;
@@ -222,7 +262,7 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +270,7 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * UrlQuota.
+         * The maximum number of URLs that can be refreshed on the current day.
          */
         public Builder urlQuota(String urlQuota) {
             this.urlQuota = urlQuota;
@@ -238,7 +278,7 @@ public class DescribeDcdnRefreshQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * UrlRemain.
+         * The remaining number of URLs that can be refreshed on the current day.
          */
         public Builder urlRemain(String urlRemain) {
             this.urlRemain = urlRemain;

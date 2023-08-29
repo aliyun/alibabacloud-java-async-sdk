@@ -50,7 +50,7 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The list of the data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Bps.
+             * The bandwidth, in bit/s.
              */
             public Builder bps(Float bps) {
                 this.bps = bps;
@@ -118,7 +118,7 @@ public class DescribeDcdnDomainRealTimeBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

@@ -83,7 +83,7 @@ public class DescribeDcdnCertificateDetailRequest extends Request {
         } 
 
         /**
-         * CertName.
+         * The name of the certificate.
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);

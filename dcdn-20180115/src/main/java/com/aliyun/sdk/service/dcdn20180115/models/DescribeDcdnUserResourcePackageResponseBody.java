@@ -50,7 +50,7 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
         private ResourcePackageInfos resourcePackageInfos; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * ResourcePackageInfos.
+         * The detailed information about resource plans. The returned information is displayed in the format that is specified by the ResourcePackageInfo parameter.
          */
         public Builder resourcePackageInfos(ResourcePackageInfos resourcePackageInfos) {
             this.resourcePackageInfos = resourcePackageInfos;
@@ -194,7 +194,7 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * CommodityCode.
+             * The commodity code of the resource plan.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -202,7 +202,11 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * CurrCapacity.
+             * The remaining quota of the resource plan.
+             * <p>
+             * 
+             * *   The unit for traffic: bytes.
+             * *   The unit for requests: count.
              */
             public Builder currCapacity(String currCapacity) {
                 this.currCapacity = currCapacity;
@@ -210,7 +214,7 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The name of the resource plan.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -218,7 +222,7 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The expiration time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -226,7 +230,11 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * InitCapacity.
+             * The total quota of the resource plan.
+             * <p>
+             * 
+             * *   The unit for traffic: bytes.
+             * *   The unit for requests: count.
              */
             public Builder initCapacity(String initCapacity) {
                 this.initCapacity = initCapacity;
@@ -234,7 +242,7 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the resource plan.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -242,7 +250,7 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The validation time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -250,7 +258,11 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the resource plan. Valid values:
+             * <p>
+             * 
+             * *   **valid**: valid
+             * *   **closed**: expired
              */
             public Builder status(String status) {
                 this.status = status;
@@ -258,7 +270,7 @@ public class DescribeDcdnUserResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

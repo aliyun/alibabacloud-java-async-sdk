@@ -62,7 +62,7 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -70,7 +70,7 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
         }
 
         /**
-         * HttpCodeDataInterval.
+         * The distribution of HTTP status codes at each time interval.
          */
         public Builder httpCodeDataInterval(HttpCodeDataInterval httpCodeDataInterval) {
             this.httpCodeDataInterval = httpCodeDataInterval;
@@ -78,7 +78,7 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -99,7 +99,7 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
         private String totalValue;
 
         @NameInMap("Value")
-        private String value;
+        private java.util.Map < String, ? > value;
 
         private DataModule(Builder builder) {
             this.timeStamp = builder.timeStamp;
@@ -132,17 +132,17 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
         /**
          * @return value
          */
-        public String getValue() {
+        public java.util.Map < String, ? > getValue() {
             return this.value;
         }
 
         public static final class Builder {
             private String timeStamp; 
             private String totalValue; 
-            private String value; 
+            private java.util.Map < String, ? > value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -150,7 +150,7 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
             }
 
             /**
-             * TotalValue.
+             * The total number of times that HTTP status codes were returned.
              */
             public Builder totalValue(String totalValue) {
                 this.totalValue = totalValue;
@@ -158,9 +158,9 @@ public class DescribeDcdnDomainHttpCodeDataByLayerResponseBody extends TeaModel 
             }
 
             /**
-             * Value.
+             * The number of times that the HTTP status code was returned.
              */
-            public Builder value(String value) {
+            public Builder value(java.util.Map < String, ? > value) {
                 this.value = value;
                 return this;
             }

@@ -13,17 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CheckDcdnProjectExistRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("ProjectName")
     @Validation(required = true)
     private String projectName;
 
     private CheckDcdnProjectExistRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.projectName = builder.projectName;
     }
 
@@ -41,13 +36,6 @@ public class CheckDcdnProjectExistRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -55,7 +43,6 @@ public class CheckDcdnProjectExistRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CheckDcdnProjectExistRequest, Builder> {
-        private Long ownerId; 
         private String projectName; 
 
         private Builder() {
@@ -64,21 +51,11 @@ public class CheckDcdnProjectExistRequest extends Request {
 
         private Builder(CheckDcdnProjectExistRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
             this.projectName = request.projectName;
         } 
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ProjectName.
+         * The name of a real-time log delivery project.
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);

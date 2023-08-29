@@ -98,7 +98,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * OriginTrafficDataPerInterval.
+         * The amount of back-to-origin traffic returned at each time interval. Unit: bytes.
          */
         public Builder originTrafficDataPerInterval(OriginTrafficDataPerInterval originTrafficDataPerInterval) {
             this.originTrafficDataPerInterval = originTrafficDataPerInterval;
@@ -130,7 +130,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -238,7 +238,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * DynamicHttpOriginTraffic.
+             * The amount of back-to-origin traffic that was consumed to deliver dynamic content over HTTP.
              */
             public Builder dynamicHttpOriginTraffic(Float dynamicHttpOriginTraffic) {
                 this.dynamicHttpOriginTraffic = dynamicHttpOriginTraffic;
@@ -246,7 +246,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicHttpsOriginTraffic.
+             * The amount of back-to-origin traffic that was consumed to deliver dynamic content over HTTPS.
              */
             public Builder dynamicHttpsOriginTraffic(Float dynamicHttpsOriginTraffic) {
                 this.dynamicHttpsOriginTraffic = dynamicHttpsOriginTraffic;
@@ -254,7 +254,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * OriginTraffic.
+             * The amount of back-to-origin traffic.
              */
             public Builder originTraffic(Float originTraffic) {
                 this.originTraffic = originTraffic;
@@ -262,7 +262,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * StaticHttpOriginTraffic.
+             * The amount of back-to-origin traffic that was consumed to deliver static content over HTTP.
              */
             public Builder staticHttpOriginTraffic(Float staticHttpOriginTraffic) {
                 this.staticHttpOriginTraffic = staticHttpOriginTraffic;
@@ -270,7 +270,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * StaticHttpsOriginTraffic.
+             * The amount of back-to-origin traffic that was consumed to deliver static content over HTTPS.
              */
             public Builder staticHttpsOriginTraffic(Float staticHttpsOriginTraffic) {
                 this.staticHttpsOriginTraffic = staticHttpsOriginTraffic;
@@ -278,7 +278,7 @@ public class DescribeDcdnDomainOriginTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

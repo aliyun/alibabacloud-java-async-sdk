@@ -13,17 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnRefreshTaskByIdRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("TaskId")
     @Validation(required = true)
     private String taskId;
 
     private DescribeDcdnRefreshTaskByIdRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.taskId = builder.taskId;
     }
 
@@ -41,13 +36,6 @@ public class DescribeDcdnRefreshTaskByIdRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -55,7 +43,6 @@ public class DescribeDcdnRefreshTaskByIdRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDcdnRefreshTaskByIdRequest, Builder> {
-        private Long ownerId; 
         private String taskId; 
 
         private Builder() {
@@ -64,21 +51,17 @@ public class DescribeDcdnRefreshTaskByIdRequest extends Request {
 
         private Builder(DescribeDcdnRefreshTaskByIdRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
             this.taskId = request.taskId;
         } 
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * TaskId.
+         * The ID of the task that you want to query. The following signature algorithms require different message digest algorithms:
+         * <p>
+         * 
+         * *   Perform the [RefreshDcdnObjectCaches](~~130620~~) operation to query refresh task IDs.
+         * *   Perform the [PreloadDcdnObjectCaches](~~130636~~) operation to query prefetch task IDs.
+         * 
+         * > You can specify at most 10 task IDs in each call. Separate IDs with commas (,).
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

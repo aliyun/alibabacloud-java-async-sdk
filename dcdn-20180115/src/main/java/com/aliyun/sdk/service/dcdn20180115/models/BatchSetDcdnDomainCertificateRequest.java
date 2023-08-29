@@ -168,7 +168,7 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         } 
 
         /**
-         * CertName.
+         * The name of the certificate.
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -177,7 +177,11 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * CertType.
+         * The type of the certificate. Valid values:
+         * <p>
+         * 
+         * *   **upload**: a custom certificate that you upload.
+         * *   **cas**: a certificate that is acquired through Certificate Management Service.
          */
         public Builder certType(String certType) {
             this.putQueryParameter("CertType", certType);
@@ -186,7 +190,10 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name for which you want to configure the HTTPS certificate. The accelerated domain must have HTTPS acceleration enabled. You can specify multiple domain names and separate them with commas (,).
+         * <p>
+         * 
+         * > You can configure up to 10 domain names in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -204,7 +211,7 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -213,7 +220,7 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * SSLPri.
+         * The private key. This parameter is required only if you enable the certificate.
          */
         public Builder SSLPri(String SSLPri) {
             this.putQueryParameter("SSLPri", SSLPri);
@@ -222,7 +229,13 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * SSLProtocol.
+         * Specifies whether to enable the HTTPS certificate. Valid values:
+         * <p>
+         * 
+         * *   \*\*on\*\*: enables the HTTPS certificate.
+         * *   **off**: does not enable the HTTPS certificate.
+         * 
+         * This is the default value.
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);
@@ -231,7 +244,7 @@ public class BatchSetDcdnDomainCertificateRequest extends Request {
         }
 
         /**
-         * SSLPub.
+         * The content of the certificate. This parameter is required only if you enable the certificate.
          */
         public Builder SSLPub(String SSLPub) {
             this.putQueryParameter("SSLPub", SSLPub);

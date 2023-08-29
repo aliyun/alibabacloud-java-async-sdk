@@ -98,7 +98,7 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * HitRatePerInterval.
+         * The byte hit ratio at each time interval. The byte hit ratio is measured in percentage.
          */
         public Builder hitRatePerInterval(HitRatePerInterval hitRatePerInterval) {
             this.hitRatePerInterval = hitRatePerInterval;
@@ -130,7 +130,7 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -202,7 +202,7 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * ByteHitRate.
+             * The byte hit ratio.
              */
             public Builder byteHitRate(Float byteHitRate) {
                 this.byteHitRate = byteHitRate;
@@ -210,7 +210,7 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * ReqHitRate.
+             * The request hit ratio.
              */
             public Builder reqHitRate(Float reqHitRate) {
                 this.reqHitRate = reqHitRate;
@@ -218,7 +218,7 @@ public class DescribeDcdnDomainHitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

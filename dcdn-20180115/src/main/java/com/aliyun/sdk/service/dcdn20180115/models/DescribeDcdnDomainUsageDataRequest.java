@@ -39,13 +39,13 @@ public class DescribeDcdnDomainUsageDataRequest extends Request {
     private String interval;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     @Validation(required = true)
     private String startTime;
+
+    @Query
+    @NameInMap("Type")
+    private String type;
 
     private DescribeDcdnDomainUsageDataRequest(Builder builder) {
         super(builder);
@@ -55,8 +55,8 @@ public class DescribeDcdnDomainUsageDataRequest extends Request {
         this.endTime = builder.endTime;
         this.field = builder.field;
         this.interval = builder.interval;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -115,17 +115,17 @@ public class DescribeDcdnDomainUsageDataRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
         return this.startTime;
+    }
+
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
     }
 
     public static final class Builder extends Request.Builder<DescribeDcdnDomainUsageDataRequest, Builder> {
@@ -135,8 +135,8 @@ public class DescribeDcdnDomainUsageDataRequest extends Request {
         private String endTime; 
         private String field; 
         private String interval; 
-        private Long ownerId; 
         private String startTime; 
+        private String type; 
 
         private Builder() {
             super();
@@ -150,12 +150,26 @@ public class DescribeDcdnDomainUsageDataRequest extends Request {
             this.endTime = request.endTime;
             this.field = request.field;
             this.interval = request.interval;
-            this.ownerId = request.ownerId;
             this.startTime = request.startTime;
+            this.type = request.type;
         } 
 
         /**
-         * Area.
+         * The billable region. Valid values:
+         * <p>
+         * 
+         * *   **CN**: Chinese mainland
+         * *   **OverSeas**: outside the Chinese mainland
+         * *   **AP1**: Asia Pacific 1
+         * *   **AP2**: Asia Pacific 2
+         * *   **AP3**: Asia Pacific 3
+         * *   **NA**: North America
+         * *   **SA**: South America
+         * *   **EU**: Europe
+         * *   **MEAA**: Middle East and Africa
+         * *   **all**: all the preceding billable regions
+         * 
+         * Default value: **CN**
          */
         public Builder area(String area) {
             this.putQueryParameter("Area", area);
@@ -164,7 +178,15 @@ public class DescribeDcdnDomainUsageDataRequest extends Request {
         }
 
         /**
-         * DataProtocol.
+         * The protocol by which the data is queried. Valid values:
+         * <p>
+         * 
+         * *   **quic**: Quick UDP Internet Connections (QUIC)
+         * *   **https**: HTTPS
+         * *   **http**: HTTP
+         * *   **all**: HTTP, HTTPS, and QUIC
+         * 
+         * Default value: **all**
          */
         public Builder dataProtocol(String dataProtocol) {
             this.putQueryParameter("DataProtocol", dataProtocol);
@@ -173,7 +195,10 @@ public class DescribeDcdnDomainUsageDataRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify up to 100 domain names in each request. Separate multiple domain names with commas (,).
+         * <p>
+         * 
+         * > If you do not specify this parameter, the usage data of all accelerated domain names that belong to your Alibaba Cloud account is returned.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -182,7 +207,10 @@ public class DescribeDcdnDomainUsageDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > The end time must be later than the start time. The maximum time range that can be queried is 31 days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -191,7 +219,14 @@ public class DescribeDcdnDomainUsageDataRequest extends Request {
         }
 
         /**
-         * Field.
+         * The type of data that you want to query. Valid values:
+         * <p>
+         * 
+         * *   **bps**: bandwidth
+         * *   **traf**: traffic
+         * *   **acc**: requests
+         * 
+         * > If the value is set to **acc**, the **Area** parameter is not supported.
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -200,7 +235,10 @@ public class DescribeDcdnDomainUsageDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The time interval between the data entries to return. Unit: seconds.
+         * <p>
+         * 
+         * The time interval varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -209,20 +247,30 @@ public class DescribeDcdnDomainUsageDataRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > The minimum time granularity at which the data is queried is 5 minutes.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * 请求数类型，取值：
+         * <p>
+         * 
+         * - **static**：静态。
+         * - **dynamic**：动态。
+         * - **all**：全部。
+         * 
+         * 默认为**all**。
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

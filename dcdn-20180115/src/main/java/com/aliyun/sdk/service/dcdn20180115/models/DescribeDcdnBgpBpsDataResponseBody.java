@@ -74,7 +74,7 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * BgpDataInterval.
+         * The BGP bandwidth data that is collected for each interval.
          */
         public Builder bgpDataInterval(java.util.List < BgpDataInterval> bgpDataInterval) {
             this.bgpDataInterval = bgpDataInterval;
@@ -82,7 +82,7 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -90,7 +90,7 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -162,7 +162,7 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * In.
+             * The inbound bandwidth. Unit: bit/s.
              */
             public Builder in(Float in) {
                 this.in = in;
@@ -170,7 +170,7 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Out.
+             * The outbound bandwidth. Unit: bit/s.
              */
             public Builder out(Float out) {
                 this.out = out;
@@ -178,7 +178,7 @@ public class DescribeDcdnBgpBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

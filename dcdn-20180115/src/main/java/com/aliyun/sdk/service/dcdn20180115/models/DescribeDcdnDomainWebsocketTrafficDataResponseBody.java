@@ -98,7 +98,7 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         private TrafficDataPerInterval trafficDataPerInterval; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +138,7 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
         }
 
         /**
-         * TrafficDataPerInterval.
+         * The network traffic returned at each time interval. Unit: bytes.
          */
         public Builder trafficDataPerInterval(TrafficDataPerInterval trafficDataPerInterval) {
             this.trafficDataPerInterval = trafficDataPerInterval;
@@ -190,7 +190,7 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
             private Float websocketTraffic; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +198,7 @@ public class DescribeDcdnDomainWebsocketTrafficDataResponseBody extends TeaModel
             }
 
             /**
-             * WebsocketTraffic.
+             * The total volume of traffic.
              */
             public Builder websocketTraffic(Float websocketTraffic) {
                 this.websocketTraffic = websocketTraffic;

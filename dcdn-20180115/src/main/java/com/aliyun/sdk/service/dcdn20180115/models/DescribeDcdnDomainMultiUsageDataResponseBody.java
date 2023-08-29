@@ -86,7 +86,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         private TrafficPerInterval trafficPerInterval; 
 
         /**
-         * EndTime.
+         * The end of the time range that was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -94,7 +94,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +102,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestPerInterval.
+         * The information about requests collected every 5 minutes.
          */
         public Builder requestPerInterval(RequestPerInterval requestPerInterval) {
             this.requestPerInterval = requestPerInterval;
@@ -110,7 +110,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range that was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -118,7 +118,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficPerInterval.
+         * The statistics of network traffic collected every 5 minutes.
          */
         public Builder trafficPerInterval(TrafficPerInterval trafficPerInterval) {
             this.trafficPerInterval = trafficPerInterval;
@@ -194,7 +194,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Domain.
+             * The domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -202,7 +202,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Request.
+             * The number of requests.
              */
             public Builder request(Long request) {
                 this.request = request;
@@ -210,7 +210,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -218,7 +218,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the requests. Valid values: StaticHttps, DynamicHttps, DynamicHttp, StaticQuic, and DynamicQuic.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -348,7 +348,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Area.
+             * The name of the region.
              */
             public Builder area(String area) {
                 this.area = area;
@@ -356,7 +356,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Bps.
+             * The number of bits per second.
              */
             public Builder bps(Float bps) {
                 this.bps = bps;
@@ -364,7 +364,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -372,7 +372,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -380,7 +380,7 @@ public class DescribeDcdnDomainMultiUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the network traffic. Valid values: Simple, IPA, and WebSocket.
              */
             public Builder type(String type) {
                 this.type = type;

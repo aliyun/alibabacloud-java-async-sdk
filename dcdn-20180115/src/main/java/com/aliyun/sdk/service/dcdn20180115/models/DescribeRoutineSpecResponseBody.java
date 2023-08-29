@@ -50,7 +50,7 @@ public class DescribeRoutineSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The specification of the CPU time slice. Valid values: 5 ms, 50 ms, and 100 ms.
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class DescribeRoutineSpecResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

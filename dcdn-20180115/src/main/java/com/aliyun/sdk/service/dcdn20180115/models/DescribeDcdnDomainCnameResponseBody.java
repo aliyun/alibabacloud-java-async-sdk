@@ -50,7 +50,7 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CnameDatas.
+         * The CNAME information.
          */
         public Builder cnameDatas(CnameDatas cnameDatas) {
             this.cnameDatas = cnameDatas;
@@ -58,7 +58,7 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * Cname.
+             * The CNAME assigned to the domain name.
              */
             public Builder cname(String cname) {
                 this.cname = cname;
@@ -130,7 +130,7 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * The accelerated domain name.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -138,7 +138,7 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The configuration status of the CNAME record. If the operation returns 0 for the parameter, the configuration was successful. Otherwise, the configuration failed.
              */
             public Builder status(Integer status) {
                 this.status = status;

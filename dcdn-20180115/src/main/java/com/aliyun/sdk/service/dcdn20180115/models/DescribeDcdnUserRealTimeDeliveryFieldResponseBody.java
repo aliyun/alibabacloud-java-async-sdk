@@ -50,7 +50,7 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
         private String requestId; 
 
         /**
-         * Content.
+         * The data returned.
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
             private Boolean selected; 
 
             /**
-             * Description.
+             * The description of the field.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -130,7 +130,7 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
             }
 
             /**
-             * FieldName.
+             * The name of the field.
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -138,7 +138,11 @@ public class DescribeDcdnUserRealTimeDeliveryFieldResponseBody extends TeaModel 
             }
 
             /**
-             * Selected.
+             * Indicates whether the field was selected.
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder selected(Boolean selected) {
                 this.selected = selected;

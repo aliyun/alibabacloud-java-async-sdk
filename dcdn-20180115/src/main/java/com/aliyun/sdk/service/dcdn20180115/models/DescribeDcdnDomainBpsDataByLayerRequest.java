@@ -37,10 +37,6 @@ public class DescribeDcdnDomainBpsDataByLayerRequest extends Request {
     private String locationNameEn;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -52,7 +48,6 @@ public class DescribeDcdnDomainBpsDataByLayerRequest extends Request {
         this.ispNameEn = builder.ispNameEn;
         this.layer = builder.layer;
         this.locationNameEn = builder.locationNameEn;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -112,13 +107,6 @@ public class DescribeDcdnDomainBpsDataByLayerRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -132,7 +120,6 @@ public class DescribeDcdnDomainBpsDataByLayerRequest extends Request {
         private String ispNameEn; 
         private String layer; 
         private String locationNameEn; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
@@ -147,12 +134,14 @@ public class DescribeDcdnDomainBpsDataByLayerRequest extends Request {
             this.ispNameEn = request.ispNameEn;
             this.layer = request.layer;
             this.locationNameEn = request.locationNameEn;
-            this.ownerId = request.ownerId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate mutiple domain names with commas (,). You can specify up to 500 domain names in each request. The query results of multiple domain names are aggregated.
+         * <p>
+         * 
+         * If you do not specify a domain name, data of all domain names is queried.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -161,7 +150,10 @@ public class DescribeDcdnDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -170,7 +162,10 @@ public class DescribeDcdnDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The time granularity of the data entries. Unit: seconds.
+         * <p>
+         * 
+         * The time granularity varies with the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see **Usage notes**.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -179,7 +174,7 @@ public class DescribeDcdnDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The Internet service provider (ISP) name. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query the ISP name. If you do not specify this parameter, all ISPs are queried.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -188,7 +183,10 @@ public class DescribeDcdnDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * Layer.
+         * The layer at which you want to query the bandwidth data. The network layer supports IPv4 and IPv6. The application layer supports http, https, and quic. You can also set the value to all.
+         * <p>
+         * 
+         * Default value: all.
          */
         public Builder layer(String layer) {
             this.putQueryParameter("Layer", layer);
@@ -197,7 +195,7 @@ public class DescribeDcdnDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The region name. You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions. If you do not specify this parameter, all regions are queried.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -206,16 +204,12 @@ public class DescribeDcdnDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * The minimum data granularity is 5 minutes.
+         * 
+         * If you do not set this parameter, data in the last 24 hours is queried.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

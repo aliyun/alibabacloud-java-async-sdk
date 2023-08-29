@@ -98,7 +98,7 @@ public class DeleteDcdnSpecificConfigRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * The ID of the configuration. Separate multiple configuration IDs with commas (,). For more information about ConfigId, see [Usage notes on ConfigId](~~410558~~).
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -107,7 +107,7 @@ public class DeleteDcdnSpecificConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

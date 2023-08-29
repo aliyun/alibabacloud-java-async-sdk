@@ -83,7 +83,7 @@ public class DescribeDcdnSMCertificateDetailRequest extends Request {
         } 
 
         /**
-         * CertIdentifier.
+         * The ID of the certificate.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.putQueryParameter("CertIdentifier", certIdentifier);

@@ -21,6 +21,12 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
     @NameInMap("DomainQuota")
     private Integer domainQuota;
 
+    @NameInMap("IgnoreParamsQuota")
+    private Integer ignoreParamsQuota;
+
+    @NameInMap("IgnoreParamsRemain")
+    private Integer ignoreParamsRemain;
+
     @NameInMap("PreloadQuota")
     private Integer preloadQuota;
 
@@ -46,6 +52,8 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         this.blockQuota = builder.blockQuota;
         this.blockRemain = builder.blockRemain;
         this.domainQuota = builder.domainQuota;
+        this.ignoreParamsQuota = builder.ignoreParamsQuota;
+        this.ignoreParamsRemain = builder.ignoreParamsRemain;
         this.preloadQuota = builder.preloadQuota;
         this.preloadRemain = builder.preloadRemain;
         this.refreshDirQuota = builder.refreshDirQuota;
@@ -82,6 +90,20 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
      */
     public Integer getDomainQuota() {
         return this.domainQuota;
+    }
+
+    /**
+     * @return ignoreParamsQuota
+     */
+    public Integer getIgnoreParamsQuota() {
+        return this.ignoreParamsQuota;
+    }
+
+    /**
+     * @return ignoreParamsRemain
+     */
+    public Integer getIgnoreParamsRemain() {
+        return this.ignoreParamsRemain;
     }
 
     /**
@@ -137,6 +159,8 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         private Integer blockQuota; 
         private Integer blockRemain; 
         private Integer domainQuota; 
+        private Integer ignoreParamsQuota; 
+        private Integer ignoreParamsRemain; 
         private Integer preloadQuota; 
         private Integer preloadRemain; 
         private Integer refreshDirQuota; 
@@ -146,7 +170,7 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BlockQuota.
+         * The maximum number of URLs that can be blocked.
          */
         public Builder blockQuota(Integer blockQuota) {
             this.blockQuota = blockQuota;
@@ -154,7 +178,7 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * BlockRemain.
+         * The remaining number of URLs that can be blocked.
          */
         public Builder blockRemain(Integer blockRemain) {
             this.blockRemain = blockRemain;
@@ -162,7 +186,7 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * DomainQuota.
+         * The maximum number of accelerated domains.
          */
         public Builder domainQuota(Integer domainQuota) {
             this.domainQuota = domainQuota;
@@ -170,7 +194,23 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * PreloadQuota.
+         * The maximum number of URLs or directories with parameters ignored that can be refreshed.
+         */
+        public Builder ignoreParamsQuota(Integer ignoreParamsQuota) {
+            this.ignoreParamsQuota = ignoreParamsQuota;
+            return this;
+        }
+
+        /**
+         * The number of remaining URLs or directories with parameters ignored that can be refreshed.
+         */
+        public Builder ignoreParamsRemain(Integer ignoreParamsRemain) {
+            this.ignoreParamsRemain = ignoreParamsRemain;
+            return this;
+        }
+
+        /**
+         * The maximum number of URLs that can be prefetched.
          */
         public Builder preloadQuota(Integer preloadQuota) {
             this.preloadQuota = preloadQuota;
@@ -178,7 +218,7 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * PreloadRemain.
+         * The remaining number of URLs that can be prefetched.
          */
         public Builder preloadRemain(Integer preloadRemain) {
             this.preloadRemain = preloadRemain;
@@ -186,7 +226,7 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RefreshDirQuota.
+         * The maximum number of directories that can be refreshed.
          */
         public Builder refreshDirQuota(Integer refreshDirQuota) {
             this.refreshDirQuota = refreshDirQuota;
@@ -194,7 +234,7 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RefreshDirRemain.
+         * The remaining number of directories that can be refreshed.
          */
         public Builder refreshDirRemain(Integer refreshDirRemain) {
             this.refreshDirRemain = refreshDirRemain;
@@ -202,7 +242,7 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RefreshUrlQuota.
+         * The maximum number of URLs that can be refreshed.
          */
         public Builder refreshUrlQuota(Integer refreshUrlQuota) {
             this.refreshUrlQuota = refreshUrlQuota;
@@ -210,7 +250,7 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RefreshUrlRemain.
+         * The remaining number of URLs that can be refreshed.
          */
         public Builder refreshUrlRemain(Integer refreshUrlRemain) {
             this.refreshUrlRemain = refreshUrlRemain;
@@ -218,7 +258,7 @@ public class DescribeDcdnUserQuotaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

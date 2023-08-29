@@ -50,7 +50,7 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CertificateListModel.
+         * Details about certificates.
          */
         public Builder certificateListModel(CertificateListModel certificateListModel) {
             this.certificateListModel = certificateListModel;
@@ -58,7 +58,7 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             private Long lastTime; 
 
             /**
-             * CertId.
+             * The ID of the certificate.
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -166,7 +166,7 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * CertName.
+             * The name of the certificate.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -174,7 +174,7 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Common.
+             * The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.
              */
             public Builder common(String common) {
                 this.common = common;
@@ -182,7 +182,7 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Fingerprint.
+             * The fingerprint of the certificate.
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -190,7 +190,7 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * The certificate authority (CA) that issued the certificate.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -198,7 +198,7 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * The timestamp.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -292,7 +292,7 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * CertList.
+             * Details about each certificate.
              */
             public Builder certList(CertList certList) {
                 this.certList = certList;
@@ -300,7 +300,7 @@ public class DescribeDcdnCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of certificates.
              */
             public Builder count(Integer count) {
                 this.count = count;

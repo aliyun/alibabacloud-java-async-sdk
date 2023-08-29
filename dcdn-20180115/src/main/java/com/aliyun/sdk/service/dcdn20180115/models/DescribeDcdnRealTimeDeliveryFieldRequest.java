@@ -16,14 +16,9 @@ public class DescribeDcdnRealTimeDeliveryFieldRequest extends Request {
     @NameInMap("BusinessType")
     private String businessType;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DescribeDcdnRealTimeDeliveryFieldRequest(Builder builder) {
         super(builder);
         this.businessType = builder.businessType;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -46,16 +41,8 @@ public class DescribeDcdnRealTimeDeliveryFieldRequest extends Request {
         return this.businessType;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDcdnRealTimeDeliveryFieldRequest, Builder> {
         private String businessType; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -64,24 +51,19 @@ public class DescribeDcdnRealTimeDeliveryFieldRequest extends Request {
         private Builder(DescribeDcdnRealTimeDeliveryFieldRequest request) {
             super(request);
             this.businessType = request.businessType;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * BusinessType.
+         * The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
+         * <p>
+         * 
+         * *   **cdn_log_access_l1**: access logs of Dynamic Content Delivery Network (DCDN) points of presence (POPs)
+         * *   **cdn_log_origin**: back-to-origin logs
+         * *   **cdn_log_er**: EdgeRoutine logs
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
             this.businessType = businessType;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

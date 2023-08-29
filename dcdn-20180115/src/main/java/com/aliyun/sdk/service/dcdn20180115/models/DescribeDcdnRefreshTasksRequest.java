@@ -196,7 +196,7 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -205,7 +205,10 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -214,7 +217,7 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * ObjectPath.
+         * The path of the object. The path is used as a condition for exact matching.
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -223,7 +226,15 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * ObjectType.
+         * The type of the task. Valid values:
+         * <p>
+         * 
+         * *   **file**: URL-based refresh
+         * *   **directory**: directory-based refresh
+         * *   **regex**: regular expression-based refresh
+         * *   **preload**: URL-based prefetch
+         * 
+         * If you set **DomainName** or **Status**, you must also set this parameter.
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);
@@ -241,7 +252,7 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Valid values: **1** to **100000**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -250,7 +261,7 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**. Maximum value: **50**. Valid values: **1** to **50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -268,7 +279,7 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -277,7 +288,12 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the task. Valid values:
+         * <p>
+         * 
+         * *   **Complete**: The task is complete.
+         * *   **Refreshing**: The task is in progress.
+         * *   **Failed**: The task failed.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -286,7 +302,7 @@ public class DescribeDcdnRefreshTasksRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the task. A task ID is assigned when you create a refresh or prefetch task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

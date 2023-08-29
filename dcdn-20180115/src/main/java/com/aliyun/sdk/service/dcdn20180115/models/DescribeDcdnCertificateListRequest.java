@@ -82,7 +82,10 @@ public class DescribeDcdnCertificateListRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. Separate multiple accelerated domain names with commas (,).
+         * <p>
+         * 
+         * By default, this operation queries the certificates of all accelerated domain names.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

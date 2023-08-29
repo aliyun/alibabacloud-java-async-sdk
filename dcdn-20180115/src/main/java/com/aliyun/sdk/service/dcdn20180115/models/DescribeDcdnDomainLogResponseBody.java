@@ -62,7 +62,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DomainLogDetails.
+         * The log information. The log information is indicated by the DomainLogDetail parameter.
          */
         public Builder domainLogDetails(DomainLogDetails domainLogDetails) {
             this.domainLogDetails = domainLogDetails;
@@ -70,7 +70,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -78,7 +78,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -166,7 +166,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * EndTime.
+             * The end of the time range during which data was queried.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -174,7 +174,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogName.
+             * The name of the log file.
              */
             public Builder logName(String logName) {
                 this.logName = logName;
@@ -182,7 +182,10 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogPath.
+             * The path of the log file.
+             * <p>
+             * 
+             * Take note of the Expires field (expiration timestamp) in the response parameter LogPath. If the log download URL expires, you must obtain it again. For more information, see [LogPath field](~~31952~~).
              */
             public Builder logPath(String logPath) {
                 this.logPath = logPath;
@@ -190,7 +193,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogSize.
+             * The size of the log file. Unit: bytes.
              */
             public Builder logSize(Long logSize) {
                 this.logSize = logSize;
@@ -198,7 +201,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start of the time range during which data was queried.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -304,7 +307,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * PageIndex.
+             * The page number of the returned page.
              */
             public Builder pageIndex(Long pageIndex) {
                 this.pageIndex = pageIndex;
@@ -312,7 +315,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -320,7 +323,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of entries returned.
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -385,7 +388,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             private PageInfos pageInfos; 
 
             /**
-             * LogCount.
+             * The total number of entries returned on the current page.
              */
             public Builder logCount(Long logCount) {
                 this.logCount = logCount;
@@ -393,7 +396,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogInfos.
+             * The log information. The log information is indicated by the LogInfoDetail parameter.
              */
             public Builder logInfos(LogInfos logInfos) {
                 this.logInfos = logInfos;
@@ -401,7 +404,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * PageInfos.
+             * The page information. The page information is indicated by the PageInfoDetail parameter.
              */
             public Builder pageInfos(PageInfos pageInfos) {
                 this.pageInfos = pageInfos;

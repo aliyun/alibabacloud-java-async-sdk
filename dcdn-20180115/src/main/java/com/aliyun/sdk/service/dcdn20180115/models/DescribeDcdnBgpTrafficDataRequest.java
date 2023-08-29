@@ -25,10 +25,6 @@ public class DescribeDcdnBgpTrafficDataRequest extends Request {
     private String isp;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -37,7 +33,6 @@ public class DescribeDcdnBgpTrafficDataRequest extends Request {
         this.endTime = builder.endTime;
         this.interval = builder.interval;
         this.isp = builder.isp;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -76,13 +71,6 @@ public class DescribeDcdnBgpTrafficDataRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -93,7 +81,6 @@ public class DescribeDcdnBgpTrafficDataRequest extends Request {
         private String endTime; 
         private String interval; 
         private String isp; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
@@ -105,12 +92,11 @@ public class DescribeDcdnBgpTrafficDataRequest extends Request {
             this.endTime = request.endTime;
             this.interval = request.interval;
             this.isp = request.isp;
-            this.ownerId = request.ownerId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -119,7 +105,7 @@ public class DescribeDcdnBgpTrafficDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The data collection interval. Unit: seconds. Valid values: 300 and 3600. Default value: 300. The default value of 300 seconds is equal to 5 minutes. The value of this parameter varies based on the time range from the specified start time to the specified end time.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -128,7 +114,14 @@ public class DescribeDcdnBgpTrafficDataRequest extends Request {
         }
 
         /**
-         * Isp.
+         * The ISP. Separate multiple ISPs with commas (,). If you specify multiple ISPs, the data for the ISPs is aggregated. If you do not specify this parameter, the operation returns the data for all the ISPs.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   cu: China Unicom
+         * *   cmi: China Mobile
+         * *   ct: China Telecom
          */
         public Builder isp(String isp) {
             this.putQueryParameter("Isp", isp);
@@ -137,16 +130,12 @@ public class DescribeDcdnBgpTrafficDataRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * The minimum data collection interval is an hour.
+         * 
+         * If you do not set this parameter, data collected in the last 24 hours is queried.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

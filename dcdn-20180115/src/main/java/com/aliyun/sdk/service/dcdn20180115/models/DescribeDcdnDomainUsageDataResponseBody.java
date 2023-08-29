@@ -122,7 +122,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         private UsageDataPerInterval usageDataPerInterval; 
 
         /**
-         * Area.
+         * The billable region where the usage data was collected.
          */
         public Builder area(String area) {
             this.area = area;
@@ -130,7 +130,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -138,7 +138,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -146,7 +146,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -154,7 +154,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -170,7 +170,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The type of the content returned.
          */
         public Builder type(String type) {
             this.type = type;
@@ -178,7 +178,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * UsageDataPerInterval.
+         * The network traffic that was collected at each interval.
          */
         public Builder usageDataPerInterval(UsageDataPerInterval usageDataPerInterval) {
             this.usageDataPerInterval = usageDataPerInterval;
@@ -254,7 +254,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * PeakTime.
+             * The time of the peak bandwidth value if the **Field** parameter in the request is set to **bps**. Otherwise, this parameter returns the same value as the **TimeStamp** parameter.
              */
             public Builder peakTime(String peakTime) {
                 this.peakTime = peakTime;
@@ -262,7 +262,10 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * SpecialValue.
+             * The data usage in a specific scenario.
+             * <p>
+             * 
+             * > SpecialValue indicates the data usage in a specific scenario. If no special billable item is specified, ignore this parameter.
              */
             public Builder specialValue(String specialValue) {
                 this.specialValue = specialValue;
@@ -270,7 +273,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -278,7 +281,7 @@ public class DescribeDcdnDomainUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The amount of resource usage.
              */
             public Builder value(String value) {
                 this.value = value;

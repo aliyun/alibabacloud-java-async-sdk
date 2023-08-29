@@ -83,7 +83,7 @@ public class DescribeDcdnDomainDetailRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

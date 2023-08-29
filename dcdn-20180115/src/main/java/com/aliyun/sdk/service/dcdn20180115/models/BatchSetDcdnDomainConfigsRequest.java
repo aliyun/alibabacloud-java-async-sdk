@@ -112,7 +112,7 @@ public class BatchSetDcdnDomainConfigsRequest extends Request {
         } 
 
         /**
-         * DomainNames.
+         * The accelerated domain names. Specify multiple accelerated domain names with commas (,).
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -121,7 +121,32 @@ public class BatchSetDcdnDomainConfigsRequest extends Request {
         }
 
         /**
-         * Functions.
+         * The features that you want to configure. Format:
+         * <p>
+         * 
+         * > 
+         * 
+         * *   **functionName**: The name of the feature. Separate multiple values with commas (,). For more information, see [A list of features](~~410622~~).
+         * 
+         * *   **argName**: The feature parameters for **functionName**.
+         * 
+         * *   **argValue**: The parameter values set for **functionName**.
+         * 
+         *         [
+         *          {
+         *            "functionArgs": [
+         *             {
+         *              "argName": "Parameter A", 
+         *              "argValue": "Parameter value"
+         *             }, 
+         *           {
+         *             "argName": "Parameter B", 
+         *             "argValue": "Parameter value"
+         *              }
+         *          ], 
+         *          "functionName": "Feature name"
+         *             }
+         *         ]
          */
         public Builder functions(String functions) {
             this.putQueryParameter("Functions", functions);

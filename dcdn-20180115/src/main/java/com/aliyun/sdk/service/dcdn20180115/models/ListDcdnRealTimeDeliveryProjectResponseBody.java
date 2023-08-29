@@ -62,7 +62,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Content.
+         * The configuration results of the domain name.
          */
         public Builder content(Content content) {
             this.content = content;
@@ -70,7 +70,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -226,7 +226,12 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * BusinessType.
+             * The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
+             * <p>
+             * 
+             * *   **cdn_log_access_l1**: access logs of DCDN POPs
+             * *   **cdn_log_origin**: back-to-origin logs
+             * *   **cdn_log_er**: EdgeRoutine logs
              */
             public Builder businessType(String businessType) {
                 this.businessType = businessType;
@@ -234,7 +239,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
             }
 
             /**
-             * DataCenter.
+             * The region from which logs were collected.
              */
             public Builder dataCenter(String dataCenter) {
                 this.dataCenter = dataCenter;
@@ -242,7 +247,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain names from which logs were collected. You can specify one or more domain names. Separate multiple domain names with commas (,).
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -250,7 +255,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
             }
 
             /**
-             * FieldName.
+             * The name of the field. For more information about fields in real-time log entries, see [Fields in a real-time log](~~324199~~).
              */
             public Builder fieldName(String fieldName) {
                 this.fieldName = fieldName;
@@ -258,7 +263,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * The name of the project.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -266,7 +271,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
             }
 
             /**
-             * SLSLogStore.
+             * The name of the Logstore.
              */
             public Builder SLSLogStore(String SLSLogStore) {
                 this.SLSLogStore = SLSLogStore;
@@ -274,7 +279,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
             }
 
             /**
-             * SLSProject.
+             * The name of the log file.
              */
             public Builder SLSProject(String SLSProject) {
                 this.SLSProject = SLSProject;
@@ -282,7 +287,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
             }
 
             /**
-             * SLSRegion.
+             * The region to which logs were delivered.
              */
             public Builder SLSRegion(String SLSRegion) {
                 this.SLSRegion = SLSRegion;
@@ -290,7 +295,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingRate.
+             * The sampling rate.
              */
             public Builder samplingRate(Float samplingRate) {
                 this.samplingRate = samplingRate;
@@ -298,7 +303,7 @@ public class ListDcdnRealTimeDeliveryProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of log delivery. Only **SLS_POST** is supported.
              */
             public Builder type(String type) {
                 this.type = type;

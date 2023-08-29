@@ -18,10 +18,6 @@ public class DescribeDcdnDomainTopReferVisitRequest extends Request {
     private String domainName;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("SortBy")
     private String sortBy;
 
@@ -32,7 +28,6 @@ public class DescribeDcdnDomainTopReferVisitRequest extends Request {
     private DescribeDcdnDomainTopReferVisitRequest(Builder builder) {
         super(builder);
         this.domainName = builder.domainName;
-        this.ownerId = builder.ownerId;
         this.sortBy = builder.sortBy;
         this.startTime = builder.startTime;
     }
@@ -58,13 +53,6 @@ public class DescribeDcdnDomainTopReferVisitRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -80,7 +68,6 @@ public class DescribeDcdnDomainTopReferVisitRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDcdnDomainTopReferVisitRequest, Builder> {
         private String domainName; 
-        private Long ownerId; 
         private String sortBy; 
         private String startTime; 
 
@@ -91,13 +78,12 @@ public class DescribeDcdnDomainTopReferVisitRequest extends Request {
         private Builder(DescribeDcdnDomainTopReferVisitRequest request) {
             super(request);
             this.domainName = request.domainName;
-            this.ownerId = request.ownerId;
             this.sortBy = request.sortBy;
             this.startTime = request.startTime;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -106,16 +92,13 @@ public class DescribeDcdnDomainTopReferVisitRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * SortBy.
+         * The sorting order. Valid values:
+         * <p>
+         * 
+         * *   **traf**: by network traffic
+         * *   **pv**: by the number of visits
+         * 
+         * Default value: **pv**.
          */
         public Builder sortBy(String sortBy) {
             this.putQueryParameter("SortBy", sortBy);
@@ -124,7 +107,12 @@ public class DescribeDcdnDomainTopReferVisitRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * To query the data on a specified day, use the yyyy-MM-ddT16:00:00Z format.
+         * 
+         * If you do not set this parameter, data collected within the last 24 hours is queried.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

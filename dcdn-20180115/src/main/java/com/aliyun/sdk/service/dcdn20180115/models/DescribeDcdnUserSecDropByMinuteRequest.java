@@ -30,15 +30,12 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
     private String object;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("PageNumber")
     private Long pageNumber;
 
     @Query
     @NameInMap("PageSize")
+    @Validation(maximum = 100)
     private Long pageSize;
 
     @Query
@@ -60,7 +57,6 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         this.endTime = builder.endTime;
         this.lang = builder.lang;
         this.object = builder.object;
-        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.ruleName = builder.ruleName;
@@ -110,13 +106,6 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -156,7 +145,6 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         private String endTime; 
         private String lang; 
         private String object; 
-        private Long ownerId; 
         private Long pageNumber; 
         private Long pageSize; 
         private String ruleName; 
@@ -173,7 +161,6 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
             this.endTime = request.endTime;
             this.lang = request.lang;
             this.object = request.object;
-            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.ruleName = request.ruleName;
@@ -182,7 +169,7 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -191,7 +178,10 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2006-01-02T15:05:04Z.
+         * <p>
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -200,7 +190,7 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language. Valid values: en and zh. Default value: en
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -209,7 +199,7 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * Object.
+         * The object that triggered rate limiting.
          */
         public Builder object(String object) {
             this.putQueryParameter("Object", object);
@@ -218,16 +208,7 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -236,7 +217,7 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Maximum value: 100.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -245,7 +226,7 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * RuleName.
+         * The rule that was triggered.
          */
         public Builder ruleName(String ruleName) {
             this.putQueryParameter("RuleName", ruleName);
@@ -254,7 +235,7 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * SecFunc.
+         * The name of the security feature.
          */
         public Builder secFunc(String secFunc) {
             this.putQueryParameter("SecFunc", secFunc);
@@ -263,7 +244,7 @@ public class DescribeDcdnUserSecDropByMinuteRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2006-01-02T15:04:04Z.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

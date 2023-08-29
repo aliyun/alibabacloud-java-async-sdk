@@ -98,7 +98,7 @@ public class DeleteDcdnIpaSpecificConfigRequest extends Request {
         } 
 
         /**
-         * ConfigId.
+         * The ID of the configuration. You can call the [DescribeDcdnDomainConfigs](~~130625~~) operation to query configuration IDs.
          */
         public Builder configId(String configId) {
             this.putQueryParameter("ConfigId", configId);
@@ -107,7 +107,7 @@ public class DeleteDcdnIpaSpecificConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify only one domain name in each request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

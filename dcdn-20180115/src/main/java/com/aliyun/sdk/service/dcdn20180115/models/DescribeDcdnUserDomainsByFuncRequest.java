@@ -26,10 +26,6 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
     private Integer funcId;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("PageNumber")
     @Validation(maximum = 100000, minimum = 1)
     private Integer pageNumber;
@@ -48,7 +44,6 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
         this.domainName = builder.domainName;
         this.funcFilter = builder.funcFilter;
         this.funcId = builder.funcId;
-        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
@@ -89,13 +84,6 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -120,7 +108,6 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
         private String domainName; 
         private String funcFilter; 
         private Integer funcId; 
-        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String resourceGroupId; 
@@ -134,14 +121,13 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
             this.domainName = request.domainName;
             this.funcFilter = request.funcFilter;
             this.funcId = request.funcId;
-            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name whose ICP filing status you want to update.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -150,7 +136,11 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
         }
 
         /**
-         * FuncFilter.
+         * Specifies whether the feature that is specified by the FuncId parameter is enabled.
+         * <p>
+         * 
+         * *   **config**: enabled
+         * *   **unconfig**: not enabled
          */
         public Builder funcFilter(String funcFilter) {
             this.putQueryParameter("FuncFilter", funcFilter);
@@ -159,7 +149,7 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
         }
 
         /**
-         * FuncId.
+         * The ID of the feature. For more information about how to query feature IDs, see [Parameters for configuring features for domain names](~~410622~~). For example, the ID of the origin host feature (set_req_host_header) is 18.
          */
         public Builder funcId(Integer funcId) {
             this.putQueryParameter("FuncId", funcId);
@@ -168,16 +158,7 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * PageNumber.
+         * The number of the page to return. Default value: **1**. Valid values: **1 to 100000**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -186,7 +167,7 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: **20**. Valid values: **1 to 500**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -195,7 +176,7 @@ public class DescribeDcdnUserDomainsByFuncRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

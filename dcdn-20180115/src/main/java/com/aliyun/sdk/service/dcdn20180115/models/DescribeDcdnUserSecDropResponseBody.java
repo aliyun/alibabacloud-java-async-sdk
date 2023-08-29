@@ -74,7 +74,7 @@ public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
         private String uuidStr; 
 
         /**
-         * Drops.
+         * The number of packets that are blocked.
          */
         public Builder drops(Integer drops) {
             this.drops = drops;
@@ -82,7 +82,11 @@ public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
         }
 
         /**
-         * Msg.
+         * Indicates whether the information is found.
+         * <p>
+         * 
+         * *   Found
+         * *   Not Found
          */
         public Builder msg(String msg) {
             this.msg = msg;
@@ -90,7 +94,7 @@ public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +102,7 @@ public class DescribeDcdnUserSecDropResponseBody extends TeaModel {
         }
 
         /**
-         * UuidStr.
+         * The character string that is concatenated based on the request parameters and is used to locate causes when data is not found.
          */
         public Builder uuidStr(String uuidStr) {
             this.uuidStr = uuidStr;

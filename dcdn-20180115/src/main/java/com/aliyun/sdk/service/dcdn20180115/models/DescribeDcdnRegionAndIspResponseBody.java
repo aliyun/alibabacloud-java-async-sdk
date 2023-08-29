@@ -62,7 +62,7 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Isps.
+         * The list of ISPs.
          */
         public Builder isps(Isps isps) {
             this.isps = isps;
@@ -70,7 +70,7 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         }
 
         /**
-         * Regions.
+         * The list of regions.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -78,7 +78,7 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
             private String nameZh; 
 
             /**
-             * NameEn.
+             * The English name of the region.
              */
             public Builder nameEn(String nameEn) {
                 this.nameEn = nameEn;
@@ -138,7 +138,7 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
             }
 
             /**
-             * NameZh.
+             * The Chinese name of the ISP.
              */
             public Builder nameZh(String nameZh) {
                 this.nameZh = nameZh;
@@ -232,7 +232,7 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
             private String nameZh; 
 
             /**
-             * NameEn.
+             * The English name of the region.
              */
             public Builder nameEn(String nameEn) {
                 this.nameEn = nameEn;
@@ -240,7 +240,7 @@ public class DescribeDcdnRegionAndIspResponseBody extends TeaModel {
             }
 
             /**
-             * NameZh.
+             * The Chinese name of the region.
              */
             public Builder nameZh(String nameZh) {
                 this.nameZh = nameZh;

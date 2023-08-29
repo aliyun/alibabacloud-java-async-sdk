@@ -97,7 +97,7 @@ public class RefreshDcdnObjectCachesRequest extends Request {
         } 
 
         /**
-         * ObjectPath.
+         * The path of the objects that you want to refresh. Separate multiple URLs with line feed characters (\n) or a pair of carriage return and line feed characters (\r\n).
          */
         public Builder objectPath(String objectPath) {
             this.putQueryParameter("ObjectPath", objectPath);
@@ -106,7 +106,11 @@ public class RefreshDcdnObjectCachesRequest extends Request {
         }
 
         /**
-         * ObjectType.
+         * The refresh type. Valid values:
+         * <p>
+         * 
+         * *   **File**: URL
+         * *   **Directory**: directory
          */
         public Builder objectType(String objectType) {
             this.putQueryParameter("ObjectType", objectType);

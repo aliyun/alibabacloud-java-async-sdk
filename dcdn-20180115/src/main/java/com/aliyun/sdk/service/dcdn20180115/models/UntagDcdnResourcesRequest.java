@@ -17,10 +17,6 @@ public class UntagDcdnResourcesRequest extends Request {
     private Boolean all;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("ResourceId")
     @Validation(required = true)
     private java.util.List < String > resourceId;
@@ -37,7 +33,6 @@ public class UntagDcdnResourcesRequest extends Request {
     private UntagDcdnResourcesRequest(Builder builder) {
         super(builder);
         this.all = builder.all;
-        this.ownerId = builder.ownerId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tagKey = builder.tagKey;
@@ -64,13 +59,6 @@ public class UntagDcdnResourcesRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return resourceId
      */
     public java.util.List < String > getResourceId() {
@@ -93,7 +81,6 @@ public class UntagDcdnResourcesRequest extends Request {
 
     public static final class Builder extends Request.Builder<UntagDcdnResourcesRequest, Builder> {
         private Boolean all; 
-        private Long ownerId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
         private java.util.List < String > tagKey; 
@@ -105,14 +92,19 @@ public class UntagDcdnResourcesRequest extends Request {
         private Builder(UntagDcdnResourcesRequest request) {
             super(request);
             this.all = request.all;
-            this.ownerId = request.ownerId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
             this.tagKey = request.tagKey;
         } 
 
         /**
-         * All.
+         * Specifies whether to delete all tags. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * Default value: **false**
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -121,16 +113,7 @@ public class UntagDcdnResourcesRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ResourceId.
+         * The ID of the resource. Valid values of N: **1** to **50**.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -139,7 +122,7 @@ public class UntagDcdnResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **DOMAIN**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -148,7 +131,7 @@ public class UntagDcdnResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * The key of the tag. Valid values of N: **1** to **20**.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

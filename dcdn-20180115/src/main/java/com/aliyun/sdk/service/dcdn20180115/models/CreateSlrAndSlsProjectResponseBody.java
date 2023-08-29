@@ -50,7 +50,7 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
         private SlsInfo slsInfo; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
         }
 
         /**
-         * SlsInfo.
+         * The information about Log Service.
          */
         public Builder slsInfo(SlsInfo slsInfo) {
             this.slsInfo = slsInfo;
@@ -134,7 +134,7 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * EndPoint.
+             * The endpoint of Log Service.
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -142,7 +142,7 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
             }
 
             /**
-             * LogStore.
+             * The Logstore of Log Service.
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -150,7 +150,7 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * The project of Log Service.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -158,7 +158,7 @@ public class CreateSlrAndSlsProjectResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region where Log Service resides.
              */
             public Builder region(String region) {
                 this.region = region;

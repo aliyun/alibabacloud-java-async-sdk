@@ -21,15 +21,10 @@ public class UpdateDcdnUserRealTimeDeliveryFieldRequest extends Request {
     @Validation(required = true)
     private String fields;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private UpdateDcdnUserRealTimeDeliveryFieldRequest(Builder builder) {
         super(builder);
         this.businessType = builder.businessType;
         this.fields = builder.fields;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -59,17 +54,9 @@ public class UpdateDcdnUserRealTimeDeliveryFieldRequest extends Request {
         return this.fields;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateDcdnUserRealTimeDeliveryFieldRequest, Builder> {
         private String businessType; 
         private String fields; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -79,11 +66,15 @@ public class UpdateDcdnUserRealTimeDeliveryFieldRequest extends Request {
             super(request);
             this.businessType = request.businessType;
             this.fields = request.fields;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * BusinessType.
+         * The type of the collected logs. Default value: cdn_log_access_l1. Valid values:
+         * <p>
+         * 
+         * *   **cdn_log_access_l1**: access logs of L1 Dynamic Route for CDN (DCDN) points of presence (POPs)
+         * *   **cdn_log_origin**: back-to-origin logs
+         * *   **cdn_log_er**: EdgeRoutine logs
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -92,20 +83,11 @@ public class UpdateDcdnUserRealTimeDeliveryFieldRequest extends Request {
         }
 
         /**
-         * Fields.
+         * The list of fields. Separate multiple fields with commas (,). For more information, see [Fields in a real-time log](~~324199~~).
          */
         public Builder fields(String fields) {
             this.putQueryParameter("Fields", fields);
             this.fields = fields;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

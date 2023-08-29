@@ -98,7 +98,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * QpsDataPerInterval.
+         * The QPS returned at each time interval.
          */
         public Builder qpsDataPerInterval(QpsDataPerInterval qpsDataPerInterval) {
             this.qpsDataPerInterval = qpsDataPerInterval;
@@ -130,7 +130,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -298,7 +298,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Acc.
+             * The total number of requests.
              */
             public Builder acc(Float acc) {
                 this.acc = acc;
@@ -306,7 +306,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicHttpAcc.
+             * The number of requests for dynamic content delivery over HTTP.
              */
             public Builder dynamicHttpAcc(Float dynamicHttpAcc) {
                 this.dynamicHttpAcc = dynamicHttpAcc;
@@ -314,7 +314,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicHttpQps.
+             * The QPS for dynamic content delivery over HTTP.
              */
             public Builder dynamicHttpQps(Float dynamicHttpQps) {
                 this.dynamicHttpQps = dynamicHttpQps;
@@ -322,7 +322,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicHttpsAcc.
+             * The number of requests for dynamic content delivery over HTTPS.
              */
             public Builder dynamicHttpsAcc(Float dynamicHttpsAcc) {
                 this.dynamicHttpsAcc = dynamicHttpsAcc;
@@ -330,7 +330,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicHttpsQps.
+             * The QPS for dynamic content delivery over HTTPS.
              */
             public Builder dynamicHttpsQps(Float dynamicHttpsQps) {
                 this.dynamicHttpsQps = dynamicHttpsQps;
@@ -338,7 +338,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Qps.
+             * The total QPS.
              */
             public Builder qps(Float qps) {
                 this.qps = qps;
@@ -346,7 +346,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * StaticHttpAcc.
+             * The number of requests for static content delivery over HTTP.
              */
             public Builder staticHttpAcc(Float staticHttpAcc) {
                 this.staticHttpAcc = staticHttpAcc;
@@ -354,7 +354,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * StaticHttpQps.
+             * The QPS for static content delivery over HTTP.
              */
             public Builder staticHttpQps(Float staticHttpQps) {
                 this.staticHttpQps = staticHttpQps;
@@ -362,7 +362,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * StaticHttpsAcc.
+             * The number of requests for static content delivery over HTTPS.
              */
             public Builder staticHttpsAcc(Float staticHttpsAcc) {
                 this.staticHttpsAcc = staticHttpsAcc;
@@ -370,7 +370,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * StaticHttpsQps.
+             * The QPS for static content delivery over HTTPS.
              */
             public Builder staticHttpsQps(Float staticHttpsQps) {
                 this.staticHttpsQps = staticHttpsQps;
@@ -378,7 +378,7 @@ public class DescribeDcdnDomainQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

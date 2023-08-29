@@ -182,7 +182,7 @@ public class AddDcdnIpaDomainRequest extends Request {
         } 
 
         /**
-         * CheckUrl.
+         * The URL that is used for health checks.
          */
         public Builder checkUrl(String checkUrl) {
             this.putQueryParameter("CheckUrl", checkUrl);
@@ -191,7 +191,10 @@ public class AddDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * The domain name to be added to IPA.
+         * <p>
+         * 
+         * A wildcard domain that starts with a period (.) is supported, such as .example.com.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -218,7 +221,15 @@ public class AddDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * The protocol. Valid values:
+         * <p>
+         * 
+         * *   **udp**
+         * *   **tcp**
+         * 
+         * **
+         * 
+         * **Description** For example: `{"protocol":"udp"}`.
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -227,7 +238,7 @@ public class AddDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. If you do not specify a value for this parameter, the system automatically assigns the ID of the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -236,7 +247,12 @@ public class AddDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * Scope.
+         * The acceleration region. Default value: domestic. Valid values:
+         * <p>
+         * 
+         * *   **domestic**: Chinese mainland
+         * *   **overseas**: outside the Chinese mainland
+         * *   **global**: global
          */
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
@@ -254,7 +270,7 @@ public class AddDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * Sources.
+         * The information about the addresses of origin servers.
          */
         public Builder sources(String sources) {
             this.putQueryParameter("Sources", sources);
@@ -263,7 +279,7 @@ public class AddDcdnIpaDomainRequest extends Request {
         }
 
         /**
-         * TopLevelDomain.
+         * The top-level domain.
          */
         public Builder topLevelDomain(String topLevelDomain) {
             this.putQueryParameter("TopLevelDomain", topLevelDomain);

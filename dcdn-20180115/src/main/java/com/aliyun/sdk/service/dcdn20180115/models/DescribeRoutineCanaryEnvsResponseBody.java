@@ -50,7 +50,7 @@ public class DescribeRoutineCanaryEnvsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * The canary release environments that are supported.
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class DescribeRoutineCanaryEnvsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

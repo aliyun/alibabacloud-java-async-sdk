@@ -18,10 +18,6 @@ public class DescribeDcdnSecFuncInfoRequest extends Request {
     private String lang;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("SecFuncType")
     @Validation(required = true)
     private String secFuncType;
@@ -29,7 +25,6 @@ public class DescribeDcdnSecFuncInfoRequest extends Request {
     private DescribeDcdnSecFuncInfoRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
-        this.ownerId = builder.ownerId;
         this.secFuncType = builder.secFuncType;
     }
 
@@ -54,13 +49,6 @@ public class DescribeDcdnSecFuncInfoRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return secFuncType
      */
     public String getSecFuncType() {
@@ -69,7 +57,6 @@ public class DescribeDcdnSecFuncInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDcdnSecFuncInfoRequest, Builder> {
         private String lang; 
-        private Long ownerId; 
         private String secFuncType; 
 
         private Builder() {
@@ -79,12 +66,11 @@ public class DescribeDcdnSecFuncInfoRequest extends Request {
         private Builder(DescribeDcdnSecFuncInfoRequest request) {
             super(request);
             this.lang = request.lang;
-            this.ownerId = request.ownerId;
             this.secFuncType = request.secFuncType;
         } 
 
         /**
-         * Lang.
+         * The language. Valid values: en and zh. Default value: en.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -93,16 +79,7 @@ public class DescribeDcdnSecFuncInfoRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * SecFuncType.
+         * The type of the drop-down list. Valid values: RobotRuleName and RobotObject.
          */
         public Builder secFuncType(String secFuncType) {
             this.putQueryParameter("SecFuncType", secFuncType);

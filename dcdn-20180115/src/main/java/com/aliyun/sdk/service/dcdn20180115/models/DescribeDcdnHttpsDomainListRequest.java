@@ -17,10 +17,6 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
     private String keyword;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -31,7 +27,6 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
     private DescribeDcdnHttpsDomainListRequest(Builder builder) {
         super(builder);
         this.keyword = builder.keyword;
-        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
     }
@@ -57,13 +52,6 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -79,7 +67,6 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDcdnHttpsDomainListRequest, Builder> {
         private String keyword; 
-        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
 
@@ -90,13 +77,18 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
         private Builder(DescribeDcdnHttpsDomainListRequest request) {
             super(request);
             this.keyword = request.keyword;
-            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
         } 
 
         /**
-         * Keyword.
+         * The status of the certificate. Valid values:
+         * <p>
+         * 
+         * *   **ok**: The certificate is working as expected.
+         * *   **mismatch**: The certificate does not match the specified domain name.
+         * *   **expired**: The certificate has expired.
+         * *   **expire_soon**: The certificate is about to expire.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -105,16 +97,7 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * PageNumber.
+         * The total number of entries returned.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +106,12 @@ public class DescribeDcdnHttpsDomainListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The type of the certificate. Valid values:
+         * <p>
+         * 
+         * *   **free**: A free certificate.
+         * *   **cas**: A certificate that is purchased through Alibaba Cloud SSL Certificates Service.
+         * *   **upload**: A user-uploaded certificate.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

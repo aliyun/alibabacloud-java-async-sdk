@@ -17,19 +17,9 @@ public class DescribeDcdnIpInfoRequest extends Request {
     @Validation(required = true)
     private String ip;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
-    @NameInMap("SecurityToken")
-    private String securityToken;
-
     private DescribeDcdnIpInfoRequest(Builder builder) {
         super(builder);
         this.ip = builder.ip;
-        this.ownerId = builder.ownerId;
-        this.securityToken = builder.securityToken;
     }
 
     public static Builder builder() {
@@ -52,24 +42,8 @@ public class DescribeDcdnIpInfoRequest extends Request {
         return this.ip;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDcdnIpInfoRequest, Builder> {
         private String ip; 
-        private Long ownerId; 
-        private String securityToken; 
 
         private Builder() {
             super();
@@ -78,34 +52,14 @@ public class DescribeDcdnIpInfoRequest extends Request {
         private Builder(DescribeDcdnIpInfoRequest request) {
             super(request);
             this.ip = request.ip;
-            this.ownerId = request.ownerId;
-            this.securityToken = request.securityToken;
         } 
 
         /**
-         * IP.
+         * The IP address. You can specify only one IP address.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("IP", ip);
             this.ip = ip;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
             return this;
         }
 

@@ -17,14 +17,9 @@ public class DescribeDcdnBlockedRegionsRequest extends Request {
     @Validation(required = true)
     private String language;
 
-    @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
     private DescribeDcdnBlockedRegionsRequest(Builder builder) {
         super(builder);
         this.language = builder.language;
-        this.ownerId = builder.ownerId;
     }
 
     public static Builder builder() {
@@ -47,16 +42,8 @@ public class DescribeDcdnBlockedRegionsRequest extends Request {
         return this.language;
     }
 
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeDcdnBlockedRegionsRequest, Builder> {
         private String language; 
-        private Long ownerId; 
 
         private Builder() {
             super();
@@ -65,24 +52,14 @@ public class DescribeDcdnBlockedRegionsRequest extends Request {
         private Builder(DescribeDcdnBlockedRegionsRequest request) {
             super(request);
             this.language = request.language;
-            this.ownerId = request.ownerId;
         } 
 
         /**
-         * Language.
+         * The language. Valid values: zh, en, and jp.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
             this.language = language;
-            return this;
-        }
-
-        /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
             return this;
         }
 

@@ -50,7 +50,7 @@ public class RefreshDcdnObjectCachesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RefreshTaskId.
+         * The ID of the refresh task. Multiple IDs are separated by commas (,).
          */
         public Builder refreshTaskId(String refreshTaskId) {
             this.refreshTaskId = refreshTaskId;
@@ -58,7 +58,7 @@ public class RefreshDcdnObjectCachesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

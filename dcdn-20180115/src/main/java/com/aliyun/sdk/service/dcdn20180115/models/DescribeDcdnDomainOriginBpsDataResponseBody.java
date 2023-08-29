@@ -98,7 +98,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval between the data entries returned. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +106,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +114,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range during which data was queried.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +122,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * OriginBpsDataPerInterval.
+         * The origin bandwidth data returned at each time interval. Unit: bit/s.
          */
         public Builder originBpsDataPerInterval(OriginBpsDataPerInterval originBpsDataPerInterval) {
             this.originBpsDataPerInterval = originBpsDataPerInterval;
@@ -130,7 +130,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start of the time range during which data was queried.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -238,7 +238,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * DynamicHttpOriginBps.
+             * The bandwidth that was consumed for fetching dynamic content from the origin over HTTP.
              */
             public Builder dynamicHttpOriginBps(Float dynamicHttpOriginBps) {
                 this.dynamicHttpOriginBps = dynamicHttpOriginBps;
@@ -246,7 +246,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicHttpsOriginBps.
+             * The bandwidth that was consumed for fetching dynamic content from the origin over HTTPS.
              */
             public Builder dynamicHttpsOriginBps(Float dynamicHttpsOriginBps) {
                 this.dynamicHttpsOriginBps = dynamicHttpsOriginBps;
@@ -254,7 +254,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * OriginBps.
+             * The bandwidth that was consumed for fetching content from the origin.
              */
             public Builder originBps(Float originBps) {
                 this.originBps = originBps;
@@ -262,7 +262,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * StaticHttpOriginBps.
+             * The bandwidth that was consumed for fetching static content from the origin over HTTP.
              */
             public Builder staticHttpOriginBps(Float staticHttpOriginBps) {
                 this.staticHttpOriginBps = staticHttpOriginBps;
@@ -270,7 +270,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * StaticHttpsOriginBps.
+             * The bandwidth that was consumed for fetching static content from the origin over HTTPS.
              */
             public Builder staticHttpsOriginBps(Float staticHttpsOriginBps) {
                 this.staticHttpsOriginBps = staticHttpsOriginBps;
@@ -278,7 +278,7 @@ public class DescribeDcdnDomainOriginBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

@@ -13,10 +13,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDcdnTagResourcesRequest extends Request {
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("ResourceId")
     @Validation(required = true)
     private java.util.List < String > resourceId;
@@ -32,7 +28,6 @@ public class DescribeDcdnTagResourcesRequest extends Request {
 
     private DescribeDcdnTagResourcesRequest(Builder builder) {
         super(builder);
-        this.ownerId = builder.ownerId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
@@ -49,13 +44,6 @@ public class DescribeDcdnTagResourcesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
     }
 
     /**
@@ -80,7 +68,6 @@ public class DescribeDcdnTagResourcesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDcdnTagResourcesRequest, Builder> {
-        private Long ownerId; 
         private java.util.List < String > resourceId; 
         private String resourceType; 
         private java.util.List < Tag> tag; 
@@ -91,23 +78,13 @@ public class DescribeDcdnTagResourcesRequest extends Request {
 
         private Builder(DescribeDcdnTagResourcesRequest request) {
             super(request);
-            this.ownerId = request.ownerId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
             this.tag = request.tag;
         } 
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * ResourceId.
+         * The list of resource IDs. You can specify a maximum of 50 resource IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -116,7 +93,7 @@ public class DescribeDcdnTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **DOMAIN**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -125,7 +102,7 @@ public class DescribeDcdnTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags. You can specify a maximum of 20 tag values.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -179,7 +156,7 @@ public class DescribeDcdnTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -187,7 +164,7 @@ public class DescribeDcdnTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

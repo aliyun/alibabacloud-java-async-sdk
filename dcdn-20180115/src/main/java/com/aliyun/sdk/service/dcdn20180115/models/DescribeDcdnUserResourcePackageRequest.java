@@ -100,7 +100,12 @@ public class DescribeDcdnUserResourcePackageRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the resource plan. Valid values:
+         * <p>
+         * 
+         * *   **valid**: valid
+         * *   **closed**: expired
+         * *   If you leave this parameter empty, all resource plans are queried.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

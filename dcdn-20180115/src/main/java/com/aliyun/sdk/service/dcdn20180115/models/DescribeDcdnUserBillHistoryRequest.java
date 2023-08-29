@@ -18,10 +18,6 @@ public class DescribeDcdnUserBillHistoryRequest extends Request {
     private String endTime;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     @Validation(required = true)
     private String startTime;
@@ -29,7 +25,6 @@ public class DescribeDcdnUserBillHistoryRequest extends Request {
     private DescribeDcdnUserBillHistoryRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
     }
 
@@ -54,13 +49,6 @@ public class DescribeDcdnUserBillHistoryRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -69,7 +57,6 @@ public class DescribeDcdnUserBillHistoryRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDcdnUserBillHistoryRequest, Builder> {
         private String endTime; 
-        private Long ownerId; 
         private String startTime; 
 
         private Builder() {
@@ -79,12 +66,14 @@ public class DescribeDcdnUserBillHistoryRequest extends Request {
         private Builder(DescribeDcdnUserBillHistoryRequest request) {
             super(request);
             this.endTime = request.endTime;
-            this.ownerId = request.ownerId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -93,16 +82,10 @@ public class DescribeDcdnUserBillHistoryRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * The minimum data granularity is 5 minutes.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

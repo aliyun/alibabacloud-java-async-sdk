@@ -37,10 +37,6 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
     private String locationNameEn;
 
     @Query
-    @NameInMap("OwnerId")
-    private Long ownerId;
-
-    @Query
     @NameInMap("StartTime")
     private String startTime;
 
@@ -56,7 +52,6 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         this.interval = builder.interval;
         this.ispNameEn = builder.ispNameEn;
         this.locationNameEn = builder.locationNameEn;
-        this.ownerId = builder.ownerId;
         this.startTime = builder.startTime;
         this.timeMerge = builder.timeMerge;
     }
@@ -117,13 +112,6 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
     }
 
     /**
-     * @return ownerId
-     */
-    public Long getOwnerId() {
-        return this.ownerId;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -144,7 +132,6 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         private String interval; 
         private String ispNameEn; 
         private String locationNameEn; 
-        private Long ownerId; 
         private String startTime; 
         private String timeMerge; 
 
@@ -160,13 +147,15 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
             this.interval = request.interval;
             this.ispNameEn = request.ispNameEn;
             this.locationNameEn = request.locationNameEn;
-            this.ownerId = request.ownerId;
             this.startTime = request.startTime;
             this.timeMerge = request.timeMerge;
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name.
+         * <p>
+         * 
+         * Separate multiple domain names with commas (,). If you do not specify a value for this parameter, data for all accelerated domain names is queried.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -175,7 +164,12 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -184,7 +178,11 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * FixTimeGap.
+         * Specify whether to implement padding with zeros. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder fixTimeGap(String fixTimeGap) {
             this.putQueryParameter("FixTimeGap", fixTimeGap);
@@ -193,7 +191,14 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The time granularity of data entries. Unit: seconds.
+         * <p>
+         * 
+         * The time granularity varies with the time range specified by **StartTime** and **EndTime**.
+         * 
+         * *   If the time range between StartTime and EndTime is less than 3 days, the valid values are **300**, **3600**, and **86400**. If you do not specify a value for this parameter, **300** is used.
+         * *   If the time range between StartTime and EndTime is greater than or equal to 3 days and less than 31 days, the valid values are **3600** and **86400**. Default value: **3600**.
+         * *   If the time range between StartTime and EndTime is 31 days or longer, the valid value is **86400**. Default value: **86400**.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -202,7 +207,10 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The name of the Internet service provider (ISP).
+         * <p>
+         * 
+         * You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query ISPs.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -211,7 +219,10 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region.
+         * <p>
+         * 
+         * You can call the [DescribeDcdnRegionAndIsp](~~207199~~) operation to query regions.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -220,16 +231,10 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * OwnerId.
-         */
-        public Builder ownerId(Long ownerId) {
-            this.putQueryParameter("OwnerId", ownerId);
-            this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -238,7 +243,7 @@ public class DescribeDcdnDomainIpaTrafficDataRequest extends Request {
         }
 
         /**
-         * TimeMerge.
+         * Specifies whether to automatically calculate the value of the **interval**. If the **timeMerge** parameter is set to **1**, the value of **inteval** is calculated based on **StartTime** and **EndTime**. You can set either this parameter or the **interval** parameter.
          */
         public Builder timeMerge(String timeMerge) {
             this.putQueryParameter("TimeMerge", timeMerge);
