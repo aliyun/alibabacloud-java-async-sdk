@@ -74,11 +74,11 @@ public class ListFlowsRequest extends Request {
             super();
         } 
 
-        private Builder(ListFlowsRequest response) {
-            super(response);
-            this.limit = response.limit;
-            this.nextToken = response.nextToken;
-            this.requestId = response.requestId;
+        private Builder(ListFlowsRequest request) {
+            super(request);
+            this.limit = request.limit;
+            this.nextToken = request.nextToken;
+            this.requestId = request.requestId;
         } 
 
         /**

@@ -76,11 +76,11 @@ public class DescribeScheduleRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeScheduleRequest response) {
-            super(response);
-            this.flowName = response.flowName;
-            this.requestId = response.requestId;
-            this.scheduleName = response.scheduleName;
+        private Builder(DescribeScheduleRequest request) {
+            super(request);
+            this.flowName = request.flowName;
+            this.requestId = request.requestId;
+            this.scheduleName = request.scheduleName;
         } 
 
         /**

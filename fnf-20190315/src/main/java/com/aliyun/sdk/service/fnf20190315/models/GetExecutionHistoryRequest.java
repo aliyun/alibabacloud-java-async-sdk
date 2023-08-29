@@ -102,13 +102,13 @@ public class GetExecutionHistoryRequest extends Request {
             super();
         } 
 
-        private Builder(GetExecutionHistoryRequest response) {
-            super(response);
-            this.executionName = response.executionName;
-            this.flowName = response.flowName;
-            this.limit = response.limit;
-            this.nextToken = response.nextToken;
-            this.requestId = response.requestId;
+        private Builder(GetExecutionHistoryRequest request) {
+            super(request);
+            this.executionName = request.executionName;
+            this.flowName = request.flowName;
+            this.limit = request.limit;
+            this.nextToken = request.nextToken;
+            this.requestId = request.requestId;
         } 
 
         /**

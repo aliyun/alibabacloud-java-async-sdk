@@ -101,13 +101,13 @@ public class StartExecutionRequest extends Request {
             super();
         } 
 
-        private Builder(StartExecutionRequest response) {
-            super(response);
-            this.callbackFnFTaskToken = response.callbackFnFTaskToken;
-            this.executionName = response.executionName;
-            this.flowName = response.flowName;
-            this.input = response.input;
-            this.requestId = response.requestId;
+        private Builder(StartExecutionRequest request) {
+            super(request);
+            this.callbackFnFTaskToken = request.callbackFnFTaskToken;
+            this.executionName = request.executionName;
+            this.flowName = request.flowName;
+            this.input = request.input;
+            this.requestId = request.requestId;
         } 
 
         /**

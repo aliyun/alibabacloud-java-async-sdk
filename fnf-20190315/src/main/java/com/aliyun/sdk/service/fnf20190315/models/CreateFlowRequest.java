@@ -23,6 +23,10 @@ public class CreateFlowRequest extends Request {
     private String description;
 
     @Body
+    @NameInMap("ExecutionMode")
+    private String executionMode;
+
+    @Body
     @NameInMap("ExternalStorageLocation")
     private String externalStorageLocation;
 
@@ -48,6 +52,7 @@ public class CreateFlowRequest extends Request {
         super(builder);
         this.definition = builder.definition;
         this.description = builder.description;
+        this.executionMode = builder.executionMode;
         this.externalStorageLocation = builder.externalStorageLocation;
         this.name = builder.name;
         this.requestId = builder.requestId;
@@ -80,6 +85,13 @@ public class CreateFlowRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return executionMode
+     */
+    public String getExecutionMode() {
+        return this.executionMode;
     }
 
     /**
@@ -120,6 +132,7 @@ public class CreateFlowRequest extends Request {
     public static final class Builder extends Request.Builder<CreateFlowRequest, Builder> {
         private String definition; 
         private String description; 
+        private String executionMode; 
         private String externalStorageLocation; 
         private String name; 
         private String requestId; 
@@ -130,15 +143,16 @@ public class CreateFlowRequest extends Request {
             super();
         } 
 
-        private Builder(CreateFlowRequest response) {
-            super(response);
-            this.definition = response.definition;
-            this.description = response.description;
-            this.externalStorageLocation = response.externalStorageLocation;
-            this.name = response.name;
-            this.requestId = response.requestId;
-            this.roleArn = response.roleArn;
-            this.type = response.type;
+        private Builder(CreateFlowRequest request) {
+            super(request);
+            this.definition = request.definition;
+            this.description = request.description;
+            this.executionMode = request.executionMode;
+            this.externalStorageLocation = request.externalStorageLocation;
+            this.name = request.name;
+            this.requestId = request.requestId;
+            this.roleArn = request.roleArn;
+            this.type = request.type;
         } 
 
         /**
@@ -156,6 +170,15 @@ public class CreateFlowRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * ExecutionMode.
+         */
+        public Builder executionMode(String executionMode) {
+            this.putBodyParameter("ExecutionMode", executionMode);
+            this.executionMode = executionMode;
             return this;
         }
 

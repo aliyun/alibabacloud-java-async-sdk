@@ -62,10 +62,10 @@ public class DescribeFlowRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeFlowRequest response) {
-            super(response);
-            this.name = response.name;
-            this.requestId = response.requestId;
+        private Builder(DescribeFlowRequest request) {
+            super(request);
+            this.name = request.name;
+            this.requestId = request.requestId;
         } 
 
         /**

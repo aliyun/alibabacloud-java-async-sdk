@@ -89,12 +89,12 @@ public class DescribeExecutionRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeExecutionRequest response) {
-            super(response);
-            this.executionName = response.executionName;
-            this.flowName = response.flowName;
-            this.requestId = response.requestId;
-            this.waitTimeSeconds = response.waitTimeSeconds;
+        private Builder(DescribeExecutionRequest request) {
+            super(request);
+            this.executionName = request.executionName;
+            this.flowName = request.flowName;
+            this.requestId = request.requestId;
+            this.waitTimeSeconds = request.waitTimeSeconds;
         } 
 
         /**

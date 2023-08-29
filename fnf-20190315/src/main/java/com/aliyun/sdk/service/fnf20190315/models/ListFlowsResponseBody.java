@@ -101,8 +101,8 @@ public class ListFlowsResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
-        @NameInMap("ExternalStorageLocation")
-        private String externalStorageLocation;
+        @NameInMap("ExecutionMode")
+        private String executionMode;
 
         @NameInMap("Id")
         private String id;
@@ -123,7 +123,7 @@ public class ListFlowsResponseBody extends TeaModel {
             this.createdTime = builder.createdTime;
             this.definition = builder.definition;
             this.description = builder.description;
-            this.externalStorageLocation = builder.externalStorageLocation;
+            this.executionMode = builder.executionMode;
             this.id = builder.id;
             this.lastModifiedTime = builder.lastModifiedTime;
             this.name = builder.name;
@@ -161,10 +161,10 @@ public class ListFlowsResponseBody extends TeaModel {
         }
 
         /**
-         * @return externalStorageLocation
+         * @return executionMode
          */
-        public String getExternalStorageLocation() {
-            return this.externalStorageLocation;
+        public String getExecutionMode() {
+            return this.executionMode;
         }
 
         /**
@@ -206,7 +206,7 @@ public class ListFlowsResponseBody extends TeaModel {
             private String createdTime; 
             private String definition; 
             private String description; 
-            private String externalStorageLocation; 
+            private String executionMode; 
             private String id; 
             private String lastModifiedTime; 
             private String name; 
@@ -238,10 +238,10 @@ public class ListFlowsResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalStorageLocation.
+             * ExecutionMode.
              */
-            public Builder externalStorageLocation(String externalStorageLocation) {
-                this.externalStorageLocation = externalStorageLocation;
+            public Builder executionMode(String executionMode) {
+                this.executionMode = executionMode;
                 return this;
             }
 

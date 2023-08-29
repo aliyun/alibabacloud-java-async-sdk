@@ -102,13 +102,13 @@ public class StopExecutionRequest extends Request {
             super();
         } 
 
-        private Builder(StopExecutionRequest response) {
-            super(response);
-            this.cause = response.cause;
-            this.error = response.error;
-            this.executionName = response.executionName;
-            this.flowName = response.flowName;
-            this.requestId = response.requestId;
+        private Builder(StopExecutionRequest request) {
+            super(request);
+            this.cause = request.cause;
+            this.error = request.error;
+            this.executionName = request.executionName;
+            this.flowName = request.flowName;
+            this.requestId = request.requestId;
         } 
 
         /**

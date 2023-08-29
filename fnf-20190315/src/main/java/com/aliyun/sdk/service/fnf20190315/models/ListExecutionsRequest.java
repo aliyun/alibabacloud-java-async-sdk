@@ -140,16 +140,16 @@ public class ListExecutionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListExecutionsRequest response) {
-            super(response);
-            this.executionNamePrefix = response.executionNamePrefix;
-            this.flowName = response.flowName;
-            this.limit = response.limit;
-            this.nextToken = response.nextToken;
-            this.requestId = response.requestId;
-            this.startedTimeBegin = response.startedTimeBegin;
-            this.startedTimeEnd = response.startedTimeEnd;
-            this.status = response.status;
+        private Builder(ListExecutionsRequest request) {
+            super(request);
+            this.executionNamePrefix = request.executionNamePrefix;
+            this.flowName = request.flowName;
+            this.limit = request.limit;
+            this.nextToken = request.nextToken;
+            this.requestId = request.requestId;
+            this.startedTimeBegin = request.startedTimeBegin;
+            this.startedTimeEnd = request.startedTimeEnd;
+            this.status = request.status;
         } 
 
         /**

@@ -62,10 +62,10 @@ public class DeleteFlowRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteFlowRequest response) {
-            super(response);
-            this.name = response.name;
-            this.requestId = response.requestId;
+        private Builder(DeleteFlowRequest request) {
+            super(request);
+            this.name = request.name;
+            this.requestId = request.requestId;
         } 
 
         /**

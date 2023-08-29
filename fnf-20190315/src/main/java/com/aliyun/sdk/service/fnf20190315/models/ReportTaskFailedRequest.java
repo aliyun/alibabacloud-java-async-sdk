@@ -89,12 +89,12 @@ public class ReportTaskFailedRequest extends Request {
             super();
         } 
 
-        private Builder(ReportTaskFailedRequest response) {
-            super(response);
-            this.cause = response.cause;
-            this.error = response.error;
-            this.requestId = response.requestId;
-            this.taskToken = response.taskToken;
+        private Builder(ReportTaskFailedRequest request) {
+            super(request);
+            this.cause = request.cause;
+            this.error = request.error;
+            this.requestId = request.requestId;
+            this.taskToken = request.taskToken;
         } 
 
         /**

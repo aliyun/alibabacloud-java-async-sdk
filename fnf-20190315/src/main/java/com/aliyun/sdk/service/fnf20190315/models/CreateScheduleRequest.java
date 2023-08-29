@@ -129,15 +129,15 @@ public class CreateScheduleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateScheduleRequest response) {
-            super(response);
-            this.cronExpression = response.cronExpression;
-            this.description = response.description;
-            this.enable = response.enable;
-            this.flowName = response.flowName;
-            this.payload = response.payload;
-            this.requestId = response.requestId;
-            this.scheduleName = response.scheduleName;
+        private Builder(CreateScheduleRequest request) {
+            super(request);
+            this.cronExpression = request.cronExpression;
+            this.description = request.description;
+            this.enable = request.enable;
+            this.flowName = request.flowName;
+            this.payload = request.payload;
+            this.requestId = request.requestId;
+            this.scheduleName = request.scheduleName;
         } 
 
         /**

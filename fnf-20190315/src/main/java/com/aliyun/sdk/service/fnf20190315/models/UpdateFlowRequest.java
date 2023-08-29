@@ -21,10 +21,6 @@ public class UpdateFlowRequest extends Request {
     private String description;
 
     @Body
-    @NameInMap("ExternalStorageLocation")
-    private String externalStorageLocation;
-
-    @Body
     @NameInMap("Name")
     @Validation(required = true)
     private String name;
@@ -45,7 +41,6 @@ public class UpdateFlowRequest extends Request {
         super(builder);
         this.definition = builder.definition;
         this.description = builder.description;
-        this.externalStorageLocation = builder.externalStorageLocation;
         this.name = builder.name;
         this.requestId = builder.requestId;
         this.roleArn = builder.roleArn;
@@ -80,13 +75,6 @@ public class UpdateFlowRequest extends Request {
     }
 
     /**
-     * @return externalStorageLocation
-     */
-    public String getExternalStorageLocation() {
-        return this.externalStorageLocation;
-    }
-
-    /**
      * @return name
      */
     public String getName() {
@@ -117,7 +105,6 @@ public class UpdateFlowRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateFlowRequest, Builder> {
         private String definition; 
         private String description; 
-        private String externalStorageLocation; 
         private String name; 
         private String requestId; 
         private String roleArn; 
@@ -127,15 +114,14 @@ public class UpdateFlowRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateFlowRequest response) {
-            super(response);
-            this.definition = response.definition;
-            this.description = response.description;
-            this.externalStorageLocation = response.externalStorageLocation;
-            this.name = response.name;
-            this.requestId = response.requestId;
-            this.roleArn = response.roleArn;
-            this.type = response.type;
+        private Builder(UpdateFlowRequest request) {
+            super(request);
+            this.definition = request.definition;
+            this.description = request.description;
+            this.name = request.name;
+            this.requestId = request.requestId;
+            this.roleArn = request.roleArn;
+            this.type = request.type;
         } 
 
         /**
@@ -153,15 +139,6 @@ public class UpdateFlowRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
-            return this;
-        }
-
-        /**
-         * ExternalStorageLocation.
-         */
-        public Builder externalStorageLocation(String externalStorageLocation) {
-            this.putBodyParameter("ExternalStorageLocation", externalStorageLocation);
-            this.externalStorageLocation = externalStorageLocation;
             return this;
         }
 

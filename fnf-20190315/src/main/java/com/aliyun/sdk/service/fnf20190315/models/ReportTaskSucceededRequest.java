@@ -76,11 +76,11 @@ public class ReportTaskSucceededRequest extends Request {
             super();
         } 
 
-        private Builder(ReportTaskSucceededRequest response) {
-            super(response);
-            this.output = response.output;
-            this.requestId = response.requestId;
-            this.taskToken = response.taskToken;
+        private Builder(ReportTaskSucceededRequest request) {
+            super(request);
+            this.output = request.output;
+            this.requestId = request.requestId;
+            this.taskToken = request.taskToken;
         } 
 
         /**

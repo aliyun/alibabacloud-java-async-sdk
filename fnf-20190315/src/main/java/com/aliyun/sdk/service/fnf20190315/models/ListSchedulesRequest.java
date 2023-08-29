@@ -89,12 +89,12 @@ public class ListSchedulesRequest extends Request {
             super();
         } 
 
-        private Builder(ListSchedulesRequest response) {
-            super(response);
-            this.flowName = response.flowName;
-            this.limit = response.limit;
-            this.nextToken = response.nextToken;
-            this.requestId = response.requestId;
+        private Builder(ListSchedulesRequest request) {
+            super(request);
+            this.flowName = request.flowName;
+            this.limit = request.limit;
+            this.nextToken = request.nextToken;
+            this.requestId = request.requestId;
         } 
 
         /**

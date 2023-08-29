@@ -12,12 +12,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartExecutionResponseBody</p>
  */
 public class StartExecutionResponseBody extends TeaModel {
-    @NameInMap("ExternalInputUri")
-    private String externalInputUri;
-
-    @NameInMap("ExternalOutputUri")
-    private String externalOutputUri;
-
     @NameInMap("FlowDefinition")
     private String flowDefinition;
 
@@ -46,8 +40,6 @@ public class StartExecutionResponseBody extends TeaModel {
     private String stoppedTime;
 
     private StartExecutionResponseBody(Builder builder) {
-        this.externalInputUri = builder.externalInputUri;
-        this.externalOutputUri = builder.externalOutputUri;
         this.flowDefinition = builder.flowDefinition;
         this.flowName = builder.flowName;
         this.input = builder.input;
@@ -65,20 +57,6 @@ public class StartExecutionResponseBody extends TeaModel {
 
     public static StartExecutionResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return externalInputUri
-     */
-    public String getExternalInputUri() {
-        return this.externalInputUri;
-    }
-
-    /**
-     * @return externalOutputUri
-     */
-    public String getExternalOutputUri() {
-        return this.externalOutputUri;
     }
 
     /**
@@ -145,8 +123,6 @@ public class StartExecutionResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String externalInputUri; 
-        private String externalOutputUri; 
         private String flowDefinition; 
         private String flowName; 
         private String input; 
@@ -156,22 +132,6 @@ public class StartExecutionResponseBody extends TeaModel {
         private String startedTime; 
         private String status; 
         private String stoppedTime; 
-
-        /**
-         * ExternalInputUri.
-         */
-        public Builder externalInputUri(String externalInputUri) {
-            this.externalInputUri = externalInputUri;
-            return this;
-        }
-
-        /**
-         * ExternalOutputUri.
-         */
-        public Builder externalOutputUri(String externalOutputUri) {
-            this.externalOutputUri = externalOutputUri;
-            return this;
-        }
 
         /**
          * FlowDefinition.
