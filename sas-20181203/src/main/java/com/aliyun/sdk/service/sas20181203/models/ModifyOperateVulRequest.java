@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyOperateVulRequest extends Request {
     @Query
+    @NameInMap("From")
+    private String from;
+
+    @Query
     @NameInMap("Info")
     @Validation(required = true)
     private String info;
@@ -33,6 +37,7 @@ public class ModifyOperateVulRequest extends Request {
 
     private ModifyOperateVulRequest(Builder builder) {
         super(builder);
+        this.from = builder.from;
         this.info = builder.info;
         this.operateType = builder.operateType;
         this.reason = builder.reason;
@@ -50,6 +55,13 @@ public class ModifyOperateVulRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return from
+     */
+    public String getFrom() {
+        return this.from;
     }
 
     /**
@@ -81,6 +93,7 @@ public class ModifyOperateVulRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyOperateVulRequest, Builder> {
+        private String from; 
         private String info; 
         private String operateType; 
         private String reason; 
@@ -92,11 +105,21 @@ public class ModifyOperateVulRequest extends Request {
 
         private Builder(ModifyOperateVulRequest request) {
             super(request);
+            this.from = request.from;
             this.info = request.info;
             this.operateType = request.operateType;
             this.reason = request.reason;
             this.type = request.type;
         } 
+
+        /**
+         * From.
+         */
+        public Builder from(String from) {
+            this.putQueryParameter("From", from);
+            this.from = from;
+            return this;
+        }
 
         /**
          * The details of the vulnerability. The value of this parameter is in the JSON format and contains the following fields:

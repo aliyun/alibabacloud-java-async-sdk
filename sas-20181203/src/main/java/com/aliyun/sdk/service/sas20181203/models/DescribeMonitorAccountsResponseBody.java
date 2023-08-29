@@ -50,7 +50,7 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccountIds.
+         * The IDs of the members.
          */
         public Builder accountIds(java.util.List < String > accountIds) {
             this.accountIds = accountIds;
@@ -58,7 +58,7 @@ public class DescribeMonitorAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
