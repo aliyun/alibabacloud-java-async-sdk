@@ -954,6 +954,87 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
         } 
 
     }
+    public static class ChangeFee extends TeaModel {
+        @NameInMap("change_fee")
+        private Long changeFee;
+
+        @NameInMap("service_fee")
+        private Long serviceFee;
+
+        @NameInMap("upgrade_price")
+        private Long upgradePrice;
+
+        private ChangeFee(Builder builder) {
+            this.changeFee = builder.changeFee;
+            this.serviceFee = builder.serviceFee;
+            this.upgradePrice = builder.upgradePrice;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ChangeFee create() {
+            return builder().build();
+        }
+
+        /**
+         * @return changeFee
+         */
+        public Long getChangeFee() {
+            return this.changeFee;
+        }
+
+        /**
+         * @return serviceFee
+         */
+        public Long getServiceFee() {
+            return this.serviceFee;
+        }
+
+        /**
+         * @return upgradePrice
+         */
+        public Long getUpgradePrice() {
+            return this.upgradePrice;
+        }
+
+        public static final class Builder {
+            private Long changeFee; 
+            private Long serviceFee; 
+            private Long upgradePrice; 
+
+            /**
+             * change_fee.
+             */
+            public Builder changeFee(Long changeFee) {
+                this.changeFee = changeFee;
+                return this;
+            }
+
+            /**
+             * service_fee.
+             */
+            public Builder serviceFee(Long serviceFee) {
+                this.serviceFee = serviceFee;
+                return this;
+            }
+
+            /**
+             * upgrade_price.
+             */
+            public Builder upgradePrice(Long upgradePrice) {
+                this.upgradePrice = upgradePrice;
+                return this;
+            }
+
+            public ChangeFee build() {
+                return new ChangeFee(this);
+            } 
+
+        } 
+
+    }
     public static class TravelerInfoDTOS extends TeaModel {
         @NameInMap("birth_date")
         private String birthDate;
@@ -963,6 +1044,9 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
 
         @NameInMap("cert_type")
         private Integer certType;
+
+        @NameInMap("change_fee")
+        private ChangeFee changeFee;
 
         @NameInMap("gender")
         private Integer gender;
@@ -992,6 +1076,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             this.birthDate = builder.birthDate;
             this.certNo = builder.certNo;
             this.certType = builder.certType;
+            this.changeFee = builder.changeFee;
             this.gender = builder.gender;
             this.originTicketNos = builder.originTicketNos;
             this.passengerId = builder.passengerId;
@@ -1029,6 +1114,13 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
          */
         public Integer getCertType() {
             return this.certType;
+        }
+
+        /**
+         * @return changeFee
+         */
+        public ChangeFee getChangeFee() {
+            return this.changeFee;
         }
 
         /**
@@ -1091,6 +1183,7 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
             private String birthDate; 
             private String certNo; 
             private Integer certType; 
+            private ChangeFee changeFee; 
             private Integer gender; 
             private java.util.List < String > originTicketNos; 
             private String passengerId; 
@@ -1121,6 +1214,14 @@ public class FlightModifyOrderDetailV2ResponseBody extends TeaModel {
              */
             public Builder certType(Integer certType) {
                 this.certType = certType;
+                return this;
+            }
+
+            /**
+             * change_fee.
+             */
+            public Builder changeFee(ChangeFee changeFee) {
+                this.changeFee = changeFee;
                 return this;
             }
 
