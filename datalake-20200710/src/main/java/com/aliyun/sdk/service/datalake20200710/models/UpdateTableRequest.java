@@ -152,7 +152,7 @@ public class UpdateTableRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -161,7 +161,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * AllowPartitionKeyChange
+         * AllowPartitionKeyChange.
          */
         public Builder allowPartitionKeyChange(Boolean allowPartitionKeyChange) {
             this.putBodyParameter("AllowPartitionKeyChange", allowPartitionKeyChange);
@@ -170,7 +170,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putBodyParameter("CatalogId", catalogId);
@@ -179,7 +179,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -188,7 +188,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * IsAsync
+         * IsAsync.
          */
         public Builder isAsync(Boolean isAsync) {
             this.putBodyParameter("IsAsync", isAsync);
@@ -197,7 +197,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * SkipArchive
+         * SkipArchive.
          */
         public Builder skipArchive(Boolean skipArchive) {
             this.putBodyParameter("SkipArchive", skipArchive);
@@ -215,7 +215,7 @@ public class UpdateTableRequest extends Request {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);

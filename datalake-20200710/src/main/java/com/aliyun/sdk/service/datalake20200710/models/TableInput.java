@@ -254,7 +254,7 @@ public class TableInput extends TeaModel {
         private String viewOriginalText; 
 
         /**
-         * Cascade
+         * Cascade.
          */
         public Builder cascade(Boolean cascade) {
             this.cascade = cascade;
@@ -262,7 +262,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * CreateTime
+         * CreateTime.
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -270,7 +270,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * CreatedBy
+         * CreatedBy.
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -278,7 +278,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -286,7 +286,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * LastAccessTime
+         * LastAccessTime.
          */
         public Builder lastAccessTime(Integer lastAccessTime) {
             this.lastAccessTime = lastAccessTime;
@@ -294,7 +294,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * LastAnalyzedTime
+         * LastAnalyzedTime.
          */
         public Builder lastAnalyzedTime(Integer lastAnalyzedTime) {
             this.lastAnalyzedTime = lastAnalyzedTime;
@@ -302,7 +302,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * Owner
+         * Owner.
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -310,7 +310,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * OwnerType
+         * OwnerType.
          */
         public Builder ownerType(String ownerType) {
             this.ownerType = ownerType;
@@ -342,7 +342,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * Retention
+         * Retention.
          */
         public Builder retention(Integer retention) {
             this.retention = retention;
@@ -350,7 +350,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * RewriteEnabled
+         * RewriteEnabled.
          */
         public Builder rewriteEnabled(Boolean rewriteEnabled) {
             this.rewriteEnabled = rewriteEnabled;
@@ -366,7 +366,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -374,7 +374,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * TableType
+         * TableType.
          */
         public Builder tableType(String tableType) {
             this.tableType = tableType;
@@ -382,7 +382,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * Temporary
+         * Temporary.
          */
         public Builder temporary(Boolean temporary) {
             this.temporary = temporary;
@@ -390,7 +390,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * ViewExpandedText
+         * ViewExpandedText.
          */
         public Builder viewExpandedText(String viewExpandedText) {
             this.viewExpandedText = viewExpandedText;
@@ -398,7 +398,7 @@ public class TableInput extends TeaModel {
         }
 
         /**
-         * ViewOriginalText
+         * ViewOriginalText.
          */
         public Builder viewOriginalText(String viewOriginalText) {
             this.viewOriginalText = viewOriginalText;

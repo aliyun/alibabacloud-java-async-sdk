@@ -50,7 +50,7 @@ public class LockStatus extends TeaModel {
         private String lockState; 
 
         /**
-         * LockId
+         * LockId.
          */
         public Builder lockId(Long lockId) {
             this.lockId = lockId;
@@ -58,7 +58,7 @@ public class LockStatus extends TeaModel {
         }
 
         /**
-         * ACQUIRED/NOT_ACQUIRED
+         * LockState.
          */
         public Builder lockState(String lockState) {
             this.lockState = lockState;

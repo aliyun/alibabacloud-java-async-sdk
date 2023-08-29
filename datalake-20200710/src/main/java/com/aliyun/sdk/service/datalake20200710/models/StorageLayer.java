@@ -24,11 +24,15 @@ public class StorageLayer extends TeaModel {
     @NameInMap("Standard")
     private Long standard;
 
+    @NameInMap("Unknown")
+    private Long unknown;
+
     private StorageLayer(Builder builder) {
         this.archive = builder.archive;
         this.coldArchive = builder.coldArchive;
         this.infrequent = builder.infrequent;
         this.standard = builder.standard;
+        this.unknown = builder.unknown;
     }
 
     public static Builder builder() {
@@ -67,14 +71,22 @@ public class StorageLayer extends TeaModel {
         return this.standard;
     }
 
+    /**
+     * @return unknown
+     */
+    public Long getUnknown() {
+        return this.unknown;
+    }
+
     public static final class Builder {
         private Long archive; 
         private Long coldArchive; 
         private Long infrequent; 
         private Long standard; 
+        private Long unknown; 
 
         /**
-         * 归档
+         * Archive.
          */
         public Builder archive(Long archive) {
             this.archive = archive;
@@ -82,7 +94,7 @@ public class StorageLayer extends TeaModel {
         }
 
         /**
-         * 冷归档
+         * ColdArchive.
          */
         public Builder coldArchive(Long coldArchive) {
             this.coldArchive = coldArchive;
@@ -90,7 +102,7 @@ public class StorageLayer extends TeaModel {
         }
 
         /**
-         * 低频
+         * Infrequent.
          */
         public Builder infrequent(Long infrequent) {
             this.infrequent = infrequent;
@@ -98,10 +110,18 @@ public class StorageLayer extends TeaModel {
         }
 
         /**
-         * 标准
+         * Standard.
          */
         public Builder standard(Long standard) {
             this.standard = standard;
+            return this;
+        }
+
+        /**
+         * Unknown.
+         */
+        public Builder unknown(Long unknown) {
+            this.unknown = unknown;
             return this;
         }
 

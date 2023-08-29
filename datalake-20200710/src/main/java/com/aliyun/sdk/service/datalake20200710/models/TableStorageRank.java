@@ -62,7 +62,7 @@ public class TableStorageRank extends TeaModel {
         private String tableName; 
 
         /**
-         * 库名
+         * DbName.
          */
         public Builder dbName(String dbName) {
             this.dbName = dbName;
@@ -70,7 +70,7 @@ public class TableStorageRank extends TeaModel {
         }
 
         /**
-         * 存储量
+         * Quantity.
          */
         public Builder quantity(Long quantity) {
             this.quantity = quantity;
@@ -78,7 +78,7 @@ public class TableStorageRank extends TeaModel {
         }
 
         /**
-         * 表名
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;

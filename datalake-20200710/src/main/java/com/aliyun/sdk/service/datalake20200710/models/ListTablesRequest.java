@@ -139,7 +139,7 @@ public class ListTablesRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -148,7 +148,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putQueryParameter("CatalogId", catalogId);
@@ -157,7 +157,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -166,7 +166,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * NextPageToken
+         * NextPageToken.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -175,7 +175,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * PageSize
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -184,7 +184,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * TableNamePattern
+         * TableNamePattern.
          */
         public Builder tableNamePattern(String tableNamePattern) {
             this.putQueryParameter("TableNamePattern", tableNamePattern);
@@ -193,7 +193,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * TableType filter
+         * TableType.
          */
         public Builder tableType(String tableType) {
             this.putQueryParameter("TableType", tableType);

@@ -83,7 +83,7 @@ public class DeleteCatalogRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -101,7 +101,7 @@ public class DeleteCatalogRequest extends Request {
         }
 
         /**
-         * 是否异步，默认同步
+         * IsAsync.
          */
         public Builder isAsync(Boolean isAsync) {
             this.putQueryParameter("IsAsync", isAsync);

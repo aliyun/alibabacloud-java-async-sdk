@@ -86,7 +86,7 @@ public class TableExtendedPrivilegesGroupPrivilegesValue extends TeaModel {
         private String privilege; 
 
         /**
-         * CreateTime
+         * CreateTime.
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -94,7 +94,7 @@ public class TableExtendedPrivilegesGroupPrivilegesValue extends TeaModel {
         }
 
         /**
-         * GrantOption
+         * GrantOption.
          */
         public Builder grantOption(Boolean grantOption) {
             this.grantOption = grantOption;
@@ -102,7 +102,7 @@ public class TableExtendedPrivilegesGroupPrivilegesValue extends TeaModel {
         }
 
         /**
-         * Grantor
+         * Grantor.
          */
         public Builder grantor(String grantor) {
             this.grantor = grantor;
@@ -110,7 +110,7 @@ public class TableExtendedPrivilegesGroupPrivilegesValue extends TeaModel {
         }
 
         /**
-         * GrantorType
+         * GrantorType.
          */
         public Builder grantorType(String grantorType) {
             this.grantorType = grantorType;
@@ -118,7 +118,7 @@ public class TableExtendedPrivilegesGroupPrivilegesValue extends TeaModel {
         }
 
         /**
-         * Privilege
+         * Privilege.
          */
         public Builder privilege(String privilege) {
             this.privilege = privilege;

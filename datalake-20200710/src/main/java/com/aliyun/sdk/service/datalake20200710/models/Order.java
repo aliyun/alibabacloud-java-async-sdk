@@ -50,7 +50,7 @@ public class Order extends TeaModel {
         private Integer order; 
 
         /**
-         * Col
+         * Col.
          */
         public Builder col(String col) {
             this.col = col;
@@ -58,7 +58,7 @@ public class Order extends TeaModel {
         }
 
         /**
-         * Order
+         * Order.
          */
         public Builder order(Integer order) {
             this.order = order;

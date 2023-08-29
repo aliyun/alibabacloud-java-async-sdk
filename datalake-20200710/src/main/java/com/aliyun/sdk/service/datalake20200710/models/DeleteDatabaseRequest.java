@@ -17,6 +17,10 @@ public class DeleteDatabaseRequest extends Request {
     private String regionId;
 
     @Query
+    @NameInMap("Async")
+    private Boolean async;
+
+    @Query
     @NameInMap("Cascade")
     private Boolean cascade;
 
@@ -31,6 +35,7 @@ public class DeleteDatabaseRequest extends Request {
     private DeleteDatabaseRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.async = builder.async;
         this.cascade = builder.cascade;
         this.catalogId = builder.catalogId;
         this.name = builder.name;
@@ -57,6 +62,13 @@ public class DeleteDatabaseRequest extends Request {
     }
 
     /**
+     * @return async
+     */
+    public Boolean getAsync() {
+        return this.async;
+    }
+
+    /**
      * @return cascade
      */
     public Boolean getCascade() {
@@ -79,6 +91,7 @@ public class DeleteDatabaseRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteDatabaseRequest, Builder> {
         private String regionId; 
+        private Boolean async; 
         private Boolean cascade; 
         private String catalogId; 
         private String name; 
@@ -90,13 +103,14 @@ public class DeleteDatabaseRequest extends Request {
         private Builder(DeleteDatabaseRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.async = request.async;
             this.cascade = request.cascade;
             this.catalogId = request.catalogId;
             this.name = request.name;
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -105,7 +119,16 @@ public class DeleteDatabaseRequest extends Request {
         }
 
         /**
-         * Cascade
+         * Async.
+         */
+        public Builder async(Boolean async) {
+            this.putQueryParameter("Async", async);
+            this.async = async;
+            return this;
+        }
+
+        /**
+         * Cascade.
          */
         public Builder cascade(Boolean cascade) {
             this.putQueryParameter("Cascade", cascade);
@@ -114,7 +137,7 @@ public class DeleteDatabaseRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putQueryParameter("CatalogId", catalogId);
@@ -123,7 +146,7 @@ public class DeleteDatabaseRequest extends Request {
         }
 
         /**
-         * Name
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

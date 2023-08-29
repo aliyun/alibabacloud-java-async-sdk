@@ -15,6 +15,9 @@ public class LifecycleResource extends TeaModel {
     @NameInMap("BizId")
     private String bizId;
 
+    @NameInMap("CatalogId")
+    private String catalogId;
+
     @NameInMap("Database")
     private Database database;
 
@@ -44,6 +47,7 @@ public class LifecycleResource extends TeaModel {
 
     private LifecycleResource(Builder builder) {
         this.bizId = builder.bizId;
+        this.catalogId = builder.catalogId;
         this.database = builder.database;
         this.databaseName = builder.databaseName;
         this.databaseProfile = builder.databaseProfile;
@@ -68,6 +72,13 @@ public class LifecycleResource extends TeaModel {
      */
     public String getBizId() {
         return this.bizId;
+    }
+
+    /**
+     * @return catalogId
+     */
+    public String getCatalogId() {
+        return this.catalogId;
     }
 
     /**
@@ -135,6 +146,7 @@ public class LifecycleResource extends TeaModel {
 
     public static final class Builder {
         private String bizId; 
+        private String catalogId; 
         private Database database; 
         private String databaseName; 
         private DatabaseProfile databaseProfile; 
@@ -146,7 +158,7 @@ public class LifecycleResource extends TeaModel {
         private TableProfile tableProfile; 
 
         /**
-         * BizId
+         * BizId.
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -154,7 +166,15 @@ public class LifecycleResource extends TeaModel {
         }
 
         /**
-         * Database
+         * CatalogId.
+         */
+        public Builder catalogId(String catalogId) {
+            this.catalogId = catalogId;
+            return this;
+        }
+
+        /**
+         * Database.
          */
         public Builder database(Database database) {
             this.database = database;
@@ -162,7 +182,7 @@ public class LifecycleResource extends TeaModel {
         }
 
         /**
-         * 数据库名称
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -170,7 +190,7 @@ public class LifecycleResource extends TeaModel {
         }
 
         /**
-         * DatabaseProfile
+         * DatabaseProfile.
          */
         public Builder databaseProfile(DatabaseProfile databaseProfile) {
             this.databaseProfile = databaseProfile;
@@ -178,7 +198,7 @@ public class LifecycleResource extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * GmtCreate.
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -186,7 +206,7 @@ public class LifecycleResource extends TeaModel {
         }
 
         /**
-         * 生命周期规则id
+         * LifecycleRuleBizId.
          */
         public Builder lifecycleRuleBizId(String lifecycleRuleBizId) {
             this.lifecycleRuleBizId = lifecycleRuleBizId;
@@ -194,7 +214,7 @@ public class LifecycleResource extends TeaModel {
         }
 
         /**
-         * Owner
+         * Owner.
          */
         public Builder owner(Long owner) {
             this.owner = owner;
@@ -202,7 +222,7 @@ public class LifecycleResource extends TeaModel {
         }
 
         /**
-         * Table
+         * Table.
          */
         public Builder table(Table table) {
             this.table = table;
@@ -210,7 +230,7 @@ public class LifecycleResource extends TeaModel {
         }
 
         /**
-         * 表名称
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -306,7 +326,7 @@ public class LifecycleResource extends TeaModel {
             private Long updateTime; 
 
             /**
-             * CreateTime
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -314,7 +334,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * Description
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -322,7 +342,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * LocationUri
+             * LocationUri.
              */
             public Builder locationUri(String locationUri) {
                 this.locationUri = locationUri;
@@ -330,7 +350,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * Name
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -338,7 +358,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * UpdateTime
+             * UpdateTime.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -403,7 +423,7 @@ public class LifecycleResource extends TeaModel {
             private String serializationLib; 
 
             /**
-             * Name
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -411,7 +431,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * Parameters
+             * Parameters.
              */
             public Builder parameters(java.util.Map < String, String > parameters) {
                 this.parameters = parameters;
@@ -419,7 +439,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * SerializationLib
+             * SerializationLib.
              */
             public Builder serializationLib(String serializationLib) {
                 this.serializationLib = serializationLib;
@@ -520,7 +540,7 @@ public class LifecycleResource extends TeaModel {
             private SerDeInfo serDeInfo; 
 
             /**
-             * BucketCols
+             * BucketCols.
              */
             public Builder bucketCols(java.util.List < String > bucketCols) {
                 this.bucketCols = bucketCols;
@@ -528,7 +548,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * InputFormat
+             * InputFormat.
              */
             public Builder inputFormat(String inputFormat) {
                 this.inputFormat = inputFormat;
@@ -536,7 +556,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * Location
+             * Location.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -544,7 +564,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * OutputFormat
+             * OutputFormat.
              */
             public Builder outputFormat(String outputFormat) {
                 this.outputFormat = outputFormat;
@@ -552,7 +572,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * Parameters
+             * Parameters.
              */
             public Builder parameters(java.util.Map < String, String > parameters) {
                 this.parameters = parameters;
@@ -560,7 +580,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * SerDeInfo
+             * SerDeInfo.
              */
             public Builder serDeInfo(SerDeInfo serDeInfo) {
                 this.serDeInfo = serDeInfo;
@@ -661,7 +681,7 @@ public class LifecycleResource extends TeaModel {
             private String tableType; 
 
             /**
-             * CreateTime
+             * CreateTime.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -669,7 +689,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * DatabaseName
+             * DatabaseName.
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -677,7 +697,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * Parameters
+             * Parameters.
              */
             public Builder parameters(java.util.Map < String, String > parameters) {
                 this.parameters = parameters;
@@ -685,7 +705,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * Sd
+             * Sd.
              */
             public Builder sd(Sd sd) {
                 this.sd = sd;
@@ -693,7 +713,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * TableName
+             * TableName.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -701,7 +721,7 @@ public class LifecycleResource extends TeaModel {
             }
 
             /**
-             * TableType
+             * TableType.
              */
             public Builder tableType(String tableType) {
                 this.tableType = tableType;

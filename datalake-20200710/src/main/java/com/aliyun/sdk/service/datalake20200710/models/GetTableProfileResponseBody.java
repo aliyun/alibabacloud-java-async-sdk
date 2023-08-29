@@ -102,7 +102,7 @@ public class GetTableProfileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class GetTableProfileResponseBody extends TeaModel {
         }
 
         /**
-         * Success
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

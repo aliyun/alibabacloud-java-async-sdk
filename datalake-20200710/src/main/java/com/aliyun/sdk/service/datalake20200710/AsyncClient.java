@@ -80,6 +80,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteTableVersionResponse> deleteTableVersion(DeleteTableVersionRequest request);
 
+    CompletableFuture<DeregisterLocationResponse> deregisterLocation(DeregisterLocationRequest request);
+
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     CompletableFuture<GetAsyncTaskStatusResponse> getAsyncTaskStatus(GetAsyncTaskStatusRequest request);
@@ -91,6 +93,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDatabaseResponse> getDatabase(GetDatabaseRequest request);
 
     CompletableFuture<GetFunctionResponse> getFunction(GetFunctionRequest request);
+
+    CompletableFuture<GetLifecycleRuleResponse> getLifecycleRule(GetLifecycleRuleRequest request);
 
     CompletableFuture<GetLockResponse> getLock(GetLockRequest request);
 
@@ -152,6 +156,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RefreshLockResponse> refreshLock(RefreshLockRequest request);
 
+    CompletableFuture<RegisterLocationResponse> registerLocation(RegisterLocationRequest request);
+
     CompletableFuture<RenamePartitionResponse> renamePartition(RenamePartitionRequest request);
 
     CompletableFuture<RenameTableResponse> renameTable(RenameTableRequest request);
@@ -185,6 +191,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePartitionColumnStatisticsResponse> updatePartitionColumnStatistics(UpdatePartitionColumnStatisticsRequest request);
 
     CompletableFuture<UpdatePermissionsResponse> updatePermissions(UpdatePermissionsRequest request);
+
+    CompletableFuture<UpdateRegisteredLocationResponse> updateRegisteredLocation(UpdateRegisteredLocationRequest request);
 
     CompletableFuture<UpdateRoleResponse> updateRole(UpdateRoleRequest request);
 

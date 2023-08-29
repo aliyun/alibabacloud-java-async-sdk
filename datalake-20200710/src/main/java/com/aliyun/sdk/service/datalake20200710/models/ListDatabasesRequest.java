@@ -111,7 +111,7 @@ public class ListDatabasesRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -120,7 +120,7 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * catalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putQueryParameter("CatalogId", catalogId);
@@ -129,7 +129,7 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * namePattern
+         * NamePattern.
          */
         public Builder namePattern(String namePattern) {
             this.putQueryParameter("NamePattern", namePattern);
@@ -138,7 +138,7 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * namePattern
+         * NextPageToken.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -147,7 +147,7 @@ public class ListDatabasesRequest extends Request {
         }
 
         /**
-         * pageSize
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

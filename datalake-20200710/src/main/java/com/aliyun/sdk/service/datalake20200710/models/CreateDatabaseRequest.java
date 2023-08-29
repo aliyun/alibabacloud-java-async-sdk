@@ -82,7 +82,7 @@ public class CreateDatabaseRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -91,7 +91,7 @@ public class CreateDatabaseRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putBodyParameter("CatalogId", catalogId);

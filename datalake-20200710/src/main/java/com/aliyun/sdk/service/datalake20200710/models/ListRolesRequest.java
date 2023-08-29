@@ -96,7 +96,7 @@ public class ListRolesRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -114,7 +114,7 @@ public class ListRolesRequest extends Request {
         }
 
         /**
-         * PageSize
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -122,7 +122,7 @@ public class Catalog extends TeaModel {
         private Long updateTime; 
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.catalogId = catalogId;
@@ -130,7 +130,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * CreateTime.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -138,7 +138,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * CreatedBy- 创建者 - principal格式
+         * CreatedBy.
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -146,7 +146,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * Description
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -154,7 +154,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * LocationUri
+         * LocationUri.
          */
         public Builder locationUri(String locationUri) {
             this.locationUri = locationUri;
@@ -162,7 +162,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * Owner - 负责人 - Principal格式
+         * Owner.
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -170,7 +170,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * Catalog状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;
@@ -178,7 +178,7 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * 更新时间
+         * UpdateTime.
          */
         public Builder updateTime(Long updateTime) {
             this.updateTime = updateTime;

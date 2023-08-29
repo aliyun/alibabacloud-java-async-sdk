@@ -124,7 +124,7 @@ public class BatchGetPartitionsRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -133,7 +133,7 @@ public class BatchGetPartitionsRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putBodyParameter("CatalogId", catalogId);
@@ -142,7 +142,7 @@ public class BatchGetPartitionsRequest extends Request {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -151,7 +151,7 @@ public class BatchGetPartitionsRequest extends Request {
         }
 
         /**
-         * IsShareSd
+         * IsShareSd.
          */
         public Builder isShareSd(Boolean isShareSd) {
             this.putBodyParameter("IsShareSd", isShareSd);
@@ -169,7 +169,7 @@ public class BatchGetPartitionsRequest extends Request {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);

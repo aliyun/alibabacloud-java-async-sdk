@@ -138,7 +138,7 @@ public class SearchAcrossCatalogRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -147,7 +147,7 @@ public class SearchAcrossCatalogRequest extends Request {
         }
 
         /**
-         * CatalogId数组，为空则搜索所有Catalog
+         * CatalogIds.
          */
         public Builder catalogIds(java.util.List < String > catalogIds) {
             this.putBodyParameter("CatalogIds", catalogIds);
@@ -156,7 +156,7 @@ public class SearchAcrossCatalogRequest extends Request {
         }
 
         /**
-         * 当前查询的页号
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -165,7 +165,7 @@ public class SearchAcrossCatalogRequest extends Request {
         }
 
         /**
-         * 当前查询的页大小
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -174,7 +174,7 @@ public class SearchAcrossCatalogRequest extends Request {
         }
 
         /**
-         * 搜索问题
+         * SearchText.
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);
@@ -183,7 +183,7 @@ public class SearchAcrossCatalogRequest extends Request {
         }
 
         /**
-         * SearchTypes数组，可选值为ALL/CATALOG/DATABASE/TABLE
+         * SearchTypes.
          */
         public Builder searchTypes(java.util.List < String > searchTypes) {
             this.putBodyParameter("SearchTypes", searchTypes);
@@ -192,7 +192,7 @@ public class SearchAcrossCatalogRequest extends Request {
         }
 
         /**
-         * 排序结构
+         * SortCriteria.
          */
         public Builder sortCriteria(java.util.List < SortCriterion > sortCriteria) {
             this.putBodyParameter("SortCriteria", sortCriteria);

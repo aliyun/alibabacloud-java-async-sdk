@@ -74,7 +74,7 @@ public class FileCnt extends TeaModel {
         private Long tiny; 
 
         /**
-         * 大文件
+         * Large.
          */
         public Builder large(Long large) {
             this.large = large;
@@ -82,7 +82,7 @@ public class FileCnt extends TeaModel {
         }
 
         /**
-         * 中文件
+         * Middle.
          */
         public Builder middle(Long middle) {
             this.middle = middle;
@@ -90,7 +90,7 @@ public class FileCnt extends TeaModel {
         }
 
         /**
-         * 小文件
+         * Small.
          */
         public Builder small(Long small) {
             this.small = small;
@@ -98,7 +98,7 @@ public class FileCnt extends TeaModel {
         }
 
         /**
-         * 极小文件
+         * Tiny.
          */
         public Builder tiny(Long tiny) {
             this.tiny = tiny;

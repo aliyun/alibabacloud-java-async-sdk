@@ -58,7 +58,7 @@ public class TableVersion extends TeaModel {
         }
 
         /**
-         * table version
+         * VersionId.
          */
         public Builder versionId(Integer versionId) {
             this.versionId = versionId;

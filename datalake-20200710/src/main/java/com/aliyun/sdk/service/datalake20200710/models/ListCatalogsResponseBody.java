@@ -98,7 +98,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Catalogs
+         * Catalogs.
          */
         public Builder catalogs(java.util.List < Catalog > catalogs) {
             this.catalogs = catalogs;
@@ -106,7 +106,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * Code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +114,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * Message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * NextPageToken
+         * NextPageToken.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -130,7 +130,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListCatalogsResponseBody extends TeaModel {
         }
 
         /**
-         * Success
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

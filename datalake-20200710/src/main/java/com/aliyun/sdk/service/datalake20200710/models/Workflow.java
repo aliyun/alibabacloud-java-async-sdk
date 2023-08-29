@@ -74,7 +74,7 @@ public class Workflow extends TeaModel {
         private String latestStartTime; 
 
         /**
-         * 最近运行的结束时间
+         * LatestEndTime.
          */
         public Builder latestEndTime(String latestEndTime) {
             this.latestEndTime = latestEndTime;
@@ -82,7 +82,7 @@ public class Workflow extends TeaModel {
         }
 
         /**
-         * 实例id
+         * LatestInstanceId.
          */
         public Builder latestInstanceId(String latestInstanceId) {
             this.latestInstanceId = latestInstanceId;
@@ -90,7 +90,7 @@ public class Workflow extends TeaModel {
         }
 
         /**
-         * 最后运行实例的状态
+         * LatestInstanceStatus.
          */
         public Builder latestInstanceStatus(String latestInstanceStatus) {
             this.latestInstanceStatus = latestInstanceStatus;
@@ -98,7 +98,7 @@ public class Workflow extends TeaModel {
         }
 
         /**
-         * 最后运行的开始时间
+         * LatestStartTime.
          */
         public Builder latestStartTime(String latestStartTime) {
             this.latestStartTime = latestStartTime;

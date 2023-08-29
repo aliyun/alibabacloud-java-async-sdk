@@ -98,7 +98,7 @@ public class BatchGetTablesResponseBody extends TeaModel {
         private java.util.List < Table > tables; 
 
         /**
-         * Code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class BatchGetTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +114,7 @@ public class BatchGetTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class BatchGetTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,7 @@ public class BatchGetTablesResponseBody extends TeaModel {
         }
 
         /**
-         * TableErrors
+         * TableErrors.
          */
         public Builder tableErrors(java.util.List < TableError > tableErrors) {
             this.tableErrors = tableErrors;
@@ -138,7 +138,7 @@ public class BatchGetTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Tables
+         * Tables.
          */
         public Builder tables(java.util.List < Table > tables) {
             this.tables = tables;

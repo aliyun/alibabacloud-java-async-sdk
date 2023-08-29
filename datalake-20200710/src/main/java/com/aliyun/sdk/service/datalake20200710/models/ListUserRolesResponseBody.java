@@ -98,7 +98,7 @@ public class ListUserRolesResponseBody extends TeaModel {
         private java.util.List < UserRole > userRoles; 
 
         /**
-         * Code.
+         * Code
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * Message
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ListUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * success
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class ListUserRolesResponseBody extends TeaModel {
         }
 
         /**
-         * Data
+         * UserRoles
          */
         public Builder userRoles(java.util.List < UserRole > userRoles) {
             this.userRoles = userRoles;

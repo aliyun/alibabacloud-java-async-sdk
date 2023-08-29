@@ -69,7 +69,7 @@ public class UpdateCatalogRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -78,7 +78,7 @@ public class UpdateCatalogRequest extends Request {
         }
 
         /**
-         * CatalogInput.
+         * cataloginput
          */
         public Builder catalogInput(CatalogInput catalogInput) {
             this.putBodyParameter("CatalogInput", catalogInput);

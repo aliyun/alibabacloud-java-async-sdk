@@ -98,7 +98,7 @@ public class SearchResponseBody extends TeaModel {
         private TableResult tableResult; 
 
         /**
-         * 响应代码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class SearchResponseBody extends TeaModel {
         }
 
         /**
-         * 返回的db结果
+         * DatabaseResult.
          */
         public Builder databaseResult(DatabaseResult databaseResult) {
             this.databaseResult = databaseResult;
@@ -114,7 +114,7 @@ public class SearchResponseBody extends TeaModel {
         }
 
         /**
-         * 响应消息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class SearchResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class SearchResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class SearchResponseBody extends TeaModel {
         }
 
         /**
-         * 返回的table result
+         * TableResult.
          */
         public Builder tableResult(TableResult tableResult) {
             this.tableResult = tableResult;
@@ -190,7 +190,7 @@ public class SearchResponseBody extends TeaModel {
             private java.util.List < HighLight > highLightList; 
 
             /**
-             * 返回的Database
+             * Database.
              */
             public Builder database(Database database) {
                 this.database = database;
@@ -198,7 +198,7 @@ public class SearchResponseBody extends TeaModel {
             }
 
             /**
-             * 返回高亮文本
+             * HighLightList.
              */
             public Builder highLightList(java.util.List < HighLight > highLightList) {
                 this.highLightList = highLightList;
@@ -251,7 +251,7 @@ public class SearchResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * 返回的DatabaseList
+             * Databases.
              */
             public Builder databases(java.util.List < Databases> databases) {
                 this.databases = databases;
@@ -259,7 +259,7 @@ public class SearchResponseBody extends TeaModel {
             }
 
             /**
-             * 满足匹配条件的总的Database个数
+             * TotalCount.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -312,7 +312,7 @@ public class SearchResponseBody extends TeaModel {
             private Table table; 
 
             /**
-             * 返回的高亮文本
+             * HighLightList.
              */
             public Builder highLightList(java.util.List < HighLight > highLightList) {
                 this.highLightList = highLightList;
@@ -320,7 +320,7 @@ public class SearchResponseBody extends TeaModel {
             }
 
             /**
-             * 返回的Table
+             * Table.
              */
             public Builder table(Table table) {
                 this.table = table;
@@ -373,7 +373,7 @@ public class SearchResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * 返回的TableList
+             * Tables.
              */
             public Builder tables(java.util.List < Tables> tables) {
                 this.tables = tables;
@@ -381,7 +381,7 @@ public class SearchResponseBody extends TeaModel {
             }
 
             /**
-             * 满足匹配条件的总的Table个数
+             * TotalCount.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -124,7 +124,7 @@ public class DeletePartitionRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -133,7 +133,7 @@ public class DeletePartitionRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putBodyParameter("CatalogId", catalogId);
@@ -142,7 +142,7 @@ public class DeletePartitionRequest extends Request {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -151,7 +151,7 @@ public class DeletePartitionRequest extends Request {
         }
 
         /**
-         * IfExists
+         * IfExists.
          */
         public Builder ifExists(Boolean ifExists) {
             this.putBodyParameter("IfExists", ifExists);
@@ -169,7 +169,7 @@ public class DeletePartitionRequest extends Request {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);

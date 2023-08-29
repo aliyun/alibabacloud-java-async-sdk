@@ -50,7 +50,7 @@ public class ResourceUri extends TeaModel {
         private String uri; 
 
         /**
-         * ResourceType
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -58,7 +58,7 @@ public class ResourceUri extends TeaModel {
         }
 
         /**
-         * Uri
+         * Uri.
          */
         public Builder uri(String uri) {
             this.uri = uri;

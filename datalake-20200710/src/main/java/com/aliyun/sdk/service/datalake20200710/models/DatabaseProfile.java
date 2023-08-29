@@ -21,18 +21,30 @@ public class DatabaseProfile extends TeaModel {
     @NameInMap("FileSize")
     private Long fileSize;
 
+    @NameInMap("LatestDate")
+    private String latestDate;
+
     @NameInMap("Location")
     private String location;
 
     @NameInMap("Name")
     private String name;
 
+    @NameInMap("ObjectCnt")
+    private Long objectCnt;
+
+    @NameInMap("ObjectSize")
+    private Long objectSize;
+
     private DatabaseProfile(Builder builder) {
         this.createTime = builder.createTime;
         this.fileCnt = builder.fileCnt;
         this.fileSize = builder.fileSize;
+        this.latestDate = builder.latestDate;
         this.location = builder.location;
         this.name = builder.name;
+        this.objectCnt = builder.objectCnt;
+        this.objectSize = builder.objectSize;
     }
 
     public static Builder builder() {
@@ -65,6 +77,13 @@ public class DatabaseProfile extends TeaModel {
     }
 
     /**
+     * @return latestDate
+     */
+    public String getLatestDate() {
+        return this.latestDate;
+    }
+
+    /**
      * @return location
      */
     public String getLocation() {
@@ -78,15 +97,32 @@ public class DatabaseProfile extends TeaModel {
         return this.name;
     }
 
+    /**
+     * @return objectCnt
+     */
+    public Long getObjectCnt() {
+        return this.objectCnt;
+    }
+
+    /**
+     * @return objectSize
+     */
+    public Long getObjectSize() {
+        return this.objectSize;
+    }
+
     public static final class Builder {
         private String createTime; 
         private Long fileCnt; 
         private Long fileSize; 
+        private String latestDate; 
         private String location; 
         private String name; 
+        private Long objectCnt; 
+        private Long objectSize; 
 
         /**
-         * 创建时间
+         * CreateTime.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -94,7 +130,7 @@ public class DatabaseProfile extends TeaModel {
         }
 
         /**
-         * 文件数量
+         * FileCnt.
          */
         public Builder fileCnt(Long fileCnt) {
             this.fileCnt = fileCnt;
@@ -102,7 +138,7 @@ public class DatabaseProfile extends TeaModel {
         }
 
         /**
-         * 文件大小
+         * FileSize.
          */
         public Builder fileSize(Long fileSize) {
             this.fileSize = fileSize;
@@ -110,7 +146,15 @@ public class DatabaseProfile extends TeaModel {
         }
 
         /**
-         * 存储位置
+         * LatestDate.
+         */
+        public Builder latestDate(String latestDate) {
+            this.latestDate = latestDate;
+            return this;
+        }
+
+        /**
+         * Location.
          */
         public Builder location(String location) {
             this.location = location;
@@ -118,10 +162,26 @@ public class DatabaseProfile extends TeaModel {
         }
 
         /**
-         * 库名称
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * ObjectCnt.
+         */
+        public Builder objectCnt(Long objectCnt) {
+            this.objectCnt = objectCnt;
+            return this;
+        }
+
+        /**
+         * ObjectSize.
+         */
+        public Builder objectSize(Long objectSize) {
+            this.objectSize = objectSize;
             return this;
         }
 

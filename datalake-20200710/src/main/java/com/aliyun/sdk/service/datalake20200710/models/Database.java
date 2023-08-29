@@ -146,7 +146,7 @@ public class Database extends TeaModel {
         private Integer updateTime; 
 
         /**
-         * createTime
+         * CreateTime.
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -154,7 +154,7 @@ public class Database extends TeaModel {
         }
 
         /**
-         * CreatedBy
+         * CreatedBy.
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -162,7 +162,7 @@ public class Database extends TeaModel {
         }
 
         /**
-         * description
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -170,7 +170,7 @@ public class Database extends TeaModel {
         }
 
         /**
-         * locationUri
+         * LocationUri.
          */
         public Builder locationUri(String locationUri) {
             this.locationUri = locationUri;
@@ -178,7 +178,7 @@ public class Database extends TeaModel {
         }
 
         /**
-         * name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -186,7 +186,7 @@ public class Database extends TeaModel {
         }
 
         /**
-         * ownerName
+         * OwnerName.
          */
         public Builder ownerName(String ownerName) {
             this.ownerName = ownerName;
@@ -194,7 +194,7 @@ public class Database extends TeaModel {
         }
 
         /**
-         * ownerType
+         * OwnerType.
          */
         public Builder ownerType(String ownerType) {
             this.ownerType = ownerType;
@@ -218,7 +218,7 @@ public class Database extends TeaModel {
         }
 
         /**
-         * updateTime
+         * UpdateTime.
          */
         public Builder updateTime(Integer updateTime) {
             this.updateTime = updateTime;

@@ -138,7 +138,7 @@ public class SearchRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -156,7 +156,7 @@ public class SearchRequest extends Request {
         }
 
         /**
-         * 当前查询的页号
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("PageNumber", pageNumber);
@@ -165,7 +165,7 @@ public class SearchRequest extends Request {
         }
 
         /**
-         * 当前查询的页大小
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -174,7 +174,7 @@ public class SearchRequest extends Request {
         }
 
         /**
-         * 搜索问题
+         * SearchText.
          */
         public Builder searchText(String searchText) {
             this.putBodyParameter("SearchText", searchText);
@@ -192,7 +192,7 @@ public class SearchRequest extends Request {
         }
 
         /**
-         * 排序结构
+         * SortCriteria.
          */
         public Builder sortCriteria(java.util.List < SortCriterion > sortCriteria) {
             this.putBodyParameter("SortCriteria", sortCriteria);

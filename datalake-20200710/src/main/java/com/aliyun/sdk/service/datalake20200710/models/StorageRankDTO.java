@@ -62,7 +62,7 @@ public class StorageRankDTO extends TeaModel {
         private java.util.List < TableStorageRank > tableStorageRank; 
 
         /**
-         * 库存储排名
+         * dbStorageRank.
          */
         public Builder dbStorageRank(java.util.List < DbStorageRank > dbStorageRank) {
             this.dbStorageRank = dbStorageRank;
@@ -70,7 +70,7 @@ public class StorageRankDTO extends TeaModel {
         }
 
         /**
-         * 小文件数量排名
+         * smallFileCntRank.
          */
         public Builder smallFileCntRank(java.util.List < SmallFileCntRank > smallFileCntRank) {
             this.smallFileCntRank = smallFileCntRank;
@@ -78,7 +78,7 @@ public class StorageRankDTO extends TeaModel {
         }
 
         /**
-         * 表存储排名
+         * tableStorageRank.
          */
         public Builder tableStorageRank(java.util.List < TableStorageRank > tableStorageRank) {
             this.tableStorageRank = tableStorageRank;

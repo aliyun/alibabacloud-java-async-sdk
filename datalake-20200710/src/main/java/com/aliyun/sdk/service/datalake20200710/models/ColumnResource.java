@@ -62,7 +62,7 @@ public class ColumnResource extends TeaModel {
         private String tableName; 
 
         /**
-         * ColumnName
+         * ColumnNames.
          */
         public Builder columnNames(java.util.List < String > columnNames) {
             this.columnNames = columnNames;
@@ -70,7 +70,7 @@ public class ColumnResource extends TeaModel {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -78,7 +78,7 @@ public class ColumnResource extends TeaModel {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;

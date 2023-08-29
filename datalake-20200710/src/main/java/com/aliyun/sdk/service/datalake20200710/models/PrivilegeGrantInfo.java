@@ -86,7 +86,7 @@ public class PrivilegeGrantInfo extends TeaModel {
         private String privilege; 
 
         /**
-         * createTime
+         * CreateTime.
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -94,7 +94,7 @@ public class PrivilegeGrantInfo extends TeaModel {
         }
 
         /**
-         * grantOption
+         * GrantOption.
          */
         public Builder grantOption(Boolean grantOption) {
             this.grantOption = grantOption;
@@ -102,7 +102,7 @@ public class PrivilegeGrantInfo extends TeaModel {
         }
 
         /**
-         * grantor
+         * Grantor.
          */
         public Builder grantor(String grantor) {
             this.grantor = grantor;
@@ -110,7 +110,7 @@ public class PrivilegeGrantInfo extends TeaModel {
         }
 
         /**
-         * grantorType
+         * GrantorType.
          */
         public Builder grantorType(String grantorType) {
             this.grantorType = grantorType;
@@ -118,7 +118,7 @@ public class PrivilegeGrantInfo extends TeaModel {
         }
 
         /**
-         * privilege
+         * Privilege.
          */
         public Builder privilege(String privilege) {
             this.privilege = privilege;

@@ -50,7 +50,7 @@ public class HighLight extends TeaModel {
         private String value; 
 
         /**
-         * 高亮的key
+         * Key.
          */
         public Builder key(String key) {
             this.key = key;
@@ -58,7 +58,7 @@ public class HighLight extends TeaModel {
         }
 
         /**
-         * 高亮的value
+         * Value.
          */
         public Builder value(String value) {
             this.value = value;

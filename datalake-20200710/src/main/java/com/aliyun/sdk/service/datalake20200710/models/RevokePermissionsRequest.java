@@ -142,7 +142,7 @@ public class RevokePermissionsRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -151,7 +151,7 @@ public class RevokePermissionsRequest extends Request {
         }
 
         /**
-         * 取消授权的accesses列表
+         * Accesses.
          */
         public Builder accesses(java.util.List < String > accesses) {
             this.putBodyParameter("Accesses", accesses);
@@ -169,7 +169,7 @@ public class RevokePermissionsRequest extends Request {
         }
 
         /**
-         * 取消授权的grantable accesses列表
+         * DelegateAccesses.
          */
         public Builder delegateAccesses(java.util.List < String > delegateAccesses) {
             this.putBodyParameter("DelegateAccesses", delegateAccesses);
@@ -178,7 +178,7 @@ public class RevokePermissionsRequest extends Request {
         }
 
         /**
-         * 取消授权meta资源
+         * MetaResource.
          */
         public Builder metaResource(MetaResource metaResource) {
             this.putBodyParameter("MetaResource", metaResource);
@@ -187,7 +187,7 @@ public class RevokePermissionsRequest extends Request {
         }
 
         /**
-         * 取消授权的用户/角色principal
+         * Principal.
          */
         public Builder principal(Principal principal) {
             this.putBodyParameter("Principal", principal);
@@ -196,7 +196,7 @@ public class RevokePermissionsRequest extends Request {
         }
 
         /**
-         * 取消授权的类型，目前仅支持hive
+         * Type.
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

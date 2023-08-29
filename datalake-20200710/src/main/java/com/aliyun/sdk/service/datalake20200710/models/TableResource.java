@@ -50,7 +50,7 @@ public class TableResource extends TeaModel {
         private String tableName; 
 
         /**
-         * database name
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -58,7 +58,7 @@ public class TableResource extends TeaModel {
         }
 
         /**
-         * tablename
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;

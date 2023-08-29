@@ -86,7 +86,7 @@ public class BatchUpdatePartitionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class BatchUpdatePartitionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class BatchUpdatePartitionsResponseBody extends TeaModel {
         }
 
         /**
-         * PartitionErrors
+         * PartitionErrors.
          */
         public Builder partitionErrors(java.util.List < PartitionError > partitionErrors) {
             this.partitionErrors = partitionErrors;
@@ -110,7 +110,7 @@ public class BatchUpdatePartitionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class BatchUpdatePartitionsResponseBody extends TeaModel {
         }
 
         /**
-         * Success
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

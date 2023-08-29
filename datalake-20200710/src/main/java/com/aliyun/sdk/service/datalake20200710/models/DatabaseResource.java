@@ -50,7 +50,7 @@ public class DatabaseResource extends TeaModel {
         private String databaseWildcard; 
 
         /**
-         * Database name
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -58,7 +58,7 @@ public class DatabaseResource extends TeaModel {
         }
 
         /**
-         * A wildcard member representing every resource under a database
+         * DatabaseWildcard.
          */
         public Builder databaseWildcard(String databaseWildcard) {
             this.databaseWildcard = databaseWildcard;

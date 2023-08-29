@@ -102,7 +102,7 @@ public class BatchGrantPermissionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message Code
+         * Message
          */
         public Builder message(String message) {
             this.message = message;

@@ -50,7 +50,7 @@ public class TaskStatus extends TeaModel {
         private String status; 
 
         /**
-         * message of the task
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -58,7 +58,7 @@ public class TaskStatus extends TeaModel {
         }
 
         /**
-         * status of the task
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;

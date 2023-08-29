@@ -24,11 +24,15 @@ public class DeleteDatabaseResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
+    @NameInMap("TaskId")
+    private String taskId;
+
     private DeleteDatabaseResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -67,14 +71,22 @@ public class DeleteDatabaseResponseBody extends TeaModel {
         return this.success;
     }
 
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
         private String code; 
         private String message; 
         private String requestId; 
         private Boolean success; 
+        private String taskId; 
 
         /**
-         * Response Code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +94,7 @@ public class DeleteDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Response Message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +102,7 @@ public class DeleteDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,10 +110,18 @@ public class DeleteDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Request is success or not
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
             return this;
         }
 

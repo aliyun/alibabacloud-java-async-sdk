@@ -98,7 +98,7 @@ public class BatchCreatePartitionsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 响应代码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class BatchCreatePartitionsResponseBody extends TeaModel {
         }
 
         /**
-         * 响应消息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +114,7 @@ public class BatchCreatePartitionsResponseBody extends TeaModel {
         }
 
         /**
-         * 分区出错信息
+         * PartitionErrors.
          */
         public Builder partitionErrors(java.util.List < PartitionError > partitionErrors) {
             this.partitionErrors = partitionErrors;
@@ -122,7 +122,7 @@ public class BatchCreatePartitionsResponseBody extends TeaModel {
         }
 
         /**
-         * Partitions
+         * Partitions.
          */
         public Builder partitions(java.util.List < Partition > partitions) {
             this.partitions = partitions;
@@ -130,7 +130,7 @@ public class BatchCreatePartitionsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class BatchCreatePartitionsResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -74,7 +74,7 @@ public class LockObj extends TeaModel {
         private String tableName; 
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.catalogId = catalogId;
@@ -82,7 +82,7 @@ public class LockObj extends TeaModel {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -90,7 +90,7 @@ public class LockObj extends TeaModel {
         }
 
         /**
-         * PartitionName
+         * PartitionName.
          */
         public Builder partitionName(String partitionName) {
             this.partitionName = partitionName;
@@ -98,7 +98,7 @@ public class LockObj extends TeaModel {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;

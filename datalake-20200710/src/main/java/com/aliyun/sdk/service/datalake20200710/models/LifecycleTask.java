@@ -74,7 +74,7 @@ public class LifecycleTask extends TeaModel {
         private WorkflowInstance workflowInstance; 
 
         /**
-         * 业务id
+         * BizId.
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -90,7 +90,7 @@ public class LifecycleTask extends TeaModel {
         }
 
         /**
-         * 名称
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;

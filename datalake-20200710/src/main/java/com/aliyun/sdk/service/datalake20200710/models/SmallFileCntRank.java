@@ -74,7 +74,7 @@ public class SmallFileCntRank extends TeaModel {
         private String tableName; 
 
         /**
-         * 库名
+         * DbName.
          */
         public Builder dbName(String dbName) {
             this.dbName = dbName;
@@ -82,7 +82,7 @@ public class SmallFileCntRank extends TeaModel {
         }
 
         /**
-         * 存储位置
+         * Location.
          */
         public Builder location(String location) {
             this.location = location;
@@ -90,7 +90,7 @@ public class SmallFileCntRank extends TeaModel {
         }
 
         /**
-         * 数量
+         * Quantity.
          */
         public Builder quantity(Long quantity) {
             this.quantity = quantity;
@@ -98,7 +98,7 @@ public class SmallFileCntRank extends TeaModel {
         }
 
         /**
-         * 表名
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;

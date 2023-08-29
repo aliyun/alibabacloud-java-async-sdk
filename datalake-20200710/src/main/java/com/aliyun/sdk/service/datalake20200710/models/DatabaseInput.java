@@ -122,7 +122,7 @@ public class DatabaseInput extends TeaModel {
         private PrincipalPrivilegeSet privileges; 
 
         /**
-         * createTime
+         * CreateTime.
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -130,7 +130,7 @@ public class DatabaseInput extends TeaModel {
         }
 
         /**
-         * Description
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -138,7 +138,7 @@ public class DatabaseInput extends TeaModel {
         }
 
         /**
-         * locationUri
+         * LocationUri.
          */
         public Builder locationUri(String locationUri) {
             this.locationUri = locationUri;
@@ -146,7 +146,7 @@ public class DatabaseInput extends TeaModel {
         }
 
         /**
-         * name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -154,7 +154,7 @@ public class DatabaseInput extends TeaModel {
         }
 
         /**
-         * ownerName
+         * OwnerName.
          */
         public Builder ownerName(String ownerName) {
             this.ownerName = ownerName;
@@ -162,7 +162,7 @@ public class DatabaseInput extends TeaModel {
         }
 
         /**
-         * ownerType
+         * OwnerType.
          */
         public Builder ownerType(String ownerType) {
             this.ownerType = ownerType;

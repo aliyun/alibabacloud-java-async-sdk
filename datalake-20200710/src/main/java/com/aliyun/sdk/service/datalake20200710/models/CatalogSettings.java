@@ -38,7 +38,7 @@ public class CatalogSettings extends TeaModel {
         private java.util.Map < String, String > config; 
 
         /**
-         * 配置
+         * Config.
          */
         public Builder config(java.util.Map < String, String > config) {
             this.config = config;

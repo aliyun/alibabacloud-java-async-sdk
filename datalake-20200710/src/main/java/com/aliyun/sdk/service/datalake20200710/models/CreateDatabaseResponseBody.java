@@ -74,7 +74,7 @@ public class CreateDatabaseResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Response Code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class CreateDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Response Message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class CreateDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreateDatabaseResponseBody extends TeaModel {
         }
 
         /**
-         * Success
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -96,7 +96,7 @@ public class UpdateDatabaseRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -105,7 +105,7 @@ public class UpdateDatabaseRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putBodyParameter("CatalogId", catalogId);
@@ -123,7 +123,7 @@ public class UpdateDatabaseRequest extends Request {
         }
 
         /**
-         * Name
+         * Name.
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);

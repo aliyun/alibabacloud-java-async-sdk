@@ -278,7 +278,7 @@ public class TableExtended extends TeaModel {
         private String viewOriginalText; 
 
         /**
-         * Cascade
+         * Cascade.
          */
         public Builder cascade(Boolean cascade) {
             this.cascade = cascade;
@@ -286,7 +286,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * CreateTime
+         * CreateTime.
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -294,7 +294,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * CreatedBy
+         * CreatedBy.
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -302,7 +302,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -310,7 +310,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * LastAccessTime
+         * LastAccessTime.
          */
         public Builder lastAccessTime(Integer lastAccessTime) {
             this.lastAccessTime = lastAccessTime;
@@ -318,7 +318,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * LastAnalyzedTime
+         * LastAnalyzedTime.
          */
         public Builder lastAnalyzedTime(Integer lastAnalyzedTime) {
             this.lastAnalyzedTime = lastAnalyzedTime;
@@ -326,7 +326,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * Owner
+         * Owner.
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -334,7 +334,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * OwnerType
+         * OwnerType.
          */
         public Builder ownerType(String ownerType) {
             this.ownerType = ownerType;
@@ -358,7 +358,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * privileges
+         * Privileges.
          */
         public Builder privileges(Privileges privileges) {
             this.privileges = privileges;
@@ -366,7 +366,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * Retention
+         * Retention.
          */
         public Builder retention(Integer retention) {
             this.retention = retention;
@@ -374,7 +374,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * RewriteEnabled
+         * RewriteEnabled.
          */
         public Builder rewriteEnabled(Boolean rewriteEnabled) {
             this.rewriteEnabled = rewriteEnabled;
@@ -382,7 +382,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * sd
+         * Sd.
          */
         public Builder sd(Sd sd) {
             this.sd = sd;
@@ -390,7 +390,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * TableFormat
+         * TableFormat.
          */
         public Builder tableFormat(String tableFormat) {
             this.tableFormat = tableFormat;
@@ -398,7 +398,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -406,7 +406,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * TableType
+         * TableType.
          */
         public Builder tableType(String tableType) {
             this.tableType = tableType;
@@ -414,7 +414,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * Temporary
+         * Temporary.
          */
         public Builder temporary(Boolean temporary) {
             this.temporary = temporary;
@@ -422,7 +422,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * UpdateTime
+         * UpdateTime.
          */
         public Builder updateTime(Integer updateTime) {
             this.updateTime = updateTime;
@@ -430,7 +430,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * ViewExpandedText
+         * ViewExpandedText.
          */
         public Builder viewExpandedText(String viewExpandedText) {
             this.viewExpandedText = viewExpandedText;
@@ -438,7 +438,7 @@ public class TableExtended extends TeaModel {
         }
 
         /**
-         * ViewOriginalText
+         * ViewOriginalText.
          */
         public Builder viewOriginalText(String viewOriginalText) {
             this.viewOriginalText = viewOriginalText;
@@ -502,7 +502,7 @@ public class TableExtended extends TeaModel {
             private java.util.Map < String, java.util.List<TableExtendedPrivilegesGroupPrivilegesValue>> groupPrivileges; 
 
             /**
-             * rolePrivileges
+             * RolePrivileges.
              */
             public Builder rolePrivileges(java.util.Map < String, java.util.List<TableExtendedPrivilegesRolePrivilegesValue>> rolePrivileges) {
                 this.rolePrivileges = rolePrivileges;
@@ -510,7 +510,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * userPrivileges
+             * UserPrivileges.
              */
             public Builder userPrivileges(java.util.Map < String, java.util.List<TableExtendedPrivilegesUserPrivilegesValue>> userPrivileges) {
                 this.userPrivileges = userPrivileges;
@@ -518,7 +518,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * groupPrivileges
+             * groupPrivileges.
              */
             public Builder groupPrivileges(java.util.Map < String, java.util.List<TableExtendedPrivilegesGroupPrivilegesValue>> groupPrivileges) {
                 this.groupPrivileges = groupPrivileges;
@@ -583,7 +583,7 @@ public class TableExtended extends TeaModel {
             private String serializationLib; 
 
             /**
-             * Name
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -591,7 +591,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * Parameters
+             * Parameters.
              */
             public Builder parameters(java.util.Map < String, String > parameters) {
                 this.parameters = parameters;
@@ -599,7 +599,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * SerializationLib
+             * SerializationLib.
              */
             public Builder serializationLib(String serializationLib) {
                 this.serializationLib = serializationLib;
@@ -664,7 +664,7 @@ public class TableExtended extends TeaModel {
             private java.util.List < java.util.List < String > > skewedColValues; 
 
             /**
-             * SkewedColNames
+             * SkewedColNames.
              */
             public Builder skewedColNames(java.util.List < String > skewedColNames) {
                 this.skewedColNames = skewedColNames;
@@ -672,7 +672,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * SkewedColValueLocationMaps
+             * SkewedColValueLocationMaps.
              */
             public Builder skewedColValueLocationMaps(java.util.Map < String, String > skewedColValueLocationMaps) {
                 this.skewedColValueLocationMaps = skewedColValueLocationMaps;
@@ -680,7 +680,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * SkewedColValues
+             * SkewedColValues.
              */
             public Builder skewedColValues(java.util.List < java.util.List < String > > skewedColValues) {
                 this.skewedColValues = skewedColValues;
@@ -853,7 +853,7 @@ public class TableExtended extends TeaModel {
             private Boolean storedAsSubDirectories; 
 
             /**
-             * bucketCols
+             * BucketCols.
              */
             public Builder bucketCols(java.util.List < String > bucketCols) {
                 this.bucketCols = bucketCols;
@@ -861,7 +861,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * Cols
+             * Cols.
              */
             public Builder cols(java.util.List < FieldSchema > cols) {
                 this.cols = cols;
@@ -869,7 +869,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * Compressed
+             * Compressed.
              */
             public Builder compressed(Boolean compressed) {
                 this.compressed = compressed;
@@ -877,7 +877,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * InputFormat
+             * InputFormat.
              */
             public Builder inputFormat(String inputFormat) {
                 this.inputFormat = inputFormat;
@@ -885,7 +885,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * Location
+             * Location.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -893,7 +893,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * NumBuckets
+             * NumBuckets.
              */
             public Builder numBuckets(Integer numBuckets) {
                 this.numBuckets = numBuckets;
@@ -901,7 +901,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * OutputFormat
+             * OutputFormat.
              */
             public Builder outputFormat(String outputFormat) {
                 this.outputFormat = outputFormat;
@@ -909,7 +909,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * Parameters
+             * Parameters.
              */
             public Builder parameters(java.util.Map < String, String > parameters) {
                 this.parameters = parameters;
@@ -917,7 +917,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * SerDeInfo
+             * SerDeInfo.
              */
             public Builder serDeInfo(SerDeInfo serDeInfo) {
                 this.serDeInfo = serDeInfo;
@@ -925,7 +925,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * SkewedInfo
+             * SkewedInfo.
              */
             public Builder skewedInfo(SkewedInfo skewedInfo) {
                 this.skewedInfo = skewedInfo;
@@ -933,7 +933,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * SortCols
+             * SortCols.
              */
             public Builder sortCols(java.util.List < Order > sortCols) {
                 this.sortCols = sortCols;
@@ -941,7 +941,7 @@ public class TableExtended extends TeaModel {
             }
 
             /**
-             * StoredAsSubDirectories
+             * StoredAsSubDirectories.
              */
             public Builder storedAsSubDirectories(Boolean storedAsSubDirectories) {
                 this.storedAsSubDirectories = storedAsSubDirectories;

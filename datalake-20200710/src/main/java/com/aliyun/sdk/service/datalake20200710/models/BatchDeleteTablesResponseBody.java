@@ -86,7 +86,7 @@ public class BatchDeleteTablesResponseBody extends TeaModel {
         private java.util.List < TableError > tableErrors; 
 
         /**
-         * Code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class BatchDeleteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -102,7 +102,7 @@ public class BatchDeleteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +110,7 @@ public class BatchDeleteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * Success
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -118,7 +118,7 @@ public class BatchDeleteTablesResponseBody extends TeaModel {
         }
 
         /**
-         * PartitionErrors
+         * TableErrors.
          */
         public Builder tableErrors(java.util.List < TableError > tableErrors) {
             this.tableErrors = tableErrors;

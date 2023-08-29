@@ -62,7 +62,7 @@ public class StorageSummary extends TeaModel {
         private Integer tableNum; 
 
         /**
-         * database num of this catalog
+         * DatabaseNum.
          */
         public Builder databaseNum(Integer databaseNum) {
             this.databaseNum = databaseNum;
@@ -70,7 +70,7 @@ public class StorageSummary extends TeaModel {
         }
 
         /**
-         * partition num of this catalog
+         * PartitionNum.
          */
         public Builder partitionNum(Integer partitionNum) {
             this.partitionNum = partitionNum;
@@ -78,7 +78,7 @@ public class StorageSummary extends TeaModel {
         }
 
         /**
-         * table num of this catalog
+         * TableNum.
          */
         public Builder tableNum(Integer tableNum) {
             this.tableNum = tableNum;

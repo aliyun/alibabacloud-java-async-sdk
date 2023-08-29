@@ -290,7 +290,7 @@ public class Table extends TeaModel {
         private String viewOriginalText; 
 
         /**
-         * Cascade
+         * Cascade.
          */
         public Builder cascade(Boolean cascade) {
             this.cascade = cascade;
@@ -298,7 +298,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * CreateTime
+         * CreateTime.
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -306,7 +306,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * CreatedBy
+         * CreatedBy.
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -314,7 +314,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -322,7 +322,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * LastAccessTime
+         * LastAccessTime.
          */
         public Builder lastAccessTime(Integer lastAccessTime) {
             this.lastAccessTime = lastAccessTime;
@@ -330,7 +330,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * LastAnalyzedTime
+         * LastAnalyzedTime.
          */
         public Builder lastAnalyzedTime(Integer lastAnalyzedTime) {
             this.lastAnalyzedTime = lastAnalyzedTime;
@@ -338,7 +338,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * Owner
+         * Owner.
          */
         public Builder owner(String owner) {
             this.owner = owner;
@@ -346,7 +346,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * OwnerType
+         * OwnerType.
          */
         public Builder ownerType(String ownerType) {
             this.ownerType = ownerType;
@@ -378,7 +378,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * Retention
+         * Retention.
          */
         public Builder retention(Integer retention) {
             this.retention = retention;
@@ -386,7 +386,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * RewriteEnabled
+         * RewriteEnabled.
          */
         public Builder rewriteEnabled(Boolean rewriteEnabled) {
             this.rewriteEnabled = rewriteEnabled;
@@ -402,7 +402,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * TableId
+         * TableId.
          */
         public Builder tableId(String tableId) {
             this.tableId = tableId;
@@ -410,7 +410,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -418,7 +418,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * TableType
+         * TableType.
          */
         public Builder tableType(String tableType) {
             this.tableType = tableType;
@@ -426,7 +426,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * TableVersion
+         * TableVersion.
          */
         public Builder tableVersion(TableVersion tableVersion) {
             this.tableVersion = tableVersion;
@@ -434,7 +434,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * Temporary
+         * Temporary.
          */
         public Builder temporary(Boolean temporary) {
             this.temporary = temporary;
@@ -442,7 +442,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * UpdateTime
+         * UpdateTime.
          */
         public Builder updateTime(Integer updateTime) {
             this.updateTime = updateTime;
@@ -450,7 +450,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * ViewExpandedText
+         * ViewExpandedText.
          */
         public Builder viewExpandedText(String viewExpandedText) {
             this.viewExpandedText = viewExpandedText;
@@ -458,7 +458,7 @@ public class Table extends TeaModel {
         }
 
         /**
-         * ViewOriginalText
+         * ViewOriginalText.
          */
         public Builder viewOriginalText(String viewOriginalText) {
             this.viewOriginalText = viewOriginalText;

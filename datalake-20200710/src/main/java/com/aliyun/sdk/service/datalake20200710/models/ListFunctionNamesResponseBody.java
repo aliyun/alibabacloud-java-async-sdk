@@ -98,7 +98,7 @@ public class ListFunctionNamesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListFunctionNamesResponseBody extends TeaModel {
         }
 
         /**
-         * FunctionNames
+         * FunctionNames.
          */
         public Builder functionNames(java.util.List < String > functionNames) {
             this.functionNames = functionNames;
@@ -114,7 +114,7 @@ public class ListFunctionNamesResponseBody extends TeaModel {
         }
 
         /**
-         * Message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class ListFunctionNamesResponseBody extends TeaModel {
         }
 
         /**
-         * NextPageToken
+         * NextPageToken.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -130,7 +130,7 @@ public class ListFunctionNamesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class ListFunctionNamesResponseBody extends TeaModel {
         }
 
         /**
-         * Success
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

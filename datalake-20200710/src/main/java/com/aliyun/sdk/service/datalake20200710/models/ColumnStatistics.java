@@ -82,7 +82,7 @@ public class ColumnStatistics extends TeaModel {
         }
 
         /**
-         * ColumnStatisticsObjList
+         * ColumnStatisticsObjList.
          */
         public Builder columnStatisticsObjList(java.util.List < ColumnStatisticsObj > columnStatisticsObjList) {
             this.columnStatisticsObjList = columnStatisticsObjList;
@@ -90,7 +90,7 @@ public class ColumnStatistics extends TeaModel {
         }
 
         /**
-         * Engine for hive3+
+         * Engine.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -98,7 +98,7 @@ public class ColumnStatistics extends TeaModel {
         }
 
         /**
-         * IsStatsCompliant for hive3+
+         * IsStatsCompliant.
          */
         public Builder isStatsCompliant(Boolean isStatsCompliant) {
             this.isStatsCompliant = isStatsCompliant;

@@ -82,7 +82,7 @@ public class RevokeRoleFromUsersRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -91,7 +91,7 @@ public class RevokeRoleFromUsersRequest extends Request {
         }
 
         /**
-         * 待revoke的角色
+         * RoleName.
          */
         public Builder roleName(String roleName) {
             this.putBodyParameter("RoleName", roleName);
@@ -100,7 +100,7 @@ public class RevokeRoleFromUsersRequest extends Request {
         }
 
         /**
-         * 待revoke的用户列表
+         * Users.
          */
         public Builder users(java.util.List < Principal > users) {
             this.putBodyParameter("Users", users);

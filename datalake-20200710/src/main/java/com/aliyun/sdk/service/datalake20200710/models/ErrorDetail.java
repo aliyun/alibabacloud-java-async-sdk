@@ -50,7 +50,7 @@ public class ErrorDetail extends TeaModel {
         private String message; 
 
         /**
-         * Code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -58,7 +58,7 @@ public class ErrorDetail extends TeaModel {
         }
 
         /**
-         * Message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;

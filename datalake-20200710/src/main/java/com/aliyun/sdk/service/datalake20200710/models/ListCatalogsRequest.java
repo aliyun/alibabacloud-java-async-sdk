@@ -97,7 +97,7 @@ public class ListCatalogsRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -106,7 +106,7 @@ public class ListCatalogsRequest extends Request {
         }
 
         /**
-         * catalogId
+         * IdPattern.
          */
         public Builder idPattern(String idPattern) {
             this.putQueryParameter("IdPattern", idPattern);
@@ -115,7 +115,7 @@ public class ListCatalogsRequest extends Request {
         }
 
         /**
-         * namePattern
+         * NextPageToken.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -124,7 +124,7 @@ public class ListCatalogsRequest extends Request {
         }
 
         /**
-         * pageSize
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

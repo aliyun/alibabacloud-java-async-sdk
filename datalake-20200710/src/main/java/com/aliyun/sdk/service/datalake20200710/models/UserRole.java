@@ -62,7 +62,7 @@ public class UserRole extends TeaModel {
         private Principal user; 
 
         /**
-         * 授权时间
+         * GrantTime.
          */
         public Builder grantTime(Long grantTime) {
             this.grantTime = grantTime;
@@ -70,7 +70,7 @@ public class UserRole extends TeaModel {
         }
 
         /**
-         * 授权的角色
+         * Role.
          */
         public Builder role(Role role) {
             this.role = role;
@@ -78,7 +78,7 @@ public class UserRole extends TeaModel {
         }
 
         /**
-         * 授权的用户
+         * User.
          */
         public Builder user(Principal user) {
             this.user = user;

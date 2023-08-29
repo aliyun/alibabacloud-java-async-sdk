@@ -532,6 +532,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DeregisterLocationResponse> deregisterLocation(DeregisterLocationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeregisterLocation").setMethod(HttpMethod.DELETE).setPathRegex("/webapi/locations").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeregisterLocationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeregisterLocationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -610,6 +624,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetFunctionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<GetLifecycleRuleResponse> getLifecycleRule(GetLifecycleRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetLifecycleRule").setMethod(HttpMethod.GET).setPathRegex("/webapi/metastorehouse/lifecycle/rule/getLifecycleRule").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLifecycleRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLifecycleRuleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1036,6 +1064,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<RegisterLocationResponse> registerLocation(RegisterLocationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RegisterLocation").setMethod(HttpMethod.POST).setPathRegex("/webapi/locations").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RegisterLocationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RegisterLocationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<RenamePartitionResponse> renamePartition(RenamePartitionRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1268,6 +1310,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdatePermissionsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<UpdateRegisteredLocationResponse> updateRegisteredLocation(UpdateRegisteredLocationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateRegisteredLocation").setMethod(HttpMethod.PUT).setPathRegex("/webapi/locations").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRegisteredLocationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateRegisteredLocationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

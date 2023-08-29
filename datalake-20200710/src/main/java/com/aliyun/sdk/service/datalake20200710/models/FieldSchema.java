@@ -74,7 +74,7 @@ public class FieldSchema extends TeaModel {
         private String type; 
 
         /**
-         * Comment
+         * Comment.
          */
         public Builder comment(String comment) {
             this.comment = comment;
@@ -82,7 +82,7 @@ public class FieldSchema extends TeaModel {
         }
 
         /**
-         * Name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -98,7 +98,7 @@ public class FieldSchema extends TeaModel {
         }
 
         /**
-         * Type
+         * Type.
          */
         public Builder type(String type) {
             this.type = type;

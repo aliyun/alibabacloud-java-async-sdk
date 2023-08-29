@@ -98,7 +98,7 @@ public class MetaResource extends TeaModel {
         private TableResource tableResource; 
 
         /**
-         * catalog resource
+         * CatalogResource.
          */
         public Builder catalogResource(CatalogResource catalogResource) {
             this.catalogResource = catalogResource;
@@ -106,7 +106,7 @@ public class MetaResource extends TeaModel {
         }
 
         /**
-         * column resource
+         * ColumnResource.
          */
         public Builder columnResource(ColumnResource columnResource) {
             this.columnResource = columnResource;
@@ -114,7 +114,7 @@ public class MetaResource extends TeaModel {
         }
 
         /**
-         * database resource
+         * DatabaseResource.
          */
         public Builder databaseResource(DatabaseResource databaseResource) {
             this.databaseResource = databaseResource;
@@ -122,7 +122,7 @@ public class MetaResource extends TeaModel {
         }
 
         /**
-         * function resource
+         * FunctionResource.
          */
         public Builder functionResource(FunctionResource functionResource) {
             this.functionResource = functionResource;
@@ -130,7 +130,7 @@ public class MetaResource extends TeaModel {
         }
 
         /**
-         * CATALOG,DATABASE, TABLE, FUNCTION, COLUMN任选其一
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -138,7 +138,7 @@ public class MetaResource extends TeaModel {
         }
 
         /**
-         * table resource
+         * TableResource.
          */
         public Builder tableResource(TableResource tableResource) {
             this.tableResource = tableResource;

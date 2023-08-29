@@ -62,7 +62,7 @@ public class RoleInput extends TeaModel {
         private String name; 
 
         /**
-         * 角色描述
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -70,7 +70,7 @@ public class RoleInput extends TeaModel {
         }
 
         /**
-         * DisplayName
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -78,7 +78,7 @@ public class RoleInput extends TeaModel {
         }
 
         /**
-         * name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;

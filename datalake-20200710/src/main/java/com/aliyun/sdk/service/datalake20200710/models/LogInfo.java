@@ -110,7 +110,7 @@ public class LogInfo extends TeaModel {
         private String logType; 
 
         /**
-         * 业务运行时间
+         * BizTime.
          */
         public Builder bizTime(String bizTime) {
             this.bizTime = bizTime;
@@ -118,7 +118,7 @@ public class LogInfo extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * GmtCreate.
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -126,7 +126,7 @@ public class LogInfo extends TeaModel {
         }
 
         /**
-         * 实例ID
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -134,7 +134,7 @@ public class LogInfo extends TeaModel {
         }
 
         /**
-         * 日志内容
+         * LogContent.
          */
         public Builder logContent(String logContent) {
             this.logContent = logContent;
@@ -142,7 +142,7 @@ public class LogInfo extends TeaModel {
         }
 
         /**
-         * 日志id
+         * LogId.
          */
         public Builder logId(String logId) {
             this.logId = logId;
@@ -150,7 +150,7 @@ public class LogInfo extends TeaModel {
         }
 
         /**
-         * 日志概要
+         * LogSummary.
          */
         public Builder logSummary(String logSummary) {
             this.logSummary = logSummary;
@@ -158,7 +158,7 @@ public class LogInfo extends TeaModel {
         }
 
         /**
-         * 日志级别
+         * LogType.
          */
         public Builder logType(String logType) {
             this.logType = logType;

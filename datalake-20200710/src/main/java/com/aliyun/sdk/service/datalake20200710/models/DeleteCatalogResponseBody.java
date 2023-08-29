@@ -118,7 +118,7 @@ public class DeleteCatalogResponseBody extends TeaModel {
         }
 
         /**
-         * 异步删除Catalog的taskId
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

@@ -138,7 +138,7 @@ public class ListPartitionNamesRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -147,7 +147,7 @@ public class ListPartitionNamesRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putBodyParameter("CatalogId", catalogId);
@@ -156,7 +156,7 @@ public class ListPartitionNamesRequest extends Request {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -165,7 +165,7 @@ public class ListPartitionNamesRequest extends Request {
         }
 
         /**
-         * NextPageToken
+         * NextPageToken.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putBodyParameter("NextPageToken", nextPageToken);
@@ -174,7 +174,7 @@ public class ListPartitionNamesRequest extends Request {
         }
 
         /**
-         * PageSize
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -192,7 +192,7 @@ public class ListPartitionNamesRequest extends Request {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);

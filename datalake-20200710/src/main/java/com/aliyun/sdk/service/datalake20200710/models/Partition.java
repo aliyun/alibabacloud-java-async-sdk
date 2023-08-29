@@ -134,7 +134,7 @@ public class Partition extends TeaModel {
         private java.util.List < String > values; 
 
         /**
-         * CreateTime
+         * CreateTime.
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -142,7 +142,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -150,7 +150,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * LastAccessTime
+         * LastAccessTime.
          */
         public Builder lastAccessTime(Integer lastAccessTime) {
             this.lastAccessTime = lastAccessTime;
@@ -158,7 +158,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * LastAnalyzedTime
+         * LastAnalyzedTime.
          */
         public Builder lastAnalyzedTime(Integer lastAnalyzedTime) {
             this.lastAnalyzedTime = lastAnalyzedTime;
@@ -166,7 +166,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * Parameters
+         * Parameters.
          */
         public Builder parameters(java.util.Map < String, String > parameters) {
             this.parameters = parameters;
@@ -190,7 +190,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -198,7 +198,7 @@ public class Partition extends TeaModel {
         }
 
         /**
-         * Values
+         * Values.
          */
         public Builder values(java.util.List < String > values) {
             this.values = values;

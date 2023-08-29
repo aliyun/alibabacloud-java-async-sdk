@@ -86,7 +86,7 @@ public class SingleIndicatorDTO extends TeaModel {
         private Long total; 
 
         /**
-         * 日新增
+         * DayIncrement.
          */
         public Builder dayIncrement(Long dayIncrement) {
             this.dayIncrement = dayIncrement;
@@ -94,7 +94,7 @@ public class SingleIndicatorDTO extends TeaModel {
         }
 
         /**
-         * 日环比
+         * DayOnDay.
          */
         public Builder dayOnDay(Double dayOnDay) {
             this.dayOnDay = dayOnDay;
@@ -102,7 +102,7 @@ public class SingleIndicatorDTO extends TeaModel {
         }
 
         /**
-         * 月新增
+         * MonthIncrement.
          */
         public Builder monthIncrement(Long monthIncrement) {
             this.monthIncrement = monthIncrement;
@@ -110,7 +110,7 @@ public class SingleIndicatorDTO extends TeaModel {
         }
 
         /**
-         * 月环比
+         * MonthOnMonth.
          */
         public Builder monthOnMonth(Double monthOnMonth) {
             this.monthOnMonth = monthOnMonth;
@@ -118,7 +118,7 @@ public class SingleIndicatorDTO extends TeaModel {
         }
 
         /**
-         * 总量
+         * Total.
          */
         public Builder total(Long total) {
             this.total = total;

@@ -98,7 +98,7 @@ public class BatchUpdateTablesResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * 响应代码
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class BatchUpdateTablesResponseBody extends TeaModel {
         }
 
         /**
-         * 响应消息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +114,7 @@ public class BatchUpdateTablesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class BatchUpdateTablesResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -130,7 +130,7 @@ public class BatchUpdateTablesResponseBody extends TeaModel {
         }
 
         /**
-         * 表出错信息
+         * TableErrors.
          */
         public Builder tableErrors(java.util.List < TableError > tableErrors) {
             this.tableErrors = tableErrors;
@@ -138,7 +138,7 @@ public class BatchUpdateTablesResponseBody extends TeaModel {
         }
 
         /**
-         * 异步更新 taskId
+         * TaskId.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

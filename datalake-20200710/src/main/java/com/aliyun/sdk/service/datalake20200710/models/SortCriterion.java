@@ -50,7 +50,7 @@ public class SortCriterion extends TeaModel {
         private String sort; 
 
         /**
-         * 排序字段
+         * FieldName.
          */
         public Builder fieldName(String fieldName) {
             this.fieldName = fieldName;
@@ -58,7 +58,7 @@ public class SortCriterion extends TeaModel {
         }
 
         /**
-         * 排序方式
+         * Sort.
          */
         public Builder sort(String sort) {
             this.sort = sort;

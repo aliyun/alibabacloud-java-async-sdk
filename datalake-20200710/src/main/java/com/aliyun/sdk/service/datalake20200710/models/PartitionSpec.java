@@ -50,7 +50,7 @@ public class PartitionSpec extends TeaModel {
         private SharedStorageDescriptor sharedStorageDescriptor; 
 
         /**
-         * SharedSDPartitions
+         * SharedSDPartitions.
          */
         public Builder sharedSDPartitions(java.util.List < Partition > sharedSDPartitions) {
             this.sharedSDPartitions = sharedSDPartitions;
@@ -58,7 +58,7 @@ public class PartitionSpec extends TeaModel {
         }
 
         /**
-         * SharedStorageDescriptor
+         * SharedStorageDescriptor.
          */
         public Builder sharedStorageDescriptor(SharedStorageDescriptor sharedStorageDescriptor) {
             this.sharedStorageDescriptor = sharedStorageDescriptor;
@@ -110,7 +110,7 @@ public class PartitionSpec extends TeaModel {
             private String location; 
 
             /**
-             * Cols
+             * Cols.
              */
             public Builder cols(java.util.List < FieldSchema > cols) {
                 this.cols = cols;
@@ -118,7 +118,7 @@ public class PartitionSpec extends TeaModel {
             }
 
             /**
-             * Location
+             * Location.
              */
             public Builder location(String location) {
                 this.location = location;

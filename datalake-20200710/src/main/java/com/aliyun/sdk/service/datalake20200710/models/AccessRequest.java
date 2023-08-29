@@ -79,7 +79,7 @@ public class AccessRequest extends Request {
         } 
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.catalogId = catalogId;

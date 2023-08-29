@@ -97,7 +97,7 @@ public class BatchGrantPermissionsRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -115,7 +115,7 @@ public class BatchGrantPermissionsRequest extends Request {
         }
 
         /**
-         * 待授权列表
+         * GrantRevokeEntries.
          */
         public Builder grantRevokeEntries(java.util.List < GrantRevokeEntry > grantRevokeEntries) {
             this.putBodyParameter("GrantRevokeEntries", grantRevokeEntries);
@@ -124,7 +124,7 @@ public class BatchGrantPermissionsRequest extends Request {
         }
 
         /**
-         * 授权的类型，目前仅支持hive
+         * Type.
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

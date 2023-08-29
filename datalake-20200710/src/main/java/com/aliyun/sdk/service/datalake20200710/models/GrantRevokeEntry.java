@@ -86,7 +86,7 @@ public class GrantRevokeEntry extends TeaModel {
         private Principal principal; 
 
         /**
-         * 授权的accesses列表
+         * Accesses.
          */
         public Builder accesses(java.util.List < String > accesses) {
             this.accesses = accesses;
@@ -94,7 +94,7 @@ public class GrantRevokeEntry extends TeaModel {
         }
 
         /**
-         * 授权的grantable accesses列表
+         * DelegateAccesses.
          */
         public Builder delegateAccesses(java.util.List < String > delegateAccesses) {
             this.delegateAccesses = delegateAccesses;
@@ -102,7 +102,7 @@ public class GrantRevokeEntry extends TeaModel {
         }
 
         /**
-         * identifier for this entry
+         * Id.
          */
         public Builder id(String id) {
             this.id = id;
@@ -110,7 +110,7 @@ public class GrantRevokeEntry extends TeaModel {
         }
 
         /**
-         * 授权的资源
+         * MetaResource.
          */
         public Builder metaResource(MetaResource metaResource) {
             this.metaResource = metaResource;
@@ -118,7 +118,7 @@ public class GrantRevokeEntry extends TeaModel {
         }
 
         /**
-         * 授权的用户principal
+         * Principal.
          */
         public Builder principal(Principal principal) {
             this.principal = principal;

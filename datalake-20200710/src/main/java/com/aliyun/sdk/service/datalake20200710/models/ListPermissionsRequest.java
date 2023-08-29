@@ -167,7 +167,7 @@ public class ListPermissionsRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -185,7 +185,7 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * 是否获取用户所属角色的权限
+         * IsListUserRolePermissions.
          */
         public Builder isListUserRolePermissions(Boolean isListUserRolePermissions) {
             this.putBodyParameter("IsListUserRolePermissions", isListUserRolePermissions);
@@ -194,7 +194,7 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * 基于资源对权限信息进行过滤
+         * MetaResource.
          */
         public Builder metaResource(MetaResource metaResource) {
             this.putBodyParameter("MetaResource", metaResource);
@@ -203,7 +203,7 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * 基于Resource Type进行过滤
+         * MetaResourceType.
          */
         public Builder metaResourceType(String metaResourceType) {
             this.putBodyParameter("MetaResourceType", metaResourceType);
@@ -212,7 +212,7 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * 分页Token
+         * NextPageToken.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putBodyParameter("NextPageToken", nextPageToken);
@@ -221,7 +221,7 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * 分页大小
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -230,7 +230,7 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * 基于Principal对权限信息进行过滤
+         * Principal.
          */
         public Builder principal(Principal principal) {
             this.putBodyParameter("Principal", principal);
@@ -239,7 +239,7 @@ public class ListPermissionsRequest extends Request {
         }
 
         /**
-         * 获取权限信息的类型，目前仅支持hive
+         * Type.
          */
         public Builder type(String type) {
             this.putBodyParameter("Type", type);

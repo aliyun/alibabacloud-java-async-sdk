@@ -122,7 +122,7 @@ public class Role extends TeaModel {
         private java.util.List < Principal > users; 
 
         /**
-         * CreateTime
+         * CreateTime.
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -130,7 +130,7 @@ public class Role extends TeaModel {
         }
 
         /**
-         * 角色描述
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -138,7 +138,7 @@ public class Role extends TeaModel {
         }
 
         /**
-         * DisplayName
+         * DisplayName.
          */
         public Builder displayName(String displayName) {
             this.displayName = displayName;
@@ -146,7 +146,7 @@ public class Role extends TeaModel {
         }
 
         /**
-         * IsPredefined
+         * IsPredefined.
          */
         public Builder isPredefined(Integer isPredefined) {
             this.isPredefined = isPredefined;
@@ -154,7 +154,7 @@ public class Role extends TeaModel {
         }
 
         /**
-         * name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -162,7 +162,7 @@ public class Role extends TeaModel {
         }
 
         /**
-         * PrincipalArn
+         * PrincipalArn.
          */
         public Builder principalArn(String principalArn) {
             this.principalArn = principalArn;
@@ -170,7 +170,7 @@ public class Role extends TeaModel {
         }
 
         /**
-         * UpdateTime
+         * UpdateTime.
          */
         public Builder updateTime(Long updateTime) {
             this.updateTime = updateTime;

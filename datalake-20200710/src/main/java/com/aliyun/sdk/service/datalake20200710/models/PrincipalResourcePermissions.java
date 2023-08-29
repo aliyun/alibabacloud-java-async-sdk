@@ -76,7 +76,7 @@ public class PrincipalResourcePermissions extends TeaModel {
         private Principal principal; 
 
         /**
-         * 权限
+         * Accesses.
          */
         public Builder accesses(java.util.List < String > accesses) {
             this.accesses = accesses;
@@ -84,7 +84,7 @@ public class PrincipalResourcePermissions extends TeaModel {
         }
 
         /**
-         * grantable权限
+         * DelegateAccesses.
          */
         public Builder delegateAccesses(java.util.List < String > delegateAccesses) {
             this.delegateAccesses = delegateAccesses;
@@ -92,7 +92,7 @@ public class PrincipalResourcePermissions extends TeaModel {
         }
 
         /**
-         * 权限信息所属的Hive元数据资源
+         * MetaResource.
          */
         public Builder metaResource(MetaResource metaResource) {
             this.metaResource = metaResource;
@@ -100,7 +100,7 @@ public class PrincipalResourcePermissions extends TeaModel {
         }
 
         /**
-         * 权限信息所属的Principal
+         * Principal.
          */
         public Builder principal(Principal principal) {
             this.principal = principal;

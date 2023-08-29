@@ -110,7 +110,7 @@ public class FunctionInput extends TeaModel {
         private java.util.List < ResourceUri > resourceUri; 
 
         /**
-         * ClassName
+         * ClassName.
          */
         public Builder className(String className) {
             this.className = className;
@@ -118,7 +118,7 @@ public class FunctionInput extends TeaModel {
         }
 
         /**
-         * createTime
+         * CreateTime.
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -126,7 +126,7 @@ public class FunctionInput extends TeaModel {
         }
 
         /**
-         * FunctionName
+         * FunctionName.
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -134,7 +134,7 @@ public class FunctionInput extends TeaModel {
         }
 
         /**
-         * FunctionType
+         * FunctionType.
          */
         public Builder functionType(String functionType) {
             this.functionType = functionType;
@@ -142,7 +142,7 @@ public class FunctionInput extends TeaModel {
         }
 
         /**
-         * OwnerName
+         * OwnerName.
          */
         public Builder ownerName(String ownerName) {
             this.ownerName = ownerName;
@@ -150,7 +150,7 @@ public class FunctionInput extends TeaModel {
         }
 
         /**
-         * OwnerType
+         * OwnerType.
          */
         public Builder ownerType(String ownerType) {
             this.ownerType = ownerType;
@@ -158,7 +158,7 @@ public class FunctionInput extends TeaModel {
         }
 
         /**
-         * ResourceUri
+         * ResourceUri.
          */
         public Builder resourceUri(java.util.List < ResourceUri > resourceUri) {
             this.resourceUri = resourceUri;

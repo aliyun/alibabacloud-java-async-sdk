@@ -62,7 +62,7 @@ public class SerDeInfo extends TeaModel {
         private String serializationLib; 
 
         /**
-         * Name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -78,7 +78,7 @@ public class SerDeInfo extends TeaModel {
         }
 
         /**
-         * SerializationLib
+         * SerializationLib.
          */
         public Builder serializationLib(String serializationLib) {
             this.serializationLib = serializationLib;

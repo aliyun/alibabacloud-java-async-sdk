@@ -110,7 +110,7 @@ public class WorkflowInstance extends TeaModel {
         private String status; 
 
         /**
-         * 执行进度
+         * BatchProgress.
          */
         public Builder batchProgress(Integer batchProgress) {
             this.batchProgress = batchProgress;
@@ -118,7 +118,7 @@ public class WorkflowInstance extends TeaModel {
         }
 
         /**
-         * 工作流id
+         * DlfWorkflowId.
          */
         public Builder dlfWorkflowId(String dlfWorkflowId) {
             this.dlfWorkflowId = dlfWorkflowId;
@@ -126,7 +126,7 @@ public class WorkflowInstance extends TeaModel {
         }
 
         /**
-         * 结束时间
+         * EndTime.
          */
         public Builder endTime(Long endTime) {
             this.endTime = endTime;
@@ -134,7 +134,7 @@ public class WorkflowInstance extends TeaModel {
         }
 
         /**
-         * 业务流程实例id
+         * ExternalInstanceId.
          */
         public Builder externalInstanceId(String externalInstanceId) {
             this.externalInstanceId = externalInstanceId;
@@ -142,7 +142,7 @@ public class WorkflowInstance extends TeaModel {
         }
 
         /**
-         * 运行日志
+         * RuntimeLogs.
          */
         public Builder runtimeLogs(java.util.List < LogInfo > runtimeLogs) {
             this.runtimeLogs = runtimeLogs;
@@ -150,7 +150,7 @@ public class WorkflowInstance extends TeaModel {
         }
 
         /**
-         * 开始时间
+         * StartTime.
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
@@ -158,7 +158,7 @@ public class WorkflowInstance extends TeaModel {
         }
 
         /**
-         * 运行状态
+         * Status.
          */
         public Builder status(String status) {
             this.status = status;

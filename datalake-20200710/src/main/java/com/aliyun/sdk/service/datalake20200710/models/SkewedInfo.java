@@ -62,7 +62,7 @@ public class SkewedInfo extends TeaModel {
         private java.util.List < java.util.List < String > > skewedColValues; 
 
         /**
-         * SkewedColNames
+         * SkewedColNames.
          */
         public Builder skewedColNames(java.util.List < String > skewedColNames) {
             this.skewedColNames = skewedColNames;
@@ -70,7 +70,7 @@ public class SkewedInfo extends TeaModel {
         }
 
         /**
-         * SkewedColValueLocationMaps
+         * SkewedColValueLocationMaps.
          */
         public Builder skewedColValueLocationMaps(java.util.Map < String, String > skewedColValueLocationMaps) {
             this.skewedColValueLocationMaps = skewedColValueLocationMaps;
@@ -78,7 +78,7 @@ public class SkewedInfo extends TeaModel {
         }
 
         /**
-         * SkewedColValueLocationMaps
+         * SkewedColValues.
          */
         public Builder skewedColValues(java.util.List < java.util.List < String > > skewedColValues) {
             this.skewedColValues = skewedColValues;

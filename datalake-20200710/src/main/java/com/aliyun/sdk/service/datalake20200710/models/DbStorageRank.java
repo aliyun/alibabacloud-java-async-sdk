@@ -50,7 +50,7 @@ public class DbStorageRank extends TeaModel {
         private Long quantity; 
 
         /**
-         * 库名
+         * DbName.
          */
         public Builder dbName(String dbName) {
             this.dbName = dbName;
@@ -58,7 +58,7 @@ public class DbStorageRank extends TeaModel {
         }
 
         /**
-         * 存储量
+         * Quantity.
          */
         public Builder quantity(Long quantity) {
             this.quantity = quantity;

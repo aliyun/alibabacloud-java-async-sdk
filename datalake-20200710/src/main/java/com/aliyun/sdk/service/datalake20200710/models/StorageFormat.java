@@ -134,7 +134,7 @@ public class StorageFormat extends TeaModel {
         private Long uncategorized; 
 
         /**
-         * Avro
+         * Avro.
          */
         public Builder avro(Long avro) {
             this.avro = avro;
@@ -142,7 +142,7 @@ public class StorageFormat extends TeaModel {
         }
 
         /**
-         * Csv
+         * Csv.
          */
         public Builder csv(Long csv) {
             this.csv = csv;
@@ -150,7 +150,7 @@ public class StorageFormat extends TeaModel {
         }
 
         /**
-         * Delta
+         * Delta.
          */
         public Builder delta(Long delta) {
             this.delta = delta;
@@ -158,7 +158,7 @@ public class StorageFormat extends TeaModel {
         }
 
         /**
-         * Hudi
+         * Hudi.
          */
         public Builder hudi(Long hudi) {
             this.hudi = hudi;
@@ -166,7 +166,7 @@ public class StorageFormat extends TeaModel {
         }
 
         /**
-         * Iceberg
+         * Iceberg.
          */
         public Builder iceberg(Long iceberg) {
             this.iceberg = iceberg;
@@ -174,7 +174,7 @@ public class StorageFormat extends TeaModel {
         }
 
         /**
-         * Json
+         * Json.
          */
         public Builder json(Long json) {
             this.json = json;
@@ -182,7 +182,7 @@ public class StorageFormat extends TeaModel {
         }
 
         /**
-         * Orc
+         * Orc.
          */
         public Builder orc(Long orc) {
             this.orc = orc;
@@ -190,7 +190,7 @@ public class StorageFormat extends TeaModel {
         }
 
         /**
-         * Parquet
+         * Parquet.
          */
         public Builder parquet(Long parquet) {
             this.parquet = parquet;
@@ -198,7 +198,7 @@ public class StorageFormat extends TeaModel {
         }
 
         /**
-         * Uncategorized
+         * Uncategorized.
          */
         public Builder uncategorized(Long uncategorized) {
             this.uncategorized = uncategorized;

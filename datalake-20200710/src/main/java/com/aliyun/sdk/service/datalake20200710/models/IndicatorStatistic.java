@@ -50,7 +50,7 @@ public class IndicatorStatistic extends TeaModel {
         private String date; 
 
         /**
-         * 指标数据
+         * Data.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class IndicatorStatistic extends TeaModel {
         }
 
         /**
-         * 指标日期
+         * Date.
          */
         public Builder date(String date) {
             this.date = date;

@@ -38,7 +38,7 @@ public class CatalogResource extends TeaModel {
         private String catalogId; 
 
         /**
-         * Catalog id
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.catalogId = catalogId;

@@ -110,7 +110,7 @@ public class BatchDeleteTableVersionsRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -119,7 +119,7 @@ public class BatchDeleteTableVersionsRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putBodyParameter("CatalogId", catalogId);
@@ -128,7 +128,7 @@ public class BatchDeleteTableVersionsRequest extends Request {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -137,7 +137,7 @@ public class BatchDeleteTableVersionsRequest extends Request {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);
@@ -146,7 +146,7 @@ public class BatchDeleteTableVersionsRequest extends Request {
         }
 
         /**
-         * Table versionIds
+         * VersionIds.
          */
         public Builder versionIds(java.util.List < Integer > versionIds) {
             this.putBodyParameter("VersionIds", versionIds);

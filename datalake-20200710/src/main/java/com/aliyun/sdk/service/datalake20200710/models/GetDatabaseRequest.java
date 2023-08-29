@@ -82,7 +82,7 @@ public class GetDatabaseRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -91,7 +91,7 @@ public class GetDatabaseRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putQueryParameter("CatalogId", catalogId);
@@ -100,7 +100,7 @@ public class GetDatabaseRequest extends Request {
         }
 
         /**
-         * The name of the database to query.
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

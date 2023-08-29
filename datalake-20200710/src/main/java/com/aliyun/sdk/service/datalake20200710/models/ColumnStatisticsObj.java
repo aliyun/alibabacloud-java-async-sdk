@@ -62,7 +62,7 @@ public class ColumnStatisticsObj extends TeaModel {
         private String columnType; 
 
         /**
-         * ColumnName of the table
+         * ColumnName.
          */
         public Builder columnName(String columnName) {
             this.columnName = columnName;
@@ -70,7 +70,7 @@ public class ColumnStatisticsObj extends TeaModel {
         }
 
         /**
-         * ColumnStatisticsData
+         * ColumnStatisticsData.
          */
         public Builder columnStatisticsData(ColumnStatisticsData columnStatisticsData) {
             this.columnStatisticsData = columnStatisticsData;
@@ -78,7 +78,7 @@ public class ColumnStatisticsObj extends TeaModel {
         }
 
         /**
-         * ColumnType
+         * ColumnType.
          */
         public Builder columnType(String columnType) {
             this.columnType = columnType;
@@ -130,7 +130,7 @@ public class ColumnStatisticsObj extends TeaModel {
             private String statisticsType; 
 
             /**
-             * StatisticsData
+             * StatisticsData.
              */
             public Builder statisticsData(String statisticsData) {
                 this.statisticsData = statisticsData;
@@ -138,7 +138,7 @@ public class ColumnStatisticsObj extends TeaModel {
             }
 
             /**
-             * StatisticsType
+             * StatisticsType.
              */
             public Builder statisticsType(String statisticsType) {
                 this.statisticsType = statisticsType;

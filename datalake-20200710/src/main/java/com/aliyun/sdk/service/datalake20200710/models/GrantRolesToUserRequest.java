@@ -84,7 +84,7 @@ public class GrantRolesToUserRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -93,7 +93,7 @@ public class GrantRolesToUserRequest extends Request {
         }
 
         /**
-         * 待授权的角色名列表
+         * RoleNames.
          */
         public Builder roleNames(java.util.List < String > roleNames) {
             this.putBodyParameter("RoleNames", roleNames);

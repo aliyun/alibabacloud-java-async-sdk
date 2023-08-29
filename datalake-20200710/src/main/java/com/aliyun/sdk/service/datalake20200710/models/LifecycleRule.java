@@ -21,6 +21,9 @@ public class LifecycleRule extends TeaModel {
     @NameInMap("BizId")
     private String bizId;
 
+    @NameInMap("CatalogId")
+    private String catalogId;
+
     @NameInMap("ColdArchiveDays")
     private Integer coldArchiveDays;
 
@@ -64,6 +67,7 @@ public class LifecycleRule extends TeaModel {
         this.archiveDays = builder.archiveDays;
         this.bindCount = builder.bindCount;
         this.bizId = builder.bizId;
+        this.catalogId = builder.catalogId;
         this.coldArchiveDays = builder.coldArchiveDays;
         this.config = builder.config;
         this.description = builder.description;
@@ -106,6 +110,13 @@ public class LifecycleRule extends TeaModel {
      */
     public String getBizId() {
         return this.bizId;
+    }
+
+    /**
+     * @return catalogId
+     */
+    public String getCatalogId() {
+        return this.catalogId;
     }
 
     /**
@@ -203,6 +214,7 @@ public class LifecycleRule extends TeaModel {
         private Integer archiveDays; 
         private Integer bindCount; 
         private String bizId; 
+        private String catalogId; 
         private Integer coldArchiveDays; 
         private String config; 
         private String description; 
@@ -218,7 +230,7 @@ public class LifecycleRule extends TeaModel {
         private WorkflowInstance workflowInstance; 
 
         /**
-         * archiveDays
+         * ArchiveDays.
          */
         public Builder archiveDays(Integer archiveDays) {
             this.archiveDays = archiveDays;
@@ -226,7 +238,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * bindCount
+         * BindCount.
          */
         public Builder bindCount(Integer bindCount) {
             this.bindCount = bindCount;
@@ -234,7 +246,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * bizId
+         * BizId.
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -242,7 +254,15 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * coldArchiveDays
+         * CatalogId.
+         */
+        public Builder catalogId(String catalogId) {
+            this.catalogId = catalogId;
+            return this;
+        }
+
+        /**
+         * ColdArchiveDays.
          */
         public Builder coldArchiveDays(Integer coldArchiveDays) {
             this.coldArchiveDays = coldArchiveDays;
@@ -250,7 +270,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * Config
+         * Config.
          */
         public Builder config(String config) {
             this.config = config;
@@ -258,7 +278,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * description
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -266,7 +286,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * GmtCreate.
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -274,7 +294,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * 修改时间
+         * GmtModified.
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -282,7 +302,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * iaDays
+         * IaDays.
          */
         public Builder iaDays(Integer iaDays) {
             this.iaDays = iaDays;
@@ -290,7 +310,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -298,7 +318,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * resourceType
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -306,7 +326,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * ruleType
+         * RuleType.
          */
         public Builder ruleType(String ruleType) {
             this.ruleType = ruleType;
@@ -314,7 +334,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * scheduleStatus
+         * ScheduleStatus.
          */
         public Builder scheduleStatus(String scheduleStatus) {
             this.scheduleStatus = scheduleStatus;
@@ -322,7 +342,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * 工作流
+         * Workflow.
          */
         public Builder workflow(Workflow workflow) {
             this.workflow = workflow;
@@ -330,7 +350,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * 工作流id
+         * WorkflowId.
          */
         public Builder workflowId(String workflowId) {
             this.workflowId = workflowId;
@@ -338,7 +358,7 @@ public class LifecycleRule extends TeaModel {
         }
 
         /**
-         * 工作流实例
+         * WorkflowInstance.
          */
         public Builder workflowInstance(WorkflowInstance workflowInstance) {
             this.workflowInstance = workflowInstance;

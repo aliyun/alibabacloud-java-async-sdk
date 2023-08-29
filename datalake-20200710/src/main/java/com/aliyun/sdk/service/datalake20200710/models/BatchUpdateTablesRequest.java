@@ -110,7 +110,7 @@ public class BatchUpdateTablesRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -119,7 +119,7 @@ public class BatchUpdateTablesRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putBodyParameter("CatalogId", catalogId);
@@ -128,7 +128,7 @@ public class BatchUpdateTablesRequest extends Request {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -137,7 +137,7 @@ public class BatchUpdateTablesRequest extends Request {
         }
 
         /**
-         * 是否异步
+         * IsAsync.
          */
         public Builder isAsync(Boolean isAsync) {
             this.putBodyParameter("IsAsync", isAsync);
@@ -146,7 +146,7 @@ public class BatchUpdateTablesRequest extends Request {
         }
 
         /**
-         * TableInputs
+         * TableInputs.
          */
         public Builder tableInputs(java.util.List < TableInput > tableInputs) {
             this.putBodyParameter("TableInputs", tableInputs);

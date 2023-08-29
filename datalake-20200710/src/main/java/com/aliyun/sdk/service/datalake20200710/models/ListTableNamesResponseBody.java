@@ -98,7 +98,7 @@ public class ListTableNamesResponseBody extends TeaModel {
         private java.util.List < String > tableNames; 
 
         /**
-         * Code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListTableNamesResponseBody extends TeaModel {
         }
 
         /**
-         * Message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +114,7 @@ public class ListTableNamesResponseBody extends TeaModel {
         }
 
         /**
-         * NextPageToken
+         * NextPageToken.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -122,7 +122,7 @@ public class ListTableNamesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class ListTableNamesResponseBody extends TeaModel {
         }
 
         /**
-         * Success
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class ListTableNamesResponseBody extends TeaModel {
         }
 
         /**
-         * TableNames
+         * TableNames.
          */
         public Builder tableNames(java.util.List < String > tableNames) {
             this.tableNames = tableNames;

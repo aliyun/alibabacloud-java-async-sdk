@@ -110,7 +110,7 @@ public class DeleteTableVersionRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -119,7 +119,7 @@ public class DeleteTableVersionRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putQueryParameter("CatalogId", catalogId);
@@ -128,7 +128,7 @@ public class DeleteTableVersionRequest extends Request {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -137,7 +137,7 @@ public class DeleteTableVersionRequest extends Request {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -146,7 +146,7 @@ public class DeleteTableVersionRequest extends Request {
         }
 
         /**
-         * table version id
+         * VersionId.
          */
         public Builder versionId(Integer versionId) {
             this.putQueryParameter("VersionId", versionId);

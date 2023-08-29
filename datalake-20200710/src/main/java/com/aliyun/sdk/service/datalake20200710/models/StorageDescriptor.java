@@ -178,7 +178,7 @@ public class StorageDescriptor extends TeaModel {
         }
 
         /**
-         * Cols
+         * Cols.
          */
         public Builder cols(java.util.List < FieldSchema > cols) {
             this.cols = cols;
@@ -186,7 +186,7 @@ public class StorageDescriptor extends TeaModel {
         }
 
         /**
-         * Compressed
+         * Compressed.
          */
         public Builder compressed(Boolean compressed) {
             this.compressed = compressed;
@@ -194,7 +194,7 @@ public class StorageDescriptor extends TeaModel {
         }
 
         /**
-         * InputFormat
+         * InputFormat.
          */
         public Builder inputFormat(String inputFormat) {
             this.inputFormat = inputFormat;
@@ -202,7 +202,7 @@ public class StorageDescriptor extends TeaModel {
         }
 
         /**
-         * Location
+         * Location.
          */
         public Builder location(String location) {
             this.location = location;
@@ -210,7 +210,7 @@ public class StorageDescriptor extends TeaModel {
         }
 
         /**
-         * NumBuckets
+         * NumBuckets.
          */
         public Builder numBuckets(Integer numBuckets) {
             this.numBuckets = numBuckets;
@@ -218,7 +218,7 @@ public class StorageDescriptor extends TeaModel {
         }
 
         /**
-         * OutputFormat
+         * OutputFormat.
          */
         public Builder outputFormat(String outputFormat) {
             this.outputFormat = outputFormat;
@@ -226,7 +226,7 @@ public class StorageDescriptor extends TeaModel {
         }
 
         /**
-         * Parameters
+         * Parameters.
          */
         public Builder parameters(java.util.Map < String, String > parameters) {
             this.parameters = parameters;
@@ -250,7 +250,7 @@ public class StorageDescriptor extends TeaModel {
         }
 
         /**
-         * SortCols
+         * SortCols.
          */
         public Builder sortCols(java.util.List < Order > sortCols) {
             this.sortCols = sortCols;
@@ -258,7 +258,7 @@ public class StorageDescriptor extends TeaModel {
         }
 
         /**
-         * StoredAsSubDirectories
+         * StoredAsSubDirectories.
          */
         public Builder storedAsSubDirectories(Boolean storedAsSubDirectories) {
             this.storedAsSubDirectories = storedAsSubDirectories;

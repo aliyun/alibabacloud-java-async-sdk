@@ -86,7 +86,7 @@ public class UnarchiveDetail extends TeaModel {
         private String unarchiveTaskStatus; 
 
         /**
-         * api调用次数
+         * ApiCallTimes.
          */
         public Builder apiCallTimes(Long apiCallTimes) {
             this.apiCallTimes = apiCallTimes;
@@ -94,7 +94,7 @@ public class UnarchiveDetail extends TeaModel {
         }
 
         /**
-         * 成本
+         * Cost.
          */
         public Builder cost(Long cost) {
             this.cost = cost;
@@ -102,7 +102,7 @@ public class UnarchiveDetail extends TeaModel {
         }
 
         /**
-         * 存储大小
+         * StorageSize.
          */
         public Builder storageSize(Long storageSize) {
             this.storageSize = storageSize;
@@ -110,7 +110,7 @@ public class UnarchiveDetail extends TeaModel {
         }
 
         /**
-         * 存储类型
+         * StorageType.
          */
         public Builder storageType(String storageType) {
             this.storageType = storageType;
@@ -118,7 +118,7 @@ public class UnarchiveDetail extends TeaModel {
         }
 
         /**
-         * 解冻状态
+         * UnarchiveTaskStatus.
          */
         public Builder unarchiveTaskStatus(String unarchiveTaskStatus) {
             this.unarchiveTaskStatus = unarchiveTaskStatus;

@@ -50,7 +50,7 @@ public class ColumnStatisticsDesc extends TeaModel {
         private String partitionName; 
 
         /**
-         * optional
+         * LastAnalyzedTime.
          */
         public Builder lastAnalyzedTime(Long lastAnalyzedTime) {
             this.lastAnalyzedTime = lastAnalyzedTime;
@@ -58,7 +58,7 @@ public class ColumnStatisticsDesc extends TeaModel {
         }
 
         /**
-         * required
+         * PartitionName.
          */
         public Builder partitionName(String partitionName) {
             this.partitionName = partitionName;

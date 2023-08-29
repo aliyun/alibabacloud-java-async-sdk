@@ -96,7 +96,7 @@ public class DeleteFunctionRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -105,7 +105,7 @@ public class DeleteFunctionRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putQueryParameter("CatalogId", catalogId);
@@ -114,7 +114,7 @@ public class DeleteFunctionRequest extends Request {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.putQueryParameter("DatabaseName", databaseName);
@@ -123,7 +123,7 @@ public class DeleteFunctionRequest extends Request {
         }
 
         /**
-         * FunctionName
+         * FunctionName.
          */
         public Builder functionName(String functionName) {
             this.putQueryParameter("FunctionName", functionName);

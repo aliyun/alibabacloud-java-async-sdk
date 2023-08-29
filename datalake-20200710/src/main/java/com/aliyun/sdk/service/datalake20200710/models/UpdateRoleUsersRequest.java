@@ -82,7 +82,7 @@ public class UpdateRoleUsersRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -91,7 +91,7 @@ public class UpdateRoleUsersRequest extends Request {
         }
 
         /**
-         * Role名称
+         * RoleName.
          */
         public Builder roleName(String roleName) {
             this.putBodyParameter("RoleName", roleName);

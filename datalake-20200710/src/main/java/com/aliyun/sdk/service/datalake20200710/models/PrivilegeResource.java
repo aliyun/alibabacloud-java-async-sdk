@@ -50,7 +50,7 @@ public class PrivilegeResource extends TeaModel {
         private MetaResource metaResource; 
 
         /**
-         * Access type
+         * Access.
          */
         public Builder access(String access) {
             this.access = access;
@@ -58,7 +58,7 @@ public class PrivilegeResource extends TeaModel {
         }
 
         /**
-         * resource
+         * MetaResource.
          */
         public Builder metaResource(MetaResource metaResource) {
             this.metaResource = metaResource;

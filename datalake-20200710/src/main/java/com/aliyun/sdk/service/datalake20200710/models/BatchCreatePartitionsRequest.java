@@ -138,7 +138,7 @@ public class BatchCreatePartitionsRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -147,7 +147,7 @@ public class BatchCreatePartitionsRequest extends Request {
         }
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.putBodyParameter("CatalogId", catalogId);
@@ -156,7 +156,7 @@ public class BatchCreatePartitionsRequest extends Request {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.putBodyParameter("DatabaseName", databaseName);
@@ -165,7 +165,7 @@ public class BatchCreatePartitionsRequest extends Request {
         }
 
         /**
-         * IfNotExists
+         * IfNotExists.
          */
         public Builder ifNotExists(Boolean ifNotExists) {
             this.putBodyParameter("IfNotExists", ifNotExists);
@@ -174,7 +174,7 @@ public class BatchCreatePartitionsRequest extends Request {
         }
 
         /**
-         * NeedResult
+         * NeedResult.
          */
         public Builder needResult(Boolean needResult) {
             this.putBodyParameter("NeedResult", needResult);
@@ -183,7 +183,7 @@ public class BatchCreatePartitionsRequest extends Request {
         }
 
         /**
-         * PartitionInputs
+         * PartitionInputs.
          */
         public Builder partitionInputs(java.util.List < PartitionInput > partitionInputs) {
             this.putBodyParameter("PartitionInputs", partitionInputs);
@@ -192,7 +192,7 @@ public class BatchCreatePartitionsRequest extends Request {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.putBodyParameter("TableName", tableName);

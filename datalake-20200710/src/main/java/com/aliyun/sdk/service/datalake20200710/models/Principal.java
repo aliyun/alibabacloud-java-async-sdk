@@ -38,7 +38,7 @@ public class Principal extends TeaModel {
         private String principalArn; 
 
         /**
-         * 身份标识
+         * PrincipalArn.
          */
         public Builder principalArn(String principalArn) {
             this.principalArn = principalArn;

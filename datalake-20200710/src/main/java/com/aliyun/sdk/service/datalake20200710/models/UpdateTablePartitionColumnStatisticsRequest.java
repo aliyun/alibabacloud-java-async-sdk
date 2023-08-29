@@ -144,7 +144,7 @@ public class UpdateTablePartitionColumnStatisticsRequest extends Request {
         } 
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.catalogId = catalogId;
@@ -152,7 +152,7 @@ public class UpdateTablePartitionColumnStatisticsRequest extends Request {
         }
 
         /**
-         * ColumnStatisticsList
+         * ColumnStatisticsList.
          */
         public Builder columnStatisticsList(java.util.List < ColumnStatistics > columnStatisticsList) {
             this.columnStatisticsList = columnStatisticsList;
@@ -160,7 +160,7 @@ public class UpdateTablePartitionColumnStatisticsRequest extends Request {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -168,7 +168,7 @@ public class UpdateTablePartitionColumnStatisticsRequest extends Request {
         }
 
         /**
-         * Engine
+         * Engine.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -176,7 +176,7 @@ public class UpdateTablePartitionColumnStatisticsRequest extends Request {
         }
 
         /**
-         * IsStatsCompliant
+         * IsStatsCompliant.
          */
         public Builder isStatsCompliant(Boolean isStatsCompliant) {
             this.isStatsCompliant = isStatsCompliant;
@@ -184,7 +184,7 @@ public class UpdateTablePartitionColumnStatisticsRequest extends Request {
         }
 
         /**
-         * TableName
+         * TableName.
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -192,7 +192,7 @@ public class UpdateTablePartitionColumnStatisticsRequest extends Request {
         }
 
         /**
-         * ValidWriteIdList, optional
+         * ValidWriteIdList.
          */
         public Builder validWriteIdList(String validWriteIdList) {
             this.validWriteIdList = validWriteIdList;
@@ -200,7 +200,7 @@ public class UpdateTablePartitionColumnStatisticsRequest extends Request {
         }
 
         /**
-         * WriteId, optional
+         * WriteId.
          */
         public Builder writeId(String writeId) {
             this.writeId = writeId;

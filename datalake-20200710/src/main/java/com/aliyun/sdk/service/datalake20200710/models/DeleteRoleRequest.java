@@ -68,7 +68,7 @@ public class DeleteRoleRequest extends Request {
         } 
 
         /**
-         * RegionId
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -77,7 +77,7 @@ public class DeleteRoleRequest extends Request {
         }
 
         /**
-         * roleName
+         * RoleName.
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

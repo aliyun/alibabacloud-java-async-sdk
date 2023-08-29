@@ -158,7 +158,7 @@ public class Function extends TeaModel {
         private Integer updateTime; 
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.catalogId = catalogId;
@@ -166,7 +166,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * ClassName
+         * ClassName.
          */
         public Builder className(String className) {
             this.className = className;
@@ -174,7 +174,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * CreateTime
+         * CreateTime.
          */
         public Builder createTime(Integer createTime) {
             this.createTime = createTime;
@@ -182,7 +182,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * CreatedBy
+         * CreatedBy.
          */
         public Builder createdBy(String createdBy) {
             this.createdBy = createdBy;
@@ -190,7 +190,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * DatabaseName
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -198,7 +198,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * FunctionName
+         * FunctionName.
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
@@ -206,7 +206,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * FunctionType
+         * FunctionType.
          */
         public Builder functionType(String functionType) {
             this.functionType = functionType;
@@ -214,7 +214,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * OwnerName
+         * OwnerName.
          */
         public Builder ownerName(String ownerName) {
             this.ownerName = ownerName;
@@ -222,7 +222,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * OwnerType
+         * OwnerType.
          */
         public Builder ownerType(String ownerType) {
             this.ownerType = ownerType;
@@ -230,7 +230,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * ResourceUri
+         * ResourceUri.
          */
         public Builder resourceUri(java.util.List < ResourceUri > resourceUri) {
             this.resourceUri = resourceUri;
@@ -238,7 +238,7 @@ public class Function extends TeaModel {
         }
 
         /**
-         * UpdateTime
+         * UpdateTime.
          */
         public Builder updateTime(Integer updateTime) {
             this.updateTime = updateTime;

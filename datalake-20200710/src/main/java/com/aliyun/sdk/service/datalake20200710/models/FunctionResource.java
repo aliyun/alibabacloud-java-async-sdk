@@ -50,7 +50,7 @@ public class FunctionResource extends TeaModel {
         private String functionName; 
 
         /**
-         * Database name
+         * DatabaseName.
          */
         public Builder databaseName(String databaseName) {
             this.databaseName = databaseName;
@@ -58,7 +58,7 @@ public class FunctionResource extends TeaModel {
         }
 
         /**
-         * Function name
+         * FunctionName.
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;

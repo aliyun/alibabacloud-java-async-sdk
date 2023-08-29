@@ -75,7 +75,7 @@ public class CatalogInput extends TeaModel {
         private String owner; 
 
         /**
-         * CatalogId
+         * CatalogId.
          */
         public Builder catalogId(String catalogId) {
             this.catalogId = catalogId;
@@ -83,7 +83,7 @@ public class CatalogInput extends TeaModel {
         }
 
         /**
-         * Description
+         * Description.
          */
         public Builder description(String description) {
             this.description = description;
@@ -91,7 +91,7 @@ public class CatalogInput extends TeaModel {
         }
 
         /**
-         * LocationUri
+         * LocationUri.
          */
         public Builder locationUri(String locationUri) {
             this.locationUri = locationUri;
@@ -99,7 +99,7 @@ public class CatalogInput extends TeaModel {
         }
 
         /**
-         * Owner - 负责人 - Principal格式
+         * Owner.
          */
         public Builder owner(String owner) {
             this.owner = owner;
