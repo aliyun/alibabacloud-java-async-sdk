@@ -56,7 +56,7 @@ public class ApplyAddRequest extends Request {
     @NameInMap("hotel_share")
     private HotelShare hotelShare;
 
-    @Query
+    @Body
     @NameInMap("international_flight_cabins")
     private String internationalFlightCabins;
 
@@ -625,7 +625,7 @@ public class ApplyAddRequest extends Request {
          * international_flight_cabins.
          */
         public Builder internationalFlightCabins(String internationalFlightCabins) {
-            this.putQueryParameter("international_flight_cabins", internationalFlightCabins);
+            this.putBodyParameter("international_flight_cabins", internationalFlightCabins);
             this.internationalFlightCabins = internationalFlightCabins;
             return this;
         }
