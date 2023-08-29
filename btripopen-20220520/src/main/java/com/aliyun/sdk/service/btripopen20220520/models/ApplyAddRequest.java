@@ -977,6 +977,9 @@ public class ApplyAddRequest extends Request {
         @NameInMap("hotel_citys")
         private java.util.List < HotelCitys> hotelCitys;
 
+        @NameInMap("international_flight_cabins")
+        private String internationalFlightCabins;
+
         @NameInMap("premium_economy_discount")
         private Integer premiumEconomyDiscount;
 
@@ -992,6 +995,7 @@ public class ApplyAddRequest extends Request {
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
             this.hotelCitys = builder.hotelCitys;
+            this.internationalFlightCabins = builder.internationalFlightCabins;
             this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
             this.trainSeats = builder.trainSeats;
@@ -1041,6 +1045,13 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
+         * @return internationalFlightCabins
+         */
+        public String getInternationalFlightCabins() {
+            return this.internationalFlightCabins;
+        }
+
+        /**
          * @return premiumEconomyDiscount
          */
         public Integer getPremiumEconomyDiscount() {
@@ -1067,6 +1078,7 @@ public class ApplyAddRequest extends Request {
             private Integer firstDiscount; 
             private String flightCabins; 
             private java.util.List < HotelCitys> hotelCitys; 
+            private String internationalFlightCabins; 
             private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
             private String trainSeats; 
@@ -1108,6 +1120,14 @@ public class ApplyAddRequest extends Request {
              */
             public Builder hotelCitys(java.util.List < HotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
+                return this;
+            }
+
+            /**
+             * international_flight_cabins.
+             */
+            public Builder internationalFlightCabins(String internationalFlightCabins) {
+                this.internationalFlightCabins = internationalFlightCabins;
                 return this;
             }
 
@@ -1996,6 +2016,9 @@ public class ApplyAddRequest extends Request {
         @NameInMap("hotel_citys")
         private java.util.List < TravelerStandardHotelCitys> hotelCitys;
 
+        @NameInMap("international_flight_cabins")
+        private String internationalFlightCabins;
+
         @NameInMap("premium_economy_discount")
         private Integer premiumEconomyDiscount;
 
@@ -2014,6 +2037,7 @@ public class ApplyAddRequest extends Request {
             this.firstDiscount = builder.firstDiscount;
             this.flightCabins = builder.flightCabins;
             this.hotelCitys = builder.hotelCitys;
+            this.internationalFlightCabins = builder.internationalFlightCabins;
             this.premiumEconomyDiscount = builder.premiumEconomyDiscount;
             this.reserveType = builder.reserveType;
             this.trainSeats = builder.trainSeats;
@@ -2064,6 +2088,13 @@ public class ApplyAddRequest extends Request {
         }
 
         /**
+         * @return internationalFlightCabins
+         */
+        public String getInternationalFlightCabins() {
+            return this.internationalFlightCabins;
+        }
+
+        /**
          * @return premiumEconomyDiscount
          */
         public Integer getPremiumEconomyDiscount() {
@@ -2097,6 +2128,7 @@ public class ApplyAddRequest extends Request {
             private Integer firstDiscount; 
             private String flightCabins; 
             private java.util.List < TravelerStandardHotelCitys> hotelCitys; 
+            private String internationalFlightCabins; 
             private Integer premiumEconomyDiscount; 
             private Integer reserveType; 
             private String trainSeats; 
@@ -2139,6 +2171,14 @@ public class ApplyAddRequest extends Request {
              */
             public Builder hotelCitys(java.util.List < TravelerStandardHotelCitys> hotelCitys) {
                 this.hotelCitys = hotelCitys;
+                return this;
+            }
+
+            /**
+             * international_flight_cabins.
+             */
+            public Builder internationalFlightCabins(String internationalFlightCabins) {
+                this.internationalFlightCabins = internationalFlightCabins;
                 return this;
             }
 
