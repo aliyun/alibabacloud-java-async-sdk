@@ -192,7 +192,13 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * EnableBackupLog.
+         * Enables or disables the data flashback feature for the instance. Valid values:
+         * <p>
+         * 
+         * *   **1**: enables the data flashback feature. Before you can use data flashback, you must make sure that AOF persistence is enabled for the instance (`appendonly` set to `yes`).
+         * *   **0** (default): disables the data flashback feature.
+         * 
+         * > This parameter is available only for Tair DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](~~443784~~).
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);
@@ -201,7 +207,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -228,7 +234,18 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupPeriod.
+         * The days of the week to back up data. Valid values:
+         * <p>
+         * 
+         * *   **Monday**: every Monday
+         * *   **Tuesday**: every Tuesday
+         * *   **Wednesday**: every Wednesday
+         * *   **Thursday**: every Thursday
+         * *   **Friday**: every Friday
+         * *   **Saturday**: every Saturday
+         * *   **Sunday**: every Sunday
+         * 
+         * >  Separate multiple options with commas (,).
          */
         public Builder preferredBackupPeriod(String preferredBackupPeriod) {
             this.putQueryParameter("PreferredBackupPeriod", preferredBackupPeriod);
@@ -237,7 +254,10 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * PreferredBackupTime.
+         * The time range to back up data. Specify the time in the ISO 8601 standard in the *HH:mm*Z-*HH:mm*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * >  The beginning and end of the time range must be on the hour. The duration must be an hour.
          */
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);

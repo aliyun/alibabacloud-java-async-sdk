@@ -148,7 +148,7 @@ public class DescribeInstanceTDEStatusRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

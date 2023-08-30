@@ -140,7 +140,7 @@ public class FlushInstanceForDBRequest extends Request {
         } 
 
         /**
-         * DbIndex.
+         * The index number of the database. Valid values: 0 to 255.
          */
         public Builder dbIndex(Integer dbIndex) {
             this.putQueryParameter("DbIndex", dbIndex);
@@ -149,7 +149,7 @@ public class FlushInstanceForDBRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

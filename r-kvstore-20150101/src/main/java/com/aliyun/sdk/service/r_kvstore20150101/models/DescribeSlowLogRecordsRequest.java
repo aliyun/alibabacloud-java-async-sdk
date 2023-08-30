@@ -300,7 +300,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you set the time range to 1 hour. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
+         * The end of the time range to query. The end time must be later than the start time. The time range cannot exceed one day. We recommend that you specify 1 hour. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);

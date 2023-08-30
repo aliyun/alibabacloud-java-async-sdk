@@ -321,7 +321,7 @@ public class DescribePriceRequest extends Request {
         } 
 
         /**
-         * The coupon code. Default value: youhuiquan_promotion_option_id_for_blank. This value indicates that no coupon code is available.
+         * The extended information such as the promotional event ID and business information.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -330,7 +330,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
+         * The storage capacity of the instance. Unit: MB. You must specify one of the **InstanceClass** and **Capacity** parameters to specify the instance type. We recommend that you use **InstanceClass** to specify the instance type.
          */
         public Builder capacity(Long capacity) {
             this.putQueryParameter("Capacity", capacity);
@@ -339,7 +339,13 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The actual price of the order.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   **PostPaid**: pay-as-you-go
+         * *   **PrePaid**: subscription.
+         * 
+         * > The default value is **PostPaid**.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -348,14 +354,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Specify the instance type. You must set InstanceClass or Capacity to specify the instance type. We recommend that you use InstanceClass to specify the instance type.
-         * <p>
-         * 
-         * To view the instance type, perform the following steps:
-         * 
-         * 1\. In the [Overview](~~26350~~) topic, click the link in the **Reference** column corresponding to the instance type that you want to view.
-         * 
-         * 2\. In the instance type table of the page that appears, find the code corresponding to the instance type in the **InstanceClass** column.
+         * The coupon code. Default value: youhuiquan_promotion_option_id_for_blank. This value indicates that no coupon code is available.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -364,7 +363,13 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The node type. Set the value to MASTER_SLAVE. This value indicates that the node type is master-replica.
+         * Specifies whether to forcefully change the configurations of the instance. Valid values:
+         * <p>
+         * 
+         * *   **false**: forcefully changes the configurations.
+         * *   **true**: does not forcefully change the configurations.
+         * 
+         * > The default value is **true**.
          */
         public Builder forceUpgrade(Boolean forceUpgrade) {
             this.putQueryParameter("ForceUpgrade", forceUpgrade);
@@ -373,13 +378,13 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully change the configurations of the instance. Default value: true. Valid values:
+         * The instance type of the instance. You must specify one of the InstanceClass and Capacity parameters to specify the instance type. We recommend that you use InstanceClass to specify the instance type.
          * <p>
          * 
-         * *   **false**: The system forcefully changes the configurations.
-         * *   **true**: The system does not forcefully change the configurations.
+         * To query the instance type, perform the following steps:
          * 
-         * >  Default value: **true**.
+         * 1.  In the [Overview](~~26350~~) topic, click the link in the **Reference** column corresponding to the instance type that you want to view.
+         * 2.  In the instance type table of the page that appears, find the instance type in the **InstanceClass** column.
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -388,7 +393,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The subscription period. Unit: months. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, and **36**.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -397,7 +402,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The storage capacity of the instance. Unit: MB. You must set **InstanceClass** or **Capacity** to specify the instance type. We recommend that you use **InstanceClass** to specify the instance type.
+         * A JSON string that contains multiple instances. For more information, see [Description of the Instances parameter in the DescribePrice API operation](~~161811~~).
          */
         public Builder instances(String instances) {
             this.putQueryParameter("Instances", instances);
@@ -406,7 +411,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The discount amount of the order.
+         * The node type. Set the value to MASTER_SLAVE. This value indicates that the node type is master-replica.
          */
         public Builder nodeType(String nodeType) {
             this.putQueryParameter("NodeType", nodeType);
@@ -415,7 +420,13 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * Indicates whether the coupon was selected.
+         * Specifies whether to return parameters related to the order. Valid values:
+         * <p>
+         * 
+         * *   **false**: does not return parameters related to the order.
+         * *   **true**: returns parameters related to the order.
+         * 
+         * > The default value is **false**.
          */
         public Builder orderParamOut(String orderParamOut) {
             this.putQueryParameter("OrderParamOut", orderParamOut);
@@ -424,7 +435,13 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The service fees of the order.
+         * The order type. Valid values:
+         * <p>
+         * 
+         * *   **BUY**: The order is used to purchase instances.
+         * *   **UPGRADE**: The order is used to change the configurations of instances.
+         * *   **RENEW**: The order is used to renew instances.
+         * *   **CONVERT**: The order is used to change the billing methods of instances.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -451,7 +468,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The extended information such as the promotional event ID and business information.
+         * The subscription duration. Unit: months. Valid values: **1**, 2, 3, 4, 5, 6, 7, 8, **9**, **12**, **24**, and **36**.
          */
         public Builder period(Long period) {
             this.putQueryParameter("Period", period);
@@ -460,7 +477,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The currency used for payment. A value of CNY is used when the order was generated on the China site (aliyun.com), and a value of USD is used when the order was generated on the international site (alibabacloud.com).
+         * The number of instances that you want to purchase. Valid values: **1** to **30**.
+         * <p>
+         * 
+         * > The default value is **1**.
          */
         public Builder quantity(Long quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -469,13 +489,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
-         * 
-         * *   **PostPaid**: pay-as-you-go
-         * *   **PrePaid**: subscription
-         * 
-         * >  Default value: **PostPaid**.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -511,7 +525,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The description of the coupon.
+         * The zone ID of the instance. You can call the [DescribeZones](~~94527~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

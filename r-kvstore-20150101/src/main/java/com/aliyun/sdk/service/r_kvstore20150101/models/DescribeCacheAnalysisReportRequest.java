@@ -221,7 +221,7 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * The maximum number of entries returned per page.
+         * The type of analytics. Set the value to **BigKey**.
          */
         public Builder analysisType(String analysisType) {
             this.putQueryParameter("AnalysisType", analysisType);
@@ -230,7 +230,7 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * The date to query. You can query the report for one day each time. Specify the date in the *yyyy-MM-dd*Z format. The time must be in UTC.
          */
         public Builder date(String date) {
             this.putQueryParameter("Date", date);
@@ -239,10 +239,7 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
-         * <p>
-         * 
-         * >  Default value: **30**.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -251,7 +248,10 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the child node in the cluster instance.
+         * <p>
+         * 
+         * > If this parameter is not specified, the analytics results of all child nodes in the instance are returned.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -278,7 +278,10 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * PageNumbers.
+         * The number of the page to return.
+         * <p>
+         * 
+         * > If the parameter value exceeds the maximum number of the returned pages, an empty large key list is returned.
          */
         public Builder pageNumbers(Integer pageNumbers) {
             this.putQueryParameter("PageNumbers", pageNumbers);
@@ -287,7 +290,10 @@ public class DescribeCacheAnalysisReportRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
+         * <p>
+         * 
+         * > The default value is **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

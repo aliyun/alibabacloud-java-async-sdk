@@ -163,7 +163,7 @@ public class ModifySecurityGroupConfigurationRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifySecurityGroupConfiguration**.
+         * The ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

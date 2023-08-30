@@ -148,7 +148,7 @@ public class CreateBackupRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

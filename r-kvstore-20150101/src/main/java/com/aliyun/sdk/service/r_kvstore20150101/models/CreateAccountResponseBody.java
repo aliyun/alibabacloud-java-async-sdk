@@ -62,7 +62,7 @@ public class CreateAccountResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AcountName.
+         * The name of the account.
          */
         public Builder acountName(String acountName) {
             this.acountName = acountName;
@@ -70,7 +70,7 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -78,7 +78,7 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

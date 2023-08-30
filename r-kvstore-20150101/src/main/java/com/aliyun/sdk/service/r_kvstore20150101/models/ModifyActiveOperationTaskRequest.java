@@ -163,7 +163,10 @@ public class ModifyActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the O\&M task. Separate multiple IDs with commas (,).
+         * <p>
+         * 
+         * > You can call the [DescribeActiveOperationTask](~~197387~~) operation to query the ID of an O\&M task.
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -217,7 +220,10 @@ public class ModifyActiveOperationTaskRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to: **ModifyActiveOperationTask**.
+         * The scheduled switchover time to be specified. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * <p>
+         * 
+         * > The time cannot be later than the latest operation time. You can call the [DescribeActiveOperationTask](~~197387~~) operation to obtain the latest operation time, which is the value of the **Deadline** parameter in the response.
          */
         public Builder switchTime(String switchTime) {
             this.putQueryParameter("SwitchTime", switchTime);

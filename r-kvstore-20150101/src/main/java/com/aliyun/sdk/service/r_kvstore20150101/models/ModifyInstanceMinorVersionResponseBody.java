@@ -38,7 +38,7 @@ public class ModifyInstanceMinorVersionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Upgrades the minor version of an ApsaraDB for Redis instance.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

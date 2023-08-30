@@ -163,7 +163,10 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * Config.
+         * The configuration parameters of the instance in the JSON format.
+         * <p>
+         * 
+         * > For more information, see [Supported parameters](~~259681~~).
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -172,7 +175,7 @@ public class ModifyInstanceConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

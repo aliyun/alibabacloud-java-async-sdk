@@ -205,10 +205,10 @@ public class DescribeCacheAnalysisReportListRequest extends Request {
         }
 
         /**
-         * The ID of the child node in the cluster instance.
+         * The time range to query. Default value: 7. Unit: days.
          * <p>
          * 
-         * >  If this parameter is not specified, the analysis results of all child nodes in the instance are returned.
+         * > If daily automatic analysis has not started and manual analysis is not performed, no records are returned.
          */
         public Builder days(Integer days) {
             this.putQueryParameter("Days", days);
@@ -226,7 +226,10 @@ public class DescribeCacheAnalysisReportListRequest extends Request {
         }
 
         /**
-         * 7
+         * The ID of the child node in the cluster instance.
+         * <p>
+         * 
+         * > If this parameter is not specified, the analysis results of all child nodes in the instance are returned.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
@@ -253,7 +256,7 @@ public class DescribeCacheAnalysisReportListRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The number of the page to return.
          */
         public Builder pageNumbers(Integer pageNumbers) {
             this.putQueryParameter("PageNumbers", pageNumbers);
@@ -262,7 +265,10 @@ public class DescribeCacheAnalysisReportListRequest extends Request {
         }
 
         /**
-         * r-bp1zxszhcgatnx****-db-0
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**.
+         * <p>
+         * 
+         * > The default value is **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

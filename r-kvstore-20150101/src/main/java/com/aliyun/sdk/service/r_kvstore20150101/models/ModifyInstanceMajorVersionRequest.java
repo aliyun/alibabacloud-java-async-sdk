@@ -177,7 +177,13 @@ public class ModifyInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * The major version to which you want to upgrade the instance. Valid values: **4.0** and **5.0**.
+         * The time when the major version is upgraded. Valid values:
+         * <p>
+         * 
+         * *   **Immediately**: immediately upgrades the major version. This is the default value.
+         * *   **MaintainTime**: upgrades the major version in the maintenance window.
+         * 
+         * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -186,7 +192,7 @@ public class ModifyInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -195,7 +201,7 @@ public class ModifyInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifyInstanceMajorVersion**.
+         * The major version to which you want to upgrade the instance. Valid values: **4.0** and **5.0**.
          */
         public Builder majorVersion(String majorVersion) {
             this.putQueryParameter("MajorVersion", majorVersion);

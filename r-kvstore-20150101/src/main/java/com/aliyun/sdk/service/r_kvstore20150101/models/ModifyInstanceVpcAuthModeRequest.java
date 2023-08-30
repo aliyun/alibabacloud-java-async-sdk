@@ -163,7 +163,7 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifyInstanceVpcAuthMode**.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -217,13 +217,13 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable password authentication for access in the VPC. Valid values:
+         * Specifies whether to disable password-free access. Valid values:
          * <p>
          * 
-         * *   **Open**: enables password authentication.
-         * *   **Close**: disables password authentication.
+         * *   **Open**: disables password-free access.
+         * *   **Close**: enables password-free access.
          * 
-         * >  Default value: **Open**.
+         * > The default value is **Open**.
          */
         public Builder vpcAuthMode(String vpcAuthMode) {
             this.putQueryParameter("VpcAuthMode", vpcAuthMode);

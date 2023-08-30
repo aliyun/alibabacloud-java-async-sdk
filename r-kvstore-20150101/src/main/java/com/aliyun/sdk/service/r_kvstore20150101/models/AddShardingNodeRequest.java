@@ -66,6 +66,10 @@ public class AddShardingNodeRequest extends Request {
     @NameInMap("SourceBiz")
     private String sourceBiz;
 
+    @Query
+    @NameInMap("VSwitchId")
+    private String vSwitchId;
+
     private AddShardingNodeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -81,6 +85,7 @@ public class AddShardingNodeRequest extends Request {
         this.securityToken = builder.securityToken;
         this.shardCount = builder.shardCount;
         this.sourceBiz = builder.sourceBiz;
+        this.vSwitchId = builder.vSwitchId;
     }
 
     public static Builder builder() {
@@ -187,6 +192,13 @@ public class AddShardingNodeRequest extends Request {
         return this.sourceBiz;
     }
 
+    /**
+     * @return vSwitchId
+     */
+    public String getVSwitchId() {
+        return this.vSwitchId;
+    }
+
     public static final class Builder extends Request.Builder<AddShardingNodeRequest, Builder> {
         private String regionId; 
         private Boolean autoPay; 
@@ -201,6 +213,7 @@ public class AddShardingNodeRequest extends Request {
         private String securityToken; 
         private Integer shardCount; 
         private String sourceBiz; 
+        private String vSwitchId; 
 
         private Builder() {
             super();
@@ -221,6 +234,7 @@ public class AddShardingNodeRequest extends Request {
             this.securityToken = request.securityToken;
             this.shardCount = request.shardCount;
             this.sourceBiz = request.sourceBiz;
+            this.vSwitchId = request.vSwitchId;
         } 
 
         /**
@@ -348,6 +362,15 @@ public class AddShardingNodeRequest extends Request {
         public Builder sourceBiz(String sourceBiz) {
             this.putQueryParameter("SourceBiz", sourceBiz);
             this.sourceBiz = sourceBiz;
+            return this;
+        }
+
+        /**
+         * VSwitchId.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
             return this;
         }
 

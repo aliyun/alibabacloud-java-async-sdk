@@ -178,7 +178,7 @@ public class ModifyInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -187,7 +187,10 @@ public class ModifyInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * MaintainEndTime.
+         * The end time of the maintenance window. The time is in the *HH:mm*Z format. The time is displayed in UTC. For example, if you want the maintenance to end at 2:00 (UTC+8), set this parameter to `18:00Z`.
+         * <p>
+         * 
+         * > The end time must be one hour later than the start time. For example, if the value of the MaintainStartTime parameter is `17:00Z`, the value of the MaintainEndTime parameter must be `18:00Z`.
          */
         public Builder maintainEndTime(String maintainEndTime) {
             this.putQueryParameter("MaintainEndTime", maintainEndTime);
@@ -196,7 +199,7 @@ public class ModifyInstanceMaintainTimeRequest extends Request {
         }
 
         /**
-         * MaintainStartTime.
+         * The start time of the maintenance window. The time is in the *HH:mm*Z format. The time is displayed in UTC. For example, if you want the maintenance to start at 1:00 (UTC+8), set this parameter to `17:00Z`. After you call the API operation, you can view the actual time in the ApsaraDB for Redis console. For more information, see [Set a maintenance window](~~55252~~).
          */
         public Builder maintainStartTime(String maintainStartTime) {
             this.putQueryParameter("MaintainStartTime", maintainStartTime);

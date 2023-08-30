@@ -50,7 +50,7 @@ public class DescribeInstanceTDEStatusResponseBody extends TeaModel {
         private String TDEStatus; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class DescribeInstanceTDEStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeInstanceTDEStatus**.
+         * Indicates whether TDE is enabled. Valid values:
+         * <p>
+         * 
+         * *   **Enabled**: TDE is enabled.
+         * *   **Disable**: TDE is disabled.
          */
         public Builder TDEStatus(String TDEStatus) {
             this.TDEStatus = TDEStatus;

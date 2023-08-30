@@ -725,7 +725,7 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * 实例的全局IP白名单模板，多个IP白名单模板请用英文逗号（,）分隔，不可重复。
+         * The global IP whitelist template of the instance. Separate multiple IP whitelist templates with commas (,) and make sure that each IP whitelist template is unique.
          */
         public Builder globalSecurityGroupIds(String globalSecurityGroupIds) {
             this.putQueryParameter("GlobalSecurityGroupIds", globalSecurityGroupIds);
@@ -793,7 +793,7 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * ParamGroupId.
+         * 参数模板ID，根据新创建的参数模板参数创建实例，不可重复。
          */
         public Builder paramGroupId(String paramGroupId) {
             this.putQueryParameter("ParamGroupId", paramGroupId);
@@ -903,11 +903,7 @@ public class CreateTairInstanceRequest extends Request {
          * The ID of the secondary zone. You can call the [DescribeRegions](~~61012~~) operation to query the ID of the secondary zone.
          * <p>
          * 
-         * > 
-         * 
-         * *   You cannot specify multiple zone IDs or set this parameter to a value that is the same as that of the **ZoneId** parameter.
-         * 
-         * *   If you set both the SecondaryZoneId and **ZoneId** parameters, the master node is deployed in the primary zone and the replica node is deployed in the secondary zone within the same region. In this case, the instance adopts the zone-disaster recovery architecture.
+         * > You cannot specify multiple zone IDs or set this parameter to a value that is the same as that of the ZoneId parameter.
          */
         public Builder secondaryZoneId(String secondaryZoneId) {
             this.putQueryParameter("SecondaryZoneId", secondaryZoneId);
@@ -925,13 +921,13 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * The number of data shards in the instance. Default value: 1. Valid values:
+         * The number of data nodes in the instance. Valid values:
          * <p>
          * 
-         * *   **1**: You can create an instance in the [standard architecture](~~52228~~) that contains only a single data shard.
-         * *   **2** to **32**: You can create an instance in the [cluster architecture](~~52228~~) that contains the specified number of data shards.
+         * *   **1**: You can create an instance in the standard architecture that contains only one data node. For more information about the standard architecture, see [Cluster master-replica instances](~~52228~~). This is the default value.
+         * *   **2** to **32**: You can create an instance in the cluster architecture that contains the specified number of data nodes. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).
          * 
-         * > Only persistent memory-optimized instances can use the cluster architecture. You can set this parameter to an integer from **2** to **32** only if you set the **InstanceType** parameter to **tair_scm**.
+         * > Only persistent memory-optimized instances can use the cluster architecture. Therefore, you can set this parameter to an integer from **2** to **32** only if you set the **InstanceType** parameter to **tair_scm**.
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("ShardCount", shardCount);
@@ -1016,10 +1012,10 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * The primary zone ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent zone list.
+         * The primary zone ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the IDs of available zones.
          * <p>
          * 
-         * > If you want to create an instance that adopts the zone-disaster recovery architecture, you can deploy the master node and replica node of the instance in different zones within the same region. You can set the **SecondaryZoneId** parameter to specify the secondary zone. In this case, do not set the ZoneId parameter to multiple zone IDs.
+         * >  You can also set the SecondaryZoneId parameter to specify the secondary zone. The primary and secondary nodes will then be deployed in the specified primary and secondary zones to implement the master-replica zone-disaster recovery architecture. For example, you can set the ZoneId parameter to cn-hangzhou-h and the SecondaryZoneId parameter to cn-hangzhou-g.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

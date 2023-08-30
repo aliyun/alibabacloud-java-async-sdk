@@ -114,7 +114,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * Redis
+         * Details of the returned parameters.
          */
         public Builder parameters(Parameters parameters) {
             this.parameters = parameters;
@@ -222,7 +222,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             private String parameterValue; 
 
             /**
-             * The number of parameters that are supported by the instance.
+             * The check code that indicates the valid values of the parameter.
              */
             public Builder checkingCode(String checkingCode) {
                 this.checkingCode = checkingCode;
@@ -230,7 +230,11 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * DescribeParameterTemplates
+             * Indicates whether the parameter can be reset. Valid values:
+             * <p>
+             * 
+             * *   **true**: The parameter can be reset.
+             * *   **false**: The parameter cannot be reset.
              */
             public Builder forceModify(Boolean forceModify) {
                 this.forceModify = forceModify;
@@ -238,7 +242,11 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the parameters and default values of an ApsaraDB for Redis instance that runs a specific major version in a specific architecture.
+             * Indicates whether a restart of the instance is required after the parameter is reset. Valid values:
+             * <p>
+             * 
+             * *   **true**: After the parameter is reset, you must restart the instance to make the new value of the parameter take effect.
+             * *   **false**: After the parameter is reset, the new value of the parameter immediately takes effect. You do not need to restart the instance.
              */
             public Builder forceRestart(Boolean forceRestart) {
                 this.forceRestart = forceRestart;
@@ -246,7 +254,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterDescription.
+             * The description of the parameter.
              */
             public Builder parameterDescription(String parameterDescription) {
                 this.parameterDescription = parameterDescription;
@@ -254,7 +262,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * 5.0
+             * The name of the parameter. For more information about the parameters and the parameter settings, see [Parameters](~~259681~~).
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -262,10 +270,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the instance belongs. You can call the [ListResourceGroups](~~158855~~) operation to query the IDs of resource groups.
-             * <p>
-             * 
-             * >  You can also query the ID of a resource group in the Resource Management console. For more information, see [View the basic information of a resource group](~~151181~~).
+             * The default value of the parameter.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

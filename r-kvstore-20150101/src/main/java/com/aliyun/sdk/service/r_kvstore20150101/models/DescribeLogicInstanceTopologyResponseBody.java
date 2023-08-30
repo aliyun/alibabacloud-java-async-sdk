@@ -74,7 +74,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeLogicInstanceTopology**.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -82,7 +82,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The bandwidth throttling of the node. Unit: MB/s.
+         * The detailed proxy information, including information about proxy nodes.
          */
         public Builder redisProxyList(RedisProxyList redisProxyList) {
             this.redisProxyList = redisProxyList;
@@ -98,7 +98,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +186,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             private String nodeType; 
 
             /**
-             * The ID of the request.
+             * The bandwidth throttling of the node. Unit: MB/s.
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -194,7 +194,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed proxy information, including information about proxy nodes.
+             * The storage capacity of the node. Unit: MB.
              */
             public Builder capacity(String capacity) {
                 this.capacity = capacity;
@@ -202,7 +202,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance whose topology information you want to query.
+             * The maximum number of connections.
              */
             public Builder connection(String connection) {
                 this.connection = connection;
@@ -210,7 +210,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the logical topology of an ApsaraDB for Redis instance.
+             * The ID of the node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -218,7 +218,11 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node type. Valid values:
+             * <p>
+             * 
+             * *   **proxy**: proxy node
+             * *   **db**: data node
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -360,7 +364,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             private String subInstanceType; 
 
             /**
-             * The ID of the request.
+             * The bandwidth throttling of the node. Unit: MB/s.
              */
             public Builder bandwidth(String bandwidth) {
                 this.bandwidth = bandwidth;
@@ -368,7 +372,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed proxy information, including information about proxy nodes.
+             * The storage capacity of the node. Unit: MB.
              */
             public Builder capacity(String capacity) {
                 this.capacity = capacity;
@@ -376,7 +380,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance whose topology information you want to query.
+             * The maximum number of connections.
              */
             public Builder connection(String connection) {
                 this.connection = connection;
@@ -384,7 +388,7 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the logical topology of an ApsaraDB for Redis instance.
+             * The ID of the node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -392,7 +396,11 @@ public class DescribeLogicInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node type. Valid values:
+             * <p>
+             * 
+             * *   **proxy**: proxy node
+             * *   **db**: data node
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;

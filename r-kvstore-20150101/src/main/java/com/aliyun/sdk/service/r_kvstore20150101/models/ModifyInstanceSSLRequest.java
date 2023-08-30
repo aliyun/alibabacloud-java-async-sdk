@@ -208,7 +208,12 @@ public class ModifyInstanceSSLRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * Specifies whether to enable TLS (SSL) encryption. Valid values:
+         * <p>
+         * 
+         * *   **Disable**: disables SSL encryption.
+         * *   **Enable**: enables SSL encryption.
+         * *   **Update**: updates the SSL certificate.
          */
         public Builder SSLEnabled(String SSLEnabled) {
             this.putQueryParameter("SSLEnabled", SSLEnabled);

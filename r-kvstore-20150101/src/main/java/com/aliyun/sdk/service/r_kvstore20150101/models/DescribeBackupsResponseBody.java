@@ -106,7 +106,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * Backups.
+         * Details of the backup files.
          */
         public Builder backups(Backups backups) {
             this.backups = backups;
@@ -114,7 +114,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of backup files that were returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -495,7 +495,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String nodeInstanceId; 
 
             /**
-             * BackupDBNames.
+             * The databases that are backed up. Default value: **all**, which indicates that all databases are backed up.
              */
             public Builder backupDBNames(String backupDBNames) {
                 this.backupDBNames = backupDBNames;
@@ -503,7 +503,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupDownloadURL.
+             * The public download URL of the backup file.
              */
             public Builder backupDownloadURL(String backupDownloadURL) {
                 this.backupDownloadURL = backupDownloadURL;
@@ -511,7 +511,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupEndTime.
+             * The end time of the backup.
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -519,7 +519,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupId.
+             * The ID of the backup file.
              */
             public Builder backupId(Integer backupId) {
                 this.backupId = backupId;
@@ -527,7 +527,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupIntranetDownloadURL.
+             * The internal download URL of the backup file.
+             * <p>
+             * 
+             * >  You can download the backup file by using this URL from the Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance and ApsaraDB for Redis instance must reside in the classic network or the same virtual private cloud (VPC) within the same region.
              */
             public Builder backupIntranetDownloadURL(String backupIntranetDownloadURL) {
                 this.backupIntranetDownloadURL = backupIntranetDownloadURL;
@@ -535,7 +538,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupJobID.
+             * The ID of the backup task.
              */
             public Builder backupJobID(Integer backupJobID) {
                 this.backupJobID = backupJobID;
@@ -543,7 +546,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMethod.
+             * The backup method. Valid values:
+             * <p>
+             * 
+             * *   **Logical**
+             * *   **Physical**
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -551,7 +558,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMode.
+             * The backup mode. Valid values:
+             * <p>
+             * 
+             * *   **Automated**
+             * *   **Manual**
              */
             public Builder backupMode(String backupMode) {
                 this.backupMode = backupMode;
@@ -559,7 +570,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSize.
+             * The size of the backup file.
              */
             public Builder backupSize(Long backupSize) {
                 this.backupSize = backupSize;
@@ -567,7 +578,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * The start time of the backup.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -575,7 +586,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStatus.
+             * The state of the backup task. Valid values:
+             * <p>
+             * 
+             * *   **Success**: The task is successful.
+             * *   **Failed**: The task failed.
              */
             public Builder backupStatus(String backupStatus) {
                 this.backupStatus = backupStatus;
@@ -583,7 +598,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * The backup type of the backup file. Valid values:
+             * <p>
+             * 
+             * *   **FullBackup**
+             * *   **IncrementalBackup**
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -591,7 +610,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * EngineVersion.
+             * The major engine version of the instance.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -599,7 +618,10 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * NodeInstanceId.
+             * The node ID.
+             * <p>
+             * 
+             * >  If a standard instance is used, the instance ID is returned.
              */
             public Builder nodeInstanceId(String nodeInstanceId) {
                 this.nodeInstanceId = nodeInstanceId;

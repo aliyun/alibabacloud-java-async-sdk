@@ -50,10 +50,7 @@ public class ModifyActiveOperationTaskResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The scheduled switchover time to be specified. Specify the time in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
-         * <p>
-         * 
-         * >  The time cannot be later than the latest operation time. You can call the [DescribeActiveOperationTask](~~197387~~) operation. The **Deadline** parameter in the response indicates the latest operation time.
+         * The ID of the O\&M task. IDs are separated by commas (,).
          */
         public Builder ids(String ids) {
             this.ids = ids;
@@ -61,7 +58,7 @@ public class ModifyActiveOperationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Modifies the scheduled switchover time of an operations and maintenance (O&M) task.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

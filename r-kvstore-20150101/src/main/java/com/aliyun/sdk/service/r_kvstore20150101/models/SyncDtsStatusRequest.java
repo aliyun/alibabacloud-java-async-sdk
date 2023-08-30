@@ -168,11 +168,7 @@ public class SyncDtsStatusRequest extends Request {
         } 
 
         /**
-         * Disables configuration change for the instance. Valid values:
-         * <p>
-         * 
-         * *   **0**: no
-         * *   **1**: yes. If you attempt to modify the configurations of the instance, the system sends a prompt about the restriction.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -235,7 +231,11 @@ public class SyncDtsStatusRequest extends Request {
         }
 
         /**
-         * cn-hangzhou
+         * Disables configuration changes for the instance. Valid values:
+         * <p>
+         * 
+         * *   **0**: does not disable configuration changes.
+         * *   **1**: disables configuration changes. In this case, if you attempt to modify the configurations of the instance, the system informs you that the operation cannot be performed.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -244,7 +244,10 @@ public class SyncDtsStatusRequest extends Request {
         }
 
         /**
-         * Disables the configuration change of an ApsaraDB for Redis instance before you use Data Transmission Service (DTS) to migrate or synchronize data of the instance. This prevents migration and synchronization task failures due to the configuration change.
+         * The ID of the DTS instance. You can view the ID in the [DTS console](https://dts.console.aliyun.com/).
+         * <p>
+         * 
+         * > An ApsaraDB for Redis instance may be involved in multiple data migration or synchronization tasks. If you want to cancel the restriction on the instance, you can specify this parameter to prevent repeated operation calls.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

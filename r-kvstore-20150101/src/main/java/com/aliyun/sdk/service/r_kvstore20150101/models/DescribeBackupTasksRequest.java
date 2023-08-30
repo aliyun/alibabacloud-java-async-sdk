@@ -194,7 +194,13 @@ public class DescribeBackupTasksRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. The operation that you want to perform. Set the value to **DescribeBackupTasks**.
+         * The backup mode. Valid values:
+         * <p>
+         * 
+         * *   **Automated**: automatic backup. You can call the [DescribeBackupPolicy](~~61078~~) operation to query the automatic backup policy.
+         * *   **Manual**: manual backup.
+         * 
+         * > By default, the information about backup tasks in both modes is returned.
          */
         public Builder jobMode(String jobMode) {
             this.putQueryParameter("JobMode", jobMode);

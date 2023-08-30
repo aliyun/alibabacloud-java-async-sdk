@@ -217,7 +217,7 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * The minor version of the node.
+         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -226,7 +226,7 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeRoleZoneInfo**.
+         * The number of entries to return on each page. Valid values: **10**, **20**, and **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -235,12 +235,16 @@ public class DescribeRoleZoneInfoRequest extends Request {
         }
 
         /**
-         * The current bandwidth of the node, which consists of the default bandwidth and the increased bandwidth. Unit: MB/s.
+         * The type of the node to query. Default value: 1. Valid values:
          * <p>
          * 
-         * > 
-         * *   You can call the [EnableAdditionalBandwidth](~~206173~~) operation to specify the increased bandwidth.
-         * *   You can also use this parameter to calculate the increased bandwidth. For example, if the default bandwidth of the node is 96 MB/s and the returned value of this parameter is 100, the increased bandwidth is 4 MB/s.
+         * *   **0**: proxy node
+         * 
+         *     **
+         * 
+         *     **Note**This parameter is supported only for cluster and read/write splitting instances.
+         * 
+         * *   **1**: data node
          */
         public Builder queryType(Integer queryType) {
             this.putQueryParameter("QueryType", queryType);

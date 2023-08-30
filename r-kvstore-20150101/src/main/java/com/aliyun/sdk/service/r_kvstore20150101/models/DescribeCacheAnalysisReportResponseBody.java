@@ -110,7 +110,7 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * BigKeys.
+         * Details of the large keys.
          */
         public Builder bigKeys(java.util.List < java.util.Map<String, ?>> bigKeys) {
             this.bigKeys = bigKeys;
@@ -118,7 +118,10 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         }
 
         /**
-         * HotKeys.
+         * Details of the hotkeys.
+         * <p>
+         * 
+         * > This parameter is not returned because ApsaraDB for Redis does not support hotkey analytics.
          */
         public Builder hotKeys(java.util.List < java.util.Map<String, ?>> hotKeys) {
             this.hotKeys = hotKeys;
@@ -126,7 +129,7 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -134,7 +137,7 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -142,7 +145,7 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The maximum number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +153,7 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +161,7 @@ public class DescribeCacheAnalysisReportResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;

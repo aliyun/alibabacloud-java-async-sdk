@@ -140,7 +140,7 @@ public class DescribeAuditLogConfigRequest extends Request {
         } 
 
         /**
-         * The region ID of the instance. You can call the [DescribeInstanceAttribute](~~60996~~) operation to query the region ID of the instance.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -167,7 +167,7 @@ public class DescribeAuditLogConfigRequest extends Request {
         }
 
         /**
-         * The retention period of audit logs. Unit: day.
+         * The region ID of the instance. You can call the [DescribeInstanceAttribute](~~60996~~) operation to query the region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

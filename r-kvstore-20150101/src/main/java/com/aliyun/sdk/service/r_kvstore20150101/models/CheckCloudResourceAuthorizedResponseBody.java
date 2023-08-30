@@ -50,7 +50,12 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CheckCloudResourceAuthorized
+         * Indicates whether the instance is authorized to use KMS. Valid values:
+         * <p>
+         * 
+         * *   **0**: The instance is authorized to use KMS.
+         * *   **1**: The instance is not authorized to use KMS.
+         * *   **2**: KMS is not activated. For more information, see [Activate KMS](~~153781~~).
          */
         public Builder authorizationState(Integer authorizationState) {
             this.authorizationState = authorizationState;
@@ -58,7 +63,7 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

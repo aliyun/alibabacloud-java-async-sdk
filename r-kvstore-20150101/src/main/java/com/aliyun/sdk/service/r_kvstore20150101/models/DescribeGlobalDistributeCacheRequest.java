@@ -216,7 +216,7 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * The total number of entries returned.
+         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -225,7 +225,7 @@ public class DescribeGlobalDistributeCacheRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

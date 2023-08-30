@@ -86,7 +86,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The time when the system performs the switchover operation. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.
+         * The O\&M tasks of the instance.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -293,7 +293,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * CreatedTime.
+             * The time when the O\&M task was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -301,7 +301,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Queries the information about operations and maintenance (O&M) tasks for an ApsaraDB for Redis instance.
+             * The engine type of the instance. The return value is **Redis**.
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -309,7 +309,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the O\&M task was modified. The time in UTC is displayed in the *yyyy-MM-dd*T*HH:mm:ss*Z format.
+             * The deadline before which the time to perform the O\&M task can be modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder deadline(String deadline) {
                 this.deadline = deadline;
@@ -317,7 +317,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the O\&M task.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -325,7 +325,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The ID of the ApsaraDB for Redis instance.
              */
             public Builder insName(String insName) {
                 this.insName = insName;
@@ -333,7 +333,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of entries that were returned per page.
+             * The time when the O\&M task was modified. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -341,13 +341,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
-             * <p>
-             * 
-             * *   **rds_apsaradb_ha**: switchover between a master node and a replica node.
-             * *   **rds_apsaradb_transfer**: instance migration task.
-             * *   **rds_apsaradb_upgrade**: minor version upgrade.
-             * *   **all**: all task types.
+             * The required preparation period between the task start time and the switchover time. The time is displayed in the *HH:mm:ss* format.
              */
             public Builder prepareInterval(String prepareInterval) {
                 this.prepareInterval = prepareInterval;
@@ -355,7 +349,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region ID.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -363,7 +357,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The time when the O\&M task was performed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -371,7 +365,15 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The required preparation period between the task start time and the switchover time. The time is displayed in the *HH:mm:ss* format.
+             * The state of the O\&M task. Valid values:
+             * <p>
+             * 
+             * *   **2**: The task is waiting for users to specify a switchover time.
+             * *   **3**: The task is waiting to be performed.
+             * *   **4**: The task is being performed. If the task is in this state, the [ModifyActiveOperationTask](~~197384~~) operation cannot be called to modify the scheduled switchover time.
+             * *   **5**: The task is performed.
+             * *   **6**: The task fails.
+             * *   **7**: The task is canceled.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -379,7 +381,7 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchTime.
+             * The time when the switchover operation was performed. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;
@@ -387,7 +389,13 @@ public class DescribeActiveOperationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page. Specify a value greater than **10**. Default value: **30**.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   **rds_apsaradb_ha**: primary/secondary switchover
+             * *   **rds_apsaradb_transfer**: instance migration
+             * *   **rds_apsaradb_upgrade**: minor version update
+             * *   **all**: all types
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

@@ -82,7 +82,7 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the ApsaraDB for Redis instance. You can call the [DescribeInstances](~~60933~~) operation to query instance IDs.
+         * The details of the backup tasks.
          */
         public Builder backupJobs(java.util.List < BackupJobs> backupJobs) {
             this.backupJobs = backupJobs;
@@ -387,26 +387,18 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning time when the backup task started. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format and displayed in UTC.
+             * The state of the backup task. Valid values:
+             * <p>
+             * 
+             * *   **NoStart**: The backup task is not started.
+             * *   **Preparing**: The backup task is being prepared.
+             * *   **Waiting**: The backup task is pending.
+             * *   **Uploading**: The system is uploading the backup file.
+             * *   **Checking**: The system is checking the uploaded backup file.
+             * *   **Finished**: The backup task is completed.
              */
             public Builder backupProgressStatus(String backupProgressStatus) {
                 this.backupProgressStatus = backupProgressStatus;
-                return this;
-            }
-
-            /**
-             * Manual
-             */
-            public Builder jobMode(String jobMode) {
-                this.jobMode = jobMode;
-                return this;
-            }
-
-            /**
-             * The ID of the request.
-             */
-            public Builder nodeId(String nodeId) {
-                this.nodeId = nodeId;
                 return this;
             }
 
@@ -417,13 +409,29 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
              * *   **Automated**: automatic backup
              * *   **Manual**: manual backup
              */
+            public Builder jobMode(String jobMode) {
+                this.jobMode = jobMode;
+                return this;
+            }
+
+            /**
+             * The ID of the data node.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
+                return this;
+            }
+
+            /**
+             * The progress of the backup task in percentage.
+             */
             public Builder process(String process) {
                 this.process = process;
                 return this;
             }
 
             /**
-             * 1162****
+             * The start time of the backup task. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -431,7 +439,11 @@ public class DescribeBackupTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskAction.
+             * The type of the backup task. Valid values:
+             * <p>
+             * 
+             * *   **TempBackupTask**: The backup task was manually performed.
+             * *   **NormalBackupTask**: The backup task was automatically performed.
              */
             public Builder taskAction(String taskAction) {
                 this.taskAction = taskAction;

@@ -176,7 +176,13 @@ public class ModifyInstanceMinorVersionRequest extends Request {
         }
 
         /**
-         * The minor version to which you want to update. Default value: **latest_version**.
+         * The time when the minor version is updated. Valid values:
+         * <p>
+         * 
+         * *   **Immediately**: The minor version is immediately updated.
+         * *   **MaintainTime**: The minor version is updated within the maintenance window.
+         * 
+         * >  You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -185,7 +191,7 @@ public class ModifyInstanceMinorVersionRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -194,7 +200,7 @@ public class ModifyInstanceMinorVersionRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifyInstanceMinorVersion**.
+         * The minor version to which you want to update. Default value: **latest_version**.
          */
         public Builder minorversion(String minorversion) {
             this.putQueryParameter("Minorversion", minorversion);

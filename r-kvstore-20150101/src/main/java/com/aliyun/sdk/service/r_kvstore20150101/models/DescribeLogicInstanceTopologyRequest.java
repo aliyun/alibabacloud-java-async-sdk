@@ -148,7 +148,7 @@ public class DescribeLogicInstanceTopologyRequest extends Request {
         }
 
         /**
-         * The storage capacity of the node. Unit: MB.
+         * The ID of the instance whose topology information you want to query.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

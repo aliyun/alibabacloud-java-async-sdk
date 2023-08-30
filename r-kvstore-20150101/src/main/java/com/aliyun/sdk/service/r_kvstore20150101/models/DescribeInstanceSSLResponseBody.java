@@ -98,7 +98,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         private String SSLExpiredTime; 
 
         /**
-         * The common name of the SSL certificate, which is the domain name for which you want to apply for the SSL certificate. The default value is the internal endpoint of the instance.
+         * The common name of the CA certificate. The default value is the internal endpoint of the instance.
          */
         public Builder certCommonName(String certCommonName) {
             this.certCommonName = certCommonName;
@@ -106,7 +106,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * Download URL for CA certificate.
+         * The download URL of the CA certificate.
          */
         public Builder certDownloadURL(String certDownloadURL) {
             this.certDownloadURL = certDownloadURL;
@@ -130,7 +130,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether SSL encryption is enabled. Valid values:
+         * The status of the TLS (SSL) encryption feature. Valid values:
          * <p>
          * 
          * *   **Enable**: SSL encryption is enabled.
@@ -142,7 +142,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
         }
 
         /**
-         * The expiration time of the SSL certificate.
+         * The time when the CA certificate expires.
          */
         public Builder SSLExpiredTime(String SSLExpiredTime) {
             this.SSLExpiredTime = SSLExpiredTime;

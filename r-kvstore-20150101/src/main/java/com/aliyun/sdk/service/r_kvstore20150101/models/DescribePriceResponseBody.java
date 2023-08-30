@@ -86,10 +86,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private SubOrders subOrders; 
 
         /**
-         * The number of instances that you want to purchase. Valid values: **1** to **30**.
-         * <p>
-         * 
-         * >  Default value: **1**.
+         * The order information.
          */
         public Builder order(Order order) {
             this.order = order;
@@ -97,7 +94,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Details about coupons.
+         * The parameters of the order. This parameter is returned when OrderParamOut is set to `true`.
          */
         public Builder orderParams(String orderParams) {
             this.orderParams = orderParams;
@@ -105,7 +102,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * A JSON string that contains multiple instances. For more information, see [Description of the Instances parameter in the DescribePrice API operation](~~161811~~).
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -113,7 +110,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * Details about promotion rules.
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
@@ -121,7 +118,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * SubOrders.
+         * Details about rules that match the coupon.
          */
         public Builder subOrders(SubOrders subOrders) {
             this.subOrders = subOrders;
@@ -197,7 +194,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * CouponNo.
+             * The coupon number.
              */
             public Builder couponNo(String couponNo) {
                 this.couponNo = couponNo;
@@ -205,7 +202,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the coupon.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -213,7 +210,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * IsSelected.
+             * Indicates whether the coupon was selected.
              */
             public Builder isSelected(String isSelected) {
                 this.isSelected = isSelected;
@@ -221,7 +218,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the coupon.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -416,7 +413,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String tradeAmount; 
 
             /**
-             * Queries the fees that you must pay when you create, upgrade, or renew an ApsaraDB for Redis instance.
+             * Details about coupons.
              */
             public Builder coupons(Coupons coupons) {
                 this.coupons = coupons;
@@ -424,13 +421,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The order type. Valid values:
-             * <p>
-             * 
-             * *   **BUY**
-             * *   **UPGRADE**
-             * *   **RENEW**
-             * *   **CONVERT**
+             * The currency used for payment. A value of CNY is used when the order was generated on the China site (aliyun.com), and a value of USD is used when the order was generated on the international site (alibabacloud.com).
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -438,7 +429,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The order information.
+             * The discount amount of the order.
              */
             public Builder discountAmount(String discountAmount) {
                 this.discountAmount = discountAmount;
@@ -446,7 +437,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the coupon.
+             * The service fees of the order.
              */
             public Builder handlingFeeAmount(String handlingFeeAmount) {
                 this.handlingFeeAmount = handlingFeeAmount;
@@ -454,7 +445,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The coupon number.
+             * The original price of the order.
              */
             public Builder originalAmount(String originalAmount) {
                 this.originalAmount = originalAmount;
@@ -462,7 +453,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleIds.
+             * Details about promotion rule IDs.
              */
             public Builder ruleIds(RuleIds ruleIds) {
                 this.ruleIds = ruleIds;
@@ -470,7 +461,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The transaction price of the order.
              */
             public Builder tradeAmount(String tradeAmount) {
                 this.tradeAmount = tradeAmount;
@@ -535,7 +526,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * Name.
+             * The name of the rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -543,7 +534,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleDescId.
+             * The ID of the rule.
              */
             public Builder ruleDescId(Long ruleDescId) {
                 this.ruleDescId = ruleDescId;
@@ -551,7 +542,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The title of the rule.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -722,7 +713,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String tradeAmount; 
 
             /**
-             * The order information.
+             * The discount amount of the order.
              */
             public Builder discountAmount(String discountAmount) {
                 this.discountAmount = discountAmount;
@@ -730,7 +721,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -738,7 +729,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The coupon number.
+             * The original price of the order.
              */
             public Builder originalAmount(String originalAmount) {
                 this.originalAmount = originalAmount;
@@ -746,7 +737,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * RuleIds.
+             * Details about promotion rule IDs.
              */
             public Builder ruleIds(SubOrderRuleIds ruleIds) {
                 this.ruleIds = ruleIds;
@@ -754,7 +745,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The transaction price of the order.
              */
             public Builder tradeAmount(String tradeAmount) {
                 this.tradeAmount = tradeAmount;

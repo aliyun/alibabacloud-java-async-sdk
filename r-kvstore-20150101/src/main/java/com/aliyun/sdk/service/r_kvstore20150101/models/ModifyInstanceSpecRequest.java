@@ -323,7 +323,11 @@ public class ModifyInstanceSpecRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable auto-renewal. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables auto-renewal.
+         * *   **false**: disables auto-renewal. If you set this parameter to **false**, the instance must be manually renewed before it expires. For more information, see [Renew an instance](~~26352~~).
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -332,7 +336,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * BusinessInfo.
+         * The ID of the promotional event or business information.
          */
         public Builder businessInfo(String businessInfo) {
             this.putQueryParameter("BusinessInfo", businessInfo);
@@ -341,7 +345,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -350,7 +354,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * CouponNo.
+         * The coupon code. Default value: `youhuiquan_promotion_option_id_for_blank`.
          */
         public Builder couponNo(String couponNo) {
             this.putQueryParameter("CouponNo", couponNo);
@@ -359,7 +363,11 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * EffectiveTime.
+         * The time when to change the configurations. Default value: Immediately. Valid values:
+         * <p>
+         * 
+         * *   **Immediately**: The configurations are immediately changed.
+         * *   **MaintainTime**: The configurations are changed within the maintenance window. You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to change the maintenance window.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);
@@ -377,7 +385,11 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * ForceUpgrade.
+         * Specifies whether to forcefully change the configurations of the instance. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   **false**: The system does not forcefully change the configurations.
+         * *   **true**: The system forcefully changes the configurations.
          */
         public Builder forceUpgrade(Boolean forceUpgrade) {
             this.putQueryParameter("ForceUpgrade", forceUpgrade);
@@ -386,7 +398,10 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * InstanceClass.
+         * The new instance type. You can call the [DescribeAvailableResource](~~120580~~) operation to query the instance types available for configuration change within the zone to which the instance belongs.
+         * <p>
+         * 
+         * >  For more information about the instance types, see [Overview](~~26350~~).
          */
         public Builder instanceClass(String instanceClass) {
             this.putQueryParameter("InstanceClass", instanceClass);
@@ -395,7 +410,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * ModifyInstanceSpec
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -404,7 +419,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * MajorVersion.
+         * The major version to which you want to upgrade. When you change the configurations of an instance, you can upgrade the major version of the instance by setting this parameter. Valid values: **4.0** and **5.0**.
          */
         public Builder majorVersion(String majorVersion) {
             this.putQueryParameter("MajorVersion", majorVersion);
@@ -413,7 +428,14 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The change type. This parameter is required when you change the configurations of a subscription instance. Default value: UPGRADE. Valid values:
+         * <p>
+         * 
+         * *   **UPGRADE**: upgrades the configurations of a subscription instance.
+         * *   **DOWNGRADE**: downgrades the configurations of a subscription instance.
+         * 
+         * > *   To downgrade a subscription instance, you must set this parameter to **DOWNGRADE**.
+         * > *   If the price of an instance increases after its configurations are changed, the instance is upgraded. If the price decreases, the instance is downgraded. For example, the price of an 8 GB read/write splitting instance with five read replicas is higher than that of a 16 GB cluster instance. If you want to change a 16 GB cluster instance to an 8 GB read/write splitting instance with five read replicas, you must upgrade the instance.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -440,7 +462,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * ReadOnlyCount.
+         * The number of read-only nodes. This parameter is available only for read/write splitting instances that use cloud disks. Valid values: 1 to 5.
          */
         public Builder readOnlyCount(Integer readOnlyCount) {
             this.putQueryParameter("ReadOnlyCount", readOnlyCount);
@@ -449,7 +471,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * Changes the configurations of an ApsaraDB for Redis instance.
+         * The region ID of the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -485,7 +507,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * ShardCount.
+         * The number of shards. This parameter is available only for cluster instances that use cloud disks.
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("ShardCount", shardCount);
@@ -494,7 +516,7 @@ public class ModifyInstanceSpecRequest extends Request {
         }
 
         /**
-         * SourceBiz.
+         * The source of the operation. This parameter is used only for internal maintenance. You do not need to specify this parameter.
          */
         public Builder sourceBiz(String sourceBiz) {
             this.putQueryParameter("SourceBiz", sourceBiz);

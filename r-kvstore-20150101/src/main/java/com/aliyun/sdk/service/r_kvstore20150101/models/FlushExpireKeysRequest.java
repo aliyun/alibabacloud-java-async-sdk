@@ -162,7 +162,13 @@ public class FlushExpireKeysRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The time when to delete the expired keys. Default value: Immediately. Valid values:
+         * <p>
+         * 
+         * *   **Immediately**: deletes the keys immediately.
+         * *   **MaintainTime**: deletes the keys during the maintenance window.
+         * 
+         * > You can call the [ModifyInstanceMaintainTime](~~61000~~) operation to modify the maintenance window of an ApsaraDB for Redis instance.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);

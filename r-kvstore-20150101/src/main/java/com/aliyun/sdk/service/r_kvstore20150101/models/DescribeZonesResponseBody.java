@@ -58,7 +58,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * Zones.
+         * The queried zones.
          */
         public Builder zones(Zones zones) {
             this.zones = zones;
@@ -158,7 +158,11 @@ public class DescribeZonesResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * Disabled.
+             * Indicates whether ApsaraDB for Redis instances can be created in the current zone. Valid values:
+             * <p>
+             * 
+             * *   **true**: ApsaraDB for Redis instances cannot be created in the current zone.
+             * *   **false**: ApsaraDB for Redis instances can be created in the current zone.
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -166,7 +170,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * IsRds.
+             * Indicates whether the zone is managed by ApsaraDB RDS. The return value of this parameter is **true** in ApsaraDB for Redis.
              */
             public Builder isRds(Boolean isRds) {
                 this.isRds = isRds;
@@ -174,7 +178,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -182,7 +186,11 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchNetwork.
+             * Indicates whether the network type of the instance can be changed from the classic network to Virtual Private Cloud (VPC). Valid values:
+             * <p>
+             * 
+             * *   **true**: The network type of the instance can be changed from the classic network to VPC.
+             * *   **false**: The network type of the instance cannot be changed from the classic network to VPC.
              */
             public Builder switchNetwork(Boolean switchNetwork) {
                 this.switchNetwork = switchNetwork;
@@ -190,7 +198,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone within the specified region.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -198,7 +206,7 @@ public class DescribeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneName.
+             * The name of the zone within the specified region.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;

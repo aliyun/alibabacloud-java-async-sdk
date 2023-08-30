@@ -86,7 +86,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Items.
+         * The request source. Valid values: System and User.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 10 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The unique ID of the request. If the request fails, provide this ID for technical support to troubleshoot the failure.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of tasks that meet these constraints without taking pagination into account.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

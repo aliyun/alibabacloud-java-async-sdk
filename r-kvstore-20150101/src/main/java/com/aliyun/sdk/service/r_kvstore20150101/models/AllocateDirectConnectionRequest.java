@@ -176,7 +176,7 @@ public class AllocateDirectConnectionRequest extends Request {
         }
 
         /**
-         * The prefix of the private endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix can be 8 to 40 characters in length.
+         * The prefix of the private endpoint. The prefix must start with a lowercase letter and can contain lowercase letters and digits. The prefix must be 8 to 40 characters in length.
          */
         public Builder connectionString(String connectionString) {
             this.putQueryParameter("ConnectionString", connectionString);
@@ -185,7 +185,7 @@ public class AllocateDirectConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -212,7 +212,7 @@ public class AllocateDirectConnectionRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port number of the instance. Valid values: **1024** to **65535**. Default value: **6379**.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);

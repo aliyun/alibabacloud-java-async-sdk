@@ -182,7 +182,7 @@ public class ModifySecurityIpsRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -191,7 +191,12 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * ModifyMode.
+         * The method that is used to modify the whitelist. Valid values:
+         * <p>
+         * 
+         * *   **Cover**: overwrites the original whitelist.
+         * *   **Append**: appends data to the whitelist.
+         * *   **Delete**: deletes the whitelist.
          */
         public Builder modifyMode(String modifyMode) {
             this.putQueryParameter("ModifyMode", modifyMode);
@@ -236,7 +241,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * SecurityIpGroupAttribute.
+         * By default, this parameter is left empty. The attribute of the whitelist. The console does not display the whitelist whose value of this parameter is **hidden**.
          */
         public Builder securityIpGroupAttribute(String securityIpGroupAttribute) {
             this.putQueryParameter("SecurityIpGroupAttribute", securityIpGroupAttribute);
@@ -245,12 +250,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The method of modification. Valid values:
-         * <p>
-         * 
-         * *   **Cover**: overwrites the whitelist.
-         * *   **Append**: appends data to the whitelist.
-         * *   **Delete**: deletes the whitelist.
+         * The name of the whitelist.
          */
         public Builder securityIpGroupName(String securityIpGroupName) {
             this.putQueryParameter("SecurityIpGroupName", securityIpGroupName);
@@ -259,7 +259,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifySecurityIps**.
+         * The IP addresses in the whitelist. Up to 1,000 IP addresses can be specified in a whitelist. Separate multiple IP addresses with a comma (,). Specify an IP address in the 0.0.0.0/0, 10.23.12.24, or 10.23.12.24/24 format. In CIDR block 10.23.12.24/24, /24 specifies the length of the prefix of an IP address. The prefix length ranges from 1 to 32.
          */
         public Builder securityIps(String securityIps) {
             this.putQueryParameter("SecurityIps", securityIps);

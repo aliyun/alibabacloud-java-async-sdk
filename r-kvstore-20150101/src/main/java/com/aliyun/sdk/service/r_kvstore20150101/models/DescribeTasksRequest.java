@@ -257,7 +257,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The ID of the task.
+         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -266,7 +266,7 @@ public class DescribeTasksRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **DescribeTasks**.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

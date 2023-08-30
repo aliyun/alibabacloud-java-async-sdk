@@ -290,12 +290,13 @@ public class SwitchNetworkRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which you want to switch. You can call the [DescribeVpcs](~~35739~~) operation to query VPC IDs.
+         * The network type to which you want to switch. Set the value to **VPC**.
          * <p>
          * 
-         * > 
-         * *   The VPC and the ApsaraDB for Redis instance must be deployed in the same region.
-         * *   After you set this parameter, you must also set the **VSwitchId** parameter.
+         * Valid values:
+         * 
+         * *   CLASSIC
+         * *   VPC
          */
         public Builder targetNetworkType(String targetNetworkType) {
             this.putQueryParameter("TargetNetworkType", targetNetworkType);

@@ -177,7 +177,13 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * DbAudit.
+         * Specifies whether to enable the audit log feature. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables the audit log feature.
+         * *   **false**: disables the audit log feature.
+         * 
+         * > If the instance uses the [cluster architecture](~~52228~~) or [read/write splitting architecture](~~62870~~), the audit log feature is enabled or disabled for both the data nodes and proxy nodes. You cannot separately enable the audit log feature for the data nodes or proxy nodes.
          */
         public Builder dbAudit(Boolean dbAudit) {
             this.putQueryParameter("DbAudit", dbAudit);
@@ -186,7 +192,7 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The ID of the instance. You can call the [DescribeInstances](~~60933~~) operation to query the ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -231,7 +237,11 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * Retention.
+         * The retention period of audit logs. Valid values: **1** to **365**. Unit: days.
+         * <p>
+         * 
+         * > *   This parameter is required only if the **DbAudit** parameter is set to **true**.
+         * > *   The value of this parameter takes effect for all ApsaraDB for Redis instances in the current region.
          */
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);

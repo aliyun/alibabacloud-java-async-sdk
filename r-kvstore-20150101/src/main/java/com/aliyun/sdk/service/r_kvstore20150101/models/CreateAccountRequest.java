@@ -220,7 +220,12 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountDescription.
+         * The description of the account.
+         * <p>
+         * 
+         * *   The description must start with a letter, and cannot start with `http://` or `https://`.
+         * *   The description can contain letters, digits, underscores (\_), and hyphens (-).
+         * *   The description must be 2 to 256 characters in length.
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -229,7 +234,12 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountName.
+         * The name of the account. The name must meet the following requirements:
+         * <p>
+         * 
+         * *   The name can contain lowercase letters, digits, and hyphens (-), and must start with a lowercase letter.
+         * *   The name can be up to 100 characters in length.
+         * *   The name cannot be one of the reserved words in the [Reserved words for Redis account names](~~92665~~#title-84o-mok-b6h) section.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -238,7 +248,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountPassword.
+         * The password of the account. The password must be 8 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and specific special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -247,7 +257,11 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountPrivilege.
+         * The permissions of the account. Valid values:
+         * <p>
+         * 
+         * *   **RoleReadOnly**: The account has read-only permissions.
+         * *   **RoleReadWrite**: The account has read and write permissions.
          */
         public Builder accountPrivilege(String accountPrivilege) {
             this.putQueryParameter("AccountPrivilege", accountPrivilege);
@@ -256,7 +270,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * AccountType.
+         * The type of the account. Set the value to **Normal**, which indicates that the account is a standard account.
          */
         public Builder accountType(String accountType) {
             this.putQueryParameter("AccountType", accountType);
@@ -265,7 +279,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

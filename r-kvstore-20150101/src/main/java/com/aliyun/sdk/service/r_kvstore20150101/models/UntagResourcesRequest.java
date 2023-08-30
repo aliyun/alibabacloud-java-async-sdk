@@ -169,11 +169,11 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * Specifies whether to remove all tags from the instance. Default value: false. Valid values:
+         * Specifies whether to remove all tags from the instance. Valid values:
          * <p>
          * 
          * *   **true**: removes all tags from the instance.
-         * *   **false**: does not remove all tags from the instance.
+         * *   **false** (default): does not remove all tags from the instance.
          * 
          * > If you specify both this parameter and the **TagKey.N** parameter, this parameter does not take effect.
          */

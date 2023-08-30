@@ -234,7 +234,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * BackupId.
+         * The ID of the backup file.
          */
         public Builder backupId(Integer backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -243,7 +243,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC. The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -252,7 +252,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance whose backup files you want to query.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -261,7 +261,13 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * NeedAof.
+         * Specifies whether to enable append-only files (AOFs) persistence. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes
+         * 
+         * >  The default value is **0**.
          */
         public Builder needAof(String needAof) {
             this.putQueryParameter("NeedAof", needAof);
@@ -288,7 +294,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than **0**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -297,7 +303,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: 30, 50, 100, 200, and 300.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -333,7 +339,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

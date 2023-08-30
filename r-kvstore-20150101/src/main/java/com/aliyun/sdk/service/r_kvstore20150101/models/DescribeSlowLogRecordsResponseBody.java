@@ -150,7 +150,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of slow log entries.
+         * The slow log entries.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -382,7 +382,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time when the slow query statement was executed. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format.
+             * The start time when the slow query statement was executed. The time is displayed in the YYYY-MM-DDTHH:mm:ssZ format.
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -398,7 +398,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

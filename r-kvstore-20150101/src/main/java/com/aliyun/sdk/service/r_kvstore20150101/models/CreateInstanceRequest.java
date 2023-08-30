@@ -105,6 +105,10 @@ public class CreateInstanceRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("ParamGroupId")
+    private String paramGroupId;
+
+    @Query
     @NameInMap("Password")
     private String password;
 
@@ -209,6 +213,7 @@ public class CreateInstanceRequest extends Request {
         this.nodeType = builder.nodeType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.paramGroupId = builder.paramGroupId;
         this.password = builder.password;
         this.period = builder.period;
         this.port = builder.port;
@@ -405,6 +410,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return paramGroupId
+     */
+    public String getParamGroupId() {
+        return this.paramGroupId;
+    }
+
+    /**
      * @return password
      */
     public String getPassword() {
@@ -561,6 +573,7 @@ public class CreateInstanceRequest extends Request {
         private String nodeType; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String paramGroupId; 
         private String password; 
         private String period; 
         private String port; 
@@ -610,6 +623,7 @@ public class CreateInstanceRequest extends Request {
             this.nodeType = request.nodeType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.paramGroupId = request.paramGroupId;
             this.password = request.password;
             this.period = request.period;
             this.port = request.port;
@@ -887,6 +901,15 @@ public class CreateInstanceRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ParamGroupId.
+         */
+        public Builder paramGroupId(String paramGroupId) {
+            this.putQueryParameter("ParamGroupId", paramGroupId);
+            this.paramGroupId = paramGroupId;
             return this;
         }
 

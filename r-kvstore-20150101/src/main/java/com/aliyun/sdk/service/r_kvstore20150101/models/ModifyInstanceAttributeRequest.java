@@ -190,10 +190,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The new password for the default account. The default account is named after the instance ID. Default account example: r-bp10noxlhcoim2****.
-         * <p>
-         * 
-         * >  The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `! @ # $ % ^ & * ( ) _ + - =`
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -202,13 +199,7 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The release protection state of the instance. Valid values:
-         * <p>
-         * 
-         * *   **true**: The release protection is enabled.
-         * *   **false**: The release protection is disabled.
-         * 
-         * >  This parameter is available only for pay-as-you-go instances.
+         * The new name of the instance. The name must be 2 to 80 characters in length. The name must start with a letter and cannot contain spaces and the following special characters: `@ / : = " < > { [ ] }`
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -217,7 +208,13 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **ModifyInstanceAttribute**.
+         * [The release protection state of the instance.](~~165005~~) Valid values:
+         * <p>
+         * 
+         * *   **true**: enabled
+         * *   **false**: disabled
+         * 
+         * > This parameter is available only for pay-as-you-go instances.
          */
         public Builder instanceReleaseProtection(Boolean instanceReleaseProtection) {
             this.putQueryParameter("InstanceReleaseProtection", instanceReleaseProtection);
@@ -226,7 +223,10 @@ public class ModifyInstanceAttributeRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The new password for the default account. The default account is named after the instance ID. Example: r-bp10noxlhcoim2\*\*\*\*.
+         * <p>
+         * 
+         * > The password must be 8 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. These special characters include `! @ # $ % ^ & * ( ) _ + - =`
          */
         public Builder newPassword(String newPassword) {
             this.putQueryParameter("NewPassword", newPassword);
