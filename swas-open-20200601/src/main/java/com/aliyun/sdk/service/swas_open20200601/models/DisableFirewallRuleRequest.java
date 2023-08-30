@@ -113,7 +113,7 @@ public class DisableFirewallRuleRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -122,7 +122,7 @@ public class DisableFirewallRuleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the simple application server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -131,7 +131,7 @@ public class DisableFirewallRuleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -140,7 +140,7 @@ public class DisableFirewallRuleRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remarks of the firewall rule.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -149,7 +149,7 @@ public class DisableFirewallRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * The ID of the firewall rule. You can call the ListFirewallRules operation to query the ID of the firewall rule.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

@@ -86,7 +86,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DatabaseInstances.
+         * The name of the super administrator account of the Simple Database Service instance.
          */
         public Builder databaseInstances(java.util.List < DatabaseInstances> databaseInstances) {
             this.databaseInstances = databaseInstances;
@@ -94,7 +94,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDatabaseInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

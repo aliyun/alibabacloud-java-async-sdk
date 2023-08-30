@@ -86,7 +86,13 @@ public class DescribeDatabaseInstanceMetricDataResponseBody extends TeaModel {
         private String unit; 
 
         /**
-         * DataFormat.
+         * The data format. Valid values:
+         * <p>
+         * 
+         * *   cpuusage\&memusage
+         * *   active_session\&total_session
+         * *   ins_size\&data_size\&log_size\&tmp_size\&other_size
+         * *   io
          */
         public Builder dataFormat(String dataFormat) {
             this.dataFormat = dataFormat;
@@ -94,7 +100,7 @@ public class DescribeDatabaseInstanceMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * MetricData.
+         * The monitoring data.
          */
         public Builder metricData(String metricData) {
             this.metricData = metricData;
@@ -102,7 +108,13 @@ public class DescribeDatabaseInstanceMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * MetricName.
+         * The name of the metric. Valid values:
+         * <p>
+         * 
+         * *   MySQL_MemCpuUsage: The CPU utilization and memory usage of the instance within the entire operating system.
+         * *   MySQL_DetailedSpaceUsage: The total space usage, data space, log space, temporary space, and system space of the instance.
+         * *   MySQL_Sessions : The total number of active connections.
+         * *   MySQL_IOPS: The IOPS of the instance.
          */
         public Builder metricName(String metricName) {
             this.metricName = metricName;
@@ -110,7 +122,7 @@ public class DescribeDatabaseInstanceMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +130,12 @@ public class DescribeDatabaseInstanceMetricDataResponseBody extends TeaModel {
         }
 
         /**
-         * Unit.
+         * The unit of the monitoring metric.
+         * <p>
+         * 
+         * *   %
+         * *   int
+         * *   MB
          */
         public Builder unit(String unit) {
             this.unit = unit;

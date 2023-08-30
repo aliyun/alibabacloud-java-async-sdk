@@ -86,7 +86,7 @@ public class ListDisksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The region ID of the disks.
+         * Details about the disks.
          */
         public Builder disks(java.util.List < Disks> disks) {
             this.disks = disks;
@@ -302,11 +302,11 @@ public class ListDisksResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The category of the disk. Valid values: Valid values:
+             * The category of the disk. Valid values:
              * <p>
              * 
-             * *   ESSD: enhanced SSD (ESSD) at performance level 0 (PL0)
-             * *   SSD: standard SSD
+             * *   ESSD: an enhanced SSD (ESSD) at performance level 0 (PL0).
+             * *   SSD: a standard SSD.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -357,8 +357,8 @@ public class ListDisksResponseBody extends TeaModel {
              * The type of the disk. Valid values:
              * <p>
              * 
-             * *   System: system disk
-             * *   Data: data disk
+             * *   System: system disk.
+             * *   Data: data disk.
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -374,7 +374,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * 轻量应用服务器名称。
+             * Name of the simple application server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -382,7 +382,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the server.
+             * The region ID of the disks.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -390,7 +390,7 @@ public class ListDisksResponseBody extends TeaModel {
             }
 
             /**
-             * 磁盘备注。
+             * Description about the disk.
              */
             public Builder remark(String remark) {
                 this.remark = remark;

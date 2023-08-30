@@ -86,7 +86,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Running records of commands.
+         * The command name.
          */
         public Builder invocations(java.util.List < Invocations> invocations) {
             this.invocations = invocations;
@@ -94,7 +94,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of commands.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

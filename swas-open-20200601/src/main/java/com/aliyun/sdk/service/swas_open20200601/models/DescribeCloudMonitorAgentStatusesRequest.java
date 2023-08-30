@@ -84,7 +84,7 @@ public class DescribeCloudMonitorAgentStatusesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -93,7 +93,7 @@ public class DescribeCloudMonitorAgentStatusesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -102,7 +102,7 @@ public class DescribeCloudMonitorAgentStatusesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application servers. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

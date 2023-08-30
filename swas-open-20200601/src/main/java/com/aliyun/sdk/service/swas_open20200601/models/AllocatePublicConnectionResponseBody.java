@@ -50,7 +50,7 @@ public class AllocatePublicConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PublicConnection.
+         * The public endpoint that is assigned to the Simple Database Service instance.
          */
         public Builder publicConnection(String publicConnection) {
             this.publicConnection = publicConnection;
@@ -58,7 +58,7 @@ public class AllocatePublicConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

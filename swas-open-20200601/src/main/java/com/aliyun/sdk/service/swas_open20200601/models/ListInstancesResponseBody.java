@@ -94,7 +94,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of simple application servers returned.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String osType; 
 
             /**
-             * ImageContact.
+             * The image provider.
              */
             public Builder imageContact(String imageContact) {
                 this.imageContact = imageContact;
@@ -226,7 +226,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageIconUrl.
+             * The URL of the image icon.
              */
             public Builder imageIconUrl(String imageIconUrl) {
                 this.imageIconUrl = imageIconUrl;
@@ -234,7 +234,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageName.
+             * The image name.
              */
             public Builder imageName(String imageName) {
                 this.imageName = imageName;
@@ -242,7 +242,12 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageType.
+             * The image type. Valid values:
+             * <p>
+             * 
+             * *   system
+             * *   app
+             * *   custom
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -250,7 +255,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageVersion.
+             * The image tag.
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -258,7 +263,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OsType.
+             * The OS.
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -359,7 +364,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private Double memory; 
 
             /**
-             * Bandwidth.
+             * The bandwidth of the server.
              */
             public Builder bandwidth(Integer bandwidth) {
                 this.bandwidth = bandwidth;
@@ -367,7 +372,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Cpu.
+             * The number of vCPUs.
              */
             public Builder cpu(Integer cpu) {
                 this.cpu = cpu;
@@ -375,7 +380,12 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskCategory.
+             * The category of the disk. Valid values:
+             * <p>
+             * 
+             * *   ESSD: an enhanced SSD (ESSD) at performance level 0 (PL0).
+             * *   SSD: a standard SSD.
+             * *   CLOUD_EFFICIENCY: an ultra disk.
              */
             public Builder diskCategory(String diskCategory) {
                 this.diskCategory = diskCategory;
@@ -383,7 +393,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * The disk size.
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -391,7 +401,11 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Flow.
+             * The amount of the traffic.
+             * <p>
+             * 
+             * *   A value of 0 indicates that the server is a bandwidth-based server.
+             * *   A value of none-zero indicates that the server is a data transfer plan-based server.
              */
             public Builder flow(Double flow) {
                 this.flow = flow;
@@ -399,7 +413,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size.
              */
             public Builder memory(Double memory) {
                 this.memory = memory;
@@ -656,12 +670,12 @@ public class ListInstancesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * The status of the simple application server. Valid values:
+             * The status of the server. Valid values:
              * <p>
              * 
-             * *   Normal
-             * *   Expired
-             * *   Overdue
+             * *   Normal: The server is normal.
+             * *   Expired: The server expires.
+             * *   Overdue: The payment of the server is overdue.
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -677,7 +691,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Combination.
+             * Indicates whether the plan is a bundle plan.
              */
             public Builder combination(Boolean combination) {
                 this.combination = combination;
@@ -685,7 +699,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CombinationInstanceId.
+             * The ID of the bundle plan.
              */
             public Builder combinationInstanceId(String combinationInstanceId) {
                 this.combinationInstanceId = combinationInstanceId;
@@ -701,12 +715,12 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The DDoS protection status. Valid values:
+             * The DDoS protection status of the server. Valid values:
              * <p>
              * 
-             * *   Normal: Normal
-             * *   BlackHole: Blackholing
-             * *   Defense: Cleaning
+             * *   Normal: The DDoS protection status of the server is normal.
+             * *   BlackHole: The server is in blackhole filtering.
+             * *   Defense: The server is being scrubbed.
              */
             public Builder ddosStatus(String ddosStatus) {
                 this.ddosStatus = ddosStatus;
@@ -714,7 +728,12 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DisableReason.
+             * The reason why the server is disabled. Valid values:
+             * <p>
+             * 
+             * *   FINANCIAL: The server is locked due to overdue payments.
+             * *   SECURITY: The server is locked due to security reasons.
+             * *   EXPIRED: The server has expired.
              */
             public Builder disableReason(String disableReason) {
                 this.disableReason = disableReason;
@@ -722,7 +741,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the simple application server expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The time when the server expires. The time follows the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
@@ -730,7 +749,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The description of the image.
              */
             public Builder image(Image image) {
                 this.image = image;
@@ -738,7 +757,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the image.
+             * The ID of an image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -762,7 +781,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the simple application server.
+             * The name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -770,7 +789,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the plan.
+             * The plan ID.
              */
             public Builder planId(String planId) {
                 this.planId = planId;
@@ -778,7 +797,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * The public IP address of the server.
              */
             public Builder publicIpAddress(String publicIpAddress) {
                 this.publicIpAddress = publicIpAddress;
@@ -786,7 +805,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the simple application servers.
+             * The region ID of the servers.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -794,7 +813,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceSpec.
+             * The specifications of the resource.
              */
             public Builder resourceSpec(ResourceSpec resourceSpec) {
                 this.resourceSpec = resourceSpec;
@@ -820,7 +839,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * The universally unique identifier (UUID) of the server.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

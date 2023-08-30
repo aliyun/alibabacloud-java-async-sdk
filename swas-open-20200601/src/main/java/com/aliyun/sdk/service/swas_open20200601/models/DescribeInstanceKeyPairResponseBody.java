@@ -62,7 +62,7 @@ public class DescribeInstanceKeyPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Fingerprint.
+         * The fingerprint of the key pair.
          */
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = fingerprint;
@@ -70,7 +70,7 @@ public class DescribeInstanceKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * KeyPairName.
+         * The name of the key pair.
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -78,7 +78,7 @@ public class DescribeInstanceKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

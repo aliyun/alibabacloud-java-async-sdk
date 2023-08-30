@@ -110,7 +110,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Engine.
+         * The database engine that the instance runs.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -118,7 +118,12 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -126,7 +131,10 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 30 to 100.
+         * <p>
+         * 
+         * Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -134,7 +142,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PhysicalIORead.
+         * The number of logical reads.
          */
         public Builder physicalIORead(Long physicalIORead) {
             this.physicalIORead = physicalIORead;
@@ -142,7 +150,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +158,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * SlowLogs.
+         * The database name.
          */
         public Builder slowLogs(java.util.List < SlowLogs> slowLogs) {
             this.slowLogs = slowLogs;
@@ -158,7 +166,7 @@ public class DescribeDatabaseSlowLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

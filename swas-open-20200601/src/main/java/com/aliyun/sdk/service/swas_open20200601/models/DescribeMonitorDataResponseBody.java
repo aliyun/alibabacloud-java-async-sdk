@@ -74,7 +74,7 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Datapoints.
+         * The monitoring data.
          */
         public Builder datapoints(String datapoints) {
             this.datapoints = datapoints;
@@ -82,7 +82,7 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +90,16 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * Period.
+         * The interval at which the monitoring data is queried. Valid values: 60, 300, and 900. Unit: seconds.
+         * <p>
+         * 
+         * > 
+         * 
+         * If MetricName is set to FLOW_USED, the value of Period is 3600 (one hour).
+         * 
+         * **
+         * 
+         * ****
          */
         public Builder period(String period) {
             this.period = period;
@@ -98,7 +107,7 @@ public class DescribeMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -136,14 +136,13 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * 磁盘类型。可能值：
+         * The type of the disk. Valid values:
          * <p>
          * 
-         * - System：系统盘
+         * *   System: system disk.
+         * *   Data: data disk.
          * 
-         * - Data：数据盘
-         * 
-         * 默认全量查询
+         * By default, system disks and data disks are both queried.
          */
         public Builder diskType(String diskType) {
             this.putQueryParameter("DiskType", diskType);
@@ -176,7 +175,7 @@ public class ListDisksRequest extends Request {
          * The number of entries per page.
          * <p>
          * 
-         * Valid values: 1 to 100.
+         * Maximum value: 100.
          * 
          * Default value: 10.
          */
@@ -187,7 +186,7 @@ public class ListDisksRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server.
+         * The region ID of the disks.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

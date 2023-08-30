@@ -74,7 +74,7 @@ public class CreateInstanceKeyPairResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Fingerprint.
+         * The fingerprint of the key pair.
          */
         public Builder fingerprint(String fingerprint) {
             this.fingerprint = fingerprint;
@@ -82,7 +82,7 @@ public class CreateInstanceKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * KeyPairName.
+         * The name of the key pair.
          */
         public Builder keyPairName(String keyPairName) {
             this.keyPairName = keyPairName;
@@ -90,7 +90,7 @@ public class CreateInstanceKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * PrivateKey.
+         * The private key.
          */
         public Builder privateKey(String privateKey) {
             this.privateKey = privateKey;
@@ -98,7 +98,7 @@ public class CreateInstanceKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

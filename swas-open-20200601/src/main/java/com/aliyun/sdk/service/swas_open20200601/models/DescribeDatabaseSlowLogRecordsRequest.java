@@ -128,7 +128,7 @@ public class DescribeDatabaseSlowLogRecordsRequest extends Request {
         } 
 
         /**
-         * DatabaseInstanceId.
+         * The ID of the Simple Database Service instance.
          */
         public Builder databaseInstanceId(String databaseInstanceId) {
             this.putQueryParameter("DatabaseInstanceId", databaseInstanceId);
@@ -137,7 +137,12 @@ public class DescribeDatabaseSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. The interval between the start time and the end time must be less than 7 days.
+         * <p>
+         * 
+         * Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * > The time displayed in the Simple Application Server console is in the format of UTC+8.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -146,7 +151,12 @@ public class DescribeDatabaseSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -155,7 +165,10 @@ public class DescribeDatabaseSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: 30 to 100.
+         * <p>
+         * 
+         * Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -164,7 +177,7 @@ public class DescribeDatabaseSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Simple Database Service instance. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +186,12 @@ public class DescribeDatabaseSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * > The time displayed in the Simple Application Server console is in the format of UTC+8.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

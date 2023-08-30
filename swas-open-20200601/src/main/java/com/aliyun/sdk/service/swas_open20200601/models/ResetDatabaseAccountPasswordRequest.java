@@ -99,7 +99,7 @@ public class ResetDatabaseAccountPasswordRequest extends Request {
         } 
 
         /**
-         * AccountPassword.
+         * The password of the database administrator account.
          */
         public Builder accountPassword(String accountPassword) {
             this.putQueryParameter("AccountPassword", accountPassword);
@@ -108,7 +108,7 @@ public class ResetDatabaseAccountPasswordRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -117,7 +117,7 @@ public class ResetDatabaseAccountPasswordRequest extends Request {
         }
 
         /**
-         * DatabaseInstanceId.
+         * The ID of the Simple Database Service instance.
          */
         public Builder databaseInstanceId(String databaseInstanceId) {
             this.putQueryParameter("DatabaseInstanceId", databaseInstanceId);
@@ -126,7 +126,7 @@ public class ResetDatabaseAccountPasswordRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Simple Database Service instance. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

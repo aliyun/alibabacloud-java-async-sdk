@@ -70,7 +70,7 @@ public class DescribeDatabaseInstanceParametersRequest extends Request {
         } 
 
         /**
-         * DatabaseInstanceId.
+         * The ID of the Simple Database Service instance.
          */
         public Builder databaseInstanceId(String databaseInstanceId) {
             this.putQueryParameter("DatabaseInstanceId", databaseInstanceId);
@@ -79,7 +79,7 @@ public class DescribeDatabaseInstanceParametersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Simple Database Service instance. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

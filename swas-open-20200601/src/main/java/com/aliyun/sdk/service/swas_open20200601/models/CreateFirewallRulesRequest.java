@@ -98,7 +98,7 @@ public class CreateFirewallRulesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -107,7 +107,7 @@ public class CreateFirewallRulesRequest extends Request {
         }
 
         /**
-         * FirewallRules.
+         * The remarks of the firewall rule.
          */
         public Builder firewallRules(java.util.List < FirewallRules> firewallRules) {
             String firewallRulesShrink = shrink(firewallRules, "FirewallRules", "json");
@@ -117,7 +117,7 @@ public class CreateFirewallRulesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the simple application server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -126,7 +126,7 @@ public class CreateFirewallRulesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

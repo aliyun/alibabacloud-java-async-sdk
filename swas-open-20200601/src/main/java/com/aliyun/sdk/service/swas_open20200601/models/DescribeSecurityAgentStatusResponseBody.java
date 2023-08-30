@@ -50,7 +50,12 @@ public class DescribeSecurityAgentStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClientStatus.
+         * The status of the Security Center agent. Valid values:
+         * <p>
+         * 
+         * *   pause: The Security Center agent suspends protection for your server.
+         * *   online: The Security Center agent is protecting your server.
+         * *   offline: The Security Center agent does not protect your server.
          */
         public Builder clientStatus(String clientStatus) {
             this.clientStatus = clientStatus;
@@ -58,7 +63,7 @@ public class DescribeSecurityAgentStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -128,7 +128,7 @@ public class DescribeDatabaseErrorLogsRequest extends Request {
         } 
 
         /**
-         * DatabaseInstanceId.
+         * The ID of the Simple Database Service instance.
          */
         public Builder databaseInstanceId(String databaseInstanceId) {
             this.putQueryParameter("DatabaseInstanceId", databaseInstanceId);
@@ -137,7 +137,10 @@ public class DescribeDatabaseErrorLogsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC. The end time must be later than the start time.
+         * <p>
+         * 
+         * > The time displayed in the Simple Application Server console is in the format of UTC+8.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -146,7 +149,7 @@ public class DescribeDatabaseErrorLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -155,7 +158,7 @@ public class DescribeDatabaseErrorLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -164,7 +167,10 @@ public class DescribeDatabaseErrorLogsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Simple Database Service instance.
+         * <p>
+         * 
+         * You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +179,10 @@ public class DescribeDatabaseErrorLogsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > The time displayed in the Simple Application Server console is in the format of UTC+8.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

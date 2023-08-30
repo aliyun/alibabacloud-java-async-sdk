@@ -50,7 +50,7 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the data transfer plans of the simple application servers.
+         * The data transfers that exceed the quota of the data transfer plan in the current month. Unit: bytes.
          */
         public Builder instanceTrafficPackageUsages(java.util.List < InstanceTrafficPackageUsages> instanceTrafficPackageUsages) {
             this.instanceTrafficPackageUsages = instanceTrafficPackageUsages;
@@ -58,7 +58,7 @@ public class ListInstancesTrafficPackagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -82,7 +82,7 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         }
 
         /**
-         * SecurityToken.
+         * The security token included in the WebSocket request header. The system uses this token to authenticate the request.
          */
         public Builder securityToken(String securityToken) {
             this.securityToken = securityToken;
@@ -90,7 +90,7 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * The session ID.
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -98,7 +98,7 @@ public class StartTerminalSessionResponseBody extends TeaModel {
         }
 
         /**
-         * WebSocketUrl.
+         * The URL of the WebSocket session that is used to connect to the server. The URL contains the session ID (`SessionId`) and the authentication token (`SecurityToken`).
          */
         public Builder webSocketUrl(String webSocketUrl) {
             this.webSocketUrl = webSocketUrl;

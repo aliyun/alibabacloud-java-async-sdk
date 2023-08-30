@@ -109,7 +109,7 @@ public class ListFirewallRulesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1.
@@ -123,7 +123,7 @@ public class ListFirewallRulesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Maximum value: 100.

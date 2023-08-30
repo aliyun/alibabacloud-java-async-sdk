@@ -83,7 +83,7 @@ public class ListImagesRequest extends Request {
         } 
 
         /**
-         * The IDs of the images. The value can be a JSON array that consists of up to 50 image IDs, in the format of `["xxx", "yyy", … "zzz"]`. Separate the image IDs with commas (,).
+         * The image IDs. The value can be a JSON array that consists of up to 50 image IDs. Format: `["xxx", "yyy", … "zzz"]`. Separate multiple image IDs with commas (,).
          */
         public Builder imageIds(String imageIds) {
             this.putQueryParameter("ImageIds", imageIds);
@@ -92,12 +92,12 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * The type of the image. Valid values:
+         * The type of the images. Valid values:
          * <p>
          * 
-         * *   system
-         * *   app
-         * *   custom
+         * *   system: OS images
+         * *   app: application images
+         * *   custom: custom images
          */
         public Builder imageType(String imageType) {
             this.putQueryParameter("ImageType", imageType);

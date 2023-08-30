@@ -115,7 +115,7 @@ public class DescribeDatabaseInstanceMetricDataRequest extends Request {
         } 
 
         /**
-         * DatabaseInstanceId.
+         * The ID of the Simple Database Service instance.
          */
         public Builder databaseInstanceId(String databaseInstanceId) {
             this.putQueryParameter("DatabaseInstanceId", databaseInstanceId);
@@ -124,7 +124,10 @@ public class DescribeDatabaseInstanceMetricDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > The time displayed in the Simple Application Server console is in the format of UTC+8.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -133,7 +136,13 @@ public class DescribeDatabaseInstanceMetricDataRequest extends Request {
         }
 
         /**
-         * MetricName.
+         * The name of the metric. Valid values:
+         * <p>
+         * 
+         * *   MySQL_MemCpuUsage: The CPU utilization and memory usage of the instance within the entire operating system.
+         * *   MySQL_DetailedSpaceUsage: The total space usage, data space, log space, temporary space, and system space of the instance.
+         * *   MySQL_Sessions : The total number of active connections.
+         * *   MySQL_IOPS: The IOPS of the instance.
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -142,7 +151,7 @@ public class DescribeDatabaseInstanceMetricDataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Simple Database Service instance. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -151,7 +160,10 @@ public class DescribeDatabaseInstanceMetricDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the [ISO 8601](~~25696~~) standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > The time displayed in the Simple Application Server console is in the format of UTC+8.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

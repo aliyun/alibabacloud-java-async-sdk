@@ -50,7 +50,11 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceStatusList.
+         * Indicates whether the Cloud Monitor agent was automatically installed on the simple application server. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder instanceStatusList(java.util.List < InstanceStatusList> instanceStatusList) {
             this.instanceStatusList = instanceStatusList;
@@ -58,7 +62,7 @@ public class DescribeCloudMonitorAgentStatusesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -141,7 +141,7 @@ public class ListInstancesRequest extends Request {
         } 
 
         /**
-         * The billing method of the simple application server. Set the value to PrePaid, which indicates the subscription billing method. Only the subscription billing method is supported.
+         * The billing method of the simple application servers. Set the value to PrePaid, which indicates the subscription billing method.
          * <p>
          * 
          * Default value: PrePaid.
@@ -153,10 +153,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate the server IDs with commas (,).
+         * The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).
          * <p>
          * 
-         * >  If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that each specified ID and its corresponding public IP address belong to the same simple application server. Otherwise, an empty result is returned.
+         * > If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that the specified IDs and the specified public IP addresses belong to the same simple application servers. Otherwise, an empty result is returned.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -165,7 +165,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Default value: 1.
@@ -177,7 +177,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: 100.
+         * The number of entries per page. Maximum value: 100.
          * <p>
          * 
          * Default value: 10.
@@ -189,10 +189,10 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The public IP addresses of the simple application servers. The value can be a JSON array that consists of up to 100 IP addresses. Separate the IP addresses with commas (,).
+         * The public IP addresses of the simple application servers. The value can be a JSON array that consists of up to 100 IP addresses. Separate multiple IP addresses with commas (,).
          * <p>
          * 
-         * >  If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that each specified ID and its corresponding public IP address belong to the same simple application server. Otherwise, an empty result is returned.
+         * > If you specify both `InstanceIds` and `PublicIpAddresses`, make sure that the specified IDs and the specified public IP addresses belong to the same simple application servers. Otherwise, an empty result is returned.
          */
         public Builder publicIpAddresses(String publicIpAddresses) {
             this.putQueryParameter("PublicIpAddresses", publicIpAddresses);
@@ -210,7 +210,17 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * 实例状态，可能值：
+         * <p>
+         * 
+         * - Pending：准备中
+         * - Starting：启动中
+         * - Running：运行中
+         * - Stopping：停止中
+         * - Stopped：停止
+         * - Resetting：重置中
+         * - Upgrading：升级中
+         * - Disabled：不可用
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

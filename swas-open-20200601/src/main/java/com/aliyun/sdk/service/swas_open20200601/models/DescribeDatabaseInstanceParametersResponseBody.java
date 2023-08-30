@@ -86,7 +86,10 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
         private java.util.List < RunningParameters> runningParameters; 
 
         /**
-         * ConfigParameters.
+         * The range of ParameterValue.
+         * <p>
+         * 
+         * > The value of CheckingCode varies based on the value of ParameterName.
          */
         public Builder configParameters(java.util.List < ConfigParameters> configParameters) {
             this.configParameters = configParameters;
@@ -94,7 +97,7 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Engine.
+         * The database engine that the instance runs. The value must be MySQL.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -102,7 +105,11 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
         }
 
         /**
-         * EngineVersion.
+         * The version of the database engine. Valid values:
+         * <p>
+         * 
+         * *   5.7: MySQL 5.7.
+         * *   8.0: MySQL 8.0.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -110,7 +117,7 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +125,10 @@ public class DescribeDatabaseInstanceParametersResponseBody extends TeaModel {
         }
 
         /**
-         * RunningParameters.
+         * The range of ParameterValue.
+         * <p>
+         * 
+         * > The value of CheckingCode varies based on the value of ParameterName.
          */
         public Builder runningParameters(java.util.List < RunningParameters> runningParameters) {
             this.runningParameters = runningParameters;

@@ -94,7 +94,7 @@ public class DescribeInvocationResultRequest extends Request {
         }
 
         /**
-         * The ID of the command task. You can call the [DescribeInvocations](~~439368~~) operation to query the task IDs.
+         * The execution ID. You can call the [DescribeInvocations](~~439368~~) operation to query execution IDs.
          */
         public Builder invokeId(String invokeId) {
             this.putQueryParameter("InvokeId", invokeId);

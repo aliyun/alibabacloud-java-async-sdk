@@ -94,7 +94,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of firewall rules.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -218,7 +218,11 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             private String sourceCidrIp; 
 
             /**
-             * Policy.
+             * The firewall policy.
+             * <p>
+             * 
+             * *   accept: Access is allowed.
+             * *   drop: Access is refused.
              */
             public Builder policy(String policy) {
                 this.policy = policy;
@@ -254,8 +258,8 @@ public class ListFirewallRulesResponseBody extends TeaModel {
              * <p>
              * 
              * *   TCP: the TCP protocol.
-             * *   UDP: the UDP protocol.
-             * *   TCP+UDP: the TCP and UDP protocols.
+             * *   UDP: the UDP protocol
+             * *   TCP+UDP: the TCP and UDP protocols
              */
             public Builder ruleProtocol(String ruleProtocol) {
                 this.ruleProtocol = ruleProtocol;
@@ -263,7 +267,7 @@ public class ListFirewallRulesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCidrIp.
+             * The IP address or CIDR block that is allowed by the firewall rule.
              */
             public Builder sourceCidrIp(String sourceCidrIp) {
                 this.sourceCidrIp = sourceCidrIp;

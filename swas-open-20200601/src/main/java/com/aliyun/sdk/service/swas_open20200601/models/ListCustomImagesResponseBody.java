@@ -86,7 +86,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * CustomImages.
+         * The queried custom images.
          */
         public Builder customImages(java.util.List < CustomImages> customImages) {
             this.customImages = customImages;
@@ -94,7 +94,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -302,7 +302,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             private String systemSnapshotName; 
 
             /**
-             * CreationTime.
+             * The time when the snapshot was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -310,7 +310,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSnapshotId.
+             * The ID of the data disk snapshot.
              */
             public Builder dataSnapshotId(String dataSnapshotId) {
                 this.dataSnapshotId = dataSnapshotId;
@@ -318,7 +318,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSnapshotName.
+             * The name of the data disk snapshot.
              */
             public Builder dataSnapshotName(String dataSnapshotName) {
                 this.dataSnapshotName = dataSnapshotName;
@@ -326,7 +326,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the custom image.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -334,7 +334,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * The ID of the custom image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -342,7 +342,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * InShare.
+             * Indicates whether the custom image is shared with Elastic Compute Service (ECS).
              */
             public Builder inShare(Boolean inShare) {
                 this.inShare = inShare;
@@ -350,7 +350,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the simple application server.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -358,7 +358,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The name of the simple application server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -366,7 +366,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the custom image.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -374,7 +374,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the custom images.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -382,7 +382,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the custom image.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -390,7 +390,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SystemSnapshotId.
+             * The ID of the system disk snapshot.
              */
             public Builder systemSnapshotId(String systemSnapshotId) {
                 this.systemSnapshotId = systemSnapshotId;
@@ -398,7 +398,7 @@ public class ListCustomImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SystemSnapshotName.
+             * The name of the system disk snapshot.
              */
             public Builder systemSnapshotName(String systemSnapshotName) {
                 this.systemSnapshotName = systemSnapshotName;

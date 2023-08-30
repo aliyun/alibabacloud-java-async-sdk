@@ -107,7 +107,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1.
@@ -121,7 +121,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Maximum value: 50.
@@ -135,7 +135,7 @@ public class DescribeCloudAssistantStatusRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server.
+         * The region ID of the simple application servers.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

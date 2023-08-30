@@ -62,7 +62,7 @@ public class DescribeInstancePasswordsSettingResponseBody extends TeaModel {
         private Boolean vncPasswordSetting; 
 
         /**
-         * InstancePasswordSetting.
+         * Indicates whether a logon password is set for the simple application server.
          */
         public Builder instancePasswordSetting(Boolean instancePasswordSetting) {
             this.instancePasswordSetting = instancePasswordSetting;
@@ -70,7 +70,7 @@ public class DescribeInstancePasswordsSettingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class DescribeInstancePasswordsSettingResponseBody extends TeaModel {
         }
 
         /**
-         * VncPasswordSetting.
+         * Indicates whether a VNC connection password is set.
          */
         public Builder vncPasswordSetting(Boolean vncPasswordSetting) {
             this.vncPasswordSetting = vncPasswordSetting;

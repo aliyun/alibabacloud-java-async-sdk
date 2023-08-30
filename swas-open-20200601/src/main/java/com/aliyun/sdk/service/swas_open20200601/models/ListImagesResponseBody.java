@@ -50,7 +50,11 @@ public class ListImagesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the images.
+         * The OS type of the image. Valid values:
+         * <p>
+         * 
+         * *   Linux
+         * *   Windows
          */
         public Builder images(java.util.List < Images> images) {
             this.images = images;
@@ -58,7 +62,7 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

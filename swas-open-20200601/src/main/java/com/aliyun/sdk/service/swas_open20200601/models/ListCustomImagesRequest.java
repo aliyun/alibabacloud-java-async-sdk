@@ -153,7 +153,7 @@ public class ListCustomImagesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The value of **ClientToken** can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -162,7 +162,7 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * DataSnapshotId.
+         * The ID of the data disk snapshot.
          */
         public Builder dataSnapshotId(String dataSnapshotId) {
             this.putQueryParameter("DataSnapshotId", dataSnapshotId);
@@ -171,7 +171,7 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * ImageIds.
+         * The image IDs of the simple application server. The value can be a JSON array that consists of up to 100 image IDs. Separate multiple image IDs with commas (,).
          */
         public Builder imageIds(String imageIds) {
             this.putQueryParameter("ImageIds", imageIds);
@@ -180,7 +180,7 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * ImageNames.
+         * The image names of the simple application servers. The value can be a JSON array that consists of up to 100 image names. Separate multiple image names with commas (,).
          */
         public Builder imageNames(String imageNames) {
             this.putQueryParameter("ImageNames", imageNames);
@@ -189,7 +189,7 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -198,7 +198,11 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * *   Maximum value: 100.
+         * *   Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -207,7 +211,7 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application servers corresponding to the custom images. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +220,7 @@ public class ListCustomImagesRequest extends Request {
         }
 
         /**
-         * SystemSnapshotId.
+         * The ID of the system disk snapshot.
          */
         public Builder systemSnapshotId(String systemSnapshotId) {
             this.putQueryParameter("SystemSnapshotId", systemSnapshotId);

@@ -98,7 +98,7 @@ public class RebootInstancesRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25693~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -107,7 +107,13 @@ public class RebootInstancesRequest extends Request {
         }
 
         /**
-         * ForceReboot.
+         * Specifies whether to forcibly restart the servers. Valid values:
+         * <p>
+         * 
+         * *   true: forcibly restarts the servers. This operation is equivalent to the typical power-off operation. Cache data that is not written to storage devices on the server will be lost.
+         * *   false: normally restarts the instance.
+         * 
+         * Default value: false
          */
         public Builder forceReboot(Boolean forceReboot) {
             this.putQueryParameter("ForceReboot", forceReboot);
@@ -116,7 +122,7 @@ public class RebootInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of the simple application servers. The value can be a JSON array that consists of up to 100 simple application server IDs. Separate multiple server IDs with commas (,).
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -125,7 +131,7 @@ public class RebootInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the simple application servers. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -86,7 +86,7 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * InstanceStatuses.
+         * The ID of the simple application server.
          */
         public Builder instanceStatuses(java.util.List < InstanceStatuses> instanceStatuses) {
             this.instanceStatuses = instanceStatuses;
@@ -94,7 +94,7 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListInstanceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

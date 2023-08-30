@@ -111,7 +111,7 @@ public class LoginInstanceRequest extends Request {
          * <p>
          * 
          * *   For a Linux server, you do not need to enter a password.
-         * *   For a Windows server, enter the password that you set. If you have not set a password for the simple application server, set a password. For more information, see [Reset the password](~~60055~~l).
+         * *   For a Windows server, enter the password that you set. If you have not set a password for the simple application server, set a password. For more information, see [Reset the password](~~60055~~).
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -120,10 +120,7 @@ public class LoginInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the simple application server.
-         * <p>
-         * 
-         * You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
+         * The region ID of the simple application server. You can call the [ListRegions](~~189315~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

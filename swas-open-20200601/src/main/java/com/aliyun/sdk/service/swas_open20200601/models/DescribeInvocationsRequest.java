@@ -121,12 +121,12 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The status of the command. Valid values:
+         * The status of the command execution. Valid values:
          * <p>
          * 
-         * *   Running: The command is running.
-         * *   Finished: The command finishes running.
-         * *   Failed: The command failed to be run.
+         * *   Running: The command is being executed.
+         * *   Finished: The execution is complete.
+         * *   Failed: The execution fails.
          */
         public Builder invokeStatus(String invokeStatus) {
             this.putQueryParameter("InvokeStatus", invokeStatus);
@@ -135,7 +135,7 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1.
@@ -149,12 +149,12 @@ public class DescribeInvocationsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          * <p>
          * 
          * Maximum value: 50.
          * 
-         * Default value: 10
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -97,7 +97,7 @@ public class DescribeDatabaseInstancesRequest extends Request {
         } 
 
         /**
-         * DatabaseInstanceIds.
+         * The IDs of the Simple Database Service instances. The value can be a JSON array that consists of up to 100 Simple Database Service instance IDs. Separate multiple instance IDs with commas (,).
          */
         public Builder databaseInstanceIds(String databaseInstanceIds) {
             this.putQueryParameter("DatabaseInstanceIds", databaseInstanceIds);
@@ -106,7 +106,12 @@ public class DescribeDatabaseInstancesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number.
+         * <p>
+         * 
+         * Pages start from page 1.
+         * 
+         * Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -115,7 +120,12 @@ public class DescribeDatabaseInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Maximum value: 100.
+         * 
+         * Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -124,7 +134,7 @@ public class DescribeDatabaseInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the Simple Database Service instances.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

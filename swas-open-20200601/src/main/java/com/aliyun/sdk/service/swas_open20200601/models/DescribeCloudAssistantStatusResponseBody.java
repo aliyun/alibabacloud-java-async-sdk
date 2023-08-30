@@ -86,7 +86,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The status of the Cloud Assistant client.
+         * Indicates whether the Cloud Assistant client is installed on the server.
          */
         public Builder cloudAssistantStatus(java.util.List < CloudAssistantStatus> cloudAssistantStatus) {
             this.cloudAssistantStatus = cloudAssistantStatus;
@@ -94,7 +94,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          * <p>
          * 
          * Pages start from page 1.
@@ -107,7 +107,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          * <p>
          * 
          * Maximum value: 50.
@@ -120,7 +120,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +128,7 @@ public class DescribeCloudAssistantStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of commands.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

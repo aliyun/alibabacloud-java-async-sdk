@@ -171,7 +171,7 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100.
+         * The number of entries per page. Maximum value: 100.
          * <p>
          * 
          * Default value: 10.
@@ -201,7 +201,11 @@ public class ListSnapshotsRequest extends Request {
         }
 
         /**
-         * SourceDiskType.
+         * The type of the source disk. Valid values:
+         * <p>
+         * 
+         * *   system: system disk.
+         * *   data: data disk.
          */
         public Builder sourceDiskType(String sourceDiskType) {
             this.putQueryParameter("SourceDiskType", sourceDiskType);

@@ -110,7 +110,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
         }
 
         /**
-         * The region ID of the simple application server.
+         * Details about the snapshots.
          */
         public Builder snapshots(java.util.List < Snapshots> snapshots) {
             this.snapshots = snapshots;
@@ -286,7 +286,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the simple application server.
+             * <p>
+             * 
+             * Note: This parameter has a value for system disk snapshots. This parameter is left empty for data disk snapshots.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -302,7 +305,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID of the snapshots.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -318,7 +321,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * RollbackTime.
+             * The time when the last disk rollback was performed.
              */
             public Builder rollbackTime(String rollbackTime) {
                 this.rollbackTime = rollbackTime;
@@ -326,7 +329,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the snapshot.
+             * The snapshot ID.
              */
             public Builder snapshotId(String snapshotId) {
                 this.snapshotId = snapshotId;
@@ -342,7 +345,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the source disk. This parameter has a value even after the source disk is released.
+             * The ID of the source disk based on which the snapshot is created. This parameter has a value even if the source disk is released.
              */
             public Builder sourceDiskId(String sourceDiskId) {
                 this.sourceDiskId = sourceDiskId;
@@ -353,8 +356,8 @@ public class ListSnapshotsResponseBody extends TeaModel {
              * The type of the source disk. Valid values:
              * <p>
              * 
-             * *   System: system disk
-             * *   data: data disk
+             * *   system: system disk.
+             * *   data: data disk.
              */
             public Builder sourceDiskType(String sourceDiskType) {
                 this.sourceDiskType = sourceDiskType;
