@@ -17,12 +17,17 @@ public class DescribeCACertificateListRequest extends Request {
     private Integer currentPage;
 
     @Query
+    @NameInMap("Identifier")
+    private String identifier;
+
+    @Query
     @NameInMap("ShowSize")
     private Integer showSize;
 
     private DescribeCACertificateListRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.identifier = builder.identifier;
         this.showSize = builder.showSize;
     }
 
@@ -47,6 +52,13 @@ public class DescribeCACertificateListRequest extends Request {
     }
 
     /**
+     * @return identifier
+     */
+    public String getIdentifier() {
+        return this.identifier;
+    }
+
+    /**
      * @return showSize
      */
     public Integer getShowSize() {
@@ -55,6 +67,7 @@ public class DescribeCACertificateListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeCACertificateListRequest, Builder> {
         private Integer currentPage; 
+        private String identifier; 
         private Integer showSize; 
 
         private Builder() {
@@ -64,6 +77,7 @@ public class DescribeCACertificateListRequest extends Request {
         private Builder(DescribeCACertificateListRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.identifier = request.identifier;
             this.showSize = request.showSize;
         } 
 
@@ -73,6 +87,15 @@ public class DescribeCACertificateListRequest extends Request {
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
             this.currentPage = currentPage;
+            return this;
+        }
+
+        /**
+         * Identifier.
+         */
+        public Builder identifier(String identifier) {
+            this.putQueryParameter("Identifier", identifier);
+            this.identifier = identifier;
             return this;
         }
 
