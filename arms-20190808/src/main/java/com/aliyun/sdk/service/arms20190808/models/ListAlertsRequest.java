@@ -210,7 +210,7 @@ public class ListAlertsRequest extends Request {
         } 
 
         /**
-         * AlertName.
+         * The name of the alert rule.
          */
         public Builder alertName(String alertName) {
             this.putQueryParameter("AlertName", alertName);
@@ -219,7 +219,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * DispatchRuleId.
+         * The ID of the notification policy.
          */
         public Builder dispatchRuleId(Long dispatchRuleId) {
             this.putQueryParameter("DispatchRuleId", dispatchRuleId);
@@ -228,7 +228,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end time of the alert sending history that you want to query. Specify the time in the `YYYY-MM-DD HH:mm:ss` format.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -237,7 +237,28 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * IntegrationType.
+         * The integration type.
+         * <p>
+         * 
+         * *   ARMS
+         * *   CLOUD_MONITOR
+         * *   MSE
+         * *   ARMS_CLOUD_DIALTEST
+         * *   PROMETHEUS
+         * *   LOG_SERVICE
+         * *   CUSTOM
+         * *   ARMS_PROMETHEUS
+         * *   ARMS_APP_MON
+         * *   ARMS_FRONT_MON
+         * *   ARMS_CUSTOM
+         * *   XTRACE
+         * *   GRAFANA
+         * *   ZABBIX
+         * *   SKYWALKING
+         * *   EVENT_BRIDGE
+         * *   NAGIOS
+         * *   OPENFALCON
+         * *   ARMS_INSIGHTS
          */
         public Builder integrationType(String integrationType) {
             this.putQueryParameter("IntegrationType", integrationType);
@@ -246,7 +267,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * Page.
+         * The number of the page to return.
          */
         public Builder page(Long page) {
             this.putQueryParameter("Page", page);
@@ -255,7 +276,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,7 +285,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * Severity.
+         * The severity level of the alert. Valid values: P6, P5, P4, P3, P2, and P1. The preceding values are listed in ascending order of severity.
          */
         public Builder severity(String severity) {
             this.putQueryParameter("Severity", severity);
@@ -273,7 +294,11 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * ShowActivities.
+         * Specifies whether to query the activities that correspond to alerts. Valid values:
+         * <p>
+         * 
+         * *   `false` (default value): The activities are not queried.
+         * *   `true`: The activities in the last three days are queried.
          */
         public Builder showActivities(Boolean showActivities) {
             this.putQueryParameter("ShowActivities", showActivities);
@@ -282,7 +307,11 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * ShowEvents.
+         * Specifies whether to query the events that correspond to alerts. Valid values:
+         * <p>
+         * 
+         * *   `false` (default value): The events are not queried.
+         * *   `true`: The events are queried.
          */
         public Builder showEvents(Boolean showEvents) {
             this.putQueryParameter("ShowEvents", showEvents);
@@ -291,7 +320,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * Size.
+         * The number of alerts to return on each page.
          */
         public Builder size(Long size) {
             this.putQueryParameter("Size", size);
@@ -300,7 +329,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The start time of the alert sending history that you want to query. Specify the time in the `YYYY-MM-DD HH:mm:ss` format.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -309,7 +338,12 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * State.
+         * The status of the alert. Valid values:
+         * <p>
+         * 
+         * *   0: The alert is pending.
+         * *   1: The alert is being handled.
+         * *   2: The alert is handled.
          */
         public Builder state(Long state) {
             this.putQueryParameter("State", state);

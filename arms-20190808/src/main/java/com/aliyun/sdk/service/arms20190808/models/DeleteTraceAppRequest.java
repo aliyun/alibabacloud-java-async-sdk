@@ -123,7 +123,7 @@ public class DeleteTraceAppRequest extends Request {
         }
 
         /**
-         * DeleteReason.
+         * The reason(s) to delete application.
          */
         public Builder deleteReason(DeleteReason deleteReason) {
             String deleteReasonShrink = shrink(deleteReason, "DeleteReason", "json");
@@ -133,7 +133,7 @@ public class DeleteTraceAppRequest extends Request {
         }
 
         /**
-         * The PID of the application that you want to delete. For more information about how to obtain the PID, see [Obtain the PID of an application](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).
+         * The PID of the application. For more information about how to query the PID, see [QueryMetricByPage](https://www.alibabacloud.com/help/zh/doc-detail/186100.htm?spm=a2cdw.13409063.0.0.7a72281f0bkTfx#title-imy-7gj-qhr).
          */
         public Builder pid(String pid) {
             this.putQueryParameter("Pid", pid);
@@ -142,7 +142,7 @@ public class DeleteTraceAppRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the region in which the application is located.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -154,7 +154,7 @@ public class DeleteTraceAppRequest extends Request {
          * The type of the application that you want to delete. You can call the SearchTraceAppByName operation to query the application type. For more information, see [SearchTraceAppByName](~~130676~~). Valid values:
          * <p>
          * 
-         * *   `TRACE`: application monitoring
+         * *   `TRACE`: Application Monitoring
          * *   `RETCODE`: frontend monitoring
          */
         public Builder type(String type) {
@@ -209,7 +209,7 @@ public class DeleteTraceAppRequest extends Request {
             private String name; 
 
             /**
-             * Id.
+             * The ID of the reason for deletion.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -217,7 +217,7 @@ public class DeleteTraceAppRequest extends Request {
             }
 
             /**
-             * Name.
+             * A description of the reason for removal.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +270,7 @@ public class DeleteTraceAppRequest extends Request {
             private String remark; 
 
             /**
-             * ReasonIds.
+             * Reasons Ids.
              */
             public Builder reasonIds(java.util.List < ReasonIds> reasonIds) {
                 this.reasonIds = reasonIds;
@@ -278,7 +278,7 @@ public class DeleteTraceAppRequest extends Request {
             }
 
             /**
-             * Remark.
+             * Additional remarks when none of the reasons for removal provided are met.
              */
             public Builder remark(String remark) {
                 this.remark = remark;

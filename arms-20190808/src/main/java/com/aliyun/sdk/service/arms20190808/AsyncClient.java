@@ -332,6 +332,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<OpenXtraceDefaultSLRResponse> openXtraceDefaultSLR(OpenXtraceDefaultSLRRequest request);
 
+    CompletableFuture<QueryAppMetadataResponse> queryAppMetadata(QueryAppMetadataRequest request);
+
     CompletableFuture<QueryMetricByPageResponse> queryMetricByPage(QueryMetricByPageRequest request);
 
     CompletableFuture<QueryPromInstallStatusResponse> queryPromInstallStatus(QueryPromInstallStatusRequest request);

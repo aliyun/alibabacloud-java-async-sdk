@@ -7,19 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SaveTraceAppConfigResponseBody} extends {@link TeaModel}
+ * {@link QueryAppMetadataResponseBody} extends {@link TeaModel}
  *
- * <p>SaveTraceAppConfigResponseBody</p>
+ * <p>QueryAppMetadataResponseBody</p>
  */
-public class SaveTraceAppConfigResponseBody extends TeaModel {
+public class QueryAppMetadataResponseBody extends TeaModel {
     @NameInMap("Code")
-    private Long code;
+    private Integer code;
 
     @NameInMap("Data")
-    private String data;
+    private java.util.Map < String, ? > data;
 
-    @NameInMap("Message")
-    private String message;
+    @NameInMap("HttpStatusCode")
+    private Integer httpStatusCode;
 
     @NameInMap("RequestId")
     private String requestId;
@@ -27,10 +27,10 @@ public class SaveTraceAppConfigResponseBody extends TeaModel {
     @NameInMap("Success")
     private Boolean success;
 
-    private SaveTraceAppConfigResponseBody(Builder builder) {
+    private QueryAppMetadataResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
-        this.message = builder.message;
+        this.httpStatusCode = builder.httpStatusCode;
         this.requestId = builder.requestId;
         this.success = builder.success;
     }
@@ -39,29 +39,29 @@ public class SaveTraceAppConfigResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SaveTraceAppConfigResponseBody create() {
+    public static QueryAppMetadataResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return code
      */
-    public Long getCode() {
+    public Integer getCode() {
         return this.code;
     }
 
     /**
      * @return data
      */
-    public String getData() {
+    public java.util.Map < String, ? > getData() {
         return this.data;
     }
 
     /**
-     * @return message
+     * @return httpStatusCode
      */
-    public String getMessage() {
-        return this.message;
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
     }
 
     /**
@@ -79,38 +79,38 @@ public class SaveTraceAppConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Long code; 
-        private String data; 
-        private String message; 
+        private Integer code; 
+        private java.util.Map < String, ? > data; 
+        private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.
+         * Code.
          */
-        public Builder code(Long code) {
+        public Builder code(Integer code) {
             this.code = code;
             return this;
         }
 
         /**
-         * Indicates whether the call was successful.
+         * Data.
          */
-        public Builder data(String data) {
+        public Builder data(java.util.Map < String, ? > data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
+         * HttpStatusCode.
          */
-        public Builder message(String message) {
-            this.message = message;
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,19 +118,15 @@ public class SaveTraceAppConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`
-         * *   `false`
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public SaveTraceAppConfigResponseBody build() {
-            return new SaveTraceAppConfigResponseBody(this);
+        public QueryAppMetadataResponseBody build() {
+            return new QueryAppMetadataResponseBody(this);
         } 
 
     } 

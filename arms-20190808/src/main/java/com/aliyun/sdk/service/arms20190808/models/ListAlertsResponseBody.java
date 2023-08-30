@@ -50,7 +50,7 @@ public class ListAlertsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PageBean.
+         * The information about the array object.
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -58,7 +58,7 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class ListAlertsResponseBody extends TeaModel {
             private Long type; 
 
             /**
-             * Content.
+             * The content of the alert notification.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -154,7 +154,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the activity.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -162,7 +162,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * HandlerName.
+             * The name of the handler.
              */
             public Builder handlerName(String handlerName) {
                 this.handlerName = handlerName;
@@ -170,7 +170,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The operation time of the activity.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -178,7 +178,14 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the activity. Valid values:
+             * <p>
+             * 
+             * *   1: The alert is claimed.
+             * *   2: The alert is disclaimed.
+             * *   3: A comment is added for the alert.
+             * *   4: The alert is disabled.
+             * *   5: An alert notification is sent.
              */
             public Builder type(Long type) {
                 this.type = type;
@@ -351,7 +358,7 @@ public class ListAlertsResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * AlertName.
+             * The name of the event.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -359,7 +366,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Annotations.
+             * The annotations.
              */
             public Builder annotations(String annotations) {
                 this.annotations = annotations;
@@ -367,7 +374,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the event.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -375,7 +382,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the event ended.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -383,7 +390,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * GeneratorURL.
+             * The URL of the event.
              */
             public Builder generatorURL(String generatorURL) {
                 this.generatorURL = generatorURL;
@@ -391,7 +398,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * IntegrationName.
+             * The name of the integration that corresponds to the alert event.
              */
             public Builder integrationName(String integrationName) {
                 this.integrationName = integrationName;
@@ -399,7 +406,28 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * IntegrationType.
+             * The type of the integration that corresponds to the alert event. Valid values:
+             * <p>
+             * 
+             * *   ARMS
+             * *   CLOUD_MONITOR
+             * *   MSE
+             * *   ARMS_CLOUD_DIALTEST
+             * *   PROMETHEUS
+             * *   LOG_SERVICE
+             * *   CUSTOM
+             * *   ARMS_PROMETHEUS
+             * *   ARMS_APP_MON
+             * *   ARMS_FRONT_MON
+             * *   ARMS_CUSTOM
+             * *   XTRACE
+             * *   GRAFANA
+             * *   ZABBIX
+             * *   SKYWALKING
+             * *   EVENT_BRIDGE
+             * *   NAGIOS
+             * *   OPENFALCON
+             * *   ARMS_INSIGHTS
              */
             public Builder integrationType(String integrationType) {
                 this.integrationType = integrationType;
@@ -407,7 +435,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Labels.
+             * The tags.
              */
             public Builder labels(String labels) {
                 this.labels = labels;
@@ -415,7 +443,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiveTime.
+             * The time when the event was created.
              */
             public Builder receiveTime(String receiveTime) {
                 this.receiveTime = receiveTime;
@@ -423,7 +451,13 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * The severity level of the event. Valid values:
+             * <p>
+             * 
+             * *   critical
+             * *   error
+             * *   warning
+             * *   info
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -431,7 +465,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the event started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -439,7 +473,12 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the event. Valid values:
+             * <p>
+             * 
+             * *   Active: The event is not cleared.
+             * *   Silenced: The event is silenced.
+             * *   Resolved: The event is cleared.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -588,7 +627,7 @@ public class ListAlertsResponseBody extends TeaModel {
             private Long state; 
 
             /**
-             * Activities.
+             * The list of activities.
              */
             public Builder activities(java.util.List < Activities> activities) {
                 this.activities = activities;
@@ -596,7 +635,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertEvents.
+             * The list of events.
              */
             public Builder alertEvents(java.util.List < AlertEvents> alertEvents) {
                 this.alertEvents = alertEvents;
@@ -604,7 +643,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertId.
+             * The alert ID.
              */
             public Builder alertId(Long alertId) {
                 this.alertId = alertId;
@@ -612,7 +651,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * AlertName.
+             * The name of the alert rule.
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -620,7 +659,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the alert was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -628,7 +667,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * DispatchRuleId.
+             * The ID of the notification policy.
              */
             public Builder dispatchRuleId(Float dispatchRuleId) {
                 this.dispatchRuleId = dispatchRuleId;
@@ -636,7 +675,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * DispatchRuleName.
+             * The name of the notification policy.
              */
             public Builder dispatchRuleName(String dispatchRuleName) {
                 this.dispatchRuleName = dispatchRuleName;
@@ -644,7 +683,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * The severity level of the alert. Valid values: P6, P5, P4, P3, P2, and P1. The preceding values are listed in ascending order of severity.
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -652,7 +691,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Solution.
+             * The Alert solution.
              */
             public Builder solution(String solution) {
                 this.solution = solution;
@@ -660,7 +699,12 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the alert. Valid values:
+             * <p>
+             * 
+             * *   0: The alert is pending.
+             * *   1: The alert is being handled.
+             * *   2: The alert is handled.
              */
             public Builder state(Long state) {
                 this.state = state;
@@ -737,7 +781,7 @@ public class ListAlertsResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * ListAlerts.
+             * The alerts for which the alert sending history is queried.
              */
             public Builder listAlerts(java.util.List < ListAlerts> listAlerts) {
                 this.listAlerts = listAlerts;
@@ -745,7 +789,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * The page number of the returned page.
              */
             public Builder page(Long page) {
                 this.page = page;
@@ -753,7 +797,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The number of alerts returned per page.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -761,7 +805,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of queried alerts.
              */
             public Builder total(Long total) {
                 this.total = total;

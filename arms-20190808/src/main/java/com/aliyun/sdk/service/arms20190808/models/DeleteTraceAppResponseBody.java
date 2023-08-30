@@ -86,7 +86,7 @@ public class DeleteTraceAppResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Long code) {
             this.code = code;
@@ -102,7 +102,7 @@ public class DeleteTraceAppResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +118,12 @@ public class DeleteTraceAppResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * true: The request was successful.
+         * 
+         * false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

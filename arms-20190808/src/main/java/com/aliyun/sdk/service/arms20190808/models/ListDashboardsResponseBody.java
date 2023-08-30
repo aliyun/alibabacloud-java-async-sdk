@@ -15,11 +15,15 @@ public class ListDashboardsResponseBody extends TeaModel {
     @NameInMap("DashboardVos")
     private java.util.List < DashboardVos> dashboardVos;
 
+    @NameInMap("PrometheusServiceOpened")
+    private String prometheusServiceOpened;
+
     @NameInMap("RequestId")
     private String requestId;
 
     private ListDashboardsResponseBody(Builder builder) {
         this.dashboardVos = builder.dashboardVos;
+        this.prometheusServiceOpened = builder.prometheusServiceOpened;
         this.requestId = builder.requestId;
     }
 
@@ -39,6 +43,13 @@ public class ListDashboardsResponseBody extends TeaModel {
     }
 
     /**
+     * @return prometheusServiceOpened
+     */
+    public String getPrometheusServiceOpened() {
+        return this.prometheusServiceOpened;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -47,6 +58,7 @@ public class ListDashboardsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List < DashboardVos> dashboardVos; 
+        private String prometheusServiceOpened; 
         private String requestId; 
 
         /**
@@ -54,6 +66,14 @@ public class ListDashboardsResponseBody extends TeaModel {
          */
         public Builder dashboardVos(java.util.List < DashboardVos> dashboardVos) {
             this.dashboardVos = dashboardVos;
+            return this;
+        }
+
+        /**
+         * PrometheusServiceOpened.
+         */
+        public Builder prometheusServiceOpened(String prometheusServiceOpened) {
+            this.prometheusServiceOpened = prometheusServiceOpened;
             return this;
         }
 
