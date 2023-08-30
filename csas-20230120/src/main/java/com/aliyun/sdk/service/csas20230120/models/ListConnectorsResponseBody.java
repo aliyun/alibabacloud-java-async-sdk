@@ -152,6 +152,107 @@ public class ListConnectorsResponseBody extends TeaModel {
         } 
 
     }
+    public static class ConnectorClients extends TeaModel {
+        @NameInMap("ConnectionStatus")
+        private String connectionStatus;
+
+        @NameInMap("DevTag")
+        private String devTag;
+
+        @NameInMap("Hostname")
+        private String hostname;
+
+        @NameInMap("PublicIp")
+        private String publicIp;
+
+        private ConnectorClients(Builder builder) {
+            this.connectionStatus = builder.connectionStatus;
+            this.devTag = builder.devTag;
+            this.hostname = builder.hostname;
+            this.publicIp = builder.publicIp;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConnectorClients create() {
+            return builder().build();
+        }
+
+        /**
+         * @return connectionStatus
+         */
+        public String getConnectionStatus() {
+            return this.connectionStatus;
+        }
+
+        /**
+         * @return devTag
+         */
+        public String getDevTag() {
+            return this.devTag;
+        }
+
+        /**
+         * @return hostname
+         */
+        public String getHostname() {
+            return this.hostname;
+        }
+
+        /**
+         * @return publicIp
+         */
+        public String getPublicIp() {
+            return this.publicIp;
+        }
+
+        public static final class Builder {
+            private String connectionStatus; 
+            private String devTag; 
+            private String hostname; 
+            private String publicIp; 
+
+            /**
+             * ConnectionStatus.
+             */
+            public Builder connectionStatus(String connectionStatus) {
+                this.connectionStatus = connectionStatus;
+                return this;
+            }
+
+            /**
+             * DevTag.
+             */
+            public Builder devTag(String devTag) {
+                this.devTag = devTag;
+                return this;
+            }
+
+            /**
+             * Hostname.
+             */
+            public Builder hostname(String hostname) {
+                this.hostname = hostname;
+                return this;
+            }
+
+            /**
+             * PublicIp.
+             */
+            public Builder publicIp(String publicIp) {
+                this.publicIp = publicIp;
+                return this;
+            }
+
+            public ConnectorClients build() {
+                return new ConnectorClients(this);
+            } 
+
+        } 
+
+    }
     public static class UpgradeTime extends TeaModel {
         @NameInMap("End")
         private String end;
@@ -217,6 +318,9 @@ public class ListConnectorsResponseBody extends TeaModel {
         @NameInMap("Applications")
         private java.util.List < Applications> applications;
 
+        @NameInMap("ConnectorClients")
+        private java.util.List < ConnectorClients> connectorClients;
+
         @NameInMap("ConnectorId")
         private String connectorId;
 
@@ -240,6 +344,7 @@ public class ListConnectorsResponseBody extends TeaModel {
 
         private Connectors(Builder builder) {
             this.applications = builder.applications;
+            this.connectorClients = builder.connectorClients;
             this.connectorId = builder.connectorId;
             this.createTime = builder.createTime;
             this.name = builder.name;
@@ -262,6 +367,13 @@ public class ListConnectorsResponseBody extends TeaModel {
          */
         public java.util.List < Applications> getApplications() {
             return this.applications;
+        }
+
+        /**
+         * @return connectorClients
+         */
+        public java.util.List < ConnectorClients> getConnectorClients() {
+            return this.connectorClients;
         }
 
         /**
@@ -315,6 +427,7 @@ public class ListConnectorsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < Applications> applications; 
+            private java.util.List < ConnectorClients> connectorClients; 
             private String connectorId; 
             private String createTime; 
             private String name; 
@@ -328,6 +441,14 @@ public class ListConnectorsResponseBody extends TeaModel {
              */
             public Builder applications(java.util.List < Applications> applications) {
                 this.applications = applications;
+                return this;
+            }
+
+            /**
+             * ConnectorClients.
+             */
+            public Builder connectorClients(java.util.List < ConnectorClients> connectorClients) {
+                this.connectorClients = connectorClients;
                 return this;
             }
 

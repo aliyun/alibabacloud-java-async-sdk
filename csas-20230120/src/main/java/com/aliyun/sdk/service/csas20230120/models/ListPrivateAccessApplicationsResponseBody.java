@@ -159,6 +159,9 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         @NameInMap("ApplicationId")
         private String applicationId;
 
+        @NameInMap("ConnectorIds")
+        private java.util.List < String > connectorIds;
+
         @NameInMap("CreateTime")
         private String createTime;
 
@@ -186,6 +189,7 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         private Applications(Builder builder) {
             this.addresses = builder.addresses;
             this.applicationId = builder.applicationId;
+            this.connectorIds = builder.connectorIds;
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.name = builder.name;
@@ -216,6 +220,13 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
          */
         public String getApplicationId() {
             return this.applicationId;
+        }
+
+        /**
+         * @return connectorIds
+         */
+        public java.util.List < String > getConnectorIds() {
+            return this.connectorIds;
         }
 
         /**
@@ -277,6 +288,7 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List < String > addresses; 
             private String applicationId; 
+            private java.util.List < String > connectorIds; 
             private String createTime; 
             private String description; 
             private String name; 
@@ -299,6 +311,14 @@ public class ListPrivateAccessApplicationsResponseBody extends TeaModel {
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
+                return this;
+            }
+
+            /**
+             * ConnectorIds.
+             */
+            public Builder connectorIds(java.util.List < String > connectorIds) {
+                this.connectorIds = connectorIds;
                 return this;
             }
 

@@ -21,6 +21,10 @@ public class ListPrivateAccessApplicationsRequest extends Request {
     private java.util.List < String > applicationIds;
 
     @Query
+    @NameInMap("ConnectorId")
+    private String connectorId;
+
+    @Query
     @NameInMap("CurrentPage")
     @Validation(required = true)
     private Integer currentPage;
@@ -50,6 +54,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         super(builder);
         this.address = builder.address;
         this.applicationIds = builder.applicationIds;
+        this.connectorId = builder.connectorId;
         this.currentPage = builder.currentPage;
         this.name = builder.name;
         this.pageSize = builder.pageSize;
@@ -83,6 +88,13 @@ public class ListPrivateAccessApplicationsRequest extends Request {
      */
     public java.util.List < String > getApplicationIds() {
         return this.applicationIds;
+    }
+
+    /**
+     * @return connectorId
+     */
+    public String getConnectorId() {
+        return this.connectorId;
     }
 
     /**
@@ -130,6 +142,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
     public static final class Builder extends Request.Builder<ListPrivateAccessApplicationsRequest, Builder> {
         private String address; 
         private java.util.List < String > applicationIds; 
+        private String connectorId; 
         private Integer currentPage; 
         private String name; 
         private Integer pageSize; 
@@ -145,6 +158,7 @@ public class ListPrivateAccessApplicationsRequest extends Request {
             super(request);
             this.address = request.address;
             this.applicationIds = request.applicationIds;
+            this.connectorId = request.connectorId;
             this.currentPage = request.currentPage;
             this.name = request.name;
             this.pageSize = request.pageSize;
@@ -168,6 +182,15 @@ public class ListPrivateAccessApplicationsRequest extends Request {
         public Builder applicationIds(java.util.List < String > applicationIds) {
             this.putQueryParameter("ApplicationIds", applicationIds);
             this.applicationIds = applicationIds;
+            return this;
+        }
+
+        /**
+         * ConnectorId.
+         */
+        public Builder connectorId(String connectorId) {
+            this.putQueryParameter("ConnectorId", connectorId);
+            this.connectorId = connectorId;
             return this;
         }
 
