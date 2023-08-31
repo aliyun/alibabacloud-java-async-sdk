@@ -162,6 +162,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GrantUserPermissionsResponse> grantUserPermissions(GrantUserPermissionsRequest request);
 
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
     CompletableFuture<ModifyApiServerEipResourceResponse> modifyApiServerEipResource(ModifyApiServerEipResourceRequest request);
 
     CompletableFuture<ModifyServiceMeshNameResponse> modifyServiceMeshName(ModifyServiceMeshNameRequest request);
@@ -182,11 +184,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RevokeKubeconfigResponse> revokeKubeconfig(RevokeKubeconfigRequest request);
 
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
+
     CompletableFuture<UpdateASMGatewayResponse> updateASMGateway(UpdateASMGatewayRequest request);
 
     CompletableFuture<UpdateASMGatewayImportedServicesResponse> updateASMGatewayImportedServices(UpdateASMGatewayImportedServicesRequest request);
 
     CompletableFuture<UpdateASMNamespaceFromGuestClusterResponse> updateASMNamespaceFromGuestCluster(UpdateASMNamespaceFromGuestClusterRequest request);
+
+    CompletableFuture<UpdateControlPlaneLogConfigResponse> updateControlPlaneLogConfig(UpdateControlPlaneLogConfigRequest request);
 
     CompletableFuture<UpdateIstioGatewayRoutesResponse> updateIstioGatewayRoutes(UpdateIstioGatewayRoutesRequest request);
 

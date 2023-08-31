@@ -182,7 +182,7 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The check result of the number of the backend servers of the SLB instance created for exposing Istio Pilot. Valid values:
+             * The check result of the number of backend servers of the SLB instance created for exposing the API server. Valid values:
              * <p>
              * 
              * *   `too_much`: An excessive number of backend servers are created.
@@ -291,11 +291,7 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
             private String SLBExistStatus; 
 
             /**
-             * Indicates whether the SLB instance is locked. Valid values:
-             * <p>
-             * 
-             * *   `true`
-             * *   `false`
+             * Indicates whether the SLB instance is locked due to overdue payments. Valid values: `true` `false`
              */
             public Builder locked(Boolean locked) {
                 this.locked = locked;
@@ -318,8 +314,8 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
              * Indicates whether the SLB instance is reused. Valid values:
              * <p>
              * 
-             * *   `true`
-             * *   `false`
+             * *   `true`: The SLB instance is reused. Non-ASM listener configuration is detected in the listener configurations of the SLB instance.
+             * *   `false`: The SLB instance is not reused.
              */
             public Builder reused(Boolean reused) {
                 this.reused = reused;
@@ -327,11 +323,11 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The check result of the number of the backend servers of the SLB instance created for exposing Istio Pilot. Valid values:
+             * The check result of the number of backend servers of the SLB instance created for exposing Istio Pilot. Valid values:
              * <p>
              * 
-             * *   `too_much`: An excessive number of backend servers are created.
              * *   `num_exact`: A proper number of backend servers are created.
+             * *   `too_much`: An excessive number of backend servers are created.
              * *   `too_little`: The number of backend servers falls short.
              */
             public Builder SLBBackEndServerNumStatus(String SLBBackEndServerNumStatus) {
@@ -345,9 +341,8 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
              * 
              * *   `exist`: The SLB instance exists.
              * *   `not_exist`: The SLB instance does not exist.
-             * *   `conflict`: Conflicts are detected.
-             * *   `failed`: The check fails.
              * *   `time_out`: The check times out.
+             * *   `failed`: The SLB instance has expired.
              */
             public Builder SLBExistStatus(String SLBExistStatus) {
                 this.SLBExistStatus = SLBExistStatus;
@@ -472,7 +467,7 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The check result of the number of the backend servers of the SLB instance created for exposing Istio Pilot. Valid values:
+             * The check result of the number of backend servers of the SLB instance created for exposing Istio Pilot. Valid values:
              * <p>
              * 
              * *   `too_much`: An excessive number of backend servers are created.
@@ -691,7 +686,7 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CanaryPilotLoadBalancerStatus.
+             * The check results of the SLB instance that is created for exposing Istio Pilot and used during canary release.
              */
             public Builder canaryPilotLoadBalancerStatus(CanaryPilotLoadBalancerStatus canaryPilotLoadBalancerStatus) {
                 this.canaryPilotLoadBalancerStatus = canaryPilotLoadBalancerStatus;
@@ -729,7 +724,14 @@ public class DescribeServiceMeshAdditionalStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RAMApplicationStatus.
+             * The status of the RAM OAuth application that is integrated with Mesh Topology. Valid values:
+             * <p>
+             * 
+             * *   `exist`: The RAM OAuth application exists.
+             * *   `reused`: The RAM OAuth application is reused.
+             * *   `not_exist`: The RAM OAuth application does not exist.
+             * *   `failed`: The check fails.
+             * *   `time_out`: The check times out.
              */
             public Builder RAMApplicationStatus(String RAMApplicationStatus) {
                 this.RAMApplicationStatus = RAMApplicationStatus;

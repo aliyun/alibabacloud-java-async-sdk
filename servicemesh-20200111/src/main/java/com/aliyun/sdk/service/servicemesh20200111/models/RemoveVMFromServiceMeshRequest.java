@@ -70,7 +70,7 @@ public class RemoveVMFromServiceMeshRequest extends Request {
         } 
 
         /**
-         * The ID of the VM.
+         * The ID of the ECS instance.
          */
         public Builder ecsId(String ecsId) {
             this.putQueryParameter("EcsId", ecsId);
@@ -79,7 +79,7 @@ public class RemoveVMFromServiceMeshRequest extends Request {
         }
 
         /**
-         * The ID of the ASM instance.
+         * The ASM instance ID.
          */
         public Builder serviceMeshId(String serviceMeshId) {
             this.putQueryParameter("ServiceMeshId", serviceMeshId);

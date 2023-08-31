@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeServiceMeshKubeconfigResponseBody</p>
  */
 public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
+    @NameInMap("ExpireTime")
+    private String expireTime;
+
     @NameInMap("Kubeconfig")
     private String kubeconfig;
 
@@ -19,6 +22,7 @@ public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeServiceMeshKubeconfigResponseBody(Builder builder) {
+        this.expireTime = builder.expireTime;
         this.kubeconfig = builder.kubeconfig;
         this.requestId = builder.requestId;
     }
@@ -29,6 +33,13 @@ public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
 
     public static DescribeServiceMeshKubeconfigResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return expireTime
+     */
+    public String getExpireTime() {
+        return this.expireTime;
     }
 
     /**
@@ -46,8 +57,17 @@ public class DescribeServiceMeshKubeconfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String expireTime; 
         private String kubeconfig; 
         private String requestId; 
+
+        /**
+         * ExpireTime.
+         */
+        public Builder expireTime(String expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
 
         /**
          * The content of the kubeconfig file of the cluster.

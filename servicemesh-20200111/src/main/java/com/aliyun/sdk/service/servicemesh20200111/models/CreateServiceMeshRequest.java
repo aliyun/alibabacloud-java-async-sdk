@@ -273,6 +273,10 @@ public class CreateServiceMeshRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     @Body
     @NameInMap("Telemetry")
     private Boolean telemetry;
@@ -374,6 +378,7 @@ public class CreateServiceMeshRequest extends Request {
         this.proxyRequestMemory = builder.proxyRequestMemory;
         this.redisFilterEnabled = builder.redisFilterEnabled;
         this.regionId = builder.regionId;
+        this.tag = builder.tag;
         this.telemetry = builder.telemetry;
         this.thriftFilterEnabled = builder.thriftFilterEnabled;
         this.traceSampling = builder.traceSampling;
@@ -853,6 +858,13 @@ public class CreateServiceMeshRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return telemetry
      */
     public Boolean getTelemetry() {
@@ -974,6 +986,7 @@ public class CreateServiceMeshRequest extends Request {
         private String proxyRequestMemory; 
         private Boolean redisFilterEnabled; 
         private String regionId; 
+        private java.util.List < Tag> tag; 
         private Boolean telemetry; 
         private Boolean thriftFilterEnabled; 
         private Float traceSampling; 
@@ -1054,6 +1067,7 @@ public class CreateServiceMeshRequest extends Request {
             this.proxyRequestMemory = request.proxyRequestMemory;
             this.redisFilterEnabled = request.redisFilterEnabled;
             this.regionId = request.regionId;
+            this.tag = request.tag;
             this.telemetry = request.telemetry;
             this.thriftFilterEnabled = request.thriftFilterEnabled;
             this.traceSampling = request.traceSampling;
@@ -1222,6 +1236,7 @@ public class CreateServiceMeshRequest extends Request {
         /**
          * The billing method of the SLB instance. Valid values:
          * <p>
+         * 
          * *   `PayOnDemand`: pay-as-you-go.
          * *   `PrePay`: subscription.
          */
@@ -1733,7 +1748,7 @@ public class CreateServiceMeshRequest extends Request {
         }
 
         /**
-         * The subscription period of the SLB instance. Unit: month. This parameter is valid only if the ChargeType parameter is set to PrePay. For example, if the subscription period is one year, set this parameter to 12.
+         * The auto-renewal period of the SLB instance. This parameter is valid only if `ChargeType` is set to `PrePaid`. The value of this parameter indicates the purchased month of the SLB instance when the subscription billing method is used. For example, if the subscription period is one year, set this parameter to 12.
          */
         public Builder period(Integer period) {
             this.putBodyParameter("Period", period);
@@ -1816,6 +1831,15 @@ public class CreateServiceMeshRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -1922,4 +1946,65 @@ public class CreateServiceMeshRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

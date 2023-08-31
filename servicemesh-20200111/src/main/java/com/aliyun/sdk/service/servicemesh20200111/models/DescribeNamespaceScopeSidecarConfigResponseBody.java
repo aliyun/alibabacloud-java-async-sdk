@@ -608,6 +608,9 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         @NameInMap("Concurrency")
         private Integer concurrency;
 
+        @NameInMap("EnableCoreDump")
+        private Boolean enableCoreDump;
+
         @NameInMap("ExcludeInboundPorts")
         private String excludeInboundPorts;
 
@@ -641,11 +644,23 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         @NameInMap("LogLevel")
         private String logLevel;
 
+        @NameInMap("Privileged")
+        private Boolean privileged;
+
         @NameInMap("ProxyMetadata")
         private java.util.Map < String, String > proxyMetadata;
 
         @NameInMap("ProxyStatsMatcher")
         private ProxyStatsMatcher proxyStatsMatcher;
+
+        @NameInMap("ReadinessFailureThreshold")
+        private Integer readinessFailureThreshold;
+
+        @NameInMap("ReadinessInitialDelaySeconds")
+        private Integer readinessInitialDelaySeconds;
+
+        @NameInMap("ReadinessPeriodSeconds")
+        private Integer readinessPeriodSeconds;
 
         @NameInMap("SidecarProxyAckSloResource")
         private SidecarProxyAckSloResource sidecarProxyAckSloResource;
@@ -673,6 +688,7 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
         private ConfigPatches(Builder builder) {
             this.concurrency = builder.concurrency;
+            this.enableCoreDump = builder.enableCoreDump;
             this.excludeInboundPorts = builder.excludeInboundPorts;
             this.excludeOutboundIPRanges = builder.excludeOutboundIPRanges;
             this.excludeOutboundPorts = builder.excludeOutboundPorts;
@@ -684,8 +700,12 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             this.istioDNSProxyEnabled = builder.istioDNSProxyEnabled;
             this.lifecycleStr = builder.lifecycleStr;
             this.logLevel = builder.logLevel;
+            this.privileged = builder.privileged;
             this.proxyMetadata = builder.proxyMetadata;
             this.proxyStatsMatcher = builder.proxyStatsMatcher;
+            this.readinessFailureThreshold = builder.readinessFailureThreshold;
+            this.readinessInitialDelaySeconds = builder.readinessInitialDelaySeconds;
+            this.readinessPeriodSeconds = builder.readinessPeriodSeconds;
             this.sidecarProxyAckSloResource = builder.sidecarProxyAckSloResource;
             this.sidecarProxyInitAckSloResource = builder.sidecarProxyInitAckSloResource;
             this.sidecarProxyInitResourceLimit = builder.sidecarProxyInitResourceLimit;
@@ -709,6 +729,13 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
          */
         public Integer getConcurrency() {
             return this.concurrency;
+        }
+
+        /**
+         * @return enableCoreDump
+         */
+        public Boolean getEnableCoreDump() {
+            return this.enableCoreDump;
         }
 
         /**
@@ -789,6 +816,13 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return privileged
+         */
+        public Boolean getPrivileged() {
+            return this.privileged;
+        }
+
+        /**
          * @return proxyMetadata
          */
         public java.util.Map < String, String > getProxyMetadata() {
@@ -800,6 +834,27 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
          */
         public ProxyStatsMatcher getProxyStatsMatcher() {
             return this.proxyStatsMatcher;
+        }
+
+        /**
+         * @return readinessFailureThreshold
+         */
+        public Integer getReadinessFailureThreshold() {
+            return this.readinessFailureThreshold;
+        }
+
+        /**
+         * @return readinessInitialDelaySeconds
+         */
+        public Integer getReadinessInitialDelaySeconds() {
+            return this.readinessInitialDelaySeconds;
+        }
+
+        /**
+         * @return readinessPeriodSeconds
+         */
+        public Integer getReadinessPeriodSeconds() {
+            return this.readinessPeriodSeconds;
         }
 
         /**
@@ -860,6 +915,7 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer concurrency; 
+            private Boolean enableCoreDump; 
             private String excludeInboundPorts; 
             private String excludeOutboundIPRanges; 
             private String excludeOutboundPorts; 
@@ -871,8 +927,12 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             private Boolean istioDNSProxyEnabled; 
             private String lifecycleStr; 
             private String logLevel; 
+            private Boolean privileged; 
             private java.util.Map < String, String > proxyMetadata; 
             private ProxyStatsMatcher proxyStatsMatcher; 
+            private Integer readinessFailureThreshold; 
+            private Integer readinessInitialDelaySeconds; 
+            private Integer readinessPeriodSeconds; 
             private SidecarProxyAckSloResource sidecarProxyAckSloResource; 
             private SidecarProxyInitAckSloResource sidecarProxyInitAckSloResource; 
             private SidecarProxyInitResourceLimit sidecarProxyInitResourceLimit; 
@@ -887,6 +947,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
              */
             public Builder concurrency(Integer concurrency) {
                 this.concurrency = concurrency;
+                return this;
+            }
+
+            /**
+             * EnableCoreDump.
+             */
+            public Builder enableCoreDump(Boolean enableCoreDump) {
+                this.enableCoreDump = enableCoreDump;
                 return this;
             }
 
@@ -991,6 +1059,14 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
             }
 
             /**
+             * Privileged.
+             */
+            public Builder privileged(Boolean privileged) {
+                this.privileged = privileged;
+                return this;
+            }
+
+            /**
              * ProxyMetadata.
              */
             public Builder proxyMetadata(java.util.Map < String, String > proxyMetadata) {
@@ -1003,6 +1079,30 @@ public class DescribeNamespaceScopeSidecarConfigResponseBody extends TeaModel {
              */
             public Builder proxyStatsMatcher(ProxyStatsMatcher proxyStatsMatcher) {
                 this.proxyStatsMatcher = proxyStatsMatcher;
+                return this;
+            }
+
+            /**
+             * ReadinessFailureThreshold.
+             */
+            public Builder readinessFailureThreshold(Integer readinessFailureThreshold) {
+                this.readinessFailureThreshold = readinessFailureThreshold;
+                return this;
+            }
+
+            /**
+             * ReadinessInitialDelaySeconds.
+             */
+            public Builder readinessInitialDelaySeconds(Integer readinessInitialDelaySeconds) {
+                this.readinessInitialDelaySeconds = readinessInitialDelaySeconds;
+                return this;
+            }
+
+            /**
+             * ReadinessPeriodSeconds.
+             */
+            public Builder readinessPeriodSeconds(Integer readinessPeriodSeconds) {
+                this.readinessPeriodSeconds = readinessPeriodSeconds;
                 return this;
             }
 

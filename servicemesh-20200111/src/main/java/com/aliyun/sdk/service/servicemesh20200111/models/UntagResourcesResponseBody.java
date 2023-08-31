@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RemoveVMFromServiceMeshResponseBody} extends {@link TeaModel}
+ * {@link UntagResourcesResponseBody} extends {@link TeaModel}
  *
- * <p>RemoveVMFromServiceMeshResponseBody</p>
+ * <p>UntagResourcesResponseBody</p>
  */
-public class RemoveVMFromServiceMeshResponseBody extends TeaModel {
+public class UntagResourcesResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private RemoveVMFromServiceMeshResponseBody(Builder builder) {
+    private UntagResourcesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class RemoveVMFromServiceMeshResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RemoveVMFromServiceMeshResponseBody create() {
+    public static UntagResourcesResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class RemoveVMFromServiceMeshResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RemoveVMFromServiceMeshResponseBody build() {
-            return new RemoveVMFromServiceMeshResponseBody(this);
+        public UntagResourcesResponseBody build() {
+            return new UntagResourcesResponseBody(this);
         } 
 
     } 

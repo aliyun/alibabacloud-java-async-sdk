@@ -50,7 +50,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
         private java.util.List < VMs> vMs; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
             }
 
             /**
-             * The hostname of the ECS instance.
+             * The host name.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -214,7 +214,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -230,7 +230,7 @@ public class DescribeServiceMeshVMsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the ASM instance.
+             * The ASM instance ID.
              */
             public Builder serviceMeshId(String serviceMeshId) {
                 this.serviceMeshId = serviceMeshId;

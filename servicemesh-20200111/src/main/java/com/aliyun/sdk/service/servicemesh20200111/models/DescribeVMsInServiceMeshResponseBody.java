@@ -50,7 +50,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
         private java.util.List < VMs> vMs; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -170,7 +170,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Indicates whether the VM has labels.
+             * Indicates whether the ECS instance has labels.
              */
             public Builder hasTag(Boolean hasTag) {
                 this.hasTag = hasTag;
@@ -178,7 +178,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * The host name of the VM.
+             * The host name.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -186,7 +186,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VM.
+             * The ID of the ECS instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -194,7 +194,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the VM.
+             * The IP address of the ECS instance.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -210,7 +210,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * The security group to which the VM belongs.
+             * The security group to which the ECS instance belongs.
              */
             public Builder securityGroupIds(String securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -218,7 +218,7 @@ public class DescribeVMsInServiceMeshResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the VM.
+             * The state of the ECS instance.
              */
             public Builder status(String status) {
                 this.status = status;

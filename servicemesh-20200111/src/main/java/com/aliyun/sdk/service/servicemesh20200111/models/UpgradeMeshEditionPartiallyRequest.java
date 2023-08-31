@@ -148,7 +148,7 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
         }
 
         /**
-         * 执行升级检查。如果该值设置为true，则只会执行升级检查，并不会实际升级。
+         * Specifies whether to perform an upgrade check. If the value of this parameter is set to true, only the upgrade check is performed and the ASM instance is not upgraded.
          */
         public Builder preCheck(Boolean preCheck) {
             this.putBodyParameter("PreCheck", preCheck);
@@ -166,9 +166,11 @@ public class UpgradeMeshEditionPartiallyRequest extends Request {
         }
 
         /**
-         * *   ``
+         * Specifies whether to upgrade the ASM instance to Professional Edition. Valid values:
          * <p>
-         * *   ``
+         * 
+         * *   `true`
+         * *   `false`
          */
         public Builder switchToPro(Boolean switchToPro) {
             this.putBodyParameter("SwitchToPro", switchToPro);

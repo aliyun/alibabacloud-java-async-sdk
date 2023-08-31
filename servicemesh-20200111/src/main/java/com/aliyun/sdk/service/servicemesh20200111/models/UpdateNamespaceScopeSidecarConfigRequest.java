@@ -17,6 +17,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
     private Integer concurrency;
 
     @Body
+    @NameInMap("EnableCoreDump")
+    private Boolean enableCoreDump;
+
+    @Body
     @NameInMap("ExcludeIPRanges")
     private String excludeIPRanges;
 
@@ -73,6 +77,10 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
     private String preStop;
 
     @Body
+    @NameInMap("Privileged")
+    private Boolean privileged;
+
+    @Body
     @NameInMap("ProxyInitAckSloCPUResourceLimit")
     private String proxyInitAckSloCPUResourceLimit;
 
@@ -111,6 +119,18 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
     @Body
     @NameInMap("ProxyStatsMatcher")
     private String proxyStatsMatcher;
+
+    @Body
+    @NameInMap("ReadinessFailureThreshold")
+    private Integer readinessFailureThreshold;
+
+    @Body
+    @NameInMap("ReadinessInitialDelaySeconds")
+    private Integer readinessInitialDelaySeconds;
+
+    @Body
+    @NameInMap("ReadinessPeriodSeconds")
+    private Integer readinessPeriodSeconds;
 
     @Body
     @NameInMap("ServiceMeshId")
@@ -160,6 +180,7 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
     private UpdateNamespaceScopeSidecarConfigRequest(Builder builder) {
         super(builder);
         this.concurrency = builder.concurrency;
+        this.enableCoreDump = builder.enableCoreDump;
         this.excludeIPRanges = builder.excludeIPRanges;
         this.excludeInboundPorts = builder.excludeInboundPorts;
         this.excludeOutboundPorts = builder.excludeOutboundPorts;
@@ -174,6 +195,7 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         this.namespace = builder.namespace;
         this.postStart = builder.postStart;
         this.preStop = builder.preStop;
+        this.privileged = builder.privileged;
         this.proxyInitAckSloCPUResourceLimit = builder.proxyInitAckSloCPUResourceLimit;
         this.proxyInitAckSloCPUResourceRequest = builder.proxyInitAckSloCPUResourceRequest;
         this.proxyInitAckSloMemoryResourceLimit = builder.proxyInitAckSloMemoryResourceLimit;
@@ -184,6 +206,9 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         this.proxyInitMemoryResourceRequest = builder.proxyInitMemoryResourceRequest;
         this.proxyMetadata = builder.proxyMetadata;
         this.proxyStatsMatcher = builder.proxyStatsMatcher;
+        this.readinessFailureThreshold = builder.readinessFailureThreshold;
+        this.readinessInitialDelaySeconds = builder.readinessInitialDelaySeconds;
+        this.readinessPeriodSeconds = builder.readinessPeriodSeconds;
         this.serviceMeshId = builder.serviceMeshId;
         this.sidecarProxyAckSloCPUResourceLimit = builder.sidecarProxyAckSloCPUResourceLimit;
         this.sidecarProxyAckSloCPUResourceRequest = builder.sidecarProxyAckSloCPUResourceRequest;
@@ -215,6 +240,13 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
      */
     public Integer getConcurrency() {
         return this.concurrency;
+    }
+
+    /**
+     * @return enableCoreDump
+     */
+    public Boolean getEnableCoreDump() {
+        return this.enableCoreDump;
     }
 
     /**
@@ -316,6 +348,13 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
     }
 
     /**
+     * @return privileged
+     */
+    public Boolean getPrivileged() {
+        return this.privileged;
+    }
+
+    /**
      * @return proxyInitAckSloCPUResourceLimit
      */
     public String getProxyInitAckSloCPUResourceLimit() {
@@ -383,6 +422,27 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
      */
     public String getProxyStatsMatcher() {
         return this.proxyStatsMatcher;
+    }
+
+    /**
+     * @return readinessFailureThreshold
+     */
+    public Integer getReadinessFailureThreshold() {
+        return this.readinessFailureThreshold;
+    }
+
+    /**
+     * @return readinessInitialDelaySeconds
+     */
+    public Integer getReadinessInitialDelaySeconds() {
+        return this.readinessInitialDelaySeconds;
+    }
+
+    /**
+     * @return readinessPeriodSeconds
+     */
+    public Integer getReadinessPeriodSeconds() {
+        return this.readinessPeriodSeconds;
     }
 
     /**
@@ -464,6 +524,7 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateNamespaceScopeSidecarConfigRequest, Builder> {
         private Integer concurrency; 
+        private Boolean enableCoreDump; 
         private String excludeIPRanges; 
         private String excludeInboundPorts; 
         private String excludeOutboundPorts; 
@@ -478,6 +539,7 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         private String namespace; 
         private String postStart; 
         private String preStop; 
+        private Boolean privileged; 
         private String proxyInitAckSloCPUResourceLimit; 
         private String proxyInitAckSloCPUResourceRequest; 
         private String proxyInitAckSloMemoryResourceLimit; 
@@ -488,6 +550,9 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         private String proxyInitMemoryResourceRequest; 
         private String proxyMetadata; 
         private String proxyStatsMatcher; 
+        private Integer readinessFailureThreshold; 
+        private Integer readinessInitialDelaySeconds; 
+        private Integer readinessPeriodSeconds; 
         private String serviceMeshId; 
         private String sidecarProxyAckSloCPUResourceLimit; 
         private String sidecarProxyAckSloCPUResourceRequest; 
@@ -507,6 +572,7 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         private Builder(UpdateNamespaceScopeSidecarConfigRequest request) {
             super(request);
             this.concurrency = request.concurrency;
+            this.enableCoreDump = request.enableCoreDump;
             this.excludeIPRanges = request.excludeIPRanges;
             this.excludeInboundPorts = request.excludeInboundPorts;
             this.excludeOutboundPorts = request.excludeOutboundPorts;
@@ -521,6 +587,7 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
             this.namespace = request.namespace;
             this.postStart = request.postStart;
             this.preStop = request.preStop;
+            this.privileged = request.privileged;
             this.proxyInitAckSloCPUResourceLimit = request.proxyInitAckSloCPUResourceLimit;
             this.proxyInitAckSloCPUResourceRequest = request.proxyInitAckSloCPUResourceRequest;
             this.proxyInitAckSloMemoryResourceLimit = request.proxyInitAckSloMemoryResourceLimit;
@@ -531,6 +598,9 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
             this.proxyInitMemoryResourceRequest = request.proxyInitMemoryResourceRequest;
             this.proxyMetadata = request.proxyMetadata;
             this.proxyStatsMatcher = request.proxyStatsMatcher;
+            this.readinessFailureThreshold = request.readinessFailureThreshold;
+            this.readinessInitialDelaySeconds = request.readinessInitialDelaySeconds;
+            this.readinessPeriodSeconds = request.readinessPeriodSeconds;
             this.serviceMeshId = request.serviceMeshId;
             this.sidecarProxyAckSloCPUResourceLimit = request.sidecarProxyAckSloCPUResourceLimit;
             this.sidecarProxyAckSloCPUResourceRequest = request.sidecarProxyAckSloCPUResourceRequest;
@@ -550,6 +620,15 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         public Builder concurrency(Integer concurrency) {
             this.putBodyParameter("Concurrency", concurrency);
             this.concurrency = concurrency;
+            return this;
+        }
+
+        /**
+         * EnableCoreDump.
+         */
+        public Builder enableCoreDump(Boolean enableCoreDump) {
+            this.putBodyParameter("EnableCoreDump", enableCoreDump);
+            this.enableCoreDump = enableCoreDump;
             return this;
         }
 
@@ -692,6 +771,15 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
+         * Privileged.
+         */
+        public Builder privileged(Boolean privileged) {
+            this.putBodyParameter("Privileged", privileged);
+            this.privileged = privileged;
+            return this;
+        }
+
+        /**
          * ProxyInitAckSloCPUResourceLimit.
          */
         public Builder proxyInitAckSloCPUResourceLimit(String proxyInitAckSloCPUResourceLimit) {
@@ -764,7 +852,7 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         }
 
         /**
-         * ProxyMetadata.
+         * The environment variables that are added to a sidecar proxy. The environment variables are represented as JSON objects. The keys and values in the JSON objects represent the keys and values added to the environment variables of the sidecar proxy.
          */
         public Builder proxyMetadata(String proxyMetadata) {
             this.putBodyParameter("ProxyMetadata", proxyMetadata);
@@ -778,6 +866,33 @@ public class UpdateNamespaceScopeSidecarConfigRequest extends Request {
         public Builder proxyStatsMatcher(String proxyStatsMatcher) {
             this.putBodyParameter("ProxyStatsMatcher", proxyStatsMatcher);
             this.proxyStatsMatcher = proxyStatsMatcher;
+            return this;
+        }
+
+        /**
+         * ReadinessFailureThreshold.
+         */
+        public Builder readinessFailureThreshold(Integer readinessFailureThreshold) {
+            this.putBodyParameter("ReadinessFailureThreshold", readinessFailureThreshold);
+            this.readinessFailureThreshold = readinessFailureThreshold;
+            return this;
+        }
+
+        /**
+         * ReadinessInitialDelaySeconds.
+         */
+        public Builder readinessInitialDelaySeconds(Integer readinessInitialDelaySeconds) {
+            this.putBodyParameter("ReadinessInitialDelaySeconds", readinessInitialDelaySeconds);
+            this.readinessInitialDelaySeconds = readinessInitialDelaySeconds;
+            return this;
+        }
+
+        /**
+         * ReadinessPeriodSeconds.
+         */
+        public Builder readinessPeriodSeconds(Integer readinessPeriodSeconds) {
+            this.putBodyParameter("ReadinessPeriodSeconds", readinessPeriodSeconds);
+            this.readinessPeriodSeconds = readinessPeriodSeconds;
             return this;
         }
 

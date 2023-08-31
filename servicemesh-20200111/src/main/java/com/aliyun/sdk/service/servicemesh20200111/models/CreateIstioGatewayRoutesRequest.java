@@ -810,7 +810,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private RetryRemoteLocalities retryRemoteLocalities; 
 
             /**
-             * The number of retries allowed for a request.
+             * The number of retries that are allowed for a request.
              */
             public Builder attempts(Integer attempts) {
                 this.attempts = attempts;
@@ -1036,7 +1036,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * The HTTP redirect rule.
+             * The HTTP redirection rule.
              */
             public Builder HTTPRedirect(HTTPRedirect HTTPRedirect) {
                 this.HTTPRedirect = HTTPRedirect;
@@ -1431,7 +1431,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private Integer number; 
 
             /**
-             * Number.
+             * The port number.
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -1504,7 +1504,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * Port.
+             * The port.
              */
             public Builder port(Port port) {
                 this.port = port;
@@ -1698,7 +1698,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             private String routeType; 
 
             /**
-             * Domains.
+             * The requested domain names.
              */
             public Builder domains(java.util.List < String > domains) {
                 this.domains = domains;
@@ -1722,7 +1722,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * The name of the namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1730,7 +1730,7 @@ public class CreateIstioGatewayRoutesRequest extends Request {
             }
 
             /**
-             * RawVSRoute.
+             * A JSON string. This parameter corresponds to the three routing types in virtual services and provides configuration entries for advanced features. The value of this parameter overwrites the configurations in RouteName, RouteType, MatchRequest, and HTTPAdvancedOptions.
              */
             public Builder rawVSRoute(Object rawVSRoute) {
                 this.rawVSRoute = rawVSRoute;

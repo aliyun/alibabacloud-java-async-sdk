@@ -644,11 +644,15 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         @NameInMap("Enabled")
         private Boolean enabled;
 
+        @NameInMap("LogTTL")
+        private Integer logTTL;
+
         @NameInMap("Project")
         private String project;
 
         private ControlPlaneLogInfo(Builder builder) {
             this.enabled = builder.enabled;
+            this.logTTL = builder.logTTL;
             this.project = builder.project;
         }
 
@@ -668,6 +672,13 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return logTTL
+         */
+        public Integer getLogTTL() {
+            return this.logTTL;
+        }
+
+        /**
          * @return project
          */
         public String getProject() {
@@ -676,6 +687,7 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enabled; 
+            private Integer logTTL; 
             private String project; 
 
             /**
@@ -687,6 +699,14 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * LogTTL.
+             */
+            public Builder logTTL(Integer logTTL) {
+                this.logTTL = logTTL;
                 return this;
             }
 
@@ -787,14 +807,22 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
 
     }
     public static class AccessLogExtraConf extends TeaModel {
+        @NameInMap("GatewayEnabled")
+        private Boolean gatewayEnabled;
+
         @NameInMap("GatewayLifecycle")
         private Integer gatewayLifecycle;
+
+        @NameInMap("SidecarEnabled")
+        private Boolean sidecarEnabled;
 
         @NameInMap("SidecarLifecycle")
         private Integer sidecarLifecycle;
 
         private AccessLogExtraConf(Builder builder) {
+            this.gatewayEnabled = builder.gatewayEnabled;
             this.gatewayLifecycle = builder.gatewayLifecycle;
+            this.sidecarEnabled = builder.sidecarEnabled;
             this.sidecarLifecycle = builder.sidecarLifecycle;
         }
 
@@ -807,10 +835,24 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return gatewayEnabled
+         */
+        public Boolean getGatewayEnabled() {
+            return this.gatewayEnabled;
+        }
+
+        /**
          * @return gatewayLifecycle
          */
         public Integer getGatewayLifecycle() {
             return this.gatewayLifecycle;
+        }
+
+        /**
+         * @return sidecarEnabled
+         */
+        public Boolean getSidecarEnabled() {
+            return this.sidecarEnabled;
         }
 
         /**
@@ -821,14 +863,32 @@ public class DescribeServiceMeshDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean gatewayEnabled; 
             private Integer gatewayLifecycle; 
+            private Boolean sidecarEnabled; 
             private Integer sidecarLifecycle; 
+
+            /**
+             * GatewayEnabled.
+             */
+            public Builder gatewayEnabled(Boolean gatewayEnabled) {
+                this.gatewayEnabled = gatewayEnabled;
+                return this;
+            }
 
             /**
              * The retention period for the access logs of the ingress gateway. Unit: day. The logs are collected by using the Log Service. For example, a value of 30 indicates that the logs are retained for 30 days.
              */
             public Builder gatewayLifecycle(Integer gatewayLifecycle) {
                 this.gatewayLifecycle = gatewayLifecycle;
+                return this;
+            }
+
+            /**
+             * SidecarEnabled.
+             */
+            public Builder sidecarEnabled(Boolean sidecarEnabled) {
+                this.sidecarEnabled = sidecarEnabled;
                 return this;
             }
 

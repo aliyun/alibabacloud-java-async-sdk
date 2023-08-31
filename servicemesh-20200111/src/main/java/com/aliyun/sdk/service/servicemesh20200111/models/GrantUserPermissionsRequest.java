@@ -18,7 +18,6 @@ public class GrantUserPermissionsRequest extends Request {
 
     @Body
     @NameInMap("SubAccountUserId")
-    @Validation(required = true)
     private String subAccountUserId;
 
     @Body
