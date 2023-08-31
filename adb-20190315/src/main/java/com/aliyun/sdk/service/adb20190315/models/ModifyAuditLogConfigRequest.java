@@ -141,7 +141,11 @@ public class ModifyAuditLogConfigRequest extends Request {
         } 
 
         /**
-         * AuditLogStatus.
+         * The status of SQL audit. Valid values:
+         * <p>
+         * 
+         * *   **on**: SQL audit is enabled.
+         * *   **off**: SQL audit is disabled.
          */
         public Builder auditLogStatus(String auditLogStatus) {
             this.putQueryParameter("AuditLogStatus", auditLogStatus);
@@ -150,7 +154,7 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -177,7 +181,7 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

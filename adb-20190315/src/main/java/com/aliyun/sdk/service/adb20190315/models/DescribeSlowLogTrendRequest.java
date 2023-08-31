@@ -155,7 +155,7 @@ public class DescribeSlowLogTrendRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -164,7 +164,7 @@ public class DescribeSlowLogTrendRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -173,7 +173,7 @@ public class DescribeSlowLogTrendRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. The maximum time range that can be specified is seven days. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -218,7 +218,7 @@ public class DescribeSlowLogTrendRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

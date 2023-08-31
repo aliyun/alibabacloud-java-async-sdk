@@ -241,7 +241,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -250,7 +253,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -259,7 +262,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time. The specified time range must be less than seven days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -268,7 +274,27 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order in which to sort the retrieved entries by field. Specify this parameter in the JSON format. The value is an ordered array that uses the order of the input array and contains `Field` and `Type`. Example: `[{"Field":"ExecutionStartTime","Type":"Desc"},{"Field":"ScanRows","Type":"Asc"}]`.
+         * <p>
+         * 
+         * *   `Field`: the field that is used to sort the retrieved entries. Valid values:
+         * 
+         *     *   **HostAddress**: the IP address of the client that is used to connect to the database.
+         *     *   **UserName**: the username.
+         *     *   **ExecutionStartTime**: the start time of the query execution.
+         *     *   **QueryTime**: the amount of time consumed to execute the SQL statement.
+         *     *   **PeakMemoryUsage**: the maximum memory usage when the SQL statement is executed.
+         *     *   **ScanRows**: the number of rows to be scanned from a data source in the task.
+         *     *   **ScanSize**: the amount of data to be scanned.
+         *     *   **ScanTime**: the total amount of time consumed to scan data.
+         *     *   **PlanningTime**: the amount of time consumed to generate execution plans.
+         *     *   **WallTime**: the accumulated CPU Time values of all operators in the query on each node.
+         *     *   **ProcessID**: the ID of the process.
+         * 
+         * *   `Type`: the sorting type of the retrieved entries. Valid values:
+         * 
+         *     *   **Desc**: descending order
+         *     *   **Asc**: ascending order
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -295,7 +321,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -304,7 +330,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -313,7 +339,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * ProcessID.
+         * The ID of the process.
          */
         public Builder processID(String processID) {
             this.putQueryParameter("ProcessID", processID);
@@ -322,7 +348,16 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * Range.
+         * The range conditions used to filter specified fields, including `Max` and `Min`. Specify this parameter in the JSON format. Example: `[{"Field":"ScanSize","Min":"1000000","Max":"10000000"},{"Field":"QueryTime","Min":"1000","Max":"10000"}]`.
+         * <p>
+         * 
+         * `Field`: the field to be filtered. Valid values:
+         * 
+         * *   **ScanSize**: the amount of data to be scanned. Unit: KB.
+         * *   **QueryTime**: the amount of time consumed to execute the statement. Unit: milliseconds.
+         * *   **PeakMemoryUsage**: the maximum memory usage when the SQL statement is executed. Unit: KB.
+         * 
+         * >  `Min` indicates the minimum value of the query range (left operand). `Max` indicates the maximum value of the query range (right operand). Max and Min are both of the String type.
          */
         public Builder range(String range) {
             this.putQueryParameter("Range", range);
@@ -349,7 +384,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -358,7 +393,11 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * State.
+         * The state of the query. Valid values:
+         * <p>
+         * 
+         * *   **Successed**: successful
+         * *   **Failed**: failed
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

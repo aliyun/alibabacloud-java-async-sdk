@@ -126,7 +126,10 @@ public class ModifyDBClusterMaintainTimeRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the details of all AnalyticDB for MySQL clusters within a specific region, including cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -135,7 +138,10 @@ public class ModifyDBClusterMaintainTimeRequest extends Request {
         }
 
         /**
-         * MaintainTime.
+         * The maintenance window of the cluster. It is in the hh:mmZ-hh:mmZ format.
+         * <p>
+         * 
+         * >  The maintenance window lasts only 1 hour. Specify the beginning and end of the time range on the hour.
          */
         public Builder maintainTime(String maintainTime) {
             this.putQueryParameter("MaintainTime", maintainTime);

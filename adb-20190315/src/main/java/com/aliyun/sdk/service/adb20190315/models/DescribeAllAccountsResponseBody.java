@@ -50,7 +50,7 @@ public class DescribeAllAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccountList.
+         * The list of accounts.
          */
         public Builder accountList(java.util.List < AccountList> accountList) {
             this.accountList = accountList;
@@ -58,7 +58,7 @@ public class DescribeAllAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeAllAccountsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * User.
+             * The name of the account.
              */
             public Builder user(String user) {
                 this.user = user;

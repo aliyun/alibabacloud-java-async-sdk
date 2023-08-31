@@ -122,6 +122,10 @@ public class CreateDBClusterRequest extends Request {
     private String storageType;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("UsedTime")
     private String usedTime;
 
@@ -165,6 +169,7 @@ public class CreateDBClusterRequest extends Request {
         this.sourceDBInstanceName = builder.sourceDBInstanceName;
         this.storageResource = builder.storageResource;
         this.storageType = builder.storageType;
+        this.tag = builder.tag;
         this.usedTime = builder.usedTime;
         this.VPCId = builder.VPCId;
         this.vSwitchId = builder.vSwitchId;
@@ -367,6 +372,13 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return usedTime
      */
     public String getUsedTime() {
@@ -421,6 +433,7 @@ public class CreateDBClusterRequest extends Request {
         private String sourceDBInstanceName; 
         private String storageResource; 
         private String storageType; 
+        private java.util.List < Tag> tag; 
         private String usedTime; 
         private String VPCId; 
         private String vSwitchId; 
@@ -458,6 +471,7 @@ public class CreateDBClusterRequest extends Request {
             this.sourceDBInstanceName = request.sourceDBInstanceName;
             this.storageResource = request.storageResource;
             this.storageType = request.storageType;
+            this.tag = request.tag;
             this.usedTime = request.usedTime;
             this.VPCId = request.VPCId;
             this.vSwitchId = request.vSwitchId;
@@ -465,7 +479,7 @@ public class CreateDBClusterRequest extends Request {
         } 
 
         /**
-         * BackupSetID.
+         * A reserved parameter.
          */
         public Builder backupSetID(String backupSetID) {
             this.putQueryParameter("BackupSetID", backupSetID);
@@ -474,7 +488,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The value is case-sensitive and can contain a maximum of 64 ASCII characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -483,7 +497,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ComputeResource.
+         * The computing resources of the cluster. This parameter is required if the Mode parameter is set to **Flexible**.
+         * <p>
+         * 
+         * >  You can call the [DescribeAvailableResource](~~190632~~) operation to query the computing resources that are available within a specific region.
          */
         public Builder computeResource(String computeResource) {
             this.putQueryParameter("ComputeResource", computeResource);
@@ -492,7 +509,16 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterCategory.
+         * The edition of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **Cluster**: reserved mode for Cluster Edition
+         * 
+         * <!---->
+         * 
+         * *   **MixedStorage**: elastic mode for Cluster Edition
+         * 
+         * >  If the DBClusterCategory parameter is set to Cluster, you must set the Mode parameter to Reserver. If the DBClusterCategory parameter is set to MixedStorage, you must set the Mode parameter to Flexible. Otherwise, the cluster fails to be created.
          */
         public Builder DBClusterCategory(String DBClusterCategory) {
             this.putQueryParameter("DBClusterCategory", DBClusterCategory);
@@ -501,7 +527,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterClass.
+         * The specification of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **C8**
+         * *   **C32**
+         * 
+         * >  This parameter is required if the Mode parameter is set to Reserver.
          */
         public Builder DBClusterClass(String DBClusterClass) {
             this.putQueryParameter("DBClusterClass", DBClusterClass);
@@ -510,7 +542,11 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterDescription.
+         * The description of the cluster.
+         * <p>
+         * 
+         * *   The description cannot start with `http://` or `https`.
+         * *   The description must be 2 to 256 characters in length.
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -519,7 +555,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterNetworkType.
+         * The network type of the cluster. Set the value to **VPC**.
          */
         public Builder DBClusterNetworkType(String DBClusterNetworkType) {
             this.putQueryParameter("DBClusterNetworkType", DBClusterNetworkType);
@@ -528,7 +564,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterVersion.
+         * The version of the cluster. Set the value to **3.0**.
          */
         public Builder DBClusterVersion(String DBClusterVersion) {
             this.putQueryParameter("DBClusterVersion", DBClusterVersion);
@@ -537,7 +573,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * DBNodeGroupCount.
+         * The number of node groups. Valid values: 1 to 200 (integer).
+         * <p>
+         * 
+         * >  This parameter is required if the Mode parameter is set to Reserver.
          */
         public Builder DBNodeGroupCount(String DBNodeGroupCount) {
             this.putQueryParameter("DBNodeGroupCount", DBNodeGroupCount);
@@ -546,7 +585,14 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * DBNodeStorage.
+         * The storage capacity of the cluster. Unit: GB.
+         * <p>
+         * 
+         * *   Valid values when DBClusterClass is set to C8: 100 to 1000
+         * *   Valid values when DBClusterClass is set to C32: 100 to 8000
+         * 
+         * > * This parameter is required if the Mode parameter is set to Reserver.
+         * > * 1000 The storage capacity less than 1,000 GB increases in 100 GB increments. The storage capacity greater than 1,000 GB increases in 1,000 GB increments.
          */
         public Builder DBNodeStorage(String DBNodeStorage) {
             this.putQueryParameter("DBNodeStorage", DBNodeStorage);
@@ -555,7 +601,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ElasticIOResource.
+         * The number of elastic I/O units (EIUs). For more information, see [Use EIUs to scale up storage resources](~~189505~~).
          */
         public Builder elasticIOResource(String elasticIOResource) {
             this.putQueryParameter("ElasticIOResource", elasticIOResource);
@@ -564,7 +610,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ExecutorCount.
+         * A reserved parameter.
          */
         public Builder executorCount(String executorCount) {
             this.putQueryParameter("ExecutorCount", executorCount);
@@ -573,7 +619,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * Mode.
+         * The mode of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **Reserver**: the reserved mode
+         * *   **Flexible**: the elastic mode
+         * 
+         * >  If you do not specify this parameter, the cluster is in reserved mode.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -600,7 +652,11 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go
+         * *   **Prepaid**: subscription
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -609,7 +665,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription type of the subscription cluster. Valid values:
+         * <p>
+         * 
+         * *   **Year**: subscription on a yearly basis
+         * *   **Month**: subscription on a monthly basis
+         * 
+         * >  This parameter is required if the PayType parameter is set to Prepaid.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -618,7 +680,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -627,7 +692,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the cluster belongs.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -654,7 +719,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * A reserved parameter.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -663,7 +728,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * RestoreType.
+         * A reserved parameter.
          */
         public Builder restoreType(String restoreType) {
             this.putQueryParameter("RestoreType", restoreType);
@@ -672,7 +737,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * SourceDBInstanceName.
+         * A reserved parameter.
          */
         public Builder sourceDBInstanceName(String sourceDBInstanceName) {
             this.putQueryParameter("SourceDBInstanceName", sourceDBInstanceName);
@@ -681,7 +746,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * StorageResource.
+         * A reserved parameter.
          */
         public Builder storageResource(String storageResource) {
             this.putQueryParameter("StorageResource", storageResource);
@@ -690,7 +755,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * StorageType.
+         * A reserved parameter.
          */
         public Builder storageType(String storageType) {
             this.putQueryParameter("StorageType", storageType);
@@ -699,7 +764,23 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The subscription period of the subscription cluster.
+         * <p>
+         * 
+         * *   Valid values when Period is set to Year: 1, 2, 3, and 5 (integer)
+         * *   Valid values when Period is set to Month: 1 to 11 (integer)
+         * 
+         * > * This parameter is required if the PayType parameter is set to Prepaid.
+         * > * Longer subscription periods offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);
@@ -708,7 +789,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * VPCId.
+         * The virtual private cloud (VPC) ID of the cluster.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -717,7 +798,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * VSwitchId.
+         * The vSwitch ID of the cluster.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -726,7 +807,10 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -741,4 +825,65 @@ public class CreateDBClusterRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

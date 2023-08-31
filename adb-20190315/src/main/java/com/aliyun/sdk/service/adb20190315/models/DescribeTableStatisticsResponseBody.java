@@ -98,7 +98,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -106,7 +106,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * Details about table statistics.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on the current page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -262,7 +262,10 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * ColdDataSize.
+             * The total amount of cold data. Unit: byte.
+             * <p>
+             * 
+             * >  The parameter is returned only when the engine version of the cluster is 3.1.3.4 or later.
              */
             public Builder coldDataSize(Long coldDataSize) {
                 this.coldDataSize = coldDataSize;
@@ -270,7 +273,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * DataSize.
+             * The amount of data in the table. Unit: byte.
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -278,7 +281,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * IndexSize.
+             * The amount of data in indexes. Unit: byte.
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
@@ -286,7 +289,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionCount.
+             * The number of partitions.
              */
             public Builder partitionCount(Long partitionCount) {
                 this.partitionCount = partitionCount;
@@ -294,7 +297,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKeyIndexSize.
+             * The amount of data in primary key indexes. Unit: byte.
              */
             public Builder primaryKeyIndexSize(Long primaryKeyIndexSize) {
                 this.primaryKeyIndexSize = primaryKeyIndexSize;
@@ -302,7 +305,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * RowCount.
+             * The number of rows in the table.
              */
             public Builder rowCount(Long rowCount) {
                 this.rowCount = rowCount;
@@ -310,7 +313,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -318,7 +321,7 @@ public class DescribeTableStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

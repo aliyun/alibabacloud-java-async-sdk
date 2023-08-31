@@ -141,7 +141,7 @@ public class UnbindDBResourcePoolWithUserRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -168,7 +168,7 @@ public class UnbindDBResourcePoolWithUserRequest extends Request {
         }
 
         /**
-         * PoolName.
+         * The name of the resource pool. You cannot unbind users from the default resource pool named USER_DEFAULT.
          */
         public Builder poolName(String poolName) {
             this.putQueryParameter("PoolName", poolName);
@@ -177,7 +177,7 @@ public class UnbindDBResourcePoolWithUserRequest extends Request {
         }
 
         /**
-         * PoolUser.
+         * The user bound to the resource pool.
          */
         public Builder poolUser(String poolUser) {
             this.putQueryParameter("PoolUser", poolUser);

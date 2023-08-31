@@ -171,7 +171,10 @@ public class DescribeSQLPatternsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters in a region, including cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -180,7 +183,10 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
+         * <p>
+         * 
+         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -189,7 +195,7 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword that is used for the query.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -198,7 +204,13 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of file titles and error messages. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): simplified Chinese.
+         * *   **en**: English.
+         * *   **ja**: Japanese.
+         * *   **zh-tw**: traditional Chinese.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -207,7 +219,27 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order by which to sort query results. Specify the parameter value in the JSON format. Example: `[{"Field":"AverageQueryTime","Type":"Asc"}]`.
+         * <p>
+         * 
+         * *   `Field` specifies the field by which to sort the query results. Valid values:
+         * 
+         *     *   `PatternCreationTime`: the earliest commit time of the SQL pattern within the time range to query.
+         *     *   `AverageQueryTime`: the average total amount of time consumed by the SQL pattern within the time range to query.
+         *     *   `MaxQueryTime`: the maximum total amount of time consumed by the SQL pattern within the time range to query.
+         *     *   `AverageExecutionTime`: the average execution duration of the SQL pattern within the time range to query.
+         *     *   `MaxExecutionTime`: the maximum execution duration of the SQL pattern within the time range to query.
+         *     *   `AveragePeakMemory`: the average peak memory usage of the SQL pattern within the time range to query.
+         *     *   `MaxPeakMemory`: the maximum peak memory usage of the SQL pattern within the time range to query.
+         *     *   `AverageScanSize`: the average amount of data scanned based on the SQL pattern within the time range to query.
+         *     *   `MaxScanSize`: the maximum amount of data scanned based on the SQL pattern within the time range to query.
+         *     *   `QueryCount`: the number of queries performed in association with the SQL pattern within the time range to query.
+         *     *   `FailedCount`: the number of failed queries performed in association with the SQL pattern within the time range to query.
+         * 
+         * *   `Type` specifies the sorting order. Valid values (case-insensitive):
+         * 
+         *     *   `Asc`: ascending order.
+         *     *   `Desc`: descending order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -216,7 +248,10 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1.
+         * <p>
+         * 
+         * > If you do not specify this parameter, the value **1** is used.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -225,7 +260,14 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * > If you do not specify this parameter, the value **30** is used.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,7 +276,10 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -243,7 +288,14 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   Only data within the last 14 days can be queried. For example, if the current time is 2021-11-22T12:00:00Z, you can query SQL patterns at a point in time as early as 2021-11-09T12:00:00Z.
+         * 
+         * *   The maximum time range that can be specified is 24 hours.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

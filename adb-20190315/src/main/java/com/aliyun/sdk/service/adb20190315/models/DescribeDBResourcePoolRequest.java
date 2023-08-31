@@ -125,7 +125,10 @@ public class DescribeDBResourcePoolRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -152,7 +155,7 @@ public class DescribeDBResourcePoolRequest extends Request {
         }
 
         /**
-         * PoolName.
+         * The name of the resource group.
          */
         public Builder poolName(String poolName) {
             this.putQueryParameter("PoolName", poolName);

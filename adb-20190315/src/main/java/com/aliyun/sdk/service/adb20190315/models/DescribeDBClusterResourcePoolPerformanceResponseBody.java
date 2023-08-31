@@ -86,7 +86,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         private String startTime; 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -94,7 +94,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         }
 
         /**
-         * EndTime.
+         * The end of the time range for monitoring the resource group. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -102,7 +102,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         }
 
         /**
-         * Performances.
+         * The queried monitoring information about the metrics.
          */
         public Builder performances(java.util.List < Performances> performances) {
             this.performances = performances;
@@ -110,7 +110,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range for monitoring the resource group. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -170,7 +170,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             private java.util.List < String > values; 
 
             /**
-             * Name.
+             * The name of the metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +178,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             }
 
             /**
-             * Values.
+             * The value of the metric.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -231,7 +231,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             private java.util.List < ResourcePoolSeries> resourcePoolSeries; 
 
             /**
-             * ResourcePoolName.
+             * The name of the resource group.
              */
             public Builder resourcePoolName(String resourcePoolName) {
                 this.resourcePoolName = resourcePoolName;
@@ -239,7 +239,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             }
 
             /**
-             * ResourcePoolSeries.
+             * The sequential monitoring information about the resource groups.
              */
             public Builder resourcePoolSeries(java.util.List < ResourcePoolSeries> resourcePoolSeries) {
                 this.resourcePoolSeries = resourcePoolSeries;
@@ -304,7 +304,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             private String unit; 
 
             /**
-             * Key.
+             * The metric of the resource group.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -312,7 +312,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             }
 
             /**
-             * ResourcePoolPerformances.
+             * The queried monitoring information about the resource groups.
              */
             public Builder resourcePoolPerformances(java.util.List < ResourcePoolPerformances> resourcePoolPerformances) {
                 this.resourcePoolPerformances = resourcePoolPerformances;
@@ -320,7 +320,7 @@ public class DescribeDBClusterResourcePoolPerformanceResponseBody extends TeaMod
             }
 
             /**
-             * Unit.
+             * The unit of the metric value.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

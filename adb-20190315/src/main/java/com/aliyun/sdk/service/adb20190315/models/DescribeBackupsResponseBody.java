@@ -86,7 +86,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Items.
+         * The queried backup sets.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -230,7 +230,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String DBClusterId; 
 
             /**
-             * BackupEndTime.
+             * The end time of the backup.
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
@@ -238,7 +238,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupId.
+             * The ID of the backup set.
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -246,7 +246,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupMethod.
+             * The backup method. Only Snapshot is returned.
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
@@ -254,7 +254,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupSize.
+             * The backup size. Unit: bytes.
              */
             public Builder backupSize(Integer backupSize) {
                 this.backupSize = backupSize;
@@ -262,7 +262,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupStartTime.
+             * The start time of the backup.
              */
             public Builder backupStartTime(String backupStartTime) {
                 this.backupStartTime = backupStartTime;
@@ -270,7 +270,11 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupType.
+             * The backup type. Valid values:
+             * <p>
+             * 
+             * *   **FullBackup**
+             * *   **IncrementalBackup**
              */
             public Builder backupType(String backupType) {
                 this.backupType = backupType;
@@ -278,7 +282,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;

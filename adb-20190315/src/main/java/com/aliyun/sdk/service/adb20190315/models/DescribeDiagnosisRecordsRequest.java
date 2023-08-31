@@ -68,7 +68,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
 
     @Query
     @NameInMap("PatternId")
-    private Long patternId;
+    private String patternId;
 
     @Query
     @NameInMap("QueryCondition")
@@ -77,6 +77,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
 
     @Query
@@ -222,7 +223,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
     /**
      * @return patternId
      */
-    public Long getPatternId() {
+    public String getPatternId() {
         return this.patternId;
     }
 
@@ -275,7 +276,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         private String order; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private Long patternId; 
+        private String patternId; 
         private String queryCondition; 
         private String regionId; 
         private String resourceGroup; 
@@ -310,7 +311,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         } 
 
         /**
-         * ClientIp.
+         * The source IP address.
+         * <p>
+         * 
+         * > You can call the [DescribeDiagnosisDimensions](~~308210~~) operation to query the resource group, database name, username, and source IP address of the SQL statements to be queried.
          */
         public Builder clientIp(String clientIp) {
             this.putQueryParameter("ClientIp", clientIp);
@@ -319,7 +323,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -328,7 +335,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * Database.
+         * The database on which the SQL statements are executed.
+         * <p>
+         * 
+         * > You can call the [DescribeDiagnosisDimensions](~~308210~~) operation to query the resource group, database name, username, and source IP address of the SQL statements to be queried.
          */
         public Builder database(String database) {
             this.putQueryParameter("Database", database);
@@ -337,7 +347,14 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The end time must be later than the start time.
+         * 
+         * *   The maximum time range that can be specified is 24 hours.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -346,7 +363,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword for the query.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -355,7 +372,13 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language of file titles and error messages. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): simplified Chinese.
+         * *   **en**: English.
+         * *   **ja**: Japanese.
+         * *   **zh-tw**: traditional Chinese.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -364,7 +387,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * MaxPeakMemory.
+         * The maximum peak memory of the SQL statements. Unit: bytes.
          */
         public Builder maxPeakMemory(Long maxPeakMemory) {
             this.putQueryParameter("MaxPeakMemory", maxPeakMemory);
@@ -373,7 +396,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * MaxScanSize.
+         * The maximum scan size of the SQL statements. Unit: bytes.
          */
         public Builder maxScanSize(Long maxScanSize) {
             this.putQueryParameter("MaxScanSize", maxScanSize);
@@ -382,7 +405,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * MinPeakMemory.
+         * The minimum peak memory of the SQL statements. Unit: bytes.
          */
         public Builder minPeakMemory(Long minPeakMemory) {
             this.putQueryParameter("MinPeakMemory", minPeakMemory);
@@ -391,7 +414,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * MinScanSize.
+         * The minimum scan size of the SQL statements. Unit: bytes.
          */
         public Builder minScanSize(Long minScanSize) {
             this.putQueryParameter("MinScanSize", minScanSize);
@@ -400,7 +423,29 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order in which to sort the retrieved SQL statements by field. Specify this value in the JSON format. The value is an ordered array that uses the order of the input array and contains the `Field` and `Type` fields. Example: `[{"Field":"StartTime", "Type": "desc" }]`. Fields:
+         * <p>
+         * 
+         * *   `Field` specifies the field that is used to sort the retrieved SQL statements. Valid values:
+         * 
+         *     *   `StartTime`: the start time of the execution.
+         *     *   `Status`: the execution state.
+         *     *   `UserName`: the username.
+         *     *   `Cost`: the execution duration.
+         *     *   `PeakMemory`: the peak memory.
+         *     *   `ScanSize`: the amount of data to be scanned.
+         *     *   `Database`: the name of the database.
+         *     *   `ClientIp`: the source IP address.
+         *     *   `ResourceGroup`: the name of the resource group.
+         *     *   `QueueTime`: the amount of time that is consumed for queuing.
+         *     *   `OutputRows`: the number of output rows.
+         *     *   `OutputDataSize`: the amount of output data.
+         *     *   `ResourceCostRank`: the execution duration rank of operators that are used in the SQL statements. This field takes effect only when `QueryCondition` is set to `{"Type":"status","Value":"running"}`.
+         * 
+         * *   `Type` specifies the sorting order. Valid values (case-insensitive):
+         * 
+         *     *   `Desc`: descending order.
+         *     *   `Asc`: ascending order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -409,7 +454,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -418,7 +463,7 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values: **30**, **50**, and **100**. Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -427,16 +472,21 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * PatternId.
+         * The ID of the SQL pattern.[](~~321868~~)
          */
-        public Builder patternId(Long patternId) {
+        public Builder patternId(String patternId) {
             this.putQueryParameter("PatternId", patternId);
             this.patternId = patternId;
             return this;
         }
 
         /**
-         * QueryCondition.
+         * The query condition for SQL statements, which can contain the `Type`, `Value`, and `Min` or `Max` fields. Specify the condition in the JSON format. `Type` specifies the query dimension. Valid values for Type: `maxCost`, `status`, and `cost`. `Value`, `Min`, or `Max` specifies the query range for the dimension. Valid values:
+         * <p>
+         * 
+         * *   `{"Type":"maxCost","Value":"100"}`: queries the top 100 most time-consuming SQL statements. Set `Value` to 100.
+         * *   `{"Type":"status","Value":"finished"}`: queries executed SQL statements. You can set `Value` to `running` to query SQL statements that are being executed. You can also set Value to `failed` to query SQL statements that failed to be executed.
+         * *   `{"Type":"cost","Min":"10","Max":"200"}`: queries SQL statements whose execution durations are in the range of 10 to 200 milliseconds. You can also customize the maximum and minimum execution durations.
          */
         public Builder queryCondition(String queryCondition) {
             this.putQueryParameter("QueryCondition", queryCondition);
@@ -445,7 +495,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -454,7 +507,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * ResourceGroup.
+         * The resource group to which the SQL statements belong.
+         * <p>
+         * 
+         * > You can call the [DescribeDiagnosisDimensions](~~308210~~) operation to query the resource group, database name, username, and source IP address of the SQL statements to be queried.
          */
         public Builder resourceGroup(String resourceGroup) {
             this.putQueryParameter("ResourceGroup", resourceGroup);
@@ -463,7 +519,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * <p>
+         * 
+         * > Only data within the last 14 days can be queried.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -472,7 +531,10 @@ public class DescribeDiagnosisRecordsRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The username that is used to execute the SQL statements.
+         * <p>
+         * 
+         * > You can call the [DescribeDiagnosisDimensions](~~308210~~) operation to query the resource group, database name, username, and source IP address of the SQL statements to be queried.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

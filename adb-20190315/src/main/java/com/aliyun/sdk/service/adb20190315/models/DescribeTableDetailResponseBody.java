@@ -62,7 +62,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AvgSize.
+         * The average number of rows in partitions.
          */
         public Builder avgSize(Long avgSize) {
             this.avgSize = avgSize;
@@ -70,7 +70,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * The list of partitions.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -78,7 +78,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             private Long size; 
 
             /**
-             * Id.
+             * The ID of the partition. Only the numeric part of the partition name is returned.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -138,7 +138,7 @@ public class DescribeTableDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The number of rows in the table.
              */
             public Builder size(Long size) {
                 this.size = size;

@@ -122,7 +122,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -130,7 +130,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * The information of tables.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -138,7 +138,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -146,7 +146,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -154,7 +154,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * SuggestMaxRecordsPerPartition.
+         * The recommended maximum number of rows in each list partition.
          */
         public Builder suggestMaxRecordsPerPartition(Long suggestMaxRecordsPerPartition) {
             this.suggestMaxRecordsPerPartition = suggestMaxRecordsPerPartition;
@@ -170,7 +170,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * SuggestMinRecordsPerPartition.
+         * The recommended minimum number of rows in each list partition.
          */
         public Builder suggestMinRecordsPerPartition(Long suggestMinRecordsPerPartition) {
             this.suggestMinRecordsPerPartition = suggestMinRecordsPerPartition;
@@ -178,7 +178,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * PartitionDetail.
+             * Details of the inappropriate partitions.
              */
             public Builder partitionDetail(String partitionDetail) {
                 this.partitionDetail = partitionDetail;
@@ -262,7 +262,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionNumber.
+             * The number of partitions.
              */
             public Builder partitionNumber(Integer partitionNumber) {
                 this.partitionNumber = partitionNumber;
@@ -270,7 +270,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The name of the database.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -278,7 +278,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * The table name.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

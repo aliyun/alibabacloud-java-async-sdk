@@ -74,7 +74,7 @@ public class ModifyDBClusterPayTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -82,7 +82,7 @@ public class ModifyDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The order ID.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -90,7 +90,11 @@ public class ModifyDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go.
+         * *   **Prepaid**: subscription.
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -98,7 +102,7 @@ public class ModifyDBClusterPayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

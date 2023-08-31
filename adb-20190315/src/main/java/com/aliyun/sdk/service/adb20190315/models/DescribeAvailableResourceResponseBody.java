@@ -62,7 +62,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AvailableZoneList.
+         * The resources available in elastic mode.
          */
         public Builder availableZoneList(java.util.List < AvailableZoneList> availableZoneList) {
             this.availableZoneList = availableZoneList;
@@ -70,7 +70,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * The resources available in the supported editions.
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -78,7 +78,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The supported edition. Valid values:
+         * <p>
+         * 
+         * *   **basic**: Basic Edition
+         * *   **cluster**: Cluster Edition
+         * *   **mixed_storage**: elastic mode for Cluster Edition
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -235,7 +240,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private java.util.List < String > supportedStorageResource; 
 
             /**
-             * StorageType.
+             * The maximum number of EIUs.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;
@@ -689,7 +694,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private java.util.List < SupportedInstanceClassList> supportedInstanceClassList; 
 
             /**
-             * Serial.
+             * The step size.
              */
             public Builder serial(String serial) {
                 this.serial = serial;
@@ -697,7 +702,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedFlexibleResource.
+             * The minimum number of EIUs.
              */
             public Builder supportedFlexibleResource(java.util.List < SupportedFlexibleResource> supportedFlexibleResource) {
                 this.supportedFlexibleResource = supportedFlexibleResource;
@@ -758,7 +763,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private java.util.List < SupportedSerialList> supportedSerialList; 
 
             /**
-             * Mode.
+             * N/A
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -766,7 +771,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SupportedSerialList.
+             * The available elastic I/O units (EIUs).
              */
             public Builder supportedSerialList(java.util.List < SupportedSerialList> supportedSerialList) {
                 this.supportedSerialList = supportedSerialList;
@@ -781,14 +786,22 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class AvailableZoneList extends TeaModel {
+        @NameInMap("SupportedComputeResource")
+        private java.util.List < String > supportedComputeResource;
+
         @NameInMap("SupportedMode")
         private java.util.List < SupportedMode> supportedMode;
+
+        @NameInMap("SupportedStorageResource")
+        private java.util.List < String > supportedStorageResource;
 
         @NameInMap("ZoneId")
         private String zoneId;
 
         private AvailableZoneList(Builder builder) {
+            this.supportedComputeResource = builder.supportedComputeResource;
             this.supportedMode = builder.supportedMode;
+            this.supportedStorageResource = builder.supportedStorageResource;
             this.zoneId = builder.zoneId;
         }
 
@@ -801,10 +814,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportedComputeResource
+         */
+        public java.util.List < String > getSupportedComputeResource() {
+            return this.supportedComputeResource;
+        }
+
+        /**
          * @return supportedMode
          */
         public java.util.List < SupportedMode> getSupportedMode() {
             return this.supportedMode;
+        }
+
+        /**
+         * @return supportedStorageResource
+         */
+        public java.util.List < String > getSupportedStorageResource() {
+            return this.supportedStorageResource;
         }
 
         /**
@@ -815,11 +842,21 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > supportedComputeResource; 
             private java.util.List < SupportedMode> supportedMode; 
+            private java.util.List < String > supportedStorageResource; 
             private String zoneId; 
 
             /**
-             * SupportedMode.
+             * SupportedComputeResource.
+             */
+            public Builder supportedComputeResource(java.util.List < String > supportedComputeResource) {
+                this.supportedComputeResource = supportedComputeResource;
+                return this;
+            }
+
+            /**
+             * The available computing resources.
              */
             public Builder supportedMode(java.util.List < SupportedMode> supportedMode) {
                 this.supportedMode = supportedMode;
@@ -827,7 +864,19 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * SupportedStorageResource.
+             */
+            public Builder supportedStorageResource(java.util.List < String > supportedStorageResource) {
+                this.supportedStorageResource = supportedStorageResource;
+                return this;
+            }
+
+            /**
+             * The storage type. Valid values:
+             * <p>
+             * 
+             * *   **hdd**
+             * *   **ssd**
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

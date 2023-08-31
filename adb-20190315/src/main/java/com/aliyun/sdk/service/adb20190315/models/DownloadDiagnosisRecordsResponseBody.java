@@ -50,7 +50,7 @@ public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DownloadId.
+         * The ID of the download task.
          */
         public Builder downloadId(Integer downloadId) {
             this.downloadId = downloadId;
@@ -58,7 +58,7 @@ public class DownloadDiagnosisRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

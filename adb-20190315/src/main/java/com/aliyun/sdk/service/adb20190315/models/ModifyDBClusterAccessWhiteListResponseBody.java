@@ -62,7 +62,7 @@ public class ModifyDBClusterAccessWhiteListResponseBody extends TeaModel {
         private Integer taskId; 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,7 +70,7 @@ public class ModifyDBClusterAccessWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ModifyDBClusterAccessWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;

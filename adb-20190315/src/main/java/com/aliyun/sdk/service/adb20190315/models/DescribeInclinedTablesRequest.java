@@ -170,7 +170,7 @@ public class DescribeInclinedTablesRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -179,7 +179,31 @@ public class DescribeInclinedTablesRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order in which queries are sorted in the JSON format based on the specified fields. Specify the fields used to sort the queries and the order type.
+         * <p>
+         * 
+         * Example:
+         * 
+         * ```
+         * 
+         * [
+         * 
+         *     {
+         * 
+         *         "Field":"Name",
+         * 
+         *         "Type":"Asc"
+         * 
+         *     }
+         * 
+         * ]
+         * ```
+         * 
+         * In the preceding code, Field indicates the field used to sort queries. Set the value of Field to Name.
+         * 
+         * Type indicates the order type. Valid values of Type: Desc and Asc. A value of Desc indicates a descending order. A value of Asc indicates an ascending order.
+         * 
+         * Both fields are not case-sensitive.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -206,7 +230,7 @@ public class DescribeInclinedTablesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -215,7 +239,14 @@ public class DescribeInclinedTablesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   30
+         * *   50
+         * *   100
+         * 
+         * Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -242,7 +273,11 @@ public class DescribeInclinedTablesRequest extends Request {
         }
 
         /**
-         * TableType.
+         * The type of the table. Valid values:
+         * <p>
+         * 
+         * *   FactTable
+         * *   DimensionTable
          */
         public Builder tableType(String tableType) {
             this.putQueryParameter("TableType", tableType);

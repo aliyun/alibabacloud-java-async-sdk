@@ -141,7 +141,7 @@ public class DescribeSQLPlanTaskRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -168,7 +168,7 @@ public class DescribeSQLPlanTaskRequest extends Request {
         }
 
         /**
-         * ProcessId.
+         * The ID of the task.
          */
         public Builder processId(String processId) {
             this.putQueryParameter("ProcessId", processId);
@@ -195,7 +195,7 @@ public class DescribeSQLPlanTaskRequest extends Request {
         }
 
         /**
-         * StageId.
+         * The stage of the task.
          */
         public Builder stageId(String stageId) {
             this.putQueryParameter("StageId", stageId);

@@ -126,7 +126,7 @@ public class DeleteElasticPlanRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -135,7 +135,7 @@ public class DeleteElasticPlanRequest extends Request {
         }
 
         /**
-         * ElasticPlanName.
+         * The name of the elastic plan.
          */
         public Builder elasticPlanName(String elasticPlanName) {
             this.putQueryParameter("ElasticPlanName", elasticPlanName);

@@ -155,7 +155,11 @@ public class ModifyClusterConnectionStringRequest extends Request {
         } 
 
         /**
-         * ConnectionStringPrefix.
+         * The prefix of public endpoints.
+         * <p>
+         * 
+         * *   The prefix can contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.
+         * *   The prefix can be up to 30 characters in length.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -164,7 +168,10 @@ public class ModifyClusterConnectionStringRequest extends Request {
         }
 
         /**
-         * CurrentConnectionString.
+         * The current public endpoint of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusterNetInfo](~~143384~~) operation to query the public endpoint of the cluster.
          */
         public Builder currentConnectionString(String currentConnectionString) {
             this.putQueryParameter("CurrentConnectionString", currentConnectionString);
@@ -173,7 +180,10 @@ public class ModifyClusterConnectionStringRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -200,7 +210,7 @@ public class ModifyClusterConnectionStringRequest extends Request {
         }
 
         /**
-         * Port.
+         * The port number. Set the value to **3306**.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);

@@ -111,7 +111,10 @@ public class DescribeConnectionCountRecordsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the details of all AnalyticDB for MySQL clusters within a specific region, including cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

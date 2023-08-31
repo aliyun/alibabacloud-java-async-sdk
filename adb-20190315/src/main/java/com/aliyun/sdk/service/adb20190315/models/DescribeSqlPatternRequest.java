@@ -155,7 +155,10 @@ public class DescribeSqlPatternRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the details of all AnalyticDB for MySQL clusters within a specified region, including cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -164,7 +167,33 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order by which to sort query results. Specify the parameter value in the JSON string format. Example: `[{"Field":"Pattern","Type":"Asc"}]`.
+         * <p>
+         * 
+         * *   `Field` indicates the field that is used to sort the retrieved entries. Valid values:
+         * 
+         *     *   `Pattern` : the SQL pattern.
+         *     *   `AccessIP`: the IP address of the client.
+         *     *   `User`: the username.
+         *     *   `QueryCount`: the total number of queries.
+         *     *   `AvgPeakMemory`: the average peak memory. Unit: KB.
+         *     *   `MaxPeakMemory`: the maximum peak memory. Unit: KB.
+         *     *   `AvgCpuTime`: the average CPU time. Unit: milliseconds.
+         *     *   `MaxCpuTime`: the maximum CPU time. Unit: milliseconds.
+         *     *   `AvgStageCount`: the average number of stages.
+         *     *   `MaxStageCount`: the maximum number of stages.
+         *     *   `AvgTaskCount`: the average number of tasks.
+         *     *   `MaxTaskCount`: the maximum number of tasks.
+         *     *   `AvgScanSize`: the average scan size. Unit: KB.
+         *     *   `MaxScanSize`: the maximum scan size. Unit: KB.
+         * 
+         * *   `Type` indicates the sorting method. Valid values:
+         * 
+         *     *   `Asc`: ascending order.
+         *     *   `Desc`: descending order.
+         * 
+         * > *   If this parameter is not specified, query results are sorted in ascending order of `Pattern`.
+         * > *   If you need to sort query results by `AccessIP`, you must set the `Type` parameter to `accessip`. If you need to sort query results by `User`, you must leave the `Type` parameter empty or set it to `user`.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -173,7 +202,7 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -182,7 +211,7 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. The value must be a positive integer. Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -191,7 +220,10 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the regions and zones supported by AnalyticDB for MySQL, including region IDs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -200,7 +232,10 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * SqlPattern.
+         * The keyword contained in the SQL pattern.
+         * <p>
+         * 
+         * >  If this parameter is not specified, all SQL patterns within an AnalyticDB for MySQL cluster for a date specified by `StartTime` are returned.
          */
         public Builder sqlPattern(String sqlPattern) {
             this.putQueryParameter("SqlPattern", sqlPattern);
@@ -209,7 +244,10 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The date to query. Specify the time in the *yyyy-MM-dd* format. The time must be in UTC.
+         * <p>
+         * 
+         * >  Only data for the last 30 days can be queried.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -218,7 +256,13 @@ public class DescribeSqlPatternRequest extends Request {
         }
 
         /**
-         * Type.
+         * The dimension by which to aggregate the SQL pattern. Valid values:
+         * <p>
+         * 
+         * *   `user`: the user.
+         * *   `accessip`: the IP address of the client.
+         * 
+         * >  If this parameter is not specified, the SQL pattern is aggregated by `user`.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

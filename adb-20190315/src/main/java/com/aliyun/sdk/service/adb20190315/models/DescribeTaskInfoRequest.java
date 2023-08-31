@@ -26,6 +26,10 @@ public class DescribeTaskInfoRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -43,6 +47,7 @@ public class DescribeTaskInfoRequest extends Request {
         this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.taskId = builder.taskId;
@@ -83,6 +88,13 @@ public class DescribeTaskInfoRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -107,6 +119,7 @@ public class DescribeTaskInfoRequest extends Request {
         private String DBClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Integer taskId; 
@@ -120,13 +133,14 @@ public class DescribeTaskInfoRequest extends Request {
             this.DBClusterId = request.DBClusterId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.taskId = request.taskId;
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -153,6 +167,15 @@ public class DescribeTaskInfoRequest extends Request {
         }
 
         /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -171,7 +194,7 @@ public class DescribeTaskInfoRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(Integer taskId) {
             this.putQueryParameter("TaskId", taskId);

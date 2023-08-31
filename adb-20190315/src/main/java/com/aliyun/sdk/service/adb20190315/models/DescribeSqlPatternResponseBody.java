@@ -86,7 +86,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Items.
+         * Details about the SQL pattern.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned on the current page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -338,7 +338,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * AccessIP.
+             * The IP address of the client.
+             * <p>
+             * 
+             * >  This parameter is returned only when the `Type` parameter is set to `accessip`.
              */
             public Builder accessIP(String accessIP) {
                 this.accessIP = accessIP;
@@ -346,7 +349,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * AvgCpuTime.
+             * The average CPU time. Unit: milliseconds.
              */
             public Builder avgCpuTime(String avgCpuTime) {
                 this.avgCpuTime = avgCpuTime;
@@ -354,7 +357,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * AvgPeakMemory.
+             * The average peak memory. Unit: KB.
              */
             public Builder avgPeakMemory(String avgPeakMemory) {
                 this.avgPeakMemory = avgPeakMemory;
@@ -362,7 +365,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * AvgScanSize.
+             * The average scan size. Unit: KB.
              */
             public Builder avgScanSize(String avgScanSize) {
                 this.avgScanSize = avgScanSize;
@@ -370,7 +373,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * AvgStageCount.
+             * The average number of stages.
              */
             public Builder avgStageCount(String avgStageCount) {
                 this.avgStageCount = avgStageCount;
@@ -378,7 +381,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * AvgTaskCount.
+             * The average number of tasks.
              */
             public Builder avgTaskCount(String avgTaskCount) {
                 this.avgTaskCount = avgTaskCount;
@@ -386,7 +389,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The ID of the cluster.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -394,7 +397,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCpuTime.
+             * The maximum CPU time. Unit: milliseconds.
              */
             public Builder maxCpuTime(String maxCpuTime) {
                 this.maxCpuTime = maxCpuTime;
@@ -402,7 +405,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * MaxPeakMemory.
+             * The maximum peak memory. Unit: KB.
              */
             public Builder maxPeakMemory(String maxPeakMemory) {
                 this.maxPeakMemory = maxPeakMemory;
@@ -410,7 +413,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * MaxScanSize.
+             * The maximum scan size. Unit: KB.
              */
             public Builder maxScanSize(String maxScanSize) {
                 this.maxScanSize = maxScanSize;
@@ -418,7 +421,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * MaxStageCount.
+             * The maximum number of stages.
              */
             public Builder maxStageCount(String maxStageCount) {
                 this.maxStageCount = maxStageCount;
@@ -426,7 +429,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTaskCount.
+             * The maximum number of tasks.
              */
             public Builder maxTaskCount(String maxTaskCount) {
                 this.maxTaskCount = maxTaskCount;
@@ -434,7 +437,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * Pattern.
+             * The SQL pattern.
              */
             public Builder pattern(String pattern) {
                 this.pattern = pattern;
@@ -442,7 +445,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * QueryCount.
+             * The total number of queries.
              */
             public Builder queryCount(String queryCount) {
                 this.queryCount = queryCount;
@@ -450,7 +453,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * ReportDate.
+             * The query date.
              */
             public Builder reportDate(String reportDate) {
                 this.reportDate = reportDate;
@@ -458,7 +461,10 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The username.
+             * <p>
+             * 
+             * >  This parameter is returned only when the `Type` parameter is left empty or set to `user`.
              */
             public Builder user(String user) {
                 this.user = user;

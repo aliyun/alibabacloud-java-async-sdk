@@ -211,7 +211,7 @@ public class DescribeProcessListRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -220,7 +220,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword in an SQL statement, which is used to filter queries. Set the value to **SELECT**.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -229,7 +229,11 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order in which queries are sorted based on the specified fields. Specify this parameter as an ordered JSON array in the `[{"Field":"Time","Type":"Desc" },{ "Field":"User", "Type":"Asc" }]` format.
+         * <p>
+         * 
+         * *   **Field** specifies the field used to sort queries. Valid values: Time, User, Host, and DB.
+         * *   **Type** specifies the sorting sequence. Valid values: **Desc** and **Asc**.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -256,7 +260,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -265,7 +269,12 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 30. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -292,7 +301,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * RunningTime.
+         * The execution duration used to filter queries. Queries that take a longer time than the specified execution duration are displayed. Unit: seconds.
          */
         public Builder runningTime(Integer runningTime) {
             this.putQueryParameter("RunningTime", runningTime);
@@ -301,7 +310,13 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * ShowFull.
+         * Specifies whether to show a complete SQL statement. Valid values:
+         * <p>
+         * 
+         * *   **True**: shows a complete SQL statement.
+         * *   **False**: shows only the first 100 characters of an SQL statement.
+         * 
+         * >  The default value is False.
          */
         public Builder showFull(Boolean showFull) {
             this.putQueryParameter("ShowFull", showFull);
@@ -310,7 +325,7 @@ public class DescribeProcessListRequest extends Request {
         }
 
         /**
-         * User.
+         * The name of the user used to filter queries.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

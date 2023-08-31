@@ -110,7 +110,14 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language used for the region and zone names specified by the `LocalName` parameter. Valid values:
+         * <p>
+         * 
+         * *   **zh-CN**: Chinese
+         * *   **en-US**: English
+         * *   **ja**: Japanese
+         * 
+         * >  If this parameter is left empty, Chinese is used.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);

@@ -38,9 +38,17 @@ public class ModifyDBClusterRequest extends Request {
     private String DBNodeStorage;
 
     @Query
+    @NameInMap("DiskPerformanceLevel")
+    private String diskPerformanceLevel;
+
+    @Query
     @NameInMap("ElasticIOResource")
     @Validation(maximum = 200)
     private Integer elasticIOResource;
+
+    @Query
+    @NameInMap("ElasticIOResourceSize")
+    private String elasticIOResourceSize;
 
     @Query
     @NameInMap("ExecutorCount")
@@ -86,7 +94,9 @@ public class ModifyDBClusterRequest extends Request {
         this.DBNodeClass = builder.DBNodeClass;
         this.DBNodeGroupCount = builder.DBNodeGroupCount;
         this.DBNodeStorage = builder.DBNodeStorage;
+        this.diskPerformanceLevel = builder.diskPerformanceLevel;
         this.elasticIOResource = builder.elasticIOResource;
+        this.elasticIOResourceSize = builder.elasticIOResourceSize;
         this.executorCount = builder.executorCount;
         this.mode = builder.mode;
         this.modifyType = builder.modifyType;
@@ -154,10 +164,24 @@ public class ModifyDBClusterRequest extends Request {
     }
 
     /**
+     * @return diskPerformanceLevel
+     */
+    public String getDiskPerformanceLevel() {
+        return this.diskPerformanceLevel;
+    }
+
+    /**
      * @return elasticIOResource
      */
     public Integer getElasticIOResource() {
         return this.elasticIOResource;
+    }
+
+    /**
+     * @return elasticIOResourceSize
+     */
+    public String getElasticIOResourceSize() {
+        return this.elasticIOResourceSize;
     }
 
     /**
@@ -230,7 +254,9 @@ public class ModifyDBClusterRequest extends Request {
         private String DBNodeClass; 
         private String DBNodeGroupCount; 
         private String DBNodeStorage; 
+        private String diskPerformanceLevel; 
         private Integer elasticIOResource; 
+        private String elasticIOResourceSize; 
         private String executorCount; 
         private String mode; 
         private String modifyType; 
@@ -253,7 +279,9 @@ public class ModifyDBClusterRequest extends Request {
             this.DBNodeClass = request.DBNodeClass;
             this.DBNodeGroupCount = request.DBNodeGroupCount;
             this.DBNodeStorage = request.DBNodeStorage;
+            this.diskPerformanceLevel = request.diskPerformanceLevel;
             this.elasticIOResource = request.elasticIOResource;
+            this.elasticIOResourceSize = request.elasticIOResourceSize;
             this.executorCount = request.executorCount;
             this.mode = request.mode;
             this.modifyType = request.modifyType;
@@ -266,7 +294,10 @@ public class ModifyDBClusterRequest extends Request {
         } 
 
         /**
-         * ComputeResource.
+         * The computing resources of the cluster. You can call the [DescribeAvailableResource](~~190632~~) operation to query the computing resources that are available within a region.
+         * <p>
+         * 
+         * > This parameter must be specified when Mode is set to Flexible.
          */
         public Builder computeResource(String computeResource) {
             this.putQueryParameter("ComputeResource", computeResource);
@@ -275,7 +306,13 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterCategory.
+         * The edition of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **Cluster**: reserved mode for Cluster Edition.
+         * *   **MixedStorage**: elastic mode for Cluster Edition.
+         * 
+         * > If you set DBClusterCategory to Cluster, you must set Mode to Reserver. If you set DBClusterCategory to MixedStorage, you must set Mode to Flexible. Otherwise, you fail to change the specifications of the cluster.
          */
         public Builder DBClusterCategory(String DBClusterCategory) {
             this.putQueryParameter("DBClusterCategory", DBClusterCategory);
@@ -284,7 +321,7 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -293,7 +330,13 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DBNodeClass.
+         * The node specifications of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **C8**
+         * *   **C32**
+         * 
+         * > This parameter must be specified when Mode is set to Reserver.
          */
         public Builder DBNodeClass(String DBNodeClass) {
             this.putQueryParameter("DBNodeClass", DBNodeClass);
@@ -302,7 +345,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DBNodeGroupCount.
+         * The number of node groups. Valid values: 1 to 200.
+         * <p>
+         * 
+         * > This parameter must be specified when Mode is set to Reserver.
          */
         public Builder DBNodeGroupCount(String DBNodeGroupCount) {
             this.putQueryParameter("DBNodeGroupCount", DBNodeGroupCount);
@@ -311,7 +357,17 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DBNodeStorage.
+         * The storage capacity per node. Unit: GB.
+         * <p>
+         * 
+         * *   Valid values when DBClusterClass is set to C8: 100 to 2000.
+         * *   Valid values when DBClusterClass is set to C32: 100 to 8000.
+         * 
+         * > 
+         * 
+         * *   This parameter must be specified when Mode is set to Reserver.
+         * 
+         * *   The storage capacity less than 1,000 GB increases in 100 GB increments. The storage capacity greater than 1,000 GB increases in 1,000 GB increments.
          */
         public Builder DBNodeStorage(String DBNodeStorage) {
             this.putQueryParameter("DBNodeStorage", DBNodeStorage);
@@ -320,7 +376,20 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * ElasticIOResource.
+         * The enhanced SSD (ESSD) performance level of the cluster. Valid values: PL1 PL2 PL3
+         */
+        public Builder diskPerformanceLevel(String diskPerformanceLevel) {
+            this.putQueryParameter("DiskPerformanceLevel", diskPerformanceLevel);
+            this.diskPerformanceLevel = diskPerformanceLevel;
+            return this;
+        }
+
+        /**
+         * The number of EIUs. The number of EIUs that you can purchase varies based on the single-node EIU specifications.
+         * <p>
+         * 
+         * *   If the single-node EIU specifications are 8 cores and 64 GB, you can purchase up to 32 EIUs.
+         * *   If the single-node EIU specifications are 12 cores and 96 GB, you can purchase up to 16 EIUs.
          */
         public Builder elasticIOResource(Integer elasticIOResource) {
             this.putQueryParameter("ElasticIOResource", elasticIOResource);
@@ -329,7 +398,28 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * ExecutorCount.
+         * The single-node specifications of an elastic I/O unit (EIU). Valid values:
+         * <p>
+         * 
+         * *   **8Core64GB**: If you set the parameter to **8Core64GB**, the specifications of an EIU are 24 cores and 192 GB memory.
+         * *   **12Core96GB**: If you set the parameter to **12Core96GB**, the specifications of an EIU are 36 cores and 288 GB memory.
+         * 
+         * > This parameter is available only when the cluster meets the following conditions:
+         * 
+         * *   The cluster is in elastic mode.
+         * 
+         * *   If the cluster resides in the China (Guangzhou), China (Shenzhen), China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), or China (Zhangjiakou) region, the cluster has 16 cores and 64 GB memory or higher specifications.
+         * 
+         * *   If the cluster resides in another region, the cluster has 32 cores and 128 GB memory or higher specifications.
+         */
+        public Builder elasticIOResourceSize(String elasticIOResourceSize) {
+            this.putQueryParameter("ElasticIOResourceSize", elasticIOResourceSize);
+            this.elasticIOResourceSize = elasticIOResourceSize;
+            return this;
+        }
+
+        /**
+         * N/A
          */
         public Builder executorCount(String executorCount) {
             this.putQueryParameter("ExecutorCount", executorCount);
@@ -338,7 +428,11 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * Mode.
+         * The mode of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **Reserver**: the reserved mode.
+         * *   **Flexible**: the elastic mode.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -347,7 +441,11 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * ModifyType.
+         * The change type. Valid values:
+         * <p>
+         * 
+         * *   **Upgrade**
+         * *   **Downgrade**
          */
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);
@@ -374,7 +472,7 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -401,7 +499,7 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * StorageResource.
+         * N/A
          */
         public Builder storageResource(String storageResource) {
             this.putQueryParameter("StorageResource", storageResource);

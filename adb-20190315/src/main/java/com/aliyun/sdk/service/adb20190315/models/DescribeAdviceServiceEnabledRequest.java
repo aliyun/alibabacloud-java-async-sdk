@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDBClusterHealthReportRequest} extends {@link RequestModel}
+ * {@link DescribeAdviceServiceEnabledRequest} extends {@link RequestModel}
  *
- * <p>DescribeDBClusterHealthReportRequest</p>
+ * <p>DescribeAdviceServiceEnabledRequest</p>
  */
-public class DescribeDBClusterHealthReportRequest extends Request {
+public class DescribeAdviceServiceEnabledRequest extends Request {
     @Query
     @NameInMap("DBClusterId")
     @Validation(required = true)
@@ -22,23 +22,17 @@ public class DescribeDBClusterHealthReportRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
-    private String startTime;
-
-    private DescribeDBClusterHealthReportRequest(Builder builder) {
+    private DescribeAdviceServiceEnabledRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.regionId = builder.regionId;
-        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeDBClusterHealthReportRequest create() {
+    public static DescribeAdviceServiceEnabledRequest create() {
         return builder().build();
     }
 
@@ -61,31 +55,25 @@ public class DescribeDBClusterHealthReportRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return startTime
-     */
-    public String getStartTime() {
-        return this.startTime;
-    }
-
-    public static final class Builder extends Request.Builder<DescribeDBClusterHealthReportRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeAdviceServiceEnabledRequest, Builder> {
         private String DBClusterId; 
         private String regionId; 
-        private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDBClusterHealthReportRequest request) {
+        private Builder(DescribeAdviceServiceEnabledRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.regionId = request.regionId;
-            this.startTime = request.startTime;
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of Data Warehouse Edition (V3.0) clusters.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -94,7 +82,10 @@ public class DescribeDBClusterHealthReportRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -102,18 +93,9 @@ public class DescribeDBClusterHealthReportRequest extends Request {
             return this;
         }
 
-        /**
-         * StartTime.
-         */
-        public Builder startTime(String startTime) {
-            this.putQueryParameter("StartTime", startTime);
-            this.startTime = startTime;
-            return this;
-        }
-
         @Override
-        public DescribeDBClusterHealthReportRequest build() {
-            return new DescribeDBClusterHealthReportRequest(this);
+        public DescribeAdviceServiceEnabledRequest build() {
+            return new DescribeAdviceServiceEnabledRequest(this);
         } 
 
     } 

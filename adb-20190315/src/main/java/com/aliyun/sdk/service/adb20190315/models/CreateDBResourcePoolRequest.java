@@ -155,7 +155,10 @@ public class CreateDBResourcePoolRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -164,7 +167,11 @@ public class CreateDBResourcePoolRequest extends Request {
         }
 
         /**
-         * NodeNum.
+         * The number of nodes. Default value: 0.
+         * <p>
+         * 
+         * *   Each node provides 16 cores and 64 GB memory.
+         * *   The total amount of resources provided by the nodes (number of nodes × 16 cores, number of nodes × 64 GB memory) cannot exceed the total amount of resources in the cluster. Set this parameter to a proper value.
          */
         public Builder nodeNum(Integer nodeNum) {
             this.putQueryParameter("NodeNum", nodeNum);
@@ -191,7 +198,12 @@ public class CreateDBResourcePoolRequest extends Request {
         }
 
         /**
-         * PoolName.
+         * The name of the resource group.
+         * <p>
+         * 
+         * *   The name can be up to 255 characters in length.
+         * *   The name must start with a letter or a digit.
+         * *   The name can contain letters, digits, hyphens (\_), and underscores (\_).
          */
         public Builder poolName(String poolName) {
             this.putQueryParameter("PoolName", poolName);
@@ -200,7 +212,14 @@ public class CreateDBResourcePoolRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * The mode in which to execute SQL statements.
+         * <p>
+         * 
+         * *   **batch**
+         * 
+         * *   **interactive**
+         * 
+         * > For more information, see [Query execution modes](~~189502~~).
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);

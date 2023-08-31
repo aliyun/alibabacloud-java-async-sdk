@@ -35,6 +35,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
     private Long ownerId;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -49,6 +53,7 @@ public class ModifyLogBackupPolicyRequest extends Request {
         this.logBackupRetentionPeriod = builder.logBackupRetentionPeriod;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -102,6 +107,13 @@ public class ModifyLogBackupPolicyRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -121,6 +133,7 @@ public class ModifyLogBackupPolicyRequest extends Request {
         private String logBackupRetentionPeriod; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -135,12 +148,13 @@ public class ModifyLogBackupPolicyRequest extends Request {
             this.logBackupRetentionPeriod = request.logBackupRetentionPeriod;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -149,7 +163,11 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * EnableBackupLog.
+         * Specifies whether to enable log backup. Valid values:
+         * <p>
+         * 
+         * *   **Enable**
+         * *   **Disable**
          */
         public Builder enableBackupLog(String enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);
@@ -158,7 +176,10 @@ public class ModifyLogBackupPolicyRequest extends Request {
         }
 
         /**
-         * LogBackupRetentionPeriod.
+         * The number of days for which to retain data backup files. Valid values: 7 to 730.
+         * <p>
+         * 
+         * >  If you leave this parameter empty, the default value 7 is used.
          */
         public Builder logBackupRetentionPeriod(String logBackupRetentionPeriod) {
             this.putQueryParameter("LogBackupRetentionPeriod", logBackupRetentionPeriod);
@@ -181,6 +202,15 @@ public class ModifyLogBackupPolicyRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

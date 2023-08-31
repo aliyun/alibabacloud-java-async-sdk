@@ -86,7 +86,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * The list of events.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -314,7 +314,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * CreatedTime.
+             * The time when the O\&M event was created. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -322,7 +322,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The ID of the cluster involved in the O\&M event.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -330,7 +330,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * DBType.
+             * The database engine.
              */
             public Builder DBType(String DBType) {
                 this.DBType = DBType;
@@ -338,7 +338,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * DBVersion.
+             * The version of the database engine.
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -346,7 +346,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * Deadline.
+             * The deadline before which the event can be executed. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder deadline(String deadline) {
                 this.deadline = deadline;
@@ -354,7 +354,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the event.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -362,7 +362,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The point in time at which the O\&M event was switched. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -370,7 +370,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * PrepareInterval.
+             * The preparation time that is required before the pending O\&M event can be switched. The time is in the `HH:mm:ss` format.
              */
             public Builder prepareInterval(String prepareInterval) {
                 this.prepareInterval = prepareInterval;
@@ -378,7 +378,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The ID of the region where the O\&M event occurs.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -386,7 +386,10 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * ResultInfo.
+             * The execution result of the O\&M event.
+             * <p>
+             * 
+             * >  This parameter is valid only when `Status` is set to **FAILED** or **CANCEL**.
              */
             public Builder resultInfo(String resultInfo) {
                 this.resultInfo = resultInfo;
@@ -394,7 +397,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the task was executed in the backend. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -402,7 +405,20 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the event.
+             * <p>
+             * 
+             * *   If you set `IsHistory` to **0**, the state of the pending O\&M event is returned. Valid values:
+             * 
+             *     *   **WAITING_MODIFY**: The start time of the O\&M event is waiting to be set.
+             *     *   **WAITING**: The O\&M event is waiting to be processed.
+             *     *   **PROCESSING**: The O\&M event is being processed. The switching time of an event in this state cannot be changed.
+             * 
+             * *   If you set `IsHistory` to **1**, the state of the historical O\&M event is returned. Valid values:
+             * 
+             *     *   **SUCCESS**: The event ended and the execution succeeded.
+             *     *   **FAILED**: The event ended but the execution failed.
+             *     *   **CANCEL**: The event was canceled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -410,7 +426,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchTime.
+             * The time when the pending event was switched. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder switchTime(String switchTime) {
                 this.switchTime = switchTime;
@@ -418,7 +434,7 @@ public class DescribeMaintenanceActionResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the O&M event.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

@@ -50,7 +50,7 @@ public class ModifyAuditLogConfigResponseBody extends TeaModel {
         private Boolean updateSucceed; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class ModifyAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateSucceed.
+         * Indicates whether the status of SQL audit is updated. Valid values:
+         * <p>
+         * 
+         * *   **true**: The status of SQL audit is updated.
+         * *   **false**: The status of SQL audit is not updated.
          */
         public Builder updateSucceed(Boolean updateSucceed) {
             this.updateSucceed = updateSucceed;

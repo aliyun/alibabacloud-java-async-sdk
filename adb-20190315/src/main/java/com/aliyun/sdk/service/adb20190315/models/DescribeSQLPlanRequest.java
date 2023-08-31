@@ -126,7 +126,10 @@ public class DescribeSQLPlanRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query details about all AnalyticDB for MySQL clusters in a specific region, including cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -153,7 +156,10 @@ public class DescribeSQLPlanRequest extends Request {
         }
 
         /**
-         * ProcessId.
+         * The ID of the task.
+         * <p>
+         * 
+         * >  You can call the [DescribeSlowLogRecords](~~143382~~) operation to query the task ID of the SQL statement.
          */
         public Builder processId(String processId) {
             this.putQueryParameter("ProcessId", processId);

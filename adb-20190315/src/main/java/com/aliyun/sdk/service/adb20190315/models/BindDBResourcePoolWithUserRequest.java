@@ -141,7 +141,10 @@ public class BindDBResourcePoolWithUserRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -168,7 +171,7 @@ public class BindDBResourcePoolWithUserRequest extends Request {
         }
 
         /**
-         * PoolName.
+         * The name of the resource group.
          */
         public Builder poolName(String poolName) {
             this.putQueryParameter("PoolName", poolName);
@@ -177,7 +180,7 @@ public class BindDBResourcePoolWithUserRequest extends Request {
         }
 
         /**
-         * PoolUser.
+         * The database account with which to associate the resource group. It can be a standard account or a privileged account.
          */
         public Builder poolUser(String poolUser) {
             this.putQueryParameter("PoolUser", poolUser);

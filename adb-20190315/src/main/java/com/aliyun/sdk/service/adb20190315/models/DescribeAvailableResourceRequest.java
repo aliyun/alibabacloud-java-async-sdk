@@ -21,6 +21,10 @@ public class DescribeAvailableResourceRequest extends Request {
     private String chargeType;
 
     @Query
+    @NameInMap("DBClusterVersion")
+    private String DBClusterVersion;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -49,6 +53,7 @@ public class DescribeAvailableResourceRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.chargeType = builder.chargeType;
+        this.DBClusterVersion = builder.DBClusterVersion;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -82,6 +87,13 @@ public class DescribeAvailableResourceRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return DBClusterVersion
+     */
+    public String getDBClusterVersion() {
+        return this.DBClusterVersion;
     }
 
     /**
@@ -129,6 +141,7 @@ public class DescribeAvailableResourceRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAvailableResourceRequest, Builder> {
         private String acceptLanguage; 
         private String chargeType; 
+        private String DBClusterVersion; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -144,6 +157,7 @@ public class DescribeAvailableResourceRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.chargeType = request.chargeType;
+            this.DBClusterVersion = request.DBClusterVersion;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -153,7 +167,11 @@ public class DescribeAvailableResourceRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The supported mode. Valid values:
+         * <p>
+         * 
+         * *   **flexible**: elastic mode
+         * *   **reserver**: reserved mode
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -162,11 +180,20 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The resources available in the supported modes.
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * DBClusterVersion.
+         */
+        public Builder DBClusterVersion(String DBClusterVersion) {
+            this.putQueryParameter("DBClusterVersion", DBClusterVersion);
+            this.DBClusterVersion = DBClusterVersion;
             return this;
         }
 
@@ -189,7 +216,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The resources available in the zones.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -216,7 +243,7 @@ public class DescribeAvailableResourceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The ID of the zone.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

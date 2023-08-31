@@ -174,7 +174,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,7 +183,14 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the cluster to which to add a tag. If you want to add a tag to multiple clusters, click **Add** and enter the cluster IDs.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   You can add tags to up to 50 clusters at a time.
+         * 
+         * *   You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -210,7 +217,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the cluster. Set the value to **ALIYUN::ADB::CLUSTER**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -219,7 +226,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags to add to the cluster.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -273,7 +280,10 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. If you want to add multiple tags to a single cluster at a time, click **Add** and enter tag keys and values.
+             * <p>
+             * 
+             * > You can add up to 20 tags at a time.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -281,7 +291,10 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag. If you want to add multiple tags to a single cluster at a time, click **Add** and enter tag keys and values.
+             * <p>
+             * 
+             * > You can add up to 20 tags at a time.
              */
             public Builder value(String value) {
                 this.value = value;

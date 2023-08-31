@@ -25,6 +25,10 @@ public class DescribeDBClustersRequest extends Request {
     private String DBClusterStatus;
 
     @Query
+    @NameInMap("DBVersion")
+    private String DBVersion;
+
+    @Query
     @NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -66,6 +70,7 @@ public class DescribeDBClustersRequest extends Request {
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterIds = builder.DBClusterIds;
         this.DBClusterStatus = builder.DBClusterStatus;
+        this.DBVersion = builder.DBVersion;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
@@ -109,6 +114,13 @@ public class DescribeDBClustersRequest extends Request {
      */
     public String getDBClusterStatus() {
         return this.DBClusterStatus;
+    }
+
+    /**
+     * @return DBVersion
+     */
+    public String getDBVersion() {
+        return this.DBVersion;
     }
 
     /**
@@ -178,6 +190,7 @@ public class DescribeDBClustersRequest extends Request {
         private String DBClusterDescription; 
         private String DBClusterIds; 
         private String DBClusterStatus; 
+        private String DBVersion; 
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
@@ -197,6 +210,7 @@ public class DescribeDBClustersRequest extends Request {
             this.DBClusterDescription = request.DBClusterDescription;
             this.DBClusterIds = request.DBClusterIds;
             this.DBClusterStatus = request.DBClusterStatus;
+            this.DBVersion = request.DBVersion;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
@@ -209,7 +223,11 @@ public class DescribeDBClustersRequest extends Request {
         } 
 
         /**
-         * DBClusterDescription.
+         * The description of the cluster.
+         * <p>
+         * 
+         * *   The description cannot start with `http://` or `https://`.
+         * *   The description must be 2 to 256 characters in length
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -218,7 +236,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * DBClusterIds.
+         * The cluster IDs.
+         * <p>
+         * 
+         * > You can specify the ID of one cluster or IDs of more clusters within the preceding region.
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -227,11 +248,30 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * DBClusterStatus.
+         * The state of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **Preparing**: The cluster is being prepared.
+         * *   **Creating**: The cluster is being created.
+         * *   **Restoring**: The cluster is being restored from a backup.
+         * *   **Running**: The cluster is running.
+         * *   **Deleting**: The cluster is being deleted.
+         * *   **ClassChanging**: The cluster specifications are being changed.
+         * *   **NetAddressCreating**: A network connection is being created.
+         * *   **NetAddressDeleting**: A network connection is being deleted.
          */
         public Builder DBClusterStatus(String DBClusterStatus) {
             this.putQueryParameter("DBClusterStatus", DBClusterStatus);
             this.DBClusterStatus = DBClusterStatus;
+            return this;
+        }
+
+        /**
+         * The version of the cluster. Set the value to **3.0**.
+         */
+        public Builder DBVersion(String DBVersion) {
+            this.putQueryParameter("DBVersion", DBVersion);
+            this.DBVersion = DBVersion;
             return this;
         }
 
@@ -254,7 +294,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -263,7 +303,12 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values:
+         * <p>
+         * 
+         * *   **30** (default)
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -272,7 +317,10 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the clusters.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -281,7 +329,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -308,7 +356,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags that are added to the cluster.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -362,7 +410,10 @@ public class DescribeDBClustersRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N that is added to the cluster. You can use tags to filter clusters. A tag is a key-value pair. You can specify up to 20 tags in one request. The letter N specifies the sequence number of each key-value pair and must be unique. The values of N must be consecutive integers that start from 1. Each value of `Tag.N.Key` is paired with a value of `Tag.N.Value`.
+             * <p>
+             * 
+             * > The tag key can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -370,7 +421,10 @@ public class DescribeDBClustersRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N that is added to the cluster. You can use tags to filter clusters. A tag is a key-value pair. You can specify up to 20 tags in one request. The letter N specifies the sequence number of each key-value pair and must be unique. The values of N must be consecutive integers that start from 1. Each value of `Tag.N.Key` is paired with a value of `Tag.N.Value`.
+             * <p>
+             * 
+             * > The tag key can be up to 64 characters in length and cannot start with `aliyun`, `acs:`, `http://`, or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -86,7 +86,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -94,7 +94,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end time of the query. The end time must be later than the start time. The maximum time range that can be specified is seven days. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -102,7 +102,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * The information about the trend of slow query logs.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -110,7 +110,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -170,7 +170,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * Name.
+             * The name of the performance metric.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +178,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The values of the performance metric.
              */
             public Builder values(String values) {
                 this.values = values;
@@ -284,7 +284,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * Key.
+             * The trend of slow query logs. The value is AnalyticDB_SlowLogTrend.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -292,7 +292,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Series.
+             * The performance metrics.
              */
             public Builder series(Series series) {
                 this.series = series;
@@ -300,7 +300,7 @@ public class DescribeSlowLogTrendResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of performance metrics.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

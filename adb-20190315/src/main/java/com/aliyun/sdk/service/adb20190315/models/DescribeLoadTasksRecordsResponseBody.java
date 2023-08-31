@@ -98,7 +98,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -106,7 +106,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * LoadTasksRecords.
+         * The queried asynchronous import and export tasks.
          */
         public Builder loadTasksRecords(java.util.List < LoadTasksRecords> loadTasksRecords) {
             this.loadTasksRecords = loadTasksRecords;
@@ -114,7 +114,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -262,7 +262,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The start time of the task. The time is accurate to milliseconds. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ss.SSSZ* format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -270,7 +270,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * The name of the database that is involved in the import or export task.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -278,7 +278,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * JobName.
+             * The task ID.
              */
             public Builder jobName(String jobName) {
                 this.jobName = jobName;
@@ -286,7 +286,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessID.
+             * The process ID.
              */
             public Builder processID(String processID) {
                 this.processID = processID;
@@ -294,7 +294,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessRows.
+             * The number of rows that are processed in the asynchronous import or export task.
              */
             public Builder processRows(Long processRows) {
                 this.processRows = processRows;
@@ -302,7 +302,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Sql.
+             * The SQL statement that is used in the asynchronous import or export task.
              */
             public Builder sql(String sql) {
                 this.sql = sql;
@@ -310,7 +310,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The state of the task.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -318,7 +318,7 @@ public class DescribeLoadTasksRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the task state was updated. The time is accurate to milliseconds. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ss.SSSZ* format. The time is displayed in UTC.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

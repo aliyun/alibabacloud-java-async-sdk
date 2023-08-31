@@ -99,7 +99,7 @@ public class ModifyDBClusterPayTypeRequest extends Request {
         } 
 
         /**
-         * DbClusterId.
+         * The cluster ID.
          */
         public Builder dbClusterId(String dbClusterId) {
             this.putQueryParameter("DbClusterId", dbClusterId);
@@ -108,7 +108,11 @@ public class ModifyDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * PayType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   **Postpaid**: pay-as-you-go.
+         * *   **Prepaid**: subscription.
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -117,7 +121,13 @@ public class ModifyDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription type of the subscription cluster. Valid values:
+         * <p>
+         * 
+         * *   **Year**: subscription on a yearly basis.
+         * *   **Month**: subscription on a monthly basis.
+         * 
+         * > This parameter must be specified when PayType is set to Prepaid.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -126,7 +136,17 @@ public class ModifyDBClusterPayTypeRequest extends Request {
         }
 
         /**
-         * UsedTime.
+         * The subscription duration of the subscription cluster.
+         * <p>
+         * 
+         * *   Valid values when Period is set to Year: 1, 2, 3, and 5 (integer).
+         * *   Valid values when Period is set to Month: 1 to 11 (integer).
+         * 
+         * > 
+         * 
+         * *   This parameter must be specified when PayType is set to Prepaid.
+         * 
+         * *   Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.
          */
         public Builder usedTime(String usedTime) {
             this.putQueryParameter("UsedTime", usedTime);

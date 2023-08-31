@@ -168,7 +168,10 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -177,7 +180,14 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The renewal duration. Default value: **1**.
+         * <p>
+         * 
+         * *   Valid values when PeriodUnit is set to **Month**: 1 to 11. Data type: INTEGER.
+         * 
+         * *   Valid values when PeriodUnit is set to **Year**: 1, 2, 3, and 5. Data type: INTEGER.
+         * 
+         * > Longer subscription periods offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -204,7 +214,11 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the renewal duration. Default value: **Month**. Valid values:
+         * <p>
+         * 
+         * *   **Year**
+         * *   **Month**
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
@@ -213,7 +227,10 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -222,7 +239,12 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RenewalStatus.
+         * The renewal status of the cluster. Valid values:
+         * <p>
+         * 
+         * *   **AutoRenewal**: The cluster is automatically renewed.
+         * *   **Normal**: The cluster is manually renewed.
+         * *   **NotRenewal**: The cluster is not renewed.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);

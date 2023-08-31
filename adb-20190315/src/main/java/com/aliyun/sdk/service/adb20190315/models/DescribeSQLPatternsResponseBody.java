@@ -86,7 +86,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +94,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +102,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * PatternDetails.
+         * The queried SQL patterns.
          */
         public Builder patternDetails(java.util.List < PatternDetails> patternDetails) {
             this.patternDetails = patternDetails;
@@ -110,7 +110,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -350,7 +350,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * AccessIp.
+             * The IP address of the SQL client that commits the SQL pattern.
              */
             public Builder accessIp(String accessIp) {
                 this.accessIp = accessIp;
@@ -358,7 +358,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * AverageExecutionTime.
+             * The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.
              */
             public Builder averageExecutionTime(Double averageExecutionTime) {
                 this.averageExecutionTime = averageExecutionTime;
@@ -366,7 +366,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * AveragePeakMemory.
+             * The average peak memory usage of the SQL pattern within the query time range. Unit: bytes.
              */
             public Builder averagePeakMemory(Double averagePeakMemory) {
                 this.averagePeakMemory = averagePeakMemory;
@@ -374,7 +374,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * AverageQueryTime.
+             * The average total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.
              */
             public Builder averageQueryTime(Double averageQueryTime) {
                 this.averageQueryTime = averageQueryTime;
@@ -382,7 +382,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * AverageScanSize.
+             * The average amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.
              */
             public Builder averageScanSize(Double averageScanSize) {
                 this.averageScanSize = averageScanSize;
@@ -390,7 +390,13 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * Blockable.
+             * Indicates whether the execution of the SQL pattern can be blocked. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             * 
+             * > Only SELECT and INSERT statements can be blocked.
              */
             public Builder blockable(Boolean blockable) {
                 this.blockable = blockable;
@@ -398,7 +404,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * FailedCount.
+             * The number of failed queries executed in association with the SQL pattern within the query time range.
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -406,7 +412,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxExecutionTime.
+             * The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.
              */
             public Builder maxExecutionTime(Long maxExecutionTime) {
                 this.maxExecutionTime = maxExecutionTime;
@@ -414,7 +420,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxPeakMemory.
+             * The maximum peak memory usage of the SQL pattern within the query time range. Unit: bytes.
              */
             public Builder maxPeakMemory(Long maxPeakMemory) {
                 this.maxPeakMemory = maxPeakMemory;
@@ -422,7 +428,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQueryTime.
+             * The maximum total amount of time consumed by the SQL pattern within the query time range. Unit: milliseconds.
              */
             public Builder maxQueryTime(Long maxQueryTime) {
                 this.maxQueryTime = maxQueryTime;
@@ -430,7 +436,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxScanSize.
+             * The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: bytes.
              */
             public Builder maxScanSize(Long maxScanSize) {
                 this.maxScanSize = maxScanSize;
@@ -438,7 +444,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * PatternCreationTime.
+             * The earliest commit time of the SQL pattern within the query time range. Unit: milliseconds.
              */
             public Builder patternCreationTime(String patternCreationTime) {
                 this.patternCreationTime = patternCreationTime;
@@ -446,7 +452,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * PatternId.
+             * The ID of the SQL pattern.
              */
             public Builder patternId(String patternId) {
                 this.patternId = patternId;
@@ -454,7 +460,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryCount.
+             * The number of queries executed in association with the SQL pattern within the query time range.
              */
             public Builder queryCount(Long queryCount) {
                 this.queryCount = queryCount;
@@ -462,7 +468,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLPattern.
+             * The statement of the SQL pattern.
              */
             public Builder SQLPattern(String SQLPattern) {
                 this.SQLPattern = SQLPattern;
@@ -470,7 +476,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * Tables.
+             * The tables scanned based on the SQL pattern.
              */
             public Builder tables(String tables) {
                 this.tables = tables;
@@ -478,7 +484,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The database username that is used to commit the SQL pattern.
              */
             public Builder user(String user) {
                 this.user = user;

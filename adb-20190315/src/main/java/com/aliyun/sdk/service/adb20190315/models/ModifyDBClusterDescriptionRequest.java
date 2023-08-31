@@ -126,7 +126,11 @@ public class ModifyDBClusterDescriptionRequest extends Request {
         } 
 
         /**
-         * DBClusterDescription.
+         * The description of the cluster.
+         * <p>
+         * 
+         * *   The description cannot start with `http://` or `https`.
+         * *   The description must be 2 to 256 characters in length.
          */
         public Builder DBClusterDescription(String DBClusterDescription) {
             this.putQueryParameter("DBClusterDescription", DBClusterDescription);
@@ -135,7 +139,7 @@ public class ModifyDBClusterDescriptionRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

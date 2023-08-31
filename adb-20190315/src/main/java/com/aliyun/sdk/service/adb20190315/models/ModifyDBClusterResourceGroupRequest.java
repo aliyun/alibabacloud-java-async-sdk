@@ -126,7 +126,7 @@ public class ModifyDBClusterResourceGroupRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -135,7 +135,7 @@ public class ModifyDBClusterResourceGroupRequest extends Request {
         }
 
         /**
-         * NewResourceGroupId.
+         * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181#task-2398293~~ "This topic describes how to view basic information of a resource group, including the resource group ID, resource group name, and resource group display name.").
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);

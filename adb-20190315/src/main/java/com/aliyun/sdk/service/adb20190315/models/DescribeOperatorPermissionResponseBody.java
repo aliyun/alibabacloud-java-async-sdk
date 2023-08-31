@@ -86,7 +86,7 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CreatedTime.
+         * The time when the authorization takes effect.
          */
         public Builder createdTime(String createdTime) {
             this.createdTime = createdTime;
@@ -94,7 +94,7 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -102,7 +102,7 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * ExpiredTime.
+         * The time when the authorization expires.
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
@@ -110,7 +110,7 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * Privileges.
+         * The type of authorization. Valid values: Control | Data.
          */
         public Builder privileges(String privileges) {
             this.privileges = privileges;
@@ -118,7 +118,7 @@ public class DescribeOperatorPermissionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

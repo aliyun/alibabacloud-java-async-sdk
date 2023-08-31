@@ -50,7 +50,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
         private java.util.List < TaskList> taskList; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TaskList.
+         * The list of tasks.
          */
         public Builder taskList(java.util.List < TaskList> taskList) {
             this.taskList = taskList;
@@ -230,7 +230,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             private Integer taskId; 
 
             /**
-             * ElapsedTime.
+             * The time elapsed from when the task was created to when the task was complete. Unit: milliseconds.
              */
             public Builder elapsedTime(Long elapsedTime) {
                 this.elapsedTime = elapsedTime;
@@ -238,7 +238,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InputRows.
+             * The number of input rows in the task.
              */
             public Builder inputRows(Long inputRows) {
                 this.inputRows = inputRows;
@@ -246,7 +246,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InputSize.
+             * The amount of input data in the task. Unit: bytes.
              */
             public Builder inputSize(Long inputSize) {
                 this.inputSize = inputSize;
@@ -254,7 +254,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorCost.
+             * The total amount of time consumed by operators in the task on a specific node. This parameter can be used to determine whether long tails occur in computing. Unit: milliseconds.
              */
             public Builder operatorCost(Long operatorCost) {
                 this.operatorCost = operatorCost;
@@ -262,7 +262,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * OutputRows.
+             * The number of output rows in the task.
              */
             public Builder outputRows(Long outputRows) {
                 this.outputRows = outputRows;
@@ -270,7 +270,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * OutputSize.
+             * The amount of output data in the task. Unit: bytes.
              */
             public Builder outputSize(Long outputSize) {
                 this.outputSize = outputSize;
@@ -278,7 +278,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PeakMemory.
+             * The peak memory of the task on a specific node. Unit: bytes.
              */
             public Builder peakMemory(Long peakMemory) {
                 this.peakMemory = peakMemory;
@@ -286,7 +286,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ScanCost.
+             * The time consumed to scan data from a data source in the task. Unit: milliseconds.
              */
             public Builder scanCost(Long scanCost) {
                 this.scanCost = scanCost;
@@ -294,7 +294,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ScanRows.
+             * The number of rows scanned from a data source in the task.
              */
             public Builder scanRows(Long scanRows) {
                 this.scanRows = scanRows;
@@ -302,7 +302,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ScanSize.
+             * The amount of data scanned from a data source in the task. Unit: bytes.
              */
             public Builder scanSize(Long scanSize) {
                 this.scanSize = scanSize;
@@ -310,7 +310,13 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The final execution status of the task. Valid values:
+             * <p>
+             * 
+             * *   FINISHED
+             * *   CANCELED
+             * *   ABORTED
+             * *   FAILED
              */
             public Builder state(String state) {
                 this.state = state;
@@ -318,7 +324,7 @@ public class DescribeSQLPlanTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

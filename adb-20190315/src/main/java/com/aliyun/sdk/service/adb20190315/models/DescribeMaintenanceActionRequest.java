@@ -183,7 +183,13 @@ public class DescribeMaintenanceActionRequest extends Request {
         } 
 
         /**
-         * IsHistory.
+         * Specifies whether to return the details of pending or historical O\&M events. Valid values:
+         * <p>
+         * 
+         * *   **0**: returns the details of pending O\&M event.
+         * *   **1**: returns the details of historical O\&M event.
+         * 
+         * If you do not specify this parameter, the details of pending O\&M event are returned.
          */
         public Builder isHistory(Integer isHistory) {
             this.putQueryParameter("IsHistory", isHistory);
@@ -210,7 +216,7 @@ public class DescribeMaintenanceActionRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -219,7 +225,7 @@ public class DescribeMaintenanceActionRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -228,7 +234,11 @@ public class DescribeMaintenanceActionRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region where the O\&M event occurs. Valid values:
+         * <p>
+         * 
+         * *   The ID of the region where the O\&M event occurs. Example: `cn-hangzhou`. You can call the [DescribeRegions](~~143074~~) operation to query the regions and zones supported by AnalyticDB for MySQL, including the region IDs.
+         * *   You can also set Region to `all` to view all the O\&M events in all regions. If `Region` is set to `all`, `TaskType` must be set to `all`.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -237,7 +247,10 @@ public class DescribeMaintenanceActionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region where the O\&M event occurs.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the regions and zones supported by AnalyticDB for MySQL, including the region IDs.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -264,7 +277,11 @@ public class DescribeMaintenanceActionRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the O\&M event. Valid values:
+         * <p>
+         * 
+         * *   **rds_apsaradb_upgrade**: indicates database software upgrades.
+         * *   **all**: indicates all the O\&M events in all regions within the current account. If `Region` is set to `all`, `TaskType` must be set to `all`.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

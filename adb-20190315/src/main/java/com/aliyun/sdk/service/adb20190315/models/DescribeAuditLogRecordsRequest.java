@@ -298,7 +298,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -307,7 +310,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database on which you want to execute the SQL statement.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -316,7 +319,14 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The end time must be later than the start time.
+         * 
+         * *   The maximum time range that can be specified is 24 hours.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -325,7 +335,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * HostAddress.
+         * The IP address and port number of the client that is used to execute the SQL statement.
          */
         public Builder hostAddress(String hostAddress) {
             this.putQueryParameter("HostAddress", hostAddress);
@@ -334,7 +344,23 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order in which specified fields are sorted. Specify this parameter as an ordered JSON array that consists of the Field and Type fields.
+         * <p>
+         * 
+         * *   Field specifies the field that is used to sort the retrieved entries. Valid values:
+         * 
+         *     *   HostAddress: the IP address of the client that is used to connect to the database.
+         *     *   Succeed: specifies whether the SQL statement is successfully executed.
+         *     *   TotalTime: the total amount of time that is consumed to execute the SQL statement.
+         *     *   DBName: the name of the database on which the SQL statement is executed.
+         *     *   SQLType: the type of the SQL statement.
+         *     *   User: the username that is used to execute the SQL statement.
+         *     *   ExecuteTime: the time to start executing the SQL statement.
+         * 
+         * *   Type specifies the sorting order. Valid values:
+         * 
+         *     *   Desc: descending order.
+         *     *   Asc: ascending order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -343,7 +369,11 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The sorting order of the retrieved entries. Valid values:
+         * <p>
+         * 
+         * *   **asc**: sorts the retrieved entries by time in ascending order.
+         * *   **desc**: sorts the retrieved entries by time in descending order.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -370,7 +400,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value is an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -379,7 +409,15 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   **10**
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * > If you do not specify this parameter, the value 10 is used.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -388,7 +426,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * QueryKeyword.
+         * The keywords that are included in the SQL statement to query.
          */
         public Builder queryKeyword(String queryKeyword) {
             this.putQueryParameter("QueryKeyword", queryKeyword);
@@ -397,7 +435,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -424,7 +465,18 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * SqlType.
+         * The type of the SQL statement. Valid values:
+         * <p>
+         * 
+         * *   **DELETE**
+         * *   **SELECT**
+         * *   **UPDATE**
+         * *   **INSERT_INTO_SELECT**
+         * *   **ALTER**
+         * *   **DROP**
+         * *   **INSERT**
+         * 
+         * > You can query only a single type of SQL statements at a time. If this parameter is left empty, the **SELECT** SQL statements are queried.
          */
         public Builder sqlType(String sqlType) {
             this.putQueryParameter("SqlType", sqlType);
@@ -433,7 +485,10 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.
+         * <p>
+         * 
+         * > SQL audit logs can be queried only when SQL audit is enabled. Only SQL audit logs within the last 30 days can be queried. If SQL audit was disabled and re-enabled, only SQL audit logs from the time when SQL audit was re-enabled can be queried.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -442,7 +497,11 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * Succeed.
+         * Specifies whether the execution of the SQL statement succeeds. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder succeed(String succeed) {
             this.putQueryParameter("Succeed", succeed);
@@ -451,7 +510,7 @@ public class DescribeAuditLogRecordsRequest extends Request {
         }
 
         /**
-         * User.
+         * The name of the user who executed the SQL statement.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

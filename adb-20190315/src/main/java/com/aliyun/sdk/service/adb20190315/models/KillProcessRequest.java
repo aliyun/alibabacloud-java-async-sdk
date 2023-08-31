@@ -125,7 +125,7 @@ public class KillProcessRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -152,7 +152,7 @@ public class KillProcessRequest extends Request {
         }
 
         /**
-         * ProcessId.
+         * The unique ID of the process. You can call the [DescribeProcessList](~~190092~~) operation to obtain the ID.
          */
         public Builder processId(String processId) {
             this.putQueryParameter("ProcessId", processId);

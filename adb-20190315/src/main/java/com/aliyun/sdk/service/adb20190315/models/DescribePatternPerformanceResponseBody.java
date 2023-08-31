@@ -74,7 +74,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * EndTime.
+         * The end time of the query. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -82,7 +82,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Performances.
+         * The queried performance metrics.
          */
         public Builder performances(java.util.List < Performances> performances) {
             this.performances = performances;
@@ -90,7 +90,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The start time of the query. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -150,7 +150,30 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
             private java.util.List < String > values; 
 
             /**
-             * Name.
+             * The name of the performance metric value. Valid values:
+             * <p>
+             * 
+             * *   When the `Key` parameter is set to `AnalyticDB_PatternQueryCount`, `pattern_query_count` is returned, which indicates the number of executions of the SQL statements in association with the SQL pattern.
+             * 
+             * *   When the `Key` parameter is set to `AnalyticDB_PatternQueryTime`, the following values are returned:
+             * 
+             *     *   `average_query_time`, which indicates the average total amount of time consumed by the SQL statements in association with the SQL pattern.
+             *     *   `max_query_time`, which indicates the maximum total amount of time consumed by the SQL statements in association with the SQL pattern.
+             * 
+             * *   When the `Key` parameter is set to `AnalyticDB_PatternExecutionTime`, the following values are returned:
+             * 
+             *     *   `average_execution_time`, which indicates the average execution duration of the SQL statements in association with the SQL pattern.
+             *     *   `max_execution_time`, which indicates the maximum execution duration of the SQL statements in association with the SQL pattern.
+             * 
+             * *   When the `Key` parameter is set to `AnalyticDB_PatternPeakMemory`, the following values are returned:
+             * 
+             *     *   `average_peak_memory`, which indicates the average peak memory usage of the SQL statements in association with the SQL pattern.
+             *     *   `max_peak_memory`, which indicates the maximum peak memory usage of the SQL statements in association with the SQL pattern.
+             * 
+             * *   When the `Key` parameter is set `AnalyticDB_PatternScanSize`, the following values are returned:
+             * 
+             *     *   `average_scan_size`, which indicates the average amount of data scanned by the SQL statements in association with the SQL pattern.
+             *     *   `max_scan_size`, which indicates the maximum amount of data scanned by the SQL statements in association with the SQL pattern.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +181,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The queried performance metrics.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -223,7 +246,14 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * Key.
+             * The performance metric that was queried. Valid values:
+             * <p>
+             * 
+             * *   **AnalyticDB_PatternQueryCount**: the total number of queries executed in association with the SQL pattern.
+             * *   **AnalyticDB_PatternQueryTime**: the total amount of time consumed by the queries executed in association with the SQL pattern.
+             * *   **AnalyticDB_PatternExecutionTime**: the total execution duration of the queries executed in association with the SQL pattern.
+             * *   **AnalyticDB_PatternPeakMemory**: the peak memory usage of the queries executed in association with the SQL pattern.
+             * *   **AnalyticDB_PatternScanSize**: the amount of data scanned in the queries executed in association with the SQL pattern.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -231,7 +261,7 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Series.
+             * The queried performance metrics.
              */
             public Builder series(java.util.List < Series> series) {
                 this.series = series;
@@ -239,7 +269,13 @@ public class DescribePatternPerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * Unit.
+             * The unit of the performance metric. Valid values:
+             * <p>
+             * 
+             * *   When the performance metric is related to the query duration (the `Key` value is `AnalyticDB_PatternQueryTime` or `AnalyticDB_PatternExecutionTime`), **ms** is returned.
+             * *   When the performance metric is related to the memory usage (the `Key` value is `AnalyticDB_PatternPeakMemory`), **MB** is returned.
+             * *   When the performance metric is related to the amount of data scanned (the `Key` value is `AnalyticDB_PatternScanSize`), **MB** is returned.
+             * *   When the performance metric is related to the number of queries (the `Key` value is `AnalyticDB_PatternQueryCount`), this parameter is empty.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

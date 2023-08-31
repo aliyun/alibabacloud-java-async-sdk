@@ -125,7 +125,12 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         } 
 
         /**
-         * ConnectionStringPrefix.
+         * The prefix of the public endpoint.
+         * <p>
+         * 
+         * *   The prefix must contain lowercase letters, digits, and hyphens (-). It must start with a lowercase letter.
+         * *   The prefix can be up to 30 characters in length.
+         * *   By default, the cluster name is used as the prefix of the public endpoint.
          */
         public Builder connectionStringPrefix(String connectionStringPrefix) {
             this.putQueryParameter("ConnectionStringPrefix", connectionStringPrefix);
@@ -134,7 +139,10 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

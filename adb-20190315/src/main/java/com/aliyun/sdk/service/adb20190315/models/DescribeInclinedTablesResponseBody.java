@@ -86,7 +86,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Items.
+         * The monitoring information about tables.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +206,11 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * IsIncline.
+             * Indicates whether data is skewed in partitions of the table. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder isIncline(Boolean isIncline) {
                 this.isIncline = isIncline;
@@ -214,7 +218,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the table.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -222,7 +226,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Schema.
+             * The name of the database.
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -230,7 +234,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The number of rows in the table.
              */
             public Builder size(Long size) {
                 this.size = size;
@@ -238,7 +242,11 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the table. Valid values:
+             * <p>
+             * 
+             * *   **FactTable**
+             * *   **DimensionTable**
              */
             public Builder type(String type) {
                 this.type = type;

@@ -155,7 +155,10 @@ public class ModifyDBResourcePoolRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -164,7 +167,17 @@ public class ModifyDBResourcePoolRequest extends Request {
         }
 
         /**
-         * NodeNum.
+         * The number of nodes.
+         * <p>
+         * 
+         * *   Each node provides 16 cores and 64 GB memory.
+         * *   The amount of resources that you want to add to or remove from the cluster cannot exceed the total amount of resources in the cluster.
+         * 
+         * > 
+         * 
+         * *   If you do not specify this parameter, the original value is retained.
+         * 
+         * *   You must specify at least one of the QueryType and NodeNum parameters.
          */
         public Builder nodeNum(Integer nodeNum) {
             this.putQueryParameter("NodeNum", nodeNum);
@@ -191,7 +204,7 @@ public class ModifyDBResourcePoolRequest extends Request {
         }
 
         /**
-         * PoolName.
+         * The name of the resource group.
          */
         public Builder poolName(String poolName) {
             this.putQueryParameter("PoolName", poolName);
@@ -200,7 +213,13 @@ public class ModifyDBResourcePoolRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * The mode in which SQL statements are executed. Valid values:
+         * <p>
+         * 
+         * *   **batch**
+         * *   **interactive**
+         * 
+         * > If you do not specify this parameter, the original value is retained.
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);

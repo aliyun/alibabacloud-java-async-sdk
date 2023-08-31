@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeAutoRenewAttributeRequest extends Request {
     @Query
     @NameInMap("DBClusterIds")
+    @Validation(required = true)
     private String DBClusterIds;
 
     @Query
@@ -167,7 +168,10 @@ public class DescribeAutoRenewAttributeRequest extends Request {
         } 
 
         /**
-         * DBClusterIds.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * Separate multiple clusters with commas (,).
          */
         public Builder DBClusterIds(String DBClusterIds) {
             this.putQueryParameter("DBClusterIds", DBClusterIds);
@@ -194,7 +198,10 @@ public class DescribeAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than 0.
+         * <p>
+         * 
+         * Default value: 1
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -203,7 +210,14 @@ public class DescribeAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values:
+         * <p>
+         * 
+         * *   30
+         * *   50
+         * *   100
+         * 
+         * Default value: 30
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -212,7 +226,7 @@ public class DescribeAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the cluster.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -221,7 +235,7 @@ public class DescribeAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

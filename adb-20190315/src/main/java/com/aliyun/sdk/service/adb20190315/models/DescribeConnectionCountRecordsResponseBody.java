@@ -74,7 +74,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         private java.util.List < UserRecords> userRecords; 
 
         /**
-         * AccessIpRecords.
+         * Details of the client IP addresses.
          */
         public Builder accessIpRecords(java.util.List < AccessIpRecords> accessIpRecords) {
             this.accessIpRecords = accessIpRecords;
@@ -82,7 +82,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -90,7 +90,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * UserRecords.
+         * Details of the users.
          */
         public Builder userRecords(java.util.List < UserRecords> userRecords) {
             this.userRecords = userRecords;
@@ -150,7 +150,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
             private Long count; 
 
             /**
-             * AccessIp.
+             * The IP address of the client used to connect to the cluster.
              */
             public Builder accessIp(String accessIp) {
                 this.accessIp = accessIp;
@@ -158,7 +158,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of connections.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -211,7 +211,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * Count.
+             * The number of connections.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -219,7 +219,7 @@ public class DescribeConnectionCountRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The name of the user used to connect to the cluster.
              */
             public Builder user(String user) {
                 this.user = user;

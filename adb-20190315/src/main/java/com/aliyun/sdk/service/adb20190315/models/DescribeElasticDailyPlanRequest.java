@@ -167,7 +167,10 @@ public class DescribeElasticDailyPlanRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -176,7 +179,7 @@ public class DescribeElasticDailyPlanRequest extends Request {
         }
 
         /**
-         * ElasticDailyPlanDay.
+         * The start date of the current-day scaling plan. Specify the date in the yyyy-MM-dd format.
          */
         public Builder elasticDailyPlanDay(String elasticDailyPlanDay) {
             this.putQueryParameter("ElasticDailyPlanDay", elasticDailyPlanDay);
@@ -185,7 +188,13 @@ public class DescribeElasticDailyPlanRequest extends Request {
         }
 
         /**
-         * ElasticDailyPlanStatusList.
+         * The execution state of the current-day scaling plan. Separate multiple values with commas (,). Valid values:
+         * <p>
+         * 
+         * *   **1**: The scaling plan is not executed.
+         * *   **2**: The scaling plan is being executed.
+         * *   **3**: The scaling plan is executed.
+         * *   **4**: The scaling plan fails to be executed.
          */
         public Builder elasticDailyPlanStatusList(String elasticDailyPlanStatusList) {
             this.putQueryParameter("ElasticDailyPlanStatusList", elasticDailyPlanStatusList);
@@ -194,7 +203,11 @@ public class DescribeElasticDailyPlanRequest extends Request {
         }
 
         /**
-         * ElasticPlanName.
+         * The name of the scaling plan. Valid values:
+         * <p>
+         * 
+         * *   The name must be 2 to 30 characters in length.
+         * *   The name can contain letters, digits, and underscores (\_).
          */
         public Builder elasticPlanName(String elasticPlanName) {
             this.putQueryParameter("ElasticPlanName", elasticPlanName);
@@ -239,7 +252,10 @@ public class DescribeElasticDailyPlanRequest extends Request {
         }
 
         /**
-         * ResourcePoolName.
+         * The name of the resource group.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBResourceGroup](~~466685~~) operation to query the resource group name.
          */
         public Builder resourcePoolName(String resourcePoolName) {
             this.putQueryParameter("ResourcePoolName", resourcePoolName);

@@ -98,7 +98,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -106,7 +106,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * The queried SQL audit logs.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -114,7 +114,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -122,7 +122,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -130,7 +130,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -286,7 +286,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * ConnId.
+             * This parameter is unavailable.
              */
             public Builder connId(String connId) {
                 this.connId = connId;
@@ -294,7 +294,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * The name of the database on which the SQL statement was executed.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -302,7 +302,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecuteTime.
+             * The start time of the execution of the SQL statement. The time is displayed in the ISO 8601 standard in the yyyy-MM-dd HH:mm:ss format. The time must be in UTC.
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -310,7 +310,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * HostAddress.
+             * The IP address and port number of the client that is used to execute the SQL statement.
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -318,7 +318,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessID.
+             * The task ID.
              */
             public Builder processID(String processID) {
                 this.processID = processID;
@@ -326,7 +326,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLText.
+             * Details of the SQL statement.
              */
             public Builder SQLText(String SQLText) {
                 this.SQLText = SQLText;
@@ -334,7 +334,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SQLType.
+             * The type of the SQL statement.
              */
             public Builder SQLType(String SQLType) {
                 this.SQLType = SQLType;
@@ -342,7 +342,11 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Succeed.
+             * Indicates whether the SQL statement was successfully executed. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder succeed(String succeed) {
                 this.succeed = succeed;
@@ -350,7 +354,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTime.
+             * The amount of time that is consumed to execute the SQL statement. Unit: milliseconds.
              */
             public Builder totalTime(String totalTime) {
                 this.totalTime = totalTime;
@@ -358,7 +362,7 @@ public class DescribeAuditLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The name of the user who executed the SQL statement.
              */
             public Builder user(String user) {
                 this.user = user;

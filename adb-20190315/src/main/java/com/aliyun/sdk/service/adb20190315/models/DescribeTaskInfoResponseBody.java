@@ -50,7 +50,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         private TaskInfo taskInfo; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
         }
 
         /**
-         * TaskInfo.
+         * The description of the task.
          */
         public Builder taskInfo(TaskInfo taskInfo) {
             this.taskInfo = taskInfo;
@@ -146,7 +146,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             private Integer taskId; 
 
             /**
-             * BeginTime.
+             * The start time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.
              */
             public Builder beginTime(String beginTime) {
                 this.beginTime = beginTime;
@@ -154,7 +154,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The end time of the task. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -162,7 +162,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the task. Unit: %.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -170,7 +170,18 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task.
+             * <p>
+             * 
+             * *   Waiting
+             * *   Running
+             * *   Finished
+             * *   Failed
+             * *   Closed
+             * *   Cancel
+             * *   Retry
+             * *   Pause
+             * *   Stop
              */
             public Builder status(String status) {
                 this.status = status;
@@ -178,7 +189,7 @@ public class DescribeTaskInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(Integer taskId) {
                 this.taskId = taskId;

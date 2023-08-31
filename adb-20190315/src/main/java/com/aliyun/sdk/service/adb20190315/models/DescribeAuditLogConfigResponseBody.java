@@ -62,7 +62,11 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AuditLogStatus.
+         * The status of SQL audit. Valid values:
+         * <p>
+         * 
+         * *   **on**: SQL audit is enabled.
+         * *   **off**: SQL audit is disabled.
          */
         public Builder auditLogStatus(String auditLogStatus) {
             this.auditLogStatus = auditLogStatus;
@@ -70,7 +74,7 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -78,7 +82,7 @@ public class DescribeAuditLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

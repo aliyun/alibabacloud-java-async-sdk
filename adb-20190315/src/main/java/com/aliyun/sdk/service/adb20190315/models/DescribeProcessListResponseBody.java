@@ -86,7 +86,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * Items.
+         * Details of the queries.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The total number of pages returned.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * Command.
+             * The type of the statement. Only SELECT can be returned.
              */
             public Builder command(String command) {
                 this.command = command;
@@ -262,7 +262,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * DB.
+             * The name of the database.
              */
             public Builder db(String db) {
                 this.db = db;
@@ -270,7 +270,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * Host.
+             * The IP address from which the query was initiated.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -278,7 +278,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the worker thread.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -286,7 +286,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * Info.
+             * The SQL statement that is being executed. By default, the first 100 characters of the SQL statement are returned. If the ShowFull parameter is set to True, the complete SQL statement is returned.
              */
             public Builder info(String info) {
                 this.info = info;
@@ -294,7 +294,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * ProcessId.
+             * The unique ID of the query. You must specify this parameter when you use the KILL PROCESS statement.
              */
             public Builder processId(String processId) {
                 this.processId = processId;
@@ -302,7 +302,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -310,7 +310,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The amount of time that has elapsed from the start time of the query. Unit: seconds.
              */
             public Builder time(Integer time) {
                 this.time = time;
@@ -318,7 +318,7 @@ public class DescribeProcessListResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The username.
              */
             public Builder user(String user) {
                 this.user = user;

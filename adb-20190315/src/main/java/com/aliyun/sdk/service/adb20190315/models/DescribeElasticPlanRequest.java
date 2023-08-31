@@ -153,7 +153,10 @@ public class DescribeElasticPlanRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -162,7 +165,11 @@ public class DescribeElasticPlanRequest extends Request {
         }
 
         /**
-         * ElasticPlanEnable.
+         * Specifies whether the scaling plan takes effect. Default value: true. Valid values:
+         * <p>
+         * 
+         * *   **true**: The scaling plan takes effect.
+         * *   **false**: The scaling plan does not take effect.
          */
         public Builder elasticPlanEnable(Boolean elasticPlanEnable) {
             this.putQueryParameter("ElasticPlanEnable", elasticPlanEnable);
@@ -171,7 +178,14 @@ public class DescribeElasticPlanRequest extends Request {
         }
 
         /**
-         * ElasticPlanName.
+         * The name of the scaling plan.
+         * <p>
+         * 
+         * *   The name must be 2 to 30 characters in length.
+         * 
+         * *   The name can contain letters, digits, and underscores (\_).
+         * 
+         * >  If you do not specify this parameter, the details of all scaling plans for the specified cluster are returned.
          */
         public Builder elasticPlanName(String elasticPlanName) {
             this.putQueryParameter("ElasticPlanName", elasticPlanName);
@@ -216,7 +230,10 @@ public class DescribeElasticPlanRequest extends Request {
         }
 
         /**
-         * ResourcePoolName.
+         * The name of the resource group.
+         * <p>
+         * 
+         * > *   You can call the [DescribeDBResourceGroup](~~466685~~) operation to query the resource group name.
          */
         public Builder resourcePoolName(String resourcePoolName) {
             this.putQueryParameter("ResourcePoolName", resourcePoolName);

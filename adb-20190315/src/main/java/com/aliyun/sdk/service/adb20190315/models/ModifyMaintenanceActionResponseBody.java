@@ -50,7 +50,7 @@ public class ModifyMaintenanceActionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Ids.
+         * The O\&M event ID.
          */
         public Builder ids(String ids) {
             this.ids = ids;
@@ -58,7 +58,7 @@ public class ModifyMaintenanceActionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

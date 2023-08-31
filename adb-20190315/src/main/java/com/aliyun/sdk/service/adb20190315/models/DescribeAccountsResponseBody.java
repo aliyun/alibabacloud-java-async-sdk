@@ -50,7 +50,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccountList.
+         * The list of database accounts.
          */
         public Builder accountList(AccountList accountList) {
             this.accountList = accountList;
@@ -58,7 +58,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountType; 
 
             /**
-             * AccountDescription.
+             * The description of the account.
              */
             public Builder accountDescription(String accountDescription) {
                 this.accountDescription = accountDescription;
@@ -142,7 +142,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The name of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -150,7 +150,12 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountStatus.
+             * The status of the account.
+             * <p>
+             * 
+             * *   Creating: The account is being created.
+             * *   Available: The account is available.
+             * *   Deleting: The account is being deleted.
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -158,7 +163,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountType.
+             * *   Normal: standard account
+             * <p>
+             * *   Super: privileged account
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;

@@ -62,7 +62,7 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ClusterNetworkType.
+         * The network type of the cluster.
          */
         public Builder clusterNetworkType(String clusterNetworkType) {
             this.clusterNetworkType = clusterNetworkType;
@@ -70,7 +70,7 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * The network information of the cluster.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -78,7 +78,7 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * ConnectionString.
+             * The endpoint of the cluster.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -198,7 +198,7 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionStringPrefix.
+             * The prefix of the cluster endpoint.
              */
             public Builder connectionStringPrefix(String connectionStringPrefix) {
                 this.connectionStringPrefix = connectionStringPrefix;
@@ -206,7 +206,7 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IPAddress.
+             * The IP address.
              */
             public Builder IPAddress(String IPAddress) {
                 this.IPAddress = IPAddress;
@@ -214,7 +214,11 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * NetType.
+             * The network type of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   **Public**: public endpoint
+             * *   **VPC**: Virtual Private Cloud (VPC) endpoint
              */
             public Builder netType(String netType) {
                 this.netType = netType;
@@ -222,7 +226,7 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number that is used to connect to the cluster.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -230,7 +234,10 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * The ID of the VPC.
+             * <p>
+             * 
+             * >  This parameter is empty when Public is returned for NetType.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -238,7 +245,10 @@ public class DescribeDBClusterNetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The ID of the vSwitch.
+             * <p>
+             * 
+             * >  This parameter is empty when Public is returned for NetType.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

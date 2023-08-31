@@ -155,7 +155,10 @@ public class CreateDBResourceGroupRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -164,7 +167,12 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the resource group.
+         * <p>
+         * 
+         * *   The name can be up to 255 characters in length.
+         * *   The name must start with a letter or a digit.
+         * *   The name can contain letters, digits, hyphens (\_), and underscores (\_).
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -173,7 +181,11 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * GroupType.
+         * The query execution mode. Default value: batch. Valid values:
+         * <p>
+         * 
+         * *   **interactive**
+         * *   **batch**
          */
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
@@ -182,7 +194,11 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * NodeNum.
+         * The number of nodes. Default value: 0.
+         * <p>
+         * 
+         * *   Each node is configured with the resources of 16 cores and 64 GB memory.
+         * *   Make sure that the amount of resources of the nodes (Number of nodes × 16 cores and 64 GB memory) is less than or equal to the amount of unused resources of the cluster.
          */
         public Builder nodeNum(Integer nodeNum) {
             this.putQueryParameter("NodeNum", nodeNum);

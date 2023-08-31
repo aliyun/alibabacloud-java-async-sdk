@@ -49,6 +49,10 @@ public class DescribeLoadTasksRecordsRequest extends Request {
     private Integer pageSize;
 
     @Query
+    @NameInMap("RegionId")
+    private String regionId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -75,6 +79,7 @@ public class DescribeLoadTasksRecordsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.startTime = builder.startTime;
@@ -151,6 +156,13 @@ public class DescribeLoadTasksRecordsRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -187,6 +199,7 @@ public class DescribeLoadTasksRecordsRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String startTime; 
@@ -206,6 +219,7 @@ public class DescribeLoadTasksRecordsRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.startTime = request.startTime;
@@ -213,7 +227,10 @@ public class DescribeLoadTasksRecordsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL clusters in a region, including cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -222,7 +239,7 @@ public class DescribeLoadTasksRecordsRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database that is involved in the import or export task.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -231,7 +248,7 @@ public class DescribeLoadTasksRecordsRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -240,7 +257,14 @@ public class DescribeLoadTasksRecordsRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order in which to sort the tasks by field. Specify the field and the sort order in the JSON format. Example: `[{"Field":"CreateTime", "Type":"desc"}]`.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   `Field` specifies the field that is used to sort the tasks. Valid values of Field: `State`, `CreateTime`, `DBName`, `ProcessID`, `UpdateTime`, `JobName`, and `ProcessRows`.
+         * 
+         * *   `Type` specifies the sort order. Valid values of Type: `Desc` and `Asc`. The values are case-insensitive.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -267,7 +291,7 @@ public class DescribeLoadTasksRecordsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -276,11 +300,25 @@ public class DescribeLoadTasksRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values:
+         * <p>
+         * 
+         * *   **30** (default)
+         * *   **50**
+         * *   **100**
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
@@ -303,7 +341,10 @@ public class DescribeLoadTasksRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
+         * <p>
+         * 
+         * > We recommend that you set the query start time to any point in time within 30 days.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -312,7 +353,13 @@ public class DescribeLoadTasksRecordsRequest extends Request {
         }
 
         /**
-         * State.
+         * The state of the asynchronous import or export task to be queried. Valid values:
+         * <p>
+         * 
+         * *   **INIT**: The task is being initialized.
+         * *   **RUNNING**: The task is running.
+         * *   **FINISH**: The task is successful.
+         * *   **FAILED**: The task fails.
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

@@ -86,7 +86,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Items.
+         * The queried clusters.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -170,7 +170,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
+             * <p>
+             * 
+             * > You can call the [TagResources](~~179253~~) operation to add tags to a cluster.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +181,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -297,6 +300,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("Expired")
         private String expired;
 
+        @NameInMap("InnerIp")
+        private String innerIp;
+
+        @NameInMap("InnerPort")
+        private String innerPort;
+
         @NameInMap("LockMode")
         private String lockMode;
 
@@ -361,6 +370,8 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             this.executorCount = builder.executorCount;
             this.expireTime = builder.expireTime;
             this.expired = builder.expired;
+            this.innerIp = builder.innerIp;
+            this.innerPort = builder.innerPort;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
             this.mode = builder.mode;
@@ -533,6 +544,20 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return innerIp
+         */
+        public String getInnerIp() {
+            return this.innerIp;
+        }
+
+        /**
+         * @return innerPort
+         */
+        public String getInnerPort() {
+            return this.innerPort;
+        }
+
+        /**
          * @return lockMode
          */
         public String getLockMode() {
@@ -652,6 +677,8 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String executorCount; 
             private String expireTime; 
             private String expired; 
+            private String innerIp; 
+            private String innerPort; 
             private String lockMode; 
             private String lockReason; 
             private String mode; 
@@ -668,7 +695,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Category.
+             * The edition of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **BASIC**: reserved mode for Basic Edition.
+             * *   **CLUSTER**: reserved mode for Cluster Edition.
+             * *   **MIXED_STORAGE**: elastic mode for Cluster Edition.
+             * 
+             * > For more information about cluster editions, see [Editions](~~205001~~).
              */
             public Builder category(String category) {
                 this.category = category;
@@ -676,7 +710,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * The commodity code. **ads** is returned.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -684,7 +718,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeResource.
+             * The specifications of computing resources that are used in the cluster in elastic mode. The increase of computing resources can speed up queries. You can adjust the value of this parameter to scale the cluster.
              */
             public Builder computeResource(String computeResource) {
                 this.computeResource = computeResource;
@@ -692,7 +726,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionString.
+             * The public endpoint that is used to connect to the cluster.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -700,7 +734,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the cluster was created. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC. Example: *2021-04-01T09:50:18Z*.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -708,7 +742,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterDescription.
+             * The description of the cluster.
              */
             public Builder DBClusterDescription(String DBClusterDescription) {
                 this.DBClusterDescription = DBClusterDescription;
@@ -716,7 +750,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The cluster ID.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -724,7 +758,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterNetworkType.
+             * The network type of the cluster. **VPC** is returned.
              */
             public Builder DBClusterNetworkType(String DBClusterNetworkType) {
                 this.DBClusterNetworkType = DBClusterNetworkType;
@@ -732,7 +766,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterStatus.
+             * The state of the cluster. For more information, see [Cluster states](~~143075~~).
              */
             public Builder DBClusterStatus(String DBClusterStatus) {
                 this.DBClusterStatus = DBClusterStatus;
@@ -740,7 +774,11 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterType.
+             * The type of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **Common**: common cluster.
+             * *   **RDS_ANALYSIS**: MySQL analytic instance.
              */
             public Builder DBClusterType(String DBClusterType) {
                 this.DBClusterType = DBClusterType;
@@ -748,7 +786,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeClass.
+             * The instance type of the cluster.
              */
             public Builder DBNodeClass(String DBNodeClass) {
                 this.DBNodeClass = DBNodeClass;
@@ -756,7 +794,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeCount.
+             * The number of node groups.
              */
             public Builder DBNodeCount(Long DBNodeCount) {
                 this.DBNodeCount = DBNodeCount;
@@ -764,7 +802,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBNodeStorage.
+             * The storage capacity of the cluster. Unit: GB.
              */
             public Builder DBNodeStorage(Long DBNodeStorage) {
                 this.DBNodeStorage = DBNodeStorage;
@@ -772,7 +810,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DBVersion.
+             * The version of the database engine. **3.0** is returned.
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -780,7 +818,18 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DiskType.
+             * The disk type of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **local_ssd**: local disk.
+             * *   **cloud**: basic disk.
+             * *   **cloud_ssd**: standard SSD.
+             * *   **cloud_efficiency**: ultra disk.
+             * *   **cloud_essd**: PL1 enhanced SSD (ESSD).
+             * *   **cloud_essd2**: PL2 ESSD.
+             * *   **cloud_essd3**: PL3 ESSD.
+             * 
+             * > For more information, see [ESSDs](~~122389~~).
              */
             public Builder diskType(String diskType) {
                 this.diskType = diskType;
@@ -788,7 +837,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DtsJobId.
+             * The ID of the Data Transmission Service (DTS) synchronization task. This parameter is returned only for MySQL analytic instances.
              */
             public Builder dtsJobId(String dtsJobId) {
                 this.dtsJobId = dtsJobId;
@@ -796,7 +845,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticIOResource.
+             * The number of elastic I/O units (EIUs). For more information, see [Use EIUs to scale up storage resources](~~189505~~).
+             * <p>
+             * 
+             * > This parameter is returned only for clusters in elastic mode.
              */
             public Builder elasticIOResource(Integer elasticIOResource) {
                 this.elasticIOResource = elasticIOResource;
@@ -804,7 +856,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The engine of the cluster. **AnalyticDB** is returned.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -812,7 +864,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutorCount.
+             * The number of compute nodes that are used by the cluster in elastic mode.
              */
             public Builder executorCount(String executorCount) {
                 this.executorCount = executorCount;
@@ -820,7 +872,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the cluster expires. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC. Example: *2999-09-08T16:00:00Z*.
+             * <p>
+             * 
+             * > 
+             * 
+             * *   If the billing method of the cluster is subscription, the actual expiration time is returned.
+             * 
+             * *   If the billing method of the cluster is pay-as-you-go, **2999-09-08T16:00:00Z** is returned.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -828,7 +887,11 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Expired.
+             * Indicates whether the cluster has expired. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder expired(String expired) {
                 this.expired = expired;
@@ -836,7 +899,30 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * LockMode.
+             * The public IP address of the cluster.
+             */
+            public Builder innerIp(String innerIp) {
+                this.innerIp = innerIp;
+                return this;
+            }
+
+            /**
+             * The port number that is used to connect to the cluster.
+             */
+            public Builder innerPort(String innerPort) {
+                this.innerPort = innerPort;
+                return this;
+            }
+
+            /**
+             * The lock mode of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **Unlock**: The cluster is not locked.
+             * *   **ManualLock**: The cluster is manually locked.
+             * *   **LockByExpiration**: The cluster is automatically locked due to cluster expiration.
+             * *   **LockByRestoration**: The cluster is automatically locked due to cluster restoration.
+             * *   **LockByDiskQuota**: The cluster is automatically locked when it has used 90% of its storage.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -844,7 +930,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * LockReason.
+             * The reason why the cluster is locked.
+             * <p>
+             * 
+             * > This parameter is returned only when the cluster was locked. **instance_expire** is returned.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -852,7 +941,15 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The mode of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **flexible**: elastic mode.
+             * *   **reserver**: reserved mode.
+             * 
+             * > 
+             * 
+             * *   For more information about cluster modes, see [Editions](~~205001~~).
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -860,7 +957,11 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **Postpaid**: pay-as-you-go.
+             * *   **Prepaid**: subscription.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -868,7 +969,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number that is used to connect to the cluster. Default value: 3306.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -876,7 +977,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * RdsInstanceId.
+             * The ID of the ApsaraDB RDS instance from which data is synchronized to the cluster. This parameter is returned only for MySQL analytic instances.
              */
             public Builder rdsInstanceId(String rdsInstanceId) {
                 this.rdsInstanceId = rdsInstanceId;
@@ -884,7 +985,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the cluster.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -892,7 +993,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -900,7 +1001,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * StorageResource.
+             * The specifications of storage resources that are used in the cluster in elastic mode. These resources are used to read and write data. You can increase the value of this parameter to improve the read and write performance of the cluster.
              */
             public Builder storageResource(String storageResource) {
                 this.storageResource = storageResource;
@@ -908,7 +1009,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags that are added to the cluster.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -916,7 +1017,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VPCCloudInstanceId.
+             * The ID of the cluster that is deployed in the VPC.
              */
             public Builder VPCCloudInstanceId(String VPCCloudInstanceId) {
                 this.VPCCloudInstanceId = VPCCloudInstanceId;
@@ -924,7 +1025,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * The virtual private cloud (VPC) ID of the cluster.
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -932,7 +1033,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID of the cluster.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -940,7 +1041,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the cluster.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

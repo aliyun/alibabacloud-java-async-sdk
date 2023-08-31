@@ -86,7 +86,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * Items.
+         * The renewal information of the cluster.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries returned per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -218,7 +218,11 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             private String renewalStatus; 
 
             /**
-             * AutoRenewEnabled.
+             * Indicates whether auto-renewal is enabled for the cluster. Valid values:
+             * <p>
+             * 
+             * *   **true**: Auto-renewal is enabled.
+             * *   **false**: Auto-renewal is disabled.
              */
             public Builder autoRenewEnabled(Boolean autoRenewEnabled) {
                 this.autoRenewEnabled = autoRenewEnabled;
@@ -226,7 +230,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * DBClusterId.
+             * The ID of the cluster.
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
@@ -234,7 +238,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The renewal period.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -242,7 +246,11 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodUnit.
+             * The unit of the renewal period. Valid values:
+             * <p>
+             * 
+             * *   **Year**
+             * *   **Month**
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -250,7 +258,7 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the cluster.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -258,7 +266,12 @@ public class DescribeAutoRenewAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * RenewalStatus.
+             * The renewal status of the cluster. Valid values:
+             * <p>
+             * 
+             * *   **AutoRenewal**: The cluster is automatically renewed.
+             * *   **Normal**: The cluster is manually renewed. Before the cluster expires, the system sends you a reminder by SMS message.
+             * *   **NotRenewal**: The cluster is not renewed. Three days before the cluster expires, the system sends you a reminder by SMS message to remind you that the cluster is not renewed. However, the system does not send you a reminder when the cluster expires.
              */
             public Builder renewalStatus(String renewalStatus) {
                 this.renewalStatus = renewalStatus;

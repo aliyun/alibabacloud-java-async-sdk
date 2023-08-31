@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBResourcePoolResponseBody</p>
  */
 public class DescribeDBResourcePoolResponseBody extends TeaModel {
+    @NameInMap("DBClusterId")
+    private String DBClusterId;
+
     @NameInMap("PoolsInfo")
     private java.util.List < PoolsInfo> poolsInfo;
 
@@ -19,6 +22,7 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeDBResourcePoolResponseBody(Builder builder) {
+        this.DBClusterId = builder.DBClusterId;
         this.poolsInfo = builder.poolsInfo;
         this.requestId = builder.requestId;
     }
@@ -29,6 +33,13 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
 
     public static DescribeDBResourcePoolResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return DBClusterId
+     */
+    public String getDBClusterId() {
+        return this.DBClusterId;
     }
 
     /**
@@ -46,11 +57,20 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String DBClusterId; 
         private java.util.List < PoolsInfo> poolsInfo; 
         private String requestId; 
 
         /**
-         * PoolsInfo.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         */
+        public Builder DBClusterId(String DBClusterId) {
+            this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Details of the resource group.
          */
         public Builder poolsInfo(java.util.List < PoolsInfo> poolsInfo) {
             this.poolsInfo = poolsInfo;
@@ -58,7 +78,7 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +178,7 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the resource group was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -166,7 +186,10 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
             }
 
             /**
-             * NodeNum.
+             * The number of nodes.
+             * <p>
+             * 
+             * >  Each node consumes 16 cores and 64 GB memory.
              */
             public Builder nodeNum(Integer nodeNum) {
                 this.nodeNum = nodeNum;
@@ -174,7 +197,7 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
             }
 
             /**
-             * PoolName.
+             * The name of the resource group.
              */
             public Builder poolName(String poolName) {
                 this.poolName = poolName;
@@ -182,7 +205,7 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
             }
 
             /**
-             * PoolUsers.
+             * The database accounts that are associated with the resource group.
              */
             public Builder poolUsers(String poolUsers) {
                 this.poolUsers = poolUsers;
@@ -190,7 +213,13 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
             }
 
             /**
-             * QueryType.
+             * The mode in which SQL statements are executed.
+             * <p>
+             * 
+             * *   **batch**
+             * *   **interactive**
+             * 
+             * >  For more information, see [Query execution modes](~~189502~~).
              */
             public Builder queryType(String queryType) {
                 this.queryType = queryType;
@@ -198,7 +227,7 @@ public class DescribeDBResourcePoolResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the resource group was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

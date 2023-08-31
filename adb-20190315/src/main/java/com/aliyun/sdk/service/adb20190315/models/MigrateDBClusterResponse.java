@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDBClusterHealthReportResponse} extends {@link TeaModel}
+ * {@link MigrateDBClusterResponse} extends {@link TeaModel}
  *
- * <p>DescribeDBClusterHealthReportResponse</p>
+ * <p>MigrateDBClusterResponse</p>
  */
-public class DescribeDBClusterHealthReportResponse extends Response {
+public class MigrateDBClusterResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeDBClusterHealthReportResponseBody body;
+    private MigrateDBClusterResponseBody body;
 
-    private DescribeDBClusterHealthReportResponse(BuilderImpl builder) {
+    private MigrateDBClusterResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DescribeDBClusterHealthReportResponse create() {
+    public static MigrateDBClusterResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DescribeDBClusterHealthReportResponse extends Response {
     /**
      * @return body
      */
-    public DescribeDBClusterHealthReportResponseBody getBody() {
+    public MigrateDBClusterResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeDBClusterHealthReportResponse, Builder> {
+    public interface Builder extends Response.Builder<MigrateDBClusterResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeDBClusterHealthReportResponseBody body);
+        Builder body(MigrateDBClusterResponseBody body);
 
         @Override
-        DescribeDBClusterHealthReportResponse build();
+        MigrateDBClusterResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeDBClusterHealthReportResponse, Builder>
+            extends Response.BuilderImpl<MigrateDBClusterResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeDBClusterHealthReportResponseBody body; 
+        private MigrateDBClusterResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeDBClusterHealthReportResponse response) {
+        private BuilderImpl(MigrateDBClusterResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DescribeDBClusterHealthReportResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeDBClusterHealthReportResponseBody body) {
+        public Builder body(MigrateDBClusterResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeDBClusterHealthReportResponse build() {
-            return new DescribeDBClusterHealthReportResponse(this);
+        public MigrateDBClusterResponse build() {
+            return new MigrateDBClusterResponse(this);
         } 
 
     } 

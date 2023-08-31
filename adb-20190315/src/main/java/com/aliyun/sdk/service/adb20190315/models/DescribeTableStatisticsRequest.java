@@ -155,7 +155,10 @@ public class DescribeTableStatisticsRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query details about all AnalyticDB for MySQL clusters in a specific region, including cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -164,7 +167,15 @@ public class DescribeTableStatisticsRequest extends Request {
         }
 
         /**
-         * Order.
+         * The order in which to sort the retrieved records by field. Specify this value in the JSON format. The value is an ordered array that uses the order of the input array and contains `Field` and `Type`. Example: `[{ "Field":"TableName", "Type":"Asc" }]`.
+         * <p>
+         * 
+         * *   In the example, `Field` indicates the field that is used to sort the retrieved records. Set the value of Field to `TableName`.
+         * 
+         * *   `Type` indicates the sort type. Valid values (case-insensitive):
+         * 
+         *     *   **Desc**: The entries are sorted in descending order.
+         *     *   **Asc**: The entries are sorted in ascending order.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -191,7 +202,7 @@ public class DescribeTableStatisticsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. The value must be an integer that is greater than 0. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -200,7 +211,7 @@ public class DescribeTableStatisticsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **30**, **50**, and **100**. Default value: 30.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

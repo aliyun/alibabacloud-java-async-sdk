@@ -141,7 +141,10 @@ public class GrantOperatorPermissionRequest extends Request {
         } 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query cluster IDs.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -150,7 +153,7 @@ public class GrantOperatorPermissionRequest extends Request {
         }
 
         /**
-         * ExpiredTime.
+         * The expiration time of the service account permissions. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);
@@ -177,7 +180,11 @@ public class GrantOperatorPermissionRequest extends Request {
         }
 
         /**
-         * Privileges.
+         * The name of the permissions. Valid values:
+         * <p>
+         * 
+         * *   **Control**: configuration permissions. The service account is granted permissions to query and modify cluster configurations.
+         * *   **Data**: data permissions. The service account is granted permissions to query schemas, indexes, and SQL statements.
          */
         public Builder privileges(String privileges) {
             this.putQueryParameter("Privileges", privileges);

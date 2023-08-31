@@ -169,7 +169,13 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * Specifies whether to detach all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -196,7 +202,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance. You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -232,7 +238,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the cluster. Set the value to `ALIYUN::ADB::CLUSTER`.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

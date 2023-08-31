@@ -62,7 +62,7 @@ public class CreateAccountResponseBody extends TeaModel {
         private Integer taskId; 
 
         /**
-         * DBClusterId.
+         * The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -70,7 +70,7 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The task ID.
          */
         public Builder taskId(Integer taskId) {
             this.taskId = taskId;
