@@ -1,0 +1,104 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.adb20211201.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ExistRunningSQLEngineResponse} extends {@link TeaModel}
+ *
+ * <p>ExistRunningSQLEngineResponse</p>
+ */
+public class ExistRunningSQLEngineResponse extends Response {
+    @NameInMap("headers")
+    @Validation(required = true)
+    private java.util.Map < String, String > headers;
+
+    @NameInMap("body")
+    @Validation(required = true)
+    private ExistRunningSQLEngineResponseBody body;
+
+    private ExistRunningSQLEngineResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.body = builder.body;
+    }
+
+    public static ExistRunningSQLEngineResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return body
+     */
+    public ExistRunningSQLEngineResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<ExistRunningSQLEngineResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder body(ExistRunningSQLEngineResponseBody body);
+
+        @Override
+        ExistRunningSQLEngineResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<ExistRunningSQLEngineResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private ExistRunningSQLEngineResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(ExistRunningSQLEngineResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(ExistRunningSQLEngineResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ExistRunningSQLEngineResponse build() {
+            return new ExistRunningSQLEngineResponse(this);
+        } 
+
+    } 
+
+}
