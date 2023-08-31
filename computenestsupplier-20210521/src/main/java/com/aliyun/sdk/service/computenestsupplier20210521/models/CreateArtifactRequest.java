@@ -227,8 +227,17 @@ public class CreateArtifactRequest extends Request {
         @NameInMap("RegionId")
         private String regionId;
 
+        @NameInMap("RepoId")
+        private String repoId;
+
+        @NameInMap("RepoName")
+        private String repoName;
+
         @NameInMap("ScriptMetadata")
         private String scriptMetadata;
+
+        @NameInMap("Tag")
+        private String tag;
 
         @NameInMap("Url")
         private String url;
@@ -239,7 +248,10 @@ public class CreateArtifactRequest extends Request {
             this.fileScriptMetadata = builder.fileScriptMetadata;
             this.imageId = builder.imageId;
             this.regionId = builder.regionId;
+            this.repoId = builder.repoId;
+            this.repoName = builder.repoName;
             this.scriptMetadata = builder.scriptMetadata;
+            this.tag = builder.tag;
             this.url = builder.url;
         }
 
@@ -287,10 +299,31 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
+         * @return repoId
+         */
+        public String getRepoId() {
+            return this.repoId;
+        }
+
+        /**
+         * @return repoName
+         */
+        public String getRepoName() {
+            return this.repoName;
+        }
+
+        /**
          * @return scriptMetadata
          */
         public String getScriptMetadata() {
             return this.scriptMetadata;
+        }
+
+        /**
+         * @return tag
+         */
+        public String getTag() {
+            return this.tag;
         }
 
         /**
@@ -306,7 +339,10 @@ public class CreateArtifactRequest extends Request {
             private String fileScriptMetadata; 
             private String imageId; 
             private String regionId; 
+            private String repoId; 
+            private String repoName; 
             private String scriptMetadata; 
+            private String tag; 
             private String url; 
 
             /**
@@ -350,10 +386,34 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
+             * RepoId.
+             */
+            public Builder repoId(String repoId) {
+                this.repoId = repoId;
+                return this;
+            }
+
+            /**
+             * RepoName.
+             */
+            public Builder repoName(String repoName) {
+                this.repoName = repoName;
+                return this;
+            }
+
+            /**
              * ScriptMetadata.
              */
             public Builder scriptMetadata(String scriptMetadata) {
                 this.scriptMetadata = scriptMetadata;
+                return this;
+            }
+
+            /**
+             * Tag.
+             */
+            public Builder tag(String tag) {
+                this.tag = tag;
                 return this;
             }
 

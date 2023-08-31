@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceInstanceResponseBody</p>
  */
 public class GetServiceInstanceResponseBody extends TeaModel {
+    @NameInMap("BizStatus")
+    private String bizStatus;
+
     @NameInMap("CreateTime")
     private String createTime;
 
@@ -54,6 +57,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("PayType")
     private String payType;
 
+    @NameInMap("PredefinedParameterName")
+    private String predefinedParameterName;
+
     @NameInMap("Progress")
     private Long progress;
 
@@ -62,6 +68,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
     @NameInMap("RequestId")
     private String requestId;
+
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @NameInMap("Resources")
     private String resources;
@@ -100,6 +109,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     private Long userId;
 
     private GetServiceInstanceResponseBody(Builder builder) {
+        this.bizStatus = builder.bizStatus;
         this.createTime = builder.createTime;
         this.enableInstanceOps = builder.enableInstanceOps;
         this.enableUserPrometheus = builder.enableUserPrometheus;
@@ -114,9 +124,11 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         this.outputs = builder.outputs;
         this.parameters = builder.parameters;
         this.payType = builder.payType;
+        this.predefinedParameterName = builder.predefinedParameterName;
         this.progress = builder.progress;
         this.rdAccountLoginUrl = builder.rdAccountLoginUrl;
         this.requestId = builder.requestId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resources = builder.resources;
         this.service = builder.service;
         this.serviceInstanceId = builder.serviceInstanceId;
@@ -137,6 +149,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
     public static GetServiceInstanceResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return bizStatus
+     */
+    public String getBizStatus() {
+        return this.bizStatus;
     }
 
     /**
@@ -238,6 +257,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return predefinedParameterName
+     */
+    public String getPredefinedParameterName() {
+        return this.predefinedParameterName;
+    }
+
+    /**
      * @return progress
      */
     public Long getProgress() {
@@ -256,6 +282,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -343,6 +376,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String bizStatus; 
         private String createTime; 
         private Boolean enableInstanceOps; 
         private String enableUserPrometheus; 
@@ -357,9 +391,11 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String outputs; 
         private String parameters; 
         private String payType; 
+        private String predefinedParameterName; 
         private Long progress; 
         private String rdAccountLoginUrl; 
         private String requestId; 
+        private String resourceGroupId; 
         private String resources; 
         private Service service; 
         private String serviceInstanceId; 
@@ -372,6 +408,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String templateName; 
         private String updateTime; 
         private Long userId; 
+
+        /**
+         * BizStatus.
+         */
+        public Builder bizStatus(String bizStatus) {
+            this.bizStatus = bizStatus;
+            return this;
+        }
 
         /**
          * CreateTime.
@@ -486,6 +530,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * PredefinedParameterName.
+         */
+        public Builder predefinedParameterName(String predefinedParameterName) {
+            this.predefinedParameterName = predefinedParameterName;
+            return this;
+        }
+
+        /**
          * Progress.
          */
         public Builder progress(Long progress) {
@@ -506,6 +558,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

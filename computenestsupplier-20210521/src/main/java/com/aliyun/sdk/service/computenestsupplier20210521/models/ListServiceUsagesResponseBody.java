@@ -94,7 +94,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -102,7 +102,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

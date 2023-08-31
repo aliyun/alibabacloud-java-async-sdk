@@ -18,7 +18,7 @@ public class ListArtifactsRequest extends Request {
 
     @Query
     @NameInMap("MaxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @Query
     @NameInMap("NextToken")
@@ -54,7 +54,7 @@ public class ListArtifactsRequest extends Request {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -67,7 +67,7 @@ public class ListArtifactsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListArtifactsRequest, Builder> {
         private java.util.List < Filter> filter; 
-        private String maxResults; 
+        private Integer maxResults; 
         private String nextToken; 
 
         private Builder() {
@@ -93,7 +93,7 @@ public class ListArtifactsRequest extends Request {
         /**
          * MaxResults.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
             return this;

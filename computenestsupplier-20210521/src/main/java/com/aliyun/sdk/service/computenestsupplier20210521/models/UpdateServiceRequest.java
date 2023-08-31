@@ -41,6 +41,10 @@ public class UpdateServiceRequest extends Request {
     private String licenseMetadata;
 
     @Query
+    @NameInMap("LogMetadata")
+    private String logMetadata;
+
+    @Query
     @NameInMap("OperationMetadata")
     private String operationMetadata;
 
@@ -95,6 +99,7 @@ public class UpdateServiceRequest extends Request {
         this.duration = builder.duration;
         this.isSupportOperated = builder.isSupportOperated;
         this.licenseMetadata = builder.licenseMetadata;
+        this.logMetadata = builder.logMetadata;
         this.operationMetadata = builder.operationMetadata;
         this.policyNames = builder.policyNames;
         this.regionId = builder.regionId;
@@ -168,6 +173,13 @@ public class UpdateServiceRequest extends Request {
      */
     public String getLicenseMetadata() {
         return this.licenseMetadata;
+    }
+
+    /**
+     * @return logMetadata
+     */
+    public String getLogMetadata() {
+        return this.logMetadata;
     }
 
     /**
@@ -255,6 +267,7 @@ public class UpdateServiceRequest extends Request {
         private Long duration; 
         private Boolean isSupportOperated; 
         private String licenseMetadata; 
+        private String logMetadata; 
         private String operationMetadata; 
         private String policyNames; 
         private String regionId; 
@@ -280,6 +293,7 @@ public class UpdateServiceRequest extends Request {
             this.duration = request.duration;
             this.isSupportOperated = request.isSupportOperated;
             this.licenseMetadata = request.licenseMetadata;
+            this.logMetadata = request.logMetadata;
             this.operationMetadata = request.operationMetadata;
             this.policyNames = request.policyNames;
             this.regionId = request.regionId;
@@ -353,6 +367,15 @@ public class UpdateServiceRequest extends Request {
         public Builder licenseMetadata(String licenseMetadata) {
             this.putQueryParameter("LicenseMetadata", licenseMetadata);
             this.licenseMetadata = licenseMetadata;
+            return this;
+        }
+
+        /**
+         * LogMetadata.
+         */
+        public Builder logMetadata(String logMetadata) {
+            this.putQueryParameter("LogMetadata", logMetadata);
+            this.logMetadata = logMetadata;
             return this;
         }
 
@@ -469,6 +492,9 @@ public class UpdateServiceRequest extends Request {
         @NameInMap("Locale")
         private String locale;
 
+        @NameInMap("LongDescriptionUrl")
+        private String longDescriptionUrl;
+
         @NameInMap("Name")
         private String name;
 
@@ -478,6 +504,7 @@ public class UpdateServiceRequest extends Request {
         private ServiceInfo(Builder builder) {
             this.image = builder.image;
             this.locale = builder.locale;
+            this.longDescriptionUrl = builder.longDescriptionUrl;
             this.name = builder.name;
             this.shortDescription = builder.shortDescription;
         }
@@ -505,6 +532,13 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
+         * @return longDescriptionUrl
+         */
+        public String getLongDescriptionUrl() {
+            return this.longDescriptionUrl;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -521,6 +555,7 @@ public class UpdateServiceRequest extends Request {
         public static final class Builder {
             private String image; 
             private String locale; 
+            private String longDescriptionUrl; 
             private String name; 
             private String shortDescription; 
 
@@ -537,6 +572,14 @@ public class UpdateServiceRequest extends Request {
              */
             public Builder locale(String locale) {
                 this.locale = locale;
+                return this;
+            }
+
+            /**
+             * LongDescriptionUrl.
+             */
+            public Builder longDescriptionUrl(String longDescriptionUrl) {
+                this.longDescriptionUrl = longDescriptionUrl;
                 return this;
             }
 

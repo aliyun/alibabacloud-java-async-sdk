@@ -18,13 +18,21 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<ContinueDeployServiceInstanceResponse> continueDeployServiceInstance(ContinueDeployServiceInstanceRequest request);
+
     CompletableFuture<CreateArtifactResponse> createArtifact(CreateArtifactRequest request);
 
     CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request);
 
+    CompletableFuture<CreateServiceInstanceResponse> createServiceInstance(CreateServiceInstanceRequest request);
+
     CompletableFuture<DeleteArtifactResponse> deleteArtifact(DeleteArtifactRequest request);
 
     CompletableFuture<DeleteServiceResponse> deleteService(DeleteServiceRequest request);
+
+    CompletableFuture<DeleteServiceInstancesResponse> deleteServiceInstances(DeleteServiceInstancesRequest request);
+
+    CompletableFuture<DeployServiceInstanceResponse> deployServiceInstance(DeployServiceInstanceRequest request);
 
     CompletableFuture<GetArtifactResponse> getArtifact(GetArtifactRequest request);
 
@@ -38,6 +46,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetUploadCredentialsResponse> getUploadCredentials(GetUploadCredentialsRequest request);
 
+    CompletableFuture<ListAcrImageRepositoriesResponse> listAcrImageRepositories(ListAcrImageRepositoriesRequest request);
+
+    CompletableFuture<ListAcrImageTagsResponse> listAcrImageTags(ListAcrImageTagsRequest request);
+
     CompletableFuture<ListArtifactVersionsResponse> listArtifactVersions(ListArtifactVersionsRequest request);
 
     CompletableFuture<ListArtifactsResponse> listArtifacts(ListArtifactsRequest request);
@@ -47,6 +59,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServiceUsagesResponse> listServiceUsages(ListServiceUsagesRequest request);
 
     CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
+
+    CompletableFuture<ModifyServiceInstanceResourcesResponse> modifyServiceInstanceResources(ModifyServiceInstanceResourcesRequest request);
+
+    CompletableFuture<PushMeteringDataResponse> pushMeteringData(PushMeteringDataRequest request);
+
+    CompletableFuture<RegisterServiceResponse> registerService(RegisterServiceRequest request);
 
     CompletableFuture<ReleaseArtifactResponse> releaseArtifact(ReleaseArtifactRequest request);
 

@@ -16,7 +16,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     private java.util.List < Artifacts> artifacts;
 
     @NameInMap("MaxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @NameInMap("NextToken")
     private String nextToken;
@@ -25,7 +25,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     private String requestId;
 
     @NameInMap("TotalCount")
-    private String totalCount;
+    private Integer totalCount;
 
     private ListArtifactVersionsResponseBody(Builder builder) {
         this.artifacts = builder.artifacts;
@@ -53,7 +53,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -74,16 +74,16 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
     /**
      * @return totalCount
      */
-    public String getTotalCount() {
+    public Integer getTotalCount() {
         return this.totalCount;
     }
 
     public static final class Builder {
         private java.util.List < Artifacts> artifacts; 
-        private String maxResults; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private String totalCount; 
+        private Integer totalCount; 
 
         /**
          * Artifacts.
@@ -96,7 +96,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         /**
          * MaxResults.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
             return this;
         }
@@ -120,7 +120,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         /**
          * TotalCount.
          */
-        public Builder totalCount(String totalCount) {
+        public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }

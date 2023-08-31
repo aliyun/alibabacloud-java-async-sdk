@@ -48,6 +48,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("LicenseMetadata")
     private String licenseMetadata;
 
+    @NameInMap("LogMetadata")
+    private String logMetadata;
+
     @NameInMap("OperationMetadata")
     private String operationMetadata;
 
@@ -95,6 +98,18 @@ public class GetServiceResponseBody extends TeaModel {
 
     @NameInMap("ShareType")
     private String shareType;
+
+    @NameInMap("SourceServiceId")
+    private String sourceServiceId;
+
+    @NameInMap("SourceServiceVersion")
+    private String sourceServiceVersion;
+
+    @NameInMap("SourceSupplierName")
+    private String sourceSupplierName;
+
+    @NameInMap("Statistic")
+    private Statistic statistic;
 
     @NameInMap("Status")
     private String status;
@@ -148,6 +163,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.duration = builder.duration;
         this.isSupportOperated = builder.isSupportOperated;
         this.licenseMetadata = builder.licenseMetadata;
+        this.logMetadata = builder.logMetadata;
         this.operationMetadata = builder.operationMetadata;
         this.payFromType = builder.payFromType;
         this.payType = builder.payType;
@@ -164,6 +180,10 @@ public class GetServiceResponseBody extends TeaModel {
         this.serviceProductUrl = builder.serviceProductUrl;
         this.serviceType = builder.serviceType;
         this.shareType = builder.shareType;
+        this.sourceServiceId = builder.sourceServiceId;
+        this.sourceServiceVersion = builder.sourceServiceVersion;
+        this.sourceSupplierName = builder.sourceSupplierName;
+        this.statistic = builder.statistic;
         this.status = builder.status;
         this.statusDetail = builder.statusDetail;
         this.supplierName = builder.supplierName;
@@ -269,6 +289,13 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public String getLicenseMetadata() {
         return this.licenseMetadata;
+    }
+
+    /**
+     * @return logMetadata
+     */
+    public String getLogMetadata() {
+        return this.logMetadata;
     }
 
     /**
@@ -384,6 +411,34 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return sourceServiceId
+     */
+    public String getSourceServiceId() {
+        return this.sourceServiceId;
+    }
+
+    /**
+     * @return sourceServiceVersion
+     */
+    public String getSourceServiceVersion() {
+        return this.sourceServiceVersion;
+    }
+
+    /**
+     * @return sourceSupplierName
+     */
+    public String getSourceSupplierName() {
+        return this.sourceSupplierName;
+    }
+
+    /**
+     * @return statistic
+     */
+    public Statistic getStatistic() {
+        return this.statistic;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -487,6 +542,7 @@ public class GetServiceResponseBody extends TeaModel {
         private Long duration; 
         private Boolean isSupportOperated; 
         private String licenseMetadata; 
+        private String logMetadata; 
         private String operationMetadata; 
         private String payFromType; 
         private String payType; 
@@ -503,6 +559,10 @@ public class GetServiceResponseBody extends TeaModel {
         private String serviceProductUrl; 
         private String serviceType; 
         private String shareType; 
+        private String sourceServiceId; 
+        private String sourceServiceVersion; 
+        private String sourceSupplierName; 
+        private Statistic statistic; 
         private String status; 
         private String statusDetail; 
         private String supplierName; 
@@ -610,6 +670,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder licenseMetadata(String licenseMetadata) {
             this.licenseMetadata = licenseMetadata;
+            return this;
+        }
+
+        /**
+         * LogMetadata.
+         */
+        public Builder logMetadata(String logMetadata) {
+            this.logMetadata = logMetadata;
             return this;
         }
 
@@ -738,6 +806,38 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder shareType(String shareType) {
             this.shareType = shareType;
+            return this;
+        }
+
+        /**
+         * SourceServiceId.
+         */
+        public Builder sourceServiceId(String sourceServiceId) {
+            this.sourceServiceId = sourceServiceId;
+            return this;
+        }
+
+        /**
+         * SourceServiceVersion.
+         */
+        public Builder sourceServiceVersion(String sourceServiceVersion) {
+            this.sourceServiceVersion = sourceServiceVersion;
+            return this;
+        }
+
+        /**
+         * SourceSupplierName.
+         */
+        public Builder sourceSupplierName(String sourceSupplierName) {
+            this.sourceSupplierName = sourceSupplierName;
+            return this;
+        }
+
+        /**
+         * Statistic.
+         */
+        public Builder statistic(Statistic statistic) {
+            this.statistic = statistic;
             return this;
         }
 
@@ -1020,6 +1120,9 @@ public class GetServiceResponseBody extends TeaModel {
         @NameInMap("Locale")
         private String locale;
 
+        @NameInMap("LongDescriptionUrl")
+        private String longDescriptionUrl;
+
         @NameInMap("Name")
         private String name;
 
@@ -1029,6 +1132,7 @@ public class GetServiceResponseBody extends TeaModel {
         private ServiceInfos(Builder builder) {
             this.image = builder.image;
             this.locale = builder.locale;
+            this.longDescriptionUrl = builder.longDescriptionUrl;
             this.name = builder.name;
             this.shortDescription = builder.shortDescription;
         }
@@ -1056,6 +1160,13 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
+         * @return longDescriptionUrl
+         */
+        public String getLongDescriptionUrl() {
+            return this.longDescriptionUrl;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -1072,6 +1183,7 @@ public class GetServiceResponseBody extends TeaModel {
         public static final class Builder {
             private String image; 
             private String locale; 
+            private String longDescriptionUrl; 
             private String name; 
             private String shortDescription; 
 
@@ -1088,6 +1200,14 @@ public class GetServiceResponseBody extends TeaModel {
              */
             public Builder locale(String locale) {
                 this.locale = locale;
+                return this;
+            }
+
+            /**
+             * LongDescriptionUrl.
+             */
+            public Builder longDescriptionUrl(String longDescriptionUrl) {
+                this.longDescriptionUrl = longDescriptionUrl;
                 return this;
             }
 
@@ -1109,6 +1229,207 @@ public class GetServiceResponseBody extends TeaModel {
 
             public ServiceInfos build() {
                 return new ServiceInfos(this);
+            } 
+
+        } 
+
+    }
+    public static class Statistic extends TeaModel {
+        @NameInMap("AccumulativeInstanceCount")
+        private Integer accumulativeInstanceCount;
+
+        @NameInMap("AccumulativePocAmount")
+        private Double accumulativePocAmount;
+
+        @NameInMap("AccumulativeUserCount")
+        private Integer accumulativeUserCount;
+
+        @NameInMap("AveragePocAmount")
+        private Double averagePocAmount;
+
+        @NameInMap("AveragePocDuration")
+        private Double averagePocDuration;
+
+        @NameInMap("AveragePocUnitAmount")
+        private Double averagePocUnitAmount;
+
+        @NameInMap("DeployedServiceInstanceCount")
+        private Integer deployedServiceInstanceCount;
+
+        @NameInMap("DeployedUserCount")
+        private Integer deployedUserCount;
+
+        @NameInMap("SubmittedUsageCount")
+        private Integer submittedUsageCount;
+
+        private Statistic(Builder builder) {
+            this.accumulativeInstanceCount = builder.accumulativeInstanceCount;
+            this.accumulativePocAmount = builder.accumulativePocAmount;
+            this.accumulativeUserCount = builder.accumulativeUserCount;
+            this.averagePocAmount = builder.averagePocAmount;
+            this.averagePocDuration = builder.averagePocDuration;
+            this.averagePocUnitAmount = builder.averagePocUnitAmount;
+            this.deployedServiceInstanceCount = builder.deployedServiceInstanceCount;
+            this.deployedUserCount = builder.deployedUserCount;
+            this.submittedUsageCount = builder.submittedUsageCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Statistic create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accumulativeInstanceCount
+         */
+        public Integer getAccumulativeInstanceCount() {
+            return this.accumulativeInstanceCount;
+        }
+
+        /**
+         * @return accumulativePocAmount
+         */
+        public Double getAccumulativePocAmount() {
+            return this.accumulativePocAmount;
+        }
+
+        /**
+         * @return accumulativeUserCount
+         */
+        public Integer getAccumulativeUserCount() {
+            return this.accumulativeUserCount;
+        }
+
+        /**
+         * @return averagePocAmount
+         */
+        public Double getAveragePocAmount() {
+            return this.averagePocAmount;
+        }
+
+        /**
+         * @return averagePocDuration
+         */
+        public Double getAveragePocDuration() {
+            return this.averagePocDuration;
+        }
+
+        /**
+         * @return averagePocUnitAmount
+         */
+        public Double getAveragePocUnitAmount() {
+            return this.averagePocUnitAmount;
+        }
+
+        /**
+         * @return deployedServiceInstanceCount
+         */
+        public Integer getDeployedServiceInstanceCount() {
+            return this.deployedServiceInstanceCount;
+        }
+
+        /**
+         * @return deployedUserCount
+         */
+        public Integer getDeployedUserCount() {
+            return this.deployedUserCount;
+        }
+
+        /**
+         * @return submittedUsageCount
+         */
+        public Integer getSubmittedUsageCount() {
+            return this.submittedUsageCount;
+        }
+
+        public static final class Builder {
+            private Integer accumulativeInstanceCount; 
+            private Double accumulativePocAmount; 
+            private Integer accumulativeUserCount; 
+            private Double averagePocAmount; 
+            private Double averagePocDuration; 
+            private Double averagePocUnitAmount; 
+            private Integer deployedServiceInstanceCount; 
+            private Integer deployedUserCount; 
+            private Integer submittedUsageCount; 
+
+            /**
+             * AccumulativeInstanceCount.
+             */
+            public Builder accumulativeInstanceCount(Integer accumulativeInstanceCount) {
+                this.accumulativeInstanceCount = accumulativeInstanceCount;
+                return this;
+            }
+
+            /**
+             * AccumulativePocAmount.
+             */
+            public Builder accumulativePocAmount(Double accumulativePocAmount) {
+                this.accumulativePocAmount = accumulativePocAmount;
+                return this;
+            }
+
+            /**
+             * AccumulativeUserCount.
+             */
+            public Builder accumulativeUserCount(Integer accumulativeUserCount) {
+                this.accumulativeUserCount = accumulativeUserCount;
+                return this;
+            }
+
+            /**
+             * AveragePocAmount.
+             */
+            public Builder averagePocAmount(Double averagePocAmount) {
+                this.averagePocAmount = averagePocAmount;
+                return this;
+            }
+
+            /**
+             * AveragePocDuration.
+             */
+            public Builder averagePocDuration(Double averagePocDuration) {
+                this.averagePocDuration = averagePocDuration;
+                return this;
+            }
+
+            /**
+             * AveragePocUnitAmount.
+             */
+            public Builder averagePocUnitAmount(Double averagePocUnitAmount) {
+                this.averagePocUnitAmount = averagePocUnitAmount;
+                return this;
+            }
+
+            /**
+             * DeployedServiceInstanceCount.
+             */
+            public Builder deployedServiceInstanceCount(Integer deployedServiceInstanceCount) {
+                this.deployedServiceInstanceCount = deployedServiceInstanceCount;
+                return this;
+            }
+
+            /**
+             * DeployedUserCount.
+             */
+            public Builder deployedUserCount(Integer deployedUserCount) {
+                this.deployedUserCount = deployedUserCount;
+                return this;
+            }
+
+            /**
+             * SubmittedUsageCount.
+             */
+            public Builder submittedUsageCount(Integer submittedUsageCount) {
+                this.submittedUsageCount = submittedUsageCount;
+                return this;
+            }
+
+            public Statistic build() {
+                return new Statistic(this);
             } 
 
         } 

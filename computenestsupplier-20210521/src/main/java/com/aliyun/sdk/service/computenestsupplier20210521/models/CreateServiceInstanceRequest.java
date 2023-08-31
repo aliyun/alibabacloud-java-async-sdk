@@ -7,14 +7,22 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetServiceEstimateCostRequest} extends {@link RequestModel}
+ * {@link CreateServiceInstanceRequest} extends {@link RequestModel}
  *
- * <p>GetServiceEstimateCostRequest</p>
+ * <p>CreateServiceInstanceRequest</p>
  */
-public class GetServiceEstimateCostRequest extends Request {
+public class CreateServiceInstanceRequest extends Request {
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
+
+    @Query
+    @NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @Query
+    @NameInMap("Name")
+    private String name;
 
     @Query
     @NameInMap("Parameters")
@@ -22,16 +30,17 @@ public class GetServiceEstimateCostRequest extends Request {
 
     @Query
     @NameInMap("RegionId")
+    @Validation(required = true)
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
     @NameInMap("ServiceId")
     @Validation(required = true)
     private String serviceId;
-
-    @Query
-    @NameInMap("ServiceInstanceId")
-    private String serviceInstanceId;
 
     @Query
     @NameInMap("ServiceVersion")
@@ -42,26 +51,38 @@ public class GetServiceEstimateCostRequest extends Request {
     private String specificationName;
 
     @Query
+    @NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @Query
     @NameInMap("TemplateName")
     private String templateName;
 
-    private GetServiceEstimateCostRequest(Builder builder) {
+    @Query
+    @NameInMap("UserId")
+    private String userId;
+
+    private CreateServiceInstanceRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.dryRun = builder.dryRun;
+        this.name = builder.name;
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.serviceId = builder.serviceId;
-        this.serviceInstanceId = builder.serviceInstanceId;
         this.serviceVersion = builder.serviceVersion;
         this.specificationName = builder.specificationName;
+        this.tag = builder.tag;
         this.templateName = builder.templateName;
+        this.userId = builder.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetServiceEstimateCostRequest create() {
+    public static CreateServiceInstanceRequest create() {
         return builder().build();
     }
 
@@ -75,6 +96,20 @@ public class GetServiceEstimateCostRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -92,17 +127,17 @@ public class GetServiceEstimateCostRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return serviceId
      */
     public String getServiceId() {
         return this.serviceId;
-    }
-
-    /**
-     * @return serviceInstanceId
-     */
-    public String getServiceInstanceId() {
-        return this.serviceInstanceId;
     }
 
     /**
@@ -120,36 +155,58 @@ public class GetServiceEstimateCostRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return templateName
      */
     public String getTemplateName() {
         return this.templateName;
     }
 
-    public static final class Builder extends Request.Builder<GetServiceEstimateCostRequest, Builder> {
+    /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    public static final class Builder extends Request.Builder<CreateServiceInstanceRequest, Builder> {
         private String clientToken; 
+        private Boolean dryRun; 
+        private String name; 
         private java.util.Map < String, ? > parameters; 
         private String regionId; 
+        private String resourceGroupId; 
         private String serviceId; 
-        private String serviceInstanceId; 
         private String serviceVersion; 
         private String specificationName; 
+        private java.util.List < Tag> tag; 
         private String templateName; 
+        private String userId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetServiceEstimateCostRequest request) {
+        private Builder(CreateServiceInstanceRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.dryRun = request.dryRun;
+            this.name = request.name;
             this.parameters = request.parameters;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.serviceId = request.serviceId;
-            this.serviceInstanceId = request.serviceInstanceId;
             this.serviceVersion = request.serviceVersion;
             this.specificationName = request.specificationName;
+            this.tag = request.tag;
             this.templateName = request.templateName;
+            this.userId = request.userId;
         } 
 
         /**
@@ -158,6 +215,24 @@ public class GetServiceEstimateCostRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 
@@ -181,20 +256,20 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
          * ServiceId.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
             this.serviceId = serviceId;
-            return this;
-        }
-
-        /**
-         * ServiceInstanceId.
-         */
-        public Builder serviceInstanceId(String serviceInstanceId) {
-            this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
-            this.serviceInstanceId = serviceInstanceId;
             return this;
         }
 
@@ -217,6 +292,15 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * TemplateName.
          */
         public Builder templateName(String templateName) {
@@ -225,11 +309,81 @@ public class GetServiceEstimateCostRequest extends Request {
             return this;
         }
 
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.putQueryParameter("UserId", userId);
+            this.userId = userId;
+            return this;
+        }
+
         @Override
-        public GetServiceEstimateCostRequest build() {
-            return new GetServiceEstimateCostRequest(this);
+        public CreateServiceInstanceRequest build() {
+            return new CreateServiceInstanceRequest(this);
         } 
 
     } 
 
+    public static class Tag extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

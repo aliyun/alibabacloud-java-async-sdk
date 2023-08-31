@@ -22,7 +22,7 @@ public class ListServicesRequest extends Request {
 
     @Query
     @NameInMap("MaxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @Query
     @NameInMap("NextToken")
@@ -82,7 +82,7 @@ public class ListServicesRequest extends Request {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -117,7 +117,7 @@ public class ListServicesRequest extends Request {
     public static final class Builder extends Request.Builder<ListServicesRequest, Builder> {
         private Boolean allVersions; 
         private java.util.List < Filter> filter; 
-        private String maxResults; 
+        private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
         private String resourceGroupId; 
@@ -159,7 +159,7 @@ public class ListServicesRequest extends Request {
         /**
          * MaxResults.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
             return this;

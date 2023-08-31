@@ -25,7 +25,7 @@ public class ListServicesResponseBody extends TeaModel {
     private java.util.List < Services> services;
 
     @NameInMap("TotalCount")
-    private String totalCount;
+    private Integer totalCount;
 
     private ListServicesResponseBody(Builder builder) {
         this.maxResults = builder.maxResults;
@@ -74,7 +74,7 @@ public class ListServicesResponseBody extends TeaModel {
     /**
      * @return totalCount
      */
-    public String getTotalCount() {
+    public Integer getTotalCount() {
         return this.totalCount;
     }
 
@@ -83,7 +83,7 @@ public class ListServicesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List < Services> services; 
-        private String totalCount; 
+        private Integer totalCount; 
 
         /**
          * MaxResults.
@@ -120,7 +120,7 @@ public class ListServicesResponseBody extends TeaModel {
         /**
          * TotalCount.
          */
-        public Builder totalCount(String totalCount) {
+        public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
             return this;
         }
@@ -315,11 +315,17 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("DeployType")
         private String deployType;
 
+        @NameInMap("LatestResellSourceServiceVersion")
+        private String latestResellSourceServiceVersion;
+
         @NameInMap("PublishTime")
         private String publishTime;
 
         @NameInMap("RelationType")
         private String relationType;
+
+        @NameInMap("ResellServiceId")
+        private String resellServiceId;
 
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
@@ -338,6 +344,15 @@ public class ListServicesResponseBody extends TeaModel {
 
         @NameInMap("SourceImage")
         private String sourceImage;
+
+        @NameInMap("SourceServiceId")
+        private String sourceServiceId;
+
+        @NameInMap("SourceServiceVersion")
+        private String sourceServiceVersion;
+
+        @NameInMap("SourceSupplierName")
+        private String sourceSupplierName;
 
         @NameInMap("Status")
         private String status;
@@ -374,14 +389,19 @@ public class ListServicesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.defaultVersion = builder.defaultVersion;
             this.deployType = builder.deployType;
+            this.latestResellSourceServiceVersion = builder.latestResellSourceServiceVersion;
             this.publishTime = builder.publishTime;
             this.relationType = builder.relationType;
+            this.resellServiceId = builder.resellServiceId;
             this.resourceGroupId = builder.resourceGroupId;
             this.serviceId = builder.serviceId;
             this.serviceInfos = builder.serviceInfos;
             this.serviceType = builder.serviceType;
             this.shareType = builder.shareType;
             this.sourceImage = builder.sourceImage;
+            this.sourceServiceId = builder.sourceServiceId;
+            this.sourceServiceVersion = builder.sourceServiceVersion;
+            this.sourceSupplierName = builder.sourceSupplierName;
             this.status = builder.status;
             this.supplierName = builder.supplierName;
             this.supplierUrl = builder.supplierUrl;
@@ -451,6 +471,13 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return latestResellSourceServiceVersion
+         */
+        public String getLatestResellSourceServiceVersion() {
+            return this.latestResellSourceServiceVersion;
+        }
+
+        /**
          * @return publishTime
          */
         public String getPublishTime() {
@@ -462,6 +489,13 @@ public class ListServicesResponseBody extends TeaModel {
          */
         public String getRelationType() {
             return this.relationType;
+        }
+
+        /**
+         * @return resellServiceId
+         */
+        public String getResellServiceId() {
+            return this.resellServiceId;
         }
 
         /**
@@ -504,6 +538,27 @@ public class ListServicesResponseBody extends TeaModel {
          */
         public String getSourceImage() {
             return this.sourceImage;
+        }
+
+        /**
+         * @return sourceServiceId
+         */
+        public String getSourceServiceId() {
+            return this.sourceServiceId;
+        }
+
+        /**
+         * @return sourceServiceVersion
+         */
+        public String getSourceServiceVersion() {
+            return this.sourceServiceVersion;
+        }
+
+        /**
+         * @return sourceSupplierName
+         */
+        public String getSourceSupplierName() {
+            return this.sourceSupplierName;
         }
 
         /**
@@ -577,14 +632,19 @@ public class ListServicesResponseBody extends TeaModel {
             private String createTime; 
             private Boolean defaultVersion; 
             private String deployType; 
+            private String latestResellSourceServiceVersion; 
             private String publishTime; 
             private String relationType; 
+            private String resellServiceId; 
             private String resourceGroupId; 
             private String serviceId; 
             private java.util.List < ServiceInfos> serviceInfos; 
             private String serviceType; 
             private String shareType; 
             private String sourceImage; 
+            private String sourceServiceId; 
+            private String sourceServiceVersion; 
+            private String sourceSupplierName; 
             private String status; 
             private String supplierName; 
             private String supplierUrl; 
@@ -652,6 +712,14 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
+             * LatestResellSourceServiceVersion.
+             */
+            public Builder latestResellSourceServiceVersion(String latestResellSourceServiceVersion) {
+                this.latestResellSourceServiceVersion = latestResellSourceServiceVersion;
+                return this;
+            }
+
+            /**
              * PublishTime.
              */
             public Builder publishTime(String publishTime) {
@@ -664,6 +732,14 @@ public class ListServicesResponseBody extends TeaModel {
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
+                return this;
+            }
+
+            /**
+             * ResellServiceId.
+             */
+            public Builder resellServiceId(String resellServiceId) {
+                this.resellServiceId = resellServiceId;
                 return this;
             }
 
@@ -712,6 +788,30 @@ public class ListServicesResponseBody extends TeaModel {
              */
             public Builder sourceImage(String sourceImage) {
                 this.sourceImage = sourceImage;
+                return this;
+            }
+
+            /**
+             * SourceServiceId.
+             */
+            public Builder sourceServiceId(String sourceServiceId) {
+                this.sourceServiceId = sourceServiceId;
+                return this;
+            }
+
+            /**
+             * SourceServiceVersion.
+             */
+            public Builder sourceServiceVersion(String sourceServiceVersion) {
+                this.sourceServiceVersion = sourceServiceVersion;
+                return this;
+            }
+
+            /**
+             * SourceSupplierName.
+             */
+            public Builder sourceSupplierName(String sourceSupplierName) {
+                this.sourceSupplierName = sourceSupplierName;
                 return this;
             }
 

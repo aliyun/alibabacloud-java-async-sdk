@@ -18,7 +18,7 @@ public class ListServiceInstancesRequest extends Request {
 
     @Query
     @NameInMap("MaxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @Query
     @NameInMap("NextToken")
@@ -27,6 +27,10 @@ public class ListServiceInstancesRequest extends Request {
     @Query
     @NameInMap("RegionId")
     private String regionId;
+
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
 
     @Query
     @NameInMap("ShowDeleted")
@@ -42,6 +46,7 @@ public class ListServiceInstancesRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.showDeleted = builder.showDeleted;
         this.tag = builder.tag;
     }
@@ -69,7 +74,7 @@ public class ListServiceInstancesRequest extends Request {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -88,6 +93,13 @@ public class ListServiceInstancesRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return showDeleted
      */
     public Boolean getShowDeleted() {
@@ -103,9 +115,10 @@ public class ListServiceInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListServiceInstancesRequest, Builder> {
         private java.util.List < Filter> filter; 
-        private String maxResults; 
+        private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
+        private String resourceGroupId; 
         private Boolean showDeleted; 
         private java.util.List < Tag> tag; 
 
@@ -119,6 +132,7 @@ public class ListServiceInstancesRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.showDeleted = request.showDeleted;
             this.tag = request.tag;
         } 
@@ -135,7 +149,7 @@ public class ListServiceInstancesRequest extends Request {
         /**
          * MaxResults.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
             this.maxResults = maxResults;
             return this;
@@ -156,6 +170,15 @@ public class ListServiceInstancesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -46,6 +46,10 @@ public class CreateServiceRequest extends Request {
     private String licenseMetadata;
 
     @Query
+    @NameInMap("LogMetadata")
+    private String logMetadata;
+
+    @Query
     @NameInMap("OperationMetadata")
     private String operationMetadata;
 
@@ -79,6 +83,14 @@ public class CreateServiceRequest extends Request {
     private String shareType;
 
     @Query
+    @NameInMap("SourceServiceId")
+    private String sourceServiceId;
+
+    @Query
+    @NameInMap("SourceServiceVersion")
+    private String sourceServiceVersion;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -108,6 +120,7 @@ public class CreateServiceRequest extends Request {
         this.duration = builder.duration;
         this.isSupportOperated = builder.isSupportOperated;
         this.licenseMetadata = builder.licenseMetadata;
+        this.logMetadata = builder.logMetadata;
         this.operationMetadata = builder.operationMetadata;
         this.policyNames = builder.policyNames;
         this.regionId = builder.regionId;
@@ -116,6 +129,8 @@ public class CreateServiceRequest extends Request {
         this.serviceInfo = builder.serviceInfo;
         this.serviceType = builder.serviceType;
         this.shareType = builder.shareType;
+        this.sourceServiceId = builder.sourceServiceId;
+        this.sourceServiceVersion = builder.sourceServiceVersion;
         this.tag = builder.tag;
         this.tenantType = builder.tenantType;
         this.trialDuration = builder.trialDuration;
@@ -193,6 +208,13 @@ public class CreateServiceRequest extends Request {
     }
 
     /**
+     * @return logMetadata
+     */
+    public String getLogMetadata() {
+        return this.logMetadata;
+    }
+
+    /**
      * @return operationMetadata
      */
     public String getOperationMetadata() {
@@ -249,6 +271,20 @@ public class CreateServiceRequest extends Request {
     }
 
     /**
+     * @return sourceServiceId
+     */
+    public String getSourceServiceId() {
+        return this.sourceServiceId;
+    }
+
+    /**
+     * @return sourceServiceVersion
+     */
+    public String getSourceServiceVersion() {
+        return this.sourceServiceVersion;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -292,6 +328,7 @@ public class CreateServiceRequest extends Request {
         private Long duration; 
         private Boolean isSupportOperated; 
         private String licenseMetadata; 
+        private String logMetadata; 
         private String operationMetadata; 
         private String policyNames; 
         private String regionId; 
@@ -300,6 +337,8 @@ public class CreateServiceRequest extends Request {
         private java.util.List < ServiceInfo> serviceInfo; 
         private String serviceType; 
         private String shareType; 
+        private String sourceServiceId; 
+        private String sourceServiceVersion; 
         private java.util.List < Tag> tag; 
         private String tenantType; 
         private Long trialDuration; 
@@ -320,6 +359,7 @@ public class CreateServiceRequest extends Request {
             this.duration = request.duration;
             this.isSupportOperated = request.isSupportOperated;
             this.licenseMetadata = request.licenseMetadata;
+            this.logMetadata = request.logMetadata;
             this.operationMetadata = request.operationMetadata;
             this.policyNames = request.policyNames;
             this.regionId = request.regionId;
@@ -328,6 +368,8 @@ public class CreateServiceRequest extends Request {
             this.serviceInfo = request.serviceInfo;
             this.serviceType = request.serviceType;
             this.shareType = request.shareType;
+            this.sourceServiceId = request.sourceServiceId;
+            this.sourceServiceVersion = request.sourceServiceVersion;
             this.tag = request.tag;
             this.tenantType = request.tenantType;
             this.trialDuration = request.trialDuration;
@@ -408,6 +450,15 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
+         * LogMetadata.
+         */
+        public Builder logMetadata(String logMetadata) {
+            this.putQueryParameter("LogMetadata", logMetadata);
+            this.logMetadata = logMetadata;
+            return this;
+        }
+
+        /**
          * OperationMetadata.
          */
         public Builder operationMetadata(String operationMetadata) {
@@ -480,6 +531,24 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
+         * SourceServiceId.
+         */
+        public Builder sourceServiceId(String sourceServiceId) {
+            this.putQueryParameter("SourceServiceId", sourceServiceId);
+            this.sourceServiceId = sourceServiceId;
+            return this;
+        }
+
+        /**
+         * SourceServiceVersion.
+         */
+        public Builder sourceServiceVersion(String sourceServiceVersion) {
+            this.putQueryParameter("SourceServiceVersion", sourceServiceVersion);
+            this.sourceServiceVersion = sourceServiceVersion;
+            return this;
+        }
+
+        /**
          * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
@@ -539,6 +608,9 @@ public class CreateServiceRequest extends Request {
         @Validation(required = true)
         private String locale;
 
+        @NameInMap("LongDescriptionUrl")
+        private String longDescriptionUrl;
+
         @NameInMap("Name")
         @Validation(required = true)
         private String name;
@@ -549,6 +621,7 @@ public class CreateServiceRequest extends Request {
         private ServiceInfo(Builder builder) {
             this.image = builder.image;
             this.locale = builder.locale;
+            this.longDescriptionUrl = builder.longDescriptionUrl;
             this.name = builder.name;
             this.shortDescription = builder.shortDescription;
         }
@@ -576,6 +649,13 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
+         * @return longDescriptionUrl
+         */
+        public String getLongDescriptionUrl() {
+            return this.longDescriptionUrl;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -592,6 +672,7 @@ public class CreateServiceRequest extends Request {
         public static final class Builder {
             private String image; 
             private String locale; 
+            private String longDescriptionUrl; 
             private String name; 
             private String shortDescription; 
 
@@ -608,6 +689,14 @@ public class CreateServiceRequest extends Request {
              */
             public Builder locale(String locale) {
                 this.locale = locale;
+                return this;
+            }
+
+            /**
+             * LongDescriptionUrl.
+             */
+            public Builder longDescriptionUrl(String longDescriptionUrl) {
+                this.longDescriptionUrl = longDescriptionUrl;
                 return this;
             }
 

@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListServiceInstancesResponseBody extends TeaModel {
     @NameInMap("MaxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @NameInMap("NextToken")
     private String nextToken;
@@ -46,7 +46,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -79,7 +79,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String maxResults; 
+        private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private java.util.List < ServiceInstances> serviceInstances; 
@@ -88,7 +88,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         /**
          * MaxResults.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
             return this;
         }
@@ -254,6 +254,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("ServiceType")
         private String serviceType;
 
+        @NameInMap("SourceSupplierName")
+        private String sourceSupplierName;
+
         @NameInMap("Status")
         private String status;
 
@@ -277,6 +280,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             this.serviceId = builder.serviceId;
             this.serviceInfos = builder.serviceInfos;
             this.serviceType = builder.serviceType;
+            this.sourceSupplierName = builder.sourceSupplierName;
             this.status = builder.status;
             this.supplierName = builder.supplierName;
             this.supplierUrl = builder.supplierUrl;
@@ -342,6 +346,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return sourceSupplierName
+         */
+        public String getSourceSupplierName() {
+            return this.sourceSupplierName;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -384,6 +395,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String serviceId; 
             private java.util.List < ServiceInfos> serviceInfos; 
             private String serviceType; 
+            private String sourceSupplierName; 
             private String status; 
             private String supplierName; 
             private String supplierUrl; 
@@ -443,6 +455,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
+                return this;
+            }
+
+            /**
+             * SourceSupplierName.
+             */
+            public Builder sourceSupplierName(String sourceSupplierName) {
+                this.sourceSupplierName = sourceSupplierName;
                 return this;
             }
 
@@ -588,6 +608,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("Progress")
         private Long progress;
 
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @NameInMap("Service")
         private Service service;
 
@@ -630,6 +653,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             this.parameters = builder.parameters;
             this.payType = builder.payType;
             this.progress = builder.progress;
+            this.resourceGroupId = builder.resourceGroupId;
             this.service = builder.service;
             this.serviceInstanceId = builder.serviceInstanceId;
             this.serviceType = builder.serviceType;
@@ -728,6 +752,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return service
          */
         public Service getService() {
@@ -809,6 +840,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String parameters; 
             private String payType; 
             private Long progress; 
+            private String resourceGroupId; 
             private Service service; 
             private String serviceInstanceId; 
             private String serviceType; 
@@ -905,6 +937,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
              */
             public Builder progress(Long progress) {
                 this.progress = progress;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 

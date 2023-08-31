@@ -19,7 +19,7 @@ public class ListArtifactVersionsRequest extends Request {
 
     @Query
     @NameInMap("MaxResult")
-    private String maxResult;
+    private Integer maxResult;
 
     @Query
     @NameInMap("NextToken")
@@ -55,7 +55,7 @@ public class ListArtifactVersionsRequest extends Request {
     /**
      * @return maxResult
      */
-    public String getMaxResult() {
+    public Integer getMaxResult() {
         return this.maxResult;
     }
 
@@ -68,7 +68,7 @@ public class ListArtifactVersionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListArtifactVersionsRequest, Builder> {
         private String artifactId; 
-        private String maxResult; 
+        private Integer maxResult; 
         private String nextToken; 
 
         private Builder() {
@@ -94,7 +94,7 @@ public class ListArtifactVersionsRequest extends Request {
         /**
          * MaxResult.
          */
-        public Builder maxResult(String maxResult) {
+        public Builder maxResult(Integer maxResult) {
             this.putQueryParameter("MaxResult", maxResult);
             this.maxResult = maxResult;
             return this;

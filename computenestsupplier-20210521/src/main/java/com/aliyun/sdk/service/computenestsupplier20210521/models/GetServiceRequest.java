@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetServiceRequest extends Request {
     @Query
+    @NameInMap("FilterAliUid")
+    private Boolean filterAliUid;
+
+    @Query
     @NameInMap("RegionId")
     private String regionId;
 
@@ -25,11 +29,22 @@ public class GetServiceRequest extends Request {
     @NameInMap("ServiceVersion")
     private String serviceVersion;
 
+    @Query
+    @NameInMap("SharedAccountType")
+    private String sharedAccountType;
+
+    @Query
+    @NameInMap("ShowDetail")
+    private java.util.List < String > showDetail;
+
     private GetServiceRequest(Builder builder) {
         super(builder);
+        this.filterAliUid = builder.filterAliUid;
         this.regionId = builder.regionId;
         this.serviceId = builder.serviceId;
         this.serviceVersion = builder.serviceVersion;
+        this.sharedAccountType = builder.sharedAccountType;
+        this.showDetail = builder.showDetail;
     }
 
     public static Builder builder() {
@@ -43,6 +58,13 @@ public class GetServiceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return filterAliUid
+     */
+    public Boolean getFilterAliUid() {
+        return this.filterAliUid;
     }
 
     /**
@@ -66,10 +88,27 @@ public class GetServiceRequest extends Request {
         return this.serviceVersion;
     }
 
+    /**
+     * @return sharedAccountType
+     */
+    public String getSharedAccountType() {
+        return this.sharedAccountType;
+    }
+
+    /**
+     * @return showDetail
+     */
+    public java.util.List < String > getShowDetail() {
+        return this.showDetail;
+    }
+
     public static final class Builder extends Request.Builder<GetServiceRequest, Builder> {
+        private Boolean filterAliUid; 
         private String regionId; 
         private String serviceId; 
         private String serviceVersion; 
+        private String sharedAccountType; 
+        private java.util.List < String > showDetail; 
 
         private Builder() {
             super();
@@ -77,10 +116,22 @@ public class GetServiceRequest extends Request {
 
         private Builder(GetServiceRequest request) {
             super(request);
+            this.filterAliUid = request.filterAliUid;
             this.regionId = request.regionId;
             this.serviceId = request.serviceId;
             this.serviceVersion = request.serviceVersion;
+            this.sharedAccountType = request.sharedAccountType;
+            this.showDetail = request.showDetail;
         } 
+
+        /**
+         * FilterAliUid.
+         */
+        public Builder filterAliUid(Boolean filterAliUid) {
+            this.putQueryParameter("FilterAliUid", filterAliUid);
+            this.filterAliUid = filterAliUid;
+            return this;
+        }
 
         /**
          * RegionId.
@@ -106,6 +157,24 @@ public class GetServiceRequest extends Request {
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
             this.serviceVersion = serviceVersion;
+            return this;
+        }
+
+        /**
+         * SharedAccountType.
+         */
+        public Builder sharedAccountType(String sharedAccountType) {
+            this.putQueryParameter("SharedAccountType", sharedAccountType);
+            this.sharedAccountType = sharedAccountType;
+            return this;
+        }
+
+        /**
+         * ShowDetail.
+         */
+        public Builder showDetail(java.util.List < String > showDetail) {
+            this.putQueryParameter("ShowDetail", showDetail);
+            this.showDetail = showDetail;
             return this;
         }
 

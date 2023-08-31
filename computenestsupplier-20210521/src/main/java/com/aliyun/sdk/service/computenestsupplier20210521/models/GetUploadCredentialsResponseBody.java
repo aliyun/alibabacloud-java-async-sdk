@@ -250,7 +250,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * ak
+             * AccessKeyId.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -258,7 +258,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * sk
+             * AccessKeySecret.
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -266,7 +266,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * 仓库名称
+             * BucketName.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -274,7 +274,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * 过期时间
+             * ExpireDate.
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -282,7 +282,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * 文件key
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -290,7 +290,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * 地域
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -298,7 +298,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * 安全token
+             * SecurityToken.
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;

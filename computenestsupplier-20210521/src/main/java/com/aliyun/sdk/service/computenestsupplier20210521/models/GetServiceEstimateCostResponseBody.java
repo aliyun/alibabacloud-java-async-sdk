@@ -50,7 +50,7 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
         private java.util.Map < String, ? > resources; 
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
