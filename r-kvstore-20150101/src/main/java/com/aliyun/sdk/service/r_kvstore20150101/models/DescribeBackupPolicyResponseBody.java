@@ -18,6 +18,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("BackupRetentionPeriod")
     private String backupRetentionPeriod;
 
+    @NameInMap("DbsInstance")
+    private String dbsInstance;
+
     @NameInMap("EnableBackupLog")
     private Integer enableBackupLog;
 
@@ -36,6 +39,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     private DescribeBackupPolicyResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.backupRetentionPeriod = builder.backupRetentionPeriod;
+        this.dbsInstance = builder.dbsInstance;
         this.enableBackupLog = builder.enableBackupLog;
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
         this.preferredBackupTime = builder.preferredBackupTime;
@@ -63,6 +67,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      */
     public String getBackupRetentionPeriod() {
         return this.backupRetentionPeriod;
+    }
+
+    /**
+     * @return dbsInstance
+     */
+    public String getDbsInstance() {
+        return this.dbsInstance;
     }
 
     /**
@@ -103,6 +114,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private AccessDeniedDetail accessDeniedDetail; 
         private String backupRetentionPeriod; 
+        private String dbsInstance; 
         private Integer enableBackupLog; 
         private String preferredBackupPeriod; 
         private String preferredBackupTime; 
@@ -122,6 +134,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          */
         public Builder backupRetentionPeriod(String backupRetentionPeriod) {
             this.backupRetentionPeriod = backupRetentionPeriod;
+            return this;
+        }
+
+        /**
+         * DbsInstance.
+         */
+        public Builder dbsInstance(String dbsInstance) {
+            this.dbsInstance = dbsInstance;
             return this;
         }
 
