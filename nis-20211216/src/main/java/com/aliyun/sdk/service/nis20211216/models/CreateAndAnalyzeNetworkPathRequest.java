@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAndAnalyzeNetworkPathRequest extends Request {
     @Query
+    @NameInMap("AuditParam")
+    private String auditParam;
+
+    @Query
     @NameInMap("Protocol")
     private String protocol;
 
@@ -56,6 +60,7 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
 
     private CreateAndAnalyzeNetworkPathRequest(Builder builder) {
         super(builder);
+        this.auditParam = builder.auditParam;
         this.protocol = builder.protocol;
         this.regionId = builder.regionId;
         this.sourceId = builder.sourceId;
@@ -79,6 +84,13 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return auditParam
+     */
+    public String getAuditParam() {
+        return this.auditParam;
     }
 
     /**
@@ -152,6 +164,7 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAndAnalyzeNetworkPathRequest, Builder> {
+        private String auditParam; 
         private String protocol; 
         private String regionId; 
         private String sourceId; 
@@ -169,6 +182,7 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
 
         private Builder(CreateAndAnalyzeNetworkPathRequest request) {
             super(request);
+            this.auditParam = request.auditParam;
             this.protocol = request.protocol;
             this.regionId = request.regionId;
             this.sourceId = request.sourceId;
@@ -180,6 +194,15 @@ public class CreateAndAnalyzeNetworkPathRequest extends Request {
             this.targetPort = request.targetPort;
             this.targetType = request.targetType;
         } 
+
+        /**
+         * AuditParam.
+         */
+        public Builder auditParam(String auditParam) {
+            this.putQueryParameter("AuditParam", auditParam);
+            this.auditParam = auditParam;
+            return this;
+        }
 
         /**
          * The protocol type. Valid values:

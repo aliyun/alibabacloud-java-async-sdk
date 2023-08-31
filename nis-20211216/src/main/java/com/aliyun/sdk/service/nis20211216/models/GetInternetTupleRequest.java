@@ -339,7 +339,7 @@ public class GetInternetTupleRequest extends Request {
         } 
 
         /**
-         * AccountIds.
+         * The IDs of member accounts.
          */
         public Builder accountIds(java.util.List < String > accountIds) {
             this.putQueryParameter("AccountIds", accountIds);
@@ -348,7 +348,7 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * BeginTime.
+         * The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder beginTime(Long beginTime) {
             this.putQueryParameter("BeginTime", beginTime);
@@ -357,7 +357,7 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * CloudIp.
+         * The local IP address.
          */
         public Builder cloudIp(String cloudIp) {
             this.putQueryParameter("CloudIp", cloudIp);
@@ -366,7 +366,10 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * CloudIsp.
+         * The local Internet service provider (ISP).
+         * <p>
+         * 
+         * > In most cases, the value is Alibaba or Alibaba Cloud.
          */
         public Builder cloudIsp(String cloudIsp) {
             this.putQueryParameter("CloudIsp", cloudIsp);
@@ -375,7 +378,10 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * CloudPort.
+         * The local port.
+         * <p>
+         * 
+         * > This parameter is required only when you set **TupleType** to **5**.
          */
         public Builder cloudPort(String cloudPort) {
             this.putQueryParameter("CloudPort", cloudPort);
@@ -384,7 +390,11 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * Direction.
+         * The direction of the Internet traffic that you want to query. Valid values:
+         * <p>
+         * 
+         * - **in**: inbound
+         * - **out**: outbound
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -393,7 +403,7 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -402,7 +412,7 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Alibaba Cloud instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -411,7 +421,7 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * InstanceList.
+         * The instance IDs for filtering.
          */
         public Builder instanceList(java.util.List < String > instanceList) {
             String instanceListShrink = shrink(instanceList, "InstanceList", "json");
@@ -421,7 +431,7 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The metric for instance ranking. Default value: **ByteCount**. This value specifies that instances are ranked by traffic volume.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -430,7 +440,10 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * OtherCity.
+         * The remote city.
+         * <p>
+         * 
+         * > This parameter is required only if you set **TupleType** to **5**.
          */
         public Builder otherCity(String otherCity) {
             this.putQueryParameter("OtherCity", otherCity);
@@ -439,7 +452,10 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * OtherCountry.
+         * The remote country.
+         * <p>
+         * 
+         * > This parameter is required only if you set **TupleType** to **5**.
          */
         public Builder otherCountry(String otherCountry) {
             this.putQueryParameter("OtherCountry", otherCountry);
@@ -448,7 +464,10 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * OtherIp.
+         * The remote IP address.
+         * <p>
+         * 
+         * > This parameter is required only when you set **TupleType** to **2** or **5**.
          */
         public Builder otherIp(String otherIp) {
             this.putQueryParameter("OtherIp", otherIp);
@@ -457,7 +476,10 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * OtherIsp.
+         * The remote ISP.
+         * <p>
+         * 
+         * > This parameter is required if you want to view the information about the remote ISP.
          */
         public Builder otherIsp(String otherIsp) {
             this.putQueryParameter("OtherIsp", otherIsp);
@@ -466,7 +488,10 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * OtherPort.
+         * The remote port.
+         * <p>
+         * 
+         * > This parameter is required only when you set **TupleType** to **5**.
          */
         public Builder otherPort(String otherPort) {
             this.putQueryParameter("OtherPort", otherPort);
@@ -475,7 +500,10 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * Protocol.
+         * The protocol number.
+         * <p>
+         * 
+         * > All protocols are supported. This parameter is required only when you set **TupleType** to **5**.
          */
         public Builder protocol(String protocol) {
             this.putQueryParameter("Protocol", protocol);
@@ -484,7 +512,7 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region for which you want to query the Internet traffic.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -493,7 +521,11 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * Sort.
+         * The order in which instances are ranked by Internet traffic. Valid values:
+         * <p>
+         * 
+         * - **desc**: the descending order
+         * - **asc**: the ascending order
          */
         public Builder sort(String sort) {
             this.putQueryParameter("Sort", sort);
@@ -502,7 +534,7 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * TopN.
+         * Specifies top-N traffic data to display. Default value: **10**. This value specifies to display top-10 traffic data by default.
          */
         public Builder topN(Integer topN) {
             this.putQueryParameter("TopN", topN);
@@ -511,7 +543,12 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * TupleType.
+         * The type of the tuple. Valid values:
+         * <p>
+         * 
+         * - **1**: 1-tuple
+         * - **2**: 2-tuples
+         * - **5**: 5-tuples
          */
         public Builder tupleType(Integer tupleType) {
             this.putQueryParameter("TupleType", tupleType);
@@ -520,7 +557,10 @@ public class GetInternetTupleRequest extends Request {
         }
 
         /**
-         * UseMultiAccount.
+         * Specifies whether to enable the multi-account management feature. Default value: **false**. This value specifies that the multi-account management feature is disabled.
+         * <p>
+         * 
+         * > By default, the multi-account management feature is disabled. If you want to enable this feature, contact your customer business manager.
          */
         public Builder useMultiAccount(Boolean useMultiAccount) {
             this.putQueryParameter("UseMultiAccount", useMultiAccount);

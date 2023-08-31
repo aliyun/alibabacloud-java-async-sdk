@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateNetworkReachableAnalysisRequest extends Request {
     @Query
+    @NameInMap("AuditParam")
+    private String auditParam;
+
+    @Query
     @NameInMap("NetworkPathId")
     @Validation(required = true)
     private String networkPathId;
@@ -27,6 +31,7 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
 
     private CreateNetworkReachableAnalysisRequest(Builder builder) {
         super(builder);
+        this.auditParam = builder.auditParam;
         this.networkPathId = builder.networkPathId;
         this.regionId = builder.regionId;
         this.tag = builder.tag;
@@ -43,6 +48,13 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return auditParam
+     */
+    public String getAuditParam() {
+        return this.auditParam;
     }
 
     /**
@@ -67,6 +79,7 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateNetworkReachableAnalysisRequest, Builder> {
+        private String auditParam; 
         private String networkPathId; 
         private String regionId; 
         private java.util.List < Tag> tag; 
@@ -77,10 +90,20 @@ public class CreateNetworkReachableAnalysisRequest extends Request {
 
         private Builder(CreateNetworkReachableAnalysisRequest request) {
             super(request);
+            this.auditParam = request.auditParam;
             this.networkPathId = request.networkPathId;
             this.regionId = request.regionId;
             this.tag = request.tag;
         } 
+
+        /**
+         * AuditParam.
+         */
+        public Builder auditParam(String auditParam) {
+            this.putQueryParameter("AuditParam", auditParam);
+            this.auditParam = auditParam;
+            return this;
+        }
 
         /**
          * The ID of the network path. You can call the **CreateNetworkPath** operation to obtain the ID of the network path.
