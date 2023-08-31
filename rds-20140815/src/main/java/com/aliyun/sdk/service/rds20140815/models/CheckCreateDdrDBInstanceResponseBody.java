@@ -50,7 +50,11 @@ public class CheckCreateDdrDBInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Indicates whether the data of the source instance can be restored across regions. Valid values:** true and false**
+         * Indicates whether the data of the source instance can be restored across regions. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder isValid(String isValid) {
             this.isValid = isValid;
@@ -58,7 +62,7 @@ public class CheckCreateDdrDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

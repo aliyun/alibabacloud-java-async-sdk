@@ -197,7 +197,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         } 
 
         /**
-         * The ID of the data backup file.
+         * The ID of the backup set.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -206,7 +206,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The backup mode of the data backup file. Valid values:
+         * The backup method. Valid values:
          * <p>
          * 
          * *   **Automated**
@@ -219,7 +219,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The status of the data backup file. Valid values:
+         * The status of the backup set. Valid values:
          * <p>
          * 
          * *   **Success**
@@ -232,7 +232,7 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -244,7 +244,7 @@ public class DescribeDetachedBackupsRequest extends Request {
          * The end of the time range to query. The end time must be later than the start time.
          * <p>
          * 
-         * The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
+         * Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -253,10 +253,10 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: any non-zero positive integer.
+         * The page number. Pages start from page 1.
          * <p>
          * 
-         * >  Default value: 1.
+         * > The default value is 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -265,14 +265,14 @@ public class DescribeDetachedBackupsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
          * *   **30**
          * *   **50**
          * *   **100**
          * 
-         * >  Default value: **30**.
+         * > The default value is **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

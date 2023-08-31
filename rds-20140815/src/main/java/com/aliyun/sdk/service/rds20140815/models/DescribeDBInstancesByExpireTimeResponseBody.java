@@ -86,7 +86,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * An array that consists of the details about the instances.
+         * The details of the instances.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -229,7 +229,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -245,10 +245,10 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration date and time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The expiration time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              * <p>
              * 
-             * > Pay-as-you-go instances never expire.
+             * > : Pay-as-you-go instances never expire.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -275,8 +275,8 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
              * The billing method of the instance. Valid values:
              * <p>
              * 
-             * *   **Postpaid**: pay-as-you-go
-             * *   **Prepaid**: subscription
+             * *   **Postpaid**: pay-as-you-go.
+             * *   **Prepaid**: subscription.
              */
             public Builder payType(String payType) {
                 this.payType = payType;

@@ -86,7 +86,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         private String syncMode; 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -94,7 +94,13 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HAMode.
+         * The high availability mode of the instance. Valid values:
+         * <p>
+         * 
+         * *   **RPO**: Data consistency is preferred. The instance ensures data reliability to minimize data losses. If you have high requirements on data consistency, select this mode.
+         * *   **RTO**: Service availability is preferred. The instance restores the database service at the earliest opportunity to ensure service availability. If you have high requirements on instance availability, select this mode.
+         * 
+         * > This parameter is returned only for instances that run MySQL.
          */
         public Builder HAMode(String HAMode) {
             this.HAMode = HAMode;
@@ -102,7 +108,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HostInstanceInfos.
+         * An array that consists of the information of the primary and secondary instances.
          */
         public Builder hostInstanceInfos(HostInstanceInfos hostInstanceInfos) {
             this.hostInstanceInfos = hostInstanceInfos;
@@ -110,7 +116,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +124,14 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
         }
 
         /**
-         * SyncMode.
+         * The data replication mode of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Sync**: the synchronous mode
+         * *   **Semi-sync**: the semi-synchronous replication mode
+         * *   **Async**: the asynchronous mode
+         * 
+         * > This parameter is returned only for instances that run MySQL.
          */
         public Builder syncMode(String syncMode) {
             this.syncMode = syncMode;
@@ -230,7 +243,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * DataSyncTime.
+             * The time when the secondary instance completed the synchronization of data from the primary instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder dataSyncTime(String dataSyncTime) {
                 this.dataSyncTime = dataSyncTime;
@@ -238,7 +251,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LogSyncTime.
+             * The time when the secondary instance received logs from the primary instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder logSyncTime(String logSyncTime) {
                 this.logSyncTime = logSyncTime;
@@ -246,7 +259,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the instance.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -254,7 +267,11 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NodeType.
+             * The type of the node. Valid values:
+             * <p>
+             * 
+             * *   **Master**: the primary node
+             * *   **Slave**: the secondary node
              */
             public Builder nodeType(String nodeType) {
                 this.nodeType = nodeType;
@@ -262,7 +279,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -270,7 +287,13 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SyncStatus.
+             * The synchronization status. Valid values:
+             * <p>
+             * 
+             * *   **NotAvailable**: The synchronization fails. This means that faults occur.
+             * *   **Syncing**: The synchronization is in process. In this case, a primary/secondary switchover may cause data losses.
+             * *   **Synchronized**: The synchronization is completed.
+             * *   **NotSupport**: The database engine or database engine version does not involve the synchronization between the primary and secondary instances.
              */
             public Builder syncStatus(String syncStatus) {
                 this.syncStatus = syncStatus;
@@ -278,7 +301,7 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The ID of the zone.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

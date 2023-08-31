@@ -62,7 +62,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
         private Rules rules; 
 
         /**
-         * An array that consists of price information.
+         * Details of price information.
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -142,7 +142,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * The description of the error.
+             * The returned message.
              */
             public Builder checkErrMsg(String checkErrMsg) {
                 this.checkErrMsg = checkErrMsg;
@@ -235,7 +235,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the coupon.
+             * The coupon ID.
              */
             public Builder couponNo(String couponNo) {
                 this.couponNo = couponNo;
@@ -567,7 +567,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             private Long ruleId; 
 
             /**
-             * The description of the promotion rule.
+             * The description of the activity.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -575,7 +575,7 @@ public class DescribeRenewalPriceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the promotion rule.
+             * The name of the rule.
              */
             public Builder name(String name) {
                 this.name = name;

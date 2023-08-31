@@ -98,7 +98,14 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code returned. Valid values:
+         * <p>
+         * 
+         * *   **200**: success
+         * *   **400**: client error
+         * *   **401**: identity authentication failed
+         * *   **404**: requested page not found
+         * *   **500**: server error
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +113,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +121,12 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned. Valid values:
+         * <p>
+         * 
+         * *   **200**: success
+         * *   **400**: client error
+         * *   **500**: server error
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +134,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +142,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,11 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -226,7 +242,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             private Integer userId; 
 
             /**
-             * Id.
+             * The primary key of the data table.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -234,7 +250,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * The IP addresses.
              */
             public Builder ips(String ips) {
                 this.ips = ips;
@@ -242,7 +258,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the whitelist.
              */
             public Builder templateId(Integer templateId) {
                 this.templateId = templateId;
@@ -250,7 +266,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the whitelist.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -258,7 +274,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The user ID.
              */
             public Builder userId(Integer userId) {
                 this.userId = userId;
@@ -371,7 +387,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             private Integer totalRecords; 
 
             /**
-             * CurrPageNumbers.
+             * The page number returned.
              */
             public Builder currPageNumbers(Integer currPageNumbers) {
                 this.currPageNumbers = currPageNumbers;
@@ -379,7 +395,11 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * HasNext.
+             * Indicates whether the data that meets conditions is displayed on the next page. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder hasNext(Boolean hasNext) {
                 this.hasNext = hasNext;
@@ -387,7 +407,11 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * HasPrev.
+             * Indicates whether the data that meets conditions is displayed on the previous page. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder hasPrev(Boolean hasPrev) {
                 this.hasPrev = hasPrev;
@@ -395,7 +419,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRecordsPerPage.
+             * The number of entries returned per page.
              */
             public Builder maxRecordsPerPage(Integer maxRecordsPerPage) {
                 this.maxRecordsPerPage = maxRecordsPerPage;
@@ -403,7 +427,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Templates.
+             * The information about whitelists returned by page.
              */
             public Builder templates(java.util.List < Templates> templates) {
                 this.templates = templates;
@@ -411,7 +435,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPageNumbers.
+             * The total number of pages returned.
              */
             public Builder totalPageNumbers(Integer totalPageNumbers) {
                 this.totalPageNumbers = totalPageNumbers;
@@ -419,7 +443,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRecords.
+             * The total number of entries returned.
              */
             public Builder totalRecords(Integer totalRecords) {
                 this.totalRecords = totalRecords;

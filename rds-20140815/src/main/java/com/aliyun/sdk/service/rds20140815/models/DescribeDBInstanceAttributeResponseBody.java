@@ -224,7 +224,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -232,7 +232,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder nodeRegionId(String nodeRegionId) {
                 this.nodeRegionId = nodeRegionId;
@@ -252,7 +252,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * The zone ID.
              */
             public Builder nodeZoneId(String nodeZoneId) {
                 this.nodeZoneId = nodeZoneId;
@@ -375,7 +375,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private DBInstanceIds DBInstanceIds; 
 
             /**
-             * The details of the instance.
+             * An array consisting of the IDs of the instances.
              */
             public Builder DBInstanceIds(DBInstanceIds DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
@@ -548,7 +548,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of RDS Capacity Units (RCUs).
+             * The maximum number of RCUs.
              */
             public Builder scaleMax(Double scaleMax) {
                 this.scaleMax = scaleMax;
@@ -1545,7 +1545,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Auto:** automatic update.
-             * *   **Manual**: manual update. ApsaraDB RDS automatically updates the minor engine version of the instance only when the minor engine version is phased out.
+             * *   **Manual**: manual update. The minor engine version of the instance is forcefully updated only when the in-use minor engine version is phased out.
              */
             public Builder autoUpgradeMinorVersion(String autoUpgradeMinorVersion) {
                 this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
@@ -1572,9 +1572,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <props="china">预留参数，无需配置。</props>
-             * <p>
-             * <props="intl">无效参数，无需配置。</props>
+             * An invalid parameter. You can ignore this parameter.
              */
             public Builder bpeEnabled(String bpeEnabled) {
                 this.bpeEnabled = bpeEnabled;
@@ -1582,9 +1580,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <props="china">预留参数，无需配置。</props>
-             * <p>
-             * <props="intl">无效参数，无需配置。</props>
+             * An invalid parameter. You can ignore this parameter.
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
@@ -1674,7 +1670,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cores that are configured for the instance.
+             * The number of CPU cores.
              */
             public Builder DBInstanceCPU(String DBInstanceCPU) {
                 this.DBInstanceCPU = DBInstanceCPU;
@@ -1720,7 +1716,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The memory size of the instance. Unit: MB.
+             * The memory capacity of the instance. Unit: MB.
              */
             public Builder DBInstanceMemory(Long DBInstanceMemory) {
                 this.DBInstanceMemory = DBInstanceMemory;
@@ -1760,8 +1756,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * <p>
              * 
              * *   **local_ssd** and **ephemeral_ssd**: local SSD
-             * *   **cloud_ssd**: standard SSD
-             * *   **cloud_essd**: enhanced SSD
+             * *   **cloud_ssd**: standard SSD.
+             * *   **cloud_essd**: enhanced SSD (ESSD)
              */
             public Builder DBInstanceStorageType(String DBInstanceStorageType) {
                 this.DBInstanceStorageType = DBInstanceStorageType;
@@ -1887,8 +1883,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * The network type of the instance. Valid values:
              * <p>
              * 
-             * *   **Classic**: classic network
-             * *   **VPC**: virtual private cloud (VPC)
+             * *   **Classic**
+             * *   **VPC**
              */
             public Builder instanceNetworkType(String instanceNetworkType) {
                 this.instanceNetworkType = instanceNetworkType;
@@ -1983,7 +1979,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of I/O requests that is processed by the instance per second.
+             * The maximum number of I/O requests per second.
              */
             public Builder maxIOPS(Integer maxIOPS) {
                 this.maxIOPS = maxIOPS;
@@ -1991,7 +1987,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * PGBouncerEnabled.
+             * Indicates whether PgBouncer is enabled.
+             * <p>
+             * 
+             * > This parameter is returned only for RDS instances that run PostgreSQL. If PgBouncer is enabled, the return value is **true**.
              */
             public Builder PGBouncerEnabled(String PGBouncerEnabled) {
                 this.PGBouncerEnabled = PGBouncerEnabled;
@@ -2032,7 +2031,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the IDs of the read-only instances that are attached to the primary instance.
+             * The IDs of the read-only instances that are attached to the primary instance.
              */
             public Builder readOnlyDBInstanceIds(ReadOnlyDBInstanceIds readOnlyDBInstanceIds) {
                 this.readOnlyDBInstanceIds = readOnlyDBInstanceIds;
@@ -2048,7 +2047,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID of the instance.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -2092,7 +2091,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the details about the secondary zones.
+             * Information about the zone of the secondary instance.
              */
             public Builder slaveZones(SlaveZones slaveZones) {
                 this.slaveZones = slaveZones;
@@ -2100,11 +2099,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the instance supports superuser accounts, such as the system administrator (SA) account, the Active Directory (AD) account, and the host account.
+             * Indicates whether the instance supports privileged accounts, such as the system administrator (SA) account, the Active Directory (AD) account, and the host account.
              * <p>
              * 
-             * *   **Enable**: Superuser accounts are supported.
-             * *   **Disabled**: Superuser accounts are not supported.
+             * *   **Enable**: Privileged accounts are supported.
+             * *   **Disabled**: Privileged accounts are not supported.
              */
             public Builder superPermissionMode(String superPermissionMode) {
                 this.superPermissionMode = superPermissionMode;
@@ -2120,7 +2119,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone of the instance.
+             * The time zone.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
@@ -2148,7 +2147,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -2156,7 +2155,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID of the instance. This parameter is returned only when the instance resides in a VPC.
+             * The VPC ID.
              */
             public Builder vpcCloudInstanceId(String vpcCloudInstanceId) {
                 this.vpcCloudInstanceId = vpcCloudInstanceId;
@@ -2164,7 +2163,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -2172,7 +2171,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID of the instance.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

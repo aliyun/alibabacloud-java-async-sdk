@@ -83,7 +83,7 @@ public class DeleteGadInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the global active database cluster. You can call the [DescribeGadInstances](~~330105~~) operation to query the IDs of global active database clusters.
+         * The ID of the global active database cluster. You can call the [DescribeGadInstances](~~330105~~) operation to query the ID of the global active database cluster.
          */
         public Builder gadInstanceName(String gadInstanceName) {
             this.putQueryParameter("GadInstanceName", gadInstanceName);
@@ -92,7 +92,7 @@ public class DeleteGadInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the central node of the global active database cluster. You can call the [DescribeGadInstances](~~330105~~) operation to query the region IDs of global active database clusters.
+         * The region ID of the central node of the global active database cluster. You can call the [DescribeGadInstances](~~330105~~) operation to query the information.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +101,7 @@ public class DeleteGadInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * 资源组ID。可调用[DescribeDBInstanceAttribute](~~610394~~)接口获取。
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

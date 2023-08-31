@@ -139,7 +139,7 @@ public class RestartDBInstanceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * Specifies the client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -148,7 +148,7 @@ public class RestartDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -157,7 +157,10 @@ public class RestartDBInstanceRequest extends Request {
         }
 
         /**
-         * The unique ID of the secondary instance. You can call [DescribeDBInstanceHAConfig](~~26244~~) to query the secondary instance ID.
+         * The node ID, which can be used to restart a specified node. You can call the [DescribeDBInstanceHAConfig](~~610434~~) to obtain the node ID.
+         * <p>
+         * 
+         * > The secondary instance restart feature is supported for RDS instances that run SQL Server EE on RDS Cluster Edition. For more information, see [Restart a secondary database](~~2411880~~).
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

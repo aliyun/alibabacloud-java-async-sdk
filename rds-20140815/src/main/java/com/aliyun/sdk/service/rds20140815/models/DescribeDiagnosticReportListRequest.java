@@ -69,7 +69,7 @@ public class DescribeDiagnosticReportListRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -78,7 +78,7 @@ public class DescribeDiagnosticReportListRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

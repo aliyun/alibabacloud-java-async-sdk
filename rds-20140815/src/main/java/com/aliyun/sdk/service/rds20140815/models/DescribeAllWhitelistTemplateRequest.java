@@ -27,6 +27,10 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
     private Integer pageNumbers;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -43,6 +47,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         this.fuzzySearch = builder.fuzzySearch;
         this.maxRecordsPerPage = builder.maxRecordsPerPage;
         this.pageNumbers = builder.pageNumbers;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.templateName = builder.templateName;
@@ -83,6 +88,13 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -107,6 +119,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         private Boolean fuzzySearch; 
         private Integer maxRecordsPerPage; 
         private Integer pageNumbers; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String templateName; 
@@ -120,13 +133,18 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
             this.fuzzySearch = request.fuzzySearch;
             this.maxRecordsPerPage = request.maxRecordsPerPage;
             this.pageNumbers = request.pageNumbers;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.templateName = request.templateName;
         } 
 
         /**
-         * FuzzySearch.
+         * Specifies whether to enable fuzzy search. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables the feature.
+         * *   **false**: disables the feature.
          */
         public Builder fuzzySearch(Boolean fuzzySearch) {
             this.putQueryParameter("FuzzySearch", fuzzySearch);
@@ -135,7 +153,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * MaxRecordsPerPage.
+         * The number of entries to return on each page. Enumerated valid values: 10, 30, and 50.
          */
         public Builder maxRecordsPerPage(Integer maxRecordsPerPage) {
             this.putQueryParameter("MaxRecordsPerPage", maxRecordsPerPage);
@@ -144,11 +162,20 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * PageNumbers.
+         * The page number.
          */
         public Builder pageNumbers(Integer pageNumbers) {
             this.putQueryParameter("PageNumbers", pageNumbers);
             this.pageNumbers = pageNumbers;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -171,7 +198,7 @@ public class DescribeAllWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the whitelist. If you specify this parameter when you perform a fuzzy search, you can call the DescribeWhitelistTemplate operation to query the name of the whitelist during the fuzzy search.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

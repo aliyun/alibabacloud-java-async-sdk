@@ -98,7 +98,7 @@ public class DescribePriceResponseBody extends TeaModel {
         private Float tradeMinRCUAmount; 
 
         /**
-         * The information about the price.
+         * The price information.
          */
         public Builder priceInfo(PriceInfo priceInfo) {
             this.priceInfo = priceInfo;
@@ -114,7 +114,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details of the promotion rule.
+         * The details of the promotion rule.
          */
         public Builder rules(Rules rules) {
             this.rules = rules;
@@ -122,7 +122,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * ShowDiscount.
+         * Indicates whether discounts can be used.
          */
         public Builder showDiscount(Boolean showDiscount) {
             this.showDiscount = showDiscount;
@@ -130,7 +130,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * TradeMaxRCUAmount.
+         * The estimated hourly fee that is calculated based on the maximum number of RCUs.
          */
         public Builder tradeMaxRCUAmount(Float tradeMaxRCUAmount) {
             this.tradeMaxRCUAmount = tradeMaxRCUAmount;
@@ -138,7 +138,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * TradeMinRCUAmount.
+         * The estimated hourly fee that is calculated based on the minimum number of RCUs.
          */
         public Builder tradeMinRCUAmount(Float tradeMinRCUAmount) {
             this.tradeMinRCUAmount = tradeMinRCUAmount;
@@ -295,7 +295,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The ID of the coupon.
+             * The coupon ID.
              */
             public Builder couponNo(String couponNo) {
                 this.couponNo = couponNo;
@@ -522,7 +522,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of information about the coupon.
+             * The information about the coupon.
              */
             public Builder coupons(Coupons coupons) {
                 this.coupons = coupons;

@@ -70,10 +70,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The instance to which the parameter template was applied. 
+         * The instance to which the parameter template was applied.
          * <p>
          * 
-         * >  The RelatedCustinsInfo parameter is available only for ApsaraDB RDS for PostgreSQL instances.
+         * > This parameter is available only for ApsaraDB RDS for PostgreSQL instances.
          */
         public Builder relatedCustinsInfo(RelatedCustinsInfo relatedCustinsInfo) {
             this.relatedCustinsInfo = relatedCustinsInfo;
@@ -81,7 +81,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -351,7 +351,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine.
+             * The database engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -359,7 +359,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version.
+             * The version of the database engine.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -387,7 +387,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The array of parameters.
+             * The details of the parameters.
              */
             public Builder paramDetail(ParamDetail paramDetail) {
                 this.paramDetail = paramDetail;
@@ -534,7 +534,7 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -575,10 +575,10 @@ public class DescribeParameterGroupResponseBody extends TeaModel {
             private java.util.List < RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo; 
 
             /**
-             * The instance to which the parameter template was applied. 
+             * The instance to which the parameter template was applied.
              * <p>
              * 
-             * >  The RelatedCustinsInfo parameter is available only for ApsaraDB RDS for PostgreSQL instances.
+             * > This parameter is available only for ApsaraDB RDS for PostgreSQL instances.
              */
             public Builder relatedCustinsInfo(java.util.List < RelatedCustinsInfoRelatedCustinsInfo> relatedCustinsInfo) {
                 this.relatedCustinsInfo = relatedCustinsInfo;

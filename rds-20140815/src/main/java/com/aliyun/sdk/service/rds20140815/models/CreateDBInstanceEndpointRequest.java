@@ -258,7 +258,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -267,7 +267,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The node that is configured for the endpoint.
+         * The information about the node that is configured for the endpoint.
          */
         public Builder nodeItems(java.util.List < NodeItems> nodeItems) {
             String nodeItemsShrink = shrink(nodeItems, "NodeItems", "json");
@@ -298,7 +298,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -391,7 +391,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
             private Long weight; 
 
             /**
-             * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+             * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;
@@ -399,7 +399,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
             }
 
             /**
-             * The ID of the node.
+             * The node ID.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;

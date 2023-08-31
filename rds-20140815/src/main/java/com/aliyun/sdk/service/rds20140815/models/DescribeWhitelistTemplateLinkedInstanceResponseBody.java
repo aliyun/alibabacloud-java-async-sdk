@@ -98,7 +98,14 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code returned. Valid values:
+         * <p>
+         * 
+         * *   **200**: success
+         * *   **400**: client error
+         * *   **401**: identity authentication failed
+         * *   **404**: request page not found
+         * *   **500**: server error
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +113,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +121,12 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned. Valid values:
+         * <p>
+         * 
+         * *   **200**: success
+         * *   **400**: client error
+         * *   **500**: server error
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +134,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +142,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,11 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +206,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
             private Integer templateId; 
 
             /**
-             * InsName.
+             * The information about the instance.
              */
             public Builder insName(java.util.List < String > insName) {
                 this.insName = insName;
@@ -198,7 +214,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
             }
 
             /**
-             * TemplateId.
+             * The ID of the whitelist template.
              */
             public Builder templateId(Integer templateId) {
                 this.templateId = templateId;

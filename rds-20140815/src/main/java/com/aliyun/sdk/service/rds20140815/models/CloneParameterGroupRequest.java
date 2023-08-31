@@ -215,7 +215,7 @@ public class CloneParameterGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group. You can leave this parameter empty.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

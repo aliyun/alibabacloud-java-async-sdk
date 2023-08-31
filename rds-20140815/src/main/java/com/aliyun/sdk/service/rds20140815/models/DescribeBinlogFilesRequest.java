@@ -171,7 +171,7 @@ public class DescribeBinlogFilesRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -180,7 +180,10 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * The end time of the query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The end of the time range to query. The end time must be later than the start time.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -207,7 +210,7 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: any non-zero positive integer.
+         * The page number. Pages start from page 1.
          * <p>
          * 
          * Default value: **1**.
@@ -219,7 +222,12 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **30** to **100**. Default value: **30**.
+         * The number of entries per page.
+         * <p>
+         * 
+         * Valid values: **30** to **100**.
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -246,7 +254,10 @@ public class DescribeBinlogFilesRequest extends Request {
         }
 
         /**
-         * The start time of the query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

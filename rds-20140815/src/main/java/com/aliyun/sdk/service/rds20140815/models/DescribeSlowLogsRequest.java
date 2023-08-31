@@ -199,7 +199,7 @@ public class DescribeSlowLogsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -208,7 +208,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * The name of the database that you want to query.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -217,7 +217,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time cannot exceed 31 days. Specify the time in the *yyyy-MM-dd*Z format. The time must be in UTC.
+         * The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time cannot exceed 31 days. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -244,7 +244,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: any non-zero positive integer.
+         * The page number. Valid values: any non-zero positive integer.
          * <p>
          * 
          * Default value: **1**.
@@ -283,15 +283,15 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * The dimension based on which ApsaraDB RDS sorts the returned entries. Valid values:
+         * The dimension based on which the system sorts the entries to return. Valid values:
          * <p>
          * 
-         * *   **TotalExecutionCounts**: ApsaraDB RDS sorts the returned entries based on the total number of SQL statements that are executed.
-         * *   **TotalQueryTimes**: ApsaraDB RDS sorts the returned entries based on the total execution duration.
-         * *   **TotalLogicalReads**: ApsaraDB RDS sorts the returned entries based on the total number of logical reads.
-         * *   **TotalPhysicalReads**: ApsaraDB RDS sorts the returned entries based on the total number of physical reads.
+         * *   **TotalExecutionCounts**: The system sorts the entries to return based on the number of times that SQL statements are executed.
+         * *   **TotalQueryTimes**: The system sorts the entries to return based on the total execution duration.
+         * *   **TotalLogicalReads**: The system sorts the entries to return based on the total number of logical reads.
+         * *   **TotalPhysicalReads**: The system sorts the entries to return based on the total number of physical reads.
          * 
-         * >  This parameter is supported only for instances that run SQL Server 2008 R2.
+         * > This parameter is supported only for instances that run SQL Server 2008 R2.
          */
         public Builder sortKey(String sortKey) {
             this.putQueryParameter("SortKey", sortKey);
@@ -300,7 +300,7 @@ public class DescribeSlowLogsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the *yyyy-MM-dd*Z format. The time must be in UTC.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

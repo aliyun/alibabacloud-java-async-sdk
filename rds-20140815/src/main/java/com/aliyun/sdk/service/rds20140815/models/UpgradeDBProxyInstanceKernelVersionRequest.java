@@ -139,7 +139,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the instance ID.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -148,7 +148,7 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
         }
 
         /**
-         * An internal parameter. You do not need to specify this parameter.
+         * A reserved parameter. You do not need to specify this parameter.
          */
         public Builder DBProxyEngineType(String DBProxyEngineType) {
             this.putQueryParameter("DBProxyEngineType", DBProxyEngineType);
@@ -199,9 +199,9 @@ public class UpgradeDBProxyInstanceKernelVersionRequest extends Request {
          * The time when you want to upgrade the database proxy version of the instance. Valid values:
          * <p>
          * 
-         * *   **MaintainTime**: ApsaraDB RDS performs the upgrade during the maintenance window that you specified. This is the default value. For more information, see [Modify the maintenance window](~~26249~~).
-         * *   **Immediate**: ApsaraDB RDS immediately performs the upgrade.
-         * *   **SpecificTime**: ApsaraDB RDS performs the upgrade at a specified point in time.
+         * *   **MaintainTime** (default): performs the upgrade during the maintenance window that you specified. For more information, see [Modify the maintenance window](~~610402~~).
+         * *   **Immediate**: performs the upgrade immediately.
+         * *   **SpecificTime**: performs the upgrade at a specified point in time.
          * 
          * > 
          * 

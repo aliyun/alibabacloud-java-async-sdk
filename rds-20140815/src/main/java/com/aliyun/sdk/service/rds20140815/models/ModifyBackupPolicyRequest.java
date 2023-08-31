@@ -548,7 +548,17 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * BackupPriority.
+         * Specifies whether the backup settings of a secondary instance are configured. Valid values:
+         * <p>
+         * 
+         * *   **1**: secondary instance preferred
+         * *   **2**: primary instance preferred
+         * 
+         * > 
+         * 
+         * *   This parameter is suitable only for instances that run SQL Server on RDS Cluster Edition.
+         * 
+         * *   This parameter takes effect only when **BackupMethod** is set to **Physical**. If **BackupMethod** is set to **Snapshot**, backups are forcefully performed on the primary instance that runs SQL Server on RDS Cluster Edition.
          */
         public Builder backupPriority(Integer backupPriority) {
             this.putQueryParameter("BackupPriority", backupPriority);
@@ -606,7 +616,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -634,7 +644,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the incremental backup feature. Valid values:
+         * Specifies whether to enable incremental backup. Valid values:
          * <p>
          * 
          * *   **false** (default): disables the feature.

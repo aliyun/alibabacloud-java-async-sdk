@@ -98,7 +98,14 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code returned. Valid values:
+         * <p>
+         * 
+         * *   **200**: success
+         * *   **400**: client error
+         * *   **401**: identity authentication failed
+         * *   **404**: request page not found
+         * *   **500**: server error
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +113,7 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +121,12 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned. Valid values:
+         * <p>
+         * 
+         * *   **200**: success
+         * *   **400**: client error
+         * *   **500**: server error
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +134,7 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The response parameters.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +142,7 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,11 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +194,11 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Status.
+             * The status code returned. Valid values:
+             * <p>
+             * 
+             * *   **ok**: The request is successfully returned.
+             * *   **error**: The request fails to be returned.
              */
             public Builder status(String status) {
                 this.status = status;

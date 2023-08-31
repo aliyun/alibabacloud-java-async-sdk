@@ -448,11 +448,13 @@ public class CloneDBInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic payment. Default value: true. Valid values:
+         * Specifies whether to automatically complete the payment. Valid values:
          * <p>
          * 
-         * *   **true**: enables automatic payment. Make sure that you have sufficient balance within your account.
-         * *   **false**: disables automatic payment. In this case, you must manually pay for the instance. You can perform the following operations to pay for the instance: Log on to the ApsaraDB for MongoDB console. In the upper-right corner of the page, click **Expenses**. On the page that appears, select **Orders** from the left-side navigation pane. On the Orders page, find the order and complete the payment.
+         * 1.  **true**: automatically completes the payment. You must make sure that your account balance is sufficient.
+         * 2.  **false**: does not automatically complete the payment. An unpaid order is generated.
+         * 
+         * > The default value is true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can pay for the order in the ApsaraDB RDS console.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -488,7 +490,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * A reserved parameter. You do not need to specify this parameter.
          */
         public Builder bpeEnabled(String bpeEnabled) {
             this.putQueryParameter("BpeEnabled", bpeEnabled);
@@ -497,7 +499,7 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * A reserved parameter. You do not need to specify this parameter.
          */
         public Builder burstingEnabled(Boolean burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);
@@ -514,7 +516,12 @@ public class CloneDBInstanceRequest extends Request {
          * *   **AlwaysOn**: RDS Cluster Edition for SQL Server.
          * *   **cluster**: RDS Cluster Edition for MySQL.
          * *   **Finance**: RDS Enterprise Edition. This edition is available only on the China site (aliyun.com).
-         * *   **serverless_basic**: RDS Serverless Basic Edition.
+         * 
+         * **Serverless instances**
+         * 
+         * *   **serverless_basic**: RDS Serverless Basic Edition. This edition is available only for instances that run MySQL and PostgreSQL.
+         * *   **serverless_standard**: RDS Serverless High-availability Edition for MySQL.
+         * *   **serverless_ha** RDS Serverless High-availability Edition for SQL Server.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -556,14 +563,16 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage type of the new instance. Valid values:
+         * The storage type of the instance. Valid values:
          * <p>
          * 
-         * *   **local_ssd**: local SSD
-         * *   **cloud_ssd**: standard SSD
-         * *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)
-         * *   **cloud_essd2**: ESSD of PL2
+         * *   **local_ssd**: local SSDs
+         * *   **cloud_ssd**: standard SSDs
+         * *   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)
+         * *   **cloud_essd2**: ESSDs of PL2
          * *   **cloud_essd3**: ESSD of PL3
+         * 
+         * > Serverless instances support only ESSDs of PL 1. For a serverless instance, you must set this parameter to **cloud_essd**.
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -590,13 +599,11 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the release protection feature for the new instance. Valid values:
+         * Specifies whether to enable the release protection feature for the instance. Valid values:
          * <p>
          * 
-         * *   **true**
-         * *   **false**
-         * 
-         * Default value: **false**.
+         * *   **true**: enables the feature.
+         * *   **false** (default): disables the feature.
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putQueryParameter("DeletionProtection", deletionProtection);
@@ -620,12 +627,12 @@ public class CloneDBInstanceRequest extends Request {
         }
 
         /**
-         * The billing method of the read-only instance. Valid values:
+         * The billing method of the instance. Valid values:
          * <p>
          * 
-         * *   **Postpaid**: pay-as-you-go
-         * *   **Prepaid**: subscription
-         * *   **Serverless**: serverless. This value is supported only for instances that run MySQL. For more information, see [Overview](~~411291~~).
+         * *   **Postpaid**: pay-as-you-go.
+         * *   **Prepaid**: subscription.
+         * *   **Serverless**: serverless. This value is not supported for instances that run MariaDB. For more information, see [Overview of serverless ApsaraDB RDS for MySQL instances](~~411291~~), [Overview of serverless ApsaraDB RDS for SQL Server instances](~~604344~~), and [Overview of serverless ApsaraDB RDS for PostgreSQL instances](~~607742~~).
          */
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
@@ -858,11 +865,13 @@ public class CloneDBInstanceRequest extends Request {
             private Boolean switchForce; 
 
             /**
-             * Specifies whether to enable the automatic start and stop feature for the serverless instance. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection is established to the instance, the instance is automatically resumed. Valid values:
+             * Specifies whether to enable the automatic start and stop feature for the serverless ApsaraDB RDS for MySQL instance. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection is established to the instance, the instance is automatically resumed. Valid values:
              * <p>
              * 
-             * *   true: enables the feature.
-             * *   false (default): disables the feature.
+             * *   **true**: enables the feature.
+             * *   **false** (default): disables the feature.
+             * 
+             * > This parameter is supported only for serverless ApsaraDB RDS for MySQL instances.
              */
             public Builder autoPause(Boolean autoPause) {
                 this.autoPause = autoPause;
@@ -870,7 +879,14 @@ public class CloneDBInstanceRequest extends Request {
             }
 
             /**
-             * The maximum number of RDS Capacity Units (RCUs).
+             * The maximum number of RDS Capacity Units (RCUs). Valid values:
+             * <p>
+             * 
+             * *   Serverless ApsaraDB RDS for MySQL instances: **1 to 8**
+             * *   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**
+             * *   Serverless ApsaraDB RDS for PostgreSQL instances: **1 to 12**
+             * 
+             * > The value of this parameter must be greater than or equal to the value of **MinCapacity** and can be specified only to an **integer**.
              */
             public Builder maxCapacity(Double maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -878,7 +894,14 @@ public class CloneDBInstanceRequest extends Request {
             }
 
             /**
-             * The minimum number of RCUs.
+             * The minimum number of RCUs. Valid values:
+             * <p>
+             * 
+             * *   Serverless ApsaraDB RDS for MySQL instances: **0.5 to 8**.
+             * *   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**. Only integers are supported.
+             * *   Serverless ApsaraDB RDS for PostgreSQL instances: **0.5 to 12**.
+             * 
+             * > The value of this parameter must be less than or equal to the value of **MaxCapacity**.
              */
             public Builder minCapacity(Double minCapacity) {
                 this.minCapacity = minCapacity;
@@ -886,11 +909,13 @@ public class CloneDBInstanceRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the forced scaling feature for the serverless instance. In most cases, ApsaraDB RDS automatically scales in or out the RCUs of a serverless instance based on business requirements in real time. In rare cases, the scaling does not take effect in real time. You can enable the forced scaling feature to forcefully scales in or out the RCUs of the instance. Valid values:
+             * Specifies whether to enable the forced scaling feature for the serverless ApsaraDB RDS for MySQL instance. In most cases, ApsaraDB RDS automatically scales in or out the RCUs of a serverless instance based on business requirements in real time. In rare cases, the scaling does not take effect in real time. You can enable the forced scaling feature to forcefully scales in or out the RCUs of the instance. Valid values:
              * <p>
              * 
-             * *   true: enables the feature.
-             * *   false (default): disables the feature.
+             * *   **true**: enables the feature.
+             * *   **false** (default): disables the feature.
+             * 
+             * > This parameter is supported only for serverless ApsaraDB RDS for MySQL instances.
              */
             public Builder switchForce(Boolean switchForce) {
                 this.switchForce = switchForce;

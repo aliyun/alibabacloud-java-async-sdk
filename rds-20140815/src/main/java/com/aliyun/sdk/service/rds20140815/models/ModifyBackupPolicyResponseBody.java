@@ -137,7 +137,7 @@ public class ModifyBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceID(String DBInstanceID) {
             this.DBInstanceID = DBInstanceID;

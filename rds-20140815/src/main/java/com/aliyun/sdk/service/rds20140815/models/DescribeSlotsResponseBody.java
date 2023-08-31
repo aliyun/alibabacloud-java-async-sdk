@@ -87,6 +87,9 @@ public class DescribeSlotsResponseBody extends TeaModel {
         @NameInMap("SlotType")
         private String slotType;
 
+        @NameInMap("SubReplayLag")
+        private String subReplayLag;
+
         @NameInMap("Temporary")
         private String temporary;
 
@@ -99,6 +102,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
             this.slotName = builder.slotName;
             this.slotStatus = builder.slotStatus;
             this.slotType = builder.slotType;
+            this.subReplayLag = builder.subReplayLag;
             this.temporary = builder.temporary;
             this.walDelay = builder.walDelay;
         }
@@ -147,6 +151,13 @@ public class DescribeSlotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return subReplayLag
+         */
+        public String getSubReplayLag() {
+            return this.subReplayLag;
+        }
+
+        /**
          * @return temporary
          */
         public String getTemporary() {
@@ -166,6 +177,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
             private String slotName; 
             private String slotStatus; 
             private String slotType; 
+            private String subReplayLag; 
             private String temporary; 
             private String walDelay; 
 
@@ -225,6 +237,14 @@ public class DescribeSlotsResponseBody extends TeaModel {
              */
             public Builder slotType(String slotType) {
                 this.slotType = slotType;
+                return this;
+            }
+
+            /**
+             * SubReplayLag.
+             */
+            public Builder subReplayLag(String subReplayLag) {
+                this.subReplayLag = subReplayLag;
                 return this;
             }
 

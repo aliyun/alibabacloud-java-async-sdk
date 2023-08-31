@@ -18,6 +18,10 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
     private String insName;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -28,6 +32,7 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
     private DescribeInstanceLinkedWhitelistTemplateRequest(Builder builder) {
         super(builder);
         this.insName = builder.insName;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -53,6 +58,13 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -68,6 +80,7 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeInstanceLinkedWhitelistTemplateRequest, Builder> {
         private String insName; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -78,16 +91,26 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends Request {
         private Builder(DescribeInstanceLinkedWhitelistTemplateRequest request) {
             super(request);
             this.insName = request.insName;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * InsName.
+         * The name of the instance.
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
             this.insName = insName;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

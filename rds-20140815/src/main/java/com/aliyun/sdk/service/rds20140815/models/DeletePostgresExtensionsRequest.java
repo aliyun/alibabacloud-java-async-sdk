@@ -169,7 +169,7 @@ public class DeletePostgresExtensionsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +178,7 @@ public class DeletePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -187,7 +187,7 @@ public class DeletePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * DBNames.
+         * The database for which you want to create an extension. If you want to uninstall extensions for multiple databases, separate multiple databases with commas (,).
          */
         public Builder DBNames(String DBNames) {
             this.putQueryParameter("DBNames", DBNames);
@@ -196,7 +196,7 @@ public class DeletePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * Extensions.
+         * The name of the extension. If you want to uninstall multiple extensions, separate the extension names with commas (,).
          */
         public Builder extensions(String extensions) {
             this.putQueryParameter("Extensions", extensions);
@@ -223,7 +223,7 @@ public class DeletePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

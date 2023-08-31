@@ -185,7 +185,7 @@ public class DescribeClassDetailsRequest extends Request {
         } 
 
         /**
-         * ClassCode.
+         * The code of the instance type.
          */
         public Builder classCode(String classCode) {
             this.putQueryParameter("ClassCode", classCode);
@@ -194,7 +194,7 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -203,7 +203,17 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * CommodityCode.
+         * The commodity code of the instance. Valid values:
+         * <p>
+         * 
+         * *   ****
+         * *   ****
+         * *   ****
+         * *   ****
+         * *   **bards_intl**: The instance is a pay-as-you-go primary instance.
+         * *   **rds_intl**: The instance is a subscription primary instance.
+         * *   **rords_intl**: The instance is a pay-as-you-go read-only instance.
+         * *   **rds_rordspre_public_intl**: The instance is a subscription read-only instance.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -212,7 +222,7 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * Engine.
+         * The type of the database engine.
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -221,7 +231,7 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * EngineVersion.
+         * The database engine version of the instance.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -239,7 +249,7 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -248,7 +258,7 @@ public class DescribeClassDetailsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * 资源组ID。可调用[DescribeDBInstanceAttribute](~~610394~~)获取。
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

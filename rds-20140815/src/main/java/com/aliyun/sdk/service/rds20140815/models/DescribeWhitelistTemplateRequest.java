@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeWhitelistTemplateRequest extends Request {
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -27,6 +31,7 @@ public class DescribeWhitelistTemplateRequest extends Request {
 
     private DescribeWhitelistTemplateRequest(Builder builder) {
         super(builder);
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.templateId = builder.templateId;
@@ -43,6 +48,13 @@ public class DescribeWhitelistTemplateRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -67,6 +79,7 @@ public class DescribeWhitelistTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeWhitelistTemplateRequest, Builder> {
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Integer templateId; 
@@ -77,10 +90,20 @@ public class DescribeWhitelistTemplateRequest extends Request {
 
         private Builder(DescribeWhitelistTemplateRequest request) {
             super(request);
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.templateId = request.templateId;
         } 
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
 
         /**
          * ResourceOwnerAccount.
@@ -101,7 +124,7 @@ public class DescribeWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the IP whitelist. You can call the DescribeAllWhitelistTemplate operation to query the ID of the IP whitelist.
          */
         public Builder templateId(Integer templateId) {
             this.putQueryParameter("TemplateId", templateId);

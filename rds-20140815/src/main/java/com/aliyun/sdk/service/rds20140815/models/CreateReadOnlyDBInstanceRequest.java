@@ -509,11 +509,13 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         } 
 
         /**
-         * Specifies whether payment is automatically made during renewal. Valid values:
+         * Specifies whether to enable the automatic payment feature. Valid values:
          * <p>
          * 
-         * *   **True**: enables automatic payment. Make sure that your Alibaba Cloud account has adequate balance.
-         * *   **False** (default): disables automatic payment. You have to manually pay the order in the console. Log on to the ApsaraDB RDS console. In the upper-right corner, choose **Expenses > User Center**. In the left-side navigation pane, click **Orders**. On the page that appears, find your order and complete the payment.
+         * 1.  **true**: enables the feature. You must make sure that your account balance is sufficient.
+         * 2.  **false**: disables the feature. An unpaid order is generated.
+         * 
+         * >  The default value is true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -538,7 +540,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * A reserved parameter. You do not need to specify this parameter.
          */
         public Builder bpeEnabled(String bpeEnabled) {
             this.putQueryParameter("BpeEnabled", bpeEnabled);
@@ -547,7 +549,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * This parameter is not publicly available.
+         * A reserved parameter. You do not need to specify this parameter.
          */
         public Builder burstingEnabled(Boolean burstingEnabled) {
             this.putQueryParameter("BurstingEnabled", burstingEnabled);
@@ -556,12 +558,12 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The RDS edition of the read-only instance. Valid values:
+         * The RDS edition of the instance. Valid values:
          * <p>
          * 
-         * *   **Basic**: RDS Basic Edition.
-         * *   **HighAvailability**: RDS High-availability Edition. This is the default value.
-         * *   **AlwaysOn**: RDS Cluster Edition.
+         * *   **Basic**: RDS Basic Edition
+         * *   **HighAvailability** (default): RDS High-availability Edition
+         * *   **AlwaysOn**: RDS Cluster Edition
          * 
          * > If the primary instance runs PostgreSQL with cloud disks, you must set this parameter to **Basic**.
          */
@@ -593,7 +595,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
          * The description of the read-only instance. The description must be 2 to 256 characters in length and can contain letters, digits, underscores (\_), and hyphens (-). The value must start with a letter
          * <p>
          * 
-         * > The value cannot start with `http://` or `https://`.
+         * > The value cannot start with [http:// or https://.](http://https://。)
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -602,7 +604,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the primary instance.
+         * The ID of the primary instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -620,17 +622,20 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The storage type of the read-only instance. Valid values:
+         * The storage type of the instance. Valid values:
          * <p>
          * 
-         * *   **local_ssd**: local SSD
-         * *   **cloud_ssd**: standard SSD
-         * *   **cloud_essd**: enhanced SSD (ESSD) of performance level 1 (PL1)
-         * *   **cloud_essd2**: ESSD of PL2
-         * *   **cloud_essd3**: ESSD of PL3
+         * *   **local_ssd**: local SSDs
+         * *   **cloud_ssd**: standard SSDs
+         * *   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)
+         * *   **cloud_essd2**: ESSDs of PL2
+         * *   **cloud_essd3**: ESSDs of PL3
          * 
-         * > * If the primary instance runs MySQL with local disks, you must set this parameter to **local\_ssd**. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud\_ssd, cloud\_essd, cloud\_essd2, or cloud\_essd3.
-         * > * If the primary instance runs SQL Server, you must set this parameter to cloud\_ssd, cloud\_essd, cloud\_essd2, or cloud\_essd3.
+         * > 
+         * 
+         * *   If the primary instance runs MySQL with local disks, you must set this parameter to **local_ssd**. If the primary instance runs MySQL with cloud disks, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.
+         * 
+         * *   If the primary instance runs SQL Server, you must set this parameter to cloud_ssd, cloud_essd, cloud_essd2, or cloud_essd3.
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.putQueryParameter("DBInstanceStorageType", DBInstanceStorageType);
@@ -652,7 +657,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
          * <p>
          * 
          * *   **true**: enables the feature.
-         * *   **false**: disables the feature. This is the default value.
+         * *   **false** (default): disables the feature.
          * 
          * > This feature can be enabled only when you set the **PayType** parameter to **Postpaid**.
          */
@@ -765,7 +770,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The region ID of the read-only instance. The read-only instance and the primary instance must reside in the same region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. The read-only instance and the primary instance must reside in the same region. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -865,7 +870,7 @@ public class CreateReadOnlyDBInstanceRequest extends Request {
         }
 
         /**
-         * The zone ID of the read-only instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.
+         * The zone ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

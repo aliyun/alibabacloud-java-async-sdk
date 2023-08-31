@@ -197,7 +197,7 @@ public class CreatePostgresExtensionsRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * The account of the user who owns the extension. Only privileged accounts are supported.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -206,7 +206,7 @@ public class CreatePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -215,7 +215,7 @@ public class CreatePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -224,7 +224,7 @@ public class CreatePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * DBNames.
+         * The name of the database. You can call the [DescribeDatabases](~~610471~~) to obtain the name of the database.
          */
         public Builder DBNames(String DBNames) {
             this.putQueryParameter("DBNames", DBNames);
@@ -233,7 +233,7 @@ public class CreatePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * Extensions.
+         * The extension that you want to install. If you want to install multiple extensions, separate them with commas (,). If you do not specify the **SourceDatabase** parameter, you must specify this parameter.
          */
         public Builder extensions(String extensions) {
             this.putQueryParameter("Extensions", extensions);
@@ -260,7 +260,7 @@ public class CreatePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -287,7 +287,7 @@ public class CreatePostgresExtensionsRequest extends Request {
         }
 
         /**
-         * SourceDatabase.
+         * The source database from which you want to synchronize the extension to the destination database. If you do not specify the **Extensions** parameter, you must specify this parameter.
          */
         public Builder sourceDatabase(String sourceDatabase) {
             this.putQueryParameter("SourceDatabase", sourceDatabase);

@@ -113,21 +113,7 @@ public class SwitchDBInstanceVpcRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
-         * <p>
-         * 
-         * > 
-         * 
-         * *   The instance must run one of the following database engines:
-         * 
-         *     - MySQL with local SSDs, standard SSDs, or ESSDs
-         *     - SQL Server with standard SSDs or ESSDs
-         *     - MariaDB with standard SSDs or ESSDs
-         *     - PostgreSQL with standard SSDs or ESSDs
-         * 
-         * *   The instance must be in the Running state.
-         * *   The instance must reside in a VPC.
-         * *   The instance cannot be a temporary instance or use an instance type that belongs to the shared instance family.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -157,10 +143,10 @@ public class SwitchDBInstanceVpcRequest extends Request {
         }
 
         /**
-         * The ID of the VPC.
+         * The VPC ID.
          * <p>
          * 
-         * > The VPC must belong to the same region as the instance.
+         * > The VPC must reside in the same region as the instance.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -169,7 +155,7 @@ public class SwitchDBInstanceVpcRequest extends Request {
         }
 
         /**
-         * The ID of the vSwitch.
+         * The vSwitch ID of the instance.
          * <p>
          * 
          * > The vSwitch must belong to the same zone as the instance.

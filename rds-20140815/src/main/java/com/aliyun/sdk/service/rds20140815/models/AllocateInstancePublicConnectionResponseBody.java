@@ -62,7 +62,7 @@ public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The endpoint of the instance.
+         * The endpoint that is used to connect to the database instance.
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;

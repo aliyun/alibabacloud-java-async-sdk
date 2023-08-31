@@ -159,7 +159,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The IDs of the instances. You can specify up to 50 instance IDs.
+         * The instance ID.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -195,7 +195,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The tags to be added to the resources. You can specify up to 20 tags.
+         * The list of tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -250,7 +250,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag that you want to add to the instance. The value of this parameter cannot be an empty string.
+             * The key of the tag. You can create N tag keys at a time. Valid values of N: **1** to **20**. The value of this parameter cannot be an empty string.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -258,7 +258,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * The tag value that is associated with the specified tag key. This parameter can be an empty string.
+             * The value of the tag. You can create N tag values at a time. Valid values of N: **1** to **20**. The value of this parameter can be an empty string.
              */
             public Builder value(String value) {
                 this.value = value;

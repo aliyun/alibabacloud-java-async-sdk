@@ -121,7 +121,7 @@ public class DescribeParameterGroupRequest extends Request {
         }
 
         /**
-         * The ID of the parameter template. You can call the [DescribeParameterGroups](~~144491~~) operation to query the IDs of parameter templates.
+         * The ID of the parameter template. You can call the [DescribeParameterGroups](~~144491~~) operation to query the parameter template ID.
          */
         public Builder parameterGroupId(String parameterGroupId) {
             this.putQueryParameter("ParameterGroupId", parameterGroupId);
@@ -130,7 +130,7 @@ public class DescribeParameterGroupRequest extends Request {
         }
 
         /**
-         * The region ID of the parameter template. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

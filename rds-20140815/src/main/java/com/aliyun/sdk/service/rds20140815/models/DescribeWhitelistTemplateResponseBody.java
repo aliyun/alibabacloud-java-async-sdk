@@ -98,7 +98,14 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code returned. Valid values:
+         * <p>
+         * 
+         * *   **200**: success
+         * *   **400**: client error
+         * *   **401**: identity authentication failed
+         * *   **404**: request page not found
+         * *   **500**: server error
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +113,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +121,12 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned. Valid values:
+         * <p>
+         * 
+         * *   **200**: success
+         * *   **400**: client error
+         * *   **500**: server error
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +134,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +142,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +150,11 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -226,7 +242,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             private Integer userId; 
 
             /**
-             * Id.
+             * The primary key of the data table.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -234,7 +250,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * The IP addresses.
              */
             public Builder ips(String ips) {
                 this.ips = ips;
@@ -242,7 +258,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The ID of the IP whitelist.
              */
             public Builder templateId(Integer templateId) {
                 this.templateId = templateId;
@@ -250,7 +266,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the IP whitelist.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -258,7 +274,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The user ID.
              */
             public Builder userId(Integer userId) {
                 this.userId = userId;
@@ -299,7 +315,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
             private Template template; 
 
             /**
-             * Template.
+             * The information about the IP whitelist.
              */
             public Builder template(Template template) {
                 this.template = template;

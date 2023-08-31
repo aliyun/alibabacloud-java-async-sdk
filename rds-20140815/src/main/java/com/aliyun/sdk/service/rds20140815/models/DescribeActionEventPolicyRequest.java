@@ -120,7 +120,7 @@ public class DescribeActionEventPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -129,7 +129,7 @@ public class DescribeActionEventPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

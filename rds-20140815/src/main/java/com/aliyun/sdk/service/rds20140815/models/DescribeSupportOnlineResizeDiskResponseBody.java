@@ -86,7 +86,7 @@ public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned.
+         * The response code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The result data that is returned.
+         * The response result set.
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The response code.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +118,7 @@ public class DescribeSupportOnlineResizeDiskResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

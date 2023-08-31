@@ -98,7 +98,10 @@ public class DescribeParametersResponseBody extends TeaModel {
         private RunningParameters runningParameters; 
 
         /**
-         * The list of parameters that are being synchronized. After you modify and submit the parameter settings, you must wait for the parameter modifications to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.
+         * The list of parameters that are being synchronized.
+         * <p>
+         * 
+         * > After you modify and submit the parameters, you must wait for the parameters to be synchronized to the instance. After the synchronization, you can delete the parameters from the list.
          */
         public Builder configParameters(ConfigParameters configParameters) {
             this.configParameters = configParameters;
@@ -114,7 +117,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine version of the instance.
+         * The version of the database engine.
          */
         public Builder engineVersion(String engineVersion) {
             this.engineVersion = engineVersion;
@@ -122,7 +125,7 @@ public class DescribeParametersResponseBody extends TeaModel {
         }
 
         /**
-         * Parameter template information.
+         * The information about the parameter template.
          */
         public Builder paramGroupInfo(ParamGroupInfo paramGroupInfo) {
             this.paramGroupInfo = paramGroupInfo;
@@ -336,7 +339,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             private String parameterGroupType; 
 
             /**
-             * Parameter template ID.
+             * The ID of the parameter template.
              */
             public Builder paramGroupId(String paramGroupId) {
                 this.paramGroupId = paramGroupId;
@@ -344,7 +347,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Parameter template description.
+             * The description of the parameter template.
              */
             public Builder parameterGroupDesc(String parameterGroupDesc) {
                 this.parameterGroupDesc = parameterGroupDesc;
@@ -352,7 +355,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Parameter template name.
+             * The name of the parameter template.
              */
             public Builder parameterGroupName(String parameterGroupName) {
                 this.parameterGroupName = parameterGroupName;
@@ -360,7 +363,7 @@ public class DescribeParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Parameter template type.
+             * The type of the parameter template.
              */
             public Builder parameterGroupType(String parameterGroupType) {
                 this.parameterGroupType = parameterGroupType;

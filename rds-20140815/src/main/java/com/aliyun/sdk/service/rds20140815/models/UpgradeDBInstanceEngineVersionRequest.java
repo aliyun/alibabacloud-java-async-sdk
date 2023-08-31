@@ -163,7 +163,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -172,13 +172,11 @@ public class UpgradeDBInstanceEngineVersionRequest extends Request {
         }
 
         /**
-         * The time at which you want the specification change to take effect. Valid values:
+         * The effective time. Valid values:
          * <p>
          * 
-         * *   **Immediate**: The specification change takes effect immediately.
-         * *   **MaintainTime**: The change is applied during the specified maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~26249~~).
-         * 
-         * Default value: **Immediate**.
+         * *   **Immediate**: This is the default value.
+         * *   **MaintainTime**: The effective time is within the maintenance window. For more information, see [ModifyDBInstanceMaintainTime](~~610402~~).
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putQueryParameter("EffectiveTime", effectiveTime);

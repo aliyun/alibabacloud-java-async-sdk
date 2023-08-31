@@ -146,10 +146,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The endpoint of the instance.
-         * <p>
-         * 
-         * > The **DBInstanceNetType** parameter indicates whether the endpoint is internal or public.
+         * The internal endpoint of the instance.
          */
         public Builder connectionString(String connectionString) {
             this.connectionString = connectionString;
@@ -157,7 +154,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance If the value of the **Amount** parameter is greater than **1**, more than one instance ID is returned. The number of instance IDs that are returned is the same as the value of the Amount parameter. The returned instance IDs are separated by commas (,).
+         * The instance ID. If the value of the **Amount** parameter is greater than **1**, more than one instance ID is returned. The number of instance IDs that are returned is the same as the value of the Amount parameter. The returned instance IDs are separated by commas (,).
          * <p>
          * 
          * For example, if the value of the **Amount** parameter is **3**, three instance IDs are returned. Example: `rm-uf6wjk5*****1,rm-uf6wjk5*****2,rm-uf6wjk5*****3`
@@ -184,9 +181,12 @@ public class CreateDBInstanceResponseBody extends TeaModel {
          * <p>
          * 
          * *   **true**
-         * *   **false** 
+         * *   **false**
+         * 
+         * > 
          * 
          * *   If the system does not perform a dry run, this parameter is not returned.
+         * 
          * *   If the request failed the dry run, an error message is returned.
          */
         public Builder dryRunResult(Boolean dryRunResult) {
@@ -206,7 +206,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The order ID.
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
@@ -214,10 +214,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The port that is used to connect to the instance.
-         * <p>
-         * 
-         * > The **DBInstanceNetType** parameter indicates whether the port number is internal or public.
+         * The internal IP address and port number that are used to connect to the instance.
          */
         public Builder port(String port) {
             this.port = port;
@@ -251,7 +248,7 @@ public class CreateDBInstanceResponseBody extends TeaModel {
          * <p>
          * 
          * *   This parameter is returned only when the value of **Amount** is greater than 1.
-         * *   **TaskID** cannot be used to query a task.
+         * *   The **TaskID** parameter cannot be used to query a task.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

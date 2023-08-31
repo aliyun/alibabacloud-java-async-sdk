@@ -86,7 +86,7 @@ public class CreateDBInstanceForRebuildResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;

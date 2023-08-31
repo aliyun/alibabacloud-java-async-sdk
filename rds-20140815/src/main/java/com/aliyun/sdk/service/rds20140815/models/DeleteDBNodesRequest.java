@@ -165,7 +165,7 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -174,7 +174,7 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * An array that consists of information about the ID of the node.
+         * The node IDs.
          */
         public Builder DBNodeId(java.util.List < String > DBNodeId) {
             String DBNodeIdShrink = shrink(DBNodeId, "DBNodeId", "json");
@@ -202,7 +202,7 @@ public class DeleteDBNodesRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

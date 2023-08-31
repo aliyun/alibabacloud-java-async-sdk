@@ -140,13 +140,13 @@ public class DescribeCharacterSetNameRequest extends Request {
         } 
 
         /**
-         * The database engine that is run on the instance. Valid values:
+         * The type of the database engine. Valid values:
          * <p>
          * 
-         * *   **mysql**: MySQL
-         * *   **mssql**: SQL Server
-         * *   **PostgreSQL**: PostgreSQL
-         * *   **MariaDB**: MariaDB
+         * *   **mysql**
+         * *   **mssql**
+         * *   **PostgreSQL**
+         * *   **MariaDB**
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -173,7 +173,7 @@ public class DescribeCharacterSetNameRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +182,7 @@ public class DescribeCharacterSetNameRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

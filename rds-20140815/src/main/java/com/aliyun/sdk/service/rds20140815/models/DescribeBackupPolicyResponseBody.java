@@ -400,7 +400,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * BackupPriority.
+         * The backup settings of the secondary instance. Valid values:
+         * <p>
+         * 
+         * *   **1**: Secondary instance preferred
+         * *   **2**: Primary instance preferred
+         * 
+         * > This parameter is valid only when the instance runs SQL Server on RDS Cluster Edition. This parameter is returned only when SupportModifyBackupPriority is set to True.
          */
         public Builder backupPriority(Integer backupPriority) {
             this.backupPriority = backupPriority;
@@ -581,7 +587,11 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * SupportModifyBackupPriority.
+         * Indicates whether the backup settings of a secondary instance can be modified. Valid values:
+         * <p>
+         * 
+         * *   **True**
+         * *   **False**
          */
         public Builder supportModifyBackupPriority(Boolean supportModifyBackupPriority) {
             this.supportModifyBackupPriority = supportModifyBackupPriority;

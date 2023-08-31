@@ -178,7 +178,7 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The endpoint ID of the instance. You can call the [DescribeDBInstanceEndpoints](~~464397~~) operation to query the endpoint ID of the instance.
+         * The endpoint ID of the instance. You can call the [DescribeDBInstanceEndpoints](~~610488~~) operation to query the endpoint ID of the instance.
          */
         public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
             this.putQueryParameter("DBInstanceEndpointId", DBInstanceEndpointId);
@@ -187,7 +187,7 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -214,7 +214,7 @@ public class CreateDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

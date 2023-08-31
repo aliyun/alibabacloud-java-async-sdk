@@ -18,6 +18,10 @@ public class ModifyWhitelistTemplateRequest extends Request {
     private String ipWhitelist;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -36,6 +40,7 @@ public class ModifyWhitelistTemplateRequest extends Request {
     private ModifyWhitelistTemplateRequest(Builder builder) {
         super(builder);
         this.ipWhitelist = builder.ipWhitelist;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.templateId = builder.templateId;
@@ -60,6 +65,13 @@ public class ModifyWhitelistTemplateRequest extends Request {
      */
     public String getIpWhitelist() {
         return this.ipWhitelist;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     /**
@@ -92,6 +104,7 @@ public class ModifyWhitelistTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyWhitelistTemplateRequest, Builder> {
         private String ipWhitelist; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Integer templateId; 
@@ -104,6 +117,7 @@ public class ModifyWhitelistTemplateRequest extends Request {
         private Builder(ModifyWhitelistTemplateRequest request) {
             super(request);
             this.ipWhitelist = request.ipWhitelist;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.templateId = request.templateId;
@@ -111,11 +125,26 @@ public class ModifyWhitelistTemplateRequest extends Request {
         } 
 
         /**
-         * IpWhitelist.
+         * The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). Each IP address in the IP address whitelist must be unique. The entries in the IP address whitelist must be in one of the following formats:
+         * <p>
+         * 
+         * *   IP addresses, such as 10.23.XX.XX.
+         * *   CIDR blocks, such as 10.23.XX.XX/24. In this example, 24 indicates that the prefix of the CIDR block is 24-bit in length. You can replace 24 with a value that ranges from 1 to 32.
+         * 
+         * > : A maximum of 1,000 IP addresses or CIDR blocks can be added for each instance. If you want to add a large number of IP addresses, we recommend that you merge them into CIDR blocks, such as 10.23.XX.XX/24.
          */
         public Builder ipWhitelist(String ipWhitelist) {
             this.putQueryParameter("IpWhitelist", ipWhitelist);
             this.ipWhitelist = ipWhitelist;
+            return this;
+        }
+
+        /**
+         * 资源组ID。 关于资源组的更多信息，请参见什么是资源组。
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -138,7 +167,7 @@ public class ModifyWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the whitelist template. This parameter is required when you modify or delete a whitelist. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist.
          */
         public Builder templateId(Integer templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -147,7 +176,7 @@ public class ModifyWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the IP whitelist. This parameter is required when you create a whitelist. The value of this parameter cannot be modified after the whitelist is created. The value must be unique to an Alibaba Cloud account and start with a letter. You can call the DescribeWhitelistTemplate operation to obtain the name of the whitelist.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

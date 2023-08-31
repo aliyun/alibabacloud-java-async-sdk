@@ -354,7 +354,7 @@ public class DescribePriceRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -369,10 +369,10 @@ public class DescribePriceRequest extends Request {
          * *   **bards**: The instance is a pay-as-you-go primary instance. This value is available at the China site (aliyun.com).
          * *   **rds**: The instance is a subscription primary instance. This is the default value. This value is available at the China site (aliyun.com).
          * *   **rords**: The instance is a pay-as-you-go read-only instance. This value is available at the China site (aliyun.com).
-         * *   **rds_rordspre_public_cn**: The instance is a subscription read-only instance. This value is available on the China site (aliyun.com).
-         * *   **bards_intl**: The instance is a pay-as-you-go primary instance. This value is available on the International site (alibabacloud.com).
-         * *   **rds_intl**: The instance is a subscription primary instance. This value is available on the International site (alibabacloud.com).
-         * *   **rords_intl**: The instance is a pay-as-you-go read-only instance. This value is available on the International site (alibabacloud.com).
+         * *   **rds_rordspre_public_cn**: The instance is a subscription read-only instance. This value is available at the China site (aliyun.com).
+         * *   **bards_intl**: The instance is a pay-as-you-go primary instance. This value is available at the International site (alibabacloud.com).
+         * *   **rds_intl**: The instance is a subscription primary instance. This value is available at the International site (alibabacloud.com).
+         * *   **rords_intl**: The instance is a pay-as-you-go read-only instance. This value is available at the International site (alibabacloud.com).
          * *   **rds_rordspre_public_intl**: The instance is a subscription read-only instance. This value is available on the International site (alibabacloud.com).
          * 
          * > If you want to query the price of a read-only instance, you must specify this parameter.
@@ -396,7 +396,11 @@ public class DescribePriceRequest extends Request {
          * The ID of the instance for which you want to change the specifications or the instance that you want to renew.
          * <p>
          * 
-         * > *   If you want to query the price of an specification change order or a renewal order, you must specify this parameter. - If the instance is a read-only instance, you must set this parameter to the ID of its primary instance.
+         * > 
+         * 
+         * *   If you want to query the price of an specification change order or a renewal order, you must specify this parameter.
+         * 
+         * *   If the instance is a read-only instance, you must set this parameter to the ID of its primary instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -463,7 +467,7 @@ public class DescribePriceRequest extends Request {
          * 
          * *   Valid values when you set the Engine parameter to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**
          * *   Valid values when you set the Engine parameter to SQLServer: **2008r2**, **2012**, **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_std_ha**, **2017\_ent**, **2019\_std_ha**, and **2019\_ent**
-         * *   Valid values when you set the Engine parameter to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**
+         * *   Valid values if you set the Engine parameter to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, and **15.0**
          * *   Valid value when you set the Engine parameter to MariaDB: **10.3**
          */
         public Builder engineVersion(String engineVersion) {
@@ -486,7 +490,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The type of the order. Valid values:
+         * The order type. Valid values:
          * <p>
          * 
          * *   **BUY**: purchase order
@@ -540,7 +544,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -567,7 +571,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * ServerlessConfig.
+         * The settings of the serverless instance.
+         * <p>
+         * 
+         * > ApsaraDB RDS for MariaDB does not support serverless instances.
          */
         public Builder serverlessConfig(ServerlessConfig serverlessConfig) {
             String serverlessConfigShrink = shrink(serverlessConfig, "ServerlessConfig", "json");
@@ -605,10 +612,10 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The zone ID of the primary instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.
+         * The zone ID of the primary instance. You can call the [DescribeRegions](~~610399~~) operation to query the most recent zone list.
          * <p>
          * 
-         * > This parameter is required to identify the zone for a vSwitch if you have specified the virtual private cloud (VPC) and the vSwitch.
+         * > If you specify a virtual private cloud (VPC) and a vSwitch, you must specify this parameter to identify the zone for the vSwitch.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -723,7 +730,7 @@ public class DescribePriceRequest extends Request {
             private Double minCapacity; 
 
             /**
-             * MaxCapacity.
+             * The maximum number of RDS Capacity Units (RCUs).
              */
             public Builder maxCapacity(Double maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -731,7 +738,7 @@ public class DescribePriceRequest extends Request {
             }
 
             /**
-             * MinCapacity.
+             * The minimum number of RCUs.
              */
             public Builder minCapacity(Double minCapacity) {
                 this.minCapacity = minCapacity;

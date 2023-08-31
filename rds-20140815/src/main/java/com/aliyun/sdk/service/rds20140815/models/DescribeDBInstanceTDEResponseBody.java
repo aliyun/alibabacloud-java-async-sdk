@@ -18,12 +18,16 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
+    @NameInMap("TDEMode")
+    private String TDEMode;
+
     @NameInMap("TDEStatus")
     private String TDEStatus;
 
     private DescribeDBInstanceTDEResponseBody(Builder builder) {
         this.databases = builder.databases;
         this.requestId = builder.requestId;
+        this.TDEMode = builder.TDEMode;
         this.TDEStatus = builder.TDEStatus;
     }
 
@@ -50,6 +54,13 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     }
 
     /**
+     * @return TDEMode
+     */
+    public String getTDEMode() {
+        return this.TDEMode;
+    }
+
+    /**
      * @return TDEStatus
      */
     public String getTDEStatus() {
@@ -59,6 +70,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     public static final class Builder {
         private Databases databases; 
         private String requestId; 
+        private String TDEMode; 
         private String TDEStatus; 
 
         /**
@@ -77,6 +89,14 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TDEMode.
+         */
+        public Builder TDEMode(String TDEMode) {
+            this.TDEMode = TDEMode;
             return this;
         }
 

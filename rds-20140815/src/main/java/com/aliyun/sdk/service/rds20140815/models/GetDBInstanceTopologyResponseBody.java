@@ -174,7 +174,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The endpoint of the instance.
+             * The endpoint that is used to connect to the database instance.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -182,7 +182,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -314,7 +314,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
              * The ID of the dedicated cluster.
              * <p>
              * 
-             * > If the instance does not reside in the specified dedicated cluster, no value is returned.
+             * > : If the instance does not reside in the specified dedicated cluster, no value is returned.
              */
             public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
                 this.dedicatedHostGroupId = dedicatedHostGroupId;
@@ -322,10 +322,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the host on which the instance resides in the dedicated cluster.
+             * The host ID of the instance in the dedicated cluster.
              * <p>
              * 
-             * > If the instance does not reside in the specified dedicated cluster, no value is returned.
+             * > : If the instance does not reside in the specified dedicated cluster, no value is returned.
              */
             public Builder dedicatedHostId(String dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
@@ -333,10 +333,10 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The unique identifier of the instance.
+             * The ID of the instance.
              * <p>
              * 
-             * > The value \*\*-1\*\* is returned for an instance that does not reside in a dedicated cluster.
+             * > : The value \*\*-1\*\* is returned for an instance that does not reside in a dedicated cluster.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -344,7 +344,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the node. Valid values:
+             * The type of the node. The following result is returned:
              * <p>
              * 
              * *   **Master**: a primary node
@@ -421,7 +421,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             private java.util.List < Nodes> nodes; 
 
             /**
-             * The network connection of the instance.
+             * The network connection information of the instance.
              */
             public Builder connections(java.util.List < Connections> connections) {
                 this.connections = connections;
@@ -429,7 +429,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The instance ID.
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -437,7 +437,7 @@ public class GetDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The node information.
+             * The queried nodes.
              */
             public Builder nodes(java.util.List < Nodes> nodes) {
                 this.nodes = nodes;

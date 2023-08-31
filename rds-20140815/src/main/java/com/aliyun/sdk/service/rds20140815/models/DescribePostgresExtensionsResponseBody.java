@@ -74,7 +74,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         private java.util.List < UninstalledExtensions> uninstalledExtensions; 
 
         /**
-         * InstalledExtensions.
+         * The extensions that are installed on the database.
          */
         public Builder installedExtensions(java.util.List < InstalledExtensions> installedExtensions) {
             this.installedExtensions = installedExtensions;
@@ -82,7 +82,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * Overview.
+         * The overview of the extension.
          */
         public Builder overview(java.util.Map < String, ? > overview) {
             this.overview = overview;
@@ -90,7 +90,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * UninstalledExtensions.
+         * The extensions that are not installed on the database.
          */
         public Builder uninstalledExtensions(java.util.List < UninstalledExtensions> uninstalledExtensions) {
             this.uninstalledExtensions = uninstalledExtensions;
@@ -222,7 +222,20 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             private String requires; 
 
             /**
-             * Category.
+             * The category of the extension.
+             * <p>
+             * 
+             * *   **external_access**
+             * *   **index_support**
+             * *   **information_stat**
+             * *   **geography_space**
+             * *   **vector_engine**
+             * *   **timing_engine**
+             * *   **data_type**
+             * *   **encrypt_secure**
+             * *   **text_process**
+             * *   **operation_maintenance**
+             * *   **self_develop**
              */
             public Builder category(String category) {
                 this.category = category;
@@ -230,7 +243,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The purpose of the extension.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -238,7 +251,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * The default version of the extension.
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -246,7 +259,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * InstalledVersion.
+             * The current version of the extension.
              */
             public Builder installedVersion(String installedVersion) {
                 this.installedVersion = installedVersion;
@@ -254,7 +267,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the extension.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -262,7 +275,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The user of the extension.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -270,7 +283,11 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the extension.
+             * <p>
+             * 
+             * *   **0**: The extension is displayed by default.
+             * *   **1**: The extension is preferentially displayed.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -278,7 +295,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Requires.
+             * The extensions on which the current extension depends when it is installed.
              */
             public Builder requires(String requires) {
                 this.requires = requires;
@@ -403,7 +420,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             private String requires; 
 
             /**
-             * Category.
+             * The category of the extension.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -411,7 +428,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * The purpose of the extension.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -419,7 +436,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * The default version of the extension.
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -427,7 +444,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * InstalledVersion.
+             * The current version of the extension.
              */
             public Builder installedVersion(String installedVersion) {
                 this.installedVersion = installedVersion;
@@ -435,7 +452,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the extension.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -443,7 +460,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * The user of the extension.
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -451,7 +468,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the extension.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -459,7 +476,7 @@ public class DescribePostgresExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Requires.
+             * The extensions on which the current extension depends when it is installed.
              */
             public Builder requires(String requires) {
                 this.requires = requires;

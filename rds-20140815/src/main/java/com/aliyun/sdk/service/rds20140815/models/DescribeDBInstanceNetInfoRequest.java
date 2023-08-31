@@ -176,7 +176,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -200,7 +200,7 @@ public class DescribeDBInstanceNetInfoRequest extends Request {
         }
 
         /**
-         * A reserved parameter.
+         * A reserved parameter. You do not need to specify this parameter.
          */
         public Builder flag(Integer flag) {
             this.putQueryParameter("Flag", flag);

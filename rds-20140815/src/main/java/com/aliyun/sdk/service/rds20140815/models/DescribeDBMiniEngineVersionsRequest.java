@@ -176,7 +176,7 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated cluster. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.
+         * The dedicated cluster ID. You can call the [DescribeDedicatedHostGroups](~~141946~~) operation to query the ID of the dedicated cluster.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -194,11 +194,11 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance.
+         * The database engine version of the instance. Valid values:
          * <p>
          * 
          * *   Valid values when you set the Engine parameter to MySQL: **8.0**, **5.7**, **5.6**, and **5.5**
-         * *   Valid values when you set the Engine parameter to PostgreSQL: **14.0**, **13.0**, **12.0**, **11.0**, and **10.0**
+         * *   Valid values when you set the Engine parameter to PostgreSQL: **15.0**, **14.0**, **13.0**, **12.0**, **11.0**, and **10.0**
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -230,7 +230,7 @@ public class DescribeDBMiniEngineVersionsRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

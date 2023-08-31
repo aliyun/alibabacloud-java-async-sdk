@@ -195,7 +195,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The prefix of the public endpoint. A valid public endpoint is in the following format: Prefix.Database engine.rds.aliyuncs.com. Example: test1234.mysql.rds.aliyuncs.com.
+         * The prefix of the public endpoint. A valid public endpoint is in the following format: `Prefix.Database engine.rds.aliyuncs.com`. Example: `test1234.mysql.rds.aliyuncs.com`.
          * <p>
          * 
          * > The value can be 5 to 40 characters in length and can contain letters, digits, and hyphens (-). The value cannot contain any of the following characters: ~ ! # % ^ & \* = + | {} ; : \" " , <> / ?
@@ -207,7 +207,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -216,7 +216,7 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * The name of the dedicated cluster to which the instance belongs. This parameter takes effect only when the instance runs MySQL on RDS Standard Edition and is created in a dedicated cluster.
+         * The name of the dedicated cluster to which the instance belongs. This parameter is available only when the instance is created in an ApsaraDB MyBase cluster that runs MySQL on Standard Edition.
          */
         public Builder generalGroupName(String generalGroupName) {
             this.putQueryParameter("GeneralGroupName", generalGroupName);
@@ -243,7 +243,10 @@ public class AllocateInstancePublicConnectionRequest extends Request {
         }
 
         /**
-         * PGBouncerPort.
+         * The PgBouncer port.
+         * <p>
+         * 
+         * > This parameter is available only for instances that run PostgreSQL.
          */
         public Builder PGBouncerPort(String PGBouncerPort) {
             this.putQueryParameter("PGBouncerPort", PGBouncerPort);

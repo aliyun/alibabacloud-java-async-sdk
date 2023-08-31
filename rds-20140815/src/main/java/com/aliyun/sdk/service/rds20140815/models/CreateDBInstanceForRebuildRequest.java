@@ -349,10 +349,10 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The name of the destination instance. The value must be 2 to 256 characters in length. The value must start with a letter and can contain letters, digits, underscores (\_), and hyphens (-).
+         * The name of the instance. The name must be 2 to 256 characters in length. The name can contain letters, digits, underscores (\_), and hyphens (-). The name must start with a letter.
          * <p>
          * 
-         * > The value cannot start with http:// or https://.
+         * > : The name cannot start with http:// or https://.
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -361,7 +361,7 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The ID of the instance that you want to rebuild.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -383,7 +383,7 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The network type of the destination instance. Valid values:
+         * The network type of the instance. Valid values:
          * <p>
          * 
          * *   **VPC**
@@ -391,7 +391,7 @@ public class CreateDBInstanceForRebuildRequest extends Request {
          * 
          * Default value: Classic.
          * 
-         * > If you set this parameter to **VPC**, you must also specify **VpcId** and **VSwitchId**.
+         * > : If you set this parameter to **VPC**, you must also specify **VpcId** and **VSwitchId**.
          */
         public Builder instanceNetworkType(String instanceNetworkType) {
             this.putQueryParameter("InstanceNetworkType", instanceNetworkType);
@@ -437,7 +437,7 @@ public class CreateDBInstanceForRebuildRequest extends Request {
          * *   **Year**
          * *   **Month**
          * 
-         * > If you set PayType to **Prepaid**, you must also specify this parameter.
+         * > : If you set PayType to **Prepaid**, you must also specify this parameter.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -446,7 +446,7 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -455,7 +455,7 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can leave this parameter empty.
+         * The ID of the resource group. The value of this parameter can be NULL.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -482,11 +482,13 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The IP address whitelist of the instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for MySQL instance](~~43185~~). If you want to add more than one entry to the IP address whitelist, separate the entries with commas (,). Each entry must be unique. You can add up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
+         * The IP address whitelist of the serverless instance. For more information, see [Use a database client or the CLI to connect to an ApsaraDB RDS for PostgreSQL instance](~~43185~~). If the IP address whitelist contains more than one entry, separate the entries with commas (,). Each entry must be unique. You can specify up to 1,000 entries. The entries in the IP address whitelist must be in one of the following formats:
          * <p>
          * 
          * *   IP addresses, such as 10.10.XX.XX.
          * *   CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of each IP address in the IP address whitelist is 24 bits in length. You can replace 24 with a value within the range of 1 to 32.
+         * 
+         * If this parameter is not specified, the default IP address whitelist is used.
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);
@@ -519,10 +521,10 @@ public class CreateDBInstanceForRebuildRequest extends Request {
         }
 
         /**
-         * The VPC ID of the destination instance. This parameter is available only when you set **InstanceNetworkType** to **VPC**.
+         * The VPC ID of the instance. If you set **InstanceNetworkType** to **VPC**, you must specify this parameter.
          * <p>
          * 
-         * > If you specify this parameter, you must also specify **ZoneId**.
+         * > : If you specify this parameter, you must also specify **ZoneId**.
          */
         public Builder VPCId(String VPCId) {
             this.putQueryParameter("VPCId", VPCId);
@@ -538,7 +540,7 @@ public class CreateDBInstanceForRebuildRequest extends Request {
          * 
          * *   If you set **InstanceNetworkType** to **VPC**, you must also specify this parameter.
          * 
-         * *   If you specify ZoneSlaveId1, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).
+         * *   If you specify the ZoneSlaveId1 parameter, you must specify the IDs of two vSwitches for this parameter and separate the IDs with a comma (,).
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);

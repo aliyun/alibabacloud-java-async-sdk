@@ -50,7 +50,7 @@ public class QueryNotifyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the returned parameters.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class QueryNotifyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +238,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the notification has been confirmed. You can call the ConfirmNotify operation to mark the notification as confirmed. Valid values:
+             * Indicates whether the notification has been confirmed. You can call the [ConfirmNotify](~~610444~~) operation to mark the notification as confirmed. Valid values:
              * <p>
              * 
              * *   **true**
@@ -250,7 +250,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * The UID of the contact who called the ConfirmNotify operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.
+             * The UID of the contact who called the [ConfirmNotify](~~610444~~) operation to mark the notification as confirmed. The contact belongs to the current Alibaba Cloud account.
              * <p>
              * 
              * The value **0** indicates that the notification is automatically confirmed by the system.
@@ -430,7 +430,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             private Integer totalRecordCount; 
 
             /**
-             * The details of the notification.
+             * The details of notifications.
              */
             public Builder notifyItemList(java.util.List < NotifyItemList> notifyItemList) {
                 this.notifyItemList = notifyItemList;
@@ -438,7 +438,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The page number of the page returned.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -446,7 +446,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The number of entries returned on each page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -454,7 +454,7 @@ public class QueryNotifyResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries.
+             * The total number of entries returned.
              */
             public Builder totalRecordCount(Integer totalRecordCount) {
                 this.totalRecordCount = totalRecordCount;

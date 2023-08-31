@@ -98,7 +98,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * An array that consists of information about the binary log file.
+         * The details of the log file.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -106,7 +106,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +114,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of binary log files returned on the current page.
+         * The number of log files on the current page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -122,7 +122,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The total size of the binary log files.
+         * The total size of the log file.
          */
         public Builder totalFileSize(Long totalFileSize) {
             this.totalFileSize = totalFileSize;
@@ -138,7 +138,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of binary log files returned.
+         * The total number of log files.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -294,7 +294,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP-based download URL of the binary log file. If the return value of this parameter is NULL, ApsaraDB RDS does not provide a download URL for the file.
+             * The HTTP-based download URL of the log file. If the return value of this parameter is NULL, ApsaraDB RDS does not provide a download URL for the log file.
              */
             public Builder downloadLink(String downloadLink) {
                 this.downloadLink = downloadLink;
@@ -302,7 +302,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the binary log file. Unit: bytes.
+             * The size of the log file.
+             * <p>
+             * 
+             * Unit: bytes.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -310,7 +313,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the binary log file belongs. This parameter is used to distinguish between the binary log files that are generated on a primary instance and those that are generated on a secondary instance.
+             * The ID of the instance to which the log file belongs. This parameter helps determine whether the log file is generated on the primary instance or the secondary instance.
+             * <p>
+             * 
+             * > You can log on to the ApsaraDB RDS console and go to the instance details page. In the left-side navigation pane, click **Service Availability** to view the values of **Primary Instance No.** and **Secondary Instance No.**.
              */
             public Builder hostInstanceID(String hostInstanceID) {
                 this.hostInstanceID = hostInstanceID;
@@ -318,7 +324,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The download URL that is used over an internal network.
+             * The URL that is used to download files over an internal network.
              */
             public Builder intranetDownloadLink(String intranetDownloadLink) {
                 this.intranetDownloadLink = intranetDownloadLink;
@@ -326,7 +332,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the URL. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The expiration time of the URL.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder linkExpiredTime(String linkExpiredTime) {
                 this.linkExpiredTime = linkExpiredTime;
@@ -334,7 +343,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the log data recorded in the binary log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The start time of the log file.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder logBeginTime(String logBeginTime) {
                 this.logBeginTime = logBeginTime;
@@ -342,7 +354,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the log data recorded in the binary log file. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The end time of the log file.
+             * <p>
+             * 
+             * The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder logEndTime(String logEndTime) {
                 this.logEndTime = logEndTime;
@@ -350,7 +365,7 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the binary log file.
+             * The log file name.
              */
             public Builder logFileName(String logFileName) {
                 this.logFileName = logFileName;
@@ -358,8 +373,10 @@ public class DescribeBinlogFilesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the binary log file that is stored in the Object Storage Service (OSS) bucket. Valid values:
+             * The status of the log file that is stored in the Object Storage Service (OSS) bucket.
              * <p>
+             * 
+             * Valid values:
              * 
              * *   **Uploading**
              * *   **Completed**

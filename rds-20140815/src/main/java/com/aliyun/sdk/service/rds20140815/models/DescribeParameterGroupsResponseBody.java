@@ -62,7 +62,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         private Boolean signalForOptimizeParams; 
 
         /**
-         * The details of parameter templates.
+         * The details of the parameter templates.
          */
         public Builder parameterGroups(ParameterGroups parameterGroups) {
             this.parameterGroups = parameterGroups;
@@ -70,7 +70,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -238,7 +238,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine.
+             * The database engine of the instance.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -246,7 +246,7 @@ public class DescribeParameterGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance.
+             * The version of the database engine.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;

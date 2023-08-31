@@ -169,7 +169,7 @@ public class ModifyDBInstanceConfigRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +178,10 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * ConfigName.
+         * The name of the configuration item that you want to modify.
+         * <p>
+         * 
+         * *   **pgbouncer**
          */
         public Builder configName(String configName) {
             this.putQueryParameter("ConfigName", configName);
@@ -187,7 +190,11 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * ConfigValue.
+         * The value of the configuration item that you want to modify.
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder configValue(String configValue) {
             this.putQueryParameter("ConfigValue", configValue);
@@ -196,7 +203,7 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -223,7 +230,7 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

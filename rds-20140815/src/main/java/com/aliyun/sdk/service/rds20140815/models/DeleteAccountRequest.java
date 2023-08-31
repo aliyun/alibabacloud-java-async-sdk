@@ -135,7 +135,7 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

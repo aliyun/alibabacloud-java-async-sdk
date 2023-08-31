@@ -213,7 +213,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -222,7 +222,7 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * DBName.
+         * The name of the database.
          */
         public Builder DBName(String DBName) {
             this.putQueryParameter("DBName", DBName);
@@ -240,7 +240,10 @@ public class DescribeSlowLogRecordsRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The ID of the node.
+         * <p>
+         * 
+         * > This parameter is available only for instances that run RDS Cluster Edition. You can specify this parameter to query the logs of a specified node. If this parameter is not specified, the logs of the primary node are returned by default.
          */
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);

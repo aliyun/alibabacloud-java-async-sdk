@@ -274,7 +274,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -319,7 +319,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends Request {
         }
 
         /**
-         * A deprecated parameter.
+         * A deprecated parameter. You do not need to configure this parameter.
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);

@@ -170,7 +170,13 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Category.
+         * The RDS edition of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Basic**: RDS Basic Edition
+         * *   **HighAvailability**: RDS High-availability Edition
+         * *   **AlwaysOn**: RDS Cluster Edition
+         * *   **Finance**: RDS Enterprise Edition
          */
         public Builder category(String category) {
             this.category = category;
@@ -178,7 +184,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ClassCode.
+         * The code of the instance type.
          */
         public Builder classCode(String classCode) {
             this.classCode = classCode;
@@ -186,7 +192,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ClassGroup.
+         * The instance family of the instance.
          */
         public Builder classGroup(String classGroup) {
             this.classGroup = classGroup;
@@ -194,7 +200,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Cpu.
+         * The number of CPU cores that are supported by the instance type. Unit: cores.
          */
         public Builder cpu(String cpu) {
             this.cpu = cpu;
@@ -202,7 +208,14 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * DBInstanceStorageType.
+         * The storage type of the instance. Valid values:
+         * <p>
+         * 
+         * *   **local_ssd**: local SSDs
+         * *   **cloud_ssd**: standard SSDs
+         * *   **cloud_essd**: enhanced SSDs (ESSDs) of performance level 1 (PL1)
+         * *   **cloud_essd2**: ESSDs of PL2
+         * *   **cloud_essd3**: ESSD of PL3
          */
         public Builder DBInstanceStorageType(String DBInstanceStorageType) {
             this.DBInstanceStorageType = DBInstanceStorageType;
@@ -210,7 +223,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * InstructionSetArch.
+         * The architecture of the instance.
          */
         public Builder instructionSetArch(String instructionSetArch) {
             this.instructionSetArch = instructionSetArch;
@@ -218,7 +231,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxConnections.
+         * The maximum number of connections.
          */
         public Builder maxConnections(String maxConnections) {
             this.maxConnections = maxConnections;
@@ -226,7 +239,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxIOMBPS.
+         * The maximum I/O bandwidth that is supported by the instance type. Unit: Mbit/s.
          */
         public Builder maxIOMBPS(String maxIOMBPS) {
             this.maxIOMBPS = maxIOMBPS;
@@ -234,7 +247,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxIOPS.
+         * The maximum input/output operations per second (IOPS) that is supported by the instance type. Unit: operations per second.
          */
         public Builder maxIOPS(String maxIOPS) {
             this.maxIOPS = maxIOPS;
@@ -242,7 +255,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * MemoryClass.
+         * The memory size. Unit: GB.
          */
         public Builder memoryClass(String memoryClass) {
             this.memoryClass = memoryClass;
@@ -250,7 +263,16 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * ReferencePrice.
+         * The price.
+         * <p>
+         * 
+         * Unit: cents (US dollars).
+         * 
+         * > 
+         * 
+         * *   If you set the CommodityCode parameter to a value that indicates the pay-as-you-go billing method, the ReferencePrice parameter specifies the hourly fee that you must pay.
+         * 
+         * *   If you set the CommodityCode parameter to a value that indicates the subscription billing method, the ReferencePrice parameter specifies the monthly fee that you must pay.
          */
         public Builder referencePrice(String referencePrice) {
             this.referencePrice = referencePrice;
@@ -258,7 +280,7 @@ public class DescribeClassDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

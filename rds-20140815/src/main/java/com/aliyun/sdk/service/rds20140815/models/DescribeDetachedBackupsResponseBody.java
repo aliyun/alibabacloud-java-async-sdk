@@ -86,7 +86,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         private String totalRecordCount; 
 
         /**
-         * The details of the returned data backup files.
+         * The queried backup sets.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -94,7 +94,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of data backup files on the page.
+         * The number of entries per page.
          */
         public Builder pageRecordCount(String pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -110,7 +110,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -350,7 +350,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             private String storeStatus; 
 
             /**
-             * The URL that is used to download the data backup file over the Internet. If the data backup file cannot be downloaded, an empty string is returned.
+             * The URL that is used to download the diagnostic report over the Internet. If the diagnostic report cannot be downloaded, an empty string is returned.
              */
             public Builder backupDownloadURL(String backupDownloadURL) {
                 this.backupDownloadURL = backupDownloadURL;
@@ -358,7 +358,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the backup.
+             * The end time of the backup task.
              * <p>
              * 
              * The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
@@ -369,7 +369,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data backup file.
+             * The ID of the backup set.
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -377,7 +377,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download the data backup file over an internal network. If the data backup file cannot be downloaded, an empty string is returned.
+             * The URL that is used to download the log file over an internal network. If the log file cannot be downloaded, an empty string is returned.
              */
             public Builder backupIntranetDownloadURL(String backupIntranetDownloadURL) {
                 this.backupIntranetDownloadURL = backupIntranetDownloadURL;
@@ -397,7 +397,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup mode of the data backup file. Valid values:
+             * The backup method. Valid values:
              * <p>
              * 
              * *   **Automated**
@@ -409,7 +409,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the data backup file. Unit: bytes.
+             * The backup size. Unit: bytes.
              */
             public Builder backupSize(Long backupSize) {
                 this.backupSize = backupSize;
@@ -417,7 +417,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the backup.
+             * The start time of the backup task.
              * <p>
              * 
              * The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm*Z format. The time is displayed in UTC.
@@ -428,7 +428,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data backup file. Valid values:
+             * The status of the backup set. Valid values:
              * <p>
              * 
              * *   **Success**
@@ -440,7 +440,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backup type. Valid values:
+             * The backup type of the backup file. Valid values:
              * <p>
              * 
              * *   **FullBackup**
@@ -452,10 +452,10 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time at which the data in the data backup file is consistent. The return value of this parameter is a timestamp.
+             * The point in time at which the data in the backup set is consistent. The return value of this parameter is a timestamp.
              * <p>
              * 
-             * >  If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.
+             * > If the instance runs MySQL 5.6, a timestamp is returned. Otherwise, the value 0 is returned.
              */
             public Builder consistentTime(Long consistentTime) {
                 this.consistentTime = consistentTime;
@@ -479,7 +479,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The No. of the instance that generates the data backup file. This parameter is used to indicate whether the instance that generates the data backup file is a primary instance or a secondary instance.
+             * The ID of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.
              */
             public Builder hostInstanceID(String hostInstanceID) {
                 this.hostInstanceID = hostInstanceID;
@@ -487,11 +487,11 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the data backup file is available. Valid values:
+             * Indicates whether the backup set is available. Valid values:
              * <p>
              * 
-             * *   **0**: The data backup file is unavailable.
-             * *   **1**: The data backup file is available.
+             * *   **0**: The backup set is unavailable.
+             * *   **1**: The backup set is available.
              */
             public Builder isAvail(Integer isAvail) {
                 this.isAvail = isAvail;
@@ -499,12 +499,12 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the data backup file that is used to restore individual databases or tables. Valid values:
+             * The status of the backup set that is used to restore individual databases or tables. Valid values:
              * <p>
              * 
-             * *   **OK**: The data backup file is normal.
-             * *   **LARGE**: The data backup file contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.
-             * *   **EMPTY**: The data backup file is generated from a failed backup task.
+             * *   **OK**: The backup set is normal.
+             * *   **LARGE**: The backup set contains an abnormally large number of tables. It cannot be used to restore individual databases or tables.
+             * *   **EMPTY**: The backup set is generated from a failed backup task.
              */
             public Builder metaStatus(String metaStatus) {
                 this.metaStatus = metaStatus;
@@ -515,8 +515,8 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
              * Indicates whether the data backup file can be deleted. Valid values:
              * <p>
              * 
-             * *   **Enabled**: The data backup file can be deleted.
-             * *   **Disabled**: The data backup file cannot be deleted.
+             * *   **Enabled**
+             * *   **Disabled**
              */
             public Builder storeStatus(String storeStatus) {
                 this.storeStatus = storeStatus;

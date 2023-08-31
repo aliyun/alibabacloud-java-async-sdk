@@ -139,12 +139,12 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. This parameter is supported only for instances that run MySQL, PostgreSQL, or SQL Server.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          * <p>
          * 
          * > 
          * 
-         * *   If your instance runs PostgreSQL, you must make sure that the instance uses **cloud disks**. If the instance is equipped with local disks, you must call the [RestartDBInstance](~~26230~~) operation to restart the instance. The system automatically updates the instance to the latest minor engine version during the restart process.
+         * *   If your instance runs PostgreSQL, you must make sure that the instance uses **cloud disks**. If the instance is equipped with local disks, you must call the [RestartDBInstance](~~26230~~) operation to restart the instance. The system automatically updates the instance to the latest minor engine version during the restart.
          * 
          * *   If your instance runs SQL Server, you must make sure that the instance runs SQL Server 2019.
          */
@@ -221,11 +221,9 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
          * The time when the update takes effect. Valid values:
          * <p>
          * 
-         * *   **Immediate**: The update immediately takes effect.
+         * *   **Immediate** (default): The update takes effect immediately.
          * *   **MaintainTime**: The update takes effect during the maintenance window that you specify. For more information about how to change the maintenance window, see [ModifyDBInstanceMaintainTime](~~26249~~).
          * *   **SpecifyTime**: The update takes effect at the point in time you specify.
-         * 
-         * Default value: **Immediate**.
          */
         public Builder upgradeTime(String upgradeTime) {
             this.putQueryParameter("UpgradeTime", upgradeTime);

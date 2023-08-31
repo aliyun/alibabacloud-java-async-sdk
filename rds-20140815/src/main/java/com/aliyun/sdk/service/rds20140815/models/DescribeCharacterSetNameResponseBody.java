@@ -62,7 +62,7 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the character sets that are supported for the instance.
+         * The character sets that are supported.
          */
         public Builder characterSetNameItems(CharacterSetNameItems characterSetNameItems) {
             this.characterSetNameItems = characterSetNameItems;
@@ -70,7 +70,7 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         }
 
         /**
-         * The database engine that is run on the instance.
+         * The type of the database engine.
          */
         public Builder engine(String engine) {
             this.engine = engine;
@@ -78,7 +78,7 @@ public class DescribeCharacterSetNameResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

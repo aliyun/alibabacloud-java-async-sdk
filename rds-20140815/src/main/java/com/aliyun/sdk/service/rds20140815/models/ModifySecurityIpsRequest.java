@@ -180,7 +180,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The name of the IP address whitelist that you want to modify. Default value: Default.
+         * The name of the IP address whitelist that you want to modify. Default value: **Default**.
          * <p>
          * 
          * > A maximum of 200 IP address whitelists can be configured for each instance.
@@ -192,7 +192,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -249,7 +249,7 @@ public class ModifySecurityIpsRequest extends Request {
         }
 
         /**
-         * The IP addresses and CIDR blocks that you want to include in the IP address whitelist. If the IP address whitelist contains more than one IP address or CIDR block, separate these IP addresses and CIDR blocks with commas (,). Each IP address or CIDR block in an IP address whitelist must be unique. For more information, see [Configure an IP address whitelist for an ApsaraDB RDS instance](~~43185~~). The entries in the IP address whitelist must be in one of the following formats:
+         * The IP addresses in an IP address whitelist. Separate multiple IP addresses with commas (,). Each IP address in the IP address whitelist must be unique. The entries in the IP address whitelist must be in one of the following formats:
          * <p>
          * 
          * *   IP addresses, such as 10.23.XX.XX.

@@ -98,7 +98,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -114,7 +114,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of details of the minor engine versions.
+         * An array that consists of details of the minor engine version.
          */
         public Builder minorVersionItems(java.util.List < MinorVersionItems> minorVersionItems) {
             this.minorVersionItems = minorVersionItems;
@@ -122,7 +122,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number returned.
          */
         public Builder pageNumbers(Integer pageNumbers) {
             this.pageNumbers = pageNumbers;
@@ -130,7 +130,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned entries.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -289,7 +289,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
              * The PostgreSQL version to which the minor engine version corresponds. For more information, see [Release notes for AliPG](~~126002~~).
              * <p>
              * 
-             * >  This parameter is valid only when the Engine parameter is set to **PostgreSQL**.
+             * > This parameter is valid only when the instance runs **PostgreSQL**.
              */
             public Builder communityMinorVersion(String communityMinorVersion) {
                 this.communityMinorVersion = communityMinorVersion;
@@ -313,7 +313,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * An internal parameter. You can ignore this parameter.
+             * An internal parameter. You do not need to specify this parameter.
              */
             public Builder isHotfixVersion(Boolean isHotfixVersion) {
                 this.isHotfixVersion = isHotfixVersion;
@@ -321,7 +321,7 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the minor engine.
+             * The minor engine version.
              */
             public Builder minorVersion(String minorVersion) {
                 this.minorVersion = minorVersion;
@@ -373,10 +373,10 @@ public class DescribeDBMiniEngineVersionsResponseBody extends TeaModel {
              * The tag that corresponds to the minor engine version. Valid values:
              * <p>
              * 
-             * *   **pgsql_docker_image**: tag of common instances
+             * *   **pgsql_docker_image**: tag of the common instance
              * *   **pgsql_babelfish_image**: tag of the instance for which Babelfish is enabled
              * 
-             * >  This parameter is valid only when the Engine parameter is set to **PostgreSQL**.
+             * > This parameter is valid only when the instance runs **PostgreSQL**.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

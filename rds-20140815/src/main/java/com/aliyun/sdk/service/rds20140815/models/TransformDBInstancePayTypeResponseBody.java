@@ -94,7 +94,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -113,7 +113,7 @@ public class TransformDBInstancePayTypeResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The order ID.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;

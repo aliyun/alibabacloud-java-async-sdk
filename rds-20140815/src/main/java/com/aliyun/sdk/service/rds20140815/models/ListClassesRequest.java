@@ -154,7 +154,7 @@ public class ListClassesRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the generated token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,10 +178,10 @@ public class ListClassesRequest extends Request {
         }
 
         /**
-         * The ID of the primary instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the primary instance.
+         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          * <p>
          * 
-         * > If you use **CommodityCode** to query the instance types that are available to read-only instances, you must specify the DBInstanceId parameter.
+         * > If you use **CommodityCode** to query the instance types that are available to read-only instances, you must specify DBInstanceId.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -214,10 +214,10 @@ public class ListClassesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
          * <p>
          * 
-         * > If you are using an Alibaba Cloud account on the International site (alibabacloud.com), you must specify the RegionId parameter.
+         * > If you are using an Alibaba Cloud account on the International site (alibabacloud.com), you must specify RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

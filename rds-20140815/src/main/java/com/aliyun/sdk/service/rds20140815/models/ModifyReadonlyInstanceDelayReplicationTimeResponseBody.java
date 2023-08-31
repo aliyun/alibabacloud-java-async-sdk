@@ -82,7 +82,7 @@ public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody extends TeaM
         }
 
         /**
-         * The latency at which data is replicated from the primary instance to the read-only instance. Unit: seconds.
+         * The replication latency of the data replication. Unit: seconds.
          */
         public Builder readSQLReplicationTime(String readSQLReplicationTime) {
             this.readSQLReplicationTime = readSQLReplicationTime;
@@ -90,7 +90,7 @@ public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody extends TeaM
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class ModifyReadonlyInstanceDelayReplicationTimeResponseBody extends TeaM
         }
 
         /**
-         * The ID of the replication task.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

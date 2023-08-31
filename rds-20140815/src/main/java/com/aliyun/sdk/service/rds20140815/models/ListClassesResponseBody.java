@@ -62,7 +62,7 @@ public class ListClassesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of available instance types.
+         * The list of instance specifications.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -234,7 +234,7 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance family. For more information, see [Instance families](~~57184~~).
+             * The instance family. For more information, see [Overview of instance families](~~57184~~).
              */
             public Builder classGroup(String classGroup) {
                 this.classGroup = classGroup;
@@ -242,7 +242,7 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of cores that are supported by the instance type. Unit: core.
+             * The number of CPU cores that are supported by the instance type. Unit: cores.
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -270,7 +270,7 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of connections that are supported by the instance type. Unit: core.
+             * The maximum number of connections that are supported by the instance type. Unit: connections.
              */
             public Builder maxConnections(String maxConnections) {
                 this.maxConnections = maxConnections;
@@ -294,7 +294,7 @@ public class ListClassesResponseBody extends TeaModel {
             }
 
             /**
-             * The memory capacity that is supported by the instance type. Unit: GB.
+             * The memory size that is supported by the instance type. Unit: GB.
              */
             public Builder memoryClass(String memoryClass) {
                 this.memoryClass = memoryClass;
@@ -305,7 +305,7 @@ public class ListClassesResponseBody extends TeaModel {
              * The fee that you must pay for the instance type.
              * <p>
              * 
-             * *   Unit: cent (USD).
+             * *   Unit: cents (USD).
              * 
              * > 
              * 

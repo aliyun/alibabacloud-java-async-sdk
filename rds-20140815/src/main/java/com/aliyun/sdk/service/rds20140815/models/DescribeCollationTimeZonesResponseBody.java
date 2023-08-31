@@ -50,7 +50,7 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the character set collations and time zones that are available for use in ApsaraDB RDS.
+         * The list of the character set collations and time zones that are available.
          */
         public Builder collationTimeZones(CollationTimeZones collationTimeZones) {
             this.collationTimeZones = collationTimeZones;
@@ -58,7 +58,7 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
             private String timeZone; 
 
             /**
-             * The description of the character set collations and time zones.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -130,7 +130,7 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The offset of the UTC time. The offset is in the following format: (UTC+\<i>HH:mm\</i>).
+             * The offset of the UTC time. The offset is in the following format: (UTC+*HH:mm*).
              */
             public Builder standardTimeOffset(String standardTimeOffset) {
                 this.standardTimeOffset = standardTimeOffset;
@@ -138,7 +138,7 @@ public class DescribeCollationTimeZonesResponseBody extends TeaModel {
             }
 
             /**
-             * The time zone that is available for use in ApsaraDB RDS.
+             * The time zone.
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;

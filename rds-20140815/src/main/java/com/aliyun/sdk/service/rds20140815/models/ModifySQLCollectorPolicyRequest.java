@@ -140,7 +140,7 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         } 
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -167,7 +167,7 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. For more information, see [View basic information of a resource group](~~151181~~).
+         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -194,7 +194,11 @@ public class ModifySQLCollectorPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable or disable the SQL Explorer (SQL Audit) feature. Valid values: **Enable and Disabled**.
+         * Specifies whether to enable the SQL Explorer (SQL Audit) feature. Valid values:
+         * <p>
+         * 
+         * *   **Enable**
+         * *   **Disabled**
          */
         public Builder SQLCollectorStatus(String SQLCollectorStatus) {
             this.putQueryParameter("SQLCollectorStatus", SQLCollectorStatus);

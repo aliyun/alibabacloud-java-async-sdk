@@ -18,6 +18,10 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
     private String insName;
 
     @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @Query
     @NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -33,6 +37,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
     private DetachWhitelistTemplateToInstanceRequest(Builder builder) {
         super(builder);
         this.insName = builder.insName;
+        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.templateId = builder.templateId;
@@ -59,6 +64,13 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -81,6 +93,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DetachWhitelistTemplateToInstanceRequest, Builder> {
         private String insName; 
+        private String resourceGroupId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private Integer templateId; 
@@ -92,17 +105,27 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
         private Builder(DetachWhitelistTemplateToInstanceRequest request) {
             super(request);
             this.insName = request.insName;
+            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.templateId = request.templateId;
         } 
 
         /**
-         * InsName.
+         * The name of the instance.
          */
         public Builder insName(String insName) {
             this.putQueryParameter("InsName", insName);
             this.insName = insName;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -125,7 +148,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID of the whitelist template.
          */
         public Builder templateId(Integer templateId) {
             this.putQueryParameter("TemplateId", templateId);

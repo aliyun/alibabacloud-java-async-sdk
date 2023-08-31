@@ -274,7 +274,7 @@ public class ModifyParameterGroupRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * 资源组ID。可调用[DescribeDBInstanceAttribute](~~610394~~)获取。
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -174,7 +174,7 @@ public class DescribeDiagnosticReportListResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used to download the diagnostic report over the Internet. If the diagnostic report cannot be downloaded, an empty string is returned.
+             * The URL that is used to download the backup set over the Internet. If the backup set cannot be downloaded, an empty string is returned.
              */
             public Builder downloadURL(String downloadURL) {
                 this.downloadURL = downloadURL;

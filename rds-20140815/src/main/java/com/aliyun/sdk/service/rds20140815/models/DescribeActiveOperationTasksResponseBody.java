@@ -562,7 +562,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the precheck task.
+             * The task ID.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -650,7 +650,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
+             * The task status.
              * <p>
              * 
              * *   **3**: pending
@@ -681,7 +681,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskParams.
+             * The task parameters.
              */
             public Builder taskParams(String taskParams) {
                 this.taskParams = taskParams;
@@ -695,7 +695,7 @@ public class DescribeActiveOperationTasksResponseBody extends TeaModel {
              * *   **rds_apsaradb_ha**: primary/secondary switchover
              * *   **rds_apsaradb_transfer**: instance migration
              * *   **rds_apsaradb_upgrade**: update of the minor engine version
-             * *   **rds_apsaradb_maxscale**: update of the minor version of the proxy
+             * *   **rds_apsaradb_maxscale**: upgrade of the database proxy version
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

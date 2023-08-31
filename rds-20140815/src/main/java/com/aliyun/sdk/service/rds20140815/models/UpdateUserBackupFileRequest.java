@@ -155,7 +155,7 @@ public class UpdateUserBackupFileRequest extends Request {
         } 
 
         /**
-         * The ID of the backup file. You can call the [ListUserBackupFiles](~~257821~~) operation to query the ID of the backup file.
+         * The ID of the backup file. You can call the [ListUserBackupFiles](~~610600~~) operation to query the ID of the file.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -191,7 +191,7 @@ public class UpdateUserBackupFileRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) operation to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

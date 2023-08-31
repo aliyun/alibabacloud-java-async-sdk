@@ -74,7 +74,7 @@ public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel 
         private String taskId; 
 
         /**
-         * The name of the instance.
+         * The instance name.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.DBInstanceName = DBInstanceName;
@@ -82,7 +82,7 @@ public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class UpgradeDBInstanceMajorVersionPrecheckResponseBody extends TeaModel 
         }
 
         /**
-         * The ID of the upgrade check task.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

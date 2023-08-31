@@ -506,7 +506,13 @@ public class DescribeDBInstancesRequest extends Request {
         } 
 
         /**
-         * Category.
+         * The RDS edition of the instance. Valid values:
+         * <p>
+         * 
+         * *   **Basic**: RDS Basic Edition
+         * *   **HighAvailability**: RDS High-availability Edition
+         * *   **cluster**: RDS Cluster Edition
+         * *   **serverless_basic**: RDS Serverless Basic Edition
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -557,7 +563,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~26232~~) operation to query the ID of the instance.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -592,7 +598,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the dedicated cluster.
+         * The dedicated cluster ID.
          */
         public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
             this.putQueryParameter("DedicatedHostGroupId", dedicatedHostGroupId);
@@ -627,7 +633,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The database engine version of the instance.
+         * The database engine version.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -649,7 +655,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * 实例过滤条件参数及其值的JSON串
+         * The JSON string that consists of filter condition parameters and their values.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -727,7 +733,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Valid values: any non-zero positive integer.
+         * The page number. Valid values: any non-zero positive integer.
          * <p>
          * 
          * Default value: **1**.
@@ -764,7 +770,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the [DescribeRegions](~~610399~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -818,7 +824,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the instance.
+         * The vSwitch ID.
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
@@ -827,7 +833,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The VPC ID of the instance.
+         * The VPC ID.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -845,7 +851,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the proxy mode.
+         * A deprecated parameter. You do not need to configure this parameter.
          */
         public Builder proxyId(String proxyId) {
             this.putQueryParameter("proxyId", proxyId);

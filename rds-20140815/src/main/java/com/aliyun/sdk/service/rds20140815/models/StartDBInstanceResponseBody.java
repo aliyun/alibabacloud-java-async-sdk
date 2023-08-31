@@ -62,10 +62,7 @@ public class StartDBInstanceResponseBody extends TeaModel {
         private Integer taskId; 
 
         /**
-         * The ID of the migration task.
-         * <p>
-         * 
-         * > This parameter is returned only for the instances that are created in dedicated clusters.
+         * The migration task ID. This parameter is available only for instances that are created in dedicated clusters.
          */
         public Builder migrationId(Integer migrationId) {
             this.migrationId = migrationId;

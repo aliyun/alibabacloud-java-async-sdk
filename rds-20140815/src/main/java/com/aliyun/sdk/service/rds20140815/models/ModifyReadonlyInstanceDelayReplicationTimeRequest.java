@@ -126,7 +126,7 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         } 
 
         /**
-         * The ID of the read-only instance.
+         * The ID of the read-only instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the read-only instance.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -144,7 +144,7 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         }
 
         /**
-         * The latency at which to replicate data from the primary instance to the read-only instance. Unit: seconds.
+         * The replication latency of the data replication. Unit: seconds.
          */
         public Builder readSQLReplicationTime(String readSQLReplicationTime) {
             this.putQueryParameter("ReadSQLReplicationTime", readSQLReplicationTime);
@@ -153,7 +153,7 @@ public class ModifyReadonlyInstanceDelayReplicationTimeRequest extends Request {
         }
 
         /**
-         * The ID of the resource group.
+         * 资源组ID。可调用[DescribeDBInstanceAttribute](~~610394~~)获取。
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

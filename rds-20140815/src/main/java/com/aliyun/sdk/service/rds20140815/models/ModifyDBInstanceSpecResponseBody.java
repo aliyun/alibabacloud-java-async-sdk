@@ -62,7 +62,7 @@ public class ModifyDBInstanceSpecResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -70,7 +70,7 @@ public class ModifyDBInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -78,7 +78,7 @@ public class ModifyDBInstanceSpecResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
