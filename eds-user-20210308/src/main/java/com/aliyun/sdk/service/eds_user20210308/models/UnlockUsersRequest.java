@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnlockUsersRequest</p>
  */
 public class UnlockUsersRequest extends Request {
+    @Query
+    @NameInMap("AutoLockTime")
+    private String autoLockTime;
+
     @Body
     @NameInMap("Users")
     @Validation(required = true)
@@ -19,6 +23,7 @@ public class UnlockUsersRequest extends Request {
 
     private UnlockUsersRequest(Builder builder) {
         super(builder);
+        this.autoLockTime = builder.autoLockTime;
         this.users = builder.users;
     }
 
@@ -36,6 +41,13 @@ public class UnlockUsersRequest extends Request {
     }
 
     /**
+     * @return autoLockTime
+     */
+    public String getAutoLockTime() {
+        return this.autoLockTime;
+    }
+
+    /**
      * @return users
      */
     public java.util.List < String > getUsers() {
@@ -43,6 +55,7 @@ public class UnlockUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UnlockUsersRequest, Builder> {
+        private String autoLockTime; 
         private java.util.List < String > users; 
 
         private Builder() {
@@ -51,8 +64,18 @@ public class UnlockUsersRequest extends Request {
 
         private Builder(UnlockUsersRequest request) {
             super(request);
+            this.autoLockTime = request.autoLockTime;
             this.users = request.users;
         } 
+
+        /**
+         * AutoLockTime.
+         */
+        public Builder autoLockTime(String autoLockTime) {
+            this.putQueryParameter("AutoLockTime", autoLockTime);
+            this.autoLockTime = autoLockTime;
+            return this;
+        }
 
         /**
          * Users.

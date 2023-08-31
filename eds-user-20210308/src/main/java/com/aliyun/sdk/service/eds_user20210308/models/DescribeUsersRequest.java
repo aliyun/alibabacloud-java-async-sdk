@@ -125,7 +125,7 @@ public class DescribeUsersRequest extends Request {
         } 
 
         /**
-         * EndUserIds.
+         * The list of usernames that must be exactly matched.
          */
         public Builder endUserIds(java.util.List < String > endUserIds) {
             this.putBodyParameter("EndUserIds", endUserIds);
@@ -134,7 +134,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * ExcludeEndUserIds.
+         * The list of usernames to be exactly excluded.
          */
         public Builder excludeEndUserIds(java.util.List < String > excludeEndUserIds) {
             this.putBodyParameter("ExcludeEndUserIds", excludeEndUserIds);
@@ -143,7 +143,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The string that is used for fuzzy search. You perform fuzzy search by username (EndUserId) and email address (Email). Wildcard characters (\*) are supported. For example, if you set this parameter to `a*m`, usernames or email addresses that start with `a` and end with `m` are returned.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -152,7 +152,11 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page.
+         * <p>
+         * 
+         * *   Valid values: 1 to 500
+         * *   Default value: 500
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -161,7 +165,9 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.\
+         * <p>
+         * If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the return value of NextToken to perform the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -170,7 +176,7 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
-         * OrgId.
+         * The ID of the organization in which you want to query users.
          */
         public Builder orgId(String orgId) {
             this.putBodyParameter("OrgId", orgId);

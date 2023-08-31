@@ -21,7 +21,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckUsedPropertyResponse> checkUsedProperty(CheckUsedPropertyRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to **CheckUsedPropertyValue**.
+      * Before you call the operation, you can call the [ListProperty](~~410890~~) operation to query the existing user properties and their IDs (PropertyId) and values (PropertyValueId).
       *
      */
     CompletableFuture<CheckUsedPropertyValueResponse> checkUsedPropertyValue(CheckUsedPropertyValueRequest request);
@@ -51,7 +51,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPropertyValueResponse> listPropertyValue(ListPropertyValueRequest request);
 
     /**
-      * Locks a virtual MFA device that is bound to a convenience user.
+      * ## Description
+      * After a virtual MFA device is locked, the status of the virtual MFA device changes to LOCKED. The convenience user to which the MFA device is bound cannot log on to the cloud desktop that resides in the workspace with the MFA feature enabled because the convenience user will fail authentication based on the virtual MFA device. You can call the UnlockMfaDevice operation to unlock the virtual MFA device.
       *
      */
     CompletableFuture<LockMfaDeviceResponse> lockMfaDevice(LockMfaDeviceRequest request);

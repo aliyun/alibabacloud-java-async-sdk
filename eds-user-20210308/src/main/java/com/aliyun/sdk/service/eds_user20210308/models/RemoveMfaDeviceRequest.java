@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class RemoveMfaDeviceRequest extends Request {
     @Query
+    @NameInMap("AdDomain")
+    private String adDomain;
+
+    @Query
     @NameInMap("SerialNumber")
     @Validation(required = true)
     private String serialNumber;
 
     private RemoveMfaDeviceRequest(Builder builder) {
         super(builder);
+        this.adDomain = builder.adDomain;
         this.serialNumber = builder.serialNumber;
     }
 
@@ -36,6 +41,13 @@ public class RemoveMfaDeviceRequest extends Request {
     }
 
     /**
+     * @return adDomain
+     */
+    public String getAdDomain() {
+        return this.adDomain;
+    }
+
+    /**
      * @return serialNumber
      */
     public String getSerialNumber() {
@@ -43,6 +55,7 @@ public class RemoveMfaDeviceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<RemoveMfaDeviceRequest, Builder> {
+        private String adDomain; 
         private String serialNumber; 
 
         private Builder() {
@@ -51,8 +64,18 @@ public class RemoveMfaDeviceRequest extends Request {
 
         private Builder(RemoveMfaDeviceRequest request) {
             super(request);
+            this.adDomain = request.adDomain;
             this.serialNumber = request.serialNumber;
         } 
+
+        /**
+         * AdDomain.
+         */
+        public Builder adDomain(String adDomain) {
+            this.putQueryParameter("AdDomain", adDomain);
+            this.adDomain = adDomain;
+            return this;
+        }
 
         /**
          * SerialNumber.

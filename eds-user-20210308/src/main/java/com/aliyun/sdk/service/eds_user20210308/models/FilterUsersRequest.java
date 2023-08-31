@@ -195,7 +195,7 @@ public class FilterUsersRequest extends Request {
         } 
 
         /**
-         * The IDs of excluded users.
+         * The list of usernames to be precisely excluded.
          */
         public Builder excludeEndUserIds(java.util.List < String > excludeEndUserIds) {
             this.putQueryParameter("ExcludeEndUserIds", excludeEndUserIds);
@@ -204,7 +204,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * The string that you enter for a fuzzy search. You can enter a string to match the username or email address.
+         * The string that is used for fuzzy search. You can use usernames and email addresses to perform fuzzy search. Wildcard characters (\*) are supported for this parameter. For example, if you set this parameter to a\*m, the usernames or an email addresses that start with a or end with m are returned.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -231,7 +231,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. If you set this parameter to a value greater than 100, the system resets the value to 100.
+         * The number of entries per page. If you set this parameter to a value greater than 100, the system resets the value to 100.
          */
         public Builder maxResults(Long maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -240,7 +240,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * The token that determines the start point of the query. You do not need to configure this parameter if you call this operation for the first time. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to perform the next query.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -249,7 +249,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * The parameter that is supported to sort query results.
+         * The parameter that supports to sort query results.
          */
         public Builder orderParam(OrderParam orderParam) {
             String orderParamShrink = shrink(orderParam, "OrderParam", "json");
@@ -277,7 +277,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * Details of the user property that you want to perform fuzzy search.
+         * The list of properties for fuzzy search.
          */
         public Builder propertyFilterParam(java.util.List < PropertyFilterParam> propertyFilterParam) {
             this.putQueryParameter("PropertyFilterParam", propertyFilterParam);
@@ -286,7 +286,7 @@ public class FilterUsersRequest extends Request {
         }
 
         /**
-         * Details of the properties and property values.
+         * The list of property names and property values.
          */
         public Builder propertyKeyValueFilterParam(java.util.List < PropertyKeyValueFilterParam> propertyKeyValueFilterParam) {
             this.putQueryParameter("PropertyKeyValueFilterParam", propertyKeyValueFilterParam);
@@ -340,7 +340,34 @@ public class FilterUsersRequest extends Request {
             private String orderType; 
 
             /**
-             * The method that you want to use to sort query results.
+             * The way to sort query results.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   EndUserId
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   id
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   gmt_created
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder orderField(String orderField) {
                 this.orderField = orderField;
@@ -348,7 +375,26 @@ public class FilterUsersRequest extends Request {
             }
 
             /**
-             * Specifies whether to sort query results in ascending or descending order.
+             * Specifies whether to sort query results in ascending or descending order. Valid values:
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   ASC: ascending
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   DESC (default): descending
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -462,7 +508,7 @@ public class FilterUsersRequest extends Request {
             private String propertyValues; 
 
             /**
-             * The name of the property.
+             * The property name.
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -470,7 +516,7 @@ public class FilterUsersRequest extends Request {
             }
 
             /**
-             * The values of the property.
+             * The property values.
              */
             public Builder propertyValues(String propertyValues) {
                 this.propertyValues = propertyValues;

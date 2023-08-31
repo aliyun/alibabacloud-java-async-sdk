@@ -62,7 +62,7 @@ public class FilterUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * The token that is used to query the next page. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to perform the next query.
+         * The pagination token that is used in the next request to retrieve a new page of results. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -70,7 +70,7 @@ public class FilterUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class FilterUsersResponseBody extends TeaModel {
             private String jobNumber; 
 
             /**
-             * The name of the external system account to which the user is connected.
+             * The account that is connected to the user.
              */
             public Builder externalName(String externalName) {
                 this.externalName = externalName;
@@ -138,7 +138,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The student ID or employee ID of the external system account that is connected to the user.
+             * The account, student ID, or employee ID that is connected to the user.
              */
             public Builder jobNumber(String jobNumber) {
                 this.jobNumber = jobNumber;
@@ -199,7 +199,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the property value.
+             * The property value ID.
              */
             public Builder propertyValueId(Long propertyValueId) {
                 this.propertyValueId = propertyValueId;
@@ -300,7 +300,7 @@ public class FilterUsersResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The ID of the property.
+             * The property ID.
              */
             public Builder propertyId(Long propertyId) {
                 this.propertyId = propertyId;
@@ -308,7 +308,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the property.
+             * The property name.
              */
             public Builder propertyKey(String propertyKey) {
                 this.propertyKey = propertyKey;
@@ -316,7 +316,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of property.
+             * The property ID.
              */
             public Builder propertyType(Integer propertyType) {
                 this.propertyType = propertyType;
@@ -324,7 +324,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the property value.
+             * The property value.
              */
             public Builder propertyValues(java.util.List < PropertyValues> propertyValues) {
                 this.propertyValues = propertyValues;
@@ -541,7 +541,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The email address of the user.
+             * The email address.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -549,7 +549,26 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * EnableAdminAccess.
+             * Indicates whether the user is a local administrator.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   false
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder enableAdminAccess(Boolean enableAdminAccess) {
                 this.enableAdminAccess = enableAdminAccess;
@@ -557,7 +576,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the user.
+             * The username.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -573,7 +592,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * The user ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -581,7 +600,26 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether the user is a tenant administrator.
+             * Indicates whether the user is a tenant administrator.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   false
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder isTenantManager(Boolean isTenantManager) {
                 this.isTenantManager = isTenantManager;
@@ -590,6 +628,33 @@ public class FilterUsersResponseBody extends TeaModel {
 
             /**
              * The type of the account ownership.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   CreateFromManager
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     administrator-activated
+             * 
+             *     <!-- -->
+             * 
+             * *   Normal
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     user-activated
+             * 
+             *     <!-- -->
              */
             public Builder ownerType(String ownerType) {
                 this.ownerType = ownerType;
@@ -597,7 +662,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The mobile number of the user.
+             * The mobile number.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -605,7 +670,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the user.
+             * The remarks.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -613,7 +678,26 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the user.
+             * The user status.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   0: The user status is normal.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   9: The user is locked.
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -621,7 +705,7 @@ public class FilterUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the user properties.
+             * Details of the properties.
              */
             public Builder userSetPropertiesModels(java.util.List < UserSetPropertiesModels> userSetPropertiesModels) {
                 this.userSetPropertiesModels = userSetPropertiesModels;

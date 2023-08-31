@@ -78,7 +78,7 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * Details of the convenience users.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -238,7 +238,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             private String wyId; 
 
             /**
-             * Email.
+             * The email address.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -246,7 +246,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * EndUserId.
+             * The name of the user.
              */
             public Builder endUserId(String endUserId) {
                 this.endUserId = endUserId;
@@ -254,7 +254,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the user.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -262,7 +262,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * IsTenantManager.
+             * Indicates whether the user is an administrator. If the convenience user is of the administrator-activated type, you must specify a user administrator. Notifications such as password reset on a client are sent to the email address or mobile phone of the user administrator. For more information, see [Create a convenience user](~~214472~~).
              */
             public Builder isTenantManager(Boolean isTenantManager) {
                 this.isTenantManager = isTenantManager;
@@ -270,7 +270,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * The nickname of the user.
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -278,7 +278,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * OrgId.
+             * The ID of the organization to which the user belongs.
              */
             public Builder orgId(String orgId) {
                 this.orgId = orgId;
@@ -286,7 +286,33 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerType.
+             * The type of the convenience account.
+             * <p>
+             * 
+             * *   The administrator-activated type. The administrator specifies the username and the password of the convenience account. User notifications such as password reset are sent to the email address or mobile number of the administrator.
+             * *   The user-activated type. The administrator specifies the username and the email address or mobile number of a user. Activation notifications are sent to the email address or mobile number of the user.
+             * 
+             * Valid values:
+             * 
+             * *   CreateFromManager
+             * 
+             *     <!-- -->
+             * 
+             *     :
+             * 
+             *     <!-- -->
+             * 
+             *     administrator-activated
+             * 
+             *     <!-- -->
+             * 
+             * *   Normal: user-activated
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder ownerType(String ownerType) {
                 this.ownerType = ownerType;
@@ -294,7 +320,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Phone.
+             * The mobile number of the user. If you leave this parameter empty, the value of this parameter is not returned.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -302,7 +328,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The remarks on the user.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -310,7 +336,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the user.
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -318,7 +344,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * WyId.
+             * The user ID that is globally unique.
              */
             public Builder wyId(String wyId) {
                 this.wyId = wyId;

@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UnlockMfaDeviceRequest extends Request {
     @Query
+    @NameInMap("AdDomain")
+    private String adDomain;
+
+    @Query
     @NameInMap("SerialNumber")
     @Validation(required = true)
     private String serialNumber;
 
     private UnlockMfaDeviceRequest(Builder builder) {
         super(builder);
+        this.adDomain = builder.adDomain;
         this.serialNumber = builder.serialNumber;
     }
 
@@ -36,6 +41,13 @@ public class UnlockMfaDeviceRequest extends Request {
     }
 
     /**
+     * @return adDomain
+     */
+    public String getAdDomain() {
+        return this.adDomain;
+    }
+
+    /**
      * @return serialNumber
      */
     public String getSerialNumber() {
@@ -43,6 +55,7 @@ public class UnlockMfaDeviceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UnlockMfaDeviceRequest, Builder> {
+        private String adDomain; 
         private String serialNumber; 
 
         private Builder() {
@@ -51,11 +64,21 @@ public class UnlockMfaDeviceRequest extends Request {
 
         private Builder(UnlockMfaDeviceRequest request) {
             super(request);
+            this.adDomain = request.adDomain;
             this.serialNumber = request.serialNumber;
         } 
 
         /**
-         * SerialNumber.
+         * The address of the Active Directory (AD) workspace.
+         */
+        public Builder adDomain(String adDomain) {
+            this.putQueryParameter("AdDomain", adDomain);
+            this.adDomain = adDomain;
+            return this;
+        }
+
+        /**
+         * The serial number of the virtual MFA device, which is a unique identifier.
          */
         public Builder serialNumber(String serialNumber) {
             this.putQueryParameter("SerialNumber", serialNumber);

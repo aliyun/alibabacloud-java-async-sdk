@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUsersRequest</p>
  */
 public class CreateUsersRequest extends Request {
+    @Query
+    @NameInMap("AutoLockTime")
+    private String autoLockTime;
+
     @Body
     @NameInMap("Password")
     @Validation(maxLength = 256)
@@ -24,6 +28,7 @@ public class CreateUsersRequest extends Request {
 
     private CreateUsersRequest(Builder builder) {
         super(builder);
+        this.autoLockTime = builder.autoLockTime;
         this.password = builder.password;
         this.users = builder.users;
     }
@@ -42,6 +47,13 @@ public class CreateUsersRequest extends Request {
     }
 
     /**
+     * @return autoLockTime
+     */
+    public String getAutoLockTime() {
+        return this.autoLockTime;
+    }
+
+    /**
      * @return password
      */
     public String getPassword() {
@@ -56,6 +68,7 @@ public class CreateUsersRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateUsersRequest, Builder> {
+        private String autoLockTime; 
         private String password; 
         private java.util.List < Users> users; 
 
@@ -65,9 +78,19 @@ public class CreateUsersRequest extends Request {
 
         private Builder(CreateUsersRequest request) {
             super(request);
+            this.autoLockTime = request.autoLockTime;
             this.password = request.password;
             this.users = request.users;
         } 
+
+        /**
+         * AutoLockTime.
+         */
+        public Builder autoLockTime(String autoLockTime) {
+            this.putQueryParameter("AutoLockTime", autoLockTime);
+            this.autoLockTime = autoLockTime;
+            return this;
+        }
 
         /**
          * The initial password. If this parameter is left empty, an email for password reset is sent to the specified email address.

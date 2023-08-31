@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeMfaDevicesRequest extends Request {
     @Query
+    @NameInMap("AdDomain")
+    private String adDomain;
+
+    @Query
     @NameInMap("EndUserIds")
     private java.util.List < String > endUserIds;
 
@@ -31,6 +35,7 @@ public class DescribeMfaDevicesRequest extends Request {
 
     private DescribeMfaDevicesRequest(Builder builder) {
         super(builder);
+        this.adDomain = builder.adDomain;
         this.endUserIds = builder.endUserIds;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -48,6 +53,13 @@ public class DescribeMfaDevicesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return adDomain
+     */
+    public String getAdDomain() {
+        return this.adDomain;
     }
 
     /**
@@ -79,6 +91,7 @@ public class DescribeMfaDevicesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeMfaDevicesRequest, Builder> {
+        private String adDomain; 
         private java.util.List < String > endUserIds; 
         private Long maxResults; 
         private String nextToken; 
@@ -90,11 +103,21 @@ public class DescribeMfaDevicesRequest extends Request {
 
         private Builder(DescribeMfaDevicesRequest request) {
             super(request);
+            this.adDomain = request.adDomain;
             this.endUserIds = request.endUserIds;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.serialNumbers = request.serialNumbers;
         } 
+
+        /**
+         * AdDomain.
+         */
+        public Builder adDomain(String adDomain) {
+            this.putQueryParameter("AdDomain", adDomain);
+            this.adDomain = adDomain;
+            return this;
+        }
 
         /**
          * The list of username of convenience users.

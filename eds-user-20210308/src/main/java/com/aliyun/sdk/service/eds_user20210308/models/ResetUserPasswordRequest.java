@@ -69,7 +69,7 @@ public class ResetUserPasswordRequest extends Request {
         } 
 
         /**
-         * NotifyType.
+         * The method to notify the user after the password is reset.
          */
         public Builder notifyType(Integer notifyType) {
             this.putBodyParameter("NotifyType", notifyType);
@@ -78,7 +78,7 @@ public class ResetUserPasswordRequest extends Request {
         }
 
         /**
-         * Users.
+         * The names of the convenience users whose passwords you want to reset.
          */
         public Builder users(java.util.List < String > users) {
             this.putBodyParameter("Users", users);

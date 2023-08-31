@@ -70,7 +70,7 @@ public class CheckUsedPropertyValueRequest extends Request {
         } 
 
         /**
-         * CheckUsedPropertyValue
+         * The ID of the property.
          */
         public Builder propertyId(Long propertyId) {
             this.putQueryParameter("PropertyId", propertyId);
@@ -79,7 +79,7 @@ public class CheckUsedPropertyValueRequest extends Request {
         }
 
         /**
-         * PropertyValueId.
+         * The ID of the property value.
          */
         public Builder propertyValueId(Long propertyValueId) {
             this.putQueryParameter("PropertyValueId", propertyValueId);
