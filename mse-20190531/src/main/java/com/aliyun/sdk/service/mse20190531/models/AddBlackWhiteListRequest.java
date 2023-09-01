@@ -180,7 +180,11 @@ public class AddBlackWhiteListRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -189,7 +193,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Content.
+         * The content of the blacklist.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -198,7 +202,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -207,7 +211,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * IsWhite.
+         * Specifies whether to create a whitelist.
          */
         public Builder isWhite(Boolean isWhite) {
             this.putQueryParameter("IsWhite", isWhite);
@@ -216,7 +220,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -225,7 +229,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Note.
+         * The description.
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);
@@ -234,7 +238,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * ResourceIdJsonList.
+         * The resource IDs in the JSON format.
          */
         public Builder resourceIdJsonList(String resourceIdJsonList) {
             this.putQueryParameter("ResourceIdJsonList", resourceIdJsonList);
@@ -243,7 +247,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type to which the blacklist or whitelist applies.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -252,7 +256,11 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the blacklist.
+         * <p>
+         * 
+         * *   on: enabled
+         * *   off: disabled
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -261,7 +269,7 @@ public class AddBlackWhiteListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of object in the blacklist or whitelist.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

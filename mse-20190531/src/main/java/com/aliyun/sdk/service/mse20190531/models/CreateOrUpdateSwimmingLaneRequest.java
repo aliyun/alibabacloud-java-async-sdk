@@ -252,7 +252,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * SwimmingLane
+         * EntryRules.
          */
         public Builder entryRules(java.util.List < EntryRules> entryRules) {
             this.putBodyParameter("EntryRules", entryRules);
@@ -304,7 +304,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         }
 
         /**
-         * MSE命名空间名字
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -472,7 +472,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private String value; 
 
             /**
-             * 匹配符
+             * Cond.
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -480,7 +480,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 数值
+             * Datum.
              */
             public Builder datum(String datum) {
                 this.datum = datum;
@@ -488,7 +488,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 除数
+             * Divisor.
              */
             public Builder divisor(Integer divisor) {
                 this.divisor = divisor;
@@ -496,7 +496,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 名称
+             * The name of the MSE namespace.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -504,7 +504,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 匹配列表
+             * NameList.
              */
             public Builder nameList(java.util.List < String > nameList) {
                 this.nameList = nameList;
@@ -512,7 +512,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 操作符
+             * Operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -520,7 +520,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 百分比
+             * Rate.
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -528,7 +528,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 余数
+             * Remainder.
              */
             public Builder remainder(Integer remainder) {
                 this.remainder = remainder;
@@ -536,7 +536,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 匹配类型
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -544,7 +544,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -621,7 +621,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private java.util.List < RestItems> restItems; 
 
             /**
-             * 指示RestItems如何组合成最终的条件
+             * Condition.
              */
             public Builder condition(String condition) {
                 this.condition = condition;
@@ -629,7 +629,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 路径列表
+             * Paths.
              */
             public Builder paths(java.util.List < String > paths) {
                 this.paths = paths;
@@ -637,7 +637,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 优先级
+             * Priority.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -645,7 +645,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 匹配列表
+             * RestItems.
              */
             public Builder restItems(java.util.List < RestItems> restItems) {
                 this.restItems = restItems;
@@ -722,7 +722,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private String value; 
 
             /**
-             * 匹配符
+             * Cond.
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -730,7 +730,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 名称
+             * The name of the MSE namespace.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -738,7 +738,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 匹配类型
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -746,7 +746,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             }
 
             /**
-             * 值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

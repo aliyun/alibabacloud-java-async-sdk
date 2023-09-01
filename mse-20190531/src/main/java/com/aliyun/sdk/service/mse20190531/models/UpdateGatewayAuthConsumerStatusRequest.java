@@ -99,7 +99,11 @@ public class UpdateGatewayAuthConsumerStatusRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -108,7 +112,11 @@ public class UpdateGatewayAuthConsumerStatusRequest extends Request {
         }
 
         /**
-         * ConsumerStatus.
+         * The status of the consumer. Valid values:
+         * <p>
+         * 
+         * *   true: The consumer is enabled.
+         * *   false: The consumer is disabled.
          */
         public Builder consumerStatus(Boolean consumerStatus) {
             this.putQueryParameter("ConsumerStatus", consumerStatus);
@@ -117,7 +125,7 @@ public class UpdateGatewayAuthConsumerStatusRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -126,7 +134,7 @@ public class UpdateGatewayAuthConsumerStatusRequest extends Request {
         }
 
         /**
-         * Id.
+         * The consumer ID.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

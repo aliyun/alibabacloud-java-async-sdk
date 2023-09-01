@@ -194,7 +194,11 @@ public class UpdateBlackWhiteListRequest extends Request {
         } 
 
         /**
-         * mse-100-001
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -203,7 +207,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * duplicated cluster alias name
+         * The content of the blacklist.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -212,7 +216,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * illegalRequest
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -221,7 +225,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * code
+         * The ID of the blacklist.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -230,7 +234,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * illegal request:%s
+         * Specifies whether to enable the whitelist.
          */
         public Builder isWhite(Boolean isWhite) {
             this.putQueryParameter("IsWhite", isWhite);
@@ -239,7 +243,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * cluster not found
+         * The name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -248,7 +252,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * clusterNotFound
+         * The description.
          */
         public Builder note(String note) {
             this.putQueryParameter("Note", note);
@@ -257,7 +261,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * mse-200-021
+         * The resource IDs in the JSON format.
          */
         public Builder resourceIdJsonList(String resourceIdJsonList) {
             this.putQueryParameter("ResourceIdJsonList", resourceIdJsonList);
@@ -266,7 +270,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The type of the resource.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -275,7 +279,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * mse-100-007
+         * Specifies whether to enable the blacklist or whitelist.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -284,7 +288,7 @@ public class UpdateBlackWhiteListRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The type of the blacklist or whitelist.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

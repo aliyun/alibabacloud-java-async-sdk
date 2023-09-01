@@ -177,7 +177,7 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * AcceptLanguage.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -186,7 +186,7 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * 应用ID。
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -195,7 +195,7 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * 应用名称。
+         * AppName.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -204,7 +204,7 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * 应用所属的微服务命名空间。
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -213,7 +213,7 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * 起始页。
+         * PageIndex.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -222,7 +222,7 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * 页大小。
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -231,7 +231,7 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * 查找指定接口的防护规则。
+         * Resource.
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -240,7 +240,7 @@ public class ListCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * 查找包含接口关键字的防护规则。
+         * ResourceSearchKey.
          */
         public Builder resourceSearchKey(String resourceSearchKey) {
             this.putQueryParameter("ResourceSearchKey", resourceSearchKey);

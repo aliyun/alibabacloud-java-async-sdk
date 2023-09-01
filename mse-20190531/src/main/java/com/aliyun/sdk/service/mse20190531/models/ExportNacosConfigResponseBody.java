@@ -122,7 +122,7 @@ public class ExportNacosConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -130,7 +130,7 @@ public class ExportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -138,7 +138,10 @@ public class ExportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. This parameter is used to replace **%s** in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -146,7 +149,7 @@ public class ExportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -154,7 +157,7 @@ public class ExportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * mse-100-001
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -162,7 +165,7 @@ public class ExportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +173,7 @@ public class ExportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * systemError
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -178,7 +181,11 @@ public class ExportNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * system error
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +225,7 @@ public class ExportNacosConfigResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Url.
+             * The URL that is used to download the exported configurations.
              */
             public Builder url(String url) {
                 this.url = url;

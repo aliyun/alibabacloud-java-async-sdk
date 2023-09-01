@@ -134,7 +134,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,7 +142,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * cluster not found
+         * The HTTP status code returned.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -150,7 +150,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * systemError
+         * The information about listeners.
          */
         public Builder listeners(java.util.List < Listeners> listeners) {
             this.listeners = listeners;
@@ -158,7 +158,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +166,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +174,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +182,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,11 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +202,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
         }
 
         /**
-         * mse-100-001
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -262,7 +266,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Ip.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -270,7 +274,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * The verification string.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -278,7 +282,7 @@ public class ListListenersByConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status.
              */
             public Builder status(String status) {
                 this.status = status;

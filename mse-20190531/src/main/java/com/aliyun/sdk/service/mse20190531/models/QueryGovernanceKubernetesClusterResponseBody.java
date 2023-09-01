@@ -74,7 +74,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of entries to return on each page.
+         * The response data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the Kubernetes cluster.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The number of the page to return.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The version of the cluster.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +198,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * The returned message.
+             * The ID of cluster.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -206,7 +206,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code returned.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -214,7 +214,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The response data.
+             * The version of the cluster.
              */
             public Builder k8sVersion(String k8sVersion) {
                 this.k8sVersion = k8sVersion;
@@ -222,7 +222,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The data structure.
+             * The information of the namespace.
              */
             public Builder namespaceInfos(String namespaceInfos) {
                 this.namespaceInfos = namespaceInfos;
@@ -230,7 +230,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The data structure.
+             * The time when the ack-onepilot component was started.
              */
             public Builder pilotStartTime(String pilotStartTime) {
                 this.pilotStartTime = pilotStartTime;
@@ -238,7 +238,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the request.
+             * The region where the cluster resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -315,7 +315,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The ID of cluster.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -323,7 +323,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The region where the cluster resides.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -331,11 +331,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the response. Valid values:
-             * <p>
-             * 
-             * *   zh: Chinese
-             * *   en: English
+             * The data structure.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -343,7 +339,7 @@ public class QueryGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The total number of clusters.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

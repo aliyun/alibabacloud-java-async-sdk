@@ -124,7 +124,11 @@ public class ListGatewayRouteRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -133,7 +137,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * duplicated cluster alias name
+         * Specifies whether to enable sorting. This parameter is unavailable.
          */
         public Builder descSort(Boolean descSort) {
             this.putQueryParameter("DescSort", descSort);
@@ -142,7 +146,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * mse-100-007
+         * The parameters that specify filter conditions. The parameters are in the format of {"key1":"value1"}.
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
@@ -152,7 +156,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The item based on which entries are sorted.
          */
         public Builder orderItem(String orderItem) {
             this.putQueryParameter("OrderItem", orderItem);
@@ -161,7 +165,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * code
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -170,7 +174,7 @@ public class ListGatewayRouteRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -297,7 +301,7 @@ public class ListGatewayRouteRequest extends Request {
             private Integer status; 
 
             /**
-             * clusterNotFound
+             * The default service ID.
              */
             public Builder defaultServiceId(Long defaultServiceId) {
                 this.defaultServiceId = defaultServiceId;
@@ -305,7 +309,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * mse-100-001
+             * The domain ID.
              */
             public Builder domainId(Long domainId) {
                 this.domainId = domainId;
@@ -313,7 +317,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * system error
+             * The associated domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -321,7 +325,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * illegalRequest
+             * The ID of the gateway.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -329,7 +333,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * systemError
+             * The unique ID of the gateway.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -337,7 +341,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * illegal request:%s
+             * The name of the gateway.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -345,7 +349,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * cluster not found
+             * The order.
              */
             public Builder routeOrder(Integer routeOrder) {
                 this.routeOrder = routeOrder;
@@ -353,7 +357,7 @@ public class ListGatewayRouteRequest extends Request {
             }
 
             /**
-             * mse-200-021
+             * The status.
              */
             public Builder status(Integer status) {
                 this.status = status;

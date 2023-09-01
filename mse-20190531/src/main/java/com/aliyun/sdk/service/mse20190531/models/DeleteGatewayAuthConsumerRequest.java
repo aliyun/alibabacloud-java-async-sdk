@@ -84,7 +84,11 @@ public class DeleteGatewayAuthConsumerRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -93,7 +97,7 @@ public class DeleteGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -102,7 +106,7 @@ public class DeleteGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the consumer on which the gateway performs authentication operations.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

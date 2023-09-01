@@ -118,7 +118,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
         }
 
         /**
-         * 请求结果。
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -314,7 +314,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             private Float threshold; 
 
             /**
-             * 应用ID。
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -322,7 +322,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 应用名称。
+             * AppName.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -330,7 +330,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 规则的启用状态。
+             * Enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -338,7 +338,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 熔断恢复每步最小通过数目。
+             * HalfOpenBaseAmountPerStep.
              */
             public Builder halfOpenBaseAmountPerStep(Integer halfOpenBaseAmountPerStep) {
                 this.halfOpenBaseAmountPerStep = halfOpenBaseAmountPerStep;
@@ -346,7 +346,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 熔断恢复阶段数。
+             * HalfOpenRecoveryStepNum.
              */
             public Builder halfOpenRecoveryStepNum(Integer halfOpenRecoveryStepNum) {
                 this.halfOpenRecoveryStepNum = halfOpenRecoveryStepNum;
@@ -354,7 +354,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 规则ID。
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -362,7 +362,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 慢调用RT（单位毫秒）：超过该时长则判定为慢请求，阈值类型为慢调用比例时必填。
+             * MaxAllowedRtMs.
              */
             public Builder maxAllowedRtMs(Integer maxAllowedRtMs) {
                 this.maxAllowedRtMs = maxAllowedRtMs;
@@ -370,7 +370,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 触发熔断的最小请求数目，若当前统计窗口请求数小于此值，即使达到熔断条件规则也不会触发。
+             * MinRequestAmount.
              */
             public Builder minRequestAmount(Integer minRequestAmount) {
                 this.minRequestAmount = minRequestAmount;
@@ -378,7 +378,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 应用所属的微服务命名空间。
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -386,7 +386,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 接口名称：适用该规则的应用资源。需要与控制台接口详情处接口名称一致。
+             * Resource.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -394,7 +394,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 熔断时长（单位毫秒）：即熔断触发后持续的时间。资源进入熔断状态后，在配置的熔断时长内，请求都会快速失败。
+             * RetryTimeoutMs.
              */
             public Builder retryTimeoutMs(Integer retryTimeoutMs) {
                 this.retryTimeoutMs = retryTimeoutMs;
@@ -402,7 +402,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 统计窗口时长（单位毫秒）：统计的时间窗口长度，取值范围为1秒~120分钟。
+             * StatIntervalMs.
              */
             public Builder statIntervalMs(Integer statIntervalMs) {
                 this.statIntervalMs = statIntervalMs;
@@ -410,7 +410,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 阈值类型：选择以慢调用比例或异常比例作为阈值。
+             * Strategy.
              */
             public Builder strategy(Integer strategy) {
                 this.strategy = strategy;
@@ -418,7 +418,7 @@ public class UpdateCircuitBreakerRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 熔断比例阈值：触发熔断的比例阈值，取值范围为0 - 1，代表0% - 100%。
+             * Threshold.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

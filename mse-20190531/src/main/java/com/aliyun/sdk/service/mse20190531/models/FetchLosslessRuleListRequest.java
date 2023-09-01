@@ -141,7 +141,11 @@ public class FetchLosslessRuleListRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -150,7 +154,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * appId
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -159,7 +163,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * Key word of search lossless list
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -168,7 +172,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -177,7 +181,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * current
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -186,7 +190,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * limit
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -195,7 +199,7 @@ public class FetchLosslessRuleListRequest extends Request {
         }
 
         /**
-         * region id, such as cn-hangzhou
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

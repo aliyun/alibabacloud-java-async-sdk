@@ -208,7 +208,7 @@ public class GetServiceListenersRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The data structure.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -217,7 +217,10 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * 当前查询服务的集群标识
+         * The ID of the instance to which the service belongs.
+         * <p>
+         * 
+         * > You must specify InstanceId or ClusterId.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -226,7 +229,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * 查询服务下某个集群的实例列表是所需要的参数
+         * A reserved parameter.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -235,7 +238,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * 服务所在的分组
+         * The namespace to which the service belongs.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -244,7 +247,10 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * HasIpCount.
+         * The ID of the MSE instance to which the service belongs.
+         * <p>
+         * 
+         * > You must specify InstanceId or ClusterId.
          */
         public Builder hasIpCount(String hasIpCount) {
             this.putQueryParameter("HasIpCount", hasIpCount);
@@ -253,7 +259,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * 当前查询服务的集群标识
+         * The number of the page to return.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -262,7 +268,10 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * 服务所在的 namespace
+         * The name of the cluster to which the service belongs.
+         * <p>
+         * 
+         * > The cluster is a concept for Nacos services and is not equivalent to a Microservices Engine (MSE) instance.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -271,7 +280,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * 查询第几页
+         * The number of entries to return on each page.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -280,7 +289,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * 每页展示条数
+         * The ID of the region.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -289,7 +298,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The extended request parameters in the JSON format.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -298,7 +307,11 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -307,7 +320,7 @@ public class GetServiceListenersRequest extends Request {
         }
 
         /**
-         * 查询指定的服务名信息
+         * The group to which the service belongs.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

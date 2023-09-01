@@ -134,7 +134,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code仅仅用来和success同步
+         * The status code. A value of 200 is returned if the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -142,7 +142,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned result.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,7 +150,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误信息中的占位符
+         * The dynamic part in the error message.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -158,7 +158,10 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -166,7 +169,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code that is returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,7 +177,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +185,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +193,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +201,11 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -322,7 +329,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             private String routeName; 
 
             /**
-             * ConsumerId.
+             * The ID of the consumer.
              */
             public Builder consumerId(Long consumerId) {
                 this.consumerId = consumerId;
@@ -330,7 +337,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * The unique ID of the gateway.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -338,7 +345,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -346,7 +353,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -354,7 +361,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the authorized resource for the consumer.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -362,7 +369,11 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceStatus.
+             * The resource authorization status. Valid values:
+             * <p>
+             * 
+             * *   true: enabled
+             * *   false: disabled
              */
             public Builder resourceStatus(Boolean resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -370,7 +381,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * RouteId.
+             * The ID of the route.
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -378,7 +389,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * RouteName.
+             * The name of the route.
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -455,7 +466,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -463,7 +474,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -471,7 +482,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The data structure.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -479,7 +490,7 @@ public class ListGatewayAuthConsumerResourceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of entries returned.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

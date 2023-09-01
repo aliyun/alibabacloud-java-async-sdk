@@ -98,7 +98,7 @@ public class GetGatewayResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. A value of 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the gateway.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class GetGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -364,7 +368,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private String projectName; 
 
             /**
-             * LogEnabled.
+             * Indicates whether Log Service is activated.
              */
             public Builder logEnabled(Boolean logEnabled) {
                 this.logEnabled = logEnabled;
@@ -372,7 +376,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * The name of the Logstore.
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -380,7 +384,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * The name of the project.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -433,7 +437,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private Boolean traceOn; 
 
             /**
-             * Sample.
+             * The sampling rate of Tracing Analysis.
              */
             public Builder sample(Integer sample) {
                 this.sample = sample;
@@ -441,7 +445,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * TraceOn.
+             * Indicates whether sampling by using Tracing Analysis is enabled.
              */
             public Builder traceOn(Boolean traceOn) {
                 this.traceOn = traceOn;
@@ -794,7 +798,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private XtraceDetails xtraceDetails; 
 
             /**
-             * ChargeType.
+             * The billing method, such as subscription or pay-as-you-go.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -834,7 +838,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * EndDate.
+             * The time when the gateway expires.
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -842,7 +846,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * The unique ID of the gateway.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -850,7 +854,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the gateway was created. The time is displayed in GMT. The time is the local time of the region in which the gateway resides.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -858,7 +862,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the gateway was last modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -866,7 +870,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the gateway.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -874,7 +878,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -882,7 +886,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * LogConfigDetails.
+             * The log configuration.
              */
             public Builder logConfigDetails(LogConfigDetails logConfigDetails) {
                 this.logConfigDetails = logConfigDetails;
@@ -890,7 +894,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * MseTag.
+             * The tag of the resource.
              */
             public Builder mseTag(String mseTag) {
                 this.mseTag = mseTag;
@@ -898,7 +902,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the gateway.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -906,7 +910,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryUser.
+             * The Alibaba Cloud account ID of the user who created the gateway.
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -914,7 +918,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region ID.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -922,7 +926,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Replica.
+             * The number of gateway replicas.
              */
             public Builder replica(Integer replica) {
                 this.replica = replica;
@@ -930,7 +934,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -938,7 +942,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroup.
+             * The ID of the security group.
              */
             public Builder securityGroup(String securityGroup) {
                 this.securityGroup = securityGroup;
@@ -946,7 +950,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * The specifications of the gateway.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -954,7 +958,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the gateway. Valid values: 0: The gateway is being created. 1: The gateway fails to be created. 2: The gateway is running. 3: The gateway is changing. 4: The gateway is scaling down. 6: The gateway is scaling up. 8: The gateway is being deleted. 10: The gateway is restarting. 11: The gateway is being rebuilt. 12: The gateway is updating. 13: The gateway fails to be updated.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -962,7 +966,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDesc.
+             * The description of the status.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -978,7 +982,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Vpc.
+             * The ID of the VPC.
              */
             public Builder vpc(String vpc) {
                 this.vpc = vpc;
@@ -986,7 +990,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Vswitch.
+             * The ID of the vSwitch.
              */
             public Builder vswitch(String vswitch) {
                 this.vswitch = vswitch;
@@ -994,7 +998,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * Vswitch2.
+             * The ID of the secondary vSwitch.
              */
             public Builder vswitch2(String vswitch2) {
                 this.vswitch2 = vswitch2;
@@ -1002,7 +1006,7 @@ public class GetGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * XtraceDetails.
+             * The details of Tracing Analysis.
              */
             public Builder xtraceDetails(XtraceDetails xtraceDetails) {
                 this.xtraceDetails = xtraceDetails;

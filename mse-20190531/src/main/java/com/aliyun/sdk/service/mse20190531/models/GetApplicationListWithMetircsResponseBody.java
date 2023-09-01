@@ -12,14 +12,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetApplicationListWithMetircsResponseBody</p>
  */
 public class GetApplicationListWithMetircsResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private Integer code;
-
     @NameInMap("Data")
     private Data data;
-
-    @NameInMap("HttpStatusCode")
-    private Integer httpStatusCode;
 
     @NameInMap("Message")
     private String message;
@@ -31,9 +25,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
     private Boolean success;
 
     private GetApplicationListWithMetircsResponseBody(Builder builder) {
-        this.code = builder.code;
         this.data = builder.data;
-        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -48,24 +40,10 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public Integer getCode() {
-        return this.code;
-    }
-
-    /**
      * @return data
      */
     public Data getData() {
         return this.data;
-    }
-
-    /**
-     * @return httpStatusCode
-     */
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     /**
@@ -90,23 +68,13 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
         private Data data; 
-        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Code.
-         */
-        public Builder code(Integer code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,15 +82,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         }
 
         /**
-         * cluster not found
-         */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * mse-100-001
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +90,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         }
 
         /**
-         * system error
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +98,11 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +214,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * BlockQps.
+             * The number of blocked QPS.
              */
             public Builder blockQps(Double blockQps) {
                 this.blockQps = blockQps;
@@ -258,7 +222,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpQps.
+             * The abnormal QPS.
              */
             public Builder expQps(Double expQps) {
                 this.expQps = expQps;
@@ -266,7 +230,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * PassQps.
+             * The number of passed QPS.
              */
             public Builder passQps(Double passQps) {
                 this.passQps = passQps;
@@ -274,7 +238,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Qps.
+             * The queries per second (QPS).
              */
             public Builder qps(Double qps) {
                 this.qps = qps;
@@ -282,7 +246,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Rt.
+             * The response time (RT).
              */
             public Builder rt(Double rt) {
                 this.rt = rt;
@@ -290,7 +254,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Thread.
+             * The number of threads.
              */
             public Builder thread(Double thread) {
                 this.thread = thread;
@@ -298,7 +262,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The timestamp.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -411,7 +375,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * BlockQps.
+             * The number of blocked QPS.
              */
             public Builder blockQps(Double blockQps) {
                 this.blockQps = blockQps;
@@ -419,7 +383,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpQps.
+             * The abnormal QPS.
              */
             public Builder expQps(Double expQps) {
                 this.expQps = expQps;
@@ -427,7 +391,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * PassQps.
+             * The number of passed QPS.
              */
             public Builder passQps(Double passQps) {
                 this.passQps = passQps;
@@ -435,7 +399,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Qps.
+             * The QPS.
              */
             public Builder qps(Double qps) {
                 this.qps = qps;
@@ -443,7 +407,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Rt.
+             * The RT.
              */
             public Builder rt(Double rt) {
                 this.rt = rt;
@@ -451,7 +415,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Thread.
+             * The number of concurrent threads.
              */
             public Builder thread(Double thread) {
                 this.thread = thread;
@@ -459,7 +423,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The timestamp.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -498,9 +462,6 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         @NameInMap("Language")
         private String language;
 
-        @NameInMap("LicenseKey")
-        private String licenseKey;
-
         @NameInMap("Namespace")
         private String namespace;
 
@@ -513,11 +474,11 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         @NameInMap("Status")
         private Long status;
 
+        @NameInMap("TagCount")
+        private Long tagCount;
+
         @NameInMap("Tags")
         private java.util.List < String > tags;
-
-        @NameInMap("UserId")
-        private String userId;
 
         private Result(Builder builder) {
             this.appId = builder.appId;
@@ -528,13 +489,12 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             this.extraInfo = builder.extraInfo;
             this.instancesNumber = builder.instancesNumber;
             this.language = builder.language;
-            this.licenseKey = builder.licenseKey;
             this.namespace = builder.namespace;
             this.regionId = builder.regionId;
             this.source = builder.source;
             this.status = builder.status;
+            this.tagCount = builder.tagCount;
             this.tags = builder.tags;
-            this.userId = builder.userId;
         }
 
         public static Builder builder() {
@@ -602,13 +562,6 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         }
 
         /**
-         * @return licenseKey
-         */
-        public String getLicenseKey() {
-            return this.licenseKey;
-        }
-
-        /**
          * @return namespace
          */
         public String getNamespace() {
@@ -637,17 +590,17 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tagCount
+         */
+        public Long getTagCount() {
+            return this.tagCount;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List < String > getTags() {
             return this.tags;
-        }
-
-        /**
-         * @return userId
-         */
-        public String getUserId() {
-            return this.userId;
         }
 
         public static final class Builder {
@@ -659,16 +612,15 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             private String extraInfo; 
             private Integer instancesNumber; 
             private String language; 
-            private String licenseKey; 
             private String namespace; 
             private String regionId; 
             private String source; 
             private Long status; 
+            private Long tagCount; 
             private java.util.List < String > tags; 
-            private String userId; 
 
             /**
-             * AppId.
+             * The ID of the application.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -676,7 +628,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -692,7 +644,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * CurMetrics.
+             * The current metrics.
              */
             public Builder curMetrics(java.util.List < CurMetrics> curMetrics) {
                 this.curMetrics = curMetrics;
@@ -700,7 +652,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * CurMetricsFm.
+             * The sum of metrics about the application.
              */
             public Builder curMetricsFm(CurMetricsFm curMetricsFm) {
                 this.curMetricsFm = curMetricsFm;
@@ -708,7 +660,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtraInfo.
+             * The additional information.
              */
             public Builder extraInfo(String extraInfo) {
                 this.extraInfo = extraInfo;
@@ -716,7 +668,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * InstancesNumber.
+             * The number of instances.
              */
             public Builder instancesNumber(Integer instancesNumber) {
                 this.instancesNumber = instancesNumber;
@@ -724,18 +676,10 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Language.
+             * The programming language of the application.
              */
             public Builder language(String language) {
                 this.language = language;
-                return this;
-            }
-
-            /**
-             * LicenseKey.
-             */
-            public Builder licenseKey(String licenseKey) {
-                this.licenseKey = licenseKey;
                 return this;
             }
 
@@ -748,7 +692,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -756,7 +700,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -764,7 +708,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status.
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -772,18 +716,18 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * TagCount.
              */
-            public Builder tags(java.util.List < String > tags) {
-                this.tags = tags;
+            public Builder tagCount(Long tagCount) {
+                this.tagCount = tagCount;
                 return this;
             }
 
             /**
-             * UserId.
+             * The tags.
              */
-            public Builder userId(String userId) {
-                this.userId = userId;
+            public Builder tags(java.util.List < String > tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -857,7 +801,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * PageNumber.
+             * The number of the page to return.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -865,7 +809,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -873,7 +817,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The returned information.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -881,7 +825,7 @@ public class GetApplicationListWithMetircsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of entries returned.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

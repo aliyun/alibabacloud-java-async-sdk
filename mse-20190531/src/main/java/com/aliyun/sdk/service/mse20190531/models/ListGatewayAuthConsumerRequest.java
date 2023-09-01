@@ -141,7 +141,11 @@ public class ListGatewayAuthConsumerRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -150,7 +154,11 @@ public class ListGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * ConsumerStatus.
+         * The status of the consumer. Valid values:
+         * <p>
+         * 
+         * *   true: enabled
+         * *   false: disabled
          */
         public Builder consumerStatus(Boolean consumerStatus) {
             this.putQueryParameter("ConsumerStatus", consumerStatus);
@@ -159,7 +167,7 @@ public class ListGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -168,7 +176,7 @@ public class ListGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the consumer.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -177,7 +185,7 @@ public class ListGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(String pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -186,7 +194,7 @@ public class ListGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -195,7 +203,10 @@ public class ListGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * Type.
+         * The authentication type. Valid values:
+         * <p>
+         * 
+         * *   JWT
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

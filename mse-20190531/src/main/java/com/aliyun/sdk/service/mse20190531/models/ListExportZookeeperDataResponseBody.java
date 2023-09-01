@@ -110,7 +110,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -118,7 +118,10 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * cluster not found
+         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -126,7 +129,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * systemError
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +137,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * system error
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(String httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +145,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * mse-200-021
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +153,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * mse-100-001
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +161,11 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * illegal request:%s
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -294,7 +301,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * ContentMap.
+             * The details of the task.
              */
             public Builder contentMap(String contentMap) {
                 this.contentMap = contentMap;
@@ -302,7 +309,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the task was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -310,7 +317,11 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * ExportType.
+             * The type of the object that is exported. Valid values:
+             * <p>
+             * 
+             * *   transactionLog: transaction logs
+             * *   snapshot: snapshots
              */
             public Builder exportType(String exportType) {
                 this.exportType = exportType;
@@ -318,7 +329,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * Extend.
+             * The extension information that is in the JSON format. The extension information facilitates addition of parameters.
              */
             public Builder extend(String extend) {
                 this.extend = extend;
@@ -326,7 +337,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the task.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -334,7 +345,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -342,7 +353,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * KubeoneTaskIds.
+             * The ID of the associated task at the underlying layer. This parameter is used only to troubleshoot failures.
              */
             public Builder kubeoneTaskIds(String kubeoneTaskIds) {
                 this.kubeoneTaskIds = kubeoneTaskIds;
@@ -350,7 +361,14 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   CREATE: The task is being created.
+             * *   RUNNING: The task is being executed.
+             * *   FINISH: The task is completed.
+             * *   FAILED: The task failed.
+             * *   EXPIRE: The task has expired.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -358,7 +376,7 @@ public class ListExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the task was updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

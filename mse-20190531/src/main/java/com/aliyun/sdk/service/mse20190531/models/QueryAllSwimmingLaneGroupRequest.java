@@ -69,7 +69,11 @@ public class QueryAllSwimmingLaneGroupRequest extends Request {
         } 
 
         /**
-         * system error
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -78,7 +82,7 @@ public class QueryAllSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 需要查询的MSE命名空间名字
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

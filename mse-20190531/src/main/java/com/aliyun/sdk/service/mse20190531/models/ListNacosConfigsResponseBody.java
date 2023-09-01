@@ -146,7 +146,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -154,7 +154,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Configurations.
+         * The configurations.
          */
         public Builder configurations(java.util.List < Configurations> configurations) {
             this.configurations = configurations;
@@ -162,10 +162,50 @@ public class ListNacosConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * The HTTP status code returned.
+         */
+        public Builder httpCode(String httpCode) {
+            this.httpCode = httpCode;
+            return this;
+        }
+
+        /**
+         * The message returned.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The page number of the returned page.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries returned per page.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -176,53 +216,13 @@ public class ListNacosConfigsResponseBody extends TeaModel {
          * *   `true`: The request was successful.
          * *   `false`: The request failed.
          */
-        public Builder httpCode(String httpCode) {
-            this.httpCode = httpCode;
-            return this;
-        }
-
-        /**
-         * Message.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * PageNumber.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * PageSize.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * Queries Nacos configurations.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * Success.
-         */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
         /**
-         * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+         * The total number of returned instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -298,7 +298,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             private String id; 
 
             /**
-             * AppName.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -306,7 +306,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * DataId.
+             * The ID of the configuration.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -314,7 +314,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * The ID of the group.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -322,7 +322,7 @@ public class ListNacosConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the application.
              */
             public Builder id(String id) {
                 this.id = id;

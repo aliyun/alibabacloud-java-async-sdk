@@ -84,7 +84,11 @@ public class QueryAllSwimmingLaneRequest extends Request {
         } 
 
         /**
-         * The ID of the lane group.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -93,7 +97,7 @@ public class QueryAllSwimmingLaneRequest extends Request {
         }
 
         /**
-         * system error
+         * The ID of the lane group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);

@@ -110,11 +110,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The response code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -122,7 +118,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * A reserved parameter.
          */
         public Builder data(String data) {
             this.data = data;
@@ -130,7 +126,11 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The error code returned if the request failed. Take note of the following rules:
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned if the request succeeds.
+         * *   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -138,7 +138,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The number of destination nodes.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -146,7 +146,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The destination engine specifications.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -154,7 +154,7 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +162,11 @@ public class UpdateClusterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * The data structure.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

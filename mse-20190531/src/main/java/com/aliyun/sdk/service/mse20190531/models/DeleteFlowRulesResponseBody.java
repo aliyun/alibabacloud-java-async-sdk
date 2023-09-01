@@ -106,7 +106,7 @@ public class DeleteFlowRulesResponseBody extends TeaModel {
         }
 
         /**
-         * 完成删除的规则ID列表。
+         * Data.
          */
         public Builder data(java.util.List < Long > data) {
             this.data = data;

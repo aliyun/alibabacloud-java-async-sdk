@@ -96,7 +96,11 @@ public class AddGatewayServiceVersionRequest extends Request {
         } 
 
         /**
-         * mse-100-007
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -105,7 +109,7 @@ public class AddGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * duplicated cluster alias name
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -114,7 +118,7 @@ public class AddGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The ID of the service.
          */
         public Builder serviceId(Long serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -123,7 +127,7 @@ public class AddGatewayServiceVersionRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The version of the service.
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);

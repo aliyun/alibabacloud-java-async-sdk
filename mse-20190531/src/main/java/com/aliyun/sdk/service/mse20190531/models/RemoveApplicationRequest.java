@@ -31,7 +31,6 @@ public class RemoveApplicationRequest extends Request {
 
     @Query
     @NameInMap("Region")
-    @Validation(required = true)
     private String region;
 
     private RemoveApplicationRequest(Builder builder) {
@@ -112,7 +111,7 @@ public class RemoveApplicationRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * AcceptLanguage.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -121,7 +120,7 @@ public class RemoveApplicationRequest extends Request {
         }
 
         /**
-         * 要删除的应用id。
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -130,7 +129,7 @@ public class RemoveApplicationRequest extends Request {
         }
 
         /**
-         * 要删除的应用名字。
+         * AppName.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -139,7 +138,7 @@ public class RemoveApplicationRequest extends Request {
         }
 
         /**
-         * 微服务命名空间。
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -148,7 +147,7 @@ public class RemoveApplicationRequest extends Request {
         }
 
         /**
-         * 地域。
+         * Region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

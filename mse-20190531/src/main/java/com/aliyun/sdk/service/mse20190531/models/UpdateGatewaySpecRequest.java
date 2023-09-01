@@ -99,7 +99,11 @@ public class UpdateGatewaySpecRequest extends Request {
         } 
 
         /**
-         * duplicated cluster alias name
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -108,7 +112,7 @@ public class UpdateGatewaySpecRequest extends Request {
         }
 
         /**
-         * code
+         * The ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -117,7 +121,7 @@ public class UpdateGatewaySpecRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The number of nodes.
          */
         public Builder replica(Integer replica) {
             this.putQueryParameter("Replica", replica);
@@ -126,7 +130,7 @@ public class UpdateGatewaySpecRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The node specifications of the gateway.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);

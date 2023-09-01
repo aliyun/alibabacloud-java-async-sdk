@@ -197,7 +197,11 @@ public class ListNacosConfigsRequest extends Request {
         } 
 
         /**
-         * The ID of the group.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -215,7 +219,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * The configurations.
+         * The ID of the data.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -224,7 +228,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * The data structure.
+         * The name of the group. Default value: `default`
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -233,7 +237,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * The page number of the returned page.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -242,7 +246,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the application.
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -251,7 +255,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * The request was successfully processed.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -260,7 +264,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -269,7 +273,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * The error code returned if the request failed.
+         * The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -278,7 +282,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The extended request parameters. The JSON format is supported.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -287,7 +291,7 @@ public class ListNacosConfigsRequest extends Request {
         }
 
         /**
-         * The ID of the configuration.
+         * The tags.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

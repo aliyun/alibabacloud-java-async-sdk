@@ -86,7 +86,7 @@ public class QueryMonitorResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The name of the pod.
+         * The data structure.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class QueryMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * mse-200-105
+         * The name of the pod.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class QueryMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The interval between data points. Unit: seconds.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,11 @@ public class QueryMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class QueryMonitorResponseBody extends TeaModel {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +186,7 @@ public class QueryMonitorResponseBody extends TeaModel {
             private java.util.List < java.util.Map<String, ?>> values; 
 
             /**
-             * The content of the data.
+             * The ID of the request.
              */
             public Builder clusterNamePrefix(String clusterNamePrefix) {
                 this.clusterNamePrefix = clusterNamePrefix;
@@ -190,7 +194,7 @@ public class QueryMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the data.
+             * The request was successfully processed.
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -198,7 +202,7 @@ public class QueryMonitorResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned if the request failed.
+             * The details of the data.
              */
             public Builder values(java.util.List < java.util.Map<String, ?>> values) {
                 this.values = values;

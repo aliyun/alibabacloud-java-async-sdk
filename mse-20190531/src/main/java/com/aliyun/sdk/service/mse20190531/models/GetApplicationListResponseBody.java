@@ -12,14 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetApplicationListResponseBody</p>
  */
 public class GetApplicationListResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private Integer code;
-
     @NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
-    private Integer httpStatusCode;
+    @NameInMap("ErrorCode")
+    private String errorCode;
 
     @NameInMap("Message")
     private String message;
@@ -31,9 +28,8 @@ public class GetApplicationListResponseBody extends TeaModel {
     private Boolean success;
 
     private GetApplicationListResponseBody(Builder builder) {
-        this.code = builder.code;
         this.data = builder.data;
-        this.httpStatusCode = builder.httpStatusCode;
+        this.errorCode = builder.errorCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -48,13 +44,6 @@ public class GetApplicationListResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public Integer getCode() {
-        return this.code;
-    }
-
-    /**
      * @return data
      */
     public Data getData() {
@@ -62,10 +51,10 @@ public class GetApplicationListResponseBody extends TeaModel {
     }
 
     /**
-     * @return httpStatusCode
+     * @return errorCode
      */
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public String getErrorCode() {
+        return this.errorCode;
     }
 
     /**
@@ -90,20 +79,11 @@ public class GetApplicationListResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
         private Data data; 
-        private Integer httpStatusCode; 
+        private String errorCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
-
-        /**
-         * The status code returned.
-         */
-        public Builder code(Integer code) {
-            this.code = code;
-            return this;
-        }
 
         /**
          * The data structure.
@@ -114,10 +94,10 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * ErrorCode.
          */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
             return this;
         }
 
@@ -171,9 +151,6 @@ public class GetApplicationListResponseBody extends TeaModel {
         @NameInMap("Language")
         private String language;
 
-        @NameInMap("LicenseKey")
-        private String licenseKey;
-
         @NameInMap("Namespace")
         private String namespace;
 
@@ -186,6 +163,9 @@ public class GetApplicationListResponseBody extends TeaModel {
         @NameInMap("Status")
         private Long status;
 
+        @NameInMap("TagCount")
+        private Long tagCount;
+
         @NameInMap("UserId")
         private String userId;
 
@@ -195,11 +175,11 @@ public class GetApplicationListResponseBody extends TeaModel {
             this.extraInfo = builder.extraInfo;
             this.instancesNumber = builder.instancesNumber;
             this.language = builder.language;
-            this.licenseKey = builder.licenseKey;
             this.namespace = builder.namespace;
             this.regionId = builder.regionId;
             this.source = builder.source;
             this.status = builder.status;
+            this.tagCount = builder.tagCount;
             this.userId = builder.userId;
         }
 
@@ -247,13 +227,6 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
-         * @return licenseKey
-         */
-        public String getLicenseKey() {
-            return this.licenseKey;
-        }
-
-        /**
          * @return namespace
          */
         public String getNamespace() {
@@ -282,6 +255,13 @@ public class GetApplicationListResponseBody extends TeaModel {
         }
 
         /**
+         * @return tagCount
+         */
+        public Long getTagCount() {
+            return this.tagCount;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -294,11 +274,11 @@ public class GetApplicationListResponseBody extends TeaModel {
             private String extraInfo; 
             private Integer instancesNumber; 
             private String language; 
-            private String licenseKey; 
             private String namespace; 
             private String regionId; 
             private String source; 
             private Long status; 
+            private Long tagCount; 
             private String userId; 
 
             /**
@@ -342,14 +322,6 @@ public class GetApplicationListResponseBody extends TeaModel {
             }
 
             /**
-             * The license key in use.
-             */
-            public Builder licenseKey(String licenseKey) {
-                this.licenseKey = licenseKey;
-                return this;
-            }
-
-            /**
              * Namespace.
              */
             public Builder namespace(String namespace) {
@@ -378,6 +350,14 @@ public class GetApplicationListResponseBody extends TeaModel {
              */
             public Builder status(Long status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TagCount.
+             */
+            public Builder tagCount(Long tagCount) {
+                this.tagCount = tagCount;
                 return this;
             }
 

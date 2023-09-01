@@ -98,7 +98,7 @@ public class ApplyGatewayRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * clusterNotFound
+         * The response code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ApplyGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * mse-100-001
+         * The data of the node.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ApplyGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * illegal request:%s
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ApplyGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * mse-200-021
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ApplyGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * illegalRequest
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class ApplyGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * cluster not found
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

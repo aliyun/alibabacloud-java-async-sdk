@@ -74,7 +74,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 请求响应数据。
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
-         * 请求信息。
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id。
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
         }
 
         /**
-         * 请求是否成功。
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -210,7 +210,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * 应用id。
+             * AppId.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -218,7 +218,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 应用名。
+             * AppName.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -226,7 +226,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 服务最后的更新时间。
+             * GmtModifyTime.
              */
             public Builder gmtModifyTime(String gmtModifyTime) {
                 this.gmtModifyTime = gmtModifyTime;
@@ -234,7 +234,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 服务分组。
+             * Group.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -242,7 +242,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 服务对应的节点数。
+             * InstanceNum.
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -250,7 +250,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 服务名。
+             * ServiceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -258,7 +258,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 服务版本。
+             * Version.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -335,7 +335,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             private String totalSize; 
 
             /**
-             * 当前页码。
+             * PageNumber.
              */
             public Builder pageNumber(String pageNumber) {
                 this.pageNumber = pageNumber;
@@ -343,7 +343,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 页面大小。
+             * PageSize.
              */
             public Builder pageSize(String pageSize) {
                 this.pageSize = pageSize;
@@ -351,7 +351,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 当前页面数据。
+             * Result.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -359,7 +359,7 @@ public class GetServiceListPageResponseBody extends TeaModel {
             }
 
             /**
-             * 数据总数。
+             * TotalSize.
              */
             public Builder totalSize(String totalSize) {
                 this.totalSize = totalSize;

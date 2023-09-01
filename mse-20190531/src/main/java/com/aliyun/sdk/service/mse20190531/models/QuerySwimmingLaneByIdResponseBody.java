@@ -86,7 +86,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The request was successfully processed.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The status code. A value of 200 is returned if the request is successful.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * RestResult
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -266,7 +270,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 匹配符
+             * cond.
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -274,7 +278,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * 数值
+             * datum.
              */
             public Builder datum(String datum) {
                 this.datum = datum;
@@ -282,7 +286,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * 除数
+             * divisor.
              */
             public Builder divisor(Integer divisor) {
                 this.divisor = divisor;
@@ -290,7 +294,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * 名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -298,7 +302,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * 匹配列表
+             * nameList.
              */
             public Builder nameList(java.util.List < String > nameList) {
                 this.nameList = nameList;
@@ -306,7 +310,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * 操作符
+             * operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -314,7 +318,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * 百分比
+             * rate.
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -322,7 +326,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * 余数
+             * remainder.
              */
             public Builder remainder(Integer remainder) {
                 this.remainder = remainder;
@@ -330,7 +334,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * 匹配类型
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -338,7 +342,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * 值
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -696,7 +700,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             }
 
             /**
-             * 名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;

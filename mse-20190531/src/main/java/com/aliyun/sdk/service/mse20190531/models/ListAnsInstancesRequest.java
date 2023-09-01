@@ -183,7 +183,11 @@ public class ListAnsInstancesRequest extends Request {
         } 
 
         /**
-         * mse-100-001
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -192,7 +196,10 @@ public class ListAnsInstancesRequest extends Request {
         }
 
         /**
-         * mse-100-007
+         * The ID of the Nacos instance.
+         * <p>
+         * 
+         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -201,7 +208,7 @@ public class ListAnsInstancesRequest extends Request {
         }
 
         /**
-         * clusterNotFound
+         * The alias of the Nacos instance.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -210,7 +217,7 @@ public class ListAnsInstancesRequest extends Request {
         }
 
         /**
-         * illegal request:%s
+         * The name of the contact group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -219,7 +226,10 @@ public class ListAnsInstancesRequest extends Request {
         }
 
         /**
-         * cluster not found
+         * The ID of the instance.
+         * <p>
+         * 
+         * > This operation contains both the InstanceId and ClusterId parameters. You must specify one of them.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -228,7 +238,7 @@ public class ListAnsInstancesRequest extends Request {
         }
 
         /**
-         * mse-200-021
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -237,7 +247,7 @@ public class ListAnsInstancesRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -246,7 +256,7 @@ public class ListAnsInstancesRequest extends Request {
         }
 
         /**
-         * duplicated cluster alias name
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -255,7 +265,7 @@ public class ListAnsInstancesRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -264,7 +274,7 @@ public class ListAnsInstancesRequest extends Request {
         }
 
         /**
-         * illegalRequest
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

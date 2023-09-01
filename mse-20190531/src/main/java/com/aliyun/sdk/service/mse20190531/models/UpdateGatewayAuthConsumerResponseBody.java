@@ -134,7 +134,7 @@ public class UpdateGatewayAuthConsumerResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code仅仅用来和success同步
+         * The status code. A value of 200 is returned if the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -142,7 +142,7 @@ public class UpdateGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The ID of the consumer.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -150,7 +150,7 @@ public class UpdateGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误信息中的占位符
+         * The dynamic part in the error message.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -158,7 +158,10 @@ public class UpdateGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -166,7 +169,7 @@ public class UpdateGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code that is returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,7 +177,7 @@ public class UpdateGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +185,7 @@ public class UpdateGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +193,7 @@ public class UpdateGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +201,11 @@ public class UpdateGatewayAuthConsumerResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

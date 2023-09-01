@@ -98,7 +98,7 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The port used for health checks.
+         * The response code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the health check.
+         * The result returned.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the service.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the namespace.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the group.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class UpdateNacosClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether to use the port of the instance for a health check.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

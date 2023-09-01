@@ -50,7 +50,7 @@ public class TrafficPolicy extends TeaModel {
         private TlsSetting tlsSetting; 
 
         /**
-         * 负载均衡相关配置
+         * LoadBalancerSettings.
          */
         public Builder loadBalancerSettings(LoadBalancerSettings loadBalancerSettings) {
             this.loadBalancerSettings = loadBalancerSettings;
@@ -58,7 +58,7 @@ public class TrafficPolicy extends TeaModel {
         }
 
         /**
-         * tls相关配置
+         * TlsSetting.
          */
         public Builder tlsSetting(TlsSetting tlsSetting) {
             this.tlsSetting = tlsSetting;
@@ -122,7 +122,7 @@ public class TrafficPolicy extends TeaModel {
             private String TTL; 
 
             /**
-             * cookie名
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -130,7 +130,7 @@ public class TrafficPolicy extends TeaModel {
             }
 
             /**
-             * cookie path
+             * Path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -138,7 +138,7 @@ public class TrafficPolicy extends TeaModel {
             }
 
             /**
-             * cookie生命周期
+             * TTL.
              */
             public Builder TTL(String TTL) {
                 this.TTL = TTL;
@@ -203,7 +203,7 @@ public class TrafficPolicy extends TeaModel {
             private String parameterName; 
 
             /**
-             * HEADER, COOKIE, SOURCE_IP, QUERY_PARAMETER
+             * ConsistentHashLBType.
              */
             public Builder consistentHashLBType(String consistentHashLBType) {
                 this.consistentHashLBType = consistentHashLBType;
@@ -211,7 +211,7 @@ public class TrafficPolicy extends TeaModel {
             }
 
             /**
-             * 使用cookie时配置
+             * HttpCookie.
              */
             public Builder httpCookie(HttpCookie httpCookie) {
                 this.httpCookie = httpCookie;
@@ -219,7 +219,7 @@ public class TrafficPolicy extends TeaModel {
             }
 
             /**
-             * 使用根据header和参数路由时生效
+             * ParameterName.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -284,7 +284,7 @@ public class TrafficPolicy extends TeaModel {
             private Long warmupDuration; 
 
             /**
-             * 一致性hash相关配置
+             * ConsistentHashLBConfig.
              */
             public Builder consistentHashLBConfig(ConsistentHashLBConfig consistentHashLBConfig) {
                 this.consistentHashLBConfig = consistentHashLBConfig;
@@ -292,7 +292,7 @@ public class TrafficPolicy extends TeaModel {
             }
 
             /**
-             * 负载均衡类型，枚举类可为ROUND_ROBIN, LEAST_CONN,RANDOM, CONSISTENT_HASH
+             * LoadbalancerType.
              */
             public Builder loadbalancerType(String loadbalancerType) {
                 this.loadbalancerType = loadbalancerType;
@@ -300,7 +300,7 @@ public class TrafficPolicy extends TeaModel {
             }
 
             /**
-             * 预热时间(单位/s)
+             * WarmupDuration.
              */
             public Builder warmupDuration(Long warmupDuration) {
                 this.warmupDuration = warmupDuration;
@@ -378,7 +378,7 @@ public class TrafficPolicy extends TeaModel {
             private String tlsMode; 
 
             /**
-             * ca证书内容
+             * CaCertContent.
              */
             public Builder caCertContent(String caCertContent) {
                 this.caCertContent = caCertContent;
@@ -386,7 +386,7 @@ public class TrafficPolicy extends TeaModel {
             }
 
             /**
-             * 使用的证书id，仅当为mutual时需要填写
+             * CertId.
              */
             public Builder certId(String certId) {
                 this.certId = certId;
@@ -394,7 +394,7 @@ public class TrafficPolicy extends TeaModel {
             }
 
             /**
-             * 到后端服务些带
+             * Sni.
              */
             public Builder sni(String sni) {
                 this.sni = sni;
@@ -402,7 +402,7 @@ public class TrafficPolicy extends TeaModel {
             }
 
             /**
-             * tls模式。为枚举类，可为NONE, SIMPLE, MUITUAL
+             * TlsMode.
              */
             public Builder tlsMode(String tlsMode) {
                 this.tlsMode = tlsMode;

@@ -134,7 +134,7 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * The error code returned if the request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -142,7 +142,7 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The maximum size of a file that can be uploaded each time. Unit: MB.
+         * The URL that is used to upload the configuration file.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,7 +150,10 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -158,7 +161,7 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The URL that is used to upload the configuration file.
+         * The returned data.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -166,7 +169,7 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The HTTP status code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,7 +177,7 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The request was successfully processed.
+         * The message returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +185,7 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The dynamic part in the error message.
+         * The request was successfully processed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +193,11 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The status code. A value of 200 is returned if the request was successful.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +205,7 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * The status code. A value of 200 is returned if the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -250,7 +257,7 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * duplicatedClusterAliasName
+             * code
              */
             public Builder maxSize(String maxSize) {
                 this.maxSize = maxSize;
@@ -258,7 +265,7 @@ public class GetZookeeperDataImportUrlResponseBody extends TeaModel {
             }
 
             /**
-             * mse-200-105
+             * The maximum size of a file that can be uploaded each time. Unit: MB.
              */
             public Builder url(String url) {
                 this.url = url;

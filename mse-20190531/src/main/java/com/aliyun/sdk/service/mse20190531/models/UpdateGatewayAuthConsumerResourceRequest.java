@@ -28,7 +28,6 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
 
     @Query
     @NameInMap("ResourceList")
-    @Validation(required = true)
     private java.util.List < ResourceList> resourceList;
 
     private UpdateGatewayAuthConsumerResourceRequest(Builder builder) {
@@ -99,7 +98,11 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -108,7 +111,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * ConsumerId.
+         * The gateway authentication consumer ID.
          */
         public Builder consumerId(Long consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
@@ -117,7 +120,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -126,7 +129,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * ResourceList.
+         * The gateway authentication consumer ID.
          */
         public Builder resourceList(java.util.List < ResourceList> resourceList) {
             String resourceListShrink = shrink(resourceList, "ResourceList", "json");
@@ -181,7 +184,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
             private String routeName; 
 
             /**
-             * RouteId.
+             * The route ID.
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -189,7 +192,7 @@ public class UpdateGatewayAuthConsumerResourceRequest extends Request {
             }
 
             /**
-             * RouteName.
+             * The name of the route.
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;

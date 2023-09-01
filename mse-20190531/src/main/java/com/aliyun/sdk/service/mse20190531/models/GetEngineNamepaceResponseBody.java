@@ -158,7 +158,7 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         private String type; 
 
         /**
-         * ConfigCount.
+         * The number of configurations.
          */
         public Builder configCount(String configCount) {
             this.configCount = configCount;
@@ -166,7 +166,7 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,7 +174,7 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code returned.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -182,7 +182,7 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +190,7 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * Namespace.
+         * The ID of the namespace.
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -198,7 +198,7 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * NamespaceDesc.
+         * The description of the namespace.
          */
         public Builder namespaceDesc(String namespaceDesc) {
             this.namespaceDesc = namespaceDesc;
@@ -206,7 +206,7 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * NamespaceShowName.
+         * The display name of the namespace.
          */
         public Builder namespaceShowName(String namespaceShowName) {
             this.namespaceShowName = namespaceShowName;
@@ -214,7 +214,7 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * Quota.
+         * The quota of configurations.
          */
         public Builder quota(String quota) {
             this.quota = quota;
@@ -222,7 +222,7 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -230,7 +230,11 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -238,7 +242,12 @@ public class GetEngineNamepaceResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * The type of the namespace. Valid values:
+         * <p>
+         * 
+         * *   0: global configuration
+         * *   1: default namespace
+         * *   2: custom namespace
          */
         public Builder type(String type) {
             this.type = type;

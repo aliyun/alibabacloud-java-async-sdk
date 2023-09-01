@@ -310,7 +310,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 匹配符
+             * cond.
              */
             public Builder cond(String cond) {
                 this.cond = cond;
@@ -318,7 +318,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 数值
+             * datum.
              */
             public Builder datum(String datum) {
                 this.datum = datum;
@@ -326,7 +326,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 除数
+             * divisor.
              */
             public Builder divisor(Integer divisor) {
                 this.divisor = divisor;
@@ -334,7 +334,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -342,7 +342,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 匹配列表
+             * nameList.
              */
             public Builder nameList(java.util.List < String > nameList) {
                 this.nameList = nameList;
@@ -350,7 +350,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 操作符
+             * operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -358,7 +358,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 百分比
+             * rate.
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -366,7 +366,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 余数
+             * remainder.
              */
             public Builder remainder(Integer remainder) {
                 this.remainder = remainder;
@@ -374,7 +374,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 匹配类型
+             * type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -382,7 +382,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 值
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -740,7 +740,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;

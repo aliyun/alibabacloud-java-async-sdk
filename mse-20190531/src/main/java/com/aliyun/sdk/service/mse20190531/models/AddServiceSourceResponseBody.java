@@ -98,7 +98,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The address.
+         * duplicatedClusterAliasName
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The return value.
+         * mse-100-007
          */
         public Builder data(Long data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The namespace whose resources you want to monitor.
+         * code
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Specifies whether to update the Ingress status.
+         * mse-200-105
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The root path of the service.
+         * The response data.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class AddServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The list of service groups.
+         * duplicated cluster alias name
          */
         public Builder success(Boolean success) {
             this.success = success;

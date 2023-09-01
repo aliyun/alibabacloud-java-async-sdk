@@ -114,7 +114,7 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -130,7 +130,7 @@ public class DeleteNacosConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Deletes a Nacos configuration.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

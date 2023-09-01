@@ -225,7 +225,11 @@ public class UpdateNacosConfigRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -234,7 +238,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * mse-100-007
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -243,7 +247,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * BetaIps.
+         * The list of IP addresses where the beta release of the configuration is performed.
          */
         public Builder betaIps(String betaIps) {
             this.putQueryParameter("BetaIps", betaIps);
@@ -252,7 +256,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * cluster not found
+         * The content of the configuration.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -261,7 +265,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The ID of the configuration.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -270,7 +274,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * illegal request:%s
+         * The description of the configuration.
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -279,7 +283,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * EncryptedDataKey.
+         * The encryption key.
          */
         public Builder encryptedDataKey(String encryptedDataKey) {
             this.putQueryParameter("EncryptedDataKey", encryptedDataKey);
@@ -288,7 +292,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * duplicated cluster alias name
+         * The name of the group.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -297,7 +301,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -306,7 +310,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * system error
+         * The MD5 value of the configuration.
          */
         public Builder md5(String md5) {
             this.putQueryParameter("Md5", md5);
@@ -315,7 +319,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * systemError
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -324,7 +328,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * illegalRequest
+         * The list of tags.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -333,7 +337,7 @@ public class UpdateNacosConfigRequest extends Request {
         }
 
         /**
-         * clusterNotFound
+         * The format of the configuration. Supported formats include TEXT, JSON, XML, and HTML.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

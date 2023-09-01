@@ -98,7 +98,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The return value.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned if the request failed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -202,7 +206,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private String ttl; 
 
             /**
-             * Name.
+             * The name of the cookie.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +214,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The path of the cookie.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -218,7 +222,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Ttl.
+             * The lifecycle of the cookie.
              */
             public Builder ttl(String ttl) {
                 this.ttl = ttl;
@@ -295,7 +299,13 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private String parameterName; 
 
             /**
-             * HEADER, COOKIE, SOURCE_IP, QUERY_PARAMETER
+             * The type based on which consistent hashing load balancing is performed.
+             * <p>
+             * 
+             * *   HEADER
+             * *   COOKIE
+             * *   SOURCE_IP
+             * *   QUERY_PARAMETER
              */
             public Builder consistentHashLBType(String consistentHashLBType) {
                 this.consistentHashLBType = consistentHashLBType;
@@ -303,7 +313,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * HttpCookie.
+             * The cookie-based load balancing parameters.
              */
             public Builder httpCookie(HttpCookie httpCookie) {
                 this.httpCookie = httpCookie;
@@ -311,7 +321,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * MinimumRingSize.
+             * The minimum value of the hash ring.
              */
             public Builder minimumRingSize(Long minimumRingSize) {
                 this.minimumRingSize = minimumRingSize;
@@ -319,7 +329,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ParameterName.
+             * The name of the parameter.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -384,7 +394,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private Integer warmupDuration; 
 
             /**
-             * ConsistentHashLBConfig.
+             * The consistent hashing settings.
              */
             public Builder consistentHashLBConfig(ConsistentHashLBConfig consistentHashLBConfig) {
                 this.consistentHashLBConfig = consistentHashLBConfig;
@@ -392,7 +402,13 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ROUND_ROBIN, LEAST_CONN, RANDOM, CONSISTENT_HASH
+             * The load balancing type.
+             * <p>
+             * 
+             * *   ROUND_ROBIN
+             * *   LEAST_CONN
+             * *   RANDOM
+             * *   CONSISTENT_HASH
              */
             public Builder loadbalancerType(String loadbalancerType) {
                 this.loadbalancerType = loadbalancerType;
@@ -400,7 +416,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * WarmupDuration.
+             * The prefetch time of the least connection load balancing.
              */
             public Builder warmupDuration(Integer warmupDuration) {
                 this.warmupDuration = warmupDuration;
@@ -501,7 +517,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private java.util.List < String > subjectAltNames; 
 
             /**
-             * CaCertContent.
+             * The public key of the CA certificate .
              */
             public Builder caCertContent(String caCertContent) {
                 this.caCertContent = caCertContent;
@@ -509,7 +525,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * CaCertId.
+             * The ID of the certification authority (CA) certificate.
              */
             public Builder caCertId(String caCertId) {
                 this.caCertId = caCertId;
@@ -517,7 +533,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * CertId.
+             * The ID of the certificate.
              */
             public Builder certId(String certId) {
                 this.certId = certId;
@@ -525,7 +541,13 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * DISABLE, SIMPLE, MUTUAL, ISTIO_MUTUAL
+             * The TLS mode.
+             * <p>
+             * 
+             * *   DISABLE
+             * *   SIMPLE
+             * *   MUTUAL
+             * *   ISTIO_MUTUAL
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -533,7 +555,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Sni.
+             * The Server Name Indication (SNI) value.
              */
             public Builder sni(String sni) {
                 this.sni = sni;
@@ -541,7 +563,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * SubjectAltNames.
+             * The array of subject aliases.
              */
             public Builder subjectAltNames(java.util.List < String > subjectAltNames) {
                 this.subjectAltNames = subjectAltNames;
@@ -594,7 +616,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private Tls tls; 
 
             /**
-             * LoadBalancerSettings.
+             * The load balancing settings.
              */
             public Builder loadBalancerSettings(LoadBalancerSettings loadBalancerSettings) {
                 this.loadBalancerSettings = loadBalancerSettings;
@@ -602,7 +624,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Tls.
+             * The Transport Layer Security (TLS).
              */
             public Builder tls(Tls tls) {
                 this.tls = tls;
@@ -739,7 +761,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private Integer unhealthyThreshold; 
 
             /**
-             * Check.
+             * Indicates whether checks are performed.
              */
             public Builder check(Boolean check) {
                 this.check = check;
@@ -747,7 +769,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectedStatuses.
+             * The expected status of the health check.
              */
             public Builder expectedStatuses(java.util.List < Integer > expectedStatuses) {
                 this.expectedStatuses = expectedStatuses;
@@ -755,7 +777,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * HealthyThreshold.
+             * The threshold for healthy instances.
              */
             public Builder healthyThreshold(Integer healthyThreshold) {
                 this.healthyThreshold = healthyThreshold;
@@ -763,7 +785,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * HttpHost.
+             * The URL of the HTTP request for the health check.
              */
             public Builder httpHost(String httpHost) {
                 this.httpHost = httpHost;
@@ -771,7 +793,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * HttpPath.
+             * The path to which the HTTP request for the health check is sent.
              */
             public Builder httpPath(String httpPath) {
                 this.httpPath = httpPath;
@@ -779,7 +801,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * The health check interval.
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -787,7 +809,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * The network protocol.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -795,7 +817,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Timeout.
+             * The timeout period.
              */
             public Builder timeout(Integer timeout) {
                 this.timeout = timeout;
@@ -803,7 +825,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * UnhealthyThreshold.
+             * The threshold for unhealthy instances.
              */
             public Builder unhealthyThreshold(Integer unhealthyThreshold) {
                 this.unhealthyThreshold = unhealthyThreshold;
@@ -844,7 +866,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * The version number.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1149,7 +1171,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private java.util.List < Versions> versions; 
 
             /**
-             * GatewayId.
+             * The ID of the gateway.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -1157,7 +1179,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayTrafficPolicy.
+             * The traffic management policy.
              */
             public Builder gatewayTrafficPolicy(GatewayTrafficPolicy gatewayTrafficPolicy) {
                 this.gatewayTrafficPolicy = gatewayTrafficPolicy;
@@ -1165,7 +1187,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * The unique ID of the gateway.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -1173,7 +1195,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -1181,7 +1203,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -1189,7 +1211,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1197,7 +1219,12 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * HealehStatus.
+             * The health status.
+             * <p>
+             * 
+             * *   Health
+             * *   Unhealthy
+             * *   Unknown
              */
             public Builder healehStatus(String healehStatus) {
                 this.healehStatus = healehStatus;
@@ -1205,7 +1232,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheck.
+             * Indicates whether health checks are performed.
              */
             public Builder healthCheck(Boolean healthCheck) {
                 this.healthCheck = healthCheck;
@@ -1213,7 +1240,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckInfo.
+             * The information about health checks.
              */
             public Builder healthCheckInfo(HealthCheckInfo healthCheckInfo) {
                 this.healthCheckInfo = healthCheckInfo;
@@ -1221,7 +1248,12 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * HealthStatus.
+             * The health status.
+             * <p>
+             * 
+             * *   Health
+             * *   Unhealthy
+             * *   Unknown
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -1229,7 +1261,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -1237,7 +1269,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Ips.
+             * The IP addresses.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -1245,7 +1277,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * MetaInfo.
+             * The metadata or IP addresses of the service.
              */
             public Builder metaInfo(String metaInfo) {
                 this.metaInfo = metaInfo;
@@ -1253,7 +1285,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the service.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1261,7 +1293,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1269,7 +1301,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Ports.
+             * The port array.
              */
             public Builder ports(java.util.List < Integer > ports) {
                 this.ports = ports;
@@ -1277,7 +1309,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceNameInRegistry.
+             * The name of the service that is registered with the service registry.
              */
             public Builder serviceNameInRegistry(String serviceNameInRegistry) {
                 this.serviceNameInRegistry = serviceNameInRegistry;
@@ -1285,7 +1317,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePort.
+             * The service port.
              */
             public Builder servicePort(Long servicePort) {
                 this.servicePort = servicePort;
@@ -1293,7 +1325,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceProtocol.
+             * The protocol of the service.
              */
             public Builder serviceProtocol(String serviceProtocol) {
                 this.serviceProtocol = serviceProtocol;
@@ -1301,7 +1333,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * SourceId.
+             * The ID of the service source.
              */
             public Builder sourceId(Long sourceId) {
                 this.sourceId = sourceId;
@@ -1309,7 +1341,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * SourceType.
+             * The type of the service source.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1317,7 +1349,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * UnhealthyEndpoints.
+             * The array of unhealthy endpoints.
              */
             public Builder unhealthyEndpoints(java.util.List < String > unhealthyEndpoints) {
                 this.unhealthyEndpoints = unhealthyEndpoints;
@@ -1325,7 +1357,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Versions.
+             * The version of the service.
              */
             public Builder versions(java.util.List < Versions> versions) {
                 this.versions = versions;
@@ -1402,7 +1434,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * PageNumber.
+             * The number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -1410,7 +1442,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1418,7 +1450,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The returned information.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -1426,7 +1458,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of entries returned.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

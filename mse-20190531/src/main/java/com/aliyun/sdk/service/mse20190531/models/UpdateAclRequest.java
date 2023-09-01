@@ -82,7 +82,11 @@ public class UpdateAclRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -91,7 +95,7 @@ public class UpdateAclRequest extends Request {
         }
 
         /**
-         * AclEntryList.
+         * The IP addresses or CIDR blocks in the IP address whitelist.
          */
         public Builder aclEntryList(String aclEntryList) {
             this.putQueryParameter("AclEntryList", aclEntryList);
@@ -100,7 +104,7 @@ public class UpdateAclRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

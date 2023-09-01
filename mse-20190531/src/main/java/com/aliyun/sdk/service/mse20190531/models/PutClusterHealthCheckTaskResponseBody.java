@@ -134,7 +134,7 @@ public class PutClusterHealthCheckTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * The status code. A value of 200 is returned if the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -142,10 +142,18 @@ public class PutClusterHealthCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * mse-200-105
+         * The returned message.
          */
         public Builder data(Boolean data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * The dynamic part in the error message.
+         */
+        public Builder dynamicCode(String dynamicCode) {
+            this.dynamicCode = dynamicCode;
             return this;
         }
 
@@ -155,24 +163,24 @@ public class PutClusterHealthCheckTaskResponseBody extends TeaModel {
          * 
          * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
-        public Builder dynamicCode(String dynamicCode) {
-            this.dynamicCode = dynamicCode;
-            return this;
-        }
-
-        /**
-         * The returned message.
-         */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
             return this;
         }
 
         /**
-         * The HTTP status code returned.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * The HTTP status code returned.
+         */
+        public Builder httpStatusCode(Integer httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
             return this;
         }
 
@@ -183,16 +191,16 @@ public class PutClusterHealthCheckTaskResponseBody extends TeaModel {
          * *   If the request is successful, a success message is returned.
          * *   If the request fails, an error message is returned, such as the "TaskId not found" message.
          */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
         /**
-         * The request is successfully processed.
+         * The ID of the request.
          */
-        public Builder message(String message) {
-            this.message = message;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -202,14 +210,6 @@ public class PutClusterHealthCheckTaskResponseBody extends TeaModel {
          * 
          * *   `true`: The request was successful.
          * *   `false`: The request failed.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The status code. A value of 200 is returned if the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

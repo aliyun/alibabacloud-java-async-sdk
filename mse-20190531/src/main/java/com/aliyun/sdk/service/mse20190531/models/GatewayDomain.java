@@ -146,7 +146,7 @@ public class GatewayDomain extends TeaModel {
         private String protocol; 
 
         /**
-         * 使用的证书Id
+         * CertIdentifier.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -154,7 +154,7 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * 网关ID
+         * GatewayId.
          */
         public Builder gatewayId(Long gatewayId) {
             this.gatewayId = gatewayId;
@@ -162,7 +162,7 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * 网关名称
+         * GatewayName.
          */
         public Builder gatewayName(String gatewayName) {
             this.gatewayName = gatewayName;
@@ -170,7 +170,7 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * 网关唯一标识
+         * GatewayUniqueId.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.gatewayUniqueId = gatewayUniqueId;
@@ -178,7 +178,7 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * 创建时间
+         * GmtCreate.
          */
         public Builder gmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
@@ -186,7 +186,7 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * 修改时间
+         * GmtModified.
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -194,7 +194,7 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * Domain Id
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -202,7 +202,7 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * 是否强制跳转
+         * MustHttps.
          */
         public Builder mustHttps(String mustHttps) {
             this.mustHttps = mustHttps;
@@ -210,7 +210,7 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * Domain Name
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -218,7 +218,7 @@ public class GatewayDomain extends TeaModel {
         }
 
         /**
-         * domainn的协议
+         * Protocol.
          */
         public Builder protocol(String protocol) {
             this.protocol = protocol;

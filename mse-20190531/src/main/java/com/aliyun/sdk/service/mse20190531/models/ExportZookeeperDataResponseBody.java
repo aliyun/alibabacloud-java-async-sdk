@@ -110,10 +110,37 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code returned if the request failed.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
+         */
+        public Builder dynamicMessage(String dynamicMessage) {
+            this.dynamicMessage = dynamicMessage;
+            return this;
+        }
+
+        /**
+         * The error code returned if the request failed.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * The HTTP status code returned.
+         */
+        public Builder httpStatusCode(String httpStatusCode) {
+            this.httpStatusCode = httpStatusCode;
             return this;
         }
 
@@ -124,40 +151,13 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
          * *   If the request is successful, a success message is returned.
          * *   If the request fails, an error message is returned.
          */
-        public Builder dynamicMessage(String dynamicMessage) {
-            this.dynamicMessage = dynamicMessage;
-            return this;
-        }
-
-        /**
-         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
-         * <p>
-         * 
-         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
-         */
-        public Builder errorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
-         */
-        public Builder httpStatusCode(String httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * BaseResult
-         */
         public Builder message(String message) {
             this.message = message;
             return this;
         }
 
         /**
-         * The request was successfully processed.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -165,11 +165,11 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
         }
 
         /**
-         * The language of the response. Valid values:
+         * Indicates whether the request was successful. Valid values:
          * <p>
          * 
-         * *   zh: Chinese
-         * *   en: English
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -305,7 +305,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The ID of the instance.
+             * The content of a task.
              */
             public Builder contentMap(java.util.Map < String, ? > contentMap) {
                 this.contentMap = contentMap;
@@ -313,18 +313,10 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the associated task at the underlying layer. This parameter is used only to troubleshoot failures.
+             * The creation time.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * The details of the data.
-             */
-            public Builder exportType(String exportType) {
-                this.exportType = exportType;
                 return this;
             }
 
@@ -335,20 +327,21 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
              * *   transactionLog: transaction logs
              * *   snapshot: snapshots
              */
+            public Builder exportType(String exportType) {
+                this.exportType = exportType;
+                return this;
+            }
+
+            /**
+             * The extended information.
+             */
             public Builder extend(String extend) {
                 this.extend = extend;
                 return this;
             }
 
             /**
-             * The task status. Valid values:
-             * <p>
-             * 
-             * *   CREATE: The task is being created.
-             * *   RUNNING: The task is being executed.
-             * *   FINISH: The task is completed.
-             * *   FAILED: The task failed.
-             * *   EXPIRE: The task has expired.
+             * The ID of the task.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -356,7 +349,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP status code returned.
+             * The ID of the instance
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -364,7 +357,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information.
+             * The ID of the associated task at the underlying layer. This parameter is used only to troubleshoot failures.
              */
             public Builder kubeoneTaskIds(String kubeoneTaskIds) {
                 this.kubeoneTaskIds = kubeoneTaskIds;
@@ -372,7 +365,14 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the task.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   CREATE: The object is being created.
+             * *   RUNNING: The task is running.
+             * *   FINISH: The task is completed.
+             * *   FAILED: The task fails.
+             * *   EXPIRE: The task has expired.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -380,7 +380,7 @@ public class ExportZookeeperDataResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The last update time.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

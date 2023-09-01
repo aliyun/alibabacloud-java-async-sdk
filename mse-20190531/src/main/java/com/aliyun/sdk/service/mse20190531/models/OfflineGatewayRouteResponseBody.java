@@ -98,7 +98,7 @@ public class OfflineGatewayRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * clusterNotFound
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class OfflineGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * mse-100-001
+         * Indicates whether the route is unpublished.
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class OfflineGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * illegalRequest
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class OfflineGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * illegal request:%s
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class OfflineGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * mse-100-007
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class OfflineGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * cluster not found
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

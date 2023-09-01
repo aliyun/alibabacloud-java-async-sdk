@@ -82,7 +82,7 @@ public class GetMseSourceRequest extends Request {
         } 
 
         /**
-         * The endpoint of the instance.
+         * The data structure.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -91,7 +91,11 @@ public class GetMseSourceRequest extends Request {
         }
 
         /**
-         * The data structure.
+         * The MSE engine type. Valid values:
+         * <p>
+         * 
+         * *   NACOS
+         * *   ZOOKEEPER
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -100,7 +104,11 @@ public class GetMseSourceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

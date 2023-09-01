@@ -155,7 +155,11 @@ public class GetApplicationListWithMetircsRequest extends Request {
         } 
 
         /**
-         * mse-200-021
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -164,7 +168,7 @@ public class GetApplicationListWithMetircsRequest extends Request {
         }
 
         /**
-         * duplicated cluster alias name
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -173,7 +177,7 @@ public class GetApplicationListWithMetircsRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -191,7 +195,7 @@ public class GetApplicationListWithMetircsRequest extends Request {
         }
 
         /**
-         * illegalRequest
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -200,7 +204,7 @@ public class GetApplicationListWithMetircsRequest extends Request {
         }
 
         /**
-         * illegal request:%s
+         * The number of entries to return on each page. Default value: 10
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -209,7 +213,14 @@ public class GetApplicationListWithMetircsRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The ID of the region where the Microservices Engine (MSE) instance resides. Examples:
+         * <p>
+         * 
+         * *   cn-hangzhou: China (Hangzhou)
+         * *   cn-beijing: China (Beijing)
+         * *   cn-shanghai: China (Shanghai)
+         * *   cn-zhangjiakou: China (Zhangjiakou)
+         * *   cn-shenzhen: China (Shenzhen)
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -218,7 +229,7 @@ public class GetApplicationListWithMetircsRequest extends Request {
         }
 
         /**
-         * mse-100-007
+         * The service source.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

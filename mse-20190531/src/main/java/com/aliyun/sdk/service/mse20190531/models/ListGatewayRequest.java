@@ -124,7 +124,11 @@ public class ListGatewayRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -133,7 +137,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * DescSort.
+         * Specifies whether to enable the sorting feature. This feature is not available.
          */
         public Builder descSort(Boolean descSort) {
             this.putQueryParameter("DescSort", descSort);
@@ -142,7 +146,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * FilterParams.
+         * The details of parameters.
          */
         public Builder filterParams(FilterParams filterParams) {
             String filterParamsShrink = shrink(filterParams, "FilterParams", "json");
@@ -152,7 +156,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * OrderItem.
+         * The order information.
          */
         public Builder orderItem(String orderItem) {
             this.putQueryParameter("OrderItem", orderItem);
@@ -161,7 +165,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -170,7 +174,7 @@ public class ListGatewayRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -284,7 +288,7 @@ public class ListGatewayRequest extends Request {
             private String vpc; 
 
             /**
-             * GatewayType.
+             * The type of the gateway.
              */
             public Builder gatewayType(String gatewayType) {
                 this.gatewayType = gatewayType;
@@ -292,7 +296,7 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * GatewayUniqueId.
+             * The unique ID of the gateway.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -300,7 +304,7 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -308,7 +312,7 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * MseTag.
+             * The tag of the instance.
              */
             public Builder mseTag(String mseTag) {
                 this.mseTag = mseTag;
@@ -316,7 +320,7 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the gateway.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -324,7 +328,7 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -332,7 +336,7 @@ public class ListGatewayRequest extends Request {
             }
 
             /**
-             * Vpc.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpc(String vpc) {
                 this.vpc = vpc;

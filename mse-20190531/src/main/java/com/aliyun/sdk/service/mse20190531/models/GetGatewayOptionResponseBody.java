@@ -98,7 +98,7 @@ public class GetGatewayOptionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned. The value 200 indicates that the request is successfully processed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,14 @@ public class GetGatewayOptionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The detailed configurations of the gateway.
+         * <p>
+         * 
+         * *   **TraceDetails**: the sampling description of Tracing Analysis. Content: TraceEnabled indicates whether Tracing Analysis is activated. Sample indicates the sampling rate of Tracing Analysis.
+         * *   **LogConfigDetails**: the description of Log Service. Content: LogEnabled indicates whether Log Service is activated. ProjectName indicates the Log Service project to which logs are delivered. LogStoreName indicates the name of the Logstore.
+         * *   **EnableHardwareAcceleration**: indicates whether hardware acceleration is enabled.
+         * *   **DisableHttp2Alpn**: indicates whether the HTTP/2 protocol is disabled.
+         * *   **EnableWaf**: indicates whether Web Application Firewall (WAF) is enabled.
          */
         public Builder data(GatewayOption data) {
             this.data = data;
@@ -114,7 +121,7 @@ public class GetGatewayOptionResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +129,11 @@ public class GetGatewayOptionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
+         * <p>
+         * 
+         * *   If the request is successful, a success message is returned.
+         * *   If the request fails, an error message is returned, such as the "TaskId not found" message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +141,7 @@ public class GetGatewayOptionResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +149,11 @@ public class GetGatewayOptionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

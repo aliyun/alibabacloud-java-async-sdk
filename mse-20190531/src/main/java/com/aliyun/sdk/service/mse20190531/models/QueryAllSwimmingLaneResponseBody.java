@@ -86,10 +86,34 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The HTTP status code returned.
+         * The details of the data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
+            return this;
+        }
+
+        /**
+         * The error code returned if the request failed.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * The message returned.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
+
+        /**
+         * The ID of the request.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -99,30 +123,6 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
          * 
          * *   `true`: The request was successful.
          * *   `false`: The request failed.
-         */
-        public Builder errorCode(String errorCode) {
-            this.errorCode = errorCode;
-            return this;
-        }
-
-        /**
-         * The status code. A value of 200 is returned if the request is successful.
-         */
-        public Builder message(String message) {
-            this.message = message;
-            return this;
-        }
-
-        /**
-         * The returned result.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The ID of the request.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -135,7 +135,335 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
     } 
 
+    public static class RestItems extends TeaModel {
+        @NameInMap("cond")
+        private String cond;
+
+        @NameInMap("datum")
+        private String datum;
+
+        @NameInMap("divisor")
+        private Integer divisor;
+
+        @NameInMap("name")
+        private String name;
+
+        @NameInMap("nameList")
+        private java.util.List < String > nameList;
+
+        @NameInMap("operator")
+        private String operator;
+
+        @NameInMap("rate")
+        private Integer rate;
+
+        @NameInMap("remainder")
+        private Integer remainder;
+
+        @NameInMap("type")
+        private String type;
+
+        @NameInMap("value")
+        private String value;
+
+        private RestItems(Builder builder) {
+            this.cond = builder.cond;
+            this.datum = builder.datum;
+            this.divisor = builder.divisor;
+            this.name = builder.name;
+            this.nameList = builder.nameList;
+            this.operator = builder.operator;
+            this.rate = builder.rate;
+            this.remainder = builder.remainder;
+            this.type = builder.type;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RestItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cond
+         */
+        public String getCond() {
+            return this.cond;
+        }
+
+        /**
+         * @return datum
+         */
+        public String getDatum() {
+            return this.datum;
+        }
+
+        /**
+         * @return divisor
+         */
+        public Integer getDivisor() {
+            return this.divisor;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return nameList
+         */
+        public java.util.List < String > getNameList() {
+            return this.nameList;
+        }
+
+        /**
+         * @return operator
+         */
+        public String getOperator() {
+            return this.operator;
+        }
+
+        /**
+         * @return rate
+         */
+        public Integer getRate() {
+            return this.rate;
+        }
+
+        /**
+         * @return remainder
+         */
+        public Integer getRemainder() {
+            return this.remainder;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String cond; 
+            private String datum; 
+            private Integer divisor; 
+            private String name; 
+            private java.util.List < String > nameList; 
+            private String operator; 
+            private Integer rate; 
+            private Integer remainder; 
+            private String type; 
+            private String value; 
+
+            /**
+             * cond.
+             */
+            public Builder cond(String cond) {
+                this.cond = cond;
+                return this;
+            }
+
+            /**
+             * datum.
+             */
+            public Builder datum(String datum) {
+                this.datum = datum;
+                return this;
+            }
+
+            /**
+             * divisor.
+             */
+            public Builder divisor(Integer divisor) {
+                this.divisor = divisor;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * nameList.
+             */
+            public Builder nameList(java.util.List < String > nameList) {
+                this.nameList = nameList;
+                return this;
+            }
+
+            /**
+             * operator.
+             */
+            public Builder operator(String operator) {
+                this.operator = operator;
+                return this;
+            }
+
+            /**
+             * rate.
+             */
+            public Builder rate(Integer rate) {
+                this.rate = rate;
+                return this;
+            }
+
+            /**
+             * remainder.
+             */
+            public Builder remainder(Integer remainder) {
+                this.remainder = remainder;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public RestItems build() {
+                return new RestItems(this);
+            } 
+
+        } 
+
+    }
+    public static class EntryRules extends TeaModel {
+        @NameInMap("condition")
+        private String condition;
+
+        @NameInMap("path")
+        private String path;
+
+        @NameInMap("paths")
+        private java.util.List < String > paths;
+
+        @NameInMap("restItems")
+        private java.util.List < RestItems> restItems;
+
+        private EntryRules(Builder builder) {
+            this.condition = builder.condition;
+            this.path = builder.path;
+            this.paths = builder.paths;
+            this.restItems = builder.restItems;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EntryRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return condition
+         */
+        public String getCondition() {
+            return this.condition;
+        }
+
+        /**
+         * @return path
+         */
+        public String getPath() {
+            return this.path;
+        }
+
+        /**
+         * @return paths
+         */
+        public java.util.List < String > getPaths() {
+            return this.paths;
+        }
+
+        /**
+         * @return restItems
+         */
+        public java.util.List < RestItems> getRestItems() {
+            return this.restItems;
+        }
+
+        public static final class Builder {
+            private String condition; 
+            private String path; 
+            private java.util.List < String > paths; 
+            private java.util.List < RestItems> restItems; 
+
+            /**
+             * condition.
+             */
+            public Builder condition(String condition) {
+                this.condition = condition;
+                return this;
+            }
+
+            /**
+             * path.
+             */
+            public Builder path(String path) {
+                this.path = path;
+                return this;
+            }
+
+            /**
+             * paths.
+             */
+            public Builder paths(java.util.List < String > paths) {
+                this.paths = paths;
+                return this;
+            }
+
+            /**
+             * restItems.
+             */
+            public Builder restItems(java.util.List < RestItems> restItems) {
+                this.restItems = restItems;
+                return this;
+            }
+
+            public EntryRules build() {
+                return new EntryRules(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
+        @NameInMap("EntryRules")
+        private java.util.List < EntryRules> entryRules;
+
+        @NameInMap("GroupId")
+        private String groupId;
+
         @NameInMap("Id")
         private Long id;
 
@@ -172,10 +500,9 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         @NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("groupId")
-        private String groupId;
-
         private Data(Builder builder) {
+            this.entryRules = builder.entryRules;
+            this.groupId = builder.groupId;
             this.id = builder.id;
             this.messageQueueFilterSide = builder.messageQueueFilterSide;
             this.messageQueueGrayEnable = builder.messageQueueGrayEnable;
@@ -188,7 +515,6 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             this.enableRules = builder.enableRules;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
-            this.groupId = builder.groupId;
         }
 
         public static Builder builder() {
@@ -197,6 +523,20 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return entryRules
+         */
+        public java.util.List < EntryRules> getEntryRules() {
+            return this.entryRules;
+        }
+
+        /**
+         * @return groupId
+         */
+        public String getGroupId() {
+            return this.groupId;
         }
 
         /**
@@ -283,14 +623,9 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
-        /**
-         * @return groupId
-         */
-        public String getGroupId() {
-            return this.groupId;
-        }
-
         public static final class Builder {
+            private java.util.List < EntryRules> entryRules; 
+            private String groupId; 
             private Long id; 
             private String messageQueueFilterSide; 
             private Boolean messageQueueGrayEnable; 
@@ -303,10 +638,25 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             private Boolean enableRules; 
             private String gmtCreate; 
             private String gmtModified; 
-            private String groupId; 
 
             /**
-             * 泳道组Id。
+             * EntryRules.
+             */
+            public Builder entryRules(java.util.List < EntryRules> entryRules) {
+                this.entryRules = entryRules;
+                return this;
+            }
+
+            /**
+             * GroupId.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -314,7 +664,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 在哪一侧实现消息灰度。
+             * MessageQueueFilterSide.
              */
             public Builder messageQueueFilterSide(String messageQueueFilterSide) {
                 this.messageQueueFilterSide = messageQueueFilterSide;
@@ -322,7 +672,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启消息灰度。
+             * MessageQueueGrayEnable.
              */
             public Builder messageQueueGrayEnable(Boolean messageQueueGrayEnable) {
                 this.messageQueueGrayEnable = messageQueueGrayEnable;
@@ -330,7 +680,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 泳道组名称。
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -338,7 +688,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 泳道所属的MSE命名空间。
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -346,7 +696,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 是否记录请求详情（全链路灰度可观测）。
+             * RecordCanaryDetail.
              */
             public Builder recordCanaryDetail(Boolean recordCanaryDetail) {
                 this.recordCanaryDetail = recordCanaryDetail;
@@ -354,7 +704,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 所属地域。
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -362,7 +712,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 泳道对应的标签。
+             * Tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -370,7 +720,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 泳道所属的用户id。
+             * UserId.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -378,7 +728,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启规则。
+             * enableRules.
              */
             public Builder enableRules(Boolean enableRules) {
                 this.enableRules = enableRules;
@@ -386,7 +736,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 泳道创建时间。
+             * gmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -394,18 +744,10 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             }
 
             /**
-             * 泳道更新时间。
+             * gmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
-                return this;
-            }
-
-            /**
-             * 泳道组Id。
-             */
-            public Builder groupId(String groupId) {
-                this.groupId = groupId;
                 return this;
             }
 

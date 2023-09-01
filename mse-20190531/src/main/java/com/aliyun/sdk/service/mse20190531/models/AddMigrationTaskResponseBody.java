@@ -86,7 +86,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The data structure.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class AddMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -266,7 +270,12 @@ public class AddMigrationTaskResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * ClusterType.
+             * The type of the instance. Valid values:
+             * <p>
+             * 
+             * *   Nacos-Ans
+             * *   ZooKeeper
+             * *   Eureka
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -274,7 +283,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the task.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -282,7 +291,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * OriginInstanceAddress.
+             * The endpoint of the source instance node.
              */
             public Builder originInstanceAddress(String originInstanceAddress) {
                 this.originInstanceAddress = originInstanceAddress;
@@ -290,7 +299,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * OriginInstanceName.
+             * The name of the source instance.
              */
             public Builder originInstanceName(String originInstanceName) {
                 this.originInstanceName = originInstanceName;
@@ -298,7 +307,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * OriginInstanceNamespace.
+             * The list of namespaces. This parameter is optional if applications are migrated from a Nacos instance.
              */
             public Builder originInstanceNamespace(String originInstanceNamespace) {
                 this.originInstanceNamespace = originInstanceNamespace;
@@ -306,7 +315,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectDesc.
+             * The description.
              */
             public Builder projectDesc(String projectDesc) {
                 this.projectDesc = projectDesc;
@@ -314,7 +323,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetClusterName.
+             * The name of the destination instance.
              */
             public Builder targetClusterName(String targetClusterName) {
                 this.targetClusterName = targetClusterName;
@@ -322,7 +331,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetClusterUrl.
+             * The URL of the destination instance.
              */
             public Builder targetClusterUrl(String targetClusterUrl) {
                 this.targetClusterUrl = targetClusterUrl;
@@ -330,7 +339,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetInstanceId.
+             * The ID of the destination instance.
              */
             public Builder targetInstanceId(String targetInstanceId) {
                 this.targetInstanceId = targetInstanceId;
@@ -338,7 +347,7 @@ public class AddMigrationTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

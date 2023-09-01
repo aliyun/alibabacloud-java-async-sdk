@@ -74,7 +74,7 @@ public class UpdateImageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The data structure.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -82,11 +82,7 @@ public class UpdateImageResponseBody extends TeaModel {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -94,10 +90,7 @@ public class UpdateImageResponseBody extends TeaModel {
         }
 
         /**
-         * The destination version number.
-         * <p>
-         * 
-         * > You must call the GetImage operation to obtain the maximum destination version number that corresponds to MaxVersionCode.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -105,7 +98,11 @@ public class UpdateImageResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

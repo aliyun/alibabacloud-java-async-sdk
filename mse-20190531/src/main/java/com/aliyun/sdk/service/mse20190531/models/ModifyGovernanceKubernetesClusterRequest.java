@@ -21,10 +21,9 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
     @Validation(required = true)
     private String clusterId;
 
-    @Query
+    @Body
     @NameInMap("NamespaceInfos")
-    @Validation(required = true)
-    private String namespaceInfos;
+    private java.util.List < NamespaceInfos> namespaceInfos;
 
     @Query
     @NameInMap("RegionId")
@@ -69,7 +68,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
     /**
      * @return namespaceInfos
      */
-    public String getNamespaceInfos() {
+    public java.util.List < NamespaceInfos> getNamespaceInfos() {
         return this.namespaceInfos;
     }
 
@@ -83,7 +82,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyGovernanceKubernetesClusterRequest, Builder> {
         private String acceptLanguage; 
         private String clusterId; 
-        private String namespaceInfos; 
+        private java.util.List < NamespaceInfos> namespaceInfos; 
         private String regionId; 
 
         private Builder() {
@@ -99,7 +98,11 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -108,7 +111,7 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -119,14 +122,15 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
         /**
          * NamespaceInfos.
          */
-        public Builder namespaceInfos(String namespaceInfos) {
-            this.putQueryParameter("NamespaceInfos", namespaceInfos);
+        public Builder namespaceInfos(java.util.List < NamespaceInfos> namespaceInfos) {
+            String namespaceInfosShrink = shrink(namespaceInfos, "NamespaceInfos", "json");
+            this.putBodyParameter("NamespaceInfos", namespaceInfosShrink);
             this.namespaceInfos = namespaceInfos;
             return this;
         }
 
         /**
-         * RegionId.
+         * The region in which the cluster resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -141,4 +145,85 @@ public class ModifyGovernanceKubernetesClusterRequest extends Request {
 
     } 
 
+    public static class NamespaceInfos extends TeaModel {
+        @NameInMap("labels")
+        private java.util.Map < String, String > labels;
+
+        @NameInMap("mseNamespace")
+        private String mseNamespace;
+
+        @NameInMap("name")
+        private String name;
+
+        private NamespaceInfos(Builder builder) {
+            this.labels = builder.labels;
+            this.mseNamespace = builder.mseNamespace;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NamespaceInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return labels
+         */
+        public java.util.Map < String, String > getLabels() {
+            return this.labels;
+        }
+
+        /**
+         * @return mseNamespace
+         */
+        public String getMseNamespace() {
+            return this.mseNamespace;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private java.util.Map < String, String > labels; 
+            private String mseNamespace; 
+            private String name; 
+
+            /**
+             * labels.
+             */
+            public Builder labels(java.util.Map < String, String > labels) {
+                this.labels = labels;
+                return this;
+            }
+
+            /**
+             * mseNamespace.
+             */
+            public Builder mseNamespace(String mseNamespace) {
+                this.mseNamespace = mseNamespace;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public NamespaceInfos build() {
+                return new NamespaceInfos(this);
+            } 
+
+        } 
+
+    }
 }

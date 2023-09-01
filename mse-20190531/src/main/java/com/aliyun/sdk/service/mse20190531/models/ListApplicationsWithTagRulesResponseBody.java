@@ -86,7 +86,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The name of the application.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -102,7 +102,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the region.
+         * The returned message.
+         * <p>
+         * 
+         * *   If the request is successful, a success message is returned.
+         * *   If the request fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +114,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The source of the routing rule. Default value: edasmsc.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the application.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -278,7 +286,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * The information about the rules.
+             * Indicates whether the field is a primary key.
              */
             public Builder carryData(Boolean carryData) {
                 this.carryData = carryData;
@@ -286,7 +294,11 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * Indicates whether the alert rule is enabled. Valid value:
+             * <p>
+             * 
+             * *   `true`: enabled.
+             * *   `false`: disabled.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -294,7 +306,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -302,7 +314,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the routing rule is deleted.
+             * The ID of the rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -310,7 +322,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * The number of instances.
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -318,7 +330,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * The name of the rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -326,7 +338,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the field is a primary key.
+             * The rate.
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -334,7 +346,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The application ID.
+             * Indicates whether the routing rule is deleted.
              */
             public Builder remove(Boolean remove) {
                 this.remove = remove;
@@ -342,7 +354,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances.
+             * The details of the routing rule.
              */
             public Builder rules(String rules) {
                 this.rules = rules;
@@ -350,7 +362,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The data structure.
+             * The status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -358,7 +370,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the rule.
+             * The tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -447,7 +459,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private Long routeStatus; 
 
             /**
-             * The ID of the request.
+             * The application ID.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -455,11 +467,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The returned message.
-             * <p>
-             * 
-             * *   If the request is successful, a success message is returned.
-             * *   If the request fails, an error message is returned.
+             * The name of the application.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -475,7 +483,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the data.
+             * The information about the rules.
              */
             public Builder routeRules(java.util.List < RouteRules> routeRules) {
                 this.routeRules = routeRules;
@@ -483,7 +491,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the routing rule.
+             * The status of the route. Valid values: -0: disabled. -1: enabled.
              */
             public Builder routeStatus(Long routeStatus) {
                 this.routeStatus = routeStatus;
@@ -560,7 +568,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * The modification time.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -568,11 +576,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the alert rule is enabled. Valid value:
-             * <p>
-             * 
-             * *   `true`: enabled.
-             * *   `false`: disabled.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -580,11 +584,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the response. Valid values:
-             * <p>
-             * 
-             * *   zh: Chinese
-             * *   en: English
+             * The data structure.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -592,7 +592,7 @@ public class ListApplicationsWithTagRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rate.
+             * The total number of entries returned.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

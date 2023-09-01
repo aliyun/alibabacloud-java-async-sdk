@@ -141,7 +141,7 @@ public class QueryMonitorRequest extends Request {
         } 
 
         /**
-         * The message returned.
+         * The timestamp when the monitoring starts.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -150,47 +150,11 @@ public class QueryMonitorRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * system error
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * The data structure.
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The timestamp when the monitoring ends.
-         */
-        public Builder monitorType(String monitorType) {
-            this.putQueryParameter("MonitorType", monitorType);
-            this.monitorType = monitorType;
-            return this;
-        }
-
-        /**
-         * The timestamp when the monitoring starts.
-         */
-        public Builder requestPars(String requestPars) {
-            this.putQueryParameter("RequestPars", requestPars);
-            this.requestPars = requestPars;
-            return this;
-        }
-
-        /**
-         * The interval between data points. Unit: seconds.
-         */
-        public Builder startTime(Long startTime) {
-            this.putQueryParameter("StartTime", startTime);
-            this.startTime = startTime;
             return this;
         }
 
@@ -200,6 +164,42 @@ public class QueryMonitorRequest extends Request {
          * 
          * *   zh: Chinese
          * *   en: English
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * mse-100-001
+         */
+        public Builder monitorType(String monitorType) {
+            this.putQueryParameter("MonitorType", monitorType);
+            this.monitorType = monitorType;
+            return this;
+        }
+
+        /**
+         * cluster not found
+         */
+        public Builder requestPars(String requestPars) {
+            this.putQueryParameter("RequestPars", requestPars);
+            this.requestPars = requestPars;
+            return this;
+        }
+
+        /**
+         * systemError
+         */
+        public Builder startTime(Long startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * The extended request parameters in the JSON format.
          */
         public Builder step(Long step) {
             this.putQueryParameter("Step", step);

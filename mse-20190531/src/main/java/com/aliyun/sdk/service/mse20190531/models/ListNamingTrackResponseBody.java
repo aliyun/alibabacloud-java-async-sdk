@@ -134,7 +134,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         private java.util.List < Traces> traces; 
 
         /**
-         * The name of the service.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -142,7 +142,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the instance.
+         * The HTTP status code returned.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -150,7 +150,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the node.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -158,7 +158,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The data information.
+         * The number of the returned page.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -166,7 +166,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -174,7 +174,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The push time.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,11 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The group.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +194,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The total number of returned entries.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -198,7 +202,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the service.
+         * The data information.
          */
         public Builder traces(java.util.List < Traces> traces) {
             this.traces = traces;
@@ -334,7 +338,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             private String slaTime; 
 
             /**
-             * The start timestamp. Unit: seconds.
+             * The IP address of the client.
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -342,7 +346,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries to return on each page.
+             * The group.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -350,7 +354,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the page to return.
+             * The number of instances.
              */
             public Builder instanceSize(String instanceSize) {
                 this.instanceSize = instanceSize;
@@ -358,7 +362,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the client.
+             * The name of the node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
@@ -366,7 +370,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * The push time.
              */
             public Builder pushTime(String pushTime) {
                 this.pushTime = pushTime;
@@ -374,11 +378,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: `false`.
-             * <p>
-             * 
-             * *   `true`: sorts the query results in reverse chronological order.
-             * *   `false`: sorts the query results in chronological order.
+             * The total push time.
              */
             public Builder pushTimeAll(String pushTimeAll) {
                 this.pushTimeAll = pushTimeAll;
@@ -386,11 +386,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The language of the response. Valid values:
-             * <p>
-             * 
-             * *   zh: Chinese
-             * *   en: English
+             * The push time for the network.
              */
             public Builder pushTimeNetwork(String pushTimeNetwork) {
                 this.pushTimeNetwork = pushTimeNetwork;
@@ -398,7 +394,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The end timestamp. Unit: seconds.
+             * The name of the service.
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;
@@ -406,7 +402,7 @@ public class ListNamingTrackResponseBody extends TeaModel {
             }
 
             /**
-             * The data structure.
+             * The duration that is specified in the service-level agreement (SLA).
              */
             public Builder slaTime(String slaTime) {
                 this.slaTime = slaTime;

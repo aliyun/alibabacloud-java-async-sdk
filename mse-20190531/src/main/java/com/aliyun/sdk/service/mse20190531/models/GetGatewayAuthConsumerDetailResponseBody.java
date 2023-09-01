@@ -134,7 +134,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code仅仅用来和success同步
+         * The status code. A value of 200 is returned if the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -142,7 +142,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data structure.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,7 +150,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误信息中的占位符
+         * The dynamic part in the error message.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -158,7 +158,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * >  If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -166,7 +169,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code that is returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,7 +177,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +185,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +193,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +201,11 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -322,7 +329,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             private String routeName; 
 
             /**
-             * ConsumerId.
+             * The ID of the consumer.
              */
             public Builder consumerId(Long consumerId) {
                 this.consumerId = consumerId;
@@ -330,7 +337,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * The unique ID of the gateway.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -338,7 +345,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -346,7 +353,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -354,7 +361,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the authorized resource for the consumer.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -362,7 +369,11 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceStatus.
+             * The resource authorization status. Valid values:
+             * <p>
+             * 
+             * *   true: enabled
+             * *   false: disabled
              */
             public Builder resourceStatus(Boolean resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -370,7 +381,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RouteId.
+             * The ID of the route.
              */
             public Builder routeId(Long routeId) {
                 this.routeId = routeId;
@@ -378,7 +389,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RouteName.
+             * The name of the route.
              */
             public Builder routeName(String routeName) {
                 this.routeName = routeName;
@@ -623,7 +634,11 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ConsumerStatus.
+             * The status of the consumer. Valid values:
+             * <p>
+             * 
+             * *   true: enabled
+             * *   false: disabled
              */
             public Builder consumerStatus(Boolean consumerStatus) {
                 this.consumerStatus = consumerStatus;
@@ -631,7 +646,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -639,7 +654,11 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * EncodeType.
+             * The encryption type. Valid values:
+             * <p>
+             * 
+             * *   RSA
+             * *   OCT
              */
             public Builder encodeType(String encodeType) {
                 this.encodeType = encodeType;
@@ -647,7 +666,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayUniqueId.
+             * The unique ID of the gateway.
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;
@@ -655,7 +674,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -663,7 +682,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The update time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -671,7 +690,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the consumer.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -679,7 +698,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Jwks.
+             * The JWT public key. The JSON format is supported.
              */
             public Builder jwks(String jwks) {
                 this.jwks = jwks;
@@ -687,7 +706,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * KeyName.
+             * The name of the key used for JWT-based identity authentication.
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -695,7 +714,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * KeyValue.
+             * The value of the key used for JWT-based identity authentication.
              */
             public Builder keyValue(String keyValue) {
                 this.keyValue = keyValue;
@@ -703,7 +722,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the consumer.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -711,7 +730,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryUser.
+             * The creator.
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -719,7 +738,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceList.
+             * The resource list.
              */
             public Builder resourceList(java.util.List < ResourceList> resourceList) {
                 this.resourceList = resourceList;
@@ -727,7 +746,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TokenName.
+             * The names of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.
              */
             public Builder tokenName(String tokenName) {
                 this.tokenName = tokenName;
@@ -735,7 +754,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TokenPass.
+             * Specifies whether to enable pass-through.
              */
             public Builder tokenPass(Boolean tokenPass) {
                 this.tokenPass = tokenPass;
@@ -743,7 +762,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TokenPosition.
+             * The positions of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.
              */
             public Builder tokenPosition(String tokenPosition) {
                 this.tokenPosition = tokenPosition;
@@ -751,7 +770,7 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TokenPrefix.
+             * The prefixes of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.
              */
             public Builder tokenPrefix(String tokenPrefix) {
                 this.tokenPrefix = tokenPrefix;
@@ -759,7 +778,10 @@ public class GetGatewayAuthConsumerDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The authentication type. Valid values:
+             * <p>
+             * 
+             * *   JWT
              */
             public Builder type(String type) {
                 this.type = type;

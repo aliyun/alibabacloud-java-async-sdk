@@ -21,25 +21,20 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
     private Long groupId;
 
     @Query
+    @NameInMap("Name")
+    private String name;
+
+    @Query
     @NameInMap("Namespace")
     @Validation(maxLength = 64)
     private String namespace;
-
-    @Query
-    @NameInMap("Region")
-    private String region;
-
-    @Query
-    @NameInMap("name")
-    private String name;
 
     private DeleteSwimmingLaneGroupRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.groupId = builder.groupId;
-        this.namespace = builder.namespace;
-        this.region = builder.region;
         this.name = builder.name;
+        this.namespace = builder.namespace;
     }
 
     public static Builder builder() {
@@ -70,32 +65,24 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
     }
 
     /**
-     * @return namespace
-     */
-    public String getNamespace() {
-        return this.namespace;
-    }
-
-    /**
-     * @return region
-     */
-    public String getRegion() {
-        return this.region;
-    }
-
-    /**
      * @return name
      */
     public String getName() {
         return this.name;
     }
 
+    /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
     public static final class Builder extends Request.Builder<DeleteSwimmingLaneGroupRequest, Builder> {
         private String acceptLanguage; 
         private Long groupId; 
-        private String namespace; 
-        private String region; 
         private String name; 
+        private String namespace; 
 
         private Builder() {
             super();
@@ -105,13 +92,16 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.groupId = request.groupId;
-            this.namespace = request.namespace;
-            this.region = request.region;
             this.name = request.name;
+            this.namespace = request.namespace;
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -120,7 +110,7 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the lane group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -129,29 +119,20 @@ public class DeleteSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * MSE命名空间名字
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
+            return this;
+        }
+
+        /**
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
             this.namespace = namespace;
-            return this;
-        }
-
-        /**
-         * Region.
-         */
-        public Builder region(String region) {
-            this.putQueryParameter("Region", region);
-            this.region = region;
-            return this;
-        }
-
-        /**
-         * name.
-         */
-        public Builder name(String name) {
-            this.putQueryParameter("name", name);
-            this.name = name;
             return this;
         }
 

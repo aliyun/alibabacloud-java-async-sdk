@@ -68,7 +68,11 @@ public class ListServiceSourceRequest extends Request {
         } 
 
         /**
-         * duplicatedClusterAliasName
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -77,7 +81,7 @@ public class ListServiceSourceRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);

@@ -225,7 +225,11 @@ public class AddGatewayAuthConsumerRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -234,7 +238,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the consumer.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -243,7 +247,11 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * EncodeType.
+         * The encryption type. Valid values:
+         * <p>
+         * 
+         * *   RSA
+         * *   OCT
          */
         public Builder encodeType(String encodeType) {
             this.putQueryParameter("EncodeType", encodeType);
@@ -252,7 +260,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -261,7 +269,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * Jwks.
+         * The JWT public key. The JSON format is supported.
          */
         public Builder jwks(String jwks) {
             this.putQueryParameter("Jwks", jwks);
@@ -270,7 +278,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * KeyName.
+         * The name of the key used for JWT-based identity authentication.
          */
         public Builder keyName(String keyName) {
             this.putQueryParameter("KeyName", keyName);
@@ -279,7 +287,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * KeyValue.
+         * The value of the key used for JWT-based identity authentication.
          */
         public Builder keyValue(String keyValue) {
             this.putQueryParameter("KeyValue", keyValue);
@@ -288,7 +296,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the consumer.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -297,7 +305,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * TokenName.
+         * The names of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.
          */
         public Builder tokenName(String tokenName) {
             this.putQueryParameter("TokenName", tokenName);
@@ -306,7 +314,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * TokenPass.
+         * Specifies whether to enable pass-through.
          */
         public Builder tokenPass(Boolean tokenPass) {
             this.putQueryParameter("TokenPass", tokenPass);
@@ -315,7 +323,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * TokenPosition.
+         * The positions of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.
          */
         public Builder tokenPosition(String tokenPosition) {
             this.putQueryParameter("TokenPosition", tokenPosition);
@@ -324,7 +332,7 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * TokenPrefix.
+         * The prefixes of the parameters that are required to verify each token. By default, each token is prefixed with Bearer and stored in the Authorization header, such as `Authorization: Bearer <Content of a token>`.
          */
         public Builder tokenPrefix(String tokenPrefix) {
             this.putQueryParameter("TokenPrefix", tokenPrefix);
@@ -333,7 +341,10 @@ public class AddGatewayAuthConsumerRequest extends Request {
         }
 
         /**
-         * Type.
+         * The authentication type. Valid values:
+         * <p>
+         * 
+         * *   JWT
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

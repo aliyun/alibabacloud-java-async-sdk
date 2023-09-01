@@ -86,7 +86,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The name of the MSE namespace.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned if the request failed.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -141,9 +141,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("DbGrayEnable")
         private String dbGrayEnable;
 
-        @NameInMap("Enable")
-        private String enable;
-
         @NameInMap("EntryApp")
         private String entryApp;
 
@@ -168,19 +165,12 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         @NameInMap("Region")
         private String region;
 
-        @NameInMap("Source")
-        private String source;
-
-        @NameInMap("Status")
-        private Integer status;
-
         @NameInMap("UserId")
         private String userId;
 
         private Data(Builder builder) {
             this.appIds = builder.appIds;
             this.dbGrayEnable = builder.dbGrayEnable;
-            this.enable = builder.enable;
             this.entryApp = builder.entryApp;
             this.id = builder.id;
             this.messageQueueFilterSide = builder.messageQueueFilterSide;
@@ -189,8 +179,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             this.namespace = builder.namespace;
             this.recordCanaryDetail = builder.recordCanaryDetail;
             this.region = builder.region;
-            this.source = builder.source;
-            this.status = builder.status;
             this.userId = builder.userId;
         }
 
@@ -214,13 +202,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
          */
         public String getDbGrayEnable() {
             return this.dbGrayEnable;
-        }
-
-        /**
-         * @return enable
-         */
-        public String getEnable() {
-            return this.enable;
         }
 
         /**
@@ -280,20 +261,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         }
 
         /**
-         * @return source
-         */
-        public String getSource() {
-            return this.source;
-        }
-
-        /**
-         * @return status
-         */
-        public Integer getStatus() {
-            return this.status;
-        }
-
-        /**
          * @return userId
          */
         public String getUserId() {
@@ -303,7 +270,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String appIds; 
             private String dbGrayEnable; 
-            private String enable; 
             private String entryApp; 
             private Long id; 
             private String messageQueueFilterSide; 
@@ -312,8 +278,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             private String namespace; 
             private Boolean recordCanaryDetail; 
             private String region; 
-            private String source; 
-            private Integer status; 
             private String userId; 
 
             /**
@@ -325,18 +289,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 是否开启数据库灰度
+             * DbGrayEnable.
              */
             public Builder dbGrayEnable(String dbGrayEnable) {
                 this.dbGrayEnable = dbGrayEnable;
-                return this;
-            }
-
-            /**
-             * Enable.
-             */
-            public Builder enable(String enable) {
-                this.enable = enable;
                 return this;
             }
 
@@ -357,7 +313,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 消息灰度过滤侧
+             * MessageQueueFilterSide.
              */
             public Builder messageQueueFilterSide(String messageQueueFilterSide) {
                 this.messageQueueFilterSide = messageQueueFilterSide;
@@ -373,7 +329,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 应用名
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -381,7 +337,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MSE命名空间名字
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -401,22 +357,6 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
              */
             public Builder region(String region) {
                 this.region = region;
-                return this;
-            }
-
-            /**
-             * Source.
-             */
-            public Builder source(String source) {
-                this.source = source;
-                return this;
-            }
-
-            /**
-             * Status.
-             */
-            public Builder status(Integer status) {
-                this.status = status;
                 return this;
             }
 

@@ -82,20 +82,11 @@ public class GetZookeeperDataImportUrlRequest extends Request {
         } 
 
         /**
-         * The ID of the request.
+         * RestResult
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
-            return this;
-        }
-
-        /**
-         * RestResult
-         */
-        public Builder contentType(String contentType) {
-            this.putQueryParameter("ContentType", contentType);
-            this.contentType = contentType;
             return this;
         }
 
@@ -105,6 +96,15 @@ public class GetZookeeperDataImportUrlRequest extends Request {
          * 
          * *   zh: Chinese
          * *   en: English
+         */
+        public Builder contentType(String contentType) {
+            this.putQueryParameter("ContentType", contentType);
+            this.contentType = contentType;
+            return this;
+        }
+
+        /**
+         * The type of the file.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);

@@ -114,7 +114,11 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -123,7 +127,7 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         }
 
         /**
-         * ConsumerId.
+         * The ID of the consumer.
          */
         public Builder consumerId(Long consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
@@ -132,7 +136,7 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -141,7 +145,7 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         }
 
         /**
-         * IdList.
+         * The list of IDs of the authorized resources that a user wants to update.
          */
         public Builder idList(String idList) {
             this.putQueryParameter("IdList", idList);
@@ -150,7 +154,11 @@ public class UpdateGatewayAuthConsumerResourceStatusRequest extends Request {
         }
 
         /**
-         * ResourceStatus.
+         * The resource authorization status. Valid values:
+         * <p>
+         * 
+         * *   true: enabled
+         * *   false: disabled
          */
         public Builder resourceStatus(Boolean resourceStatus) {
             this.putQueryParameter("ResourceStatus", resourceStatus);

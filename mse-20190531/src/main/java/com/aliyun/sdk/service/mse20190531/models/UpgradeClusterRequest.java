@@ -98,7 +98,11 @@ public class UpgradeClusterRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -107,7 +111,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -116,7 +120,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -125,7 +129,7 @@ public class UpgradeClusterRequest extends Request {
         }
 
         /**
-         * UpgradeVersion.
+         * The destination version.
          */
         public Builder upgradeVersion(String upgradeVersion) {
             this.putQueryParameter("UpgradeVersion", upgradeVersion);

@@ -134,7 +134,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * systemError
+         * The status code. A value of 200 is returned if the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -142,7 +142,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -150,7 +150,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * 动态错误信息中的占位符
+         * The dynamic part in the error message.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -158,7 +158,10 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic part in the error message. This parameter is used to replace the \*\*%s\*\* variable in the **ErrMessage** parameter.
+         * <p>
+         * 
+         * > If the return value of the **ErrMessage** parameter is **The Value of Input Parameter %s is not valid** and the return value of the **DynamicMessage** parameter is **DtsJobId**, the specified **DtsJobId** parameter is invalid.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -166,7 +169,11 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * system error
+         * The error code returned if the request failed. Take note of the following rules:
+         * <p>
+         * 
+         * *   The **ErrorCode** parameter is not returned if the request is successful.
+         * *   The **ErrorCode** parameter is returned if the request fails. For more information, see the **Error codes** section in this topic.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -174,7 +181,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -182,7 +189,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -190,7 +197,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * cluster not found
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -198,7 +205,11 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
         }
 
         /**
-         * mse-100-001
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -406,7 +417,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * Description.
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -414,7 +425,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -422,7 +433,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Module.
+             * A redundant parameter.
              */
             public Builder module(String module) {
                 this.module = module;
@@ -430,7 +441,11 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Mute.
+             * Indicates whether the risk item notification feature is disabled.
+             * <p>
+             * 
+             * *   true: disabled
+             * *   false: enabled
              */
             public Builder mute(Boolean mute) {
                 this.mute = mute;
@@ -438,7 +453,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * NoticeFeature.
+             * A redundant parameter.
              */
             public Builder noticeFeature(Boolean noticeFeature) {
                 this.noticeFeature = noticeFeature;
@@ -446,7 +461,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryUser.
+             * The ID of the user to which the cluster belongs.
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -454,7 +469,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RiskCode.
+             * The risk code.
              */
             public Builder riskCode(String riskCode) {
                 this.riskCode = riskCode;
@@ -462,7 +477,12 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * HIGH, MID, LOW, NONE
+             * The severity of the risk. Valid values:
+             * <p>
+             * 
+             * *   HIGH: high risk
+             * *   MID: medium risk
+             * *   LOW: low risk
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -470,7 +490,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RiskName.
+             * The name of the risk.
              */
             public Builder riskName(String riskName) {
                 this.riskName = riskName;
@@ -478,7 +498,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RiskType.
+             * The type of the risk.
              */
             public Builder riskType(String riskType) {
                 this.riskType = riskType;
@@ -486,7 +506,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Situation.
+             * The situation.
              */
             public Builder situation(String situation) {
                 this.situation = situation;
@@ -494,7 +514,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Suggestion.
+             * The suggestion.
              */
             public Builder suggestion(String suggestion) {
                 this.suggestion = suggestion;
@@ -502,7 +522,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the associated parent task.
              */
             public Builder taskId(Long taskId) {
                 this.taskId = taskId;
@@ -510,7 +530,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * A redundant parameter.
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -518,7 +538,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * A redundant parameter.
              */
             public Builder values(String values) {
                 this.values = values;
@@ -763,7 +783,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             private String versionCode; 
 
             /**
-             * AppVersion.
+             * The complete version number.
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -771,7 +791,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The billing method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -779,7 +799,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterType.
+             * The type of the cluster.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -787,7 +807,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the task was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -795,7 +815,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -803,7 +823,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ImageVersion.
+             * A redundant parameter.
              */
             public Builder imageVersion(String imageVersion) {
                 this.imageVersion = imageVersion;
@@ -811,7 +831,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -819,7 +839,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryUser.
+             * The ID of the user to which the instance belongs.
              */
             public Builder primaryUser(String primaryUser) {
                 this.primaryUser = primaryUser;
@@ -827,7 +847,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Replica.
+             * The number of nodes in the instance.
              */
             public Builder replica(String replica) {
                 this.replica = replica;
@@ -835,7 +855,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RiskList.
+             * The list of risk items.
              */
             public Builder riskList(java.util.List < RiskList> riskList) {
                 this.riskList = riskList;
@@ -843,7 +863,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The total score.
              */
             public Builder score(Integer score) {
                 this.score = score;
@@ -851,7 +871,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * The specifications.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -859,7 +879,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -867,7 +887,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TotalItem.
+             * The total number of check items.
              */
             public Builder totalItem(Integer totalItem) {
                 this.totalItem = totalItem;
@@ -875,7 +895,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TotalRisk.
+             * The total number of risk items.
              */
             public Builder totalRisk(Integer totalRisk) {
                 this.totalRisk = totalRisk;
@@ -883,7 +903,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * A redundant parameter.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -891,7 +911,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The last update time.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -899,7 +919,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * VersionCode.
+             * The version number.
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;
@@ -976,7 +996,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * 实例列表的页码
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -984,7 +1004,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 输入时设置的每页行数
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -992,7 +1012,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The list of health check tasks.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -1000,7 +1020,7 @@ public class ListClusterHealthCheckTaskResponseBody extends TeaModel {
             }
 
             /**
-             * 查询到的实例总数
+             * The total number of returned entries.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

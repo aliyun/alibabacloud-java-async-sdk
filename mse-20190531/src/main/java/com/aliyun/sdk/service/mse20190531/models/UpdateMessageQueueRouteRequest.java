@@ -156,7 +156,11 @@ public class UpdateMessageQueueRouteRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -165,7 +169,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -174,7 +178,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * 应用名称
+         * AppName.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -183,7 +187,11 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether the canary release for messaging feature is enabled for the application. Valid values:
+         * <p>
+         * 
+         * *   `true`: enabled
+         * *   `false`: disabled
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -192,7 +200,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * FilterSide.
+         * The side for message filtering when the canary release for messaging feature is enabled.
          */
         public Builder filterSide(String filterSide) {
             this.putQueryParameter("FilterSide", filterSide);
@@ -201,7 +209,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * MSE命名空间名字
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -210,7 +218,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region ID.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -219,7 +227,7 @@ public class UpdateMessageQueueRouteRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tag that is negligible for the untagged environment of the application.
          */
         public Builder tags(java.util.List < String > tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

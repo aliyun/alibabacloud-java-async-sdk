@@ -124,11 +124,11 @@ public class QueryInstancesInfoRequest extends Request {
         } 
 
         /**
-         * Indicates whether the request was successful. Valid values:
+         * The language of the response. Valid values:
          * <p>
          * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -137,7 +137,7 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         /**
-         * The ID of the order.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -146,7 +146,7 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         /**
-         * The ID of the region where the instance resides.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -155,7 +155,7 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         /**
-         * The extended request parameters in the JSON format.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -164,11 +164,7 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The ID of the region where the instance resides.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -177,7 +173,7 @@ public class QueryInstancesInfoRequest extends Request {
         }
 
         /**
-         * BaseResult
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

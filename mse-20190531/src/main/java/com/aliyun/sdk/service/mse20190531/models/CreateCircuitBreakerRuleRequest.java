@@ -256,7 +256,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * AcceptLanguage.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -265,7 +265,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 应用ID。
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -274,7 +274,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 应用名称。
+         * AppName.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -283,7 +283,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 规则的启用状态。
+         * Enable.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -292,7 +292,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 熔断恢复每步最小通过数目，默认值为1。
+         * HalfOpenBaseAmountPerStep.
          */
         public Builder halfOpenBaseAmountPerStep(Integer halfOpenBaseAmountPerStep) {
             this.putQueryParameter("HalfOpenBaseAmountPerStep", halfOpenBaseAmountPerStep);
@@ -301,7 +301,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 熔断恢复阶段数，默认值为1。
+         * HalfOpenRecoveryStepNum.
          */
         public Builder halfOpenRecoveryStepNum(Integer halfOpenRecoveryStepNum) {
             this.putQueryParameter("HalfOpenRecoveryStepNum", halfOpenRecoveryStepNum);
@@ -310,7 +310,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 慢调用RT（单位毫秒）：超过该时长则判定为慢请求，阈值类型为慢调用比例时必填。
+         * MaxAllowedRtMs.
          */
         public Builder maxAllowedRtMs(Integer maxAllowedRtMs) {
             this.putQueryParameter("MaxAllowedRtMs", maxAllowedRtMs);
@@ -319,7 +319,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 触发熔断的最小请求数目，若当前统计窗口请求数小于此值，即使达到熔断条件规则也不会触发。默认值为10。
+         * MinRequestAmount.
          */
         public Builder minRequestAmount(Integer minRequestAmount) {
             this.putQueryParameter("MinRequestAmount", minRequestAmount);
@@ -328,7 +328,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 应用所属的微服务命名空间。
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -337,7 +337,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 集群所在地域。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -346,7 +346,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 接口名称：适用该规则的应用资源。需要与控制台接口详情处接口名称一致。
+         * Resource.
          */
         public Builder resource(String resource) {
             this.putQueryParameter("Resource", resource);
@@ -355,7 +355,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 熔断时长（单位毫秒）：即熔断触发后持续的时间。资源进入熔断状态后，在配置的熔断时长内，请求都会快速失败。取值需要为1000的整数倍，默认值为10000，即10秒。
+         * RetryTimeoutMs.
          */
         public Builder retryTimeoutMs(Integer retryTimeoutMs) {
             this.putQueryParameter("RetryTimeoutMs", retryTimeoutMs);
@@ -364,7 +364,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 统计窗口时长（单位毫秒）：统计的时间窗口长度，取值范围为1秒~120分钟。默认值为20000，即20秒。
+         * StatIntervalMs.
          */
         public Builder statIntervalMs(Integer statIntervalMs) {
             this.putQueryParameter("StatIntervalMs", statIntervalMs);
@@ -373,7 +373,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 阈值类型：选择以慢调用比例或异常比例作为阈值。
+         * Strategy.
          */
         public Builder strategy(Integer strategy) {
             this.putQueryParameter("Strategy", strategy);
@@ -382,7 +382,7 @@ public class CreateCircuitBreakerRuleRequest extends Request {
         }
 
         /**
-         * 熔断比例阈值：触发熔断的比例阈值，取值范围为0 - 1，代表0% - 100%。
+         * Threshold.
          */
         public Builder threshold(Float threshold) {
             this.putQueryParameter("Threshold", threshold);

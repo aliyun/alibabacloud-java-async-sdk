@@ -127,7 +127,11 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * clusterNotFound
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -136,7 +140,13 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * duplicated cluster alias name
+         * Specifies whether to delete all tags. This parameter takes effect only when the TagKey.N parameter is not specified. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -145,7 +155,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -154,7 +164,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * mse-100-007
+         * The resource IDs. A maximum of 50 resource IDs can be specified.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -163,7 +173,11 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The type of the resource. Valid values:
+         * <p>
+         * 
+         * *   CLUSTER: MSE instance
+         * *   GATEWAY: cloud-native gateway
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -172,7 +186,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * illegal request:%s
+         * The tag keys. A maximum of 20 tag keys are supported.
          */
         public Builder tagKey(java.util.List < String > tagKey) {
             this.putQueryParameter("TagKey", tagKey);

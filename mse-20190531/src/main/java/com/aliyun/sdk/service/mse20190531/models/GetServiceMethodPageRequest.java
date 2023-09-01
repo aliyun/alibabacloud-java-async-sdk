@@ -239,7 +239,7 @@ public class GetServiceMethodPageRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * AcceptLanguage.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -248,7 +248,7 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * 应用id。
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -257,7 +257,7 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * 应用名称
+         * AppName.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -266,7 +266,7 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * 服务提供者ip。
+         * Ip.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -275,7 +275,7 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * 接口所在的Controller类全称。
+         * MethodController.
          */
         public Builder methodController(String methodController) {
             this.putQueryParameter("MethodController", methodController);
@@ -284,7 +284,7 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * 方法名。
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -293,7 +293,7 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * 获取第几页的数据。
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -302,7 +302,7 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * 每一页多少条。
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -311,7 +311,7 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * 接口对应的请求路径。
+         * Path.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -329,7 +329,7 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * 服务分组。
+         * ServiceGroup.
          */
         public Builder serviceGroup(String serviceGroup) {
             this.putQueryParameter("ServiceGroup", serviceGroup);
@@ -338,7 +338,7 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * 服务名。
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -347,7 +347,7 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * 服务类型。
+         * ServiceType.
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -356,7 +356,7 @@ public class GetServiceMethodPageRequest extends Request {
         }
 
         /**
-         * 服务版本。
+         * ServiceVersion.
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);

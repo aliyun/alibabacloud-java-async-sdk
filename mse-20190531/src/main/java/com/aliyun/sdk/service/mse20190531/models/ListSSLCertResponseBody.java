@@ -98,7 +98,7 @@ public class ListSSLCertResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Queries the certificates associated with the domain names of a gateway.
+         * The status code returned. A value of 200 indicates that the request is successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListSSLCertResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListSSLCertResponseBody extends TeaModel {
         }
 
         /**
-         * gw-3f97e2989c344f35ab3fd62b19f1****
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListSSLCertResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the certificate.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -138,7 +138,11 @@ public class ListSSLCertResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -286,7 +290,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             private String sans; 
 
             /**
-             * AfterDate.
+             * The validation time.
              */
             public Builder afterDate(String afterDate) {
                 this.afterDate = afterDate;
@@ -294,7 +298,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * Algorithm.
+             * The algorithm.
              */
             public Builder algorithm(String algorithm) {
                 this.algorithm = algorithm;
@@ -302,7 +306,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * BeforeDate.
+             * The expiration time.
              */
             public Builder beforeDate(String beforeDate) {
                 this.beforeDate = beforeDate;
@@ -310,7 +314,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * CertIdentifier.
+             * The ID of the certificate.
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -318,7 +322,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * CertName.
+             * The name of the certificate.
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -326,7 +330,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * CommonName.
+             * The domain name with which the certificate is associated.
              */
             public Builder commonName(String commonName) {
                 this.commonName = commonName;
@@ -334,7 +338,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * GmtAfter.
+             * The validation time.
              */
             public Builder gmtAfter(String gmtAfter) {
                 this.gmtAfter = gmtAfter;
@@ -342,7 +346,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * GmtBefore.
+             * The expiration time.
              */
             public Builder gmtBefore(String gmtBefore) {
                 this.gmtBefore = gmtBefore;
@@ -350,7 +354,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * The issuer.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -358,7 +362,7 @@ public class ListSSLCertResponseBody extends TeaModel {
             }
 
             /**
-             * Sans.
+             * The SSL certificate.
              */
             public Builder sans(String sans) {
                 this.sans = sans;

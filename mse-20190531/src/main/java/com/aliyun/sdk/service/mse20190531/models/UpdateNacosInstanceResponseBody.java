@@ -98,7 +98,7 @@ public class UpdateNacosInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 响应码
+         * The response code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class UpdateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 修改结果
+         * The result of the modification.
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class UpdateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * http状态码
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class UpdateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 响应信息
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class UpdateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class UpdateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 成功标志
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

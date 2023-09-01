@@ -12,14 +12,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyTagPoliciesResponseBody</p>
  */
 public class ApplyTagPoliciesResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private Integer code;
-
     @NameInMap("Data")
     private java.util.List < Data> data;
-
-    @NameInMap("HttpStatusCode")
-    private Integer httpStatusCode;
 
     @NameInMap("Message")
     private String message;
@@ -31,9 +25,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
     private Boolean success;
 
     private ApplyTagPoliciesResponseBody(Builder builder) {
-        this.code = builder.code;
         this.data = builder.data;
-        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -48,24 +40,10 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public Integer getCode() {
-        return this.code;
-    }
-
-    /**
      * @return data
      */
     public java.util.List < Data> getData() {
         return this.data;
-    }
-
-    /**
-     * @return httpStatusCode
-     */
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     /**
@@ -90,23 +68,13 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
         private java.util.List < Data> data; 
-        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Code.
-         */
-        public Builder code(Integer code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,15 +82,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
-         */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +90,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +98,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -286,7 +246,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * CarryData.
+             * Indicates whether the field is the primary key.
              */
             public Builder carryData(Boolean carryData) {
                 this.carryData = carryData;
@@ -294,7 +254,11 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Enable.
+             * Indicates whether the routing rule is enabled.
+             * <p>
+             * 
+             * *   `true`: enabled
+             * *   `false`: disabled
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -302,7 +266,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the primary key.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -310,7 +274,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceNum.
+             * The number of instances.
              */
             public Builder instanceNum(Integer instanceNum) {
                 this.instanceNum = instanceNum;
@@ -318,7 +282,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The policy name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -326,7 +290,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Rate.
+             * The rate.
              */
             public Builder rate(Integer rate) {
                 this.rate = rate;
@@ -334,7 +298,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Remove.
+             * Indicates whether the routing rule is deleted.
              */
             public Builder remove(Boolean remove) {
                 this.remove = remove;
@@ -342,7 +306,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Rules.
+             * The details of the routing rule.
              */
             public Builder rules(String rules) {
                 this.rules = rules;
@@ -350,7 +314,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -358,7 +322,7 @@ public class ApplyTagPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

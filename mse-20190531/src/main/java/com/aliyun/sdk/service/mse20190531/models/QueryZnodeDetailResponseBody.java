@@ -86,7 +86,7 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(String success) {
             this.success = success;
@@ -194,7 +198,7 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
             private String path; 
 
             /**
-             * Data.
+             * The data of the node.
              */
             public Builder data(String data) {
                 this.data = data;
@@ -202,7 +206,11 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Dir.
+             * Indicates whether the node information was returned. Valid values:
+             * <p>
+             * 
+             * *   `true`: The node information was returned.
+             * *   `false`: The node information failed to be returned.
              */
             public Builder dir(Boolean dir) {
                 this.dir = dir;
@@ -210,7 +218,7 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -218,7 +226,7 @@ public class QueryZnodeDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The path of the node.
              */
             public Builder path(String path) {
                 this.path = path;

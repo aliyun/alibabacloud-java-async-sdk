@@ -25,6 +25,10 @@ public class ExportNacosConfigRequest extends Request {
     private String dataId;
 
     @Query
+    @NameInMap("DataIds")
+    private String dataIds;
+
+    @Query
     @NameInMap("Group")
     private String group;
 
@@ -46,6 +50,7 @@ public class ExportNacosConfigRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.appName = builder.appName;
         this.dataId = builder.dataId;
+        this.dataIds = builder.dataIds;
         this.group = builder.group;
         this.ids = builder.ids;
         this.instanceId = builder.instanceId;
@@ -87,6 +92,13 @@ public class ExportNacosConfigRequest extends Request {
     }
 
     /**
+     * @return dataIds
+     */
+    public String getDataIds() {
+        return this.dataIds;
+    }
+
+    /**
      * @return group
      */
     public String getGroup() {
@@ -118,6 +130,7 @@ public class ExportNacosConfigRequest extends Request {
         private String acceptLanguage; 
         private String appName; 
         private String dataId; 
+        private String dataIds; 
         private String group; 
         private String ids; 
         private String instanceId; 
@@ -132,6 +145,7 @@ public class ExportNacosConfigRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.appName = request.appName;
             this.dataId = request.dataId;
+            this.dataIds = request.dataIds;
             this.group = request.group;
             this.ids = request.ids;
             this.instanceId = request.instanceId;
@@ -139,7 +153,11 @@ public class ExportNacosConfigRequest extends Request {
         } 
 
         /**
-         * clusterNotFound
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -148,7 +166,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * mse-200-021
+         * The tag of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -157,7 +175,13 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * illegalRequest
+         * The ID of the data that you want to export.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   Multiple export methods are supported.
+         * *   If you want to export a single configuration, you must leave the Ids parameter empty and specify the DataID and Group parameters.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -166,7 +190,16 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * illegal request:%s
+         * DataIds.
+         */
+        public Builder dataIds(String dataIds) {
+            this.putQueryParameter("DataIds", dataIds);
+            this.dataIds = dataIds;
+            return this;
+        }
+
+        /**
+         * The name of the configuration group.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -175,7 +208,10 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * mse-100-007
+         * The ID of the primary key of a configuration item.
+         * <p>
+         * 
+         * >  - Multiple export methods are supported. You must specify this parameter if you want to export multiple configurations. - You can obtain the value of this parameter by calling the ListNacosConfigs operation. - If you specify this parameter, multiple configurations are exported. The DataId and Group parameters are invalid.
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -184,7 +220,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -193,7 +229,7 @@ public class ExportNacosConfigRequest extends Request {
         }
 
         /**
-         * duplicated cluster alias name
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

@@ -41,7 +41,12 @@ public class CreateClusterRequest extends Request {
 
     @Query
     @NameInMap("DiskType")
+    @Deprecated
     private String diskType;
+
+    @Query
+    @NameInMap("EipEnabled")
+    private Boolean eipEnabled;
 
     @Query
     @NameInMap("InstanceCount")
@@ -63,6 +68,7 @@ public class CreateClusterRequest extends Request {
 
     @Query
     @NameInMap("PrivateSlbSpecification")
+    @Deprecated
     private String privateSlbSpecification;
 
     @Query
@@ -71,6 +77,7 @@ public class CreateClusterRequest extends Request {
 
     @Query
     @NameInMap("PubSlbSpecification")
+    @Deprecated
     private String pubSlbSpecification;
 
     @Query
@@ -84,6 +91,10 @@ public class CreateClusterRequest extends Request {
     @Query
     @NameInMap("ResourceGroupId")
     private String resourceGroupId;
+
+    @Query
+    @NameInMap("SecurityGroupType")
+    private String securityGroupType;
 
     @Query
     @NameInMap("Tag")
@@ -106,6 +117,7 @@ public class CreateClusterRequest extends Request {
         this.clusterVersion = builder.clusterVersion;
         this.connectionType = builder.connectionType;
         this.diskType = builder.diskType;
+        this.eipEnabled = builder.eipEnabled;
         this.instanceCount = builder.instanceCount;
         this.instanceName = builder.instanceName;
         this.mseVersion = builder.mseVersion;
@@ -116,6 +128,7 @@ public class CreateClusterRequest extends Request {
         this.region = builder.region;
         this.requestPars = builder.requestPars;
         this.resourceGroupId = builder.resourceGroupId;
+        this.securityGroupType = builder.securityGroupType;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -181,6 +194,13 @@ public class CreateClusterRequest extends Request {
      */
     public String getDiskType() {
         return this.diskType;
+    }
+
+    /**
+     * @return eipEnabled
+     */
+    public Boolean getEipEnabled() {
+        return this.eipEnabled;
     }
 
     /**
@@ -254,6 +274,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return securityGroupType
+     */
+    public String getSecurityGroupType() {
+        return this.securityGroupType;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -282,6 +309,7 @@ public class CreateClusterRequest extends Request {
         private String clusterVersion; 
         private String connectionType; 
         private String diskType; 
+        private Boolean eipEnabled; 
         private Integer instanceCount; 
         private String instanceName; 
         private String mseVersion; 
@@ -292,6 +320,7 @@ public class CreateClusterRequest extends Request {
         private String region; 
         private String requestPars; 
         private String resourceGroupId; 
+        private String securityGroupType; 
         private java.util.List < Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
@@ -309,6 +338,7 @@ public class CreateClusterRequest extends Request {
             this.clusterVersion = request.clusterVersion;
             this.connectionType = request.connectionType;
             this.diskType = request.diskType;
+            this.eipEnabled = request.eipEnabled;
             this.instanceCount = request.instanceCount;
             this.instanceName = request.instanceName;
             this.mseVersion = request.mseVersion;
@@ -319,13 +349,18 @@ public class CreateClusterRequest extends Request {
             this.region = request.region;
             this.requestPars = request.requestPars;
             this.resourceGroupId = request.resourceGroupId;
+            this.securityGroupType = request.securityGroupType;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
         } 
 
         /**
-         * The request is successfully processed.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -339,206 +374,6 @@ public class CreateClusterRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
-            return this;
-        }
-
-        /**
-         * The specifications of the internal-facing SLB instance. Valid values:
-         * <p>
-         * 
-         * *   `slb.s1.small`
-         * *   `slb.s3.medium`
-         */
-        public Builder clusterSpecification(String clusterSpecification) {
-            this.putQueryParameter("ClusterSpecification", clusterSpecification);
-            this.clusterSpecification = clusterSpecification;
-            return this;
-        }
-
-        /**
-         * The extended request parameters in the JSON format.
-         */
-        public Builder clusterType(String clusterType) {
-            this.putQueryParameter("ClusterType", clusterType);
-            this.clusterType = clusterType;
-            return this;
-        }
-
-        /**
-         * The network connection type. Valid values:
-         * <p>
-         * 
-         * *   slb
-         * *   eni
-         */
-        public Builder clusterVersion(String clusterVersion) {
-            this.putQueryParameter("ClusterVersion", clusterVersion);
-            this.clusterVersion = clusterVersion;
-            return this;
-        }
-
-        /**
-         * The ID of the resource group. For the details of resource groups, see [View basic information of a resource group](~~457230~~).
-         */
-        public Builder connectionType(String connectionType) {
-            this.putQueryParameter("ConnectionType", connectionType);
-            this.connectionType = connectionType;
-            return this;
-        }
-
-        /**
-         * The number of nodes in the instance. Valid values: 1 to 9.
-         * <p>
-         * 
-         * \[Professional Edition]
-         * 
-         * *   The number of nodes in an instance is greater than or equal to 3 and must be an odd number.
-         * 
-         * \[Developer Edition]
-         * 
-         * *   Only one node can be deployed for an instance.
-         */
-        public Builder diskType(String diskType) {
-            this.putQueryParameter("DiskType", diskType);
-            this.diskType = diskType;
-            return this;
-        }
-
-        /**
-         * The region where the instance resides. Examples:
-         * <p>
-         * 
-         * *   `cn-hangzhou`: China (Hangzhou)
-         * *   `cn-beijing`: China (Beijing)
-         * *   `cn-shanghai`: China (Shanghai)
-         * *   `cn-zhangjiakou`: China (Zhangjiakou)
-         * *   `cn-shenzhen`: China (Shenzhen)
-         */
-        public Builder instanceCount(Integer instanceCount) {
-            this.putQueryParameter("InstanceCount", instanceCount);
-            this.instanceCount = instanceCount;
-            return this;
-        }
-
-        /**
-         * The key of a tag.
-         */
-        public Builder instanceName(String instanceName) {
-            this.putQueryParameter("InstanceName", instanceName);
-            this.instanceName = instanceName;
-            return this;
-        }
-
-        /**
-         * The tags.
-         */
-        public Builder mseVersion(String mseVersion) {
-            this.putQueryParameter("MseVersion", mseVersion);
-            this.mseVersion = mseVersion;
-            return this;
-        }
-
-        /**
-         * The engine version of the instance. Valid values:
-         * <p>
-         * 
-         * \[Professional version]
-         * 
-         * *   `NACOS_2_0_0`: Nacos 2.0.0
-         * *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
-         * 
-         * \[Developer Edition]
-         * 
-         * *   `NACOS_2_0_0`: Nacos 2.0.0
-         * *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
-         */
-        public Builder netType(String netType) {
-            this.putQueryParameter("NetType", netType);
-            this.netType = netType;
-            return this;
-        }
-
-        /**
-         * The name of the instance.
-         */
-        public Builder privateSlbSpecification(String privateSlbSpecification) {
-            this.putQueryParameter("PrivateSlbSpecification", privateSlbSpecification);
-            this.privateSlbSpecification = privateSlbSpecification;
-            return this;
-        }
-
-        /**
-         * The network type of the MSE instance. Valid values:
-         * <p>
-         * 
-         * *   `privatenet`: VPC
-         * *   `pubnet`: Internet
-         */
-        public Builder pubNetworkFlow(String pubNetworkFlow) {
-            this.putQueryParameter("PubNetworkFlow", pubNetworkFlow);
-            this.pubNetworkFlow = pubNetworkFlow;
-            return this;
-        }
-
-        /**
-         * The ID of the vSwitch.
-         */
-        public Builder pubSlbSpecification(String pubSlbSpecification) {
-            this.putQueryParameter("PubSlbSpecification", pubSlbSpecification);
-            this.pubSlbSpecification = pubSlbSpecification;
-            return this;
-        }
-
-        /**
-         * Set this parameter unless otherwise specified. Valid values:
-         * <p>
-         * 
-         * *   `mse_pro`: Professional Edition
-         * *   `mse_dev`: Developer Edition
-         */
-        public Builder region(String region) {
-            this.putQueryParameter("Region", region);
-            this.region = region;
-            return this;
-        }
-
-        /**
-         * The list of the tags that you want to add.
-         */
-        public Builder requestPars(String requestPars) {
-            this.putQueryParameter("RequestPars", requestPars);
-            this.requestPars = requestPars;
-            return this;
-        }
-
-        /**
-         * The value of a tag.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
-            return this;
-        }
-
-        /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
-         */
-        public Builder tag(java.util.List < Tag> tag) {
-            this.putQueryParameter("Tag", tag);
-            this.tag = tag;
-            return this;
-        }
-
-        /**
-         * The type of the instance. Valid values: ZooKeeper and Nacos-Ans.
-         */
-        public Builder vSwitchId(String vSwitchId) {
-            this.putQueryParameter("VSwitchId", vSwitchId);
-            this.vSwitchId = vSwitchId;
             return this;
         }
 
@@ -558,6 +393,230 @@ public class CreateClusterRequest extends Request {
          * 
          * *   `MSE_SC_1_2_60_c`: 1 vCPU and 2 GB of memory
          * *   `MSE_SC_2_4_60_c`: 2 vCPUs and 4 GB of memory
+         */
+        public Builder clusterSpecification(String clusterSpecification) {
+            this.putQueryParameter("ClusterSpecification", clusterSpecification);
+            this.clusterSpecification = clusterSpecification;
+            return this;
+        }
+
+        /**
+         * The type of the instance. Valid values: ZooKeeper and Nacos-Ans.
+         */
+        public Builder clusterType(String clusterType) {
+            this.putQueryParameter("ClusterType", clusterType);
+            this.clusterType = clusterType;
+            return this;
+        }
+
+        /**
+         * The engine version of the instance. Valid values:
+         * <p>
+         * 
+         * \[Professional version]
+         * 
+         * *   `NACOS_2_0_0`: Nacos 2.0.0
+         * *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
+         * 
+         * \[Developer Edition]
+         * 
+         * *   `NACOS_2_0_0`: Nacos 2.0.0
+         * *   `ZooKeeper_3_8_0`: ZooKeeper 3.8.0
+         */
+        public Builder clusterVersion(String clusterVersion) {
+            this.putQueryParameter("ClusterVersion", clusterVersion);
+            this.clusterVersion = clusterVersion;
+            return this;
+        }
+
+        /**
+         * The network connection type. Valid values:
+         * <p>
+         * 
+         * *   slb
+         * *   eni
+         */
+        public Builder connectionType(String connectionType) {
+            this.putQueryParameter("ConnectionType", connectionType);
+            this.connectionType = connectionType;
+            return this;
+        }
+
+        /**
+         * The disk type. Valid values:
+         * <p>
+         * 
+         * *   alicloud-disk-ssd
+         * *   alicloud-disk-essd-pl1
+         */
+        public Builder diskType(String diskType) {
+            this.putQueryParameter("DiskType", diskType);
+            this.diskType = diskType;
+            return this;
+        }
+
+        /**
+         * EipEnabled.
+         */
+        public Builder eipEnabled(Boolean eipEnabled) {
+            this.putQueryParameter("EipEnabled", eipEnabled);
+            this.eipEnabled = eipEnabled;
+            return this;
+        }
+
+        /**
+         * The number of nodes in the instance. Valid values: 1 to 9.
+         * <p>
+         * 
+         * \[Professional Edition]
+         * 
+         * *   The number of nodes in an instance is greater than or equal to 3 and must be an odd number.
+         * 
+         * \[Developer Edition]
+         * 
+         * *   Only one node can be deployed for an instance.
+         */
+        public Builder instanceCount(Integer instanceCount) {
+            this.putQueryParameter("InstanceCount", instanceCount);
+            this.instanceCount = instanceCount;
+            return this;
+        }
+
+        /**
+         * The name of the instance.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * Set this parameter unless otherwise specified. Valid values:
+         * <p>
+         * 
+         * *   `mse_pro`: Professional Edition
+         * *   `mse_dev`: Developer Edition
+         */
+        public Builder mseVersion(String mseVersion) {
+            this.putQueryParameter("MseVersion", mseVersion);
+            this.mseVersion = mseVersion;
+            return this;
+        }
+
+        /**
+         * The network type of the MSE instance. Valid values:
+         * <p>
+         * 
+         * *   `privatenet`: VPC
+         * *   `pubnet`: Internet
+         */
+        public Builder netType(String netType) {
+            this.putQueryParameter("NetType", netType);
+            this.netType = netType;
+            return this;
+        }
+
+        /**
+         * The specifications of the internal-facing SLB instance. Valid values:
+         * <p>
+         * 
+         * *   `slb.s1.small`
+         * *   `slb.s3.medium`
+         */
+        public Builder privateSlbSpecification(String privateSlbSpecification) {
+            this.putQueryParameter("PrivateSlbSpecification", privateSlbSpecification);
+            this.privateSlbSpecification = privateSlbSpecification;
+            return this;
+        }
+
+        /**
+         * The public bandwidth. Unit: Mbit/s.\
+         * <p>
+         * Valid values: 0 to 5000. The value 0 indicates no access to the Internet.
+         */
+        public Builder pubNetworkFlow(String pubNetworkFlow) {
+            this.putQueryParameter("PubNetworkFlow", pubNetworkFlow);
+            this.pubNetworkFlow = pubNetworkFlow;
+            return this;
+        }
+
+        /**
+         * The specifications of the Internet-facing Server Load Balancer (SLB) instance. Valid values:
+         * <p>
+         * 
+         * *   `slb.s1.small`
+         * *   `slb.s3.medium`
+         */
+        public Builder pubSlbSpecification(String pubSlbSpecification) {
+            this.putQueryParameter("PubSlbSpecification", pubSlbSpecification);
+            this.pubSlbSpecification = pubSlbSpecification;
+            return this;
+        }
+
+        /**
+         * The region where the instance resides. Examples:
+         * <p>
+         * 
+         * *   `cn-hangzhou`: China (Hangzhou)
+         * *   `cn-beijing`: China (Beijing)
+         * *   `cn-shanghai`: China (Shanghai)
+         * *   `cn-zhangjiakou`: China (Zhangjiakou)
+         * *   `cn-shenzhen`: China (Shenzhen)
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("Region", region);
+            this.region = region;
+            return this;
+        }
+
+        /**
+         * The extended request parameters in the JSON format.
+         */
+        public Builder requestPars(String requestPars) {
+            this.putQueryParameter("RequestPars", requestPars);
+            this.requestPars = requestPars;
+            return this;
+        }
+
+        /**
+         * The ID of the resource group. For the details of resource groups, see [View basic information of a resource group](~~457230~~).
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupType.
+         */
+        public Builder securityGroupType(String securityGroupType) {
+            this.putQueryParameter("SecurityGroupType", securityGroupType);
+            this.securityGroupType = securityGroupType;
+            return this;
+        }
+
+        /**
+         * The list of the tags that you want to add.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * The ID of the vSwitch.
+         */
+        public Builder vSwitchId(String vSwitchId) {
+            this.putQueryParameter("VSwitchId", vSwitchId);
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * The ID of the virtual private cloud (VPC).
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -611,7 +670,7 @@ public class CreateClusterRequest extends Request {
             private String value; 
 
             /**
-             * The ID of the request.
+             * The key of a tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -619,7 +678,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * The message returned.
+             * The value of a tag.
              */
             public Builder value(String value) {
                 this.value = value;

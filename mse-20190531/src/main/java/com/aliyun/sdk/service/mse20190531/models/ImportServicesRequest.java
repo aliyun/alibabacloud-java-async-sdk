@@ -138,7 +138,11 @@ public class ImportServicesRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -165,7 +169,7 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -174,7 +178,7 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * ServiceList.
+         * The information about services.
          */
         public Builder serviceList(java.util.List < ServiceList> serviceList) {
             String serviceListShrink = shrink(serviceList, "ServiceList", "json");
@@ -184,7 +188,13 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * 服务来源
+         * The service source. Valid values:
+         * <p>
+         * 
+         * *   MSE: MSE Nacos instance
+         * *   K8s: ACK cluster
+         * *   VIP: fixed address
+         * *   DNS: DNS domain
          */
         public Builder sourceType(String sourceType) {
             this.putQueryParameter("SourceType", sourceType);
@@ -193,7 +203,14 @@ public class ImportServicesRequest extends Request {
         }
 
         /**
-         * TlsSetting.
+         * The Transport Layer Security (TLS) settings. Valid values:
+         * <p>
+         * 
+         * *   mode: TLS mode
+         * *   certId: certificate ID
+         * *   caCertId: CA certificate ID
+         * *   caCertContent: CA certificate public key
+         * *   sni: service name identification
          */
         public Builder tlsSetting(String tlsSetting) {
             this.putQueryParameter("TlsSetting", tlsSetting);
@@ -295,7 +312,7 @@ public class ImportServicesRequest extends Request {
             private String serviceProtocol; 
 
             /**
-             * GroupName.
+             * The group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -303,7 +320,7 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * Ips.
+             * The IP addresses of the service.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -311,7 +328,7 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name of the service.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -319,7 +336,7 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -327,7 +344,7 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * 服务的端口
+             * The port of the service.
              */
             public Builder servicePort(Long servicePort) {
                 this.servicePort = servicePort;
@@ -335,7 +352,7 @@ public class ImportServicesRequest extends Request {
             }
 
             /**
-             * 服务的协议版本
+             * The protocol of the service.
              */
             public Builder serviceProtocol(String serviceProtocol) {
                 this.serviceProtocol = serviceProtocol;

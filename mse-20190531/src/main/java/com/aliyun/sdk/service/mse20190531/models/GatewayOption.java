@@ -86,7 +86,7 @@ public class GatewayOption extends TeaModel {
         private TraceDetails traceDetails; 
 
         /**
-         * 是否禁用http
+         * DisableHttp2Alpn.
          */
         public Builder disableHttp2Alpn(Boolean disableHttp2Alpn) {
             this.disableHttp2Alpn = disableHttp2Alpn;
@@ -94,7 +94,7 @@ public class GatewayOption extends TeaModel {
         }
 
         /**
-         * 是否开启硬件加速
+         * EnableHardwareAcceleration.
          */
         public Builder enableHardwareAcceleration(Boolean enableHardwareAcceleration) {
             this.enableHardwareAcceleration = enableHardwareAcceleration;
@@ -102,7 +102,7 @@ public class GatewayOption extends TeaModel {
         }
 
         /**
-         * 是否开启waf
+         * EnableWaf.
          */
         public Builder enableWaf(Boolean enableWaf) {
             this.enableWaf = enableWaf;
@@ -110,7 +110,7 @@ public class GatewayOption extends TeaModel {
         }
 
         /**
-         * 日志配置详情
+         * LogConfigDetails.
          */
         public Builder logConfigDetails(LogConfigDetails logConfigDetails) {
             this.logConfigDetails = logConfigDetails;
@@ -118,7 +118,7 @@ public class GatewayOption extends TeaModel {
         }
 
         /**
-         * xtrace config option
+         * TraceDetails.
          */
         public Builder traceDetails(TraceDetails traceDetails) {
             this.traceDetails = traceDetails;
@@ -183,7 +183,7 @@ public class GatewayOption extends TeaModel {
             private String projectName; 
 
             /**
-             * 是否开启日志投递
+             * LogEnabled.
              */
             public Builder logEnabled(Boolean logEnabled) {
                 this.logEnabled = logEnabled;
@@ -191,7 +191,7 @@ public class GatewayOption extends TeaModel {
             }
 
             /**
-             * 投递的目标logstore
+             * LogStoreName.
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -199,7 +199,7 @@ public class GatewayOption extends TeaModel {
             }
 
             /**
-             * 投递的目标project
+             * ProjectName.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -253,7 +253,7 @@ public class GatewayOption extends TeaModel {
             private Boolean traceEnabled; 
 
             /**
-             * trace 采样率
+             * Sample.
              */
             public Builder sample(Long sample) {
                 this.sample = sample;
@@ -261,7 +261,7 @@ public class GatewayOption extends TeaModel {
             }
 
             /**
-             * trace是否开启
+             * TraceEnabled.
              */
             public Builder traceEnabled(Boolean traceEnabled) {
                 this.traceEnabled = traceEnabled;

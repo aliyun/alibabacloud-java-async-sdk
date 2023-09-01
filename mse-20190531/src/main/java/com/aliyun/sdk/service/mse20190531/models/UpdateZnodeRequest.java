@@ -113,7 +113,11 @@ public class UpdateZnodeRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -122,7 +126,7 @@ public class UpdateZnodeRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * The ID of the instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -131,7 +135,7 @@ public class UpdateZnodeRequest extends Request {
         }
 
         /**
-         * Data.
+         * The data of the node.
          */
         public Builder data(String data) {
             this.putQueryParameter("Data", data);
@@ -140,7 +144,7 @@ public class UpdateZnodeRequest extends Request {
         }
 
         /**
-         * Path.
+         * The path of the node.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -149,7 +153,7 @@ public class UpdateZnodeRequest extends Request {
         }
 
         /**
-         * RequestPars.
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

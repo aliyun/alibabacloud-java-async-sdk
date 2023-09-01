@@ -98,7 +98,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * A reserved parameter.
+         * The details of the data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -106,7 +106,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -114,7 +114,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The HTTP status code.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -122,7 +122,11 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The message that is returned.
+         * <p>
+         * 
+         * *   If the request is successful, a success message is returned.
+         * *   If the request fails, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +134,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +142,11 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         }
 
         /**
-         * The request is successfully processed.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -179,6 +187,9 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
         @NameInMap("Zone")
         private String zone;
 
+        @NameInMap("ZoneDistributed")
+        private Boolean zoneDistributed;
+
         private Data(Builder builder) {
             this.clientPort = builder.clientPort;
             this.creationTimestamp = builder.creationTimestamp;
@@ -189,6 +200,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             this.role = builder.role;
             this.singleTunnelVip = builder.singleTunnelVip;
             this.zone = builder.zone;
+            this.zoneDistributed = builder.zoneDistributed;
         }
 
         public static Builder builder() {
@@ -262,6 +274,13 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             return this.zone;
         }
 
+        /**
+         * @return zoneDistributed
+         */
+        public Boolean getZoneDistributed() {
+            return this.zoneDistributed;
+        }
+
         public static final class Builder {
             private String clientPort; 
             private String creationTimestamp; 
@@ -272,9 +291,10 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             private String role; 
             private String singleTunnelVip; 
             private String zone; 
+            private Boolean zoneDistributed; 
 
             /**
-             * mse-200-105
+             * The enabled port.
              */
             public Builder clientPort(String clientPort) {
                 this.clientPort = clientPort;
@@ -282,7 +302,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The zone.
+             * The creation time. The value of this parameter is a timestamp.
              */
             public Builder creationTimestamp(String creationTimestamp) {
                 this.creationTimestamp = creationTimestamp;
@@ -290,7 +310,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The pod name.
+             * A reserved parameter.
              */
             public Builder healthStatus(String healthStatus) {
                 this.healthStatus = healthStatus;
@@ -298,7 +318,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time. The value of this parameter is a timestamp.
+             * The public IP address.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -306,7 +326,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The internal IP address.
+             * The IP address of the pod.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -314,7 +334,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address.
+             * The pod name.
              */
             public Builder podName(String podName) {
                 this.podName = podName;
@@ -322,7 +342,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the pod.
+             * A reserved parameter.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -330,7 +350,7 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The enabled port.
+             * The internal IP address.
              */
             public Builder singleTunnelVip(String singleTunnelVip) {
                 this.singleTunnelVip = singleTunnelVip;
@@ -338,10 +358,18 @@ public class QueryInstancesInfoResponseBody extends TeaModel {
             }
 
             /**
-             * duplicatedClusterAliasName
+             * The zone.
              */
             public Builder zone(String zone) {
                 this.zone = zone;
+                return this;
+            }
+
+            /**
+             * ZoneDistributed.
+             */
+            public Builder zoneDistributed(Boolean zoneDistributed) {
+                this.zoneDistributed = zoneDistributed;
                 return this;
             }
 

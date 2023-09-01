@@ -86,7 +86,7 @@ public class RemoveApplicationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 删除执行结果。
+         * Data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class RemoveApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * 错误码。
+         * ErrorCode.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +102,7 @@ public class RemoveApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * 错误信息。
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class RemoveApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id。
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class RemoveApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功。
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -213,7 +213,11 @@ public class ListNamingTrackRequest extends Request {
         } 
 
         /**
-         * system error
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -222,7 +226,7 @@ public class ListNamingTrackRequest extends Request {
         }
 
         /**
-         * clusterNotFound
+         * The end timestamp. Unit: seconds.
          */
         public Builder endTs(Long endTs) {
             this.putQueryParameter("EndTs", endTs);
@@ -231,7 +235,7 @@ public class ListNamingTrackRequest extends Request {
         }
 
         /**
-         * mse-100-007
+         * The group.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -240,7 +244,7 @@ public class ListNamingTrackRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -249,7 +253,7 @@ public class ListNamingTrackRequest extends Request {
         }
 
         /**
-         * illegal request:%s
+         * The IP address of the client.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -258,7 +262,7 @@ public class ListNamingTrackRequest extends Request {
         }
 
         /**
-         * illegalRequest
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -267,7 +271,7 @@ public class ListNamingTrackRequest extends Request {
         }
 
         /**
-         * mse-100-001
+         * The number of the page to return.
          */
         public Builder pageNum(Long pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -276,7 +280,7 @@ public class ListNamingTrackRequest extends Request {
         }
 
         /**
-         * cluster not found
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -285,7 +289,7 @@ public class ListNamingTrackRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
@@ -294,7 +298,11 @@ public class ListNamingTrackRequest extends Request {
         }
 
         /**
-         * systemError
+         * Specifies whether to sort the query results in chronological order or reverse chronological order. Default value: `false`.
+         * <p>
+         * 
+         * *   `true`: sorts the query results in reverse chronological order.
+         * *   `false`: sorts the query results in chronological order.
          */
         public Builder reverse(Boolean reverse) {
             this.putQueryParameter("Reverse", reverse);
@@ -303,7 +311,7 @@ public class ListNamingTrackRequest extends Request {
         }
 
         /**
-         * duplicated cluster alias name
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -312,7 +320,7 @@ public class ListNamingTrackRequest extends Request {
         }
 
         /**
-         * mse-200-021
+         * The start timestamp. Unit: seconds.
          */
         public Builder startTs(Long startTs) {
             this.putQueryParameter("StartTs", startTs);

@@ -74,7 +74,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 请求响应数据。
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +82,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         }
 
         /**
-         * 请求信息。
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id。
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
         }
 
         /**
-         * 请求是否成功。
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +162,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 参数描述。
+             * Description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +170,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * 参数名字。
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -178,7 +178,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * 参数类型。
+             * Type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -327,7 +327,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             private String returnType; 
 
             /**
-             * 接口所在的Controller类全称。
+             * MethodController.
              */
             public Builder methodController(String methodController) {
                 this.methodController = methodController;
@@ -335,7 +335,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * 方法名。
+             * Name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,7 +343,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * 接口描述信息。
+             * NameDetail.
              */
             public Builder nameDetail(String nameDetail) {
                 this.nameDetail = nameDetail;
@@ -351,7 +351,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * 参数的详细定义。
+             * ParameterDefinitions.
              */
             public Builder parameterDefinitions(java.util.List < ParameterDefinitions> parameterDefinitions) {
                 this.parameterDefinitions = parameterDefinitions;
@@ -359,7 +359,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * 接口参数类型。
+             * ParameterDetails.
              */
             public Builder parameterDetails(java.util.List < String > parameterDetails) {
                 this.parameterDetails = parameterDetails;
@@ -367,7 +367,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * 参数类型。
+             * ParameterTypes.
              */
             public Builder parameterTypes(java.util.List < String > parameterTypes) {
                 this.parameterTypes = parameterTypes;
@@ -375,7 +375,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * 接口对应的请求路径列表。
+             * Paths.
              */
             public Builder paths(java.util.List < String > paths) {
                 this.paths = paths;
@@ -383,7 +383,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * HTTP请求方法。
+             * RequestMethods.
              */
             public Builder requestMethods(java.util.List < String > requestMethods) {
                 this.requestMethods = requestMethods;
@@ -391,7 +391,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * 返回值类型。
+             * ReturnDetails.
              */
             public Builder returnDetails(String returnDetails) {
                 this.returnDetails = returnDetails;
@@ -399,7 +399,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * 返回值类型。
+             * ReturnType.
              */
             public Builder returnType(String returnType) {
                 this.returnType = returnType;
@@ -476,7 +476,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             private Integer totalSize; 
 
             /**
-             * 第几页。
+             * PageNumber.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -484,7 +484,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * 每页大小
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -492,7 +492,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * 方法描述列表。
+             * Result.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
@@ -500,7 +500,7 @@ public class GetServiceMethodPageResponseBody extends TeaModel {
             }
 
             /**
-             * 方法总数量。
+             * TotalSize.
              */
             public Builder totalSize(Integer totalSize) {
                 this.totalSize = totalSize;

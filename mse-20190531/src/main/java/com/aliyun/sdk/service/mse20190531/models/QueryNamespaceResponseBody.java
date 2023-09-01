@@ -86,7 +86,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 返回的数据
+         * Data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * 错误时的提示信息
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
             private String region; 
 
             /**
-             * 命名空间名字
+             * Namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -178,7 +178,7 @@ public class QueryNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * 命名空间所属的地域
+             * Region.
              */
             public Builder region(String region) {
                 this.region = region;

@@ -263,6 +263,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * mse-200-105
+      *
+     * @tags cluster
+     */
     @Override
     public CompletableFuture<CloneNacosConfigResponse> cloneNacosConfig(CloneNacosConfigRequest request) {
         try {
@@ -306,7 +311,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * mse-200-105
+      * Before you call this API operation, you must make sure that you fully understand the billing methods and pricing of MSE.
       *
      * @tags cluster
      */
@@ -372,7 +377,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * mse-200-105
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -390,6 +395,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * mse-200-105
+      *
+     * @tags cluster
+     */
     @Override
     public CompletableFuture<CreateNacosInstanceResponse> createNacosInstance(CreateNacosInstanceRequest request) {
         try {
@@ -676,7 +686,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * mse-200-105
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -695,7 +705,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The port of the Nacos instance.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -714,9 +724,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The language of the response. Valid values:
-      * *   zh: Chinese
-      * *   en: English
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -819,7 +827,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The tag of the application.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -838,8 +846,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Initiates a task to export ZooKeeper data.
+      * Only one task can run at a time.
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<ExportZookeeperDataResponse> exportZookeeperData(ExportZookeeperDataRequest request) {
@@ -856,7 +865,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The returned data.
+      * You can call this operation to query the rules for graceful start and shutdown.
       *
      * @tags msc
      */
@@ -902,6 +911,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * @deprecated
+      *
+     * @tags msc
+     */
     @Override
     public CompletableFuture<GetApplicationListWithMetircsResponse> getApplicationListWithMetircs(GetApplicationListWithMetircsRequest request) {
         try {
@@ -1057,7 +1071,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The HTTP status code returned.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).\\n
       *
      * @tags cluster
      */
@@ -1139,7 +1153,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * mse-200-105
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -1157,6 +1171,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     * @tags cluster
+     */
     @Override
     public CompletableFuture<GetNacosHistoryConfigResponse> getNacosHistoryConfig(GetNacosHistoryConfigRequest request) {
         try {
@@ -1172,7 +1191,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * mse-100-001
+      * You can call this operation to query overview information about service governance.
       *
      * @tags msc
      */
@@ -1303,7 +1322,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The details of the data.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -1354,7 +1373,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The heartbeat interval of the instance. Unit: seconds.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      */
     @Override
@@ -1372,7 +1391,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Heartbeat Reporting
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -1390,6 +1409,30 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     * @tags cluster
+     */
+    @Override
+    public CompletableFuture<ListAnsServicesResponse> listAnsServices(ListAnsServicesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAnsServices").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAnsServicesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAnsServicesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * @deprecated
+      *
+     * @tags msc
+     */
     @Override
     public CompletableFuture<ListAppBySwimmingLaneGroupTagResponse> listAppBySwimmingLaneGroupTag(ListAppBySwimmingLaneGroupTagRequest request) {
         try {
@@ -1399,6 +1442,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListAppBySwimmingLaneGroupTagResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ListAppBySwimmingLaneGroupTagsResponse> listAppBySwimmingLaneGroupTags(ListAppBySwimmingLaneGroupTagsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListAppBySwimmingLaneGroupTags").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAppBySwimmingLaneGroupTagsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAppBySwimmingLaneGroupTagsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1727,7 +1784,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The HTTP status code returned.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      */
     @Override
@@ -1745,7 +1802,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The group.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      */
     @Override
@@ -1777,7 +1834,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The number of the page to return.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -1796,7 +1853,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The message returned.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -1902,7 +1959,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ListZkTrackResponse> listZkTrack(ListZkTrackRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListZkTrack").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListZkTrack").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListZkTrackResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1930,7 +1987,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ModifyGovernanceKubernetesClusterResponse> modifyGovernanceKubernetesCluster(ModifyGovernanceKubernetesClusterRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyGovernanceKubernetesCluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyGovernanceKubernetesCluster").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyGovernanceKubernetesClusterResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -2417,7 +2474,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * MSE_SC_2_4_200_c
+      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
       *
      */
     @Override
@@ -2715,7 +2772,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * system error
+      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing](~~250950~~).
       *
      * @tags gateway
      */
@@ -2790,8 +2847,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * attribute1=1221111\\r\\nattribute2=Chinese\\r\\nattribute3=abc11\\r\\nattribute4=1.00111
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
+     * @tags cluster
      */
     @Override
     public CompletableFuture<UpdateNacosConfigResponse> updateNacosConfig(UpdateNacosConfigRequest request) {
@@ -2807,6 +2865,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     @Override
     public CompletableFuture<UpdateNacosInstanceResponse> updateNacosInstance(UpdateNacosInstanceRequest request) {
         try {
@@ -2822,7 +2884,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * 5e3ee449-b5c0-4aee-b857-32c0acbebf26
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      */
     @Override

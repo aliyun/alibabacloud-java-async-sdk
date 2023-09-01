@@ -25,16 +25,11 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
     private Boolean dbGrayEnable;
 
     @Query
-    @NameInMap("Enable")
-    private Boolean enable;
-
-    @Query
     @NameInMap("EntryApp")
     private String entryApp;
 
     @Query
     @NameInMap("Id")
-    @Validation(required = true)
     private Long id;
 
     @Query
@@ -72,7 +67,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         this.acceptLanguage = builder.acceptLanguage;
         this.appIds = builder.appIds;
         this.dbGrayEnable = builder.dbGrayEnable;
-        this.enable = builder.enable;
         this.entryApp = builder.entryApp;
         this.id = builder.id;
         this.messageQueueFilterSide = builder.messageQueueFilterSide;
@@ -116,13 +110,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
      */
     public Boolean getDbGrayEnable() {
         return this.dbGrayEnable;
-    }
-
-    /**
-     * @return enable
-     */
-    public Boolean getEnable() {
-        return this.enable;
     }
 
     /**
@@ -192,7 +179,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         private String acceptLanguage; 
         private String appIds; 
         private Boolean dbGrayEnable; 
-        private Boolean enable; 
         private String entryApp; 
         private Long id; 
         private String messageQueueFilterSide; 
@@ -212,7 +198,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.appIds = request.appIds;
             this.dbGrayEnable = request.dbGrayEnable;
-            this.enable = request.enable;
             this.entryApp = request.entryApp;
             this.id = request.id;
             this.messageQueueFilterSide = request.messageQueueFilterSide;
@@ -225,7 +210,11 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         } 
 
         /**
-         * Specifies whether to record the request details.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -252,15 +241,6 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable a lane group.
-         */
-        public Builder enable(Boolean enable) {
-            this.putQueryParameter("Enable", enable);
-            this.enable = enable;
-            return this;
-        }
-
-        /**
          * The ingress application.
          */
         public Builder entryApp(String entryApp) {
@@ -270,7 +250,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * The ID of the primary key. The primary key is auto-increment.
+         * The ID of the lane group. A value of -1 is used to create a lane group. A value greater than 0 is used to modify the specified lane group.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -306,7 +286,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * MSE命名空间名字
+         * The name of the Microservices Engine (MSE) namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -315,7 +295,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends Request {
         }
 
         /**
-         * 是否开启记录请求详情。
+         * Specifies whether to record request details.
          */
         public Builder recordCanaryDetail(Boolean recordCanaryDetail) {
             this.putQueryParameter("RecordCanaryDetail", recordCanaryDetail);

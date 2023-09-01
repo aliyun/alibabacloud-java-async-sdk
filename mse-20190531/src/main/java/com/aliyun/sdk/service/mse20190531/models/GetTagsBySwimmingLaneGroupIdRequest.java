@@ -84,7 +84,11 @@ public class GetTagsBySwimmingLaneGroupIdRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -93,7 +97,7 @@ public class GetTagsBySwimmingLaneGroupIdRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the lane group.
          */
         public Builder groupId(Long groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -102,7 +106,7 @@ public class GetTagsBySwimmingLaneGroupIdRequest extends Request {
         }
 
         /**
-         * 需要查询的MSE命名空间名字
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

@@ -96,7 +96,11 @@ public class ListExportZookeeperDataRequest extends Request {
         } 
 
         /**
-         * mse-100-007
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -105,7 +109,7 @@ public class ListExportZookeeperDataRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -114,7 +118,7 @@ public class ListExportZookeeperDataRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +127,7 @@ public class ListExportZookeeperDataRequest extends Request {
         }
 
         /**
-         * duplicated cluster alias name
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

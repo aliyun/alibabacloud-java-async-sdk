@@ -86,7 +86,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Configuration.
+         * The name of the application.
          */
         public Builder configuration(Configuration configuration) {
             this.configuration = configuration;
@@ -94,7 +94,11 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +106,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The request was successfully processed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +114,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The configuration information.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * mse-200-105
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -230,7 +234,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             private String opType; 
 
             /**
-             * AppName.
+             * The MD5 value of the configuration.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -238,7 +242,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Content.
+             * The name of the configuration group.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -246,7 +250,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataId.
+             * The content of the configuration.
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -254,7 +258,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptedDataKey.
+             * The error code returned if the request failed.
              */
             public Builder encryptedDataKey(String encryptedDataKey) {
                 this.encryptedDataKey = encryptedDataKey;
@@ -262,7 +266,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Group.
+             * The configuration type.
              */
             public Builder group(String group) {
                 this.group = group;
@@ -270,7 +274,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Md5.
+             * The ID of the configuration.
              */
             public Builder md5(String md5) {
                 this.md5 = md5;
@@ -278,7 +282,7 @@ public class GetNacosHistoryConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OpType.
+             * The encryption key.
              */
             public Builder opType(String opType) {
                 this.opType = opType;

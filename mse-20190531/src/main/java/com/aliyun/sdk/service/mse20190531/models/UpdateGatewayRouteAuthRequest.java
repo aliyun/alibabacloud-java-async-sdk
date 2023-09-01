@@ -113,7 +113,11 @@ public class UpdateGatewayRouteAuthRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -122,7 +126,7 @@ public class UpdateGatewayRouteAuthRequest extends Request {
         }
 
         /**
-         * AuthJSON.
+         * The authentication configurations.
          */
         public Builder authJSON(AuthJSON authJSON) {
             String authJSONShrink = shrink(authJSON, "AuthJSON", "json");
@@ -132,7 +136,7 @@ public class UpdateGatewayRouteAuthRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * The gateway ID.
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -141,7 +145,7 @@ public class UpdateGatewayRouteAuthRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -150,7 +154,7 @@ public class UpdateGatewayRouteAuthRequest extends Request {
         }
 
         /**
-         * Id.
+         * The route ID.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -192,7 +196,10 @@ public class UpdateGatewayRouteAuthRequest extends Request {
             private String type; 
 
             /**
-             * Type.
+             * The authentication type. If an empty string is passed, no authentication type is available. Valid values:
+             * <p>
+             * 
+             * *   JWT
              */
             public Builder type(String type) {
                 this.type = type;

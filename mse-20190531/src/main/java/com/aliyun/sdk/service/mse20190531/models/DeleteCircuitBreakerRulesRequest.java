@@ -112,7 +112,7 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         } 
 
         /**
-         * 应用所在地域。
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
@@ -121,7 +121,7 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * AcceptLanguage.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -130,7 +130,7 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * 应用名称。
+         * AppName.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -139,7 +139,7 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * 待删除的规则ID列表。
+         * Ids.
          */
         public Builder ids(java.util.List < Long > ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -149,7 +149,7 @@ public class DeleteCircuitBreakerRulesRequest extends Request {
         }
 
         /**
-         * 应用所属的微服务命名空间。
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);

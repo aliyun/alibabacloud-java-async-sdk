@@ -69,7 +69,11 @@ public class ListSecurityGroupRequest extends Request {
         } 
 
         /**
-         * duplicatedClusterAliasName
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -78,7 +82,7 @@ public class ListSecurityGroupRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);

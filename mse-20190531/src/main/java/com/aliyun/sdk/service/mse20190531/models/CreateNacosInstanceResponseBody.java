@@ -98,7 +98,7 @@ public class CreateNacosInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * 响应码
+         * The result returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class CreateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 修改结果
+         * duplicatedClusterAliasName
          */
         public Builder data(String data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class CreateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * http状态码
+         * The message returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class CreateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 响应信息
+         * The response code returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class CreateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求id
+         * The request is successfully processed.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class CreateNacosInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 成功标志
+         * mse-200-105
          */
         public Builder success(Boolean success) {
             this.success = success;

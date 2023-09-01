@@ -127,7 +127,7 @@ public class DeleteNacosConfigRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The status code returned.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -136,7 +136,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * Beta.
+         * The error code returned if the request failed.
          */
         public Builder beta(Boolean beta) {
             this.putQueryParameter("Beta", beta);
@@ -145,7 +145,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * DataId.
+         * The ID of the request.
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);
@@ -154,7 +154,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * Group.
+         * The message returned.
          */
         public Builder group(String group) {
             this.putQueryParameter("Group", group);
@@ -163,7 +163,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The HTTP status code.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -172,7 +172,7 @@ public class DeleteNacosConfigRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * The request is successfully processed.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);

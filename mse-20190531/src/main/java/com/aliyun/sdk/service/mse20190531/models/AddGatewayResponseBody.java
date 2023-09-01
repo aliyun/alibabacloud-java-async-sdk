@@ -98,7 +98,11 @@ public class AddGatewayResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +110,7 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The unique ID of the gateway.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +118,11 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The message returned.
+         * <p>
+         * 
+         * *   If the request is successful, a success message is returned.
+         * *   If the request fails, an error message is returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +130,7 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The request is successfully processed.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +138,7 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The HTTP status code returned.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +146,7 @@ public class AddGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * The returned data.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -178,7 +186,7 @@ public class AddGatewayResponseBody extends TeaModel {
             private String gatewayUniqueId; 
 
             /**
-             * GatewayUniqueId.
+             * code
              */
             public Builder gatewayUniqueId(String gatewayUniqueId) {
                 this.gatewayUniqueId = gatewayUniqueId;

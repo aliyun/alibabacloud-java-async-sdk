@@ -111,7 +111,7 @@ public class GetPluginsRequest extends Request {
         } 
 
         /**
-         * system error
+         * The data returned.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -120,7 +120,7 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * cluster not found
+         * Specifies whether to enable the plug-in.
          */
         public Builder category(Integer category) {
             this.putQueryParameter("Category", category);
@@ -129,7 +129,7 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * mse-100-001
+         * The name of the plug-in.
          */
         public Builder enableOnly(Boolean enableOnly) {
             this.putQueryParameter("EnableOnly", enableOnly);
@@ -138,7 +138,15 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * clusterNotFound
+         * The type of the plug-in. Valid values:
+         * <p>
+         * 
+         * *   0: custom
+         * *   1: permission authorization
+         * *   2: security protection
+         * *   3: transmission protocol
+         * *   4: traffic control
+         * *   5: traffic observation
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -147,7 +155,10 @@ public class GetPluginsRequest extends Request {
         }
 
         /**
-         * systemError
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * zh: Chinese en: English
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

@@ -142,7 +142,11 @@ public class ListGatewayAuthConsumerResourceRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -151,7 +155,7 @@ public class ListGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * ConsumerId.
+         * The ID of the consumer.
          */
         public Builder consumerId(Long consumerId) {
             this.putQueryParameter("ConsumerId", consumerId);
@@ -160,7 +164,7 @@ public class ListGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -169,7 +173,7 @@ public class ListGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(String pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -178,7 +182,7 @@ public class ListGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -187,7 +191,11 @@ public class ListGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * ResourceStatus.
+         * The resource authorization status. Valid values:
+         * <p>
+         * 
+         * *   true: enabled
+         * *   false: disabled
          */
         public Builder resourceStatus(Boolean resourceStatus) {
             this.putQueryParameter("ResourceStatus", resourceStatus);
@@ -196,7 +204,7 @@ public class ListGatewayAuthConsumerResourceRequest extends Request {
         }
 
         /**
-         * RouteName.
+         * The name of the route.
          */
         public Builder routeName(String routeName) {
             this.putQueryParameter("RouteName", routeName);

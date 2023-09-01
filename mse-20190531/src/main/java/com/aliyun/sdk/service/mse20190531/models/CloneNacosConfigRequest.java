@@ -127,7 +127,7 @@ public class CloneNacosConfigRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The HTTP status code returned.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -136,7 +136,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * Ids.
+         * The data structure.
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);
@@ -145,7 +145,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the destination namespace.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -154,7 +154,12 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * OriginNamespaceId.
+         * The policy used when a write conflict occurs.
+         * <p>
+         * 
+         * *   ABORT
+         * *   SKIP
+         * *   OVERWRITE
          */
         public Builder originNamespaceId(String originNamespaceId) {
             this.putQueryParameter("OriginNamespaceId", originNamespaceId);
@@ -163,7 +168,11 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * Policy.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder policy(String policy) {
             this.putQueryParameter("Policy", policy);
@@ -172,7 +181,7 @@ public class CloneNacosConfigRequest extends Request {
         }
 
         /**
-         * TargetNamespaceId.
+         * The IDs of configurations.
          */
         public Builder targetNamespaceId(String targetNamespaceId) {
             this.putQueryParameter("TargetNamespaceId", targetNamespaceId);

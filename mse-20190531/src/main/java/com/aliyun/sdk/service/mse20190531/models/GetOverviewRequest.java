@@ -82,7 +82,11 @@ public class GetOverviewRequest extends Request {
         } 
 
         /**
-         * duplicated cluster alias name
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -91,7 +95,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The query time. Unit: days. For example, if you set this parameter to 30, the governance rules within the last 30 days are queried.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -100,7 +104,7 @@ public class GetOverviewRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

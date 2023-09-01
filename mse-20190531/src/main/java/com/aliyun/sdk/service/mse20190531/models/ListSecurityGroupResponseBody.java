@@ -98,7 +98,7 @@ public class ListSecurityGroupResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * mse-200-021
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * cluster not found
+         * The data structure.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * illegalRequest
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * illegal request:%s
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ListSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * mse-100-007
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class ListSecurityGroupResponseBody extends TeaModel {
         }
 
         /**
-         * clusterNotFound
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -214,7 +218,7 @@ public class ListSecurityGroupResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * systemError
+             * The ID of the security group.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -222,7 +226,7 @@ public class ListSecurityGroupResponseBody extends TeaModel {
             }
 
             /**
-             * system error
+             * The name of the security group.
              */
             public Builder securityGroupName(String securityGroupName) {
                 this.securityGroupName = securityGroupName;
@@ -230,7 +234,11 @@ public class ListSecurityGroupResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupType.
+             * The type of the security group. Valid values:
+             * <p>
+             * 
+             * *   normal: basic security group
+             * *   enterprise: advanced security group For more information, see [Advanced security groups](~~120621~~).
              */
             public Builder securityGroupType(String securityGroupType) {
                 this.securityGroupType = securityGroupType;
@@ -238,7 +246,7 @@ public class ListSecurityGroupResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -172,7 +172,11 @@ public class DeleteNacosInstanceRequest extends Request {
         } 
 
         /**
-         * mse-100-001
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -181,7 +185,7 @@ public class DeleteNacosInstanceRequest extends Request {
         }
 
         /**
-         * illegal request:%s
+         * The alias of the cluster.
          */
         public Builder clusterName(String clusterName) {
             this.putQueryParameter("ClusterName", clusterName);
@@ -190,7 +194,11 @@ public class DeleteNacosInstanceRequest extends Request {
         }
 
         /**
-         * cluster not found
+         * Specifies whether the node is an ephemeral node. Valid values:
+         * <p>
+         * 
+         * *   `true`: yes
+         * *   `false`: no
          */
         public Builder ephemeral(Boolean ephemeral) {
             this.putQueryParameter("Ephemeral", ephemeral);
@@ -199,7 +207,7 @@ public class DeleteNacosInstanceRequest extends Request {
         }
 
         /**
-         * illegalRequest
+         * The name of the group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -208,7 +216,7 @@ public class DeleteNacosInstanceRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The ID of the Nacos instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -217,7 +225,7 @@ public class DeleteNacosInstanceRequest extends Request {
         }
 
         /**
-         * mse-200-021
+         * The IP address of the Nacos instance.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -226,7 +234,7 @@ public class DeleteNacosInstanceRequest extends Request {
         }
 
         /**
-         * mse-100-007
+         * The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -235,7 +243,7 @@ public class DeleteNacosInstanceRequest extends Request {
         }
 
         /**
-         * clusterNotFound
+         * The port of the Nacos instance.
          */
         public Builder port(Integer port) {
             this.putQueryParameter("Port", port);
@@ -244,7 +252,7 @@ public class DeleteNacosInstanceRequest extends Request {
         }
 
         /**
-         * duplicated cluster alias name
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);

@@ -158,7 +158,11 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         } 
 
         /**
-         * The number of the page to return.
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -167,7 +171,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * readAndWrite
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -176,7 +180,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * edas-service-platform
+         * The name of the application.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -194,7 +198,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * $.parameters[3].schema.enumValueTitles
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -203,7 +207,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * $.parameters[7].schema.description
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -212,7 +216,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * $.parameters[7].schema.example
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -221,7 +225,7 @@ public class ListApplicationsWithTagRulesRequest extends Request {
         }
 
         /**
-         * $.parameters[7].schema.enumValueTitles
+         * The source of the routing rule. Default value: edasmsc.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

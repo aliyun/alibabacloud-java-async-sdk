@@ -110,38 +110,15 @@ public class ExportZookeeperDataRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
-            return this;
-        }
-
-        /**
-         * system error
-         */
-        public Builder exportType(String exportType) {
-            this.putQueryParameter("ExportType", exportType);
-            this.exportType = exportType;
-            return this;
-        }
-
-        /**
-         * systemError
-         */
-        public Builder instanceId(String instanceId) {
-            this.putQueryParameter("InstanceId", instanceId);
-            this.instanceId = instanceId;
-            return this;
-        }
-
-        /**
-         * The instance ID.
-         */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 
@@ -151,6 +128,33 @@ public class ExportZookeeperDataRequest extends Request {
          * 
          * *   transactionLog: transaction logs
          * *   snapshot: snapshots
+         */
+        public Builder exportType(String exportType) {
+            this.putQueryParameter("ExportType", exportType);
+            this.exportType = exportType;
+            return this;
+        }
+
+        /**
+         * The ID of the instance.
+         */
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The ID of the region in which the instance resides. The region is supported by Microservices Engine (MSE).
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * The extended request parameters in the JSON format.
          */
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);

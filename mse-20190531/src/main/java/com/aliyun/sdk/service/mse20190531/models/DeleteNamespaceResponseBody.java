@@ -94,7 +94,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * HTTP状态码
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -102,7 +102,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求信息，错误排查用
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * 请求Id
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * 是否成功
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -84,7 +84,11 @@ public class UpdateImageRequest extends Request {
         } 
 
         /**
-         * system error
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -93,7 +97,7 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * mse-100-001
+         * The ID of the destination cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -102,7 +106,10 @@ public class UpdateImageRequest extends Request {
         }
 
         /**
-         * systemError
+         * The destination version number.
+         * <p>
+         * 
+         * > You must call the GetImage operation to obtain the maximum destination version number that corresponds to MaxVersionCode.
          */
         public Builder versionCode(String versionCode) {
             this.putQueryParameter("VersionCode", versionCode);

@@ -278,7 +278,11 @@ public class AddGatewayRouteRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -287,7 +291,50 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * DestinationType.
+         * The destination service type.
+         * <p>
+         * 
+         * Enumeration values:
+         * 
+         * *   VersionOriented
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Multiple
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Single
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Mock\"\"
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         * *   Redirect
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
+         * 
+         *     <!-- -->
          */
         public Builder destinationType(String destinationType) {
             this.putQueryParameter("DestinationType", destinationType);
@@ -296,7 +343,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * DirectResponseJSON.
+         * The mock response configuration.
          */
         public Builder directResponseJSON(DirectResponseJSON directResponseJSON) {
             String directResponseJSONShrink = shrink(directResponseJSON, "DirectResponseJSON", "json");
@@ -306,7 +353,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * DomainId.
+         * The domain ID.
          */
         public Builder domainId(Long domainId) {
             this.putQueryParameter("DomainId", domainId);
@@ -315,7 +362,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * DomainIdListJSON.
+         * The list of domain IDs.
          */
         public Builder domainIdListJSON(String domainIdListJSON) {
             this.putQueryParameter("DomainIdListJSON", domainIdListJSON);
@@ -324,7 +371,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * EnableWaf.
+         * Specifies whether to activate Web Application Firewall (WAF).
          */
         public Builder enableWaf(Boolean enableWaf) {
             this.putQueryParameter("EnableWaf", enableWaf);
@@ -333,7 +380,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * Fallback.
+         * Specifies whether to enable the Fallback service.
          */
         public Builder fallback(Boolean fallback) {
             this.putQueryParameter("Fallback", fallback);
@@ -342,7 +389,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * FallbackServices.
+         * The information about the Fallback service.
          */
         public Builder fallbackServices(java.util.List < FallbackServices> fallbackServices) {
             String fallbackServicesShrink = shrink(fallbackServices, "FallbackServices", "json");
@@ -352,7 +399,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * The ID of the gateway.
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -361,7 +408,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -370,7 +417,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the route.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -379,7 +426,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * Policies.
+         * The routing policy in a JSON string.
          */
         public Builder policies(String policies) {
             this.putQueryParameter("Policies", policies);
@@ -388,7 +435,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * Predicates.
+         * The matching rule.
          */
         public Builder predicates(Predicates predicates) {
             String predicatesShrink = shrink(predicates, "Predicates", "json");
@@ -398,7 +445,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * RedirectJSON.
+         * The configuration of the redirection.
          */
         public Builder redirectJSON(RedirectJSON redirectJSON) {
             String redirectJSONShrink = shrink(redirectJSON, "RedirectJSON", "json");
@@ -408,7 +455,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * RouteOrder.
+         * The sequence number of the route. (A small value indicates a high priority.)
          */
         public Builder routeOrder(Integer routeOrder) {
             this.putQueryParameter("RouteOrder", routeOrder);
@@ -417,7 +464,10 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * RouteType.
+         * The route type. Valid values:
+         * <p>
+         * 
+         * Op: Manage routes.
          */
         public Builder routeType(String routeType) {
             this.putQueryParameter("RouteType", routeType);
@@ -426,7 +476,7 @@ public class AddGatewayRouteRequest extends Request {
         }
 
         /**
-         * Services.
+         * The list of services.
          */
         public Builder services(java.util.List < Services> services) {
             String servicesShrink = shrink(services, "Services", "json");
@@ -481,7 +531,7 @@ public class AddGatewayRouteRequest extends Request {
             private Long code; 
 
             /**
-             * Body.
+             * The mock return value.
              */
             public Builder body(String body) {
                 this.body = body;
@@ -489,7 +539,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Code.
+             * The mock return code.
              */
             public Builder code(Long code) {
                 this.code = code;
@@ -626,7 +676,7 @@ public class AddGatewayRouteRequest extends Request {
             private String version; 
 
             /**
-             * AgreementType.
+             * The type of the protocol.
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;
@@ -634,7 +684,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * GroupName.
+             * The name of the group to which the service belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -642,7 +692,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -650,7 +700,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * The namespace to which the service belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -658,7 +708,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Percent.
+             * The weight in the form of a percentage value.
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -666,7 +716,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * ServiceId.
+             * The ID of the service.
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -674,7 +724,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * ServicePort.
+             * The service port number.
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;
@@ -682,7 +732,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * SourceType.
+             * The source type.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -690,7 +740,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Version.
+             * The version of the service.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -755,7 +805,7 @@ public class AddGatewayRouteRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the request header.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -763,7 +813,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Type.
+             * The matching type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -771,7 +821,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the request header.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -836,7 +886,7 @@ public class AddGatewayRouteRequest extends Request {
             private String type; 
 
             /**
-             * IgnoreCase.
+             * Specifies whether to ignore case sensitivity.
              */
             public Builder ignoreCase(Boolean ignoreCase) {
                 this.ignoreCase = ignoreCase;
@@ -844,7 +894,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Path.
+             * The path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -852,7 +902,12 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Type.
+             * The route matching type. Valid values:
+             * <p>
+             * 
+             * *   PRE: prefix matching
+             * *   EQUAL: exact matching
+             * *   ERGULAR: regular expression matching
              */
             public Builder type(String type) {
                 this.type = type;
@@ -917,7 +972,7 @@ public class AddGatewayRouteRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The name of the parameter.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -925,7 +980,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Type.
+             * The matching type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -933,7 +988,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the parameter.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1010,7 +1065,7 @@ public class AddGatewayRouteRequest extends Request {
             private java.util.List < QueryPredicates> queryPredicates; 
 
             /**
-             * HeaderPredicates.
+             * The information about header matching.
              */
             public Builder headerPredicates(java.util.List < HeaderPredicates> headerPredicates) {
                 this.headerPredicates = headerPredicates;
@@ -1018,7 +1073,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * MethodPredicates.
+             * The information about method matching.
              */
             public Builder methodPredicates(java.util.List < String > methodPredicates) {
                 this.methodPredicates = methodPredicates;
@@ -1026,7 +1081,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * PathPredicates.
+             * The information about route matching.
              */
             public Builder pathPredicates(PathPredicates pathPredicates) {
                 this.pathPredicates = pathPredicates;
@@ -1034,7 +1089,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * QueryPredicates.
+             * The information about URL parameter matching.
              */
             public Builder queryPredicates(java.util.List < QueryPredicates> queryPredicates) {
                 this.queryPredicates = queryPredicates;
@@ -1099,7 +1154,7 @@ public class AddGatewayRouteRequest extends Request {
             private String path; 
 
             /**
-             * Code.
+             * The status code returned.
              */
             public Builder code(Integer code) {
                 this.code = code;
@@ -1107,7 +1162,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Host.
+             * The hostname to be redirected to.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -1115,7 +1170,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Path.
+             * The path to be redirected to.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -1180,7 +1235,7 @@ public class AddGatewayRouteRequest extends Request {
             private String mappingType; 
 
             /**
-             * ExtractKey.
+             * The key extracted from the input parameter.
              */
             public Builder extractKey(String extractKey) {
                 this.extractKey = extractKey;
@@ -1188,7 +1243,16 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * ExtractKeySpec.
+             * The position of the input parameter.
+             * <p>
+             * 
+             * > Valid values:
+             * 
+             * *   `ALL_QUERY_PARAMETER`: request parameter
+             * 
+             * *   `ALL_HEADER`: request header
+             * *   `ALL_PATH`: request path
+             * *   `ALL_BODY`: request body
              */
             public Builder extractKeySpec(String extractKeySpec) {
                 this.extractKeySpec = extractKeySpec;
@@ -1196,7 +1260,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * MappingType.
+             * The type of the backend service parameter.
              */
             public Builder mappingType(String mappingType) {
                 this.mappingType = mappingType;
@@ -1297,7 +1361,7 @@ public class AddGatewayRouteRequest extends Request {
             private java.util.List < String > passThroughList; 
 
             /**
-             * DubboMothedName.
+             * The method name of the Dubbo service.
              */
             public Builder dubboMothedName(String dubboMothedName) {
                 this.dubboMothedName = dubboMothedName;
@@ -1305,7 +1369,20 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * HttpMothed.
+             * The HTTP method.
+             * <p>
+             * 
+             * > Valid values:
+             * 
+             * *   ALL_GET
+             * 
+             * *   ALL_POST
+             * 
+             * *   ALL_PUT
+             * 
+             * *   ALL_DELETE
+             * 
+             * *   ALL_PATCH
              */
             public Builder httpMothed(String httpMothed) {
                 this.httpMothed = httpMothed;
@@ -1313,7 +1390,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Mothedpath.
+             * The path used for method matching.
              */
             public Builder mothedpath(String mothedpath) {
                 this.mothedpath = mothedpath;
@@ -1321,7 +1398,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * ParamMapsList.
+             * The information about parameter mappings.
              */
             public Builder paramMapsList(java.util.List < ParamMapsList> paramMapsList) {
                 this.paramMapsList = paramMapsList;
@@ -1329,7 +1406,16 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * PassThroughAllHeaders.
+             * The pass-through type of the header.
+             * <p>
+             * 
+             * > Valid values:
+             * 
+             * *   PASS_ALL: All headers are passed through.
+             * 
+             * *   PASS_NOT: All headers are not passed through.
+             * 
+             * *   PASS_ASSIGN: Specified headers are passed through.
              */
             public Builder passThroughAllHeaders(String passThroughAllHeaders) {
                 this.passThroughAllHeaders = passThroughAllHeaders;
@@ -1337,7 +1423,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * PassThroughList.
+             * The list of headers to be passed through.
              */
             public Builder passThroughList(java.util.List < String > passThroughList) {
                 this.passThroughList = passThroughList;
@@ -1414,7 +1500,7 @@ public class AddGatewayRouteRequest extends Request {
             private java.util.List < MothedMapList> mothedMapList; 
 
             /**
-             * DubboServiceGroup.
+             * The name of the service group.
              */
             public Builder dubboServiceGroup(String dubboServiceGroup) {
                 this.dubboServiceGroup = dubboServiceGroup;
@@ -1422,7 +1508,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * DubboServiceName.
+             * The name of the Dubbo service.
              */
             public Builder dubboServiceName(String dubboServiceName) {
                 this.dubboServiceName = dubboServiceName;
@@ -1430,7 +1516,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * DubboServiceVersion.
+             * The version of the Dubbo service.
              */
             public Builder dubboServiceVersion(String dubboServiceVersion) {
                 this.dubboServiceVersion = dubboServiceVersion;
@@ -1438,7 +1524,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * MothedMapList.
+             * The forwarding rules of the Dubbo service.
              */
             public Builder mothedMapList(java.util.List < MothedMapList> mothedMapList) {
                 this.mothedMapList = mothedMapList;
@@ -1587,7 +1673,7 @@ public class AddGatewayRouteRequest extends Request {
             private String version; 
 
             /**
-             * AgreementType.
+             * The type of the protocol.
              */
             public Builder agreementType(String agreementType) {
                 this.agreementType = agreementType;
@@ -1595,7 +1681,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * GroupName.
+             * The name of the group to which the service belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1603,7 +1689,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * HttpDubboTranscoder.
+             * The transcoder of the Dubbo protocol.
              */
             public Builder httpDubboTranscoder(HttpDubboTranscoder httpDubboTranscoder) {
                 this.httpDubboTranscoder = httpDubboTranscoder;
@@ -1611,7 +1697,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Name.
+             * The name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1619,7 +1705,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Namespace.
+             * The namespace to which the service belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1627,7 +1713,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Percent.
+             * The weight in the form of a percentage value.
              */
             public Builder percent(Integer percent) {
                 this.percent = percent;
@@ -1635,7 +1721,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * ServiceId.
+             * The ID of the service.
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -1643,7 +1729,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * ServicePort.
+             * The service port number.
              */
             public Builder servicePort(Integer servicePort) {
                 this.servicePort = servicePort;
@@ -1651,7 +1737,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * SourceType.
+             * The source type.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1659,7 +1745,7 @@ public class AddGatewayRouteRequest extends Request {
             }
 
             /**
-             * Version.
+             * The version of the service.
              */
             public Builder version(String version) {
                 this.version = version;

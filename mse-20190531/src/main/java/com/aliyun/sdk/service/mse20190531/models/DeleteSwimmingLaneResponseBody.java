@@ -74,7 +74,7 @@ public class DeleteSwimmingLaneResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The ID of the lane.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -82,11 +82,7 @@ public class DeleteSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -94,7 +90,7 @@ public class DeleteSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * systemError
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,7 +98,11 @@ public class DeleteSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
-         * system error
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -110,7 +110,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -118,7 +118,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response data.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -126,7 +126,14 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code that is returned.
+         * <p>
+         * 
+         * *   InvalidParameter: The parameter is invalid. For example, the parameter is incomplete or the parameter format is invalid.
+         * *   IllegalRequest: The request is invalid. Unauthorized access to data initiated by parameters is identified.
+         * *   NoPermission: You are not authorized to perform this operation.
+         * *   NotFound: The resource does not exist and error 404 is returned.
+         * *   InternalError: An internal error occurred.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -134,7 +141,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -142,7 +149,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -150,7 +157,7 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +165,11 @@ public class AddGatewayRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

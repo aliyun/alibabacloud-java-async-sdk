@@ -167,7 +167,7 @@ public class GetServiceListPageRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * AcceptLanguage.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -176,7 +176,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * 应用id。
+         * AppId.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -185,7 +185,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * 要查询的ip地址。
+         * Ip.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -194,7 +194,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * MSE命名空间名字
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -203,7 +203,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * 页数。
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -212,7 +212,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * 每页大小。
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -221,7 +221,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * 地域。
+         * Region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -230,7 +230,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * 服务名字。
+         * ServiceName.
          */
         public Builder serviceName(String serviceName) {
             this.putQueryParameter("ServiceName", serviceName);
@@ -239,7 +239,7 @@ public class GetServiceListPageRequest extends Request {
         }
 
         /**
-         * 服务类型。
+         * ServiceType.
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);

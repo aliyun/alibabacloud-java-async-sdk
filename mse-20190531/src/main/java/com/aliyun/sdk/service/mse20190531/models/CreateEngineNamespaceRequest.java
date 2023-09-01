@@ -139,7 +139,11 @@ public class CreateEngineNamespaceRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -148,7 +152,7 @@ public class CreateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * The description of the namespace.
+         * The ID of the instance.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -157,7 +161,7 @@ public class CreateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The description of the namespace.
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -166,7 +170,7 @@ public class CreateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * Creates a namespace in a Nacos instance.
+         * The custom ID of the namespace. If you do not specify this parameter, the automatically generated Universally Unique Identifier (UUID) is returned.
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -175,7 +179,7 @@ public class CreateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * The details of the data.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -184,7 +188,7 @@ public class CreateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * Development environment
+         * The display name of the namespace.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -193,7 +197,7 @@ public class CreateEngineNamespaceRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The maximum number of services that can run in the namespace.
          */
         public Builder serviceCount(Integer serviceCount) {
             this.putQueryParameter("ServiceCount", serviceCount);

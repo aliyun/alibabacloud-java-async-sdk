@@ -42,16 +42,11 @@ public class ApplyTagPoliciesRequest extends Request {
 
     @Query
     @NameInMap("Region")
-    @Validation(required = true)
     private String region;
 
     @Query
     @NameInMap("Rules")
     private String rules;
-
-    @Query
-    @NameInMap("Source")
-    private String source;
 
     private ApplyTagPoliciesRequest(Builder builder) {
         super(builder);
@@ -63,7 +58,6 @@ public class ApplyTagPoliciesRequest extends Request {
         this.namespaceId = builder.namespaceId;
         this.region = builder.region;
         this.rules = builder.rules;
-        this.source = builder.source;
     }
 
     public static Builder builder() {
@@ -135,13 +129,6 @@ public class ApplyTagPoliciesRequest extends Request {
         return this.rules;
     }
 
-    /**
-     * @return source
-     */
-    public String getSource() {
-        return this.source;
-    }
-
     public static final class Builder extends Request.Builder<ApplyTagPoliciesRequest, Builder> {
         private String acceptLanguage; 
         private String appId; 
@@ -151,7 +138,6 @@ public class ApplyTagPoliciesRequest extends Request {
         private String namespaceId; 
         private String region; 
         private String rules; 
-        private String source; 
 
         private Builder() {
             super();
@@ -167,11 +153,14 @@ public class ApplyTagPoliciesRequest extends Request {
             this.namespaceId = request.namespaceId;
             this.region = request.region;
             this.rules = request.rules;
-            this.source = request.source;
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -180,7 +169,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * AppId.
+         * The ID of the application.
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -189,7 +178,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * 应用名字
+         * AppName.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -198,7 +187,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * Enable.
+         * Specifies whether to enable the routing rule.
          */
         public Builder enable(Boolean enable) {
             this.putQueryParameter("Enable", enable);
@@ -207,7 +196,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * 应用所属的MSE命名空间
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -216,7 +205,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * NamespaceId.
+         * Optional. The ID of the namespace.
          */
         public Builder namespaceId(String namespaceId) {
             this.putQueryParameter("NamespaceId", namespaceId);
@@ -225,7 +214,7 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region ID.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -234,20 +223,11 @@ public class ApplyTagPoliciesRequest extends Request {
         }
 
         /**
-         * Rules.
+         * The details of the routing rule.
          */
         public Builder rules(String rules) {
             this.putQueryParameter("Rules", rules);
             this.rules = rules;
-            return this;
-        }
-
-        /**
-         * Source.
-         */
-        public Builder source(String source) {
-            this.putQueryParameter("Source", source);
-            this.source = source;
             return this;
         }
 

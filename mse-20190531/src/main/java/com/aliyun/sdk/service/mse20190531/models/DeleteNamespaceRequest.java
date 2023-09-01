@@ -83,7 +83,7 @@ public class DeleteNamespaceRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * AcceptLanguage.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -92,7 +92,7 @@ public class DeleteNamespaceRequest extends Request {
         }
 
         /**
-         * 要删除的MSE命名空间名称
+         * Name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -101,7 +101,7 @@ public class DeleteNamespaceRequest extends Request {
         }
 
         /**
-         * 操作的地域
+         * Region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

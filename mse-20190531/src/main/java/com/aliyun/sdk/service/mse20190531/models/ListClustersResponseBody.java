@@ -134,7 +134,7 @@ public class ListClustersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -142,7 +142,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -150,7 +150,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * HttpCode.
+         * The HTTP status code returned.
          */
         public Builder httpCode(String httpCode) {
             this.httpCode = httpCode;
@@ -158,7 +158,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -166,7 +166,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the returned page.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -174,7 +174,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -182,7 +182,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,11 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -198,7 +202,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned instances.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -269,6 +273,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("VersionCode")
         private String versionCode;
 
+        @NameInMap("VpcId")
+        private String vpcId;
+
         private Data(Builder builder) {
             this.appVersion = builder.appVersion;
             this.canUpdate = builder.canUpdate;
@@ -289,6 +296,7 @@ public class ListClustersResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.tags = builder.tags;
             this.versionCode = builder.versionCode;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -432,6 +440,13 @@ public class ListClustersResponseBody extends TeaModel {
             return this.versionCode;
         }
 
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private String appVersion; 
             private Boolean canUpdate; 
@@ -452,9 +467,10 @@ public class ListClustersResponseBody extends TeaModel {
             private String resourceGroupId; 
             private java.util.Map < String, ? > tags; 
             private String versionCode; 
+            private String vpcId; 
 
             /**
-             * AppVersion.
+             * The application version.
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -462,7 +478,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CanUpdate.
+             * Indicates whether the instance can be upgraded.
              */
             public Builder canUpdate(Boolean canUpdate) {
                 this.canUpdate = canUpdate;
@@ -470,7 +486,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ChargeType.
+             * The billing method, such as subscription or pay-as-you-go.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -478,7 +494,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterAliasName.
+             * The alias of the instance.
              */
             public Builder clusterAliasName(String clusterAliasName) {
                 this.clusterAliasName = clusterAliasName;
@@ -486,7 +502,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the instance.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -494,7 +510,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterType.
+             * The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -502,7 +518,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -510,7 +526,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * EndDate.
+             * The time when the instance expires.
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -518,7 +534,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * InitStatus.
+             * The initialization status of the instance.
              */
             public Builder initStatus(String initStatus) {
                 this.initStatus = initStatus;
@@ -526,7 +542,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceCount.
+             * The number of instance nodes.
              */
             public Builder instanceCount(Long instanceCount) {
                 this.instanceCount = instanceCount;
@@ -534,7 +550,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the instance
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -542,7 +558,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * InternetAddress.
+             * The public IP address.
              */
             public Builder internetAddress(String internetAddress) {
                 this.internetAddress = internetAddress;
@@ -550,7 +566,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * InternetDomain.
+             * The public endpoint of the instance.
              */
             public Builder internetDomain(String internetDomain) {
                 this.internetDomain = internetDomain;
@@ -558,7 +574,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetAddress.
+             * The internal IP address.
              */
             public Builder intranetAddress(String intranetAddress) {
                 this.intranetAddress = intranetAddress;
@@ -566,7 +582,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetDomain.
+             * The internal endpoint of the instance.
              */
             public Builder intranetDomain(String intranetDomain) {
                 this.intranetDomain = intranetDomain;
@@ -574,7 +590,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * MseVersion.
+             * The edition of the instance.
              */
             public Builder mseVersion(String mseVersion) {
                 this.mseVersion = mseVersion;
@@ -582,7 +598,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group to which the instance belongs.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -590,7 +606,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags that are attached to the instance.
              */
             public Builder tags(java.util.Map < String, ? > tags) {
                 this.tags = tags;
@@ -598,10 +614,18 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * VersionCode.
+             * The version information.
              */
             public Builder versionCode(String versionCode) {
                 this.versionCode = versionCode;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

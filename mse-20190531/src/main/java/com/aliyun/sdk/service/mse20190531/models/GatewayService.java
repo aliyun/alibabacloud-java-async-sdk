@@ -122,7 +122,7 @@ public class GatewayService extends TeaModel {
         private String sourceType; 
 
         /**
-         * 服务的策略
+         * GatewayTrafficPolicy.
          */
         public Builder gatewayTrafficPolicy(TrafficPolicy gatewayTrafficPolicy) {
             this.gatewayTrafficPolicy = gatewayTrafficPolicy;
@@ -130,7 +130,7 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * 网关uniqueId
+         * GatewayUniqueId.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.gatewayUniqueId = gatewayUniqueId;
@@ -138,7 +138,7 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * 服务所属group
+         * GroupName.
          */
         public Builder groupName(String groupName) {
             this.groupName = groupName;
@@ -146,7 +146,7 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * 服务id
+         * Id.
          */
         public Builder id(Long id) {
             this.id = id;
@@ -154,7 +154,7 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * 元信息
+         * MetaInfo.
          */
         public Builder metaInfo(String metaInfo) {
             this.metaInfo = metaInfo;
@@ -162,7 +162,7 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * 服务名
+         * Name.
          */
         public Builder name(String name) {
             this.name = name;
@@ -170,7 +170,7 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * 服务所属namesapce
+         * Namespace.
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -178,7 +178,7 @@ public class GatewayService extends TeaModel {
         }
 
         /**
-         * 服务来源
+         * SourceType.
          */
         public Builder sourceType(String sourceType) {
             this.sourceType = sourceType;

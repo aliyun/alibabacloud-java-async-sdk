@@ -82,7 +82,11 @@ public class ListClusterVersionsRequest extends Request {
         } 
 
         /**
-         * duplicated cluster alias name
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -91,7 +95,7 @@ public class ListClusterVersionsRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The type of the instance. Valid values: ZooKeeper, Nacos-Ans, and Eureka.
          */
         public Builder clusterType(String clusterType) {
             this.putQueryParameter("ClusterType", clusterType);
@@ -100,7 +104,11 @@ public class ListClusterVersionsRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The instance edition. Valid values:
+         * <p>
+         * 
+         * *   `mse_dev`: Developer Edition.
+         * *   `mse_pro`: Professional Edition. This is the default value.
          */
         public Builder mseVersion(String mseVersion) {
             this.putQueryParameter("MseVersion", mseVersion);

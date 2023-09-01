@@ -50,6 +50,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ApplyTagPoliciesResponse> applyTagPolicies(ApplyTagPoliciesRequest request);
 
+    /**
+      * mse-200-105
+      *
+     * @tags cluster
+     */
     CompletableFuture<CloneNacosConfigResponse> cloneNacosConfig(CloneNacosConfigRequest request);
 
     CompletableFuture<CreateApplicationResponse> createApplication(CreateApplicationRequest request);
@@ -57,7 +62,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCircuitBreakerRuleResponse> createCircuitBreakerRule(CreateCircuitBreakerRuleRequest request);
 
     /**
-      * mse-200-105
+      * Before you call this API operation, you must make sure that you fully understand the billing methods and pricing of MSE.
       *
      * @tags cluster
      */
@@ -75,12 +80,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMseServiceApplicationResponse> createMseServiceApplication(CreateMseServiceApplicationRequest request);
 
     /**
-      * mse-200-105
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
     CompletableFuture<CreateNacosConfigResponse> createNacosConfig(CreateNacosConfigRequest request);
 
+    /**
+      * mse-200-105
+      *
+     * @tags cluster
+     */
     CompletableFuture<CreateNacosInstanceResponse> createNacosInstance(CreateNacosInstanceRequest request);
 
     /**
@@ -127,23 +137,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteNacosConfigResponse> deleteNacosConfig(DeleteNacosConfigRequest request);
 
     /**
-      * mse-200-105
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
     CompletableFuture<DeleteNacosConfigsResponse> deleteNacosConfigs(DeleteNacosConfigsRequest request);
 
     /**
-      * The port of the Nacos instance.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
     CompletableFuture<DeleteNacosInstanceResponse> deleteNacosInstance(DeleteNacosInstanceRequest request);
 
     /**
-      * The language of the response. Valid values:
-      * *   zh: Chinese
-      * *   en: English
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -162,20 +170,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteZnodeResponse> deleteZnode(DeleteZnodeRequest request);
 
     /**
-      * The tag of the application.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
     CompletableFuture<ExportNacosConfigResponse> exportNacosConfig(ExportNacosConfigRequest request);
 
     /**
-      * Initiates a task to export ZooKeeper data.
+      * Only one task can run at a time.
       *
+     * @tags cluster
      */
     CompletableFuture<ExportZookeeperDataResponse> exportZookeeperData(ExportZookeeperDataRequest request);
 
     /**
-      * The returned data.
+      * You can call this operation to query the rules for graceful start and shutdown.
       *
      * @tags msc
      */
@@ -185,6 +194,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetApplicationListResponse> getApplicationList(GetApplicationListRequest request);
 
+    /**
+      * @deprecated
+      *
+     * @tags msc
+     */
     CompletableFuture<GetApplicationListWithMetircsResponse> getApplicationListWithMetircs(GetApplicationListWithMetircsRequest request);
 
     CompletableFuture<GetBlackWhiteListResponse> getBlackWhiteList(GetBlackWhiteListRequest request);
@@ -208,7 +222,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetImageResponse> getImage(GetImageRequest request);
 
     /**
-      * The HTTP status code returned.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).\\n
       *
      * @tags cluster
      */
@@ -230,16 +244,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMseSourceResponse> getMseSource(GetMseSourceRequest request);
 
     /**
-      * mse-200-105
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
     CompletableFuture<GetNacosConfigResponse> getNacosConfig(GetNacosConfigRequest request);
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     * @tags cluster
+     */
     CompletableFuture<GetNacosHistoryConfigResponse> getNacosHistoryConfig(GetNacosHistoryConfigRequest request);
 
     /**
-      * mse-100-001
+      * You can call this operation to query overview information about service governance.
       *
      * @tags msc
      */
@@ -262,7 +281,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetZookeeperDataImportUrlResponse> getZookeeperDataImportUrl(GetZookeeperDataImportUrlRequest request);
 
     /**
-      * The details of the data.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -277,19 +296,33 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ImportZookeeperDataResponse> importZookeeperData(ImportZookeeperDataRequest request);
 
     /**
-      * The heartbeat interval of the instance. Unit: seconds.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      */
     CompletableFuture<ListAnsInstancesResponse> listAnsInstances(ListAnsInstancesRequest request);
 
     /**
-      * Heartbeat Reporting
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
     CompletableFuture<ListAnsServiceClustersResponse> listAnsServiceClusters(ListAnsServiceClustersRequest request);
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     * @tags cluster
+     */
+    CompletableFuture<ListAnsServicesResponse> listAnsServices(ListAnsServicesRequest request);
+
+    /**
+      * @deprecated
+      *
+     * @tags msc
+     */
     CompletableFuture<ListAppBySwimmingLaneGroupTagResponse> listAppBySwimmingLaneGroupTag(ListAppBySwimmingLaneGroupTagRequest request);
+
+    CompletableFuture<ListAppBySwimmingLaneGroupTagsResponse> listAppBySwimmingLaneGroupTags(ListAppBySwimmingLaneGroupTagsRequest request);
 
     CompletableFuture<ListApplicationsWithTagRulesResponse> listApplicationsWithTagRules(ListApplicationsWithTagRulesRequest request);
 
@@ -338,13 +371,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstanceCountResponse> listInstanceCount(ListInstanceCountRequest request);
 
     /**
-      * The HTTP status code returned.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      */
     CompletableFuture<ListListenersByConfigResponse> listListenersByConfig(ListListenersByConfigRequest request);
 
     /**
-      * The group.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      */
     CompletableFuture<ListListenersByIpResponse> listListenersByIp(ListListenersByIpRequest request);
@@ -352,14 +385,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMigrationTaskResponse> listMigrationTask(ListMigrationTaskRequest request);
 
     /**
-      * The number of the page to return.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
     CompletableFuture<ListNacosConfigsResponse> listNacosConfigs(ListNacosConfigsRequest request);
 
     /**
-      * The message returned.
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      * @tags cluster
      */
@@ -452,7 +485,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateClusterResponse> updateCluster(UpdateClusterRequest request);
 
     /**
-      * MSE_SC_2_4_200_c
+      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go MSE instance. You are charged when you add nodes or upgrade node specifications. For more information, see \\[Pricing] (`~~1806469~~`).
       *
      */
     CompletableFuture<UpdateClusterSpecResponse> updateClusterSpec(UpdateClusterSpecRequest request);
@@ -498,7 +531,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateGatewayServiceVersionResponse> updateGatewayServiceVersion(UpdateGatewayServiceVersionRequest request);
 
     /**
-      * system error
+      * You can call this operation to update the number or specifications of nodes in a pay-as-you-go cloud-native gateway. You are charged when you add nodes or upgrade node specifications. For more information, see [Pricing](~~250950~~).
       *
      * @tags gateway
      */
@@ -513,15 +546,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateNacosClusterResponse> updateNacosCluster(UpdateNacosClusterRequest request);
 
     /**
-      * attribute1=1221111\\r\\nattribute2=Chinese\\r\\nattribute3=abc11\\r\\nattribute4=1.00111
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
+     * @tags cluster
      */
     CompletableFuture<UpdateNacosConfigResponse> updateNacosConfig(UpdateNacosConfigRequest request);
 
+    /**
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
+      *
+     */
     CompletableFuture<UpdateNacosInstanceResponse> updateNacosInstance(UpdateNacosInstanceRequest request);
 
     /**
-      * 5e3ee449-b5c0-4aee-b857-32c0acbebf26
+      * > The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the [official documentation](https://nacos.io/zh-cn/docs/sdk.html).
       *
      */
     CompletableFuture<UpdateNacosServiceResponse> updateNacosService(UpdateNacosServiceRequest request);

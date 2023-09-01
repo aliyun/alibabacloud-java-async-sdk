@@ -98,7 +98,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data entries returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -122,7 +122,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +130,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,11 @@ public class ListGatewaySlbResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -483,7 +487,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             private String vsMetaInfo; 
 
             /**
-             * EditEnable.
+             * Indicates whether the edit operation is supported.
              */
             public Builder editEnable(Boolean editEnable) {
                 this.editEnable = editEnable;
@@ -491,7 +495,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * GatewayId.
+             * The ID of the gateway.
              */
             public Builder gatewayId(String gatewayId) {
                 this.gatewayId = gatewayId;
@@ -499,7 +503,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * GatewaySlbMode.
+             * The mode of the SLB instance.
              */
             public Builder gatewaySlbMode(String gatewaySlbMode) {
                 this.gatewaySlbMode = gatewaySlbMode;
@@ -507,7 +511,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * GatewaySlbStatus.
+             * The association status.
              */
             public Builder gatewaySlbStatus(String gatewaySlbStatus) {
                 this.gatewaySlbStatus = gatewaySlbStatus;
@@ -515,7 +519,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -523,7 +527,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * HttpPort.
+             * The port number of the HTTP virtual service group.
              */
             public Builder httpPort(Integer httpPort) {
                 this.httpPort = httpPort;
@@ -531,7 +535,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsPort.
+             * The port number of the HTTPS virtual service group.
              */
             public Builder httpsPort(Integer httpsPort) {
                 this.httpsPort = httpsPort;
@@ -539,7 +543,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * HttpsVServerGroupId.
+             * The ID of the HTTPS virtual service group.
              */
             public Builder httpsVServerGroupId(String httpsVServerGroupId) {
                 this.httpsVServerGroupId = httpsVServerGroupId;
@@ -547,7 +551,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -555,7 +559,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceWeight.
+             * The service weight.
              */
             public Builder serviceWeight(Integer serviceWeight) {
                 this.serviceWeight = serviceWeight;
@@ -563,7 +567,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * SlbId.
+             * The ID of the SLB instance.
              */
             public Builder slbId(String slbId) {
                 this.slbId = slbId;
@@ -571,7 +575,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * SlbIp.
+             * The IP address of the SLB instance.
              */
             public Builder slbIp(String slbIp) {
                 this.slbIp = slbIp;
@@ -579,7 +583,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * SlbPort.
+             * The port number of the SLB instance.
              */
             public Builder slbPort(String slbPort) {
                 this.slbPort = slbPort;
@@ -587,7 +591,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDesc.
+             * The description of the status.
              */
             public Builder statusDesc(String statusDesc) {
                 this.statusDesc = statusDesc;
@@ -595,7 +599,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -603,7 +607,7 @@ public class ListGatewaySlbResponseBody extends TeaModel {
             }
 
             /**
-             * VServerGroupId.
+             * The ID of the HTTP virtual service group.
              */
             public Builder vServerGroupId(String vServerGroupId) {
                 this.vServerGroupId = vServerGroupId;

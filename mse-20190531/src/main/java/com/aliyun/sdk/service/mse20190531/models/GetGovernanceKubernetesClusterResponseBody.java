@@ -12,14 +12,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetGovernanceKubernetesClusterResponseBody</p>
  */
 public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
-    @NameInMap("Code")
-    private Integer code;
-
     @NameInMap("Data")
     private Data data;
-
-    @NameInMap("HttpStatusCode")
-    private Integer httpStatusCode;
 
     @NameInMap("Message")
     private String message;
@@ -31,9 +25,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     private Boolean success;
 
     private GetGovernanceKubernetesClusterResponseBody(Builder builder) {
-        this.code = builder.code;
         this.data = builder.data;
-        this.httpStatusCode = builder.httpStatusCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -48,24 +40,10 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     /**
-     * @return code
-     */
-    public Integer getCode() {
-        return this.code;
-    }
-
-    /**
      * @return data
      */
     public Data getData() {
         return this.data;
-    }
-
-    /**
-     * @return httpStatusCode
-     */
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
     }
 
     /**
@@ -90,23 +68,13 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
         private Data data; 
-        private Integer httpStatusCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Code.
-         */
-        public Builder code(Integer code) {
-            this.code = code;
-            return this;
-        }
-
-        /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,15 +82,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
-         */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
-            return this;
-        }
-
-        /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +90,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +98,11 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -152,15 +116,19 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
     } 
 
     public static class Namespaces extends TeaModel {
+        @NameInMap("Labels")
+        private java.util.Map < String, String > labels;
+
+        @NameInMap("MseNamespace")
+        private String mseNamespace;
+
         @NameInMap("Name")
         private String name;
 
-        @NameInMap("Tags")
-        private String tags;
-
         private Namespaces(Builder builder) {
+            this.labels = builder.labels;
+            this.mseNamespace = builder.mseNamespace;
             this.name = builder.name;
-            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -172,36 +140,52 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return labels
+         */
+        public java.util.Map < String, String > getLabels() {
+            return this.labels;
+        }
+
+        /**
+         * @return mseNamespace
+         */
+        public String getMseNamespace() {
+            return this.mseNamespace;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
             return this.name;
         }
 
-        /**
-         * @return tags
-         */
-        public String getTags() {
-            return this.tags;
-        }
-
         public static final class Builder {
+            private java.util.Map < String, String > labels; 
+            private String mseNamespace; 
             private String name; 
-            private String tags; 
 
             /**
-             * Name.
+             * Labels.
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder labels(java.util.Map < String, String > labels) {
+                this.labels = labels;
                 return this;
             }
 
             /**
-             * Tags.
+             * MseNamespace.
              */
-            public Builder tags(String tags) {
-                this.tags = tags;
+            public Builder mseNamespace(String mseNamespace) {
+                this.mseNamespace = mseNamespace;
+                return this;
+            }
+
+            /**
+             * The name.
+             */
+            public Builder name(String name) {
+                this.name = name;
                 return this;
             }
 
@@ -323,7 +307,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * ClusterId.
+             * The ID of the instance.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -331,7 +315,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * The name of the instance.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -339,7 +323,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * K8sVersion.
+             * The version of Kubernetes.
              */
             public Builder k8sVersion(String k8sVersion) {
                 this.k8sVersion = k8sVersion;
@@ -347,7 +331,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceInfos.
+             * The information of the namespace.
              */
             public Builder namespaceInfos(String namespaceInfos) {
                 this.namespaceInfos = namespaceInfos;
@@ -355,7 +339,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Namespaces.
+             * The list of namespaces.
              */
             public Builder namespaces(java.util.List < Namespaces> namespaces) {
                 this.namespaces = namespaces;
@@ -363,7 +347,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * PilotStartTime.
+             * The time when the ack-onepilot component was started.
              */
             public Builder pilotStartTime(String pilotStartTime) {
                 this.pilotStartTime = pilotStartTime;
@@ -371,7 +355,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The ID of the region in which the instance resides. The region is supported by MSE.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -379,7 +363,7 @@ public class GetGovernanceKubernetesClusterResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time of the last modification.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -113,7 +113,11 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * cluster not found
+         * The language of the response. Valid values:
+         * <p>
+         * 
+         * *   zh: Chinese
+         * *   en: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -122,7 +126,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * mse-200-105
+         * The ID of the region.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -131,7 +135,13 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * duplicated cluster alias name
+         * The instance ID.
+         * <p>
+         * 
+         * > This parameter specifies the instance ID that is passed. Examples:
+         * 
+         * *   **ResourceId.1** specifies that the first instance ID is passed.
+         * *   **ResourceId.2** specifies that the second instance ID is passed.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -140,7 +150,11 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * duplicatedClusterAliasName
+         * The type of the resources. Valid values:
+         * <p>
+         * 
+         * *   CLUSTER: Microservices Engine (MSE) instance
+         * *   GATEWAY: cloud-native gateway
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -149,7 +163,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * illegalRequest
+         * The list of tags. You can specify a maximum of 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -203,7 +217,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * mse-200-021
+             * The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key must be 1 to 128 characters in length. The tag key cannot start with acs: or aliyun or contain [http:// or https://.](http://https://。)
              */
             public Builder key(String key) {
                 this.key = key;
@@ -211,7 +225,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * clusterNotFound
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -110,7 +110,12 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         } 
 
         /**
-         * 返回结果显示的语言。取值：zh（默认值）：中文，en：英文
+         * The language of the response. In compliance with [RFC 7231](https://tools.ietf.org/html/rfc7231), the backend service must return a response based on the language used by the user.
+         * <p>
+         * 
+         * *   No default value
+         * *   zh-CN: Chinese
+         * *   en-US: English
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -119,7 +124,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         }
 
         /**
-         * CorsJSON.
+         * The information about the CORS policy.
          */
         public Builder corsJSON(CorsJSON corsJSON) {
             String corsJSONShrink = shrink(corsJSON, "CorsJSON", "json");
@@ -129,7 +134,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         }
 
         /**
-         * GatewayId.
+         * The ID of the gateway.
          */
         public Builder gatewayId(Long gatewayId) {
             this.putQueryParameter("GatewayId", gatewayId);
@@ -138,7 +143,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         }
 
         /**
-         * GatewayUniqueId.
+         * The unique ID of the gateway.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -147,7 +152,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
         }
 
         /**
-         * Id.
+         * The ID of the associated record.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -273,7 +278,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             private Long unitNum; 
 
             /**
-             * AllowCredentials.
+             * The credentials allowed.
              */
             public Builder allowCredentials(Boolean allowCredentials) {
                 this.allowCredentials = allowCredentials;
@@ -281,7 +286,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * AllowHeaders.
+             * The request headers allowed.
              */
             public Builder allowHeaders(String allowHeaders) {
                 this.allowHeaders = allowHeaders;
@@ -289,7 +294,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * AllowMethods.
+             * The HTTP methods allowed.
              */
             public Builder allowMethods(String allowMethods) {
                 this.allowMethods = allowMethods;
@@ -297,7 +302,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * AllowOrigins.
+             * The origins from which access is allowed.
              */
             public Builder allowOrigins(String allowOrigins) {
                 this.allowOrigins = allowOrigins;
@@ -305,7 +310,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * ExposeHeaders.
+             * The response headers allowed.
              */
             public Builder exposeHeaders(String exposeHeaders) {
                 this.exposeHeaders = exposeHeaders;
@@ -313,7 +318,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * Status.
+             * The status of the policy.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -321,7 +326,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * TimeUnit.
+             * The unit of time.
              */
             public Builder timeUnit(String timeUnit) {
                 this.timeUnit = timeUnit;
@@ -329,7 +334,7 @@ public class UpdateGatewayRouteCORSRequest extends Request {
             }
 
             /**
-             * UnitNum.
+             * The value of time.
              */
             public Builder unitNum(Long unitNum) {
                 this.unitNum = unitNum;

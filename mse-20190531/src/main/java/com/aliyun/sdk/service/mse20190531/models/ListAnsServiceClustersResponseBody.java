@@ -18,6 +18,9 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     @NameInMap("ErrorCode")
     private String errorCode;
 
+    @NameInMap("HttpCode")
+    private String httpCode;
+
     @NameInMap("Message")
     private String message;
 
@@ -30,6 +33,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     private ListAnsServiceClustersResponseBody(Builder builder) {
         this.data = builder.data;
         this.errorCode = builder.errorCode;
+        this.httpCode = builder.httpCode;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -58,6 +62,13 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     }
 
     /**
+     * @return httpCode
+     */
+    public String getHttpCode() {
+        return this.httpCode;
+    }
+
+    /**
      * @return message
      */
     public String getMessage() {
@@ -81,12 +92,13 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String errorCode; 
+        private String httpCode; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
         /**
-         * Data.
+         * The details of the data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -94,7 +106,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -102,7 +114,15 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * HttpCode.
+         */
+        public Builder httpCode(String httpCode) {
+            this.httpCode = httpCode;
+            return this;
+        }
+
+        /**
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +130,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +138,11 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   `true`: The request was successful.
+         * *   `false`: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -431,7 +455,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             private Boolean useIPPort4Check; 
 
             /**
-             * DefaultCheckPort.
+             * The default port used for a health check.
              */
             public Builder defaultCheckPort(Integer defaultCheckPort) {
                 this.defaultCheckPort = defaultCheckPort;
@@ -439,7 +463,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultPort.
+             * The default port.
              */
             public Builder defaultPort(Integer defaultPort) {
                 this.defaultPort = defaultPort;
@@ -447,7 +471,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * HealthCheckerType.
+             * The type of health check.
              */
             public Builder healthCheckerType(String healthCheckerType) {
                 this.healthCheckerType = healthCheckerType;
@@ -455,7 +479,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * The metadata of the cluster.
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -463,7 +487,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -471,7 +495,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The full name of the service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -479,7 +503,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * UseIPPort4Check.
+             * Indicates whether an end-to-end health check is initiated by the server. This parameter is valid only if the service is a temporary service.
              */
             public Builder useIPPort4Check(Boolean useIPPort4Check) {
                 this.useIPPort4Check = useIPPort4Check;
@@ -624,7 +648,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Clusters.
+             * The information about the clusters.
              */
             public Builder clusters(java.util.List < Clusters> clusters) {
                 this.clusters = clusters;
@@ -632,7 +656,11 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Ephemeral.
+             * Indicates whether the service is a temporary service. Valid values:
+             * <p>
+             * 
+             * *   `true`: yes
+             * *   `false`: no
              */
             public Builder ephemeral(Boolean ephemeral) {
                 this.ephemeral = ephemeral;
@@ -640,7 +668,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the contact group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -648,7 +676,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * The metadata of the service.
              */
             public Builder metadata(java.util.Map < String, ? > metadata) {
                 this.metadata = metadata;
@@ -656,7 +684,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the service.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -664,7 +692,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ProtectThreshold.
+             * The protection threshold.
              */
             public Builder protectThreshold(Float protectThreshold) {
                 this.protectThreshold = protectThreshold;
@@ -672,7 +700,7 @@ public class ListAnsServiceClustersResponseBody extends TeaModel {
             }
 
             /**
-             * SelectorType.
+             * The election mode.
              */
             public Builder selectorType(String selectorType) {
                 this.selectorType = selectorType;
