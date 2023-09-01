@@ -1,0 +1,366 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.aiworkspace20210204.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link CreateWorkspaceResourceRequest} extends {@link RequestModel}
+ *
+ * <p>CreateWorkspaceResourceRequest</p>
+ */
+public class CreateWorkspaceResourceRequest extends Request {
+    @Path
+    @NameInMap("WorkspaceId")
+    @Validation(required = true)
+    private String workspaceId;
+
+    @Body
+    @NameInMap("Option")
+    private String option;
+
+    @Body
+    @NameInMap("Resources")
+    @Validation(required = true)
+    private java.util.List < Resources> resources;
+
+    private CreateWorkspaceResourceRequest(Builder builder) {
+        super(builder);
+        this.workspaceId = builder.workspaceId;
+        this.option = builder.option;
+        this.resources = builder.resources;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static CreateWorkspaceResourceRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    /**
+     * @return option
+     */
+    public String getOption() {
+        return this.option;
+    }
+
+    /**
+     * @return resources
+     */
+    public java.util.List < Resources> getResources() {
+        return this.resources;
+    }
+
+    public static final class Builder extends Request.Builder<CreateWorkspaceResourceRequest, Builder> {
+        private String workspaceId; 
+        private String option; 
+        private java.util.List < Resources> resources; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(CreateWorkspaceResourceRequest request) {
+            super(request);
+            this.workspaceId = request.workspaceId;
+            this.option = request.option;
+            this.resources = request.resources;
+        } 
+
+        /**
+         * WorkspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putPathParameter("WorkspaceId", workspaceId);
+            this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * Option.
+         */
+        public Builder option(String option) {
+            this.putBodyParameter("Option", option);
+            this.option = option;
+            return this;
+        }
+
+        /**
+         * Resources.
+         */
+        public Builder resources(java.util.List < Resources> resources) {
+            this.putBodyParameter("Resources", resources);
+            this.resources = resources;
+            return this;
+        }
+
+        @Override
+        public CreateWorkspaceResourceRequest build() {
+            return new CreateWorkspaceResourceRequest(this);
+        } 
+
+    } 
+
+    public static class Quotas extends TeaModel {
+        @NameInMap("Id")
+        @Validation(required = true)
+        private String id;
+
+        private Quotas(Builder builder) {
+            this.id = builder.id;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Quotas create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        public static final class Builder {
+            private String id; 
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            public Quotas build() {
+                return new Quotas(this);
+            } 
+
+        } 
+
+    }
+    public static class Resources extends TeaModel {
+        @NameInMap("EnvType")
+        @Validation(required = true)
+        private String envType;
+
+        @NameInMap("GroupName")
+        private String groupName;
+
+        @NameInMap("IsDefault")
+        private Boolean isDefault;
+
+        @NameInMap("Name")
+        @Validation(required = true)
+        private String name;
+
+        @NameInMap("ProductType")
+        private String productType;
+
+        @NameInMap("Quotas")
+        private java.util.List < Quotas> quotas;
+
+        @NameInMap("ResourceType")
+        private String resourceType;
+
+        @NameInMap("Spec")
+        private java.util.Map < String, ? > spec;
+
+        @NameInMap("WorkspaceId")
+        @Validation(required = true)
+        private String workspaceId;
+
+        private Resources(Builder builder) {
+            this.envType = builder.envType;
+            this.groupName = builder.groupName;
+            this.isDefault = builder.isDefault;
+            this.name = builder.name;
+            this.productType = builder.productType;
+            this.quotas = builder.quotas;
+            this.resourceType = builder.resourceType;
+            this.spec = builder.spec;
+            this.workspaceId = builder.workspaceId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Resources create() {
+            return builder().build();
+        }
+
+        /**
+         * @return envType
+         */
+        public String getEnvType() {
+            return this.envType;
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return isDefault
+         */
+        public Boolean getIsDefault() {
+            return this.isDefault;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return productType
+         */
+        public String getProductType() {
+            return this.productType;
+        }
+
+        /**
+         * @return quotas
+         */
+        public java.util.List < Quotas> getQuotas() {
+            return this.quotas;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
+         * @return spec
+         */
+        public java.util.Map < String, ? > getSpec() {
+            return this.spec;
+        }
+
+        /**
+         * @return workspaceId
+         */
+        public String getWorkspaceId() {
+            return this.workspaceId;
+        }
+
+        public static final class Builder {
+            private String envType; 
+            private String groupName; 
+            private Boolean isDefault; 
+            private String name; 
+            private String productType; 
+            private java.util.List < Quotas> quotas; 
+            private String resourceType; 
+            private java.util.Map < String, ? > spec; 
+            private String workspaceId; 
+
+            /**
+             * EnvType.
+             */
+            public Builder envType(String envType) {
+                this.envType = envType;
+                return this;
+            }
+
+            /**
+             * GroupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * IsDefault.
+             */
+            public Builder isDefault(Boolean isDefault) {
+                this.isDefault = isDefault;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * ProductType.
+             */
+            public Builder productType(String productType) {
+                this.productType = productType;
+                return this;
+            }
+
+            /**
+             * Quotas.
+             */
+            public Builder quotas(java.util.List < Quotas> quotas) {
+                this.quotas = quotas;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
+             * Spec.
+             */
+            public Builder spec(java.util.Map < String, ? > spec) {
+                this.spec = spec;
+                return this;
+            }
+
+            /**
+             * WorkspaceId.
+             */
+            public Builder workspaceId(String workspaceId) {
+                this.workspaceId = workspaceId;
+                return this;
+            }
+
+            public Resources build() {
+                return new Resources(this);
+            } 
+
+        } 
+
+    }
+}

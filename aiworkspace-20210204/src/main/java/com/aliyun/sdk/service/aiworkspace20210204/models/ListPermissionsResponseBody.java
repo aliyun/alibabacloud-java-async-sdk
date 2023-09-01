@@ -1,0 +1,216 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.aiworkspace20210204.models;
+
+import com.aliyun.core.annotation.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListPermissionsResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListPermissionsResponseBody</p>
+ */
+public class ListPermissionsResponseBody extends TeaModel {
+    @NameInMap("Permissions")
+    private java.util.List < Permissions> permissions;
+
+    @NameInMap("RequestId")
+    private String requestId;
+
+    @NameInMap("TotalCount")
+    private Long totalCount;
+
+    private ListPermissionsResponseBody(Builder builder) {
+        this.permissions = builder.permissions;
+        this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListPermissionsResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return permissions
+     */
+    public java.util.List < Permissions> getPermissions() {
+        return this.permissions;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return totalCount
+     */
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
+    public static final class Builder {
+        private java.util.List < Permissions> permissions; 
+        private String requestId; 
+        private Long totalCount; 
+
+        /**
+         * Permissions.
+         */
+        public Builder permissions(java.util.List < Permissions> permissions) {
+            this.permissions = permissions;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+
+        public ListPermissionsResponseBody build() {
+            return new ListPermissionsResponseBody(this);
+        } 
+
+    } 
+
+    public static class PermissionRules extends TeaModel {
+        @NameInMap("Accessibility")
+        private String accessibility;
+
+        @NameInMap("EntityAccessType")
+        private String entityAccessType;
+
+        private PermissionRules(Builder builder) {
+            this.accessibility = builder.accessibility;
+            this.entityAccessType = builder.entityAccessType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PermissionRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return accessibility
+         */
+        public String getAccessibility() {
+            return this.accessibility;
+        }
+
+        /**
+         * @return entityAccessType
+         */
+        public String getEntityAccessType() {
+            return this.entityAccessType;
+        }
+
+        public static final class Builder {
+            private String accessibility; 
+            private String entityAccessType; 
+
+            /**
+             * Accessibility.
+             */
+            public Builder accessibility(String accessibility) {
+                this.accessibility = accessibility;
+                return this;
+            }
+
+            /**
+             * EntityAccessType.
+             */
+            public Builder entityAccessType(String entityAccessType) {
+                this.entityAccessType = entityAccessType;
+                return this;
+            }
+
+            public PermissionRules build() {
+                return new PermissionRules(this);
+            } 
+
+        } 
+
+    }
+    public static class Permissions extends TeaModel {
+        @NameInMap("PermissionCode")
+        private String permissionCode;
+
+        @NameInMap("PermissionRules")
+        private java.util.List < PermissionRules> permissionRules;
+
+        private Permissions(Builder builder) {
+            this.permissionCode = builder.permissionCode;
+            this.permissionRules = builder.permissionRules;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Permissions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return permissionCode
+         */
+        public String getPermissionCode() {
+            return this.permissionCode;
+        }
+
+        /**
+         * @return permissionRules
+         */
+        public java.util.List < PermissionRules> getPermissionRules() {
+            return this.permissionRules;
+        }
+
+        public static final class Builder {
+            private String permissionCode; 
+            private java.util.List < PermissionRules> permissionRules; 
+
+            /**
+             * PermissionCode.
+             */
+            public Builder permissionCode(String permissionCode) {
+                this.permissionCode = permissionCode;
+                return this;
+            }
+
+            /**
+             * PermissionRules.
+             */
+            public Builder permissionRules(java.util.List < PermissionRules> permissionRules) {
+                this.permissionRules = permissionRules;
+                return this;
+            }
+
+            public Permissions build() {
+                return new Permissions(this);
+            } 
+
+        } 
+
+    }
+}
