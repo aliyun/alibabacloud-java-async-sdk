@@ -91,16 +91,16 @@ public class TagResourcesRequest extends Request {
             super();
         } 
 
-        private Builder(TagResourcesRequest response) {
-            super(response);
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
-            this.tag = response.tag;
+        private Builder(TagResourcesRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
 
         /**
-         * 地域
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -109,7 +109,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 资源ID,最多 50个子项
+         * ResourceId.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -118,7 +118,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -127,7 +127,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * 标签列表，最多包含20个子项
+         * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -181,7 +181,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * 标签键
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -189,7 +189,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * 标签值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;

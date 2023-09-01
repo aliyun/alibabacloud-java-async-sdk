@@ -77,11 +77,11 @@ public class DescribeDistributeTableListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDistributeTableListRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.dbName = response.dbName;
-            this.regionId = response.regionId;
+        private Builder(DescribeDistributeTableListRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.dbName = request.dbName;
+            this.regionId = request.regionId;
         } 
 
         /**

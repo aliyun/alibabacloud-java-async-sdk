@@ -18,14 +18,24 @@ public class DescribeDBInstanceTopologyRequest extends Request {
     private String DBInstanceName;
 
     @Query
+    @NameInMap("EndTime")
+    private String endTime;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("StartTime")
+    private String startTime;
+
     private DescribeDBInstanceTopologyRequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
+        this.endTime = builder.endTime;
         this.regionId = builder.regionId;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -49,24 +59,42 @@ public class DescribeDBInstanceTopologyRequest extends Request {
     }
 
     /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDBInstanceTopologyRequest, Builder> {
         private String DBInstanceName; 
+        private String endTime; 
         private String regionId; 
+        private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDBInstanceTopologyRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(DescribeDBInstanceTopologyRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.endTime = request.endTime;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**
@@ -79,11 +107,29 @@ public class DescribeDBInstanceTopologyRequest extends Request {
         }
 
         /**
+         * EndTime.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * StartTime.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

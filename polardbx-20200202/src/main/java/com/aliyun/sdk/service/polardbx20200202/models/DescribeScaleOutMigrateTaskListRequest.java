@@ -101,13 +101,13 @@ public class DescribeScaleOutMigrateTaskListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeScaleOutMigrateTaskListRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
+        private Builder(DescribeScaleOutMigrateTaskListRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**

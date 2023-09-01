@@ -63,10 +63,10 @@ public class DescribeBackupPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupPolicyRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(DescribeBackupPolicyRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -91,12 +91,12 @@ public class ModifyDBInstanceConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceConfigRequest response) {
-            super(response);
-            this.configName = response.configName;
-            this.configValue = response.configValue;
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(ModifyDBInstanceConfigRequest request) {
+            super(request);
+            this.configName = request.configName;
+            this.configValue = request.configValue;
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

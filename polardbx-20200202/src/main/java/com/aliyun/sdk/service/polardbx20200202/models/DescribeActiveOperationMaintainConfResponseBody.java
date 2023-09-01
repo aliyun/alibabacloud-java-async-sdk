@@ -62,7 +62,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 配置信息
+         * Config.
          */
         public Builder config(Config config) {
             this.config = config;
@@ -70,7 +70,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         }
 
         /**
-         * 用户是否配置：1:已经配置。 0.未配置
+         * HasConfig.
          */
         public Builder hasConfig(Long hasConfig) {
             this.hasConfig = hasConfig;
@@ -78,7 +78,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         }
 
         /**
-         * requestid
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -190,7 +190,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             private Long status; 
 
             /**
-             * 创建时间
+             * CreatedTime.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -198,7 +198,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * 循环时间
+             * CycleTime.
              */
             public Builder cycleTime(String cycleTime) {
                 this.cycleTime = cycleTime;
@@ -206,7 +206,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * 循环类型
+             * CycleType.
              */
             public Builder cycleType(String cycleType) {
                 this.cycleType = cycleType;
@@ -214,7 +214,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * 运维结束时间
+             * MaintainEndTime.
              */
             public Builder maintainEndTime(String maintainEndTime) {
                 this.maintainEndTime = maintainEndTime;
@@ -222,7 +222,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * 运维开始时间
+             * MaintainStartTime.
              */
             public Builder maintainStartTime(String maintainStartTime) {
                 this.maintainStartTime = maintainStartTime;
@@ -230,7 +230,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * ModifiedTime.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -238,7 +238,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
             }
 
             /**
-             * 状态
+             * Status.
              */
             public Builder status(Long status) {
                 this.status = status;

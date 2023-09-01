@@ -17,9 +17,17 @@ public class ModifyDBInstanceClassRequest extends Request {
     private String clientToken;
 
     @Query
+    @NameInMap("CnClass")
+    private String cnClass;
+
+    @Query
     @NameInMap("DBInstanceName")
     @Validation(required = true)
     private String DBInstanceName;
+
+    @Query
+    @NameInMap("DnClass")
+    private String dnClass;
 
     @Query
     @NameInMap("RegionId")
@@ -28,13 +36,14 @@ public class ModifyDBInstanceClassRequest extends Request {
 
     @Query
     @NameInMap("TargetDBInstanceClass")
-    @Validation(required = true)
     private String targetDBInstanceClass;
 
     private ModifyDBInstanceClassRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.cnClass = builder.cnClass;
         this.DBInstanceName = builder.DBInstanceName;
+        this.dnClass = builder.dnClass;
         this.regionId = builder.regionId;
         this.targetDBInstanceClass = builder.targetDBInstanceClass;
     }
@@ -60,10 +69,24 @@ public class ModifyDBInstanceClassRequest extends Request {
     }
 
     /**
+     * @return cnClass
+     */
+    public String getCnClass() {
+        return this.cnClass;
+    }
+
+    /**
      * @return DBInstanceName
      */
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    /**
+     * @return dnClass
+     */
+    public String getDnClass() {
+        return this.dnClass;
     }
 
     /**
@@ -82,7 +105,9 @@ public class ModifyDBInstanceClassRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDBInstanceClassRequest, Builder> {
         private String clientToken; 
+        private String cnClass; 
         private String DBInstanceName; 
+        private String dnClass; 
         private String regionId; 
         private String targetDBInstanceClass; 
 
@@ -90,12 +115,14 @@ public class ModifyDBInstanceClassRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceClassRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
-            this.targetDBInstanceClass = response.targetDBInstanceClass;
+        private Builder(ModifyDBInstanceClassRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.cnClass = request.cnClass;
+            this.DBInstanceName = request.DBInstanceName;
+            this.dnClass = request.dnClass;
+            this.regionId = request.regionId;
+            this.targetDBInstanceClass = request.targetDBInstanceClass;
         } 
 
         /**
@@ -108,11 +135,29 @@ public class ModifyDBInstanceClassRequest extends Request {
         }
 
         /**
+         * CnClass.
+         */
+        public Builder cnClass(String cnClass) {
+            this.putQueryParameter("CnClass", cnClass);
+            this.cnClass = cnClass;
+            return this;
+        }
+
+        /**
          * DBInstanceName.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
             this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+
+        /**
+         * DnClass.
+         */
+        public Builder dnClass(String dnClass) {
+            this.putQueryParameter("DnClass", dnClass);
+            this.dnClass = dnClass;
             return this;
         }
 

@@ -101,17 +101,17 @@ public class DescribeEventsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeEventsRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeEventsRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * 结束时间
+         * EndTime.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -120,7 +120,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * 页面下标
+         * PageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -129,7 +129,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * 页面大小
+         * PageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -138,7 +138,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * 区域ID
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -147,7 +147,7 @@ public class DescribeEventsRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * StartTime.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -76,11 +76,11 @@ public class CreateBackupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateBackupRequest response) {
-            super(response);
-            this.backupType = response.backupType;
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(CreateBackupRequest request) {
+            super(request);
+            this.backupType = request.backupType;
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

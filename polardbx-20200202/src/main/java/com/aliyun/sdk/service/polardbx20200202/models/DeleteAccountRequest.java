@@ -103,13 +103,13 @@ public class DeleteAccountRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteAccountRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
-            this.securityAccountName = response.securityAccountName;
-            this.securityAccountPassword = response.securityAccountPassword;
+        private Builder(DeleteAccountRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
+            this.securityAccountName = request.securityAccountName;
+            this.securityAccountPassword = request.securityAccountPassword;
         } 
 
         /**

@@ -192,20 +192,20 @@ public class DescribeActiveOperationTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeActiveOperationTasksRequest response) {
-            super(response);
-            this.allowCancel = response.allowCancel;
-            this.allowChange = response.allowChange;
-            this.changeLevel = response.changeLevel;
-            this.dbType = response.dbType;
-            this.insName = response.insName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.productId = response.productId;
-            this.region = response.region;
-            this.regionId = response.regionId;
-            this.status = response.status;
-            this.taskType = response.taskType;
+        private Builder(DescribeActiveOperationTasksRequest request) {
+            super(request);
+            this.allowCancel = request.allowCancel;
+            this.allowChange = request.allowChange;
+            this.changeLevel = request.changeLevel;
+            this.dbType = request.dbType;
+            this.insName = request.insName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.productId = request.productId;
+            this.region = request.region;
+            this.regionId = request.regionId;
+            this.status = request.status;
+            this.taskType = request.taskType;
         } 
 
         /**

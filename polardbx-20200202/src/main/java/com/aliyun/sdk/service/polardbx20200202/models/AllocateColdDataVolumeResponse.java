@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeSlinkTaskInfoResponse} extends {@link TeaModel}
+ * {@link AllocateColdDataVolumeResponse} extends {@link TeaModel}
  *
- * <p>DescribeSlinkTaskInfoResponse</p>
+ * <p>AllocateColdDataVolumeResponse</p>
  */
-public class DescribeSlinkTaskInfoResponse extends Response {
+public class AllocateColdDataVolumeResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeSlinkTaskInfoResponseBody body;
+    private AllocateColdDataVolumeResponseBody body;
 
-    private DescribeSlinkTaskInfoResponse(BuilderImpl builder) {
+    private AllocateColdDataVolumeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DescribeSlinkTaskInfoResponse create() {
+    public static AllocateColdDataVolumeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DescribeSlinkTaskInfoResponse extends Response {
     /**
      * @return body
      */
-    public DescribeSlinkTaskInfoResponseBody getBody() {
+    public AllocateColdDataVolumeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeSlinkTaskInfoResponse, Builder> {
+    public interface Builder extends Response.Builder<AllocateColdDataVolumeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeSlinkTaskInfoResponseBody body);
+        Builder body(AllocateColdDataVolumeResponseBody body);
 
         @Override
-        DescribeSlinkTaskInfoResponse build();
+        AllocateColdDataVolumeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeSlinkTaskInfoResponse, Builder>
+            extends Response.BuilderImpl<AllocateColdDataVolumeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeSlinkTaskInfoResponseBody body; 
+        private AllocateColdDataVolumeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeSlinkTaskInfoResponse response) {
+        private BuilderImpl(AllocateColdDataVolumeResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DescribeSlinkTaskInfoResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeSlinkTaskInfoResponseBody body) {
+        public Builder body(AllocateColdDataVolumeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeSlinkTaskInfoResponse build() {
-            return new DescribeSlinkTaskInfoResponse(this);
+        public AllocateColdDataVolumeResponse build() {
+            return new AllocateColdDataVolumeResponse(this);
         } 
 
     } 

@@ -58,7 +58,7 @@ public class DescribeTagsResponseBody extends TeaModel {
         }
 
         /**
-         * 标签信息列表
+         * TagInfos.
          */
         public Builder tagInfos(java.util.List < TagInfos> tagInfos) {
             this.tagInfos = tagInfos;
@@ -122,7 +122,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * 标签关联数据库实例列表
+             * DBInstanceIds.
              */
             public Builder DBInstanceIds(java.util.List < String > DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
@@ -130,7 +130,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * 标签Key
+             * TagKey.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -138,7 +138,7 @@ public class DescribeTagsResponseBody extends TeaModel {
             }
 
             /**
-             * 标签Value
+             * TagValue.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

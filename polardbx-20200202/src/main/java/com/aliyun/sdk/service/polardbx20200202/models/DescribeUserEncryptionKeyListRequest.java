@@ -61,10 +61,10 @@ public class DescribeUserEncryptionKeyListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeUserEncryptionKeyListRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(DescribeUserEncryptionKeyListRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -18,14 +18,24 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
     private String DBInstanceName;
 
     @Query
+    @NameInMap("MinorVersion")
+    private String minorVersion;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("SwitchMode")
+    private String switchMode;
+
     private UpgradeDBInstanceKernelVersionRequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
+        this.minorVersion = builder.minorVersion;
         this.regionId = builder.regionId;
+        this.switchMode = builder.switchMode;
     }
 
     public static Builder builder() {
@@ -49,24 +59,42 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
     }
 
     /**
+     * @return minorVersion
+     */
+    public String getMinorVersion() {
+        return this.minorVersion;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return switchMode
+     */
+    public String getSwitchMode() {
+        return this.switchMode;
+    }
+
     public static final class Builder extends Request.Builder<UpgradeDBInstanceKernelVersionRequest, Builder> {
         private String DBInstanceName; 
+        private String minorVersion; 
         private String regionId; 
+        private String switchMode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpgradeDBInstanceKernelVersionRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(UpgradeDBInstanceKernelVersionRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.minorVersion = request.minorVersion;
+            this.regionId = request.regionId;
+            this.switchMode = request.switchMode;
         } 
 
         /**
@@ -79,11 +107,29 @@ public class UpgradeDBInstanceKernelVersionRequest extends Request {
         }
 
         /**
+         * MinorVersion.
+         */
+        public Builder minorVersion(String minorVersion) {
+            this.putQueryParameter("MinorVersion", minorVersion);
+            this.minorVersion = minorVersion;
+            return this;
+        }
+
+        /**
          * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SwitchMode.
+         */
+        public Builder switchMode(String switchMode) {
+            this.putQueryParameter("SwitchMode", switchMode);
+            this.switchMode = switchMode;
             return this;
         }
 

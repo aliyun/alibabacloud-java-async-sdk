@@ -75,11 +75,11 @@ public class DescribeActiveOperationTaskCountRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeActiveOperationTaskCountRequest response) {
-            super(response);
-            this.category = response.category;
-            this.product = response.product;
-            this.regionId = response.regionId;
+        private Builder(DescribeActiveOperationTaskCountRequest request) {
+            super(request);
+            this.category = request.category;
+            this.product = request.product;
+            this.regionId = request.regionId;
         } 
 
         /**

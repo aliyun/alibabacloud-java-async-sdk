@@ -76,11 +76,11 @@ public class CheckCloudResourceAuthorizedRequest extends Request {
             super();
         } 
 
-        private Builder(CheckCloudResourceAuthorizedRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
-            this.roleArn = response.roleArn;
+        private Builder(CheckCloudResourceAuthorizedRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
+            this.roleArn = request.roleArn;
         } 
 
         /**

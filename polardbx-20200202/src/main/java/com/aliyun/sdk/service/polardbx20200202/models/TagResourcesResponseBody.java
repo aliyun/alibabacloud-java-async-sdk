@@ -38,7 +38,7 @@ public class TagResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * requestId
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

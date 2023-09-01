@@ -63,10 +63,10 @@ public class RestartDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(RestartDBInstanceRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(RestartDBInstanceRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

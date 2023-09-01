@@ -86,7 +86,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         private Long totalRecordCount; 
 
         /**
-         * 事件体
+         * EventItems.
          */
         public Builder eventItems(java.util.List < EventItems> eventItems) {
             this.eventItems = eventItems;
@@ -94,7 +94,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 页面下标
+         * PageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 页面大小
+         * PageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 总页数
+         * TotalRecordCount.
          */
         public Builder totalRecordCount(Long totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -278,7 +278,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             private String resourceType; 
 
             /**
-             * 事件ID
+             * EventId.
              */
             public Builder eventId(Long eventId) {
                 this.eventId = eventId;
@@ -286,7 +286,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件名称
+             * EventName.
              */
             public Builder eventName(String eventName) {
                 this.eventName = eventName;
@@ -294,7 +294,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 补充信息
+             * EventPayload.
              */
             public Builder eventPayload(String eventPayload) {
                 this.eventPayload = eventPayload;
@@ -302,7 +302,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 原因
+             * EventReason.
              */
             public Builder eventReason(String eventReason) {
                 this.eventReason = eventReason;
@@ -310,7 +310,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 记录时间
+             * EventRecordTime.
              */
             public Builder eventRecordTime(String eventRecordTime) {
                 this.eventRecordTime = eventRecordTime;
@@ -318,7 +318,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件时间
+             * EventTime.
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -326,7 +326,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件类型
+             * EventType.
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -334,7 +334,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件用户类型
+             * EventUserType.
              */
             public Builder eventUserType(String eventUserType) {
                 this.eventUserType = eventUserType;
@@ -342,7 +342,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 区域ID
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -350,7 +350,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 资源名
+             * ResourceName.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -358,7 +358,7 @@ public class DescribeEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * ResourceType.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyActiveOperationTasksRequest extends Request {
     @Query
     @NameInMap("Ids")
+    @Validation(required = true)
     private String ids;
 
     @Query
@@ -88,12 +89,12 @@ public class ModifyActiveOperationTasksRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyActiveOperationTasksRequest response) {
-            super(response);
-            this.ids = response.ids;
-            this.immediateStart = response.immediateStart;
-            this.regionId = response.regionId;
-            this.switchTime = response.switchTime;
+        private Builder(ModifyActiveOperationTasksRequest request) {
+            super(request);
+            this.ids = request.ids;
+            this.immediateStart = request.immediateStart;
+            this.regionId = request.regionId;
+            this.switchTime = request.switchTime;
         } 
 
         /**

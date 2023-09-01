@@ -103,13 +103,13 @@ public class ModifySecurityIpsRequest extends Request {
             super();
         } 
 
-        private Builder(ModifySecurityIpsRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.groupName = response.groupName;
-            this.modifyMode = response.modifyMode;
-            this.regionId = response.regionId;
-            this.securityIPList = response.securityIPList;
+        private Builder(ModifySecurityIpsRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.groupName = request.groupName;
+            this.modifyMode = request.modifyMode;
+            this.regionId = request.regionId;
+            this.securityIPList = request.securityIPList;
         } 
 
         /**

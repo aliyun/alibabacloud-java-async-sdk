@@ -19,6 +19,7 @@ public class ModifyDatabaseDescriptionRequest extends Request {
 
     @Query
     @NameInMap("DbDescription")
+    @Validation(required = true)
     private String dbDescription;
 
     @Query
@@ -90,12 +91,12 @@ public class ModifyDatabaseDescriptionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDatabaseDescriptionRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.dbDescription = response.dbDescription;
-            this.dbName = response.dbName;
-            this.regionId = response.regionId;
+        private Builder(ModifyDatabaseDescriptionRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.dbDescription = request.dbDescription;
+            this.dbName = request.dbName;
+            this.regionId = request.regionId;
         } 
 
         /**

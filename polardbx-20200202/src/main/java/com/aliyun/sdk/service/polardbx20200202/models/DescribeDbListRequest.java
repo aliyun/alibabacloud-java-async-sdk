@@ -76,11 +76,11 @@ public class DescribeDbListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDbListRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.DBName = response.DBName;
-            this.regionId = response.regionId;
+        private Builder(DescribeDbListRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.DBName = request.DBName;
+            this.regionId = request.regionId;
         } 
 
         /**

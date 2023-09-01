@@ -17,6 +17,10 @@ public class DescribeDBInstancesRequest extends Request {
     private String instanceId;
 
     @Query
+    @NameInMap("MustHasCdc")
+    private Boolean mustHasCdc;
+
+    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -35,16 +39,22 @@ public class DescribeDBInstancesRequest extends Request {
     private String resourceGroupId;
 
     @Query
+    @NameInMap("Series")
+    private String series;
+
+    @Query
     @NameInMap("Tags")
     private String tags;
 
     private DescribeDBInstancesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.mustHasCdc = builder.mustHasCdc;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.series = builder.series;
         this.tags = builder.tags;
     }
 
@@ -66,6 +76,13 @@ public class DescribeDBInstancesRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return mustHasCdc
+     */
+    public Boolean getMustHasCdc() {
+        return this.mustHasCdc;
     }
 
     /**
@@ -97,6 +114,13 @@ public class DescribeDBInstancesRequest extends Request {
     }
 
     /**
+     * @return series
+     */
+    public String getSeries() {
+        return this.series;
+    }
+
+    /**
      * @return tags
      */
     public String getTags() {
@@ -105,32 +129,45 @@ public class DescribeDBInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDBInstancesRequest, Builder> {
         private String instanceId; 
+        private Boolean mustHasCdc; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
         private String resourceGroupId; 
+        private String series; 
         private String tags; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDBInstancesRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
-            this.tags = response.tags;
+        private Builder(DescribeDBInstancesRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.mustHasCdc = request.mustHasCdc;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
+            this.series = request.series;
+            this.tags = request.tags;
         } 
 
         /**
-         * 实例名称
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MustHasCdc.
+         */
+        public Builder mustHasCdc(Boolean mustHasCdc) {
+            this.putQueryParameter("MustHasCdc", mustHasCdc);
+            this.mustHasCdc = mustHasCdc;
             return this;
         }
 
@@ -162,7 +199,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * 资源组ID
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -171,7 +208,16 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * 标签过滤条件
+         * Series.
+         */
+        public Builder series(String series) {
+            this.putQueryParameter("Series", series);
+            this.series = series;
+            return this;
+        }
+
+        /**
+         * Tags.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);

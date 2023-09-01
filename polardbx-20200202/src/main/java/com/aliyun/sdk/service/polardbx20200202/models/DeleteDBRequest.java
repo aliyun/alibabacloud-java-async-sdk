@@ -77,11 +77,11 @@ public class DeleteDBRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDBRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.dbName = response.dbName;
-            this.regionId = response.regionId;
+        private Builder(DeleteDBRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.dbName = request.dbName;
+            this.regionId = request.regionId;
         } 
 
         /**

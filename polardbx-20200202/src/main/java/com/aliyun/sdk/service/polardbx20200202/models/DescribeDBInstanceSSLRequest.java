@@ -61,10 +61,10 @@ public class DescribeDBInstanceSSLRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstanceSSLRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(DescribeDBInstanceSSLRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

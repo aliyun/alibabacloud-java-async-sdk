@@ -77,11 +77,11 @@ public class DescribeDBInstanceConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstanceConfigRequest response) {
-            super(response);
-            this.configName = response.configName;
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(DescribeDBInstanceConfigRequest request) {
+            super(request);
+            this.configName = request.configName;
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

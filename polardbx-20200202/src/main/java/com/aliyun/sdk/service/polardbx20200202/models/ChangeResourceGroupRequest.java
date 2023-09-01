@@ -91,16 +91,16 @@ public class ChangeResourceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ChangeResourceGroupRequest response) {
-            super(response);
-            this.newResourceGroupId = response.newResourceGroupId;
-            this.regionId = response.regionId;
-            this.resourceId = response.resourceId;
-            this.resourceType = response.resourceType;
+        private Builder(ChangeResourceGroupRequest request) {
+            super(request);
+            this.newResourceGroupId = request.newResourceGroupId;
+            this.regionId = request.regionId;
+            this.resourceId = request.resourceId;
+            this.resourceType = request.resourceType;
         } 
 
         /**
-         * 新资源组ID
+         * NewResourceGroupId.
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -109,7 +109,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * 地域
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -118,7 +118,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * 资源ID
+         * ResourceId.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -127,7 +127,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

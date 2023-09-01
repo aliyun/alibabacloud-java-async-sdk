@@ -105,13 +105,13 @@ public class ModifyDBInstanceConnectionStringRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceConnectionStringRequest response) {
-            super(response);
-            this.connectionString = response.connectionString;
-            this.DBInstanceName = response.DBInstanceName;
-            this.newPort = response.newPort;
-            this.newPrefix = response.newPrefix;
-            this.regionId = response.regionId;
+        private Builder(ModifyDBInstanceConnectionStringRequest request) {
+            super(request);
+            this.connectionString = request.connectionString;
+            this.DBInstanceName = request.DBInstanceName;
+            this.newPort = request.newPort;
+            this.newPrefix = request.newPrefix;
+            this.regionId = request.regionId;
         } 
 
         /**

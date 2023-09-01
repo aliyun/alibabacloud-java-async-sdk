@@ -104,13 +104,13 @@ public class CreateSuperAccountRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSuperAccountRequest response) {
-            super(response);
-            this.accountDescription = response.accountDescription;
-            this.accountName = response.accountName;
-            this.accountPassword = response.accountPassword;
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(CreateSuperAccountRequest request) {
+            super(request);
+            this.accountDescription = request.accountDescription;
+            this.accountName = request.accountName;
+            this.accountPassword = request.accountPassword;
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

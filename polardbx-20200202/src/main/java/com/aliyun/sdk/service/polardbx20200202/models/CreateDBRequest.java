@@ -41,6 +41,10 @@ public class CreateDBRequest extends Request {
     private String dbName;
 
     @Query
+    @NameInMap("Mode")
+    private String mode;
+
+    @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
@@ -61,6 +65,7 @@ public class CreateDBRequest extends Request {
         this.DBInstanceName = builder.DBInstanceName;
         this.dbDescription = builder.dbDescription;
         this.dbName = builder.dbName;
+        this.mode = builder.mode;
         this.regionId = builder.regionId;
         this.securityAccountName = builder.securityAccountName;
         this.securityAccountPassword = builder.securityAccountPassword;
@@ -122,6 +127,13 @@ public class CreateDBRequest extends Request {
     }
 
     /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -149,6 +161,7 @@ public class CreateDBRequest extends Request {
         private String DBInstanceName; 
         private String dbDescription; 
         private String dbName; 
+        private String mode; 
         private String regionId; 
         private String securityAccountName; 
         private String securityAccountPassword; 
@@ -157,17 +170,18 @@ public class CreateDBRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDBRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.accountPrivilege = response.accountPrivilege;
-            this.charset = response.charset;
-            this.DBInstanceName = response.DBInstanceName;
-            this.dbDescription = response.dbDescription;
-            this.dbName = response.dbName;
-            this.regionId = response.regionId;
-            this.securityAccountName = response.securityAccountName;
-            this.securityAccountPassword = response.securityAccountPassword;
+        private Builder(CreateDBRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.accountPrivilege = request.accountPrivilege;
+            this.charset = request.charset;
+            this.DBInstanceName = request.DBInstanceName;
+            this.dbDescription = request.dbDescription;
+            this.dbName = request.dbName;
+            this.mode = request.mode;
+            this.regionId = request.regionId;
+            this.securityAccountName = request.securityAccountName;
+            this.securityAccountPassword = request.securityAccountPassword;
         } 
 
         /**
@@ -221,6 +235,15 @@ public class CreateDBRequest extends Request {
         public Builder dbName(String dbName) {
             this.putQueryParameter("DbName", dbName);
             this.dbName = dbName;
+            return this;
+        }
+
+        /**
+         * Mode.
+         */
+        public Builder mode(String mode) {
+            this.putQueryParameter("Mode", mode);
+            this.mode = mode;
             return this;
         }
 

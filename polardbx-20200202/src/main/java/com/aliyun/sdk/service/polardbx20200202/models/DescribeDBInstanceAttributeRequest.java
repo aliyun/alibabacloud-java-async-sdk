@@ -76,11 +76,11 @@ public class DescribeDBInstanceAttributeRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstanceAttributeRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
-            this.resourceGroupId = response.resourceGroupId;
+        private Builder(DescribeDBInstanceAttributeRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -102,7 +102,7 @@ public class DescribeDBInstanceAttributeRequest extends Request {
         }
 
         /**
-         * 资源组ID
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

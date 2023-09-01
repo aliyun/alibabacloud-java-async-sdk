@@ -61,10 +61,10 @@ public class DescribeDBInstanceTDERequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBInstanceTDERequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(DescribeDBInstanceTDERequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

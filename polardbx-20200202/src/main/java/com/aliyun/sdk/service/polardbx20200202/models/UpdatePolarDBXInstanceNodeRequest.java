@@ -13,6 +13,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdatePolarDBXInstanceNodeRequest extends Request {
     @Query
+    @NameInMap("CNNodeCount")
+    private String CNNodeCount;
+
+    @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
@@ -22,8 +26,11 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
     private String DBInstanceName;
 
     @Query
+    @NameInMap("DNNodeCount")
+    private String DNNodeCount;
+
+    @Query
     @NameInMap("DbInstanceNodeCount")
-    @Validation(required = true)
     private String dbInstanceNodeCount;
 
     @Query
@@ -33,8 +40,10 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
 
     private UpdatePolarDBXInstanceNodeRequest(Builder builder) {
         super(builder);
+        this.CNNodeCount = builder.CNNodeCount;
         this.clientToken = builder.clientToken;
         this.DBInstanceName = builder.DBInstanceName;
+        this.DNNodeCount = builder.DNNodeCount;
         this.dbInstanceNodeCount = builder.dbInstanceNodeCount;
         this.regionId = builder.regionId;
     }
@@ -53,6 +62,13 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
     }
 
     /**
+     * @return CNNodeCount
+     */
+    public String getCNNodeCount() {
+        return this.CNNodeCount;
+    }
+
+    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -64,6 +80,13 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
      */
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    /**
+     * @return DNNodeCount
+     */
+    public String getDNNodeCount() {
+        return this.DNNodeCount;
     }
 
     /**
@@ -81,8 +104,10 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdatePolarDBXInstanceNodeRequest, Builder> {
+        private String CNNodeCount; 
         private String clientToken; 
         private String DBInstanceName; 
+        private String DNNodeCount; 
         private String dbInstanceNodeCount; 
         private String regionId; 
 
@@ -90,13 +115,24 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdatePolarDBXInstanceNodeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBInstanceName = response.DBInstanceName;
-            this.dbInstanceNodeCount = response.dbInstanceNodeCount;
-            this.regionId = response.regionId;
+        private Builder(UpdatePolarDBXInstanceNodeRequest request) {
+            super(request);
+            this.CNNodeCount = request.CNNodeCount;
+            this.clientToken = request.clientToken;
+            this.DBInstanceName = request.DBInstanceName;
+            this.DNNodeCount = request.DNNodeCount;
+            this.dbInstanceNodeCount = request.dbInstanceNodeCount;
+            this.regionId = request.regionId;
         } 
+
+        /**
+         * CNNodeCount.
+         */
+        public Builder CNNodeCount(String CNNodeCount) {
+            this.putQueryParameter("CNNodeCount", CNNodeCount);
+            this.CNNodeCount = CNNodeCount;
+            return this;
+        }
 
         /**
          * ClientToken.
@@ -113,6 +149,15 @@ public class UpdatePolarDBXInstanceNodeRequest extends Request {
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
             this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+
+        /**
+         * DNNodeCount.
+         */
+        public Builder DNNodeCount(String DNNodeCount) {
+            this.putQueryParameter("DNNodeCount", DNNodeCount);
+            this.DNNodeCount = DNNodeCount;
             return this;
         }
 

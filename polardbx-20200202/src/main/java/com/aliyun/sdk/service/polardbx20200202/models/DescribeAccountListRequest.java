@@ -89,12 +89,12 @@ public class DescribeAccountListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAccountListRequest response) {
-            super(response);
-            this.accountName = response.accountName;
-            this.accountType = response.accountType;
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(DescribeAccountListRequest request) {
+            super(request);
+            this.accountName = request.accountName;
+            this.accountType = request.accountType;
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

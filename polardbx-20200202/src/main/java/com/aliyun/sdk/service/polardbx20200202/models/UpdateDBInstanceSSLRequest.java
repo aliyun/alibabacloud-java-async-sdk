@@ -89,12 +89,12 @@ public class UpdateDBInstanceSSLRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDBInstanceSSLRequest response) {
-            super(response);
-            this.certCommonName = response.certCommonName;
-            this.DBInstanceName = response.DBInstanceName;
-            this.enableSSL = response.enableSSL;
-            this.regionId = response.regionId;
+        private Builder(UpdateDBInstanceSSLRequest request) {
+            super(request);
+            this.certCommonName = request.certCommonName;
+            this.DBInstanceName = request.DBInstanceName;
+            this.enableSSL = request.enableSSL;
+            this.regionId = request.regionId;
         } 
 
         /**

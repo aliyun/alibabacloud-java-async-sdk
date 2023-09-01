@@ -76,11 +76,11 @@ public class DescribeParameterTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeParameterTemplatesRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.paramLevel = response.paramLevel;
-            this.regionId = response.regionId;
+        private Builder(DescribeParameterTemplatesRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.paramLevel = request.paramLevel;
+            this.regionId = request.regionId;
         } 
 
         /**

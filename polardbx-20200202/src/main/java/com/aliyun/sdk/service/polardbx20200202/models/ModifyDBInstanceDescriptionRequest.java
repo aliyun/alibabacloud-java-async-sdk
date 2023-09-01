@@ -77,11 +77,11 @@ public class ModifyDBInstanceDescriptionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDBInstanceDescriptionRequest response) {
-            super(response);
-            this.DBInstanceDescription = response.DBInstanceDescription;
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(ModifyDBInstanceDescriptionRequest request) {
+            super(request);
+            this.DBInstanceDescription = request.DBInstanceDescription;
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

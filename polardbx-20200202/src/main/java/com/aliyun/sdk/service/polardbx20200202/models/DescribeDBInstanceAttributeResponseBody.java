@@ -87,12 +87,16 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("VSwitchId")
         private String vSwitchId;
 
+        @NameInMap("VpcInstanceId")
+        private String vpcInstanceId;
+
         private ConnAddrs(Builder builder) {
             this.connectionString = builder.connectionString;
             this.port = builder.port;
             this.type = builder.type;
             this.VPCId = builder.VPCId;
             this.vSwitchId = builder.vSwitchId;
+            this.vpcInstanceId = builder.vpcInstanceId;
         }
 
         public static Builder builder() {
@@ -138,12 +142,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
+        /**
+         * @return vpcInstanceId
+         */
+        public String getVpcInstanceId() {
+            return this.vpcInstanceId;
+        }
+
         public static final class Builder {
             private String connectionString; 
             private Long port; 
             private String type; 
             private String VPCId; 
             private String vSwitchId; 
+            private String vpcInstanceId; 
 
             /**
              * ConnectionString.
@@ -170,7 +182,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * VPC ID。
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;
@@ -182,6 +194,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * VpcInstanceId.
+             */
+            public Builder vpcInstanceId(String vpcInstanceId) {
+                this.vpcInstanceId = vpcInstanceId;
                 return this;
             }
 
@@ -372,7 +392,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 标签名称
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -380,7 +400,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 标签值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -395,6 +415,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class DBInstance extends TeaModel {
+        @NameInMap("CnNodeClassCode")
+        private String cnNodeClassCode;
+
+        @NameInMap("CnNodeCount")
+        private Integer cnNodeCount;
+
         @NameInMap("CommodityCode")
         private String commodityCode;
 
@@ -428,6 +454,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("Description")
         private String description;
 
+        @NameInMap("DnNodeClassCode")
+        private String dnNodeClassCode;
+
+        @NameInMap("DnNodeCount")
+        private Integer dnNodeCount;
+
         @NameInMap("Engine")
         private String engine;
 
@@ -442,6 +474,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         @NameInMap("KindCode")
         private Integer kindCode;
+
+        @NameInMap("LTSVersions")
+        @Validation(required = true)
+        private java.util.List < String > LTSVersions;
 
         @NameInMap("LatestMinorVersion")
         private String latestMinorVersion;
@@ -482,6 +518,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("RightsSeparationStatus")
         private String rightsSeparationStatus;
 
+        @NameInMap("Series")
+        private String series;
+
         @NameInMap("Status")
         private String status;
 
@@ -504,6 +543,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String zoneId;
 
         private DBInstance(Builder builder) {
+            this.cnNodeClassCode = builder.cnNodeClassCode;
+            this.cnNodeCount = builder.cnNodeCount;
             this.commodityCode = builder.commodityCode;
             this.connAddrs = builder.connAddrs;
             this.connectionString = builder.connectionString;
@@ -515,11 +556,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.DBType = builder.DBType;
             this.DBVersion = builder.DBVersion;
             this.description = builder.description;
+            this.dnNodeClassCode = builder.dnNodeClassCode;
+            this.dnNodeCount = builder.dnNodeCount;
             this.engine = builder.engine;
             this.expireDate = builder.expireDate;
             this.expired = builder.expired;
             this.id = builder.id;
             this.kindCode = builder.kindCode;
+            this.LTSVersions = builder.LTSVersions;
             this.latestMinorVersion = builder.latestMinorVersion;
             this.lockMode = builder.lockMode;
             this.maintainEndTime = builder.maintainEndTime;
@@ -533,6 +577,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.resourceGroupId = builder.resourceGroupId;
             this.rightsSeparationEnabled = builder.rightsSeparationEnabled;
             this.rightsSeparationStatus = builder.rightsSeparationStatus;
+            this.series = builder.series;
             this.status = builder.status;
             this.storageUsed = builder.storageUsed;
             this.tagSet = builder.tagSet;
@@ -548,6 +593,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static DBInstance create() {
             return builder().build();
+        }
+
+        /**
+         * @return cnNodeClassCode
+         */
+        public String getCnNodeClassCode() {
+            return this.cnNodeClassCode;
+        }
+
+        /**
+         * @return cnNodeCount
+         */
+        public Integer getCnNodeCount() {
+            return this.cnNodeCount;
         }
 
         /**
@@ -628,6 +687,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return dnNodeClassCode
+         */
+        public String getDnNodeClassCode() {
+            return this.dnNodeClassCode;
+        }
+
+        /**
+         * @return dnNodeCount
+         */
+        public Integer getDnNodeCount() {
+            return this.dnNodeCount;
+        }
+
+        /**
          * @return engine
          */
         public String getEngine() {
@@ -660,6 +733,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Integer getKindCode() {
             return this.kindCode;
+        }
+
+        /**
+         * @return LTSVersions
+         */
+        public java.util.List < String > getLTSVersions() {
+            return this.LTSVersions;
         }
 
         /**
@@ -754,6 +834,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return series
+         */
+        public String getSeries() {
+            return this.series;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -803,6 +890,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String cnNodeClassCode; 
+            private Integer cnNodeCount; 
             private String commodityCode; 
             private java.util.List < ConnAddrs> connAddrs; 
             private String connectionString; 
@@ -814,11 +903,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String DBType; 
             private String DBVersion; 
             private String description; 
+            private String dnNodeClassCode; 
+            private Integer dnNodeCount; 
             private String engine; 
             private String expireDate; 
             private String expired; 
             private String id; 
             private Integer kindCode; 
+            private java.util.List < String > LTSVersions; 
             private String latestMinorVersion; 
             private String lockMode; 
             private String maintainEndTime; 
@@ -832,6 +924,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String resourceGroupId; 
             private Boolean rightsSeparationEnabled; 
             private String rightsSeparationStatus; 
+            private String series; 
             private String status; 
             private Long storageUsed; 
             private java.util.List < TagSet> tagSet; 
@@ -839,6 +932,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String VPCId; 
             private String vSwitchId; 
             private String zoneId; 
+
+            /**
+             * CnNodeClassCode.
+             */
+            public Builder cnNodeClassCode(String cnNodeClassCode) {
+                this.cnNodeClassCode = cnNodeClassCode;
+                return this;
+            }
+
+            /**
+             * CnNodeCount.
+             */
+            public Builder cnNodeCount(Integer cnNodeCount) {
+                this.cnNodeCount = cnNodeCount;
+                return this;
+            }
 
             /**
              * CommodityCode.
@@ -929,6 +1038,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * DnNodeClassCode.
+             */
+            public Builder dnNodeClassCode(String dnNodeClassCode) {
+                this.dnNodeClassCode = dnNodeClassCode;
+                return this;
+            }
+
+            /**
+             * DnNodeCount.
+             */
+            public Builder dnNodeCount(Integer dnNodeCount) {
+                this.dnNodeCount = dnNodeCount;
+                return this;
+            }
+
+            /**
              * Engine.
              */
             public Builder engine(String engine) {
@@ -965,6 +1090,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder kindCode(Integer kindCode) {
                 this.kindCode = kindCode;
+                return this;
+            }
+
+            /**
+             * LTSVersions.
+             */
+            public Builder LTSVersions(java.util.List < String > LTSVersions) {
+                this.LTSVersions = LTSVersions;
                 return this;
             }
 
@@ -1049,7 +1182,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组ID
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1073,6 +1206,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * Series.
+             */
+            public Builder series(String series) {
+                this.series = series;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
@@ -1089,7 +1230,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * 标签集合
+             * TagSet.
              */
             public Builder tagSet(java.util.List < TagSet> tagSet) {
                 this.tagSet = tagSet;
@@ -1105,7 +1246,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * VPC ID。
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;

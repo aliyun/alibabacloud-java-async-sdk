@@ -75,15 +75,15 @@ public class DescribeTagsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTagsRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
-            this.tagKey = response.tagKey;
+        private Builder(DescribeTagsRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
+            this.tagKey = request.tagKey;
         } 
 
         /**
-         * 实例名称
+         * DBInstanceName.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -92,7 +92,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * 地域
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +101,7 @@ public class DescribeTagsRequest extends Request {
         }
 
         /**
-         * 标签Key
+         * TagKey.
          */
         public Builder tagKey(String tagKey) {
             this.putQueryParameter("TagKey", tagKey);

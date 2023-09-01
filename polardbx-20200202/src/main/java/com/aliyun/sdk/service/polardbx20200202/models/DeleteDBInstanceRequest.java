@@ -63,10 +63,10 @@ public class DeleteDBInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteDBInstanceRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(DeleteDBInstanceRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

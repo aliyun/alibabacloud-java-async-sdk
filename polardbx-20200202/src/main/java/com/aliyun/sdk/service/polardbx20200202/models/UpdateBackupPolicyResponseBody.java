@@ -127,17 +127,41 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
         @NameInMap("BackupWay")
         private String backupWay;
 
+        @NameInMap("ColdDataBackupInterval")
+        private Integer coldDataBackupInterval;
+
+        @NameInMap("ColdDataBackupRetention")
+        private Integer coldDataBackupRetention;
+
+        @NameInMap("CrossRegionDataBackupRetention")
+        private Integer crossRegionDataBackupRetention;
+
+        @NameInMap("CrossRegionLogBackupRetention")
+        private Integer crossRegionLogBackupRetention;
+
         @NameInMap("DBInstanceName")
         private String DBInstanceName;
 
+        @NameInMap("DestCrossRegion")
+        private String destCrossRegion;
+
         @NameInMap("ForceCleanOnHighSpaceUsage")
         private Integer forceCleanOnHighSpaceUsage;
+
+        @NameInMap("IsCrossRegionDataBackupEnabled")
+        private Boolean isCrossRegionDataBackupEnabled;
+
+        @NameInMap("IsCrossRegionLogBackupEnabled")
+        private Boolean isCrossRegionLogBackupEnabled;
 
         @NameInMap("IsEnabled")
         private Integer isEnabled;
 
         @NameInMap("LocalLogRetention")
         private Integer localLogRetention;
+
+        @NameInMap("LocalLogRetentionNumber")
+        private Integer localLogRetentionNumber;
 
         @NameInMap("LogLocalRetentionSpace")
         private Integer logLocalRetentionSpace;
@@ -151,10 +175,18 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             this.backupSetRetention = builder.backupSetRetention;
             this.backupType = builder.backupType;
             this.backupWay = builder.backupWay;
+            this.coldDataBackupInterval = builder.coldDataBackupInterval;
+            this.coldDataBackupRetention = builder.coldDataBackupRetention;
+            this.crossRegionDataBackupRetention = builder.crossRegionDataBackupRetention;
+            this.crossRegionLogBackupRetention = builder.crossRegionLogBackupRetention;
             this.DBInstanceName = builder.DBInstanceName;
+            this.destCrossRegion = builder.destCrossRegion;
             this.forceCleanOnHighSpaceUsage = builder.forceCleanOnHighSpaceUsage;
+            this.isCrossRegionDataBackupEnabled = builder.isCrossRegionDataBackupEnabled;
+            this.isCrossRegionLogBackupEnabled = builder.isCrossRegionLogBackupEnabled;
             this.isEnabled = builder.isEnabled;
             this.localLogRetention = builder.localLogRetention;
+            this.localLogRetentionNumber = builder.localLogRetentionNumber;
             this.logLocalRetentionSpace = builder.logLocalRetentionSpace;
             this.removeLogRetention = builder.removeLogRetention;
         }
@@ -203,6 +235,34 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return coldDataBackupInterval
+         */
+        public Integer getColdDataBackupInterval() {
+            return this.coldDataBackupInterval;
+        }
+
+        /**
+         * @return coldDataBackupRetention
+         */
+        public Integer getColdDataBackupRetention() {
+            return this.coldDataBackupRetention;
+        }
+
+        /**
+         * @return crossRegionDataBackupRetention
+         */
+        public Integer getCrossRegionDataBackupRetention() {
+            return this.crossRegionDataBackupRetention;
+        }
+
+        /**
+         * @return crossRegionLogBackupRetention
+         */
+        public Integer getCrossRegionLogBackupRetention() {
+            return this.crossRegionLogBackupRetention;
+        }
+
+        /**
          * @return DBInstanceName
          */
         public String getDBInstanceName() {
@@ -210,10 +270,31 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
         }
 
         /**
+         * @return destCrossRegion
+         */
+        public String getDestCrossRegion() {
+            return this.destCrossRegion;
+        }
+
+        /**
          * @return forceCleanOnHighSpaceUsage
          */
         public Integer getForceCleanOnHighSpaceUsage() {
             return this.forceCleanOnHighSpaceUsage;
+        }
+
+        /**
+         * @return isCrossRegionDataBackupEnabled
+         */
+        public Boolean getIsCrossRegionDataBackupEnabled() {
+            return this.isCrossRegionDataBackupEnabled;
+        }
+
+        /**
+         * @return isCrossRegionLogBackupEnabled
+         */
+        public Boolean getIsCrossRegionLogBackupEnabled() {
+            return this.isCrossRegionLogBackupEnabled;
         }
 
         /**
@@ -228,6 +309,13 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
          */
         public Integer getLocalLogRetention() {
             return this.localLogRetention;
+        }
+
+        /**
+         * @return localLogRetentionNumber
+         */
+        public Integer getLocalLogRetentionNumber() {
+            return this.localLogRetentionNumber;
         }
 
         /**
@@ -250,10 +338,18 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             private Integer backupSetRetention; 
             private String backupType; 
             private String backupWay; 
+            private Integer coldDataBackupInterval; 
+            private Integer coldDataBackupRetention; 
+            private Integer crossRegionDataBackupRetention; 
+            private Integer crossRegionLogBackupRetention; 
             private String DBInstanceName; 
+            private String destCrossRegion; 
             private Integer forceCleanOnHighSpaceUsage; 
+            private Boolean isCrossRegionDataBackupEnabled; 
+            private Boolean isCrossRegionLogBackupEnabled; 
             private Integer isEnabled; 
             private Integer localLogRetention; 
+            private Integer localLogRetentionNumber; 
             private Integer logLocalRetentionSpace; 
             private Integer removeLogRetention; 
 
@@ -298,6 +394,38 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
+             * ColdDataBackupInterval.
+             */
+            public Builder coldDataBackupInterval(Integer coldDataBackupInterval) {
+                this.coldDataBackupInterval = coldDataBackupInterval;
+                return this;
+            }
+
+            /**
+             * ColdDataBackupRetention.
+             */
+            public Builder coldDataBackupRetention(Integer coldDataBackupRetention) {
+                this.coldDataBackupRetention = coldDataBackupRetention;
+                return this;
+            }
+
+            /**
+             * CrossRegionDataBackupRetention.
+             */
+            public Builder crossRegionDataBackupRetention(Integer crossRegionDataBackupRetention) {
+                this.crossRegionDataBackupRetention = crossRegionDataBackupRetention;
+                return this;
+            }
+
+            /**
+             * CrossRegionLogBackupRetention.
+             */
+            public Builder crossRegionLogBackupRetention(Integer crossRegionLogBackupRetention) {
+                this.crossRegionLogBackupRetention = crossRegionLogBackupRetention;
+                return this;
+            }
+
+            /**
              * DBInstanceName.
              */
             public Builder DBInstanceName(String DBInstanceName) {
@@ -306,10 +434,34 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
             }
 
             /**
+             * DestCrossRegion.
+             */
+            public Builder destCrossRegion(String destCrossRegion) {
+                this.destCrossRegion = destCrossRegion;
+                return this;
+            }
+
+            /**
              * ForceCleanOnHighSpaceUsage.
              */
             public Builder forceCleanOnHighSpaceUsage(Integer forceCleanOnHighSpaceUsage) {
                 this.forceCleanOnHighSpaceUsage = forceCleanOnHighSpaceUsage;
+                return this;
+            }
+
+            /**
+             * IsCrossRegionDataBackupEnabled.
+             */
+            public Builder isCrossRegionDataBackupEnabled(Boolean isCrossRegionDataBackupEnabled) {
+                this.isCrossRegionDataBackupEnabled = isCrossRegionDataBackupEnabled;
+                return this;
+            }
+
+            /**
+             * IsCrossRegionLogBackupEnabled.
+             */
+            public Builder isCrossRegionLogBackupEnabled(Boolean isCrossRegionLogBackupEnabled) {
+                this.isCrossRegionLogBackupEnabled = isCrossRegionLogBackupEnabled;
                 return this;
             }
 
@@ -326,6 +478,14 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
              */
             public Builder localLogRetention(Integer localLogRetention) {
                 this.localLogRetention = localLogRetention;
+                return this;
+            }
+
+            /**
+             * LocalLogRetentionNumber.
+             */
+            public Builder localLogRetentionNumber(Integer localLogRetentionNumber) {
+                this.localLogRetentionNumber = localLogRetentionNumber;
                 return this;
             }
 

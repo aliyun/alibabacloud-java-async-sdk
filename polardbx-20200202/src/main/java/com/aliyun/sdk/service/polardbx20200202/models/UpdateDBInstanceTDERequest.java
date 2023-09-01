@@ -103,13 +103,13 @@ public class UpdateDBInstanceTDERequest extends Request {
             super();
         } 
 
-        private Builder(UpdateDBInstanceTDERequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.encryptionKey = response.encryptionKey;
-            this.regionId = response.regionId;
-            this.roleArn = response.roleArn;
-            this.TDEStatus = response.TDEStatus;
+        private Builder(UpdateDBInstanceTDERequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.encryptionKey = request.encryptionKey;
+            this.regionId = request.regionId;
+            this.roleArn = request.roleArn;
+            this.TDEStatus = request.TDEStatus;
         } 
 
         /**

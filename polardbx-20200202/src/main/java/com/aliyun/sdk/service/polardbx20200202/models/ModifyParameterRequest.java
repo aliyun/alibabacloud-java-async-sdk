@@ -103,13 +103,13 @@ public class ModifyParameterRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyParameterRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.DBInstanceId = response.DBInstanceId;
-            this.paramLevel = response.paramLevel;
-            this.parameters = response.parameters;
-            this.regionId = response.regionId;
+        private Builder(ModifyParameterRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.DBInstanceId = request.DBInstanceId;
+            this.paramLevel = request.paramLevel;
+            this.parameters = request.parameters;
+            this.regionId = request.regionId;
         } 
 
         /**

@@ -23,6 +23,10 @@ public class DescribeBinaryLogListRequest extends Request {
     private String endTime;
 
     @Query
+    @NameInMap("InstanceName")
+    private String instanceName;
+
+    @Query
     @NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -45,6 +49,7 @@ public class DescribeBinaryLogListRequest extends Request {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
         this.endTime = builder.endTime;
+        this.instanceName = builder.instanceName;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
@@ -79,6 +84,13 @@ public class DescribeBinaryLogListRequest extends Request {
     }
 
     /**
+     * @return instanceName
+     */
+    public String getInstanceName() {
+        return this.instanceName;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -109,6 +121,7 @@ public class DescribeBinaryLogListRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeBinaryLogListRequest, Builder> {
         private String DBInstanceName; 
         private String endTime; 
+        private String instanceName; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
@@ -118,14 +131,15 @@ public class DescribeBinaryLogListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBinaryLogListRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.endTime = response.endTime;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeBinaryLogListRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.endTime = request.endTime;
+            this.instanceName = request.instanceName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**
@@ -143,6 +157,15 @@ public class DescribeBinaryLogListRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * InstanceName.
+         */
+        public Builder instanceName(String instanceName) {
+            this.putQueryParameter("InstanceName", instanceName);
+            this.instanceName = instanceName;
             return this;
         }
 

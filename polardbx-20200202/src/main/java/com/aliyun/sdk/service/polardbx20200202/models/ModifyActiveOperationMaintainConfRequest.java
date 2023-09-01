@@ -14,18 +14,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyActiveOperationMaintainConfRequest extends Request {
     @Query
     @NameInMap("CycleTime")
+    @Validation(required = true)
     private String cycleTime;
 
     @Query
     @NameInMap("CycleType")
+    @Validation(required = true)
     private String cycleType;
 
     @Query
     @NameInMap("MaintainEndTime")
+    @Validation(required = true)
     private String maintainEndTime;
 
     @Query
     @NameInMap("MaintainStartTime")
+    @Validation(required = true)
     private String maintainStartTime;
 
     @Query
@@ -35,6 +39,7 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
 
     @Query
     @NameInMap("Status")
+    @Validation(required = true)
     private Integer status;
 
     private ModifyActiveOperationMaintainConfRequest(Builder builder) {
@@ -114,14 +119,14 @@ public class ModifyActiveOperationMaintainConfRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyActiveOperationMaintainConfRequest response) {
-            super(response);
-            this.cycleTime = response.cycleTime;
-            this.cycleType = response.cycleType;
-            this.maintainEndTime = response.maintainEndTime;
-            this.maintainStartTime = response.maintainStartTime;
-            this.regionId = response.regionId;
-            this.status = response.status;
+        private Builder(ModifyActiveOperationMaintainConfRequest request) {
+            super(request);
+            this.cycleTime = request.cycleTime;
+            this.cycleType = request.cycleType;
+            this.maintainEndTime = request.maintainEndTime;
+            this.maintainStartTime = request.maintainStartTime;
+            this.regionId = request.regionId;
+            this.status = request.status;
         } 
 
         /**

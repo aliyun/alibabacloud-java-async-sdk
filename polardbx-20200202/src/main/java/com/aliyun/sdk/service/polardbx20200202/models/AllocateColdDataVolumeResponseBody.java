@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link InitDBInstanceResourceGroupIdResponseBody} extends {@link TeaModel}
+ * {@link AllocateColdDataVolumeResponseBody} extends {@link TeaModel}
  *
- * <p>InitDBInstanceResourceGroupIdResponseBody</p>
+ * <p>AllocateColdDataVolumeResponseBody</p>
  */
-public class InitDBInstanceResourceGroupIdResponseBody extends TeaModel {
+public class AllocateColdDataVolumeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private InitDBInstanceResourceGroupIdResponseBody(Builder builder) {
+    private AllocateColdDataVolumeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class InitDBInstanceResourceGroupIdResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static InitDBInstanceResourceGroupIdResponseBody create() {
+    public static AllocateColdDataVolumeResponseBody create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class InitDBInstanceResourceGroupIdResponseBody extends TeaModel {
             return this;
         }
 
-        public InitDBInstanceResourceGroupIdResponseBody build() {
-            return new InitDBInstanceResourceGroupIdResponseBody(this);
+        public AllocateColdDataVolumeResponseBody build() {
+            return new AllocateColdDataVolumeResponseBody(this);
         } 
 
     } 

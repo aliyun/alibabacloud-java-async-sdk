@@ -271,7 +271,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 标签名称
+             * Key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -279,7 +279,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签值
+             * Value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -294,8 +294,20 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
     }
     public static class DBInstances extends TeaModel {
+        @NameInMap("CdcInstanceName")
+        private String cdcInstanceName;
+
+        @NameInMap("CnNodeClassCode")
+        private String cnNodeClassCode;
+
+        @NameInMap("CnNodeCount")
+        private Integer cnNodeCount;
+
         @NameInMap("CommodityCode")
         private String commodityCode;
+
+        @NameInMap("ContainBinlogX")
+        private Boolean containBinlogX;
 
         @NameInMap("CreateTime")
         private String createTime;
@@ -311,6 +323,12 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         @NameInMap("Description")
         private String description;
+
+        @NameInMap("DnNodeClassCode")
+        private String dnNodeClassCode;
+
+        @NameInMap("DnNodeCount")
+        private Integer dnNodeCount;
 
         @NameInMap("Engine")
         private String engine;
@@ -357,11 +375,17 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @NameInMap("Series")
+        private String series;
+
         @NameInMap("Status")
         private String status;
 
         @NameInMap("StorageUsed")
         private Long storageUsed;
+
+        @NameInMap("SupportBinlogX")
+        private Boolean supportBinlogX;
 
         @NameInMap("TagSet")
         private java.util.List < TagSet> tagSet;
@@ -376,12 +400,18 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private String zoneId;
 
         private DBInstances(Builder builder) {
+            this.cdcInstanceName = builder.cdcInstanceName;
+            this.cnNodeClassCode = builder.cnNodeClassCode;
+            this.cnNodeCount = builder.cnNodeCount;
             this.commodityCode = builder.commodityCode;
+            this.containBinlogX = builder.containBinlogX;
             this.createTime = builder.createTime;
             this.DBInstanceName = builder.DBInstanceName;
             this.DBType = builder.DBType;
             this.DBVersion = builder.DBVersion;
             this.description = builder.description;
+            this.dnNodeClassCode = builder.dnNodeClassCode;
+            this.dnNodeCount = builder.dnNodeCount;
             this.engine = builder.engine;
             this.expireTime = builder.expireTime;
             this.expired = builder.expired;
@@ -397,8 +427,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.readDBInstances = builder.readDBInstances;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
+            this.series = builder.series;
             this.status = builder.status;
             this.storageUsed = builder.storageUsed;
+            this.supportBinlogX = builder.supportBinlogX;
             this.tagSet = builder.tagSet;
             this.type = builder.type;
             this.VPCId = builder.VPCId;
@@ -414,10 +446,38 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return cdcInstanceName
+         */
+        public String getCdcInstanceName() {
+            return this.cdcInstanceName;
+        }
+
+        /**
+         * @return cnNodeClassCode
+         */
+        public String getCnNodeClassCode() {
+            return this.cnNodeClassCode;
+        }
+
+        /**
+         * @return cnNodeCount
+         */
+        public Integer getCnNodeCount() {
+            return this.cnNodeCount;
+        }
+
+        /**
          * @return commodityCode
          */
         public String getCommodityCode() {
             return this.commodityCode;
+        }
+
+        /**
+         * @return containBinlogX
+         */
+        public Boolean getContainBinlogX() {
+            return this.containBinlogX;
         }
 
         /**
@@ -453,6 +513,20 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return dnNodeClassCode
+         */
+        public String getDnNodeClassCode() {
+            return this.dnNodeClassCode;
+        }
+
+        /**
+         * @return dnNodeCount
+         */
+        public Integer getDnNodeCount() {
+            return this.dnNodeCount;
         }
 
         /**
@@ -561,6 +635,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return series
+         */
+        public String getSeries() {
+            return this.series;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -572,6 +653,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
          */
         public Long getStorageUsed() {
             return this.storageUsed;
+        }
+
+        /**
+         * @return supportBinlogX
+         */
+        public Boolean getSupportBinlogX() {
+            return this.supportBinlogX;
         }
 
         /**
@@ -603,12 +691,18 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String cdcInstanceName; 
+            private String cnNodeClassCode; 
+            private Integer cnNodeCount; 
             private String commodityCode; 
+            private Boolean containBinlogX; 
             private String createTime; 
             private String DBInstanceName; 
             private String DBType; 
             private String DBVersion; 
             private String description; 
+            private String dnNodeClassCode; 
+            private Integer dnNodeCount; 
             private String engine; 
             private String expireTime; 
             private Boolean expired; 
@@ -624,18 +718,52 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private java.util.List < String > readDBInstances; 
             private String regionId; 
             private String resourceGroupId; 
+            private String series; 
             private String status; 
             private Long storageUsed; 
+            private Boolean supportBinlogX; 
             private java.util.List < TagSet> tagSet; 
             private String type; 
             private String VPCId; 
             private String zoneId; 
 
             /**
+             * CdcInstanceName.
+             */
+            public Builder cdcInstanceName(String cdcInstanceName) {
+                this.cdcInstanceName = cdcInstanceName;
+                return this;
+            }
+
+            /**
+             * CnNodeClassCode.
+             */
+            public Builder cnNodeClassCode(String cnNodeClassCode) {
+                this.cnNodeClassCode = cnNodeClassCode;
+                return this;
+            }
+
+            /**
+             * CnNodeCount.
+             */
+            public Builder cnNodeCount(Integer cnNodeCount) {
+                this.cnNodeCount = cnNodeCount;
+                return this;
+            }
+
+            /**
              * CommodityCode.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
+                return this;
+            }
+
+            /**
+             * ContainBinlogX.
+             */
+            public Builder containBinlogX(Boolean containBinlogX) {
+                this.containBinlogX = containBinlogX;
                 return this;
             }
 
@@ -648,7 +776,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据库实例名称
+             * DBInstanceName.
              */
             public Builder DBInstanceName(String DBInstanceName) {
                 this.DBInstanceName = DBInstanceName;
@@ -676,6 +804,22 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * DnNodeClassCode.
+             */
+            public Builder dnNodeClassCode(String dnNodeClassCode) {
+                this.dnNodeClassCode = dnNodeClassCode;
+                return this;
+            }
+
+            /**
+             * DnNodeCount.
+             */
+            public Builder dnNodeCount(Integer dnNodeCount) {
+                this.dnNodeCount = dnNodeCount;
                 return this;
             }
 
@@ -792,10 +936,18 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源组ID
+             * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * Series.
+             */
+            public Builder series(String series) {
+                this.series = series;
                 return this;
             }
 
@@ -816,7 +968,15 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * 标签集合
+             * SupportBinlogX.
+             */
+            public Builder supportBinlogX(Boolean supportBinlogX) {
+                this.supportBinlogX = supportBinlogX;
+                return this;
+            }
+
+            /**
+             * TagSet.
              */
             public Builder tagSet(java.util.List < TagSet> tagSet) {
                 this.tagSet = tagSet;
@@ -832,7 +992,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VPCId.
+             * VPC ID。
              */
             public Builder VPCId(String VPCId) {
                 this.VPCId = VPCId;

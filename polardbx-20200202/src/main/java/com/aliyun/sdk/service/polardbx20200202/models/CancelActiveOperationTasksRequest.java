@@ -63,10 +63,10 @@ public class CancelActiveOperationTasksRequest extends Request {
             super();
         } 
 
-        private Builder(CancelActiveOperationTasksRequest response) {
-            super(response);
-            this.ids = response.ids;
-            this.regionId = response.regionId;
+        private Builder(CancelActiveOperationTasksRequest request) {
+            super(request);
+            this.ids = request.ids;
+            this.regionId = request.regionId;
         } 
 
         /**

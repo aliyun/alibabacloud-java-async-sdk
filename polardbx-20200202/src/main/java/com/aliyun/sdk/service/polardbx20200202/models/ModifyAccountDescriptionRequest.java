@@ -90,12 +90,12 @@ public class ModifyAccountDescriptionRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAccountDescriptionRequest response) {
-            super(response);
-            this.accountDescription = response.accountDescription;
-            this.accountName = response.accountName;
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(ModifyAccountDescriptionRequest request) {
+            super(request);
+            this.accountDescription = request.accountDescription;
+            this.accountName = request.accountName;
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

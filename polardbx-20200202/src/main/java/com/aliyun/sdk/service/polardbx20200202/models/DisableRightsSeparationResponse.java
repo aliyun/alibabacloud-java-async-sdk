@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link InitDBInstanceResourceGroupIdResponse} extends {@link TeaModel}
+ * {@link DisableRightsSeparationResponse} extends {@link TeaModel}
  *
- * <p>InitDBInstanceResourceGroupIdResponse</p>
+ * <p>DisableRightsSeparationResponse</p>
  */
-public class InitDBInstanceResourceGroupIdResponse extends Response {
+public class DisableRightsSeparationResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private InitDBInstanceResourceGroupIdResponseBody body;
+    private DisableRightsSeparationResponseBody body;
 
-    private InitDBInstanceResourceGroupIdResponse(BuilderImpl builder) {
+    private DisableRightsSeparationResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static InitDBInstanceResourceGroupIdResponse create() {
+    public static DisableRightsSeparationResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class InitDBInstanceResourceGroupIdResponse extends Response {
     /**
      * @return body
      */
-    public InitDBInstanceResourceGroupIdResponseBody getBody() {
+    public DisableRightsSeparationResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<InitDBInstanceResourceGroupIdResponse, Builder> {
+    public interface Builder extends Response.Builder<DisableRightsSeparationResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(InitDBInstanceResourceGroupIdResponseBody body);
+        Builder body(DisableRightsSeparationResponseBody body);
 
         @Override
-        InitDBInstanceResourceGroupIdResponse build();
+        DisableRightsSeparationResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<InitDBInstanceResourceGroupIdResponse, Builder>
+            extends Response.BuilderImpl<DisableRightsSeparationResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private InitDBInstanceResourceGroupIdResponseBody body; 
+        private DisableRightsSeparationResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(InitDBInstanceResourceGroupIdResponse response) {
+        private BuilderImpl(DisableRightsSeparationResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class InitDBInstanceResourceGroupIdResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(InitDBInstanceResourceGroupIdResponseBody body) {
+        public Builder body(DisableRightsSeparationResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public InitDBInstanceResourceGroupIdResponse build() {
-            return new InitDBInstanceResourceGroupIdResponse(this);
+        public DisableRightsSeparationResponse build() {
+            return new DisableRightsSeparationResponse(this);
         } 
 
     } 

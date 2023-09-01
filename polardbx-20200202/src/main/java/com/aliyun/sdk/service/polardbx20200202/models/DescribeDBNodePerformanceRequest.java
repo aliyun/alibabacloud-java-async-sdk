@@ -146,16 +146,16 @@ public class DescribeDBNodePerformanceRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDBNodePerformanceRequest response) {
-            super(response);
-            this.characterType = response.characterType;
-            this.DBInstanceName = response.DBInstanceName;
-            this.DBNodeIds = response.DBNodeIds;
-            this.DBNodeRole = response.DBNodeRole;
-            this.endTime = response.endTime;
-            this.key = response.key;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeDBNodePerformanceRequest request) {
+            super(request);
+            this.characterType = request.characterType;
+            this.DBInstanceName = request.DBInstanceName;
+            this.DBNodeIds = request.DBNodeIds;
+            this.DBNodeRole = request.DBNodeRole;
+            this.endTime = request.endTime;
+            this.key = request.key;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**

@@ -63,10 +63,10 @@ public class DescribeCharacterSetRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeCharacterSetRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(DescribeCharacterSetRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**

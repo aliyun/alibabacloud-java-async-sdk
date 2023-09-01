@@ -18,6 +18,10 @@ public class DescribeBackupSetListRequest extends Request {
     private String DBInstanceName;
 
     @Query
+    @NameInMap("DestCrossRegion")
+    private String destCrossRegion;
+
+    @Query
     @NameInMap("EndTime")
     private Long endTime;
 
@@ -41,6 +45,7 @@ public class DescribeBackupSetListRequest extends Request {
     private DescribeBackupSetListRequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
+        this.destCrossRegion = builder.destCrossRegion;
         this.endTime = builder.endTime;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -66,6 +71,13 @@ public class DescribeBackupSetListRequest extends Request {
      */
     public String getDBInstanceName() {
         return this.DBInstanceName;
+    }
+
+    /**
+     * @return destCrossRegion
+     */
+    public String getDestCrossRegion() {
+        return this.destCrossRegion;
     }
 
     /**
@@ -105,6 +117,7 @@ public class DescribeBackupSetListRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeBackupSetListRequest, Builder> {
         private String DBInstanceName; 
+        private String destCrossRegion; 
         private Long endTime; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -115,14 +128,15 @@ public class DescribeBackupSetListRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeBackupSetListRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.endTime = response.endTime;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.startTime = response.startTime;
+        private Builder(DescribeBackupSetListRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.destCrossRegion = request.destCrossRegion;
+            this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.startTime = request.startTime;
         } 
 
         /**
@@ -131,6 +145,15 @@ public class DescribeBackupSetListRequest extends Request {
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
             this.DBInstanceName = DBInstanceName;
+            return this;
+        }
+
+        /**
+         * DestCrossRegion.
+         */
+        public Builder destCrossRegion(String destCrossRegion) {
+            this.putQueryParameter("DestCrossRegion", destCrossRegion);
+            this.destCrossRegion = destCrossRegion;
             return this;
         }
 

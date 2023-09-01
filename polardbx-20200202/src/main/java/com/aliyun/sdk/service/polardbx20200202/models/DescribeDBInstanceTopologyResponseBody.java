@@ -71,6 +71,187 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
 
     } 
 
+    public static class HistoryItems extends TeaModel {
+        @NameInMap("Activated")
+        private Boolean activated;
+
+        @NameInMap("Azone")
+        private String azone;
+
+        @NameInMap("CharacterType")
+        private String characterType;
+
+        @NameInMap("DBInstanceId")
+        private String DBInstanceId;
+
+        @NameInMap("DBInstanceName")
+        private String DBInstanceName;
+
+        @NameInMap("PhyInstanceName")
+        private String phyInstanceName;
+
+        @NameInMap("Region")
+        private String region;
+
+        @NameInMap("Role")
+        private String role;
+
+        private HistoryItems(Builder builder) {
+            this.activated = builder.activated;
+            this.azone = builder.azone;
+            this.characterType = builder.characterType;
+            this.DBInstanceId = builder.DBInstanceId;
+            this.DBInstanceName = builder.DBInstanceName;
+            this.phyInstanceName = builder.phyInstanceName;
+            this.region = builder.region;
+            this.role = builder.role;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HistoryItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return activated
+         */
+        public Boolean getActivated() {
+            return this.activated;
+        }
+
+        /**
+         * @return azone
+         */
+        public String getAzone() {
+            return this.azone;
+        }
+
+        /**
+         * @return characterType
+         */
+        public String getCharacterType() {
+            return this.characterType;
+        }
+
+        /**
+         * @return DBInstanceId
+         */
+        public String getDBInstanceId() {
+            return this.DBInstanceId;
+        }
+
+        /**
+         * @return DBInstanceName
+         */
+        public String getDBInstanceName() {
+            return this.DBInstanceName;
+        }
+
+        /**
+         * @return phyInstanceName
+         */
+        public String getPhyInstanceName() {
+            return this.phyInstanceName;
+        }
+
+        /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        public static final class Builder {
+            private Boolean activated; 
+            private String azone; 
+            private String characterType; 
+            private String DBInstanceId; 
+            private String DBInstanceName; 
+            private String phyInstanceName; 
+            private String region; 
+            private String role; 
+
+            /**
+             * Activated.
+             */
+            public Builder activated(Boolean activated) {
+                this.activated = activated;
+                return this;
+            }
+
+            /**
+             * Azone.
+             */
+            public Builder azone(String azone) {
+                this.azone = azone;
+                return this;
+            }
+
+            /**
+             * CharacterType.
+             */
+            public Builder characterType(String characterType) {
+                this.characterType = characterType;
+                return this;
+            }
+
+            /**
+             * DBInstanceId.
+             */
+            public Builder DBInstanceId(String DBInstanceId) {
+                this.DBInstanceId = DBInstanceId;
+                return this;
+            }
+
+            /**
+             * DBInstanceName.
+             */
+            public Builder DBInstanceName(String DBInstanceName) {
+                this.DBInstanceName = DBInstanceName;
+                return this;
+            }
+
+            /**
+             * PhyInstanceName.
+             */
+            public Builder phyInstanceName(String phyInstanceName) {
+                this.phyInstanceName = phyInstanceName;
+                return this;
+            }
+
+            /**
+             * Region.
+             */
+            public Builder region(String region) {
+                this.region = region;
+                return this;
+            }
+
+            /**
+             * Role.
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            public HistoryItems build() {
+                return new HistoryItems(this);
+            } 
+
+        } 
+
+    }
     public static class AzoneRoleList extends TeaModel {
         @NameInMap("Azone")
         private String azone;
@@ -277,11 +458,23 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("MaxIops")
         private Integer maxIops;
 
+        @NameInMap("NodeClass")
+        private String nodeClass;
+
+        @NameInMap("PhyInstanceName")
+        private String phyInstanceName;
+
         @NameInMap("Region")
         private String region;
 
         @NameInMap("Role")
         private String role;
+
+        @NameInMap("Status")
+        private String status;
+
+        @NameInMap("Version")
+        private String version;
 
         private Items(Builder builder) {
             this.activated = builder.activated;
@@ -305,8 +498,12 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             this.maintainStartTime = builder.maintainStartTime;
             this.maxConnections = builder.maxConnections;
             this.maxIops = builder.maxIops;
+            this.nodeClass = builder.nodeClass;
+            this.phyInstanceName = builder.phyInstanceName;
             this.region = builder.region;
             this.role = builder.role;
+            this.status = builder.status;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -465,6 +662,20 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeClass
+         */
+        public String getNodeClass() {
+            return this.nodeClass;
+        }
+
+        /**
+         * @return phyInstanceName
+         */
+        public String getPhyInstanceName() {
+            return this.phyInstanceName;
+        }
+
+        /**
          * @return region
          */
         public String getRegion() {
@@ -476,6 +687,20 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
          */
         public String getRole() {
             return this.role;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
         }
 
         public static final class Builder {
@@ -500,8 +725,12 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             private String maintainStartTime; 
             private Integer maxConnections; 
             private Integer maxIops; 
+            private String nodeClass; 
+            private String phyInstanceName; 
             private String region; 
             private String role; 
+            private String status; 
+            private String version; 
 
             /**
              * Activated.
@@ -672,6 +901,22 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
+             * NodeClass.
+             */
+            public Builder nodeClass(String nodeClass) {
+                this.nodeClass = nodeClass;
+                return this;
+            }
+
+            /**
+             * PhyInstanceName.
+             */
+            public Builder phyInstanceName(String phyInstanceName) {
+                this.phyInstanceName = phyInstanceName;
+                return this;
+            }
+
+            /**
              * Region.
              */
             public Builder region(String region) {
@@ -684,6 +929,22 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
              */
             public Builder role(String role) {
                 this.role = role;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 
@@ -725,6 +986,9 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("EngineVersion")
         private String engineVersion;
 
+        @NameInMap("HistoryItems")
+        private java.util.List < HistoryItems> historyItems;
+
         @NameInMap("Items")
         private java.util.List < Items> items;
 
@@ -751,6 +1015,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             this.DBInstanceStorage = builder.DBInstanceStorage;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
+            this.historyItems = builder.historyItems;
             this.items = builder.items;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
@@ -837,6 +1102,13 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
+         * @return historyItems
+         */
+        public java.util.List < HistoryItems> getHistoryItems() {
+            return this.historyItems;
+        }
+
+        /**
          * @return items
          */
         public java.util.List < Items> getItems() {
@@ -882,6 +1154,7 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
             private Integer DBInstanceStorage; 
             private String engine; 
             private String engineVersion; 
+            private java.util.List < HistoryItems> historyItems; 
             private java.util.List < Items> items; 
             private Integer lockMode; 
             private String lockReason; 
@@ -965,6 +1238,14 @@ public class DescribeDBInstanceTopologyResponseBody extends TeaModel {
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
+                return this;
+            }
+
+            /**
+             * HistoryItems.
+             */
+            public Builder historyItems(java.util.List < HistoryItems> historyItems) {
+                this.historyItems = historyItems;
                 return this;
             }
 

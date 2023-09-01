@@ -49,13 +49,13 @@ public class DescribeActiveOperationMaintainConfRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeActiveOperationMaintainConfRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(DescribeActiveOperationMaintainConfRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**
-         * 区域ID
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

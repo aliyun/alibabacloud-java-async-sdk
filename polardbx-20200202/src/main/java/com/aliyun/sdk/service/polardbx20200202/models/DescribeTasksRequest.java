@@ -19,6 +19,7 @@ public class DescribeTasksRequest extends Request {
 
     @Query
     @NameInMap("EndTime")
+    @Validation(required = true)
     private String endTime;
 
     @Query
@@ -54,6 +55,7 @@ public class DescribeTasksRequest extends Request {
 
     @Query
     @NameInMap("StartTime")
+    @Validation(required = true)
     private String startTime;
 
     private DescribeTasksRequest(Builder builder) {
@@ -169,18 +171,18 @@ public class DescribeTasksRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTasksRequest response) {
-            super(response);
-            this.DBInstanceId = response.DBInstanceId;
-            this.endTime = response.endTime;
-            this.ownerAccount = response.ownerAccount;
-            this.ownerId = response.ownerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.resourceOwnerId = response.resourceOwnerId;
-            this.startTime = response.startTime;
+        private Builder(DescribeTasksRequest request) {
+            super(request);
+            this.DBInstanceId = request.DBInstanceId;
+            this.endTime = request.endTime;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**

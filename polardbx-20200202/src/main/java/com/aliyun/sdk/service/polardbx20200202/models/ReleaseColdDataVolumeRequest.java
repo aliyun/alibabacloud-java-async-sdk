@@ -7,11 +7,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link InitDBInstanceResourceGroupIdRequest} extends {@link RequestModel}
+ * {@link ReleaseColdDataVolumeRequest} extends {@link RequestModel}
  *
- * <p>InitDBInstanceResourceGroupIdRequest</p>
+ * <p>ReleaseColdDataVolumeRequest</p>
  */
-public class InitDBInstanceResourceGroupIdRequest extends Request {
+public class ReleaseColdDataVolumeRequest extends Request {
     @Query
     @NameInMap("DBInstanceName")
     @Validation(required = true)
@@ -22,7 +22,7 @@ public class InitDBInstanceResourceGroupIdRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
-    private InitDBInstanceResourceGroupIdRequest(Builder builder) {
+    private ReleaseColdDataVolumeRequest(Builder builder) {
         super(builder);
         this.DBInstanceName = builder.DBInstanceName;
         this.regionId = builder.regionId;
@@ -32,7 +32,7 @@ public class InitDBInstanceResourceGroupIdRequest extends Request {
         return new Builder();
     }
 
-    public static InitDBInstanceResourceGroupIdRequest create() {
+    public static ReleaseColdDataVolumeRequest create() {
         return builder().build();
     }
 
@@ -55,7 +55,7 @@ public class InitDBInstanceResourceGroupIdRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<InitDBInstanceResourceGroupIdRequest, Builder> {
+    public static final class Builder extends Request.Builder<ReleaseColdDataVolumeRequest, Builder> {
         private String DBInstanceName; 
         private String regionId; 
 
@@ -63,14 +63,14 @@ public class InitDBInstanceResourceGroupIdRequest extends Request {
             super();
         } 
 
-        private Builder(InitDBInstanceResourceGroupIdRequest response) {
-            super(response);
-            this.DBInstanceName = response.DBInstanceName;
-            this.regionId = response.regionId;
+        private Builder(ReleaseColdDataVolumeRequest request) {
+            super(request);
+            this.DBInstanceName = request.DBInstanceName;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * 资源类型
+         * DBInstanceName.
          */
         public Builder DBInstanceName(String DBInstanceName) {
             this.putQueryParameter("DBInstanceName", DBInstanceName);
@@ -79,7 +79,7 @@ public class InitDBInstanceResourceGroupIdRequest extends Request {
         }
 
         /**
-         * 地域
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -88,8 +88,8 @@ public class InitDBInstanceResourceGroupIdRequest extends Request {
         }
 
         @Override
-        public InitDBInstanceResourceGroupIdRequest build() {
-            return new InitDBInstanceResourceGroupIdRequest(this);
+        public ReleaseColdDataVolumeRequest build() {
+            return new ReleaseColdDataVolumeRequest(this);
         } 
 
     } 
