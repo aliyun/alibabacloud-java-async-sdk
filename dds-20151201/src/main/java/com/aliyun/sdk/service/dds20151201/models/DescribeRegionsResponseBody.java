@@ -201,6 +201,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     }
     public static class DdsRegion extends TeaModel {
+        @NameInMap("EndPoint")
+        private String endPoint;
+
         @NameInMap("RegionId")
         private String regionId;
 
@@ -211,6 +214,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private Zones zones;
 
         private DdsRegion(Builder builder) {
+            this.endPoint = builder.endPoint;
             this.regionId = builder.regionId;
             this.regionName = builder.regionName;
             this.zones = builder.zones;
@@ -222,6 +226,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
         public static DdsRegion create() {
             return builder().build();
+        }
+
+        /**
+         * @return endPoint
+         */
+        public String getEndPoint() {
+            return this.endPoint;
         }
 
         /**
@@ -246,9 +257,18 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String endPoint; 
             private String regionId; 
             private String regionName; 
             private Zones zones; 
+
+            /**
+             * EndPoint.
+             */
+            public Builder endPoint(String endPoint) {
+                this.endPoint = endPoint;
+                return this;
+            }
 
             /**
              * The ID of the region.

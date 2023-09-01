@@ -50,6 +50,10 @@ public class DescribeAvailableResourceRequest extends Request {
     private String securityToken;
 
     @Query
+    @NameInMap("StorageType")
+    private String storageType;
+
+    @Query
     @NameInMap("ZoneId")
     private String zoneId;
 
@@ -64,6 +68,7 @@ public class DescribeAvailableResourceRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.securityToken = builder.securityToken;
+        this.storageType = builder.storageType;
         this.zoneId = builder.zoneId;
     }
 
@@ -144,6 +149,13 @@ public class DescribeAvailableResourceRequest extends Request {
     }
 
     /**
+     * @return storageType
+     */
+    public String getStorageType() {
+        return this.storageType;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -160,6 +172,7 @@ public class DescribeAvailableResourceRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityToken; 
+        private String storageType; 
         private String zoneId; 
 
         private Builder() {
@@ -177,6 +190,7 @@ public class DescribeAvailableResourceRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.securityToken = request.securityToken;
+            this.storageType = request.storageType;
             this.zoneId = request.zoneId;
         } 
 
@@ -266,6 +280,15 @@ public class DescribeAvailableResourceRequest extends Request {
         public Builder securityToken(String securityToken) {
             this.putQueryParameter("SecurityToken", securityToken);
             this.securityToken = securityToken;
+            return this;
+        }
+
+        /**
+         * StorageType.
+         */
+        public Builder storageType(String storageType) {
+            this.putQueryParameter("StorageType", storageType);
+            this.storageType = storageType;
             return this;
         }
 
