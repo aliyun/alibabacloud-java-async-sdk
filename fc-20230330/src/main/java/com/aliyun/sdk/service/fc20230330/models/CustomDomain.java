@@ -18,6 +18,9 @@ public class CustomDomain extends TeaModel {
     @NameInMap("apiVersion")
     private String apiVersion;
 
+    @NameInMap("authConfig")
+    private AuthConfig authConfig;
+
     @NameInMap("certConfig")
     private CertConfig certConfig;
 
@@ -48,6 +51,7 @@ public class CustomDomain extends TeaModel {
     private CustomDomain(Builder builder) {
         this.accountId = builder.accountId;
         this.apiVersion = builder.apiVersion;
+        this.authConfig = builder.authConfig;
         this.certConfig = builder.certConfig;
         this.createdTime = builder.createdTime;
         this.domainName = builder.domainName;
@@ -79,6 +83,13 @@ public class CustomDomain extends TeaModel {
      */
     public String getApiVersion() {
         return this.apiVersion;
+    }
+
+    /**
+     * @return authConfig
+     */
+    public AuthConfig getAuthConfig() {
+        return this.authConfig;
     }
 
     /**
@@ -147,6 +158,7 @@ public class CustomDomain extends TeaModel {
     public static final class Builder {
         private String accountId; 
         private String apiVersion; 
+        private AuthConfig authConfig; 
         private CertConfig certConfig; 
         private String createdTime; 
         private String domainName; 
@@ -170,6 +182,14 @@ public class CustomDomain extends TeaModel {
          */
         public Builder apiVersion(String apiVersion) {
             this.apiVersion = apiVersion;
+            return this;
+        }
+
+        /**
+         * authConfig.
+         */
+        public Builder authConfig(AuthConfig authConfig) {
+            this.authConfig = authConfig;
             return this;
         }
 

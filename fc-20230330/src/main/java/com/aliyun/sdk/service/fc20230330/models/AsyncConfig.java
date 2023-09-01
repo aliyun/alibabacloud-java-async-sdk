@@ -18,8 +18,8 @@ public class AsyncConfig extends TeaModel {
     @NameInMap("destinationConfig")
     private DestinationConfig destinationConfig;
 
-    @NameInMap("functionName")
-    private String functionName;
+    @NameInMap("functionArn")
+    private String functionArn;
 
     @NameInMap("lastModifiedTime")
     private String lastModifiedTime;
@@ -30,17 +30,13 @@ public class AsyncConfig extends TeaModel {
     @NameInMap("maxAsyncRetryAttempts")
     private Long maxAsyncRetryAttempts;
 
-    @NameInMap("qualifier")
-    private String qualifier;
-
     private AsyncConfig(Builder builder) {
         this.createdTime = builder.createdTime;
         this.destinationConfig = builder.destinationConfig;
-        this.functionName = builder.functionName;
+        this.functionArn = builder.functionArn;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.maxAsyncEventAgeInSeconds = builder.maxAsyncEventAgeInSeconds;
         this.maxAsyncRetryAttempts = builder.maxAsyncRetryAttempts;
-        this.qualifier = builder.qualifier;
     }
 
     public static Builder builder() {
@@ -66,10 +62,10 @@ public class AsyncConfig extends TeaModel {
     }
 
     /**
-     * @return functionName
+     * @return functionArn
      */
-    public String getFunctionName() {
-        return this.functionName;
+    public String getFunctionArn() {
+        return this.functionArn;
     }
 
     /**
@@ -93,21 +89,13 @@ public class AsyncConfig extends TeaModel {
         return this.maxAsyncRetryAttempts;
     }
 
-    /**
-     * @return qualifier
-     */
-    public String getQualifier() {
-        return this.qualifier;
-    }
-
     public static final class Builder {
         private String createdTime; 
         private DestinationConfig destinationConfig; 
-        private String functionName; 
+        private String functionArn; 
         private String lastModifiedTime; 
         private Long maxAsyncEventAgeInSeconds; 
         private Long maxAsyncRetryAttempts; 
-        private String qualifier; 
 
         /**
          * createdTime.
@@ -126,10 +114,10 @@ public class AsyncConfig extends TeaModel {
         }
 
         /**
-         * functionName.
+         * functionArn.
          */
-        public Builder functionName(String functionName) {
-            this.functionName = functionName;
+        public Builder functionArn(String functionArn) {
+            this.functionArn = functionArn;
             return this;
         }
 
@@ -154,14 +142,6 @@ public class AsyncConfig extends TeaModel {
          */
         public Builder maxAsyncRetryAttempts(Long maxAsyncRetryAttempts) {
             this.maxAsyncRetryAttempts = maxAsyncRetryAttempts;
-            return this;
-        }
-
-        /**
-         * qualifier.
-         */
-        public Builder qualifier(String qualifier) {
-            this.qualifier = qualifier;
             return this;
         }
 

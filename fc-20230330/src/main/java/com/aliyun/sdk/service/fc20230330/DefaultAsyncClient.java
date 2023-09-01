@@ -40,7 +40,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * create function version
+      * 创建函数别名。
       *
      */
     @Override
@@ -58,7 +58,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Create custom domain.
+      * 创建自定义域名。
       *
      */
     @Override
@@ -76,7 +76,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Create function
+      * 创建函数。
       *
      */
     @Override
@@ -94,7 +94,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Create layer version
+      * 创建层版本。
       *
      */
     @Override
@@ -112,7 +112,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Create trigger.
+      * 创建函数触发器。
       *
      */
     @Override
@@ -130,7 +130,25 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Delete function alias
+      * 创建VPC绑定。
+      *
+     */
+    @Override
+    public CompletableFuture<CreateVpcBindingResponse> createVpcBinding(CreateVpcBindingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateVpcBinding").setMethod(HttpMethod.POST).setPathRegex("/2023-03-30/functions/{functionName}/vpc-bindings").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateVpcBindingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateVpcBindingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * 删除函数别名。
       *
      */
     @Override
@@ -148,7 +166,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Delete function async invoke config
+      * 删除函数异步调用配置。
       *
      */
     @Override
@@ -166,7 +184,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * deletes the concurrency config for a function
+      * 删除函数并发度配置。
       *
      */
     @Override
@@ -184,7 +202,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Delete custom domain.
+      * 删除自定义域名。
       *
      */
     @Override
@@ -202,7 +220,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Delete function
+      * 删除函数。
       *
      */
     @Override
@@ -220,14 +238,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Delete function version
+      * 删除函数版本。
       *
      */
     @Override
     public CompletableFuture<DeleteFunctionVersionResponse> deleteFunctionVersion(DeleteFunctionVersionRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteFunctionVersion").setMethod(HttpMethod.DELETE).setPathRegex("/2023-03-30/functions/{functionName}/versions/{versionID}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteFunctionVersion").setMethod(HttpMethod.DELETE).setPathRegex("/2023-03-30/functions/{functionName}/versions/{versionId}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteFunctionVersionResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -238,7 +256,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Delete layer version
+      * 删除层版本。
       *
      */
     @Override
@@ -256,7 +274,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Delete provision config.
+      * 删除函数预留配置。
       *
      */
     @Override
@@ -274,7 +292,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Delete trigger.
+      * 删除函数触发器。
       *
      */
     @Override
@@ -292,7 +310,25 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Get function alias
+      * 删除VPC绑定。
+      *
+     */
+    @Override
+    public CompletableFuture<DeleteVpcBindingResponse> deleteVpcBinding(DeleteVpcBindingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteVpcBinding").setMethod(HttpMethod.DELETE).setPathRegex("/2023-03-30/functions/{functionName}/vpc-bindings/{vpcId}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteVpcBindingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteVpcBindingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * 获取函数别名信息。
       *
      */
     @Override
@@ -310,7 +346,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Get function async invoke config
+      * 获取函数异步调用配置。
       *
      */
     @Override
@@ -328,7 +364,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * gets the concurrency config for a function
+      * 获取函数并发度配置。
       *
      */
     @Override
@@ -346,7 +382,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Get custom domain.
+      * 获取自定义域名。
       *
      */
     @Override
@@ -364,7 +400,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Get function info by function name
+      * 获取函数信息。
       *
      */
     @Override
@@ -382,7 +418,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Get function code by function name
+      * 获取函数代码。
       *
      */
     @Override
@@ -400,7 +436,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Get layer version.
+      * 获取层版本。
       *
      */
     @Override
@@ -418,7 +454,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Get layer version by arn.
+      * 根据资源标识获取层版本。
       *
      */
     @Override
@@ -436,7 +472,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Get provision config.
+      * 获取函数预留配置。
       *
      */
     @Override
@@ -454,7 +490,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Get resource tag
+      * 获取资源标签。
       *
      */
     @Override
@@ -472,7 +508,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Get trigger.
+      * 获取函数触发器。
       *
      */
     @Override
@@ -490,7 +526,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Invoke function
+      * 调用函数。
       *
      */
     @Override
@@ -507,8 +543,37 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public CompletableFuture<InvokeFunctionResponse> invokeFunctionWithRequestBody(InvokeFunctionRequest request, RequestBody requestBody) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InvokeFunction").setMethod(HttpMethod.POST).setPathRegex("/2023-03-30/functions/{functionName}/invocations").setBodyType(BodyType.BINARY).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withRequestBody(requestBody).withOutput(InvokeFunctionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<InvokeFunctionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> invokeFunctionWithAsyncResponseHandler(InvokeFunctionRequest request, AsyncResponseHandler<InvokeFunctionResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("InvokeFunction").setMethod(HttpMethod.POST).setPathRegex("/2023-03-30/functions/{functionName}/invocations").setBodyType(BodyType.BINARY).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(InvokeFunctionResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((InvokeFunctionResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
     /**
-      * List function aliases
+      * 列出函数别名。
       *
      */
     @Override
@@ -526,7 +591,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * List all functions async invoke config
+      * 列出函数异步调用配置。
       *
      */
     @Override
@@ -544,7 +609,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * List all functions concurrency configs
+      * 列出函数并发度配置。
       *
      */
     @Override
@@ -562,7 +627,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * List custom domains.
+      * 列出自定义域名。
       *
      */
     @Override
@@ -580,7 +645,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * List function versions
+      * 列出函数版本。
       *
      */
     @Override
@@ -598,7 +663,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Lists existing functions.
+      * 列出函数。
       *
      */
     @Override
@@ -616,7 +681,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * List instances for function.
+      * 列出函数实例。
       *
      */
     @Override
@@ -634,7 +699,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * List layer versions.
+      * 列出层版本。
       *
      */
     @Override
@@ -652,7 +717,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * List layers .
+      * 列出层。
       *
      */
     @Override
@@ -670,7 +735,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * List provision configs.
+      * 列出函数预留配置。
       *
      */
     @Override
@@ -688,7 +753,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * List tagged resources
+      * 列出具有标签的资源。
       *
      */
     @Override
@@ -706,7 +771,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * List triggers.
+      * 列出函数触发器。
       *
      */
     @Override
@@ -724,7 +789,25 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * publish new function version
+      * 列出VPC绑定配置。
+      *
+     */
+    @Override
+    public CompletableFuture<ListVpcBindingsResponse> listVpcBindings(ListVpcBindingsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListVpcBindings").setMethod(HttpMethod.GET).setPathRegex("/2023-03-30/functions/{functionName}/vpc-bindings").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListVpcBindingsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListVpcBindingsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+      * 发布函数版本。
       *
      */
     @Override
@@ -742,7 +825,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Put function async invoke config.
+      * 设置函数异步调用配置。
       *
      */
     @Override
@@ -760,7 +843,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * sets the concurrency config for a function
+      * 设置函数并发度配置。
       *
      */
     @Override
@@ -778,7 +861,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Update layer ACL.
+      * 设置层的访问权限。
       *
      */
     @Override
@@ -796,7 +879,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Put provision config.
+      * 设置函数预留配置。
       *
      */
     @Override
@@ -814,14 +897,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Tag resource
+      * 设置资源标签。
       *
      */
     @Override
     public CompletableFuture<TagResourceResponse> tagResource(TagResourceRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TagResource").setMethod(HttpMethod.POST).setPathRegex("/2023-03-30/tag").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("TagResource").setMethod(HttpMethod.POST).setPathRegex("/2023-03-30/tag").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TagResourceResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -832,7 +915,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Untag resource tag, support resource type: function, service
+      * 删除资源标签。
       *
      */
     @Override
@@ -850,7 +933,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Update function alias
+      * 更新函数别名。
       *
      */
     @Override
@@ -868,7 +951,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Update custom domain.
+      * 更新自定义域名。
       *
      */
     @Override
@@ -886,7 +969,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Update function
+      * 更新函数。
       *
      */
     @Override
@@ -904,7 +987,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Update trigger.
+      * 更新函数触发器。
       *
      */
     @Override

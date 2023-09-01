@@ -7,21 +7,21 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link TagResourceResponse} extends {@link TeaModel}
+ * {@link DeleteVpcBindingResponse} extends {@link TeaModel}
  *
- * <p>TagResourceResponse</p>
+ * <p>DeleteVpcBindingResponse</p>
  */
-public class TagResourceResponse extends Response {
+public class DeleteVpcBindingResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    private TagResourceResponse(BuilderImpl builder) {
+    private DeleteVpcBindingResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
     }
 
-    public static TagResourceResponse create() {
+    public static DeleteVpcBindingResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -37,17 +37,17 @@ public class TagResourceResponse extends Response {
         return this.headers;
     }
 
-    public interface Builder extends Response.Builder<TagResourceResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteVpcBindingResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         @Override
-        TagResourceResponse build();
+        DeleteVpcBindingResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<TagResourceResponse, Builder>
+            extends Response.BuilderImpl<DeleteVpcBindingResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
 
@@ -55,7 +55,7 @@ public class TagResourceResponse extends Response {
             super();
         } 
 
-        private BuilderImpl(TagResourceResponse response) {
+        private BuilderImpl(DeleteVpcBindingResponse response) {
             super(response);
             this.headers = response.headers;
         } 
@@ -70,8 +70,8 @@ public class TagResourceResponse extends Response {
         }
 
         @Override
-        public TagResourceResponse build() {
-            return new TagResourceResponse(this);
+        public DeleteVpcBindingResponse build() {
+            return new DeleteVpcBindingResponse(this);
         } 
 
     } 

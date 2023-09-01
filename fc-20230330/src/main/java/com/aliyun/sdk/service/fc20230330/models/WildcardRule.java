@@ -13,11 +13,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class WildcardRule extends TeaModel {
     @NameInMap("match")
-    @Validation(maxLength = 256)
+    @Validation(required = true, maxLength = 256)
     private String match;
 
     @NameInMap("replacement")
-    @Validation(maxLength = 256)
+    @Validation(required = true, maxLength = 256)
     private String replacement;
 
     private WildcardRule(Builder builder) {

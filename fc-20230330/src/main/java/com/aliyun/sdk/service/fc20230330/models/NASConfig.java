@@ -13,14 +13,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class NASConfig extends TeaModel {
     @NameInMap("groupId")
-    @Validation(maximum = 65534)
     private Integer groupId;
 
     @NameInMap("mountPoints")
     private java.util.List < NASMountConfig > mountPoints;
 
     @NameInMap("userId")
-    @Validation(maximum = 65534)
     private Integer userId;
 
     private NASConfig(Builder builder) {

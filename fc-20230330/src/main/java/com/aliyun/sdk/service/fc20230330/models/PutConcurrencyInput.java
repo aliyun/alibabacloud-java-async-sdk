@@ -13,7 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class PutConcurrencyInput extends TeaModel {
     @NameInMap("reservedConcurrency")
-    @Validation(maximum = 5000)
+    @Validation(required = true)
     private Long reservedConcurrency;
 
     private PutConcurrencyInput(Builder builder) {

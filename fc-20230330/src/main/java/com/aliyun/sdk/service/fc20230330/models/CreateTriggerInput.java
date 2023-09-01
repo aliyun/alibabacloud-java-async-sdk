@@ -32,10 +32,11 @@ public class CreateTriggerInput extends TeaModel {
     private String triggerConfig;
 
     @NameInMap("triggerName")
-    @Validation(maxLength = 128, minLength = 1)
+    @Validation(required = true, maxLength = 128, minLength = 1)
     private String triggerName;
 
     @NameInMap("triggerType")
+    @Validation(required = true)
     private String triggerType;
 
     private CreateTriggerInput(Builder builder) {

@@ -12,11 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCustomDomainInput</p>
  */
 public class CreateCustomDomainInput extends TeaModel {
+    @NameInMap("authConfig")
+    private AuthConfig authConfig;
+
     @NameInMap("certConfig")
     private CertConfig certConfig;
 
     @NameInMap("domainName")
-    @Validation(maxLength = 256, minLength = 1)
+    @Validation(required = true, maxLength = 256, minLength = 1)
     private String domainName;
 
     @NameInMap("protocol")
@@ -32,6 +35,7 @@ public class CreateCustomDomainInput extends TeaModel {
     private WAFConfig wafConfig;
 
     private CreateCustomDomainInput(Builder builder) {
+        this.authConfig = builder.authConfig;
         this.certConfig = builder.certConfig;
         this.domainName = builder.domainName;
         this.protocol = builder.protocol;
@@ -46,6 +50,13 @@ public class CreateCustomDomainInput extends TeaModel {
 
     public static CreateCustomDomainInput create() {
         return builder().build();
+    }
+
+    /**
+     * @return authConfig
+     */
+    public AuthConfig getAuthConfig() {
+        return this.authConfig;
     }
 
     /**
@@ -91,12 +102,21 @@ public class CreateCustomDomainInput extends TeaModel {
     }
 
     public static final class Builder {
+        private AuthConfig authConfig; 
         private CertConfig certConfig; 
         private String domainName; 
         private String protocol; 
         private RouteConfig routeConfig; 
         private TLSConfig tlsConfig; 
         private WAFConfig wafConfig; 
+
+        /**
+         * authConfig.
+         */
+        public Builder authConfig(AuthConfig authConfig) {
+            this.authConfig = authConfig;
+            return this;
+        }
 
         /**
          * certConfig.

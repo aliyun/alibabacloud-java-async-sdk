@@ -12,20 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PathConfig</p>
  */
 public class PathConfig extends TeaModel {
-    @NameInMap("accountId")
-    private String accountId;
-
     @NameInMap("functionName")
+    @Validation(required = true)
     private String functionName;
-
-    @NameInMap("innerRewriteConfig")
-    private InnerRewriteConfig innerRewriteConfig;
 
     @NameInMap("methods")
     private java.util.List < String > methods;
 
     @NameInMap("path")
-    @Validation(maxLength = 2048)
+    @Validation(required = true, maxLength = 2048)
     private String path;
 
     @NameInMap("qualifier")
@@ -34,18 +29,12 @@ public class PathConfig extends TeaModel {
     @NameInMap("rewriteConfig")
     private RewriteConfig rewriteConfig;
 
-    @NameInMap("serviceName")
-    private String serviceName;
-
     private PathConfig(Builder builder) {
-        this.accountId = builder.accountId;
         this.functionName = builder.functionName;
-        this.innerRewriteConfig = builder.innerRewriteConfig;
         this.methods = builder.methods;
         this.path = builder.path;
         this.qualifier = builder.qualifier;
         this.rewriteConfig = builder.rewriteConfig;
-        this.serviceName = builder.serviceName;
     }
 
     public static Builder builder() {
@@ -57,24 +46,10 @@ public class PathConfig extends TeaModel {
     }
 
     /**
-     * @return accountId
-     */
-    public String getAccountId() {
-        return this.accountId;
-    }
-
-    /**
      * @return functionName
      */
     public String getFunctionName() {
         return this.functionName;
-    }
-
-    /**
-     * @return innerRewriteConfig
-     */
-    public InnerRewriteConfig getInnerRewriteConfig() {
-        return this.innerRewriteConfig;
     }
 
     /**
@@ -105,44 +80,18 @@ public class PathConfig extends TeaModel {
         return this.rewriteConfig;
     }
 
-    /**
-     * @return serviceName
-     */
-    public String getServiceName() {
-        return this.serviceName;
-    }
-
     public static final class Builder {
-        private String accountId; 
         private String functionName; 
-        private InnerRewriteConfig innerRewriteConfig; 
         private java.util.List < String > methods; 
         private String path; 
         private String qualifier; 
         private RewriteConfig rewriteConfig; 
-        private String serviceName; 
-
-        /**
-         * accountId.
-         */
-        public Builder accountId(String accountId) {
-            this.accountId = accountId;
-            return this;
-        }
 
         /**
          * functionName.
          */
         public Builder functionName(String functionName) {
             this.functionName = functionName;
-            return this;
-        }
-
-        /**
-         * innerRewriteConfig.
-         */
-        public Builder innerRewriteConfig(InnerRewriteConfig innerRewriteConfig) {
-            this.innerRewriteConfig = innerRewriteConfig;
             return this;
         }
 
@@ -175,14 +124,6 @@ public class PathConfig extends TeaModel {
          */
         public Builder rewriteConfig(RewriteConfig rewriteConfig) {
             this.rewriteConfig = rewriteConfig;
-            return this;
-        }
-
-        /**
-         * serviceName.
-         */
-        public Builder serviceName(String serviceName) {
-            this.serviceName = serviceName;
             return this;
         }
 

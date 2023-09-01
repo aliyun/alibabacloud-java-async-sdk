@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Error</p>
  */
 public class Error extends TeaModel {
-    @NameInMap("code")
+    @NameInMap("Code")
     private String code;
 
-    @NameInMap("message")
+    @NameInMap("Message")
     private String message;
 
-    @NameInMap("requestId")
+    @NameInMap("RequestId")
     private String requestId;
 
     private Error(Builder builder) {
@@ -62,7 +62,7 @@ public class Error extends TeaModel {
         private String requestId; 
 
         /**
-         * code.
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -70,7 +70,7 @@ public class Error extends TeaModel {
         }
 
         /**
-         * message.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -78,7 +78,7 @@ public class Error extends TeaModel {
         }
 
         /**
-         * requestId.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

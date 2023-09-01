@@ -13,6 +13,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class Destination extends TeaModel {
     @NameInMap("destination")
+    @Validation(maxLength = 512)
     private String destination;
 
     private Destination(Builder builder) {

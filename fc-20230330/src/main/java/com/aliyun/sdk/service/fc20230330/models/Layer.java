@@ -35,7 +35,7 @@ public class Layer extends TeaModel {
     private String description;
 
     @NameInMap("layerName")
-    @Validation(maxLength = 128, minLength = 1)
+    @Validation(required = true, maxLength = 128, minLength = 1)
     private String layerName;
 
     @NameInMap("layerVersionArn")

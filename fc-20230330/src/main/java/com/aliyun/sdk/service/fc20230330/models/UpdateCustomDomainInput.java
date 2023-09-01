@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCustomDomainInput</p>
  */
 public class UpdateCustomDomainInput extends TeaModel {
+    @NameInMap("authConfig")
+    private AuthConfig authConfig;
+
     @NameInMap("certConfig")
     private CertConfig certConfig;
 
@@ -28,6 +31,7 @@ public class UpdateCustomDomainInput extends TeaModel {
     private WAFConfig wafConfig;
 
     private UpdateCustomDomainInput(Builder builder) {
+        this.authConfig = builder.authConfig;
         this.certConfig = builder.certConfig;
         this.protocol = builder.protocol;
         this.routeConfig = builder.routeConfig;
@@ -41,6 +45,13 @@ public class UpdateCustomDomainInput extends TeaModel {
 
     public static UpdateCustomDomainInput create() {
         return builder().build();
+    }
+
+    /**
+     * @return authConfig
+     */
+    public AuthConfig getAuthConfig() {
+        return this.authConfig;
     }
 
     /**
@@ -79,11 +90,20 @@ public class UpdateCustomDomainInput extends TeaModel {
     }
 
     public static final class Builder {
+        private AuthConfig authConfig; 
         private CertConfig certConfig; 
         private String protocol; 
         private RouteConfig routeConfig; 
         private TLSConfig tlsConfig; 
         private WAFConfig wafConfig; 
+
+        /**
+         * authConfig.
+         */
+        public Builder authConfig(AuthConfig authConfig) {
+            this.authConfig = authConfig;
+            return this;
+        }
 
         /**
          * certConfig.

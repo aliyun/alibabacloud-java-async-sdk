@@ -16,20 +16,23 @@ public class TargetTrackingPolicy extends TeaModel {
     private String endTime;
 
     @NameInMap("maxCapacity")
-    @Validation(maximum = 100000)
+    @Validation(required = true)
     private Long maxCapacity;
 
     @NameInMap("metricTarget")
+    @Validation(required = true)
     private Float metricTarget;
 
     @NameInMap("metricType")
+    @Validation(required = true)
     private String metricType;
 
     @NameInMap("minCapacity")
-    @Validation(maximum = 100000)
+    @Validation(required = true)
     private Long minCapacity;
 
     @NameInMap("name")
+    @Validation(required = true)
     private String name;
 
     @NameInMap("startTime")

@@ -19,7 +19,7 @@ public class PutProvisionConfigInput extends TeaModel {
     private java.util.List < ScheduledAction > scheduledActions;
 
     @NameInMap("target")
-    @Validation(maximum = 100000)
+    @Validation(required = true)
     private Long target;
 
     @NameInMap("targetTrackingPolicies")

@@ -38,18 +38,17 @@ public class CreateFunctionInput extends TeaModel {
     private java.util.Map < String, String > environmentVariables;
 
     @NameInMap("functionName")
-    @Validation(maxLength = 128, minLength = 1)
+    @Validation(required = true, maxLength = 128, minLength = 1)
     private String functionName;
 
     @NameInMap("gpuConfig")
     private GPUConfig gpuConfig;
 
     @NameInMap("handler")
-    @Validation(maxLength = 128, minLength = 1)
+    @Validation(required = true, maxLength = 128, minLength = 1)
     private String handler;
 
     @NameInMap("instanceConcurrency")
-    @Validation(maximum = 100, minimum = 1)
     private Integer instanceConcurrency;
 
     @NameInMap("instanceLifecycleConfig")
@@ -78,6 +77,7 @@ public class CreateFunctionInput extends TeaModel {
     private String role;
 
     @NameInMap("runtime")
+    @Validation(required = true)
     private String runtime;
 
     @NameInMap("timeout")
@@ -85,9 +85,6 @@ public class CreateFunctionInput extends TeaModel {
 
     @NameInMap("tracingConfig")
     private TracingConfig tracingConfig;
-
-    @NameInMap("vpcBinding")
-    private VPCBinding vpcBinding;
 
     @NameInMap("vpcConfig")
     private VPCConfig vpcConfig;
@@ -116,7 +113,6 @@ public class CreateFunctionInput extends TeaModel {
         this.runtime = builder.runtime;
         this.timeout = builder.timeout;
         this.tracingConfig = builder.tracingConfig;
-        this.vpcBinding = builder.vpcBinding;
         this.vpcConfig = builder.vpcConfig;
     }
 
@@ -290,13 +286,6 @@ public class CreateFunctionInput extends TeaModel {
     }
 
     /**
-     * @return vpcBinding
-     */
-    public VPCBinding getVpcBinding() {
-        return this.vpcBinding;
-    }
-
-    /**
      * @return vpcConfig
      */
     public VPCConfig getVpcConfig() {
@@ -327,7 +316,6 @@ public class CreateFunctionInput extends TeaModel {
         private String runtime; 
         private Integer timeout; 
         private TracingConfig tracingConfig; 
-        private VPCBinding vpcBinding; 
         private VPCConfig vpcConfig; 
 
         /**
@@ -511,14 +499,6 @@ public class CreateFunctionInput extends TeaModel {
          */
         public Builder tracingConfig(TracingConfig tracingConfig) {
             this.tracingConfig = tracingConfig;
-            return this;
-        }
-
-        /**
-         * vpcBinding.
-         */
-        public Builder vpcBinding(VPCBinding vpcBinding) {
-            this.vpcBinding = vpcBinding;
             return this;
         }
 

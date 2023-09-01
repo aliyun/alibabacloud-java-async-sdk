@@ -23,7 +23,6 @@ public class CreateLayerVersionInput extends TeaModel {
     private String description;
 
     @NameInMap("license")
-    @Validation(maxLength = 20480)
     private String license;
 
     private CreateLayerVersionInput(Builder builder) {

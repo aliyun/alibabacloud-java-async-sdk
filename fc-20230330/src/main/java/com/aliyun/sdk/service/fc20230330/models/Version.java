@@ -18,9 +18,6 @@ public class Version extends TeaModel {
     @NameInMap("description")
     private String description;
 
-    @NameInMap("functionVersionArn")
-    private String functionVersionArn;
-
     @NameInMap("lastModifiedTime")
     private String lastModifiedTime;
 
@@ -30,7 +27,6 @@ public class Version extends TeaModel {
     private Version(Builder builder) {
         this.createdTime = builder.createdTime;
         this.description = builder.description;
-        this.functionVersionArn = builder.functionVersionArn;
         this.lastModifiedTime = builder.lastModifiedTime;
         this.versionId = builder.versionId;
     }
@@ -58,13 +54,6 @@ public class Version extends TeaModel {
     }
 
     /**
-     * @return functionVersionArn
-     */
-    public String getFunctionVersionArn() {
-        return this.functionVersionArn;
-    }
-
-    /**
      * @return lastModifiedTime
      */
     public String getLastModifiedTime() {
@@ -81,7 +70,6 @@ public class Version extends TeaModel {
     public static final class Builder {
         private String createdTime; 
         private String description; 
-        private String functionVersionArn; 
         private String lastModifiedTime; 
         private String versionId; 
 
@@ -98,14 +86,6 @@ public class Version extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
-            return this;
-        }
-
-        /**
-         * functionVersionArn.
-         */
-        public Builder functionVersionArn(String functionVersionArn) {
-            this.functionVersionArn = functionVersionArn;
             return this;
         }
 

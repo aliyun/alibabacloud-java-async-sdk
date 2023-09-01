@@ -7,32 +7,32 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteFunctionVersionRequest} extends {@link RequestModel}
+ * {@link CreateVpcBindingRequest} extends {@link RequestModel}
  *
- * <p>DeleteFunctionVersionRequest</p>
+ * <p>CreateVpcBindingRequest</p>
  */
-public class DeleteFunctionVersionRequest extends Request {
+public class CreateVpcBindingRequest extends Request {
     @Path
     @NameInMap("functionName")
     @Validation(required = true)
     private String functionName;
 
-    @Path
-    @NameInMap("versionId")
+    @Body
+    @NameInMap("body")
     @Validation(required = true)
-    private Integer versionId;
+    private CreateVpcBindingInput body;
 
-    private DeleteFunctionVersionRequest(Builder builder) {
+    private CreateVpcBindingRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
-        this.versionId = builder.versionId;
+        this.body = builder.body;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteFunctionVersionRequest create() {
+    public static CreateVpcBindingRequest create() {
         return builder().build();
     }
 
@@ -49,24 +49,24 @@ public class DeleteFunctionVersionRequest extends Request {
     }
 
     /**
-     * @return versionId
+     * @return body
      */
-    public Integer getVersionId() {
-        return this.versionId;
+    public CreateVpcBindingInput getBody() {
+        return this.body;
     }
 
-    public static final class Builder extends Request.Builder<DeleteFunctionVersionRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateVpcBindingRequest, Builder> {
         private String functionName; 
-        private Integer versionId; 
+        private CreateVpcBindingInput body; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteFunctionVersionRequest request) {
+        private Builder(CreateVpcBindingRequest request) {
             super(request);
             this.functionName = request.functionName;
-            this.versionId = request.versionId;
+            this.body = request.body;
         } 
 
         /**
@@ -79,17 +79,17 @@ public class DeleteFunctionVersionRequest extends Request {
         }
 
         /**
-         * versionId.
+         * body.
          */
-        public Builder versionId(Integer versionId) {
-            this.putPathParameter("versionId", versionId);
-            this.versionId = versionId;
+        public Builder body(CreateVpcBindingInput body) {
+            this.putBodyParameter("body", body);
+            this.body = body;
             return this;
         }
 
         @Override
-        public DeleteFunctionVersionRequest build() {
-            return new DeleteFunctionVersionRequest(this);
+        public CreateVpcBindingRequest build() {
+            return new CreateVpcBindingRequest(this);
         } 
 
     } 

@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link VPCBinding} extends {@link TeaModel}
+ * {@link ListVpcBindingsOutput} extends {@link TeaModel}
  *
- * <p>VPCBinding</p>
+ * <p>ListVpcBindingsOutput</p>
  */
-public class VPCBinding extends TeaModel {
+public class ListVpcBindingsOutput extends TeaModel {
     @NameInMap("vpcIds")
     private java.util.List < String > vpcIds;
 
-    private VPCBinding(Builder builder) {
+    private ListVpcBindingsOutput(Builder builder) {
         this.vpcIds = builder.vpcIds;
     }
 
@@ -23,7 +23,7 @@ public class VPCBinding extends TeaModel {
         return new Builder();
     }
 
-    public static VPCBinding create() {
+    public static ListVpcBindingsOutput create() {
         return builder().build();
     }
 
@@ -45,8 +45,8 @@ public class VPCBinding extends TeaModel {
             return this;
         }
 
-        public VPCBinding build() {
-            return new VPCBinding(this);
+        public ListVpcBindingsOutput build() {
+            return new ListVpcBindingsOutput(this);
         } 
 
     } 

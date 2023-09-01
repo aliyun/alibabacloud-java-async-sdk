@@ -16,7 +16,7 @@ public class CreateAliasInput extends TeaModel {
     private java.util.Map < String, Float > additionalVersionWeight;
 
     @NameInMap("aliasName")
-    @Validation(maxLength = 128, minLength = 1)
+    @Validation(required = true, maxLength = 128, minLength = 1)
     private String aliasName;
 
     @NameInMap("description")
@@ -24,7 +24,7 @@ public class CreateAliasInput extends TeaModel {
     private String description;
 
     @NameInMap("versionId")
-    @Validation(maxLength = 10, minLength = 1)
+    @Validation(required = true, maxLength = 10, minLength = 1)
     private String versionId;
 
     private CreateAliasInput(Builder builder) {

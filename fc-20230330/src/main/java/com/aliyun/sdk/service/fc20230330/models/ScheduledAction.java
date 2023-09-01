@@ -16,16 +16,18 @@ public class ScheduledAction extends TeaModel {
     private String endTime;
 
     @NameInMap("name")
+    @Validation(required = true)
     private String name;
 
     @NameInMap("scheduleExpression")
+    @Validation(required = true)
     private String scheduleExpression;
 
     @NameInMap("startTime")
     private String startTime;
 
     @NameInMap("target")
-    @Validation(maximum = 100000)
+    @Validation(required = true)
     private Long target;
 
     private ScheduledAction(Builder builder) {

@@ -7,21 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link TagResourceResponse} extends {@link TeaModel}
+ * {@link ListVpcBindingsResponse} extends {@link TeaModel}
  *
- * <p>TagResourceResponse</p>
+ * <p>ListVpcBindingsResponse</p>
  */
-public class TagResourceResponse extends Response {
+public class ListVpcBindingsResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
-    private TagResourceResponse(BuilderImpl builder) {
+    @NameInMap("body")
+    @Validation(required = true)
+    private ListVpcBindingsOutput body;
+
+    private ListVpcBindingsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.body = builder.body;
     }
 
-    public static TagResourceResponse create() {
+    public static ListVpcBindingsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -37,27 +42,38 @@ public class TagResourceResponse extends Response {
         return this.headers;
     }
 
-    public interface Builder extends Response.Builder<TagResourceResponse, Builder> {
+    /**
+     * @return body
+     */
+    public ListVpcBindingsOutput getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<ListVpcBindingsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
+        Builder body(ListVpcBindingsOutput body);
+
         @Override
-        TagResourceResponse build();
+        ListVpcBindingsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<TagResourceResponse, Builder>
+            extends Response.BuilderImpl<ListVpcBindingsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private ListVpcBindingsOutput body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(TagResourceResponse response) {
+        private BuilderImpl(ListVpcBindingsResponse response) {
             super(response);
             this.headers = response.headers;
+            this.body = response.body;
         } 
 
         /**
@@ -69,9 +85,18 @@ public class TagResourceResponse extends Response {
             return this;
         }
 
+        /**
+         * body.
+         */
         @Override
-        public TagResourceResponse build() {
-            return new TagResourceResponse(this);
+        public Builder body(ListVpcBindingsOutput body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ListVpcBindingsResponse build() {
+            return new ListVpcBindingsResponse(this);
         } 
 
     } 

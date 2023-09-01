@@ -19,295 +19,317 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-      * create function version
+      * 创建函数别名。
       *
      */
     CompletableFuture<CreateAliasResponse> createAlias(CreateAliasRequest request);
 
     /**
-      * Create custom domain.
+      * 创建自定义域名。
       *
      */
     CompletableFuture<CreateCustomDomainResponse> createCustomDomain(CreateCustomDomainRequest request);
 
     /**
-      * Create function
+      * 创建函数。
       *
      */
     CompletableFuture<CreateFunctionResponse> createFunction(CreateFunctionRequest request);
 
     /**
-      * Create layer version
+      * 创建层版本。
       *
      */
     CompletableFuture<CreateLayerVersionResponse> createLayerVersion(CreateLayerVersionRequest request);
 
     /**
-      * Create trigger.
+      * 创建函数触发器。
       *
      */
     CompletableFuture<CreateTriggerResponse> createTrigger(CreateTriggerRequest request);
 
     /**
-      * Delete function alias
+      * 创建VPC绑定。
+      *
+     */
+    CompletableFuture<CreateVpcBindingResponse> createVpcBinding(CreateVpcBindingRequest request);
+
+    /**
+      * 删除函数别名。
       *
      */
     CompletableFuture<DeleteAliasResponse> deleteAlias(DeleteAliasRequest request);
 
     /**
-      * Delete function async invoke config
+      * 删除函数异步调用配置。
       *
      */
     CompletableFuture<DeleteAsyncInvokeConfigResponse> deleteAsyncInvokeConfig(DeleteAsyncInvokeConfigRequest request);
 
     /**
-      * deletes the concurrency config for a function
+      * 删除函数并发度配置。
       *
      */
     CompletableFuture<DeleteConcurrencyConfigResponse> deleteConcurrencyConfig(DeleteConcurrencyConfigRequest request);
 
     /**
-      * Delete custom domain.
+      * 删除自定义域名。
       *
      */
     CompletableFuture<DeleteCustomDomainResponse> deleteCustomDomain(DeleteCustomDomainRequest request);
 
     /**
-      * Delete function
+      * 删除函数。
       *
      */
     CompletableFuture<DeleteFunctionResponse> deleteFunction(DeleteFunctionRequest request);
 
     /**
-      * Delete function version
+      * 删除函数版本。
       *
      */
     CompletableFuture<DeleteFunctionVersionResponse> deleteFunctionVersion(DeleteFunctionVersionRequest request);
 
     /**
-      * Delete layer version
+      * 删除层版本。
       *
      */
     CompletableFuture<DeleteLayerVersionResponse> deleteLayerVersion(DeleteLayerVersionRequest request);
 
     /**
-      * Delete provision config.
+      * 删除函数预留配置。
       *
      */
     CompletableFuture<DeleteProvisionConfigResponse> deleteProvisionConfig(DeleteProvisionConfigRequest request);
 
     /**
-      * Delete trigger.
+      * 删除函数触发器。
       *
      */
     CompletableFuture<DeleteTriggerResponse> deleteTrigger(DeleteTriggerRequest request);
 
     /**
-      * Get function alias
+      * 删除VPC绑定。
+      *
+     */
+    CompletableFuture<DeleteVpcBindingResponse> deleteVpcBinding(DeleteVpcBindingRequest request);
+
+    /**
+      * 获取函数别名信息。
       *
      */
     CompletableFuture<GetAliasResponse> getAlias(GetAliasRequest request);
 
     /**
-      * Get function async invoke config
+      * 获取函数异步调用配置。
       *
      */
     CompletableFuture<GetAsyncInvokeConfigResponse> getAsyncInvokeConfig(GetAsyncInvokeConfigRequest request);
 
     /**
-      * gets the concurrency config for a function
+      * 获取函数并发度配置。
       *
      */
     CompletableFuture<GetConcurrencyConfigResponse> getConcurrencyConfig(GetConcurrencyConfigRequest request);
 
     /**
-      * Get custom domain.
+      * 获取自定义域名。
       *
      */
     CompletableFuture<GetCustomDomainResponse> getCustomDomain(GetCustomDomainRequest request);
 
     /**
-      * Get function info by function name
+      * 获取函数信息。
       *
      */
     CompletableFuture<GetFunctionResponse> getFunction(GetFunctionRequest request);
 
     /**
-      * Get function code by function name
+      * 获取函数代码。
       *
      */
     CompletableFuture<GetFunctionCodeResponse> getFunctionCode(GetFunctionCodeRequest request);
 
     /**
-      * Get layer version.
+      * 获取层版本。
       *
      */
     CompletableFuture<GetLayerVersionResponse> getLayerVersion(GetLayerVersionRequest request);
 
     /**
-      * Get layer version by arn.
+      * 根据资源标识获取层版本。
       *
      */
     CompletableFuture<GetLayerVersionByArnResponse> getLayerVersionByArn(GetLayerVersionByArnRequest request);
 
     /**
-      * Get provision config.
+      * 获取函数预留配置。
       *
      */
     CompletableFuture<GetProvisionConfigResponse> getProvisionConfig(GetProvisionConfigRequest request);
 
     /**
-      * Get resource tag
+      * 获取资源标签。
       *
      */
     CompletableFuture<GetResourceTagsResponse> getResourceTags(GetResourceTagsRequest request);
 
     /**
-      * Get trigger.
+      * 获取函数触发器。
       *
      */
     CompletableFuture<GetTriggerResponse> getTrigger(GetTriggerRequest request);
 
     /**
-      * Invoke function
+      * 调用函数。
       *
      */
     CompletableFuture<InvokeFunctionResponse> invokeFunction(InvokeFunctionRequest request);
 
+    CompletableFuture<InvokeFunctionResponse> invokeFunctionWithRequestBody(InvokeFunctionRequest request, RequestBody requestBody);
+
+<ReturnT> CompletableFuture<ReturnT> invokeFunctionWithAsyncResponseHandler(InvokeFunctionRequest request, AsyncResponseHandler<InvokeFunctionResponse, ReturnT> responseHandler);
+
     /**
-      * List function aliases
+      * 列出函数别名。
       *
      */
     CompletableFuture<ListAliasesResponse> listAliases(ListAliasesRequest request);
 
     /**
-      * List all functions async invoke config
+      * 列出函数异步调用配置。
       *
      */
     CompletableFuture<ListAsyncInvokeConfigsResponse> listAsyncInvokeConfigs(ListAsyncInvokeConfigsRequest request);
 
     /**
-      * List all functions concurrency configs
+      * 列出函数并发度配置。
       *
      */
     CompletableFuture<ListConcurrencyConfigsResponse> listConcurrencyConfigs(ListConcurrencyConfigsRequest request);
 
     /**
-      * List custom domains.
+      * 列出自定义域名。
       *
      */
     CompletableFuture<ListCustomDomainsResponse> listCustomDomains(ListCustomDomainsRequest request);
 
     /**
-      * List function versions
+      * 列出函数版本。
       *
      */
     CompletableFuture<ListFunctionVersionsResponse> listFunctionVersions(ListFunctionVersionsRequest request);
 
     /**
-      * Lists existing functions.
+      * 列出函数。
       *
      */
     CompletableFuture<ListFunctionsResponse> listFunctions(ListFunctionsRequest request);
 
     /**
-      * List instances for function.
+      * 列出函数实例。
       *
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
     /**
-      * List layer versions.
+      * 列出层版本。
       *
      */
     CompletableFuture<ListLayerVersionsResponse> listLayerVersions(ListLayerVersionsRequest request);
 
     /**
-      * List layers .
+      * 列出层。
       *
      */
     CompletableFuture<ListLayersResponse> listLayers(ListLayersRequest request);
 
     /**
-      * List provision configs.
+      * 列出函数预留配置。
       *
      */
     CompletableFuture<ListProvisionConfigsResponse> listProvisionConfigs(ListProvisionConfigsRequest request);
 
     /**
-      * List tagged resources
+      * 列出具有标签的资源。
       *
      */
     CompletableFuture<ListTaggedResourcesResponse> listTaggedResources(ListTaggedResourcesRequest request);
 
     /**
-      * List triggers.
+      * 列出函数触发器。
       *
      */
     CompletableFuture<ListTriggersResponse> listTriggers(ListTriggersRequest request);
 
     /**
-      * publish new function version
+      * 列出VPC绑定配置。
+      *
+     */
+    CompletableFuture<ListVpcBindingsResponse> listVpcBindings(ListVpcBindingsRequest request);
+
+    /**
+      * 发布函数版本。
       *
      */
     CompletableFuture<PublishFunctionVersionResponse> publishFunctionVersion(PublishFunctionVersionRequest request);
 
     /**
-      * Put function async invoke config.
+      * 设置函数异步调用配置。
       *
      */
     CompletableFuture<PutAsyncInvokeConfigResponse> putAsyncInvokeConfig(PutAsyncInvokeConfigRequest request);
 
     /**
-      * sets the concurrency config for a function
+      * 设置函数并发度配置。
       *
      */
     CompletableFuture<PutConcurrencyConfigResponse> putConcurrencyConfig(PutConcurrencyConfigRequest request);
 
     /**
-      * Update layer ACL.
+      * 设置层的访问权限。
       *
      */
     CompletableFuture<PutLayerACLResponse> putLayerACL(PutLayerACLRequest request);
 
     /**
-      * Put provision config.
+      * 设置函数预留配置。
       *
      */
     CompletableFuture<PutProvisionConfigResponse> putProvisionConfig(PutProvisionConfigRequest request);
 
     /**
-      * Tag resource
+      * 设置资源标签。
       *
      */
     CompletableFuture<TagResourceResponse> tagResource(TagResourceRequest request);
 
     /**
-      * Untag resource tag, support resource type: function, service
+      * 删除资源标签。
       *
      */
     CompletableFuture<UntagResourceResponse> untagResource(UntagResourceRequest request);
 
     /**
-      * Update function alias
+      * 更新函数别名。
       *
      */
     CompletableFuture<UpdateAliasResponse> updateAlias(UpdateAliasRequest request);
 
     /**
-      * Update custom domain.
+      * 更新自定义域名。
       *
      */
     CompletableFuture<UpdateCustomDomainResponse> updateCustomDomain(UpdateCustomDomainRequest request);
 
     /**
-      * Update function
+      * 更新函数。
       *
      */
     CompletableFuture<UpdateFunctionResponse> updateFunction(UpdateFunctionRequest request);
 
     /**
-      * Update trigger.
+      * 更新函数触发器。
       *
      */
     CompletableFuture<UpdateTriggerResponse> updateTrigger(UpdateTriggerRequest request);

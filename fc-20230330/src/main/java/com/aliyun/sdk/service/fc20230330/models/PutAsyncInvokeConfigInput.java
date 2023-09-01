@@ -16,11 +16,9 @@ public class PutAsyncInvokeConfigInput extends TeaModel {
     private DestinationConfig destinationConfig;
 
     @NameInMap("maxAsyncEventAgeInSeconds")
-    @Validation(maximum = 2592000, minimum = 1)
     private Long maxAsyncEventAgeInSeconds;
 
     @NameInMap("maxAsyncRetryAttempts")
-    @Validation(maximum = 8)
     private Long maxAsyncRetryAttempts;
 
     private PutAsyncInvokeConfigInput(Builder builder) {

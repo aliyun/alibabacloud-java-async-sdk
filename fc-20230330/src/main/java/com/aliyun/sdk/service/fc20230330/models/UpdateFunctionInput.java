@@ -45,7 +45,6 @@ public class UpdateFunctionInput extends TeaModel {
     private String handler;
 
     @NameInMap("instanceConcurrency")
-    @Validation(maximum = 100, minimum = 1)
     private Integer instanceConcurrency;
 
     @NameInMap("instanceLifecycleConfig")
@@ -82,9 +81,6 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("tracingConfig")
     private TracingConfig tracingConfig;
 
-    @NameInMap("vpcBinding")
-    private VPCBinding vpcBinding;
-
     @NameInMap("vpcConfig")
     private VPCConfig vpcConfig;
 
@@ -111,7 +107,6 @@ public class UpdateFunctionInput extends TeaModel {
         this.runtime = builder.runtime;
         this.timeout = builder.timeout;
         this.tracingConfig = builder.tracingConfig;
-        this.vpcBinding = builder.vpcBinding;
         this.vpcConfig = builder.vpcConfig;
     }
 
@@ -278,13 +273,6 @@ public class UpdateFunctionInput extends TeaModel {
     }
 
     /**
-     * @return vpcBinding
-     */
-    public VPCBinding getVpcBinding() {
-        return this.vpcBinding;
-    }
-
-    /**
      * @return vpcConfig
      */
     public VPCConfig getVpcConfig() {
@@ -314,7 +302,6 @@ public class UpdateFunctionInput extends TeaModel {
         private String runtime; 
         private Integer timeout; 
         private TracingConfig tracingConfig; 
-        private VPCBinding vpcBinding; 
         private VPCConfig vpcConfig; 
 
         /**
@@ -490,14 +477,6 @@ public class UpdateFunctionInput extends TeaModel {
          */
         public Builder tracingConfig(TracingConfig tracingConfig) {
             this.tracingConfig = tracingConfig;
-            return this;
-        }
-
-        /**
-         * vpcBinding.
-         */
-        public Builder vpcBinding(VPCBinding vpcBinding) {
-            this.vpcBinding = vpcBinding;
             return this;
         }
 

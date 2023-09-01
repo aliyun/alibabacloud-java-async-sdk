@@ -18,8 +18,8 @@ public class CustomContainerConfig extends TeaModel {
     @NameInMap("accelerationType")
     private String accelerationType;
 
-    @NameInMap("acrInstanceID")
-    private String acrInstanceID;
+    @NameInMap("acrInstanceId")
+    private String acrInstanceId;
 
     @NameInMap("command")
     private java.util.List < String > command;
@@ -39,7 +39,7 @@ public class CustomContainerConfig extends TeaModel {
     private CustomContainerConfig(Builder builder) {
         this.accelerationInfo = builder.accelerationInfo;
         this.accelerationType = builder.accelerationType;
-        this.acrInstanceID = builder.acrInstanceID;
+        this.acrInstanceId = builder.acrInstanceId;
         this.command = builder.command;
         this.entrypoint = builder.entrypoint;
         this.healthCheckConfig = builder.healthCheckConfig;
@@ -70,10 +70,10 @@ public class CustomContainerConfig extends TeaModel {
     }
 
     /**
-     * @return acrInstanceID
+     * @return acrInstanceId
      */
-    public String getAcrInstanceID() {
-        return this.acrInstanceID;
+    public String getAcrInstanceId() {
+        return this.acrInstanceId;
     }
 
     /**
@@ -114,7 +114,7 @@ public class CustomContainerConfig extends TeaModel {
     public static final class Builder {
         private AccelerationInfo accelerationInfo; 
         private String accelerationType; 
-        private String acrInstanceID; 
+        private String acrInstanceId; 
         private java.util.List < String > command; 
         private java.util.List < String > entrypoint; 
         private CustomHealthCheckConfig healthCheckConfig; 
@@ -138,10 +138,10 @@ public class CustomContainerConfig extends TeaModel {
         }
 
         /**
-         * acrInstanceID.
+         * acrInstanceId.
          */
-        public Builder acrInstanceID(String acrInstanceID) {
-            this.acrInstanceID = acrInstanceID;
+        public Builder acrInstanceId(String acrInstanceId) {
+            this.acrInstanceId = acrInstanceId;
             return this;
         }
 

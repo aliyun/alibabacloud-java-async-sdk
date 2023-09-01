@@ -13,15 +13,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CertConfig extends TeaModel {
     @NameInMap("certName")
-    @Validation(maxLength = 128, minLength = 1)
+    @Validation(required = true, maxLength = 128, minLength = 1)
     private String certName;
 
     @NameInMap("certificate")
-    @Validation(maxLength = 20480)
+    @Validation(required = true, maxLength = 20480)
     private String certificate;
 
     @NameInMap("privateKey")
-    @Validation(maxLength = 4096)
+    @Validation(required = true, maxLength = 4096)
     private String privateKey;
 
     private CertConfig(Builder builder) {

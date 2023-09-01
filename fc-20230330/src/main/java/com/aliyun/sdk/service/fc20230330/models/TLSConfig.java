@@ -13,12 +13,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TLSConfig extends TeaModel {
     @NameInMap("cipherSuites")
+    @Validation(required = true)
     private java.util.List < String > cipherSuites;
 
     @NameInMap("maxVersion")
     private String maxVersion;
 
     @NameInMap("minVersion")
+    @Validation(required = true)
     private String minVersion;
 
     private TLSConfig(Builder builder) {

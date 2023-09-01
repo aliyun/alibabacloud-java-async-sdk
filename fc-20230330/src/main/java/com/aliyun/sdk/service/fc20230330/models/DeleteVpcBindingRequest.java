@@ -7,32 +7,32 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteFunctionVersionRequest} extends {@link RequestModel}
+ * {@link DeleteVpcBindingRequest} extends {@link RequestModel}
  *
- * <p>DeleteFunctionVersionRequest</p>
+ * <p>DeleteVpcBindingRequest</p>
  */
-public class DeleteFunctionVersionRequest extends Request {
+public class DeleteVpcBindingRequest extends Request {
     @Path
     @NameInMap("functionName")
     @Validation(required = true)
     private String functionName;
 
     @Path
-    @NameInMap("versionId")
+    @NameInMap("vpcId")
     @Validation(required = true)
-    private Integer versionId;
+    private String vpcId;
 
-    private DeleteFunctionVersionRequest(Builder builder) {
+    private DeleteVpcBindingRequest(Builder builder) {
         super(builder);
         this.functionName = builder.functionName;
-        this.versionId = builder.versionId;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteFunctionVersionRequest create() {
+    public static DeleteVpcBindingRequest create() {
         return builder().build();
     }
 
@@ -49,24 +49,24 @@ public class DeleteFunctionVersionRequest extends Request {
     }
 
     /**
-     * @return versionId
+     * @return vpcId
      */
-    public Integer getVersionId() {
-        return this.versionId;
+    public String getVpcId() {
+        return this.vpcId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteFunctionVersionRequest, Builder> {
+    public static final class Builder extends Request.Builder<DeleteVpcBindingRequest, Builder> {
         private String functionName; 
-        private Integer versionId; 
+        private String vpcId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteFunctionVersionRequest request) {
+        private Builder(DeleteVpcBindingRequest request) {
             super(request);
             this.functionName = request.functionName;
-            this.versionId = request.versionId;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -79,17 +79,17 @@ public class DeleteFunctionVersionRequest extends Request {
         }
 
         /**
-         * versionId.
+         * vpcId.
          */
-        public Builder versionId(Integer versionId) {
-            this.putPathParameter("versionId", versionId);
-            this.versionId = versionId;
+        public Builder vpcId(String vpcId) {
+            this.putPathParameter("vpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 
         @Override
-        public DeleteFunctionVersionRequest build() {
-            return new DeleteFunctionVersionRequest(this);
+        public DeleteVpcBindingRequest build() {
+            return new DeleteVpcBindingRequest(this);
         } 
 
     } 
