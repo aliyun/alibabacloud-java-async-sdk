@@ -14,7 +14,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteEaiAllRequest extends Request {
     @Query
     @NameInMap("ClientInstanceId")
-    @Validation(required = true)
     private String clientInstanceId;
 
     @Query
@@ -77,11 +76,11 @@ public class DeleteEaiAllRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteEaiAllRequest response) {
-            super(response);
-            this.clientInstanceId = response.clientInstanceId;
-            this.elasticAcceleratedInstanceId = response.elasticAcceleratedInstanceId;
-            this.regionId = response.regionId;
+        private Builder(DeleteEaiAllRequest request) {
+            super(request);
+            this.clientInstanceId = request.clientInstanceId;
+            this.elasticAcceleratedInstanceId = request.elasticAcceleratedInstanceId;
+            this.regionId = request.regionId;
         } 
 
         /**

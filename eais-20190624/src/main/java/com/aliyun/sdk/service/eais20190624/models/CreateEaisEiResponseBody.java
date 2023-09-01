@@ -7,19 +7,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetPrivateIpResponseBody} extends {@link TeaModel}
+ * {@link CreateEaisEiResponseBody} extends {@link TeaModel}
  *
- * <p>GetPrivateIpResponseBody</p>
+ * <p>CreateEaisEiResponseBody</p>
  */
-public class GetPrivateIpResponseBody extends TeaModel {
-    @NameInMap("PrivateIp")
-    private String privateIp;
+public class CreateEaisEiResponseBody extends TeaModel {
+    @NameInMap("EiInstanceId")
+    private String eiInstanceId;
 
     @NameInMap("RequestId")
     private String requestId;
 
-    private GetPrivateIpResponseBody(Builder builder) {
-        this.privateIp = builder.privateIp;
+    private CreateEaisEiResponseBody(Builder builder) {
+        this.eiInstanceId = builder.eiInstanceId;
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +27,15 @@ public class GetPrivateIpResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetPrivateIpResponseBody create() {
+    public static CreateEaisEiResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return privateIp
+     * @return eiInstanceId
      */
-    public String getPrivateIp() {
-        return this.privateIp;
+    public String getEiInstanceId() {
+        return this.eiInstanceId;
     }
 
     /**
@@ -46,14 +46,14 @@ public class GetPrivateIpResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String privateIp; 
+        private String eiInstanceId; 
         private String requestId; 
 
         /**
-         * PrivateIp.
+         * EiInstanceId.
          */
-        public Builder privateIp(String privateIp) {
-            this.privateIp = privateIp;
+        public Builder eiInstanceId(String eiInstanceId) {
+            this.eiInstanceId = eiInstanceId;
             return this;
         }
 
@@ -65,8 +65,8 @@ public class GetPrivateIpResponseBody extends TeaModel {
             return this;
         }
 
-        public GetPrivateIpResponseBody build() {
-            return new GetPrivateIpResponseBody(this);
+        public CreateEaisEiResponseBody build() {
+            return new CreateEaisEiResponseBody(this);
         } 
 
     } 

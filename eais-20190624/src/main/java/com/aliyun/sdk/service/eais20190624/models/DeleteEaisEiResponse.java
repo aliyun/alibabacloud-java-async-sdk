@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeZonesResponse} extends {@link TeaModel}
+ * {@link DeleteEaisEiResponse} extends {@link TeaModel}
  *
- * <p>DescribeZonesResponse</p>
+ * <p>DeleteEaisEiResponse</p>
  */
-public class DescribeZonesResponse extends Response {
+public class DeleteEaisEiResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private DescribeZonesResponseBody body;
+    private DeleteEaisEiResponseBody body;
 
-    private DescribeZonesResponse(BuilderImpl builder) {
+    private DeleteEaisEiResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static DescribeZonesResponse create() {
+    public static DeleteEaisEiResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class DescribeZonesResponse extends Response {
     /**
      * @return body
      */
-    public DescribeZonesResponseBody getBody() {
+    public DeleteEaisEiResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeZonesResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteEaisEiResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(DescribeZonesResponseBody body);
+        Builder body(DeleteEaisEiResponseBody body);
 
         @Override
-        DescribeZonesResponse build();
+        DeleteEaisEiResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeZonesResponse, Builder>
+            extends Response.BuilderImpl<DeleteEaisEiResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private DescribeZonesResponseBody body; 
+        private DeleteEaisEiResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeZonesResponse response) {
+        private BuilderImpl(DeleteEaisEiResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class DescribeZonesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeZonesResponseBody body) {
+        public Builder body(DeleteEaisEiResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeZonesResponse build() {
-            return new DescribeZonesResponse(this);
+        public DeleteEaisEiResponse build() {
+            return new DeleteEaisEiResponse(this);
         } 
 
     } 

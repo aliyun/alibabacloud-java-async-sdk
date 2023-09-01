@@ -234,6 +234,9 @@ public class DescribeEaisResponseBody extends TeaModel {
 
     }
     public static class Instance extends TeaModel {
+        @NameInMap("Category")
+        private String category;
+
         @NameInMap("ClientInstanceId")
         private String clientInstanceId;
 
@@ -258,8 +261,20 @@ public class DescribeEaisResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         private String instanceType;
 
+        @NameInMap("JupyterUrl")
+        private String jupyterUrl;
+
         @NameInMap("RegionId")
         private String regionId;
+
+        @NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @NameInMap("StartTime")
+        private String startTime;
 
         @NameInMap("Status")
         private String status;
@@ -267,10 +282,14 @@ public class DescribeEaisResponseBody extends TeaModel {
         @NameInMap("Tags")
         private Tags tags;
 
+        @NameInMap("VSwitchId")
+        private String vSwitchId;
+
         @NameInMap("ZoneId")
         private String zoneId;
 
         private Instance(Builder builder) {
+            this.category = builder.category;
             this.clientInstanceId = builder.clientInstanceId;
             this.clientInstanceName = builder.clientInstanceName;
             this.clientInstanceType = builder.clientInstanceType;
@@ -279,9 +298,14 @@ public class DescribeEaisResponseBody extends TeaModel {
             this.elasticAcceleratedInstanceId = builder.elasticAcceleratedInstanceId;
             this.instanceName = builder.instanceName;
             this.instanceType = builder.instanceType;
+            this.jupyterUrl = builder.jupyterUrl;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
+            this.securityGroupId = builder.securityGroupId;
+            this.startTime = builder.startTime;
             this.status = builder.status;
             this.tags = builder.tags;
+            this.vSwitchId = builder.vSwitchId;
             this.zoneId = builder.zoneId;
         }
 
@@ -291,6 +315,13 @@ public class DescribeEaisResponseBody extends TeaModel {
 
         public static Instance create() {
             return builder().build();
+        }
+
+        /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
         }
 
         /**
@@ -350,10 +381,38 @@ public class DescribeEaisResponseBody extends TeaModel {
         }
 
         /**
+         * @return jupyterUrl
+         */
+        public String getJupyterUrl() {
+            return this.jupyterUrl;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
             return this.regionId;
+        }
+
+        /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return startTime
+         */
+        public String getStartTime() {
+            return this.startTime;
         }
 
         /**
@@ -371,6 +430,13 @@ public class DescribeEaisResponseBody extends TeaModel {
         }
 
         /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -378,6 +444,7 @@ public class DescribeEaisResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String category; 
             private String clientInstanceId; 
             private String clientInstanceName; 
             private String clientInstanceType; 
@@ -386,10 +453,23 @@ public class DescribeEaisResponseBody extends TeaModel {
             private String elasticAcceleratedInstanceId; 
             private String instanceName; 
             private String instanceType; 
+            private String jupyterUrl; 
             private String regionId; 
+            private String resourceGroupId; 
+            private String securityGroupId; 
+            private String startTime; 
             private String status; 
             private Tags tags; 
+            private String vSwitchId; 
             private String zoneId; 
+
+            /**
+             * Category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
 
             /**
              * ClientInstanceId.
@@ -456,10 +536,42 @@ public class DescribeEaisResponseBody extends TeaModel {
             }
 
             /**
+             * JupyterUrl.
+             */
+            public Builder jupyterUrl(String jupyterUrl) {
+                this.jupyterUrl = jupyterUrl;
+                return this;
+            }
+
+            /**
              * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * StartTime.
+             */
+            public Builder startTime(String startTime) {
+                this.startTime = startTime;
                 return this;
             }
 
@@ -476,6 +588,14 @@ public class DescribeEaisResponseBody extends TeaModel {
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
                 return this;
             }
 

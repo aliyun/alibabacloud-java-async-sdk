@@ -78,6 +78,10 @@ public class CreateEaiAllRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
+    @Query
+    @NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
     private CreateEaiAllRequest(Builder builder) {
         super(builder);
         this.clientImageId = builder.clientImageId;
@@ -95,6 +99,7 @@ public class CreateEaiAllRequest extends Request {
         this.eaiInstanceType = builder.eaiInstanceType;
         this.instanceName = builder.instanceName;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
     }
 
     public static Builder builder() {
@@ -215,6 +220,13 @@ public class CreateEaiAllRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public static final class Builder extends Request.Builder<CreateEaiAllRequest, Builder> {
         private String clientImageId; 
         private String clientInstanceName; 
@@ -231,28 +243,30 @@ public class CreateEaiAllRequest extends Request {
         private String eaiInstanceType; 
         private String instanceName; 
         private String regionId; 
+        private String resourceGroupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateEaiAllRequest response) {
-            super(response);
-            this.clientImageId = response.clientImageId;
-            this.clientInstanceName = response.clientInstanceName;
-            this.clientInstanceType = response.clientInstanceType;
-            this.clientInternetMaxBandwidthIn = response.clientInternetMaxBandwidthIn;
-            this.clientInternetMaxBandwidthOut = response.clientInternetMaxBandwidthOut;
-            this.clientPassword = response.clientPassword;
-            this.clientSecurityGroupId = response.clientSecurityGroupId;
-            this.clientSystemDiskCategory = response.clientSystemDiskCategory;
-            this.clientSystemDiskSize = response.clientSystemDiskSize;
-            this.clientToken = response.clientToken;
-            this.clientVSwitchId = response.clientVSwitchId;
-            this.clientZoneId = response.clientZoneId;
-            this.eaiInstanceType = response.eaiInstanceType;
-            this.instanceName = response.instanceName;
-            this.regionId = response.regionId;
+        private Builder(CreateEaiAllRequest request) {
+            super(request);
+            this.clientImageId = request.clientImageId;
+            this.clientInstanceName = request.clientInstanceName;
+            this.clientInstanceType = request.clientInstanceType;
+            this.clientInternetMaxBandwidthIn = request.clientInternetMaxBandwidthIn;
+            this.clientInternetMaxBandwidthOut = request.clientInternetMaxBandwidthOut;
+            this.clientPassword = request.clientPassword;
+            this.clientSecurityGroupId = request.clientSecurityGroupId;
+            this.clientSystemDiskCategory = request.clientSystemDiskCategory;
+            this.clientSystemDiskSize = request.clientSystemDiskSize;
+            this.clientToken = request.clientToken;
+            this.clientVSwitchId = request.clientVSwitchId;
+            this.clientZoneId = request.clientZoneId;
+            this.eaiInstanceType = request.eaiInstanceType;
+            this.instanceName = request.instanceName;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
@@ -387,6 +401,15 @@ public class CreateEaiAllRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

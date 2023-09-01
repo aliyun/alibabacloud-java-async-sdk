@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteEaiRequest} extends {@link RequestModel}
+ * {@link DeleteEaisEiRequest} extends {@link RequestModel}
  *
- * <p>DeleteEaiRequest</p>
+ * <p>DeleteEaisEiRequest</p>
  */
-public class DeleteEaiRequest extends Request {
+public class DeleteEaisEiRequest extends Request {
     @Query
-    @NameInMap("ElasticAcceleratedInstanceId")
+    @NameInMap("EiInstanceId")
     @Validation(required = true)
-    private String elasticAcceleratedInstanceId;
+    private String eiInstanceId;
 
     @Query
     @NameInMap("Force")
@@ -26,9 +26,9 @@ public class DeleteEaiRequest extends Request {
     @Validation(required = true)
     private String regionId;
 
-    private DeleteEaiRequest(Builder builder) {
+    private DeleteEaisEiRequest(Builder builder) {
         super(builder);
-        this.elasticAcceleratedInstanceId = builder.elasticAcceleratedInstanceId;
+        this.eiInstanceId = builder.eiInstanceId;
         this.force = builder.force;
         this.regionId = builder.regionId;
     }
@@ -37,7 +37,7 @@ public class DeleteEaiRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteEaiRequest create() {
+    public static DeleteEaisEiRequest create() {
         return builder().build();
     }
 
@@ -47,10 +47,10 @@ public class DeleteEaiRequest extends Request {
     }
 
     /**
-     * @return elasticAcceleratedInstanceId
+     * @return eiInstanceId
      */
-    public String getElasticAcceleratedInstanceId() {
-        return this.elasticAcceleratedInstanceId;
+    public String getEiInstanceId() {
+        return this.eiInstanceId;
     }
 
     /**
@@ -67,8 +67,8 @@ public class DeleteEaiRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteEaiRequest, Builder> {
-        private String elasticAcceleratedInstanceId; 
+    public static final class Builder extends Request.Builder<DeleteEaisEiRequest, Builder> {
+        private String eiInstanceId; 
         private Boolean force; 
         private String regionId; 
 
@@ -76,19 +76,19 @@ public class DeleteEaiRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteEaiRequest request) {
+        private Builder(DeleteEaisEiRequest request) {
             super(request);
-            this.elasticAcceleratedInstanceId = request.elasticAcceleratedInstanceId;
+            this.eiInstanceId = request.eiInstanceId;
             this.force = request.force;
             this.regionId = request.regionId;
         } 
 
         /**
-         * ElasticAcceleratedInstanceId.
+         * EiInstanceId.
          */
-        public Builder elasticAcceleratedInstanceId(String elasticAcceleratedInstanceId) {
-            this.putQueryParameter("ElasticAcceleratedInstanceId", elasticAcceleratedInstanceId);
-            this.elasticAcceleratedInstanceId = elasticAcceleratedInstanceId;
+        public Builder eiInstanceId(String eiInstanceId) {
+            this.putQueryParameter("EiInstanceId", eiInstanceId);
+            this.eiInstanceId = eiInstanceId;
             return this;
         }
 
@@ -111,8 +111,8 @@ public class DeleteEaiRequest extends Request {
         }
 
         @Override
-        public DeleteEaiRequest build() {
-            return new DeleteEaiRequest(this);
+        public DeleteEaisEiRequest build() {
+            return new DeleteEaisEiRequest(this);
         } 
 
     } 

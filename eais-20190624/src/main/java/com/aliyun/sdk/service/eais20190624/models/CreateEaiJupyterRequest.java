@@ -7,27 +7,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateEaiRequest} extends {@link RequestModel}
+ * {@link CreateEaiJupyterRequest} extends {@link RequestModel}
  *
- * <p>CreateEaiRequest</p>
+ * <p>CreateEaiJupyterRequest</p>
  */
-public class CreateEaiRequest extends Request {
+public class CreateEaiJupyterRequest extends Request {
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
 
     @Query
-    @NameInMap("Image")
-    private String image;
+    @NameInMap("EaisName")
+    private String eaisName;
 
     @Query
-    @NameInMap("InstanceName")
-    private String instanceName;
-
-    @Query
-    @NameInMap("InstanceType")
+    @NameInMap("EaisType")
     @Validation(required = true)
-    private String instanceType;
+    private String eaisType;
+
+    @Query
+    @NameInMap("EnvironmentVar")
+    private java.util.List < EnvironmentVar> environmentVar;
 
     @Query
     @NameInMap("RegionId")
@@ -40,18 +40,20 @@ public class CreateEaiRequest extends Request {
 
     @Query
     @NameInMap("SecurityGroupId")
+    @Validation(required = true)
     private String securityGroupId;
 
     @Query
     @NameInMap("VSwitchId")
+    @Validation(required = true)
     private String vSwitchId;
 
-    private CreateEaiRequest(Builder builder) {
+    private CreateEaiJupyterRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
-        this.image = builder.image;
-        this.instanceName = builder.instanceName;
-        this.instanceType = builder.instanceType;
+        this.eaisName = builder.eaisName;
+        this.eaisType = builder.eaisType;
+        this.environmentVar = builder.environmentVar;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.securityGroupId = builder.securityGroupId;
@@ -62,7 +64,7 @@ public class CreateEaiRequest extends Request {
         return new Builder();
     }
 
-    public static CreateEaiRequest create() {
+    public static CreateEaiJupyterRequest create() {
         return builder().build();
     }
 
@@ -79,24 +81,24 @@ public class CreateEaiRequest extends Request {
     }
 
     /**
-     * @return image
+     * @return eaisName
      */
-    public String getImage() {
-        return this.image;
+    public String getEaisName() {
+        return this.eaisName;
     }
 
     /**
-     * @return instanceName
+     * @return eaisType
      */
-    public String getInstanceName() {
-        return this.instanceName;
+    public String getEaisType() {
+        return this.eaisType;
     }
 
     /**
-     * @return instanceType
+     * @return environmentVar
      */
-    public String getInstanceType() {
-        return this.instanceType;
+    public java.util.List < EnvironmentVar> getEnvironmentVar() {
+        return this.environmentVar;
     }
 
     /**
@@ -127,11 +129,11 @@ public class CreateEaiRequest extends Request {
         return this.vSwitchId;
     }
 
-    public static final class Builder extends Request.Builder<CreateEaiRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateEaiJupyterRequest, Builder> {
         private String clientToken; 
-        private String image; 
-        private String instanceName; 
-        private String instanceType; 
+        private String eaisName; 
+        private String eaisType; 
+        private java.util.List < EnvironmentVar> environmentVar; 
         private String regionId; 
         private String resourceGroupId; 
         private String securityGroupId; 
@@ -141,12 +143,12 @@ public class CreateEaiRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEaiRequest request) {
+        private Builder(CreateEaiJupyterRequest request) {
             super(request);
             this.clientToken = request.clientToken;
-            this.image = request.image;
-            this.instanceName = request.instanceName;
-            this.instanceType = request.instanceType;
+            this.eaisName = request.eaisName;
+            this.eaisType = request.eaisType;
+            this.environmentVar = request.environmentVar;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.securityGroupId = request.securityGroupId;
@@ -163,29 +165,30 @@ public class CreateEaiRequest extends Request {
         }
 
         /**
-         * Image.
+         * EaisName.
          */
-        public Builder image(String image) {
-            this.putQueryParameter("Image", image);
-            this.image = image;
+        public Builder eaisName(String eaisName) {
+            this.putQueryParameter("EaisName", eaisName);
+            this.eaisName = eaisName;
             return this;
         }
 
         /**
-         * InstanceName.
+         * EaisType.
          */
-        public Builder instanceName(String instanceName) {
-            this.putQueryParameter("InstanceName", instanceName);
-            this.instanceName = instanceName;
+        public Builder eaisType(String eaisType) {
+            this.putQueryParameter("EaisType", eaisType);
+            this.eaisType = eaisType;
             return this;
         }
 
         /**
-         * InstanceType.
+         * EnvironmentVar.
          */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
+        public Builder environmentVar(java.util.List < EnvironmentVar> environmentVar) {
+            String environmentVarShrink = shrink(environmentVar, "EnvironmentVar", "json");
+            this.putQueryParameter("EnvironmentVar", environmentVarShrink);
+            this.environmentVar = environmentVar;
             return this;
         }
 
@@ -226,10 +229,71 @@ public class CreateEaiRequest extends Request {
         }
 
         @Override
-        public CreateEaiRequest build() {
-            return new CreateEaiRequest(this);
+        public CreateEaiJupyterRequest build() {
+            return new CreateEaiJupyterRequest(this);
         } 
 
     } 
 
+    public static class EnvironmentVar extends TeaModel {
+        @NameInMap("Key")
+        private String key;
+
+        @NameInMap("Value")
+        private String value;
+
+        private EnvironmentVar(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EnvironmentVar create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public EnvironmentVar build() {
+                return new EnvironmentVar(this);
+            } 
+
+        } 
+
+    }
 }

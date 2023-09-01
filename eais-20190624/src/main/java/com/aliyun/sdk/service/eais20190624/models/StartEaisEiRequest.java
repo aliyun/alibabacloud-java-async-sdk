@@ -7,23 +7,24 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeZonesRequest} extends {@link RequestModel}
+ * {@link StartEaisEiRequest} extends {@link RequestModel}
  *
- * <p>DescribeZonesRequest</p>
+ * <p>StartEaisEiRequest</p>
  */
-public class DescribeZonesRequest extends Request {
+public class StartEaisEiRequest extends Request {
     @Query
-    @NameInMap("InstanceType")
-    private String instanceType;
+    @NameInMap("EiInstanceId")
+    @Validation(required = true)
+    private String eiInstanceId;
 
     @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
-    private DescribeZonesRequest(Builder builder) {
+    private StartEaisEiRequest(Builder builder) {
         super(builder);
-        this.instanceType = builder.instanceType;
+        this.eiInstanceId = builder.eiInstanceId;
         this.regionId = builder.regionId;
     }
 
@@ -31,7 +32,7 @@ public class DescribeZonesRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeZonesRequest create() {
+    public static StartEaisEiRequest create() {
         return builder().build();
     }
 
@@ -41,10 +42,10 @@ public class DescribeZonesRequest extends Request {
     }
 
     /**
-     * @return instanceType
+     * @return eiInstanceId
      */
-    public String getInstanceType() {
-        return this.instanceType;
+    public String getEiInstanceId() {
+        return this.eiInstanceId;
     }
 
     /**
@@ -54,26 +55,26 @@ public class DescribeZonesRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeZonesRequest, Builder> {
-        private String instanceType; 
+    public static final class Builder extends Request.Builder<StartEaisEiRequest, Builder> {
+        private String eiInstanceId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeZonesRequest response) {
-            super(response);
-            this.instanceType = response.instanceType;
-            this.regionId = response.regionId;
+        private Builder(StartEaisEiRequest request) {
+            super(request);
+            this.eiInstanceId = request.eiInstanceId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * InstanceType.
+         * EiInstanceId.
          */
-        public Builder instanceType(String instanceType) {
-            this.putQueryParameter("InstanceType", instanceType);
-            this.instanceType = instanceType;
+        public Builder eiInstanceId(String eiInstanceId) {
+            this.putQueryParameter("EiInstanceId", eiInstanceId);
+            this.eiInstanceId = eiInstanceId;
             return this;
         }
 
@@ -87,8 +88,8 @@ public class DescribeZonesRequest extends Request {
         }
 
         @Override
-        public DescribeZonesRequest build() {
-            return new DescribeZonesRequest(this);
+        public StartEaisEiRequest build() {
+            return new StartEaisEiRequest(this);
         } 
 
     } 

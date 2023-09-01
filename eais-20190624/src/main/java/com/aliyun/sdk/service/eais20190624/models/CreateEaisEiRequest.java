@@ -7,18 +7,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateEaiRequest} extends {@link RequestModel}
+ * {@link CreateEaisEiRequest} extends {@link RequestModel}
  *
- * <p>CreateEaiRequest</p>
+ * <p>CreateEaisEiRequest</p>
  */
-public class CreateEaiRequest extends Request {
+public class CreateEaisEiRequest extends Request {
     @Query
     @NameInMap("ClientToken")
     private String clientToken;
-
-    @Query
-    @NameInMap("Image")
-    private String image;
 
     @Query
     @NameInMap("InstanceName")
@@ -40,16 +36,17 @@ public class CreateEaiRequest extends Request {
 
     @Query
     @NameInMap("SecurityGroupId")
+    @Validation(required = true)
     private String securityGroupId;
 
     @Query
     @NameInMap("VSwitchId")
+    @Validation(required = true)
     private String vSwitchId;
 
-    private CreateEaiRequest(Builder builder) {
+    private CreateEaisEiRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
-        this.image = builder.image;
         this.instanceName = builder.instanceName;
         this.instanceType = builder.instanceType;
         this.regionId = builder.regionId;
@@ -62,7 +59,7 @@ public class CreateEaiRequest extends Request {
         return new Builder();
     }
 
-    public static CreateEaiRequest create() {
+    public static CreateEaisEiRequest create() {
         return builder().build();
     }
 
@@ -76,13 +73,6 @@ public class CreateEaiRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    /**
-     * @return image
-     */
-    public String getImage() {
-        return this.image;
     }
 
     /**
@@ -127,9 +117,8 @@ public class CreateEaiRequest extends Request {
         return this.vSwitchId;
     }
 
-    public static final class Builder extends Request.Builder<CreateEaiRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateEaisEiRequest, Builder> {
         private String clientToken; 
-        private String image; 
         private String instanceName; 
         private String instanceType; 
         private String regionId; 
@@ -141,10 +130,9 @@ public class CreateEaiRequest extends Request {
             super();
         } 
 
-        private Builder(CreateEaiRequest request) {
+        private Builder(CreateEaisEiRequest request) {
             super(request);
             this.clientToken = request.clientToken;
-            this.image = request.image;
             this.instanceName = request.instanceName;
             this.instanceType = request.instanceType;
             this.regionId = request.regionId;
@@ -159,15 +147,6 @@ public class CreateEaiRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * Image.
-         */
-        public Builder image(String image) {
-            this.putQueryParameter("Image", image);
-            this.image = image;
             return this;
         }
 
@@ -226,8 +205,8 @@ public class CreateEaiRequest extends Request {
         }
 
         @Override
-        public CreateEaiRequest build() {
-            return new CreateEaiRequest(this);
+        public CreateEaisEiRequest build() {
+            return new CreateEaisEiRequest(this);
         } 
 
     } 

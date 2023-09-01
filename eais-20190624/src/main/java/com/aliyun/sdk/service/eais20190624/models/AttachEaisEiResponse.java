@@ -7,26 +7,26 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetPrivateIpResponse} extends {@link TeaModel}
+ * {@link AttachEaisEiResponse} extends {@link TeaModel}
  *
- * <p>GetPrivateIpResponse</p>
+ * <p>AttachEaisEiResponse</p>
  */
-public class GetPrivateIpResponse extends Response {
+public class AttachEaisEiResponse extends Response {
     @NameInMap("headers")
     @Validation(required = true)
     private java.util.Map < String, String > headers;
 
     @NameInMap("body")
     @Validation(required = true)
-    private GetPrivateIpResponseBody body;
+    private AttachEaisEiResponseBody body;
 
-    private GetPrivateIpResponse(BuilderImpl builder) {
+    private AttachEaisEiResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.body = builder.body;
     }
 
-    public static GetPrivateIpResponse create() {
+    public static AttachEaisEiResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -45,32 +45,32 @@ public class GetPrivateIpResponse extends Response {
     /**
      * @return body
      */
-    public GetPrivateIpResponseBody getBody() {
+    public AttachEaisEiResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetPrivateIpResponse, Builder> {
+    public interface Builder extends Response.Builder<AttachEaisEiResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
-        Builder body(GetPrivateIpResponseBody body);
+        Builder body(AttachEaisEiResponseBody body);
 
         @Override
-        GetPrivateIpResponse build();
+        AttachEaisEiResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetPrivateIpResponse, Builder>
+            extends Response.BuilderImpl<AttachEaisEiResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
-        private GetPrivateIpResponseBody body; 
+        private AttachEaisEiResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetPrivateIpResponse response) {
+        private BuilderImpl(AttachEaisEiResponse response) {
             super(response);
             this.headers = response.headers;
             this.body = response.body;
@@ -89,14 +89,14 @@ public class GetPrivateIpResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetPrivateIpResponseBody body) {
+        public Builder body(AttachEaisEiResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetPrivateIpResponse build() {
-            return new GetPrivateIpResponse(this);
+        public AttachEaisEiResponse build() {
+            return new AttachEaisEiResponse(this);
         } 
 
     } 

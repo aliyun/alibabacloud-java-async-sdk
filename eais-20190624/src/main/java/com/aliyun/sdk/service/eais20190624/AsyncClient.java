@@ -20,22 +20,44 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AttachEaiResponse> attachEai(AttachEaiRequest request);
 
+    CompletableFuture<AttachEaisEiResponse> attachEaisEi(AttachEaisEiRequest request);
+
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
     CompletableFuture<CreateEaiResponse> createEai(CreateEaiRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<CreateEaiAllResponse> createEaiAll(CreateEaiAllRequest request);
+
+    CompletableFuture<CreateEaiEciResponse> createEaiEci(CreateEaiEciRequest request);
+
+    CompletableFuture<CreateEaiEcsResponse> createEaiEcs(CreateEaiEcsRequest request);
+
+    CompletableFuture<CreateEaiJupyterResponse> createEaiJupyter(CreateEaiJupyterRequest request);
+
+    CompletableFuture<CreateEaisEiResponse> createEaisEi(CreateEaisEiRequest request);
 
     CompletableFuture<DeleteEaiResponse> deleteEai(DeleteEaiRequest request);
 
     CompletableFuture<DeleteEaiAllResponse> deleteEaiAll(DeleteEaiAllRequest request);
 
+    CompletableFuture<DeleteEaisEiResponse> deleteEaisEi(DeleteEaisEiRequest request);
+
     CompletableFuture<DescribeEaisResponse> describeEais(DescribeEaisRequest request);
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
-    CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request);
-
     CompletableFuture<DetachEaiResponse> detachEai(DetachEaiRequest request);
 
-    CompletableFuture<GetPrivateIpResponse> getPrivateIp(GetPrivateIpRequest request);
+    CompletableFuture<DetachEaisEiResponse> detachEaisEi(DetachEaisEiRequest request);
+
+    CompletableFuture<GetInstanceMetricsResponse> getInstanceMetrics(GetInstanceMetricsRequest request);
+
+    CompletableFuture<StartEaisEiResponse> startEaisEi(StartEaisEiRequest request);
+
+    CompletableFuture<StopEaisEiResponse> stopEaisEi(StopEaisEiRequest request);
 
 }

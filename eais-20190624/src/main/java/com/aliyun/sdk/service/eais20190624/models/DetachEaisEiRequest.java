@@ -7,24 +7,24 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetPrivateIpRequest} extends {@link RequestModel}
+ * {@link DetachEaisEiRequest} extends {@link RequestModel}
  *
- * <p>GetPrivateIpRequest</p>
+ * <p>DetachEaisEiRequest</p>
  */
-public class GetPrivateIpRequest extends Request {
+public class DetachEaisEiRequest extends Request {
     @Query
-    @NameInMap("ClientInstanceId")
+    @NameInMap("EiInstanceId")
     @Validation(required = true)
-    private String clientInstanceId;
+    private String eiInstanceId;
 
     @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
-    private GetPrivateIpRequest(Builder builder) {
+    private DetachEaisEiRequest(Builder builder) {
         super(builder);
-        this.clientInstanceId = builder.clientInstanceId;
+        this.eiInstanceId = builder.eiInstanceId;
         this.regionId = builder.regionId;
     }
 
@@ -32,7 +32,7 @@ public class GetPrivateIpRequest extends Request {
         return new Builder();
     }
 
-    public static GetPrivateIpRequest create() {
+    public static DetachEaisEiRequest create() {
         return builder().build();
     }
 
@@ -42,10 +42,10 @@ public class GetPrivateIpRequest extends Request {
     }
 
     /**
-     * @return clientInstanceId
+     * @return eiInstanceId
      */
-    public String getClientInstanceId() {
-        return this.clientInstanceId;
+    public String getEiInstanceId() {
+        return this.eiInstanceId;
     }
 
     /**
@@ -55,26 +55,26 @@ public class GetPrivateIpRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<GetPrivateIpRequest, Builder> {
-        private String clientInstanceId; 
+    public static final class Builder extends Request.Builder<DetachEaisEiRequest, Builder> {
+        private String eiInstanceId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetPrivateIpRequest response) {
-            super(response);
-            this.clientInstanceId = response.clientInstanceId;
-            this.regionId = response.regionId;
+        private Builder(DetachEaisEiRequest request) {
+            super(request);
+            this.eiInstanceId = request.eiInstanceId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * ClientInstanceId.
+         * EiInstanceId.
          */
-        public Builder clientInstanceId(String clientInstanceId) {
-            this.putQueryParameter("ClientInstanceId", clientInstanceId);
-            this.clientInstanceId = clientInstanceId;
+        public Builder eiInstanceId(String eiInstanceId) {
+            this.putQueryParameter("EiInstanceId", eiInstanceId);
+            this.eiInstanceId = eiInstanceId;
             return this;
         }
 
@@ -88,8 +88,8 @@ public class GetPrivateIpRequest extends Request {
         }
 
         @Override
-        public GetPrivateIpRequest build() {
-            return new GetPrivateIpRequest(this);
+        public DetachEaisEiRequest build() {
+            return new DetachEaisEiRequest(this);
         } 
 
     } 

@@ -7,24 +7,24 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DetachEaiRequest} extends {@link RequestModel}
+ * {@link StopEaisEiRequest} extends {@link RequestModel}
  *
- * <p>DetachEaiRequest</p>
+ * <p>StopEaisEiRequest</p>
  */
-public class DetachEaiRequest extends Request {
+public class StopEaisEiRequest extends Request {
     @Query
-    @NameInMap("ElasticAcceleratedInstanceId")
+    @NameInMap("EiInstanceId")
     @Validation(required = true)
-    private String elasticAcceleratedInstanceId;
+    private String eiInstanceId;
 
     @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
-    private DetachEaiRequest(Builder builder) {
+    private StopEaisEiRequest(Builder builder) {
         super(builder);
-        this.elasticAcceleratedInstanceId = builder.elasticAcceleratedInstanceId;
+        this.eiInstanceId = builder.eiInstanceId;
         this.regionId = builder.regionId;
     }
 
@@ -32,7 +32,7 @@ public class DetachEaiRequest extends Request {
         return new Builder();
     }
 
-    public static DetachEaiRequest create() {
+    public static StopEaisEiRequest create() {
         return builder().build();
     }
 
@@ -42,10 +42,10 @@ public class DetachEaiRequest extends Request {
     }
 
     /**
-     * @return elasticAcceleratedInstanceId
+     * @return eiInstanceId
      */
-    public String getElasticAcceleratedInstanceId() {
-        return this.elasticAcceleratedInstanceId;
+    public String getEiInstanceId() {
+        return this.eiInstanceId;
     }
 
     /**
@@ -55,26 +55,26 @@ public class DetachEaiRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<DetachEaiRequest, Builder> {
-        private String elasticAcceleratedInstanceId; 
+    public static final class Builder extends Request.Builder<StopEaisEiRequest, Builder> {
+        private String eiInstanceId; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DetachEaiRequest request) {
+        private Builder(StopEaisEiRequest request) {
             super(request);
-            this.elasticAcceleratedInstanceId = request.elasticAcceleratedInstanceId;
+            this.eiInstanceId = request.eiInstanceId;
             this.regionId = request.regionId;
         } 
 
         /**
-         * ElasticAcceleratedInstanceId.
+         * EiInstanceId.
          */
-        public Builder elasticAcceleratedInstanceId(String elasticAcceleratedInstanceId) {
-            this.putQueryParameter("ElasticAcceleratedInstanceId", elasticAcceleratedInstanceId);
-            this.elasticAcceleratedInstanceId = elasticAcceleratedInstanceId;
+        public Builder eiInstanceId(String eiInstanceId) {
+            this.putQueryParameter("EiInstanceId", eiInstanceId);
+            this.eiInstanceId = eiInstanceId;
             return this;
         }
 
@@ -88,8 +88,8 @@ public class DetachEaiRequest extends Request {
         }
 
         @Override
-        public DetachEaiRequest build() {
-            return new DetachEaiRequest(this);
+        public StopEaisEiRequest build() {
+            return new StopEaisEiRequest(this);
         } 
 
     } 

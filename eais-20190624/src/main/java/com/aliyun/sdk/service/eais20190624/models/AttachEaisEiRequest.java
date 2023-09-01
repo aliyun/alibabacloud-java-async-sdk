@@ -7,30 +7,34 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AttachEaiRequest} extends {@link RequestModel}
+ * {@link AttachEaisEiRequest} extends {@link RequestModel}
  *
- * <p>AttachEaiRequest</p>
+ * <p>AttachEaisEiRequest</p>
  */
-public class AttachEaiRequest extends Request {
+public class AttachEaisEiRequest extends Request {
     @Query
     @NameInMap("ClientInstanceId")
     @Validation(required = true)
     private String clientInstanceId;
 
     @Query
-    @NameInMap("ElasticAcceleratedInstanceId")
-    @Validation(required = true)
-    private String elasticAcceleratedInstanceId;
+    @NameInMap("EiInstanceId")
+    private String eiInstanceId;
+
+    @Query
+    @NameInMap("EiInstanceType")
+    private String eiInstanceType;
 
     @Query
     @NameInMap("RegionId")
     @Validation(required = true)
     private String regionId;
 
-    private AttachEaiRequest(Builder builder) {
+    private AttachEaisEiRequest(Builder builder) {
         super(builder);
         this.clientInstanceId = builder.clientInstanceId;
-        this.elasticAcceleratedInstanceId = builder.elasticAcceleratedInstanceId;
+        this.eiInstanceId = builder.eiInstanceId;
+        this.eiInstanceType = builder.eiInstanceType;
         this.regionId = builder.regionId;
     }
 
@@ -38,7 +42,7 @@ public class AttachEaiRequest extends Request {
         return new Builder();
     }
 
-    public static AttachEaiRequest create() {
+    public static AttachEaisEiRequest create() {
         return builder().build();
     }
 
@@ -55,10 +59,17 @@ public class AttachEaiRequest extends Request {
     }
 
     /**
-     * @return elasticAcceleratedInstanceId
+     * @return eiInstanceId
      */
-    public String getElasticAcceleratedInstanceId() {
-        return this.elasticAcceleratedInstanceId;
+    public String getEiInstanceId() {
+        return this.eiInstanceId;
+    }
+
+    /**
+     * @return eiInstanceType
+     */
+    public String getEiInstanceType() {
+        return this.eiInstanceType;
     }
 
     /**
@@ -68,19 +79,21 @@ public class AttachEaiRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<AttachEaiRequest, Builder> {
+    public static final class Builder extends Request.Builder<AttachEaisEiRequest, Builder> {
         private String clientInstanceId; 
-        private String elasticAcceleratedInstanceId; 
+        private String eiInstanceId; 
+        private String eiInstanceType; 
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(AttachEaiRequest request) {
+        private Builder(AttachEaisEiRequest request) {
             super(request);
             this.clientInstanceId = request.clientInstanceId;
-            this.elasticAcceleratedInstanceId = request.elasticAcceleratedInstanceId;
+            this.eiInstanceId = request.eiInstanceId;
+            this.eiInstanceType = request.eiInstanceType;
             this.regionId = request.regionId;
         } 
 
@@ -94,11 +107,20 @@ public class AttachEaiRequest extends Request {
         }
 
         /**
-         * ElasticAcceleratedInstanceId.
+         * EiInstanceId.
          */
-        public Builder elasticAcceleratedInstanceId(String elasticAcceleratedInstanceId) {
-            this.putQueryParameter("ElasticAcceleratedInstanceId", elasticAcceleratedInstanceId);
-            this.elasticAcceleratedInstanceId = elasticAcceleratedInstanceId;
+        public Builder eiInstanceId(String eiInstanceId) {
+            this.putQueryParameter("EiInstanceId", eiInstanceId);
+            this.eiInstanceId = eiInstanceId;
+            return this;
+        }
+
+        /**
+         * EiInstanceType.
+         */
+        public Builder eiInstanceType(String eiInstanceType) {
+            this.putQueryParameter("EiInstanceType", eiInstanceType);
+            this.eiInstanceType = eiInstanceType;
             return this;
         }
 
@@ -112,8 +134,8 @@ public class AttachEaiRequest extends Request {
         }
 
         @Override
-        public AttachEaiRequest build() {
-            return new AttachEaiRequest(this);
+        public AttachEaisEiRequest build() {
+            return new AttachEaisEiRequest(this);
         } 
 
     } 

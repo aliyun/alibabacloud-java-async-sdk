@@ -7,44 +7,32 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AttachEaiRequest} extends {@link RequestModel}
+ * {@link CreateEaiEcsResponseBody} extends {@link TeaModel}
  *
- * <p>AttachEaiRequest</p>
+ * <p>CreateEaiEcsResponseBody</p>
  */
-public class AttachEaiRequest extends Request {
-    @Query
+public class CreateEaiEcsResponseBody extends TeaModel {
     @NameInMap("ClientInstanceId")
-    @Validation(required = true)
     private String clientInstanceId;
 
-    @Query
     @NameInMap("ElasticAcceleratedInstanceId")
-    @Validation(required = true)
     private String elasticAcceleratedInstanceId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
-    private String regionId;
+    @NameInMap("RequestId")
+    private String requestId;
 
-    private AttachEaiRequest(Builder builder) {
-        super(builder);
+    private CreateEaiEcsResponseBody(Builder builder) {
         this.clientInstanceId = builder.clientInstanceId;
         this.elasticAcceleratedInstanceId = builder.elasticAcceleratedInstanceId;
-        this.regionId = builder.regionId;
+        this.requestId = builder.requestId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static AttachEaiRequest create() {
+    public static CreateEaiEcsResponseBody create() {
         return builder().build();
-    }
-
-    @Override
-    public Builder toBuilder() {
-        return new Builder(this);
     }
 
     /**
@@ -62,33 +50,21 @@ public class AttachEaiRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return requestId
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getRequestId() {
+        return this.requestId;
     }
 
-    public static final class Builder extends Request.Builder<AttachEaiRequest, Builder> {
+    public static final class Builder {
         private String clientInstanceId; 
         private String elasticAcceleratedInstanceId; 
-        private String regionId; 
-
-        private Builder() {
-            super();
-        } 
-
-        private Builder(AttachEaiRequest request) {
-            super(request);
-            this.clientInstanceId = request.clientInstanceId;
-            this.elasticAcceleratedInstanceId = request.elasticAcceleratedInstanceId;
-            this.regionId = request.regionId;
-        } 
+        private String requestId; 
 
         /**
          * ClientInstanceId.
          */
         public Builder clientInstanceId(String clientInstanceId) {
-            this.putQueryParameter("ClientInstanceId", clientInstanceId);
             this.clientInstanceId = clientInstanceId;
             return this;
         }
@@ -97,23 +73,20 @@ public class AttachEaiRequest extends Request {
          * ElasticAcceleratedInstanceId.
          */
         public Builder elasticAcceleratedInstanceId(String elasticAcceleratedInstanceId) {
-            this.putQueryParameter("ElasticAcceleratedInstanceId", elasticAcceleratedInstanceId);
             this.elasticAcceleratedInstanceId = elasticAcceleratedInstanceId;
             return this;
         }
 
         /**
-         * RegionId.
+         * RequestId.
          */
-        public Builder regionId(String regionId) {
-            this.putQueryParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
-        @Override
-        public AttachEaiRequest build() {
-            return new AttachEaiRequest(this);
+        public CreateEaiEcsResponseBody build() {
+            return new CreateEaiEcsResponseBody(this);
         } 
 
     } 
