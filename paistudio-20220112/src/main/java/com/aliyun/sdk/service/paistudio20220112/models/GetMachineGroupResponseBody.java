@@ -15,6 +15,9 @@ public class GetMachineGroupResponseBody extends TeaModel {
     @NameInMap("Count")
     private Long count;
 
+    @NameInMap("DefaultDriver")
+    private String defaultDriver;
+
     @NameInMap("Duration")
     private String duration;
 
@@ -57,8 +60,12 @@ public class GetMachineGroupResponseBody extends TeaModel {
     @NameInMap("Status")
     private String status;
 
+    @NameInMap("SupportedDrivers")
+    private java.util.List < String > supportedDrivers;
+
     private GetMachineGroupResponseBody(Builder builder) {
         this.count = builder.count;
+        this.defaultDriver = builder.defaultDriver;
         this.duration = builder.duration;
         this.ecsType = builder.ecsType;
         this.gmtCreated = builder.gmtCreated;
@@ -73,6 +80,7 @@ public class GetMachineGroupResponseBody extends TeaModel {
         this.regionID = builder.regionID;
         this.requestId = builder.requestId;
         this.status = builder.status;
+        this.supportedDrivers = builder.supportedDrivers;
     }
 
     public static Builder builder() {
@@ -88,6 +96,13 @@ public class GetMachineGroupResponseBody extends TeaModel {
      */
     public Long getCount() {
         return this.count;
+    }
+
+    /**
+     * @return defaultDriver
+     */
+    public String getDefaultDriver() {
+        return this.defaultDriver;
     }
 
     /**
@@ -188,8 +203,16 @@ public class GetMachineGroupResponseBody extends TeaModel {
         return this.status;
     }
 
+    /**
+     * @return supportedDrivers
+     */
+    public java.util.List < String > getSupportedDrivers() {
+        return this.supportedDrivers;
+    }
+
     public static final class Builder {
         private Long count; 
+        private String defaultDriver; 
         private String duration; 
         private String ecsType; 
         private String gmtCreated; 
@@ -204,12 +227,21 @@ public class GetMachineGroupResponseBody extends TeaModel {
         private String regionID; 
         private String requestId; 
         private String status; 
+        private java.util.List < String > supportedDrivers; 
 
         /**
          * Count.
          */
         public Builder count(Long count) {
             this.count = count;
+            return this;
+        }
+
+        /**
+         * DefaultDriver.
+         */
+        public Builder defaultDriver(String defaultDriver) {
+            this.defaultDriver = defaultDriver;
             return this;
         }
 
@@ -322,6 +354,14 @@ public class GetMachineGroupResponseBody extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * SupportedDrivers.
+         */
+        public Builder supportedDrivers(java.util.List < String > supportedDrivers) {
+            this.supportedDrivers = supportedDrivers;
             return this;
         }
 

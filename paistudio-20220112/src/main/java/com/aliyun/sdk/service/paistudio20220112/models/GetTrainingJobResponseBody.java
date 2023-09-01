@@ -54,6 +54,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("LatestMetrics")
     private java.util.List < LatestMetrics> latestMetrics;
 
+    @NameInMap("LatestProgress")
+    private LatestProgress latestProgress;
+
     @NameInMap("OutputChannels")
     private java.util.List < OutputChannels> outputChannels;
 
@@ -93,6 +96,9 @@ public class GetTrainingJobResponseBody extends TeaModel {
     @NameInMap("UserId")
     private String userId;
 
+    @NameInMap("UserVpc")
+    private UserVpc userVpc;
+
     @NameInMap("WorkspaceId")
     private String workspaceId;
 
@@ -111,6 +117,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         this.isTempAlgo = builder.isTempAlgo;
         this.labels = builder.labels;
         this.latestMetrics = builder.latestMetrics;
+        this.latestProgress = builder.latestProgress;
         this.outputChannels = builder.outputChannels;
         this.reasonCode = builder.reasonCode;
         this.reasonMessage = builder.reasonMessage;
@@ -124,6 +131,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         this.trainingJobName = builder.trainingJobName;
         this.trainingJobUrl = builder.trainingJobUrl;
         this.userId = builder.userId;
+        this.userVpc = builder.userVpc;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -234,6 +242,13 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return latestProgress
+     */
+    public LatestProgress getLatestProgress() {
+        return this.latestProgress;
+    }
+
+    /**
      * @return outputChannels
      */
     public java.util.List < OutputChannels> getOutputChannels() {
@@ -325,6 +340,13 @@ public class GetTrainingJobResponseBody extends TeaModel {
     }
 
     /**
+     * @return userVpc
+     */
+    public UserVpc getUserVpc() {
+        return this.userVpc;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -346,6 +368,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         private Boolean isTempAlgo; 
         private java.util.List < Labels> labels; 
         private java.util.List < LatestMetrics> latestMetrics; 
+        private LatestProgress latestProgress; 
         private java.util.List < OutputChannels> outputChannels; 
         private String reasonCode; 
         private String reasonMessage; 
@@ -359,6 +382,7 @@ public class GetTrainingJobResponseBody extends TeaModel {
         private String trainingJobName; 
         private String trainingJobUrl; 
         private String userId; 
+        private UserVpc userVpc; 
         private String workspaceId; 
 
         /**
@@ -474,6 +498,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
         }
 
         /**
+         * LatestProgress.
+         */
+        public Builder latestProgress(LatestProgress latestProgress) {
+            this.latestProgress = latestProgress;
+            return this;
+        }
+
+        /**
          * OutputChannels.
          */
         public Builder outputChannels(java.util.List < OutputChannels> outputChannels) {
@@ -574,6 +606,14 @@ public class GetTrainingJobResponseBody extends TeaModel {
          */
         public Builder userId(String userId) {
             this.userId = userId;
+            return this;
+        }
+
+        /**
+         * UserVpc.
+         */
+        public Builder userVpc(UserVpc userVpc) {
+            this.userVpc = userVpc;
             return this;
         }
 
@@ -1017,6 +1057,189 @@ public class GetTrainingJobResponseBody extends TeaModel {
         } 
 
     }
+    public static class OverallProgress extends TeaModel {
+        @NameInMap("Timestamp")
+        private String timestamp;
+
+        @NameInMap("Value")
+        private Float value;
+
+        private OverallProgress(Builder builder) {
+            this.timestamp = builder.timestamp;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OverallProgress create() {
+            return builder().build();
+        }
+
+        /**
+         * @return timestamp
+         */
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        /**
+         * @return value
+         */
+        public Float getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String timestamp; 
+            private Float value; 
+
+            /**
+             * Timestamp.
+             */
+            public Builder timestamp(String timestamp) {
+                this.timestamp = timestamp;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(Float value) {
+                this.value = value;
+                return this;
+            }
+
+            public OverallProgress build() {
+                return new OverallProgress(this);
+            } 
+
+        } 
+
+    }
+    public static class RemainingTime extends TeaModel {
+        @NameInMap("Timestamp")
+        private String timestamp;
+
+        @NameInMap("Value")
+        private Long value;
+
+        private RemainingTime(Builder builder) {
+            this.timestamp = builder.timestamp;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RemainingTime create() {
+            return builder().build();
+        }
+
+        /**
+         * @return timestamp
+         */
+        public String getTimestamp() {
+            return this.timestamp;
+        }
+
+        /**
+         * @return value
+         */
+        public Long getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String timestamp; 
+            private Long value; 
+
+            /**
+             * Timestamp.
+             */
+            public Builder timestamp(String timestamp) {
+                this.timestamp = timestamp;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(Long value) {
+                this.value = value;
+                return this;
+            }
+
+            public RemainingTime build() {
+                return new RemainingTime(this);
+            } 
+
+        } 
+
+    }
+    public static class LatestProgress extends TeaModel {
+        @NameInMap("OverallProgress")
+        private OverallProgress overallProgress;
+
+        @NameInMap("RemainingTime")
+        private RemainingTime remainingTime;
+
+        private LatestProgress(Builder builder) {
+            this.overallProgress = builder.overallProgress;
+            this.remainingTime = builder.remainingTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LatestProgress create() {
+            return builder().build();
+        }
+
+        /**
+         * @return overallProgress
+         */
+        public OverallProgress getOverallProgress() {
+            return this.overallProgress;
+        }
+
+        /**
+         * @return remainingTime
+         */
+        public RemainingTime getRemainingTime() {
+            return this.remainingTime;
+        }
+
+        public static final class Builder {
+            private OverallProgress overallProgress; 
+            private RemainingTime remainingTime; 
+
+            /**
+             * OverallProgress.
+             */
+            public Builder overallProgress(OverallProgress overallProgress) {
+                this.overallProgress = overallProgress;
+                return this;
+            }
+
+            /**
+             * RemainingTime.
+             */
+            public Builder remainingTime(RemainingTime remainingTime) {
+                this.remainingTime = remainingTime;
+                return this;
+            }
+
+            public LatestProgress build() {
+                return new LatestProgress(this);
+            } 
+
+        } 
+
+    }
     public static class OutputChannels extends TeaModel {
         @NameInMap("DatasetId")
         private String datasetId;
@@ -1255,6 +1478,107 @@ public class GetTrainingJobResponseBody extends TeaModel {
 
             public StatusTransitions build() {
                 return new StatusTransitions(this);
+            } 
+
+        } 
+
+    }
+    public static class UserVpc extends TeaModel {
+        @NameInMap("ExtendedCIDRs")
+        private java.util.List < String > extendedCIDRs;
+
+        @NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @NameInMap("SwitchId")
+        private String switchId;
+
+        @NameInMap("VpcId")
+        private String vpcId;
+
+        private UserVpc(Builder builder) {
+            this.extendedCIDRs = builder.extendedCIDRs;
+            this.securityGroupId = builder.securityGroupId;
+            this.switchId = builder.switchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserVpc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return extendedCIDRs
+         */
+        public java.util.List < String > getExtendedCIDRs() {
+            return this.extendedCIDRs;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return switchId
+         */
+        public String getSwitchId() {
+            return this.switchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > extendedCIDRs; 
+            private String securityGroupId; 
+            private String switchId; 
+            private String vpcId; 
+
+            /**
+             * ExtendedCIDRs.
+             */
+            public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
+                this.extendedCIDRs = extendedCIDRs;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * SwitchId.
+             */
+            public Builder switchId(String switchId) {
+                this.switchId = switchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public UserVpc build() {
+                return new UserVpc(this);
             } 
 
         } 

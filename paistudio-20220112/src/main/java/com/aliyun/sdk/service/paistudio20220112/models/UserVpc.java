@@ -12,6 +12,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UserVpc</p>
  */
 public class UserVpc extends TeaModel {
+    @NameInMap("DefaultRoute")
+    private String defaultRoute;
+
     @NameInMap("ExtendedCIDRs")
     private java.util.List < String > extendedCIDRs;
 
@@ -28,6 +31,7 @@ public class UserVpc extends TeaModel {
     private String vpcId;
 
     private UserVpc(Builder builder) {
+        this.defaultRoute = builder.defaultRoute;
         this.extendedCIDRs = builder.extendedCIDRs;
         this.roleArn = builder.roleArn;
         this.securityGroupId = builder.securityGroupId;
@@ -41,6 +45,13 @@ public class UserVpc extends TeaModel {
 
     public static UserVpc create() {
         return builder().build();
+    }
+
+    /**
+     * @return defaultRoute
+     */
+    public String getDefaultRoute() {
+        return this.defaultRoute;
     }
 
     /**
@@ -79,11 +90,20 @@ public class UserVpc extends TeaModel {
     }
 
     public static final class Builder {
+        private String defaultRoute; 
         private java.util.List < String > extendedCIDRs; 
         private String roleArn; 
         private String securityGroupId; 
         private String switchId; 
         private String vpcId; 
+
+        /**
+         * DefaultRoute.
+         */
+        public Builder defaultRoute(String defaultRoute) {
+            this.defaultRoute = defaultRoute;
+            return this;
+        }
 
         /**
          * ExtendedCIDRs.

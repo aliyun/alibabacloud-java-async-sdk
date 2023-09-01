@@ -15,6 +15,9 @@ public class MachineGroup extends TeaModel {
     @NameInMap("CreatorID")
     private String creatorID;
 
+    @NameInMap("DefaultDriver")
+    private String defaultDriver;
+
     @NameInMap("EcsCount")
     private Long ecsCount;
 
@@ -57,8 +60,12 @@ public class MachineGroup extends TeaModel {
     @NameInMap("Status")
     private String status;
 
+    @NameInMap("SupportedDrivers")
+    private java.util.List < String > supportedDrivers;
+
     private MachineGroup(Builder builder) {
         this.creatorID = builder.creatorID;
+        this.defaultDriver = builder.defaultDriver;
         this.ecsCount = builder.ecsCount;
         this.ecsSpec = builder.ecsSpec;
         this.gmtCreatedTime = builder.gmtCreatedTime;
@@ -73,6 +80,7 @@ public class MachineGroup extends TeaModel {
         this.reasonMessage = builder.reasonMessage;
         this.resourceGroupID = builder.resourceGroupID;
         this.status = builder.status;
+        this.supportedDrivers = builder.supportedDrivers;
     }
 
     public static Builder builder() {
@@ -88,6 +96,13 @@ public class MachineGroup extends TeaModel {
      */
     public String getCreatorID() {
         return this.creatorID;
+    }
+
+    /**
+     * @return defaultDriver
+     */
+    public String getDefaultDriver() {
+        return this.defaultDriver;
     }
 
     /**
@@ -188,8 +203,16 @@ public class MachineGroup extends TeaModel {
         return this.status;
     }
 
+    /**
+     * @return supportedDrivers
+     */
+    public java.util.List < String > getSupportedDrivers() {
+        return this.supportedDrivers;
+    }
+
     public static final class Builder {
         private String creatorID; 
+        private String defaultDriver; 
         private Long ecsCount; 
         private String ecsSpec; 
         private String gmtCreatedTime; 
@@ -204,12 +227,21 @@ public class MachineGroup extends TeaModel {
         private String reasonMessage; 
         private String resourceGroupID; 
         private String status; 
+        private java.util.List < String > supportedDrivers; 
 
         /**
          * CreatorID.
          */
         public Builder creatorID(String creatorID) {
             this.creatorID = creatorID;
+            return this;
+        }
+
+        /**
+         * DefaultDriver.
+         */
+        public Builder defaultDriver(String defaultDriver) {
+            this.defaultDriver = defaultDriver;
             return this;
         }
 
@@ -322,6 +354,14 @@ public class MachineGroup extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * SupportedDrivers.
+         */
+        public Builder supportedDrivers(java.util.List < String > supportedDrivers) {
+            this.supportedDrivers = supportedDrivers;
             return this;
         }
 

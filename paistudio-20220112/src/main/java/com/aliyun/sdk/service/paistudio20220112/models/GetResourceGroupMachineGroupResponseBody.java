@@ -15,6 +15,9 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     @NameInMap("Cpu")
     private String cpu;
 
+    @NameInMap("DefaultDriver")
+    private String defaultDriver;
+
     @NameInMap("EcsCount")
     private Long ecsCount;
 
@@ -63,8 +66,12 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     @NameInMap("Status")
     private String status;
 
+    @NameInMap("SupportedDrivers")
+    private java.util.List < String > supportedDrivers;
+
     private GetResourceGroupMachineGroupResponseBody(Builder builder) {
         this.cpu = builder.cpu;
+        this.defaultDriver = builder.defaultDriver;
         this.ecsCount = builder.ecsCount;
         this.ecsSpec = builder.ecsSpec;
         this.gmtCreatedTime = builder.gmtCreatedTime;
@@ -81,6 +88,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceGroupID = builder.resourceGroupID;
         this.status = builder.status;
+        this.supportedDrivers = builder.supportedDrivers;
     }
 
     public static Builder builder() {
@@ -96,6 +104,13 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
      */
     public String getCpu() {
         return this.cpu;
+    }
+
+    /**
+     * @return defaultDriver
+     */
+    public String getDefaultDriver() {
+        return this.defaultDriver;
     }
 
     /**
@@ -210,8 +225,16 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         return this.status;
     }
 
+    /**
+     * @return supportedDrivers
+     */
+    public java.util.List < String > getSupportedDrivers() {
+        return this.supportedDrivers;
+    }
+
     public static final class Builder {
         private String cpu; 
+        private String defaultDriver; 
         private Long ecsCount; 
         private String ecsSpec; 
         private String gmtCreatedTime; 
@@ -228,12 +251,21 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupID; 
         private String status; 
+        private java.util.List < String > supportedDrivers; 
 
         /**
          * Cpu.
          */
         public Builder cpu(String cpu) {
             this.cpu = cpu;
+            return this;
+        }
+
+        /**
+         * DefaultDriver.
+         */
+        public Builder defaultDriver(String defaultDriver) {
+            this.defaultDriver = defaultDriver;
             return this;
         }
 
@@ -362,6 +394,14 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
          */
         public Builder status(String status) {
             this.status = status;
+            return this;
+        }
+
+        /**
+         * SupportedDrivers.
+         */
+        public Builder supportedDrivers(java.util.List < String > supportedDrivers) {
+            this.supportedDrivers = supportedDrivers;
             return this;
         }
 

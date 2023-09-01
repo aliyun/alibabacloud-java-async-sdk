@@ -598,6 +598,107 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         } 
 
     }
+    public static class UserVpc extends TeaModel {
+        @NameInMap("ExtendedCIDRs")
+        private java.util.List < String > extendedCIDRs;
+
+        @NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @NameInMap("SwitchId")
+        private String switchId;
+
+        @NameInMap("VpcId")
+        private String vpcId;
+
+        private UserVpc(Builder builder) {
+            this.extendedCIDRs = builder.extendedCIDRs;
+            this.securityGroupId = builder.securityGroupId;
+            this.switchId = builder.switchId;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserVpc create() {
+            return builder().build();
+        }
+
+        /**
+         * @return extendedCIDRs
+         */
+        public java.util.List < String > getExtendedCIDRs() {
+            return this.extendedCIDRs;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return switchId
+         */
+        public String getSwitchId() {
+            return this.switchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > extendedCIDRs; 
+            private String securityGroupId; 
+            private String switchId; 
+            private String vpcId; 
+
+            /**
+             * ExtendedCIDRs.
+             */
+            public Builder extendedCIDRs(java.util.List < String > extendedCIDRs) {
+                this.extendedCIDRs = extendedCIDRs;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * SwitchId.
+             */
+            public Builder switchId(String switchId) {
+                this.switchId = switchId;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public UserVpc build() {
+                return new UserVpc(this);
+            } 
+
+        } 
+
+    }
     public static class TrainingJobs extends TeaModel {
         @NameInMap("AlgorithmName")
         private String algorithmName;
@@ -662,6 +763,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("UserId")
         private String userId;
 
+        @NameInMap("UserVpc")
+        private UserVpc userVpc;
+
         @NameInMap("WorkspaceId")
         private String workspaceId;
 
@@ -687,6 +791,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             this.trainingJobId = builder.trainingJobId;
             this.trainingJobName = builder.trainingJobName;
             this.userId = builder.userId;
+            this.userVpc = builder.userVpc;
             this.workspaceId = builder.workspaceId;
         }
 
@@ -846,6 +951,13 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return userVpc
+         */
+        public UserVpc getUserVpc() {
+            return this.userVpc;
+        }
+
+        /**
          * @return workspaceId
          */
         public String getWorkspaceId() {
@@ -874,6 +986,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
             private String trainingJobId; 
             private String trainingJobName; 
             private String userId; 
+            private UserVpc userVpc; 
             private String workspaceId; 
 
             /**
@@ -1041,6 +1154,14 @@ public class ListTrainingJobsResponseBody extends TeaModel {
              */
             public Builder userId(String userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * UserVpc.
+             */
+            public Builder userVpc(UserVpc userVpc) {
+                this.userVpc = userVpc;
                 return this;
             }
 

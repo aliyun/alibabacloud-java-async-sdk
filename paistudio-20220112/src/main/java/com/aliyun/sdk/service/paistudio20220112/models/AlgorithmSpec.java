@@ -45,6 +45,9 @@ public class AlgorithmSpec extends TeaModel {
     @NameInMap("OutputChannels")
     private java.util.List < Channel > outputChannels;
 
+    @NameInMap("ProgressDefinitions")
+    private ProgressDefinitions progressDefinitions;
+
     @NameInMap("ResourceRequirements")
     private java.util.List < ConditionExpression > resourceRequirements;
 
@@ -66,6 +69,7 @@ public class AlgorithmSpec extends TeaModel {
         this.jobType = builder.jobType;
         this.metricDefinitions = builder.metricDefinitions;
         this.outputChannels = builder.outputChannels;
+        this.progressDefinitions = builder.progressDefinitions;
         this.resourceRequirements = builder.resourceRequirements;
         this.supportedInstanceTypes = builder.supportedInstanceTypes;
         this.supportsDistributedTraining = builder.supportsDistributedTraining;
@@ -150,6 +154,13 @@ public class AlgorithmSpec extends TeaModel {
     }
 
     /**
+     * @return progressDefinitions
+     */
+    public ProgressDefinitions getProgressDefinitions() {
+        return this.progressDefinitions;
+    }
+
+    /**
      * @return resourceRequirements
      */
     public java.util.List < ConditionExpression > getResourceRequirements() {
@@ -181,6 +192,7 @@ public class AlgorithmSpec extends TeaModel {
         private String jobType; 
         private java.util.List < MetricDefinition > metricDefinitions; 
         private java.util.List < Channel > outputChannels; 
+        private ProgressDefinitions progressDefinitions; 
         private java.util.List < ConditionExpression > resourceRequirements; 
         private java.util.List < String > supportedInstanceTypes; 
         private Boolean supportsDistributedTraining; 
@@ -262,6 +274,14 @@ public class AlgorithmSpec extends TeaModel {
          */
         public Builder outputChannels(java.util.List < Channel > outputChannels) {
             this.outputChannels = outputChannels;
+            return this;
+        }
+
+        /**
+         * ProgressDefinitions.
+         */
+        public Builder progressDefinitions(ProgressDefinitions progressDefinitions) {
+            this.progressDefinitions = progressDefinitions;
             return this;
         }
 
@@ -436,6 +456,189 @@ public class AlgorithmSpec extends TeaModel {
 
             public Customization build() {
                 return new Customization(this);
+            } 
+
+        } 
+
+    }
+    public static class OverallProgress extends TeaModel {
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("Regex")
+        private String regex;
+
+        private OverallProgress(Builder builder) {
+            this.description = builder.description;
+            this.regex = builder.regex;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OverallProgress create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return regex
+         */
+        public String getRegex() {
+            return this.regex;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String regex; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Regex.
+             */
+            public Builder regex(String regex) {
+                this.regex = regex;
+                return this;
+            }
+
+            public OverallProgress build() {
+                return new OverallProgress(this);
+            } 
+
+        } 
+
+    }
+    public static class RemainingTime extends TeaModel {
+        @NameInMap("Description")
+        private String description;
+
+        @NameInMap("Regex")
+        private String regex;
+
+        private RemainingTime(Builder builder) {
+            this.description = builder.description;
+            this.regex = builder.regex;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RemainingTime create() {
+            return builder().build();
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
+         * @return regex
+         */
+        public String getRegex() {
+            return this.regex;
+        }
+
+        public static final class Builder {
+            private String description; 
+            private String regex; 
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * Regex.
+             */
+            public Builder regex(String regex) {
+                this.regex = regex;
+                return this;
+            }
+
+            public RemainingTime build() {
+                return new RemainingTime(this);
+            } 
+
+        } 
+
+    }
+    public static class ProgressDefinitions extends TeaModel {
+        @NameInMap("OverallProgress")
+        private OverallProgress overallProgress;
+
+        @NameInMap("RemainingTime")
+        private RemainingTime remainingTime;
+
+        private ProgressDefinitions(Builder builder) {
+            this.overallProgress = builder.overallProgress;
+            this.remainingTime = builder.remainingTime;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProgressDefinitions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return overallProgress
+         */
+        public OverallProgress getOverallProgress() {
+            return this.overallProgress;
+        }
+
+        /**
+         * @return remainingTime
+         */
+        public RemainingTime getRemainingTime() {
+            return this.remainingTime;
+        }
+
+        public static final class Builder {
+            private OverallProgress overallProgress; 
+            private RemainingTime remainingTime; 
+
+            /**
+             * OverallProgress.
+             */
+            public Builder overallProgress(OverallProgress overallProgress) {
+                this.overallProgress = overallProgress;
+                return this;
+            }
+
+            /**
+             * RemainingTime.
+             */
+            public Builder remainingTime(RemainingTime remainingTime) {
+                this.remainingTime = remainingTime;
+                return this;
+            }
+
+            public ProgressDefinitions build() {
+                return new ProgressDefinitions(this);
             } 
 
         } 
