@@ -406,7 +406,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             private Integer vulCount; 
 
             /**
-             * The number of alerts that are generated on the current pod, application, namespace, or cluster.
+             * The number of alerts that are detected from the current pod, application, namespace, or cluster.
              */
             public Builder alarmCount(Integer alarmCount) {
                 this.alarmCount = alarmCount;
@@ -414,7 +414,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * The application name.
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -422,7 +422,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of cluster.
+             * The cluster ID.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -430,7 +430,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The name of the cluster.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -441,9 +441,9 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
              * The type of the cluster. Valid values:
              * <p>
              * 
-             * *   **Kubernetes**: dedicated Kubernetes cluster
-             * *   **ManagedKubernetes**: standard managed cluster (edge cluster)
-             * *   **Ask**: standard serverless cluster
+             * *   **Kubernetes**: dedicated Kubernetes cluster.
+             * *   **ManagedKubernetes**: standard managed cluster (edge cluster).
+             * *   **Ask**: standard serverless cluster.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -451,7 +451,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the cluster was created. Unit: milliseconds.
+             * The timestamp generated when the cluster was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -514,7 +514,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The namespace to which the image repository belongs.
+             * The namespace of the image repository.
              */
             public Builder imageRepoNamespace(String imageRepoNamespace) {
                 this.imageRepoNamespace = imageRepoNamespace;
@@ -538,7 +538,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of queried pods, applications, clusters, or namespaces.
+             * The number of pods, applications, clusters, or namespaces that is returned.
              */
             public Builder instanceCount(Integer instanceCount) {
                 this.instanceCount = instanceCount;
@@ -546,7 +546,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server.
+             * The ID of the server instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -578,7 +578,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the server resides.
+             * The ID of the region in which the instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -586,7 +586,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of at-risk instances.
+             * The number of potential risky instances.
              */
             public Builder riskInstanceCount(Integer riskInstanceCount) {
                 this.riskInstanceCount = riskInstanceCount;
@@ -619,7 +619,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of vulnerabilities that are detected on the current pod, application, namespace, or cluster.
+             * The number of vulnerabilities that are detected from the current pod, application, namespace, or cluster.
              */
             public Builder vulCount(Integer vulCount) {
                 this.vulCount = vulCount;

@@ -69,7 +69,7 @@ public class UninstallRaspAttachRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * The application group ID.
          */
         public Builder applicationId(String applicationId) {
             this.putQueryParameter("ApplicationId", applicationId);
@@ -78,7 +78,7 @@ public class UninstallRaspAttachRequest extends Request {
         }
 
         /**
-         * EcsUUIDList.
+         * The UUIDs of ECS instances from which the RASP agent is to be uninstalled.
          */
         public Builder ecsUUIDList(java.util.List < String > ecsUUIDList) {
             this.putQueryParameter("EcsUUIDList", ecsUUIDList);

@@ -177,11 +177,11 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
              * The type of the cluster. Valid values:
              * <p>
              * 
-             * *   **ManagedKubernetes**: managed Kubernetes cluster
-             * *   **NotManagedKubernetes**: non-managed Kubernetes cluster
-             * *   **PrivateKubernetes**: private cluster
-             * *   **kubernetes**: dedicated Kubernetes cluster
-             * *   **ask**: dedicated ASK cluster
+             * *   **ManagedKubernetes**: managed Kubernetes cluster.
+             * *   **NotManagedKubernetes**: non-managed Kubernetes cluster.
+             * *   **PrivateKubernetes**: private cluster.
+             * *   **kubernetes**: dedicated Kubernetes cluster.
+             * *   **ask**: dedicated serverless Kubernetes (ASK) cluster.
              */
             public Builder clusterType(String clusterType) {
                 this.clusterType = clusterType;
@@ -189,7 +189,7 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * The region of the container cluster.
+             * The region in which the cluster resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -200,10 +200,10 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
              * The status of the cluster. Valid values:
              * <p>
              * 
-             * *   **unavailable**
-             * *   **Available**
-             * *   **Creating**
-             * *   **CreateFailed**
+             * *   **unavailable**: The cluster is unavailable.
+             * *   **Available**: The cluster is available.
+             * *   **Creating**: The cluster is being created.
+             * *   **CreateFailed**: The cluster failed to be created.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -211,11 +211,11 @@ public class DescribeClusterInfoListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cluster is enabled. Valid values:
+             * Indicates whether container network topology was enabled. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder targetResult(Boolean targetResult) {
                 this.targetResult = targetResult;

@@ -261,13 +261,13 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy for full backup. The value of this parameter is a JSON string that contains the following fields:
+         * The policy for full data backup. The value of this parameter is a JSON string. The JSON string contains the following fields:
          * <p>
          * 
-         * *   **start**: the start time of a backup task
-         * *   **interval**: the interval of backup tasks
-         * *   **type**: the unit of the interval
-         * *   **days**: the days of a week on which a backup task is performed
+         * *   **start**: the start time of a backup task.
+         * *   **interval**: the interval of backup tasks.
+         * *   **type**: the unit of the interval.
+         * *   **days**: the days of a week on which a backup task is performed.
          */
         public Builder fullPlan(java.util.Map < String, ? > fullPlan) {
             String fullPlanShrink = shrink(fullPlan, "FullPlan", "json");
@@ -277,13 +277,13 @@ public class CreateUniBackupPolicyRequest extends Request {
         }
 
         /**
-         * The policy for incremental backup. The value of this parameter is a JSON string that contains the following fields:
+         * The policy for incremental data backup. The value of this parameter is a JSON string. The JSON string contains the following fields:
          * <p>
          * 
-         * *   **start**: the start time of a backup task
-         * *   **interval**: the interval of backup tasks
-         * *   **type**: the unit of the interval
-         * *   **days**: the days of a week on which a backup task is performed
+         * *   **start**: the start time of a backup task.
+         * *   **interval**: the interval of backup tasks.
+         * *   **type**: the unit of the interval.
+         * *   **days**: the days of a week on which a backup task is performed.
          */
         public Builder incPlan(java.util.Map < String, ? > incPlan) {
             String incPlanShrink = shrink(incPlan, "IncPlan", "json");

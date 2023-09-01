@@ -269,7 +269,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the incremental backup started. The time is in the HH:mm:ss format.
+             * The time when the incremental data backup starts. The time is in the hh:mm:ss format.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -485,7 +485,7 @@ public class DescribeUniBackupPolicyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the policy for incremental backup.
+             * The policy for incremental data backup.
              */
             public Builder incPlan(IncPlan incPlan) {
                 this.incPlan = incPlan;

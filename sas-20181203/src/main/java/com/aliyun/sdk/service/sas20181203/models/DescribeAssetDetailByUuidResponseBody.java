@@ -50,7 +50,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the server.
+         * The asset details.
          */
         public Builder assetDetail(AssetDetail assetDetail) {
             this.assetDetail = assetDetail;
@@ -673,7 +673,7 @@ public class DescribeAssetDetailByUuidResponseBody extends TeaModel {
             }
 
             /**
-             * The media access control (MAC) addresses of the server.
+             * The Media Access Control (MAC) addresses.
              */
             public Builder macList(java.util.List < String > macList) {
                 this.macList = macList;

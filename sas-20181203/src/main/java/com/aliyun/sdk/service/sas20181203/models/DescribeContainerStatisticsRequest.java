@@ -55,10 +55,10 @@ public class DescribeContainerStatisticsRequest extends Request {
         } 
 
         /**
-         * The ID of the container cluster.
+         * The ID of the specified container cluster.
          * <p>
          * 
-         * >  You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to query the IDs of container clusters.
+         * > You can call the [DescribeGroupedContainerInstances](~~DescribeGroupedContainerInstances~~) operation to obtain the cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

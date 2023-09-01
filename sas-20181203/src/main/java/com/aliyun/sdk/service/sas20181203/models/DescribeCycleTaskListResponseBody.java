@@ -250,7 +250,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The ID of the task configuration.
+             * The configuration ID.
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -258,11 +258,11 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task is enabled. Valid values:
+             * Indicates whether the configuration for the task interval was enabled. Valid values:
              * <p>
              * 
-             * *   **1**: yes
-             * *   **0**: no
+             * *   **1**: enabled.
+             * *   **0**: disabled.
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -270,7 +270,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The first time when the task starts.
+             * The time when the task first started.
              */
             public Builder firstDateStr(Long firstDateStr) {
                 this.firstDateStr = firstDateStr;
@@ -278,7 +278,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The interval of the task.
+             * The interval between which two consecutive tasks are run.
              */
             public Builder intervalPeriod(Integer intervalPeriod) {
                 this.intervalPeriod = intervalPeriod;
@@ -286,7 +286,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task when the task last runs.
+             * The ID of the last task.
              */
             public Builder lastTaskId(String lastTaskId) {
                 this.lastTaskId = lastTaskId;
@@ -294,7 +294,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The next time when the task starts. The value is a UNIX timestamp. Unit: milliseconds.
+             * The time when the next task starts. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder nextStartTimeStr(Long nextStartTimeStr) {
                 this.nextStartTimeStr = nextStartTimeStr;
@@ -302,7 +302,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The additional information.
+             * The extended information.
              */
             public Builder param(String param) {
                 this.param = param;
@@ -313,8 +313,8 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
              * The unit of the scan interval. Valid values:
              * <p>
              * 
-             * *   **day**: days
-             * *   **hour**: hours
+             * *   **day**
+             * *   **hour**
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -322,7 +322,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time before the task ends. Unit: hours.
+             * The end time of the task. The time must be a time frame.
              */
             public Builder targetEndTime(Integer targetEndTime) {
                 this.targetEndTime = targetEndTime;
@@ -330,7 +330,7 @@ public class DescribeCycleTaskListResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time before the task starts for the next time. Unit: hours.
+             * The start time of the task. The start time must be a time frame.
              */
             public Builder targetStartTime(Integer targetStartTime) {
                 this.targetStartTime = targetStartTime;

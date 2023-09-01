@@ -56,6 +56,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ChangeCheckCustomConfigResponse> changeCheckCustomConfig(ChangeCheckCustomConfigRequest request);
 
+    CompletableFuture<ChangeSecurityScoreRuleResponse> changeSecurityScoreRule(ChangeSecurityScoreRuleRequest request);
+
+    CompletableFuture<ChangeUserLangResponse> changeUserLang(ChangeUserLangRequest request);
+
     CompletableFuture<CheckQuaraFileIdResponse> checkQuaraFileId(CheckQuaraFileIdRequest request);
 
     CompletableFuture<CheckSecurityEventIdResponse> checkSecurityEventId(CheckSecurityEventIdRequest request);
@@ -841,11 +845,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetRulesCountResponse> getRulesCount(GetRulesCountRequest request);
 
+    CompletableFuture<GetSecurityScoreRuleResponse> getSecurityScoreRule(GetSecurityScoreRuleRequest request);
+
     CompletableFuture<GetServiceTrailResponse> getServiceTrail(GetServiceTrailRequest request);
 
     CompletableFuture<GetSuspiciousStatisticsResponse> getSuspiciousStatistics(GetSuspiciousStatisticsRequest request);
 
     CompletableFuture<GetSwitchRegionDetailResponse> getSwitchRegionDetail(GetSwitchRegionDetailRequest request);
+
+    CompletableFuture<GetUserLangResponse> getUserLang(GetUserLangRequest request);
 
     CompletableFuture<GetVulStatisticsResponse> getVulStatistics(GetVulStatisticsRequest request);
 

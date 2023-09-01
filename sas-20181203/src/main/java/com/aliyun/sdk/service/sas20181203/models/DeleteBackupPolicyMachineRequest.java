@@ -100,7 +100,8 @@ public class DeleteBackupPolicyMachineRequest extends Request {
         /**
          * The ID of the anti-ransomware policy.
          * <p>
-         * >  You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the **Id** of anti-ransomware policies.
+         * 
+         * > You can call the [DescribeBackupPolicies](~~DescribeBackupPolicies~~) operation to query the IDs of anti-ransomware policies.
          */
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);
@@ -127,7 +128,7 @@ public class DeleteBackupPolicyMachineRequest extends Request {
          * The UUID of the server to which the anti-ransomware policy is applied.
          * <p>
          * 
-         * >  You must specify at least one of the `UuidList` and `Uuid` parameters.
+         * > You must specify at least one of the `UuidList` and `Uuid` parameters.
          */
         public Builder uuid(String uuid) {
             this.putQueryParameter("Uuid", uuid);
@@ -139,7 +140,7 @@ public class DeleteBackupPolicyMachineRequest extends Request {
          * The UUIDs of the servers to which the anti-ransomware policy is applied.
          * <p>
          * 
-         * >  You must specify at least one of the `UuidList` and `Uuid` parameters.
+         * > You must specify at least one of the `UuidList` and `Uuid` parameters.
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

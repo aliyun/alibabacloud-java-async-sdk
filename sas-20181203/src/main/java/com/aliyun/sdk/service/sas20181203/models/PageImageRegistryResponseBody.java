@@ -346,7 +346,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             private String whiteList; 
 
             /**
-             * The blacklist.
+             * The IP address blacklist.
              */
             public Builder blackList(String blackList) {
                 this.blackList = blackList;
@@ -362,7 +362,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time. The time is in the yyyy-MM-dd HH:mm:ss format.
+             * The time when the image repository was created. The time is in the yyyy-MM-dd HH:mm:ss format.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -370,7 +370,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The update time. The time is in the yyyy-MM-dd HH:mm:ss format.
+             * The time when the image repository was updated. The time is in the yyyy-MM-dd HH:mm:ss format.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -405,8 +405,8 @@ public class PageImageRegistryResponseBody extends TeaModel {
              * The network type. Valid values:
              * <p>
              * 
-             * *   **1**: Internet
-             * *   **2**: Virtual Private Cloud (VPC)
+             * *   **1**: Internet.
+             * *   **2**: virtual private cloud (VPC).
              */
             public Builder netType(Integer netType) {
                 this.netType = netType;
@@ -422,7 +422,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days during which assets can be retained.
+             * The number of days for which assets are retained.
              */
             public Builder persistenceDay(Integer persistenceDay) {
                 this.persistenceDay = persistenceDay;
@@ -433,8 +433,8 @@ public class PageImageRegistryResponseBody extends TeaModel {
              * The type of the protocol. Valid values:
              * <p>
              * 
-             * *   **1**: HTTP
-             * *   **2**: HTTPS
+             * *   **1**: HTTP.
+             * *   **2**: HTTPS.
              */
             public Builder protocolType(Integer protocolType) {
                 this.protocolType = protocolType;
@@ -469,10 +469,10 @@ public class PageImageRegistryResponseBody extends TeaModel {
              * The type of the image repository. Valid values:
              * <p>
              * 
-             * *   **acr**: Container Registry
-             * *   **harbor**: Harbor
-             * *   **quay**: Quay
-             * *   **CI/CD**: Jenkins
+             * *   **acr**: Container Registry.
+             * *   **harbor**: Harbor.
+             * *   **quay**: Quay.
+             * *   **CI/CD**: Jenkins.
              */
             public Builder registryType(String registryType) {
                 this.registryType = registryType;
@@ -504,7 +504,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -512,7 +512,7 @@ public class PageImageRegistryResponseBody extends TeaModel {
             }
 
             /**
-             * The whitelist.
+             * The IP address whitelist.
              */
             public Builder whiteList(String whiteList) {
                 this.whiteList = whiteList;

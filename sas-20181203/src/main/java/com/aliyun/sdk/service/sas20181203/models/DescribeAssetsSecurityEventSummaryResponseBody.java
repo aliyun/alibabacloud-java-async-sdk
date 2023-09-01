@@ -125,13 +125,13 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
              * The type of the asset. Valid values:
              * <p>
              * 
-             * *   **namespace**: namespace
-             * *   **clusters**: cluster
-             * *   **applications**: application
-             * *   **pods**: container group
-             * *   **containers**: container
-             * *   **images**: image
-             * *   **hosts**: node
+             * *   **namespace**
+             * *   **clusters**
+             * *   **applications**
+             * *   **pods**
+             * *   **containers**
+             * *   **images**
+             * *   **hosts**
              */
             public Builder assetType(String assetType) {
                 this.assetType = assetType;
@@ -139,7 +139,7 @@ public class DescribeAssetsSecurityEventSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets that are at risk.
+             * The number of potential risky assets.
              */
             public Builder riskCount(Long riskCount) {
                 this.riskCount = riskCount;

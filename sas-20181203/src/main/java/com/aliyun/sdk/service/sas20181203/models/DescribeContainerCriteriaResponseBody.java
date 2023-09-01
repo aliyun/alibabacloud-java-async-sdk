@@ -122,12 +122,12 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
             private String values; 
 
             /**
-             * The name of the filter condition.
+             * The name of the search condition. Valid values:
              * <p>
              * 
-             * *   **instanceId**: the ID of the container.
-             * *   **clusterId**: the ID of the cluster.
-             * *   **regionId**: the region of the container.
+             * *   **instanceId**: the ID of the container instance.
+             * *   **clusterId**: the cluster ID.
+             * *   **regionId**: the ID of the region in which the container resides.
              * *   **clusterName**: the name of the cluster.
              * *   **image**: the name of the image.
              * *   **imageRepoName**: the name of the image repository.
@@ -138,7 +138,7 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
              * *   **hostIp**: the public IP address.
              * *   **pod**: the pod.
              * *   **podIp**: the IP address of the pod.
-             * *   **containerId**: the ID of the container.
+             * *   **containerId**: the container ID.
              * *   **vulStatus**: indicates whether vulnerabilities exist in the container.
              * *   **alarmStatus**: indicates whether alerts are generated for the container.
              * *   **riskStatus**: indicates whether risks exist in the container.
@@ -151,11 +151,11 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the filter condition. Valid values:
+             * The type of the search condition. Valid values:
              * <p>
              * 
-             * *   **input**: The filter condition needs to be specified.
-             * *   **select**: The filter condition is an option that can be selected from the drop-down list.
+             * *   **input**: The search condition needs to be specified.
+             * *   **select**: The search condition is an option that can be selected from the drop-down list.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -163,10 +163,10 @@ public class DescribeContainerCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the filter condition. This parameter is returned only when the value of **Type** is **select**.
+             * The values of the search condition. This parameter is returned only if the value of **Type** is set to **select**.
              * <p>
              * 
-             * > If the value of **Type** is **input**, the value of this parameter is an empty string.
+             * > If the value of **Type** is set to **input**, the return value of this parameter is empty.
              */
             public Builder values(String values) {
                 this.values = values;

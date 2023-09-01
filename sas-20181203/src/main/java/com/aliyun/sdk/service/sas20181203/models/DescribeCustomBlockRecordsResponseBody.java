@@ -231,7 +231,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * The ID of the server.
+             * The ID of the destination asset.
              */
             public Builder target(String target) {
                 this.target = target;
@@ -239,10 +239,10 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the query condition. Valid values:
+             * The type of the query. Valid values:
              * <p>
              * 
-             * *   **uuid**: the ID of an asset
+             * *   Set the value to **uuid**.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -379,7 +379,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             private java.util.List < TargetList> targetList; 
 
             /**
-             * The timestamp when the defense rule expires.
+             * The timestamp generated when the block action on the IP address becomes invalid.
              */
             public Builder blockExpireDate(Long blockExpireDate) {
                 this.blockExpireDate = blockExpireDate;
@@ -398,8 +398,8 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
              * The direction of the traffic that is sent by the blocked IP address. Valid values:
              * <p>
              * 
-             * *   **in**: inbound
-             * *   **out**: outbound
+             * *   **in**
+             * *   **out**
              */
             public Builder bound(String bound) {
                 this.bound = bound;
@@ -407,7 +407,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of servers to which the defense rule is applied.
+             * The number of servers for which the defense rule is enabled.
              */
             public Builder enableCount(Integer enableCount) {
                 this.enableCount = enableCount;
@@ -415,7 +415,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the defense rule.
+             * The record ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -431,7 +431,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the defense rule. Valid values:
+             * The source of the defense rule.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -439,12 +439,12 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the defense rule. Valid values:
+             * The status of the defense rule against brute-force attacks. Valid values:
              * <p>
              * 
-             * *   **0**: invalid
-             * *   **1**: enabled
-             * *   **2**: failed
+             * *   **0**: invalid.
+             * *   **1**: enabled.
+             * *   **2**: failed.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -452,7 +452,7 @@ public class DescribeCustomBlockRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the servers to which the defense rule is applied.
+             * The servers for which the defense rule is enabled.
              */
             public Builder targetList(java.util.List < TargetList> targetList) {
                 this.targetList = targetList;

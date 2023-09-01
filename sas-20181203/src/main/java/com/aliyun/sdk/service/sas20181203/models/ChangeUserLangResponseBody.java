@@ -7,15 +7,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UninstallRaspAttachResponseBody} extends {@link TeaModel}
+ * {@link ChangeUserLangResponseBody} extends {@link TeaModel}
  *
- * <p>UninstallRaspAttachResponseBody</p>
+ * <p>ChangeUserLangResponseBody</p>
  */
-public class UninstallRaspAttachResponseBody extends TeaModel {
+public class ChangeUserLangResponseBody extends TeaModel {
     @NameInMap("RequestId")
     private String requestId;
 
-    private UninstallRaspAttachResponseBody(Builder builder) {
+    private ChangeUserLangResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +23,7 @@ public class UninstallRaspAttachResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UninstallRaspAttachResponseBody create() {
+    public static ChangeUserLangResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class UninstallRaspAttachResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UninstallRaspAttachResponseBody build() {
-            return new UninstallRaspAttachResponseBody(this);
+        public ChangeUserLangResponseBody build() {
+            return new ChangeUserLangResponseBody(this);
         } 
 
     } 

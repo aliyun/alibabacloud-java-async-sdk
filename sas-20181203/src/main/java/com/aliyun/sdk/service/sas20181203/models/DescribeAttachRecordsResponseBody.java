@@ -50,7 +50,7 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessList.
+         * The results of automatically connecting applications on the ECS instance to the application protection feature.
          */
         public Builder accessList(java.util.List < AccessList> accessList) {
             this.accessList = accessList;
@@ -58,7 +58,7 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,14 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
             private Long installState; 
 
             /**
-             * AttachState.
+             * The status of connecting applications on the ECS instance to the application protection feature. Valid values:
+             * <p>
+             * 
+             * *   **0**: All applications are connected to the application protection feature.
+             * *   **1**: Partial applications are connected to the application protection feature.
+             * *   **2**: Applications failed to be connected to the application protection feature.
+             * *   **3**: Applications are being connected to the application protection feature.
+             * *   **4**: Applications are not connected to the application protection feature.
              */
             public Builder attachState(Long attachState) {
                 this.attachState = attachState;
@@ -154,7 +161,11 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * AttachSwitch.
+             * Indicates whether automatic protection is enabled for the applications on the ECS instance. Valid values:
+             * <p>
+             * 
+             * *   **ON**: Automatic protection is enabled for the applications on the ECS instance.
+             * *   **OFF**: Automatic protection is disabled for the applications on the ECS instance.
              */
             public Builder attachSwitch(String attachSwitch) {
                 this.attachSwitch = attachSwitch;
@@ -162,7 +173,7 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * EcsUUID.
+             * The UUID of the ECS instance.
              */
             public Builder ecsUUID(String ecsUUID) {
                 this.ecsUUID = ecsUUID;
@@ -170,7 +181,7 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InstallMsg.
+             * The message that shows the results of installing the RASP agent on the ECS instance.
              */
             public Builder installMsg(String installMsg) {
                 this.installMsg = installMsg;
@@ -178,7 +189,17 @@ public class DescribeAttachRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * InstallState.
+             * The status of installing the RASP agent on the ECS instance to enable automatic application connection. Valid values:
+             * <p>
+             * 
+             * *   **0**: installed
+             * *   **1**: installing
+             * *   **2**: installation failed
+             * *   **3**: installation timeout
+             * *   **4**: uninstalled
+             * *   **5**: uninstalling
+             * *   **6**: uninstallation failed
+             * *   **7**: uninstallation timeout
              */
             public Builder installState(Long installState) {
                 this.installState = installState;

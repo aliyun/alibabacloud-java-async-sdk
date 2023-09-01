@@ -68,7 +68,11 @@ public class ListCloudVendorRegionsRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * The language of the content in the request and response messages. Default value: **zh**. Valid values:
+         * <p>
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -77,7 +81,10 @@ public class ListCloudVendorRegionsRequest extends Request {
         }
 
         /**
-         * Vendor.
+         * The service provider of cloud assets. Valid values:
+         * <p>
+         * 
+         * *   **Tencent**, **HUAWEICLOUD**, **Azure**, and **AWS**: other service providers of cloud assets.
          */
         public Builder vendor(String vendor) {
             this.putQueryParameter("Vendor", vendor);

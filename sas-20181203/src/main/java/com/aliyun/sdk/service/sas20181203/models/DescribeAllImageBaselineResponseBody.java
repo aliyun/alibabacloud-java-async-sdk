@@ -243,7 +243,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of baseline check items.
+             * The information about the baseline check item.
              */
             public Builder baselineItemList(java.util.List < BaselineItemList> baselineItemList) {
                 this.baselineItemList = baselineItemList;
@@ -332,7 +332,7 @@ public class DescribeAllImageBaselineResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of baselines.
+             * The information about the baseline.
              */
             public Builder baselineNameList(java.util.List < BaselineNameList> baselineNameList) {
                 this.baselineNameList = baselineNameList;

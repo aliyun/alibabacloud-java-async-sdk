@@ -169,7 +169,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
              * The type of the destination node. Valid values:
              * <p>
              * 
-             * *   **cluster**: a cluster
+             * *   Set the value to **cluster**.
              */
             public Builder dstNodeType(String dstNodeType) {
                 this.dstNodeType = dstNodeType;
@@ -204,8 +204,8 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
              * The type of the source node. Valid values:
              * <p>
              * 
-             * *   **cluster**: a cluster
-             * *   **internet**: a network node in another cluster
+             * *   **cluster**: a cluster.
+             * *   **internet**: a network node outside the cluster
              */
             public Builder srcNodeType(String srcNodeType) {
                 this.srcNodeType = srcNodeType;
@@ -318,11 +318,11 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The micro-segmentation switch. Valid values:
+             * The status of the microsegmentation switch. Valid values:
              * <p>
              * 
-             * *   **0**: The switch is turned off.
-             * *   **1**: The switch is turned on.
+             * *   **0**: off.
+             * *   **1**: on.
              */
             public Builder cnnfSwitch(Integer cnnfSwitch) {
                 this.cnnfSwitch = cnnfSwitch;
@@ -341,8 +341,8 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
              * The network type. Valid values:
              * <p>
              * 
-             * *   **0**: classic network
-             * *   **1**: virtual private cloud (VPC)
+             * *   **0**: classic network.
+             * *   **1**: virtual private cloud (VPC).
              */
             public Builder interceptionType(Integer interceptionType) {
                 this.interceptionType = interceptionType;
@@ -358,7 +358,7 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
             }
 
             /**
-             * The network topology switch. Valid values:
+             * The status of the network topology switch. Valid values:
              * <p>
              * 
              * *   **ON**
@@ -373,11 +373,11 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
              * The risk level. Valid values:
              * <p>
              * 
-             * *   **3**: high
-             * *   **2**: medium
-             * *   **1**: low
-             * *   **0**: warning
-             * *   **-1**: unknown
+             * *   **3**: high.
+             * *   **2**: medium.
+             * *   **1**: low.
+             * *   **0**: secure.
+             * *   **-1**: unknown.
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -388,8 +388,8 @@ public class DescribeClusterNetworkResponseBody extends TeaModel {
              * The type of the node. Valid values:
              * <p>
              * 
-             * *   **cluster**: a cluster
-             * *   **internet**: a node in another cluster
+             * *   **cluster**: a cluster.
+             * *   **internet**: a network node outside the cluster.
              */
             public Builder type(String type) {
                 this.type = type;

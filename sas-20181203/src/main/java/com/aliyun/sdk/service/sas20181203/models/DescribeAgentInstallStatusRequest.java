@@ -105,7 +105,10 @@ public class DescribeAgentInstallStatusRequest extends Request {
         }
 
         /**
-         * The UUIDs of the servers. Separate multiple UUIDs with commas (,).
+         * The UUIDs of servers. Separate multiple UUIDs with commas (,).
+         * <p>
+         * 
+         * > You can call the [DescribeCloudCenterInstances](~~DescribeCloudCenterInstances~~) operation to query the UUIDs of servers.
          */
         public Builder uuids(String uuids) {
             this.putQueryParameter("Uuids", uuids);

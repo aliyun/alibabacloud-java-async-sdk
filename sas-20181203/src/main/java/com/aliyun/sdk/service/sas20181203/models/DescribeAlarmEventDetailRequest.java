@@ -98,10 +98,10 @@ public class DescribeAlarmEventDetailRequest extends Request {
         } 
 
         /**
-         * The unique ID of the alert event.
+         * The unique identifier of the alert event.
          * <p>
          * 
-         * >  To query the details of an alert event, you must specify the unique ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the unique IDs of alert events.
+         * > To query the details of an alert event, you must provide the unique identifier of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the identifier.
          */
         public Builder alarmUniqueInfo(String alarmUniqueInfo) {
             this.putQueryParameter("AlarmUniqueInfo", alarmUniqueInfo);

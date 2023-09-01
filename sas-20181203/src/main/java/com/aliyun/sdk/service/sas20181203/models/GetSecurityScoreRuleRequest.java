@@ -7,16 +7,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeVpcHoneyPotCriteriaRequest} extends {@link RequestModel}
+ * {@link GetSecurityScoreRuleRequest} extends {@link RequestModel}
  *
- * <p>DescribeVpcHoneyPotCriteriaRequest</p>
+ * <p>GetSecurityScoreRuleRequest</p>
  */
-public class DescribeVpcHoneyPotCriteriaRequest extends Request {
+public class GetSecurityScoreRuleRequest extends Request {
     @Query
     @NameInMap("Lang")
     private String lang;
 
-    private DescribeVpcHoneyPotCriteriaRequest(Builder builder) {
+    private GetSecurityScoreRuleRequest(Builder builder) {
         super(builder);
         this.lang = builder.lang;
     }
@@ -25,7 +25,7 @@ public class DescribeVpcHoneyPotCriteriaRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeVpcHoneyPotCriteriaRequest create() {
+    public static GetSecurityScoreRuleRequest create() {
         return builder().build();
     }
 
@@ -41,24 +41,20 @@ public class DescribeVpcHoneyPotCriteriaRequest extends Request {
         return this.lang;
     }
 
-    public static final class Builder extends Request.Builder<DescribeVpcHoneyPotCriteriaRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetSecurityScoreRuleRequest, Builder> {
         private String lang; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeVpcHoneyPotCriteriaRequest request) {
+        private Builder(GetSecurityScoreRuleRequest request) {
             super(request);
             this.lang = request.lang;
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
-         * <p>
-         * 
-         * *   **zh**: Chinese.
-         * *   **en**: English.
+         * Lang.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -67,8 +63,8 @@ public class DescribeVpcHoneyPotCriteriaRequest extends Request {
         }
 
         @Override
-        public DescribeVpcHoneyPotCriteriaRequest build() {
-            return new DescribeVpcHoneyPotCriteriaRequest(this);
+        public GetSecurityScoreRuleRequest build() {
+            return new GetSecurityScoreRuleRequest(this);
         } 
 
     } 

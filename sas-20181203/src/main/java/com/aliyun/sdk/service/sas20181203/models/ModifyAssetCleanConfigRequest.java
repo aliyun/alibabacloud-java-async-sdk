@@ -54,7 +54,7 @@ public class ModifyAssetCleanConfigRequest extends Request {
         } 
 
         /**
-         * AssetCleanConfigs.
+         * The asset cleanup configurations.
          */
         public Builder assetCleanConfigs(java.util.List < AssetCleanConfigs> assetCleanConfigs) {
             this.putQueryParameter("AssetCleanConfigs", assetCleanConfigs);
@@ -120,7 +120,7 @@ public class ModifyAssetCleanConfigRequest extends Request {
             private Integer type; 
 
             /**
-             * CleanDays.
+             * The number of days before hosts whose provider cannot be identified are automatically cleaned after they enter the offline state. Valid value: an integer that ranges from 1 to 30.
              */
             public Builder cleanDays(Integer cleanDays) {
                 this.cleanDays = cleanDays;
@@ -128,7 +128,11 @@ public class ModifyAssetCleanConfigRequest extends Request {
             }
 
             /**
-             * Status.
+             * Specifies whether to enable the feature of cleaning the offline hosts whose provider cannot be identified. Valid values:
+             * <p>
+             * 
+             * *   **0**: disables the feature.
+             * *   **1**: enables the feature.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -136,7 +140,10 @@ public class ModifyAssetCleanConfigRequest extends Request {
             }
 
             /**
-             * Type.
+             * The type of hosts that you want to clean.
+             * <p>
+             * 
+             * Set the value to **1**, which indicates hosts whose provider cannot be identified.
              */
             public Builder type(Integer type) {
                 this.type = type;

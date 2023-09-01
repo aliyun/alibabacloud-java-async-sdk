@@ -50,7 +50,7 @@ public class DescribeCriteriaResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the filter conditions.
+         * The information about the search conditions of assets.
          */
         public Builder criteriaList(java.util.List < CriteriaList> criteriaList) {
             this.criteriaList = criteriaList;
@@ -137,7 +137,7 @@ public class DescribeCriteriaResponseBody extends TeaModel {
              * The structured attribute values of the assets that match the keyword. The value of this parameter is in the JSON format and contains the following fields:
              * <p>
              * 
-             * *   **vendor**: providers
+             * *   **vendor**: providers.
              * *   **regionIds**: IDs of supported regions
              */
             public Builder multiValues(String multiValues) {
@@ -146,7 +146,32 @@ public class DescribeCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the filter condition.
+             * The name of the search condition. Valid values:
+             * <p>
+             * 
+             * *   **internetIp**: the public IP address.
+             * *   **intranetIp**: the private IP address.
+             * *   **instanceName**: the name of the instance.
+             * *   **instanceId**: the instance ID.
+             * *   **vpcInstanceId**: the ID of the virtual private cloud (VPC) to which the instance belongs.
+             * *   **osName**: the operating system.
+             * *   **osType**: the operating system type.
+             * *   **hcStatus**: indicates whether baseline risks exist.
+             * *   **vulStatus**: indicates whether vulnerabilities exist.
+             * *   **alarmStatus**: indicates whether security alerts exist.
+             * *   **riskStatus**: indicates whether risks exist.
+             * *   **clientStatus**: indicates the status of the client.
+             * *   **runningStatus**: the running status of the asset.
+             * *   **tagName**: the name of the tag.
+             * *   **groupName**: the name of the server group.
+             * *   **regionId**: the region ID.
+             * *   **importance**: the importance of the asset.
+             * *   **exposedStatus**: indicates whether the server is exposed.
+             * *   **authVersion**: the authorization version.
+             * *   **flag**: the cloud service provider.
+             * *   **ipList**: the IP addresses.
+             * *   **uuidList** :the UUID.
+             * *   **tagKeyValue**: the ECS tag.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -154,11 +179,11 @@ public class DescribeCriteriaResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the filter condition. Valid values:
+             * The type of the search condition. Valid values:
              * <p>
              * 
-             * *   **input**: The filter condition needs to be specified.
-             * *   **select**: The filter condition is an option that can be selected from the drop-down list.
+             * *   **input**: The search condition needs to be specified.
+             * *   **select**: The search condition is an option that can be selected from the drop-down list.
              */
             public Builder type(String type) {
                 this.type = type;

@@ -78,7 +78,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the alert events that are triggered by the same rule or of the same alert type.
+         * The information about the alert events that are triggered by the same rule or of the same alert type.
          */
         public Builder securityEventsResponse(java.util.List < SecurityEventsResponse> securityEventsResponse) {
             this.securityEventsResponse = securityEventsResponse;
@@ -287,34 +287,31 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The alert type of the alert event. Valid values:
+             * The type of the alert event. Valid values:
              * <p>
              * 
-             * *   Suspicious process
+             * *   Suspicious Process
              * *   Webshell
-             * *   Unusual logon
-             * *   Exception
-             * *   Sensitive file tampering
-             * *   Malicious process (cloud threat detection)
-             * *   Suspicious network connection
+             * *   Unusual Logon
+             * *   Malicious Software
+             * *   Sensitive File Tampering
+             * *   Unusual Network Connection
              * *   Other
-             * *   Abnormal account
-             * *   Application intrusion event
+             * *   Suspicious Account
              * *   Cloud threat detection
-             * *   Precise defense
-             * *   Application whitelist
-             * *   Persistent webshell
-             * *   Web application threat detection
-             * *   Malicious script
-             * *   Threat intelligence
-             * *   Malicious network activity
-             * *   Cluster exception
-             * *   Webshell (on-premises threat detection)
-             * *   Vulnerability exploitation
-             * *   Malicious process (on-premises threat detection)
+             * *   Precision defense
+             * *   Application Whitelist
+             * *   Persistence
+             * *   Web Application Threat Detection
+             * *   Malicious scripts
+             * *   Malicious Network Activity
+             * *   K8s Abnormal Behavior
+             * *   Website backdoor (local engine)
+             * *   Exploit
+             * *   Image Scan
              * *   Trusted exception
              * 
-             * For more information about alert types, see [Alerts](https://www.alibabacloud.com/help/en/security-center/latest/events-overview).
+             * For more information about alert types, see [Overview](~~68388~~).
              */
             public Builder eventType(String eventType) {
                 this.eventType = eventType;
@@ -322,7 +319,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert event was last detected. Unit: milliseconds.
+             * The timestamp generated when the alert event was last detected. Unit: milliseconds.
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -330,7 +327,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the alert event was first detected. Unit: milliseconds.
+             * The timestamp generated when the alert event was first detected. Unit: milliseconds.
              */
             public Builder occurrenceTime(Long occurrenceTime) {
                 this.occurrenceTime = occurrenceTime;
@@ -346,7 +343,7 @@ public class DescribeSimilarSecurityEventsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server that is affected by the alert event.
+             * The UUID of the server that was affected by the alert event.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

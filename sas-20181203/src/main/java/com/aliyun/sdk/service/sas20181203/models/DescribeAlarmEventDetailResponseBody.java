@@ -50,7 +50,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the alert event.
+         * The details of the alert event.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +122,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The name of the field that displays tracing information.
+             * The name of the field that displays the tracing information.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -130,7 +130,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the field that displays tracing information. Valid values:
+             * The type of the field that displays the tracing information. Valid values:
              * <p>
              * 
              * *   **text**
@@ -142,7 +142,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the field that displays tracing information.
+             * The value of the field that displays the tracing information.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -203,7 +203,7 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the value that is used to trace the alert event.
+             * The value that is used to trace the alert event.
              */
             public Builder value(java.util.List < Value> value) {
                 this.value = value;
@@ -572,10 +572,10 @@ public class DescribeAlarmEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the alert event.
+             * The unique identifier of the alert event.
              * <p>
              * 
-             * >  To query the details about an alert event, you must specify the unique ID of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to query the unique IDs of alert events.
+             * > To query the details of an alert event, you must provide the unique identifier of the alert event. You can call the [DescribeSuspEvents](~~DescribeSuspEvents~~) operation to obtain the identifier.
              */
             public Builder alarmUniqueInfo(String alarmUniqueInfo) {
                 this.alarmUniqueInfo = alarmUniqueInfo;

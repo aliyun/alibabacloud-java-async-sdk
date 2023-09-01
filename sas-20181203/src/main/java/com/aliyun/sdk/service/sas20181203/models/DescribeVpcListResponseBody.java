@@ -166,7 +166,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * The number of ECS instances.
+             * The number of Elastic Compute Service (ECS) instances.
              */
             public Builder ecsCount(Integer ecsCount) {
                 this.ecsCount = ecsCount;
@@ -174,7 +174,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the VPC.
+             * The information about the virtual private cloud (VPC).
              */
             public Builder instanceDesc(String instanceDesc) {
                 this.instanceDesc = instanceDesc;
@@ -198,7 +198,7 @@ public class DescribeVpcListResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the ECS instance resides.
+             * The region in which the server resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
