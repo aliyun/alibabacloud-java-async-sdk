@@ -50,7 +50,7 @@ public class ModifyCdnDomainOwnerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Content.
+         * Procedure
          */
         public Builder content(java.util.Map < String, ? > content) {
             this.content = content;
@@ -58,7 +58,7 @@ public class ModifyCdnDomainOwnerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

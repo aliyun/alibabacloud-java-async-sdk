@@ -50,7 +50,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The certificate information.
+         * The information about the certificate.
          */
         public Builder certInfos(CertInfos certInfos) {
             this.certInfos = certInfos;
@@ -197,8 +197,8 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
              * Indicates whether the SSL certificate is obsolete. Valid values:
              * <p>
              * 
-             * *   **yes**
-             * *   **no**
+             * *   **yes**: The SSL certificate is obsolete.
+             * *   **no**: The SSL certificate is working as expected.
              */
             public Builder certCaIsLegacy(String certCaIsLegacy) {
                 this.certCaIsLegacy = certCaIsLegacy;
@@ -217,8 +217,8 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
              * Indicates whether the SSL certificate is expired. Valid values:
              * <p>
              * 
-             * *   **yes**
-             * *   **no**
+             * *   **yes**: The SSL certificate is expired.
+             * *   **no**: The SSL certificate is not expired.
              */
             public Builder certExpired(String certExpired) {
                 this.certExpired = certExpired;
@@ -226,7 +226,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The effective time of the certificate.
+             * The time when the certificate became effective.
              */
             public Builder certStartTime(String certStartTime) {
                 this.certStartTime = certStartTime;
@@ -250,7 +250,7 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             }
 
             /**
-             * The list of domain names. If a value is returned, the value matches the SSL certificate. Multiple domain names are separated by commas (,).
+             * If a value is returned, the value matches the SSL certificate. Multiple domain names are separated by commas (,).
              */
             public Builder domainList(String domainList) {
                 this.domainList = domainList;

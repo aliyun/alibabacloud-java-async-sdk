@@ -123,10 +123,10 @@ public class DescribeDomainMax95BpsDataRequest extends Request {
         }
 
         /**
-         * The accelerated domain name. If you do not specify this parameter, data of all accelerated domain names under your account is queried.
+         * The accelerated domain name. If you do not specify a domain name, data of all domain names is queried.
          * <p>
          * 
-         * > You cannot specify multiple domain names at a time.
+         * > You cannot specify multiple domain names in a DescribeDomainMax95BpsData request.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

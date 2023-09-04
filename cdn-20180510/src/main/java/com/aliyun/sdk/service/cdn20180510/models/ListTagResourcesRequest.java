@@ -125,7 +125,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -134,7 +134,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the resource.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -143,7 +143,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **DOMAIN**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -152,7 +152,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The key-value pair of a tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -161,7 +161,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * TagOwnerBid.
+         * The business ID of the tag owner.
          */
         public Builder tagOwnerBid(String tagOwnerBid) {
             this.putQueryParameter("TagOwnerBid", tagOwnerBid);
@@ -170,7 +170,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * TagOwnerUid.
+         * The ID of the Alibaba Cloud account to which the tag belongs.
          */
         public Builder tagOwnerUid(String tagOwnerUid) {
             this.putQueryParameter("TagOwnerUid", tagOwnerUid);
@@ -224,7 +224,7 @@ public class ListTagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -232,7 +232,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

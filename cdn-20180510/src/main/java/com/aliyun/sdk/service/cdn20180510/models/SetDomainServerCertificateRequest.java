@@ -256,8 +256,8 @@ public class SetDomainServerCertificateRequest extends Request {
          * Specifies whether to enable the SSL certificate. Default value: off. Valid values:
          * <p>
          * 
-         * *   **on** ：enables the SSL certificate.
-         * *   **off**：disables the SSL certificate.
+         * *   **on** : enables the SSL certificate.
+         * *   **off**: disables the SSL certificate.
          */
         public Builder serverCertificateStatus(String serverCertificateStatus) {
             this.putQueryParameter("ServerCertificateStatus", serverCertificateStatus);

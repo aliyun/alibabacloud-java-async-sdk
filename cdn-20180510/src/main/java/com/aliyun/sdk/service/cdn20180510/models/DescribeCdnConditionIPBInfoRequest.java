@@ -55,7 +55,15 @@ public class DescribeCdnConditionIPBInfoRequest extends Request {
         } 
 
         /**
-         * DataId.
+         * The configuration ID. Valid values:
+         * <p>
+         * 
+         * *   condition_region_config_cn
+         * *   condition_region_config_en
+         * *   condition_isp_config_cn
+         * *   condition_isp_config_en
+         * *   condition_country_config_cn
+         * *   condition_country_config_en
          */
         public Builder dataId(String dataId) {
             this.putQueryParameter("DataId", dataId);

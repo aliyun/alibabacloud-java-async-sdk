@@ -72,8 +72,8 @@ public class DescribeUserVipsByDomainRequest extends Request {
          * Specifies whether to query the virtual IP addresses of only healthy CDN POPs. Valid values:
          * <p>
          * 
-         * *   **on**：healthy CDN edge nodes.
-         * *   **off**：all CDN edge nodes.
+         * *   **on**: healthy CDN edge nodes.
+         * *   **off**: all CDN edge nodes.
          */
         public Builder available(String available) {
             this.putQueryParameter("Available", available);

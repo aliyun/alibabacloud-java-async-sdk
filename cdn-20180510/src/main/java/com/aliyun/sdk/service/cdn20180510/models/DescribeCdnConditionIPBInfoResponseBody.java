@@ -50,7 +50,7 @@ public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Datas.
+         * The data that is returned.
          */
         public Builder datas(java.util.List < Datas> datas) {
             this.datas = datas;
@@ -58,7 +58,7 @@ public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Value.
+             * The configuration value.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -122,7 +122,7 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DetailData.
+         * Details of the 95th percentile bandwidth.
          */
         public Builder detailData(DetailData detailData) {
             this.detailData = detailData;
@@ -254,7 +254,7 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Area.
+             * Region of the 95th percentile bandwidth.
              */
             public Builder area(String area) {
                 this.area = area;
@@ -270,7 +270,7 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Max95BpsPeakTime.
+             * Time of the 95th percentile bandwidth.
              */
             public Builder max95BpsPeakTime(String max95BpsPeakTime) {
                 this.max95BpsPeakTime = max95BpsPeakTime;
@@ -278,7 +278,7 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

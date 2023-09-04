@@ -355,7 +355,7 @@ public class DescribeDomainCertificateInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The CANME status of the domain name.
+             * The CNAME status of the domain name.
              * <p>
              * 
              * *   **ok**: The domain name points to the CNAME assigned by Alibaba Cloud CDN.
