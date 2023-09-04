@@ -50,7 +50,7 @@ public class GetServiceStatusResponseBody extends TeaModel {
         private ServiceStatus serviceStatus; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceStatus.
+         * The status information of CloudSSO.
          */
         public Builder serviceStatus(ServiceStatus serviceStatus) {
             this.serviceStatus = serviceStatus;
@@ -134,7 +134,7 @@ public class GetServiceStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AccountId.
+             * The ID of your Alibaba Cloud account.
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -142,7 +142,13 @@ public class GetServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * PrerequisiteCheckResult.
+             * Indicates whether you have permissions to enable CloudSSO. Valid values:
+             * <p>
+             * 
+             * *   Success: You have permissions to enable CloudSSO.
+             * *   Failed: You do not have permissions to enable CloudSSO.
+             * 
+             * >  The value of this parameter is returned only if the value of `Status` is `Disabled`.
              */
             public Builder prerequisiteCheckResult(String prerequisiteCheckResult) {
                 this.prerequisiteCheckResult = prerequisiteCheckResult;
@@ -150,7 +156,7 @@ public class GetServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * RegionsInUse.
+             * The ID of the region.
              */
             public Builder regionsInUse(java.util.List < String > regionsInUse) {
                 this.regionsInUse = regionsInUse;
@@ -158,7 +164,11 @@ public class GetServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether CloudSSO is enabled. Valid values:
+             * <p>
+             * 
+             * *   Enabled
+             * *   Disabled
              */
             public Builder status(String status) {
                 this.status = status;

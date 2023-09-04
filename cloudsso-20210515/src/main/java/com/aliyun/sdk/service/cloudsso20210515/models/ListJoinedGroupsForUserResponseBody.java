@@ -98,7 +98,11 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * IsTruncated.
+         * Indicates whether the queried entries are truncated. Valid values:
+         * <p>
+         * 
+         * *   true: The queried entries are truncated.
+         * *   false: The queried entries are not truncated.
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -106,7 +110,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * JoinedGroups.
+         * The groups to which the user is added.
          */
         public Builder joinedGroups(java.util.List < JoinedGroups> joinedGroups) {
             this.joinedGroups = joinedGroups;
@@ -114,7 +118,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +126,10 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is returned for the next page.
+         * <p>
+         * 
+         * >  This parameter is returned only when the value of `IsTruncated` is `true`.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +137,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +145,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * The total number of entries returned.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -238,7 +245,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * Description.
+             * The description of the group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -246,7 +253,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -254,7 +261,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -262,7 +269,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * JoinTime.
+             * The time when the user was added to the user group.
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -270,7 +277,11 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * ProvisionType.
+             * The type of the group. Valid values:
+             * <p>
+             * 
+             * *   Manual: The group is manually created.
+             * *   Synchronized: The user is synchronized from an external identity provider (IdP).
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -278,7 +289,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

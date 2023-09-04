@@ -50,7 +50,7 @@ public class GetSCIMSynchronizationStatusResponseBody extends TeaModel {
         private String SCIMSynchronizationStatus; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,11 @@ public class GetSCIMSynchronizationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SCIMSynchronizationStatus.
+         * The status of SCIM synchronization. Valid values:
+         * <p>
+         * 
+         * *   Enabled
+         * *   Disabled
          */
         public Builder SCIMSynchronizationStatus(String SCIMSynchronizationStatus) {
             this.SCIMSynchronizationStatus = SCIMSynchronizationStatus;

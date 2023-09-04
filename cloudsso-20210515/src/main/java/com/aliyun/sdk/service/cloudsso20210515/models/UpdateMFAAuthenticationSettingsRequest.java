@@ -82,7 +82,7 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -91,7 +91,13 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         }
 
         /**
-         * MFAAuthenticationSettings.
+         * Specifies whether to enable MFA for all users. Valid value:
+         * <p>
+         * 
+         * - Enabled: enables MFA for all users.
+         * - Byuser: uses user-specific settings. For more information about how to configure MFA for a single user, see [UpdateUserMFAAuthenticationSettings](~~450135~~).
+         * - Disabled: disables MFA for all users.
+         * - OnlyRiskyLogin: MFA is required only for unusual logons.
          */
         public Builder MFAAuthenticationSettings(String MFAAuthenticationSettings) {
             this.putQueryParameter("MFAAuthenticationSettings", MFAAuthenticationSettings);
@@ -100,7 +106,12 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         }
 
         /**
-         * OperationForRiskLogin.
+         * Specifies whether MFA is required for users who initiated unusual logons. Valid value:
+         * <p>
+         * 
+         * - Autonomous: MFA is prompted for users who initiated unusual logons. However, the users are allowed to skip MFA. If an MFA device is bound to a user who initiated an unusual logon, the user must pass MFA.
+         * 
+         * - EnforceVerify: MFA is required. If no MFA devices are bound to a user who initiated an unusual logon, the user must bind an MFA device. If an MFA device is already bound to a user who initiated an unusual logon, the user must pass MFA.
          */
         public Builder operationForRiskLogin(String operationForRiskLogin) {
             this.putQueryParameter("OperationForRiskLogin", operationForRiskLogin);

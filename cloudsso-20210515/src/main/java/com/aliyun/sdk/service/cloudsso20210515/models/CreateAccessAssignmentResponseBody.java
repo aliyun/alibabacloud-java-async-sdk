@@ -50,7 +50,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         private Task task; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         }
 
         /**
-         * Task.
+         * The information about the task.
          */
         public Builder task(Task task) {
             this.task = task;
@@ -242,7 +242,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * AccessConfigurationId.
+             * The ID of the access configuration.
              */
             public Builder accessConfigurationId(String accessConfigurationId) {
                 this.accessConfigurationId = accessConfigurationId;
@@ -250,7 +250,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * AccessConfigurationName.
+             * The name of the access configuration.
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
@@ -258,7 +258,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalId.
+             * The ID of the CloudSSO identity.
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -266,7 +266,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalName.
+             * The name of the CloudSSO identity.
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -274,7 +274,11 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalType.
+             * The type of the CloudSSO identity. Valid values:
+             * <p>
+             * 
+             * *   User
+             * *   Group
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -282,7 +286,12 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   InProgress: The task is running.
+             * *   Success: The task is successful.
+             * *   Failed: The task failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -290,7 +299,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the task object.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -298,7 +307,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the task object.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -306,7 +315,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPath.
+             * The path ID of the task object in your resource directory.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -314,7 +323,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPathName.
+             * The path name of the task object in your resource directory.
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -322,7 +331,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the task object. The value is fixed as RD-Account, which indicates an account in your resource directory.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -330,7 +339,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -338,7 +347,7 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. The value is fixed as CreateAccessAssignment, which indicates that access permissions on an account in your resource directory are assigned.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

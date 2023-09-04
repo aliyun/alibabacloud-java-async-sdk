@@ -50,7 +50,7 @@ public class AddExternalSAMLIdPCertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CertificateId.
+         * The ID of the SAML signing certificate.
          */
         public Builder certificateId(String certificateId) {
             this.certificateId = certificateId;
@@ -58,7 +58,7 @@ public class AddExternalSAMLIdPCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

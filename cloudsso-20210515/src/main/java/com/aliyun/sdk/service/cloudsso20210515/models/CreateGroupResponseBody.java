@@ -50,7 +50,7 @@ public class CreateGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Group.
+         * The information about the group.
          */
         public Builder group(Group group) {
             this.group = group;
@@ -58,7 +58,7 @@ public class CreateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class CreateGroupResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the group was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -166,7 +166,7 @@ public class CreateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +174,7 @@ public class CreateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -182,7 +182,7 @@ public class CreateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -190,7 +190,7 @@ public class CreateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ProvisionType.
+             * The type of the group. The value is fixed as Manual, which indicates that the group is manually created.
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -198,7 +198,7 @@ public class CreateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the information about the group was modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

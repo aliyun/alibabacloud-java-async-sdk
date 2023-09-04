@@ -110,7 +110,12 @@ public class CreateAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * AccessConfigurationName.
+         * The name of the access configuration.
+         * <p>
+         * 
+         * The name can contain letters, digits, and hyphens (-).
+         * 
+         * The name can be up to 32 characters in length.
          */
         public Builder accessConfigurationName(String accessConfigurationName) {
             this.putQueryParameter("AccessConfigurationName", accessConfigurationName);
@@ -119,7 +124,10 @@ public class CreateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the access configuration.
+         * <p>
+         * 
+         * The description can be up to 1,024 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -128,7 +136,7 @@ public class CreateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -137,7 +145,10 @@ public class CreateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * RelayState.
+         * The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.
+         * <p>
+         * 
+         * The web page must be a page of the Alibaba Cloud Management Console. By default, this parameter is empty, which indicates that the initial web page is the homepage of the Alibaba Cloud Management Console.
          */
         public Builder relayState(String relayState) {
             this.putQueryParameter("RelayState", relayState);
@@ -146,7 +157,14 @@ public class CreateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * SessionDuration.
+         * The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.
+         * <p>
+         * 
+         * Unit: seconds.
+         * 
+         * Valid values: 900 to 43200. The value 900 indicates 15 minutes. The value 43200 indicates 12 hours.
+         * 
+         * Default value: 3600. The value indicates 1 hour.
          */
         public Builder sessionDuration(Integer sessionDuration) {
             this.putQueryParameter("SessionDuration", sessionDuration);

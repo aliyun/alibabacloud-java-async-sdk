@@ -50,7 +50,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         private TaskStatus taskStatus; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * TaskStatus.
+         * The status information of the task.
          */
         public Builder taskStatus(TaskStatus taskStatus) {
             this.taskStatus = taskStatus;
@@ -158,7 +158,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * EndTime.
+             * The time when the task ended.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -166,7 +166,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * FailureReason.
+             * The cause of the task failure.
+             * <p>
+             * 
+             * >  This parameter is returned only when the value of `Status` is `Failed`.
              */
             public Builder failureReason(String failureReason) {
                 this.failureReason = failureReason;
@@ -174,7 +177,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the task started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -182,7 +185,12 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   InProgress: The task is running.
+             * *   Success: The task is successful.
+             * *   Failed: The task failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -190,7 +198,7 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -198,7 +206,13 @@ public class GetTaskStatusResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   ProvisionAccessConfiguration: An access configuration is provisioned.
+             * *   DeprovisionAccessConfiguration: An access configuration is de-provisioned.
+             * *   CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.
+             * *   DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

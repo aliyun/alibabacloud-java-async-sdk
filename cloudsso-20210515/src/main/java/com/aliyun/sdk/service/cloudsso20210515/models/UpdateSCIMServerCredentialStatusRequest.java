@@ -82,7 +82,7 @@ public class UpdateSCIMServerCredentialStatusRequest extends Request {
         } 
 
         /**
-         * CredentialId.
+         * The ID of the SCIM credential.
          */
         public Builder credentialId(String credentialId) {
             this.putQueryParameter("CredentialId", credentialId);
@@ -91,7 +91,7 @@ public class UpdateSCIMServerCredentialStatusRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -100,7 +100,11 @@ public class UpdateSCIMServerCredentialStatusRequest extends Request {
         }
 
         /**
-         * NewStatus.
+         * The new status of the SCIM credential. Valid values:
+         * <p>
+         * 
+         * *   Enabled: The SCIM credential is enabled.
+         * *   Disabled: The SCIM credential is disabled.
          */
         public Builder newStatus(String newStatus) {
             this.putQueryParameter("NewStatus", newStatus);

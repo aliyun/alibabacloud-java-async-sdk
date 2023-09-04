@@ -82,7 +82,7 @@ public class DeleteAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * AccessConfigurationId.
+         * The ID of the access configuration.
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -91,7 +91,7 @@ public class DeleteAccessConfigurationRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -100,7 +100,11 @@ public class DeleteAccessConfigurationRequest extends Request {
         }
 
         /**
-         * ForceRemovePermissionPolicies.
+         * Specifies whether to forcibly remove system policies and inline policies. Valid values:
+         * <p>
+         * 
+         * *   true: When you delete the access configuration, the associated system policies and inline policies are forcibly removed.
+         * *   false: When you delete the access configuration, the associated system policies and inline policies are not forcibly removed. This is the default value. If these policies exist in the access configuration, the deletion fails. Before you delete the access configuration, you must remove the system policies and inline policies. For more information, see [RemovePermissionPolicyFromAccessConfiguration](~~336904~~).
          */
         public Builder forceRemovePermissionPolicies(Boolean forceRemovePermissionPolicies) {
             this.putQueryParameter("ForceRemovePermissionPolicies", forceRemovePermissionPolicies);

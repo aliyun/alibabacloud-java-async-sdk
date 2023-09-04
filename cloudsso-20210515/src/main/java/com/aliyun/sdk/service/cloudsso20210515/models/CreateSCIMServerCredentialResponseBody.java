@@ -50,7 +50,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
         private SCIMServerCredential SCIMServerCredential; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
         }
 
         /**
-         * SCIMServerCredential.
+         * The information about the SCIM credential.
          */
         public Builder SCIMServerCredential(SCIMServerCredential SCIMServerCredential) {
             this.SCIMServerCredential = SCIMServerCredential;
@@ -170,7 +170,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * The time when the SCIM credential was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -178,7 +178,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialId.
+             * The ID of the SCIM credential.
              */
             public Builder credentialId(String credentialId) {
                 this.credentialId = credentialId;
@@ -186,7 +186,10 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialSecret.
+             * The SCIM credential.
+             * <p>
+             * 
+             * >  The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.
              */
             public Builder credentialSecret(String credentialSecret) {
                 this.credentialSecret = credentialSecret;
@@ -194,7 +197,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialType.
+             * The type of the SCIM credential.
              */
             public Builder credentialType(String credentialType) {
                 this.credentialType = credentialType;
@@ -202,7 +205,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * The ID of the directory.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -210,7 +213,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the SCIM credential expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -218,7 +221,7 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the SCIM credential. The value is fixed as Enabled, which indicates that the SCIM credential is enabled.
              */
             public Builder status(String status) {
                 this.status = status;

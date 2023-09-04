@@ -50,7 +50,11 @@ public class GetMFAAuthenticationStatusResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MFAAuthenticationStatus.
+         * The status of MFA. Valid values:
+         * <p>
+         * 
+         * *   Enabled
+         * *   Disabled
          */
         public Builder MFAAuthenticationStatus(String MFAAuthenticationStatus) {
             this.MFAAuthenticationStatus = MFAAuthenticationStatus;
@@ -58,7 +62,7 @@ public class GetMFAAuthenticationStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

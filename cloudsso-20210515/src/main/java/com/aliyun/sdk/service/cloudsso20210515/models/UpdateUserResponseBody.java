@@ -50,7 +50,7 @@ public class UpdateUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateUserResponseBody extends TeaModel {
         }
 
         /**
-         * User.
+         * The information about the user.
          */
         public Builder user(User user) {
             this.user = user;
@@ -218,7 +218,7 @@ public class UpdateUserResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * CreateTime.
+             * The time when the user was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -226,7 +226,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the user.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -234,7 +234,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -242,7 +242,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address of the user.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -250,7 +250,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * FirstName.
+             * The first name of the user.
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -258,7 +258,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * LastName.
+             * The last name of the user.
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -266,7 +266,11 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * ProvisionType.
+             * The type of the user. Valid values:
+             * <p>
+             * 
+             * *   Manual: The user is manually created.
+             * *   Synchronized: The user is synchronized from an external identity provider (IdP).
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -274,7 +278,11 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the user. Valid values:
+             * <p>
+             * 
+             * *   Enabled: The logon of the user is enabled.
+             * *   Disabled: The logon of the user is disabled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -282,7 +290,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the information about the user was modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -290,7 +298,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -298,7 +306,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The name of the user.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

@@ -62,7 +62,7 @@ public class ListDirectoriesResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * Directories.
+         * The directories.
          */
         public Builder directories(java.util.List < Directories> directories) {
             this.directories = directories;
@@ -70,7 +70,7 @@ public class ListDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListDirectoriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * The number of directories.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -166,7 +166,7 @@ public class ListDirectoriesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the directory was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -174,7 +174,7 @@ public class ListDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * The ID of the directory.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -182,7 +182,7 @@ public class ListDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryName.
+             * The name of the directory.
              */
             public Builder directoryName(String directoryName) {
                 this.directoryName = directoryName;
@@ -190,7 +190,7 @@ public class ListDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region ID of the directory.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -198,7 +198,7 @@ public class ListDirectoriesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the directory was modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -62,7 +62,7 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
         private Integer totalCounts; 
 
         /**
-         * PermissionPolicies.
+         * The policies.
          */
         public Builder permissionPolicies(java.util.List < PermissionPolicies> permissionPolicies) {
             this.permissionPolicies = permissionPolicies;
@@ -70,7 +70,7 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
         }
 
         /**
-         * TotalCounts.
+         * The total number of policies.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -154,7 +154,7 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
             private String permissionPolicyType; 
 
             /**
-             * AddTime.
+             * The time when the policy was created for the access configuration.
              */
             public Builder addTime(String addTime) {
                 this.addTime = addTime;
@@ -162,7 +162,10 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
             }
 
             /**
-             * PermissionPolicyDocument.
+             * The configurations of the inline policy.
+             * <p>
+             * 
+             * >  This parameter is returned only when the value of the PermissionPolicyType parameter is Inline.
              */
             public Builder permissionPolicyDocument(String permissionPolicyDocument) {
                 this.permissionPolicyDocument = permissionPolicyDocument;
@@ -170,7 +173,7 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
             }
 
             /**
-             * PermissionPolicyName.
+             * The name of the policy.
              */
             public Builder permissionPolicyName(String permissionPolicyName) {
                 this.permissionPolicyName = permissionPolicyName;
@@ -178,7 +181,7 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
             }
 
             /**
-             * PermissionPolicyType.
+             * The type of the policy.
              */
             public Builder permissionPolicyType(String permissionPolicyType) {
                 this.permissionPolicyType = permissionPolicyType;

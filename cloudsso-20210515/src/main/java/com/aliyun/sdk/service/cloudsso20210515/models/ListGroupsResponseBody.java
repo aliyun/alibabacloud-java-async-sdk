@@ -98,7 +98,7 @@ public class ListGroupsResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * Groups.
+         * The groups.
          */
         public Builder groups(java.util.List < Groups> groups) {
             this.groups = groups;
@@ -106,7 +106,11 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * IsTruncated.
+         * Indicates whether the queried entries are truncated. Valid values:
+         * <p>
+         * 
+         * *   true: The queried entries are truncated.
+         * *   false: The queried entries are not truncated.
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -114,7 +118,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +126,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is returned for the next page.
+         * <p>
+         * 
+         * >  This parameter is returned only when the `IsTruncated` parameter is set to `true`.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +137,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +145,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * The total number of entries returned.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -238,7 +245,7 @@ public class ListGroupsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the group was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -246,7 +253,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the group.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -254,7 +261,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -262,7 +269,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -270,7 +277,11 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ProvisionType.
+             * The type of the group. Valid values:
+             * <p>
+             * 
+             * *   Manual: The group is manually created.
+             * *   Synchronized: The group is synchronized from an external IdP.
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -278,7 +289,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the information about the group was modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

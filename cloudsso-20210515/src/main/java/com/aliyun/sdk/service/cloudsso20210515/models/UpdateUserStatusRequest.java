@@ -82,7 +82,7 @@ public class UpdateUserStatusRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -91,7 +91,11 @@ public class UpdateUserStatusRequest extends Request {
         }
 
         /**
-         * NewStatus.
+         * The new status of the user. Valid values:
+         * <p>
+         * 
+         * *   Enabled: The logon of the user is enabled.
+         * *   Disabled: The logon of the user is disabled.
          */
         public Builder newStatus(String newStatus) {
             this.putQueryParameter("NewStatus", newStatus);
@@ -100,7 +104,7 @@ public class UpdateUserStatusRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the user.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

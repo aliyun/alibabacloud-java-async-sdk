@@ -62,7 +62,7 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * SCIMServerCredentials.
+         * The SCIM credentials.
          */
         public Builder SCIMServerCredentials(java.util.List < SCIMServerCredentials> SCIMServerCredentials) {
             this.SCIMServerCredentials = SCIMServerCredentials;
@@ -78,7 +78,7 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * The total number of entries returned.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -178,7 +178,7 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * The time when the SCIM credential was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -186,7 +186,7 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialId.
+             * The ID of the SCIM credential.
              */
             public Builder credentialId(String credentialId) {
                 this.credentialId = credentialId;
@@ -194,7 +194,7 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialType.
+             * The type of the SCIM credential.
              */
             public Builder credentialType(String credentialType) {
                 this.credentialType = credentialType;
@@ -202,7 +202,7 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * The ID of the directory.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -210,7 +210,7 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the SCIM credential expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -218,7 +218,11 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the SCIM credential. Valid values:
+             * <p>
+             * 
+             * *   Enabled: The SCIM credential is enabled.
+             * *   Disabled: The SCIM credential is disabled.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -96,7 +96,7 @@ public class UpdateInlinePolicyForAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * AccessConfigurationId.
+         * The ID of the access configuration.
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -105,7 +105,7 @@ public class UpdateInlinePolicyForAccessConfigurationRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -114,7 +114,7 @@ public class UpdateInlinePolicyForAccessConfigurationRequest extends Request {
         }
 
         /**
-         * InlinePolicyName.
+         * The name of the inline policy.
          */
         public Builder inlinePolicyName(String inlinePolicyName) {
             this.putQueryParameter("InlinePolicyName", inlinePolicyName);
@@ -123,7 +123,12 @@ public class UpdateInlinePolicyForAccessConfigurationRequest extends Request {
         }
 
         /**
-         * NewInlinePolicyDocument.
+         * The new configurations of the inline policy.
+         * <p>
+         * 
+         * The value can be up to 4,096 characters in length.
+         * 
+         * For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](~~93739~~).
          */
         public Builder newInlinePolicyDocument(String newInlinePolicyDocument) {
             this.putQueryParameter("NewInlinePolicyDocument", newInlinePolicyDocument);

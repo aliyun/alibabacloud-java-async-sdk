@@ -138,7 +138,7 @@ public class UpdateUserRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -147,7 +147,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewDescription.
+         * The new description of the user.
          */
         public Builder newDescription(String newDescription) {
             this.putQueryParameter("NewDescription", newDescription);
@@ -156,7 +156,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewDisplayName.
+         * The new display name of the user.
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);
@@ -165,7 +165,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewEmail.
+         * The new email address of the user.
          */
         public Builder newEmail(String newEmail) {
             this.putQueryParameter("NewEmail", newEmail);
@@ -174,7 +174,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewFirstName.
+         * The new first name of the user.
          */
         public Builder newFirstName(String newFirstName) {
             this.putQueryParameter("NewFirstName", newFirstName);
@@ -183,7 +183,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewLastName.
+         * The new last name of the user.
          */
         public Builder newLastName(String newLastName) {
             this.putQueryParameter("NewLastName", newLastName);
@@ -192,7 +192,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the user.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

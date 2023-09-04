@@ -54,7 +54,7 @@ public class GetDirectorySAMLServiceProviderInfoRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);

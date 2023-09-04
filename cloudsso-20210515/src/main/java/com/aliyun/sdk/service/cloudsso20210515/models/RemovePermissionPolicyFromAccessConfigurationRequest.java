@@ -96,7 +96,7 @@ public class RemovePermissionPolicyFromAccessConfigurationRequest extends Reques
         } 
 
         /**
-         * AccessConfigurationId.
+         * The ID of the access configuration.
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -105,7 +105,7 @@ public class RemovePermissionPolicyFromAccessConfigurationRequest extends Reques
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -114,7 +114,7 @@ public class RemovePermissionPolicyFromAccessConfigurationRequest extends Reques
         }
 
         /**
-         * PermissionPolicyName.
+         * The name of the policy.
          */
         public Builder permissionPolicyName(String permissionPolicyName) {
             this.putQueryParameter("PermissionPolicyName", permissionPolicyName);
@@ -123,7 +123,11 @@ public class RemovePermissionPolicyFromAccessConfigurationRequest extends Reques
         }
 
         /**
-         * PermissionPolicyType.
+         * The type of the policy. Valid values:
+         * <p>
+         * 
+         * *   System: system policy
+         * *   Inline: inline policy
          */
         public Builder permissionPolicyType(String permissionPolicyType) {
             this.putQueryParameter("PermissionPolicyType", permissionPolicyType);

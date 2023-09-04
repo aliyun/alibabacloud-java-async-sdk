@@ -50,7 +50,7 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
         private SCIMServerCredential SCIMServerCredential; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
         }
 
         /**
-         * SCIMServerCredential.
+         * The information about the SCIM credential.
          */
         public Builder SCIMServerCredential(SCIMServerCredential SCIMServerCredential) {
             this.SCIMServerCredential = SCIMServerCredential;
@@ -158,7 +158,7 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * The time when the SCIM credential was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -166,7 +166,7 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialId.
+             * The ID of the SCIM credential.
              */
             public Builder credentialId(String credentialId) {
                 this.credentialId = credentialId;
@@ -174,7 +174,7 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * CredentialType.
+             * The type of the SCIM credential.
              */
             public Builder credentialType(String credentialType) {
                 this.credentialType = credentialType;
@@ -182,7 +182,7 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * The ID of the directory.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -190,7 +190,7 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The time when the SCIM credential expires.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -198,7 +198,11 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the SCIM credential. Valid values:
+             * <p>
+             * 
+             * *   Enabled: The SCIM credential is enabled.
+             * *   Disabled: The SCIM credential is disabled.
              */
             public Builder status(String status) {
                 this.status = status;

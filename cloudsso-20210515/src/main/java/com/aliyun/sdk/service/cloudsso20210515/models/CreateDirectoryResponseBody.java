@@ -50,7 +50,7 @@ public class CreateDirectoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Directory.
+         * The information about the directory.
          */
         public Builder directory(Directory directory) {
             this.directory = directory;
@@ -58,7 +58,7 @@ public class CreateDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -146,7 +146,7 @@ public class CreateDirectoryResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * CreateTime.
+             * The time when the directory was created. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -154,7 +154,7 @@ public class CreateDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * The ID of the directory.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -162,7 +162,7 @@ public class CreateDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryName.
+             * The name of the directory.
              */
             public Builder directoryName(String directoryName) {
                 this.directoryName = directoryName;
@@ -170,7 +170,7 @@ public class CreateDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region ID of the directory.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -178,7 +178,7 @@ public class CreateDirectoryResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the directory was modified. The time is displayed in UTC.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -62,7 +62,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * MFADevices.
+         * The MFA devices.
          */
         public Builder MFADevices(java.util.List < MFADevices> MFADevices) {
             this.MFADevices = MFADevices;
@@ -70,7 +70,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +78,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * The total number of MFA devices.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -166,7 +166,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             private String userId; 
 
             /**
-             * DeviceId.
+             * The ID of the MFA device.
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -174,7 +174,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceName.
+             * The name of the MFA device.
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -182,7 +182,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceType.
+             * The type of the MFA device. The value is fixed as TOTP, which indicates a virtual MFA device. Virtual MFA devices are based on the Time-based One-time Password (TOTP) algorithm.
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -190,7 +190,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveTime.
+             * The time when the MFA device was enabled.
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -198,7 +198,7 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;

@@ -98,7 +98,11 @@ public class ListUsersResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * IsTruncated.
+         * Indicates whether the queried entries are truncated. Valid values:
+         * <p>
+         * 
+         * *   true: The queried entries are truncated.
+         * *   false: The queried entries are not truncated.
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -106,7 +110,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +118,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is returned for the next page.
+         * <p>
+         * 
+         * >  This parameter is returned only when the value of `IsTruncated` is `true`.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +129,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +137,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * The total number of entries returned.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -138,7 +145,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * The users.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -298,7 +305,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * CreateTime.
+             * The time when the user was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -306,7 +313,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the user.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -314,7 +321,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -322,7 +329,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address of the user.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -330,7 +337,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * FirstName.
+             * The first name of the user.
              */
             public Builder firstName(String firstName) {
                 this.firstName = firstName;
@@ -338,7 +345,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * LastName.
+             * The last name of the user.
              */
             public Builder lastName(String lastName) {
                 this.lastName = lastName;
@@ -346,7 +353,11 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ProvisionType.
+             * The type of the user. Valid values:
+             * <p>
+             * 
+             * *   Manual: The user is manually created.
+             * *   Synchronized: The user is synchronized from an external IdP.
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -354,7 +365,11 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the user. Valid values:
+             * <p>
+             * 
+             * *   Enabled: The logon of the user is enabled.
+             * *   Disabled: The logon of the user is disabled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -362,7 +377,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the information about the user was modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -370,7 +385,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -378,7 +393,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The name of the user.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

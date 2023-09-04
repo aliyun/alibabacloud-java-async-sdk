@@ -50,7 +50,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         private java.util.List < Tasks> tasks; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * The information about the task.
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -206,7 +206,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * AccessConfigurationId.
+             * The ID of the access configuration.
              */
             public Builder accessConfigurationId(String accessConfigurationId) {
                 this.accessConfigurationId = accessConfigurationId;
@@ -214,7 +214,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * AccessConfigurationName.
+             * The name of the access configuration.
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
@@ -222,7 +222,12 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   InProgress: The task is running.
+             * *   Success: The task is successful.
+             * *   Failed: The task failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -230,7 +235,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the task object.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -238,7 +243,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the task object.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -246,7 +251,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPath.
+             * The path ID of the task object in your resource directory.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -254,7 +259,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPathName.
+             * The path name of the task object in your resource directory.
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -262,7 +267,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the task object. The value is fixed as RD-Account, which indicates an account your resource directory.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -270,7 +275,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -278,7 +283,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. The value is fixed as ProvisionAccessConfiguration, which indicates that an access configuration is provisioned.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

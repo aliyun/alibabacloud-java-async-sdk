@@ -98,7 +98,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * GroupMembers.
+         * The users in the group.
          */
         public Builder groupMembers(java.util.List < GroupMembers> groupMembers) {
             this.groupMembers = groupMembers;
@@ -106,7 +106,11 @@ public class ListGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * IsTruncated.
+         * Indicates whether the queried entries are truncated. Valid values:
+         * <p>
+         * 
+         * *   true: The queried entries are truncated.
+         * *   false: The queried entries are not truncated.
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -114,7 +118,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +126,10 @@ public class ListGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is returned for the next page.
+         * <p>
+         * 
+         * >  This parameter is returned only when the value of `IsTruncated` is `true`.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +137,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +145,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * The total number of entries returned.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -274,7 +281,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * Description.
+             * The description of the user.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -282,7 +289,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -290,7 +297,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address of the user.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -298,7 +305,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -306,7 +313,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * JoinTime.
+             * The time when the user was added to the user group.
              */
             public Builder joinTime(String joinTime) {
                 this.joinTime = joinTime;
@@ -314,7 +321,11 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * ProvisionType.
+             * The type of the user. Valid values:
+             * <p>
+             * 
+             * *   Manual: The user is manually created.
+             * *   Synchronized: The user is synchronized from an external identity provider (IdP).
              */
             public Builder provisionType(String provisionType) {
                 this.provisionType = provisionType;
@@ -322,7 +333,11 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the user. Valid values:
+             * <p>
+             * 
+             * *   Enabled: The logon of the user is enabled.
+             * *   Disabled: The logon of the user is disabled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -330,7 +345,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -338,7 +353,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The name of the user.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

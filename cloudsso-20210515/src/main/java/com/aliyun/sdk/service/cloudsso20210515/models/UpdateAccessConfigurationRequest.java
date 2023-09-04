@@ -110,7 +110,7 @@ public class UpdateAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * AccessConfigurationId.
+         * The ID of the access configuration.
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -119,7 +119,7 @@ public class UpdateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -128,7 +128,10 @@ public class UpdateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * NewDescription.
+         * The new description of the access configuration.
+         * <p>
+         * 
+         * The description can be up to 1,024 characters in length.
          */
         public Builder newDescription(String newDescription) {
             this.putQueryParameter("NewDescription", newDescription);
@@ -137,7 +140,10 @@ public class UpdateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * NewRelayState.
+         * The new initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.
+         * <p>
+         * 
+         * The web page must be a page of the Alibaba Cloud Management Console.
          */
         public Builder newRelayState(String newRelayState) {
             this.putQueryParameter("NewRelayState", newRelayState);
@@ -146,7 +152,12 @@ public class UpdateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * NewSessionDuration.
+         * The new duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.
+         * <p>
+         * 
+         * Unit: seconds.
+         * 
+         * Valid values: 900 to 43200. The value 900 indicates 15 minutes. The value 43200 indicates 12 hours.
          */
         public Builder newSessionDuration(Integer newSessionDuration) {
             this.putQueryParameter("NewSessionDuration", newSessionDuration);

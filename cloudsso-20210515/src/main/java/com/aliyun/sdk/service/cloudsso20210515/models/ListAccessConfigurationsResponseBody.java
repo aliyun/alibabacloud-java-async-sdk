@@ -98,7 +98,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * AccessConfigurations.
+         * The access configurations.
          */
         public Builder accessConfigurations(java.util.List < AccessConfigurations> accessConfigurations) {
             this.accessConfigurations = accessConfigurations;
@@ -106,7 +106,11 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * IsTruncated.
+         * Indicates whether the queried entries are truncated. Valid values:
+         * <p>
+         * 
+         * *   true: The queried entries are truncated.
+         * *   false: The queried entries are not truncated.
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -114,7 +118,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +126,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is returned for the next page.
+         * <p>
+         * 
+         * >  This parameter is returned only when the `IsTruncated` parameter is set to `true`.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +137,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +145,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * The total number of entries returned.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -262,7 +269,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * AccessConfigurationId.
+             * The ID of the access configuration.
              */
             public Builder accessConfigurationId(String accessConfigurationId) {
                 this.accessConfigurationId = accessConfigurationId;
@@ -270,7 +277,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessConfigurationName.
+             * The name of the access configuration.
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
@@ -278,7 +285,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the access configuration was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -286,7 +293,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the access configuration.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -294,7 +301,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * RelayState.
+             * The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.
              */
             public Builder relayState(String relayState) {
                 this.relayState = relayState;
@@ -302,7 +309,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionDuration.
+             * The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.
+             * <p>
+             * 
+             * Unit: seconds.
              */
             public Builder sessionDuration(Integer sessionDuration) {
                 this.sessionDuration = sessionDuration;
@@ -310,7 +320,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * StatusNotifications.
+             * The status notification.
              */
             public Builder statusNotifications(java.util.List < String > statusNotifications) {
                 this.statusNotifications = statusNotifications;
@@ -318,7 +328,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the information about the access configuration was modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

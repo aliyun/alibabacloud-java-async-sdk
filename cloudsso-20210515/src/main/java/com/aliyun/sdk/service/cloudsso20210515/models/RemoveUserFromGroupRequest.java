@@ -82,7 +82,7 @@ public class RemoveUserFromGroupRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -91,7 +91,7 @@ public class RemoveUserFromGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -100,7 +100,7 @@ public class RemoveUserFromGroupRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the user.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

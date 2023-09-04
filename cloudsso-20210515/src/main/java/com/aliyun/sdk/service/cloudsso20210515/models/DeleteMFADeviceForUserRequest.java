@@ -82,7 +82,7 @@ public class DeleteMFADeviceForUserRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -91,7 +91,10 @@ public class DeleteMFADeviceForUserRequest extends Request {
         }
 
         /**
-         * MFADeviceId.
+         * The ID of the MFA device.
+         * <p>
+         * 
+         * You can call the [ListMFADevicesForUser](~~333531~~) operation to query the IDs of MFA devices.
          */
         public Builder MFADeviceId(String MFADeviceId) {
             this.putQueryParameter("MFADeviceId", MFADeviceId);
@@ -100,7 +103,7 @@ public class DeleteMFADeviceForUserRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the user.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

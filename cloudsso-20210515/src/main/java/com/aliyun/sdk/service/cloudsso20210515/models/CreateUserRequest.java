@@ -152,7 +152,10 @@ public class CreateUserRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the user.
+         * <p>
+         * 
+         * The description can be up to 1,024 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -161,7 +164,7 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -170,7 +173,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * The display name of the user.
+         * <p>
+         * 
+         * The name can be up to 256 characters in length.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -179,7 +185,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Email.
+         * The email address of the user. The email address must be unique within the directory.
+         * <p>
+         * 
+         * The email address can be up to 128 characters in length.
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -188,7 +197,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * FirstName.
+         * The first name of the user.
+         * <p>
+         * 
+         * The name can be up to 64 characters in length.
          */
         public Builder firstName(String firstName) {
             this.putQueryParameter("FirstName", firstName);
@@ -197,7 +209,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * LastName.
+         * The last name of the user.
+         * <p>
+         * 
+         * The name can be up to 64 characters in length.
          */
         public Builder lastName(String lastName) {
             this.putQueryParameter("LastName", lastName);
@@ -206,7 +221,11 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of the user. Valid values:
+         * <p>
+         * 
+         * *   Enabled: The logon of the user is enabled. This is the default value.
+         * *   Disabled: The logon of the user is disabled.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -215,7 +234,12 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The name of the user. The name must be unique within the directory. The name cannot be changed.
+         * <p>
+         * 
+         * The name can contain numbers, letters, and the following special characters: `@_-.`
+         * 
+         * The name can be up to 64 characters in length.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

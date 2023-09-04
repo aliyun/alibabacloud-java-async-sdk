@@ -82,7 +82,7 @@ public class ListPermissionPoliciesInAccessConfigurationRequest extends Request 
         } 
 
         /**
-         * AccessConfigurationId.
+         * The ID of the access configuration.
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -91,7 +91,7 @@ public class ListPermissionPoliciesInAccessConfigurationRequest extends Request 
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -100,7 +100,13 @@ public class ListPermissionPoliciesInAccessConfigurationRequest extends Request 
         }
 
         /**
-         * PermissionPolicyType.
+         * The type of the policy. The type can be used to filter policies. Valid values:
+         * <p>
+         * 
+         * *   System: system policy
+         * *   Inline: inline policy
+         * 
+         * If you do not specify this parameter, all types of policies are queried.
          */
         public Builder permissionPolicyType(String permissionPolicyType) {
             this.putQueryParameter("PermissionPolicyType", permissionPolicyType);

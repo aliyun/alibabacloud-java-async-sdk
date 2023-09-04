@@ -50,7 +50,12 @@ public class GetMFAAuthenticationSettingsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MFAAuthenticationAdvanceSettings.
+         * Indicates whether MFA is enabled for all users. Valid values:
+         * <p>
+         * 
+         * *   Enabled: MFA is enabled for all users.
+         * *   Byuser: User-specific settings are applied.
+         * *   Disabled: MFA is disabled for all users.
          */
         public Builder MFAAuthenticationAdvanceSettings(String MFAAuthenticationAdvanceSettings) {
             this.MFAAuthenticationAdvanceSettings = MFAAuthenticationAdvanceSettings;
@@ -58,7 +63,7 @@ public class GetMFAAuthenticationSettingsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

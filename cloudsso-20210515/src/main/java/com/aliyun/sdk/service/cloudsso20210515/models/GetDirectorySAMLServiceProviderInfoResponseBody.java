@@ -50,7 +50,7 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
         private SAMLServiceProvider SAMLServiceProvider; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
         }
 
         /**
-         * SAMLServiceProvider.
+         * The information about the SP.
          */
         public Builder SAMLServiceProvider(SAMLServiceProvider SAMLServiceProvider) {
             this.SAMLServiceProvider = SAMLServiceProvider;
@@ -134,7 +134,7 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
             private String entityId; 
 
             /**
-             * AcsUrl.
+             * The Assertion Consumer Service (ACS) URL of the SP.
              */
             public Builder acsUrl(String acsUrl) {
                 this.acsUrl = acsUrl;
@@ -142,7 +142,7 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * The ID of the directory.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -150,7 +150,7 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedMetadataDocument.
+             * The metadata file of the SP. The value of this parameter is Base64-encoded.
              */
             public Builder encodedMetadataDocument(String encodedMetadataDocument) {
                 this.encodedMetadataDocument = encodedMetadataDocument;
@@ -158,7 +158,7 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * The entity ID of the SP.
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;

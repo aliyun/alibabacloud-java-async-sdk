@@ -68,7 +68,7 @@ public class GetTaskRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,7 +77,7 @@ public class GetTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The ID of the task.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

@@ -50,7 +50,7 @@ public class GetTaskResponseBody extends TeaModel {
         private Task task; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Task.
+         * The information about the task.
          */
         public Builder task(Task task) {
             this.task = task;
@@ -278,7 +278,7 @@ public class GetTaskResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * AccessConfigurationId.
+             * The ID of the access configuration.
              */
             public Builder accessConfigurationId(String accessConfigurationId) {
                 this.accessConfigurationId = accessConfigurationId;
@@ -286,7 +286,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * AccessConfigurationName.
+             * The name of the access configuration.
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
@@ -294,7 +294,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the task ended.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -302,7 +302,10 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * FailureReason.
+             * The cause of the task failure.
+             * <p>
+             * 
+             * >  This parameter is returned only when the value of `Status` is `Failed`.
              */
             public Builder failureReason(String failureReason) {
                 this.failureReason = failureReason;
@@ -310,7 +313,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalId.
+             * The ID of the CloudSSO identity.
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -318,7 +321,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalName.
+             * The name of the CloudSSO identity.
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -326,7 +329,11 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalType.
+             * The type of the CloudSSO identity. Valid values:
+             * <p>
+             * 
+             * *   User
+             * *   Group
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -334,7 +341,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the task started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -342,7 +349,12 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   InProgress: The task is running.
+             * *   Success: The task is successful.
+             * *   Failed: The task failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -350,7 +362,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the task object.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -358,7 +370,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the task object.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -366,7 +378,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPath.
+             * The path ID of the task object in the resource directory.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -374,7 +386,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPathName.
+             * The path name of the task object in the resource directory.
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -382,7 +394,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -390,7 +402,7 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -398,7 +410,13 @@ public class GetTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   ProvisionAccessConfiguration: An access configuration is provisioned.
+             * *   DeprovisionAccessConfiguration: An access configuration is de-provisioned.
+             * *   CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.
+             * *   DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

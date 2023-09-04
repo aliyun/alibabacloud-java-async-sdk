@@ -68,7 +68,10 @@ public class RemoveExternalSAMLIdPCertificateRequest extends Request {
         } 
 
         /**
-         * CertificateId.
+         * The ID of the certificate.
+         * <p>
+         * 
+         * You can call the [ListExternalSAMLIdPCertificates](~~341629~~) operation to query the IDs of certificates.
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -77,7 +80,7 @@ public class RemoveExternalSAMLIdPCertificateRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);

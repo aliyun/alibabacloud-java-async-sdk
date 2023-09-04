@@ -96,7 +96,7 @@ public class UpdateGroupRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -105,7 +105,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -114,7 +114,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * NewDescription.
+         * The new description of the group.
          */
         public Builder newDescription(String newDescription) {
             this.putQueryParameter("NewDescription", newDescription);
@@ -123,7 +123,7 @@ public class UpdateGroupRequest extends Request {
         }
 
         /**
-         * NewGroupName.
+         * The new name of the group.
          */
         public Builder newGroupName(String newGroupName) {
             this.putQueryParameter("NewGroupName", newGroupName);

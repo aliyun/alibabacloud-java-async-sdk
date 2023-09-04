@@ -68,7 +68,7 @@ public class DeleteSCIMServerCredentialRequest extends Request {
         } 
 
         /**
-         * CredentialId.
+         * The ID of the SCIM credential.
          */
         public Builder credentialId(String credentialId) {
             this.putQueryParameter("CredentialId", credentialId);
@@ -77,7 +77,7 @@ public class DeleteSCIMServerCredentialRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);

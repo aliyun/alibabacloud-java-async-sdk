@@ -98,7 +98,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * AccessConfigurationProvisionings.
+         * The accounts for which the access configuration is provisioned.
          */
         public Builder accessConfigurationProvisionings(java.util.List < AccessConfigurationProvisionings> accessConfigurationProvisionings) {
             this.accessConfigurationProvisionings = accessConfigurationProvisionings;
@@ -106,7 +106,11 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * IsTruncated.
+         * Indicates whether the queried entries are truncated. Valid values:
+         * <p>
+         * 
+         * *   true: The queried entries are truncated.
+         * *   false: The queried entries are not truncated.
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -114,7 +118,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +126,10 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is returned for the next page.
+         * <p>
+         * 
+         * >  This parameter is returned only when the value of `IsTruncated` is `true`.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +137,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +145,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * The total number of entries returned.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -322,7 +329,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * AccessConfigurationId.
+             * The ID of the access configuration.
              */
             public Builder accessConfigurationId(String accessConfigurationId) {
                 this.accessConfigurationId = accessConfigurationId;
@@ -330,7 +337,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessConfigurationName.
+             * The name of the access configuration.
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
@@ -338,7 +345,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The first time when the access configuration was provisioned.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -346,7 +353,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * RAMPolicyNames.
+             * The name of the custom policy that is created for an account in your resource directory.
              */
             public Builder RAMPolicyNames(java.util.List < String > RAMPolicyNames) {
                 this.RAMPolicyNames = RAMPolicyNames;
@@ -354,7 +361,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * RAMRoleName.
+             * The name of the RAM role that is created for an account in your resource directory.
              */
             public Builder RAMRoleName(String RAMRoleName) {
                 this.RAMRoleName = RAMRoleName;
@@ -362,7 +369,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * SAMLProviderName.
+             * The name of the Security Assertion Markup Language (SAML) identity provider (IdP) that is created within an account in your resource directory.
              */
             public Builder SAMLProviderName(String SAMLProviderName) {
                 this.SAMLProviderName = SAMLProviderName;
@@ -370,7 +377,12 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the access configuration. Valid values:
+             * <p>
+             * 
+             * *   Provisioned: The access configuration is provisioned.
+             * *   ReprovisionRequired: The access configuration needs to be re-provisioned.
+             * *   DeprovisionFailed: The access configuration failed to be provisioned.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -378,7 +390,10 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the task object.
+             * <p>
+             * 
+             * If the value of TargetType is `RD-Account`, the value of this parameter is the UID of an account in your resource directory.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -386,7 +401,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the task object.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -394,7 +409,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPath.
+             * The path ID of the task object in your resource directory.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -402,7 +417,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPathName.
+             * The path name of the task object in your resource directory.
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -410,7 +425,10 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the task object.
+             * <p>
+             * 
+             * The value is fixed as RD-Account, which indicates an account in your resource directory.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -418,7 +436,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The last time when the access configuration was provisioned.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

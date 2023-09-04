@@ -50,7 +50,7 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessConfiguration.
+         * The information about the access configuration.
          */
         public Builder accessConfiguration(AccessConfiguration accessConfiguration) {
             this.accessConfiguration = accessConfiguration;
@@ -58,7 +58,7 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -182,7 +182,7 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * AccessConfigurationId.
+             * The ID of the access configuration.
              */
             public Builder accessConfigurationId(String accessConfigurationId) {
                 this.accessConfigurationId = accessConfigurationId;
@@ -190,7 +190,7 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * AccessConfigurationName.
+             * The name of the access configuration.
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
@@ -198,7 +198,7 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the access configuration was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -206,7 +206,7 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the access configuration.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +214,7 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * RelayState.
+             * The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.
              */
             public Builder relayState(String relayState) {
                 this.relayState = relayState;
@@ -222,7 +222,10 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * SessionDuration.
+             * The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.
+             * <p>
+             * 
+             * Unit: seconds.
              */
             public Builder sessionDuration(Integer sessionDuration) {
                 this.sessionDuration = sessionDuration;
@@ -230,7 +233,7 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * StatusNotifications.
+             * The status notification.
              */
             public Builder statusNotifications(java.util.List < String > statusNotifications) {
                 this.statusNotifications = statusNotifications;
@@ -238,7 +241,7 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the information about the access configuration was modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

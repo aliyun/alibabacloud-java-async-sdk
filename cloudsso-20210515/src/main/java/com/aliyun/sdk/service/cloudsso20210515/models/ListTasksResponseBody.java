@@ -98,7 +98,11 @@ public class ListTasksResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * IsTruncated.
+         * Indicates whether the queried entries are truncated. Valid values:
+         * <p>
+         * 
+         * *   true: The queried entries are truncated.
+         * *   false: The queried entries are not truncated.
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -106,7 +110,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +118,10 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is returned for the next page.
+         * <p>
+         * 
+         * >  This parameter is returned only when the value of `IsTruncated` is `true`.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +129,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +137,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Tasks.
+         * The tasks.
          */
         public Builder tasks(java.util.List < Tasks> tasks) {
             this.tasks = tasks;
@@ -138,7 +145,7 @@ public class ListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * The total number of entries returned.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -358,7 +365,7 @@ public class ListTasksResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * AccessConfigurationId.
+             * The ID of the access configuration.
              */
             public Builder accessConfigurationId(String accessConfigurationId) {
                 this.accessConfigurationId = accessConfigurationId;
@@ -366,7 +373,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * AccessConfigurationName.
+             * The name of the access configuration.
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
@@ -374,7 +381,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the task ended.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -382,7 +389,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * FailureReason.
+             * The cause of the task failure.
+             * <p>
+             * 
+             * >  This parameter is returned only when the value of `Status` is `Failed`.
              */
             public Builder failureReason(String failureReason) {
                 this.failureReason = failureReason;
@@ -390,7 +400,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalId.
+             * The ID of the CloudSSO identity.
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -398,7 +408,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalName.
+             * The name of the CloudSSO identity.
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -406,7 +416,11 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalType.
+             * The type of the CloudSSO identity. Valid values:
+             * <p>
+             * 
+             * *   User
+             * *   Group
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -414,7 +428,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the task started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -422,7 +436,12 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the task. Valid values:
+             * <p>
+             * 
+             * *   InProgress: The task is running.
+             * *   Success: The task is successful.
+             * *   Failed: The task failed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -430,7 +449,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the task object.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -438,7 +457,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the task object.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -446,7 +465,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPath.
+             * The path ID of the task object in your resource directory.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -454,7 +473,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPathName.
+             * The path name of the task object in your resource directory.
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -462,7 +481,10 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the task object.
+             * <p>
+             * 
+             * The value is fixed as RD-Account, which indicates an account in your resource directory.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -470,7 +492,7 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The ID of the task.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -478,7 +500,13 @@ public class ListTasksResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The type of the task. Valid values:
+             * <p>
+             * 
+             * *   ProvisionAccessConfiguration: An access configuration is provisioned.
+             * *   DeprovisionAccessConfiguration: An access configuration is de-provisioned.
+             * *   CreateAccessAssignment: Access permissions on an account in your resource directory are assigned.
+             * *   DeleteAccessAssignment: Access permissions on an account in your resource directory are removed.
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;

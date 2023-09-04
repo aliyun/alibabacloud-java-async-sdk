@@ -62,7 +62,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +70,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * SAMLIdPCertificates.
+         * The SAML signing certificates.
          */
         public Builder SAMLIdPCertificates(java.util.List < SAMLIdPCertificates> SAMLIdPCertificates) {
             this.SAMLIdPCertificates = SAMLIdPCertificates;
@@ -78,7 +78,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * The total number of entries returned.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -226,7 +226,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             private String x509Certificate; 
 
             /**
-             * CertificateId.
+             * The ID of the certificate.
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
@@ -234,7 +234,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * The issuer of the certificate.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -242,7 +242,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * NotAfter.
+             * The time when the certificate expires.
              */
             public Builder notAfter(String notAfter) {
                 this.notAfter = notAfter;
@@ -250,7 +250,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * NotBefore.
+             * The time when the certificate was created.
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -258,7 +258,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicKey.
+             * The public key of the certificate. The value of this paremeter is in the PEM format and is Base64-encoded.
              */
             public Builder publicKey(String publicKey) {
                 this.publicKey = publicKey;
@@ -266,7 +266,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * SerialNumber.
+             * The serial number of the certificate.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -274,7 +274,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * SignatureAlgorithm.
+             * The signature algorithm of the certificate.
              */
             public Builder signatureAlgorithm(String signatureAlgorithm) {
                 this.signatureAlgorithm = signatureAlgorithm;
@@ -282,7 +282,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Subject.
+             * The subject of the certificate.
              */
             public Builder subject(String subject) {
                 this.subject = subject;
@@ -290,7 +290,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the certificate.
              */
             public Builder version(Integer version) {
                 this.version = version;
@@ -298,7 +298,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             }
 
             /**
-             * X509Certificate.
+             * The X.509 certificate in the PEM format.
              */
             public Builder x509Certificate(String x509Certificate) {
                 this.x509Certificate = x509Certificate;

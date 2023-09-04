@@ -68,7 +68,7 @@ public class DeleteGroupRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,7 +77,7 @@ public class DeleteGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);

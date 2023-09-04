@@ -68,7 +68,7 @@ public class SetMFAAuthenticationStatusRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,7 +77,11 @@ public class SetMFAAuthenticationStatusRequest extends Request {
         }
 
         /**
-         * MFAAuthenticationStatus.
+         * The status of MFA. Valid values:
+         * <p>
+         * 
+         * *   Enabled
+         * *   Disabled
          */
         public Builder MFAAuthenticationStatus(String MFAAuthenticationStatus) {
             this.putQueryParameter("MFAAuthenticationStatus", MFAAuthenticationStatus);

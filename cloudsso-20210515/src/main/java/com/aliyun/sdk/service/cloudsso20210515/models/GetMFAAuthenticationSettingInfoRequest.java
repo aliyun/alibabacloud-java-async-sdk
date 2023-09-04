@@ -7,30 +7,25 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListMFADevicesForUserRequest} extends {@link RequestModel}
+ * {@link GetMFAAuthenticationSettingInfoRequest} extends {@link RequestModel}
  *
- * <p>ListMFADevicesForUserRequest</p>
+ * <p>GetMFAAuthenticationSettingInfoRequest</p>
  */
-public class ListMFADevicesForUserRequest extends Request {
+public class GetMFAAuthenticationSettingInfoRequest extends Request {
     @Query
     @NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("UserId")
-    private String userId;
-
-    private ListMFADevicesForUserRequest(Builder builder) {
+    private GetMFAAuthenticationSettingInfoRequest(Builder builder) {
         super(builder);
         this.directoryId = builder.directoryId;
-        this.userId = builder.userId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListMFADevicesForUserRequest create() {
+    public static GetMFAAuthenticationSettingInfoRequest create() {
         return builder().build();
     }
 
@@ -46,25 +41,16 @@ public class ListMFADevicesForUserRequest extends Request {
         return this.directoryId;
     }
 
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
-    }
-
-    public static final class Builder extends Request.Builder<ListMFADevicesForUserRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetMFAAuthenticationSettingInfoRequest, Builder> {
         private String directoryId; 
-        private String userId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListMFADevicesForUserRequest request) {
+        private Builder(GetMFAAuthenticationSettingInfoRequest request) {
             super(request);
             this.directoryId = request.directoryId;
-            this.userId = request.userId;
         } 
 
         /**
@@ -76,18 +62,9 @@ public class ListMFADevicesForUserRequest extends Request {
             return this;
         }
 
-        /**
-         * The ID of the user.
-         */
-        public Builder userId(String userId) {
-            this.putQueryParameter("UserId", userId);
-            this.userId = userId;
-            return this;
-        }
-
         @Override
-        public ListMFADevicesForUserRequest build() {
-            return new ListMFADevicesForUserRequest(this);
+        public GetMFAAuthenticationSettingInfoRequest build() {
+            return new GetMFAAuthenticationSettingInfoRequest(this);
         } 
 
     } 

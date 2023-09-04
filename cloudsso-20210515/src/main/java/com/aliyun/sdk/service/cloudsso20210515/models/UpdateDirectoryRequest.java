@@ -68,7 +68,7 @@ public class UpdateDirectoryRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,7 +77,12 @@ public class UpdateDirectoryRequest extends Request {
         }
 
         /**
-         * NewDirectoryName.
+         * The new name of the directory. The name must be globally unique.
+         * <p>
+         * 
+         * The name can contain lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-) and cannot have two consecutive hyphens (-). If you want to start the new name of the directory starts with `d-`, you must set this parameter to the ID of the directory.
+         * 
+         * The name must be 2 to 64 characters in length.
          */
         public Builder newDirectoryName(String newDirectoryName) {
             this.putQueryParameter("NewDirectoryName", newDirectoryName);

@@ -138,7 +138,7 @@ public class DeleteAccessAssignmentRequest extends Request {
         } 
 
         /**
-         * AccessConfigurationId.
+         * The ID of the access configuration.
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -147,7 +147,11 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * DeprovisionStrategy.
+         * Specifies whether to de-provision the access configuration when you remove the access permissions from the CloudSSO identity. The access configuration is used to assign the access permissions, and the identity is the only one that uses the access configuration and is associated with the account. Valid values:
+         * <p>
+         * 
+         * *   DeprovisionForLastAccessAssignmentOnAccount: de-provisions the access configuration.
+         * *   None: does not de-provision the access configuration. This is the default value.
          */
         public Builder deprovisionStrategy(String deprovisionStrategy) {
             this.putQueryParameter("DeprovisionStrategy", deprovisionStrategy);
@@ -156,7 +160,7 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -165,7 +169,11 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * PrincipalId.
+         * The ID of the CloudSSO identity.
+         * <p>
+         * 
+         * *   If you set `PrincipalType` to `User`, set `PrincipalId` to the ID of the CloudSSO user.
+         * *   If you set `PrincipalType` to `Group`, set `PrincipalId` to the ID of the CloudSSO group.
          */
         public Builder principalId(String principalId) {
             this.putQueryParameter("PrincipalId", principalId);
@@ -174,7 +182,11 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * PrincipalType.
+         * The type of the CloudSSO identity. Valid values:
+         * <p>
+         * 
+         * *   User
+         * *   Group
          */
         public Builder principalType(String principalType) {
             this.putQueryParameter("PrincipalType", principalType);
@@ -183,7 +195,7 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * TargetId.
+         * The ID of the task object.
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -192,7 +204,7 @@ public class DeleteAccessAssignmentRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

@@ -68,7 +68,7 @@ public class GetUserMFAAuthenticationSettingsRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,7 +77,7 @@ public class GetUserMFAAuthenticationSettingsRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the user.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);

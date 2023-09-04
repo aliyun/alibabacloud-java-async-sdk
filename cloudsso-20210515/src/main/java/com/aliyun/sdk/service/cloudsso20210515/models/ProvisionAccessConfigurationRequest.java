@@ -96,7 +96,7 @@ public class ProvisionAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * AccessConfigurationId.
+         * The ID of the access configuration.
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -105,7 +105,7 @@ public class ProvisionAccessConfigurationRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -114,7 +114,7 @@ public class ProvisionAccessConfigurationRequest extends Request {
         }
 
         /**
-         * TargetId.
+         * The ID of the task object.
          */
         public Builder targetId(String targetId) {
             this.putQueryParameter("TargetId", targetId);
@@ -123,7 +123,7 @@ public class ProvisionAccessConfigurationRequest extends Request {
         }
 
         /**
-         * TargetType.
+         * The type of the task object. Set the value to RD-Account, which indicates an account in your resource directory.
          */
         public Builder targetType(String targetType) {
             this.putQueryParameter("TargetType", targetType);

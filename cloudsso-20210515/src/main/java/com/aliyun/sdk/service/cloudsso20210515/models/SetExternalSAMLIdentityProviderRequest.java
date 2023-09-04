@@ -138,7 +138,7 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -147,7 +147,10 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * EncodedMetadataDocument.
+         * The metadata file of the IdP. The value of this parameter is Base64-encoded.
+         * <p>
+         * 
+         * The file is provided by the IdP that supports SAML 2.0.
          */
         public Builder encodedMetadataDocument(String encodedMetadataDocument) {
             this.putQueryParameter("EncodedMetadataDocument", encodedMetadataDocument);
@@ -156,7 +159,7 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * EntityId.
+         * The entity ID of the IdP.
          */
         public Builder entityId(String entityId) {
             this.putQueryParameter("EntityId", entityId);
@@ -165,7 +168,7 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * LoginUrl.
+         * The logon URL of the IdP.
          */
         public Builder loginUrl(String loginUrl) {
             this.putQueryParameter("LoginUrl", loginUrl);
@@ -174,7 +177,11 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * SSOStatus.
+         * The status of SSO logon. Valid values:
+         * <p>
+         * 
+         * *   Enabled
+         * *   Disabled (default)
          */
         public Builder SSOStatus(String SSOStatus) {
             this.putQueryParameter("SSOStatus", SSOStatus);
@@ -183,7 +190,11 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * WantRequestSigned.
+         * Specifies whether CloudSSO needs to sign SAML requests. The requests are sent when users log on to the CloudSSO user portal to initiate SAML-based SSO. Valid values:
+         * <p>
+         * 
+         * *   true: yes
+         * *   false: no (default)
          */
         public Builder wantRequestSigned(Boolean wantRequestSigned) {
             this.putQueryParameter("WantRequestSigned", wantRequestSigned);
@@ -192,7 +203,7 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         }
 
         /**
-         * X509Certificate.
+         * The X.509 certificate in the PEM format. If you specify this parameter, all existing certificates are replaced.
          */
         public Builder x509Certificate(String x509Certificate) {
             this.putQueryParameter("X509Certificate", x509Certificate);

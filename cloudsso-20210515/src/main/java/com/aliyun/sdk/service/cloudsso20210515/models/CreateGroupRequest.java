@@ -82,7 +82,10 @@ public class CreateGroupRequest extends Request {
         } 
 
         /**
-         * Description.
+         * The description of the group.
+         * <p>
+         * 
+         * The description can be up to 1,024 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -91,7 +94,7 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -100,7 +103,12 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the group.
+         * <p>
+         * 
+         * The name can contain letters, digits, underscores (\_), hyphens (-), and periods (.).
+         * 
+         * The name can be up to 128 characters in length.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

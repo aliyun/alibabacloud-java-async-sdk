@@ -50,7 +50,7 @@ public class GetExternalSAMLIdentityProviderResponseBody extends TeaModel {
         private SAMLIdentityProviderConfiguration SAMLIdentityProviderConfiguration; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +58,7 @@ public class GetExternalSAMLIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * SAMLIdentityProviderConfiguration.
+         * The configurations of the IdP.
          */
         public Builder SAMLIdentityProviderConfiguration(SAMLIdentityProviderConfiguration SAMLIdentityProviderConfiguration) {
             this.SAMLIdentityProviderConfiguration = SAMLIdentityProviderConfiguration;
@@ -194,7 +194,7 @@ public class GetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             private Boolean wantRequestSigned; 
 
             /**
-             * CertificateIds.
+             * The ID of the SAML signing certificate.
              */
             public Builder certificateIds(java.util.List < String > certificateIds) {
                 this.certificateIds = certificateIds;
@@ -202,7 +202,7 @@ public class GetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the IdP was configured for the first time.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -210,7 +210,7 @@ public class GetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * The ID of the directory.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -218,7 +218,7 @@ public class GetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * EncodedMetadataDocument.
+             * The metadata file of the IdP. The value of this parameter is Base64-encoded.
              */
             public Builder encodedMetadataDocument(String encodedMetadataDocument) {
                 this.encodedMetadataDocument = encodedMetadataDocument;
@@ -226,7 +226,7 @@ public class GetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * The entity ID of the IdP.
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -234,7 +234,7 @@ public class GetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * LoginUrl.
+             * The logon URL of the IdP.
              */
             public Builder loginUrl(String loginUrl) {
                 this.loginUrl = loginUrl;
@@ -242,7 +242,11 @@ public class GetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * SSOStatus.
+             * The status of SSO logon. Valid values:
+             * <p>
+             * 
+             * *   Enabled
+             * *   Disabled
              */
             public Builder SSOStatus(String SSOStatus) {
                 this.SSOStatus = SSOStatus;
@@ -250,7 +254,7 @@ public class GetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the IdP configurations were last modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -258,7 +262,11 @@ public class GetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * WantRequestSigned.
+             * Indicates whether CloudSSO needs to sign SAML requests. The requests are sent when users log on to the CloudSSO user portal to initiate SAML-based SSO. Valid values:
+             * <p>
+             * 
+             * *   true: yes
+             * *   false: no (default)
              */
             public Builder wantRequestSigned(Boolean wantRequestSigned) {
                 this.wantRequestSigned = wantRequestSigned;

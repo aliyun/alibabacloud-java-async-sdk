@@ -110,7 +110,7 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
         } 
 
         /**
-         * AccessConfigurationId.
+         * The ID of the access configuration.
          */
         public Builder accessConfigurationId(String accessConfigurationId) {
             this.putQueryParameter("AccessConfigurationId", accessConfigurationId);
@@ -119,7 +119,7 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
         }
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -128,7 +128,12 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
         }
 
         /**
-         * InlinePolicyDocument.
+         * The configurations of the inline policy.
+         * <p>
+         * 
+         * The value can be up to 4,096 characters in length.
+         * 
+         * If you set `PermissionPolicyType` to `Inline`, you must specify this parameter. For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](~~93739~~).
          */
         public Builder inlinePolicyDocument(String inlinePolicyDocument) {
             this.putQueryParameter("InlinePolicyDocument", inlinePolicyDocument);
@@ -137,7 +142,11 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
         }
 
         /**
-         * PermissionPolicyName.
+         * The name of the policy.
+         * <p>
+         * 
+         * *   If you set `PermissionPolicyType` to `System`, you must set this parameter to the name of the system policy. You can obtain the name of the system policy from RAM.
+         * *   If you set `PermissionPolicyType` to `Inline`, you must set this parameter to the name of the inline policy. A custom value is supported.
          */
         public Builder permissionPolicyName(String permissionPolicyName) {
             this.putQueryParameter("PermissionPolicyName", permissionPolicyName);
@@ -146,7 +155,11 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
         }
 
         /**
-         * PermissionPolicyType.
+         * The type of the policy. Valid values:
+         * <p>
+         * 
+         * *   System: system policy. Resource Access Management (RAM) system policies are reused.
+         * *   Inline: inline policy. Inline policies are created based on the RAM policy syntax and structure.
          */
         public Builder permissionPolicyType(String permissionPolicyType) {
             this.putQueryParameter("PermissionPolicyType", permissionPolicyType);

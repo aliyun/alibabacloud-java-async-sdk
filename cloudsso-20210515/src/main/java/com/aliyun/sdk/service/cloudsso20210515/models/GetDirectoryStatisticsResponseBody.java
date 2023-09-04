@@ -50,7 +50,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DirectoryStatistics.
+         * The statistics of the directory.
          */
         public Builder directoryStatistics(DirectoryStatistics directoryStatistics) {
             this.directoryStatistics = directoryStatistics;
@@ -58,7 +58,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -108,6 +108,9 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         @NameInMap("SSOEnabled")
         private Boolean SSOEnabled;
 
+        @NameInMap("SystemPolicyPerAccessConfigurationQuota")
+        private Integer systemPolicyPerAccessConfigurationQuota;
+
         @NameInMap("UserCount")
         private Integer userCount;
 
@@ -127,6 +130,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             this.SCIMServerCredentialCount = builder.SCIMServerCredentialCount;
             this.SCIMSyncEnabled = builder.SCIMSyncEnabled;
             this.SSOEnabled = builder.SSOEnabled;
+            this.systemPolicyPerAccessConfigurationQuota = builder.systemPolicyPerAccessConfigurationQuota;
             this.userCount = builder.userCount;
             this.userQuota = builder.userQuota;
         }
@@ -224,6 +228,13 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return systemPolicyPerAccessConfigurationQuota
+         */
+        public Integer getSystemPolicyPerAccessConfigurationQuota() {
+            return this.systemPolicyPerAccessConfigurationQuota;
+        }
+
+        /**
          * @return userCount
          */
         public Integer getUserCount() {
@@ -250,11 +261,12 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             private Integer SCIMServerCredentialCount; 
             private Boolean SCIMSyncEnabled; 
             private Boolean SSOEnabled; 
+            private Integer systemPolicyPerAccessConfigurationQuota; 
             private Integer userCount; 
             private Integer userQuota; 
 
             /**
-             * AccessAssignmentCount.
+             * The number of access permissions that are assigned.
              */
             public Builder accessAssignmentCount(Integer accessAssignmentCount) {
                 this.accessAssignmentCount = accessAssignmentCount;
@@ -262,7 +274,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessConfigurationCount.
+             * The number of access configurations.
              */
             public Builder accessConfigurationCount(Integer accessConfigurationCount) {
                 this.accessConfigurationCount = accessConfigurationCount;
@@ -270,7 +282,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessConfigurationQuota.
+             * The quota for access configurations.
              */
             public Builder accessConfigurationQuota(Integer accessConfigurationQuota) {
                 this.accessConfigurationQuota = accessConfigurationQuota;
@@ -278,7 +290,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryId.
+             * The ID of the directory.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -286,7 +298,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * DirectoryName.
+             * The name of the directory.
              */
             public Builder directoryName(String directoryName) {
                 this.directoryName = directoryName;
@@ -294,7 +306,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupCount.
+             * The number of groups.
              */
             public Builder groupCount(Integer groupCount) {
                 this.groupCount = groupCount;
@@ -302,7 +314,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * GroupQuota.
+             * The quota for groups.
              */
             public Builder groupQuota(Integer groupQuota) {
                 this.groupQuota = groupQuota;
@@ -310,7 +322,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * InProgressTaskCount.
+             * The number of tasks that are being performed.
              */
             public Builder inProgressTaskCount(Integer inProgressTaskCount) {
                 this.inProgressTaskCount = inProgressTaskCount;
@@ -318,7 +330,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region ID of the directory.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -326,7 +338,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SCIMServerCredentialCount.
+             * The number of SCIM credentials.
              */
             public Builder SCIMServerCredentialCount(Integer SCIMServerCredentialCount) {
                 this.SCIMServerCredentialCount = SCIMServerCredentialCount;
@@ -334,7 +346,11 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SCIMSyncEnabled.
+             * Indicates whether SCIM synchronization is enabled. Valid values:
+             * <p>
+             * 
+             * *   true: SCIM synchronization is enabled.
+             * *   false: SCIM synchronization is disabled.
              */
             public Builder SCIMSyncEnabled(Boolean SCIMSyncEnabled) {
                 this.SCIMSyncEnabled = SCIMSyncEnabled;
@@ -342,7 +358,11 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SSOEnabled.
+             * Indicates whether SSO logon is enabled. Valid values:
+             * <p>
+             * 
+             * *   true: SSO logon is enabled.
+             * *   false: SSO logon is disabled.
              */
             public Builder SSOEnabled(Boolean SSOEnabled) {
                 this.SSOEnabled = SSOEnabled;
@@ -350,7 +370,15 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * UserCount.
+             * SystemPolicyPerAccessConfigurationQuota.
+             */
+            public Builder systemPolicyPerAccessConfigurationQuota(Integer systemPolicyPerAccessConfigurationQuota) {
+                this.systemPolicyPerAccessConfigurationQuota = systemPolicyPerAccessConfigurationQuota;
+                return this;
+            }
+
+            /**
+             * The number of users.
              */
             public Builder userCount(Integer userCount) {
                 this.userCount = userCount;
@@ -358,7 +386,7 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * UserQuota.
+             * The quota for users.
              */
             public Builder userQuota(Integer userQuota) {
                 this.userQuota = userQuota;

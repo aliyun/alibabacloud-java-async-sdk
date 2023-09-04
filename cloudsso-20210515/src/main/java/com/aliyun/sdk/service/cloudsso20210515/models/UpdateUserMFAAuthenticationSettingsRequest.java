@@ -82,7 +82,7 @@ public class UpdateUserMFAAuthenticationSettingsRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -91,7 +91,7 @@ public class UpdateUserMFAAuthenticationSettingsRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the user.
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -100,7 +100,11 @@ public class UpdateUserMFAAuthenticationSettingsRequest extends Request {
         }
 
         /**
-         * UserMFAAuthenticationSettings.
+         * Specifies whether to enable MFA for the user. Valid values:
+         * <p>
+         * 
+         * *   Enabled: enables MFA for the user.
+         * *   Disabled: disables MFA for the user.
          */
         public Builder userMFAAuthenticationSettings(String userMFAAuthenticationSettings) {
             this.putQueryParameter("UserMFAAuthenticationSettings", userMFAAuthenticationSettings);

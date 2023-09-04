@@ -98,7 +98,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         private Integer totalCounts; 
 
         /**
-         * AccessAssignments.
+         * The access permissions that are assigned.
          */
         public Builder accessAssignments(java.util.List < AccessAssignments> accessAssignments) {
             this.accessAssignments = accessAssignments;
@@ -106,7 +106,11 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * IsTruncated.
+         * Indicates whether the queried entries are truncated. Valid values:
+         * <p>
+         * 
+         * *   true: The queried entries are truncated.
+         * *   false: The queried entries are not truncated.
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -114,7 +118,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries returned per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -122,7 +126,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that is returned for the next page.
+         * <p>
+         * 
+         * >  This parameter is returned only when the value of `IsTruncated` is `true`.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -130,7 +137,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +145,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCounts.
+         * The total number of entries returned.
          */
         public Builder totalCounts(Integer totalCounts) {
             this.totalCounts = totalCounts;
@@ -298,7 +305,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             private String targetType; 
 
             /**
-             * AccessConfigurationId.
+             * The ID of the access configuration.
              */
             public Builder accessConfigurationId(String accessConfigurationId) {
                 this.accessConfigurationId = accessConfigurationId;
@@ -306,7 +313,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessConfigurationName.
+             * The name of the access configuration.
              */
             public Builder accessConfigurationName(String accessConfigurationName) {
                 this.accessConfigurationName = accessConfigurationName;
@@ -314,7 +321,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the access permissions were assigned.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -322,7 +329,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalId.
+             * The ID of the CloudSSO identity.
              */
             public Builder principalId(String principalId) {
                 this.principalId = principalId;
@@ -330,7 +337,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalName.
+             * The name of the CloudSSO identity.
              */
             public Builder principalName(String principalName) {
                 this.principalName = principalName;
@@ -338,7 +345,11 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * PrincipalType.
+             * The type of the CloudSSO identity. Valid values:
+             * <p>
+             * 
+             * *   User
+             * *   Group
              */
             public Builder principalType(String principalType) {
                 this.principalType = principalType;
@@ -346,7 +357,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * The ID of the task object.
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -354,7 +365,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * The name of the task object.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -362,7 +373,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPath.
+             * The path ID of the task object in your resource directory.
              */
             public Builder targetPath(String targetPath) {
                 this.targetPath = targetPath;
@@ -370,7 +381,7 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetPathName.
+             * The path name of the task object in your resource directory.
              */
             public Builder targetPathName(String targetPathName) {
                 this.targetPathName = targetPathName;
@@ -378,7 +389,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * The type of the task object.
+             * <p>
+             * 
+             * The value is fixed as RD-Account, which indicates an account in your resource directory.
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

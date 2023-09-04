@@ -68,7 +68,7 @@ public class AddExternalSAMLIdPCertificateRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,7 +77,10 @@ public class AddExternalSAMLIdPCertificateRequest extends Request {
         }
 
         /**
-         * X509Certificate.
+         * The X.509 certificate in the PEM format.
+         * <p>
+         * 
+         * The certificate is provided by the SAML IdP.
          */
         public Builder x509Certificate(String x509Certificate) {
             this.putQueryParameter("X509Certificate", x509Certificate);

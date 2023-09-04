@@ -68,7 +68,7 @@ public class SetSCIMSynchronizationStatusRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,7 +77,11 @@ public class SetSCIMSynchronizationStatusRequest extends Request {
         }
 
         /**
-         * SCIMSynchronizationStatus.
+         * The status of SCIM synchronization. Valid values:
+         * <p>
+         * 
+         * *   Enabled
+         * *   Disabled
          */
         public Builder SCIMSynchronizationStatus(String SCIMSynchronizationStatus) {
             this.putQueryParameter("SCIMSynchronizationStatus", SCIMSynchronizationStatus);
