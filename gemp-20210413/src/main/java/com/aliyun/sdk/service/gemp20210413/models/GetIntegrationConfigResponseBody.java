@@ -50,7 +50,7 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,7 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 集成秘钥
+             * accessKey.
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -178,7 +178,7 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 集成配置id、
+             * integrationConfigId.
              */
             public Builder integrationConfigId(Long integrationConfigId) {
                 this.integrationConfigId = integrationConfigId;
@@ -186,7 +186,7 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 是否接收报警
+             * isReceivedEvent.
              */
             public Builder isReceivedEvent(Boolean isReceivedEvent) {
                 this.isReceivedEvent = isReceivedEvent;
@@ -194,7 +194,7 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 监控源id
+             * monitorSourceId.
              */
             public Builder monitorSourceId(Long monitorSourceId) {
                 this.monitorSourceId = monitorSourceId;
@@ -202,7 +202,7 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 监控源名称
+             * monitorSourceName.
              */
             public Builder monitorSourceName(String monitorSourceName) {
                 this.monitorSourceName = monitorSourceName;
@@ -210,7 +210,7 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 监控源简称
+             * monitorSourceShortName.
              */
             public Builder monitorSourceShortName(String monitorSourceShortName) {
                 this.monitorSourceShortName = monitorSourceShortName;
@@ -218,7 +218,7 @@ public class GetIntegrationConfigResponseBody extends TeaModel {
             }
 
             /**
-             * 集成配置状态，DISABLE 禁用，INTEGRATED 已集成，UNINTEGRATED未集成
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;

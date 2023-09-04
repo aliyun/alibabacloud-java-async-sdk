@@ -38,7 +38,7 @@ public class EnableIntegrationConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * requestId.
+         * requestId
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

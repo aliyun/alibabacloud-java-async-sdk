@@ -110,7 +110,7 @@ public class CreateTenantApplicationResponseBody extends TeaModel {
             private String progress; 
 
             /**
-             * 开通url
+             * openUrl.
              */
             public Builder openUrl(String openUrl) {
                 this.openUrl = openUrl;
@@ -118,7 +118,7 @@ public class CreateTenantApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 开通进度状态
+             * progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;

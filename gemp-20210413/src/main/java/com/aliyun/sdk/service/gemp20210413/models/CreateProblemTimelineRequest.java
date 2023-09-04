@@ -101,17 +101,17 @@ public class CreateProblemTimelineRequest extends Request {
             super();
         } 
 
-        private Builder(CreateProblemTimelineRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.content = response.content;
-            this.keyNode = response.keyNode;
-            this.problemId = response.problemId;
-            this.time = response.time;
+        private Builder(CreateProblemTimelineRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.content = request.content;
+            this.keyNode = request.keyNode;
+            this.problemId = request.problemId;
+            this.time = request.time;
         } 
 
         /**
-         * clientToken
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -120,7 +120,7 @@ public class CreateProblemTimelineRequest extends Request {
         }
 
         /**
-         * 节点内容
+         * content.
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -129,7 +129,7 @@ public class CreateProblemTimelineRequest extends Request {
         }
 
         /**
-         * 关键节点 码表:PROBLEM_KEY_NODE (逗号分隔)
+         * keyNode.
          */
         public Builder keyNode(String keyNode) {
             this.putBodyParameter("keyNode", keyNode);
@@ -138,7 +138,7 @@ public class CreateProblemTimelineRequest extends Request {
         }
 
         /**
-         * 故障id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -147,7 +147,7 @@ public class CreateProblemTimelineRequest extends Request {
         }
 
         /**
-         * 发生时间
+         * time.
          */
         public Builder time(String time) {
             this.putBodyParameter("time", time);

@@ -13,11 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetSubscriptionRequest extends Request {
     @Body
+    @NameInMap("notFilterScopeObjectDeleted")
+    private Boolean notFilterScopeObjectDeleted;
+
+    @Body
     @NameInMap("subscriptionId")
     private Long subscriptionId;
 
     private GetSubscriptionRequest(Builder builder) {
         super(builder);
+        this.notFilterScopeObjectDeleted = builder.notFilterScopeObjectDeleted;
         this.subscriptionId = builder.subscriptionId;
     }
 
@@ -35,6 +40,13 @@ public class GetSubscriptionRequest extends Request {
     }
 
     /**
+     * @return notFilterScopeObjectDeleted
+     */
+    public Boolean getNotFilterScopeObjectDeleted() {
+        return this.notFilterScopeObjectDeleted;
+    }
+
+    /**
      * @return subscriptionId
      */
     public Long getSubscriptionId() {
@@ -42,16 +54,27 @@ public class GetSubscriptionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetSubscriptionRequest, Builder> {
+        private Boolean notFilterScopeObjectDeleted; 
         private Long subscriptionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetSubscriptionRequest response) {
-            super(response);
-            this.subscriptionId = response.subscriptionId;
+        private Builder(GetSubscriptionRequest request) {
+            super(request);
+            this.notFilterScopeObjectDeleted = request.notFilterScopeObjectDeleted;
+            this.subscriptionId = request.subscriptionId;
         } 
+
+        /**
+         * notFilterScopeObjectDeleted.
+         */
+        public Builder notFilterScopeObjectDeleted(Boolean notFilterScopeObjectDeleted) {
+            this.putBodyParameter("notFilterScopeObjectDeleted", notFilterScopeObjectDeleted);
+            this.notFilterScopeObjectDeleted = notFilterScopeObjectDeleted;
+            return this;
+        }
 
         /**
          * subscriptionId.

@@ -50,7 +50,7 @@ public class ListSubscriptionServiceGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -122,7 +122,7 @@ public class ListSubscriptionServiceGroupsResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * 服务组描述
+             * serviceGroupDescription.
              */
             public Builder serviceGroupDescription(String serviceGroupDescription) {
                 this.serviceGroupDescription = serviceGroupDescription;
@@ -130,7 +130,7 @@ public class ListSubscriptionServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 主键
+             * serviceId.
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -138,7 +138,7 @@ public class ListSubscriptionServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组名称
+             * serviceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;

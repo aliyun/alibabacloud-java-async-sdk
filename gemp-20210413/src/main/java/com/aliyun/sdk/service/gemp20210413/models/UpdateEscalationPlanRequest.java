@@ -37,6 +37,10 @@ public class UpdateEscalationPlanRequest extends Request {
     @NameInMap("escalationPlanScopeObjects")
     private java.util.List < EscalationPlanScopeObjects> escalationPlanScopeObjects;
 
+    @Body
+    @NameInMap("isGlobal")
+    private Boolean isGlobal;
+
     private UpdateEscalationPlanRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -45,6 +49,7 @@ public class UpdateEscalationPlanRequest extends Request {
         this.escalationPlanName = builder.escalationPlanName;
         this.escalationPlanRules = builder.escalationPlanRules;
         this.escalationPlanScopeObjects = builder.escalationPlanScopeObjects;
+        this.isGlobal = builder.isGlobal;
     }
 
     public static Builder builder() {
@@ -102,6 +107,13 @@ public class UpdateEscalationPlanRequest extends Request {
         return this.escalationPlanScopeObjects;
     }
 
+    /**
+     * @return isGlobal
+     */
+    public Boolean getIsGlobal() {
+        return this.isGlobal;
+    }
+
     public static final class Builder extends Request.Builder<UpdateEscalationPlanRequest, Builder> {
         private String clientToken; 
         private String escalationPlanDescription; 
@@ -109,19 +121,21 @@ public class UpdateEscalationPlanRequest extends Request {
         private String escalationPlanName; 
         private java.util.List < EscalationPlanRules> escalationPlanRules; 
         private java.util.List < EscalationPlanScopeObjects> escalationPlanScopeObjects; 
+        private Boolean isGlobal; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateEscalationPlanRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.escalationPlanDescription = response.escalationPlanDescription;
-            this.escalationPlanId = response.escalationPlanId;
-            this.escalationPlanName = response.escalationPlanName;
-            this.escalationPlanRules = response.escalationPlanRules;
-            this.escalationPlanScopeObjects = response.escalationPlanScopeObjects;
+        private Builder(UpdateEscalationPlanRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.escalationPlanDescription = request.escalationPlanDescription;
+            this.escalationPlanId = request.escalationPlanId;
+            this.escalationPlanName = request.escalationPlanName;
+            this.escalationPlanRules = request.escalationPlanRules;
+            this.escalationPlanScopeObjects = request.escalationPlanScopeObjects;
+            this.isGlobal = request.isGlobal;
         } 
 
         /**
@@ -134,7 +148,7 @@ public class UpdateEscalationPlanRequest extends Request {
         }
 
         /**
-         * 升级计划描述
+         * escalationPlanDescription.
          */
         public Builder escalationPlanDescription(String escalationPlanDescription) {
             this.putBodyParameter("escalationPlanDescription", escalationPlanDescription);
@@ -143,7 +157,7 @@ public class UpdateEscalationPlanRequest extends Request {
         }
 
         /**
-         * 升级计划id
+         * escalationPlanId.
          */
         public Builder escalationPlanId(Long escalationPlanId) {
             this.putBodyParameter("escalationPlanId", escalationPlanId);
@@ -152,7 +166,7 @@ public class UpdateEscalationPlanRequest extends Request {
         }
 
         /**
-         * 升级计划名称
+         * escalationPlanName.
          */
         public Builder escalationPlanName(String escalationPlanName) {
             this.putBodyParameter("escalationPlanName", escalationPlanName);
@@ -161,7 +175,7 @@ public class UpdateEscalationPlanRequest extends Request {
         }
 
         /**
-         * 升级计划规则
+         * escalationPlanRules.
          */
         public Builder escalationPlanRules(java.util.List < EscalationPlanRules> escalationPlanRules) {
             this.putBodyParameter("escalationPlanRules", escalationPlanRules);
@@ -170,11 +184,20 @@ public class UpdateEscalationPlanRequest extends Request {
         }
 
         /**
-         * 关联范围列表（服务）
+         * escalationPlanScopeObjects.
          */
         public Builder escalationPlanScopeObjects(java.util.List < EscalationPlanScopeObjects> escalationPlanScopeObjects) {
             this.putBodyParameter("escalationPlanScopeObjects", escalationPlanScopeObjects);
             this.escalationPlanScopeObjects = escalationPlanScopeObjects;
+            return this;
+        }
+
+        /**
+         * isGlobal.
+         */
+        public Builder isGlobal(Boolean isGlobal) {
+            this.putBodyParameter("isGlobal", isGlobal);
+            this.isGlobal = isGlobal;
             return this;
         }
 
@@ -250,11 +273,17 @@ public class UpdateEscalationPlanRequest extends Request {
         @NameInMap("enableWebhook")
         private Boolean enableWebhook;
 
+        @NameInMap("escalationPlanType")
+        private String escalationPlanType;
+
         @NameInMap("noticeChannels")
         private java.util.List < String > noticeChannels;
 
         @NameInMap("noticeObjects")
         private java.util.List < Long > noticeObjects;
+
+        @NameInMap("noticeRoleList")
+        private java.util.List < Long > noticeRoleList;
 
         @NameInMap("noticeTime")
         private Long noticeTime;
@@ -264,8 +293,10 @@ public class UpdateEscalationPlanRequest extends Request {
 
         private EscalationPlanStrategies(Builder builder) {
             this.enableWebhook = builder.enableWebhook;
+            this.escalationPlanType = builder.escalationPlanType;
             this.noticeChannels = builder.noticeChannels;
             this.noticeObjects = builder.noticeObjects;
+            this.noticeRoleList = builder.noticeRoleList;
             this.noticeTime = builder.noticeTime;
             this.serviceGroupIds = builder.serviceGroupIds;
         }
@@ -286,6 +317,13 @@ public class UpdateEscalationPlanRequest extends Request {
         }
 
         /**
+         * @return escalationPlanType
+         */
+        public String getEscalationPlanType() {
+            return this.escalationPlanType;
+        }
+
+        /**
          * @return noticeChannels
          */
         public java.util.List < String > getNoticeChannels() {
@@ -297,6 +335,13 @@ public class UpdateEscalationPlanRequest extends Request {
          */
         public java.util.List < Long > getNoticeObjects() {
             return this.noticeObjects;
+        }
+
+        /**
+         * @return noticeRoleList
+         */
+        public java.util.List < Long > getNoticeRoleList() {
+            return this.noticeRoleList;
         }
 
         /**
@@ -315,13 +360,15 @@ public class UpdateEscalationPlanRequest extends Request {
 
         public static final class Builder {
             private Boolean enableWebhook; 
+            private String escalationPlanType; 
             private java.util.List < String > noticeChannels; 
             private java.util.List < Long > noticeObjects; 
+            private java.util.List < Long > noticeRoleList; 
             private Long noticeTime; 
             private java.util.List < Long > serviceGroupIds; 
 
             /**
-             * 是否支持群通知
+             * enableWebhook.
              */
             public Builder enableWebhook(Boolean enableWebhook) {
                 this.enableWebhook = enableWebhook;
@@ -329,7 +376,15 @@ public class UpdateEscalationPlanRequest extends Request {
             }
 
             /**
-             * 通知渠道
+             * escalationPlanType.
+             */
+            public Builder escalationPlanType(String escalationPlanType) {
+                this.escalationPlanType = escalationPlanType;
+                return this;
+            }
+
+            /**
+             * noticeChannels.
              */
             public Builder noticeChannels(java.util.List < String > noticeChannels) {
                 this.noticeChannels = noticeChannels;
@@ -337,7 +392,7 @@ public class UpdateEscalationPlanRequest extends Request {
             }
 
             /**
-             * 通知对象id
+             * noticeObjects.
              */
             public Builder noticeObjects(java.util.List < Long > noticeObjects) {
                 this.noticeObjects = noticeObjects;
@@ -345,7 +400,15 @@ public class UpdateEscalationPlanRequest extends Request {
             }
 
             /**
-             * 通知时间
+             * noticeRoleList.
+             */
+            public Builder noticeRoleList(java.util.List < Long > noticeRoleList) {
+                this.noticeRoleList = noticeRoleList;
+                return this;
+            }
+
+            /**
+             * noticeTime.
              */
             public Builder noticeTime(Long noticeTime) {
                 this.noticeTime = noticeTime;
@@ -353,7 +416,7 @@ public class UpdateEscalationPlanRequest extends Request {
             }
 
             /**
-             * 服务组id
+             * serviceGroupIds.
              */
             public Builder serviceGroupIds(java.util.List < Long > serviceGroupIds) {
                 this.serviceGroupIds = serviceGroupIds;
@@ -430,7 +493,7 @@ public class UpdateEscalationPlanRequest extends Request {
             private Long id; 
 
             /**
-             * 升级计划条件列表
+             * escalationPlanConditions.
              */
             public Builder escalationPlanConditions(java.util.List < EscalationPlanConditions> escalationPlanConditions) {
                 this.escalationPlanConditions = escalationPlanConditions;
@@ -438,7 +501,7 @@ public class UpdateEscalationPlanRequest extends Request {
             }
 
             /**
-             * 升级策略列表
+             * escalationPlanStrategies.
              */
             public Builder escalationPlanStrategies(java.util.List < EscalationPlanStrategies> escalationPlanStrategies) {
                 this.escalationPlanStrategies = escalationPlanStrategies;
@@ -446,7 +509,7 @@ public class UpdateEscalationPlanRequest extends Request {
             }
 
             /**
-             * UN_ACKNOWLEDGE 未响应 UN_FINISH 未完结
+             * escalationPlanType.
              */
             public Builder escalationPlanType(String escalationPlanType) {
                 this.escalationPlanType = escalationPlanType;
@@ -454,7 +517,7 @@ public class UpdateEscalationPlanRequest extends Request {
             }
 
             /**
-             * 主键
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -521,7 +584,7 @@ public class UpdateEscalationPlanRequest extends Request {
             private Long scopeObjectId; 
 
             /**
-             * 主键
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -529,7 +592,7 @@ public class UpdateEscalationPlanRequest extends Request {
             }
 
             /**
-             * 范围对象类型
+             * scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -537,7 +600,7 @@ public class UpdateEscalationPlanRequest extends Request {
             }
 
             /**
-             * 范围对象id
+             * scopeObjectId.
              */
             public Builder scopeObjectId(Long scopeObjectId) {
                 this.scopeObjectId = scopeObjectId;

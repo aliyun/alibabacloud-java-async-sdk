@@ -50,7 +50,7 @@ public class ListTrendForSourceEventResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 统计列表
+         * data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -146,7 +146,7 @@ public class ListTrendForSourceEventResponseBody extends TeaModel {
             private String unit; 
 
             /**
-             * 收敛率
+             * convergenceRate.
              */
             public Builder convergenceRate(String convergenceRate) {
                 this.convergenceRate = convergenceRate;
@@ -154,7 +154,7 @@ public class ListTrendForSourceEventResponseBody extends TeaModel {
             }
 
             /**
-             * 最大持续时长
+             * maxSustainTime.
              */
             public Builder maxSustainTime(Long maxSustainTime) {
                 this.maxSustainTime = maxSustainTime;
@@ -162,7 +162,7 @@ public class ListTrendForSourceEventResponseBody extends TeaModel {
             }
 
             /**
-             * 是否跨天
+             * skipDay.
              */
             public Builder skipDay(Boolean skipDay) {
                 this.skipDay = skipDay;
@@ -170,7 +170,7 @@ public class ListTrendForSourceEventResponseBody extends TeaModel {
             }
 
             /**
-             * 按监控源分组统计数据
+             * sourceEventsStatMap.
              */
             public Builder sourceEventsStatMap(java.util.Map < String, ? > sourceEventsStatMap) {
                 this.sourceEventsStatMap = sourceEventsStatMap;
@@ -178,7 +178,7 @@ public class ListTrendForSourceEventResponseBody extends TeaModel {
             }
 
             /**
-             * 时间单位
+             * unit.
              */
             public Builder unit(String unit) {
                 this.unit = unit;

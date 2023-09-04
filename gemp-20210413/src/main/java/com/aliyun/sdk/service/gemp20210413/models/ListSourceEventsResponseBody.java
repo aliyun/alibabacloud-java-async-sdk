@@ -134,7 +134,7 @@ public class ListSourceEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 当前页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -142,7 +142,7 @@ public class ListSourceEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 页大小
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -150,7 +150,7 @@ public class ListSourceEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -158,7 +158,7 @@ public class ListSourceEventsResponseBody extends TeaModel {
         }
 
         /**
-         * 总条数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -282,7 +282,7 @@ public class ListSourceEventsResponseBody extends TeaModel {
             private Long tenantRamId; 
 
             /**
-             * 告警内容json
+             * eventJson.
              */
             public Builder eventJson(String eventJson) {
                 this.eventJson = eventJson;
@@ -290,7 +290,7 @@ public class ListSourceEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警上报时间
+             * eventTime.
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -298,7 +298,7 @@ public class ListSourceEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联对象ID
+             * instanceId.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -306,7 +306,7 @@ public class ListSourceEventsResponseBody extends TeaModel {
             }
 
             /**
-             * INCIDENT 事件、ALERT 报警、PROBLEM 故障
+             * instanceType.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -314,7 +314,7 @@ public class ListSourceEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 监控告警源ID
+             * monitorSourceId.
              */
             public Builder monitorSourceId(Long monitorSourceId) {
                 this.monitorSourceId = monitorSourceId;
@@ -322,7 +322,7 @@ public class ListSourceEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 监控告警源名称
+             * monitorSourceName.
              */
             public Builder monitorSourceName(String monitorSourceName) {
                 this.monitorSourceName = monitorSourceName;
@@ -330,7 +330,7 @@ public class ListSourceEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 规则ID
+             * routeRuleId.
              */
             public Builder routeRuleId(Long routeRuleId) {
                 this.routeRuleId = routeRuleId;
@@ -338,7 +338,7 @@ public class ListSourceEventsResponseBody extends TeaModel {
             }
 
             /**
-             * 租户ID
+             * tenantRamId.
              */
             public Builder tenantRamId(Long tenantRamId) {
                 this.tenantRamId = tenantRamId;

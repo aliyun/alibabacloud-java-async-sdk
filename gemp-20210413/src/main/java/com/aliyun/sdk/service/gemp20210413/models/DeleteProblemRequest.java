@@ -61,14 +61,14 @@ public class DeleteProblemRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteProblemRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.problemId = response.problemId;
+        private Builder(DeleteProblemRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.problemId = request.problemId;
         } 
 
         /**
-         * 幂等校验
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -77,7 +77,7 @@ public class DeleteProblemRequest extends Request {
         }
 
         /**
-         * 故障Id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);

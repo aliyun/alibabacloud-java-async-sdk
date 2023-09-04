@@ -94,7 +94,7 @@ public class ListProblemOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * 页
+         * pageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListProblemOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * 行
+         * pageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class ListProblemOperationsResponseBody extends TeaModel {
         }
 
         /**
-         * 总数
+         * totalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -254,7 +254,7 @@ public class ListProblemOperationsResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 升级    PROBLEM_UPGRADE      撤销     PROBLEM_REVOKE      恢复     PROBLEM_RESTORE       复盘     PROBLEM_IN_REVIEW       完结     PROBLEM_REOPENED       取消     PROBLEM_CANCEL       更新故障通告     PROBLEM_UPDATE_NOTIFY       添加故障小计     PROBLEM_ADD_SUBTOTAL       更新故障     PROBLEM_UPDATE
+             * action.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -262,7 +262,7 @@ public class ListProblemOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -270,7 +270,7 @@ public class ListProblemOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -278,7 +278,7 @@ public class ListProblemOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * 故障Id
+             * problemId.
              */
             public Builder problemId(Long problemId) {
                 this.problemId = problemId;
@@ -286,7 +286,7 @@ public class ListProblemOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * 故障名称
+             * problemName.
              */
             public Builder problemName(String problemName) {
                 this.problemName = problemName;
@@ -294,7 +294,7 @@ public class ListProblemOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * 故障编号
+             * problemNumber.
              */
             public Builder problemNumber(String problemNumber) {
                 this.problemNumber = problemNumber;
@@ -302,7 +302,7 @@ public class ListProblemOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务名称
+             * relatedServiceName.
              */
             public Builder relatedServiceName(String relatedServiceName) {
                 this.relatedServiceName = relatedServiceName;
@@ -310,7 +310,7 @@ public class ListProblemOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * 快照数据
+             * snapshotData.
              */
             public Builder snapshotData(String snapshotData) {
                 this.snapshotData = snapshotData;
@@ -318,7 +318,7 @@ public class ListProblemOperationsResponseBody extends TeaModel {
             }
 
             /**
-             * 动态标题
+             * title.
              */
             public Builder title(String title) {
                 this.title = title;

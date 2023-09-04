@@ -50,7 +50,7 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -122,7 +122,7 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
             private String serviceGroupName; 
 
             /**
-             * 服务组描述
+             * serviceGroupDescription.
              */
             public Builder serviceGroupDescription(String serviceGroupDescription) {
                 this.serviceGroupDescription = serviceGroupDescription;
@@ -130,7 +130,7 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组id
+             * serviceGroupId.
              */
             public Builder serviceGroupId(Long serviceGroupId) {
                 this.serviceGroupId = serviceGroupId;
@@ -138,7 +138,7 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组名称
+             * serviceGroupName.
              */
             public Builder serviceGroupName(String serviceGroupName) {
                 this.serviceGroupName = serviceGroupName;
@@ -239,7 +239,7 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * 邮箱
+             * email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -247,7 +247,7 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号
+             * phone.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -255,7 +255,7 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RAM子账号ID
+             * ramId.
              */
             public Builder ramId(Long ramId) {
                 this.ramId = ramId;
@@ -263,7 +263,7 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 人员所属服务组
+             * serviceGroups.
              */
             public Builder serviceGroups(java.util.List < ServiceGroups> serviceGroups) {
                 this.serviceGroups = serviceGroups;
@@ -271,7 +271,7 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 用户ID
+             * userId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -279,7 +279,7 @@ public class ListUserSerivceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 用户昵称
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;

@@ -50,7 +50,7 @@ public class GetProblemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 详情
+         * data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetProblemResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetProblemResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * 动作名称
+             * actionName.
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -142,7 +142,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 操作时间
+             * actionTime.
              */
             public Builder actionTime(String actionTime) {
                 this.actionTime = actionTime;
@@ -150,7 +150,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 操作人
+             * operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -158,7 +158,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 用户ID
+             * userId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -173,6 +173,9 @@ public class GetProblemResponseBody extends TeaModel {
 
     }
     public static class CoordinationGroups extends TeaModel {
+        @NameInMap("isValid")
+        private Long isValid;
+
         @NameInMap("serviceGroupId")
         private Long serviceGroupId;
 
@@ -180,6 +183,7 @@ public class GetProblemResponseBody extends TeaModel {
         private String serviceGroupName;
 
         private CoordinationGroups(Builder builder) {
+            this.isValid = builder.isValid;
             this.serviceGroupId = builder.serviceGroupId;
             this.serviceGroupName = builder.serviceGroupName;
         }
@@ -190,6 +194,13 @@ public class GetProblemResponseBody extends TeaModel {
 
         public static CoordinationGroups create() {
             return builder().build();
+        }
+
+        /**
+         * @return isValid
+         */
+        public Long getIsValid() {
+            return this.isValid;
         }
 
         /**
@@ -207,11 +218,20 @@ public class GetProblemResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long isValid; 
             private Long serviceGroupId; 
             private String serviceGroupName; 
 
             /**
-             * 服务组ID
+             * isValid.
+             */
+            public Builder isValid(Long isValid) {
+                this.isValid = isValid;
+                return this;
+            }
+
+            /**
+             * serviceGroupId.
              */
             public Builder serviceGroupId(Long serviceGroupId) {
                 this.serviceGroupId = serviceGroupId;
@@ -219,7 +239,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组名字
+             * serviceGroupName.
              */
             public Builder serviceGroupName(String serviceGroupName) {
                 this.serviceGroupName = serviceGroupName;
@@ -246,6 +266,9 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("effectionStatus")
         private Integer effectionStatus;
 
+        @NameInMap("serviceDeleteType")
+        private Integer serviceDeleteType;
+
         @NameInMap("serviceName")
         private String serviceName;
 
@@ -254,6 +277,7 @@ public class GetProblemResponseBody extends TeaModel {
             this.effectionLevel = builder.effectionLevel;
             this.effectionServiceId = builder.effectionServiceId;
             this.effectionStatus = builder.effectionStatus;
+            this.serviceDeleteType = builder.serviceDeleteType;
             this.serviceName = builder.serviceName;
         }
 
@@ -294,6 +318,13 @@ public class GetProblemResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceDeleteType
+         */
+        public Integer getServiceDeleteType() {
+            return this.serviceDeleteType;
+        }
+
+        /**
          * @return serviceName
          */
         public String getServiceName() {
@@ -305,10 +336,11 @@ public class GetProblemResponseBody extends TeaModel {
             private Long effectionLevel; 
             private Long effectionServiceId; 
             private Integer effectionStatus; 
+            private Integer serviceDeleteType; 
             private String serviceName; 
 
             /**
-             * 影响描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -316,7 +348,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 影响等级 P1 . P2 P3 P4
+             * effectionLevel.
              */
             public Builder effectionLevel(Long effectionLevel) {
                 this.effectionLevel = effectionLevel;
@@ -324,7 +356,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 服务ID
+             * effectionServiceId.
              */
             public Builder effectionServiceId(Long effectionServiceId) {
                 this.effectionServiceId = effectionServiceId;
@@ -332,7 +364,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 影响服务状态  RECOVERED 已经恢复 ,UN_RECOVERED 未恢复
+             * effectionStatus.
              */
             public Builder effectionStatus(Integer effectionStatus) {
                 this.effectionStatus = effectionStatus;
@@ -340,7 +372,15 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 服务名称
+             * serviceDeleteType.
+             */
+            public Builder serviceDeleteType(Integer serviceDeleteType) {
+                this.serviceDeleteType = serviceDeleteType;
+                return this;
+            }
+
+            /**
+             * serviceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -367,11 +407,15 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("userId")
         private Long userId;
 
+        @NameInMap("userIsValid")
+        private Long userIsValid;
+
         private HandingProblemOperateLogs(Builder builder) {
             this.actionName = builder.actionName;
             this.actionTime = builder.actionTime;
             this.operator = builder.operator;
             this.userId = builder.userId;
+            this.userIsValid = builder.userIsValid;
         }
 
         public static Builder builder() {
@@ -410,14 +454,22 @@ public class GetProblemResponseBody extends TeaModel {
             return this.userId;
         }
 
+        /**
+         * @return userIsValid
+         */
+        public Long getUserIsValid() {
+            return this.userIsValid;
+        }
+
         public static final class Builder {
             private String actionName; 
             private String actionTime; 
             private String operator; 
             private Long userId; 
+            private Long userIsValid; 
 
             /**
-             * 动作名称
+             * actionName.
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -425,7 +477,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 操作时间
+             * actionTime.
              */
             public Builder actionTime(String actionTime) {
                 this.actionTime = actionTime;
@@ -433,7 +485,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 操作人
+             * operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -441,10 +493,18 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 用户id
+             * userId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * userIsValid.
+             */
+            public Builder userIsValid(Long userIsValid) {
+                this.userIsValid = userIsValid;
                 return this;
             }
 
@@ -468,11 +528,15 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("userId")
         private Long userId;
 
+        @NameInMap("userIsValid")
+        private Long userIsValid;
+
         private ReplayProblemOperateLogs(Builder builder) {
             this.actionName = builder.actionName;
             this.actionTime = builder.actionTime;
             this.operator = builder.operator;
             this.userId = builder.userId;
+            this.userIsValid = builder.userIsValid;
         }
 
         public static Builder builder() {
@@ -511,14 +575,22 @@ public class GetProblemResponseBody extends TeaModel {
             return this.userId;
         }
 
+        /**
+         * @return userIsValid
+         */
+        public Long getUserIsValid() {
+            return this.userIsValid;
+        }
+
         public static final class Builder {
             private String actionName; 
             private String actionTime; 
             private String operator; 
             private Long userId; 
+            private Long userIsValid; 
 
             /**
-             * 动作名称
+             * actionName.
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -526,7 +598,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 操作时间
+             * actionTime.
              */
             public Builder actionTime(String actionTime) {
                 this.actionTime = actionTime;
@@ -534,7 +606,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 操作人
+             * operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -542,10 +614,18 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 用户id
+             * userId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * userIsValid.
+             */
+            public Builder userIsValid(Long userIsValid) {
+                this.userIsValid = userIsValid;
                 return this;
             }
 
@@ -569,11 +649,15 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("userId")
         private Long userId;
 
+        @NameInMap("userIsValid")
+        private Long userIsValid;
+
         private ReplayingProblemOperateLogs(Builder builder) {
             this.actionName = builder.actionName;
             this.actionTime = builder.actionTime;
             this.operator = builder.operator;
             this.userId = builder.userId;
+            this.userIsValid = builder.userIsValid;
         }
 
         public static Builder builder() {
@@ -612,14 +696,22 @@ public class GetProblemResponseBody extends TeaModel {
             return this.userId;
         }
 
+        /**
+         * @return userIsValid
+         */
+        public Long getUserIsValid() {
+            return this.userIsValid;
+        }
+
         public static final class Builder {
             private String actionName; 
             private String actionTime; 
             private String operator; 
             private Long userId; 
+            private Long userIsValid; 
 
             /**
-             * 动作名称
+             * actionName.
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -627,7 +719,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 操作时间
+             * actionTime.
              */
             public Builder actionTime(String actionTime) {
                 this.actionTime = actionTime;
@@ -635,7 +727,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 操作人
+             * operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -643,10 +735,18 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 用户id
+             * userId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * userIsValid.
+             */
+            public Builder userIsValid(Long userIsValid) {
+                this.userIsValid = userIsValid;
                 return this;
             }
 
@@ -670,11 +770,15 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("userId")
         private Long userId;
 
+        @NameInMap("userIsValid")
+        private Long userIsValid;
+
         private RestoredProblemOperateLogs(Builder builder) {
             this.actionName = builder.actionName;
             this.actionTime = builder.actionTime;
             this.operator = builder.operator;
             this.userId = builder.userId;
+            this.userIsValid = builder.userIsValid;
         }
 
         public static Builder builder() {
@@ -713,14 +817,22 @@ public class GetProblemResponseBody extends TeaModel {
             return this.userId;
         }
 
+        /**
+         * @return userIsValid
+         */
+        public Long getUserIsValid() {
+            return this.userIsValid;
+        }
+
         public static final class Builder {
             private String actionName; 
             private String actionTime; 
             private String operator; 
             private Long userId; 
+            private Long userIsValid; 
 
             /**
-             * 动作名称
+             * actionName.
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -728,7 +840,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 操作时间
+             * actionTime.
              */
             public Builder actionTime(String actionTime) {
                 this.actionTime = actionTime;
@@ -736,7 +848,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 操作人
+             * operator.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -744,10 +856,18 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 用户id
+             * userId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * userIsValid.
+             */
+            public Builder userIsValid(Long userIsValid) {
+                this.userIsValid = userIsValid;
                 return this;
             }
 
@@ -785,7 +905,7 @@ public class GetProblemResponseBody extends TeaModel {
             private String keyNode; 
 
             /**
-             * 关键节点 码表:PROBLEM_KEY_NODE (逗号分隔)
+             * keyNode.
              */
             public Builder keyNode(String keyNode) {
                 this.keyNode = keyNode;
@@ -836,11 +956,17 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("incidentNumber")
         private String incidentNumber;
 
+        @NameInMap("isRuleTrigger")
+        private Boolean isRuleTrigger;
+
         @NameInMap("mainHandler")
         private Long mainHandler;
 
         @NameInMap("mainHandlerId")
         private Long mainHandlerId;
+
+        @NameInMap("mainHandlerIsValid")
+        private Long mainHandlerIsValid;
 
         @NameInMap("mainHandlerPhone")
         private String mainHandlerPhone;
@@ -885,6 +1011,9 @@ public class GetProblemResponseBody extends TeaModel {
         @NameInMap("restoredProblemOperateLogs")
         private java.util.List < RestoredProblemOperateLogs> restoredProblemOperateLogs;
 
+        @NameInMap("serviceDeleteType")
+        private Integer serviceDeleteType;
+
         @NameInMap("serviceName")
         private String serviceName;
 
@@ -904,8 +1033,10 @@ public class GetProblemResponseBody extends TeaModel {
             this.handingProblemOperateLogs = builder.handingProblemOperateLogs;
             this.incidentId = builder.incidentId;
             this.incidentNumber = builder.incidentNumber;
+            this.isRuleTrigger = builder.isRuleTrigger;
             this.mainHandler = builder.mainHandler;
             this.mainHandlerId = builder.mainHandlerId;
+            this.mainHandlerIsValid = builder.mainHandlerIsValid;
             this.mainHandlerPhone = builder.mainHandlerPhone;
             this.preliminaryReason = builder.preliminaryReason;
             this.problemId = builder.problemId;
@@ -920,6 +1051,7 @@ public class GetProblemResponseBody extends TeaModel {
             this.replayProblemOperateLogs = builder.replayProblemOperateLogs;
             this.replayingProblemOperateLogs = builder.replayingProblemOperateLogs;
             this.restoredProblemOperateLogs = builder.restoredProblemOperateLogs;
+            this.serviceDeleteType = builder.serviceDeleteType;
             this.serviceName = builder.serviceName;
             this.timelines = builder.timelines;
         }
@@ -1017,6 +1149,13 @@ public class GetProblemResponseBody extends TeaModel {
         }
 
         /**
+         * @return isRuleTrigger
+         */
+        public Boolean getIsRuleTrigger() {
+            return this.isRuleTrigger;
+        }
+
+        /**
          * @return mainHandler
          */
         public Long getMainHandler() {
@@ -1028,6 +1167,13 @@ public class GetProblemResponseBody extends TeaModel {
          */
         public Long getMainHandlerId() {
             return this.mainHandlerId;
+        }
+
+        /**
+         * @return mainHandlerIsValid
+         */
+        public Long getMainHandlerIsValid() {
+            return this.mainHandlerIsValid;
         }
 
         /**
@@ -1129,6 +1275,13 @@ public class GetProblemResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceDeleteType
+         */
+        public Integer getServiceDeleteType() {
+            return this.serviceDeleteType;
+        }
+
+        /**
          * @return serviceName
          */
         public String getServiceName() {
@@ -1155,8 +1308,10 @@ public class GetProblemResponseBody extends TeaModel {
             private java.util.List < HandingProblemOperateLogs> handingProblemOperateLogs; 
             private Long incidentId; 
             private String incidentNumber; 
+            private Boolean isRuleTrigger; 
             private Long mainHandler; 
             private Long mainHandlerId; 
+            private Long mainHandlerIsValid; 
             private String mainHandlerPhone; 
             private String preliminaryReason; 
             private Long problemId; 
@@ -1171,11 +1326,12 @@ public class GetProblemResponseBody extends TeaModel {
             private java.util.List < ReplayProblemOperateLogs> replayProblemOperateLogs; 
             private java.util.List < ReplayingProblemOperateLogs> replayingProblemOperateLogs; 
             private java.util.List < RestoredProblemOperateLogs> restoredProblemOperateLogs; 
+            private Integer serviceDeleteType; 
             private String serviceName; 
             private java.util.List < Timelines> timelines; 
 
             /**
-             * 已取消故障操作日志
+             * cancelProblemOperateLogs.
              */
             public Builder cancelProblemOperateLogs(java.util.List < CancelProblemOperateLogs> cancelProblemOperateLogs) {
                 this.cancelProblemOperateLogs = cancelProblemOperateLogs;
@@ -1183,7 +1339,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 取消原因
+             * cancelReason.
              */
             public Builder cancelReason(Long cancelReason) {
                 this.cancelReason = cancelReason;
@@ -1191,7 +1347,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 取消原因描述
+             * cancelReasonDescription.
              */
             public Builder cancelReasonDescription(String cancelReasonDescription) {
                 this.cancelReasonDescription = cancelReasonDescription;
@@ -1199,7 +1355,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 应急协同组
+             * coordinationGroups.
              */
             public Builder coordinationGroups(java.util.List < CoordinationGroups> coordinationGroups) {
                 this.coordinationGroups = coordinationGroups;
@@ -1207,7 +1363,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -1215,7 +1371,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 发现时间
+             * discoverTime.
              */
             public Builder discoverTime(String discoverTime) {
                 this.discoverTime = discoverTime;
@@ -1223,7 +1379,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 持续时间
+             * durationTime.
              */
             public Builder durationTime(Long durationTime) {
                 this.durationTime = durationTime;
@@ -1231,7 +1387,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 影响服务
+             * effectionServices.
              */
             public Builder effectionServices(java.util.List < EffectionServices> effectionServices) {
                 this.effectionServices = effectionServices;
@@ -1239,7 +1395,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 舆情反馈
+             * feedback.
              */
             public Builder feedback(String feedback) {
                 this.feedback = feedback;
@@ -1247,7 +1403,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 处理中故障操作日志
+             * handingProblemOperateLogs.
              */
             public Builder handingProblemOperateLogs(java.util.List < HandingProblemOperateLogs> handingProblemOperateLogs) {
                 this.handingProblemOperateLogs = handingProblemOperateLogs;
@@ -1255,7 +1411,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 事件id
+             * incidentId.
              */
             public Builder incidentId(Long incidentId) {
                 this.incidentId = incidentId;
@@ -1263,7 +1419,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 事件编号
+             * incidentNumber.
              */
             public Builder incidentNumber(String incidentNumber) {
                 this.incidentNumber = incidentNumber;
@@ -1271,7 +1427,15 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 主要处理人
+             * isRuleTrigger.
+             */
+            public Builder isRuleTrigger(Boolean isRuleTrigger) {
+                this.isRuleTrigger = isRuleTrigger;
+                return this;
+            }
+
+            /**
+             * mainHandler.
              */
             public Builder mainHandler(Long mainHandler) {
                 this.mainHandler = mainHandler;
@@ -1279,7 +1443,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 主要处理人ID
+             * mainHandlerId.
              */
             public Builder mainHandlerId(Long mainHandlerId) {
                 this.mainHandlerId = mainHandlerId;
@@ -1287,7 +1451,15 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 主要处理人手机号
+             * mainHandlerIsValid.
+             */
+            public Builder mainHandlerIsValid(Long mainHandlerIsValid) {
+                this.mainHandlerIsValid = mainHandlerIsValid;
+                return this;
+            }
+
+            /**
+             * mainHandlerPhone.
              */
             public Builder mainHandlerPhone(String mainHandlerPhone) {
                 this.mainHandlerPhone = mainHandlerPhone;
@@ -1295,7 +1467,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 初步原因
+             * preliminaryReason.
              */
             public Builder preliminaryReason(String preliminaryReason) {
                 this.preliminaryReason = preliminaryReason;
@@ -1311,7 +1483,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 故障等级 P1 P2 P3 P4
+             * problemLevel.
              */
             public Builder problemLevel(Integer problemLevel) {
                 this.problemLevel = problemLevel;
@@ -1319,7 +1491,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 故障名称
+             * problemName.
              */
             public Builder problemName(String problemName) {
                 this.problemName = problemName;
@@ -1327,7 +1499,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 故障编号
+             * problemNumber.
              */
             public Builder problemNumber(String problemNumber) {
                 this.problemNumber = problemNumber;
@@ -1335,7 +1507,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 故障状态  HANDLING    处理中 RECOVERED  已恢复  REPLAYING   复盘中  REPLAYED     已复盘 CANCEL        已取消
+             * problemStatus.
              */
             public Builder problemStatus(Integer problemStatus) {
                 this.problemStatus = problemStatus;
@@ -1343,7 +1515,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 进展摘要
+             * progressSummary.
              */
             public Builder progressSummary(String progressSummary) {
                 this.progressSummary = progressSummary;
@@ -1351,7 +1523,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 进展摘要富文本id
+             * progressSummaryRichTextId.
              */
             public Builder progressSummaryRichTextId(Long progressSummaryRichTextId) {
                 this.progressSummaryRichTextId = progressSummaryRichTextId;
@@ -1359,7 +1531,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 恢复时间
+             * recoveryTime.
              */
             public Builder recoveryTime(String recoveryTime) {
                 this.recoveryTime = recoveryTime;
@@ -1367,7 +1539,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务ID
+             * relatedServiceId.
              */
             public Builder relatedServiceId(Long relatedServiceId) {
                 this.relatedServiceId = relatedServiceId;
@@ -1375,7 +1547,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 已复盘故障操作日志
+             * replayProblemOperateLogs.
              */
             public Builder replayProblemOperateLogs(java.util.List < ReplayProblemOperateLogs> replayProblemOperateLogs) {
                 this.replayProblemOperateLogs = replayProblemOperateLogs;
@@ -1383,7 +1555,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 复盘中故障操作日志
+             * replayingProblemOperateLogs.
              */
             public Builder replayingProblemOperateLogs(java.util.List < ReplayingProblemOperateLogs> replayingProblemOperateLogs) {
                 this.replayingProblemOperateLogs = replayingProblemOperateLogs;
@@ -1391,7 +1563,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 已恢复故障操作日志
+             * restoredProblemOperateLogs.
              */
             public Builder restoredProblemOperateLogs(java.util.List < RestoredProblemOperateLogs> restoredProblemOperateLogs) {
                 this.restoredProblemOperateLogs = restoredProblemOperateLogs;
@@ -1399,7 +1571,15 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务 名称
+             * serviceDeleteType
+             */
+            public Builder serviceDeleteType(Integer serviceDeleteType) {
+                this.serviceDeleteType = serviceDeleteType;
+                return this;
+            }
+
+            /**
+             * serviceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -1407,7 +1587,7 @@ public class GetProblemResponseBody extends TeaModel {
             }
 
             /**
-             * 故障操作时间线
+             * timelines.
              */
             public Builder timelines(java.util.List < Timelines> timelines) {
                 this.timelines = timelines;

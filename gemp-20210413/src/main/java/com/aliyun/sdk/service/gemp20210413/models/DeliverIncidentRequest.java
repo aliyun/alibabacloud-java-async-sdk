@@ -74,15 +74,15 @@ public class DeliverIncidentRequest extends Request {
             super();
         } 
 
-        private Builder(DeliverIncidentRequest response) {
-            super(response);
-            this.assignUserId = response.assignUserId;
-            this.clientToken = response.clientToken;
-            this.incidentId = response.incidentId;
+        private Builder(DeliverIncidentRequest request) {
+            super(request);
+            this.assignUserId = request.assignUserId;
+            this.clientToken = request.clientToken;
+            this.incidentId = request.incidentId;
         } 
 
         /**
-         * 转交用户ID
+         * assignUserId.
          */
         public Builder assignUserId(Long assignUserId) {
             this.putBodyParameter("assignUserId", assignUserId);
@@ -91,7 +91,7 @@ public class DeliverIncidentRequest extends Request {
         }
 
         /**
-         * 幂等校验id
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -100,7 +100,7 @@ public class DeliverIncidentRequest extends Request {
         }
 
         /**
-         * 事件ID
+         * incidentId.
          */
         public Builder incidentId(Long incidentId) {
             this.putBodyParameter("incidentId", incidentId);

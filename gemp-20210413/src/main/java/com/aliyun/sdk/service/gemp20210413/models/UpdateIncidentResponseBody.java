@@ -50,7 +50,7 @@ public class UpdateIncidentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -98,7 +98,7 @@ public class UpdateIncidentResponseBody extends TeaModel {
             private Long incidentId; 
 
             /**
-             * 事件id
+             * incidentId.
              */
             public Builder incidentId(Long incidentId) {
                 this.incidentId = incidentId;

@@ -94,7 +94,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * 当前页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * 页大小
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * 总条数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -132,8 +132,20 @@ public class ListServicesResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("escalationPlanId")
+        private Long escalationPlanId;
+
+        @NameInMap("escalationPlanName")
+        private String escalationPlanName;
+
+        @NameInMap("isValid")
+        private Integer isValid;
+
         @NameInMap("serviceDescription")
         private String serviceDescription;
+
+        @NameInMap("serviceGroupIdList")
+        private java.util.List < Long > serviceGroupIdList;
 
         @NameInMap("serviceId")
         private Long serviceId;
@@ -145,7 +157,11 @@ public class ListServicesResponseBody extends TeaModel {
         private String updateTime;
 
         private Data(Builder builder) {
+            this.escalationPlanId = builder.escalationPlanId;
+            this.escalationPlanName = builder.escalationPlanName;
+            this.isValid = builder.isValid;
             this.serviceDescription = builder.serviceDescription;
+            this.serviceGroupIdList = builder.serviceGroupIdList;
             this.serviceId = builder.serviceId;
             this.serviceName = builder.serviceName;
             this.updateTime = builder.updateTime;
@@ -160,10 +176,38 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return escalationPlanId
+         */
+        public Long getEscalationPlanId() {
+            return this.escalationPlanId;
+        }
+
+        /**
+         * @return escalationPlanName
+         */
+        public String getEscalationPlanName() {
+            return this.escalationPlanName;
+        }
+
+        /**
+         * @return isValid
+         */
+        public Integer getIsValid() {
+            return this.isValid;
+        }
+
+        /**
          * @return serviceDescription
          */
         public String getServiceDescription() {
             return this.serviceDescription;
+        }
+
+        /**
+         * @return serviceGroupIdList
+         */
+        public java.util.List < Long > getServiceGroupIdList() {
+            return this.serviceGroupIdList;
         }
 
         /**
@@ -188,13 +232,41 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long escalationPlanId; 
+            private String escalationPlanName; 
+            private Integer isValid; 
             private String serviceDescription; 
+            private java.util.List < Long > serviceGroupIdList; 
             private Long serviceId; 
             private String serviceName; 
             private String updateTime; 
 
             /**
-             * 服务描述
+             * escalationPlanId.
+             */
+            public Builder escalationPlanId(Long escalationPlanId) {
+                this.escalationPlanId = escalationPlanId;
+                return this;
+            }
+
+            /**
+             * escalationPlanName.
+             */
+            public Builder escalationPlanName(String escalationPlanName) {
+                this.escalationPlanName = escalationPlanName;
+                return this;
+            }
+
+            /**
+             * isValid.
+             */
+            public Builder isValid(Integer isValid) {
+                this.isValid = isValid;
+                return this;
+            }
+
+            /**
+             * serviceDescription.
              */
             public Builder serviceDescription(String serviceDescription) {
                 this.serviceDescription = serviceDescription;
@@ -202,7 +274,15 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * 服务ID
+             * serviceGroupIdList.
+             */
+            public Builder serviceGroupIdList(java.util.List < Long > serviceGroupIdList) {
+                this.serviceGroupIdList = serviceGroupIdList;
+                return this;
+            }
+
+            /**
+             * serviceId.
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -210,7 +290,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * 服务名字
+             * serviceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -218,7 +298,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * updateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

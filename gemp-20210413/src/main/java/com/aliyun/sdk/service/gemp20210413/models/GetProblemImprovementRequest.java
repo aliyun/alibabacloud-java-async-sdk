@@ -61,14 +61,14 @@ public class GetProblemImprovementRequest extends Request {
             super();
         } 
 
-        private Builder(GetProblemImprovementRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.problemId = response.problemId;
+        private Builder(GetProblemImprovementRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.problemId = request.problemId;
         } 
 
         /**
-         * 幂等校验token
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -77,7 +77,7 @@ public class GetProblemImprovementRequest extends Request {
         }
 
         /**
-         * 故障ID
+         * problemId.
          */
         public Builder problemId(String problemId) {
             this.putBodyParameter("problemId", problemId);

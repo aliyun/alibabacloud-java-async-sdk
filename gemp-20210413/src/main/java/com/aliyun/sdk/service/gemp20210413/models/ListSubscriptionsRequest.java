@@ -17,6 +17,10 @@ public class ListSubscriptionsRequest extends Request {
     private String clientToken;
 
     @Body
+    @NameInMap("notFilterScopeObjectDeleted")
+    private Boolean notFilterScopeObjectDeleted;
+
+    @Body
     @NameInMap("notifyObject")
     private String notifyObject;
 
@@ -47,6 +51,7 @@ public class ListSubscriptionsRequest extends Request {
     private ListSubscriptionsRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.notFilterScopeObjectDeleted = builder.notFilterScopeObjectDeleted;
         this.notifyObject = builder.notifyObject;
         this.notifyObjectType = builder.notifyObjectType;
         this.pageNumber = builder.pageNumber;
@@ -74,6 +79,13 @@ public class ListSubscriptionsRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return notFilterScopeObjectDeleted
+     */
+    public Boolean getNotFilterScopeObjectDeleted() {
+        return this.notFilterScopeObjectDeleted;
     }
 
     /**
@@ -127,6 +139,7 @@ public class ListSubscriptionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListSubscriptionsRequest, Builder> {
         private String clientToken; 
+        private Boolean notFilterScopeObjectDeleted; 
         private String notifyObject; 
         private String notifyObjectType; 
         private Integer pageNumber; 
@@ -139,20 +152,21 @@ public class ListSubscriptionsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSubscriptionsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.notifyObject = response.notifyObject;
-            this.notifyObjectType = response.notifyObjectType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.scope = response.scope;
-            this.scopeObject = response.scopeObject;
-            this.subscriptionTitle = response.subscriptionTitle;
+        private Builder(ListSubscriptionsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.notFilterScopeObjectDeleted = request.notFilterScopeObjectDeleted;
+            this.notifyObject = request.notifyObject;
+            this.notifyObjectType = request.notifyObjectType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.scope = request.scope;
+            this.scopeObject = request.scopeObject;
+            this.subscriptionTitle = request.subscriptionTitle;
         } 
 
         /**
-         * 幂等参数
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -161,7 +175,16 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * 通知对象名
+         * notFilterScopeObjectDeleted.
+         */
+        public Builder notFilterScopeObjectDeleted(Boolean notFilterScopeObjectDeleted) {
+            this.putBodyParameter("notFilterScopeObjectDeleted", notFilterScopeObjectDeleted);
+            this.notFilterScopeObjectDeleted = notFilterScopeObjectDeleted;
+            return this;
+        }
+
+        /**
+         * notifyObject.
          */
         public Builder notifyObject(String notifyObject) {
             this.putBodyParameter("notifyObject", notifyObject);
@@ -170,7 +193,7 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * 通知对象类型notifyWhoType:0服务组 1个人
+         * notifyObjectType.
          */
         public Builder notifyObjectType(String notifyObjectType) {
             this.putBodyParameter("notifyObjectType", notifyObjectType);
@@ -179,7 +202,7 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * 第几页
+         * pageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -188,7 +211,7 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * 一页几条
+         * pageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -197,7 +220,7 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * 订阅范围类型 0全部1服务2流转规则
+         * scope.
          */
         public Builder scope(String scope) {
             this.putBodyParameter("scope", scope);
@@ -206,7 +229,7 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * 订阅范围对象名称
+         * scopeObject.
          */
         public Builder scopeObject(String scopeObject) {
             this.putBodyParameter("scopeObject", scopeObject);
@@ -215,7 +238,7 @@ public class ListSubscriptionsRequest extends Request {
         }
 
         /**
-         * 通知订阅名
+         * subscriptionTitle.
          */
         public Builder subscriptionTitle(String subscriptionTitle) {
             this.putBodyParameter("subscriptionTitle", subscriptionTitle);

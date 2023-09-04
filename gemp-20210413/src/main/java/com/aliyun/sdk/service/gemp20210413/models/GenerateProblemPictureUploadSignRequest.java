@@ -87,16 +87,16 @@ public class GenerateProblemPictureUploadSignRequest extends Request {
             super();
         } 
 
-        private Builder(GenerateProblemPictureUploadSignRequest response) {
-            super(response);
-            this.fileName = response.fileName;
-            this.fileSize = response.fileSize;
-            this.fileType = response.fileType;
-            this.problemId = response.problemId;
+        private Builder(GenerateProblemPictureUploadSignRequest request) {
+            super(request);
+            this.fileName = request.fileName;
+            this.fileSize = request.fileSize;
+            this.fileType = request.fileType;
+            this.problemId = request.problemId;
         } 
 
         /**
-         * 文件名
+         * fileName.
          */
         public Builder fileName(String fileName) {
             this.putBodyParameter("fileName", fileName);
@@ -105,7 +105,7 @@ public class GenerateProblemPictureUploadSignRequest extends Request {
         }
 
         /**
-         * 文件大小KB
+         * fileSize.
          */
         public Builder fileSize(Long fileSize) {
             this.putBodyParameter("fileSize", fileSize);
@@ -114,7 +114,7 @@ public class GenerateProblemPictureUploadSignRequest extends Request {
         }
 
         /**
-         * 文件类型
+         * fileType.
          */
         public Builder fileType(String fileType) {
             this.putBodyParameter("fileType", fileType);
@@ -123,7 +123,7 @@ public class GenerateProblemPictureUploadSignRequest extends Request {
         }
 
         /**
-         * 故障id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);

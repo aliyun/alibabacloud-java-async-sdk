@@ -86,7 +86,7 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -118,7 +118,7 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
         }
 
         /**
-         * 总数
+         * totalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -144,6 +144,9 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
         @NameInMap("incidentId")
         private Long incidentId;
 
+        @NameInMap("relRouteRuleDeleteType")
+        private Integer relRouteRuleDeleteType;
+
         @NameInMap("relatedServiceName")
         private String relatedServiceName;
 
@@ -161,6 +164,7 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.incidentId = builder.incidentId;
+            this.relRouteRuleDeleteType = builder.relRouteRuleDeleteType;
             this.relatedServiceName = builder.relatedServiceName;
             this.remark = builder.remark;
             this.snapshotData = builder.snapshotData;
@@ -204,6 +208,13 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
         }
 
         /**
+         * @return relRouteRuleDeleteType
+         */
+        public Integer getRelRouteRuleDeleteType() {
+            return this.relRouteRuleDeleteType;
+        }
+
+        /**
          * @return relatedServiceName
          */
         public String getRelatedServiceName() {
@@ -236,13 +247,14 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
             private String createTime; 
             private String description; 
             private Long incidentId; 
+            private Integer relRouteRuleDeleteType; 
             private String relatedServiceName; 
             private String remark; 
             private String snapshotData; 
             private String title; 
 
             /**
-             * 事件action
+             * action.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -250,7 +262,7 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -258,7 +270,7 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -266,7 +278,7 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
             }
 
             /**
-             * 事件Id
+             * incidentId.
              */
             public Builder incidentId(Long incidentId) {
                 this.incidentId = incidentId;
@@ -274,7 +286,15 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
             }
 
             /**
-             * 服务名称
+             * relRouteRuleDeleteType.
+             */
+            public Builder relRouteRuleDeleteType(Integer relRouteRuleDeleteType) {
+                this.relRouteRuleDeleteType = relRouteRuleDeleteType;
+                return this;
+            }
+
+            /**
+             * relatedServiceName.
              */
             public Builder relatedServiceName(String relatedServiceName) {
                 this.relatedServiceName = relatedServiceName;
@@ -282,7 +302,7 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -290,7 +310,7 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
             }
 
             /**
-             * 快照数据
+             * snapshotData.
              */
             public Builder snapshotData(String snapshotData) {
                 this.snapshotData = snapshotData;
@@ -298,7 +318,7 @@ public class ListIncidentDetailTimelinesResponseBody extends TeaModel {
             }
 
             /**
-             * 主题
+             * title.
              */
             public Builder title(String title) {
                 this.title = title;

@@ -113,18 +113,18 @@ public class ListTrendForSourceEventRequest extends Request {
             super();
         } 
 
-        private Builder(ListTrendForSourceEventRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.requestId = response.requestId;
-            this.startTime = response.startTime;
-            this.timeUnit = response.timeUnit;
+        private Builder(ListTrendForSourceEventRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.requestId = request.requestId;
+            this.startTime = request.startTime;
+            this.timeUnit = request.timeUnit;
         } 
 
         /**
-         * 结束时间
+         * endTime.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("endTime", endTime);
@@ -133,7 +133,7 @@ public class ListTrendForSourceEventRequest extends Request {
         }
 
         /**
-         * 报警ID
+         * instanceId.
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -142,7 +142,7 @@ public class ListTrendForSourceEventRequest extends Request {
         }
 
         /**
-         * 类型
+         * instanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("instanceType", instanceType);
@@ -151,7 +151,7 @@ public class ListTrendForSourceEventRequest extends Request {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("requestId", requestId);
@@ -160,7 +160,7 @@ public class ListTrendForSourceEventRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * startTime.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("startTime", startTime);
@@ -169,7 +169,7 @@ public class ListTrendForSourceEventRequest extends Request {
         }
 
         /**
-         * 时间单位毫秒
+         * timeUnit.
          */
         public Builder timeUnit(Long timeUnit) {
             this.putBodyParameter("timeUnit", timeUnit);

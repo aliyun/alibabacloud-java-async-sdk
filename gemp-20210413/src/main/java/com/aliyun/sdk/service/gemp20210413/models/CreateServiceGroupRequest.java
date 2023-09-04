@@ -144,20 +144,20 @@ public class CreateServiceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateServiceGroupRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.enableWebhook = response.enableWebhook;
-            this.monitorSourceTemplates = response.monitorSourceTemplates;
-            this.serviceGroupDescription = response.serviceGroupDescription;
-            this.serviceGroupName = response.serviceGroupName;
-            this.userIds = response.userIds;
-            this.webhookLink = response.webhookLink;
-            this.webhookType = response.webhookType;
+        private Builder(CreateServiceGroupRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.enableWebhook = request.enableWebhook;
+            this.monitorSourceTemplates = request.monitorSourceTemplates;
+            this.serviceGroupDescription = request.serviceGroupDescription;
+            this.serviceGroupName = request.serviceGroupName;
+            this.userIds = request.userIds;
+            this.webhookLink = request.webhookLink;
+            this.webhookType = request.webhookType;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -166,7 +166,7 @@ public class CreateServiceGroupRequest extends Request {
         }
 
         /**
-         * ENABLE 启用 DISABLE 禁用
+         * enableWebhook.
          */
         public Builder enableWebhook(String enableWebhook) {
             this.putBodyParameter("enableWebhook", enableWebhook);
@@ -175,7 +175,7 @@ public class CreateServiceGroupRequest extends Request {
         }
 
         /**
-         * 监控源消息模版
+         * monitorSourceTemplates.
          */
         public Builder monitorSourceTemplates(java.util.List < MonitorSourceTemplates> monitorSourceTemplates) {
             this.putBodyParameter("monitorSourceTemplates", monitorSourceTemplates);
@@ -184,7 +184,7 @@ public class CreateServiceGroupRequest extends Request {
         }
 
         /**
-         * 服务描述
+         * serviceGroupDescription.
          */
         public Builder serviceGroupDescription(String serviceGroupDescription) {
             this.putBodyParameter("serviceGroupDescription", serviceGroupDescription);
@@ -193,7 +193,7 @@ public class CreateServiceGroupRequest extends Request {
         }
 
         /**
-         * 服务小组名称
+         * serviceGroupName.
          */
         public Builder serviceGroupName(String serviceGroupName) {
             this.putBodyParameter("serviceGroupName", serviceGroupName);
@@ -202,7 +202,7 @@ public class CreateServiceGroupRequest extends Request {
         }
 
         /**
-         * 小组人员用户ID
+         * userIds.
          */
         public Builder userIds(java.util.List < Long > userIds) {
             this.putBodyParameter("userIds", userIds);
@@ -211,7 +211,7 @@ public class CreateServiceGroupRequest extends Request {
         }
 
         /**
-         * webhookLink
+         * webhooklink
          */
         public Builder webhookLink(String webhookLink) {
             this.putBodyParameter("webhookLink", webhookLink);
@@ -220,7 +220,7 @@ public class CreateServiceGroupRequest extends Request {
         }
 
         /**
-         * WEIXIN_GROUP微信 DING_GROUP钉钉 FEISHU_GROUP飞书
+         * webhookType.
          */
         public Builder webhookType(String webhookType) {
             this.putBodyParameter("webhookType", webhookType);
@@ -298,7 +298,7 @@ public class CreateServiceGroupRequest extends Request {
             private Long templateId; 
 
             /**
-             * 监控源ID
+             * monitorSourceId.
              */
             public Builder monitorSourceId(Long monitorSourceId) {
                 this.monitorSourceId = monitorSourceId;
@@ -306,7 +306,7 @@ public class CreateServiceGroupRequest extends Request {
             }
 
             /**
-             * 监控源名字
+             * monitorSourceName.
              */
             public Builder monitorSourceName(String monitorSourceName) {
                 this.monitorSourceName = monitorSourceName;
@@ -314,7 +314,7 @@ public class CreateServiceGroupRequest extends Request {
             }
 
             /**
-             * 模板内容
+             * templateContent.
              */
             public Builder templateContent(String templateContent) {
                 this.templateContent = templateContent;
@@ -322,7 +322,7 @@ public class CreateServiceGroupRequest extends Request {
             }
 
             /**
-             * 消息模版ID
+             * templateId.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

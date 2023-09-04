@@ -50,7 +50,7 @@ public class ListConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(java.util.Map < String, java.util.List<DataValue>> data) {
             this.data = data;

@@ -139,20 +139,20 @@ public class GetProblemPreviewRequest extends Request {
             super();
         } 
 
-        private Builder(GetProblemPreviewRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.effectServiceIds = response.effectServiceIds;
-            this.incidentId = response.incidentId;
-            this.problemId = response.problemId;
-            this.problemLevel = response.problemLevel;
-            this.problemNotifyType = response.problemNotifyType;
-            this.relatedServiceId = response.relatedServiceId;
-            this.serviceGroupIds = response.serviceGroupIds;
+        private Builder(GetProblemPreviewRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.effectServiceIds = request.effectServiceIds;
+            this.incidentId = request.incidentId;
+            this.problemId = request.problemId;
+            this.problemLevel = request.problemLevel;
+            this.problemNotifyType = request.problemNotifyType;
+            this.relatedServiceId = request.relatedServiceId;
+            this.serviceGroupIds = request.serviceGroupIds;
         } 
 
         /**
-         * 幂等校验token
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -161,7 +161,7 @@ public class GetProblemPreviewRequest extends Request {
         }
 
         /**
-         * 影响服务
+         * effectServiceIds.
          */
         public Builder effectServiceIds(java.util.List < Long > effectServiceIds) {
             this.putBodyParameter("effectServiceIds", effectServiceIds);
@@ -170,7 +170,7 @@ public class GetProblemPreviewRequest extends Request {
         }
 
         /**
-         * 事件Id
+         * incidentId.
          */
         public Builder incidentId(Long incidentId) {
             this.putBodyParameter("incidentId", incidentId);
@@ -179,7 +179,7 @@ public class GetProblemPreviewRequest extends Request {
         }
 
         /**
-         * 故障id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -188,7 +188,7 @@ public class GetProblemPreviewRequest extends Request {
         }
 
         /**
-         * 故障等级
+         * problemLevel.
          */
         public Builder problemLevel(String problemLevel) {
             this.putBodyParameter("problemLevel", problemLevel);
@@ -197,7 +197,7 @@ public class GetProblemPreviewRequest extends Request {
         }
 
         /**
-         * 通告类型
+         * problemNotifyType.
          */
         public Builder problemNotifyType(String problemNotifyType) {
             this.putBodyParameter("problemNotifyType", problemNotifyType);
@@ -206,7 +206,7 @@ public class GetProblemPreviewRequest extends Request {
         }
 
         /**
-         * 所属服务
+         * relatedServiceId.
          */
         public Builder relatedServiceId(Long relatedServiceId) {
             this.putBodyParameter("relatedServiceId", relatedServiceId);
@@ -215,7 +215,7 @@ public class GetProblemPreviewRequest extends Request {
         }
 
         /**
-         * 应急协同组
+         * serviceGroupIds.
          */
         public Builder serviceGroupIds(java.util.List < Long > serviceGroupIds) {
             this.putBodyParameter("serviceGroupIds", serviceGroupIds);

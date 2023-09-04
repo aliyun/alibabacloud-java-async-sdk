@@ -89,16 +89,16 @@ public class ListServicesRequest extends Request {
             super();
         } 
 
-        private Builder(ListServicesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.serviceName = response.serviceName;
+        private Builder(ListServicesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.serviceName = request.serviceName;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -107,7 +107,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 当前页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -116,7 +116,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 页大小
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -125,7 +125,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * 服务名称
+         * serviceName.
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("serviceName", serviceName);

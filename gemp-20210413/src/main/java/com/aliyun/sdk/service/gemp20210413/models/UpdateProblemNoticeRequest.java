@@ -74,15 +74,15 @@ public class UpdateProblemNoticeRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateProblemNoticeRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.problemId = response.problemId;
-            this.problemNotifyType = response.problemNotifyType;
+        private Builder(UpdateProblemNoticeRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.problemId = request.problemId;
+            this.problemNotifyType = request.problemNotifyType;
         } 
 
         /**
-         * 幂等校验Id
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -91,7 +91,7 @@ public class UpdateProblemNoticeRequest extends Request {
         }
 
         /**
-         * 故障Id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -100,7 +100,7 @@ public class UpdateProblemNoticeRequest extends Request {
         }
 
         /**
-         * 通告类型 PROBLEM_NOTIFY：故障通告 PROBLEM_UPDATE：故障更新 PROBLEM_UPGRADE：故障升级 PROBLEM_DEGRADE：故障降级 PROBLEM_RECOVER：故障恢复 PROBLEM_REISSUE： 故障补发 PROBLEM_CANCEL：故障取消
+         * problemNotifyType.
          */
         public Builder problemNotifyType(String problemNotifyType) {
             this.putBodyParameter("problemNotifyType", problemNotifyType);

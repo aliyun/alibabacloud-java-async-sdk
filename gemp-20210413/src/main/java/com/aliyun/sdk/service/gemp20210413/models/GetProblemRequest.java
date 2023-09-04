@@ -62,14 +62,14 @@ public class GetProblemRequest extends Request {
             super();
         } 
 
-        private Builder(GetProblemRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.problemId = response.problemId;
+        private Builder(GetProblemRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.problemId = request.problemId;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -78,7 +78,7 @@ public class GetProblemRequest extends Request {
         }
 
         /**
-         * 故障ID
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);

@@ -29,6 +29,10 @@ public class UpdateUserRequest extends Request {
     private Long ramId;
 
     @Body
+    @NameInMap("roleIdList")
+    private java.util.List < Long > roleIdList;
+
+    @Body
     @NameInMap("userId")
     @Validation(required = true)
     private Long userId;
@@ -43,6 +47,7 @@ public class UpdateUserRequest extends Request {
         this.email = builder.email;
         this.phone = builder.phone;
         this.ramId = builder.ramId;
+        this.roleIdList = builder.roleIdList;
         this.userId = builder.userId;
         this.username = builder.username;
     }
@@ -89,6 +94,13 @@ public class UpdateUserRequest extends Request {
     }
 
     /**
+     * @return roleIdList
+     */
+    public java.util.List < Long > getRoleIdList() {
+        return this.roleIdList;
+    }
+
+    /**
      * @return userId
      */
     public Long getUserId() {
@@ -107,6 +119,7 @@ public class UpdateUserRequest extends Request {
         private String email; 
         private String phone; 
         private Long ramId; 
+        private java.util.List < Long > roleIdList; 
         private Long userId; 
         private String username; 
 
@@ -114,18 +127,19 @@ public class UpdateUserRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateUserRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.email = response.email;
-            this.phone = response.phone;
-            this.ramId = response.ramId;
-            this.userId = response.userId;
-            this.username = response.username;
+        private Builder(UpdateUserRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.email = request.email;
+            this.phone = request.phone;
+            this.ramId = request.ramId;
+            this.roleIdList = request.roleIdList;
+            this.userId = request.userId;
+            this.username = request.username;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -134,7 +148,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 邮件
+         * email.
          */
         public Builder email(String email) {
             this.putBodyParameter("email", email);
@@ -143,7 +157,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 手机号
+         * phone.
          */
         public Builder phone(String phone) {
             this.putBodyParameter("phone", phone);
@@ -152,7 +166,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 用户ramId
+         * ramId.
          */
         public Builder ramId(Long ramId) {
             this.putBodyParameter("ramId", ramId);
@@ -161,7 +175,16 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 用户ID
+         * roleIdList.
+         */
+        public Builder roleIdList(java.util.List < Long > roleIdList) {
+            this.putBodyParameter("roleIdList", roleIdList);
+            this.roleIdList = roleIdList;
+            return this;
+        }
+
+        /**
+         * userId.
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("userId", userId);
@@ -170,7 +193,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * 用户名
+         * username.
          */
         public Builder username(String username) {
             this.putBodyParameter("username", username);

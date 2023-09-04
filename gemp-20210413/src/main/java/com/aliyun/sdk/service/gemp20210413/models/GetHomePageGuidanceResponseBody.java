@@ -134,7 +134,7 @@ public class GetHomePageGuidanceResponseBody extends TeaModel {
             private Boolean usersStatus; 
 
             /**
-             * 通知订阅配置状态
+             * notifySubscriptionStatus.
              */
             public Builder notifySubscriptionStatus(Boolean notifySubscriptionStatus) {
                 this.notifySubscriptionStatus = notifySubscriptionStatus;
@@ -142,7 +142,7 @@ public class GetHomePageGuidanceResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组配置状态
+             * serviceGroupStatus.
              */
             public Builder serviceGroupStatus(Boolean serviceGroupStatus) {
                 this.serviceGroupStatus = serviceGroupStatus;
@@ -150,7 +150,7 @@ public class GetHomePageGuidanceResponseBody extends TeaModel {
             }
 
             /**
-             * 服务配置状态
+             * serviceStatus.
              */
             public Builder serviceStatus(Boolean serviceStatus) {
                 this.serviceStatus = serviceStatus;
@@ -158,7 +158,7 @@ public class GetHomePageGuidanceResponseBody extends TeaModel {
             }
 
             /**
-             * 用户配置状态
+             * usersStatus.
              */
             public Builder usersStatus(Boolean usersStatus) {
                 this.usersStatus = usersStatus;

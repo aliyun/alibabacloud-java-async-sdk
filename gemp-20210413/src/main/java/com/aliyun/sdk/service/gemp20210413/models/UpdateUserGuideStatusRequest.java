@@ -61,14 +61,14 @@ public class UpdateUserGuideStatusRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateUserGuideStatusRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.guideAction = response.guideAction;
+        private Builder(UpdateUserGuideStatusRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.guideAction = request.guideAction;
         } 
 
         /**
-         * 幂等校验
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -77,7 +77,7 @@ public class UpdateUserGuideStatusRequest extends Request {
         }
 
         /**
-         * INCIDENT_GUIDE	事件线 INCIDENT_GUIDE配置人员 USER_GUIDE 服务组 SERVICE_GROUP_GUIDE 服务 SERVICE_GUIDE 集成配置 MONITOR_GUIDE 流转规则 ROUTE_RULE_GUIDE 通知订阅 NOTICE_GUIDE
+         * guideAction.
          */
         public Builder guideAction(String guideAction) {
             this.putBodyParameter("guideAction", guideAction);

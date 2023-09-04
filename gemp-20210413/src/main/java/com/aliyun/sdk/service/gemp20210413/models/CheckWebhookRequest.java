@@ -74,15 +74,15 @@ public class CheckWebhookRequest extends Request {
             super();
         } 
 
-        private Builder(CheckWebhookRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.webhook = response.webhook;
-            this.webhookType = response.webhookType;
+        private Builder(CheckWebhookRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.webhook = request.webhook;
+            this.webhookType = request.webhookType;
         } 
 
         /**
-         * 幂等校验token
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -91,7 +91,7 @@ public class CheckWebhookRequest extends Request {
         }
 
         /**
-         * webook地址
+         * webhook.
          */
         public Builder webhook(String webhook) {
             this.putBodyParameter("webhook", webhook);
@@ -100,7 +100,7 @@ public class CheckWebhookRequest extends Request {
         }
 
         /**
-         * webhook地址类型 企业微信WEIXIN_GROUP 钉钉群 DING_GROUP 飞书 FEISHU_GROUP
+         * webhookType.
          */
         public Builder webhookType(String webhookType) {
             this.putBodyParameter("webhookType", webhookType);

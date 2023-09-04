@@ -86,7 +86,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * 分页参数
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * 分页参数
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
         }
 
         /**
-         * 分页参数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -135,6 +135,9 @@ public class ListSubscriptionsResponseBody extends TeaModel {
         @NameInMap("id")
         private Long id;
 
+        @NameInMap("isValid")
+        private Long isValid;
+
         @NameInMap("name")
         private String name;
 
@@ -146,6 +149,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
 
         private NotifyObjectList(Builder builder) {
             this.id = builder.id;
+            this.isValid = builder.isValid;
             this.name = builder.name;
             this.notifyObjectId = builder.notifyObjectId;
             this.notifyObjectType = builder.notifyObjectType;
@@ -164,6 +168,13 @@ public class ListSubscriptionsResponseBody extends TeaModel {
          */
         public Long getId() {
             return this.id;
+        }
+
+        /**
+         * @return isValid
+         */
+        public Long getIsValid() {
+            return this.isValid;
         }
 
         /**
@@ -189,12 +200,13 @@ public class ListSubscriptionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long id; 
+            private Long isValid; 
             private String name; 
             private Long notifyObjectId; 
             private Long notifyObjectType; 
 
             /**
-             * id主键
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -202,7 +214,15 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 通知对象名
+             * isValid.
+             */
+            public Builder isValid(Long isValid) {
+                this.isValid = isValid;
+                return this;
+            }
+
+            /**
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +230,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联主键id
+             * notifyObjectId.
              */
             public Builder notifyObjectId(Long notifyObjectId) {
                 this.notifyObjectId = notifyObjectId;
@@ -218,7 +238,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 通知对象类型0服务组 1个人
+             * notifyObjectType.
              */
             public Builder notifyObjectType(Long notifyObjectType) {
                 this.notifyObjectType = notifyObjectType;
@@ -236,6 +256,9 @@ public class ListSubscriptionsResponseBody extends TeaModel {
         @NameInMap("id")
         private Long id;
 
+        @NameInMap("isValid")
+        private Long isValid;
+
         @NameInMap("scope")
         private Long scope;
 
@@ -247,6 +270,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
 
         private ScopeObjectList(Builder builder) {
             this.id = builder.id;
+            this.isValid = builder.isValid;
             this.scope = builder.scope;
             this.scopeObject = builder.scopeObject;
             this.scopeObjectId = builder.scopeObjectId;
@@ -265,6 +289,13 @@ public class ListSubscriptionsResponseBody extends TeaModel {
          */
         public Long getId() {
             return this.id;
+        }
+
+        /**
+         * @return isValid
+         */
+        public Long getIsValid() {
+            return this.isValid;
         }
 
         /**
@@ -290,12 +321,13 @@ public class ListSubscriptionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long id; 
+            private Long isValid; 
             private Long scope; 
             private String scopeObject; 
             private Long scopeObjectId; 
 
             /**
-             * id主键
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -303,7 +335,15 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 订阅范围类型 ALL全部 SERVICE服务 ROUTETULE流转规则
+             * isValid.
+             */
+            public Builder isValid(Long isValid) {
+                this.isValid = isValid;
+                return this;
+            }
+
+            /**
+             * scope.
              */
             public Builder scope(Long scope) {
                 this.scope = scope;
@@ -311,7 +351,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 订阅范围对象名称
+             * scopeObject.
              */
             public Builder scopeObject(String scopeObject) {
                 this.scopeObject = scopeObject;
@@ -319,7 +359,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 订阅范围对象关联表主键id
+             * scopeObjectId.
              */
             public Builder scopeObjectId(Long scopeObjectId) {
                 this.scopeObjectId = scopeObjectId;
@@ -468,7 +508,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             private String subscriptionTitle; 
 
             /**
-             * 时效结束时间
+             * endTime.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -476,7 +516,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 有效期类型 0 长期 1短期
+             * expiredType.
              */
             public Builder expiredType(String expiredType) {
                 this.expiredType = expiredType;
@@ -484,7 +524,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 通知对象列表
+             * notifyObjectList.
              */
             public Builder notifyObjectList(java.util.List < NotifyObjectList> notifyObjectList) {
                 this.notifyObjectList = notifyObjectList;
@@ -492,7 +532,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 0服务组 1个人
+             * notifyObjectType.
              */
             public Builder notifyObjectType(Long notifyObjectType) {
                 this.notifyObjectType = notifyObjectType;
@@ -500,7 +540,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 0 全部 1服务 2 流转规则
+             * scope.
              */
             public Builder scope(Long scope) {
                 this.scope = scope;
@@ -508,7 +548,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 订阅范围列表
+             * scopeObjectList.
              */
             public Builder scopeObjectList(java.util.List < ScopeObjectList> scopeObjectList) {
                 this.scopeObjectList = scopeObjectList;
@@ -516,7 +556,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 时效开始时间
+             * startTime.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -524,7 +564,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * ENABLE 启用 DISABLE禁用
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -532,7 +572,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 订阅id
+             * subscriptionId.
              */
             public Builder subscriptionId(Long subscriptionId) {
                 this.subscriptionId = subscriptionId;
@@ -540,7 +580,7 @@ public class ListSubscriptionsResponseBody extends TeaModel {
             }
 
             /**
-             * 通知订阅名称
+             * subscriptionTitle.
              */
             public Builder subscriptionTitle(String subscriptionTitle) {
                 this.subscriptionTitle = subscriptionTitle;

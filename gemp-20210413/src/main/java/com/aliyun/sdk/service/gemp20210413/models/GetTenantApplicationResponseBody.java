@@ -81,6 +81,9 @@ public class GetTenantApplicationResponseBody extends TeaModel {
         @NameInMap("corporationId")
         private String corporationId;
 
+        @NameInMap("originalCorpId")
+        private String originalCorpId;
+
         @NameInMap("progress")
         private String progress;
 
@@ -88,6 +91,7 @@ public class GetTenantApplicationResponseBody extends TeaModel {
             this.bizId = builder.bizId;
             this.channel = builder.channel;
             this.corporationId = builder.corporationId;
+            this.originalCorpId = builder.originalCorpId;
             this.progress = builder.progress;
         }
 
@@ -121,6 +125,13 @@ public class GetTenantApplicationResponseBody extends TeaModel {
         }
 
         /**
+         * @return originalCorpId
+         */
+        public String getOriginalCorpId() {
+            return this.originalCorpId;
+        }
+
+        /**
          * @return progress
          */
         public String getProgress() {
@@ -131,10 +142,11 @@ public class GetTenantApplicationResponseBody extends TeaModel {
             private String bizId; 
             private String channel; 
             private String corporationId; 
+            private String originalCorpId; 
             private String progress; 
 
             /**
-             * 业务id
+             * bizId.
              */
             public Builder bizId(String bizId) {
                 this.bizId = bizId;
@@ -142,7 +154,7 @@ public class GetTenantApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 云钉协同渠道
+             * channel.
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -150,7 +162,7 @@ public class GetTenantApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 企业id
+             * corporationId.
              */
             public Builder corporationId(String corporationId) {
                 this.corporationId = corporationId;
@@ -158,7 +170,15 @@ public class GetTenantApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * 进度
+             * originalCorpId.
+             */
+            public Builder originalCorpId(String originalCorpId) {
+                this.originalCorpId = originalCorpId;
+                return this;
+            }
+
+            /**
+             * progress.
              */
             public Builder progress(String progress) {
                 this.progress = progress;

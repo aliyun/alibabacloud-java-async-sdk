@@ -50,7 +50,7 @@ public class CreateSubscriptionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -98,7 +98,7 @@ public class CreateSubscriptionResponseBody extends TeaModel {
             private Long subscriptionId; 
 
             /**
-             * 订阅id
+             * subscriptionId.
              */
             public Builder subscriptionId(Long subscriptionId) {
                 this.subscriptionId = subscriptionId;

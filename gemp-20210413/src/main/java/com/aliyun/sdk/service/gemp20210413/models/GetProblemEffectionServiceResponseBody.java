@@ -50,7 +50,7 @@ public class GetProblemEffectionServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -170,7 +170,7 @@ public class GetProblemEffectionServiceResponseBody extends TeaModel {
             private Long status; 
 
             /**
-             * 影响描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -178,7 +178,7 @@ public class GetProblemEffectionServiceResponseBody extends TeaModel {
             }
 
             /**
-             * 影响服务id
+             * effectionServiceId.
              */
             public Builder effectionServiceId(Long effectionServiceId) {
                 this.effectionServiceId = effectionServiceId;
@@ -186,7 +186,7 @@ public class GetProblemEffectionServiceResponseBody extends TeaModel {
             }
 
             /**
-             * 影响等级
+             * level.
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -194,7 +194,7 @@ public class GetProblemEffectionServiceResponseBody extends TeaModel {
             }
 
             /**
-             * 图片链接
+             * picUrl.
              */
             public Builder picUrl(java.util.List < String > picUrl) {
                 this.picUrl = picUrl;
@@ -202,7 +202,7 @@ public class GetProblemEffectionServiceResponseBody extends TeaModel {
             }
 
             /**
-             * 服务id
+             * serviceId.
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -210,7 +210,7 @@ public class GetProblemEffectionServiceResponseBody extends TeaModel {
             }
 
             /**
-             * 服务名称
+             * serviceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -218,7 +218,7 @@ public class GetProblemEffectionServiceResponseBody extends TeaModel {
             }
 
             /**
-             * 影响状态 0 未恢复 1已恢复
+             * status.
              */
             public Builder status(Long status) {
                 this.status = status;

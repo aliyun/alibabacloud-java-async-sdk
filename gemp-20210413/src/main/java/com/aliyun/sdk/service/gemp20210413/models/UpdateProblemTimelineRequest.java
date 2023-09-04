@@ -113,18 +113,18 @@ public class UpdateProblemTimelineRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateProblemTimelineRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.content = response.content;
-            this.keyNode = response.keyNode;
-            this.problemId = response.problemId;
-            this.problemTimelineId = response.problemTimelineId;
-            this.time = response.time;
+        private Builder(UpdateProblemTimelineRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.content = request.content;
+            this.keyNode = request.keyNode;
+            this.problemId = request.problemId;
+            this.problemTimelineId = request.problemTimelineId;
+            this.time = request.time;
         } 
 
         /**
-         * clientToken
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -133,7 +133,7 @@ public class UpdateProblemTimelineRequest extends Request {
         }
 
         /**
-         * 节点内容
+         * content.
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -142,7 +142,7 @@ public class UpdateProblemTimelineRequest extends Request {
         }
 
         /**
-         * 关键节点 码表:PROBLEM_KEY_NODE (逗号分隔)
+         * keyNode.
          */
         public Builder keyNode(String keyNode) {
             this.putBodyParameter("keyNode", keyNode);
@@ -151,7 +151,7 @@ public class UpdateProblemTimelineRequest extends Request {
         }
 
         /**
-         * 故障id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -160,7 +160,7 @@ public class UpdateProblemTimelineRequest extends Request {
         }
 
         /**
-         * 时间节点id
+         * problemTimelineId.
          */
         public Builder problemTimelineId(Long problemTimelineId) {
             this.putBodyParameter("problemTimelineId", problemTimelineId);
@@ -169,7 +169,7 @@ public class UpdateProblemTimelineRequest extends Request {
         }
 
         /**
-         * 发生时间
+         * time.
          */
         public Builder time(String time) {
             this.putBodyParameter("time", time);

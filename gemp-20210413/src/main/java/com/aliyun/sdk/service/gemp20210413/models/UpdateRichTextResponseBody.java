@@ -98,7 +98,7 @@ public class UpdateRichTextResponseBody extends TeaModel {
             private Long id; 
 
             /**
-             * 富文本id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;

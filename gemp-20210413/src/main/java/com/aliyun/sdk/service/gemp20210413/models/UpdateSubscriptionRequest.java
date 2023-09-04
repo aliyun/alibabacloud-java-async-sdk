@@ -186,23 +186,23 @@ public class UpdateSubscriptionRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateSubscriptionRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.expiredType = response.expiredType;
-            this.notifyObjectList = response.notifyObjectList;
-            this.notifyObjectType = response.notifyObjectType;
-            this.notifyStrategyList = response.notifyStrategyList;
-            this.period = response.period;
-            this.scope = response.scope;
-            this.scopeObjectList = response.scopeObjectList;
-            this.startTime = response.startTime;
-            this.subscriptionId = response.subscriptionId;
-            this.subscriptionTitle = response.subscriptionTitle;
+        private Builder(UpdateSubscriptionRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.expiredType = request.expiredType;
+            this.notifyObjectList = request.notifyObjectList;
+            this.notifyObjectType = request.notifyObjectType;
+            this.notifyStrategyList = request.notifyStrategyList;
+            this.period = request.period;
+            this.scope = request.scope;
+            this.scopeObjectList = request.scopeObjectList;
+            this.startTime = request.startTime;
+            this.subscriptionId = request.subscriptionId;
+            this.subscriptionTitle = request.subscriptionTitle;
         } 
 
         /**
-         * 结束时间
+         * endTime.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("endTime", endTime);
@@ -211,7 +211,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * 订阅时效
+         * expiredType.
          */
         public Builder expiredType(String expiredType) {
             this.putBodyParameter("expiredType", expiredType);
@@ -220,7 +220,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * 通知对象列表
+         * notifyObjectList.
          */
         public Builder notifyObjectList(java.util.List < NotifyObjectList> notifyObjectList) {
             this.putBodyParameter("notifyObjectList", notifyObjectList);
@@ -229,7 +229,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * 通知对象类型
+         * notifyObjectType.
          */
         public Builder notifyObjectType(String notifyObjectType) {
             this.putBodyParameter("notifyObjectType", notifyObjectType);
@@ -238,7 +238,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * 通知策略列表
+         * notifyStrategyList.
          */
         public Builder notifyStrategyList(java.util.List < NotifyStrategyList> notifyStrategyList) {
             this.putBodyParameter("notifyStrategyList", notifyStrategyList);
@@ -247,7 +247,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * 时间段字符串
+         * period.
          */
         public Builder period(String period) {
             this.putBodyParameter("period", period);
@@ -256,7 +256,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * 订阅范围类型
+         * scope.
          */
         public Builder scope(String scope) {
             this.putBodyParameter("scope", scope);
@@ -265,7 +265,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * 订阅范围列表
+         * scopeObjectList.
          */
         public Builder scopeObjectList(java.util.List < ScopeObjectList> scopeObjectList) {
             this.putBodyParameter("scopeObjectList", scopeObjectList);
@@ -274,7 +274,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * startTime.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("startTime", startTime);
@@ -283,7 +283,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * 主键
+         * subscriptionId.
          */
         public Builder subscriptionId(Long subscriptionId) {
             this.putBodyParameter("subscriptionId", subscriptionId);
@@ -292,7 +292,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * 通知订阅名称
+         * subscriptionTitle.
          */
         public Builder subscriptionTitle(String subscriptionTitle) {
             this.putBodyParameter("subscriptionTitle", subscriptionTitle);
@@ -347,7 +347,7 @@ public class UpdateSubscriptionRequest extends Request {
             private Long notifyObjectId; 
 
             /**
-             * 主键id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -355,7 +355,7 @@ public class UpdateSubscriptionRequest extends Request {
             }
 
             /**
-             * 通知对象id
+             * notifyObjectId.
              */
             public Builder notifyObjectId(Long notifyObjectId) {
                 this.notifyObjectId = notifyObjectId;
@@ -432,7 +432,7 @@ public class UpdateSubscriptionRequest extends Request {
             private String problemNotifyType; 
 
             /**
-             * 事件动作
+             * action.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -440,7 +440,7 @@ public class UpdateSubscriptionRequest extends Request {
             }
 
             /**
-             * 影响程度
+             * effection.
              */
             public Builder effection(String effection) {
                 this.effection = effection;
@@ -448,7 +448,7 @@ public class UpdateSubscriptionRequest extends Request {
             }
 
             /**
-             * 等级
+             * level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -456,7 +456,7 @@ public class UpdateSubscriptionRequest extends Request {
             }
 
             /**
-             * 故障通知类型
+             * problemNotifyType.
              */
             public Builder problemNotifyType(String problemNotifyType) {
                 this.problemNotifyType = problemNotifyType;
@@ -509,7 +509,7 @@ public class UpdateSubscriptionRequest extends Request {
             private String workday; 
 
             /**
-             * 非工作时间
+             * nonWorkday.
              */
             public Builder nonWorkday(String nonWorkday) {
                 this.nonWorkday = nonWorkday;
@@ -517,7 +517,7 @@ public class UpdateSubscriptionRequest extends Request {
             }
 
             /**
-             * 工作时间
+             * workday.
              */
             public Builder workday(String workday) {
                 this.workday = workday;
@@ -594,7 +594,7 @@ public class UpdateSubscriptionRequest extends Request {
             private PeriodChannel periodChannel; 
 
             /**
-             * 故障等级
+             * channels.
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -602,7 +602,7 @@ public class UpdateSubscriptionRequest extends Request {
             }
 
             /**
-             * 影响程度
+             * conditions.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -610,7 +610,7 @@ public class UpdateSubscriptionRequest extends Request {
             }
 
             /**
-             * id
+             * id.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -618,7 +618,7 @@ public class UpdateSubscriptionRequest extends Request {
             }
 
             /**
-             * 分时段通知渠道
+             * periodChannel.
              */
             public Builder periodChannel(PeriodChannel periodChannel) {
                 this.periodChannel = periodChannel;
@@ -673,7 +673,7 @@ public class UpdateSubscriptionRequest extends Request {
             private java.util.List < Strategies> strategies; 
 
             /**
-             * 订阅实例类型，事件、报警、故障
+             * instanceType.
              */
             public Builder instanceType(Long instanceType) {
                 this.instanceType = instanceType;
@@ -681,7 +681,7 @@ public class UpdateSubscriptionRequest extends Request {
             }
 
             /**
-             * 通知策略
+             * strategies.
              */
             public Builder strategies(java.util.List < Strategies> strategies) {
                 this.strategies = strategies;
@@ -735,7 +735,7 @@ public class UpdateSubscriptionRequest extends Request {
             private Long scopeObjectId; 
 
             /**
-             * 主键id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -743,7 +743,7 @@ public class UpdateSubscriptionRequest extends Request {
             }
 
             /**
-             * 订阅范围对象id
+             * scopeObjectId.
              */
             public Builder scopeObjectId(Long scopeObjectId) {
                 this.scopeObjectId = scopeObjectId;

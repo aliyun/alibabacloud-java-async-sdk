@@ -38,7 +38,7 @@ public class ConfirmIntegrationConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * requestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

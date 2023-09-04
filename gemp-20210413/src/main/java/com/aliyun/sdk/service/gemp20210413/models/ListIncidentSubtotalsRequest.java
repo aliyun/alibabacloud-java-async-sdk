@@ -61,14 +61,14 @@ public class ListIncidentSubtotalsRequest extends Request {
             super();
         } 
 
-        private Builder(ListIncidentSubtotalsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.incidentId = response.incidentId;
+        private Builder(ListIncidentSubtotalsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.incidentId = request.incidentId;
         } 
 
         /**
-         * 幂等校验
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -77,7 +77,7 @@ public class ListIncidentSubtotalsRequest extends Request {
         }
 
         /**
-         * 事件ID
+         * incidentId.
          */
         public Builder incidentId(Long incidentId) {
             this.putBodyParameter("incidentId", incidentId);

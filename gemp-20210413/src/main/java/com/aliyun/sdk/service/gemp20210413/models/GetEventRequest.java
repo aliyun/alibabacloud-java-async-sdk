@@ -49,13 +49,13 @@ public class GetEventRequest extends Request {
             super();
         } 
 
-        private Builder(GetEventRequest response) {
-            super(response);
-            this.monitorSourceId = response.monitorSourceId;
+        private Builder(GetEventRequest request) {
+            super(request);
+            this.monitorSourceId = request.monitorSourceId;
         } 
 
         /**
-         * 监控源ID不能为空
+         * monitorSourceId.
          */
         public Builder monitorSourceId(Long monitorSourceId) {
             this.putBodyParameter("monitorSourceId", monitorSourceId);

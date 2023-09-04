@@ -87,16 +87,16 @@ public class UpdateRichTextRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRichTextRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.richText = response.richText;
-            this.richTextId = response.richTextId;
+        private Builder(UpdateRichTextRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.richText = request.richText;
+            this.richTextId = request.richTextId;
         } 
 
         /**
-         * 资源id
+         * instanceId.
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -105,7 +105,7 @@ public class UpdateRichTextRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * instanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("instanceType", instanceType);
@@ -114,7 +114,7 @@ public class UpdateRichTextRequest extends Request {
         }
 
         /**
-         * 文本内容
+         * richText.
          */
         public Builder richText(String richText) {
             this.putBodyParameter("richText", richText);
@@ -123,7 +123,7 @@ public class UpdateRichTextRequest extends Request {
         }
 
         /**
-         * 富文本id
+         * richTextId.
          */
         public Builder richTextId(Long richTextId) {
             this.putBodyParameter("richTextId", richTextId);

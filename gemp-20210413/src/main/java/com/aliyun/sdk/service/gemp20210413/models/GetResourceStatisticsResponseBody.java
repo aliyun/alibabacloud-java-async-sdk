@@ -134,7 +134,7 @@ public class GetResourceStatisticsResponseBody extends TeaModel {
             private Integer problemCount; 
 
             /**
-             * 报警总数
+             * alertCount.
              */
             public Builder alertCount(Integer alertCount) {
                 this.alertCount = alertCount;
@@ -142,7 +142,7 @@ public class GetResourceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件总数
+             * incidentCount.
              */
             public Builder incidentCount(Integer incidentCount) {
                 this.incidentCount = incidentCount;
@@ -150,7 +150,7 @@ public class GetResourceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 集成总数
+             * integrationCount.
              */
             public Builder integrationCount(Integer integrationCount) {
                 this.integrationCount = integrationCount;
@@ -158,7 +158,7 @@ public class GetResourceStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 故障总数
+             * problemCount.
              */
             public Builder problemCount(Integer problemCount) {
                 this.problemCount = problemCount;

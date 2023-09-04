@@ -152,21 +152,21 @@ public class CreateIncidentRequest extends Request {
             super();
         } 
 
-        private Builder(CreateIncidentRequest response) {
-            super(response);
-            this.assignUserId = response.assignUserId;
-            this.channels = response.channels;
-            this.clientToken = response.clientToken;
-            this.effect = response.effect;
-            this.incidentDescription = response.incidentDescription;
-            this.incidentLevel = response.incidentLevel;
-            this.incidentTitle = response.incidentTitle;
-            this.relatedServiceId = response.relatedServiceId;
-            this.serviceGroupId = response.serviceGroupId;
+        private Builder(CreateIncidentRequest request) {
+            super(request);
+            this.assignUserId = request.assignUserId;
+            this.channels = request.channels;
+            this.clientToken = request.clientToken;
+            this.effect = request.effect;
+            this.incidentDescription = request.incidentDescription;
+            this.incidentLevel = request.incidentLevel;
+            this.incidentTitle = request.incidentTitle;
+            this.relatedServiceId = request.relatedServiceId;
+            this.serviceGroupId = request.serviceGroupId;
         } 
 
         /**
-         * 分派的用户ID
+         * assignUserId.
          */
         public Builder assignUserId(Long assignUserId) {
             this.putBodyParameter("assignUserId", assignUserId);
@@ -175,7 +175,7 @@ public class CreateIncidentRequest extends Request {
         }
 
         /**
-         * 通知渠道     SMS 短信   EMAIL 邮件   PHONE  电话  WEIXIN_GROUP企微群 DING_GROUP 钉钉群
+         * channels.
          */
         public Builder channels(java.util.List < String > channels) {
             this.putBodyParameter("channels", channels);
@@ -184,7 +184,7 @@ public class CreateIncidentRequest extends Request {
         }
 
         /**
-         * 幂等UUID
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -193,7 +193,7 @@ public class CreateIncidentRequest extends Request {
         }
 
         /**
-         * 影响等级 高：HIGH 低 LOW
+         * effect.
          */
         public Builder effect(String effect) {
             this.putBodyParameter("effect", effect);
@@ -202,7 +202,7 @@ public class CreateIncidentRequest extends Request {
         }
 
         /**
-         * 事件描述
+         * incidentDescription.
          */
         public Builder incidentDescription(String incidentDescription) {
             this.putBodyParameter("incidentDescription", incidentDescription);
@@ -211,7 +211,7 @@ public class CreateIncidentRequest extends Request {
         }
 
         /**
-         * P1	事件级别 P1 P2 P3 P4
+         * incidentLevel.
          */
         public Builder incidentLevel(String incidentLevel) {
             this.putBodyParameter("incidentLevel", incidentLevel);
@@ -220,7 +220,7 @@ public class CreateIncidentRequest extends Request {
         }
 
         /**
-         * 事件标题
+         * incidentTitle.
          */
         public Builder incidentTitle(String incidentTitle) {
             this.putBodyParameter("incidentTitle", incidentTitle);
@@ -229,7 +229,7 @@ public class CreateIncidentRequest extends Request {
         }
 
         /**
-         * 关联服务ID
+         * relatedServiceId.
          */
         public Builder relatedServiceId(Long relatedServiceId) {
             this.putBodyParameter("relatedServiceId", relatedServiceId);
@@ -238,7 +238,7 @@ public class CreateIncidentRequest extends Request {
         }
 
         /**
-         * 服务组Id
+         * 12000
          */
         public Builder serviceGroupId(Long serviceGroupId) {
             this.putBodyParameter("serviceGroupId", serviceGroupId);

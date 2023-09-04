@@ -61,10 +61,10 @@ public class CreateIntegrationConfigRequest extends Request {
             super();
         } 
 
-        private Builder(CreateIntegrationConfigRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.monitorSourceId = response.monitorSourceId;
+        private Builder(CreateIntegrationConfigRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.monitorSourceId = request.monitorSourceId;
         } 
 
         /**

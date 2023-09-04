@@ -50,7 +50,7 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 验证结果
+         * data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +110,7 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
             private String escalationPlanName; 
 
             /**
-             * 升级计划ID
+             * escalationPlanId.
              */
             public Builder escalationPlanId(Long escalationPlanId) {
                 this.escalationPlanId = escalationPlanId;
@@ -118,7 +118,7 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 升级计划名称
+             * escalationPlanName.
              */
             public Builder escalationPlanName(String escalationPlanName) {
                 this.escalationPlanName = escalationPlanName;
@@ -171,7 +171,7 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 订阅ID
+             * subscriptionId.
              */
             public Builder subscriptionId(Long subscriptionId) {
                 this.subscriptionId = subscriptionId;
@@ -179,7 +179,7 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 订阅名称
+             * title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -280,7 +280,7 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
             private String routeType; 
 
             /**
-             * 升级策略名称
+             * escalationPlans.
              */
             public Builder escalationPlans(java.util.List < EscalationPlans> escalationPlans) {
                 this.escalationPlans = escalationPlans;
@@ -288,7 +288,7 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 验证是否成功
+             * isValidRule.
              */
             public Builder isValidRule(Boolean isValidRule) {
                 this.isValidRule = isValidRule;
@@ -296,7 +296,7 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 验证失败监控源ID
+             * monitorSourceIds.
              */
             public Builder monitorSourceIds(java.util.List < Long > monitorSourceIds) {
                 this.monitorSourceIds = monitorSourceIds;
@@ -304,7 +304,7 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 订阅名称
+             * notifySubscriptionNames.
              */
             public Builder notifySubscriptionNames(java.util.List < NotifySubscriptionNames> notifySubscriptionNames) {
                 this.notifySubscriptionNames = notifySubscriptionNames;
@@ -312,7 +312,7 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 流转规则验证失败的原因
+             * routeRuleFailReason.
              */
             public Builder routeRuleFailReason(java.util.List < String > routeRuleFailReason) {
                 this.routeRuleFailReason = routeRuleFailReason;
@@ -320,7 +320,7 @@ public class VerifyRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 事件或者报警
+             * routeType.
              */
             public Builder routeType(String routeType) {
                 this.routeType = routeType;

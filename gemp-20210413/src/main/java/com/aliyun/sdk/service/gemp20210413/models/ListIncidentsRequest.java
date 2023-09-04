@@ -178,23 +178,23 @@ public class ListIncidentsRequest extends Request {
             super();
         } 
 
-        private Builder(ListIncidentsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.createEndTime = response.createEndTime;
-            this.createStartTime = response.createStartTime;
-            this.effect = response.effect;
-            this.incidentLevel = response.incidentLevel;
-            this.incidentStatus = response.incidentStatus;
-            this.me = response.me;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.relationServiceId = response.relationServiceId;
-            this.ruleName = response.ruleName;
+        private Builder(ListIncidentsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.createEndTime = request.createEndTime;
+            this.createStartTime = request.createStartTime;
+            this.effect = request.effect;
+            this.incidentLevel = request.incidentLevel;
+            this.incidentStatus = request.incidentStatus;
+            this.me = request.me;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.relationServiceId = request.relationServiceId;
+            this.ruleName = request.ruleName;
         } 
 
         /**
-         * 幂等校验id
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -203,7 +203,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * 创建结束时间
+         * createEndTime.
          */
         public Builder createEndTime(String createEndTime) {
             this.putBodyParameter("createEndTime", createEndTime);
@@ -212,7 +212,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * 创建开始时间
+         * createStartTime.
          */
         public Builder createStartTime(String createStartTime) {
             this.putBodyParameter("createStartTime", createStartTime);
@@ -221,7 +221,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * 影响等级 高：HIGH 低 LOW
+         * effect.
          */
         public Builder effect(String effect) {
             this.putBodyParameter("effect", effect);
@@ -230,7 +230,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * 事件级别 P1 P2 P3 P4
+         * incidentLevel.
          */
         public Builder incidentLevel(String incidentLevel) {
             this.putBodyParameter("incidentLevel", incidentLevel);
@@ -239,7 +239,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * 事件状态 ASSIGNED已分派 RESPONDED已响应  FINISHED已完结
+         * incidentStatus.
          */
         public Builder incidentStatus(String incidentStatus) {
             this.putBodyParameter("incidentStatus", incidentStatus);
@@ -248,7 +248,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * 是否自己 1是 0不是
+         * me.
          */
         public Builder me(Integer me) {
             this.putBodyParameter("me", me);
@@ -257,7 +257,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * 页
+         * pageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -266,7 +266,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * 行
+         * pageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -275,7 +275,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * 关联服务ID
+         * relationServiceId.
          */
         public Builder relationServiceId(Long relationServiceId) {
             this.putBodyParameter("relationServiceId", relationServiceId);
@@ -284,7 +284,7 @@ public class ListIncidentsRequest extends Request {
         }
 
         /**
-         * 流转规则名字
+         * ruleName.
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("ruleName", ruleName);

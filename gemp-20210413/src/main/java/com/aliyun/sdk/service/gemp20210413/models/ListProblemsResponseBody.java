@@ -94,7 +94,7 @@ public class ListProblemsResponseBody extends TeaModel {
         }
 
         /**
-         * 当前页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListProblemsResponseBody extends TeaModel {
         }
 
         /**
-         * 页大小
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class ListProblemsResponseBody extends TeaModel {
         }
 
         /**
-         * 总条数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -194,7 +194,7 @@ public class ListProblemsResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * 服务描述
+             * serviceDescription.
              */
             public Builder serviceDescription(String serviceDescription) {
                 this.serviceDescription = serviceDescription;
@@ -202,7 +202,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 影响服务ID
+             * serviceId.
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -210,7 +210,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务名字
+             * serviceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -218,7 +218,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * updateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -260,6 +260,9 @@ public class ListProblemsResponseBody extends TeaModel {
         @NameInMap("mainHandlerId")
         private Long mainHandlerId;
 
+        @NameInMap("mainHandlerIsValid")
+        private Long mainHandlerIsValid;
+
         @NameInMap("mainHandlerName")
         private String mainHandlerName;
 
@@ -287,6 +290,9 @@ public class ListProblemsResponseBody extends TeaModel {
         @NameInMap("replayTime")
         private String replayTime;
 
+        @NameInMap("serviceDeletedType")
+        private Integer serviceDeletedType;
+
         @NameInMap("serviceName")
         private String serviceName;
 
@@ -303,6 +309,7 @@ public class ListProblemsResponseBody extends TeaModel {
             this.isManual = builder.isManual;
             this.isUpgrade = builder.isUpgrade;
             this.mainHandlerId = builder.mainHandlerId;
+            this.mainHandlerIsValid = builder.mainHandlerIsValid;
             this.mainHandlerName = builder.mainHandlerName;
             this.problemId = builder.problemId;
             this.problemLevel = builder.problemLevel;
@@ -312,6 +319,7 @@ public class ListProblemsResponseBody extends TeaModel {
             this.recoveryTime = builder.recoveryTime;
             this.relatedServiceId = builder.relatedServiceId;
             this.replayTime = builder.replayTime;
+            this.serviceDeletedType = builder.serviceDeletedType;
             this.serviceName = builder.serviceName;
             this.updateTime = builder.updateTime;
         }
@@ -388,6 +396,13 @@ public class ListProblemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return mainHandlerIsValid
+         */
+        public Long getMainHandlerIsValid() {
+            return this.mainHandlerIsValid;
+        }
+
+        /**
          * @return mainHandlerName
          */
         public String getMainHandlerName() {
@@ -451,6 +466,13 @@ public class ListProblemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceDeletedType
+         */
+        public Integer getServiceDeletedType() {
+            return this.serviceDeletedType;
+        }
+
+        /**
          * @return serviceName
          */
         public String getServiceName() {
@@ -474,6 +496,7 @@ public class ListProblemsResponseBody extends TeaModel {
             private Boolean isManual; 
             private Boolean isUpgrade; 
             private Long mainHandlerId; 
+            private Long mainHandlerIsValid; 
             private String mainHandlerName; 
             private Long problemId; 
             private String problemLevel; 
@@ -483,6 +506,7 @@ public class ListProblemsResponseBody extends TeaModel {
             private String recoveryTime; 
             private String relatedServiceId; 
             private String replayTime; 
+            private Integer serviceDeletedType; 
             private String serviceName; 
             private String updateTime; 
 
@@ -495,7 +519,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 取消时间
+             * cancelTime.
              */
             public Builder cancelTime(String cancelTime) {
                 this.cancelTime = cancelTime;
@@ -503,7 +527,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -511,7 +535,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 发现时间
+             * discoverTime.
              */
             public Builder discoverTime(String discoverTime) {
                 this.discoverTime = discoverTime;
@@ -519,7 +543,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 完结时间
+             * finishTime.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -527,7 +551,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件ID
+             * incidentId.
              */
             public Builder incidentId(Long incidentId) {
                 this.incidentId = incidentId;
@@ -535,7 +559,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否手动
+             * isManual.
              */
             public Builder isManual(Boolean isManual) {
                 this.isManual = isManual;
@@ -543,7 +567,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否升级
+             * isUpgrade.
              */
             public Builder isUpgrade(Boolean isUpgrade) {
                 this.isUpgrade = isUpgrade;
@@ -551,7 +575,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 主要处理人ID
+             * mainHandlerId.
              */
             public Builder mainHandlerId(Long mainHandlerId) {
                 this.mainHandlerId = mainHandlerId;
@@ -559,7 +583,15 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 主要处理人名称
+             * mainHandlerIsValid.
+             */
+            public Builder mainHandlerIsValid(Long mainHandlerIsValid) {
+                this.mainHandlerIsValid = mainHandlerIsValid;
+                return this;
+            }
+
+            /**
+             * mainHandlerName.
              */
             public Builder mainHandlerName(String mainHandlerName) {
                 this.mainHandlerName = mainHandlerName;
@@ -567,7 +599,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 故障id
+             * problemId.
              */
             public Builder problemId(Long problemId) {
                 this.problemId = problemId;
@@ -575,7 +607,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 故障等级 1=P1 2=P2 3=P3 4=P4
+             * problemLevel.
              */
             public Builder problemLevel(String problemLevel) {
                 this.problemLevel = problemLevel;
@@ -583,7 +615,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 故障名称
+             * problemName.
              */
             public Builder problemName(String problemName) {
                 this.problemName = problemName;
@@ -591,7 +623,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 故障编号
+             * problemNumber.
              */
             public Builder problemNumber(String problemNumber) {
                 this.problemNumber = problemNumber;
@@ -599,7 +631,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 故障状态  HANDLING    处理中 RECOVERED  已恢复  REPLAYING   复盘中  REPLAYED     已复盘 CANCEL        已取消
+             * problemStatus.
              */
             public Builder problemStatus(String problemStatus) {
                 this.problemStatus = problemStatus;
@@ -607,7 +639,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 恢复时间
+             * recoveryTime.
              */
             public Builder recoveryTime(String recoveryTime) {
                 this.recoveryTime = recoveryTime;
@@ -615,7 +647,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务ID
+             * relatedServiceId.
              */
             public Builder relatedServiceId(String relatedServiceId) {
                 this.relatedServiceId = relatedServiceId;
@@ -623,7 +655,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 复盘时间
+             * replayTime.
              */
             public Builder replayTime(String replayTime) {
                 this.replayTime = replayTime;
@@ -631,7 +663,15 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务名称
+             * serviceDeletedType.
+             */
+            public Builder serviceDeletedType(Integer serviceDeletedType) {
+                this.serviceDeletedType = serviceDeletedType;
+                return this;
+            }
+
+            /**
+             * serviceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -639,7 +679,7 @@ public class ListProblemsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * updateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

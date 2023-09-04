@@ -254,7 +254,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             private String similarScore; 
 
             /**
-             * 分派人id
+             * assignUserId.
              */
             public Builder assignUserId(Long assignUserId) {
                 this.assignUserId = assignUserId;
@@ -262,7 +262,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 分派人
+             * assignUserName.
              */
             public Builder assignUserName(String assignUserName) {
                 this.assignUserName = assignUserName;
@@ -270,7 +270,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 触发时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -278,7 +278,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 持续时间
+             * durationTime.
              */
             public Builder durationTime(Long durationTime) {
                 this.durationTime = durationTime;
@@ -286,7 +286,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 触发原因
+             * finishReason.
              */
             public Builder finishReason(Long finishReason) {
                 this.finishReason = finishReason;
@@ -294,7 +294,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 触发原因描述
+             * finishReasonDescription.
              */
             public Builder finishReasonDescription(String finishReasonDescription) {
                 this.finishReasonDescription = finishReasonDescription;
@@ -302,7 +302,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 解决方案描述
+             * finishSolutionDescription.
              */
             public Builder finishSolutionDescription(String finishSolutionDescription) {
                 this.finishSolutionDescription = finishSolutionDescription;
@@ -310,7 +310,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 解决方案
+             * incidentFinishSolution.
              */
             public Builder incidentFinishSolution(Long incidentFinishSolution) {
                 this.incidentFinishSolution = incidentFinishSolution;
@@ -318,7 +318,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件id
+             * incidentId.
              */
             public Builder incidentId(Long incidentId) {
                 this.incidentId = incidentId;
@@ -326,7 +326,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件编号
+             * incidentNumber.
              */
             public Builder incidentNumber(String incidentNumber) {
                 this.incidentNumber = incidentNumber;
@@ -334,7 +334,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件名称
+             * incidentTitle.
              */
             public Builder incidentTitle(String incidentTitle) {
                 this.incidentTitle = incidentTitle;
@@ -342,7 +342,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 流转规则id
+             * relatedRouteRuleId.
              */
             public Builder relatedRouteRuleId(Long relatedRouteRuleId) {
                 this.relatedRouteRuleId = relatedRouteRuleId;
@@ -350,7 +350,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 流转规则名称
+             * relatedRouteRuleName.
              */
             public Builder relatedRouteRuleName(String relatedRouteRuleName) {
                 this.relatedRouteRuleName = relatedRouteRuleName;
@@ -358,7 +358,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 相似度
+             * similarScore.
              */
             public Builder similarScore(String similarScore) {
                 this.similarScore = similarScore;
@@ -459,7 +459,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             private String week; 
 
             /**
-             * 数量
+             * commitment.
              */
             public Builder commitment(Long commitment) {
                 this.commitment = commitment;
@@ -467,7 +467,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 日期
+             * date.
              */
             public Builder date(String date) {
                 this.date = date;
@@ -475,7 +475,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 星期几
+             * day.
              */
             public Builder day(Long day) {
                 this.day = day;
@@ -483,7 +483,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 月份
+             * month.
              */
             public Builder month(Long month) {
                 this.month = month;
@@ -491,7 +491,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 相似事件列表
+             * similarIncidents.
              */
             public Builder similarIncidents(java.util.List < SimilarIncidents> similarIncidents) {
                 this.similarIncidents = similarIncidents;
@@ -499,7 +499,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 周
+             * week.
              */
             public Builder week(String week) {
                 this.week = week;
@@ -696,7 +696,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             private String similarScore; 
 
             /**
-             * 分派人id
+             * assignUserId.
              */
             public Builder assignUserId(String assignUserId) {
                 this.assignUserId = assignUserId;
@@ -704,7 +704,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 分派人
+             * assignUserName.
              */
             public Builder assignUserName(String assignUserName) {
                 this.assignUserName = assignUserName;
@@ -712,7 +712,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 触发时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -720,7 +720,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 持续时间
+             * durationTime.
              */
             public Builder durationTime(Long durationTime) {
                 this.durationTime = durationTime;
@@ -728,7 +728,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 触发原因
+             * finishReason.
              */
             public Builder finishReason(Long finishReason) {
                 this.finishReason = finishReason;
@@ -736,7 +736,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 触发原因描述
+             * finishReasonDescription.
              */
             public Builder finishReasonDescription(String finishReasonDescription) {
                 this.finishReasonDescription = finishReasonDescription;
@@ -744,7 +744,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 解决方案描述
+             * finishSolutionDescription.
              */
             public Builder finishSolutionDescription(String finishSolutionDescription) {
                 this.finishSolutionDescription = finishSolutionDescription;
@@ -752,7 +752,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 解决方案
+             * incidentFinishSolution.
              */
             public Builder incidentFinishSolution(Long incidentFinishSolution) {
                 this.incidentFinishSolution = incidentFinishSolution;
@@ -760,7 +760,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件id
+             * incidentId.
              */
             public Builder incidentId(Long incidentId) {
                 this.incidentId = incidentId;
@@ -768,7 +768,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件编号
+             * incidentNumber.
              */
             public Builder incidentNumber(String incidentNumber) {
                 this.incidentNumber = incidentNumber;
@@ -776,7 +776,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件标题
+             * incidentTitle.
              */
             public Builder incidentTitle(String incidentTitle) {
                 this.incidentTitle = incidentTitle;
@@ -784,7 +784,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 流转规则id
+             * relatedRouteRuleId.
              */
             public Builder relatedRouteRuleId(Long relatedRouteRuleId) {
                 this.relatedRouteRuleId = relatedRouteRuleId;
@@ -792,7 +792,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 流转规则名称
+             * relatedRouteRuleName.
              */
             public Builder relatedRouteRuleName(String relatedRouteRuleName) {
                 this.relatedRouteRuleName = relatedRouteRuleName;
@@ -800,7 +800,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 相似度
+             * similarScore.
              */
             public Builder similarScore(String similarScore) {
                 this.similarScore = similarScore;
@@ -889,7 +889,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             private java.util.List < TopFiveIncidents> topFiveIncidents; 
 
             /**
-             * 7天内相似事件数量
+             * countInSevenDays.
              */
             public Builder countInSevenDays(Long countInSevenDays) {
                 this.countInSevenDays = countInSevenDays;
@@ -897,7 +897,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 6月内相似事件数量
+             * countInSixMonths.
              */
             public Builder countInSixMonths(Long countInSixMonths) {
                 this.countInSixMonths = countInSixMonths;
@@ -905,7 +905,7 @@ public class GetSimilarIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 根据日期分类
+             * dailySimilarIncidents.
              */
             public Builder dailySimilarIncidents(java.util.List < DailySimilarIncidents> dailySimilarIncidents) {
                 this.dailySimilarIncidents = dailySimilarIncidents;

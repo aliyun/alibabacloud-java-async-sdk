@@ -122,7 +122,7 @@ public class GetRichTextResponseBody extends TeaModel {
             private String richText; 
 
             /**
-             * 资源id
+             * instanceId.
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
@@ -130,7 +130,7 @@ public class GetRichTextResponseBody extends TeaModel {
             }
 
             /**
-             * 资源类型
+             * instanceType.
              */
             public Builder instanceType(Long instanceType) {
                 this.instanceType = instanceType;
@@ -138,7 +138,7 @@ public class GetRichTextResponseBody extends TeaModel {
             }
 
             /**
-             * 富文本内容
+             * richText.
              */
             public Builder richText(String richText) {
                 this.richText = richText;

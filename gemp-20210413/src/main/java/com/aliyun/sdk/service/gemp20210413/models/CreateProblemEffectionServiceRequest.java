@@ -127,15 +127,15 @@ public class CreateProblemEffectionServiceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateProblemEffectionServiceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.level = response.level;
-            this.pictureUrl = response.pictureUrl;
-            this.problemId = response.problemId;
-            this.serviceId = response.serviceId;
-            this.status = response.status;
+        private Builder(CreateProblemEffectionServiceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.level = request.level;
+            this.pictureUrl = request.pictureUrl;
+            this.problemId = request.problemId;
+            this.serviceId = request.serviceId;
+            this.status = request.status;
         } 
 
         /**
@@ -148,7 +148,7 @@ public class CreateProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 影响描述
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -157,7 +157,7 @@ public class CreateProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 影响等级
+         * level.
          */
         public Builder level(String level) {
             this.putBodyParameter("level", level);
@@ -166,7 +166,7 @@ public class CreateProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 图片地址
+         * pictureUrl.
          */
         public Builder pictureUrl(java.util.List < String > pictureUrl) {
             this.putBodyParameter("pictureUrl", pictureUrl);
@@ -175,7 +175,7 @@ public class CreateProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 故障id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -184,7 +184,7 @@ public class CreateProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 影响服务id
+         * serviceId.
          */
         public Builder serviceId(Long serviceId) {
             this.putBodyParameter("serviceId", serviceId);
@@ -193,7 +193,7 @@ public class CreateProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 影响状态 0 未恢复 1已恢复
+         * status.
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);

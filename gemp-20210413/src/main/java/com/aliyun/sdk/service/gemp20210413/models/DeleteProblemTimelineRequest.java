@@ -74,15 +74,15 @@ public class DeleteProblemTimelineRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteProblemTimelineRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.problemId = response.problemId;
-            this.problemTimelineId = response.problemTimelineId;
+        private Builder(DeleteProblemTimelineRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.problemId = request.problemId;
+            this.problemTimelineId = request.problemTimelineId;
         } 
 
         /**
-         * clientToken
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -91,7 +91,7 @@ public class DeleteProblemTimelineRequest extends Request {
         }
 
         /**
-         * 故障id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -100,7 +100,7 @@ public class DeleteProblemTimelineRequest extends Request {
         }
 
         /**
-         * ID
+         * problemTimelineId.
          */
         public Builder problemTimelineId(Long problemTimelineId) {
             this.putBodyParameter("problemTimelineId", problemTimelineId);

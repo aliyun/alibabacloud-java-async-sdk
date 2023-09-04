@@ -61,14 +61,14 @@ public class VerifyRouteRuleRequest extends Request {
             super();
         } 
 
-        private Builder(VerifyRouteRuleRequest response) {
-            super(response);
-            this.routeRuleId = response.routeRuleId;
-            this.testSourceEvents = response.testSourceEvents;
+        private Builder(VerifyRouteRuleRequest request) {
+            super(request);
+            this.routeRuleId = request.routeRuleId;
+            this.testSourceEvents = request.testSourceEvents;
         } 
 
         /**
-         * 规则id
+         * routeRuleId.
          */
         public Builder routeRuleId(Long routeRuleId) {
             this.putBodyParameter("routeRuleId", routeRuleId);
@@ -77,7 +77,7 @@ public class VerifyRouteRuleRequest extends Request {
         }
 
         /**
-         * 测试告警
+         * testSourceEvents.
          */
         public Builder testSourceEvents(java.util.List < TestSourceEvents> testSourceEvents) {
             this.putBodyParameter("testSourceEvents", testSourceEvents);
@@ -155,7 +155,7 @@ public class VerifyRouteRuleRequest extends Request {
             private String monitorSourceName; 
 
             /**
-             * 告警内容
+             * eventJson.
              */
             public Builder eventJson(String eventJson) {
                 this.eventJson = eventJson;
@@ -163,7 +163,7 @@ public class VerifyRouteRuleRequest extends Request {
             }
 
             /**
-             * 告警上报时间
+             * eventTime.
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -171,7 +171,7 @@ public class VerifyRouteRuleRequest extends Request {
             }
 
             /**
-             * 监控告警源ID
+             * monitorSourceId.
              */
             public Builder monitorSourceId(Long monitorSourceId) {
                 this.monitorSourceId = monitorSourceId;
@@ -179,7 +179,7 @@ public class VerifyRouteRuleRequest extends Request {
             }
 
             /**
-             * 监控告警源名称
+             * monitorSourceName.
              */
             public Builder monitorSourceName(String monitorSourceName) {
                 this.monitorSourceName = monitorSourceName;

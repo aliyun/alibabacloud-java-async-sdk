@@ -139,16 +139,16 @@ public class ListUsersRequest extends Request {
             super();
         } 
 
-        private Builder(ListUsersRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.phone = response.phone;
-            this.ramId = response.ramId;
-            this.scene = response.scene;
-            this.synergyChannel = response.synergyChannel;
-            this.username = response.username;
+        private Builder(ListUsersRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.phone = request.phone;
+            this.ramId = request.ramId;
+            this.scene = request.scene;
+            this.synergyChannel = request.synergyChannel;
+            this.username = request.username;
         } 
 
         /**
@@ -161,7 +161,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 分页参数
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -170,7 +170,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 分页参数
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -179,7 +179,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 人员手机号
+         * phone.
          */
         public Builder phone(String phone) {
             this.putBodyParameter("phone", phone);
@@ -188,7 +188,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * ramID
+         * ramId.
          */
         public Builder ramId(String ramId) {
             this.putBodyParameter("ramId", ramId);
@@ -197,7 +197,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * USER_LIST列表 ALL_USERS下拉
+         * scene.
          */
         public Builder scene(Long scene) {
             this.putBodyParameter("scene", scene);
@@ -206,7 +206,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 移动应用协同渠道
+         * synergyChannel.
          */
         public Builder synergyChannel(String synergyChannel) {
             this.putBodyParameter("synergyChannel", synergyChannel);
@@ -215,7 +215,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * 人员名称
+         * username.
          */
         public Builder username(String username) {
             this.putBodyParameter("username", username);

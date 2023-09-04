@@ -94,7 +94,7 @@ public class ListEscalationPlansResponseBody extends TeaModel {
         }
 
         /**
-         * 分页参数
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListEscalationPlansResponseBody extends TeaModel {
         }
 
         /**
-         * 分页参数
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class ListEscalationPlansResponseBody extends TeaModel {
         }
 
         /**
-         * 总条数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -135,6 +135,9 @@ public class ListEscalationPlansResponseBody extends TeaModel {
         @NameInMap("scope")
         private String scope;
 
+        @NameInMap("scopeObjectDeletedType")
+        private Integer scopeObjectDeletedType;
+
         @NameInMap("scopeObjectId")
         private Long scopeObjectId;
 
@@ -143,6 +146,7 @@ public class ListEscalationPlansResponseBody extends TeaModel {
 
         private EscalationPlanScopeObjects(Builder builder) {
             this.scope = builder.scope;
+            this.scopeObjectDeletedType = builder.scopeObjectDeletedType;
             this.scopeObjectId = builder.scopeObjectId;
             this.scopeObjectName = builder.scopeObjectName;
         }
@@ -163,6 +167,13 @@ public class ListEscalationPlansResponseBody extends TeaModel {
         }
 
         /**
+         * @return scopeObjectDeletedType
+         */
+        public Integer getScopeObjectDeletedType() {
+            return this.scopeObjectDeletedType;
+        }
+
+        /**
          * @return scopeObjectId
          */
         public Long getScopeObjectId() {
@@ -178,11 +189,12 @@ public class ListEscalationPlansResponseBody extends TeaModel {
 
         public static final class Builder {
             private String scope; 
+            private Integer scopeObjectDeletedType; 
             private Long scopeObjectId; 
             private String scopeObjectName; 
 
             /**
-             * 范围对象类型
+             * scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -190,7 +202,15 @@ public class ListEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 范围对象id（服务id）
+             * scopeObjectDeletedType.
+             */
+            public Builder scopeObjectDeletedType(Integer scopeObjectDeletedType) {
+                this.scopeObjectDeletedType = scopeObjectDeletedType;
+                return this;
+            }
+
+            /**
+             * scopeObjectId.
              */
             public Builder scopeObjectId(Long scopeObjectId) {
                 this.scopeObjectId = scopeObjectId;
@@ -198,7 +218,7 @@ public class ListEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 范围对象名称
+             * scopeObjectName.
              */
             public Builder scopeObjectName(String scopeObjectName) {
                 this.scopeObjectName = scopeObjectName;
@@ -222,6 +242,9 @@ public class ListEscalationPlansResponseBody extends TeaModel {
         @NameInMap("escalationPlanScopeObjects")
         private java.util.List < EscalationPlanScopeObjects> escalationPlanScopeObjects;
 
+        @NameInMap("isGlobal")
+        private Boolean isGlobal;
+
         @NameInMap("modifyTime")
         private String modifyTime;
 
@@ -232,6 +255,7 @@ public class ListEscalationPlansResponseBody extends TeaModel {
             this.escalationPlanId = builder.escalationPlanId;
             this.escalationPlanName = builder.escalationPlanName;
             this.escalationPlanScopeObjects = builder.escalationPlanScopeObjects;
+            this.isGlobal = builder.isGlobal;
             this.modifyTime = builder.modifyTime;
             this.status = builder.status;
         }
@@ -266,6 +290,13 @@ public class ListEscalationPlansResponseBody extends TeaModel {
         }
 
         /**
+         * @return isGlobal
+         */
+        public Boolean getIsGlobal() {
+            return this.isGlobal;
+        }
+
+        /**
          * @return modifyTime
          */
         public String getModifyTime() {
@@ -283,11 +314,12 @@ public class ListEscalationPlansResponseBody extends TeaModel {
             private Long escalationPlanId; 
             private String escalationPlanName; 
             private java.util.List < EscalationPlanScopeObjects> escalationPlanScopeObjects; 
+            private Boolean isGlobal; 
             private String modifyTime; 
             private String status; 
 
             /**
-             * 升级计划id
+             * escalationPlanId.
              */
             public Builder escalationPlanId(Long escalationPlanId) {
                 this.escalationPlanId = escalationPlanId;
@@ -295,7 +327,7 @@ public class ListEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 升级计划名称
+             * escalationPlanName.
              */
             public Builder escalationPlanName(String escalationPlanName) {
                 this.escalationPlanName = escalationPlanName;
@@ -303,7 +335,7 @@ public class ListEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 升级计划范围对象
+             * escalationPlanScopeObjects.
              */
             public Builder escalationPlanScopeObjects(java.util.List < EscalationPlanScopeObjects> escalationPlanScopeObjects) {
                 this.escalationPlanScopeObjects = escalationPlanScopeObjects;
@@ -311,7 +343,15 @@ public class ListEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * isGlobal.
+             */
+            public Builder isGlobal(Boolean isGlobal) {
+                this.isGlobal = isGlobal;
+                return this;
+            }
+
+            /**
+             * modifyTime.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -319,7 +359,7 @@ public class ListEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 启用ENABLE 禁用DISABLE
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;

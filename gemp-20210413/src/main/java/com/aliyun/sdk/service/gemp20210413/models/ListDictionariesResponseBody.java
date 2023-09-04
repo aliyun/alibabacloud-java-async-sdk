@@ -50,7 +50,7 @@ public class ListDictionariesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(java.util.Map < String, java.util.List<DataValue>> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListDictionariesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

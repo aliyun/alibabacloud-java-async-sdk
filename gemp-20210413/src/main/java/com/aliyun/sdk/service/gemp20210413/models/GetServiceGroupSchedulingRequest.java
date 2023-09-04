@@ -62,14 +62,14 @@ public class GetServiceGroupSchedulingRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceGroupSchedulingRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.serviceGroupId = response.serviceGroupId;
+        private Builder(GetServiceGroupSchedulingRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.serviceGroupId = request.serviceGroupId;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -78,7 +78,7 @@ public class GetServiceGroupSchedulingRequest extends Request {
         }
 
         /**
-         * 服务组ID
+         * serviceGroupId.
          */
         public Builder serviceGroupId(Long serviceGroupId) {
             this.putBodyParameter("serviceGroupId", serviceGroupId);

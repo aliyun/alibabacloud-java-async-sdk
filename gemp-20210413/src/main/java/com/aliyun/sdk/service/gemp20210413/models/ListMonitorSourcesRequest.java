@@ -48,9 +48,9 @@ public class ListMonitorSourcesRequest extends Request {
             super();
         } 
 
-        private Builder(ListMonitorSourcesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
+        private Builder(ListMonitorSourcesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
         } 
 
         /**

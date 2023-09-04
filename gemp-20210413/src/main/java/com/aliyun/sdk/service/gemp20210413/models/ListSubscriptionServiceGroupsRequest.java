@@ -61,14 +61,14 @@ public class ListSubscriptionServiceGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSubscriptionServiceGroupsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.serviceIds = response.serviceIds;
+        private Builder(ListSubscriptionServiceGroupsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.serviceIds = request.serviceIds;
         } 
 
         /**
-         * 幂等校验token
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -77,7 +77,7 @@ public class ListSubscriptionServiceGroupsRequest extends Request {
         }
 
         /**
-         * 服务列表
+         * serviceIds.
          */
         public Builder serviceIds(java.util.List < Long > serviceIds) {
             this.putBodyParameter("serviceIds", serviceIds);

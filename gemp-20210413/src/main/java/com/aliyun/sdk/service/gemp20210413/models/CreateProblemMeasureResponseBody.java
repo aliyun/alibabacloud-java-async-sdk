@@ -50,7 +50,7 @@ public class CreateProblemMeasureResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -98,7 +98,7 @@ public class CreateProblemMeasureResponseBody extends TeaModel {
             private Long measureId; 
 
             /**
-             * 故障措施Id
+             * measureId.
              */
             public Builder measureId(Long measureId) {
                 this.measureId = measureId;

@@ -81,10 +81,14 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
         @NameInMap("noticeObjectPhone")
         private String noticeObjectPhone;
 
+        @NameInMap("roleNameList")
+        private java.util.List < String > roleNameList;
+
         private NoticeObjectList(Builder builder) {
             this.noticeObjectId = builder.noticeObjectId;
             this.noticeObjectName = builder.noticeObjectName;
             this.noticeObjectPhone = builder.noticeObjectPhone;
+            this.roleNameList = builder.roleNameList;
         }
 
         public static Builder builder() {
@@ -116,13 +120,21 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             return this.noticeObjectPhone;
         }
 
+        /**
+         * @return roleNameList
+         */
+        public java.util.List < String > getRoleNameList() {
+            return this.roleNameList;
+        }
+
         public static final class Builder {
             private Long noticeObjectId; 
             private String noticeObjectName; 
             private String noticeObjectPhone; 
+            private java.util.List < String > roleNameList; 
 
             /**
-             * 分配对象id
+             * noticeObjectId.
              */
             public Builder noticeObjectId(Long noticeObjectId) {
                 this.noticeObjectId = noticeObjectId;
@@ -130,7 +142,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 分配对象名称
+             * noticeObjectName.
              */
             public Builder noticeObjectName(String noticeObjectName) {
                 this.noticeObjectName = noticeObjectName;
@@ -138,10 +150,18 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 分配对象手机号
+             * noticeObjectPhone.
              */
             public Builder noticeObjectPhone(String noticeObjectPhone) {
                 this.noticeObjectPhone = noticeObjectPhone;
+                return this;
+            }
+
+            /**
+             * roleNameList.
+             */
+            public Builder roleNameList(java.util.List < String > roleNameList) {
+                this.roleNameList = roleNameList;
                 return this;
             }
 
@@ -191,7 +211,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * 服务组id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -199,7 +219,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -213,7 +233,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
         } 
 
     }
-    public static class NuAcknowledgeEscalationPlan extends TeaModel {
+    public static class ConvergenceEscalationPlan extends TeaModel {
         @NameInMap("escalationPlanType")
         private String escalationPlanType;
 
@@ -235,7 +255,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
         @NameInMap("status")
         private String status;
 
-        private NuAcknowledgeEscalationPlan(Builder builder) {
+        private ConvergenceEscalationPlan(Builder builder) {
             this.escalationPlanType = builder.escalationPlanType;
             this.noticeChannels = builder.noticeChannels;
             this.noticeObjectList = builder.noticeObjectList;
@@ -249,7 +269,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static NuAcknowledgeEscalationPlan create() {
+        public static ConvergenceEscalationPlan create() {
             return builder().build();
         }
 
@@ -312,7 +332,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * 升级策略类型 UN_ACKNOWLEDGE
+             * escalationPlanType.
              */
             public Builder escalationPlanType(String escalationPlanType) {
                 this.escalationPlanType = escalationPlanType;
@@ -320,7 +340,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 分配渠道
+             * noticeChannels.
              */
             public Builder noticeChannels(java.util.List < String > noticeChannels) {
                 this.noticeChannels = noticeChannels;
@@ -328,7 +348,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 用户信息
+             * noticeObjectList.
              */
             public Builder noticeObjectList(java.util.List < NoticeObjectList> noticeObjectList) {
                 this.noticeObjectList = noticeObjectList;
@@ -336,7 +356,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 延迟时间
+             * noticeTime.
              */
             public Builder noticeTime(Long noticeTime) {
                 this.noticeTime = noticeTime;
@@ -344,7 +364,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 通知群
+             * serviceGroupList.
              */
             public Builder serviceGroupList(java.util.List < ServiceGroupList> serviceGroupList) {
                 this.serviceGroupList = serviceGroupList;
@@ -352,7 +372,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * startTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -360,7 +380,431 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 规则触发状态
+             * status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public ConvergenceEscalationPlan build() {
+                return new ConvergenceEscalationPlan(this);
+            } 
+
+        } 
+
+    }
+    public static class NuAcknowledgeEscalationPlanNoticeObjectList extends TeaModel {
+        @NameInMap("noticeObjectId")
+        private Long noticeObjectId;
+
+        @NameInMap("noticeObjectName")
+        private String noticeObjectName;
+
+        @NameInMap("noticeObjectPhone")
+        private String noticeObjectPhone;
+
+        @NameInMap("roleNameList")
+        private java.util.List < String > roleNameList;
+
+        private NuAcknowledgeEscalationPlanNoticeObjectList(Builder builder) {
+            this.noticeObjectId = builder.noticeObjectId;
+            this.noticeObjectName = builder.noticeObjectName;
+            this.noticeObjectPhone = builder.noticeObjectPhone;
+            this.roleNameList = builder.roleNameList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NuAcknowledgeEscalationPlanNoticeObjectList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return noticeObjectId
+         */
+        public Long getNoticeObjectId() {
+            return this.noticeObjectId;
+        }
+
+        /**
+         * @return noticeObjectName
+         */
+        public String getNoticeObjectName() {
+            return this.noticeObjectName;
+        }
+
+        /**
+         * @return noticeObjectPhone
+         */
+        public String getNoticeObjectPhone() {
+            return this.noticeObjectPhone;
+        }
+
+        /**
+         * @return roleNameList
+         */
+        public java.util.List < String > getRoleNameList() {
+            return this.roleNameList;
+        }
+
+        public static final class Builder {
+            private Long noticeObjectId; 
+            private String noticeObjectName; 
+            private String noticeObjectPhone; 
+            private java.util.List < String > roleNameList; 
+
+            /**
+             * noticeObjectId.
+             */
+            public Builder noticeObjectId(Long noticeObjectId) {
+                this.noticeObjectId = noticeObjectId;
+                return this;
+            }
+
+            /**
+             * noticeObjectName.
+             */
+            public Builder noticeObjectName(String noticeObjectName) {
+                this.noticeObjectName = noticeObjectName;
+                return this;
+            }
+
+            /**
+             * noticeObjectPhone.
+             */
+            public Builder noticeObjectPhone(String noticeObjectPhone) {
+                this.noticeObjectPhone = noticeObjectPhone;
+                return this;
+            }
+
+            /**
+             * roleNameList.
+             */
+            public Builder roleNameList(java.util.List < String > roleNameList) {
+                this.roleNameList = roleNameList;
+                return this;
+            }
+
+            public NuAcknowledgeEscalationPlanNoticeObjectList build() {
+                return new NuAcknowledgeEscalationPlanNoticeObjectList(this);
+            } 
+
+        } 
+
+    }
+    public static class NoticeRoleObjectList extends TeaModel {
+        @NameInMap("id")
+        private Long id;
+
+        @NameInMap("name")
+        private String name;
+
+        private NoticeRoleObjectList(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NoticeRoleObjectList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Long id; 
+            private String name; 
+
+            /**
+             * id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public NoticeRoleObjectList build() {
+                return new NoticeRoleObjectList(this);
+            } 
+
+        } 
+
+    }
+    public static class NuAcknowledgeEscalationPlanServiceGroupList extends TeaModel {
+        @NameInMap("id")
+        private Long id;
+
+        @NameInMap("name")
+        private String name;
+
+        private NuAcknowledgeEscalationPlanServiceGroupList(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NuAcknowledgeEscalationPlanServiceGroupList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Long id; 
+            private String name; 
+
+            /**
+             * id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public NuAcknowledgeEscalationPlanServiceGroupList build() {
+                return new NuAcknowledgeEscalationPlanServiceGroupList(this);
+            } 
+
+        } 
+
+    }
+    public static class NuAcknowledgeEscalationPlan extends TeaModel {
+        @NameInMap("escalationPlanType")
+        private String escalationPlanType;
+
+        @NameInMap("noticeChannels")
+        private java.util.List < String > noticeChannels;
+
+        @NameInMap("noticeObjectList")
+        private java.util.List < NuAcknowledgeEscalationPlanNoticeObjectList> noticeObjectList;
+
+        @NameInMap("noticeRoleList")
+        private java.util.List < Long > noticeRoleList;
+
+        @NameInMap("noticeRoleObjectList")
+        private java.util.List < NoticeRoleObjectList> noticeRoleObjectList;
+
+        @NameInMap("noticeTime")
+        private Long noticeTime;
+
+        @NameInMap("serviceGroupList")
+        private java.util.List < NuAcknowledgeEscalationPlanServiceGroupList> serviceGroupList;
+
+        @NameInMap("startTime")
+        private Long startTime;
+
+        @NameInMap("status")
+        private String status;
+
+        private NuAcknowledgeEscalationPlan(Builder builder) {
+            this.escalationPlanType = builder.escalationPlanType;
+            this.noticeChannels = builder.noticeChannels;
+            this.noticeObjectList = builder.noticeObjectList;
+            this.noticeRoleList = builder.noticeRoleList;
+            this.noticeRoleObjectList = builder.noticeRoleObjectList;
+            this.noticeTime = builder.noticeTime;
+            this.serviceGroupList = builder.serviceGroupList;
+            this.startTime = builder.startTime;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NuAcknowledgeEscalationPlan create() {
+            return builder().build();
+        }
+
+        /**
+         * @return escalationPlanType
+         */
+        public String getEscalationPlanType() {
+            return this.escalationPlanType;
+        }
+
+        /**
+         * @return noticeChannels
+         */
+        public java.util.List < String > getNoticeChannels() {
+            return this.noticeChannels;
+        }
+
+        /**
+         * @return noticeObjectList
+         */
+        public java.util.List < NuAcknowledgeEscalationPlanNoticeObjectList> getNoticeObjectList() {
+            return this.noticeObjectList;
+        }
+
+        /**
+         * @return noticeRoleList
+         */
+        public java.util.List < Long > getNoticeRoleList() {
+            return this.noticeRoleList;
+        }
+
+        /**
+         * @return noticeRoleObjectList
+         */
+        public java.util.List < NoticeRoleObjectList> getNoticeRoleObjectList() {
+            return this.noticeRoleObjectList;
+        }
+
+        /**
+         * @return noticeTime
+         */
+        public Long getNoticeTime() {
+            return this.noticeTime;
+        }
+
+        /**
+         * @return serviceGroupList
+         */
+        public java.util.List < NuAcknowledgeEscalationPlanServiceGroupList> getServiceGroupList() {
+            return this.serviceGroupList;
+        }
+
+        /**
+         * @return startTime
+         */
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String escalationPlanType; 
+            private java.util.List < String > noticeChannels; 
+            private java.util.List < NuAcknowledgeEscalationPlanNoticeObjectList> noticeObjectList; 
+            private java.util.List < Long > noticeRoleList; 
+            private java.util.List < NoticeRoleObjectList> noticeRoleObjectList; 
+            private Long noticeTime; 
+            private java.util.List < NuAcknowledgeEscalationPlanServiceGroupList> serviceGroupList; 
+            private Long startTime; 
+            private String status; 
+
+            /**
+             * escalationPlanType.
+             */
+            public Builder escalationPlanType(String escalationPlanType) {
+                this.escalationPlanType = escalationPlanType;
+                return this;
+            }
+
+            /**
+             * noticeChannels.
+             */
+            public Builder noticeChannels(java.util.List < String > noticeChannels) {
+                this.noticeChannels = noticeChannels;
+                return this;
+            }
+
+            /**
+             * noticeObjectList.
+             */
+            public Builder noticeObjectList(java.util.List < NuAcknowledgeEscalationPlanNoticeObjectList> noticeObjectList) {
+                this.noticeObjectList = noticeObjectList;
+                return this;
+            }
+
+            /**
+             * noticeRoleList.
+             */
+            public Builder noticeRoleList(java.util.List < Long > noticeRoleList) {
+                this.noticeRoleList = noticeRoleList;
+                return this;
+            }
+
+            /**
+             * noticeRoleObjectList.
+             */
+            public Builder noticeRoleObjectList(java.util.List < NoticeRoleObjectList> noticeRoleObjectList) {
+                this.noticeRoleObjectList = noticeRoleObjectList;
+                return this;
+            }
+
+            /**
+             * noticeTime.
+             */
+            public Builder noticeTime(Long noticeTime) {
+                this.noticeTime = noticeTime;
+                return this;
+            }
+
+            /**
+             * serviceGroupList.
+             */
+            public Builder serviceGroupList(java.util.List < NuAcknowledgeEscalationPlanServiceGroupList> serviceGroupList) {
+                this.serviceGroupList = serviceGroupList;
+                return this;
+            }
+
+            /**
+             * startTime.
+             */
+            public Builder startTime(Long startTime) {
+                this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -384,10 +828,14 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
         @NameInMap("noticeObjectPhone")
         private String noticeObjectPhone;
 
+        @NameInMap("roleNameList")
+        private java.util.List < String > roleNameList;
+
         private UnFinishEscalationPlanNoticeObjectList(Builder builder) {
             this.noticeObjectId = builder.noticeObjectId;
             this.noticeObjectName = builder.noticeObjectName;
             this.noticeObjectPhone = builder.noticeObjectPhone;
+            this.roleNameList = builder.roleNameList;
         }
 
         public static Builder builder() {
@@ -419,13 +867,21 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             return this.noticeObjectPhone;
         }
 
+        /**
+         * @return roleNameList
+         */
+        public java.util.List < String > getRoleNameList() {
+            return this.roleNameList;
+        }
+
         public static final class Builder {
             private Long noticeObjectId; 
             private String noticeObjectName; 
             private String noticeObjectPhone; 
+            private java.util.List < String > roleNameList; 
 
             /**
-             * 分配对象id
+             * noticeObjectId.
              */
             public Builder noticeObjectId(Long noticeObjectId) {
                 this.noticeObjectId = noticeObjectId;
@@ -433,7 +889,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 分配对象名称
+             * noticeObjectName.
              */
             public Builder noticeObjectName(String noticeObjectName) {
                 this.noticeObjectName = noticeObjectName;
@@ -441,15 +897,84 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号
+             * noticeObjectPhone.
              */
             public Builder noticeObjectPhone(String noticeObjectPhone) {
                 this.noticeObjectPhone = noticeObjectPhone;
                 return this;
             }
 
+            /**
+             * roleNameList.
+             */
+            public Builder roleNameList(java.util.List < String > roleNameList) {
+                this.roleNameList = roleNameList;
+                return this;
+            }
+
             public UnFinishEscalationPlanNoticeObjectList build() {
                 return new UnFinishEscalationPlanNoticeObjectList(this);
+            } 
+
+        } 
+
+    }
+    public static class UnFinishEscalationPlanNoticeRoleObjectList extends TeaModel {
+        @NameInMap("id")
+        private Long id;
+
+        @NameInMap("name")
+        private String name;
+
+        private UnFinishEscalationPlanNoticeRoleObjectList(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UnFinishEscalationPlanNoticeRoleObjectList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Long id; 
+            private String name; 
+
+            /**
+             * id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public UnFinishEscalationPlanNoticeRoleObjectList build() {
+                return new UnFinishEscalationPlanNoticeRoleObjectList(this);
             } 
 
         } 
@@ -494,7 +1019,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * 服务组id
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -502,7 +1027,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -526,6 +1051,12 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
         @NameInMap("noticeObjectList")
         private java.util.List < UnFinishEscalationPlanNoticeObjectList> noticeObjectList;
 
+        @NameInMap("noticeRoleList")
+        private java.util.List < Long > noticeRoleList;
+
+        @NameInMap("noticeRoleObjectList")
+        private java.util.List < UnFinishEscalationPlanNoticeRoleObjectList> noticeRoleObjectList;
+
         @NameInMap("noticeTime")
         private Integer noticeTime;
 
@@ -542,6 +1073,8 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             this.escalationPlanType = builder.escalationPlanType;
             this.noticeChannels = builder.noticeChannels;
             this.noticeObjectList = builder.noticeObjectList;
+            this.noticeRoleList = builder.noticeRoleList;
+            this.noticeRoleObjectList = builder.noticeRoleObjectList;
             this.noticeTime = builder.noticeTime;
             this.serviceGroupList = builder.serviceGroupList;
             this.startTime = builder.startTime;
@@ -578,6 +1111,20 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
         }
 
         /**
+         * @return noticeRoleList
+         */
+        public java.util.List < Long > getNoticeRoleList() {
+            return this.noticeRoleList;
+        }
+
+        /**
+         * @return noticeRoleObjectList
+         */
+        public java.util.List < UnFinishEscalationPlanNoticeRoleObjectList> getNoticeRoleObjectList() {
+            return this.noticeRoleObjectList;
+        }
+
+        /**
          * @return noticeTime
          */
         public Integer getNoticeTime() {
@@ -609,13 +1156,15 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             private String escalationPlanType; 
             private java.util.List < String > noticeChannels; 
             private java.util.List < UnFinishEscalationPlanNoticeObjectList> noticeObjectList; 
+            private java.util.List < Long > noticeRoleList; 
+            private java.util.List < UnFinishEscalationPlanNoticeRoleObjectList> noticeRoleObjectList; 
             private Integer noticeTime; 
             private java.util.List < UnFinishEscalationPlanServiceGroupList> serviceGroupList; 
             private Long startTime; 
             private String status; 
 
             /**
-             * 升级策略类型 UN_ACKNOWLEDGE
+             * escalationPlanType.
              */
             public Builder escalationPlanType(String escalationPlanType) {
                 this.escalationPlanType = escalationPlanType;
@@ -623,7 +1172,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 分配渠道
+             * noticeChannels.
              */
             public Builder noticeChannels(java.util.List < String > noticeChannels) {
                 this.noticeChannels = noticeChannels;
@@ -631,7 +1180,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 用户信息
+             * noticeObjectList.
              */
             public Builder noticeObjectList(java.util.List < UnFinishEscalationPlanNoticeObjectList> noticeObjectList) {
                 this.noticeObjectList = noticeObjectList;
@@ -639,7 +1188,23 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 延迟时间
+             * noticeRoleList.
+             */
+            public Builder noticeRoleList(java.util.List < Long > noticeRoleList) {
+                this.noticeRoleList = noticeRoleList;
+                return this;
+            }
+
+            /**
+             * noticeRoleObjectList.
+             */
+            public Builder noticeRoleObjectList(java.util.List < UnFinishEscalationPlanNoticeRoleObjectList> noticeRoleObjectList) {
+                this.noticeRoleObjectList = noticeRoleObjectList;
+                return this;
+            }
+
+            /**
+             * noticeTime.
              */
             public Builder noticeTime(Integer noticeTime) {
                 this.noticeTime = noticeTime;
@@ -647,7 +1212,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 消息群
+             * serviceGroupList.
              */
             public Builder serviceGroupList(java.util.List < UnFinishEscalationPlanServiceGroupList> serviceGroupList) {
                 this.serviceGroupList = serviceGroupList;
@@ -655,7 +1220,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 开始时间
+             * startTime.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -663,7 +1228,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 规则触发状态
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -678,6 +1243,9 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("convergenceEscalationPlan")
+        private java.util.List < ConvergenceEscalationPlan> convergenceEscalationPlan;
+
         @NameInMap("escalationPlanId")
         private Long escalationPlanId;
 
@@ -691,6 +1259,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
         private java.util.List < UnFinishEscalationPlan> unFinishEscalationPlan;
 
         private Data(Builder builder) {
+            this.convergenceEscalationPlan = builder.convergenceEscalationPlan;
             this.escalationPlanId = builder.escalationPlanId;
             this.escalationPlanName = builder.escalationPlanName;
             this.nuAcknowledgeEscalationPlan = builder.nuAcknowledgeEscalationPlan;
@@ -703,6 +1272,13 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return convergenceEscalationPlan
+         */
+        public java.util.List < ConvergenceEscalationPlan> getConvergenceEscalationPlan() {
+            return this.convergenceEscalationPlan;
         }
 
         /**
@@ -734,13 +1310,22 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < ConvergenceEscalationPlan> convergenceEscalationPlan; 
             private Long escalationPlanId; 
             private String escalationPlanName; 
             private java.util.List < NuAcknowledgeEscalationPlan> nuAcknowledgeEscalationPlan; 
             private java.util.List < UnFinishEscalationPlan> unFinishEscalationPlan; 
 
             /**
-             * 升级策略ID
+             * convergenceEscalationPlan.
+             */
+            public Builder convergenceEscalationPlan(java.util.List < ConvergenceEscalationPlan> convergenceEscalationPlan) {
+                this.convergenceEscalationPlan = convergenceEscalationPlan;
+                return this;
+            }
+
+            /**
+             * escalationPlanId.
              */
             public Builder escalationPlanId(Long escalationPlanId) {
                 this.escalationPlanId = escalationPlanId;
@@ -748,7 +1333,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 升级策略名称
+             * escalationPlanName.
              */
             public Builder escalationPlanName(String escalationPlanName) {
                 this.escalationPlanName = escalationPlanName;
@@ -756,7 +1341,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 未响应升级策略
+             * nuAcknowledgeEscalationPlan.
              */
             public Builder nuAcknowledgeEscalationPlan(java.util.List < NuAcknowledgeEscalationPlan> nuAcknowledgeEscalationPlan) {
                 this.nuAcknowledgeEscalationPlan = nuAcknowledgeEscalationPlan;
@@ -764,7 +1349,7 @@ public class ListIncidentDetailEscalationPlansResponseBody extends TeaModel {
             }
 
             /**
-             * 未完结升级策略规则列表
+             * unFinishEscalationPlan.
              */
             public Builder unFinishEscalationPlan(java.util.List < UnFinishEscalationPlan> unFinishEscalationPlan) {
                 this.unFinishEscalationPlan = unFinishEscalationPlan;

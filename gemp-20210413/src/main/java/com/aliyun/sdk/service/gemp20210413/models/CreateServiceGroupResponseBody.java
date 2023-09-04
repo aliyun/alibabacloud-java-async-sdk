@@ -50,7 +50,7 @@ public class CreateServiceGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 服务组ID
+         * data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -98,7 +98,7 @@ public class CreateServiceGroupResponseBody extends TeaModel {
             private Long serviceGroupId; 
 
             /**
-             * 服务组ID
+             * serviceGroupId.
              */
             public Builder serviceGroupId(Long serviceGroupId) {
                 this.serviceGroupId = serviceGroupId;

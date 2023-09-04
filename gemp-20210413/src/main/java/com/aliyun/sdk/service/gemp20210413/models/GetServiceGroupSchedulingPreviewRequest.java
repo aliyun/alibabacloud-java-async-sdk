@@ -128,19 +128,19 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceGroupSchedulingPreviewRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.endTime = response.endTime;
-            this.fastScheduling = response.fastScheduling;
-            this.fineScheduling = response.fineScheduling;
-            this.schedulingWay = response.schedulingWay;
-            this.serviceGroupId = response.serviceGroupId;
-            this.startTime = response.startTime;
+        private Builder(GetServiceGroupSchedulingPreviewRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.endTime = request.endTime;
+            this.fastScheduling = request.fastScheduling;
+            this.fineScheduling = request.fineScheduling;
+            this.schedulingWay = request.schedulingWay;
+            this.serviceGroupId = request.serviceGroupId;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -149,7 +149,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
         }
 
         /**
-         * 排班结束时间
+         * endTime.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("endTime", endTime);
@@ -158,7 +158,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
         }
 
         /**
-         * 快速排班
+         * fastScheduling.
          */
         public Builder fastScheduling(FastScheduling fastScheduling) {
             this.putBodyParameter("fastScheduling", fastScheduling);
@@ -167,7 +167,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
         }
 
         /**
-         * 精细排
+         * fineScheduling.
          */
         public Builder fineScheduling(FineScheduling fineScheduling) {
             this.putBodyParameter("fineScheduling", fineScheduling);
@@ -176,7 +176,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
         }
 
         /**
-         * 排班方式 FAST 快速排班 FINE 精细排班
+         * schedulingWay.
          */
         public Builder schedulingWay(String schedulingWay) {
             this.putBodyParameter("schedulingWay", schedulingWay);
@@ -185,7 +185,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
         }
 
         /**
-         * 服务组ID
+         * serviceGroupId.
          */
         public Builder serviceGroupId(Long serviceGroupId) {
             this.putBodyParameter("serviceGroupId", serviceGroupId);
@@ -194,7 +194,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
         }
 
         /**
-         * 排班开始时间
+         * startTime.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("startTime", startTime);
@@ -248,7 +248,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             private Long schedulingUserId; 
 
             /**
-             * 排班顺序
+             * schedulingOrder.
              */
             public Builder schedulingOrder(Integer schedulingOrder) {
                 this.schedulingOrder = schedulingOrder;
@@ -256,7 +256,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             }
 
             /**
-             * 轮班用户ID
+             * schedulingUserId.
              */
             public Builder schedulingUserId(Long schedulingUserId) {
                 this.schedulingUserId = schedulingUserId;
@@ -333,7 +333,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             private String singleDurationUnit; 
 
             /**
-             * 值班方案 dutyPlan FAST_CHOICE 快速选择 CUSTOM 自定义
+             * FAST_CHOICE
              */
             public Builder dutyPlan(String dutyPlan) {
                 this.dutyPlan = dutyPlan;
@@ -341,7 +341,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             }
 
             /**
-             * 快速轮班用户
+             * schedulingUsers.
              */
             public Builder schedulingUsers(java.util.List < SchedulingUsers> schedulingUsers) {
                 this.schedulingUsers = schedulingUsers;
@@ -349,7 +349,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             }
 
             /**
-             * 每人排班时长
+             * singleDuration.
              */
             public Builder singleDuration(Integer singleDuration) {
                 this.singleDuration = singleDuration;
@@ -357,7 +357,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             }
 
             /**
-             * 每人排班时长单位 HOUR 小时 DAY 天
+             * DAY
              */
             public Builder singleDurationUnit(String singleDurationUnit) {
                 this.singleDurationUnit = singleDurationUnit;
@@ -434,7 +434,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             private String shiftName; 
 
             /**
-             * 排班结束时间
+             * schedulingEndTime.
              */
             public Builder schedulingEndTime(String schedulingEndTime) {
                 this.schedulingEndTime = schedulingEndTime;
@@ -442,7 +442,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             }
 
             /**
-             * 排班顺序
+             * schedulingOrder.
              */
             public Builder schedulingOrder(Long schedulingOrder) {
                 this.schedulingOrder = schedulingOrder;
@@ -450,7 +450,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             }
 
             /**
-             * 排班开始时间
+             * schedulingStartTime.
              */
             public Builder schedulingStartTime(String schedulingStartTime) {
                 this.schedulingStartTime = schedulingStartTime;
@@ -458,7 +458,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             }
 
             /**
-             * 班次名称
+             * shiftName.
              */
             public Builder shiftName(String shiftName) {
                 this.shiftName = shiftName;
@@ -535,7 +535,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             private String shiftType; 
 
             /**
-             * 循环周期
+             * period.
              */
             public Builder period(Integer period) {
                 this.period = period;
@@ -543,7 +543,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             }
 
             /**
-             * 循环周期单位 HOUR 小时 DAY 天
+             * periodUnit.
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -551,7 +551,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             }
 
             /**
-             * 精细排班班次人员信息
+             * schedulingFineShifts.
              */
             public Builder schedulingFineShifts(java.util.List < SchedulingFineShifts> schedulingFineShifts) {
                 this.schedulingFineShifts = schedulingFineShifts;
@@ -559,7 +559,7 @@ public class GetServiceGroupSchedulingPreviewRequest extends Request {
             }
 
             /**
-             * 班次类型 MORNING_NIGHT 早晚班 MORNING_NOON_NIGHT 早中晚班 CUSTOM 自定义
+             * shiftType.
              */
             public Builder shiftType(String shiftType) {
                 this.shiftType = shiftType;

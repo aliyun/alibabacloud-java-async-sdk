@@ -61,10 +61,10 @@ public class GeneratePictureLinkRequest extends Request {
             super();
         } 
 
-        private Builder(GeneratePictureLinkRequest response) {
-            super(response);
-            this.keys = response.keys;
-            this.problemId = response.problemId;
+        private Builder(GeneratePictureLinkRequest request) {
+            super(request);
+            this.keys = request.keys;
+            this.problemId = request.problemId;
         } 
 
         /**
@@ -77,7 +77,7 @@ public class GeneratePictureLinkRequest extends Request {
         }
 
         /**
-         * 故障id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);

@@ -50,7 +50,7 @@ public class GetIncidentStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetIncidentStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * requestId
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -134,7 +134,7 @@ public class GetIncidentStatisticsResponseBody extends TeaModel {
             private Integer myResponse; 
 
             /**
-             * 所有 完结
+             * allFinish.
              */
             public Builder allFinish(Integer allFinish) {
                 this.allFinish = allFinish;
@@ -142,7 +142,7 @@ public class GetIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 所有 待响应
+             * allResponse.
              */
             public Builder allResponse(Integer allResponse) {
                 this.allResponse = allResponse;
@@ -150,7 +150,7 @@ public class GetIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 我的 完结
+             * myFinish.
              */
             public Builder myFinish(Integer myFinish) {
                 this.myFinish = myFinish;
@@ -158,7 +158,7 @@ public class GetIncidentStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * 我的 待响应
+             * myResponse.
              */
             public Builder myResponse(Integer myResponse) {
                 this.myResponse = myResponse;

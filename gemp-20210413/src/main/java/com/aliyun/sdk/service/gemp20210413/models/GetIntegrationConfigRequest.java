@@ -61,14 +61,14 @@ public class GetIntegrationConfigRequest extends Request {
             super();
         } 
 
-        private Builder(GetIntegrationConfigRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.integrationConfigId = response.integrationConfigId;
+        private Builder(GetIntegrationConfigRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.integrationConfigId = request.integrationConfigId;
         } 
 
         /**
-         * 幂等id
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -77,7 +77,7 @@ public class GetIntegrationConfigRequest extends Request {
         }
 
         /**
-         * 集成配置id
+         * integrationConfigId.
          */
         public Builder integrationConfigId(Long integrationConfigId) {
             this.putBodyParameter("integrationConfigId", integrationConfigId);

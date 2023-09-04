@@ -29,6 +29,10 @@ public class ListAlertsRequest extends Request {
     private String endTime;
 
     @Body
+    @NameInMap("monitorSourceId")
+    private String monitorSourceId;
+
+    @Body
     @NameInMap("pageNumber")
     private Long pageNumber;
 
@@ -54,6 +58,7 @@ public class ListAlertsRequest extends Request {
         this.alertName = builder.alertName;
         this.alertSourceName = builder.alertSourceName;
         this.endTime = builder.endTime;
+        this.monitorSourceId = builder.monitorSourceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.relatedServiceId = builder.relatedServiceId;
@@ -103,6 +108,13 @@ public class ListAlertsRequest extends Request {
     }
 
     /**
+     * @return monitorSourceId
+     */
+    public String getMonitorSourceId() {
+        return this.monitorSourceId;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -142,6 +154,7 @@ public class ListAlertsRequest extends Request {
         private String alertName; 
         private String alertSourceName; 
         private String endTime; 
+        private String monitorSourceId; 
         private Long pageNumber; 
         private Long pageSize; 
         private Long relatedServiceId; 
@@ -152,21 +165,22 @@ public class ListAlertsRequest extends Request {
             super();
         } 
 
-        private Builder(ListAlertsRequest response) {
-            super(response);
-            this.alertLevel = response.alertLevel;
-            this.alertName = response.alertName;
-            this.alertSourceName = response.alertSourceName;
-            this.endTime = response.endTime;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.relatedServiceId = response.relatedServiceId;
-            this.ruleName = response.ruleName;
-            this.startTime = response.startTime;
+        private Builder(ListAlertsRequest request) {
+            super(request);
+            this.alertLevel = request.alertLevel;
+            this.alertName = request.alertName;
+            this.alertSourceName = request.alertSourceName;
+            this.endTime = request.endTime;
+            this.monitorSourceId = request.monitorSourceId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.relatedServiceId = request.relatedServiceId;
+            this.ruleName = request.ruleName;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * 报警等级 P1 P2 P3 P4
+         * alertLevel.
          */
         public Builder alertLevel(String alertLevel) {
             this.putBodyParameter("alertLevel", alertLevel);
@@ -175,7 +189,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 报警名称
+         * alertName.
          */
         public Builder alertName(String alertName) {
             this.putBodyParameter("alertName", alertName);
@@ -184,7 +198,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 报警来源
+         * alertSourceName.
          */
         public Builder alertSourceName(String alertSourceName) {
             this.putBodyParameter("alertSourceName", alertSourceName);
@@ -193,7 +207,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 结束时间
+         * 2020-09-10 21:00:00
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("endTime", endTime);
@@ -202,7 +216,16 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 当前页
+         * monitorSourceId.
+         */
+        public Builder monitorSourceId(String monitorSourceId) {
+            this.putBodyParameter("monitorSourceId", monitorSourceId);
+            this.monitorSourceId = monitorSourceId;
+            return this;
+        }
+
+        /**
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -211,7 +234,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 页大小
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -220,7 +243,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 服务id
+         * relatedServiceId.
          */
         public Builder relatedServiceId(Long relatedServiceId) {
             this.putBodyParameter("relatedServiceId", relatedServiceId);
@@ -229,7 +252,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 流转规则名字
+         * ruleName.
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("ruleName", ruleName);
@@ -238,7 +261,7 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * 2020-09-10 13:00:00
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("startTime", startTime);

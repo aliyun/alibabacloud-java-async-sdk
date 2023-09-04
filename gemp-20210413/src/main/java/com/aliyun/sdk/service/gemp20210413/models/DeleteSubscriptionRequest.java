@@ -48,9 +48,9 @@ public class DeleteSubscriptionRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSubscriptionRequest response) {
-            super(response);
-            this.subscriptionId = response.subscriptionId;
+        private Builder(DeleteSubscriptionRequest request) {
+            super(request);
+            this.subscriptionId = request.subscriptionId;
         } 
 
         /**

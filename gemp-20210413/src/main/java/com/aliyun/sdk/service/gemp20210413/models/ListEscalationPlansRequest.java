@@ -21,6 +21,10 @@ public class ListEscalationPlansRequest extends Request {
     private String escalationPlanName;
 
     @Body
+    @NameInMap("isGlobal")
+    private Boolean isGlobal;
+
+    @Body
     @NameInMap("pageNumber")
     private Long pageNumber;
 
@@ -32,13 +36,19 @@ public class ListEscalationPlansRequest extends Request {
     @NameInMap("serviceName")
     private String serviceName;
 
+    @Body
+    @NameInMap("status")
+    private String status;
+
     private ListEscalationPlansRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
         this.escalationPlanName = builder.escalationPlanName;
+        this.isGlobal = builder.isGlobal;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.serviceName = builder.serviceName;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -69,6 +79,13 @@ public class ListEscalationPlansRequest extends Request {
     }
 
     /**
+     * @return isGlobal
+     */
+    public Boolean getIsGlobal() {
+        return this.isGlobal;
+    }
+
+    /**
      * @return pageNumber
      */
     public Long getPageNumber() {
@@ -89,28 +106,39 @@ public class ListEscalationPlansRequest extends Request {
         return this.serviceName;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<ListEscalationPlansRequest, Builder> {
         private String clientToken; 
         private String escalationPlanName; 
+        private Boolean isGlobal; 
         private Long pageNumber; 
         private Long pageSize; 
         private String serviceName; 
+        private String status; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListEscalationPlansRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.escalationPlanName = response.escalationPlanName;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.serviceName = response.serviceName;
+        private Builder(ListEscalationPlansRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.escalationPlanName = request.escalationPlanName;
+            this.isGlobal = request.isGlobal;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.serviceName = request.serviceName;
+            this.status = request.status;
         } 
 
         /**
-         * clientToken
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -119,7 +147,7 @@ public class ListEscalationPlansRequest extends Request {
         }
 
         /**
-         * 升级计划名
+         * escalationPlanName.
          */
         public Builder escalationPlanName(String escalationPlanName) {
             this.putBodyParameter("escalationPlanName", escalationPlanName);
@@ -128,7 +156,16 @@ public class ListEscalationPlansRequest extends Request {
         }
 
         /**
-         * pageNumber
+         * isGlobal.
+         */
+        public Builder isGlobal(Boolean isGlobal) {
+            this.putBodyParameter("isGlobal", isGlobal);
+            this.isGlobal = isGlobal;
+            return this;
+        }
+
+        /**
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -137,7 +174,7 @@ public class ListEscalationPlansRequest extends Request {
         }
 
         /**
-         * pageSize
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -146,11 +183,20 @@ public class ListEscalationPlansRequest extends Request {
         }
 
         /**
-         * 服务名称
+         * serviceName.
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("serviceName", serviceName);
             this.serviceName = serviceName;
+            return this;
+        }
+
+        /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.putBodyParameter("status", status);
+            this.status = status;
             return this;
         }
 

@@ -62,10 +62,10 @@ public class ListUserSerivceGroupsRequest extends Request {
             super();
         } 
 
-        private Builder(ListUserSerivceGroupsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.userId = response.userId;
+        private Builder(ListUserSerivceGroupsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.userId = request.userId;
         } 
 
         /**
@@ -78,7 +78,7 @@ public class ListUserSerivceGroupsRequest extends Request {
         }
 
         /**
-         * 用户ID
+         * userId.
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("userId", userId);

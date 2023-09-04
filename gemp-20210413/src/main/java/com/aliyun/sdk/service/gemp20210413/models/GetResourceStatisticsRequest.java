@@ -48,13 +48,13 @@ public class GetResourceStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(GetResourceStatisticsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
+        private Builder(GetResourceStatisticsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
         } 
 
         /**
-         * 幂等校验
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);

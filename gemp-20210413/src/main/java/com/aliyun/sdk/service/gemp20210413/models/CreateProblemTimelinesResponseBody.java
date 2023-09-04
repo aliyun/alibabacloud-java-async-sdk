@@ -50,7 +50,7 @@ public class CreateProblemTimelinesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class CreateProblemTimelinesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

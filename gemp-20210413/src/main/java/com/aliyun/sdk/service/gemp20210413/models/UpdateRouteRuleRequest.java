@@ -31,6 +31,18 @@ public class UpdateRouteRuleRequest extends Request {
     private String clientToken;
 
     @Body
+    @NameInMap("convergenceFields")
+    private java.util.List < String > convergenceFields;
+
+    @Body
+    @NameInMap("convergenceType")
+    private Integer convergenceType;
+
+    @Body
+    @NameInMap("coverageProblemLevels")
+    private java.util.List < String > coverageProblemLevels;
+
+    @Body
     @NameInMap("effection")
     @Validation(required = true)
     private String effection;
@@ -49,6 +61,14 @@ public class UpdateRouteRuleRequest extends Request {
     @NameInMap("notifyChannels")
     @Validation(required = true)
     private java.util.List < String > notifyChannels;
+
+    @Body
+    @NameInMap("problemEffectionServices")
+    private java.util.List < Long > problemEffectionServices;
+
+    @Body
+    @NameInMap("problemLevelGroup")
+    private java.util.Map < String, ProblemLevelGroupValue > problemLevelGroup;
 
     @Body
     @NameInMap("relatedServiceId")
@@ -91,10 +111,15 @@ public class UpdateRouteRuleRequest extends Request {
         this.assignObjectType = builder.assignObjectType;
         this.childRuleRelation = builder.childRuleRelation;
         this.clientToken = builder.clientToken;
+        this.convergenceFields = builder.convergenceFields;
+        this.convergenceType = builder.convergenceType;
+        this.coverageProblemLevels = builder.coverageProblemLevels;
         this.effection = builder.effection;
         this.incidentLevel = builder.incidentLevel;
         this.matchCount = builder.matchCount;
         this.notifyChannels = builder.notifyChannels;
+        this.problemEffectionServices = builder.problemEffectionServices;
+        this.problemLevelGroup = builder.problemLevelGroup;
         this.relatedServiceId = builder.relatedServiceId;
         this.routeChildRules = builder.routeChildRules;
         this.routeRuleId = builder.routeRuleId;
@@ -146,6 +171,27 @@ public class UpdateRouteRuleRequest extends Request {
     }
 
     /**
+     * @return convergenceFields
+     */
+    public java.util.List < String > getConvergenceFields() {
+        return this.convergenceFields;
+    }
+
+    /**
+     * @return convergenceType
+     */
+    public Integer getConvergenceType() {
+        return this.convergenceType;
+    }
+
+    /**
+     * @return coverageProblemLevels
+     */
+    public java.util.List < String > getCoverageProblemLevels() {
+        return this.coverageProblemLevels;
+    }
+
+    /**
      * @return effection
      */
     public String getEffection() {
@@ -171,6 +217,20 @@ public class UpdateRouteRuleRequest extends Request {
      */
     public java.util.List < String > getNotifyChannels() {
         return this.notifyChannels;
+    }
+
+    /**
+     * @return problemEffectionServices
+     */
+    public java.util.List < Long > getProblemEffectionServices() {
+        return this.problemEffectionServices;
+    }
+
+    /**
+     * @return problemLevelGroup
+     */
+    public java.util.Map < String, ProblemLevelGroupValue > getProblemLevelGroup() {
+        return this.problemLevelGroup;
     }
 
     /**
@@ -227,10 +287,15 @@ public class UpdateRouteRuleRequest extends Request {
         private String assignObjectType; 
         private String childRuleRelation; 
         private String clientToken; 
+        private java.util.List < String > convergenceFields; 
+        private Integer convergenceType; 
+        private java.util.List < String > coverageProblemLevels; 
         private String effection; 
         private String incidentLevel; 
         private Long matchCount; 
         private java.util.List < String > notifyChannels; 
+        private java.util.List < Long > problemEffectionServices; 
+        private java.util.Map < String, ProblemLevelGroupValue > problemLevelGroup; 
         private Long relatedServiceId; 
         private java.util.List < RouteChildRules> routeChildRules; 
         private Long routeRuleId; 
@@ -243,27 +308,32 @@ public class UpdateRouteRuleRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateRouteRuleRequest response) {
-            super(response);
-            this.assignObjectId = response.assignObjectId;
-            this.assignObjectType = response.assignObjectType;
-            this.childRuleRelation = response.childRuleRelation;
-            this.clientToken = response.clientToken;
-            this.effection = response.effection;
-            this.incidentLevel = response.incidentLevel;
-            this.matchCount = response.matchCount;
-            this.notifyChannels = response.notifyChannels;
-            this.relatedServiceId = response.relatedServiceId;
-            this.routeChildRules = response.routeChildRules;
-            this.routeRuleId = response.routeRuleId;
-            this.routeType = response.routeType;
-            this.ruleName = response.ruleName;
-            this.timeWindow = response.timeWindow;
-            this.timeWindowUnit = response.timeWindowUnit;
+        private Builder(UpdateRouteRuleRequest request) {
+            super(request);
+            this.assignObjectId = request.assignObjectId;
+            this.assignObjectType = request.assignObjectType;
+            this.childRuleRelation = request.childRuleRelation;
+            this.clientToken = request.clientToken;
+            this.convergenceFields = request.convergenceFields;
+            this.convergenceType = request.convergenceType;
+            this.coverageProblemLevels = request.coverageProblemLevels;
+            this.effection = request.effection;
+            this.incidentLevel = request.incidentLevel;
+            this.matchCount = request.matchCount;
+            this.notifyChannels = request.notifyChannels;
+            this.problemEffectionServices = request.problemEffectionServices;
+            this.problemLevelGroup = request.problemLevelGroup;
+            this.relatedServiceId = request.relatedServiceId;
+            this.routeChildRules = request.routeChildRules;
+            this.routeRuleId = request.routeRuleId;
+            this.routeType = request.routeType;
+            this.ruleName = request.ruleName;
+            this.timeWindow = request.timeWindow;
+            this.timeWindowUnit = request.timeWindowUnit;
         } 
 
         /**
-         * 事件分派对象ID（服务组ID 或用户ID）
+         * assignObjectId.
          */
         public Builder assignObjectId(Long assignObjectId) {
             this.putBodyParameter("assignObjectId", assignObjectId);
@@ -272,7 +342,7 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * 事件分派对象类型 SERVICEGROUP服务组  USER 单个用户
+         * assignObjectType.
          */
         public Builder assignObjectType(String assignObjectType) {
             this.putBodyParameter("assignObjectType", assignObjectType);
@@ -281,7 +351,7 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * AND
+         * childRuleRelation.
          */
         public Builder childRuleRelation(String childRuleRelation) {
             this.putBodyParameter("childRuleRelation", childRuleRelation);
@@ -290,7 +360,7 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -299,7 +369,34 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * 影响程度 LOW-一般 HIGH-严重
+         * convergenceFields.
+         */
+        public Builder convergenceFields(java.util.List < String > convergenceFields) {
+            this.putBodyParameter("convergenceFields", convergenceFields);
+            this.convergenceFields = convergenceFields;
+            return this;
+        }
+
+        /**
+         * convergenceType.
+         */
+        public Builder convergenceType(Integer convergenceType) {
+            this.putBodyParameter("convergenceType", convergenceType);
+            this.convergenceType = convergenceType;
+            return this;
+        }
+
+        /**
+         * coverageProblemLevels.
+         */
+        public Builder coverageProblemLevels(java.util.List < String > coverageProblemLevels) {
+            this.putBodyParameter("coverageProblemLevels", coverageProblemLevels);
+            this.coverageProblemLevels = coverageProblemLevels;
+            return this;
+        }
+
+        /**
+         * effection.
          */
         public Builder effection(String effection) {
             this.putBodyParameter("effection", effection);
@@ -308,7 +405,7 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * 事件级别 1-P1 2-P2 3-P3 4-P4
+         * incidentLevel.
          */
         public Builder incidentLevel(String incidentLevel) {
             this.putBodyParameter("incidentLevel", incidentLevel);
@@ -317,7 +414,7 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * 命中次数
+         * matchCount.
          */
         public Builder matchCount(Long matchCount) {
             this.putBodyParameter("matchCount", matchCount);
@@ -326,7 +423,7 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * 通知渠道    SMS 短信  EMAIL  邮件  PHONE  电话  WEIXIN_GROUP 企微群 DING_GROUP 钉钉群
+         * notifyChannels.
          */
         public Builder notifyChannels(java.util.List < String > notifyChannels) {
             this.putBodyParameter("notifyChannels", notifyChannels);
@@ -335,7 +432,25 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * 关联服务ID
+         * problemEffectionServices.
+         */
+        public Builder problemEffectionServices(java.util.List < Long > problemEffectionServices) {
+            this.putBodyParameter("problemEffectionServices", problemEffectionServices);
+            this.problemEffectionServices = problemEffectionServices;
+            return this;
+        }
+
+        /**
+         * problemLevelGroup.
+         */
+        public Builder problemLevelGroup(java.util.Map < String, ProblemLevelGroupValue > problemLevelGroup) {
+            this.putBodyParameter("problemLevelGroup", problemLevelGroup);
+            this.problemLevelGroup = problemLevelGroup;
+            return this;
+        }
+
+        /**
+         * relatedServiceId.
          */
         public Builder relatedServiceId(Long relatedServiceId) {
             this.putBodyParameter("relatedServiceId", relatedServiceId);
@@ -344,7 +459,7 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * 子规则
+         * routeChildRules.
          */
         public Builder routeChildRules(java.util.List < RouteChildRules> routeChildRules) {
             this.putBodyParameter("routeChildRules", routeChildRules);
@@ -353,7 +468,7 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * 规则ID
+         * routeRuleId.
          */
         public Builder routeRuleId(Long routeRuleId) {
             this.putBodyParameter("routeRuleId", routeRuleId);
@@ -362,7 +477,7 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * 路由类型：INCIDENT 触发事件 ALERT 仅触发报警
+         * routeType.
          */
         public Builder routeType(String routeType) {
             this.putBodyParameter("routeType", routeType);
@@ -371,7 +486,7 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * 规则名称
+         * ruleName.
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("ruleName", ruleName);
@@ -380,7 +495,7 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * 时间窗口
+         * timeWindow.
          */
         public Builder timeWindow(Integer timeWindow) {
             this.putBodyParameter("timeWindow", timeWindow);
@@ -389,7 +504,7 @@ public class UpdateRouteRuleRequest extends Request {
         }
 
         /**
-         * 时间窗口单位 MINUTE 分钟  SECOND 秒
+         * timeWindowUnit.
          */
         public Builder timeWindowUnit(String timeWindowUnit) {
             this.putBodyParameter("timeWindowUnit", timeWindowUnit);
@@ -458,7 +573,7 @@ public class UpdateRouteRuleRequest extends Request {
             private String value; 
 
             /**
-             * 字段
+             * key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -466,7 +581,7 @@ public class UpdateRouteRuleRequest extends Request {
             }
 
             /**
-             * 操作符
+             * operationSymbol.
              */
             public Builder operationSymbol(String operationSymbol) {
                 this.operationSymbol = operationSymbol;
@@ -474,7 +589,7 @@ public class UpdateRouteRuleRequest extends Request {
             }
 
             /**
-             * 字段取值
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -508,12 +623,16 @@ public class UpdateRouteRuleRequest extends Request {
         @Validation(required = true)
         private Long monitorSourceId;
 
+        @NameInMap("problemLevel")
+        private String problemLevel;
+
         private RouteChildRules(Builder builder) {
             this.childConditionRelation = builder.childConditionRelation;
             this.childRouteRuleId = builder.childRouteRuleId;
             this.conditions = builder.conditions;
             this.isValidChildRule = builder.isValidChildRule;
             this.monitorSourceId = builder.monitorSourceId;
+            this.problemLevel = builder.problemLevel;
         }
 
         public static Builder builder() {
@@ -559,15 +678,23 @@ public class UpdateRouteRuleRequest extends Request {
             return this.monitorSourceId;
         }
 
+        /**
+         * @return problemLevel
+         */
+        public String getProblemLevel() {
+            return this.problemLevel;
+        }
+
         public static final class Builder {
             private Long childConditionRelation; 
             private Long childRouteRuleId; 
             private java.util.List < Conditions> conditions; 
             private Boolean isValidChildRule; 
             private Long monitorSourceId; 
+            private String problemLevel; 
 
             /**
-             * 子条件计算关系
+             * childConditionRelation.
              */
             public Builder childConditionRelation(Long childConditionRelation) {
                 this.childConditionRelation = childConditionRelation;
@@ -575,7 +702,7 @@ public class UpdateRouteRuleRequest extends Request {
             }
 
             /**
-             * 子规则ID 不填表示新增
+             * childRouteRuleId.
              */
             public Builder childRouteRuleId(Long childRouteRuleId) {
                 this.childRouteRuleId = childRouteRuleId;
@@ -583,7 +710,7 @@ public class UpdateRouteRuleRequest extends Request {
             }
 
             /**
-             * 条件
+             * conditions.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -591,7 +718,7 @@ public class UpdateRouteRuleRequest extends Request {
             }
 
             /**
-             * true  删除子规则  false编辑子规则
+             * isValidChildRule.
              */
             public Builder isValidChildRule(Boolean isValidChildRule) {
                 this.isValidChildRule = isValidChildRule;
@@ -599,10 +726,18 @@ public class UpdateRouteRuleRequest extends Request {
             }
 
             /**
-             * 监控源ID
+             * monitorSourceId.
              */
             public Builder monitorSourceId(Long monitorSourceId) {
                 this.monitorSourceId = monitorSourceId;
+                return this;
+            }
+
+            /**
+             * problemLevel.
+             */
+            public Builder problemLevel(String problemLevel) {
+                this.problemLevel = problemLevel;
                 return this;
             }
 

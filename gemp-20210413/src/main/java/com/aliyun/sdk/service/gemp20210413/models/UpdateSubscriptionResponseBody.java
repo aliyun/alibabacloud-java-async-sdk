@@ -38,7 +38,7 @@ public class UpdateSubscriptionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * requestId.
+         * id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

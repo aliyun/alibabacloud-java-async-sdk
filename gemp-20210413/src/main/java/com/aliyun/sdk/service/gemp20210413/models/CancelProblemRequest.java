@@ -100,17 +100,17 @@ public class CancelProblemRequest extends Request {
             super();
         } 
 
-        private Builder(CancelProblemRequest response) {
-            super(response);
-            this.cancelReason = response.cancelReason;
-            this.cancelReasonDescription = response.cancelReasonDescription;
-            this.clientToken = response.clientToken;
-            this.problemId = response.problemId;
-            this.problemNotifyType = response.problemNotifyType;
+        private Builder(CancelProblemRequest request) {
+            super(request);
+            this.cancelReason = request.cancelReason;
+            this.cancelReasonDescription = request.cancelReasonDescription;
+            this.clientToken = request.clientToken;
+            this.problemId = request.problemId;
+            this.problemNotifyType = request.problemNotifyType;
         } 
 
         /**
-         * 取消原因
+         * cancelReason.
          */
         public Builder cancelReason(Long cancelReason) {
             this.putBodyParameter("cancelReason", cancelReason);
@@ -119,7 +119,7 @@ public class CancelProblemRequest extends Request {
         }
 
         /**
-         * 取消原因描述
+         * cancelReasonDescription.
          */
         public Builder cancelReasonDescription(String cancelReasonDescription) {
             this.putBodyParameter("cancelReasonDescription", cancelReasonDescription);
@@ -128,7 +128,7 @@ public class CancelProblemRequest extends Request {
         }
 
         /**
-         * 幂等校验token
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -137,7 +137,7 @@ public class CancelProblemRequest extends Request {
         }
 
         /**
-         * 故障id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -146,7 +146,7 @@ public class CancelProblemRequest extends Request {
         }
 
         /**
-         * PROBLEM_NOTIFY	通告类型 PROBLEM_NOTIFY：故障通告 PROBLEM_UPDATE：故障更新 PROBLEM_UPGRADE：故障升级 PROBLEM_DEGRADE：故障降级 PROBLEM_RECOVER：故障恢复 PROBLEM_REISSUE： 故障补发 PROBLEM_CANCEL：故障取消
+         * problemNotifyType.
          */
         public Builder problemNotifyType(Long problemNotifyType) {
             this.putBodyParameter("problemNotifyType", problemNotifyType);

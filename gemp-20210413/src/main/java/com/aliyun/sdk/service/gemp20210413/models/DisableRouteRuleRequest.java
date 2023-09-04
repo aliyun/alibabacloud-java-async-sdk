@@ -62,14 +62,14 @@ public class DisableRouteRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DisableRouteRuleRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.routeRuleId = response.routeRuleId;
+        private Builder(DisableRouteRuleRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.routeRuleId = request.routeRuleId;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -78,7 +78,7 @@ public class DisableRouteRuleRequest extends Request {
         }
 
         /**
-         * 请求ID
+         * routeRuleId.
          */
         public Builder routeRuleId(Long routeRuleId) {
             this.putBodyParameter("routeRuleId", routeRuleId);

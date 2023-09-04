@@ -100,17 +100,17 @@ public class DeleteServiceGroupUserRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteServiceGroupUserRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.newUserId = response.newUserId;
-            this.oldUserId = response.oldUserId;
-            this.removeUser = response.removeUser;
-            this.serviceGroupId = response.serviceGroupId;
+        private Builder(DeleteServiceGroupUserRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.newUserId = request.newUserId;
+            this.oldUserId = request.oldUserId;
+            this.removeUser = request.removeUser;
+            this.serviceGroupId = request.serviceGroupId;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -119,7 +119,7 @@ public class DeleteServiceGroupUserRequest extends Request {
         }
 
         /**
-         * 新的用户
+         * newUserId.
          */
         public Builder newUserId(Long newUserId) {
             this.putBodyParameter("newUserId", newUserId);
@@ -128,7 +128,7 @@ public class DeleteServiceGroupUserRequest extends Request {
         }
 
         /**
-         * 老的用户ID
+         * oldUserId.
          */
         public Builder oldUserId(Long oldUserId) {
             this.putBodyParameter("oldUserId", oldUserId);
@@ -137,7 +137,7 @@ public class DeleteServiceGroupUserRequest extends Request {
         }
 
         /**
-         * 删除服务组成员
+         * removeUser.
          */
         public Builder removeUser(Boolean removeUser) {
             this.putBodyParameter("removeUser", removeUser);
@@ -146,7 +146,7 @@ public class DeleteServiceGroupUserRequest extends Request {
         }
 
         /**
-         * 服务组ID
+         * serviceGroupId.
          */
         public Builder serviceGroupId(Long serviceGroupId) {
             this.putBodyParameter("serviceGroupId", serviceGroupId);

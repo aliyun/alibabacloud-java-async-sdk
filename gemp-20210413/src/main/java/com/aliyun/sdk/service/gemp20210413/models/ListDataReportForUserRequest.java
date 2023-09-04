@@ -87,16 +87,16 @@ public class ListDataReportForUserRequest extends Request {
             super();
         } 
 
-        private Builder(ListDataReportForUserRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startTime = response.startTime;
+        private Builder(ListDataReportForUserRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * 结束时间
+         * endTime.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("endTime", endTime);
@@ -105,7 +105,7 @@ public class ListDataReportForUserRequest extends Request {
         }
 
         /**
-         * 当前页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -114,7 +114,7 @@ public class ListDataReportForUserRequest extends Request {
         }
 
         /**
-         * 页大小
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -123,7 +123,7 @@ public class ListDataReportForUserRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * startTime.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("startTime", startTime);

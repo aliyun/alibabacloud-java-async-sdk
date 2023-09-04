@@ -50,7 +50,7 @@ public class CreateRouteRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 结果
+         * data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class CreateRouteRuleResponseBody extends TeaModel {
         }
 
         /**
-         * 请求
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreateRouteRuleResponseBody extends TeaModel {
             private Long routeRuleId; 
 
             /**
-             * 规则ID
+             * routeRuleId.
              */
             public Builder routeRuleId(Long routeRuleId) {
                 this.routeRuleId = routeRuleId;

@@ -230,27 +230,27 @@ public class CreateProblemRequest extends Request {
             super();
         } 
 
-        private Builder(CreateProblemRequest response) {
-            super(response);
-            this.affectServiceIds = response.affectServiceIds;
-            this.clientToken = response.clientToken;
-            this.discoverTime = response.discoverTime;
-            this.incidentId = response.incidentId;
-            this.mainHandlerId = response.mainHandlerId;
-            this.preliminaryReason = response.preliminaryReason;
-            this.problemLevel = response.problemLevel;
-            this.problemName = response.problemName;
-            this.problemNotifyType = response.problemNotifyType;
-            this.problemStatus = response.problemStatus;
-            this.progressSummary = response.progressSummary;
-            this.progressSummaryRichTextId = response.progressSummaryRichTextId;
-            this.recoveryTime = response.recoveryTime;
-            this.relatedServiceId = response.relatedServiceId;
-            this.serviceGroupIds = response.serviceGroupIds;
+        private Builder(CreateProblemRequest request) {
+            super(request);
+            this.affectServiceIds = request.affectServiceIds;
+            this.clientToken = request.clientToken;
+            this.discoverTime = request.discoverTime;
+            this.incidentId = request.incidentId;
+            this.mainHandlerId = request.mainHandlerId;
+            this.preliminaryReason = request.preliminaryReason;
+            this.problemLevel = request.problemLevel;
+            this.problemName = request.problemName;
+            this.problemNotifyType = request.problemNotifyType;
+            this.problemStatus = request.problemStatus;
+            this.progressSummary = request.progressSummary;
+            this.progressSummaryRichTextId = request.progressSummaryRichTextId;
+            this.recoveryTime = request.recoveryTime;
+            this.relatedServiceId = request.relatedServiceId;
+            this.serviceGroupIds = request.serviceGroupIds;
         } 
 
         /**
-         * 影响服务列表
+         * affectServiceIds.
          */
         public Builder affectServiceIds(java.util.List < Long > affectServiceIds) {
             this.putBodyParameter("affectServiceIds", affectServiceIds);
@@ -259,7 +259,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 幂等校验Id
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -268,7 +268,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 发现时间 (XXXX-XX-XX 00:00:00)
+         * discoverTime.
          */
         public Builder discoverTime(String discoverTime) {
             this.putBodyParameter("discoverTime", discoverTime);
@@ -277,7 +277,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 事件id
+         * incidentId.
          */
         public Builder incidentId(Long incidentId) {
             this.putBodyParameter("incidentId", incidentId);
@@ -286,7 +286,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 主要处理人
+         * mainHandlerId.
          */
         public Builder mainHandlerId(Long mainHandlerId) {
             this.putBodyParameter("mainHandlerId", mainHandlerId);
@@ -295,7 +295,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 初步原因
+         * preliminaryReason.
          */
         public Builder preliminaryReason(String preliminaryReason) {
             this.putBodyParameter("preliminaryReason", preliminaryReason);
@@ -304,7 +304,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 故障等级 1=P1 2=P2 3=P3 4=P4
+         * problemLevel.
          */
         public Builder problemLevel(String problemLevel) {
             this.putBodyParameter("problemLevel", problemLevel);
@@ -313,7 +313,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 故障名称
+         * problemName.
          */
         public Builder problemName(String problemName) {
             this.putBodyParameter("problemName", problemName);
@@ -322,7 +322,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 通告类型
+         * problemNotifyType.
          */
         public Builder problemNotifyType(String problemNotifyType) {
             this.putBodyParameter("problemNotifyType", problemNotifyType);
@@ -331,7 +331,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 故障状态  HANDLING 处理中 RECOVERED 已恢复  REPLAYING 复盘中  REPLAYED 已复盘 CANCEL 已取消
+         * problemStatus.
          */
         public Builder problemStatus(String problemStatus) {
             this.putBodyParameter("problemStatus", problemStatus);
@@ -340,7 +340,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 进展摘要
+         * progressSummary.
          */
         public Builder progressSummary(String progressSummary) {
             this.putBodyParameter("progressSummary", progressSummary);
@@ -349,7 +349,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 进展摘要富文本id
+         * progressSummaryRichTextId.
          */
         public Builder progressSummaryRichTextId(Long progressSummaryRichTextId) {
             this.putBodyParameter("progressSummaryRichTextId", progressSummaryRichTextId);
@@ -358,7 +358,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 恢复时间
+         * recoveryTime.
          */
         public Builder recoveryTime(String recoveryTime) {
             this.putBodyParameter("recoveryTime", recoveryTime);
@@ -367,7 +367,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 所属服务
+         * relatedServiceId.
          */
         public Builder relatedServiceId(Long relatedServiceId) {
             this.putBodyParameter("relatedServiceId", relatedServiceId);
@@ -376,7 +376,7 @@ public class CreateProblemRequest extends Request {
         }
 
         /**
-         * 应急协同组
+         * serviceGroupIds.
          */
         public Builder serviceGroupIds(java.util.List < Long > serviceGroupIds) {
             this.putBodyParameter("serviceGroupIds", serviceGroupIds);

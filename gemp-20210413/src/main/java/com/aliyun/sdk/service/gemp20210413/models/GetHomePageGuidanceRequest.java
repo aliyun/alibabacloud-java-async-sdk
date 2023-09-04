@@ -48,13 +48,13 @@ public class GetHomePageGuidanceRequest extends Request {
             super();
         } 
 
-        private Builder(GetHomePageGuidanceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
+        private Builder(GetHomePageGuidanceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);

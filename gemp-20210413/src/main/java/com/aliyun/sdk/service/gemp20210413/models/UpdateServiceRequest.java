@@ -17,8 +17,16 @@ public class UpdateServiceRequest extends Request {
     private String clientToken;
 
     @Body
+    @NameInMap("escalationPlanId")
+    private Long escalationPlanId;
+
+    @Body
     @NameInMap("serviceDescription")
     private String serviceDescription;
+
+    @Body
+    @NameInMap("serviceGroupIdList")
+    private java.util.List < Long > serviceGroupIdList;
 
     @Body
     @NameInMap("serviceId")
@@ -31,7 +39,9 @@ public class UpdateServiceRequest extends Request {
     private UpdateServiceRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.escalationPlanId = builder.escalationPlanId;
         this.serviceDescription = builder.serviceDescription;
+        this.serviceGroupIdList = builder.serviceGroupIdList;
         this.serviceId = builder.serviceId;
         this.serviceName = builder.serviceName;
     }
@@ -57,10 +67,24 @@ public class UpdateServiceRequest extends Request {
     }
 
     /**
+     * @return escalationPlanId
+     */
+    public Long getEscalationPlanId() {
+        return this.escalationPlanId;
+    }
+
+    /**
      * @return serviceDescription
      */
     public String getServiceDescription() {
         return this.serviceDescription;
+    }
+
+    /**
+     * @return serviceGroupIdList
+     */
+    public java.util.List < Long > getServiceGroupIdList() {
+        return this.serviceGroupIdList;
     }
 
     /**
@@ -79,7 +103,9 @@ public class UpdateServiceRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateServiceRequest, Builder> {
         private String clientToken; 
+        private Long escalationPlanId; 
         private String serviceDescription; 
+        private java.util.List < Long > serviceGroupIdList; 
         private Long serviceId; 
         private String serviceName; 
 
@@ -87,16 +113,18 @@ public class UpdateServiceRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateServiceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.serviceDescription = response.serviceDescription;
-            this.serviceId = response.serviceId;
-            this.serviceName = response.serviceName;
+        private Builder(UpdateServiceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.escalationPlanId = request.escalationPlanId;
+            this.serviceDescription = request.serviceDescription;
+            this.serviceGroupIdList = request.serviceGroupIdList;
+            this.serviceId = request.serviceId;
+            this.serviceName = request.serviceName;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -105,7 +133,16 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * 服务描述
+         * escalationPlanId.
+         */
+        public Builder escalationPlanId(Long escalationPlanId) {
+            this.putBodyParameter("escalationPlanId", escalationPlanId);
+            this.escalationPlanId = escalationPlanId;
+            return this;
+        }
+
+        /**
+         * serviceDescription.
          */
         public Builder serviceDescription(String serviceDescription) {
             this.putBodyParameter("serviceDescription", serviceDescription);
@@ -114,7 +151,16 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * 服务ID
+         * serviceGroupIdList.
+         */
+        public Builder serviceGroupIdList(java.util.List < Long > serviceGroupIdList) {
+            this.putBodyParameter("serviceGroupIdList", serviceGroupIdList);
+            this.serviceGroupIdList = serviceGroupIdList;
+            return this;
+        }
+
+        /**
+         * serviceId.
          */
         public Builder serviceId(Long serviceId) {
             this.putBodyParameter("serviceId", serviceId);
@@ -123,7 +169,7 @@ public class UpdateServiceRequest extends Request {
         }
 
         /**
-         * 服务名字
+         * serviceName.
          */
         public Builder serviceName(String serviceName) {
             this.putBodyParameter("serviceName", serviceName);

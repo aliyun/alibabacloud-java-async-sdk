@@ -74,15 +74,15 @@ public class ListIncidentTimelinesRequest extends Request {
             super();
         } 
 
-        private Builder(ListIncidentTimelinesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListIncidentTimelinesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * 幂等校验Id
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -91,7 +91,7 @@ public class ListIncidentTimelinesRequest extends Request {
         }
 
         /**
-         * 页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -100,7 +100,7 @@ public class ListIncidentTimelinesRequest extends Request {
         }
 
         /**
-         * 行
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);

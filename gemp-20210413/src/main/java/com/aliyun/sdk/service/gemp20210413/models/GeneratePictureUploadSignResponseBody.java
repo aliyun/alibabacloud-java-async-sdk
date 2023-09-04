@@ -134,7 +134,7 @@ public class GeneratePictureUploadSignResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * 文件名称
+             * fileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -142,7 +142,7 @@ public class GeneratePictureUploadSignResponseBody extends TeaModel {
             }
 
             /**
-             * 文件大小
+             * fileSize.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -150,7 +150,7 @@ public class GeneratePictureUploadSignResponseBody extends TeaModel {
             }
 
             /**
-             * 文件类型
+             * fileType.
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;

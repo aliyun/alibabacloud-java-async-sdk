@@ -98,7 +98,7 @@ public class CreateEscalationPlanResponseBody extends TeaModel {
             private Long escalationPlanId; 
 
             /**
-             * 升级计划id
+             * escalationPlanId.
              */
             public Builder escalationPlanId(Long escalationPlanId) {
                 this.escalationPlanId = escalationPlanId;

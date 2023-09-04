@@ -86,7 +86,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * 页
+         * pageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * 行
+         * pageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
-         * 总数
+         * totalCount.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -132,6 +132,9 @@ public class ListIncidentsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("assignToWhoIsValid")
+        private Long assignToWhoIsValid;
+
         @NameInMap("assignUserId")
         private Long assignUserId;
 
@@ -165,6 +168,12 @@ public class ListIncidentsResponseBody extends TeaModel {
         @NameInMap("isManual")
         private Boolean isManual;
 
+        @NameInMap("relRouteRuleDeleteType")
+        private Integer relRouteRuleDeleteType;
+
+        @NameInMap("relServiceDeleteType")
+        private Integer relServiceDeleteType;
+
         @NameInMap("relatedServiceId")
         private Long relatedServiceId;
 
@@ -178,6 +187,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         private String routeRuleName;
 
         private Data(Builder builder) {
+            this.assignToWhoIsValid = builder.assignToWhoIsValid;
             this.assignUserId = builder.assignUserId;
             this.assignUserName = builder.assignUserName;
             this.assignUserPhone = builder.assignUserPhone;
@@ -189,6 +199,8 @@ public class ListIncidentsResponseBody extends TeaModel {
             this.incidentStatus = builder.incidentStatus;
             this.incidentTitle = builder.incidentTitle;
             this.isManual = builder.isManual;
+            this.relRouteRuleDeleteType = builder.relRouteRuleDeleteType;
+            this.relServiceDeleteType = builder.relServiceDeleteType;
             this.relatedServiceId = builder.relatedServiceId;
             this.relatedServiceName = builder.relatedServiceName;
             this.routeRuleId = builder.routeRuleId;
@@ -201,6 +213,13 @@ public class ListIncidentsResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return assignToWhoIsValid
+         */
+        public Long getAssignToWhoIsValid() {
+            return this.assignToWhoIsValid;
         }
 
         /**
@@ -281,6 +300,20 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         /**
+         * @return relRouteRuleDeleteType
+         */
+        public Integer getRelRouteRuleDeleteType() {
+            return this.relRouteRuleDeleteType;
+        }
+
+        /**
+         * @return relServiceDeleteType
+         */
+        public Integer getRelServiceDeleteType() {
+            return this.relServiceDeleteType;
+        }
+
+        /**
          * @return relatedServiceId
          */
         public Long getRelatedServiceId() {
@@ -309,6 +342,7 @@ public class ListIncidentsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long assignToWhoIsValid; 
             private Long assignUserId; 
             private String assignUserName; 
             private String assignUserPhone; 
@@ -320,10 +354,20 @@ public class ListIncidentsResponseBody extends TeaModel {
             private String incidentStatus; 
             private String incidentTitle; 
             private Boolean isManual; 
+            private Integer relRouteRuleDeleteType; 
+            private Integer relServiceDeleteType; 
             private Long relatedServiceId; 
             private String relatedServiceName; 
             private Long routeRuleId; 
             private String routeRuleName; 
+
+            /**
+             * assignToWhoIsValid.
+             */
+            public Builder assignToWhoIsValid(Long assignToWhoIsValid) {
+                this.assignToWhoIsValid = assignToWhoIsValid;
+                return this;
+            }
 
             /**
              * 代表创建时间的资源属性字段
@@ -342,7 +386,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * 分派人手机号
+             * assignUserPhone.
              */
             public Builder assignUserPhone(String assignUserPhone) {
                 this.assignUserPhone = assignUserPhone;
@@ -382,7 +426,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件编号
+             * incidentNumber.
              */
             public Builder incidentNumber(String incidentNumber) {
                 this.incidentNumber = incidentNumber;
@@ -406,10 +450,26 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * 事件来源 是=手动 否=自动
+             * isManual.
              */
             public Builder isManual(Boolean isManual) {
                 this.isManual = isManual;
+                return this;
+            }
+
+            /**
+             * relRouteRuleDeleteType.
+             */
+            public Builder relRouteRuleDeleteType(Integer relRouteRuleDeleteType) {
+                this.relRouteRuleDeleteType = relRouteRuleDeleteType;
+                return this;
+            }
+
+            /**
+             * relServiceDeleteType.
+             */
+            public Builder relServiceDeleteType(Integer relServiceDeleteType) {
+                this.relServiceDeleteType = relServiceDeleteType;
                 return this;
             }
 
@@ -422,7 +482,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务名称
+             * relatedServiceName.
              */
             public Builder relatedServiceName(String relatedServiceName) {
                 this.relatedServiceName = relatedServiceName;
@@ -438,7 +498,7 @@ public class ListIncidentsResponseBody extends TeaModel {
             }
 
             /**
-             * 流转规则
+             * routeRuleName.
              */
             public Builder routeRuleName(String routeRuleName) {
                 this.routeRuleName = routeRuleName;

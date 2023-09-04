@@ -62,14 +62,14 @@ public class GetServiceRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.serviceId = response.serviceId;
+        private Builder(GetServiceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.serviceId = request.serviceId;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -78,7 +78,7 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * 服务ID
+         * serviceId.
          */
         public Builder serviceId(Long serviceId) {
             this.putBodyParameter("serviceId", serviceId);

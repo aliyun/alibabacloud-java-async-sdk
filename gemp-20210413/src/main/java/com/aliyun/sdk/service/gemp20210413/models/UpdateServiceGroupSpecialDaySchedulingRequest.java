@@ -90,16 +90,16 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateServiceGroupSpecialDaySchedulingRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.schedulingDate = response.schedulingDate;
-            this.schedulingSpecialDays = response.schedulingSpecialDays;
-            this.serviceGroupId = response.serviceGroupId;
+        private Builder(UpdateServiceGroupSpecialDaySchedulingRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.schedulingDate = request.schedulingDate;
+            this.schedulingSpecialDays = request.schedulingSpecialDays;
+            this.serviceGroupId = request.serviceGroupId;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -108,7 +108,7 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends Request {
         }
 
         /**
-         * 排班日期
+         * schedulingDate.
          */
         public Builder schedulingDate(String schedulingDate) {
             this.putBodyParameter("schedulingDate", schedulingDate);
@@ -117,7 +117,7 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends Request {
         }
 
         /**
-         * 特殊排班信息
+         * schedulingSpecialDays.
          */
         public Builder schedulingSpecialDays(java.util.List < SchedulingSpecialDays> schedulingSpecialDays) {
             this.putBodyParameter("schedulingSpecialDays", schedulingSpecialDays);
@@ -126,7 +126,7 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends Request {
         }
 
         /**
-         * 服务组ID
+         * serviceGroupId.
          */
         public Builder serviceGroupId(Long serviceGroupId) {
             this.putBodyParameter("serviceGroupId", serviceGroupId);
@@ -146,6 +146,9 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends Request {
         @Validation(required = true)
         private String schedulingEndTime;
 
+        @NameInMap("schedulingObjectType")
+        private String schedulingObjectType;
+
         @NameInMap("schedulingOrder")
         private Integer schedulingOrder;
 
@@ -157,11 +160,16 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends Request {
         @Validation(required = true)
         private Long schedulingUserId;
 
+        @NameInMap("schedulingUserIdList")
+        private java.util.List < Long > schedulingUserIdList;
+
         private SchedulingSpecialDays(Builder builder) {
             this.schedulingEndTime = builder.schedulingEndTime;
+            this.schedulingObjectType = builder.schedulingObjectType;
             this.schedulingOrder = builder.schedulingOrder;
             this.schedulingStartTime = builder.schedulingStartTime;
             this.schedulingUserId = builder.schedulingUserId;
+            this.schedulingUserIdList = builder.schedulingUserIdList;
         }
 
         public static Builder builder() {
@@ -177,6 +185,13 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends Request {
          */
         public String getSchedulingEndTime() {
             return this.schedulingEndTime;
+        }
+
+        /**
+         * @return schedulingObjectType
+         */
+        public String getSchedulingObjectType() {
+            return this.schedulingObjectType;
         }
 
         /**
@@ -200,14 +215,23 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends Request {
             return this.schedulingUserId;
         }
 
+        /**
+         * @return schedulingUserIdList
+         */
+        public java.util.List < Long > getSchedulingUserIdList() {
+            return this.schedulingUserIdList;
+        }
+
         public static final class Builder {
             private String schedulingEndTime; 
+            private String schedulingObjectType; 
             private Integer schedulingOrder; 
             private String schedulingStartTime; 
             private Long schedulingUserId; 
+            private java.util.List < Long > schedulingUserIdList; 
 
             /**
-             * 排班结束时间
+             * schedulingEndTime.
              */
             public Builder schedulingEndTime(String schedulingEndTime) {
                 this.schedulingEndTime = schedulingEndTime;
@@ -215,7 +239,15 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends Request {
             }
 
             /**
-             * 班次顺序
+             * schedulingObjectType.
+             */
+            public Builder schedulingObjectType(String schedulingObjectType) {
+                this.schedulingObjectType = schedulingObjectType;
+                return this;
+            }
+
+            /**
+             * schedulingOrder.
              */
             public Builder schedulingOrder(Integer schedulingOrder) {
                 this.schedulingOrder = schedulingOrder;
@@ -223,7 +255,7 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends Request {
             }
 
             /**
-             * 排班开始时间
+             * schedulingStartTime.
              */
             public Builder schedulingStartTime(String schedulingStartTime) {
                 this.schedulingStartTime = schedulingStartTime;
@@ -231,10 +263,18 @@ public class UpdateServiceGroupSpecialDaySchedulingRequest extends Request {
             }
 
             /**
-             * 排班用户ID
+             * schedulingUserId.
              */
             public Builder schedulingUserId(Long schedulingUserId) {
                 this.schedulingUserId = schedulingUserId;
+                return this;
+            }
+
+            /**
+             * schedulingUserIdList.
+             */
+            public Builder schedulingUserIdList(java.util.List < Long > schedulingUserIdList) {
+                this.schedulingUserIdList = schedulingUserIdList;
                 return this;
             }
 

@@ -50,7 +50,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -98,7 +98,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * 用户名称
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -151,7 +151,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             private java.util.List < Users> users; 
 
             /**
-             * 数量
+             * count.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -224,7 +224,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             private String serviceGroupName; 
 
             /**
-             * 服务组Maison
+             * serviceGroupDescription.
              */
             public Builder serviceGroupDescription(String serviceGroupDescription) {
                 this.serviceGroupDescription = serviceGroupDescription;
@@ -232,7 +232,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 服务Id
+             * serviceGroupId.
              */
             public Builder serviceGroupId(Long serviceGroupId) {
                 this.serviceGroupId = serviceGroupId;
@@ -240,7 +240,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组名称
+             * serviceGroupName.
              */
             public Builder serviceGroupName(String serviceGroupName) {
                 this.serviceGroupName = serviceGroupName;
@@ -293,7 +293,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * 影响服务Id
+             * serviceId.
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -301,7 +301,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 影响服务名称
+             * serviceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -546,7 +546,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * 应急协同组
+             * coordinationGroups.
              */
             public Builder coordinationGroups(java.util.List < CoordinationGroups> coordinationGroups) {
                 this.coordinationGroups = coordinationGroups;
@@ -554,7 +554,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -562,7 +562,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 发现时间
+             * discoverTime.
              */
             public Builder discoverTime(String discoverTime) {
                 this.discoverTime = discoverTime;
@@ -570,7 +570,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 影响服务
+             * effectionServices.
              */
             public Builder effectionServices(java.util.List < EffectionServices> effectionServices) {
                 this.effectionServices = effectionServices;
@@ -578,7 +578,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 是否手动
+             * isManual.
              */
             public Builder isManual(Boolean isManual) {
                 this.isManual = isManual;
@@ -586,7 +586,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 是否升级
+             * isUpgrade.
              */
             public Builder isUpgrade(Boolean isUpgrade) {
                 this.isUpgrade = isUpgrade;
@@ -594,7 +594,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 主要处理人Id
+             * mainHandlerId.
              */
             public Builder mainHandlerId(String mainHandlerId) {
                 this.mainHandlerId = mainHandlerId;
@@ -602,7 +602,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 主要处理人
+             * mainHandlerName.
              */
             public Builder mainHandlerName(String mainHandlerName) {
                 this.mainHandlerName = mainHandlerName;
@@ -610,7 +610,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 初步原因
+             * preliminaryReason.
              */
             public Builder preliminaryReason(String preliminaryReason) {
                 this.preliminaryReason = preliminaryReason;
@@ -618,7 +618,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 故障Id
+             * problemId.
              */
             public Builder problemId(Long problemId) {
                 this.problemId = problemId;
@@ -626,7 +626,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 故障等级 1=P1 2=P2 3=P3 4=P4
+             * problemLevel.
              */
             public Builder problemLevel(String problemLevel) {
                 this.problemLevel = problemLevel;
@@ -634,7 +634,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 故障名称
+             * problemName.
              */
             public Builder problemName(String problemName) {
                 this.problemName = problemName;
@@ -642,7 +642,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 故障状态 1 处理中 2已恢复 3复盘中 4已复盘 5已取消
+             * problemStatus.
              */
             public Builder problemStatus(String problemStatus) {
                 this.problemStatus = problemStatus;
@@ -650,7 +650,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 进展摘要
+             * progressSummary.
              */
             public Builder progressSummary(String progressSummary) {
                 this.progressSummary = progressSummary;
@@ -658,7 +658,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 富文本id
+             * progressSummaryRichTextId.
              */
             public Builder progressSummaryRichTextId(Long progressSummaryRichTextId) {
                 this.progressSummaryRichTextId = progressSummaryRichTextId;
@@ -666,7 +666,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 恢复时间
+             * recoveryTime.
              */
             public Builder recoveryTime(String recoveryTime) {
                 this.recoveryTime = recoveryTime;
@@ -674,7 +674,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务ID
+             * relatedServiceId.
              */
             public Builder relatedServiceId(Long relatedServiceId) {
                 this.relatedServiceId = relatedServiceId;
@@ -682,7 +682,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务 名称
+             * serviceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -723,7 +723,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * 用户名称
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -776,7 +776,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             private java.util.List < SmsUsers> users; 
 
             /**
-             * 数量
+             * count.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -825,7 +825,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * 用户
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -878,7 +878,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             private java.util.List < VoiceUsers> users; 
 
             /**
-             * 数量
+             * count.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -927,7 +927,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             private String serviceName; 
 
             /**
-             * 服务名称
+             * serviceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -980,7 +980,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             private java.util.List < ServiceGroups> serviceGroups; 
 
             /**
-             * 数量
+             * count.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -1125,7 +1125,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             private Webhook webhook; 
 
             /**
-             * 降级后数据
+             * deAfterData.
              */
             public Builder deAfterData(String deAfterData) {
                 this.deAfterData = deAfterData;
@@ -1133,7 +1133,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 降级前数据
+             * deBeforeData.
              */
             public Builder deBeforeData(String deBeforeData) {
                 this.deBeforeData = deBeforeData;
@@ -1141,7 +1141,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 邮箱
+             * mail.
              */
             public Builder mail(Mail mail) {
                 this.mail = mail;
@@ -1149,7 +1149,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * problem.
+             * object
              */
             public Builder problem(Problem problem) {
                 this.problem = problem;
@@ -1157,7 +1157,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 短信
+             * sms.
              */
             public Builder sms(Sms sms) {
                 this.sms = sms;
@@ -1165,7 +1165,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 升级后数据
+             * upAfterData.
              */
             public Builder upAfterData(String upAfterData) {
                 this.upAfterData = upAfterData;
@@ -1173,7 +1173,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 升级前数据
+             * upBeforeData.
              */
             public Builder upBeforeData(String upBeforeData) {
                 this.upBeforeData = upBeforeData;
@@ -1181,7 +1181,7 @@ public class GetProblemPreviewResponseBody extends TeaModel {
             }
 
             /**
-             * 语音
+             * voice.
              */
             public Builder voice(Voice voice) {
                 this.voice = voice;

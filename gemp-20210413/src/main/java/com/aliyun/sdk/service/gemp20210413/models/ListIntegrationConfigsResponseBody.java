@@ -50,7 +50,7 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -87,6 +87,9 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
         @NameInMap("monitorSourceShortName")
         private String monitorSourceShortName;
 
+        @NameInMap("monitorSourceType")
+        private Integer monitorSourceType;
+
         @NameInMap("status")
         private String status;
 
@@ -96,6 +99,7 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
             this.monitorSourceId = builder.monitorSourceId;
             this.monitorSourceName = builder.monitorSourceName;
             this.monitorSourceShortName = builder.monitorSourceShortName;
+            this.monitorSourceType = builder.monitorSourceType;
             this.status = builder.status;
         }
 
@@ -143,6 +147,13 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return monitorSourceType
+         */
+        public Integer getMonitorSourceType() {
+            return this.monitorSourceType;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -155,10 +166,11 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
             private Long monitorSourceId; 
             private String monitorSourceName; 
             private String monitorSourceShortName; 
+            private Integer monitorSourceType; 
             private String status; 
 
             /**
-             * 集成配置id
+             * integrationConfigId.
              */
             public Builder integrationConfigId(Long integrationConfigId) {
                 this.integrationConfigId = integrationConfigId;
@@ -166,7 +178,7 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否已接受报警
+             * isReceivedEvent.
              */
             public Builder isReceivedEvent(Boolean isReceivedEvent) {
                 this.isReceivedEvent = isReceivedEvent;
@@ -174,7 +186,7 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 监控源id
+             * monitorSourceId.
              */
             public Builder monitorSourceId(Long monitorSourceId) {
                 this.monitorSourceId = monitorSourceId;
@@ -182,7 +194,7 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 监控源名城
+             * monitorSourceName.
              */
             public Builder monitorSourceName(String monitorSourceName) {
                 this.monitorSourceName = monitorSourceName;
@@ -190,7 +202,7 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 监控源简称
+             * monitorSourceShortName.
              */
             public Builder monitorSourceShortName(String monitorSourceShortName) {
                 this.monitorSourceShortName = monitorSourceShortName;
@@ -198,7 +210,15 @@ public class ListIntegrationConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * 集成配置状态
+             * monitorSourceType.
+             */
+            public Builder monitorSourceType(Integer monitorSourceType) {
+                this.monitorSourceType = monitorSourceType;
+                return this;
+            }
+
+            /**
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;

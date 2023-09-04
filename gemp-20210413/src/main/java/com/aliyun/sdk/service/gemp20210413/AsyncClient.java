@@ -20,6 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddProblemServiceGroupResponse> addProblemServiceGroup(AddProblemServiceGroupRequest request);
 
+    CompletableFuture<BillingStatisticsResponse> billingStatistics(BillingStatisticsRequest request);
+
     CompletableFuture<CancelProblemResponse> cancelProblem(CancelProblemRequest request);
 
     CompletableFuture<CheckWebhookResponse> checkWebhook(CheckWebhookRequest request);
@@ -82,6 +84,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteServiceGroupResponse> deleteServiceGroup(DeleteServiceGroupRequest request);
 
+    CompletableFuture<DeleteServiceGroupSchedulingResponse> deleteServiceGroupScheduling(DeleteServiceGroupSchedulingRequest request);
+
     CompletableFuture<DeleteServiceGroupUserResponse> deleteServiceGroupUser(DeleteServiceGroupUserRequest request);
 
     CompletableFuture<DeleteSubscriptionResponse> deleteSubscription(DeleteSubscriptionRequest request);
@@ -130,6 +134,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetIncidentResponse> getIncident(GetIncidentRequest request);
 
+    CompletableFuture<GetIncidentListByIdListResponse> getIncidentListByIdList(GetIncidentListByIdListRequest request);
+
     CompletableFuture<GetIncidentStatisticsResponse> getIncidentStatistics(GetIncidentStatisticsRequest request);
 
     CompletableFuture<GetIncidentSubtotalCountResponse> getIncidentSubtotalCount(GetIncidentSubtotalCountRequest request);
@@ -168,11 +174,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetTenantApplicationResponse> getTenantApplication(GetTenantApplicationRequest request);
 
+    CompletableFuture<GetTenantStatusResponse> getTenantStatus(GetTenantStatusRequest request);
+
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
 
     CompletableFuture<GetUserGuideStatusResponse> getUserGuideStatus(GetUserGuideStatusRequest request);
 
     CompletableFuture<ListAlertsResponse> listAlerts(ListAlertsRequest request);
+
+    CompletableFuture<ListByMonitorSourceIdResponse> listByMonitorSourceId(ListByMonitorSourceIdRequest request);
 
     CompletableFuture<ListChartDataForServiceGroupResponse> listChartDataForServiceGroup(ListChartDataForServiceGroupRequest request);
 
@@ -189,6 +199,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListEscalationPlanServicesResponse> listEscalationPlanServices(ListEscalationPlanServicesRequest request);
 
     CompletableFuture<ListEscalationPlansResponse> listEscalationPlans(ListEscalationPlansRequest request);
+
+    CompletableFuture<ListEscalationPlansByNoticeObjectResponse> listEscalationPlansByNoticeObject(ListEscalationPlansByNoticeObjectRequest request);
 
     CompletableFuture<ListIncidentDetailEscalationPlansResponse> listIncidentDetailEscalationPlans(ListIncidentDetailEscalationPlansRequest request);
 
@@ -218,9 +230,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListRouteRulesResponse> listRouteRules(ListRouteRulesRequest request);
 
+    CompletableFuture<ListRouteRulesByAssignWhoIdResponse> listRouteRulesByAssignWhoId(ListRouteRulesByAssignWhoIdRequest request);
+
+    CompletableFuture<ListRouteRulesByServiceResponse> listRouteRulesByService(ListRouteRulesByServiceRequest request);
+
     CompletableFuture<ListServiceGroupMonitorSourceTemplatesResponse> listServiceGroupMonitorSourceTemplates(ListServiceGroupMonitorSourceTemplatesRequest request);
 
     CompletableFuture<ListServiceGroupsResponse> listServiceGroups(ListServiceGroupsRequest request);
+
+    CompletableFuture<ListServiceGroupsByUserIdResponse> listServiceGroupsByUserId(ListServiceGroupsByUserIdRequest request);
 
     CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
 
@@ -238,9 +256,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
 
+    CompletableFuture<PushMonitorResponse> pushMonitor(PushMonitorRequest request);
+
     CompletableFuture<RecoverProblemResponse> recoverProblem(RecoverProblemRequest request);
 
     CompletableFuture<RefreshIntegrationConfigKeyResponse> refreshIntegrationConfigKey(RefreshIntegrationConfigKeyRequest request);
+
+    CompletableFuture<RemoveIntegrationConfigResponse> removeIntegrationConfig(RemoveIntegrationConfigRequest request);
 
     CompletableFuture<RemoveProblemServiceGroupResponse> removeProblemServiceGroup(RemoveProblemServiceGroupRequest request);
 
@@ -249,6 +271,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RespondIncidentResponse> respondIncident(RespondIncidentRequest request);
 
     CompletableFuture<RevokeProblemRecoveryResponse> revokeProblemRecovery(RevokeProblemRecoveryRequest request);
+
+    CompletableFuture<UnbindUserResponse> unbindUser(UnbindUserRequest request);
 
     CompletableFuture<UpdateEscalationPlanResponse> updateEscalationPlan(UpdateEscalationPlanRequest request);
 

@@ -50,7 +50,7 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -146,7 +146,7 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
             private String description; 
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -154,7 +154,7 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
             }
 
             /**
-             * 操作人Id
+             * createUserId.
              */
             public Builder createUserId(Long createUserId) {
                 this.createUserId = createUserId;
@@ -162,7 +162,7 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
             }
 
             /**
-             * 操作人
+             * createUserName.
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -170,7 +170,7 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
             }
 
             /**
-             * 操作人手机号
+             * createUserPhone.
              */
             public Builder createUserPhone(String createUserPhone) {
                 this.createUserPhone = createUserPhone;
@@ -178,7 +178,7 @@ public class ListIncidentSubtotalsResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;

@@ -61,14 +61,14 @@ public class ListProblemTimeLinesRequest extends Request {
             super();
         } 
 
-        private Builder(ListProblemTimeLinesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.problemId = response.problemId;
+        private Builder(ListProblemTimeLinesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.problemId = request.problemId;
         } 
 
         /**
-         * clientToken
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -77,7 +77,7 @@ public class ListProblemTimeLinesRequest extends Request {
         }
 
         /**
-         * 故障ID
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);

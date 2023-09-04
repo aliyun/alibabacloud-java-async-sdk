@@ -61,14 +61,14 @@ public class RespondIncidentRequest extends Request {
             super();
         } 
 
-        private Builder(RespondIncidentRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.incidentIds = response.incidentIds;
+        private Builder(RespondIncidentRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.incidentIds = request.incidentIds;
         } 
 
         /**
-         * 幂等校验Id
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);

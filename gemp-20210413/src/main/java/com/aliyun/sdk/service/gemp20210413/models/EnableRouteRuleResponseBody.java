@@ -58,7 +58,7 @@ public class EnableRouteRuleResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

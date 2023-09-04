@@ -48,9 +48,9 @@ public class DisableSubscriptionRequest extends Request {
             super();
         } 
 
-        private Builder(DisableSubscriptionRequest response) {
-            super(response);
-            this.subscriptionId = response.subscriptionId;
+        private Builder(DisableSubscriptionRequest request) {
+            super(request);
+            this.subscriptionId = request.subscriptionId;
         } 
 
         /**

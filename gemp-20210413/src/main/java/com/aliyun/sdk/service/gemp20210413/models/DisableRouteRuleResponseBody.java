@@ -59,7 +59,7 @@ public class DisableRouteRuleResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -17,6 +17,10 @@ public class ListRouteRulesRequest extends Request {
     private String clientToken;
 
     @Body
+    @NameInMap("notFilterRouteRuleDeleted")
+    private Boolean notFilterRouteRuleDeleted;
+
+    @Body
     @NameInMap("pageNumber")
     private Integer pageNumber;
 
@@ -39,6 +43,7 @@ public class ListRouteRulesRequest extends Request {
     private ListRouteRulesRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.notFilterRouteRuleDeleted = builder.notFilterRouteRuleDeleted;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.routeType = builder.routeType;
@@ -64,6 +69,13 @@ public class ListRouteRulesRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return notFilterRouteRuleDeleted
+     */
+    public Boolean getNotFilterRouteRuleDeleted() {
+        return this.notFilterRouteRuleDeleted;
     }
 
     /**
@@ -103,6 +115,7 @@ public class ListRouteRulesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListRouteRulesRequest, Builder> {
         private String clientToken; 
+        private Boolean notFilterRouteRuleDeleted; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long routeType; 
@@ -113,18 +126,19 @@ public class ListRouteRulesRequest extends Request {
             super();
         } 
 
-        private Builder(ListRouteRulesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.routeType = response.routeType;
-            this.ruleName = response.ruleName;
-            this.serviceName = response.serviceName;
+        private Builder(ListRouteRulesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.notFilterRouteRuleDeleted = request.notFilterRouteRuleDeleted;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.routeType = request.routeType;
+            this.ruleName = request.ruleName;
+            this.serviceName = request.serviceName;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -133,7 +147,16 @@ public class ListRouteRulesRequest extends Request {
         }
 
         /**
-         * 第几页
+         * notFilterRouteRuleDeleted.
+         */
+        public Builder notFilterRouteRuleDeleted(Boolean notFilterRouteRuleDeleted) {
+            this.putBodyParameter("notFilterRouteRuleDeleted", notFilterRouteRuleDeleted);
+            this.notFilterRouteRuleDeleted = notFilterRouteRuleDeleted;
+            return this;
+        }
+
+        /**
+         * pageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -142,7 +165,7 @@ public class ListRouteRulesRequest extends Request {
         }
 
         /**
-         * 页的大小
+         * pageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -151,7 +174,7 @@ public class ListRouteRulesRequest extends Request {
         }
 
         /**
-         * 路由类型：0触发事件 1仅触发报警 r
+         * routeType.
          */
         public Builder routeType(Long routeType) {
             this.putBodyParameter("routeType", routeType);
@@ -160,7 +183,7 @@ public class ListRouteRulesRequest extends Request {
         }
 
         /**
-         * 规则名称
+         * ruleName.
          */
         public Builder ruleName(byte[] ruleName) {
             this.putBodyParameter("ruleName", ruleName);
@@ -169,7 +192,7 @@ public class ListRouteRulesRequest extends Request {
         }
 
         /**
-         * 服务名称
+         * serviceName.
          */
         public Builder serviceName(byte[] serviceName) {
             this.putBodyParameter("serviceName", serviceName);

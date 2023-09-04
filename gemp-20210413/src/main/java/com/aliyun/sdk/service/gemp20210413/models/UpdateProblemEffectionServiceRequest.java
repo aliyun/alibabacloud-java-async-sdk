@@ -139,16 +139,16 @@ public class UpdateProblemEffectionServiceRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateProblemEffectionServiceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.effectionServiceId = response.effectionServiceId;
-            this.level = response.level;
-            this.picUrl = response.picUrl;
-            this.problemId = response.problemId;
-            this.serviceId = response.serviceId;
-            this.status = response.status;
+        private Builder(UpdateProblemEffectionServiceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.effectionServiceId = request.effectionServiceId;
+            this.level = request.level;
+            this.picUrl = request.picUrl;
+            this.problemId = request.problemId;
+            this.serviceId = request.serviceId;
+            this.status = request.status;
         } 
 
         /**
@@ -161,7 +161,7 @@ public class UpdateProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 影响描述
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -170,7 +170,7 @@ public class UpdateProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 影响服务id
+         * effectionServiceId.
          */
         public Builder effectionServiceId(Long effectionServiceId) {
             this.putBodyParameter("effectionServiceId", effectionServiceId);
@@ -179,7 +179,7 @@ public class UpdateProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 影响等级
+         * level.
          */
         public Builder level(String level) {
             this.putBodyParameter("level", level);
@@ -188,7 +188,7 @@ public class UpdateProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 图片地址
+         * picUrl.
          */
         public Builder picUrl(java.util.List < String > picUrl) {
             this.putBodyParameter("picUrl", picUrl);
@@ -197,7 +197,7 @@ public class UpdateProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 故障id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -206,7 +206,7 @@ public class UpdateProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 关联服务id
+         * serviceId.
          */
         public Builder serviceId(Long serviceId) {
             this.putBodyParameter("serviceId", serviceId);
@@ -215,7 +215,7 @@ public class UpdateProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 影响状态 UN_RECOVERED 未恢复 RECOVERED已恢复
+         * status.
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);

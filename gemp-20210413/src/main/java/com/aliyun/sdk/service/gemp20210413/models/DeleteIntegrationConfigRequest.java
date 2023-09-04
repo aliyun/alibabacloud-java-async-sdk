@@ -61,14 +61,14 @@ public class DeleteIntegrationConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteIntegrationConfigRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.integrationConfigId = response.integrationConfigId;
+        private Builder(DeleteIntegrationConfigRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.integrationConfigId = request.integrationConfigId;
         } 
 
         /**
-         * 幂等id
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -77,7 +77,7 @@ public class DeleteIntegrationConfigRequest extends Request {
         }
 
         /**
-         * 集成配置id
+         * integrationConfigId.
          */
         public Builder integrationConfigId(Long integrationConfigId) {
             this.putBodyParameter("integrationConfigId", integrationConfigId);

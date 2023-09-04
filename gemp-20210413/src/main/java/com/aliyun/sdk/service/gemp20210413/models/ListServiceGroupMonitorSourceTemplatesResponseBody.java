@@ -50,7 +50,7 @@ public class ListServiceGroupMonitorSourceTemplatesResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * data
+         * data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -146,7 +146,7 @@ public class ListServiceGroupMonitorSourceTemplatesResponseBody extends TeaModel
             private Long templateId; 
 
             /**
-             * 字段
+             * fields.
              */
             public Builder fields(java.util.List < String > fields) {
                 this.fields = fields;
@@ -154,7 +154,7 @@ public class ListServiceGroupMonitorSourceTemplatesResponseBody extends TeaModel
             }
 
             /**
-             * 监控源ID
+             * monitorSourceId.
              */
             public Builder monitorSourceId(Long monitorSourceId) {
                 this.monitorSourceId = monitorSourceId;
@@ -162,7 +162,7 @@ public class ListServiceGroupMonitorSourceTemplatesResponseBody extends TeaModel
             }
 
             /**
-             * 监控报警源名字
+             * monitorSourceName.
              */
             public Builder monitorSourceName(String monitorSourceName) {
                 this.monitorSourceName = monitorSourceName;
@@ -170,7 +170,7 @@ public class ListServiceGroupMonitorSourceTemplatesResponseBody extends TeaModel
             }
 
             /**
-             * 模板内容
+             * templateContent.
              */
             public Builder templateContent(String templateContent) {
                 this.templateContent = templateContent;
@@ -178,7 +178,7 @@ public class ListServiceGroupMonitorSourceTemplatesResponseBody extends TeaModel
             }
 
             /**
-             * 消息模版ID
+             * templateId.
              */
             public Builder templateId(Long templateId) {
                 this.templateId = templateId;

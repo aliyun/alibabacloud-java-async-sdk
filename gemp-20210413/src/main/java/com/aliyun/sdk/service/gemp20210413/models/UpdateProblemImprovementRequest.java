@@ -17,6 +17,10 @@ public class UpdateProblemImprovementRequest extends Request {
     private String clientToken;
 
     @Body
+    @NameInMap("customProblemReason")
+    private String customProblemReason;
+
+    @Body
     @NameInMap("discoverSource")
     private Long discoverSource;
 
@@ -75,6 +79,7 @@ public class UpdateProblemImprovementRequest extends Request {
     private UpdateProblemImprovementRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.customProblemReason = builder.customProblemReason;
         this.discoverSource = builder.discoverSource;
         this.dutyDepartmentId = builder.dutyDepartmentId;
         this.dutyDepartmentName = builder.dutyDepartmentName;
@@ -109,6 +114,13 @@ public class UpdateProblemImprovementRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return customProblemReason
+     */
+    public String getCustomProblemReason() {
+        return this.customProblemReason;
     }
 
     /**
@@ -211,6 +223,7 @@ public class UpdateProblemImprovementRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateProblemImprovementRequest, Builder> {
         private String clientToken; 
+        private String customProblemReason; 
         private Long discoverSource; 
         private Long dutyDepartmentId; 
         private String dutyDepartmentName; 
@@ -230,27 +243,28 @@ public class UpdateProblemImprovementRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateProblemImprovementRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.discoverSource = response.discoverSource;
-            this.dutyDepartmentId = response.dutyDepartmentId;
-            this.dutyDepartmentName = response.dutyDepartmentName;
-            this.dutyUserId = response.dutyUserId;
-            this.injectionMode = response.injectionMode;
-            this.monitorSourceName = response.monitorSourceName;
-            this.problemId = response.problemId;
-            this.problemReason = response.problemReason;
-            this.recentActivity = response.recentActivity;
-            this.recoveryMode = response.recoveryMode;
-            this.relationChanges = response.relationChanges;
-            this.remark = response.remark;
-            this.replayDutyUserId = response.replayDutyUserId;
-            this.userReport = response.userReport;
+        private Builder(UpdateProblemImprovementRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.customProblemReason = request.customProblemReason;
+            this.discoverSource = request.discoverSource;
+            this.dutyDepartmentId = request.dutyDepartmentId;
+            this.dutyDepartmentName = request.dutyDepartmentName;
+            this.dutyUserId = request.dutyUserId;
+            this.injectionMode = request.injectionMode;
+            this.monitorSourceName = request.monitorSourceName;
+            this.problemId = request.problemId;
+            this.problemReason = request.problemReason;
+            this.recentActivity = request.recentActivity;
+            this.recoveryMode = request.recoveryMode;
+            this.relationChanges = request.relationChanges;
+            this.remark = request.remark;
+            this.replayDutyUserId = request.replayDutyUserId;
+            this.userReport = request.userReport;
         } 
 
         /**
-         * 幂等校验token
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -259,7 +273,16 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 发现来源 码表:PROBLEM_DISCOVER_SOURCE
+         * customProblemReason.
+         */
+        public Builder customProblemReason(String customProblemReason) {
+            this.putBodyParameter("customProblemReason", customProblemReason);
+            this.customProblemReason = customProblemReason;
+            return this;
+        }
+
+        /**
+         * discoverSource.
          */
         public Builder discoverSource(Long discoverSource) {
             this.putBodyParameter("discoverSource", discoverSource);
@@ -268,7 +291,7 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 故障责任部门ID
+         * dutyDepartmentId.
          */
         public Builder dutyDepartmentId(Long dutyDepartmentId) {
             this.putBodyParameter("dutyDepartmentId", dutyDepartmentId);
@@ -277,7 +300,7 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 故障责任部门
+         * dutyDepartmentName.
          */
         public Builder dutyDepartmentName(String dutyDepartmentName) {
             this.putBodyParameter("dutyDepartmentName", dutyDepartmentName);
@@ -286,7 +309,7 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 故障责任人id
+         * dutyUserId.
          */
         public Builder dutyUserId(Long dutyUserId) {
             this.putBodyParameter("dutyUserId", dutyUserId);
@@ -295,7 +318,7 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 注入方式 码表:PROBLEM_INJECTION_MODE
+         * injectionMode.
          */
         public Builder injectionMode(String injectionMode) {
             this.putBodyParameter("injectionMode", injectionMode);
@@ -304,7 +327,7 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 监控源
+         * monitorSourceName.
          */
         public Builder monitorSourceName(String monitorSourceName) {
             this.putBodyParameter("monitorSourceName", monitorSourceName);
@@ -313,7 +336,7 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 故障ID
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -322,7 +345,7 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 故障原因
+         * problemReason.
          */
         public Builder problemReason(String problemReason) {
             this.putBodyParameter("problemReason", problemReason);
@@ -331,7 +354,7 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 最近活动 码表:PROBLEM_RECENT_ACTIVITY
+         * recentActivity.
          */
         public Builder recentActivity(String recentActivity) {
             this.putBodyParameter("recentActivity", recentActivity);
@@ -340,7 +363,7 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 恢复方式  码表:PROBLEM_RECOVERY_MODE
+         * recoveryMode.
          */
         public Builder recoveryMode(String recoveryMode) {
             this.putBodyParameter("recoveryMode", recoveryMode);
@@ -349,7 +372,7 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 关联变更
+         * relationChanges.
          */
         public Builder relationChanges(String relationChanges) {
             this.putBodyParameter("relationChanges", relationChanges);
@@ -358,7 +381,7 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 备注
+         * remark.
          */
         public Builder remark(String remark) {
             this.putBodyParameter("remark", remark);
@@ -367,7 +390,7 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 复盘负责人id
+         * replayDutyUserId.
          */
         public Builder replayDutyUserId(Long replayDutyUserId) {
             this.putBodyParameter("replayDutyUserId", replayDutyUserId);
@@ -376,7 +399,7 @@ public class UpdateProblemImprovementRequest extends Request {
         }
 
         /**
-         * 用户上报 码表:PROBLEM_USER_REPORT
+         * userReport.
          */
         public Builder userReport(Long userReport) {
             this.putBodyParameter("userReport", userReport);

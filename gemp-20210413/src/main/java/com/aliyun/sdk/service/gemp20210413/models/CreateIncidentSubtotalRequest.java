@@ -75,15 +75,15 @@ public class CreateIncidentSubtotalRequest extends Request {
             super();
         } 
 
-        private Builder(CreateIncidentSubtotalRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.incidentId = response.incidentId;
+        private Builder(CreateIncidentSubtotalRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.incidentId = request.incidentId;
         } 
 
         /**
-         * 幂等校验Id
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -92,7 +92,7 @@ public class CreateIncidentSubtotalRequest extends Request {
         }
 
         /**
-         * 描述
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -101,7 +101,7 @@ public class CreateIncidentSubtotalRequest extends Request {
         }
 
         /**
-         * 事件id
+         * incidentId.
          */
         public Builder incidentId(Long incidentId) {
             this.putBodyParameter("incidentId", incidentId);

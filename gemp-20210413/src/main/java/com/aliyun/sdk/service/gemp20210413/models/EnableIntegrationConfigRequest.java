@@ -61,14 +61,14 @@ public class EnableIntegrationConfigRequest extends Request {
             super();
         } 
 
-        private Builder(EnableIntegrationConfigRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.integrationConfigId = response.integrationConfigId;
+        private Builder(EnableIntegrationConfigRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.integrationConfigId = request.integrationConfigId;
         } 
 
         /**
-         * 幂等id
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);

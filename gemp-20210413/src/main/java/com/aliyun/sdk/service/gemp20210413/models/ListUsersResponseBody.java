@@ -94,7 +94,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * 分页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * 分页
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * 总条数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -144,6 +144,12 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("isEditableUser")
         private Long isEditableUser;
 
+        @NameInMap("isOperation")
+        private Integer isOperation;
+
+        @NameInMap("isRam")
+        private Integer isRam;
+
         @NameInMap("isRelated")
         private String isRelated;
 
@@ -152,6 +158,12 @@ public class ListUsersResponseBody extends TeaModel {
 
         @NameInMap("ramId")
         private Long ramId;
+
+        @NameInMap("roleIdList")
+        private java.util.List < Long > roleIdList;
+
+        @NameInMap("roleNameList")
+        private java.util.List < String > roleNameList;
 
         @NameInMap("synergyChannel")
         private String synergyChannel;
@@ -167,9 +179,13 @@ public class ListUsersResponseBody extends TeaModel {
             this.appAccount = builder.appAccount;
             this.email = builder.email;
             this.isEditableUser = builder.isEditableUser;
+            this.isOperation = builder.isOperation;
+            this.isRam = builder.isRam;
             this.isRelated = builder.isRelated;
             this.phone = builder.phone;
             this.ramId = builder.ramId;
+            this.roleIdList = builder.roleIdList;
+            this.roleNameList = builder.roleNameList;
             this.synergyChannel = builder.synergyChannel;
             this.userId = builder.userId;
             this.username = builder.username;
@@ -212,6 +228,20 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
+         * @return isOperation
+         */
+        public Integer getIsOperation() {
+            return this.isOperation;
+        }
+
+        /**
+         * @return isRam
+         */
+        public Integer getIsRam() {
+            return this.isRam;
+        }
+
+        /**
          * @return isRelated
          */
         public String getIsRelated() {
@@ -230,6 +260,20 @@ public class ListUsersResponseBody extends TeaModel {
          */
         public Long getRamId() {
             return this.ramId;
+        }
+
+        /**
+         * @return roleIdList
+         */
+        public java.util.List < Long > getRoleIdList() {
+            return this.roleIdList;
+        }
+
+        /**
+         * @return roleNameList
+         */
+        public java.util.List < String > getRoleNameList() {
+            return this.roleNameList;
         }
 
         /**
@@ -258,15 +302,19 @@ public class ListUsersResponseBody extends TeaModel {
             private String appAccount; 
             private String email; 
             private Long isEditableUser; 
+            private Integer isOperation; 
+            private Integer isRam; 
             private String isRelated; 
             private String phone; 
             private Long ramId; 
+            private java.util.List < Long > roleIdList; 
+            private java.util.List < String > roleNameList; 
             private String synergyChannel; 
             private Long userId; 
             private String username; 
 
             /**
-             * 账户类型
+             * accountType.
              */
             public Builder accountType(Long accountType) {
                 this.accountType = accountType;
@@ -274,7 +322,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 移动应用账户
+             * appAccount.
              */
             public Builder appAccount(String appAccount) {
                 this.appAccount = appAccount;
@@ -282,7 +330,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 邮箱
+             * email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -290,7 +338,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 是否可编辑
+             * isEditableUser.
              */
             public Builder isEditableUser(Long isEditableUser) {
                 this.isEditableUser = isEditableUser;
@@ -298,7 +346,23 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 是否关联
+             * isOperation.
+             */
+            public Builder isOperation(Integer isOperation) {
+                this.isOperation = isOperation;
+                return this;
+            }
+
+            /**
+             * isRam.
+             */
+            public Builder isRam(Integer isRam) {
+                this.isRam = isRam;
+                return this;
+            }
+
+            /**
+             * isRelated.
              */
             public Builder isRelated(String isRelated) {
                 this.isRelated = isRelated;
@@ -306,7 +370,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 手机
+             * phone.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -314,7 +378,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 子账号ramId
+             * ramId.
              */
             public Builder ramId(Long ramId) {
                 this.ramId = ramId;
@@ -322,7 +386,23 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 移动应用协同渠道
+             * roleIdList.
+             */
+            public Builder roleIdList(java.util.List < Long > roleIdList) {
+                this.roleIdList = roleIdList;
+                return this;
+            }
+
+            /**
+             * roleNameList.
+             */
+            public Builder roleNameList(java.util.List < String > roleNameList) {
+                this.roleNameList = roleNameList;
+                return this;
+            }
+
+            /**
+             * synergyChannel.
              */
             public Builder synergyChannel(String synergyChannel) {
                 this.synergyChannel = synergyChannel;
@@ -330,7 +410,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 用户id
+             * userId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -338,7 +418,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 用户名
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;

@@ -75,11 +75,11 @@ public class CreateProblemTimelinesRequest extends Request {
             super();
         } 
 
-        private Builder(CreateProblemTimelinesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.problemId = response.problemId;
-            this.timelineNodes = response.timelineNodes;
+        private Builder(CreateProblemTimelinesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.problemId = request.problemId;
+            this.timelineNodes = request.timelineNodes;
         } 
 
         /**
@@ -92,7 +92,7 @@ public class CreateProblemTimelinesRequest extends Request {
         }
 
         /**
-         * 故障id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -101,7 +101,7 @@ public class CreateProblemTimelinesRequest extends Request {
         }
 
         /**
-         * 时间线节点
+         * timelineNodes.
          */
         public Builder timelineNodes(String timelineNodes) {
             this.putBodyParameter("timelineNodes", timelineNodes);

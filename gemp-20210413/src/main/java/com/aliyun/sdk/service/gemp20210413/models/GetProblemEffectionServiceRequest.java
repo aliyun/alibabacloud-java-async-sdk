@@ -74,11 +74,11 @@ public class GetProblemEffectionServiceRequest extends Request {
             super();
         } 
 
-        private Builder(GetProblemEffectionServiceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.effectionServiceId = response.effectionServiceId;
-            this.problemId = response.problemId;
+        private Builder(GetProblemEffectionServiceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.effectionServiceId = request.effectionServiceId;
+            this.problemId = request.problemId;
         } 
 
         /**
@@ -91,7 +91,7 @@ public class GetProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * id主键
+         * effectionServiceId.
          */
         public Builder effectionServiceId(Long effectionServiceId) {
             this.putBodyParameter("effectionServiceId", effectionServiceId);
@@ -100,7 +100,7 @@ public class GetProblemEffectionServiceRequest extends Request {
         }
 
         /**
-         * 故障id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);

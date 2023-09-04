@@ -74,15 +74,15 @@ public class ListDataReportForServiceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(ListDataReportForServiceGroupRequest response) {
-            super(response);
-            this.endTime = response.endTime;
-            this.serviceGroupName = response.serviceGroupName;
-            this.startTime = response.startTime;
+        private Builder(ListDataReportForServiceGroupRequest request) {
+            super(request);
+            this.endTime = request.endTime;
+            this.serviceGroupName = request.serviceGroupName;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * 结束时间
+         * endTime.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("endTime", endTime);
@@ -91,7 +91,7 @@ public class ListDataReportForServiceGroupRequest extends Request {
         }
 
         /**
-         * 服务组名称
+         * serviceGroupName.
          */
         public Builder serviceGroupName(String serviceGroupName) {
             this.putBodyParameter("serviceGroupName", serviceGroupName);
@@ -100,7 +100,7 @@ public class ListDataReportForServiceGroupRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * startTime.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("startTime", startTime);

@@ -74,15 +74,15 @@ public class ListServiceGroupMonitorSourceTemplatesRequest extends Request {
             super();
         } 
 
-        private Builder(ListServiceGroupMonitorSourceTemplatesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.requestId = response.requestId;
-            this.serviceGroupId = response.serviceGroupId;
+        private Builder(ListServiceGroupMonitorSourceTemplatesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.requestId = request.requestId;
+            this.serviceGroupId = request.serviceGroupId;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -91,7 +91,7 @@ public class ListServiceGroupMonitorSourceTemplatesRequest extends Request {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.putBodyParameter("requestId", requestId);
@@ -100,7 +100,7 @@ public class ListServiceGroupMonitorSourceTemplatesRequest extends Request {
         }
 
         /**
-         * 服务组ID
+         * serviceGroupId.
          */
         public Builder serviceGroupId(Long serviceGroupId) {
             this.putBodyParameter("serviceGroupId", serviceGroupId);

@@ -50,7 +50,7 @@ public class GetUserResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 用户
+         * data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -110,7 +110,7 @@ public class GetUserResponseBody extends TeaModel {
             private Long serviceGroupId; 
 
             /**
-             * 服务组名称
+             * name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -118,7 +118,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组ID
+             * serviceGroupId.
              */
             public Builder serviceGroupId(Long serviceGroupId) {
                 this.serviceGroupId = serviceGroupId;
@@ -154,6 +154,12 @@ public class GetUserResponseBody extends TeaModel {
         @NameInMap("ramId")
         private String ramId;
 
+        @NameInMap("roleIdList")
+        private java.util.List < Long > roleIdList;
+
+        @NameInMap("roleNameList")
+        private java.util.List < String > roleNameList;
+
         @NameInMap("serviceGroups")
         private java.util.List < ServiceGroups> serviceGroups;
 
@@ -171,6 +177,8 @@ public class GetUserResponseBody extends TeaModel {
             this.isRelated = builder.isRelated;
             this.phone = builder.phone;
             this.ramId = builder.ramId;
+            this.roleIdList = builder.roleIdList;
+            this.roleNameList = builder.roleNameList;
             this.serviceGroups = builder.serviceGroups;
             this.userId = builder.userId;
             this.username = builder.username;
@@ -234,6 +242,20 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return roleIdList
+         */
+        public java.util.List < Long > getRoleIdList() {
+            return this.roleIdList;
+        }
+
+        /**
+         * @return roleNameList
+         */
+        public java.util.List < String > getRoleNameList() {
+            return this.roleNameList;
+        }
+
+        /**
          * @return serviceGroups
          */
         public java.util.List < ServiceGroups> getServiceGroups() {
@@ -262,12 +284,14 @@ public class GetUserResponseBody extends TeaModel {
             private String isRelated; 
             private String phone; 
             private String ramId; 
+            private java.util.List < Long > roleIdList; 
+            private java.util.List < String > roleNameList; 
             private java.util.List < ServiceGroups> serviceGroups; 
             private Long userId; 
             private String username; 
 
             /**
-             * CUSTOMER:主账号，SUB:子账号
+             * accountType.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -275,7 +299,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -291,7 +315,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 是否可编辑
+             * isEditableUser.
              */
             public Builder isEditableUser(Boolean isEditableUser) {
                 this.isEditableUser = isEditableUser;
@@ -299,7 +323,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 是否关联
+             * isRelated.
              */
             public Builder isRelated(String isRelated) {
                 this.isRelated = isRelated;
@@ -307,7 +331,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 用户手机号
+             * phone.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -323,7 +347,23 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 所属服务组
+             * roleIdList.
+             */
+            public Builder roleIdList(java.util.List < Long > roleIdList) {
+                this.roleIdList = roleIdList;
+                return this;
+            }
+
+            /**
+             * roleNameList.
+             */
+            public Builder roleNameList(java.util.List < String > roleNameList) {
+                this.roleNameList = roleNameList;
+                return this;
+            }
+
+            /**
+             * serviceGroups.
              */
             public Builder serviceGroups(java.util.List < ServiceGroups> serviceGroups) {
                 this.serviceGroups = serviceGroups;
@@ -331,7 +371,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 用户ID
+             * userId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -339,7 +379,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * 用户昵称
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;

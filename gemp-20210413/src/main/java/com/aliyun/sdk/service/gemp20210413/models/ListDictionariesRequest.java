@@ -48,9 +48,9 @@ public class ListDictionariesRequest extends Request {
             super();
         } 
 
-        private Builder(ListDictionariesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
+        private Builder(ListDictionariesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
         } 
 
         /**

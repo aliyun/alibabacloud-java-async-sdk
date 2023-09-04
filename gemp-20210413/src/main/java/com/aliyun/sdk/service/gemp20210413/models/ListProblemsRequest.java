@@ -217,26 +217,26 @@ public class ListProblemsRequest extends Request {
             super();
         } 
 
-        private Builder(ListProblemsRequest response) {
-            super(response);
-            this.affectServiceId = response.affectServiceId;
-            this.clientToken = response.clientToken;
-            this.discoveryEndTime = response.discoveryEndTime;
-            this.discoveryStartTime = response.discoveryStartTime;
-            this.mainHandlerId = response.mainHandlerId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.problemLevel = response.problemLevel;
-            this.problemStatus = response.problemStatus;
-            this.queryType = response.queryType;
-            this.repeaterId = response.repeaterId;
-            this.restoreEndTime = response.restoreEndTime;
-            this.restoreStartTime = response.restoreStartTime;
-            this.serviceGroupId = response.serviceGroupId;
+        private Builder(ListProblemsRequest request) {
+            super(request);
+            this.affectServiceId = request.affectServiceId;
+            this.clientToken = request.clientToken;
+            this.discoveryEndTime = request.discoveryEndTime;
+            this.discoveryStartTime = request.discoveryStartTime;
+            this.mainHandlerId = request.mainHandlerId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.problemLevel = request.problemLevel;
+            this.problemStatus = request.problemStatus;
+            this.queryType = request.queryType;
+            this.repeaterId = request.repeaterId;
+            this.restoreEndTime = request.restoreEndTime;
+            this.restoreStartTime = request.restoreStartTime;
+            this.serviceGroupId = request.serviceGroupId;
         } 
 
         /**
-         * 影响服务ID
+         * affectServiceId.
          */
         public Builder affectServiceId(Long affectServiceId) {
             this.putBodyParameter("affectServiceId", affectServiceId);
@@ -245,7 +245,7 @@ public class ListProblemsRequest extends Request {
         }
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -254,7 +254,7 @@ public class ListProblemsRequest extends Request {
         }
 
         /**
-         * 发现结束时间
+         * discoveryEndTime.
          */
         public Builder discoveryEndTime(String discoveryEndTime) {
             this.putBodyParameter("discoveryEndTime", discoveryEndTime);
@@ -263,7 +263,7 @@ public class ListProblemsRequest extends Request {
         }
 
         /**
-         * 发现开始时间
+         * discoveryStartTime.
          */
         public Builder discoveryStartTime(String discoveryStartTime) {
             this.putBodyParameter("discoveryStartTime", discoveryStartTime);
@@ -272,7 +272,7 @@ public class ListProblemsRequest extends Request {
         }
 
         /**
-         * 主要处理人
+         * mainHandlerId.
          */
         public Builder mainHandlerId(Long mainHandlerId) {
             this.putBodyParameter("mainHandlerId", mainHandlerId);
@@ -281,7 +281,7 @@ public class ListProblemsRequest extends Request {
         }
 
         /**
-         * 当前页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -290,7 +290,7 @@ public class ListProblemsRequest extends Request {
         }
 
         /**
-         * 页大小
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -299,7 +299,7 @@ public class ListProblemsRequest extends Request {
         }
 
         /**
-         * 故障等级 1=P1 2=P2 3=P3 4=P4
+         * problemLevel.
          */
         public Builder problemLevel(String problemLevel) {
             this.putBodyParameter("problemLevel", problemLevel);
@@ -308,7 +308,7 @@ public class ListProblemsRequest extends Request {
         }
 
         /**
-         * 故障状态  HANDLING   处理中 RECOVERED 已恢复  REPLAYING   复盘中  REPLAYED     已复盘 CANCEL        已取消
+         * problemStatus.
          */
         public Builder problemStatus(String problemStatus) {
             this.putBodyParameter("problemStatus", problemStatus);
@@ -317,7 +317,7 @@ public class ListProblemsRequest extends Request {
         }
 
         /**
-         * RESPONSIBLE 我负责的       PARTICIPATED 我参与的  ALL 全部
+         * queryType.
          */
         public Builder queryType(String queryType) {
             this.putBodyParameter("queryType", queryType);
@@ -326,7 +326,7 @@ public class ListProblemsRequest extends Request {
         }
 
         /**
-         * 复盘负责人
+         * repeaterId.
          */
         public Builder repeaterId(Long repeaterId) {
             this.putBodyParameter("repeaterId", repeaterId);
@@ -335,7 +335,7 @@ public class ListProblemsRequest extends Request {
         }
 
         /**
-         * 恢复结束时间
+         * restoreEndTime.
          */
         public Builder restoreEndTime(String restoreEndTime) {
             this.putBodyParameter("restoreEndTime", restoreEndTime);
@@ -344,7 +344,7 @@ public class ListProblemsRequest extends Request {
         }
 
         /**
-         * 恢复开始时间
+         * restoreStartTime.
          */
         public Builder restoreStartTime(String restoreStartTime) {
             this.putBodyParameter("restoreStartTime", restoreStartTime);
@@ -353,7 +353,7 @@ public class ListProblemsRequest extends Request {
         }
 
         /**
-         * 应急协同组
+         * serviceGroupId.
          */
         public Builder serviceGroupId(Long serviceGroupId) {
             this.putBodyParameter("serviceGroupId", serviceGroupId);

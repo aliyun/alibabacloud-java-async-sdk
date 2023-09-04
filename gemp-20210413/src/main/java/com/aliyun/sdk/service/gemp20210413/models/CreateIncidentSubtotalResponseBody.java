@@ -50,7 +50,7 @@ public class CreateIncidentSubtotalResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -98,7 +98,7 @@ public class CreateIncidentSubtotalResponseBody extends TeaModel {
             private Long subtotalId; 
 
             /**
-             * 小计Id
+             * subtotalId.
              */
             public Builder subtotalId(Long subtotalId) {
                 this.subtotalId = subtotalId;

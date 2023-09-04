@@ -48,9 +48,9 @@ public class EnableSubscriptionRequest extends Request {
             super();
         } 
 
-        private Builder(EnableSubscriptionRequest response) {
-            super(response);
-            this.subscriptionId = response.subscriptionId;
+        private Builder(EnableSubscriptionRequest request) {
+            super(request);
+            this.subscriptionId = request.subscriptionId;
         } 
 
         /**

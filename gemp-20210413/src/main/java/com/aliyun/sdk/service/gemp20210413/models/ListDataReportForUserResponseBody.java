@@ -62,7 +62,7 @@ public class ListDataReportForUserResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 个人统计数据
+         * data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -78,7 +78,7 @@ public class ListDataReportForUserResponseBody extends TeaModel {
         }
 
         /**
-         * 总条数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -238,7 +238,7 @@ public class ListDataReportForUserResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * 分配事件数量
+             * distributionIncidentCount.
              */
             public Builder distributionIncidentCount(Long distributionIncidentCount) {
                 this.distributionIncidentCount = distributionIncidentCount;
@@ -246,7 +246,7 @@ public class ListDataReportForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 升级事件数量
+             * escalationIncidentCount.
              */
             public Builder escalationIncidentCount(Long escalationIncidentCount) {
                 this.escalationIncidentCount = escalationIncidentCount;
@@ -254,7 +254,7 @@ public class ListDataReportForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 完结事件数量
+             * finishIncidentNumber.
              */
             public Builder finishIncidentNumber(Long finishIncidentNumber) {
                 this.finishIncidentNumber = finishIncidentNumber;
@@ -262,7 +262,7 @@ public class ListDataReportForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 完结率
+             * finishProportion.
              */
             public Builder finishProportion(String finishProportion) {
                 this.finishProportion = finishProportion;
@@ -286,7 +286,7 @@ public class ListDataReportForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 未响应升级数
+             * unAcknowledgedEscalationIncidentCount.
              */
             public Builder unAcknowledgedEscalationIncidentCount(Long unAcknowledgedEscalationIncidentCount) {
                 this.unAcknowledgedEscalationIncidentCount = unAcknowledgedEscalationIncidentCount;
@@ -294,7 +294,7 @@ public class ListDataReportForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 非分配完结数
+             * unDistributionIncidentCount.
              */
             public Builder unDistributionIncidentCount(Long unDistributionIncidentCount) {
                 this.unDistributionIncidentCount = unDistributionIncidentCount;
@@ -302,7 +302,7 @@ public class ListDataReportForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 未完结事件数
+             * unFinishEscalationIncidentCount.
              */
             public Builder unFinishEscalationIncidentCount(Long unFinishEscalationIncidentCount) {
                 this.unFinishEscalationIncidentCount = unFinishEscalationIncidentCount;
@@ -310,7 +310,7 @@ public class ListDataReportForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 用户ID
+             * userId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -318,7 +318,7 @@ public class ListDataReportForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 用户名字
+             * userName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

@@ -48,13 +48,13 @@ public class GetIncidentStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(GetIncidentStatisticsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
+        private Builder(GetIncidentStatisticsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
         } 
 
         /**
-         * 幂等校验Id
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);

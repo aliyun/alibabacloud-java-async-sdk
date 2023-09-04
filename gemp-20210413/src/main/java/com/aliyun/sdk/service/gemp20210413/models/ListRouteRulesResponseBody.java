@@ -86,7 +86,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 规则列表
+         * data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
         }
 
         /**
-         * 第几页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
         }
 
         /**
-         * 分页大小
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
         }
 
         /**
-         * 总条数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -150,11 +150,17 @@ public class ListRouteRulesResponseBody extends TeaModel {
         @NameInMap("incidentLevel")
         private String incidentLevel;
 
+        @NameInMap("isValid")
+        private Integer isValid;
+
         @NameInMap("matchCount")
         private Long matchCount;
 
         @NameInMap("monitorSourceNames")
         private String monitorSourceNames;
+
+        @NameInMap("relServiceDeleteType")
+        private Integer relServiceDeleteType;
 
         @NameInMap("relatedServiceId")
         private Long relatedServiceId;
@@ -190,8 +196,10 @@ public class ListRouteRulesResponseBody extends TeaModel {
             this.effection = builder.effection;
             this.enableStatus = builder.enableStatus;
             this.incidentLevel = builder.incidentLevel;
+            this.isValid = builder.isValid;
             this.matchCount = builder.matchCount;
             this.monitorSourceNames = builder.monitorSourceNames;
+            this.relServiceDeleteType = builder.relServiceDeleteType;
             this.relatedServiceId = builder.relatedServiceId;
             this.relatedServiceName = builder.relatedServiceName;
             this.routeRuleId = builder.routeRuleId;
@@ -254,6 +262,13 @@ public class ListRouteRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return isValid
+         */
+        public Integer getIsValid() {
+            return this.isValid;
+        }
+
+        /**
          * @return matchCount
          */
         public Long getMatchCount() {
@@ -265,6 +280,13 @@ public class ListRouteRulesResponseBody extends TeaModel {
          */
         public String getMonitorSourceNames() {
             return this.monitorSourceNames;
+        }
+
+        /**
+         * @return relServiceDeleteType
+         */
+        public Integer getRelServiceDeleteType() {
+            return this.relServiceDeleteType;
         }
 
         /**
@@ -337,8 +359,10 @@ public class ListRouteRulesResponseBody extends TeaModel {
             private String effection; 
             private String enableStatus; 
             private String incidentLevel; 
+            private Integer isValid; 
             private Long matchCount; 
             private String monitorSourceNames; 
+            private Integer relServiceDeleteType; 
             private Long relatedServiceId; 
             private String relatedServiceName; 
             private Long routeRuleId; 
@@ -350,7 +374,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * 事件分派对象ID（服务组ID 或用户ID）
+             * assignObjectId.
              */
             public Builder assignObjectId(Long assignObjectId) {
                 this.assignObjectId = assignObjectId;
@@ -358,7 +382,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 事件分派对象类型 SERVICEGROUP 服务组  USER 单个用户
+             * assignObjectType.
              */
             public Builder assignObjectType(String assignObjectType) {
                 this.assignObjectType = assignObjectType;
@@ -366,7 +390,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -374,7 +398,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 影响程度 LOW-一般 HIGH-严重
+             * effection.
              */
             public Builder effection(String effection) {
                 this.effection = effection;
@@ -382,7 +406,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 是否启用  DISABLE禁用. ENABLE 启用
+             * enableStatus.
              */
             public Builder enableStatus(String enableStatus) {
                 this.enableStatus = enableStatus;
@@ -390,7 +414,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 事件级别 P1 P2 P3 P4
+             * incidentLevel.
              */
             public Builder incidentLevel(String incidentLevel) {
                 this.incidentLevel = incidentLevel;
@@ -398,7 +422,15 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 命中次数
+             * isValid.
+             */
+            public Builder isValid(Integer isValid) {
+                this.isValid = isValid;
+                return this;
+            }
+
+            /**
+             * matchCount.
              */
             public Builder matchCount(Long matchCount) {
                 this.matchCount = matchCount;
@@ -406,7 +438,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 监控源名称
+             * monitorSourceNames.
              */
             public Builder monitorSourceNames(String monitorSourceNames) {
                 this.monitorSourceNames = monitorSourceNames;
@@ -414,7 +446,15 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务ID
+             * relServiceDeleteType.
+             */
+            public Builder relServiceDeleteType(Integer relServiceDeleteType) {
+                this.relServiceDeleteType = relServiceDeleteType;
+                return this;
+            }
+
+            /**
+             * relatedServiceId.
              */
             public Builder relatedServiceId(Long relatedServiceId) {
                 this.relatedServiceId = relatedServiceId;
@@ -422,7 +462,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 服务名称
+             * relatedServiceName.
              */
             public Builder relatedServiceName(String relatedServiceName) {
                 this.relatedServiceName = relatedServiceName;
@@ -430,7 +470,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 规则ID
+             * routeRuleId.
              */
             public Builder routeRuleId(Long routeRuleId) {
                 this.routeRuleId = routeRuleId;
@@ -438,7 +478,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 路由类型：INCIDENT 触发事件 ALERT 仅触发报警
+             * routeType.
              */
             public Builder routeType(String routeType) {
                 this.routeType = routeType;
@@ -446,7 +486,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 规则名称
+             * ruleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -454,7 +494,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 租户ID
+             * tenantRamId.
              */
             public Builder tenantRamId(Long tenantRamId) {
                 this.tenantRamId = tenantRamId;
@@ -462,7 +502,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 时间窗口
+             * timeWindow.
              */
             public Builder timeWindow(Long timeWindow) {
                 this.timeWindow = timeWindow;
@@ -470,7 +510,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 时间窗口单位 MINUTE 分钟  SECOND 秒
+             * timeWindowUnit.
              */
             public Builder timeWindowUnit(Long timeWindowUnit) {
                 this.timeWindowUnit = timeWindowUnit;
@@ -478,7 +518,7 @@ public class ListRouteRulesResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * updateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

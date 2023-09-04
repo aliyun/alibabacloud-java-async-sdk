@@ -86,7 +86,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 服务组列表
+         * data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 当前页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 分页大小
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -118,7 +118,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 总条数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -135,6 +135,9 @@ public class ListServiceGroupsResponseBody extends TeaModel {
         @NameInMap("email")
         private String email;
 
+        @NameInMap("isRelated")
+        private Integer isRelated;
+
         @NameInMap("phone")
         private String phone;
 
@@ -149,6 +152,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
 
         private Users(Builder builder) {
             this.email = builder.email;
+            this.isRelated = builder.isRelated;
             this.phone = builder.phone;
             this.serviceGroupId = builder.serviceGroupId;
             this.userId = builder.userId;
@@ -168,6 +172,13 @@ public class ListServiceGroupsResponseBody extends TeaModel {
          */
         public String getEmail() {
             return this.email;
+        }
+
+        /**
+         * @return isRelated
+         */
+        public Integer getIsRelated() {
+            return this.isRelated;
         }
 
         /**
@@ -200,13 +211,14 @@ public class ListServiceGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String email; 
+            private Integer isRelated; 
             private String phone; 
             private Long serviceGroupId; 
             private Long userId; 
             private String userName; 
 
             /**
-             * 邮箱
+             * email.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -214,7 +226,15 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 手机号
+             * isRelated.
+             */
+            public Builder isRelated(Integer isRelated) {
+                this.isRelated = isRelated;
+                return this;
+            }
+
+            /**
+             * phone.
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -222,7 +242,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组ID
+             * serviceGroupId.
              */
             public Builder serviceGroupId(Long serviceGroupId) {
                 this.serviceGroupId = serviceGroupId;
@@ -230,7 +250,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 用户ID
+             * userId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -238,7 +258,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 用户名字
+             * userName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -375,7 +395,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             private String webhookType; 
 
             /**
-             * ENABLE 启用 DISABLE 禁用
+             * enableWebhook.
              */
             public Builder enableWebhook(String enableWebhook) {
                 this.enableWebhook = enableWebhook;
@@ -383,7 +403,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 是否已经排班
+             * isScheduled.
              */
             public Builder isScheduled(Boolean isScheduled) {
                 this.isScheduled = isScheduled;
@@ -391,7 +411,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组描述
+             * serviceGroupDescription.
              */
             public Builder serviceGroupDescription(String serviceGroupDescription) {
                 this.serviceGroupDescription = serviceGroupDescription;
@@ -399,7 +419,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组ID
+             * serviceGroupId.
              */
             public Builder serviceGroupId(Long serviceGroupId) {
                 this.serviceGroupId = serviceGroupId;
@@ -407,7 +427,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组名字
+             * serviceGroupName.
              */
             public Builder serviceGroupName(String serviceGroupName) {
                 this.serviceGroupName = serviceGroupName;
@@ -415,7 +435,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * updateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -423,7 +443,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组用户列表
+             * users.
              */
             public Builder users(java.util.List < Users> users) {
                 this.users = users;
@@ -431,7 +451,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * webhook 跳转地址
+             * webhookLink.
              */
             public Builder webhookLink(String webhookLink) {
                 this.webhookLink = webhookLink;
@@ -439,7 +459,7 @@ public class ListServiceGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * WEIXIN_GROUP微信DING_GROUP钉钉FEISHU_GROUP飞书
+             * webhookType.
              */
             public Builder webhookType(String webhookType) {
                 this.webhookType = webhookType;

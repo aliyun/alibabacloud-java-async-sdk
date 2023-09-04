@@ -41,6 +41,10 @@ public class ListServiceGroupsRequest extends Request {
     private String queryType;
 
     @Body
+    @NameInMap("serviceId")
+    private Long serviceId;
+
+    @Body
     @NameInMap("userId")
     private Long userId;
 
@@ -53,6 +57,7 @@ public class ListServiceGroupsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.queryName = builder.queryName;
         this.queryType = builder.queryType;
+        this.serviceId = builder.serviceId;
         this.userId = builder.userId;
     }
 
@@ -119,6 +124,13 @@ public class ListServiceGroupsRequest extends Request {
     }
 
     /**
+     * @return serviceId
+     */
+    public Long getServiceId() {
+        return this.serviceId;
+    }
+
+    /**
      * @return userId
      */
     public Long getUserId() {
@@ -133,26 +145,28 @@ public class ListServiceGroupsRequest extends Request {
         private Long pageSize; 
         private String queryName; 
         private String queryType; 
+        private Long serviceId; 
         private Long userId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListServiceGroupsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.isScheduled = response.isScheduled;
-            this.orderByScheduleStatus = response.orderByScheduleStatus;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.queryName = response.queryName;
-            this.queryType = response.queryType;
-            this.userId = response.userId;
+        private Builder(ListServiceGroupsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.isScheduled = request.isScheduled;
+            this.orderByScheduleStatus = request.orderByScheduleStatus;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.queryName = request.queryName;
+            this.queryType = request.queryType;
+            this.serviceId = request.serviceId;
+            this.userId = request.userId;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -161,7 +175,7 @@ public class ListServiceGroupsRequest extends Request {
         }
 
         /**
-         * 是否已经排班
+         * isScheduled.
          */
         public Builder isScheduled(Boolean isScheduled) {
             this.putBodyParameter("isScheduled", isScheduled);
@@ -170,7 +184,7 @@ public class ListServiceGroupsRequest extends Request {
         }
 
         /**
-         * 是否根据排班状态排序
+         * orderByScheduleStatus.
          */
         public Builder orderByScheduleStatus(Boolean orderByScheduleStatus) {
             this.putBodyParameter("orderByScheduleStatus", orderByScheduleStatus);
@@ -179,7 +193,7 @@ public class ListServiceGroupsRequest extends Request {
         }
 
         /**
-         * 当前页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -188,7 +202,7 @@ public class ListServiceGroupsRequest extends Request {
         }
 
         /**
-         * 页大小
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -197,7 +211,7 @@ public class ListServiceGroupsRequest extends Request {
         }
 
         /**
-         * 搜索名称
+         * queryName.
          */
         public Builder queryName(String queryName) {
             this.putBodyParameter("queryName", queryName);
@@ -206,7 +220,7 @@ public class ListServiceGroupsRequest extends Request {
         }
 
         /**
-         * 搜索类型。USER用户 SERVICEGROUP服务组
+         * queryType.
          */
         public Builder queryType(String queryType) {
             this.putBodyParameter("queryType", queryType);
@@ -215,7 +229,16 @@ public class ListServiceGroupsRequest extends Request {
         }
 
         /**
-         * 用户ID
+         * serviceId.
+         */
+        public Builder serviceId(Long serviceId) {
+            this.putBodyParameter("serviceId", serviceId);
+            this.serviceId = serviceId;
+            return this;
+        }
+
+        /**
+         * userId.
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("userId", userId);

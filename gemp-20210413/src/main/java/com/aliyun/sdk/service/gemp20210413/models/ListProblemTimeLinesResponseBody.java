@@ -72,6 +72,9 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
     } 
 
     public static class UsersInContent extends TeaModel {
+        @NameInMap("isValid")
+        private Long isValid;
+
         @NameInMap("userId")
         private Long userId;
 
@@ -79,6 +82,7 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
         private String username;
 
         private UsersInContent(Builder builder) {
+            this.isValid = builder.isValid;
             this.userId = builder.userId;
             this.username = builder.username;
         }
@@ -89,6 +93,13 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
 
         public static UsersInContent create() {
             return builder().build();
+        }
+
+        /**
+         * @return isValid
+         */
+        public Long getIsValid() {
+            return this.isValid;
         }
 
         /**
@@ -106,11 +117,20 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long isValid; 
             private Long userId; 
             private String username; 
 
             /**
-             * 用户id
+             * isValid.
+             */
+            public Builder isValid(Long isValid) {
+                this.isValid = isValid;
+                return this;
+            }
+
+            /**
+             * userId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -118,7 +138,7 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
             }
 
             /**
-             * 用户名
+             * username.
              */
             public Builder username(String username) {
                 this.username = username;
@@ -243,7 +263,7 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
             private java.util.List < UsersInContent> usersInContent; 
 
             /**
-             * 内容
+             * content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -251,7 +271,7 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -259,7 +279,7 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
             }
 
             /**
-             * 是否是关键字 true是 false不是 默认 false
+             * isKey.
              */
             public Builder isKey(Boolean isKey) {
                 this.isKey = isKey;
@@ -267,7 +287,7 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
             }
 
             /**
-             * 关键节点 码表:PROBLEM_KEY_NODE (逗号分隔)
+             * keyNode.
              */
             public Builder keyNode(String keyNode) {
                 this.keyNode = keyNode;
@@ -275,7 +295,7 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
             }
 
             /**
-             * 时间线id
+             * problemTimelineId.
              */
             public Builder problemTimelineId(Long problemTimelineId) {
                 this.problemTimelineId = problemTimelineId;
@@ -283,7 +303,7 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
             }
 
             /**
-             * 展示时间
+             * time.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -291,7 +311,7 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * updateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -299,7 +319,7 @@ public class ListProblemTimeLinesResponseBody extends TeaModel {
             }
 
             /**
-             * 内容中的用户信息
+             * usersInContent.
              */
             public Builder usersInContent(java.util.List < UsersInContent> usersInContent) {
                 this.usersInContent = usersInContent;

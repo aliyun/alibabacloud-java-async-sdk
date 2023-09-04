@@ -50,7 +50,7 @@ public class ListSourceEventsForMonitorSourceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 告警列表
+         * data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -134,7 +134,7 @@ public class ListSourceEventsForMonitorSourceResponseBody extends TeaModel {
             private String monitorSourceName; 
 
             /**
-             * 告警内容
+             * eventJson.
              */
             public Builder eventJson(String eventJson) {
                 this.eventJson = eventJson;
@@ -142,7 +142,7 @@ public class ListSourceEventsForMonitorSourceResponseBody extends TeaModel {
             }
 
             /**
-             * 告警上报时间
+             * eventTime.
              */
             public Builder eventTime(String eventTime) {
                 this.eventTime = eventTime;
@@ -150,7 +150,7 @@ public class ListSourceEventsForMonitorSourceResponseBody extends TeaModel {
             }
 
             /**
-             * 监控源ID
+             * monitorSourceId.
              */
             public Builder monitorSourceId(Boolean monitorSourceId) {
                 this.monitorSourceId = monitorSourceId;
@@ -158,7 +158,7 @@ public class ListSourceEventsForMonitorSourceResponseBody extends TeaModel {
             }
 
             /**
-             * 监控源名称
+             * monitorSourceName.
              */
             public Builder monitorSourceName(String monitorSourceName) {
                 this.monitorSourceName = monitorSourceName;

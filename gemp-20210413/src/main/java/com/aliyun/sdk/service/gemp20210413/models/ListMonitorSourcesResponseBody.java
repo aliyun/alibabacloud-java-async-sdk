@@ -50,7 +50,7 @@ public class ListMonitorSourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class ListMonitorSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

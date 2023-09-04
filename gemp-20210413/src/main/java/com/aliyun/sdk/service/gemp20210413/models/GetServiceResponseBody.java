@@ -50,7 +50,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 服务详情
+         * data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -72,8 +72,15 @@ public class GetServiceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("escalationPlanId")
+        @Validation(required = true)
+        private Long escalationPlanId;
+
         @NameInMap("serviceDescription")
         private String serviceDescription;
+
+        @NameInMap("serviceGroupIdList")
+        private java.util.List < Long > serviceGroupIdList;
 
         @NameInMap("serviceId")
         private Long serviceId;
@@ -85,7 +92,9 @@ public class GetServiceResponseBody extends TeaModel {
         private String updateTime;
 
         private Data(Builder builder) {
+            this.escalationPlanId = builder.escalationPlanId;
             this.serviceDescription = builder.serviceDescription;
+            this.serviceGroupIdList = builder.serviceGroupIdList;
             this.serviceId = builder.serviceId;
             this.serviceName = builder.serviceName;
             this.updateTime = builder.updateTime;
@@ -100,10 +109,24 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
+         * @return escalationPlanId
+         */
+        public Long getEscalationPlanId() {
+            return this.escalationPlanId;
+        }
+
+        /**
          * @return serviceDescription
          */
         public String getServiceDescription() {
             return this.serviceDescription;
+        }
+
+        /**
+         * @return serviceGroupIdList
+         */
+        public java.util.List < Long > getServiceGroupIdList() {
+            return this.serviceGroupIdList;
         }
 
         /**
@@ -128,13 +151,23 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long escalationPlanId; 
             private String serviceDescription; 
+            private java.util.List < Long > serviceGroupIdList; 
             private Long serviceId; 
             private String serviceName; 
             private String updateTime; 
 
             /**
-             * 服务描述
+             * escalationPlanId.
+             */
+            public Builder escalationPlanId(Long escalationPlanId) {
+                this.escalationPlanId = escalationPlanId;
+                return this;
+            }
+
+            /**
+             * serviceDescription.
              */
             public Builder serviceDescription(String serviceDescription) {
                 this.serviceDescription = serviceDescription;
@@ -142,7 +175,15 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * 服务ID
+             * serviceGroupIdList.
+             */
+            public Builder serviceGroupIdList(java.util.List < Long > serviceGroupIdList) {
+                this.serviceGroupIdList = serviceGroupIdList;
+                return this;
+            }
+
+            /**
+             * serviceId.
              */
             public Builder serviceId(Long serviceId) {
                 this.serviceId = serviceId;
@@ -150,7 +191,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * 服务名字
+             * serviceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -158,7 +199,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * updateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

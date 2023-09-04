@@ -75,15 +75,15 @@ public class CreateProblemSubtotalRequest extends Request {
             super();
         } 
 
-        private Builder(CreateProblemSubtotalRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.description = response.description;
-            this.problemId = response.problemId;
+        private Builder(CreateProblemSubtotalRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.description = request.description;
+            this.problemId = request.problemId;
         } 
 
         /**
-         * 幂等校验token
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -92,7 +92,7 @@ public class CreateProblemSubtotalRequest extends Request {
         }
 
         /**
-         * 小计文本
+         * description.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -101,7 +101,7 @@ public class CreateProblemSubtotalRequest extends Request {
         }
 
         /**
-         * 故障Id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);

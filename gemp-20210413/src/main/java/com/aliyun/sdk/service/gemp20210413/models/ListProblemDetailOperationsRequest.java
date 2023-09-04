@@ -101,17 +101,17 @@ public class ListProblemDetailOperationsRequest extends Request {
             super();
         } 
 
-        private Builder(ListProblemDetailOperationsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.createTimeSort = response.createTimeSort;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.problemId = response.problemId;
+        private Builder(ListProblemDetailOperationsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.createTimeSort = request.createTimeSort;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.problemId = request.problemId;
         } 
 
         /**
-         * 幂等校验
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -120,7 +120,7 @@ public class ListProblemDetailOperationsRequest extends Request {
         }
 
         /**
-         * 时间排序
+         * createTimeSort.
          */
         public Builder createTimeSort(String createTimeSort) {
             this.putBodyParameter("createTimeSort", createTimeSort);
@@ -129,7 +129,7 @@ public class ListProblemDetailOperationsRequest extends Request {
         }
 
         /**
-         * 页
+         * pageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -138,7 +138,7 @@ public class ListProblemDetailOperationsRequest extends Request {
         }
 
         /**
-         * 行
+         * pageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -147,7 +147,7 @@ public class ListProblemDetailOperationsRequest extends Request {
         }
 
         /**
-         * 故障id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);

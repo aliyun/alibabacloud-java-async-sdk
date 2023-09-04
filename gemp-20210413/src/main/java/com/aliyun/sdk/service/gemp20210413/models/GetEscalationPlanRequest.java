@@ -62,14 +62,14 @@ public class GetEscalationPlanRequest extends Request {
             super();
         } 
 
-        private Builder(GetEscalationPlanRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.escalationPlanId = response.escalationPlanId;
+        private Builder(GetEscalationPlanRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.escalationPlanId = request.escalationPlanId;
         } 
 
         /**
-         * 幂等标识
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -78,7 +78,7 @@ public class GetEscalationPlanRequest extends Request {
         }
 
         /**
-         * 升级计划id
+         * escalationPlanId.
          */
         public Builder escalationPlanId(Long escalationPlanId) {
             this.putBodyParameter("escalationPlanId", escalationPlanId);

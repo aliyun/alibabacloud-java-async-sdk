@@ -50,7 +50,7 @@ public class GenerateProblemPictureLinkResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -118,7 +118,7 @@ public class GenerateProblemPictureLinkResponseBody extends TeaModel {
             }
 
             /**
-             * 图片链接
+             * link.
              */
             public Builder link(String link) {
                 this.link = link;
@@ -159,7 +159,7 @@ public class GenerateProblemPictureLinkResponseBody extends TeaModel {
             private java.util.List < Links> links; 
 
             /**
-             * 图片链接列表
+             * links.
              */
             public Builder links(java.util.List < Links> links) {
                 this.links = links;

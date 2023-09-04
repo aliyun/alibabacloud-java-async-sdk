@@ -178,23 +178,23 @@ public class UpdateProblemMeasureRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateProblemMeasureRequest response) {
-            super(response);
-            this.checkStandard = response.checkStandard;
-            this.checkUserId = response.checkUserId;
-            this.clientToken = response.clientToken;
-            this.content = response.content;
-            this.directorId = response.directorId;
-            this.measureId = response.measureId;
-            this.planFinishTime = response.planFinishTime;
-            this.problemId = response.problemId;
-            this.stalkerId = response.stalkerId;
-            this.status = response.status;
-            this.type = response.type;
+        private Builder(UpdateProblemMeasureRequest request) {
+            super(request);
+            this.checkStandard = request.checkStandard;
+            this.checkUserId = request.checkUserId;
+            this.clientToken = request.clientToken;
+            this.content = request.content;
+            this.directorId = request.directorId;
+            this.measureId = request.measureId;
+            this.planFinishTime = request.planFinishTime;
+            this.problemId = request.problemId;
+            this.stalkerId = request.stalkerId;
+            this.status = request.status;
+            this.type = request.type;
         } 
 
         /**
-         * 验收标准
+         * checkStandard.
          */
         public Builder checkStandard(String checkStandard) {
             this.putBodyParameter("checkStandard", checkStandard);
@@ -203,7 +203,7 @@ public class UpdateProblemMeasureRequest extends Request {
         }
 
         /**
-         * 验收人id
+         * checkUserId.
          */
         public Builder checkUserId(Long checkUserId) {
             this.putBodyParameter("checkUserId", checkUserId);
@@ -212,7 +212,7 @@ public class UpdateProblemMeasureRequest extends Request {
         }
 
         /**
-         * 幂等校验token
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -221,7 +221,7 @@ public class UpdateProblemMeasureRequest extends Request {
         }
 
         /**
-         * 措施内容
+         * content.
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -230,7 +230,7 @@ public class UpdateProblemMeasureRequest extends Request {
         }
 
         /**
-         * 负责人id
+         * directorId.
          */
         public Builder directorId(Long directorId) {
             this.putBodyParameter("directorId", directorId);
@@ -239,7 +239,7 @@ public class UpdateProblemMeasureRequest extends Request {
         }
 
         /**
-         * 措施Id
+         * measureId.
          */
         public Builder measureId(Long measureId) {
             this.putBodyParameter("measureId", measureId);
@@ -248,7 +248,7 @@ public class UpdateProblemMeasureRequest extends Request {
         }
 
         /**
-         * 计划完成时间
+         * planFinishTime.
          */
         public Builder planFinishTime(String planFinishTime) {
             this.putBodyParameter("planFinishTime", planFinishTime);
@@ -257,7 +257,7 @@ public class UpdateProblemMeasureRequest extends Request {
         }
 
         /**
-         * 故障Id
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -266,7 +266,7 @@ public class UpdateProblemMeasureRequest extends Request {
         }
 
         /**
-         * 跟踪人id
+         * stalkerId.
          */
         public Builder stalkerId(Long stalkerId) {
             this.putBodyParameter("stalkerId", stalkerId);
@@ -275,7 +275,7 @@ public class UpdateProblemMeasureRequest extends Request {
         }
 
         /**
-         * 状态 IMPROVED 改进 2 未改进UNIMPROVED
+         * status.
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -284,7 +284,7 @@ public class UpdateProblemMeasureRequest extends Request {
         }
 
         /**
-         * 措施类型 码表 PROBLEM_REPLAY_IMPROVEMENT
+         * type.
          */
         public Builder type(Integer type) {
             this.putBodyParameter("type", type);

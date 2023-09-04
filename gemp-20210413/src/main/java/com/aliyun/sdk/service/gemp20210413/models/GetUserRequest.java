@@ -62,14 +62,14 @@ public class GetUserRequest extends Request {
             super();
         } 
 
-        private Builder(GetUserRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.userId = response.userId;
+        private Builder(GetUserRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.userId = request.userId;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -78,7 +78,7 @@ public class GetUserRequest extends Request {
         }
 
         /**
-         * 用户ID
+         * userId.
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("userId", userId);

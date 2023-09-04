@@ -48,13 +48,13 @@ public class GetUserGuideStatusRequest extends Request {
             super();
         } 
 
-        private Builder(GetUserGuideStatusRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
+        private Builder(GetUserGuideStatusRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
         } 
 
         /**
-         * 幂等校验
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);

@@ -74,15 +74,15 @@ public class GeneratePictureUploadSignRequest extends Request {
             super();
         } 
 
-        private Builder(GeneratePictureUploadSignRequest response) {
-            super(response);
-            this.files = response.files;
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
+        private Builder(GeneratePictureUploadSignRequest request) {
+            super(request);
+            this.files = request.files;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
         } 
 
         /**
-         * 文件
+         * files.
          */
         public Builder files(java.util.List < Files> files) {
             this.putBodyParameter("files", files);
@@ -91,7 +91,7 @@ public class GeneratePictureUploadSignRequest extends Request {
         }
 
         /**
-         * 资源id
+         * instanceId.
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -100,7 +100,7 @@ public class GeneratePictureUploadSignRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * instanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("instanceType", instanceType);
@@ -166,7 +166,7 @@ public class GeneratePictureUploadSignRequest extends Request {
             private String fileType; 
 
             /**
-             * 文件名称
+             * fileName.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -174,7 +174,7 @@ public class GeneratePictureUploadSignRequest extends Request {
             }
 
             /**
-             * 文件大小
+             * fileSize.
              */
             public Builder fileSize(Long fileSize) {
                 this.fileSize = fileSize;
@@ -182,7 +182,7 @@ public class GeneratePictureUploadSignRequest extends Request {
             }
 
             /**
-             * 文件类型
+             * fileType.
              */
             public Builder fileType(String fileType) {
                 this.fileType = fileType;

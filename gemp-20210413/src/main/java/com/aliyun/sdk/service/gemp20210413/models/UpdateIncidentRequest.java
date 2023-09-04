@@ -101,17 +101,17 @@ public class UpdateIncidentRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateIncidentRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.effect = response.effect;
-            this.incidentId = response.incidentId;
-            this.incidentLevel = response.incidentLevel;
-            this.incidentTitle = response.incidentTitle;
+        private Builder(UpdateIncidentRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.effect = request.effect;
+            this.incidentId = request.incidentId;
+            this.incidentLevel = request.incidentLevel;
+            this.incidentTitle = request.incidentTitle;
         } 
 
         /**
-         * 幂等校验Id
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -120,7 +120,7 @@ public class UpdateIncidentRequest extends Request {
         }
 
         /**
-         * 影响程度
+         * effect.
          */
         public Builder effect(String effect) {
             this.putBodyParameter("effect", effect);
@@ -129,7 +129,7 @@ public class UpdateIncidentRequest extends Request {
         }
 
         /**
-         * 事件Id
+         * incidentId.
          */
         public Builder incidentId(Long incidentId) {
             this.putBodyParameter("incidentId", incidentId);
@@ -138,7 +138,7 @@ public class UpdateIncidentRequest extends Request {
         }
 
         /**
-         * 级别
+         * incidentLevel.
          */
         public Builder incidentLevel(String incidentLevel) {
             this.putBodyParameter("incidentLevel", incidentLevel);
@@ -147,7 +147,7 @@ public class UpdateIncidentRequest extends Request {
         }
 
         /**
-         * 事件标题
+         * incidentTitle.
          */
         public Builder incidentTitle(String incidentTitle) {
             this.putBodyParameter("incidentTitle", incidentTitle);

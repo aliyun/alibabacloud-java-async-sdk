@@ -74,15 +74,15 @@ public class ListChartDataForUserRequest extends Request {
             super();
         } 
 
-        private Builder(ListChartDataForUserRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.endTime = response.endTime;
-            this.startTime = response.startTime;
+        private Builder(ListChartDataForUserRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.endTime = request.endTime;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * clientToken.
+         * clientToken
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -91,7 +91,7 @@ public class ListChartDataForUserRequest extends Request {
         }
 
         /**
-         * 结束时间
+         * endTime.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("endTime", endTime);
@@ -100,7 +100,7 @@ public class ListChartDataForUserRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * startTime.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("startTime", startTime);

@@ -74,15 +74,15 @@ public class CreateRichTextRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRichTextRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.richText = response.richText;
+        private Builder(CreateRichTextRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.richText = request.richText;
         } 
 
         /**
-         * 资源id
+         * instanceId.
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -91,7 +91,7 @@ public class CreateRichTextRequest extends Request {
         }
 
         /**
-         * 资源类型
+         * instanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("instanceType", instanceType);
@@ -100,7 +100,7 @@ public class CreateRichTextRequest extends Request {
         }
 
         /**
-         * 文本内容
+         * richText.
          */
         public Builder richText(String richText) {
             this.putBodyParameter("richText", richText);

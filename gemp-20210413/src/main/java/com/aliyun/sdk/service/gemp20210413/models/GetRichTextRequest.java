@@ -74,15 +74,15 @@ public class GetRichTextRequest extends Request {
             super();
         } 
 
-        private Builder(GetRichTextRequest response) {
-            super(response);
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.richTextId = response.richTextId;
+        private Builder(GetRichTextRequest request) {
+            super(request);
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.richTextId = request.richTextId;
         } 
 
         /**
-         * 资源类型
+         * instanceId.
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -100,7 +100,7 @@ public class GetRichTextRequest extends Request {
         }
 
         /**
-         * 资源id
+         * richTextId.
          */
         public Builder richTextId(Long richTextId) {
             this.putBodyParameter("richTextId", richTextId);

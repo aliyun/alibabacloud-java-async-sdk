@@ -86,7 +86,7 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 统计数据
+         * data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 当前页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 页大小
+         * pageSIze.
          */
         public Builder pageSIze(Long pageSIze) {
             this.pageSIze = pageSIze;
@@ -118,7 +118,7 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * 总数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -266,7 +266,7 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
             private Long unFinishEscalationIncidentCount; 
 
             /**
-             * 升级事件数量
+             * escalationIncidentCount.
              */
             public Builder escalationIncidentCount(Long escalationIncidentCount) {
                 this.escalationIncidentCount = escalationIncidentCount;
@@ -274,7 +274,7 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 事件完结数
+             * finishIncidentCount.
              */
             public Builder finishIncidentCount(Long finishIncidentCount) {
                 this.finishIncidentCount = finishIncidentCount;
@@ -282,7 +282,7 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 完结率
+             * finishProportion.
              */
             public Builder finishProportion(String finishProportion) {
                 this.finishProportion = finishProportion;
@@ -290,7 +290,7 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 事件数量
+             * incidentCount.
              */
             public Builder incidentCount(Long incidentCount) {
                 this.incidentCount = incidentCount;
@@ -314,7 +314,7 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组ID
+             * serviceGroupId.
              */
             public Builder serviceGroupId(Long serviceGroupId) {
                 this.serviceGroupId = serviceGroupId;
@@ -322,7 +322,7 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组名字
+             * serviceGroupName.
              */
             public Builder serviceGroupName(String serviceGroupName) {
                 this.serviceGroupName = serviceGroupName;
@@ -330,7 +330,7 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 未响应升级事件数量
+             * unAcknowledgedEscalationIncidentCount.
              */
             public Builder unAcknowledgedEscalationIncidentCount(Long unAcknowledgedEscalationIncidentCount) {
                 this.unAcknowledgedEscalationIncidentCount = unAcknowledgedEscalationIncidentCount;
@@ -338,7 +338,7 @@ public class ListDataReportForServiceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * 未完成升级事件数量
+             * unFinishEscalationIncidentCount.
              */
             public Builder unFinishEscalationIncidentCount(Long unFinishEscalationIncidentCount) {
                 this.unFinishEscalationIncidentCount = unFinishEscalationIncidentCount;

@@ -206,7 +206,7 @@ public class ListChartDataForUserResponseBody extends TeaModel {
             private Long unFinishEscalationIncidentCount; 
 
             /**
-             * 根据影响等级时间等级分组统计数量
+             * effectionLevel.
              */
             public Builder effectionLevel(java.util.Map < String, ? > effectionLevel) {
                 this.effectionLevel = effectionLevel;
@@ -214,7 +214,7 @@ public class ListChartDataForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 升级事件数
+             * escalationIncidentCount.
              */
             public Builder escalationIncidentCount(Long escalationIncidentCount) {
                 this.escalationIncidentCount = escalationIncidentCount;
@@ -222,7 +222,7 @@ public class ListChartDataForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 时间总数
+             * incidentCount.
              */
             public Builder incidentCount(Long incidentCount) {
                 this.incidentCount = incidentCount;
@@ -230,7 +230,7 @@ public class ListChartDataForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 当日平均响应时间单位秒
+             * meanTimeToAcknowledge.
              */
             public Builder meanTimeToAcknowledge(Long meanTimeToAcknowledge) {
                 this.meanTimeToAcknowledge = meanTimeToAcknowledge;
@@ -238,7 +238,7 @@ public class ListChartDataForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 当日平均完结时间单位秒
+             * meanTimeToRepair.
              */
             public Builder meanTimeToRepair(Long meanTimeToRepair) {
                 this.meanTimeToRepair = meanTimeToRepair;
@@ -246,7 +246,7 @@ public class ListChartDataForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 时间
+             * time.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -254,7 +254,7 @@ public class ListChartDataForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 总平均响应时间
+             * totalMeanTimeToAcknowledge.
              */
             public Builder totalMeanTimeToAcknowledge(Long totalMeanTimeToAcknowledge) {
                 this.totalMeanTimeToAcknowledge = totalMeanTimeToAcknowledge;
@@ -262,7 +262,7 @@ public class ListChartDataForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 总平均完结时间
+             * totalMeanTimeToRepair.
              */
             public Builder totalMeanTimeToRepair(Long totalMeanTimeToRepair) {
                 this.totalMeanTimeToRepair = totalMeanTimeToRepair;
@@ -270,7 +270,7 @@ public class ListChartDataForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 未响应升级事件数
+             * unAcknowledgedEscalationIncidentCount.
              */
             public Builder unAcknowledgedEscalationIncidentCount(Long unAcknowledgedEscalationIncidentCount) {
                 this.unAcknowledgedEscalationIncidentCount = unAcknowledgedEscalationIncidentCount;
@@ -278,7 +278,7 @@ public class ListChartDataForUserResponseBody extends TeaModel {
             }
 
             /**
-             * 未完结升级事件数
+             * unFinishEscalationIncidentCount.
              */
             public Builder unFinishEscalationIncidentCount(Long unFinishEscalationIncidentCount) {
                 this.unFinishEscalationIncidentCount = unFinishEscalationIncidentCount;

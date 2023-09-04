@@ -50,7 +50,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 排班详情
+         * data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -72,18 +72,26 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
     } 
 
     public static class SchedulingUsers extends TeaModel {
+        @NameInMap("schedulingObjectType")
+        private String schedulingObjectType;
+
         @NameInMap("schedulingOrder")
         private Integer schedulingOrder;
 
         @NameInMap("schedulingUserId")
         private Long schedulingUserId;
 
+        @NameInMap("schedulingUserIdList")
+        private java.util.List < Long > schedulingUserIdList;
+
         @NameInMap("schedulingUserName")
         private String schedulingUserName;
 
         private SchedulingUsers(Builder builder) {
+            this.schedulingObjectType = builder.schedulingObjectType;
             this.schedulingOrder = builder.schedulingOrder;
             this.schedulingUserId = builder.schedulingUserId;
+            this.schedulingUserIdList = builder.schedulingUserIdList;
             this.schedulingUserName = builder.schedulingUserName;
         }
 
@@ -93,6 +101,13 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
         public static SchedulingUsers create() {
             return builder().build();
+        }
+
+        /**
+         * @return schedulingObjectType
+         */
+        public String getSchedulingObjectType() {
+            return this.schedulingObjectType;
         }
 
         /**
@@ -110,6 +125,13 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         }
 
         /**
+         * @return schedulingUserIdList
+         */
+        public java.util.List < Long > getSchedulingUserIdList() {
+            return this.schedulingUserIdList;
+        }
+
+        /**
          * @return schedulingUserName
          */
         public String getSchedulingUserName() {
@@ -117,12 +139,22 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String schedulingObjectType; 
             private Integer schedulingOrder; 
             private Long schedulingUserId; 
+            private java.util.List < Long > schedulingUserIdList; 
             private String schedulingUserName; 
 
             /**
-             * 排班顺序
+             * schedulingObjectType.
+             */
+            public Builder schedulingObjectType(String schedulingObjectType) {
+                this.schedulingObjectType = schedulingObjectType;
+                return this;
+            }
+
+            /**
+             * schedulingOrder.
              */
             public Builder schedulingOrder(Integer schedulingOrder) {
                 this.schedulingOrder = schedulingOrder;
@@ -130,7 +162,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 轮班用户ID
+             * schedulingUserId.
              */
             public Builder schedulingUserId(Long schedulingUserId) {
                 this.schedulingUserId = schedulingUserId;
@@ -138,7 +170,15 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 轮班用户名字
+             * schedulingUserIdList.
+             */
+            public Builder schedulingUserIdList(java.util.List < Long > schedulingUserIdList) {
+                this.schedulingUserIdList = schedulingUserIdList;
+                return this;
+            }
+
+            /**
+             * schedulingUserName.
              */
             public Builder schedulingUserName(String schedulingUserName) {
                 this.schedulingUserName = schedulingUserName;
@@ -227,7 +267,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             private String singleDurationUnit; 
 
             /**
-             * 值班方案 dutyPlan FAST_CHOICE 快速选择   CUSTOM  自定义
+             * dutyPlan.
              */
             public Builder dutyPlan(String dutyPlan) {
                 this.dutyPlan = dutyPlan;
@@ -235,7 +275,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 快速排班ID
+             * id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -243,7 +283,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 快速轮班用户
+             * schedulingUsers.
              */
             public Builder schedulingUsers(java.util.List < SchedulingUsers> schedulingUsers) {
                 this.schedulingUsers = schedulingUsers;
@@ -251,7 +291,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 每人排班时长
+             * singleDuration.
              */
             public Builder singleDuration(Integer singleDuration) {
                 this.singleDuration = singleDuration;
@@ -259,7 +299,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 每人排班时长单位 HOUR 小时 DAY 天
+             * singleDurationUnit.
              */
             public Builder singleDurationUnit(String singleDurationUnit) {
                 this.singleDurationUnit = singleDurationUnit;
@@ -280,6 +320,9 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         @NameInMap("schedulingEndTime")
         private String schedulingEndTime;
 
+        @NameInMap("schedulingObjectType")
+        private String schedulingObjectType;
+
         @NameInMap("schedulingOrder")
         private Integer schedulingOrder;
 
@@ -288,6 +331,9 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
         @NameInMap("schedulingUserId")
         private Long schedulingUserId;
+
+        @NameInMap("schedulingUserIdList")
+        private java.util.List < Long > schedulingUserIdList;
 
         @NameInMap("schedulingUserName")
         private String schedulingUserName;
@@ -301,9 +347,11 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         private SchedulingFineShifts(Builder builder) {
             this.cycleOrder = builder.cycleOrder;
             this.schedulingEndTime = builder.schedulingEndTime;
+            this.schedulingObjectType = builder.schedulingObjectType;
             this.schedulingOrder = builder.schedulingOrder;
             this.schedulingStartTime = builder.schedulingStartTime;
             this.schedulingUserId = builder.schedulingUserId;
+            this.schedulingUserIdList = builder.schedulingUserIdList;
             this.schedulingUserName = builder.schedulingUserName;
             this.shiftName = builder.shiftName;
             this.skipOneDay = builder.skipOneDay;
@@ -332,6 +380,13 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         }
 
         /**
+         * @return schedulingObjectType
+         */
+        public String getSchedulingObjectType() {
+            return this.schedulingObjectType;
+        }
+
+        /**
          * @return schedulingOrder
          */
         public Integer getSchedulingOrder() {
@@ -350,6 +405,13 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
          */
         public Long getSchedulingUserId() {
             return this.schedulingUserId;
+        }
+
+        /**
+         * @return schedulingUserIdList
+         */
+        public java.util.List < Long > getSchedulingUserIdList() {
+            return this.schedulingUserIdList;
         }
 
         /**
@@ -376,15 +438,17 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         public static final class Builder {
             private Long cycleOrder; 
             private String schedulingEndTime; 
+            private String schedulingObjectType; 
             private Integer schedulingOrder; 
             private String schedulingStartTime; 
             private Long schedulingUserId; 
+            private java.util.List < Long > schedulingUserIdList; 
             private String schedulingUserName; 
             private String shiftName; 
             private Boolean skipOneDay; 
 
             /**
-             * 循环次序
+             * cycleOrder.
              */
             public Builder cycleOrder(Long cycleOrder) {
                 this.cycleOrder = cycleOrder;
@@ -392,7 +456,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 排班结束时间
+             * schedulingEndTime.
              */
             public Builder schedulingEndTime(String schedulingEndTime) {
                 this.schedulingEndTime = schedulingEndTime;
@@ -400,7 +464,15 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 排班顺序
+             * schedulingObjectType.
+             */
+            public Builder schedulingObjectType(String schedulingObjectType) {
+                this.schedulingObjectType = schedulingObjectType;
+                return this;
+            }
+
+            /**
+             * schedulingOrder.
              */
             public Builder schedulingOrder(Integer schedulingOrder) {
                 this.schedulingOrder = schedulingOrder;
@@ -408,7 +480,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 排班开始时间
+             * schedulingStartTime.
              */
             public Builder schedulingStartTime(String schedulingStartTime) {
                 this.schedulingStartTime = schedulingStartTime;
@@ -416,7 +488,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 排班用户ID
+             * schedulingUserId.
              */
             public Builder schedulingUserId(Long schedulingUserId) {
                 this.schedulingUserId = schedulingUserId;
@@ -424,7 +496,15 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 排班用户名字
+             * schedulingUserIdList.
+             */
+            public Builder schedulingUserIdList(java.util.List < Long > schedulingUserIdList) {
+                this.schedulingUserIdList = schedulingUserIdList;
+                return this;
+            }
+
+            /**
+             * schedulingUserName.
              */
             public Builder schedulingUserName(String schedulingUserName) {
                 this.schedulingUserName = schedulingUserName;
@@ -432,7 +512,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 班次名称
+             * shiftName.
              */
             public Builder shiftName(String shiftName) {
                 this.shiftName = shiftName;
@@ -440,7 +520,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 是否跨天
+             * skipOneDay.
              */
             public Builder skipOneDay(Boolean skipOneDay) {
                 this.skipOneDay = skipOneDay;
@@ -458,6 +538,9 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         @NameInMap("schedulingEndTime")
         private String schedulingEndTime;
 
+        @NameInMap("schedulingObjectType")
+        private String schedulingObjectType;
+
         @NameInMap("schedulingOrder")
         private Long schedulingOrder;
 
@@ -466,6 +549,9 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
         @NameInMap("schedulingUserId")
         private String schedulingUserId;
+
+        @NameInMap("schedulingUserIdList")
+        private java.util.List < Long > schedulingUserIdList;
 
         @NameInMap("schedulingUserName")
         private String schedulingUserName;
@@ -478,9 +564,11 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
         private SchedulingTemplateFineShifts(Builder builder) {
             this.schedulingEndTime = builder.schedulingEndTime;
+            this.schedulingObjectType = builder.schedulingObjectType;
             this.schedulingOrder = builder.schedulingOrder;
             this.schedulingStartTime = builder.schedulingStartTime;
             this.schedulingUserId = builder.schedulingUserId;
+            this.schedulingUserIdList = builder.schedulingUserIdList;
             this.schedulingUserName = builder.schedulingUserName;
             this.shiftName = builder.shiftName;
             this.skipOneDay = builder.skipOneDay;
@@ -502,6 +590,13 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
         }
 
         /**
+         * @return schedulingObjectType
+         */
+        public String getSchedulingObjectType() {
+            return this.schedulingObjectType;
+        }
+
+        /**
          * @return schedulingOrder
          */
         public Long getSchedulingOrder() {
@@ -520,6 +615,13 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
          */
         public String getSchedulingUserId() {
             return this.schedulingUserId;
+        }
+
+        /**
+         * @return schedulingUserIdList
+         */
+        public java.util.List < Long > getSchedulingUserIdList() {
+            return this.schedulingUserIdList;
         }
 
         /**
@@ -545,15 +647,17 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
 
         public static final class Builder {
             private String schedulingEndTime; 
+            private String schedulingObjectType; 
             private Long schedulingOrder; 
             private String schedulingStartTime; 
             private String schedulingUserId; 
+            private java.util.List < Long > schedulingUserIdList; 
             private String schedulingUserName; 
             private String shiftName; 
             private Boolean skipOneDay; 
 
             /**
-             * 排班结束时间
+             * schedulingEndTime.
              */
             public Builder schedulingEndTime(String schedulingEndTime) {
                 this.schedulingEndTime = schedulingEndTime;
@@ -561,7 +665,15 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 排班顺序
+             * schedulingObjectType.
+             */
+            public Builder schedulingObjectType(String schedulingObjectType) {
+                this.schedulingObjectType = schedulingObjectType;
+                return this;
+            }
+
+            /**
+             * schedulingOrder.
              */
             public Builder schedulingOrder(Long schedulingOrder) {
                 this.schedulingOrder = schedulingOrder;
@@ -569,7 +681,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 排班开始时间
+             * schedulingStartTime.
              */
             public Builder schedulingStartTime(String schedulingStartTime) {
                 this.schedulingStartTime = schedulingStartTime;
@@ -577,7 +689,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 用户ID
+             * schedulingUserId.
              */
             public Builder schedulingUserId(String schedulingUserId) {
                 this.schedulingUserId = schedulingUserId;
@@ -585,7 +697,15 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 排班用户名字
+             * schedulingUserIdList.
+             */
+            public Builder schedulingUserIdList(java.util.List < Long > schedulingUserIdList) {
+                this.schedulingUserIdList = schedulingUserIdList;
+                return this;
+            }
+
+            /**
+             * schedulingUserName.
              */
             public Builder schedulingUserName(String schedulingUserName) {
                 this.schedulingUserName = schedulingUserName;
@@ -593,7 +713,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 班次名称
+             * shiftName.
              */
             public Builder shiftName(String shiftName) {
                 this.shiftName = shiftName;
@@ -601,7 +721,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 是否跨天
+             * skipOneDay.
              */
             public Builder skipOneDay(Boolean skipOneDay) {
                 this.skipOneDay = skipOneDay;
@@ -718,7 +838,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 循环周期单位 HOUR 小时 DAY 天
+             * periodUnit.
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
@@ -726,7 +846,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 精细排班班次人员信息
+             * schedulingFineShifts.
              */
             public Builder schedulingFineShifts(java.util.List < SchedulingFineShifts> schedulingFineShifts) {
                 this.schedulingFineShifts = schedulingFineShifts;
@@ -734,7 +854,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 精细排班模版
+             * schedulingTemplateFineShifts.
              */
             public Builder schedulingTemplateFineShifts(java.util.List < SchedulingTemplateFineShifts> schedulingTemplateFineShifts) {
                 this.schedulingTemplateFineShifts = schedulingTemplateFineShifts;
@@ -742,7 +862,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 班次类型 MORNING_NIGHT 早晚班 MORNING_NOON_NIGHT 早中晚班 CUSTOM 自定义
+             * shiftType.
              */
             public Builder shiftType(String shiftType) {
                 this.shiftType = shiftType;
@@ -795,7 +915,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * 用户ID
+             * userId.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -803,7 +923,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 用户名字
+             * userName.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -892,7 +1012,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             private java.util.List < Users> users; 
 
             /**
-             * 快速排班
+             * fastScheduling.
              */
             public Builder fastScheduling(FastScheduling fastScheduling) {
                 this.fastScheduling = fastScheduling;
@@ -900,7 +1020,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 精细排班
+             * fineScheduling.
              */
             public Builder fineScheduling(FineScheduling fineScheduling) {
                 this.fineScheduling = fineScheduling;
@@ -908,7 +1028,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 排班方式 FAST 快速排班 FINE 精细排班
+             * schedulingWay.
              */
             public Builder schedulingWay(String schedulingWay) {
                 this.schedulingWay = schedulingWay;
@@ -916,7 +1036,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 服务组ID
+             * serviceGroupId.
              */
             public Builder serviceGroupId(Long serviceGroupId) {
                 this.serviceGroupId = serviceGroupId;
@@ -924,7 +1044,7 @@ public class GetServiceGroupSchedulingResponseBody extends TeaModel {
             }
 
             /**
-             * 已经排班
+             * users.
              */
             public Builder users(java.util.List < Users> users) {
                 this.users = users;

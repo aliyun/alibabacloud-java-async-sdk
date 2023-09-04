@@ -29,6 +29,10 @@ public class CreateUserRequest extends Request {
     private Long ramId;
 
     @Body
+    @NameInMap("roleIdList")
+    private java.util.List < Long > roleIdList;
+
+    @Body
     @NameInMap("username")
     private String username;
 
@@ -38,6 +42,7 @@ public class CreateUserRequest extends Request {
         this.email = builder.email;
         this.phone = builder.phone;
         this.ramId = builder.ramId;
+        this.roleIdList = builder.roleIdList;
         this.username = builder.username;
     }
 
@@ -83,6 +88,13 @@ public class CreateUserRequest extends Request {
     }
 
     /**
+     * @return roleIdList
+     */
+    public java.util.List < Long > getRoleIdList() {
+        return this.roleIdList;
+    }
+
+    /**
      * @return username
      */
     public String getUsername() {
@@ -94,19 +106,21 @@ public class CreateUserRequest extends Request {
         private String email; 
         private String phone; 
         private Long ramId; 
+        private java.util.List < Long > roleIdList; 
         private String username; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateUserRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.email = response.email;
-            this.phone = response.phone;
-            this.ramId = response.ramId;
-            this.username = response.username;
+        private Builder(CreateUserRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.email = request.email;
+            this.phone = request.phone;
+            this.ramId = request.ramId;
+            this.roleIdList = request.roleIdList;
+            this.username = request.username;
         } 
 
         /**
@@ -142,6 +156,15 @@ public class CreateUserRequest extends Request {
         public Builder ramId(Long ramId) {
             this.putBodyParameter("ramId", ramId);
             this.ramId = ramId;
+            return this;
+        }
+
+        /**
+         * roleIdList.
+         */
+        public Builder roleIdList(java.util.List < Long > roleIdList) {
+            this.putBodyParameter("roleIdList", roleIdList);
+            this.roleIdList = roleIdList;
             return this;
         }
 

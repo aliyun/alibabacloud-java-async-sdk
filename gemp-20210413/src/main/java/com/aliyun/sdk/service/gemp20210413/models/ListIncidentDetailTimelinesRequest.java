@@ -17,6 +17,10 @@ public class ListIncidentDetailTimelinesRequest extends Request {
     private String clientToken;
 
     @Body
+    @NameInMap("idSort")
+    private String idSort;
+
+    @Body
     @NameInMap("incidentId")
     private Long incidentId;
 
@@ -31,6 +35,7 @@ public class ListIncidentDetailTimelinesRequest extends Request {
     private ListIncidentDetailTimelinesRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.idSort = builder.idSort;
         this.incidentId = builder.incidentId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -57,6 +62,13 @@ public class ListIncidentDetailTimelinesRequest extends Request {
     }
 
     /**
+     * @return idSort
+     */
+    public String getIdSort() {
+        return this.idSort;
+    }
+
+    /**
      * @return incidentId
      */
     public Long getIncidentId() {
@@ -79,6 +91,7 @@ public class ListIncidentDetailTimelinesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListIncidentDetailTimelinesRequest, Builder> {
         private String clientToken; 
+        private String idSort; 
         private Long incidentId; 
         private Long pageNumber; 
         private Long pageSize; 
@@ -87,16 +100,17 @@ public class ListIncidentDetailTimelinesRequest extends Request {
             super();
         } 
 
-        private Builder(ListIncidentDetailTimelinesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.incidentId = response.incidentId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListIncidentDetailTimelinesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.idSort = request.idSort;
+            this.incidentId = request.incidentId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * 幂等校验
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -105,7 +119,16 @@ public class ListIncidentDetailTimelinesRequest extends Request {
         }
 
         /**
-         * 事件ID
+         * idSort.
+         */
+        public Builder idSort(String idSort) {
+            this.putBodyParameter("idSort", idSort);
+            this.idSort = idSort;
+            return this;
+        }
+
+        /**
+         * incidentId.
          */
         public Builder incidentId(Long incidentId) {
             this.putBodyParameter("incidentId", incidentId);
@@ -114,7 +137,7 @@ public class ListIncidentDetailTimelinesRequest extends Request {
         }
 
         /**
-         * 页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -123,7 +146,7 @@ public class ListIncidentDetailTimelinesRequest extends Request {
         }
 
         /**
-         * 行
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);

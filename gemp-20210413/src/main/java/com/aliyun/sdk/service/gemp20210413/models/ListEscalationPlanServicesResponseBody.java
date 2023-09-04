@@ -110,7 +110,7 @@ public class ListEscalationPlanServicesResponseBody extends TeaModel {
             private Long scopeObjectId; 
 
             /**
-             * 范围类型
+             * scope.
              */
             public Builder scope(String scope) {
                 this.scope = scope;
@@ -118,7 +118,7 @@ public class ListEscalationPlanServicesResponseBody extends TeaModel {
             }
 
             /**
-             * 范围对象id
+             * scopeObjectId.
              */
             public Builder scopeObjectId(Long scopeObjectId) {
                 this.scopeObjectId = scopeObjectId;

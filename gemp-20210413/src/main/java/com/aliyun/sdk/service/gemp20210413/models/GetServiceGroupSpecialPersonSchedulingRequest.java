@@ -75,15 +75,15 @@ public class GetServiceGroupSpecialPersonSchedulingRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceGroupSpecialPersonSchedulingRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.serviceGroupId = response.serviceGroupId;
-            this.userId = response.userId;
+        private Builder(GetServiceGroupSpecialPersonSchedulingRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.serviceGroupId = request.serviceGroupId;
+            this.userId = request.userId;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -92,7 +92,7 @@ public class GetServiceGroupSpecialPersonSchedulingRequest extends Request {
         }
 
         /**
-         * 服务组ID
+         * serviceGroupId.
          */
         public Builder serviceGroupId(Long serviceGroupId) {
             this.putBodyParameter("serviceGroupId", serviceGroupId);
@@ -101,7 +101,7 @@ public class GetServiceGroupSpecialPersonSchedulingRequest extends Request {
         }
 
         /**
-         * 用户ID
+         * userId.
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("userId", userId);

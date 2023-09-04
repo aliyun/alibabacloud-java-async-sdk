@@ -63,14 +63,14 @@ public class CreateTenantApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(CreateTenantApplicationRequest response) {
-            super(response);
-            this.channel = response.channel;
-            this.clientToken = response.clientToken;
+        private Builder(CreateTenantApplicationRequest request) {
+            super(request);
+            this.channel = request.channel;
+            this.clientToken = request.clientToken;
         } 
 
         /**
-         * 应用协同渠道
+         * channel.
          */
         public Builder channel(String channel) {
             this.putBodyParameter("channel", channel);
@@ -79,7 +79,7 @@ public class CreateTenantApplicationRequest extends Request {
         }
 
         /**
-         * 幂等标识
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);

@@ -87,16 +87,16 @@ public class ListIntegrationConfigTimelinesRequest extends Request {
             super();
         } 
 
-        private Builder(ListIntegrationConfigTimelinesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.integrationConfigId = response.integrationConfigId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
+        private Builder(ListIntegrationConfigTimelinesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.integrationConfigId = request.integrationConfigId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * 幂等参数
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -105,7 +105,7 @@ public class ListIntegrationConfigTimelinesRequest extends Request {
         }
 
         /**
-         * 集成配置id
+         * integrationConfigId.
          */
         public Builder integrationConfigId(Long integrationConfigId) {
             this.putBodyParameter("integrationConfigId", integrationConfigId);
@@ -114,7 +114,7 @@ public class ListIntegrationConfigTimelinesRequest extends Request {
         }
 
         /**
-         * 分页参数
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -123,7 +123,7 @@ public class ListIntegrationConfigTimelinesRequest extends Request {
         }
 
         /**
-         * 分页参数
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);

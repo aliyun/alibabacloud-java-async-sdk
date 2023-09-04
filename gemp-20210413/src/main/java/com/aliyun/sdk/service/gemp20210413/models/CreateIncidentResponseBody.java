@@ -98,7 +98,7 @@ public class CreateIncidentResponseBody extends TeaModel {
             private Long incidentId; 
 
             /**
-             * 事件主健Id
+             * incidentId.
              */
             public Builder incidentId(Long incidentId) {
                 this.incidentId = incidentId;

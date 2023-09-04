@@ -48,13 +48,13 @@ public class ListConfigsRequest extends Request {
             super();
         } 
 
-        private Builder(ListConfigsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
+        private Builder(ListConfigsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
         } 
 
         /**
-         * 幂等校验token
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);

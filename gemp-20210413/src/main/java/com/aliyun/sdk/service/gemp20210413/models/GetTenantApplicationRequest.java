@@ -49,13 +49,13 @@ public class GetTenantApplicationRequest extends Request {
             super();
         } 
 
-        private Builder(GetTenantApplicationRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
+        private Builder(GetTenantApplicationRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
         } 
 
         /**
-         * 幂等标识
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);

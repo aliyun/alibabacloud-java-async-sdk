@@ -74,15 +74,15 @@ public class ReplayProblemRequest extends Request {
             super();
         } 
 
-        private Builder(ReplayProblemRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.problemId = response.problemId;
-            this.replayDutyUserId = response.replayDutyUserId;
+        private Builder(ReplayProblemRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.problemId = request.problemId;
+            this.replayDutyUserId = request.replayDutyUserId;
         } 
 
         /**
-         * 幂等校验token
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -91,7 +91,7 @@ public class ReplayProblemRequest extends Request {
         }
 
         /**
-         * 故障ID
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -100,7 +100,7 @@ public class ReplayProblemRequest extends Request {
         }
 
         /**
-         * 复盘负责人ID
+         * replayDutyUserId.
          */
         public Builder replayDutyUserId(Long replayDutyUserId) {
             this.putBodyParameter("replayDutyUserId", replayDutyUserId);

@@ -48,13 +48,13 @@ public class ListSourceEventsForMonitorSourceRequest extends Request {
             super();
         } 
 
-        private Builder(ListSourceEventsForMonitorSourceRequest response) {
-            super(response);
-            this.monitorSourceId = response.monitorSourceId;
+        private Builder(ListSourceEventsForMonitorSourceRequest request) {
+            super(request);
+            this.monitorSourceId = request.monitorSourceId;
         } 
 
         /**
-         * 监控源ID
+         * monitorSourceId.
          */
         public Builder monitorSourceId(Long monitorSourceId) {
             this.putBodyParameter("monitorSourceId", monitorSourceId);

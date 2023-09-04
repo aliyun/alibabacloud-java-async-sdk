@@ -118,18 +118,18 @@ public class GetSimilarIncidentStatisticsRequest extends Request {
             super();
         } 
 
-        private Builder(GetSimilarIncidentStatisticsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.createTime = response.createTime;
-            this.events = response.events;
-            this.incidentId = response.incidentId;
-            this.incidentTitle = response.incidentTitle;
-            this.relatedServiceId = response.relatedServiceId;
+        private Builder(GetSimilarIncidentStatisticsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.createTime = request.createTime;
+            this.events = request.events;
+            this.incidentId = request.incidentId;
+            this.incidentTitle = request.incidentTitle;
+            this.relatedServiceId = request.relatedServiceId;
         } 
 
         /**
-         * 幂等标识
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -138,7 +138,7 @@ public class GetSimilarIncidentStatisticsRequest extends Request {
         }
 
         /**
-         * 触发时间
+         * createTime.
          */
         public Builder createTime(String createTime) {
             this.putBodyParameter("createTime", createTime);
@@ -147,7 +147,7 @@ public class GetSimilarIncidentStatisticsRequest extends Request {
         }
 
         /**
-         * 事件告警内容
+         * events.
          */
         public Builder events(java.util.List < String > events) {
             this.putBodyParameter("events", events);
@@ -156,7 +156,7 @@ public class GetSimilarIncidentStatisticsRequest extends Request {
         }
 
         /**
-         * 事件id
+         * incidentId.
          */
         public Builder incidentId(Long incidentId) {
             this.putBodyParameter("incidentId", incidentId);
@@ -165,7 +165,7 @@ public class GetSimilarIncidentStatisticsRequest extends Request {
         }
 
         /**
-         * 事件标题
+         * incidentTitle.
          */
         public Builder incidentTitle(String incidentTitle) {
             this.putBodyParameter("incidentTitle", incidentTitle);
@@ -174,7 +174,7 @@ public class GetSimilarIncidentStatisticsRequest extends Request {
         }
 
         /**
-         * 关联服务id
+         * relatedServiceId.
          */
         public Builder relatedServiceId(Long relatedServiceId) {
             this.putBodyParameter("relatedServiceId", relatedServiceId);

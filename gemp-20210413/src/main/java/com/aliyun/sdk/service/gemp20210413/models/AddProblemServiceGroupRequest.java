@@ -61,14 +61,14 @@ public class AddProblemServiceGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AddProblemServiceGroupRequest response) {
-            super(response);
-            this.problemId = response.problemId;
-            this.serviceGroupIds = response.serviceGroupIds;
+        private Builder(AddProblemServiceGroupRequest request) {
+            super(request);
+            this.problemId = request.problemId;
+            this.serviceGroupIds = request.serviceGroupIds;
         } 
 
         /**
-         * 故障ID
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -77,7 +77,7 @@ public class AddProblemServiceGroupRequest extends Request {
         }
 
         /**
-         * 应急协同组
+         * serviceGroupIds.
          */
         public Builder serviceGroupIds(java.util.List < Long > serviceGroupIds) {
             this.putBodyParameter("serviceGroupIds", serviceGroupIds);

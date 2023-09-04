@@ -61,14 +61,14 @@ public class DeleteServiceRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteServiceRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.serviceId = response.serviceId;
+        private Builder(DeleteServiceRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.serviceId = request.serviceId;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -77,7 +77,7 @@ public class DeleteServiceRequest extends Request {
         }
 
         /**
-         * 服务ID
+         * serviceId.
          */
         public Builder serviceId(Long serviceId) {
             this.putBodyParameter("serviceId", serviceId);

@@ -38,7 +38,7 @@ public class DeleteRouteRuleResponseBody extends TeaModel {
         private Long requestId; 
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(Long requestId) {
             this.requestId = requestId;

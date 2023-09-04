@@ -154,21 +154,21 @@ public class ListSourceEventsRequest extends Request {
             super();
         } 
 
-        private Builder(ListSourceEventsRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.endTime = response.endTime;
-            this.instanceId = response.instanceId;
-            this.instanceType = response.instanceType;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.startRowKey = response.startRowKey;
-            this.startTime = response.startTime;
-            this.stopRowKey = response.stopRowKey;
+        private Builder(ListSourceEventsRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.endTime = request.endTime;
+            this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.startRowKey = request.startRowKey;
+            this.startTime = request.startTime;
+            this.stopRowKey = request.stopRowKey;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -177,7 +177,7 @@ public class ListSourceEventsRequest extends Request {
         }
 
         /**
-         * 结束时间
+         * 2020-09-18 13:00:00
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("endTime", endTime);
@@ -186,7 +186,7 @@ public class ListSourceEventsRequest extends Request {
         }
 
         /**
-         * 报警或者事件ID
+         * instanceId.
          */
         public Builder instanceId(Long instanceId) {
             this.putBodyParameter("instanceId", instanceId);
@@ -195,7 +195,7 @@ public class ListSourceEventsRequest extends Request {
         }
 
         /**
-         * INCIDENT 事件、ALERT 报警、PROBLEM 故障
+         * instanceType.
          */
         public Builder instanceType(String instanceType) {
             this.putBodyParameter("instanceType", instanceType);
@@ -204,7 +204,7 @@ public class ListSourceEventsRequest extends Request {
         }
 
         /**
-         * 当前页
+         * pageNumber.
          */
         public Builder pageNumber(Long pageNumber) {
             this.putBodyParameter("pageNumber", pageNumber);
@@ -213,7 +213,7 @@ public class ListSourceEventsRequest extends Request {
         }
 
         /**
-         * 页大小
+         * pageSize.
          */
         public Builder pageSize(Long pageSize) {
             this.putBodyParameter("pageSize", pageSize);
@@ -222,7 +222,7 @@ public class ListSourceEventsRequest extends Request {
         }
 
         /**
-         * startRowKey 用来查询下一页的数据
+         * startRowKey.
          */
         public Builder startRowKey(String startRowKey) {
             this.putBodyParameter("startRowKey", startRowKey);
@@ -231,7 +231,7 @@ public class ListSourceEventsRequest extends Request {
         }
 
         /**
-         * 开始时间
+         * 2020-09-10 13:00:00
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("startTime", startTime);
@@ -240,7 +240,7 @@ public class ListSourceEventsRequest extends Request {
         }
 
         /**
-         * stopRowKey 用来查询上一页的数据
+         * stopRowKey.
          */
         public Builder stopRowKey(String stopRowKey) {
             this.putBodyParameter("stopRowKey", stopRowKey);

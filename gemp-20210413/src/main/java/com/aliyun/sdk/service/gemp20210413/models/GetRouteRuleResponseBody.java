@@ -50,7 +50,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 规则详情
+         * data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +122,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * 条件可以
+             * key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -130,7 +130,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 操作符
+             * operationSymbol.
              */
             public Builder operationSymbol(String operationSymbol) {
                 this.operationSymbol = operationSymbol;
@@ -138,7 +138,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 匹配值
+             * value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -177,6 +177,9 @@ public class GetRouteRuleResponseBody extends TeaModel {
         @NameInMap("parentRuleId")
         private Long parentRuleId;
 
+        @NameInMap("problemLevel")
+        private String problemLevel;
+
         private EventRouteChildRules(Builder builder) {
             this.childConditionRelation = builder.childConditionRelation;
             this.childRouteRuleId = builder.childRouteRuleId;
@@ -186,6 +189,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             this.monitorSourceId = builder.monitorSourceId;
             this.monitorSourceName = builder.monitorSourceName;
             this.parentRuleId = builder.parentRuleId;
+            this.problemLevel = builder.problemLevel;
         }
 
         public static Builder builder() {
@@ -252,6 +256,13 @@ public class GetRouteRuleResponseBody extends TeaModel {
             return this.parentRuleId;
         }
 
+        /**
+         * @return problemLevel
+         */
+        public String getProblemLevel() {
+            return this.problemLevel;
+        }
+
         public static final class Builder {
             private Long childConditionRelation; 
             private Long childRouteRuleId; 
@@ -261,9 +272,10 @@ public class GetRouteRuleResponseBody extends TeaModel {
             private Long monitorSourceId; 
             private String monitorSourceName; 
             private Long parentRuleId; 
+            private String problemLevel; 
 
             /**
-             * 子条件计算关系，0-与，1-或
+             * childConditionRelation.
              */
             public Builder childConditionRelation(Long childConditionRelation) {
                 this.childConditionRelation = childConditionRelation;
@@ -271,7 +283,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 子规则ID
+             * childRouteRuleId.
              */
             public Builder childRouteRuleId(Long childRouteRuleId) {
                 this.childRouteRuleId = childRouteRuleId;
@@ -279,7 +291,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 条件
+             * conditions.
              */
             public Builder conditions(java.util.List < Conditions> conditions) {
                 this.conditions = conditions;
@@ -287,7 +299,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 是否有效得规则true有效 false无效
+             * isValidChildRule.
              */
             public Builder isValidChildRule(Boolean isValidChildRule) {
                 this.isValidChildRule = isValidChildRule;
@@ -295,7 +307,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 集成配置ID
+             * monitorIntegrationConfigId.
              */
             public Builder monitorIntegrationConfigId(Long monitorIntegrationConfigId) {
                 this.monitorIntegrationConfigId = monitorIntegrationConfigId;
@@ -303,7 +315,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 监控源ID
+             * monitorSourceId.
              */
             public Builder monitorSourceId(Long monitorSourceId) {
                 this.monitorSourceId = monitorSourceId;
@@ -311,7 +323,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 监控源名称
+             * monitorSourceName.
              */
             public Builder monitorSourceName(String monitorSourceName) {
                 this.monitorSourceName = monitorSourceName;
@@ -319,10 +331,18 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 规则ID
+             * parentRuleId.
              */
             public Builder parentRuleId(Long parentRuleId) {
                 this.parentRuleId = parentRuleId;
+                return this;
+            }
+
+            /**
+             * problemLevel.
+             */
+            public Builder problemLevel(String problemLevel) {
+                this.problemLevel = problemLevel;
                 return this;
             }
 
@@ -345,6 +365,15 @@ public class GetRouteRuleResponseBody extends TeaModel {
 
         @NameInMap("childRuleRelation")
         private String childRuleRelation;
+
+        @NameInMap("convergenceFields")
+        private java.util.List < String > convergenceFields;
+
+        @NameInMap("convergenceType")
+        private Integer convergenceType;
+
+        @NameInMap("coverageProblemLevels")
+        private java.util.List < String > coverageProblemLevels;
 
         @NameInMap("createTime")
         private String createTime;
@@ -369,6 +398,15 @@ public class GetRouteRuleResponseBody extends TeaModel {
 
         @NameInMap("notifyChannels")
         private java.util.List < String > notifyChannels;
+
+        @NameInMap("problemEffectionServices")
+        private java.util.List < Long > problemEffectionServices;
+
+        @NameInMap("problemLevelGroup")
+        private java.util.Map < String, DataProblemLevelGroupValue > problemLevelGroup;
+
+        @NameInMap("relServiceDeleteType")
+        private Integer relServiceDeleteType;
 
         @NameInMap("relatedServiceId")
         private Long relatedServiceId;
@@ -396,6 +434,9 @@ public class GetRouteRuleResponseBody extends TeaModel {
             this.assignObjectName = builder.assignObjectName;
             this.assignObjectType = builder.assignObjectType;
             this.childRuleRelation = builder.childRuleRelation;
+            this.convergenceFields = builder.convergenceFields;
+            this.convergenceType = builder.convergenceType;
+            this.coverageProblemLevels = builder.coverageProblemLevels;
             this.createTime = builder.createTime;
             this.effection = builder.effection;
             this.enableStatus = builder.enableStatus;
@@ -404,6 +445,9 @@ public class GetRouteRuleResponseBody extends TeaModel {
             this.matchCount = builder.matchCount;
             this.notifyChannelNames = builder.notifyChannelNames;
             this.notifyChannels = builder.notifyChannels;
+            this.problemEffectionServices = builder.problemEffectionServices;
+            this.problemLevelGroup = builder.problemLevelGroup;
+            this.relServiceDeleteType = builder.relServiceDeleteType;
             this.relatedServiceId = builder.relatedServiceId;
             this.relatedServiceName = builder.relatedServiceName;
             this.routeRuleId = builder.routeRuleId;
@@ -447,6 +491,27 @@ public class GetRouteRuleResponseBody extends TeaModel {
          */
         public String getChildRuleRelation() {
             return this.childRuleRelation;
+        }
+
+        /**
+         * @return convergenceFields
+         */
+        public java.util.List < String > getConvergenceFields() {
+            return this.convergenceFields;
+        }
+
+        /**
+         * @return convergenceType
+         */
+        public Integer getConvergenceType() {
+            return this.convergenceType;
+        }
+
+        /**
+         * @return coverageProblemLevels
+         */
+        public java.util.List < String > getCoverageProblemLevels() {
+            return this.coverageProblemLevels;
         }
 
         /**
@@ -506,6 +571,27 @@ public class GetRouteRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return problemEffectionServices
+         */
+        public java.util.List < Long > getProblemEffectionServices() {
+            return this.problemEffectionServices;
+        }
+
+        /**
+         * @return problemLevelGroup
+         */
+        public java.util.Map < String, DataProblemLevelGroupValue > getProblemLevelGroup() {
+            return this.problemLevelGroup;
+        }
+
+        /**
+         * @return relServiceDeleteType
+         */
+        public Integer getRelServiceDeleteType() {
+            return this.relServiceDeleteType;
+        }
+
+        /**
          * @return relatedServiceId
          */
         public Long getRelatedServiceId() {
@@ -559,6 +645,9 @@ public class GetRouteRuleResponseBody extends TeaModel {
             private String assignObjectName; 
             private String assignObjectType; 
             private String childRuleRelation; 
+            private java.util.List < String > convergenceFields; 
+            private Integer convergenceType; 
+            private java.util.List < String > coverageProblemLevels; 
             private String createTime; 
             private String effection; 
             private String enableStatus; 
@@ -567,6 +656,9 @@ public class GetRouteRuleResponseBody extends TeaModel {
             private Long matchCount; 
             private java.util.List < String > notifyChannelNames; 
             private java.util.List < String > notifyChannels; 
+            private java.util.List < Long > problemEffectionServices; 
+            private java.util.Map < String, DataProblemLevelGroupValue > problemLevelGroup; 
+            private Integer relServiceDeleteType; 
             private Long relatedServiceId; 
             private String relatedServiceName; 
             private Long routeRuleId; 
@@ -576,7 +668,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * 事件分派对象ID（服务组ID 或用户ID）
+             * assignObjectId.
              */
             public Builder assignObjectId(Long assignObjectId) {
                 this.assignObjectId = assignObjectId;
@@ -584,7 +676,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 通知对象名称
+             * assignObjectName.
              */
             public Builder assignObjectName(String assignObjectName) {
                 this.assignObjectName = assignObjectName;
@@ -592,7 +684,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 事件分派对象类型 SERVICEGROUP 服务组  USER 单个用户
+             * assignObjectType.
              */
             public Builder assignObjectType(String assignObjectType) {
                 this.assignObjectType = assignObjectType;
@@ -600,7 +692,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 子规则关系，0与，1或
+             * childRuleRelation.
              */
             public Builder childRuleRelation(String childRuleRelation) {
                 this.childRuleRelation = childRuleRelation;
@@ -608,7 +700,31 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * convergenceFields.
+             */
+            public Builder convergenceFields(java.util.List < String > convergenceFields) {
+                this.convergenceFields = convergenceFields;
+                return this;
+            }
+
+            /**
+             * convergenceType.
+             */
+            public Builder convergenceType(Integer convergenceType) {
+                this.convergenceType = convergenceType;
+                return this;
+            }
+
+            /**
+             * coverageProblemLevels.
+             */
+            public Builder coverageProblemLevels(java.util.List < String > coverageProblemLevels) {
+                this.coverageProblemLevels = coverageProblemLevels;
+                return this;
+            }
+
+            /**
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -616,7 +732,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 影响程度  LOW一般  HIGH-严重
+             * effection.
              */
             public Builder effection(String effection) {
                 this.effection = effection;
@@ -624,7 +740,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 是否启用  DISABLE禁用 ENABLE 启用
+             * enableStatus.
              */
             public Builder enableStatus(String enableStatus) {
                 this.enableStatus = enableStatus;
@@ -632,7 +748,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 子规则
+             * eventRouteChildRules.
              */
             public Builder eventRouteChildRules(java.util.List < EventRouteChildRules> eventRouteChildRules) {
                 this.eventRouteChildRules = eventRouteChildRules;
@@ -640,7 +756,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 事件级别 P1 P2 P3 P4
+             * incidentLevel.
              */
             public Builder incidentLevel(String incidentLevel) {
                 this.incidentLevel = incidentLevel;
@@ -648,7 +764,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 命中次数
+             * matchCount.
              */
             public Builder matchCount(Long matchCount) {
                 this.matchCount = matchCount;
@@ -656,7 +772,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 通知渠道名称
+             * notifyChannelNames.
              */
             public Builder notifyChannelNames(java.util.List < String > notifyChannelNames) {
                 this.notifyChannelNames = notifyChannelNames;
@@ -664,7 +780,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 通知渠道
+             * notifyChannels.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -672,7 +788,31 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务ID
+             * problemEffectionServices.
+             */
+            public Builder problemEffectionServices(java.util.List < Long > problemEffectionServices) {
+                this.problemEffectionServices = problemEffectionServices;
+                return this;
+            }
+
+            /**
+             * problemLevelGroup.
+             */
+            public Builder problemLevelGroup(java.util.Map < String, DataProblemLevelGroupValue > problemLevelGroup) {
+                this.problemLevelGroup = problemLevelGroup;
+                return this;
+            }
+
+            /**
+             * relServiceDeleteType.
+             */
+            public Builder relServiceDeleteType(Integer relServiceDeleteType) {
+                this.relServiceDeleteType = relServiceDeleteType;
+                return this;
+            }
+
+            /**
+             * relatedServiceId.
              */
             public Builder relatedServiceId(Long relatedServiceId) {
                 this.relatedServiceId = relatedServiceId;
@@ -680,7 +820,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务名称
+             * relatedServiceName.
              */
             public Builder relatedServiceName(String relatedServiceName) {
                 this.relatedServiceName = relatedServiceName;
@@ -688,7 +828,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 规则ID
+             * routeRuleId.
              */
             public Builder routeRuleId(Long routeRuleId) {
                 this.routeRuleId = routeRuleId;
@@ -696,7 +836,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 路由类型：INCIDENT 触发事件 ALERT 仅触发报警
+             * routeType.
              */
             public Builder routeType(String routeType) {
                 this.routeType = routeType;
@@ -704,7 +844,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 流转规则名字
+             * ruleName.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -712,7 +852,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 时间窗口
+             * timeWindow.
              */
             public Builder timeWindow(Integer timeWindow) {
                 this.timeWindow = timeWindow;
@@ -720,7 +860,7 @@ public class GetRouteRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 修改时间
+             * updateTime.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

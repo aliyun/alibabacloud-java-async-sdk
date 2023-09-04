@@ -50,7 +50,7 @@ public class CreateProblemEffectionServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class CreateProblemEffectionServiceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class CreateProblemEffectionServiceResponseBody extends TeaModel {
             private Long effectionServiceId; 
 
             /**
-             * 影响服务id
+             * effectionServiceId.
              */
             public Builder effectionServiceId(Long effectionServiceId) {
                 this.effectionServiceId = effectionServiceId;

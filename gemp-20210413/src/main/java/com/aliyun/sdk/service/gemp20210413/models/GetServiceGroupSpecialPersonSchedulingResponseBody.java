@@ -50,7 +50,7 @@ public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * 人员排班信息
+         * data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -158,7 +158,7 @@ public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel
             private String serviceGroupName; 
 
             /**
-             * 排班日期
+             * schedulingDate.
              */
             public Builder schedulingDate(String schedulingDate) {
                 this.schedulingDate = schedulingDate;
@@ -166,7 +166,7 @@ public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel
             }
 
             /**
-             * 排班结束时间
+             * schedulingEndTime.
              */
             public Builder schedulingEndTime(String schedulingEndTime) {
                 this.schedulingEndTime = schedulingEndTime;
@@ -174,7 +174,7 @@ public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel
             }
 
             /**
-             * 排班开始时间
+             * schedulingStartTime.
              */
             public Builder schedulingStartTime(String schedulingStartTime) {
                 this.schedulingStartTime = schedulingStartTime;
@@ -182,7 +182,7 @@ public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel
             }
 
             /**
-             * 排班用户ID
+             * schedulingUserId.
              */
             public Builder schedulingUserId(Long schedulingUserId) {
                 this.schedulingUserId = schedulingUserId;
@@ -190,7 +190,7 @@ public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel
             }
 
             /**
-             * 服务组id
+             * serviceGroupId.
              */
             public Builder serviceGroupId(Long serviceGroupId) {
                 this.serviceGroupId = serviceGroupId;
@@ -198,7 +198,7 @@ public class GetServiceGroupSpecialPersonSchedulingResponseBody extends TeaModel
             }
 
             /**
-             * 服务组名字
+             * serviceGroupName.
              */
             public Builder serviceGroupName(String serviceGroupName) {
                 this.serviceGroupName = serviceGroupName;

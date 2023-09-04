@@ -86,7 +86,7 @@ public class ListIntegrationConfigTimelinesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -182,7 +182,7 @@ public class ListIntegrationConfigTimelinesResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -190,7 +190,7 @@ public class ListIntegrationConfigTimelinesResponseBody extends TeaModel {
             }
 
             /**
-             * 描述
+             * description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -198,7 +198,7 @@ public class ListIntegrationConfigTimelinesResponseBody extends TeaModel {
             }
 
             /**
-             * 主题
+             * title.
              */
             public Builder title(String title) {
                 this.title = title;

@@ -50,7 +50,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -78,6 +78,9 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         @NameInMap("checkUserId")
         private Long checkUserId;
 
+        @NameInMap("checkUserIsValid")
+        private Integer checkUserIsValid;
+
         @NameInMap("checkUserName")
         private String checkUserName;
 
@@ -86,6 +89,9 @@ public class GetProblemImprovementResponseBody extends TeaModel {
 
         @NameInMap("directorId")
         private Long directorId;
+
+        @NameInMap("directorIsValid")
+        private Integer directorIsValid;
 
         @NameInMap("directorName")
         private String directorName;
@@ -99,6 +105,9 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         @NameInMap("stalkerId")
         private Long stalkerId;
 
+        @NameInMap("stalkerIsValid")
+        private Integer stalkerIsValid;
+
         @NameInMap("stalkerName")
         private String stalkerName;
 
@@ -111,13 +120,16 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         private MeasureList(Builder builder) {
             this.checkStandard = builder.checkStandard;
             this.checkUserId = builder.checkUserId;
+            this.checkUserIsValid = builder.checkUserIsValid;
             this.checkUserName = builder.checkUserName;
             this.content = builder.content;
             this.directorId = builder.directorId;
+            this.directorIsValid = builder.directorIsValid;
             this.directorName = builder.directorName;
             this.measureId = builder.measureId;
             this.planFinishTime = builder.planFinishTime;
             this.stalkerId = builder.stalkerId;
+            this.stalkerIsValid = builder.stalkerIsValid;
             this.stalkerName = builder.stalkerName;
             this.status = builder.status;
             this.type = builder.type;
@@ -146,6 +158,13 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         }
 
         /**
+         * @return checkUserIsValid
+         */
+        public Integer getCheckUserIsValid() {
+            return this.checkUserIsValid;
+        }
+
+        /**
          * @return checkUserName
          */
         public String getCheckUserName() {
@@ -164,6 +183,13 @@ public class GetProblemImprovementResponseBody extends TeaModel {
          */
         public Long getDirectorId() {
             return this.directorId;
+        }
+
+        /**
+         * @return directorIsValid
+         */
+        public Integer getDirectorIsValid() {
+            return this.directorIsValid;
         }
 
         /**
@@ -195,6 +221,13 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         }
 
         /**
+         * @return stalkerIsValid
+         */
+        public Integer getStalkerIsValid() {
+            return this.stalkerIsValid;
+        }
+
+        /**
          * @return stalkerName
          */
         public String getStalkerName() {
@@ -218,19 +251,22 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         public static final class Builder {
             private String checkStandard; 
             private Long checkUserId; 
+            private Integer checkUserIsValid; 
             private String checkUserName; 
             private String content; 
             private Long directorId; 
+            private Integer directorIsValid; 
             private String directorName; 
             private Long measureId; 
             private String planFinishTime; 
             private Long stalkerId; 
+            private Integer stalkerIsValid; 
             private String stalkerName; 
             private String status; 
             private Long type; 
 
             /**
-             * 验收标准
+             * checkStandard.
              */
             public Builder checkStandard(String checkStandard) {
                 this.checkStandard = checkStandard;
@@ -238,7 +274,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 验收人id
+             * checkUserId.
              */
             public Builder checkUserId(Long checkUserId) {
                 this.checkUserId = checkUserId;
@@ -246,7 +282,15 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 验收人名称
+             * checkUserIsValid.
+             */
+            public Builder checkUserIsValid(Integer checkUserIsValid) {
+                this.checkUserIsValid = checkUserIsValid;
+                return this;
+            }
+
+            /**
+             * checkUserName.
              */
             public Builder checkUserName(String checkUserName) {
                 this.checkUserName = checkUserName;
@@ -254,7 +298,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 措施内容
+             * content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -262,7 +306,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 负责人id
+             * directorId.
              */
             public Builder directorId(Long directorId) {
                 this.directorId = directorId;
@@ -270,7 +314,15 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 负责人名称
+             * directorIsValid.
+             */
+            public Builder directorIsValid(Integer directorIsValid) {
+                this.directorIsValid = directorIsValid;
+                return this;
+            }
+
+            /**
+             * directorName.
              */
             public Builder directorName(String directorName) {
                 this.directorName = directorName;
@@ -278,7 +330,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 改进措施id 用于删除或更新
+             * measureId.
              */
             public Builder measureId(Long measureId) {
                 this.measureId = measureId;
@@ -286,7 +338,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 计划完成时间
+             * planFinishTime.
              */
             public Builder planFinishTime(String planFinishTime) {
                 this.planFinishTime = planFinishTime;
@@ -294,7 +346,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 跟踪人id
+             * stalkerId.
              */
             public Builder stalkerId(Long stalkerId) {
                 this.stalkerId = stalkerId;
@@ -302,7 +354,15 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 跟踪人名称
+             * stalkerIsValid.
+             */
+            public Builder stalkerIsValid(Integer stalkerIsValid) {
+                this.stalkerIsValid = stalkerIsValid;
+                return this;
+            }
+
+            /**
+             * stalkerName.
              */
             public Builder stalkerName(String stalkerName) {
                 this.stalkerName = stalkerName;
@@ -310,7 +370,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * UNIMPROVED	状态 IMPROVED 改进 2 未改进UNIMPROVED
+             * status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -318,7 +378,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 措施类型
+             * type.
              */
             public Builder type(Long type) {
                 this.type = type;
@@ -333,6 +393,9 @@ public class GetProblemImprovementResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @NameInMap("customProblemReason")
+        private String customProblemReason;
+
         @NameInMap("discoverSource")
         private String discoverSource;
 
@@ -344,6 +407,9 @@ public class GetProblemImprovementResponseBody extends TeaModel {
 
         @NameInMap("dutyUserId")
         private Long dutyUserId;
+
+        @NameInMap("dutyUserIsValid")
+        private Long dutyUserIsValid;
 
         @NameInMap("dutyUserName")
         private String dutyUserName;
@@ -384,6 +450,9 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         @NameInMap("replayDutyUserId")
         private Long replayDutyUserId;
 
+        @NameInMap("replayDutyUserIsValid")
+        private Long replayDutyUserIsValid;
+
         @NameInMap("replayDutyUserName")
         private String replayDutyUserName;
 
@@ -394,10 +463,12 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         private Long userReport;
 
         private Data(Builder builder) {
+            this.customProblemReason = builder.customProblemReason;
             this.discoverSource = builder.discoverSource;
             this.dutyDepartmentId = builder.dutyDepartmentId;
             this.dutyDepartmentName = builder.dutyDepartmentName;
             this.dutyUserId = builder.dutyUserId;
+            this.dutyUserIsValid = builder.dutyUserIsValid;
             this.dutyUserName = builder.dutyUserName;
             this.dutyUserPhone = builder.dutyUserPhone;
             this.injectionMode = builder.injectionMode;
@@ -411,6 +482,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             this.relationChanges = builder.relationChanges;
             this.remark = builder.remark;
             this.replayDutyUserId = builder.replayDutyUserId;
+            this.replayDutyUserIsValid = builder.replayDutyUserIsValid;
             this.replayDutyUserName = builder.replayDutyUserName;
             this.replayDutyUserPhone = builder.replayDutyUserPhone;
             this.userReport = builder.userReport;
@@ -422,6 +494,13 @@ public class GetProblemImprovementResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return customProblemReason
+         */
+        public String getCustomProblemReason() {
+            return this.customProblemReason;
         }
 
         /**
@@ -450,6 +529,13 @@ public class GetProblemImprovementResponseBody extends TeaModel {
          */
         public Long getDutyUserId() {
             return this.dutyUserId;
+        }
+
+        /**
+         * @return dutyUserIsValid
+         */
+        public Long getDutyUserIsValid() {
+            return this.dutyUserIsValid;
         }
 
         /**
@@ -544,6 +630,13 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         }
 
         /**
+         * @return replayDutyUserIsValid
+         */
+        public Long getReplayDutyUserIsValid() {
+            return this.replayDutyUserIsValid;
+        }
+
+        /**
          * @return replayDutyUserName
          */
         public String getReplayDutyUserName() {
@@ -565,10 +658,12 @@ public class GetProblemImprovementResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String customProblemReason; 
             private String discoverSource; 
             private String dutyDepartmentId; 
             private String dutyDepartmentName; 
             private Long dutyUserId; 
+            private Long dutyUserIsValid; 
             private String dutyUserName; 
             private String dutyUserPhone; 
             private String injectionMode; 
@@ -582,12 +677,21 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             private String relationChanges; 
             private String remark; 
             private Long replayDutyUserId; 
+            private Long replayDutyUserIsValid; 
             private String replayDutyUserName; 
             private String replayDutyUserPhone; 
             private Long userReport; 
 
             /**
-             * 发现来源 码表:PROBLEM_DISCOVER_SOURCE
+             * customProblemReason.
+             */
+            public Builder customProblemReason(String customProblemReason) {
+                this.customProblemReason = customProblemReason;
+                return this;
+            }
+
+            /**
+             * discoverSource.
              */
             public Builder discoverSource(String discoverSource) {
                 this.discoverSource = discoverSource;
@@ -595,7 +699,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 故障责任部门
+             * dutyDepartmentId.
              */
             public Builder dutyDepartmentId(String dutyDepartmentId) {
                 this.dutyDepartmentId = dutyDepartmentId;
@@ -603,7 +707,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 故障责任部门名称
+             * dutyDepartmentName.
              */
             public Builder dutyDepartmentName(String dutyDepartmentName) {
                 this.dutyDepartmentName = dutyDepartmentName;
@@ -611,7 +715,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 故障责任人id
+             * dutyUserId.
              */
             public Builder dutyUserId(Long dutyUserId) {
                 this.dutyUserId = dutyUserId;
@@ -619,7 +723,15 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 故障责任人名称
+             * dutyUserIsValid.
+             */
+            public Builder dutyUserIsValid(Long dutyUserIsValid) {
+                this.dutyUserIsValid = dutyUserIsValid;
+                return this;
+            }
+
+            /**
+             * dutyUserName.
              */
             public Builder dutyUserName(String dutyUserName) {
                 this.dutyUserName = dutyUserName;
@@ -627,7 +739,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 故障责任人手机号
+             * dutyUserPhone.
              */
             public Builder dutyUserPhone(String dutyUserPhone) {
                 this.dutyUserPhone = dutyUserPhone;
@@ -635,7 +747,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 注入方式 码表:PROBLEM_INJECTION_MODE
+             * injectionMode.
              */
             public Builder injectionMode(String injectionMode) {
                 this.injectionMode = injectionMode;
@@ -643,7 +755,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 是否手动
+             * isManual.
              */
             public Builder isManual(Boolean isManual) {
                 this.isManual = isManual;
@@ -651,7 +763,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 改进措施列表
+             * measureList.
              */
             public Builder measureList(java.util.List < MeasureList> measureList) {
                 this.measureList = measureList;
@@ -659,7 +771,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 监控源
+             * monitorSourceName.
              */
             public Builder monitorSourceName(String monitorSourceName) {
                 this.monitorSourceName = monitorSourceName;
@@ -667,7 +779,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 故障ID
+             * problemId.
              */
             public Builder problemId(String problemId) {
                 this.problemId = problemId;
@@ -675,7 +787,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 故障原因
+             * problemReason.
              */
             public Builder problemReason(String problemReason) {
                 this.problemReason = problemReason;
@@ -683,7 +795,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 最近活动 码表:PROBLEM_RECENT_ACTIVITY
+             * recentActivity.
              */
             public Builder recentActivity(String recentActivity) {
                 this.recentActivity = recentActivity;
@@ -691,7 +803,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 恢复方式  码表:PROBLEM_RECOVERY_MODE
+             * recoveryMode.
              */
             public Builder recoveryMode(String recoveryMode) {
                 this.recoveryMode = recoveryMode;
@@ -699,7 +811,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 关联变更
+             * relationChanges.
              */
             public Builder relationChanges(String relationChanges) {
                 this.relationChanges = relationChanges;
@@ -707,7 +819,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * remark.
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -715,7 +827,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 复盘负责人id
+             * replayDutyUserId.
              */
             public Builder replayDutyUserId(Long replayDutyUserId) {
                 this.replayDutyUserId = replayDutyUserId;
@@ -723,7 +835,15 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 复盘负责人名称
+             * replayDutyUserIsValid.
+             */
+            public Builder replayDutyUserIsValid(Long replayDutyUserIsValid) {
+                this.replayDutyUserIsValid = replayDutyUserIsValid;
+                return this;
+            }
+
+            /**
+             * replayDutyUserName.
              */
             public Builder replayDutyUserName(String replayDutyUserName) {
                 this.replayDutyUserName = replayDutyUserName;
@@ -731,7 +851,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 复盘负责人手机号
+             * replayDutyUserPhone.
              */
             public Builder replayDutyUserPhone(String replayDutyUserPhone) {
                 this.replayDutyUserPhone = replayDutyUserPhone;
@@ -739,7 +859,7 @@ public class GetProblemImprovementResponseBody extends TeaModel {
             }
 
             /**
-             * 用户上报 码表:PROBLEM_USER_REPORT
+             * userReport.
              */
             public Builder userReport(Long userReport) {
                 this.userReport = userReport;

@@ -50,7 +50,7 @@ public class GetServiceGroupSchedulingPreviewResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 服务组排班信息
+         * data.
          */
         public Builder data(java.util.Map < String, ? > data) {
             this.data = data;

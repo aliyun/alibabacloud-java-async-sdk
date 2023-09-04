@@ -50,7 +50,7 @@ public class GetIncidentResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +58,7 @@ public class GetIncidentResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * requestId
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,6 +72,9 @@ public class GetIncidentResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
+        @NameInMap("assignToWhoIsValid")
+        private Integer assignToWhoIsValid;
+
         @NameInMap("assignUserId")
         private Long assignUserId;
 
@@ -83,6 +86,15 @@ public class GetIncidentResponseBody extends TeaModel {
 
         @NameInMap("createTime")
         private String createTime;
+
+        @NameInMap("defaultAssignToWho")
+        private Integer defaultAssignToWho;
+
+        @NameInMap("defaultAssignToWhoIsValid")
+        private Integer defaultAssignToWhoIsValid;
+
+        @NameInMap("defaultAssignToWhoName")
+        private String defaultAssignToWhoName;
 
         @NameInMap("durationTime")
         private Long durationTime;
@@ -123,6 +135,15 @@ public class GetIncidentResponseBody extends TeaModel {
         @NameInMap("problemNumber")
         private String problemNumber;
 
+        @NameInMap("relRouteRuleDeleteType")
+        private Integer relRouteRuleDeleteType;
+
+        @NameInMap("relServiceDeleteType")
+        private Integer relServiceDeleteType;
+
+        @NameInMap("relServiceGroupIsValid")
+        private Integer relServiceGroupIsValid;
+
         @NameInMap("relatedServiceDescription")
         private String relatedServiceDescription;
 
@@ -145,10 +166,14 @@ public class GetIncidentResponseBody extends TeaModel {
         private String routeRuleName;
 
         private Data(Builder builder) {
+            this.assignToWhoIsValid = builder.assignToWhoIsValid;
             this.assignUserId = builder.assignUserId;
             this.assignUserName = builder.assignUserName;
             this.assignUserPhone = builder.assignUserPhone;
             this.createTime = builder.createTime;
+            this.defaultAssignToWho = builder.defaultAssignToWho;
+            this.defaultAssignToWhoIsValid = builder.defaultAssignToWhoIsValid;
+            this.defaultAssignToWhoName = builder.defaultAssignToWhoName;
             this.durationTime = builder.durationTime;
             this.effect = builder.effect;
             this.incidentDescription = builder.incidentDescription;
@@ -162,6 +187,9 @@ public class GetIncidentResponseBody extends TeaModel {
             this.notifyChannels = builder.notifyChannels;
             this.problemId = builder.problemId;
             this.problemNumber = builder.problemNumber;
+            this.relRouteRuleDeleteType = builder.relRouteRuleDeleteType;
+            this.relServiceDeleteType = builder.relServiceDeleteType;
+            this.relServiceGroupIsValid = builder.relServiceGroupIsValid;
             this.relatedServiceDescription = builder.relatedServiceDescription;
             this.relatedServiceGroupId = builder.relatedServiceGroupId;
             this.relatedServiceGroupName = builder.relatedServiceGroupName;
@@ -177,6 +205,13 @@ public class GetIncidentResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return assignToWhoIsValid
+         */
+        public Integer getAssignToWhoIsValid() {
+            return this.assignToWhoIsValid;
         }
 
         /**
@@ -205,6 +240,27 @@ public class GetIncidentResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return defaultAssignToWho
+         */
+        public Integer getDefaultAssignToWho() {
+            return this.defaultAssignToWho;
+        }
+
+        /**
+         * @return defaultAssignToWhoIsValid
+         */
+        public Integer getDefaultAssignToWhoIsValid() {
+            return this.defaultAssignToWhoIsValid;
+        }
+
+        /**
+         * @return defaultAssignToWhoName
+         */
+        public String getDefaultAssignToWhoName() {
+            return this.defaultAssignToWhoName;
         }
 
         /**
@@ -299,6 +355,27 @@ public class GetIncidentResponseBody extends TeaModel {
         }
 
         /**
+         * @return relRouteRuleDeleteType
+         */
+        public Integer getRelRouteRuleDeleteType() {
+            return this.relRouteRuleDeleteType;
+        }
+
+        /**
+         * @return relServiceDeleteType
+         */
+        public Integer getRelServiceDeleteType() {
+            return this.relServiceDeleteType;
+        }
+
+        /**
+         * @return relServiceGroupIsValid
+         */
+        public Integer getRelServiceGroupIsValid() {
+            return this.relServiceGroupIsValid;
+        }
+
+        /**
          * @return relatedServiceDescription
          */
         public String getRelatedServiceDescription() {
@@ -348,10 +425,14 @@ public class GetIncidentResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer assignToWhoIsValid; 
             private Long assignUserId; 
             private String assignUserName; 
             private String assignUserPhone; 
             private String createTime; 
+            private Integer defaultAssignToWho; 
+            private Integer defaultAssignToWhoIsValid; 
+            private String defaultAssignToWhoName; 
             private Long durationTime; 
             private String effect; 
             private String incidentDescription; 
@@ -365,6 +446,9 @@ public class GetIncidentResponseBody extends TeaModel {
             private java.util.List < String > notifyChannels; 
             private Long problemId; 
             private String problemNumber; 
+            private Integer relRouteRuleDeleteType; 
+            private Integer relServiceDeleteType; 
+            private Integer relServiceGroupIsValid; 
             private String relatedServiceDescription; 
             private Long relatedServiceGroupId; 
             private String relatedServiceGroupName; 
@@ -374,7 +458,15 @@ public class GetIncidentResponseBody extends TeaModel {
             private String routeRuleName; 
 
             /**
-             * 分派的用户ID
+             * assignToWhoIsValid.
+             */
+            public Builder assignToWhoIsValid(Integer assignToWhoIsValid) {
+                this.assignToWhoIsValid = assignToWhoIsValid;
+                return this;
+            }
+
+            /**
+             * assignUserId.
              */
             public Builder assignUserId(Long assignUserId) {
                 this.assignUserId = assignUserId;
@@ -382,7 +474,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 分派的用户姓名 (用户表获取)
+             * assignUserName.
              */
             public Builder assignUserName(String assignUserName) {
                 this.assignUserName = assignUserName;
@@ -390,7 +482,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 分派的用户手机号
+             * assignUserPhone.
              */
             public Builder assignUserPhone(String assignUserPhone) {
                 this.assignUserPhone = assignUserPhone;
@@ -398,7 +490,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -406,7 +498,31 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 持续时间
+             * defaultAssignToWho.
+             */
+            public Builder defaultAssignToWho(Integer defaultAssignToWho) {
+                this.defaultAssignToWho = defaultAssignToWho;
+                return this;
+            }
+
+            /**
+             * defaultAssignToWhoIsValid.
+             */
+            public Builder defaultAssignToWhoIsValid(Integer defaultAssignToWhoIsValid) {
+                this.defaultAssignToWhoIsValid = defaultAssignToWhoIsValid;
+                return this;
+            }
+
+            /**
+             * defaultAssignToWhoName.
+             */
+            public Builder defaultAssignToWhoName(String defaultAssignToWhoName) {
+                this.defaultAssignToWhoName = defaultAssignToWhoName;
+                return this;
+            }
+
+            /**
+             * durationTime.
              */
             public Builder durationTime(Long durationTime) {
                 this.durationTime = durationTime;
@@ -414,7 +530,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * HIGH	影响等级 高：HIGH 低 LOW
+             * effect.
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -422,7 +538,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 事件描述
+             * incidentDescription.
              */
             public Builder incidentDescription(String incidentDescription) {
                 this.incidentDescription = incidentDescription;
@@ -430,7 +546,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 事件Id
+             * incidentId.
              */
             public Builder incidentId(Long incidentId) {
                 this.incidentId = incidentId;
@@ -438,7 +554,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 事件级别 P1 P2 P3 P4
+             * incidentLevel.
              */
             public Builder incidentLevel(String incidentLevel) {
                 this.incidentLevel = incidentLevel;
@@ -446,7 +562,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 事件编号
+             * incidentNumber.
              */
             public Builder incidentNumber(String incidentNumber) {
                 this.incidentNumber = incidentNumber;
@@ -454,7 +570,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 事件状态 ASSIGNED已分派 RESPONDED已响应  FINISHED已完结
+             * incidentStatus.
              */
             public Builder incidentStatus(String incidentStatus) {
                 this.incidentStatus = incidentStatus;
@@ -462,7 +578,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 事件标题
+             * incidentTitle.
              */
             public Builder incidentTitle(String incidentTitle) {
                 this.incidentTitle = incidentTitle;
@@ -470,7 +586,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 事件来源 是：手动 否：自动
+             * isManual.
              */
             public Builder isManual(Boolean isManual) {
                 this.isManual = isManual;
@@ -478,7 +594,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 是否升级 是 否
+             * isUpgrade.
              */
             public Builder isUpgrade(Boolean isUpgrade) {
                 this.isUpgrade = isUpgrade;
@@ -486,7 +602,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 通知渠道
+             * notifyChannels.
              */
             public Builder notifyChannels(java.util.List < String > notifyChannels) {
                 this.notifyChannels = notifyChannels;
@@ -494,7 +610,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 故障Id
+             * problemId.
              */
             public Builder problemId(Long problemId) {
                 this.problemId = problemId;
@@ -502,7 +618,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 故障编号
+             * problemNumber.
              */
             public Builder problemNumber(String problemNumber) {
                 this.problemNumber = problemNumber;
@@ -510,7 +626,31 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务描述
+             * relRouteRuleDeleteType.
+             */
+            public Builder relRouteRuleDeleteType(Integer relRouteRuleDeleteType) {
+                this.relRouteRuleDeleteType = relRouteRuleDeleteType;
+                return this;
+            }
+
+            /**
+             * relServiceDeleteType.
+             */
+            public Builder relServiceDeleteType(Integer relServiceDeleteType) {
+                this.relServiceDeleteType = relServiceDeleteType;
+                return this;
+            }
+
+            /**
+             * relServiceGroupIsValid.
+             */
+            public Builder relServiceGroupIsValid(Integer relServiceGroupIsValid) {
+                this.relServiceGroupIsValid = relServiceGroupIsValid;
+                return this;
+            }
+
+            /**
+             * relatedServiceDescription.
              */
             public Builder relatedServiceDescription(String relatedServiceDescription) {
                 this.relatedServiceDescription = relatedServiceDescription;
@@ -518,7 +658,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服服务id
+             * relatedServiceGroupId.
              */
             public Builder relatedServiceGroupId(Long relatedServiceGroupId) {
                 this.relatedServiceGroupId = relatedServiceGroupId;
@@ -526,7 +666,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务组名称
+             * relatedServiceGroupName.
              */
             public Builder relatedServiceGroupName(String relatedServiceGroupName) {
                 this.relatedServiceGroupName = relatedServiceGroupName;
@@ -534,7 +674,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务ID
+             * relatedServiceId.
              */
             public Builder relatedServiceId(Long relatedServiceId) {
                 this.relatedServiceId = relatedServiceId;
@@ -542,7 +682,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务名称
+             * relatedServiceName.
              */
             public Builder relatedServiceName(String relatedServiceName) {
                 this.relatedServiceName = relatedServiceName;
@@ -550,7 +690,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 流转规则ID
+             * routeRuleId.
              */
             public Builder routeRuleId(Long routeRuleId) {
                 this.routeRuleId = routeRuleId;
@@ -558,7 +698,7 @@ public class GetIncidentResponseBody extends TeaModel {
             }
 
             /**
-             * 流转规则名称
+             * routeRuleName.
              */
             public Builder routeRuleName(String routeRuleName) {
                 this.routeRuleName = routeRuleName;

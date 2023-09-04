@@ -50,7 +50,7 @@ public class RefreshIntegrationConfigKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;
@@ -98,7 +98,7 @@ public class RefreshIntegrationConfigKeyResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * 集成秘钥
+             * key.
              */
             public Builder key(String key) {
                 this.key = key;

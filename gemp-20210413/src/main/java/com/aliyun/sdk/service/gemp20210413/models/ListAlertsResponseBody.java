@@ -86,7 +86,7 @@ public class ListAlertsResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * 报警列表
+         * data.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -94,7 +94,7 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * 当前页
+         * pageNumber.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -102,7 +102,7 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * 页的大小
+         * pageSize.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +110,7 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * 总条数
+         * totalCount.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -150,8 +150,17 @@ public class ListAlertsResponseBody extends TeaModel {
         @NameInMap("firstEventTime")
         private String firstEventTime;
 
+        @NameInMap("monitorSourceName")
+        private String monitorSourceName;
+
+        @NameInMap("relServiceDeleteType")
+        private Integer relServiceDeleteType;
+
         @NameInMap("relatedServiceName")
         private String relatedServiceName;
+
+        @NameInMap("routeRuleDeleteType")
+        private Integer routeRuleDeleteType;
 
         @NameInMap("routeRuleId")
         private Long routeRuleId;
@@ -172,7 +181,10 @@ public class ListAlertsResponseBody extends TeaModel {
             this.alertSourceName = builder.alertSourceName;
             this.createTime = builder.createTime;
             this.firstEventTime = builder.firstEventTime;
+            this.monitorSourceName = builder.monitorSourceName;
+            this.relServiceDeleteType = builder.relServiceDeleteType;
             this.relatedServiceName = builder.relatedServiceName;
+            this.routeRuleDeleteType = builder.routeRuleDeleteType;
             this.routeRuleId = builder.routeRuleId;
             this.routeRuleName = builder.routeRuleName;
             this.sourceEventCount = builder.sourceEventCount;
@@ -230,10 +242,31 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
+         * @return monitorSourceName
+         */
+        public String getMonitorSourceName() {
+            return this.monitorSourceName;
+        }
+
+        /**
+         * @return relServiceDeleteType
+         */
+        public Integer getRelServiceDeleteType() {
+            return this.relServiceDeleteType;
+        }
+
+        /**
          * @return relatedServiceName
          */
         public String getRelatedServiceName() {
             return this.relatedServiceName;
+        }
+
+        /**
+         * @return routeRuleDeleteType
+         */
+        public Integer getRouteRuleDeleteType() {
+            return this.routeRuleDeleteType;
         }
 
         /**
@@ -271,14 +304,17 @@ public class ListAlertsResponseBody extends TeaModel {
             private String alertSourceName; 
             private String createTime; 
             private String firstEventTime; 
+            private String monitorSourceName; 
+            private Integer relServiceDeleteType; 
             private String relatedServiceName; 
+            private Integer routeRuleDeleteType; 
             private Long routeRuleId; 
             private String routeRuleName; 
             private Long sourceEventCount; 
             private String title; 
 
             /**
-             * 报警ID
+             * alertId.
              */
             public Builder alertId(Long alertId) {
                 this.alertId = alertId;
@@ -286,7 +322,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 告警优先级  1，2，3，4  对应 p1,p2,p3,p4
+             * alertLevel.
              */
             public Builder alertLevel(String alertLevel) {
                 this.alertLevel = alertLevel;
@@ -294,7 +330,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 报警编号
+             * alertNumber.
              */
             public Builder alertNumber(String alertNumber) {
                 this.alertNumber = alertNumber;
@@ -302,7 +338,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 报警源
+             * alertSourceName.
              */
             public Builder alertSourceName(String alertSourceName) {
                 this.alertSourceName = alertSourceName;
@@ -310,7 +346,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建时间
+             * createTime.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -318,7 +354,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 第一次告警上报时间
+             * firstEventTime.
              */
             public Builder firstEventTime(String firstEventTime) {
                 this.firstEventTime = firstEventTime;
@@ -326,7 +362,23 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联服务名称
+             * monitorSourceName.
+             */
+            public Builder monitorSourceName(String monitorSourceName) {
+                this.monitorSourceName = monitorSourceName;
+                return this;
+            }
+
+            /**
+             * relServiceDeleteType.
+             */
+            public Builder relServiceDeleteType(Integer relServiceDeleteType) {
+                this.relServiceDeleteType = relServiceDeleteType;
+                return this;
+            }
+
+            /**
+             * relatedServiceName.
              */
             public Builder relatedServiceName(String relatedServiceName) {
                 this.relatedServiceName = relatedServiceName;
@@ -334,7 +386,15 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 关联流转规则ID
+             * routeRuleDeleteType.
+             */
+            public Builder routeRuleDeleteType(Integer routeRuleDeleteType) {
+                this.routeRuleDeleteType = routeRuleDeleteType;
+                return this;
+            }
+
+            /**
+             * routeRuleId.
              */
             public Builder routeRuleId(Long routeRuleId) {
                 this.routeRuleId = routeRuleId;
@@ -342,7 +402,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 流转规则名字
+             * routeRuleName.
              */
             public Builder routeRuleName(String routeRuleName) {
                 this.routeRuleName = routeRuleName;
@@ -350,7 +410,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 收敛量
+             * sourceEventCount.
              */
             public Builder sourceEventCount(Long sourceEventCount) {
                 this.sourceEventCount = sourceEventCount;
@@ -358,7 +418,7 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * 报警标题
+             * title.
              */
             public Builder title(String title) {
                 this.title = title;

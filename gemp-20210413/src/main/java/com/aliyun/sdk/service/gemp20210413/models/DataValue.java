@@ -138,7 +138,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * 配置描述
+         * configDescription.
          */
         public Builder configDescription(String configDescription) {
             this.configDescription = configDescription;
@@ -146,7 +146,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * 配置code
+         * configCode.
          */
         public Builder configCode(String configCode) {
             this.configCode = configCode;
@@ -154,7 +154,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * 配置父code
+         * parentCode.
          */
         public Builder parentCode(String parentCode) {
             this.parentCode = parentCode;
@@ -162,7 +162,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * key (用于前后端值传递)
+         * configKey.
          */
         public Builder configKey(String configKey) {
             this.configKey = configKey;
@@ -170,7 +170,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * value (用于前端展示)
+         * configValue.
          */
         public Builder configValue(String configValue) {
             this.configValue = configValue;
@@ -178,7 +178,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * 是否必选
+         * requirement.
          */
         public Builder requirement(Boolean requirement) {
             this.requirement = requirement;

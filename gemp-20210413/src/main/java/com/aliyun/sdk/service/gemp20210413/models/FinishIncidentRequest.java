@@ -114,18 +114,18 @@ public class FinishIncidentRequest extends Request {
             super();
         } 
 
-        private Builder(FinishIncidentRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.incidentFinishReason = response.incidentFinishReason;
-            this.incidentFinishReasonDescription = response.incidentFinishReasonDescription;
-            this.incidentFinishSolution = response.incidentFinishSolution;
-            this.incidentFinishSolutionDescription = response.incidentFinishSolutionDescription;
-            this.incidentIds = response.incidentIds;
+        private Builder(FinishIncidentRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.incidentFinishReason = request.incidentFinishReason;
+            this.incidentFinishReasonDescription = request.incidentFinishReasonDescription;
+            this.incidentFinishSolution = request.incidentFinishSolution;
+            this.incidentFinishSolutionDescription = request.incidentFinishSolutionDescription;
+            this.incidentIds = request.incidentIds;
         } 
 
         /**
-         * 幂等校验Id
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -134,7 +134,7 @@ public class FinishIncidentRequest extends Request {
         }
 
         /**
-         * 完结原因
+         * incidentFinishReason.
          */
         public Builder incidentFinishReason(Integer incidentFinishReason) {
             this.putBodyParameter("incidentFinishReason", incidentFinishReason);
@@ -143,7 +143,7 @@ public class FinishIncidentRequest extends Request {
         }
 
         /**
-         * 原因描述
+         * incidentFinishReasonDescription.
          */
         public Builder incidentFinishReasonDescription(String incidentFinishReasonDescription) {
             this.putBodyParameter("incidentFinishReasonDescription", incidentFinishReasonDescription);
@@ -152,7 +152,7 @@ public class FinishIncidentRequest extends Request {
         }
 
         /**
-         * 解决方案
+         * incidentFinishSolution.
          */
         public Builder incidentFinishSolution(Integer incidentFinishSolution) {
             this.putBodyParameter("incidentFinishSolution", incidentFinishSolution);
@@ -161,7 +161,7 @@ public class FinishIncidentRequest extends Request {
         }
 
         /**
-         * 解决方案描述
+         * incidentFinishSolutionDescription.
          */
         public Builder incidentFinishSolutionDescription(String incidentFinishSolutionDescription) {
             this.putBodyParameter("incidentFinishSolutionDescription", incidentFinishSolutionDescription);
@@ -170,7 +170,7 @@ public class FinishIncidentRequest extends Request {
         }
 
         /**
-         * 事件ID数组
+         * incidentIds.
          */
         public Builder incidentIds(java.util.List < Long > incidentIds) {
             this.putBodyParameter("incidentIds", incidentIds);

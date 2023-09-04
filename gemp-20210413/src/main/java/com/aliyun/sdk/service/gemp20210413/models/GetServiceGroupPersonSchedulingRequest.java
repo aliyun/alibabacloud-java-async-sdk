@@ -100,17 +100,17 @@ public class GetServiceGroupPersonSchedulingRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceGroupPersonSchedulingRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.endTime = response.endTime;
-            this.serviceGroupId = response.serviceGroupId;
-            this.startTime = response.startTime;
-            this.userId = response.userId;
+        private Builder(GetServiceGroupPersonSchedulingRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.endTime = request.endTime;
+            this.serviceGroupId = request.serviceGroupId;
+            this.startTime = request.startTime;
+            this.userId = request.userId;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -119,7 +119,7 @@ public class GetServiceGroupPersonSchedulingRequest extends Request {
         }
 
         /**
-         * 排班结束时间
+         * endTime.
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("endTime", endTime);
@@ -128,7 +128,7 @@ public class GetServiceGroupPersonSchedulingRequest extends Request {
         }
 
         /**
-         * 服务组ID
+         * serviceGroupId.
          */
         public Builder serviceGroupId(Long serviceGroupId) {
             this.putBodyParameter("serviceGroupId", serviceGroupId);
@@ -137,7 +137,7 @@ public class GetServiceGroupPersonSchedulingRequest extends Request {
         }
 
         /**
-         * 排班开始时间
+         * startTime.
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("startTime", startTime);
@@ -146,7 +146,7 @@ public class GetServiceGroupPersonSchedulingRequest extends Request {
         }
 
         /**
-         * 用户ID
+         * userId.
          */
         public Builder userId(Long userId) {
             this.putBodyParameter("userId", userId);

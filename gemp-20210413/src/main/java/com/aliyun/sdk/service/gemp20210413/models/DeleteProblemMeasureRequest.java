@@ -74,15 +74,15 @@ public class DeleteProblemMeasureRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteProblemMeasureRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.measureId = response.measureId;
-            this.problemId = response.problemId;
+        private Builder(DeleteProblemMeasureRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.measureId = request.measureId;
+            this.problemId = request.problemId;
         } 
 
         /**
-         * 幂等校验token
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -91,7 +91,7 @@ public class DeleteProblemMeasureRequest extends Request {
         }
 
         /**
-         * 故障改成措施id
+         * measureId.
          */
         public Builder measureId(Long measureId) {
             this.putBodyParameter("measureId", measureId);
@@ -100,7 +100,7 @@ public class DeleteProblemMeasureRequest extends Request {
         }
 
         /**
-         * 故障Id
+         * problemId.
          */
         public Builder problemId(String problemId) {
             this.putBodyParameter("problemId", problemId);

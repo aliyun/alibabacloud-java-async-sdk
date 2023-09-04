@@ -48,9 +48,9 @@ public class ListEscalationPlanServicesRequest extends Request {
             super();
         } 
 
-        private Builder(ListEscalationPlanServicesRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
+        private Builder(ListEscalationPlanServicesRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
         } 
 
         /**

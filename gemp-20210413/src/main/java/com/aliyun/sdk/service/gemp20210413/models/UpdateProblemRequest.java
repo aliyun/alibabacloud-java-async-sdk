@@ -165,22 +165,22 @@ public class UpdateProblemRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateProblemRequest response) {
-            super(response);
-            this.feedback = response.feedback;
-            this.level = response.level;
-            this.mainHandlerId = response.mainHandlerId;
-            this.preliminaryReason = response.preliminaryReason;
-            this.problemId = response.problemId;
-            this.problemName = response.problemName;
-            this.progressSummary = response.progressSummary;
-            this.progressSummaryRichTextId = response.progressSummaryRichTextId;
-            this.relatedServiceId = response.relatedServiceId;
-            this.serviceGroupIds = response.serviceGroupIds;
+        private Builder(UpdateProblemRequest request) {
+            super(request);
+            this.feedback = request.feedback;
+            this.level = request.level;
+            this.mainHandlerId = request.mainHandlerId;
+            this.preliminaryReason = request.preliminaryReason;
+            this.problemId = request.problemId;
+            this.problemName = request.problemName;
+            this.progressSummary = request.progressSummary;
+            this.progressSummaryRichTextId = request.progressSummaryRichTextId;
+            this.relatedServiceId = request.relatedServiceId;
+            this.serviceGroupIds = request.serviceGroupIds;
         } 
 
         /**
-         * 舆情反馈
+         * feedback.
          */
         public Builder feedback(String feedback) {
             this.putBodyParameter("feedback", feedback);
@@ -189,7 +189,7 @@ public class UpdateProblemRequest extends Request {
         }
 
         /**
-         * 故障等级
+         * level.
          */
         public Builder level(String level) {
             this.putBodyParameter("level", level);
@@ -198,7 +198,7 @@ public class UpdateProblemRequest extends Request {
         }
 
         /**
-         * 主要处理人
+         * mainHandlerId.
          */
         public Builder mainHandlerId(Long mainHandlerId) {
             this.putBodyParameter("mainHandlerId", mainHandlerId);
@@ -207,7 +207,7 @@ public class UpdateProblemRequest extends Request {
         }
 
         /**
-         * 初步原因
+         * preliminaryReason.
          */
         public Builder preliminaryReason(String preliminaryReason) {
             this.putBodyParameter("preliminaryReason", preliminaryReason);
@@ -216,7 +216,7 @@ public class UpdateProblemRequest extends Request {
         }
 
         /**
-         * 故障ID
+         * problemId.
          */
         public Builder problemId(Long problemId) {
             this.putBodyParameter("problemId", problemId);
@@ -225,7 +225,7 @@ public class UpdateProblemRequest extends Request {
         }
 
         /**
-         * 故障名
+         * problemName.
          */
         public Builder problemName(String problemName) {
             this.putBodyParameter("problemName", problemName);
@@ -234,7 +234,7 @@ public class UpdateProblemRequest extends Request {
         }
 
         /**
-         * 进展摘要
+         * progressSummary.
          */
         public Builder progressSummary(String progressSummary) {
             this.putBodyParameter("progressSummary", progressSummary);
@@ -243,7 +243,7 @@ public class UpdateProblemRequest extends Request {
         }
 
         /**
-         * 进展摘要富文本id
+         * progressSummaryRichTextId.
          */
         public Builder progressSummaryRichTextId(Long progressSummaryRichTextId) {
             this.putBodyParameter("progressSummaryRichTextId", progressSummaryRichTextId);
@@ -252,7 +252,7 @@ public class UpdateProblemRequest extends Request {
         }
 
         /**
-         * 所属服务
+         * relatedServiceId.
          */
         public Builder relatedServiceId(Long relatedServiceId) {
             this.putBodyParameter("relatedServiceId", relatedServiceId);
@@ -261,7 +261,7 @@ public class UpdateProblemRequest extends Request {
         }
 
         /**
-         * 应急协同组
+         * serviceGroupIds.
          */
         public Builder serviceGroupIds(java.util.List < Long > serviceGroupIds) {
             this.putBodyParameter("serviceGroupIds", serviceGroupIds);

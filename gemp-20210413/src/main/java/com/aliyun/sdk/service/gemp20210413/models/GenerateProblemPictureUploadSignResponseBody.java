@@ -50,7 +50,7 @@ public class GenerateProblemPictureUploadSignResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * data
          */
         public Builder data(Data data) {
             this.data = data;

@@ -62,14 +62,14 @@ public class DeleteRouteRuleRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteRouteRuleRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.routeRuleId = response.routeRuleId;
+        private Builder(DeleteRouteRuleRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.routeRuleId = request.routeRuleId;
         } 
 
         /**
-         * 幂等号
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -78,7 +78,7 @@ public class DeleteRouteRuleRequest extends Request {
         }
 
         /**
-         * 规则ID
+         * routeRuleId.
          */
         public Builder routeRuleId(Long routeRuleId) {
             this.putBodyParameter("routeRuleId", routeRuleId);

@@ -62,14 +62,14 @@ public class GetIncidentSubtotalCountRequest extends Request {
             super();
         } 
 
-        private Builder(GetIncidentSubtotalCountRequest response) {
-            super(response);
-            this.clientToken = response.clientToken;
-            this.incidentIds = response.incidentIds;
+        private Builder(GetIncidentSubtotalCountRequest request) {
+            super(request);
+            this.clientToken = request.clientToken;
+            this.incidentIds = request.incidentIds;
         } 
 
         /**
-         * 幂等标识
+         * clientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -78,7 +78,7 @@ public class GetIncidentSubtotalCountRequest extends Request {
         }
 
         /**
-         * 事件id列表
+         * incidentIds.
          */
         public Builder incidentIds(java.util.List < Long > incidentIds) {
             this.putBodyParameter("incidentIds", incidentIds);
