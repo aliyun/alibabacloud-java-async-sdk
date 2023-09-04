@@ -113,7 +113,7 @@ public class RelieveAccountRelationRequest extends Request {
         } 
 
         /**
-         * ChildUserId.
+         * The ID of the Alibaba Cloud account that is used as the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.
          */
         public Builder childUserId(Long childUserId) {
             this.putQueryParameter("ChildUserId", childUserId);
@@ -122,7 +122,7 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * ParentUserId.
+         * The ID of the Alibaba Cloud account that is used as the management account. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.
          */
         public Builder parentUserId(Long parentUserId) {
             this.putQueryParameter("ParentUserId", parentUserId);
@@ -131,7 +131,7 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * RelationId.
+         * The ID of the financial relationship between the management account and the member. You must set the RelationId parameter or all of the ParentUserId, ChildUserId, and RelationType parameters.
          */
         public Builder relationId(Long relationId) {
             this.putQueryParameter("RelationId", relationId);
@@ -140,7 +140,7 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * RelationType.
+         * The type of the financial relationship. Set the value to enterprise_group.
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("RelationType", relationType);
@@ -149,7 +149,7 @@ public class RelieveAccountRelationRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);

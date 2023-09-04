@@ -86,7 +86,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -302,7 +302,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             private String transactionType; 
 
             /**
-             * Amount.
+             * The amount of the transaction.
              */
             public Builder amount(String amount) {
                 this.amount = amount;
@@ -310,7 +310,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Balance.
+             * The balance of the account.
              */
             public Builder balance(String balance) {
                 this.balance = balance;
@@ -318,7 +318,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * BillingCycle.
+             * The billing cycle.
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -326,7 +326,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * FundType.
+             * The type of transaction payment. Valid values:
+             * <p>
+             * 
+             * Cash: pay for the transaction in cash. Deposit: pay for the transaction with deposit. RegularBankCreditRefund: pay for the transaction with credit refund controlled by a bank. DirectPay: directly pay for the transaction.
              */
             public Builder fundType(String fundType) {
                 this.fundType = fundType;
@@ -334,7 +337,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * RecordID.
+             * The ID of the order or bill.
              */
             public Builder recordID(String recordID) {
                 this.recordID = recordID;
@@ -342,7 +345,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * Remarks.
+             * The remarks.
              */
             public Builder remarks(String remarks) {
                 this.remarks = remarks;
@@ -350,7 +353,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionAccount.
+             * The transaction account.
              */
             public Builder transactionAccount(String transactionAccount) {
                 this.transactionAccount = transactionAccount;
@@ -358,7 +361,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionChannel.
+             * The transaction channel.
              */
             public Builder transactionChannel(String transactionChannel) {
                 this.transactionChannel = transactionChannel;
@@ -366,7 +369,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionChannelSN.
+             * The serial number of the transaction channel.
              */
             public Builder transactionChannelSN(String transactionChannelSN) {
                 this.transactionChannelSN = transactionChannelSN;
@@ -374,7 +377,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionFlow.
+             * Indicates whether the transaction is of the income type or the expenditure type. If one of the following types is specified, results for the specific type are returned. If the type that you specified for the parameter does not belong to the following types, no result is returned. If the parameter is left empty, results for transactions of the income and expenditure types are all returned. Valid values:
+             * <p>
+             * 
+             * Income and Expense.
              */
             public Builder transactionFlow(String transactionFlow) {
                 this.transactionFlow = transactionFlow;
@@ -382,7 +388,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionNumber.
+             * The number of the transaction.
              */
             public Builder transactionNumber(String transactionNumber) {
                 this.transactionNumber = transactionNumber;
@@ -390,7 +396,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionTime.
+             * The time when the transaction was made.
              */
             public Builder transactionTime(String transactionTime) {
                 this.transactionTime = transactionTime;
@@ -398,7 +404,10 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TransactionType.
+             * The type of the transaction. If one of the following transaction types is specified, results for the specified transaction type are returned. If the transaction type that you specified does not belong to the following transaction types, no result is returned. If the parameter is left empty, results for all transaction types are returned. Valid values:
+             * <p>
+             * 
+             * Payment, Withdraw, Refund, Consumption, Transfer, and Adjust.
              */
             public Builder transactionType(String transactionType) {
                 this.transactionType = transactionType;
@@ -528,7 +537,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * AccountName.
+             * The name of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -536,7 +545,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * AccountTransactionsList.
+             * The details of the transactions within the account.
              */
             public Builder accountTransactionsList(DataAccountTransactionsList accountTransactionsList) {
                 this.accountTransactionsList = accountTransactionsList;
@@ -544,7 +553,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * This parameter is invalid.
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -552,7 +561,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * The token that is used for paging.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -560,7 +569,7 @@ public class QueryAccountTransactionDetailsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

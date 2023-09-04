@@ -86,7 +86,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -254,7 +254,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             private String RIInstanceId; 
 
             /**
-             * DeductDate.
+             * The time when the fees are deducted by using the RI.
              */
             public Builder deductDate(String deductDate) {
                 this.deductDate = deductDate;
@@ -262,7 +262,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DeductFactorTotal.
+             * The total amount of computing power of the RI or capacity of SCU in the time period.
              */
             public Builder deductFactorTotal(Float deductFactorTotal) {
                 this.deductFactorTotal = deductFactorTotal;
@@ -270,7 +270,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DeductHours.
+             * The deduct factor. This parameter is returned only if the RICommodityCode parameter is set to ecsRi.
              */
             public Builder deductHours(String deductHours) {
                 this.deductHours = deductHours;
@@ -278,7 +278,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DeductQuantity.
+             * The computing power or capacity of the pay-as-you-go instance whose fees are deducted by using the RI.
              */
             public Builder deductQuantity(Float deductQuantity) {
                 this.deductQuantity = deductQuantity;
@@ -286,7 +286,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DeductedCommodityCode.
+             * The code of the service whose fees are deducted by using the RI.
              */
             public Builder deductedCommodityCode(String deductedCommodityCode) {
                 this.deductedCommodityCode = deductedCommodityCode;
@@ -294,7 +294,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DeductedInstanceId.
+             * The ID of the instance whose fees are deducted by using the RI.
              */
             public Builder deductedInstanceId(String deductedInstanceId) {
                 this.deductedInstanceId = deductedInstanceId;
@@ -302,7 +302,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * DeductedProductDetail.
+             * The name of the service whose fees are deducted by using the RI.
              */
             public Builder deductedProductDetail(String deductedProductDetail) {
                 this.deductedProductDetail = deductedProductDetail;
@@ -310,7 +310,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpec.
+             * The instance type of the instance whose fees are deducted by using the RI.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -318,7 +318,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RIInstanceId.
+             * The ID of the RI.
              */
             public Builder RIInstanceId(String RIInstanceId) {
                 this.RIInstanceId = RIInstanceId;
@@ -436,7 +436,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * DetailList.
+             * The usage details of the RI.
              */
             public Builder detailList(DataDetailList detailList) {
                 this.detailList = detailList;
@@ -444,7 +444,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The number of the returned page.
              */
             public Builder pageNum(Long pageNum) {
                 this.pageNum = pageNum;
@@ -452,7 +452,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -460,7 +460,7 @@ public class QueryRIUtilizationDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

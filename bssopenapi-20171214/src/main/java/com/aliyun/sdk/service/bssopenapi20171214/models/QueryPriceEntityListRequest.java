@@ -17,9 +17,14 @@ public class QueryPriceEntityListRequest extends Request {
     @Validation(required = true)
     private String commodityCode;
 
+    @Query
+    @NameInMap("Lang")
+    private String lang;
+
     private QueryPriceEntityListRequest(Builder builder) {
         super(builder);
         this.commodityCode = builder.commodityCode;
+        this.lang = builder.lang;
     }
 
     public static Builder builder() {
@@ -42,8 +47,16 @@ public class QueryPriceEntityListRequest extends Request {
         return this.commodityCode;
     }
 
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
     public static final class Builder extends Request.Builder<QueryPriceEntityListRequest, Builder> {
         private String commodityCode; 
+        private String lang; 
 
         private Builder() {
             super();
@@ -52,14 +65,24 @@ public class QueryPriceEntityListRequest extends Request {
         private Builder(QueryPriceEntityListRequest request) {
             super(request);
             this.commodityCode = request.commodityCode;
+            this.lang = request.lang;
         } 
 
         /**
-         * CommodityCode.
+         * The code of the service.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
             this.commodityCode = commodityCode;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

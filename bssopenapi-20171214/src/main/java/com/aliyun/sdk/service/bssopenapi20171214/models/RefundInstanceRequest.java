@@ -110,7 +110,7 @@ public class RefundInstanceRequest extends Request {
         } 
 
         /**
-         * clientToken
+         * This parameter is required for scenarios that need idempotence. The UUID that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -119,7 +119,7 @@ public class RefundInstanceRequest extends Request {
         }
 
         /**
-         * immediatelyRelease
+         * This parameter is required for unsubscription scenarios. Valid values: 1 and 0. A value of 1 specifies that the instance is immediately released. A value of 0 specifies that the instance is shut down based on the shutdown policy. This parameter is supported only for specified services. Default value: 1.
          */
         public Builder immediatelyRelease(String immediatelyRelease) {
             this.putQueryParameter("ImmediatelyRelease", immediatelyRelease);
@@ -128,7 +128,7 @@ public class RefundInstanceRequest extends Request {
         }
 
         /**
-         * instanceId
+         * The ID of the instance. This parameter is required for unsubscription scenarios. Do not specify a custom name for this parameter.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -137,7 +137,7 @@ public class RefundInstanceRequest extends Request {
         }
 
         /**
-         * productCode
+         * The code of the service. This parameter is required for unsubscription scenarios.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -146,7 +146,7 @@ public class RefundInstanceRequest extends Request {
         }
 
         /**
-         * productType
+         * The type of the service. This parameter is required for unsubscription scenarios. Unless otherwise specified, set this parameter to an empty string.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

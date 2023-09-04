@@ -112,7 +112,7 @@ public class QueryBillOverviewRequest extends Request {
         } 
 
         /**
-         * BillOwnerId.
+         * The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -121,7 +121,7 @@ public class QueryBillOverviewRequest extends Request {
         }
 
         /**
-         * BillingCycle.
+         * The billing cycle, in the YYYY-MM format.
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -130,7 +130,7 @@ public class QueryBillOverviewRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -139,7 +139,7 @@ public class QueryBillOverviewRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -148,7 +148,11 @@ public class QueryBillOverviewRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   Subscription: the subscription billing method
+         * *   PayAsYouGo: the pay-as-you-go billing method
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

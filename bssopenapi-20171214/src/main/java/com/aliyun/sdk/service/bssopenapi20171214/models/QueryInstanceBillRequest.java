@@ -210,7 +210,7 @@ public class QueryInstanceBillRequest extends Request {
         } 
 
         /**
-         * BillOwnerId.
+         * The ID of the member. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account are queried by default.
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -219,7 +219,7 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * BillingCycle.
+         * The billing cycle. Format: YYYY-MM.
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -228,7 +228,7 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * BillingDate.
+         * The billing date. This parameter is required only if the **Granularity** parameter is set to DAILY. Format: YYYY-MM-DD.
          */
         public Builder billingDate(String billingDate) {
             this.putQueryParameter("BillingDate", billingDate);
@@ -237,7 +237,13 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * Granularity.
+         * The granularity at which bills are queried. Valid values:
+         * <p>
+         * 
+         * *   MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.
+         * *   DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.
+         * 
+         * You must set the **BillingDate** parameter before you can set the Granularity parameter to DAILY.
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -246,7 +252,13 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * IsBillingItem.
+         * Specifies whether to query data by billable item. Valid values:
+         * <p>
+         * 
+         * *   false: does not query data by billable item. The data queried is consistent with the data that is displayed for the specified instance on the Billing Details tab of the Bill Details page in User Center.
+         * *   true: queries data by billable item. The data queried is consistent with the data that is displayed for the specified billable item on the Billing Details tab of the Bill Details page in User Center.
+         * 
+         * Default value: false.
          */
         public Builder isBillingItem(Boolean isBillingItem) {
             this.putQueryParameter("IsBillingItem", isBillingItem);
@@ -255,7 +267,11 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * IsHideZeroCharge.
+         * Specifies whether to filter out a bill whose pretax gross amount and pretax amount are 0. Default value: false.******** Valid values:
+         * <p>
+         * 
+         * *   false: does not filter the bill.
+         * *   true: filters the bill.
          */
         public Builder isHideZeroCharge(Boolean isHideZeroCharge) {
             this.putQueryParameter("IsHideZeroCharge", isHideZeroCharge);
@@ -273,7 +289,7 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -282,7 +298,7 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. Maximum value: 300.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -291,7 +307,7 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -300,7 +316,7 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service. This parameter is required if the ProductCode parameter is set to the service code of Alibaba Cloud Marketplace.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -309,7 +325,15 @@ public class QueryInstanceBillRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   Subscription: the subscription billing method
+         * *   PayAsYouGo: the pay-as-you-go billing method
+         * 
+         * **
+         * 
+         * ****This parameter must be used together with the **ProductCode** parameter.
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

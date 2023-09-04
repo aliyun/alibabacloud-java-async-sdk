@@ -86,7 +86,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +102,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * message
+         * The description of the execution result.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * success
+         * Indicates whether the request was successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +194,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
             private Double refundAmount; 
 
             /**
-             * currency
+             * The currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -202,7 +202,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * hostId
+             * The site of the execution host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -210,7 +210,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * instanceId
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -218,7 +218,7 @@ public class InquiryPriceRefundInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * refundAmount
+             * The refundable amount.
              */
             public Builder refundAmount(Double refundAmount) {
                 this.refundAmount = refundAmount;

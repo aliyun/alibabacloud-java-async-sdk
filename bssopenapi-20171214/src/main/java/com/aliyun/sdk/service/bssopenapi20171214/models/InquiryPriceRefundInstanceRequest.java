@@ -96,7 +96,7 @@ public class InquiryPriceRefundInstanceRequest extends Request {
         } 
 
         /**
-         * clientToken
+         * This parameter is required for scenarios that need idempotence. The UUID that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -105,7 +105,7 @@ public class InquiryPriceRefundInstanceRequest extends Request {
         }
 
         /**
-         * instanceId
+         * The ID of the instance. This parameter is required for unsubscription scenarios.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -114,7 +114,7 @@ public class InquiryPriceRefundInstanceRequest extends Request {
         }
 
         /**
-         * productCode
+         * The code of the service. This parameter is required for unsubscription scenarios.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -123,7 +123,7 @@ public class InquiryPriceRefundInstanceRequest extends Request {
         }
 
         /**
-         * productType
+         * The type of the service. This parameter is required for unsubscription scenarios. Unless otherwise specified, set this parameter to an empty string.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

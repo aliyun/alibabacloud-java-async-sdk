@@ -86,7 +86,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,6 +138,9 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         @NameInMap("BucketPath")
         private String bucketPath;
 
+        @NameInMap("RowLimitPerFile")
+        private Integer rowLimitPerFile;
+
         @NameInMap("SubscribeBucket")
         private String subscribeBucket;
 
@@ -153,6 +156,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         private Item(Builder builder) {
             this.bucketOwnerId = builder.bucketOwnerId;
             this.bucketPath = builder.bucketPath;
+            this.rowLimitPerFile = builder.rowLimitPerFile;
             this.subscribeBucket = builder.subscribeBucket;
             this.subscribeLanguage = builder.subscribeLanguage;
             this.subscribeTime = builder.subscribeTime;
@@ -179,6 +183,13 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
          */
         public String getBucketPath() {
             return this.bucketPath;
+        }
+
+        /**
+         * @return rowLimitPerFile
+         */
+        public Integer getRowLimitPerFile() {
+            return this.rowLimitPerFile;
         }
 
         /**
@@ -212,13 +223,14 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
         public static final class Builder {
             private Long bucketOwnerId; 
             private String bucketPath; 
+            private Integer rowLimitPerFile; 
             private String subscribeBucket; 
             private String subscribeLanguage; 
             private String subscribeTime; 
             private String subscribeType; 
 
             /**
-             * BucketOwnerId.
+             * The owner ID of the OSS bucket.
              */
             public Builder bucketOwnerId(Long bucketOwnerId) {
                 this.bucketOwnerId = bucketOwnerId;
@@ -226,7 +238,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * BucketPath.
+             * The directory of the OSS bucket.
              */
             public Builder bucketPath(String bucketPath) {
                 this.bucketPath = bucketPath;
@@ -234,7 +246,15 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * SubscribeBucket.
+             * RowLimitPerFile.
+             */
+            public Builder rowLimitPerFile(Integer rowLimitPerFile) {
+                this.rowLimitPerFile = rowLimitPerFile;
+                return this;
+            }
+
+            /**
+             * The ID of the OSS bucket that stores the subscribed bill.
              */
             public Builder subscribeBucket(String subscribeBucket) {
                 this.subscribeBucket = subscribeBucket;
@@ -242,7 +262,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * SubscribeLanguage.
+             * The code of the language.
              */
             public Builder subscribeLanguage(String subscribeLanguage) {
                 this.subscribeLanguage = subscribeLanguage;
@@ -250,7 +270,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * SubscribeTime.
+             * The time when the subscribed bill was stored in the OSS bucket. The time is displayed in the YYYY-MM-DD hh:mm:ss format.
              */
             public Builder subscribeTime(String subscribeTime) {
                 this.subscribeTime = subscribeTime;
@@ -258,7 +278,11 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * SubscribeType.
+             * The type of the subscribed bill. Valid values:
+             * <p>
+             * 
+             * *   BillingItemDetailForBillingPeriod: bill of a billable item
+             * *   InstanceDetailForBillingPeriod: bill of an instance
              */
             public Builder subscribeType(String subscribeType) {
                 this.subscribeType = subscribeType;
@@ -364,7 +388,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             private Items items; 
 
             /**
-             * AccountID.
+             * The ID of the account used to perform the query.
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -372,7 +396,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The name of the account used to perform the query.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -380,7 +404,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * The details of the subscribed bills.
              */
             public Builder items(Items items) {
                 this.items = items;

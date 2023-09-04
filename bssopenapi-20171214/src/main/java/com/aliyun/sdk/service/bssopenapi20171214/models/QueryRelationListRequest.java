@@ -97,7 +97,7 @@ public class QueryRelationListRequest extends Request {
         } 
 
         /**
-         * PageNum.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -106,7 +106,7 @@ public class QueryRelationListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -115,7 +115,7 @@ public class QueryRelationListRequest extends Request {
         }
 
         /**
-         * StatusList.
+         * The states of the relationships between the management account and its members. The valid values of this parameter are the enumeration members of the RelationshipStatusEnum data type. If you do not specify this parameter, valid relationship states are queried by default.
          */
         public Builder statusList(java.util.List < String > statusList) {
             this.putQueryParameter("StatusList", statusList);
@@ -124,7 +124,7 @@ public class QueryRelationListRequest extends Request {
         }
 
         /**
-         * UserId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder userId(Long userId) {
             this.putQueryParameter("UserId", userId);

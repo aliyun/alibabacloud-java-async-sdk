@@ -29,6 +29,10 @@ public class SubscribeBillToOSSRequest extends Request {
     private String multAccountRelSubscribe;
 
     @Query
+    @NameInMap("RowLimitPerFile")
+    private Integer rowLimitPerFile;
+
+    @Query
     @NameInMap("SubscribeBucket")
     @Validation(required = true)
     private String subscribeBucket;
@@ -43,6 +47,7 @@ public class SubscribeBillToOSSRequest extends Request {
         this.bucketOwnerId = builder.bucketOwnerId;
         this.bucketPath = builder.bucketPath;
         this.multAccountRelSubscribe = builder.multAccountRelSubscribe;
+        this.rowLimitPerFile = builder.rowLimitPerFile;
         this.subscribeBucket = builder.subscribeBucket;
         this.subscribeType = builder.subscribeType;
     }
@@ -89,6 +94,13 @@ public class SubscribeBillToOSSRequest extends Request {
     }
 
     /**
+     * @return rowLimitPerFile
+     */
+    public Integer getRowLimitPerFile() {
+        return this.rowLimitPerFile;
+    }
+
+    /**
      * @return subscribeBucket
      */
     public String getSubscribeBucket() {
@@ -107,6 +119,7 @@ public class SubscribeBillToOSSRequest extends Request {
         private Long bucketOwnerId; 
         private String bucketPath; 
         private String multAccountRelSubscribe; 
+        private Integer rowLimitPerFile; 
         private String subscribeBucket; 
         private String subscribeType; 
 
@@ -120,6 +133,7 @@ public class SubscribeBillToOSSRequest extends Request {
             this.bucketOwnerId = request.bucketOwnerId;
             this.bucketPath = request.bucketPath;
             this.multAccountRelSubscribe = request.multAccountRelSubscribe;
+            this.rowLimitPerFile = request.rowLimitPerFile;
             this.subscribeBucket = request.subscribeBucket;
             this.subscribeType = request.subscribeType;
         } 
@@ -143,7 +157,7 @@ public class SubscribeBillToOSSRequest extends Request {
         }
 
         /**
-         * OSS Bucket存储路径
+         * BucketPath.
          */
         public Builder bucketPath(String bucketPath) {
             this.putQueryParameter("BucketPath", bucketPath);
@@ -157,6 +171,15 @@ public class SubscribeBillToOSSRequest extends Request {
         public Builder multAccountRelSubscribe(String multAccountRelSubscribe) {
             this.putQueryParameter("MultAccountRelSubscribe", multAccountRelSubscribe);
             this.multAccountRelSubscribe = multAccountRelSubscribe;
+            return this;
+        }
+
+        /**
+         * RowLimitPerFile.
+         */
+        public Builder rowLimitPerFile(Integer rowLimitPerFile) {
+            this.putQueryParameter("RowLimitPerFile", rowLimitPerFile);
+            this.rowLimitPerFile = rowLimitPerFile;
             return this;
         }
 

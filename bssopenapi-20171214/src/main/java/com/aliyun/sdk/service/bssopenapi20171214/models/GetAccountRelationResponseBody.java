@@ -86,7 +86,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +102,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * message
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
         }
 
         /**
-         * success
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -242,7 +242,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ChildUserId.
+             * The ID of the Alibaba Cloud account that is used as a member.
              */
             public Builder childUserId(Long childUserId) {
                 this.childUserId = childUserId;
@@ -250,7 +250,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the financial relationship between the management account and the member was terminated.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -258,7 +258,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the financial relationship between the management account and the member was modified.
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
@@ -266,7 +266,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * id
+             * The ID of the financial relationship.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -274,7 +274,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * parentUserId
+             * The ID of the Alibaba Cloud account that is used as the management account.
              */
             public Builder parentUserId(Long parentUserId) {
                 this.parentUserId = parentUserId;
@@ -282,7 +282,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the financial relationship between the management account and the member was established.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -290,7 +290,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the financial relationship between the management account and the member.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -298,7 +298,7 @@ public class GetAccountRelationResponseBody extends TeaModel {
             }
 
             /**
-             * type
+             * The type of the financial relationship.
              */
             public Builder type(String type) {
                 this.type = type;

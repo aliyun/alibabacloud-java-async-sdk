@@ -86,7 +86,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +206,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             private String mybankCreditAmount; 
 
             /**
-             * AvailableAmount.
+             * The available balance of the account.
              */
             public Builder availableAmount(String availableAmount) {
                 this.availableAmount = availableAmount;
@@ -214,7 +214,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableCashAmount.
+             * The available balance in cash.
              */
             public Builder availableCashAmount(String availableCashAmount) {
                 this.availableCashAmount = availableCashAmount;
@@ -222,7 +222,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             }
 
             /**
-             * CreditAmount.
+             * The credit balance of the account.
              */
             public Builder creditAmount(String creditAmount) {
                 this.creditAmount = creditAmount;
@@ -230,7 +230,12 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * The type of the currency. Valid values:
+             * <p>
+             * 
+             * *   CNY: Chinese Yuan
+             * *   USD: US dollar
+             * *   JPY: Japanese Yen
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -238,7 +243,7 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
             }
 
             /**
-             * MybankCreditAmount.
+             * The credit line controlled by MYbank.
              */
             public Builder mybankCreditAmount(String mybankCreditAmount) {
                 this.mybankCreditAmount = mybankCreditAmount;

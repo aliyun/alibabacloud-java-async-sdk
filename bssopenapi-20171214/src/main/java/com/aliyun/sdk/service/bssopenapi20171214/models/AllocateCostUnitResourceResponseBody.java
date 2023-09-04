@@ -86,7 +86,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +182,11 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
             private Long toUnitUserId; 
 
             /**
-             * IsSuccess.
+             * Indicates whether resources are allocated to the specified cost center. Valid values:
+             * <p>
+             * 
+             * *   true: The resources are allocated to the specified cost center.
+             * *   false: The resources fail to be allocated to the specified cost center.
              */
             public Builder isSuccess(Boolean isSuccess) {
                 this.isSuccess = isSuccess;
@@ -190,7 +194,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ToUnitId.
+             * The ID of the destination cost center.
              */
             public Builder toUnitId(Long toUnitId) {
                 this.toUnitId = toUnitId;
@@ -198,7 +202,7 @@ public class AllocateCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ToUnitUserId.
+             * The user ID of the owner of the destination cost center.
              */
             public Builder toUnitUserId(Long toUnitUserId) {
                 this.toUnitUserId = toUnitUserId;

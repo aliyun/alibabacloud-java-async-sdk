@@ -86,7 +86,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +218,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AccountType.
+             * The type of the financial account. A value of MASTER indicates that the account is a management account. A value of MEMBER indicates that the account is a member.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -226,7 +226,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsFinancialAccount.
+             * Indicates whether the account is a financial account. A value of true indicates that the account is a financial account. A value of false indicates that the account is not a financial account.
              */
             public Builder isFinancialAccount(Boolean isFinancialAccount) {
                 this.isFinancialAccount = isFinancialAccount;
@@ -234,7 +234,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MemberGroupId.
+             * The ID of the group to which the member belongs.
              */
             public Builder memberGroupId(Long memberGroupId) {
                 this.memberGroupId = memberGroupId;
@@ -242,7 +242,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MemberGroupName.
+             * The name of the group to which the member belongs.
              */
             public Builder memberGroupName(String memberGroupName) {
                 this.memberGroupName = memberGroupName;
@@ -250,7 +250,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MemberNickName.
+             * The display name of the member.
              */
             public Builder memberNickName(String memberNickName) {
                 this.memberNickName = memberNickName;
@@ -258,7 +258,7 @@ public class QueryFinancialAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username of the account.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

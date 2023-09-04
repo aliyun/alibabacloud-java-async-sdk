@@ -159,7 +159,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         } 
 
         /**
-         * AdjustType.
+         * The type of the consumption amount adjustment. Valid values: increase: The consumption amount increases because new consumption occurs. decrease: The consumption amount decreases because funds are added to the account. This parameter is required.
          */
         public Builder adjustType(String adjustType) {
             this.putQueryParameter("AdjustType", adjustType);
@@ -168,7 +168,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * Amount.
+         * The amount to be adjusted. Unit: CNY
          */
         public Builder amount(String amount) {
             this.putQueryParameter("Amount", amount);
@@ -177,7 +177,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * BusinessType.
+         * The type of the business.
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -186,7 +186,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * Currency.
+         * The type of the currency.
          */
         public Builder currency(String currency) {
             this.putQueryParameter("Currency", currency);
@@ -195,7 +195,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * ExtendMap.
+         * The extended field of a message.
          */
         public Builder extendMap(String extendMap) {
             this.putQueryParameter("ExtendMap", extendMap);
@@ -204,7 +204,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * OutBizId.
+         * The ID of the primary key for external business. The ID is used for idempotence verification.
          */
         public Builder outBizId(String outBizId) {
             this.putQueryParameter("OutBizId", outBizId);
@@ -222,7 +222,7 @@ public class ChangeResellerConsumeAmountRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source of the request. Specify the system name for the parameter.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);

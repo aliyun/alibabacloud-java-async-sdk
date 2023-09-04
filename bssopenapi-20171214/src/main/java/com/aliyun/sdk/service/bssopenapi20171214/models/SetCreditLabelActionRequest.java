@@ -283,7 +283,7 @@ public class SetCreditLabelActionRequest extends Request {
         } 
 
         /**
-         * ActionType.
+         * The type of the action. Valid values: SET: adds the pay-as-you-go tag. CANCEL: removes the pay-as-you-go tag.
          */
         public Builder actionType(String actionType) {
             this.putQueryParameter("ActionType", actionType);
@@ -292,7 +292,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * ClearCycle.
+         * The cycle in which the account is notified of payment. **You do not need to specify this parameter.
          */
         public Builder clearCycle(String clearCycle) {
             this.putQueryParameter("ClearCycle", clearCycle);
@@ -301,7 +301,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * CreditAmount.
+         * The credit line of the account.
          */
         public Builder creditAmount(String creditAmount) {
             this.putQueryParameter("CreditAmount", creditAmount);
@@ -310,7 +310,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * CurrencyCode.
+         * The code of currency that is used. Valid values: USD and CNY.
          */
         public Builder currencyCode(String currencyCode) {
             this.putQueryParameter("CurrencyCode", currencyCode);
@@ -319,7 +319,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * DailyCycle.
+         * The cycle in which payment can be deferred. **You do not need to specify this parameter.
          */
         public Builder dailyCycle(String dailyCycle) {
             this.putQueryParameter("DailyCycle", dailyCycle);
@@ -328,7 +328,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the action.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -337,7 +337,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * IsNeedAddSettleLabel.
+         * Specifies whether to add the post-settlement tag. **You do not need to specify this parameter.
          */
         public Builder isNeedAddSettleLabel(String isNeedAddSettleLabel) {
             this.putQueryParameter("IsNeedAddSettleLabel", isNeedAddSettleLabel);
@@ -346,7 +346,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * IsNeedAdjustCreditAccount.
+         * Specifies whether to synchronize the monthly settlement tag. **You do not need to specify this parameter.
          */
         public Builder isNeedAdjustCreditAccount(String isNeedAdjustCreditAccount) {
             this.putQueryParameter("IsNeedAdjustCreditAccount", isNeedAdjustCreditAccount);
@@ -355,7 +355,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * IsNeedSaveNotifyRule.
+         * Specifies whether to save the notification rule. **You do not need to specify this parameter.
          */
         public Builder isNeedSaveNotifyRule(String isNeedSaveNotifyRule) {
             this.putQueryParameter("IsNeedSaveNotifyRule", isNeedSaveNotifyRule);
@@ -364,7 +364,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * IsNeedSetCreditAmount.
+         * Specifies whether to set a credit line. **You do not need to specify this parameter.
          */
         public Builder isNeedSetCreditAmount(String isNeedSetCreditAmount) {
             this.putQueryParameter("IsNeedSetCreditAmount", isNeedSetCreditAmount);
@@ -373,7 +373,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * NeedNotice.
+         * Specifies whether to notify the account of an identity change. **You do not need to specify this parameter.
          */
         public Builder needNotice(Boolean needNotice) {
             this.putQueryParameter("NeedNotice", needNotice);
@@ -382,7 +382,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * NewCreateMode.
+         * Specifies whether to call another operation to create a credit ledger. **You do not need to specify this parameter.
          */
         public Builder newCreateMode(Boolean newCreateMode) {
             this.putQueryParameter("NewCreateMode", newCreateMode);
@@ -391,7 +391,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * Operator.
+         * The operator who performs the action.
          */
         public Builder operator(String operator) {
             this.putQueryParameter("Operator", operator);
@@ -400,7 +400,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);
@@ -409,7 +409,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * SiteCode.
+         * The code of the site. **You do not need to specify this parameter.
          */
         public Builder siteCode(String siteCode) {
             this.putQueryParameter("SiteCode", siteCode);
@@ -418,7 +418,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * Source.
+         * The source of the action.
          */
         public Builder source(String source) {
             this.putQueryParameter("Source", source);
@@ -427,7 +427,7 @@ public class SetCreditLabelActionRequest extends Request {
         }
 
         /**
-         * Uid.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder uid(String uid) {
             this.putQueryParameter("Uid", uid);

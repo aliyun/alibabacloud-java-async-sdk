@@ -86,7 +86,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data that is returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message that is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             private java.util.List < String > priceFactorValueList; 
 
             /**
-             * PriceFactorCode.
+             * The code of the factor.
              */
             public Builder priceFactorCode(String priceFactorCode) {
                 this.priceFactorCode = priceFactorCode;
@@ -190,7 +190,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             }
 
             /**
-             * PriceFactorName.
+             * The name of the factor.
              */
             public Builder priceFactorName(String priceFactorName) {
                 this.priceFactorName = priceFactorName;
@@ -198,7 +198,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             }
 
             /**
-             * PriceFactorValueList.
+             * The values of the factor.
              */
             public Builder priceFactorValueList(java.util.List < String > priceFactorValueList) {
                 this.priceFactorValueList = priceFactorValueList;
@@ -263,7 +263,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             private java.util.List < PriceFactorList> priceFactorList; 
 
             /**
-             * PriceEntityCode.
+             * The code of the billable item.
              */
             public Builder priceEntityCode(String priceEntityCode) {
                 this.priceEntityCode = priceEntityCode;
@@ -271,7 +271,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             }
 
             /**
-             * PriceEntityName.
+             * The name of the billable item.
              */
             public Builder priceEntityName(String priceEntityName) {
                 this.priceEntityName = priceEntityName;
@@ -279,7 +279,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             }
 
             /**
-             * PriceFactorList.
+             * The factors of the billable item.
              */
             public Builder priceFactorList(java.util.List < PriceFactorList> priceFactorList) {
                 this.priceFactorList = priceFactorList;
@@ -320,7 +320,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
             private java.util.List < PriceEntityInfoList> priceEntityInfoList; 
 
             /**
-             * PriceEntityInfoList.
+             * The information about the billable items.
              */
             public Builder priceEntityInfoList(java.util.List < PriceEntityInfoList> priceEntityInfoList) {
                 this.priceEntityInfoList = priceEntityInfoList;

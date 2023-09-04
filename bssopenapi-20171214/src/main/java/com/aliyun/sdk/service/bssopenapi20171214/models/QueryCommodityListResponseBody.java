@@ -86,7 +86,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -118,7 +118,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the information about the service was queried.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
             private String commodityName; 
 
             /**
-             * ChargeType.
+             * The payment type. Valid values: POSTPAY (pay-as-you-go) and PREPAY (subscription).
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -190,7 +190,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * The code of the service, which is the same as that on the Billing Management page.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -198,7 +198,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityName.
+             * The name of the service.
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -239,7 +239,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
             private java.util.List < CommodityList> commodityList; 
 
             /**
-             * CommodityList.
+             * The information about the service.
              */
             public Builder commodityList(java.util.List < CommodityList> commodityList) {
                 this.commodityList = commodityList;

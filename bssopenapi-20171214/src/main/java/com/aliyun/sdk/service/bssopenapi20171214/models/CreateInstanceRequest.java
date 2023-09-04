@@ -182,7 +182,7 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. The server checks whether a request that uses the same client token has been received. If a request that uses the same client token has been received, the server returns the same request result as the previous request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -191,7 +191,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Logistics.
+         * The logistics address of this order. This parameter is generally valid for physical orders.
          */
         public Builder logistics(String logistics) {
             this.putQueryParameter("Logistics", logistics);
@@ -209,7 +209,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Parameter.
+         * The details of the modules.
          */
         public Builder parameter(java.util.List < Parameter> parameter) {
             this.putQueryParameter("Parameter", parameter);
@@ -218,7 +218,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration. Unit: month. The value must be an integral multiple of 12.
+         * <p>
+         * 
+         * >  This parameter is required if you create a subscription instance.
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -227,7 +230,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service to which the instance belongs. You can query the service code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud Services**.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -236,7 +239,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -245,7 +248,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * RenewPeriod.
+         * The auto-renewal period. Unit: month.
+         * <p>
+         * 
+         * >  This parameter is required if the **RenewalStatus** parameter is set to **AutoRenewal**.
          */
         public Builder renewPeriod(Integer renewPeriod) {
             this.putQueryParameter("RenewPeriod", renewPeriod);
@@ -254,7 +260,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * RenewalStatus.
+         * The renewal method. Valid values:
+         * <p>
+         * 
+         * *   AutoRenewal: The instance is automatically renewed.
+         * *   ManualRenewal: The instance is manually renewed.
+         * 
+         * Default value: ManualRenewal.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);
@@ -263,7 +275,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   Subscription: the subscription billing method.
+         * *   PayAsYouGo: the pay-as-you-go billing method.
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);
@@ -319,7 +335,7 @@ public class CreateInstanceRequest extends Request {
             private String value; 
 
             /**
-             * Code.
+             * The code property of the Nth module. Value of N: 1 to 100. If multiple module property parameters are involved, concatenate multiple parameters based on the value of N in sequence.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -327,7 +343,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value property of the Nth module. Value of N: 1 to 100.
              */
             public Builder value(String value) {
                 this.value = value;

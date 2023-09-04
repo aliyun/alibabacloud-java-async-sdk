@@ -86,7 +86,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -410,7 +410,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             private String subscriptionType; 
 
             /**
-             * AdjustAmount.
+             * The amount deducted by using credit refunds.
              */
             public Builder adjustAmount(Float adjustAmount) {
                 this.adjustAmount = adjustAmount;
@@ -418,7 +418,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * BillAccountID.
+             * The ID of the account to which the bill belongs.
              */
             public Builder billAccountID(String billAccountID) {
                 this.billAccountID = billAccountID;
@@ -426,7 +426,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * BillAccountName.
+             * The name of the account to which the bill belongs.
              */
             public Builder billAccountName(String billAccountName) {
                 this.billAccountName = billAccountName;
@@ -434,7 +434,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * BillingDate.
+             * The billing date.
              */
             public Builder billingDate(String billingDate) {
                 this.billingDate = billingDate;
@@ -442,7 +442,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * BizType.
+             * The business type.
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -450,7 +450,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * CashAmount.
+             * The amount paid in cash. The amount that was deducted by using credit refunds is not included.
              */
             public Builder cashAmount(Float cashAmount) {
                 this.cashAmount = cashAmount;
@@ -458,7 +458,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * CostUnit.
+             * The cost center.
              */
             public Builder costUnit(String costUnit) {
                 this.costUnit = costUnit;
@@ -466,7 +466,12 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * The type of the currency. Valid values:
+             * <p>
+             * 
+             * *   CNY
+             * *   USD
+             * *   JPY
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -474,7 +479,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * DeductedByCashCoupons.
+             * The amount deducted by using vouchers.
              */
             public Builder deductedByCashCoupons(Float deductedByCashCoupons) {
                 this.deductedByCashCoupons = deductedByCashCoupons;
@@ -482,7 +487,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * DeductedByCoupons.
+             * The amount deducted by using coupons.
              */
             public Builder deductedByCoupons(Float deductedByCoupons) {
                 this.deductedByCoupons = deductedByCoupons;
@@ -490,7 +495,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * DeductedByPrepaidCard.
+             * The amount deducted by using prepaid cards.
              */
             public Builder deductedByPrepaidCard(Float deductedByPrepaidCard) {
                 this.deductedByPrepaidCard = deductedByPrepaidCard;
@@ -498,7 +503,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * InvoiceDiscount.
+             * The discount amount.
              */
             public Builder invoiceDiscount(Float invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -506,7 +511,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * OutstandingAmount.
+             * The unsettled amount or the amount settled with credits.
              */
             public Builder outstandingAmount(Float outstandingAmount) {
                 this.outstandingAmount = outstandingAmount;
@@ -514,7 +519,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerID.
+             * The ID of the member.
              */
             public Builder ownerID(String ownerID) {
                 this.ownerID = ownerID;
@@ -522,7 +527,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * The name of the member.
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -530,7 +535,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentAmount.
+             * The amount paid in cash. The amount that was deducted by using credit refunds is included.
              */
             public Builder paymentAmount(Float paymentAmount) {
                 this.paymentAmount = paymentAmount;
@@ -538,7 +543,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * PipCode.
+             * The code of the service. The service code is consistent with that displayed in User Center.
              */
             public Builder pipCode(String pipCode) {
                 this.pipCode = pipCode;
@@ -546,7 +551,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * PretaxAmount.
+             * The pretax amount.
              */
             public Builder pretaxAmount(Float pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -554,7 +559,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * PretaxGrossAmount.
+             * The pretax gross amount.
              */
             public Builder pretaxGrossAmount(Float pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -562,7 +567,12 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The code of the service.
+             * <p>
+             * 
+             * **
+             * 
+             * ****A value is returned only if the **IsGroupByProduct **parameter is set to true.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -570,7 +580,12 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * The name of the service.
+             * <p>
+             * 
+             * **
+             * 
+             * ****A value is returned only if the **IsGroupByProduct **parameter is set to true.
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -578,7 +593,15 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionType.
+             * The billing method. Valid values:
+             * <p>
+             * 
+             * *   Subscription: the subscription billing method
+             * *   PayAsYouGo: the pay-as-you-go billing method
+             * 
+             * **
+             * 
+             * ****A value is returned only if the IsGroupByProduct parameter is set to true.
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -732,7 +755,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * AccountID.
+             * The ID of your Alibaba Cloud account.
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -740,7 +763,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The name of the Alibaba Cloud account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -748,7 +771,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * BillingCycle.
+             * The billing cycle. Format: YYYY-MM.
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -756,7 +779,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * The details of the bills.
              */
             public Builder items(Items items) {
                 this.items = items;
@@ -764,7 +787,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The page number of the returned page.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -772,7 +795,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -780,7 +803,7 @@ public class QueryAccountBillResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

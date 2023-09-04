@@ -155,7 +155,7 @@ public class ModifyInstanceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -164,7 +164,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance for which you want to modify the configurations.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -173,7 +173,11 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * ModifyType.
+         * The type of configuration modifications. Valid values:
+         * <p>
+         * 
+         * *   Upgrade: upgrades the configurations of the instance.
+         * *   Downgrade: downgrades the configurations of the instance.
          */
         public Builder modifyType(String modifyType) {
             this.putQueryParameter("ModifyType", modifyType);
@@ -191,7 +195,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * Parameter.
+         * The details about the parameters.
          */
         public Builder parameter(java.util.List < Parameter> parameter) {
             this.putQueryParameter("Parameter", parameter);
@@ -200,7 +204,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service to which the instance belongs.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -209,7 +213,7 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service to which the instance belongs.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -218,7 +222,11 @@ public class ModifyInstanceRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   Subscription: subscription
+         * *   PayAsYouGo: pay-as-you-go
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);
@@ -274,7 +282,10 @@ public class ModifyInstanceRequest extends Request {
             private String value; 
 
             /**
-             * Code.
+             * The code of the parameter n. Valid values of n: 1 to 100. Multiple parameters are concatenated in the order of n.
+             * <p>
+             * 
+             * >  Only the parameters of the attributes that you want to modify for the instance must be configured. For example, if the instance has Attribute A and Attribute B and only Attribute A must be modified, configure only the parameter of Attribute A.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -282,7 +293,7 @@ public class ModifyInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the parameter n. Valid values of n: 1 to 100.
              */
             public Builder value(String value) {
                 this.value = value;

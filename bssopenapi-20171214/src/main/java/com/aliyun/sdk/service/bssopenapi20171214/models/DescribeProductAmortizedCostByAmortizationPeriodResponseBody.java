@@ -86,7 +86,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -686,7 +686,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             private String subscriptionType; 
 
             /**
-             * AmortizationPeriod.
+             * The allocation month. Format: YYYYMM.
              */
             public Builder amortizationPeriod(String amortizationPeriod) {
                 this.amortizationPeriod = amortizationPeriod;
@@ -694,7 +694,11 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * AmortizationStatus.
+             * The allocation status. Valid values:
+             * <p>
+             * 
+             * *   amortized: allocated
+             * *   unAmortized: not allocated
              */
             public Builder amortizationStatus(String amortizationStatus) {
                 this.amortizationStatus = amortizationStatus;
@@ -702,7 +706,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * BillAccountID.
+             * The ID of the account to which the bill belongs.
              */
             public Builder billAccountID(Long billAccountID) {
                 this.billAccountID = billAccountID;
@@ -710,7 +714,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * BillAccountName.
+             * The name of the account to which the bill belongs.
              */
             public Builder billAccountName(String billAccountName) {
                 this.billAccountName = billAccountName;
@@ -718,7 +722,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * BillOwnerID.
+             * The ID of the account to which the resource belongs.
              */
             public Builder billOwnerID(Long billOwnerID) {
                 this.billOwnerID = billOwnerID;
@@ -726,7 +730,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * BillOwnerName.
+             * The name of the account to which the resource belongs.
              */
             public Builder billOwnerName(String billOwnerName) {
                 this.billOwnerName = billOwnerName;
@@ -734,7 +738,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * BizType.
+             * The business type.
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -742,7 +746,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * ConsumePeriod.
+             * The billing cycle. Format: YYYYMM.
              */
             public Builder consumePeriod(String consumePeriod) {
                 this.consumePeriod = consumePeriod;
@@ -750,7 +754,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * CurrentAmortizationDeductedByCashCoupons.
+             * The amount deducted by using vouchers and allocated to the current allocation month.
              */
             public Builder currentAmortizationDeductedByCashCoupons(Double currentAmortizationDeductedByCashCoupons) {
                 this.currentAmortizationDeductedByCashCoupons = currentAmortizationDeductedByCashCoupons;
@@ -758,7 +762,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * CurrentAmortizationDeductedByCoupons.
+             * The amount deducted by using coupons and allocated to the current allocation month.
              */
             public Builder currentAmortizationDeductedByCoupons(Double currentAmortizationDeductedByCoupons) {
                 this.currentAmortizationDeductedByCoupons = currentAmortizationDeductedByCoupons;
@@ -766,7 +770,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * CurrentAmortizationDeductedByPrepaidCard.
+             * The amount deducted by using prepaid cards and allocated to the current allocation month.
              */
             public Builder currentAmortizationDeductedByPrepaidCard(Double currentAmortizationDeductedByPrepaidCard) {
                 this.currentAmortizationDeductedByPrepaidCard = currentAmortizationDeductedByPrepaidCard;
@@ -774,7 +778,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * CurrentAmortizationExpenditureAmount.
+             * The expenditure amount allocated to the current allocation month. Invoicing is supported.
              */
             public Builder currentAmortizationExpenditureAmount(Double currentAmortizationExpenditureAmount) {
                 this.currentAmortizationExpenditureAmount = currentAmortizationExpenditureAmount;
@@ -782,7 +786,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * CurrentAmortizationInvoiceDiscount.
+             * The discount amount allocated to the current allocation month.
              */
             public Builder currentAmortizationInvoiceDiscount(Double currentAmortizationInvoiceDiscount) {
                 this.currentAmortizationInvoiceDiscount = currentAmortizationInvoiceDiscount;
@@ -790,7 +794,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * CurrentAmortizationPretaxAmount.
+             * The pretax amount allocated to the current allocation month.
              */
             public Builder currentAmortizationPretaxAmount(Double currentAmortizationPretaxAmount) {
                 this.currentAmortizationPretaxAmount = currentAmortizationPretaxAmount;
@@ -798,7 +802,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * CurrentAmortizationPretaxGrossAmount.
+             * The pretax gross amount allocated to the current allocation month.
              */
             public Builder currentAmortizationPretaxGrossAmount(Double currentAmortizationPretaxGrossAmount) {
                 this.currentAmortizationPretaxGrossAmount = currentAmortizationPretaxGrossAmount;
@@ -806,7 +810,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * CurrentAmortizationRoundDownDiscount.
+             * The round-off amount allocated to the current allocation month.
              */
             public Builder currentAmortizationRoundDownDiscount(Double currentAmortizationRoundDownDiscount) {
                 this.currentAmortizationRoundDownDiscount = currentAmortizationRoundDownDiscount;
@@ -814,7 +818,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * DeductedByCashCoupons.
+             * The amount deducted by using vouchers.
              */
             public Builder deductedByCashCoupons(Double deductedByCashCoupons) {
                 this.deductedByCashCoupons = deductedByCashCoupons;
@@ -822,7 +826,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * DeductedByCoupons.
+             * The amount deducted by using coupons.
              */
             public Builder deductedByCoupons(Double deductedByCoupons) {
                 this.deductedByCoupons = deductedByCoupons;
@@ -830,7 +834,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * DeductedByPrepaidCard.
+             * The amount deducted by using prepaid cards.
              */
             public Builder deductedByPrepaidCard(Double deductedByPrepaidCard) {
                 this.deductedByPrepaidCard = deductedByPrepaidCard;
@@ -838,7 +842,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * ExpenditureAmount.
+             * The expenditure amount. Invoicing is supported.
              */
             public Builder expenditureAmount(Double expenditureAmount) {
                 this.expenditureAmount = expenditureAmount;
@@ -846,7 +850,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * InvoiceDiscount.
+             * The discount amount.
              */
             public Builder invoiceDiscount(Double invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -854,7 +858,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * PretaxAmount.
+             * The pretax amount.
              */
             public Builder pretaxAmount(Double pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -862,7 +866,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * PretaxGrossAmount.
+             * The pretax gross amount.
              */
             public Builder pretaxGrossAmount(Double pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -870,7 +874,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * PreviouslyAmortizedDeductedByCashCoupons.
+             * The amount deducted by using vouchers and allocated before the current allocation month.
              */
             public Builder previouslyAmortizedDeductedByCashCoupons(Double previouslyAmortizedDeductedByCashCoupons) {
                 this.previouslyAmortizedDeductedByCashCoupons = previouslyAmortizedDeductedByCashCoupons;
@@ -878,7 +882,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * PreviouslyAmortizedDeductedByCoupons.
+             * The amount deducted by using coupons and allocated before the current allocation month.
              */
             public Builder previouslyAmortizedDeductedByCoupons(Double previouslyAmortizedDeductedByCoupons) {
                 this.previouslyAmortizedDeductedByCoupons = previouslyAmortizedDeductedByCoupons;
@@ -886,7 +890,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * PreviouslyAmortizedDeductedByPrepaidCard.
+             * The amount deducted by using prepaid cards and allocated before the current allocation month.
              */
             public Builder previouslyAmortizedDeductedByPrepaidCard(Double previouslyAmortizedDeductedByPrepaidCard) {
                 this.previouslyAmortizedDeductedByPrepaidCard = previouslyAmortizedDeductedByPrepaidCard;
@@ -894,7 +898,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * PreviouslyAmortizedExpenditureAmount.
+             * The expenditure amount allocated before the current allocation month. Invoicing is supported.
              */
             public Builder previouslyAmortizedExpenditureAmount(Double previouslyAmortizedExpenditureAmount) {
                 this.previouslyAmortizedExpenditureAmount = previouslyAmortizedExpenditureAmount;
@@ -902,7 +906,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * PreviouslyAmortizedInvoiceDiscount.
+             * The discount amount allocated before the current allocation month.
              */
             public Builder previouslyAmortizedInvoiceDiscount(Double previouslyAmortizedInvoiceDiscount) {
                 this.previouslyAmortizedInvoiceDiscount = previouslyAmortizedInvoiceDiscount;
@@ -910,7 +914,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * PreviouslyAmortizedPretaxAmount.
+             * The pretax amount allocated before the current allocation month.
              */
             public Builder previouslyAmortizedPretaxAmount(Double previouslyAmortizedPretaxAmount) {
                 this.previouslyAmortizedPretaxAmount = previouslyAmortizedPretaxAmount;
@@ -918,7 +922,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * PreviouslyAmortizedPretaxGrossAmount.
+             * The pretax gross amount allocated before the current allocation month.
              */
             public Builder previouslyAmortizedPretaxGrossAmount(Double previouslyAmortizedPretaxGrossAmount) {
                 this.previouslyAmortizedPretaxGrossAmount = previouslyAmortizedPretaxGrossAmount;
@@ -926,7 +930,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * PreviouslyAmortizedRoundDownDiscount.
+             * The round-off amount allocated before the current allocation month.
              */
             public Builder previouslyAmortizedRoundDownDiscount(Double previouslyAmortizedRoundDownDiscount) {
                 this.previouslyAmortizedRoundDownDiscount = previouslyAmortizedRoundDownDiscount;
@@ -934,7 +938,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * ProductCode.
+             * The code of the service.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -942,7 +946,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * ProductDetail.
+             * The specific service resource.
              */
             public Builder productDetail(String productDetail) {
                 this.productDetail = productDetail;
@@ -950,7 +954,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * ProductDetailCode.
+             * The code of the specific service resource.
              */
             public Builder productDetailCode(String productDetailCode) {
                 this.productDetailCode = productDetailCode;
@@ -958,7 +962,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * ProductName.
+             * The name of the service.
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -966,7 +970,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * RemainingAmortizationDeductedByCashCoupons.
+             * The amount deducted by using vouchers and to be allocated to one or more future allocation months.
              */
             public Builder remainingAmortizationDeductedByCashCoupons(Double remainingAmortizationDeductedByCashCoupons) {
                 this.remainingAmortizationDeductedByCashCoupons = remainingAmortizationDeductedByCashCoupons;
@@ -974,7 +978,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * RemainingAmortizationDeductedByCoupons.
+             * The amount deducted by using coupons and to be allocated to one or more future allocation months.
              */
             public Builder remainingAmortizationDeductedByCoupons(Double remainingAmortizationDeductedByCoupons) {
                 this.remainingAmortizationDeductedByCoupons = remainingAmortizationDeductedByCoupons;
@@ -982,7 +986,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * RemainingAmortizationDeductedByPrepaidCard.
+             * The amount deducted by using prepaid cards and to be allocated to one or more future allocation months.
              */
             public Builder remainingAmortizationDeductedByPrepaidCard(Double remainingAmortizationDeductedByPrepaidCard) {
                 this.remainingAmortizationDeductedByPrepaidCard = remainingAmortizationDeductedByPrepaidCard;
@@ -990,7 +994,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * RemainingAmortizationExpenditureAmount.
+             * The expenditure amount to be allocated to one or more future allocation months. Invoicing is supported.
              */
             public Builder remainingAmortizationExpenditureAmount(Double remainingAmortizationExpenditureAmount) {
                 this.remainingAmortizationExpenditureAmount = remainingAmortizationExpenditureAmount;
@@ -998,7 +1002,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * RemainingAmortizationInvoiceDiscount.
+             * The discount amount to be allocated to one or more future allocation months.
              */
             public Builder remainingAmortizationInvoiceDiscount(Double remainingAmortizationInvoiceDiscount) {
                 this.remainingAmortizationInvoiceDiscount = remainingAmortizationInvoiceDiscount;
@@ -1006,7 +1010,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * RemainingAmortizationPretaxAmount.
+             * The pretax amount to be allocated to one or more future allocation months.
              */
             public Builder remainingAmortizationPretaxAmount(Double remainingAmortizationPretaxAmount) {
                 this.remainingAmortizationPretaxAmount = remainingAmortizationPretaxAmount;
@@ -1014,7 +1018,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * RemainingAmortizationPretaxGrossAmount.
+             * The pretax gross amount to be allocated to one or more future allocation months.
              */
             public Builder remainingAmortizationPretaxGrossAmount(Double remainingAmortizationPretaxGrossAmount) {
                 this.remainingAmortizationPretaxGrossAmount = remainingAmortizationPretaxGrossAmount;
@@ -1022,7 +1026,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * RemainingAmortizationRoundDownDiscount.
+             * The round-off amount to be allocated to one or more future allocation months.
              */
             public Builder remainingAmortizationRoundDownDiscount(Double remainingAmortizationRoundDownDiscount) {
                 this.remainingAmortizationRoundDownDiscount = remainingAmortizationRoundDownDiscount;
@@ -1030,7 +1034,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * RoundDownDiscount.
+             * The round-off amount.
              */
             public Builder roundDownDiscount(Double roundDownDiscount) {
                 this.roundDownDiscount = roundDownDiscount;
@@ -1038,7 +1042,11 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * SubscriptionType.
+             * The billing method. Valid values:
+             * <p>
+             * 
+             * *   Subscription: the subscription billing method
+             * *   PayAsYouGo: the pay-as-you-go billing method
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -1139,7 +1147,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             private Integer totalCount; 
 
             /**
-             * AccountID.
+             * The ID of the account.
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -1147,7 +1155,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * AccountName.
+             * The name of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -1155,7 +1163,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * Items.
+             * The data entries returned.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -1163,7 +1171,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * MaxResults.
+             * The maximum number of entries returned.
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -1171,7 +1179,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * NextToken.
+             * The position from which the results started to return. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -1179,7 +1187,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodResponseBody extend
             }
 
             /**
-             * TotalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

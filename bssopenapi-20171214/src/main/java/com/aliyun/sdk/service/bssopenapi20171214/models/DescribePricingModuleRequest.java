@@ -107,7 +107,7 @@ public class DescribePricingModuleRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The service code. You can query the service code by calling the **QueryProductList** operation.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -116,7 +116,7 @@ public class DescribePricingModuleRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service. You can query the service type by calling the **QueryProductList** operation.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -125,7 +125,11 @@ public class DescribePricingModuleRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   Subscription: subscription
+         * *   PayAsYouGo: pay-as-you-go
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

@@ -13,12 +13,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryCommodityListRequest extends Request {
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("ProductCode")
     @Validation(required = true)
     private String productCode;
 
     private QueryCommodityListRequest(Builder builder) {
         super(builder);
+        this.lang = builder.lang;
         this.productCode = builder.productCode;
     }
 
@@ -36,6 +41,13 @@ public class QueryCommodityListRequest extends Request {
     }
 
     /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
+    }
+
+    /**
      * @return productCode
      */
     public String getProductCode() {
@@ -43,6 +55,7 @@ public class QueryCommodityListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryCommodityListRequest, Builder> {
+        private String lang; 
         private String productCode; 
 
         private Builder() {
@@ -51,11 +64,21 @@ public class QueryCommodityListRequest extends Request {
 
         private Builder(QueryCommodityListRequest request) {
             super(request);
+            this.lang = request.lang;
             this.productCode = request.productCode;
         } 
 
         /**
-         * ProductCode.
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * The code of the service.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

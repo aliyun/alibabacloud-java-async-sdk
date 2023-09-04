@@ -86,7 +86,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +194,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
             private String unitName; 
 
             /**
-             * OwnerUid.
+             * The user ID of the owner of the cost center.
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -202,7 +202,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * ParentUnitId.
+             * The ID of the parent cost center. A value of -1 indicates the root cost center.
              */
             public Builder parentUnitId(Long parentUnitId) {
                 this.parentUnitId = parentUnitId;
@@ -210,7 +210,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * UnitId.
+             * The ID of the cost center.
              */
             public Builder unitId(Long unitId) {
                 this.unitId = unitId;
@@ -218,7 +218,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * UnitName.
+             * The name of the cost center.
              */
             public Builder unitName(String unitName) {
                 this.unitName = unitName;
@@ -259,7 +259,7 @@ public class CreateCostUnitResponseBody extends TeaModel {
             private java.util.List < CostUnitDtoList> costUnitDtoList; 
 
             /**
-             * CostUnitDtoList.
+             * The list of cost center entities.
              */
             public Builder costUnitDtoList(java.util.List < CostUnitDtoList> costUnitDtoList) {
                 this.costUnitDtoList = costUnitDtoList;

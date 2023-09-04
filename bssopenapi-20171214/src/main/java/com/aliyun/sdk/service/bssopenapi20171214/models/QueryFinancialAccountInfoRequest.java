@@ -55,7 +55,7 @@ public class QueryFinancialAccountInfoRequest extends Request {
         } 
 
         /**
-         * UserId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder userId(Long userId) {
             this.putQueryParameter("UserId", userId);

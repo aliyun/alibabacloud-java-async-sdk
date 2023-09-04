@@ -70,7 +70,7 @@ public class DeleteCostUnitRequest extends Request {
         } 
 
         /**
-         * OwnerUid.
+         * The user ID of the cost center owner.
          */
         public Builder ownerUid(Long ownerUid) {
             this.putQueryParameter("OwnerUid", ownerUid);
@@ -79,7 +79,7 @@ public class DeleteCostUnitRequest extends Request {
         }
 
         /**
-         * UnitId.
+         * The ID of the cost center. A value of -1 indicates the root cost center.
          */
         public Builder unitId(Long unitId) {
             this.putQueryParameter("UnitId", unitId);

@@ -86,7 +86,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AgRelationDto.
+         * The relationship between the account that is used to call the CreateAgAccount operation and the account that is created.
          */
         public Builder agRelationDto(AgRelationDto agRelationDto) {
             this.agRelationDto = agRelationDto;
@@ -94,7 +94,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -102,7 +102,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +194,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * MPK（UID）
+             * The ID of the account that is used to call the CreateAgAccount operation.
              */
             public Builder mpk(String mpk) {
                 this.mpk = mpk;
@@ -202,7 +202,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Pk.
+             * The ID of the account that is created.
              */
             public Builder pk(String pk) {
                 this.pk = pk;
@@ -210,7 +210,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
             }
 
             /**
-             * RamAdminRoleName.
+             * The role of the account that is created.
              */
             public Builder ramAdminRoleName(String ramAdminRoleName) {
                 this.ramAdminRoleName = ramAdminRoleName;
@@ -218,7 +218,7 @@ public class CreateAgAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the relationship.
              */
             public Builder type(String type) {
                 this.type = type;

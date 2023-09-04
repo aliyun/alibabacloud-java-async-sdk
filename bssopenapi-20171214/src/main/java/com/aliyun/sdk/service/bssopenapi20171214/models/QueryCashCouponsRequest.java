@@ -82,7 +82,11 @@ public class QueryCashCouponsRequest extends Request {
         } 
 
         /**
-         * EffectiveOrNot.
+         * Specifies whether the voucher takes effect. Valid values:
+         * <p>
+         * 
+         * *   true: The voucher takes effect.
+         * *   false: The voucher does not take effect.
          */
         public Builder effectiveOrNot(Boolean effectiveOrNot) {
             this.putQueryParameter("EffectiveOrNot", effectiveOrNot);
@@ -91,7 +95,7 @@ public class QueryCashCouponsRequest extends Request {
         }
 
         /**
-         * ExpiryTimeEnd.
+         * The end time of the validity period of the voucher. Specify the parameter in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-08-01T00:00:00Z.
          */
         public Builder expiryTimeEnd(String expiryTimeEnd) {
             this.putQueryParameter("ExpiryTimeEnd", expiryTimeEnd);
@@ -100,7 +104,7 @@ public class QueryCashCouponsRequest extends Request {
         }
 
         /**
-         * ExpiryTimeStart.
+         * The start time of the validity period of the voucher. Specify the parameter in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-08-01T00:00:00Z.
          */
         public Builder expiryTimeStart(String expiryTimeStart) {
             this.putQueryParameter("ExpiryTimeStart", expiryTimeStart);

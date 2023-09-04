@@ -86,7 +86,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * success
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
             private Boolean releaseResult; 
 
             /**
-             * hostId
+             * HostId.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -178,7 +178,7 @@ public class ReleaseInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * releaseResult
+             * ReleaseResult.
              */
             public Builder releaseResult(Boolean releaseResult) {
                 this.releaseResult = releaseResult;

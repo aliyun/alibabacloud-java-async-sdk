@@ -127,7 +127,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
         } 
 
         /**
-         * ModuleList.
+         * The details of pricing modules.
          */
         public Builder moduleList(java.util.List < ModuleList> moduleList) {
             this.putQueryParameter("ModuleList", moduleList);
@@ -145,7 +145,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -154,7 +154,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -163,7 +163,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region in which the instance resides.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -172,7 +172,7 @@ public class GetPayAsYouGoPriceRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Set the value to PayAsYouGo.
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);
@@ -241,7 +241,10 @@ public class GetPayAsYouGoPriceRequest extends Request {
             private String priceType; 
 
             /**
-             * Config.
+             * The configuration of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.
+             * <p>
+             * 
+             * >  You can call the [DescribePricingModule](~~96469~~) operation to obtain the configuration parameters of the pricing module.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -249,7 +252,10 @@ public class GetPayAsYouGoPriceRequest extends Request {
             }
 
             /**
-             * ModuleCode.
+             * The code of the Nth pricing module.
+             * <p>
+             * 
+             * >  You can call the [DescribePricingModule](~~96469~~) operation to obtain the module code.
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -257,7 +263,15 @@ public class GetPayAsYouGoPriceRequest extends Request {
             }
 
             /**
-             * PriceType.
+             * The price type of the Nth pricing module. Valid values:
+             * <p>
+             * 
+             * *   Hour: hourly price
+             * *   Usage: usage price
+             * *   Month: monthly price
+             * *   Year: annual price
+             * 
+             * >  You can call the [DescribePricingModule](~~96469~~) operation to obtain the configuration parameters of the pricing module.
              */
             public Builder priceType(String priceType) {
                 this.priceType = priceType;

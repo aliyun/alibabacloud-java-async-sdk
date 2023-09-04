@@ -86,7 +86,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -362,7 +362,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             private String subscriptionType; 
 
             /**
-             * CreateTime.
+             * The time when the specified instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -370,7 +370,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the instance was expired.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -378,7 +378,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpectedReleaseTime.
+             * The time when the specified instance was expected to be released.
              */
             public Builder expectedReleaseTime(String expectedReleaseTime) {
                 this.expectedReleaseTime = expectedReleaseTime;
@@ -386,7 +386,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceID.
+             * The ID of the instance.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -394,7 +394,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * The ID of the instance owner.
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -402,7 +402,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The code of the service.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -410,7 +410,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * The type of the service.
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -418,7 +418,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The ID of the region in which the instance resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -426,7 +426,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseTime.
+             * The time when the instance was released.
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -434,7 +434,12 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RenewStatus.
+             * The renewal status of the specified instance. Valid values:
+             * <p>
+             * 
+             * *   AutoRenewal: The instance is automatically renewed.
+             * *   ManualRenewal: The instance is manually renewed.
+             * *   NotRenewal: The instance is not renewed.
              */
             public Builder renewStatus(String renewStatus) {
                 this.renewStatus = renewStatus;
@@ -442,7 +447,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RenewalDuration.
+             * The number of auto-renewal cycles.
              */
             public Builder renewalDuration(Integer renewalDuration) {
                 this.renewalDuration = renewalDuration;
@@ -450,7 +455,11 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * RenewalDurationUnit.
+             * The unit of the auto-renewal cycle. Valid values:
+             * <p>
+             * 
+             * *   M: month
+             * *   Y: year
              */
             public Builder renewalDurationUnit(String renewalDurationUnit) {
                 this.renewalDurationUnit = renewalDurationUnit;
@@ -458,7 +467,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Seller.
+             * The seller.
              */
             public Builder seller(String seller) {
                 this.seller = seller;
@@ -466,7 +475,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SellerId.
+             * The ID of the seller.
              */
             public Builder sellerId(Long sellerId) {
                 this.sellerId = sellerId;
@@ -474,7 +483,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the instance.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -482,7 +491,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StopTime.
+             * The time when the specified instance was suspended.
              */
             public Builder stopTime(String stopTime) {
                 this.stopTime = stopTime;
@@ -490,7 +499,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SubStatus.
+             * The sub-status of the specified instance.
              */
             public Builder subStatus(String subStatus) {
                 this.subStatus = subStatus;
@@ -498,7 +507,11 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionType.
+             * The billing method. Valid values:
+             * <p>
+             * 
+             * *   Subscription: subscription
+             * *   PayAsYouGo: pay-as-you-go
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -575,7 +588,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * InstanceList.
+             * The instances returned.
              */
             public Builder instanceList(java.util.List < InstanceList> instanceList) {
                 this.instanceList = instanceList;
@@ -583,7 +596,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The page number of the returned page.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -591,7 +604,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -599,7 +612,7 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

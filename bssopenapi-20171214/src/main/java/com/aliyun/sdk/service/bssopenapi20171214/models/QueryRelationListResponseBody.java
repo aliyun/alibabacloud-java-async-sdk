@@ -86,7 +86,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryRelationListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -266,7 +266,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * AccountId.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -274,7 +274,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The name of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -282,7 +282,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * AccountNickName.
+             * The display name of the account.
              */
             public Builder accountNickName(String accountNickName) {
                 this.accountNickName = accountNickName;
@@ -290,7 +290,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * AccountType.
+             * The type of the account. Valid values: MASTER and MEMBER.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -298,7 +298,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the relationship became invalid. If no value is returned, the relationship is still valid.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -306,7 +306,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * RelationId.
+             * The ID of the relationship.
              */
             public Builder relationId(Long relationId) {
                 this.relationId = relationId;
@@ -314,7 +314,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * RelationType.
+             * The type of the relationship. Valid values: FinancialManagement and FinancialTrusteeship.
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -322,7 +322,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * SetupTime.
+             * The time when the relationship was established. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.
              */
             public Builder setupTime(String setupTime) {
                 this.setupTime = setupTime;
@@ -330,7 +330,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the relationship became valid. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. Example: 2016-05-23T12:00:00Z.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -338,7 +338,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The state of the relationship. One of the enumeration members of the RelationshipStatusEnum data type is returned.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -415,7 +415,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * FinancialRelationInfoList.
+             * The relationships.
              */
             public Builder financialRelationInfoList(java.util.List < FinancialRelationInfoList> financialRelationInfoList) {
                 this.financialRelationInfoList = financialRelationInfoList;
@@ -423,7 +423,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The page number of the returned page.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -431,7 +431,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -439,7 +439,7 @@ public class QueryRelationListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

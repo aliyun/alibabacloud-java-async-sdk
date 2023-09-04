@@ -86,7 +86,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * The message returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The return data.
+         * The total number of entries.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The ID of the request.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Indicates whether the operation was successful.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * The return data.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +290,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The coverage.
+             * The region.
              */
             public Builder coveragePercentage(Float coveragePercentage) {
                 this.coveragePercentage = coveragePercentage;
@@ -298,7 +298,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The currency.
+             * The specifications.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -306,7 +306,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The deducted amount.
+             * The start time.
              */
             public Builder deductAmount(Float deductAmount) {
                 this.deductAmount = deductAmount;
@@ -314,7 +314,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The end time.
+             * EndPeriod.
              */
             public Builder endPeriod(String endPeriod) {
                 this.endPeriod = endPeriod;
@@ -322,7 +322,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance.
+             * The currency.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -330,7 +330,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications.
+             * The pay-as-you-go cost.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -338,7 +338,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The pay-as-you-go cost.
+             * The coverage.
              */
             public Builder postpaidCost(Float postpaidCost) {
                 this.postpaidCost = postpaidCost;
@@ -346,7 +346,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The region.
+             * The deducted amount.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -354,7 +354,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The start time.
+             * The total expenditure.
              */
             public Builder startPeriod(String startPeriod) {
                 this.startPeriod = startPeriod;
@@ -362,7 +362,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total expenditure.
+             * The username of the account.
              */
             public Builder totalAmount(Float totalAmount) {
                 this.totalAmount = totalAmount;
@@ -370,7 +370,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the account.
+             * The ID of the instance.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -378,7 +378,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the account.
+             * The end time.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -443,7 +443,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The data entries.
+             * The ID of the account.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -451,7 +451,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The token of the next page.
+             * The data entries.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -459,7 +459,7 @@ public class DescribeSavingsPlansCoverageDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries.
+             * The token of the next page.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

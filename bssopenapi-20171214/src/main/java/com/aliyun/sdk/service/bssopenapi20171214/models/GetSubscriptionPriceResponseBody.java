@@ -86,7 +86,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about the service price.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -206,7 +206,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             private Float unitPrice; 
 
             /**
-             * CostAfterDiscount.
+             * The discount price.
              */
             public Builder costAfterDiscount(Float costAfterDiscount) {
                 this.costAfterDiscount = costAfterDiscount;
@@ -214,7 +214,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * InvoiceDiscount.
+             * The discount that was applied.
              */
             public Builder invoiceDiscount(Float invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -222,7 +222,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleCode.
+             * The identifier of the pricing module.
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -230,7 +230,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalCost.
+             * The original price of the service.
              */
             public Builder originalCost(Float originalCost) {
                 this.originalCost = originalCost;
@@ -238,7 +238,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * UnitPrice.
+             * The unit price.
              */
             public Builder unitPrice(Float unitPrice) {
                 this.unitPrice = unitPrice;
@@ -344,7 +344,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             private String promotionName; 
 
             /**
-             * PromotionDesc.
+             * The description of the discount.
              */
             public Builder promotionDesc(String promotionDesc) {
                 this.promotionDesc = promotionDesc;
@@ -352,7 +352,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionId.
+             * The ID of the discount.
              */
             public Builder promotionId(Long promotionId) {
                 this.promotionId = promotionId;
@@ -360,7 +360,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionName.
+             * The name of the discount.
              */
             public Builder promotionName(String promotionName) {
                 this.promotionName = promotionName;
@@ -514,7 +514,12 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * Currency.
+             * The type of currency. Valid values:
+             * <p>
+             * 
+             * *   CNY: Chinese Yuan
+             * *   USD: US dollar
+             * *   JPY: Japanese Yen
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -522,7 +527,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * The discount that was applied.
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -530,7 +535,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleDetails.
+             * The price details of the pricing module.
              */
             public Builder moduleDetails(ModuleDetails moduleDetails) {
                 this.moduleDetails = moduleDetails;
@@ -538,7 +543,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * The original price of the service.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -546,7 +551,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * PromotionDetails.
+             * The details of the discount.
              */
             public Builder promotionDetails(PromotionDetails promotionDetails) {
                 this.promotionDetails = promotionDetails;
@@ -554,7 +559,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * Quantity.
+             * The quantity.
              */
             public Builder quantity(Integer quantity) {
                 this.quantity = quantity;
@@ -562,7 +567,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * The discount price.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;

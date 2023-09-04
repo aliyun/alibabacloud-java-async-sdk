@@ -86,7 +86,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +194,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * EndTime.
+             * The time when the permission expired. If no value is returned, the permission is still valid. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the permission expired at 20:00:00 on May 23, 2016 (UTC+8).
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -202,7 +202,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             }
 
             /**
-             * PermissionCode.
+             * The code of the permission.
              */
             public Builder permissionCode(String permissionCode) {
                 this.permissionCode = permissionCode;
@@ -210,7 +210,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             }
 
             /**
-             * PermissionName.
+             * The name of the permission.
              */
             public Builder permissionName(String permissionName) {
                 this.permissionName = permissionName;
@@ -218,7 +218,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the permission took effect. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the permission took effect at 20:00:00 on May 23, 2016 (UTC+8).
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -343,7 +343,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * EndTime.
+             * The time when the relationship expired. If no value is returned, the relationship is still valid.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -351,7 +351,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             }
 
             /**
-             * MasterId.
+             * The ID of the management account.
              */
             public Builder masterId(Long masterId) {
                 this.masterId = masterId;
@@ -359,7 +359,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             }
 
             /**
-             * MemberId.
+             * The ID of the member.
              */
             public Builder memberId(Long memberId) {
                 this.memberId = memberId;
@@ -367,7 +367,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             }
 
             /**
-             * PermissionList.
+             * The list of permissions.
              */
             public Builder permissionList(java.util.List < PermissionList> permissionList) {
                 this.permissionList = permissionList;
@@ -375,7 +375,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             }
 
             /**
-             * RelationType.
+             * The type of the relationship. Valid values: FinancialManagement and FinancialTrusteeship.
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -383,7 +383,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             }
 
             /**
-             * SetupTime.
+             * The time when the relationship was established. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the relationship was established at 20:00:00 on May 23, 2016 (UTC+8).
              */
             public Builder setupTime(String setupTime) {
                 this.setupTime = setupTime;
@@ -391,7 +391,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the relationship took effect. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC. For example, 2016-05-23T12:00:00Z indicates that the relationship took effect at 20:00:00 on May 23, 2016 (UTC+8).
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -399,7 +399,7 @@ public class QueryPermissionListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the relationship. For more information about valid values of this parameter, see the enumeration values of the RelationshipStatusEnum type in the following table.
              */
             public Builder state(String state) {
                 this.state = state;

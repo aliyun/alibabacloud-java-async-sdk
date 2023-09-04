@@ -86,7 +86,7 @@ public class EnableBillGenerationResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class EnableBillGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class EnableBillGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class EnableBillGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class EnableBillGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class EnableBillGenerationResponseBody extends TeaModel {
             private Boolean _boolean; 
 
             /**
-             * Boolean.
+             * Indicates whether the feature is enabled.
              */
             public Builder _boolean(Boolean _boolean) {
                 this._boolean = _boolean;

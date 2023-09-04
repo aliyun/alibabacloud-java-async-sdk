@@ -127,7 +127,7 @@ public class ConvertChargeTypeRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -145,7 +145,13 @@ public class ConvertChargeTypeRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration. Unit: months. This parameter is required if you switch the billing method to subscription. Valid values:
+         * <p>
+         * 
+         * *   1 to 9
+         * *   12
+         * *   24
+         * *   36
          */
         public Builder period(Integer period) {
             this.putQueryParameter("Period", period);
@@ -154,7 +160,7 @@ public class ConvertChargeTypeRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service to which the instance belongs.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -163,7 +169,7 @@ public class ConvertChargeTypeRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service to which the instance belongs.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -172,7 +178,13 @@ public class ConvertChargeTypeRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method of the instance. Valid values:
+         * <p>
+         * 
+         * *   Subscription: subscription
+         * *   PayAsYouGo: pay-as-you-go
+         * 
+         * >  After the call is successful, the billing method of the instance is switched.
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

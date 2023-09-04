@@ -86,7 +86,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The return data.
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             private String period; 
 
             /**
-             * The usage.
+             * Percentage.
              */
             public Builder percentage(Float percentage) {
                 this.percentage = percentage;
@@ -178,10 +178,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The period.
-             * <p>
-             * 
-             * The value is in the format of yyyyMMddHH.
+             * Period.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -258,7 +255,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             private Float usagePercentage; 
 
             /**
-             * The total amount of the savings plan.
+             * PoolValue.
              */
             public Builder poolValue(Float poolValue) {
                 this.poolValue = poolValue;
@@ -266,7 +263,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The pay-as-you-go cost.
+             * PostpaidCost.
              */
             public Builder postpaidCost(Float postpaidCost) {
                 this.postpaidCost = postpaidCost;
@@ -274,7 +271,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The amount that is saved.
+             * SavedCost.
              */
             public Builder savedCost(Float savedCost) {
                 this.savedCost = savedCost;
@@ -282,7 +279,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total usage.
+             * UsagePercentage.
              */
             public Builder usagePercentage(Float usagePercentage) {
                 this.usagePercentage = usagePercentage;
@@ -335,7 +332,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             private TotalUsage totalUsage; 
 
             /**
-             * The usage in different periods.
+             * PeriodCoverage.
              */
             public Builder periodCoverage(java.util.List < PeriodCoverage> periodCoverage) {
                 this.periodCoverage = periodCoverage;
@@ -343,7 +340,7 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The usage summary.
+             * TotalUsage.
              */
             public Builder totalUsage(TotalUsage totalUsage) {
                 this.totalUsage = totalUsage;

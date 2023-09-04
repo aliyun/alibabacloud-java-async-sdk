@@ -185,7 +185,7 @@ public class ApplyInvoiceRequest extends Request {
         } 
 
         /**
-         * AddressId.
+         * The ID of the address to which the invoice is delivered. This parameter is required if the invoice is a paper invoice. Set the ID to the value of the AddressId parameter returned by calling the QueryCustomerAddressList operation.
          */
         public Builder addressId(Long addressId) {
             this.putQueryParameter("AddressId", addressId);
@@ -194,7 +194,7 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * ApplyUserNick.
+         * The nickname of the applicant. The system does not verify the nickname.
          */
         public Builder applyUserNick(String applyUserNick) {
             this.putQueryParameter("ApplyUserNick", applyUserNick);
@@ -203,7 +203,7 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * CustomerId.
+         * The ID of the customer. Set the ID to the value of the CustomerId parameter returned by calling the QueryInvoicingCustomerList operation.
          */
         public Builder customerId(Long customerId) {
             this.putQueryParameter("CustomerId", customerId);
@@ -212,7 +212,7 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * InvoiceAmount.
+         * The amount of the invoice. Unit: Cent.
          */
         public Builder invoiceAmount(Long invoiceAmount) {
             this.putQueryParameter("InvoiceAmount", invoiceAmount);
@@ -221,7 +221,7 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * InvoiceByAmount.
+         * Specifies whether to invoice by amount. A value of true indicates that the user applies for the invoice based on the InvoiceAmount parameter. A value of false indicates that the user applies for the invoice based on the total amount of the invoicing items.
          */
         public Builder invoiceByAmount(Boolean invoiceByAmount) {
             this.putQueryParameter("InvoiceByAmount", invoiceByAmount);
@@ -230,7 +230,11 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * InvoicingType.
+         * The type of the invoice. Valid values:
+         * <p>
+         * 
+         * *   0: paper invoice
+         * *   1: electronic invoice
          */
         public Builder invoicingType(Integer invoicingType) {
             this.putQueryParameter("InvoicingType", invoicingType);
@@ -248,7 +252,7 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * ProcessWay.
+         * The channel that is used to process the invoice. A value of 0 indicates that the invoice is processed by Alibaba Cloud. A value of 1 indicates that the invoice is processed by the tax platform. Set the value to 1.
          */
         public Builder processWay(Integer processWay) {
             this.putQueryParameter("ProcessWay", processWay);
@@ -257,7 +261,7 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * SelectedIds.
+         * The IDs of the selected invoicing items. Set the IDs to the IDs returned by calling the QueryEvaluateList operation.
          */
         public Builder selectedIds(java.util.List < Long > selectedIds) {
             this.putQueryParameter("SelectedIds", selectedIds);
@@ -266,7 +270,7 @@ public class ApplyInvoiceRequest extends Request {
         }
 
         /**
-         * UserRemark.
+         * The remarks made by the user.
          */
         public Builder userRemark(String userRemark) {
             this.putQueryParameter("UserRemark", userRemark);

@@ -27,6 +27,10 @@ public class CreateSavingsPlansInstanceRequest extends Request {
     private String effectiveDate;
 
     @Query
+    @NameInMap("ExtendMap")
+    private java.util.Map < String, String > extendMap;
+
+    @Query
     @NameInMap("PayMode")
     @Validation(required = true)
     private String payMode;
@@ -63,6 +67,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         this.commodityCode = builder.commodityCode;
         this.duration = builder.duration;
         this.effectiveDate = builder.effectiveDate;
+        this.extendMap = builder.extendMap;
         this.payMode = builder.payMode;
         this.poolValue = builder.poolValue;
         this.pricingCycle = builder.pricingCycle;
@@ -104,6 +109,13 @@ public class CreateSavingsPlansInstanceRequest extends Request {
      */
     public String getEffectiveDate() {
         return this.effectiveDate;
+    }
+
+    /**
+     * @return extendMap
+     */
+    public java.util.Map < String, String > getExtendMap() {
+        return this.extendMap;
     }
 
     /**
@@ -159,6 +171,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         private String commodityCode; 
         private String duration; 
         private String effectiveDate; 
+        private java.util.Map < String, String > extendMap; 
         private String payMode; 
         private String poolValue; 
         private String pricingCycle; 
@@ -176,6 +189,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
             this.commodityCode = request.commodityCode;
             this.duration = request.duration;
             this.effectiveDate = request.effectiveDate;
+            this.extendMap = request.extendMap;
             this.payMode = request.payMode;
             this.poolValue = request.poolValue;
             this.pricingCycle = request.pricingCycle;
@@ -186,7 +200,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         } 
 
         /**
-         * commodityCode
+         * CommodityCode.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -195,7 +209,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * duration
+         * Duration.
          */
         public Builder duration(String duration) {
             this.putQueryParameter("Duration", duration);
@@ -204,7 +218,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * effectiveDate
+         * EffectiveDate.
          */
         public Builder effectiveDate(String effectiveDate) {
             this.putQueryParameter("EffectiveDate", effectiveDate);
@@ -213,7 +227,17 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * payMode
+         * ExtendMap.
+         */
+        public Builder extendMap(java.util.Map < String, String > extendMap) {
+            String extendMapShrink = shrink(extendMap, "ExtendMap", "json");
+            this.putQueryParameter("ExtendMap", extendMapShrink);
+            this.extendMap = extendMap;
+            return this;
+        }
+
+        /**
+         * PayMode.
          */
         public Builder payMode(String payMode) {
             this.putQueryParameter("PayMode", payMode);
@@ -222,7 +246,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * poolValue
+         * PoolValue.
          */
         public Builder poolValue(String poolValue) {
             this.putQueryParameter("PoolValue", poolValue);
@@ -231,7 +255,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * pricingCycle
+         * PricingCycle.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -240,7 +264,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * region
+         * Region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -249,7 +273,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * specType
+         * SpecType.
          */
         public Builder specType(String specType) {
             this.putQueryParameter("SpecType", specType);
@@ -258,7 +282,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * specification
+         * Specification.
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);
@@ -267,7 +291,7 @@ public class CreateSavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * type
+         * Type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

@@ -98,7 +98,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -114,7 +114,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -122,7 +122,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -130,7 +130,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +138,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -190,7 +190,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
             private Long orderId; 
 
             /**
-             * InstanceId.
+             * The ID of the resource plan.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -198,7 +198,7 @@ public class CreateResourcePackageResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * The ID of the order.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

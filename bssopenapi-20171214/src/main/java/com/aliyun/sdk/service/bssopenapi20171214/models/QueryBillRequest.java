@@ -196,7 +196,7 @@ public class QueryBillRequest extends Request {
         } 
 
         /**
-         * BillOwnerId.
+         * The ID of the member.
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -205,7 +205,7 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * BillingCycle.
+         * The billing cycle, in the YYYY-MM format.
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -214,7 +214,7 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * IsDisplayLocalCurrency.
+         * Specifies whether to display local currency information in bills. The parameter will be discontinued.
          */
         public Builder isDisplayLocalCurrency(Boolean isDisplayLocalCurrency) {
             this.putQueryParameter("IsDisplayLocalCurrency", isDisplayLocalCurrency);
@@ -223,7 +223,11 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * IsHideZeroCharge.
+         * Specifies whether to filter out a bill whose pretax gross amount is 0. By default, a bill whose pretax gross amount is 0 is not filtered out. Valid values:
+         * <p>
+         * 
+         * *   true: filters out a bill whose pretax gross amount is 0.
+         * *   false: does not filter out a bill whose pretax gross amount is 0.
          */
         public Builder isHideZeroCharge(Boolean isHideZeroCharge) {
             this.putQueryParameter("IsHideZeroCharge", isHideZeroCharge);
@@ -241,7 +245,7 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -250,7 +254,7 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. Maximum value: 300.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -259,7 +263,7 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -268,7 +272,7 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -277,7 +281,15 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   Subscription
+         * *   PayAsYouGo
+         * 
+         * **
+         * 
+         * ****This parameter must be used together with the ProductCode parameter.
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);
@@ -286,7 +298,13 @@ public class QueryBillRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the bill. Valid values:
+         * <p>
+         * 
+         * *   SubscriptionOrder
+         * *   PayAsYouGoBill
+         * *   Refund
+         * *   Adjustment
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

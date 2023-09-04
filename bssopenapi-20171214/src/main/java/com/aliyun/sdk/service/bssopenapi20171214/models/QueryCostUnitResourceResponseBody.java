@@ -86,7 +86,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +194,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private String unitName; 
 
             /**
-             * OwnerUid.
+             * The user ID of the cost center owner.
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -202,7 +202,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ParentUnitId.
+             * The ID of the parent cost center. A value of -1 indicates the root cost center.
              */
             public Builder parentUnitId(Long parentUnitId) {
                 this.parentUnitId = parentUnitId;
@@ -210,7 +210,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * UnitId.
+             * The ID of the cost center.
              */
             public Builder unitId(Long unitId) {
                 this.unitId = unitId;
@@ -218,7 +218,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * UnitName.
+             * The name of the cost center.
              */
             public Builder unitName(String unitName) {
                 this.unitName = unitName;
@@ -331,7 +331,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private Long userCount; 
 
             /**
-             * ResourceCount.
+             * The number of resource instances in the cost center.
              */
             public Builder resourceCount(Long resourceCount) {
                 this.resourceCount = resourceCount;
@@ -339,7 +339,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupCount.
+             * The number of resource groups in the cost center.
              */
             public Builder resourceGroupCount(Long resourceGroupCount) {
                 this.resourceGroupCount = resourceGroupCount;
@@ -347,7 +347,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SubUnitCount.
+             * The number of sub-cost centers in the cost center.
              */
             public Builder subUnitCount(Long subUnitCount) {
                 this.subUnitCount = subUnitCount;
@@ -355,7 +355,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalResourceCount.
+             * The total number of resource instances, including resource instances of sub-cost centers, in the cost center.
              */
             public Builder totalResourceCount(Long totalResourceCount) {
                 this.totalResourceCount = totalResourceCount;
@@ -363,7 +363,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalResourceGroupCount.
+             * The total number of resource groups, including resource groups of sub-cost centers, in the cost center.
              */
             public Builder totalResourceGroupCount(Long totalResourceGroupCount) {
                 this.totalResourceGroupCount = totalResourceGroupCount;
@@ -371,7 +371,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalUserCount.
+             * The total number of the associated accounts, including associated accounts of sub-cost centers, in the cost center.
              */
             public Builder totalUserCount(Long totalUserCount) {
                 this.totalUserCount = totalUserCount;
@@ -379,7 +379,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * UserCount.
+             * The number of sub-cost centers in the cost center.
              */
             public Builder userCount(Long userCount) {
                 this.userCount = userCount;
@@ -564,7 +564,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private String resourceUserName; 
 
             /**
-             * ApportionCode.
+             * The split code of the resource.
              */
             public Builder apportionCode(String apportionCode) {
                 this.apportionCode = apportionCode;
@@ -572,7 +572,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ApportionName.
+             * The split name of the resource.
              */
             public Builder apportionName(String apportionName) {
                 this.apportionName = apportionName;
@@ -580,7 +580,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * The product code of the resource.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -588,7 +588,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityName.
+             * The commodity name of the resource.
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -596,7 +596,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedResources.
+             * The resources related to the resource instance.
              */
             public Builder relatedResources(String relatedResources) {
                 this.relatedResources = relatedResources;
@@ -604,7 +604,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroup.
+             * The resource group to which the resource belongs.
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -612,7 +612,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The instance ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -620,7 +620,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceNick.
+             * The custom name of the resource.
              */
             public Builder resourceNick(String resourceNick) {
                 this.resourceNick = resourceNick;
@@ -628,7 +628,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceStatus.
+             * The status of the resource.
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -636,7 +636,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTag.
+             * The tags of the resource.
              */
             public Builder resourceTag(String resourceTag) {
                 this.resourceTag = resourceTag;
@@ -644,7 +644,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -652,7 +652,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceUserId.
+             * The user ID of the resource owner.
              */
             public Builder resourceUserId(Long resourceUserId) {
                 this.resourceUserId = resourceUserId;
@@ -660,7 +660,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceUserName.
+             * The username of the resource owner.
              */
             public Builder resourceUserName(String resourceUserName) {
                 this.resourceUserName = resourceUserName;
@@ -761,7 +761,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CostUnit.
+             * The information about the cost center.
              */
             public Builder costUnit(CostUnit costUnit) {
                 this.costUnit = costUnit;
@@ -769,7 +769,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * CostUnitStatisInfo.
+             * The statistical information about the cost center.
              */
             public Builder costUnitStatisInfo(CostUnitStatisInfo costUnitStatisInfo) {
                 this.costUnitStatisInfo = costUnitStatisInfo;
@@ -777,7 +777,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The page number of the returned page.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -785,7 +785,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -793,7 +793,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceInstanceDtoList.
+             * The resource instances.
              */
             public Builder resourceInstanceDtoList(java.util.List < ResourceInstanceDtoList> resourceInstanceDtoList) {
                 this.resourceInstanceDtoList = resourceInstanceDtoList;
@@ -801,7 +801,7 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

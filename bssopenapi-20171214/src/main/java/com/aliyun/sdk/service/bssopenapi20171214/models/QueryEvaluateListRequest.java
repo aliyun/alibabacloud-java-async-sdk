@@ -236,7 +236,7 @@ public class QueryEvaluateListRequest extends Request {
         } 
 
         /**
-         * BillCycle.
+         * The billing cycle.
          */
         public Builder billCycle(String billCycle) {
             this.putQueryParameter("BillCycle", billCycle);
@@ -245,7 +245,10 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * BizTypeList.
+         * The market types in invoices.
+         * <p>
+         * 
+         * >  By default, this parameter is left empty. If this parameter is left empty, all market types are queried.
          */
         public Builder bizTypeList(java.util.List < String > bizTypeList) {
             this.putQueryParameter("BizTypeList", bizTypeList);
@@ -254,7 +257,7 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * EndAmount.
+         * The maximum amount to be queried.
          */
         public Builder endAmount(Long endAmount) {
             this.putQueryParameter("EndAmount", endAmount);
@@ -263,7 +266,7 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * EndBizTime.
+         * The latest time when an order is paid Specify the time in the yyyy-mm-dd hh:mm:ss format.
          */
         public Builder endBizTime(String endBizTime) {
             this.putQueryParameter("EndBizTime", endBizTime);
@@ -272,7 +275,7 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * EndSearchTime.
+         * The end of the time range to query.
          */
         public Builder endSearchTime(String endSearchTime) {
             this.putQueryParameter("EndSearchTime", endSearchTime);
@@ -281,7 +284,7 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * OutBizId.
+         * The ID of the external order.
          */
         public Builder outBizId(String outBizId) {
             this.putQueryParameter("OutBizId", outBizId);
@@ -299,7 +302,7 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -308,7 +311,7 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -317,7 +320,12 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * SortType.
+         * The type of the sort. Valid values:
+         * <p>
+         * 
+         * *   1: Sort invoices by ID in descending order.
+         * *   2: Sort invoices by invoice type in descending order, and then sort invoices of the same type by ID in descending order.
+         * *   3: Sort invoices by invoice type in ascending order, and then sort invoices of the same type by ID in descending order.
          */
         public Builder sortType(Integer sortType) {
             this.putQueryParameter("SortType", sortType);
@@ -326,7 +334,7 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * StartAmount.
+         * The minimum amount to be queried.
          */
         public Builder startAmount(Long startAmount) {
             this.putQueryParameter("StartAmount", startAmount);
@@ -335,7 +343,7 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * StartBizTime.
+         * The earliest time when an order is paid. Specify the time in the yyyy-mm-dd hh:mm:ss format.
          */
         public Builder startBizTime(String startBizTime) {
             this.putQueryParameter("StartBizTime", startBizTime);
@@ -344,7 +352,7 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * StartSearchTime.
+         * The beginning of the time range to query.
          */
         public Builder startSearchTime(String startSearchTime) {
             this.putQueryParameter("StartSearchTime", startSearchTime);
@@ -353,7 +361,15 @@ public class QueryEvaluateListRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of orders to be queried. Valid values:
+         * <p>
+         * 
+         * *   1: the orders in which the invoiceable amount is negative.
+         * *   2: the orders in which the invoiceable amount is positive.
+         * *   3: the orders in which the invoiceable amount is not 0.
+         * *   4: the orders in which the amount that has been invoiced is greater than 0.
+         * 
+         * >  By default, this parameter is left empty. If this parameter is left empty, all orders are queried.
          */
         public Builder type(Integer type) {
             this.putQueryParameter("Type", type);

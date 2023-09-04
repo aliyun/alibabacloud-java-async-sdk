@@ -86,7 +86,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Id.
+             * The ID of the promotion.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -178,7 +178,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The description of the discount.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -308,7 +308,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             private Float tradePrice; 
 
             /**
-             * Currency.
+             * The type of the currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -316,7 +316,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountPrice.
+             * The discounted amount. Unit: CNY.
              */
             public Builder discountPrice(Float discountPrice) {
                 this.discountPrice = discountPrice;
@@ -324,7 +324,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalPrice.
+             * The original price. Unit: CNY.
              */
             public Builder originalPrice(Float originalPrice) {
                 this.originalPrice = originalPrice;
@@ -332,7 +332,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Promotions.
+             * The details of the discount.
              */
             public Builder promotions(Promotions promotions) {
                 this.promotions = promotions;
@@ -340,7 +340,7 @@ public class GetResourcePackagePriceResponseBody extends TeaModel {
             }
 
             /**
-             * TradePrice.
+             * The price at which the transaction is made. Unit: CNY.
              */
             public Builder tradePrice(Float tradePrice) {
                 this.tradePrice = tradePrice;

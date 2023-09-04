@@ -55,7 +55,7 @@ public class QueryPermissionListRequest extends Request {
         } 
 
         /**
-         * RelationId.
+         * The ID of the relationship. Set this parameter to the value of the RelationId response parameter returned by calling the QueryRelationList operation.
          */
         public Builder relationId(Long relationId) {
             this.putQueryParameter("RelationId", relationId);

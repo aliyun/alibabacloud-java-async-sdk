@@ -85,7 +85,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * ResourceId.
+         * The IDs of resources.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -94,7 +94,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Specify savings plan instance as the type of the resource.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -103,7 +103,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -159,7 +159,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. You can create N tag keys at a time. Valid values of N: 1 to 20. The value of this parameter can be an empty string.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -167,7 +167,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag N. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

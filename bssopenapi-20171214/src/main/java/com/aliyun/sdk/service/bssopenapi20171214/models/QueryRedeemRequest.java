@@ -110,7 +110,13 @@ public class QueryRedeemRequest extends Request {
         } 
 
         /**
-         * EffectiveOrNot.
+         * Specifies whether the redemption coupon takes effect. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder effectiveOrNot(Boolean effectiveOrNot) {
             this.putQueryParameter("EffectiveOrNot", effectiveOrNot);
@@ -119,7 +125,7 @@ public class QueryRedeemRequest extends Request {
         }
 
         /**
-         * ExpiryTimeEnd.
+         * The end time when the redemption coupon expires. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.
          */
         public Builder expiryTimeEnd(String expiryTimeEnd) {
             this.putQueryParameter("ExpiryTimeEnd", expiryTimeEnd);
@@ -128,7 +134,7 @@ public class QueryRedeemRequest extends Request {
         }
 
         /**
-         * ExpiryTimeStart.
+         * The start time when the redemption coupon expires. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.
          */
         public Builder expiryTimeStart(String expiryTimeStart) {
             this.putQueryParameter("ExpiryTimeStart", expiryTimeStart);
@@ -137,7 +143,7 @@ public class QueryRedeemRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -146,7 +152,7 @@ public class QueryRedeemRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

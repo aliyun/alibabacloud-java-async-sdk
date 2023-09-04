@@ -86,7 +86,7 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The error code returned if the call failed. For more information, see the "Error codes" section of the topic.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The consumption quota for the quota ledger after adjustment.
          */
         public Builder data(String data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ChangeResellerConsumeAmountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

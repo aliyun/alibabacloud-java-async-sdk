@@ -18,6 +18,10 @@ public class QuerySkuPriceListRequest extends Request {
     private String commodityCode;
 
     @Query
+    @NameInMap("Lang")
+    private String lang;
+
+    @Query
     @NameInMap("NextPageToken")
     private String nextPageToken;
 
@@ -38,6 +42,7 @@ public class QuerySkuPriceListRequest extends Request {
     private QuerySkuPriceListRequest(Builder builder) {
         super(builder);
         this.commodityCode = builder.commodityCode;
+        this.lang = builder.lang;
         this.nextPageToken = builder.nextPageToken;
         this.pageSize = builder.pageSize;
         this.priceEntityCode = builder.priceEntityCode;
@@ -62,6 +67,13 @@ public class QuerySkuPriceListRequest extends Request {
      */
     public String getCommodityCode() {
         return this.commodityCode;
+    }
+
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
     }
 
     /**
@@ -94,6 +106,7 @@ public class QuerySkuPriceListRequest extends Request {
 
     public static final class Builder extends Request.Builder<QuerySkuPriceListRequest, Builder> {
         private String commodityCode; 
+        private String lang; 
         private String nextPageToken; 
         private Integer pageSize; 
         private String priceEntityCode; 
@@ -106,6 +119,7 @@ public class QuerySkuPriceListRequest extends Request {
         private Builder(QuerySkuPriceListRequest request) {
             super(request);
             this.commodityCode = request.commodityCode;
+            this.lang = request.lang;
             this.nextPageToken = request.nextPageToken;
             this.pageSize = request.pageSize;
             this.priceEntityCode = request.priceEntityCode;
@@ -113,7 +127,7 @@ public class QuerySkuPriceListRequest extends Request {
         } 
 
         /**
-         * CommodityCode.
+         * The code of the service.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -122,7 +136,16 @@ public class QuerySkuPriceListRequest extends Request {
         }
 
         /**
-         * NextPageToken.
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
+            return this;
+        }
+
+        /**
+         * The token that is used to retrieve the next page. You do not need to set this parameter if you query coverage details for the first time. The response returns a token that you can use to query coverage details of the next page. If a null value is returned for the NextPageToken parameter, no more coverage details can be queried.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -131,7 +154,7 @@ public class QuerySkuPriceListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to be returned on each page. Maximum value: 50.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -140,7 +163,7 @@ public class QuerySkuPriceListRequest extends Request {
         }
 
         /**
-         * PriceEntityCode.
+         * The code of the pricing object.
          */
         public Builder priceEntityCode(String priceEntityCode) {
             this.putQueryParameter("PriceEntityCode", priceEntityCode);
@@ -149,7 +172,7 @@ public class QuerySkuPriceListRequest extends Request {
         }
 
         /**
-         * PriceFactorConditionMap.
+         * The conditions of the pricing factors.
          */
         public Builder priceFactorConditionMap(java.util.Map < String, java.util.List<String>> priceFactorConditionMap) {
             String priceFactorConditionMapShrink = shrink(priceFactorConditionMap, "PriceFactorConditionMap", "json");

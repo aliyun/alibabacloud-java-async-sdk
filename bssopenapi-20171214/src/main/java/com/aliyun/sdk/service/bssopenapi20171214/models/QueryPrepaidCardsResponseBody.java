@@ -86,7 +86,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -266,7 +266,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ApplicableProducts.
+             * The services to which the prepaid card is applicable.
              */
             public Builder applicableProducts(String applicableProducts) {
                 this.applicableProducts = applicableProducts;
@@ -274,7 +274,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicableScenarios.
+             * The scenario to which the prepaid card is applicable.
              */
             public Builder applicableScenarios(String applicableScenarios) {
                 this.applicableScenarios = applicableScenarios;
@@ -282,7 +282,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * Balance.
+             * The balance of the prepaid card.
              */
             public Builder balance(String balance) {
                 this.balance = balance;
@@ -290,7 +290,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveTime.
+             * The time when the prepaid card took effect.
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -298,7 +298,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiryTime.
+             * The time when the prepaid card expired.
              */
             public Builder expiryTime(String expiryTime) {
                 this.expiryTime = expiryTime;
@@ -306,7 +306,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * GrantedTime.
+             * The time when the prepaid card was issued.
              */
             public Builder grantedTime(String grantedTime) {
                 this.grantedTime = grantedTime;
@@ -314,7 +314,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * NominalValue.
+             * The nominal value of the prepaid card.
              */
             public Builder nominalValue(String nominalValue) {
                 this.nominalValue = nominalValue;
@@ -322,7 +322,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * PrepaidCardId.
+             * The ID of the prepaid card.
              */
             public Builder prepaidCardId(Long prepaidCardId) {
                 this.prepaidCardId = prepaidCardId;
@@ -330,7 +330,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * PrepaidCardNo.
+             * The number of the prepaid card.
              */
             public Builder prepaidCardNo(String prepaidCardNo) {
                 this.prepaidCardNo = prepaidCardNo;
@@ -338,7 +338,12 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the prepaid card. Valid values:
+             * <p>
+             * 
+             * *   Available: The prepaid card is valid.
+             * *   Expired: The prepaid card expired.
+             * *   Cancelled: The prepaid card is invalid.
              */
             public Builder status(String status) {
                 this.status = status;

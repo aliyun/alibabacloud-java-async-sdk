@@ -222,7 +222,7 @@ public class QueryAvailableInstancesRequest extends Request {
         } 
 
         /**
-         * CreateTimeEnd.
+         * The end time when the specified instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -231,7 +231,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * CreateTimeStart.
+         * The start time when the specified instance is created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -240,7 +240,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * EndTimeEnd.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-05-23T12:00:00Z.
          */
         public Builder endTimeEnd(String endTimeEnd) {
             this.putQueryParameter("EndTimeEnd", endTimeEnd);
@@ -249,7 +249,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * EndTimeStart.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2016-05-23T12:00:00Z.
          */
         public Builder endTimeStart(String endTimeStart) {
             this.putQueryParameter("EndTimeStart", endTimeStart);
@@ -258,7 +258,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIDs.
+         * The ID of the instance. Separate multiple IDs with commas (,). You can specify a maximum of 100 IDs.
          */
         public Builder instanceIDs(String instanceIDs) {
             this.putQueryParameter("InstanceIDs", instanceIDs);
@@ -276,7 +276,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -285,7 +285,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -294,7 +294,10 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service. You can query the service code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud services**.
+         * <p>
+         * 
+         * >This parameter cannot be left empty if the region is specified.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -303,7 +306,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -312,7 +315,7 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region in which the instance resides.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -321,7 +324,12 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * RenewStatus.
+         * The renewal status of the specified instance. Valid values:
+         * <p>
+         * 
+         * *   AutoRenewal: The instance is automatically renewed.
+         * *   ManualRenewal: The instance is manually renewed.
+         * *   NotRenewal: The instance is not renewed.
          */
         public Builder renewStatus(String renewStatus) {
             this.putQueryParameter("RenewStatus", renewStatus);
@@ -330,7 +338,11 @@ public class QueryAvailableInstancesRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   Subscription: subscription
+         * *   PayAsYouGo: pay-as-you-go
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

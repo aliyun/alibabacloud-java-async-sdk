@@ -69,7 +69,7 @@ public class GetOrderDetailRequest extends Request {
         } 
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("OrderId", orderId);

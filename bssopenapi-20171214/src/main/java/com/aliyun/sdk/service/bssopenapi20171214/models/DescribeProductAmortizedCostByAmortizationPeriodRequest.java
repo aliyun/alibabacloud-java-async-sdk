@@ -186,7 +186,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         } 
 
         /**
-         * BillOwnerIdList.
+         * The instance ID that is used to filter bills. You can specify multiple instance IDs to query bills of multiple instances. If you leave this parameter empty, the bills of all instances are queried by default. You can specify a maximum of 10 instance IDs.
          */
         public Builder billOwnerIdList(java.util.List < String > billOwnerIdList) {
             this.putBodyParameter("BillOwnerIdList", billOwnerIdList);
@@ -195,7 +195,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * BillUserIdList.
+         * The ID of the member that needs to settle the bill. The member ID is used to filter bills. If you specify a value for this parameter, you can query the bills of the specified member. If you leave this parameter empty, the bills of the current account and all members of the current account are queried by default. You can specify a maximum of 10 IDs.
          */
         public Builder billUserIdList(java.util.List < String > billUserIdList) {
             this.putBodyParameter("BillUserIdList", billUserIdList);
@@ -204,7 +204,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * BillingCycle.
+         * The allocation month. Format: YYYY-MM.
          */
         public Builder billingCycle(String billingCycle) {
             this.putBodyParameter("BillingCycle", billingCycle);
@@ -213,7 +213,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * ConsumePeriodFilter.
+         * The billing cycle that is used to filter bills. You can specify a maximum of 10 billing cycles.
          */
         public Builder consumePeriodFilter(java.util.List < String > consumePeriodFilter) {
             this.putBodyParameter("ConsumePeriodFilter", consumePeriodFilter);
@@ -222,7 +222,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * CostUnitCode.
+         * The code of the cost center.
          */
         public Builder costUnitCode(String costUnitCode) {
             this.putBodyParameter("CostUnitCode", costUnitCode);
@@ -231,7 +231,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return. Default value: 20. Maximum value: 300.
          */
         public Builder maxResults(Integer maxResults) {
             this.putBodyParameter("MaxResults", maxResults);
@@ -240,7 +240,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * NextToken.
+         * The position from which the query starts. The parameter must be left empty or set to the value of the NextToken parameter returned from the last call. Otherwise, an error is returned. If this parameter is left empty, data is queried from the beginning.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -249,7 +249,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * ProductCode.
+         * The code of the service. You can obtain the value of this parameter by calling the QueryProductList operation or the DescribeResourcePackageProduct operation.
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -258,7 +258,7 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * ProductDetail.
+         * The specific service resource.
          */
         public Builder productDetail(String productDetail) {
             this.putBodyParameter("ProductDetail", productDetail);
@@ -267,7 +267,11 @@ public class DescribeProductAmortizedCostByAmortizationPeriodRequest extends Req
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   Subscription: the subscription billing method
+         * *   PayAsYouGo: the pay-as-you-go billing method
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putBodyParameter("SubscriptionType", subscriptionType);

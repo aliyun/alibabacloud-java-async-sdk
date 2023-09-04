@@ -86,7 +86,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code
+         * The error code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * message
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
-         * success
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -153,6 +153,9 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         @NameInMap("Region")
         private String region;
 
+        @NameInMap("RegionCode")
+        private String regionCode;
+
         @NameInMap("Spec")
         private String spec;
 
@@ -167,6 +170,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             this.moduleName = builder.moduleName;
             this.payMode = builder.payMode;
             this.region = builder.region;
+            this.regionCode = builder.regionCode;
             this.spec = builder.spec;
             this.spnType = builder.spnType;
         }
@@ -229,6 +233,13 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
         }
 
         /**
+         * @return regionCode
+         */
+        public String getRegionCode() {
+            return this.regionCode;
+        }
+
+        /**
          * @return spec
          */
         public String getSpec() {
@@ -250,11 +261,12 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             private String moduleName; 
             private String payMode; 
             private String region; 
+            private String regionCode; 
             private String spec; 
             private String spnType; 
 
             /**
-             * CommodityName.
+             * The details of the service.
              */
             public Builder commodityName(String commodityName) {
                 this.commodityName = commodityName;
@@ -262,7 +274,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * ContractDiscountRate.
+             * The contracted discount.
              */
             public Builder contractDiscountRate(String contractDiscountRate) {
                 this.contractDiscountRate = contractDiscountRate;
@@ -270,7 +282,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * Cycle.
+             * The cycle based on which queries were performed.
              */
             public Builder cycle(String cycle) {
                 this.cycle = cycle;
@@ -278,7 +290,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * DiscountRate.
+             * The discount provided by the official website.
              */
             public Builder discountRate(String discountRate) {
                 this.discountRate = discountRate;
@@ -286,7 +298,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * The name of the pricing module.
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -294,7 +306,12 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * PayMode.
+             * The payment mode. Valid values:
+             * <p>
+             * 
+             * *   total: all upfront
+             * *   half: half upfront
+             * *   zero: no upfront
              */
             public Builder payMode(String payMode) {
                 this.payMode = payMode;
@@ -302,7 +319,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The ID of the region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -310,7 +327,15 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * Spec.
+             * RegionCode.
+             */
+            public Builder regionCode(String regionCode) {
+                this.regionCode = regionCode;
+                return this;
+            }
+
+            /**
+             * The type of the resource.
              */
             public Builder spec(String spec) {
                 this.spec = spec;
@@ -318,7 +343,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * SpnType.
+             * The type of the savings plan.
              */
             public Builder spnType(String spnType) {
                 this.spnType = spnType;
@@ -371,7 +396,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             private java.util.List < Items> items; 
 
             /**
-             * hostId
+             * The IP address of the request.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -379,7 +404,7 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * The information about the discounts on saving plans.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;

@@ -83,7 +83,7 @@ public class QueryProductListRequest extends Request {
         } 
 
         /**
-         * PageNum.
+         * The page number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -92,7 +92,7 @@ public class QueryProductListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -101,7 +101,7 @@ public class QueryProductListRequest extends Request {
         }
 
         /**
-         * QueryTotalCount.
+         * Specifies whether to return the total number of services. Default value: false.
          */
         public Builder queryTotalCount(Boolean queryTotalCount) {
             this.putQueryParameter("QueryTotalCount", queryTotalCount);

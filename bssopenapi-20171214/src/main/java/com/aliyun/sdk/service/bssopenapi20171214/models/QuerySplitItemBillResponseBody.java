@@ -86,7 +86,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -722,7 +722,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             private String zone; 
 
             /**
-             * AdjustAmount.
+             * The amount deducted by using credit refunds.
              */
             public Builder adjustAmount(Float adjustAmount) {
                 this.adjustAmount = adjustAmount;
@@ -730,7 +730,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * BillingDate.
+             * The billing date, in the YYYY-MM-DD format.
              */
             public Builder billingDate(String billingDate) {
                 this.billingDate = billingDate;
@@ -738,7 +738,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * BillingItem.
+             * The billable item.
              */
             public Builder billingItem(String billingItem) {
                 this.billingItem = billingItem;
@@ -746,7 +746,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * BillingType.
+             * The billing type.
              */
             public Builder billingType(String billingType) {
                 this.billingType = billingType;
@@ -754,7 +754,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * CashAmount.
+             * The amount paid in cash. The amount that was deducted by using credit refunds is not included.
              */
             public Builder cashAmount(Float cashAmount) {
                 this.cashAmount = cashAmount;
@@ -762,7 +762,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * The code of the commodity. The commodity code is the same as that displayed in User Center.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -770,7 +770,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * CostUnit.
+             * The cost center.
              */
             public Builder costUnit(String costUnit) {
                 this.costUnit = costUnit;
@@ -778,7 +778,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * The type of the currency. Valid values: CNY, USD, and JPY.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -786,7 +786,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * DeductedByCashCoupons.
+             * The amount deducted by using vouchers.
              */
             public Builder deductedByCashCoupons(Float deductedByCashCoupons) {
                 this.deductedByCashCoupons = deductedByCashCoupons;
@@ -794,7 +794,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * DeductedByCoupons.
+             * The amount deducted by using coupons.
              */
             public Builder deductedByCoupons(Float deductedByCoupons) {
                 this.deductedByCoupons = deductedByCoupons;
@@ -802,7 +802,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * DeductedByPrepaidCard.
+             * The amount deducted by using prepaid cards.
              */
             public Builder deductedByPrepaidCard(Float deductedByPrepaidCard) {
                 this.deductedByPrepaidCard = deductedByPrepaidCard;
@@ -810,7 +810,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * DeductedByResourcePackage.
+             * The amount deducted by using resource plans.
              */
             public Builder deductedByResourcePackage(String deductedByResourcePackage) {
                 this.deductedByResourcePackage = deductedByResourcePackage;
@@ -818,7 +818,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceConfig.
+             * The configurations of the instance.
              */
             public Builder instanceConfig(String instanceConfig) {
                 this.instanceConfig = instanceConfig;
@@ -826,7 +826,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceID.
+             * The ID of the instance.
              */
             public Builder instanceID(String instanceID) {
                 this.instanceID = instanceID;
@@ -834,7 +834,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceSpec.
+             * The instance type of the instance.
              */
             public Builder instanceSpec(String instanceSpec) {
                 this.instanceSpec = instanceSpec;
@@ -842,7 +842,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIP.
+             * The public IP address.
              */
             public Builder internetIP(String internetIP) {
                 this.internetIP = internetIP;
@@ -850,7 +850,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIP.
+             * The private IP address.
              */
             public Builder intranetIP(String intranetIP) {
                 this.intranetIP = intranetIP;
@@ -858,7 +858,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * InvoiceDiscount.
+             * The discount amount.
              */
             public Builder invoiceDiscount(Float invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -866,7 +866,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * Item.
+             * The type of the bill. Valid values: SubscriptionOrder: subscription order PayAsYouGoBill: pay-as-you-go bill Refund: refund Adjustment: reconciliation
              */
             public Builder item(String item) {
                 this.item = item;
@@ -874,7 +874,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * ListPrice.
+             * The unit price. This parameter is returned only if the isBillingItem parameter is set to true.
              */
             public Builder listPrice(String listPrice) {
                 this.listPrice = listPrice;
@@ -882,7 +882,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * ListPriceUnit.
+             * The unit of the unit price. This parameter is returned only if the isBillingItem parameter is set to true.
              */
             public Builder listPriceUnit(String listPriceUnit) {
                 this.listPriceUnit = listPriceUnit;
@@ -890,7 +890,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * The name of the instance.
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -898,7 +898,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * OutstandingAmount.
+             * The unsettled amount of the bill.
              */
             public Builder outstandingAmount(Float outstandingAmount) {
                 this.outstandingAmount = outstandingAmount;
@@ -906,7 +906,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerID.
+             * The ID of the member. This parameter is returned in a multi-account payment scenario.
              */
             public Builder ownerID(String ownerID) {
                 this.ownerID = ownerID;
@@ -914,7 +914,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentAmount.
+             * The amount paid in cash.
              */
             public Builder paymentAmount(Float paymentAmount) {
                 this.paymentAmount = paymentAmount;
@@ -922,7 +922,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * PipCode.
+             * The code of the service. The service code is the same as that displayed in User Center.
              */
             public Builder pipCode(String pipCode) {
                 this.pipCode = pipCode;
@@ -930,7 +930,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * PretaxAmount.
+             * The pretax amount.
              */
             public Builder pretaxAmount(Float pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -938,7 +938,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * PretaxGrossAmount.
+             * The pretax gross amount.
              */
             public Builder pretaxGrossAmount(Float pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -946,7 +946,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The code of the service.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -954,7 +954,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * ProductDetail.
+             * The details of the service.
              */
             public Builder productDetail(String productDetail) {
                 this.productDetail = productDetail;
@@ -962,7 +962,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * The name of the service.
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -970,7 +970,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * The type of the service.
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -978,7 +978,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The ID of the region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -986,7 +986,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroup.
+             * The resource group.
              */
             public Builder resourceGroup(String resourceGroup) {
                 this.resourceGroup = resourceGroup;
@@ -994,7 +994,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePeriod.
+             * The validity period.
              */
             public Builder servicePeriod(String servicePeriod) {
                 this.servicePeriod = servicePeriod;
@@ -1002,7 +1002,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * ServicePeriodUnit.
+             * The unit of the validity period.
              */
             public Builder servicePeriodUnit(String servicePeriodUnit) {
                 this.servicePeriodUnit = servicePeriodUnit;
@@ -1010,7 +1010,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * SplitAccountID.
+             * The ID of the account to which the split bill belongs.
              */
             public Builder splitAccountID(String splitAccountID) {
                 this.splitAccountID = splitAccountID;
@@ -1018,7 +1018,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * SplitAccountName.
+             * The name of the account to which the split item belongs.
              */
             public Builder splitAccountName(String splitAccountName) {
                 this.splitAccountName = splitAccountName;
@@ -1026,7 +1026,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * SplitBillingCycle.
+             * The month in which the split item is used.
              */
             public Builder splitBillingCycle(String splitBillingCycle) {
                 this.splitBillingCycle = splitBillingCycle;
@@ -1034,7 +1034,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * SplitCommodityCode.
+             * The commodity code of the split item.
              */
             public Builder splitCommodityCode(String splitCommodityCode) {
                 this.splitCommodityCode = splitCommodityCode;
@@ -1042,7 +1042,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * SplitItemID.
+             * The ID of the split item.
              */
             public Builder splitItemID(String splitItemID) {
                 this.splitItemID = splitItemID;
@@ -1050,7 +1050,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * SplitItemName.
+             * The name of the split item.
              */
             public Builder splitItemName(String splitItemName) {
                 this.splitItemName = splitItemName;
@@ -1058,7 +1058,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * SplitProductDetail.
+             * The name of the service to which the split item belongs.
              */
             public Builder splitProductDetail(String splitProductDetail) {
                 this.splitProductDetail = splitProductDetail;
@@ -1066,7 +1066,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionType.
+             * The billing method. Valid values: Subscription: subscription PayAsYouGo: pay-as-you-go This parameter is returned together with the ProductCode parameter.
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -1074,7 +1074,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1082,7 +1082,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * Usage.
+             * The usage of the split item. This parameter is returned only if the isBillingItem parameter is set to true.
              */
             public Builder usage(String usage) {
                 this.usage = usage;
@@ -1090,7 +1090,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * UsageUnit.
+             * The unit of usage. This parameter is returned only if the isBillingItem parameter is set to true.
              */
             public Builder usageUnit(String usageUnit) {
                 this.usageUnit = usageUnit;
@@ -1098,7 +1098,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * Zone.
+             * The ID of the zone.
              */
             public Builder zone(String zone) {
                 this.zone = zone;
@@ -1139,7 +1139,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             private java.util.List < Item> item; 
 
             /**
-             * Item.
+             * The type of the bill. Valid values: SubscriptionOrder: subscription order PayAsYouGoBill: pay-as-you-go bill Refund: refund Adjustment: reconciliation
              */
             public Builder item(java.util.List < Item> item) {
                 this.item = item;
@@ -1252,7 +1252,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * AccountID.
+             * The ID of the account.
              */
             public Builder accountID(String accountID) {
                 this.accountID = accountID;
@@ -1260,7 +1260,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * The name of the account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -1268,7 +1268,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * BillingCycle.
+             * The billing cycle, in the YYYY-MM format.
              */
             public Builder billingCycle(String billingCycle) {
                 this.billingCycle = billingCycle;
@@ -1276,7 +1276,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * The details of the bills.
              */
             public Builder items(Items items) {
                 this.items = items;
@@ -1284,7 +1284,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The page number of the returned page. Default value: 1.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -1292,7 +1292,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned on each page. Default value: 20. Maximum value: 300.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -1300,7 +1300,7 @@ public class QuerySplitItemBillResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

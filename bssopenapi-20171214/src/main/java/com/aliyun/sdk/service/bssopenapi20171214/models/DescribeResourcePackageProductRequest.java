@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeResourcePackageProductRequest extends Request {
     @Query
     @NameInMap("ProductCode")
+    @Validation(required = true)
     private String productCode;
 
     private DescribeResourcePackageProductRequest(Builder builder) {

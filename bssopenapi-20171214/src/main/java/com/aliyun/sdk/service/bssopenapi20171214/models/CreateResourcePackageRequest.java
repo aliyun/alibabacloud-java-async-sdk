@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateResourcePackageRequest extends Request {
     @Query
     @NameInMap("Duration")
+    @Validation(required = true)
     private Integer duration;
 
     @Query
@@ -26,6 +27,7 @@ public class CreateResourcePackageRequest extends Request {
 
     @Query
     @NameInMap("PackageType")
+    @Validation(required = true)
     private String packageType;
 
     @Query
@@ -34,10 +36,12 @@ public class CreateResourcePackageRequest extends Request {
 
     @Query
     @NameInMap("ProductCode")
+    @Validation(required = true)
     private String productCode;
 
     @Query
     @NameInMap("Specification")
+    @Validation(required = true)
     private String specification;
 
     private CreateResourcePackageRequest(Builder builder) {
@@ -138,7 +142,7 @@ public class CreateResourcePackageRequest extends Request {
         } 
 
         /**
-         * Duration.
+         * The validity period of the resource plan.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -147,7 +151,10 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * EffectiveDate.
+         * The time when the resource plan takes effect. If you leave this parameter empty, the resource plan immediately takes effect by default.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder effectiveDate(String effectiveDate) {
             this.putQueryParameter("EffectiveDate", effectiveDate);
@@ -165,7 +172,7 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * PackageType.
+         * The type of the resource plan. Set this parameter to the code of the **resource plan** returned by calling the **DescribeResourcePackageProduct** operation.
          */
         public Builder packageType(String packageType) {
             this.putQueryParameter("PackageType", packageType);
@@ -174,7 +181,13 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * The unit of the validity period of the resource plan. Valid values:
+         * <p>
+         * 
+         * *   Month
+         * *   Year
+         * 
+         * Default value: Month.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -183,7 +196,7 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service. You can query the code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud services**.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -192,7 +205,7 @@ public class CreateResourcePackageRequest extends Request {
         }
 
         /**
-         * Specification.
+         * The specifications of the resource plan. Set this parameter to the value of the **specifications** returned by calling the **DescribeResourcePackageProduct** operation.
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);

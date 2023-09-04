@@ -200,7 +200,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         } 
 
         /**
-         * 摊销月筛选条件
+         * AmortizationPeriodFilter.
          */
         public Builder amortizationPeriodFilter(java.util.List < String > amortizationPeriodFilter) {
             this.putBodyParameter("AmortizationPeriodFilter", amortizationPeriodFilter);
@@ -227,7 +227,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
-         * 账期月、摊销月
+         * BillingCycle.
          */
         public Builder billingCycle(String billingCycle) {
             this.putBodyParameter("BillingCycle", billingCycle);
@@ -236,7 +236,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
-         * 财务单元code
+         * CostUnitCode.
          */
         public Builder costUnitCode(String costUnitCode) {
             this.putBodyParameter("CostUnitCode", costUnitCode);
@@ -290,7 +290,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request
         }
 
         /**
-         * 订阅类型
+         * SubscriptionType.
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putBodyParameter("SubscriptionType", subscriptionType);

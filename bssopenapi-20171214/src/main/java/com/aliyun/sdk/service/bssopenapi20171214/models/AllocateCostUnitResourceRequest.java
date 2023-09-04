@@ -115,7 +115,11 @@ public class AllocateCostUnitResourceRequest extends Request {
         } 
 
         /**
-         * FromUnitId.
+         * The ID of the source cost center.
+         * <p>
+         * 
+         * *   A value of 0 indicates that the resources to be transferred have not been allocated to a cost center.
+         * *   A value greater than 0 indicates the ID of an existing cost center.
          */
         public Builder fromUnitId(Long fromUnitId) {
             this.putQueryParameter("FromUnitId", fromUnitId);
@@ -124,7 +128,7 @@ public class AllocateCostUnitResourceRequest extends Request {
         }
 
         /**
-         * FromUnitUserId.
+         * The user ID of the owner of the source cost center.
          */
         public Builder fromUnitUserId(Long fromUnitUserId) {
             this.putQueryParameter("FromUnitUserId", fromUnitUserId);
@@ -133,7 +137,7 @@ public class AllocateCostUnitResourceRequest extends Request {
         }
 
         /**
-         * ResourceInstanceList.
+         * The resource instances to be transferred.
          */
         public Builder resourceInstanceList(java.util.List < ResourceInstanceList> resourceInstanceList) {
             this.putQueryParameter("ResourceInstanceList", resourceInstanceList);
@@ -142,7 +146,11 @@ public class AllocateCostUnitResourceRequest extends Request {
         }
 
         /**
-         * ToUnitId.
+         * The ID of the destination cost center.
+         * <p>
+         * 
+         * *   A value of -1 indicates that the allocated resources are changed to unallocated.
+         * *   A value greater than 0 indicates the ID of an existing cost center.
          */
         public Builder toUnitId(Long toUnitId) {
             this.putQueryParameter("ToUnitId", toUnitId);
@@ -151,7 +159,7 @@ public class AllocateCostUnitResourceRequest extends Request {
         }
 
         /**
-         * ToUnitUserId.
+         * The user ID of the owner of the destination cost center.
          */
         public Builder toUnitUserId(Long toUnitUserId) {
             this.putQueryParameter("ToUnitUserId", toUnitUserId);
@@ -232,7 +240,11 @@ public class AllocateCostUnitResourceRequest extends Request {
             private Long resourceUserId; 
 
             /**
-             * ApportionCode.
+             * The split item of the shared instance. This parameter is required only for shared instances.
+             * <p>
+             * 
+             * *   Eight cloud services support bill splitting. The commodity codes of the eight services are oss, dcdn, snapshot, vod, cdn, live, cbwp, and pcdn.
+             * *   You can obtain the split item of a shared instance by calling QueryCostUnitResource operation to obtain all resource instances within a cost center.
              */
             public Builder apportionCode(String apportionCode) {
                 this.apportionCode = apportionCode;
@@ -240,7 +252,7 @@ public class AllocateCostUnitResourceRequest extends Request {
             }
 
             /**
-             * CommodityCode.
+             * The commodity code of the resource instance.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -248,7 +260,7 @@ public class AllocateCostUnitResourceRequest extends Request {
             }
 
             /**
-             * ResourceId.
+             * The ID of the resource instance.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -256,7 +268,7 @@ public class AllocateCostUnitResourceRequest extends Request {
             }
 
             /**
-             * ResourceUserId.
+             * The user ID of the resource instance owner.
              */
             public Builder resourceUserId(Long resourceUserId) {
                 this.resourceUserId = resourceUserId;

@@ -155,7 +155,7 @@ public class QueryRIUtilizationDetailRequest extends Request {
         } 
 
         /**
-         * DeductedInstanceId.
+         * The ID of the instance whose fees are deducted by using the RI. If this parameter is left empty, the usage details of all instances are queried.
          */
         public Builder deductedInstanceId(String deductedInstanceId) {
             this.putQueryParameter("DeductedInstanceId", deductedInstanceId);
@@ -164,7 +164,7 @@ public class QueryRIUtilizationDetailRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The time when the RI expires. Specify the time in the YYYY-MM-DD HH:mm:ss format.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -173,7 +173,7 @@ public class QueryRIUtilizationDetailRequest extends Request {
         }
 
         /**
-         * InstanceSpec.
+         * The instance type of the RI.
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -182,7 +182,7 @@ public class QueryRIUtilizationDetailRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -191,7 +191,7 @@ public class QueryRIUtilizationDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. Maximum value: 300.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -200,7 +200,11 @@ public class QueryRIUtilizationDetailRequest extends Request {
         }
 
         /**
-         * RICommodityCode.
+         * The code of the service to which the RI is applied. Default value: ecsRi. Valid values:
+         * <p>
+         * 
+         * *   ecsRi: ECS RI.
+         * *   scu_bag: storage capacity unit (SCU).
          */
         public Builder RICommodityCode(String RICommodityCode) {
             this.putQueryParameter("RICommodityCode", RICommodityCode);
@@ -209,7 +213,7 @@ public class QueryRIUtilizationDetailRequest extends Request {
         }
 
         /**
-         * RIInstanceId.
+         * The ID of the RI. If this parameter is left empty, the usage details of all RIs are queried.
          */
         public Builder RIInstanceId(String RIInstanceId) {
             this.putQueryParameter("RIInstanceId", RIInstanceId);
@@ -218,7 +222,7 @@ public class QueryRIUtilizationDetailRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The time when the RI was created. Specify the time in the YYYY-MM-DD HH:mm:ss format.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

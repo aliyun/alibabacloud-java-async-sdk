@@ -166,7 +166,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         } 
 
         /**
-         * CreateTimeEnd.
+         * The end of the creation time range to query.
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -175,7 +175,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * CreateTimeStart.
+         * The beginning of the creation time range to query.
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -184,7 +184,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * This parameter is invalid.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -193,7 +193,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used for paging.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -202,7 +202,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * RecordID.
+         * The ID of the order or bill.
          */
         public Builder recordID(String recordID) {
             this.putQueryParameter("RecordID", recordID);
@@ -211,7 +211,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * TransactionChannel.
+         * The transaction channel.
          */
         public Builder transactionChannel(String transactionChannel) {
             this.putQueryParameter("TransactionChannel", transactionChannel);
@@ -220,7 +220,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * TransactionChannelSN.
+         * The serial number of the transaction channel.
          */
         public Builder transactionChannelSN(String transactionChannelSN) {
             this.putQueryParameter("TransactionChannelSN", transactionChannelSN);
@@ -229,7 +229,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * TransactionNumber.
+         * The number of the transaction.
          */
         public Builder transactionNumber(String transactionNumber) {
             this.putQueryParameter("TransactionNumber", transactionNumber);
@@ -238,7 +238,7 @@ public class QueryAccountTransactionDetailsRequest extends Request {
         }
 
         /**
-         * TransactionType.
+         * The type of the transaction.
          */
         public Builder transactionType(String transactionType) {
             this.putQueryParameter("TransactionType", transactionType);

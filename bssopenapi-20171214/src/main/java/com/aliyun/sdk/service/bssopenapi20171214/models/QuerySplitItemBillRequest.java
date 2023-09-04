@@ -154,7 +154,7 @@ public class QuerySplitItemBillRequest extends Request {
         } 
 
         /**
-         * BillOwnerId.
+         * The ID of the member. If you specify a value for this parameter, you can query the split bills of the specified member. If you leave this parameter empty, the split bills of the current account are queried by default.
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -163,7 +163,7 @@ public class QuerySplitItemBillRequest extends Request {
         }
 
         /**
-         * BillingCycle.
+         * The billing cycle, in the YYYY-MM format.
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -181,7 +181,7 @@ public class QuerySplitItemBillRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -190,7 +190,7 @@ public class QuerySplitItemBillRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. Maximum value: 300.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +199,7 @@ public class QuerySplitItemBillRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -208,7 +208,7 @@ public class QuerySplitItemBillRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -217,7 +217,7 @@ public class QuerySplitItemBillRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values: Subscription: subscription PayAsYouGo: pay-as-you-go This parameter must be used together with the ProductCode parameter.
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

@@ -142,7 +142,7 @@ public class AddAccountRelationRequest extends Request {
         } 
 
         /**
-         * ChildNick.
+         * The display name of the member. This helps clarify the scenario in which the account is used.
          */
         public Builder childNick(String childNick) {
             this.putQueryParameter("ChildNick", childNick);
@@ -151,7 +151,7 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * ChildUserId.
+         * The ID of the Alibaba Cloud account that is used as the member.
          */
         public Builder childUserId(Long childUserId) {
             this.putQueryParameter("ChildUserId", childUserId);
@@ -160,7 +160,7 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * ParentUserId.
+         * The ID of the Alibaba Cloud account that is used as the management account.
          */
         public Builder parentUserId(Long parentUserId) {
             this.putQueryParameter("ParentUserId", parentUserId);
@@ -169,7 +169,16 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * PermissionCodes.
+         * The permissions that can be granted to the member. Valid values:
+         * <p>
+         * 
+         * *   SYNCHRONIZE_FINANCE_IDENTITY: allows the credit control identity to be shared with the member.
+         * *   SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: allows the discount policy to be shared with the member.
+         * *   FORBID_WITHDRAW_CASH: does not allow the member to withdraw the balance.
+         * *   FORBID_MANAGE_INVOICE: does not allow the member to manage invoices.
+         * *   CHECK_FINANCE_INFO: requests to view information about the financial relationship.
+         * *   MANAGE_TARGET_INVOICE: allows the member to manage invoices.
+         * *   CHECK_TARGET_CONSUMPTION: allows the member to view the bills.
          */
         public Builder permissionCodes(java.util.List < String > permissionCodes) {
             this.putQueryParameter("PermissionCodes", permissionCodes);
@@ -178,7 +187,7 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * RelationType.
+         * The type of the financial relationship. Set the value to enterprise_group.
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("RelationType", relationType);
@@ -187,7 +196,7 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);
@@ -196,7 +205,7 @@ public class AddAccountRelationRequest extends Request {
         }
 
         /**
-         * RoleCodes.
+         * The roles that can be assigned to the member. Set the value to trusteeship.
          */
         public Builder roleCodes(java.util.List < String > roleCodes) {
             this.putQueryParameter("RoleCodes", roleCodes);

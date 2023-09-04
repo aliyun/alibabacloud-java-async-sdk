@@ -86,7 +86,7 @@ public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * message
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * success
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +158,7 @@ public class CreateSavingsPlansInstanceResponseBody extends TeaModel {
             private Long orderId; 
 
             /**
-             * orderId
+             * OrderId.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

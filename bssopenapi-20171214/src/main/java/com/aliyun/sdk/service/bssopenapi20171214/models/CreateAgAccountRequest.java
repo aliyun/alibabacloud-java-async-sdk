@@ -167,7 +167,7 @@ public class CreateAgAccountRequest extends Request {
         } 
 
         /**
-         * AccountAttr.
+         * The attribute of the account. To view the attribute of the account, use the account to log on to the Alibaba Cloud Management Console, move the pointer over the profile picture in the upper-right corner, and then click **Security Settings**.
          */
         public Builder accountAttr(String accountAttr) {
             this.putQueryParameter("AccountAttr", accountAttr);
@@ -176,7 +176,7 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * CityName.
+         * The name of the city.
          */
         public Builder cityName(String cityName) {
             this.putQueryParameter("CityName", cityName);
@@ -185,7 +185,7 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * EnterpriseName.
+         * The name of the enterprise.
          */
         public Builder enterpriseName(String enterpriseName) {
             this.putQueryParameter("EnterpriseName", enterpriseName);
@@ -194,7 +194,7 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * FirstName.
+         * The first name.
          */
         public Builder firstName(String firstName) {
             this.putQueryParameter("FirstName", firstName);
@@ -203,7 +203,10 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * LastName.
+         * The last name.
+         * <p>
+         * 
+         * The last name can be up to 64 characters in length.
          */
         public Builder lastName(String lastName) {
             this.putQueryParameter("LastName", lastName);
@@ -212,7 +215,7 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * LoginEmail.
+         * The email address used to log on to the account.
          */
         public Builder loginEmail(String loginEmail) {
             this.putQueryParameter("LoginEmail", loginEmail);
@@ -221,7 +224,7 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * NationCode.
+         * The country code.
          */
         public Builder nationCode(String nationCode) {
             this.putQueryParameter("NationCode", nationCode);
@@ -230,7 +233,7 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * Postcode.
+         * The zip code.
          */
         public Builder postcode(String postcode) {
             this.putQueryParameter("Postcode", postcode);
@@ -239,7 +242,7 @@ public class CreateAgAccountRequest extends Request {
         }
 
         /**
-         * ProvinceName.
+         * The name of the province. This parameter is optional.
          */
         public Builder provinceName(String provinceName) {
             this.putQueryParameter("ProvinceName", provinceName);

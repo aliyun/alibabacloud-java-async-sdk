@@ -184,7 +184,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         } 
 
         /**
-         * commodityCode
+         * The code of the service.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -193,7 +193,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * cycle
+         * The cycle based on which queries are performed.
          */
         public Builder cycle(String cycle) {
             this.putQueryParameter("Cycle", cycle);
@@ -202,7 +202,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * locale
+         * The identifier of the language.
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -211,7 +211,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * moduleCode
+         * The code of the pricing module.
          */
         public Builder moduleCode(String moduleCode) {
             this.putQueryParameter("ModuleCode", moduleCode);
@@ -220,7 +220,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * pageNum
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -229,7 +229,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * pageSize
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -238,7 +238,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * payMode
+         * The payment mode.
          */
         public Builder payMode(String payMode) {
             this.putQueryParameter("PayMode", payMode);
@@ -247,7 +247,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * region
+         * The ID of the region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -256,7 +256,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * spec
+         * The type of the resource.
          */
         public Builder spec(String spec) {
             this.putQueryParameter("Spec", spec);
@@ -265,7 +265,7 @@ public class QuerySavingsPlansDiscountRequest extends Request {
         }
 
         /**
-         * spnType
+         * The type of the savings plan.
          */
         public Builder spnType(String spnType) {
             this.putQueryParameter("SpnType", spnType);

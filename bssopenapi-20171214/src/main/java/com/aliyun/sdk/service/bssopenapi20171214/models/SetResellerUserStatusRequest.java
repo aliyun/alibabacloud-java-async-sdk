@@ -99,7 +99,7 @@ public class SetResellerUserStatusRequest extends Request {
         } 
 
         /**
-         * BusinessType.
+         * The type of the business. Valid values: FREEZE: the frozen business of the account. TRUSTEESHIP: the hosted business of the account.
          */
         public Builder businessType(String businessType) {
             this.putQueryParameter("BusinessType", businessType);
@@ -117,7 +117,7 @@ public class SetResellerUserStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The account status that you want to set. Valid values: Freeze: The account is frozen. Thaw: The account is unfrozen. Trusteeship: The account is hosted. TrusteeshipCancel: The account is not hosted.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
@@ -126,7 +126,11 @@ public class SetResellerUserStatusRequest extends Request {
         }
 
         /**
-         * StopMode.
+         * 停机模式
+         * <p>
+         * 取值：
+         *     0：普通停机
+         *     1：立即停机
          */
         public Builder stopMode(String stopMode) {
             this.putQueryParameter("StopMode", stopMode);

@@ -98,7 +98,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         private java.util.List < TagResource> tagResource; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -106,7 +106,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -114,7 +114,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the QueryInstanceByTag operation was called.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +122,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +130,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +138,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
         }
 
         /**
-         * TagResource.
+         * The instances returned.
          */
         public Builder tagResource(java.util.List < TagResource> tagResource) {
             this.tagResource = tagResource;
@@ -190,7 +190,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -198,7 +198,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -263,7 +263,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
             private java.util.List < Tag> tag; 
 
             /**
-             * ResourceId.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -271,7 +271,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource. The returned resource type indicates a savings plan instance.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -279,7 +279,7 @@ public class QueryInstanceByTagResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tags.
              */
             public Builder tag(java.util.List < Tag> tag) {
                 this.tag = tag;

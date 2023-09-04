@@ -86,7 +86,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The error code.
+         * The number of entries returned per page.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,11 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
 
         /**
-         * The return data.
+         * The type of the savings plan. Valid values:
+         * <p>
+         * 
+         * *   universal: general-purpose
+         * *   ecs: ECS compute
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +106,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The ID of the savings plan instance.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +114,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The deduction details.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +122,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * The return data.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -290,7 +294,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * The billable item for which the fee is deducted.
+             * The total number of entries.
              */
             public Builder billModule(String billModule) {
                 this.billModule = billModule;
@@ -298,7 +302,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The service for which the fee is deducted.
+             * DeductCommodity.
              */
             public Builder deductCommodity(String deductCommodity) {
                 this.deductCommodity = deductCommodity;
@@ -306,7 +310,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The deducted amount.
+             * DeductFee.
              */
             public Builder deductFee(String deductFee) {
                 this.deductFee = deductFee;
@@ -314,7 +318,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance for which the fee is deducted.
+             * The ID of the request.
              */
             public Builder deductInstanceId(String deductInstanceId) {
                 this.deductInstanceId = deductInstanceId;
@@ -322,7 +326,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The deduction rate.
+             * DeductRate.
              */
             public Builder deductRate(String deductRate) {
                 this.deductRate = deductRate;
@@ -330,7 +334,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The discount used for the current deduction.
+             * The billable item for which the fee is deducted.
              */
             public Builder discountRate(String discountRate) {
                 this.discountRate = discountRate;
@@ -338,7 +342,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the billing cycle for which the fee is deducted.
+             * The page number of the returned page.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -346,7 +350,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the savings plan instance.
+             * The service for which the fee is deducted.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -362,11 +366,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the savings plan. Valid values:
-             * <p>
-             * 
-             * *   universal: general-purpose
-             * *   ecs: ECS compute
+             * The ID of the instance for which the fee is deducted.
              */
             public Builder savingsType(String savingsType) {
                 this.savingsType = savingsType;
@@ -382,7 +382,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user.
+             * The number of the page to return.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -459,7 +459,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The deduction details.
+             * The deduction rate.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -467,7 +467,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The page number of the returned page.
+             * The number of entries to return on each page.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -475,7 +475,11 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The language of the return data. Valid values:
+             * <p>
+             * 
+             * *   ZH: Chinese
+             * *   EN: English
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -483,7 +487,7 @@ public class QuerySavingsPlansDeductLogResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries.
+             * The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

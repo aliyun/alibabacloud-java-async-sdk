@@ -86,7 +86,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * The total savings.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The usage of deduction plans within the specified period.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The total costs of pay-as-you-go instances.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The status code.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * The operation that you want to perform. Set the value to DescribeResourceUsageTotal.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             private Float usagePercentage; 
 
             /**
-             * The period.
+             * The returned data.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -178,7 +178,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The usage of deduction plans within the specified period.
+             * The fee of purchased deduction plans.
              */
             public Builder usagePercentage(Float usagePercentage) {
                 this.usagePercentage = usagePercentage;
@@ -267,7 +267,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             private Float usagePercentage; 
 
             /**
-             * The total costs of pay-as-you-go instances.
+             * The ID of the request.
              */
             public Builder postpaidCost(Float postpaidCost) {
                 this.postpaidCost = postpaidCost;
@@ -275,7 +275,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total potential savings.
+             * PotentialSavedCost.
              */
             public Builder potentialSavedCost(Float potentialSavedCost) {
                 this.potentialSavedCost = potentialSavedCost;
@@ -283,7 +283,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The fee of purchased deduction plans.
+             * ReservationCost.
              */
             public Builder reservationCost(Float reservationCost) {
                 this.reservationCost = reservationCost;
@@ -291,7 +291,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total savings.
+             * Queries the total usage data of reserved instances (RIs) or storage capacity units (SCUs).
              */
             public Builder savedCost(Float savedCost) {
                 this.savedCost = savedCost;
@@ -299,7 +299,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total usage of deduction plans.
+             * The fee of purchased deduction plans.
              */
             public Builder usagePercentage(Float usagePercentage) {
                 this.usagePercentage = usagePercentage;
@@ -352,7 +352,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             private TotalUsage totalUsage; 
 
             /**
-             * The information about the usage of deduction plans within a period.
+             * The total potential savings.
              */
             public Builder periodCoverage(java.util.List < PeriodCoverage> periodCoverage) {
                 this.periodCoverage = periodCoverage;
@@ -360,7 +360,7 @@ public class DescribeResourceUsageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the total usage data of deduction plans.
+             * The total usage of deduction plans.
              */
             public Builder totalUsage(TotalUsage totalUsage) {
                 this.totalUsage = totalUsage;

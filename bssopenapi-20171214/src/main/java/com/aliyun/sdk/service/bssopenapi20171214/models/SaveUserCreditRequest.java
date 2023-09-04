@@ -160,7 +160,7 @@ public class SaveUserCreditRequest extends Request {
         } 
 
         /**
-         * AvoidExpiration.
+         * Specifies whether to enable service suspension protection for pay-as-you-go services.
          */
         public Builder avoidExpiration(Boolean avoidExpiration) {
             this.putQueryParameter("AvoidExpiration", avoidExpiration);
@@ -169,7 +169,7 @@ public class SaveUserCreditRequest extends Request {
         }
 
         /**
-         * AvoidNotification.
+         * Specifies whether to allow the use of pay-as-you-go services without the need to send notifications.
          */
         public Builder avoidNotification(Boolean avoidNotification) {
             this.putQueryParameter("AvoidNotification", avoidNotification);
@@ -178,7 +178,7 @@ public class SaveUserCreditRequest extends Request {
         }
 
         /**
-         * AvoidPrepaidExpiration.
+         * Specifies whether to enable service suspension protection for subscription services.
          */
         public Builder avoidPrepaidExpiration(Boolean avoidPrepaidExpiration) {
             this.putQueryParameter("AvoidPrepaidExpiration", avoidPrepaidExpiration);
@@ -187,7 +187,7 @@ public class SaveUserCreditRequest extends Request {
         }
 
         /**
-         * AvoidPrepaidNotification.
+         * Specifies whether to allow the use of subscription services without the need to send notifications.
          */
         public Builder avoidPrepaidNotification(Boolean avoidPrepaidNotification) {
             this.putQueryParameter("AvoidPrepaidNotification", avoidPrepaidNotification);
@@ -196,7 +196,7 @@ public class SaveUserCreditRequest extends Request {
         }
 
         /**
-         * CreditType.
+         * The type of the credit.
          */
         public Builder creditType(String creditType) {
             this.putQueryParameter("CreditType", creditType);
@@ -205,7 +205,7 @@ public class SaveUserCreditRequest extends Request {
         }
 
         /**
-         * CreditValue.
+         * The value of the credit.
          */
         public Builder creditValue(String creditValue) {
             this.putQueryParameter("CreditValue", creditValue);
@@ -214,7 +214,7 @@ public class SaveUserCreditRequest extends Request {
         }
 
         /**
-         * Description.
+         * Description
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -223,7 +223,7 @@ public class SaveUserCreditRequest extends Request {
         }
 
         /**
-         * Operator.
+         * The operator who performs the action.
          */
         public Builder operator(String operator) {
             this.putQueryParameter("Operator", operator);

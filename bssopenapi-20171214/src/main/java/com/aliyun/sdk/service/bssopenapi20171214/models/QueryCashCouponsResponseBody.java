@@ -86,7 +86,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -147,6 +147,9 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         @NameInMap("CashCouponNo")
         private String cashCouponNo;
 
+        @NameInMap("Description")
+        private String description;
+
         @NameInMap("EffectiveTime")
         private String effectiveTime;
 
@@ -168,6 +171,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             this.balance = builder.balance;
             this.cashCouponId = builder.cashCouponId;
             this.cashCouponNo = builder.cashCouponNo;
+            this.description = builder.description;
             this.effectiveTime = builder.effectiveTime;
             this.expiryTime = builder.expiryTime;
             this.grantedTime = builder.grantedTime;
@@ -219,6 +223,13 @@ public class QueryCashCouponsResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return effectiveTime
          */
         public String getEffectiveTime() {
@@ -259,6 +270,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             private String balance; 
             private Long cashCouponId; 
             private String cashCouponNo; 
+            private String description; 
             private String effectiveTime; 
             private String expiryTime; 
             private String grantedTime; 
@@ -266,7 +278,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * ApplicableProducts.
+             * The service to which the voucher is applicable.
              */
             public Builder applicableProducts(String applicableProducts) {
                 this.applicableProducts = applicableProducts;
@@ -274,7 +286,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicableScenarios.
+             * The scenario to which the voucher is applicable.
              */
             public Builder applicableScenarios(String applicableScenarios) {
                 this.applicableScenarios = applicableScenarios;
@@ -282,7 +294,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * Balance.
+             * The remaining quota of the voucher.
              */
             public Builder balance(String balance) {
                 this.balance = balance;
@@ -290,7 +302,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * CashCouponId.
+             * The ID of the voucher.
              */
             public Builder cashCouponId(Long cashCouponId) {
                 this.cashCouponId = cashCouponId;
@@ -298,7 +310,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * CashCouponNo.
+             * The code of the voucher.
              */
             public Builder cashCouponNo(String cashCouponNo) {
                 this.cashCouponNo = cashCouponNo;
@@ -306,7 +318,15 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * EffectiveTime.
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
+                return this;
+            }
+
+            /**
+             * The time when the voucher took effect.
              */
             public Builder effectiveTime(String effectiveTime) {
                 this.effectiveTime = effectiveTime;
@@ -314,7 +334,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpiryTime.
+             * The time when the voucher expired.
              */
             public Builder expiryTime(String expiryTime) {
                 this.expiryTime = expiryTime;
@@ -322,7 +342,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * GrantedTime.
+             * The time when the voucher was released.
              */
             public Builder grantedTime(String grantedTime) {
                 this.grantedTime = grantedTime;
@@ -330,7 +350,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * NominalValue.
+             * The denomination of the voucher.
              */
             public Builder nominalValue(String nominalValue) {
                 this.nominalValue = nominalValue;
@@ -338,7 +358,12 @@ public class QueryCashCouponsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the voucher. Valid values:
+             * <p>
+             * 
+             * *   Available: The voucher is valid.
+             * *   Expired: The voucher has expired.
+             * *   Cancelled: The voucher is canceled.
              */
             public Builder status(String status) {
                 this.status = status;

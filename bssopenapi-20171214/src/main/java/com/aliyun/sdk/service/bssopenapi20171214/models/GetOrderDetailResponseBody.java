@@ -86,7 +86,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -470,7 +470,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             private String usageStartTime; 
 
             /**
-             * AfterTaxAmount.
+             * The aftertaxt amount of the order.
              */
             public Builder afterTaxAmount(String afterTaxAmount) {
                 this.afterTaxAmount = afterTaxAmount;
@@ -478,7 +478,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * The service code.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -486,7 +486,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * The configurations of the main service.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -494,7 +494,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the order was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -502,7 +502,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Currency.
+             * The currency.
              */
             public Builder currency(String currency) {
                 this.currency = currency;
@@ -510,7 +510,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceIDs.
+             * The instance IDs.
              */
             public Builder instanceIDs(String instanceIDs) {
                 this.instanceIDs = instanceIDs;
@@ -518,7 +518,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The ID of the Resource Access Management (RAM) user who performs operations on the order. If no RAM user is involved, leave this parameter blank.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -526,7 +526,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * The ID of the order.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -534,7 +534,11 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OrderSubType.
+             * The type of the suborder. Valid values:
+             * <p>
+             * 
+             * *   ProductSubOrder: the service suborder
+             * *   RefundSubOrder: the refund suborder
              */
             public Builder orderSubType(String orderSubType) {
                 this.orderSubType = orderSubType;
@@ -542,7 +546,16 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * The type of the order. Valid values:
+             * <p>
+             * 
+             * *   New: purchases an instance.
+             * *   Renew: renews an instance.
+             * *   Upgrade: upgrades the configurations of an instance.
+             * *   Refund: applies for a refund.
+             * *   Convert: switches the billing method.
+             * *   Downgrade: downgrades the configurations of an instance.
+             * *   ResizeDisk: resizes the disk.
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -550,7 +563,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OriginalConfig.
+             * The module information without standardized conversion.
              */
             public Builder originalConfig(String originalConfig) {
                 this.originalConfig = originalConfig;
@@ -558,7 +571,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentCurrency.
+             * The currency of payment.
              */
             public Builder paymentCurrency(String paymentCurrency) {
                 this.paymentCurrency = paymentCurrency;
@@ -566,7 +579,12 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentStatus.
+             * The status of payment. Valid values:
+             * <p>
+             * 
+             * *   Unpaid: The order is not paid.
+             * *   Paid: The order is paid.
+             * *   Cancelled: The order is canceled.
              */
             public Builder paymentStatus(String paymentStatus) {
                 this.paymentStatus = paymentStatus;
@@ -574,7 +592,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PaymentTime.
+             * The time of payment.
              */
             public Builder paymentTime(String paymentTime) {
                 this.paymentTime = paymentTime;
@@ -582,7 +600,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PretaxAmount.
+             * The pretax amount of the order.
              */
             public Builder pretaxAmount(String pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -590,7 +608,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PretaxAmountLocal.
+             * The pretax amount of the order in local currency.
              */
             public Builder pretaxAmountLocal(String pretaxAmountLocal) {
                 this.pretaxAmountLocal = pretaxAmountLocal;
@@ -598,7 +616,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PretaxGrossAmount.
+             * The pretax gross amount of the order.
              */
             public Builder pretaxGrossAmount(String pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -606,7 +624,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProductCode.
+             * The code of the main service.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -614,7 +632,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * The type of the main service.
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -622,7 +640,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Quantity.
+             * The number of main services.
              */
             public Builder quantity(String quantity) {
                 this.quantity = quantity;
@@ -630,7 +648,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The ID of the region.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -638,7 +656,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedOrderId.
+             * The ID of the associated order.
              */
             public Builder relatedOrderId(String relatedOrderId) {
                 this.relatedOrderId = relatedOrderId;
@@ -646,7 +664,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubOrderId.
+             * The ID of the suborder.
              */
             public Builder subOrderId(String subOrderId) {
                 this.subOrderId = subOrderId;
@@ -654,7 +672,11 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionType.
+             * The billing method. Valid values:
+             * <p>
+             * 
+             * *   Subscription: subscription
+             * *   PayAsYouGo: pay-as-you-go
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -662,7 +684,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Tax.
+             * The tax of the order.
              */
             public Builder tax(String tax) {
                 this.tax = tax;
@@ -670,7 +692,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UsageEndTime.
+             * The time when the service ends.
              */
             public Builder usageEndTime(String usageEndTime) {
                 this.usageEndTime = usageEndTime;
@@ -678,7 +700,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UsageStartTime.
+             * The time when the service starts.
              */
             public Builder usageStartTime(String usageStartTime) {
                 this.usageStartTime = usageStartTime;
@@ -808,7 +830,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * HostName.
+             * The hostname.
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -816,7 +838,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * OrderList.
+             * The details of the order.
              */
             public Builder orderList(OrderList orderList) {
                 this.orderList = orderList;
@@ -824,7 +846,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * The page number of the returned page.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -832,7 +854,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned on each page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -840,7 +862,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of returned entries.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -180,7 +180,7 @@ public class QueryOrdersRequest extends Request {
         } 
 
         /**
-         * CreateTimeEnd.
+         * The end time of the period during which the orders were created. By default, orders within the last hour are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -189,7 +189,7 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * CreateTimeStart.
+         * The start time of the period during which the orders were created. By default, orders within the last hour are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -198,7 +198,13 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The type of the order. Valid values:
+         * <p>
+         * 
+         * *   New: purchases an instance.
+         * *   Renew: renews an instance.
+         * *   Upgrade: upgrades the configurations of an instance.
+         * *   Refund: applies for a refund.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -216,7 +222,7 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The page number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -225,7 +231,7 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -234,7 +240,14 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * PaymentStatus.
+         * The status of payment. Valid values for a non-refund order:
+         * <p>
+         * 
+         * *   Unpaid: The order is not paid.
+         * *   Paid: The order is paid.
+         * *   Cancelled: The order is canceled.
+         * 
+         * > : You can set this parameter to NULL for a refund order.
          */
         public Builder paymentStatus(String paymentStatus) {
             this.putQueryParameter("PaymentStatus", paymentStatus);
@@ -243,7 +256,7 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -252,7 +265,7 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -261,7 +274,11 @@ public class QueryOrdersRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   Subscription: subscription
+         * *   PayAsYouGo: pay-as-you-go
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

@@ -142,7 +142,7 @@ public class ReleaseInstanceRequest extends Request {
         } 
 
         /**
-         * instanceIds
+         * InstanceIds.
          */
         public Builder instanceIds(String instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -151,7 +151,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * ownerId
+         * OwnerId.
          */
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
@@ -160,7 +160,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * productCode
+         * ProductCode.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -169,7 +169,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * productType
+         * ProductType.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -178,7 +178,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * region
+         * Region.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -187,7 +187,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * renewStatus
+         * RenewStatus.
          */
         public Builder renewStatus(String renewStatus) {
             this.putQueryParameter("RenewStatus", renewStatus);
@@ -196,7 +196,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * subscriptionType
+         * SubscriptionType.
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

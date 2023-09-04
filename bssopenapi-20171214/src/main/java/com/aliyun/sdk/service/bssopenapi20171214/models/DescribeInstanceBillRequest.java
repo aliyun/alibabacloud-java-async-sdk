@@ -224,7 +224,7 @@ public class DescribeInstanceBillRequest extends Request {
         } 
 
         /**
-         * BillOwnerId.
+         * The ID of the member. If you specify this parameter, the bills of the member are queried. If you do not specify this parameter, the bills of the current account are queried by default.
          */
         public Builder billOwnerId(Long billOwnerId) {
             this.putQueryParameter("BillOwnerId", billOwnerId);
@@ -233,7 +233,9 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * BillingCycle.
+         * The billing cycle. Specify the parameter in the YYYY-MM format.
+         * <p>
+         * Only the latest 18 month billing cycle is supported.
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -242,7 +244,7 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * BillingDate.
+         * The billing date. This parameter is required only when the Granularity parameter is set to DAILY. Format: YYYY-MM-DD.
          */
         public Builder billingDate(String billingDate) {
             this.putQueryParameter("BillingDate", billingDate);
@@ -251,7 +253,13 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * Granularity.
+         * The granularity at which bills are queried. Valid values:
+         * <p>
+         * 
+         * *   MONTHLY: queries bills on a monthly basis. The data that you query is the same as the data searched by instances on the Billing Details tab of the Bill Details page in the User Center console.
+         * *   DAILY: queries bills on a daily basis. The data that you query is the same as the data searched by days on the Billing Details tab of the Bill Details page in the User Center console.
+         * 
+         * The BillingDate parameter is required if you set the Granularity parameter to DAILY.
          */
         public Builder granularity(String granularity) {
             this.putQueryParameter("Granularity", granularity);
@@ -260,7 +268,7 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * InstanceID.
+         * The ID of the instance.
          */
         public Builder instanceID(String instanceID) {
             this.putQueryParameter("InstanceID", instanceID);
@@ -269,7 +277,13 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * IsBillingItem.
+         * Specifies whether to query data by billable items. Valid values:
+         * <p>
+         * 
+         * *   false: The data that you query is the same as the data searched by instances on the Billing Details tab of the Bill Details page in the User Center console.
+         * *   true: The data that you query is the same as the data searched by billable items on the Billing Details tab of the Bill Details page in the User Center console.
+         * 
+         * Default value: false.
          */
         public Builder isBillingItem(Boolean isBillingItem) {
             this.putQueryParameter("IsBillingItem", isBillingItem);
@@ -278,7 +292,11 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * IsHideZeroCharge.
+         * Specifies whether to filter bills if both the pretax gross amount and pretax amount are 0. Valid values:
+         * <p>
+         * 
+         * *   false: does not filter bills.
+         * *   true: filters bills.
          */
         public Builder isHideZeroCharge(Boolean isHideZeroCharge) {
             this.putQueryParameter("IsHideZeroCharge", isHideZeroCharge);
@@ -287,7 +305,7 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return. Default value: 20. Maximum value: 300.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -296,7 +314,7 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that is used to indicate the position where the results for the current call start. The parameter must be left empty or set to the value of the NextToken parameter that is returned from the last call. Otherwise, an error is returned. If the parameter is left empty, data is queried from the first item.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -314,7 +332,7 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -323,7 +341,7 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -332,7 +350,11 @@ public class DescribeInstanceBillRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   Subscription: the subscription billing method.
+         * *   PayAsYouGo: the pay-as-you-go billing method.
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);

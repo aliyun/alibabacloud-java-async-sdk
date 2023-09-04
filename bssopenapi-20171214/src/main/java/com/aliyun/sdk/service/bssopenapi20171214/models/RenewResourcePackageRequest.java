@@ -113,7 +113,7 @@ public class RenewResourcePackageRequest extends Request {
         } 
 
         /**
-         * Duration.
+         * The renewal period of the resource plan.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -122,7 +122,10 @@ public class RenewResourcePackageRequest extends Request {
         }
 
         /**
-         * EffectiveDate.
+         * The time when the resource plan takes effect. If you leave this parameter empty, the resource plan immediately takes effect by default.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder effectiveDate(String effectiveDate) {
             this.putQueryParameter("EffectiveDate", effectiveDate);
@@ -131,7 +134,7 @@ public class RenewResourcePackageRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the resource plan.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -149,7 +152,13 @@ public class RenewResourcePackageRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * The unit of the validity period for the resource plan. Valid values:
+         * <p>
+         * 
+         * *   Month
+         * *   Year
+         * 
+         * Default value: Month.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);

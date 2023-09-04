@@ -14,6 +14,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetResourcePackagePriceRequest extends Request {
     @Query
     @NameInMap("Duration")
+    @Validation(required = true)
     private Integer duration;
 
     @Query
@@ -34,6 +35,7 @@ public class GetResourcePackagePriceRequest extends Request {
 
     @Query
     @NameInMap("PackageType")
+    @Validation(required = true)
     private String packageType;
 
     @Query
@@ -42,10 +44,12 @@ public class GetResourcePackagePriceRequest extends Request {
 
     @Query
     @NameInMap("ProductCode")
+    @Validation(required = true)
     private String productCode;
 
     @Query
     @NameInMap("Specification")
+    @Validation(required = true)
     private String specification;
 
     private GetResourcePackagePriceRequest(Builder builder) {
@@ -166,7 +170,7 @@ public class GetResourcePackagePriceRequest extends Request {
         } 
 
         /**
-         * Duration.
+         * The validity period of the resource plan. The value must be the same as the duration of the resource plan specified in the specifications.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -175,7 +179,7 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * EffectiveDate.
+         * The time when the resource plan takes effect. If you do not specify this parameter, the resource plan immediately takes effect by default. Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time must be in UTC.
          */
         public Builder effectiveDate(String effectiveDate) {
             this.putQueryParameter("EffectiveDate", effectiveDate);
@@ -184,7 +188,7 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -193,7 +197,14 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The type of the order. Valid values:
+         * <p>
+         * 
+         * *   BUY: You place the order to purchase an instance.
+         * *   UPGRADE: You place the order to upgrade an instance.
+         * *   RENEW: You place the order to renew an instance.
+         * 
+         * Default value: BUY.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -211,7 +222,7 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * PackageType.
+         * The type of the resource plan. The value must be the same as the value of the **ProductCode** parameter that is returned when you call the **DescribeResourcePackageProduct** operation.
          */
         public Builder packageType(String packageType) {
             this.putQueryParameter("PackageType", packageType);
@@ -220,7 +231,11 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * The unit of validity period of the resource plan. Valid values:
+         * <p>
+         * 
+         * *   Month
+         * *   Year
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -229,7 +244,7 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of service. You can query the service code by calling the **QueryProductList** operation or viewing **Codes of Alibaba Cloud Services**.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -238,7 +253,7 @@ public class GetResourcePackagePriceRequest extends Request {
         }
 
         /**
-         * Specification.
+         * The specifications of the resource plan.
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);

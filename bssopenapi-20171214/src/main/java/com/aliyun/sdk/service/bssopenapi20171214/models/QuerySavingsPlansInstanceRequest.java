@@ -37,6 +37,10 @@ public class QuerySavingsPlansInstanceRequest extends Request {
     private String startTime;
 
     @Query
+    @NameInMap("Status")
+    private String status;
+
+    @Query
     @NameInMap("Tag")
     private java.util.List < Tag> tag;
 
@@ -48,6 +52,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
+        this.status = builder.status;
         this.tag = builder.tag;
     }
 
@@ -107,6 +112,13 @@ public class QuerySavingsPlansInstanceRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -120,6 +132,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         private Integer pageNum; 
         private Integer pageSize; 
         private String startTime; 
+        private String status; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
@@ -134,11 +147,12 @@ public class QuerySavingsPlansInstanceRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
+            this.status = request.status;
             this.tag = request.tag;
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+         * The number of entries returned per page.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -147,7 +161,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the savings plan instance.
+         * The end of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -156,11 +170,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The language of the return data. Valid values:
-         * <p>
-         * 
-         * *   ZH: Chinese
-         * *   EN: English
+         * The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder locale(String locale) {
             this.putQueryParameter("Locale", locale);
@@ -169,7 +179,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The message returned.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -178,7 +188,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The time when the instance expires. The time is in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -187,11 +197,20 @@ public class QuerySavingsPlansInstanceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
+         * The number of entries to return on each page.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 
@@ -250,7 +269,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag to query.
+             * The ID of the savings plan instance.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -258,7 +277,7 @@ public class QuerySavingsPlansInstanceRequest extends Request {
             }
 
             /**
-             * The value of the tag to query.
+             * The instance family information. For an instance of the Elastic Compute Service (ECS) compute type, the value indicates the ECS instance family or the ECS instance family package.
              */
             public Builder value(String value) {
                 this.value = value;

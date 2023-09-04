@@ -86,7 +86,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that the call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +218,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             private Long mpk; 
 
             /**
-             * AccountType.
+             * The type of the account. A value of 1 indicates an enterprise account. A value of 0 indicates an individual account.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -226,7 +226,16 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreditLimitStatus.
+             * The business status of the customer. Valid values:
+             * <p>
+             * 
+             * Freeze: The business is frozen.
+             * 
+             * Thaw: The business is unfrozen.
+             * 
+             * Trusteeship: The business is hosted.
+             * 
+             * TrusteeshipCancel: The business is not hosted.
              */
             public Builder creditLimitStatus(String creditLimitStatus) {
                 this.creditLimitStatus = creditLimitStatus;
@@ -234,7 +243,12 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * HostingStatus.
+             * The hosting status of the credit information and instances of the customer. If the credit information and instances of the customer are managed on Alibaba Cloud, Alibaba Cloud suspends a customer service upon overdue payment. Valid values:
+             * <p>
+             * 
+             * FREEZE: The business of the customer is frozen.
+             * 
+             * TRUSTEESHIP: The business of the customer is hosted.
              */
             public Builder hostingStatus(String hostingStatus) {
                 this.hostingStatus = hostingStatus;
@@ -242,7 +256,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsCertified.
+             * Indicates whether the account passes the real-name verification.
              */
             public Builder isCertified(Boolean isCertified) {
                 this.isCertified = isCertified;
@@ -250,7 +264,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * LoginEmail.
+             * The email address of the customer.
              */
             public Builder loginEmail(String loginEmail) {
                 this.loginEmail = loginEmail;
@@ -258,7 +272,7 @@ public class GetCustomerAccountInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Mpk.
+             * The ID of the management account.
              */
             public Builder mpk(Long mpk) {
                 this.mpk = mpk;

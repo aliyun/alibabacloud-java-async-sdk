@@ -79,7 +79,7 @@ public class EnableBillGenerationRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the product.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

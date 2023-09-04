@@ -86,7 +86,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -182,7 +182,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
             private Long unitId; 
 
             /**
-             * IsSuccess.
+             * Indicates whether the cost center was modified.
              */
             public Builder isSuccess(Boolean isSuccess) {
                 this.isSuccess = isSuccess;
@@ -190,7 +190,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerUid.
+             * The user ID of the cost center owner.
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -198,7 +198,7 @@ public class ModifyCostUnitResponseBody extends TeaModel {
             }
 
             /**
-             * UnitId.
+             * The ID of the cost center.
              */
             public Builder unitId(Long unitId) {
                 this.unitId = unitId;

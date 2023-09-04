@@ -138,7 +138,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         } 
 
         /**
-         * ExpiryTimeEnd.
+         * The end of the expiration time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder expiryTimeEnd(String expiryTimeEnd) {
             this.putQueryParameter("ExpiryTimeEnd", expiryTimeEnd);
@@ -147,7 +147,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         }
 
         /**
-         * ExpiryTimeStart.
+         * The beginning of the expiration time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder expiryTimeStart(String expiryTimeStart) {
             this.putQueryParameter("ExpiryTimeStart", expiryTimeStart);
@@ -156,7 +156,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         }
 
         /**
-         * IncludePartner.
+         * Specifies whether partners are involved.
          */
         public Builder includePartner(Boolean includePartner) {
             this.putQueryParameter("IncludePartner", includePartner);
@@ -174,7 +174,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return. Default value: 1.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -183,7 +183,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20. Maximum value: 300.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -192,7 +192,7 @@ public class QueryResourcePackageInstancesRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);

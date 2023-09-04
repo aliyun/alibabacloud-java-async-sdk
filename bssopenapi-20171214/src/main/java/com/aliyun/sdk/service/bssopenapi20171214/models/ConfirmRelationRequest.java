@@ -143,7 +143,7 @@ public class ConfirmRelationRequest extends Request {
         } 
 
         /**
-         * ChildUserId.
+         * The ID of the Alibaba Cloud account that is used as the member.
          */
         public Builder childUserId(Long childUserId) {
             this.putQueryParameter("ChildUserId", childUserId);
@@ -152,7 +152,12 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * ConfirmCode.
+         * The operation to be performed to confirm the invitation. Valid values:
+         * <p>
+         * 
+         * *   child_agree: The member accepts the invitation.
+         * *   child_disagree: The member rejects the invitation.
+         * *   Canceled by the master account: The management account cancels the confirmation.
          */
         public Builder confirmCode(String confirmCode) {
             this.putQueryParameter("ConfirmCode", confirmCode);
@@ -161,7 +166,7 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * ParentUserId.
+         * The ID of the Alibaba Cloud account that is used as the management account.
          */
         public Builder parentUserId(Long parentUserId) {
             this.putQueryParameter("ParentUserId", parentUserId);
@@ -170,7 +175,16 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * PermissionCodes.
+         * The permissions that can be granted to the member. Valid values:
+         * <p>
+         * 
+         * *   SYNCHRONIZE_FINANCE_IDENTITY: allows the credit control identity to be shared with the member.
+         * *   SYNCHRONIZE_FINANCE_DISCOUNT_POLICY_TO_TARGET: allows the discount policy to be shared with the member.
+         * *   FORBID_WITHDRAW_CASH: does not allow the member to withdraw the balance.
+         * *   FORBID_MANAGE_INVOICE: does not allow the member to manage invoices.
+         * *   CHECK_FINANCE_INFO: requests to view information about the financial relationship.
+         * *   MANAGE_TARGET_INVOICE: allows the member to manage invoices.
+         * *   CHECK_TARGET_CONSUMPTION: allows the member to view the bills.
          */
         public Builder permissionCodes(java.util.List < String > permissionCodes) {
             this.putQueryParameter("PermissionCodes", permissionCodes);
@@ -179,7 +193,7 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * RelationId.
+         * The ID of the financial relationship. Set this parameter to the value of the RelationId response parameter returned by calling the QueryRelationList operation.
          */
         public Builder relationId(Long relationId) {
             this.putQueryParameter("RelationId", relationId);
@@ -188,7 +202,7 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * RelationType.
+         * The type of the financial relationship. Set the value to enterprise_group.
          */
         public Builder relationType(String relationType) {
             this.putQueryParameter("RelationType", relationType);
@@ -197,7 +211,7 @@ public class ConfirmRelationRequest extends Request {
         }
 
         /**
-         * RequestId.
+         * The unique ID of the request.
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);

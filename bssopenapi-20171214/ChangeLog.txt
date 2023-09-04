@@ -1,3 +1,6 @@
+2023-09-04 Version: 1.0.6
+- Generated java-async 2017-12-14 for BssOpenApi.
+
 2023-02-07 Version: 1.0.5
 - Add other language.
 

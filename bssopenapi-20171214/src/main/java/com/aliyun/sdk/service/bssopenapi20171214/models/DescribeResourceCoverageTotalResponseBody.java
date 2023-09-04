@@ -86,7 +86,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The status code.
+         * The operation that you want to perform. Set the value to DescribeResourceCoverageTotal.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The information about the total coverage data of deduction plans.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * The type of deduction plans whose total coverage data is queried. Valid values: RI and SCU.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The coverage rate of deduction plans within the specified period.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the operation was successful.
+         * The beginning of the time range to query. The beginning is included in the time range. Specify the time in the format of yyyy-MM-dd HH:mm:ss.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             private String period; 
 
             /**
-             * The coverage rate of deduction plans within the specified period.
+             * The returned data.
              */
             public Builder coveragePercentage(Float coveragePercentage) {
                 this.coveragePercentage = coveragePercentage;
@@ -178,10 +178,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The period.
-             * <p>
-             * 
-             * The value is in the format of yyyyMMddHH.
+             * The ID of the request.
              */
             public Builder period(String period) {
                 this.period = period;
@@ -258,7 +255,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             private Float totalQuantity; 
 
             /**
-             * The unit that is used to measure the resources deducted from deduction plans.
+             * Queries the total coverage data of reserved instances (RIs) or storage capacity units (SCUs).
              */
             public Builder capacityUnit(String capacityUnit) {
                 this.capacityUnit = capacityUnit;
@@ -266,7 +263,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total coverage rate of deduction plans.
+             * The returned data.
              */
             public Builder coveragePercentage(Float coveragePercentage) {
                 this.coveragePercentage = coveragePercentage;
@@ -274,7 +271,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of the resources deducted from deduction plans.
+             * DeductQuantity.
              */
             public Builder deductQuantity(Float deductQuantity) {
                 this.deductQuantity = deductQuantity;
@@ -282,7 +279,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of resources consumed.
+             * TotalQuantity.
              */
             public Builder totalQuantity(Float totalQuantity) {
                 this.totalQuantity = totalQuantity;
@@ -335,7 +332,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             private TotalCoverage totalCoverage; 
 
             /**
-             * The information about the coverage rate of deduction plans within a period.
+             * The ID of the account for which you want to query total coverage data. If you do not set this parameter, the data of the current Alibaba Cloud account and its RAM users is queried. To query the data of a RAM user, specify the ID of the RAM user.
              */
             public Builder periodCoverage(java.util.List < PeriodCoverage> periodCoverage) {
                 this.periodCoverage = periodCoverage;
@@ -343,7 +340,7 @@ public class DescribeResourceCoverageTotalResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the total coverage data of deduction plans.
+             * The unit that is used to measure the resources deducted from deduction plans.
              */
             public Builder totalCoverage(TotalCoverage totalCoverage) {
                 this.totalCoverage = totalCoverage;

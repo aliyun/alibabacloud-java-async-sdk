@@ -54,7 +54,7 @@ public class ModifyCostUnitRequest extends Request {
         } 
 
         /**
-         * UnitEntityList.
+         * The cost centers to be modified.
          */
         public Builder unitEntityList(java.util.List < UnitEntityList> unitEntityList) {
             this.putQueryParameter("UnitEntityList", unitEntityList);
@@ -123,7 +123,7 @@ public class ModifyCostUnitRequest extends Request {
             private Long unitId; 
 
             /**
-             * NewUnitName.
+             * The new name of the cost center.
              */
             public Builder newUnitName(String newUnitName) {
                 this.newUnitName = newUnitName;
@@ -131,7 +131,7 @@ public class ModifyCostUnitRequest extends Request {
             }
 
             /**
-             * OwnerUid.
+             * The user ID of the cost center owner.
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -139,7 +139,7 @@ public class ModifyCostUnitRequest extends Request {
             }
 
             /**
-             * UnitId.
+             * The ID of the cost center.
              */
             public Builder unitId(Long unitId) {
                 this.unitId = unitId;

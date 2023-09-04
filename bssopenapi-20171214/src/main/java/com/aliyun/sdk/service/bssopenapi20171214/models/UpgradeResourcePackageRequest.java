@@ -18,6 +18,7 @@ public class UpgradeResourcePackageRequest extends Request {
 
     @Query
     @NameInMap("InstanceId")
+    @Validation(required = true)
     private String instanceId;
 
     @Query
@@ -96,7 +97,10 @@ public class UpgradeResourcePackageRequest extends Request {
         } 
 
         /**
-         * EffectiveDate.
+         * The time when the resource plan takes effect. If you leave this parameter empty, the resource plan immediately takes effect by default.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder effectiveDate(String effectiveDate) {
             this.putQueryParameter("EffectiveDate", effectiveDate);
@@ -105,7 +109,7 @@ public class UpgradeResourcePackageRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the resource plan.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -123,7 +127,7 @@ public class UpgradeResourcePackageRequest extends Request {
         }
 
         /**
-         * Specification.
+         * The specifications to which you want to upgrade the resource plan.
          */
         public Builder specification(String specification) {
             this.putQueryParameter("Specification", specification);

@@ -86,7 +86,7 @@ public class RefundInstanceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class RefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * data
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class RefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * message
+         * The description of the execution result.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class RefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * requestId
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class RefundInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * success
+         * Indicates whether the request was successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -170,7 +170,7 @@ public class RefundInstanceResponseBody extends TeaModel {
             private Long orderId; 
 
             /**
-             * hostId
+             * The site of the execution host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -178,7 +178,7 @@ public class RefundInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * orderId
+             * The ID of the refund order that is returned only if the instance is unsubscribed from.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;

@@ -198,7 +198,7 @@ public class GetSubscriptionPriceRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the instance for which the price is queried. This parameter is required if you upgrade an instance. You can specify this parameter to obtain the pre-upgrade configurations of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -207,7 +207,7 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * ModuleList.
+         * The information about the pricing module.
          */
         public Builder moduleList(java.util.List < ModuleList> moduleList) {
             this.putQueryParameter("ModuleList", moduleList);
@@ -216,7 +216,12 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The type of the order. Valid values:
+         * <p>
+         * 
+         * *   NewOrder: purchases an instance of an Alibaba Cloud service.
+         * *   Renewal: renews an instance of an Alibaba Cloud service.
+         * *   Upgrade: upgrades an instance of an Alibaba Cloud service.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -234,7 +239,7 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service. For more information about the service code, see **Codes of Alibaba Cloud Services**.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -243,7 +248,7 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service. Specify the parameter based on the pricing document of the specific service.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -252,7 +257,7 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * Quantity.
+         * The quantity.
          */
         public Builder quantity(Integer quantity) {
             this.putQueryParameter("Quantity", quantity);
@@ -261,7 +266,7 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * Region.
+         * The ID of the region in which the instance resides.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -270,7 +275,7 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * ServicePeriodQuantity.
+         * The service duration.
          */
         public Builder servicePeriodQuantity(Integer servicePeriodQuantity) {
             this.putQueryParameter("ServicePeriodQuantity", servicePeriodQuantity);
@@ -279,7 +284,11 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * ServicePeriodUnit.
+         * The unit of the service duration. Valid values:
+         * <p>
+         * 
+         * *   Year
+         * *   Month
          */
         public Builder servicePeriodUnit(String servicePeriodUnit) {
             this.putQueryParameter("ServicePeriodUnit", servicePeriodUnit);
@@ -288,7 +297,7 @@ public class GetSubscriptionPriceRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Set the value to Subscription.
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);
@@ -368,7 +377,7 @@ public class GetSubscriptionPriceRequest extends Request {
             private String tag; 
 
             /**
-             * Config.
+             * The configurations of the Nth pricing module. Valid values of N: 1 to 50. Format: AA:aa,BB:bb. The values of AA and BB are the property IDs of the pricing module. The values of aa and bb are the property values of the pricing module.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -376,7 +385,7 @@ public class GetSubscriptionPriceRequest extends Request {
             }
 
             /**
-             * ModuleCode.
+             * The identifier of the Nth pricing module.
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -384,7 +393,13 @@ public class GetSubscriptionPriceRequest extends Request {
             }
 
             /**
-             * ModuleStatus.
+             * The status of the pricing module. This parameter is required only if the order type is Upgrade. Valid values:
+             * <p>
+             * 
+             * *   1: adds one or more instances.
+             * *   2: modifies the configurations of an instance. In the upgrade scenario, if the configurations of the pricing module change, you must specify this value for the parameter.
+             * 
+             * Default value: 1.
              */
             public Builder moduleStatus(Integer moduleStatus) {
                 this.moduleStatus = moduleStatus;
@@ -392,7 +407,7 @@ public class GetSubscriptionPriceRequest extends Request {
             }
 
             /**
-             * Tag.
+             * The tag of the specified resource. This parameter is required only if you upgrade or modify the configurations of an Alibaba Cloud service. For example, if you want to modify the configurations of a disk, you can use a tag to identify the ID of the disk.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

@@ -842,7 +842,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             private String zone; 
 
             /**
-             * 摊销月
+             * AmortizationPeriod.
              */
             public Builder amortizationPeriod(String amortizationPeriod) {
                 this.amortizationPeriod = amortizationPeriod;
@@ -850,7 +850,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * 摊销状态
+             * AmortizationStatus.
              */
             public Builder amortizationStatus(String amortizationStatus) {
                 this.amortizationStatus = amortizationStatus;
@@ -898,7 +898,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * 账期
+             * ConsumePeriod.
              */
             public Builder consumePeriod(String consumePeriod) {
                 this.consumePeriod = consumePeriod;
@@ -906,7 +906,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * 财务单元
+             * CostUnit.
              */
             public Builder costUnit(String costUnit) {
                 this.costUnit = costUnit;
@@ -914,7 +914,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * 财务单元code
+             * CostUnitCode.
              */
             public Builder costUnitCode(String costUnitCode) {
                 this.costUnitCode = costUnitCode;
@@ -986,7 +986,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * 代金券抵扣
+             * DeductedByCashCoupons.
              */
             public Builder deductedByCashCoupons(Double deductedByCashCoupons) {
                 this.deductedByCashCoupons = deductedByCashCoupons;
@@ -994,7 +994,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * 优惠券抵扣
+             * DeductedByCoupons.
              */
             public Builder deductedByCoupons(Double deductedByCoupons) {
                 this.deductedByCoupons = deductedByCoupons;
@@ -1002,7 +1002,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * 储值卡支付金额
+             * DeductedByPrepaidCard.
              */
             public Builder deductedByPrepaidCard(Double deductedByPrepaidCard) {
                 this.deductedByPrepaidCard = deductedByPrepaidCard;
@@ -1010,7 +1010,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * 消费金额（可开票）
+             * ExpenditureAmount.
              */
             public Builder expenditureAmount(Double expenditureAmount) {
                 this.expenditureAmount = expenditureAmount;
@@ -1042,7 +1042,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * 优惠金额
+             * InvoiceDiscount.
              */
             public Builder invoiceDiscount(Double invoiceDiscount) {
                 this.invoiceDiscount = invoiceDiscount;
@@ -1050,7 +1050,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * 应付金额
+             * PretaxAmount.
              */
             public Builder pretaxAmount(Double pretaxAmount) {
                 this.pretaxAmount = pretaxAmount;
@@ -1058,7 +1058,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * 官网价
+             * PretaxGrossAmount.
              */
             public Builder pretaxGrossAmount(Double pretaxGrossAmount) {
                 this.pretaxGrossAmount = pretaxGrossAmount;
@@ -1242,7 +1242,7 @@ public class DescribeInstanceAmortizedCostByConsumePeriodResponseBody extends Te
             }
 
             /**
-             * 抹零金额
+             * RoundDownDiscount.
              */
             public Builder roundDownDiscount(Double roundDownDiscount) {
                 this.roundDownDiscount = roundDownDiscount;

@@ -183,7 +183,7 @@ public class QueryDPUtilizationDetailRequest extends Request {
         } 
 
         /**
-         * CommodityCode.
+         * The code of the resource, such as ecsRi and scu_bag. If this parameter is specified, the ProdCode parameter does not take effect for the request.
          */
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
@@ -192,7 +192,7 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * DeductedInstanceId.
+         * The ID of the deducted instance. If this parameter is not specified, the details of all instances are returned.
          */
         public Builder deductedInstanceId(String deductedInstanceId) {
             this.putQueryParameter("DeductedInstanceId", deductedInstanceId);
@@ -201,7 +201,7 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -210,7 +210,11 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * IncludeShare.
+         * Specifies whether to query the resource plan usage of linked accounts. Valid values:
+         * <p>
+         * 
+         * *   true: queries the resource plan usage of linked accounts.
+         * *   false: does not query the resource plan usage of linked accounts.
          */
         public Builder includeShare(Boolean includeShare) {
             this.putQueryParameter("IncludeShare", includeShare);
@@ -219,7 +223,7 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance to query. If this parameter is not specified, the details of all used instances are returned.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -228,7 +232,7 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * InstanceSpec.
+         * The instance type of the instance.
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -237,7 +241,7 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * LastToken.
+         * The token that is used to retrieve the next page of results. For the first query, set the value to null. For subsequent queries, set the value to the token that is obtained from the NextToken parameter.
          */
         public Builder lastToken(String lastToken) {
             this.putQueryParameter("LastToken", lastToken);
@@ -246,7 +250,7 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The number of entries to return on each page. Default value: 20. Maximum value: 300.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("Limit", limit);
@@ -255,7 +259,7 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * ProdCode.
+         * The code of the service. Example: ecs.
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);
@@ -264,7 +268,7 @@ public class QueryDPUtilizationDetailRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the YYYY-MM-DD HH:mm:ss format.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -98,7 +98,7 @@ public class QueryCostUnitResourceRequest extends Request {
         } 
 
         /**
-         * OwnerUid.
+         * The user ID of the cost center owner.
          */
         public Builder ownerUid(Long ownerUid) {
             this.putQueryParameter("OwnerUid", ownerUid);
@@ -107,7 +107,7 @@ public class QueryCostUnitResourceRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -116,7 +116,7 @@ public class QueryCostUnitResourceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +125,7 @@ public class QueryCostUnitResourceRequest extends Request {
         }
 
         /**
-         * UnitId.
+         * The ID of the cost center.
          */
         public Builder unitId(Long unitId) {
             this.putQueryParameter("UnitId", unitId);

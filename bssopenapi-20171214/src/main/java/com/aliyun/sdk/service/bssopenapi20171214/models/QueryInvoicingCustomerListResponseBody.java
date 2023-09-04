@@ -86,7 +86,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -398,7 +398,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             private String userNick; 
 
             /**
-             * AdjustType.
+             * The type of invoice that was changed to.
              */
             public Builder adjustType(Long adjustType) {
                 this.adjustType = adjustType;
@@ -406,7 +406,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * Bank.
+             * The bank that issues the invoice.
              */
             public Builder bank(String bank) {
                 this.bank = bank;
@@ -414,7 +414,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * BankNo.
+             * The bank account number.
              */
             public Builder bankNo(String bankNo) {
                 this.bankNo = bankNo;
@@ -422,7 +422,11 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * CustomerType.
+             * The authentication type of Alipay. Valid values:
+             * <p>
+             * 
+             * *   1: individual
+             * *   2: company
              */
             public Builder customerType(Long customerType) {
                 this.customerType = customerType;
@@ -430,7 +434,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultRemark.
+             * The default note that is attached when the title is specified.
              */
             public Builder defaultRemark(String defaultRemark) {
                 this.defaultRemark = defaultRemark;
@@ -438,7 +442,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * EndCycle.
+             * The time when the payment ended.
              */
             public Builder endCycle(Long endCycle) {
                 this.endCycle = endCycle;
@@ -446,7 +450,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the invoice was created. The time was in the yyyy-mm-dd hh:mm:ss format.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -454,7 +458,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the invoice.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -462,7 +466,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * InvoiceTitle.
+             * The company name in the invoice title.
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
@@ -470,7 +474,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * IssueType.
+             * The type of issue.
              */
             public Builder issueType(Long issueType) {
                 this.issueType = issueType;
@@ -478,7 +482,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * OperatingLicenseAddress.
+             * The address of the business license.
              */
             public Builder operatingLicenseAddress(String operatingLicenseAddress) {
                 this.operatingLicenseAddress = operatingLicenseAddress;
@@ -486,7 +490,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * OperatingLicensePhone.
+             * The phone number of the business license.
              */
             public Builder operatingLicensePhone(String operatingLicensePhone) {
                 this.operatingLicensePhone = operatingLicensePhone;
@@ -494,7 +498,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * RegisterNo.
+             * The tax registration number.
              */
             public Builder registerNo(String registerNo) {
                 this.registerNo = registerNo;
@@ -502,7 +506,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * StartCycle.
+             * The time when the payment started.
              */
             public Builder startCycle(Long startCycle) {
                 this.startCycle = startCycle;
@@ -510,7 +514,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the invoice title.
              */
             public Builder status(Long status) {
                 this.status = status;
@@ -518,7 +522,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * TaxationLicense.
+             * The path and file name of the scanned copy of the tax registration certificate.
              */
             public Builder taxationLicense(String taxationLicense) {
                 this.taxationLicense = taxationLicense;
@@ -526,7 +530,11 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * TaxpayerType.
+             * The type of the taxpayer. Valid values:
+             * <p>
+             * 
+             * *   1: general taxpayer
+             * *   2: special taxpayer
              */
             public Builder taxpayerType(Long taxpayerType) {
                 this.taxpayerType = taxpayerType;
@@ -534,7 +542,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * TitleChangeInstructions.
+             * The instruction document of the invoice title change.
              */
             public Builder titleChangeInstructions(String titleChangeInstructions) {
                 this.titleChangeInstructions = titleChangeInstructions;
@@ -542,7 +550,11 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the invoice. Valid values:
+             * <p>
+             * 
+             * *   0: plain value-added tax (VAT) invoice
+             * *   1: special VAT invoice
              */
             public Builder type(Long type) {
                 this.type = type;
@@ -550,7 +562,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the user.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -558,7 +570,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             }
 
             /**
-             * UserNick.
+             * The nickname of the user.
              */
             public Builder userNick(String userNick) {
                 this.userNick = userNick;
@@ -640,7 +652,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
             private CustomerInvoiceList customerInvoiceList; 
 
             /**
-             * CustomerInvoiceList.
+             * The information about the invoice.
              */
             public Builder customerInvoiceList(CustomerInvoiceList customerInvoiceList) {
                 this.customerInvoiceList = customerInvoiceList;

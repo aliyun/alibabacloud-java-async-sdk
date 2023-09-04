@@ -98,7 +98,7 @@ public class SetResellerUserQuotaRequest extends Request {
         } 
 
         /**
-         * Amount.
+         * The quota of a quota ledger. Unit: CNY.
          */
         public Builder amount(String amount) {
             this.putQueryParameter("Amount", amount);
@@ -107,7 +107,7 @@ public class SetResellerUserQuotaRequest extends Request {
         }
 
         /**
-         * Currency.
+         * You do not need to set the parameter.
          */
         public Builder currency(String currency) {
             this.putQueryParameter("Currency", currency);
@@ -116,7 +116,7 @@ public class SetResellerUserQuotaRequest extends Request {
         }
 
         /**
-         * OutBizId.
+         * The ID of the business.
          */
         public Builder outBizId(String outBizId) {
             this.putQueryParameter("OutBizId", outBizId);

@@ -86,7 +86,7 @@ public class QueryProductListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class QueryProductListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The information about all Alibaba Cloud services.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class QueryProductListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class QueryProductListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class QueryProductListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +194,7 @@ public class QueryProductListResponseBody extends TeaModel {
             private String subscriptionType; 
 
             /**
-             * ProductCode.
+             * The code of the service.
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -202,7 +202,7 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductName.
+             * The name of the service.
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -210,7 +210,7 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductType.
+             * The type of the service.
              */
             public Builder productType(String productType) {
                 this.productType = productType;
@@ -218,7 +218,11 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionType.
+             * The billing method. Valid values:
+             * <p>
+             * 
+             * *   Subscription: subscription
+             * *   PayAsYouGo: pay-as-you-go
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -336,7 +340,7 @@ public class QueryProductListResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * PageNum.
+             * The page number of the returned page.
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -344,7 +348,7 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned on each page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -352,7 +356,7 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * ProductList.
+             * The service definitions.
              */
             public Builder productList(ProductList productList) {
                 this.productList = productList;
@@ -360,7 +364,7 @@ public class QueryProductListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of services.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

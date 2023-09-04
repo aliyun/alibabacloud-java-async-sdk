@@ -68,7 +68,7 @@ public class GetAccountRelationRequest extends Request {
         } 
 
         /**
-         * relationId
+         * The ID of the financial relationship.
          */
         public Builder relationId(Long relationId) {
             this.putQueryParameter("RelationId", relationId);
@@ -77,7 +77,7 @@ public class GetAccountRelationRequest extends Request {
         }
 
         /**
-         * requestId
+         * The unique ID of the request. The ID is used to mark a request and troubleshoot a problem.
          */
         public Builder requestId(String requestId) {
             this.putQueryParameter("RequestId", requestId);

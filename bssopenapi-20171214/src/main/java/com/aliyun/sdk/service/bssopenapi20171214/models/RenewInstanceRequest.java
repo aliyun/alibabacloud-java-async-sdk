@@ -127,7 +127,7 @@ public class RenewInstanceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -136,7 +136,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -154,7 +154,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service to which the instance belongs.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -163,7 +163,7 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -172,7 +172,13 @@ public class RenewInstanceRequest extends Request {
         }
 
         /**
-         * RenewPeriod.
+         * The duration of the subscription renewal. Unit: months. Valid values:
+         * <p>
+         * 
+         * *   1 to 9
+         * *   12
+         * *   24
+         * *   36
          */
         public Builder renewPeriod(Integer renewPeriod) {
             this.putQueryParameter("RenewPeriod", renewPeriod);

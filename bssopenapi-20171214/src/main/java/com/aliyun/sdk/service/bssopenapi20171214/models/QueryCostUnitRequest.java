@@ -98,7 +98,7 @@ public class QueryCostUnitRequest extends Request {
         } 
 
         /**
-         * OwnerUid.
+         * The user ID of the cost center owner.
          */
         public Builder ownerUid(Long ownerUid) {
             this.putQueryParameter("OwnerUid", ownerUid);
@@ -107,7 +107,7 @@ public class QueryCostUnitRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The page number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -116,7 +116,7 @@ public class QueryCostUnitRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. A maximum of 300 entries can be returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +125,7 @@ public class QueryCostUnitRequest extends Request {
         }
 
         /**
-         * ParentUnitId.
+         * The ID of the parent cost center. A value of -1 indicates the root cost center.
          */
         public Builder parentUnitId(Long parentUnitId) {
             this.putQueryParameter("ParentUnitId", parentUnitId);

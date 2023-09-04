@@ -82,7 +82,11 @@ public class QueryPrepaidCardsRequest extends Request {
         } 
 
         /**
-         * EffectiveOrNot.
+         * Specifies whether the prepaid card takes effect. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder effectiveOrNot(Boolean effectiveOrNot) {
             this.putQueryParameter("EffectiveOrNot", effectiveOrNot);
@@ -91,7 +95,7 @@ public class QueryPrepaidCardsRequest extends Request {
         }
 
         /**
-         * ExpiryTimeEnd.
+         * The end of the expiration time of prepaid cards to query. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.
          */
         public Builder expiryTimeEnd(String expiryTimeEnd) {
             this.putQueryParameter("ExpiryTimeEnd", expiryTimeEnd);
@@ -100,7 +104,7 @@ public class QueryPrepaidCardsRequest extends Request {
         }
 
         /**
-         * ExpiryTimeStart.
+         * The start of the expiration time of prepaid cards to query. The value must be in the yyyy-MM-ddTHH:mm:ssZ format.
          */
         public Builder expiryTimeStart(String expiryTimeStart) {
             this.putQueryParameter("ExpiryTimeStart", expiryTimeStart);

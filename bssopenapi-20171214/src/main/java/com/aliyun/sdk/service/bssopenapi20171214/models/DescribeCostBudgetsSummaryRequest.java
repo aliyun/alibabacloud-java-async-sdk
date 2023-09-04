@@ -110,7 +110,7 @@ public class DescribeCostBudgetsSummaryRequest extends Request {
         } 
 
         /**
-         * 预算名称
+         * The name of the budget. Fuzzy match is supported.
          */
         public Builder budgetName(String budgetName) {
             this.putQueryParameter("BudgetName", budgetName);
@@ -119,7 +119,7 @@ public class DescribeCostBudgetsSummaryRequest extends Request {
         }
 
         /**
-         * 预算状态
+         * The status of the budget. Valid values: overdue and notOverdue. A value of overdue specifies to filter expired budgets. A value of notOverdue specifies to filter budgets that do not expire. By default, if you do not specify this parameter, information about all budgets is to be returned.
          */
         public Builder budgetStatus(String budgetStatus) {
             this.putQueryParameter("BudgetStatus", budgetStatus);
@@ -128,7 +128,7 @@ public class DescribeCostBudgetsSummaryRequest extends Request {
         }
 
         /**
-         * 预算类型
+         * The type of the budget. Valid values: cost, byquantity, and asset. A value of cost specifies to filter expense budgets. A value of byquantity specifies to filter budgets calculated based on the resource usage. A value of asset specifies to filter usage or coverage budgets. By default, information about all budgets is returned if you do not specify this parameter.
          */
         public Builder budgetType(String budgetType) {
             this.putQueryParameter("BudgetType", budgetType);
@@ -137,7 +137,7 @@ public class DescribeCostBudgetsSummaryRequest extends Request {
         }
 
         /**
-         * 读取的最大数据记录数量
+         * The number of entries to return on each page. Default value: 10. Maximum value: 10. Minimum value: 1.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -146,7 +146,7 @@ public class DescribeCostBudgetsSummaryRequest extends Request {
         }
 
         /**
-         * 开始读取的位置
+         * The position in which the query starts. You must set this parameter to null or the token that is obtained from the previous query. Otherwise, an error is returned. If you set the NextToken parameter to null, the query starts from the beginning. The default value is null.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

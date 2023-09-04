@@ -180,7 +180,7 @@ public class QueryAccountTransactionsRequest extends Request {
         } 
 
         /**
-         * CreateTimeEnd.
+         * The end of the creation time range to query. By default, the transactions in the last month are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-01-01T00:00:00Z.
          */
         public Builder createTimeEnd(String createTimeEnd) {
             this.putQueryParameter("CreateTimeEnd", createTimeEnd);
@@ -189,7 +189,7 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * CreateTimeStart.
+         * The beginning of the creation time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. Example: 2018-01-01T00:00:00Z.
          */
         public Builder createTimeStart(String createTimeStart) {
             this.putQueryParameter("CreateTimeStart", createTimeStart);
@@ -198,7 +198,7 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * The number of the page to return.
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -207,7 +207,7 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -216,7 +216,7 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * RecordID.
+         * The ID of the order or bill.
          */
         public Builder recordID(String recordID) {
             this.putQueryParameter("RecordID", recordID);
@@ -225,7 +225,19 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * TransactionChannel.
+         * The transaction channel. If you specify one of the following transaction channels for this parameter, the results for the specified transaction channel are returned. If the transaction channel that you specify does not belong to the following transaction channels, no result is returned. If you leave this parameter empty, the results for all the following transaction channels are returned by default. Valid values:
+         * <p>
+         * 
+         * *   AccountBalance
+         * *   BankTransfer
+         * *   Alipay
+         * *   AntCreditPay
+         * *   OfflineRemittance
+         * *   RegularBankCreditRefund
+         * *   CreditCard
+         * *   MyBankCredit
+         * *   HuaxiaBankCInstallment
+         * *   ApplePay
          */
         public Builder transactionChannel(String transactionChannel) {
             this.putQueryParameter("TransactionChannel", transactionChannel);
@@ -234,7 +246,7 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * TransactionChannelSN.
+         * The serial number of the transaction channel.
          */
         public Builder transactionChannelSN(String transactionChannelSN) {
             this.putQueryParameter("TransactionChannelSN", transactionChannelSN);
@@ -243,7 +255,11 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * TransactionFlow.
+         * The type of the transaction flow. If you specify one of the following types for this parameter, the results for the specified type are returned. If the type that you specify does not belong to the following types, no result is returned. If you leave this parameter empty, the results for the following two types are returned by default. Valid values:
+         * <p>
+         * 
+         * *   Income
+         * *   Expense
          */
         public Builder transactionFlow(String transactionFlow) {
             this.putQueryParameter("TransactionFlow", transactionFlow);
@@ -252,7 +268,7 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * TransactionNumber.
+         * The number of the transaction.
          */
         public Builder transactionNumber(String transactionNumber) {
             this.putQueryParameter("TransactionNumber", transactionNumber);
@@ -261,7 +277,15 @@ public class QueryAccountTransactionsRequest extends Request {
         }
 
         /**
-         * TransactionType.
+         * The type of the transaction. If you specify one of the following transaction types for this parameter, the results for the specified transaction type are returned. If the transaction type that you specify does not belong to the following types, no result is returned. If you leave this parameter empty, the results for all the following transaction types are returned by default. Valid values:
+         * <p>
+         * 
+         * *   Payment
+         * *   Withdraw
+         * *   Refund
+         * *   Consumption
+         * *   Transfer
+         * *   Adjust
          */
         public Builder transactionType(String transactionType) {
             this.putQueryParameter("TransactionType", transactionType);

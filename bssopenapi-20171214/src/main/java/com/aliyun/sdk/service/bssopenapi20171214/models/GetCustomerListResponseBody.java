@@ -86,7 +86,7 @@ public class GetCustomerListResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The status code returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class GetCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class GetCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class GetCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,11 @@ public class GetCustomerListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**: The call is successful.
+         * *   **false**: The call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -158,7 +162,7 @@ public class GetCustomerListResponseBody extends TeaModel {
             private java.util.List < String > uidList; 
 
             /**
-             * UidList.
+             * The list of customer IDs.
              */
             public Builder uidList(java.util.List < String > uidList) {
                 this.uidList = uidList;

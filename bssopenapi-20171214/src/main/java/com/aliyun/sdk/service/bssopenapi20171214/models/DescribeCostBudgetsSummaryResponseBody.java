@@ -86,7 +86,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +94,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data that is returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +102,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The error message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +110,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +118,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -218,7 +218,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             private java.util.Map < String, ? > consumePeriod; 
 
             /**
-             * Budget.
+             * The information about the budget. The BudgetCycleType parameter indicates the cycle of the budget. Valid values: daily, monthly, quarterly, and yearly. The TotalBudgetAmount parameter indicates the total budget. The BudgetMemo parameter indicates the remarks of the budget.
              */
             public Builder budget(java.util.Map < String, ? > budget) {
                 this.budget = budget;
@@ -226,7 +226,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * BudgetName.
+             * The name of the budget.
              */
             public Builder budgetName(String budgetName) {
                 this.budgetName = budgetName;
@@ -234,7 +234,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * BudgetStatus.
+             * The status of the budget.
              */
             public Builder budgetStatus(String budgetStatus) {
                 this.budgetStatus = budgetStatus;
@@ -242,7 +242,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * BudgetType.
+             * The type of the budget.
              */
             public Builder budgetType(String budgetType) {
                 this.budgetType = budgetType;
@@ -250,7 +250,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * CalculatedValues.
+             * The information about the estimate-to-actual analysis. The ActualConsumeSum parameter indicates the accumulated actual value. The ActualAddForecastedAmount parameter indicates the sum of accumulated actual value and predicted value. If the BudgetType parameter is set to cost, the sum of actual value and predicted value includes the actual cost incurred from the budget start date to the current date and the predicted cost from the current date to the budget end date. If the BudgetType parameter is set to asset, the sum of actual value and predicted value includes the actual usage or coverage from the budget start date to the budget end date. If the budget end date minus the current date is more than one year, the part that exceeds one year is not included. The ActualAndBudgetComparison parameter indicates the comparison between the actual value and the predicted value. The value of the ActualAndBudgetComparison parameter is calculated based on the following formula: Accumulated actual value/Total budget × 100%.
              */
             public Builder calculatedValues(java.util.Map < String, ? > calculatedValues) {
                 this.calculatedValues = calculatedValues;
@@ -258,7 +258,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ConsumePeriod.
+             * The information about the billing cycle. The ConsumePeriodBegin parameter indicates the start date of the budget. The ConsumePeriodEnd parameter indicates the end date of the budget.
              */
             public Builder consumePeriod(java.util.Map < String, ? > consumePeriod) {
                 this.consumePeriod = consumePeriod;
@@ -347,7 +347,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * 站点名称
+             * The site of the host.
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -355,7 +355,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * Items.
+             * The data that is returned.
              */
             public Builder items(java.util.List < Items> items) {
                 this.items = items;
@@ -363,7 +363,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * 本次请求所返回的最大记录条数。
+             * The maximum number of entries that are returned.
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -371,7 +371,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * 下页token
+             * The token that is used to retrieve the next page
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -379,7 +379,7 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * 总记录数。
+             * The total number of entries that are returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

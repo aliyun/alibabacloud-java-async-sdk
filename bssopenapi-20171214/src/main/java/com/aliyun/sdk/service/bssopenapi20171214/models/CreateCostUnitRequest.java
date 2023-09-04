@@ -54,7 +54,7 @@ public class CreateCostUnitRequest extends Request {
         } 
 
         /**
-         * UnitEntityList.
+         * The list of cost centers.
          */
         public Builder unitEntityList(java.util.List < UnitEntityList> unitEntityList) {
             this.putQueryParameter("UnitEntityList", unitEntityList);
@@ -123,7 +123,7 @@ public class CreateCostUnitRequest extends Request {
             private String unitName; 
 
             /**
-             * OwnerUid.
+             * The user ID of the owner of the cost center.
              */
             public Builder ownerUid(Long ownerUid) {
                 this.ownerUid = ownerUid;
@@ -131,7 +131,7 @@ public class CreateCostUnitRequest extends Request {
             }
 
             /**
-             * ParentUnitId.
+             * The ID of the parent cost center. A value of -1 indicates the root cost center.
              */
             public Builder parentUnitId(Long parentUnitId) {
                 this.parentUnitId = parentUnitId;
@@ -139,7 +139,7 @@ public class CreateCostUnitRequest extends Request {
             }
 
             /**
-             * UnitName.
+             * The name of the cost center.
              */
             public Builder unitName(String unitName) {
                 this.unitName = unitName;

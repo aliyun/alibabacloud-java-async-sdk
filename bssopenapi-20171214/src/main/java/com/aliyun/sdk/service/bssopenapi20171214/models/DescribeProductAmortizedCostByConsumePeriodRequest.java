@@ -186,7 +186,7 @@ public class DescribeProductAmortizedCostByConsumePeriodRequest extends Request 
         } 
 
         /**
-         * 摊销月筛选条件
+         * AmortizationPeriodFilter.
          */
         public Builder amortizationPeriodFilter(java.util.List < String > amortizationPeriodFilter) {
             this.putBodyParameter("AmortizationPeriodFilter", amortizationPeriodFilter);

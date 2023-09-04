@@ -74,7 +74,7 @@ public class SaveUserCreditResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The error code returned if the call failed. For more information, see the "Error codes" section of the topic.
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +82,7 @@ public class SaveUserCreditResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +90,7 @@ public class SaveUserCreditResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +98,7 @@ public class SaveUserCreditResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful. A value of true indicates that the call is successful. A value of false indicates that call failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

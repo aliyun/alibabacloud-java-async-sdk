@@ -154,7 +154,7 @@ public class SetRenewalRequest extends Request {
         } 
 
         /**
-         * InstanceIDs.
+         * The ID of the instance. You can enable auto-renewal for up to 100 subscription instances at a time. Separate multiple instance IDs with commas (,).
          */
         public Builder instanceIDs(String instanceIDs) {
             this.putQueryParameter("InstanceIDs", instanceIDs);
@@ -172,7 +172,7 @@ public class SetRenewalRequest extends Request {
         }
 
         /**
-         * ProductCode.
+         * The code of the service.
          */
         public Builder productCode(String productCode) {
             this.putQueryParameter("ProductCode", productCode);
@@ -181,7 +181,7 @@ public class SetRenewalRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The type of the service.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -190,7 +190,16 @@ public class SetRenewalRequest extends Request {
         }
 
         /**
-         * RenewalPeriod.
+         * The auto-renewal period. Valid values:
+         * <p>
+         * 
+         * *   1
+         * *   2
+         * *   3
+         * *   6
+         * *   12
+         * 
+         * >  This parameter is required if the RenewalStatus parameter is set to AutoRenewal.
          */
         public Builder renewalPeriod(Integer renewalPeriod) {
             this.putQueryParameter("RenewalPeriod", renewalPeriod);
@@ -199,7 +208,13 @@ public class SetRenewalRequest extends Request {
         }
 
         /**
-         * RenewalPeriodUnit.
+         * The unit of the auto-renewal period. Valid values:
+         * <p>
+         * 
+         * *   M: months
+         * *   Y: years
+         * 
+         * >  This parameter is required if the RenewalStatus parameter is set to AutoRenewal.
          */
         public Builder renewalPeriodUnit(String renewalPeriodUnit) {
             this.putQueryParameter("RenewalPeriodUnit", renewalPeriodUnit);
@@ -208,7 +223,12 @@ public class SetRenewalRequest extends Request {
         }
 
         /**
-         * RenewalStatus.
+         * The status of renewal. Valid values:
+         * <p>
+         * 
+         * *   AutoRenewal: The instance is automatically renewed.
+         * *   ManualRenewal: The instance is manually renewed.
+         * *   NotRenewal: The instance is not renewed.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);
@@ -217,7 +237,11 @@ public class SetRenewalRequest extends Request {
         }
 
         /**
-         * SubscriptionType.
+         * The billing method. Valid values:
+         * <p>
+         * 
+         * *   Subscription: subscription
+         * *   PayAsYouGo: pay-as-you-go
          */
         public Builder subscriptionType(String subscriptionType) {
             this.putQueryParameter("SubscriptionType", subscriptionType);
